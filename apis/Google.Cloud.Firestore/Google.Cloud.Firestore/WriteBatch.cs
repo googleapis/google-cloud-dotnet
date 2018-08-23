@@ -57,14 +57,12 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(documentData, nameof(documentData));
             var fields = ValueSerializer.SerializeMap(documentData);
-            var serverTimestamps = new List<FieldPath>();
-            var deletes = new List<FieldPath>();
-            FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
-            GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete sentinels cannot appear in Create calls");
-            RemoveSentinels(fields, serverTimestamps);
+            var sentinels = FindSentinels(fields);
+            GaxPreconditions.CheckArgument(!sentinels.Any(sf => sf.IsDelete), nameof(documentData), "Delete sentinels cannot appear in Create calls");
+            RemoveSentinels(fields, sentinels);
             // Force a write if we've not got any sentinel values. Otherwise, we end up with an empty transform instead,
             // just to specify the precondition.
-            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, serverTimestamps, serverTimestamps.Count == 0, false);
+            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, sentinels, sentinels.Count == 0, false);
             return this;
         }
 
@@ -131,15 +129,15 @@ namespace Google.Cloud.Firestore
             var expanded = ExpandObject(serializedUpdates);
 
 
-            var serverTimestamps = new List<FieldPath>();
-            var deletes = new List<FieldPath>();
-            FindSentinels(expanded, FieldPath.Empty, serverTimestamps, deletes);
+            var sentinels = FindSentinels(expanded);
 
             // This effectively validates that a delete wasn't part of a map. It could still be a multi-segment field path, but it can't be within something else.
-            GaxPreconditions.CheckArgument(deletes.All(fp => updates.ContainsKey(fp)), nameof(updates), "Deletes cannot be nested within update calls");
-            RemoveSentinels(expanded, deletes);
-            RemoveSentinels(expanded, serverTimestamps);
-            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, serverTimestamps, false, false);
+            var deletePaths = sentinels.Where(sf => sf.IsDelete).Select(sf => sf.FieldPath);
+            GaxPreconditions.CheckArgument(deletePaths.All(fp => updates.ContainsKey(fp)), nameof(updates), "Deletes cannot be nested within update calls");
+            RemoveSentinels(expanded, sentinels);
+
+            var nonDeletes = sentinels.Where(sf => !sf.IsDelete).ToList();
+            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, nonDeletes, false, false);
             return this;
         }
 
@@ -157,9 +155,9 @@ namespace Google.Cloud.Firestore
 
             var fields = ValueSerializer.SerializeMap(documentData);
             options = options ?? SetOptions.Overwrite;
-            var serverTimestamps = new List<FieldPath>();
-            var deletes = new List<FieldPath>();
-            FindSentinels(fields, FieldPath.Empty, serverTimestamps, deletes);
+            var sentinels = FindSentinels(fields);
+            var deletes = sentinels.Where(sf => sf.IsDelete).ToList();
+            var nonDeletes = sentinels.Where(sf => !sf.IsDelete).ToList();
 
             bool forceWrite = false;
             IDictionary<FieldPath, Value> updates;
@@ -175,7 +173,7 @@ namespace Google.Cloud.Firestore
                     // - All timestamps converted to transforms
                     // - Each top-level entry becomes a FieldPath
                     forceWrite = fields.Count == 0;
-                    RemoveSentinels(fields, serverTimestamps);
+                    RemoveSentinels(fields, nonDeletes);
                     // Work out the update paths after removing server timestamps but before removing deletes,
                     // so that we correctly perform the deletes.
                     updatePaths = ExtractDocumentMask(fields);
@@ -188,14 +186,17 @@ namespace Google.Cloud.Firestore
                     // - Deletes must be in the mask
                     // - Only timestamps in the mask are converted to transforms
                     // - Apply the field mask to get the updates
-                    GaxPreconditions.CheckArgument(deletes.All(p => mask.Contains(p)), nameof(documentData), "Delete cannot appear in an unmerged field");
-                    serverTimestamps = serverTimestamps.Where(st => mask.Any(fp => fp.IsPrefixOf(st))).ToList();
+                    GaxPreconditions.CheckArgument(deletes.All(sf => mask.Contains(sf.FieldPath)), nameof(documentData), "Delete cannot appear in an unmerged field");
+                    nonDeletes = nonDeletes.Where(sf => mask.Any(fp => fp.IsPrefixOf(sf.FieldPath))).ToList();
                     RemoveSentinels(fields, deletes);
-                    RemoveSentinels(fields, serverTimestamps);
+                    RemoveSentinels(fields, nonDeletes);
                     updates = ApplyFieldMask(fields, mask);
                     // Every field path in the mask must either refer to a now-removed sentinel, or a remaining value.
                     // Sentinels are permitted to be in the mask in a nested fashion rather than directly, e.g. a mask of "parent" with a sentinel of "parent.child.timestamp" is fine.
-                    GaxPreconditions.CheckArgument(mask.All(p => updates.ContainsKey(p) || deletes.Any(d => p.IsPrefixOf(d)) || serverTimestamps.Any(st => p.IsPrefixOf(st))),
+                    GaxPreconditions.CheckArgument(
+                        mask.All(p => updates.ContainsKey(p) ||
+                        deletes.Any(sf => p.IsPrefixOf(sf.FieldPath)) ||
+                        nonDeletes.Any(sf => p.IsPrefixOf(sf.FieldPath))),
                         nameof(documentData), "All paths specified for merging must appear in the data.");
                     updatePaths = mask;
                 }
@@ -207,13 +208,13 @@ namespace Google.Cloud.Firestore
                 // - All timestamps converted to transforms
                 // - Each top-level entry becomes a FieldPath
                 GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete cannot appear in document data when overwriting");
-                RemoveSentinels(fields, serverTimestamps);
+                RemoveSentinels(fields, nonDeletes);
                 updates = fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value);
                 updatePaths = s_emptyFieldPathList;
                 forceWrite = true;
             }
 
-            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, serverTimestamps, forceWrite, options.Merge);
+            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, nonDeletes, forceWrite, options.Merge);
             return this;
         }
 
@@ -240,11 +241,11 @@ namespace Google.Cloud.Firestore
             IDictionary<string, Value> fields,
             IReadOnlyList<FieldPath> updatePaths,
             Precondition precondition,
-            IList<FieldPath> serverTimestampPaths,
+            IList<SentinelField> sentinelFields,
             bool forceWrite,
             bool includeEmptyUpdatePath)
         {
-            updatePaths = updatePaths.Except(serverTimestampPaths).ToList();
+            updatePaths = updatePaths.Except(sentinelFields.Select(sf => sf.FieldPath)).ToList();
             bool includeTransformInWriteResults = true;
             if (forceWrite || fields.Count > 0 || updatePaths.Count > 0)
             {
@@ -261,7 +262,7 @@ namespace Google.Cloud.Firestore
                 includeTransformInWriteResults = false;
                 precondition = null;
             }
-            if (serverTimestampPaths.Count > 0 || precondition != null)
+            if (sentinelFields.Count > 0 || precondition != null)
             {
                 Elements.Add(new BatchElement(new Write
                 {
@@ -269,49 +270,43 @@ namespace Google.Cloud.Firestore
                     Transform = new DocumentTransform
                     {
                         Document = documentReference.Path,
-                        FieldTransforms =
-                        {
-                            serverTimestampPaths.Select(p => new FieldTransform
-                            {
-                                FieldPath = p.EncodedPath,
-                                SetToServerValue = ServerValue.RequestTime
-                            })
-                        }
+                        FieldTransforms = { sentinelFields.Select(p => p.ToFieldTransform()) }
                     }
                 }, includeTransformInWriteResults));
             }
         }
 
         /// <summary>
-        /// Finds all the sentinel values in a field map, adding them to lists based on their type.
+        /// Finds all the sentinel values in a field map.
         /// Additionally, this validates that no sentinels exist in arrays (even nested).
         /// </summary>
-        /// <param name="fields">The field map</param>
-        /// <param name="parentPath">The path of this map within the document. (So FieldPath.Empty for a top-level call.)</param>
-        /// <param name="serverTimestamps">The list to add any discovered server timestamp sentinels to</param>
-        /// <param name="deletes">The list to add any discovered delete sentinels to</param>
-        private static void FindSentinels(IDictionary<string, Value> fields, FieldPath parentPath, List<FieldPath> serverTimestamps, List<FieldPath> deletes)
+        /// <param name="fields">The field map to find sentinels within.</param>
+        /// <returns>The sentinel fields in the field map: both the value and the corresponding field path.</returns>
+        private static List<SentinelField> FindSentinels(IDictionary<string, Value> fields)
         {
-            foreach (var pair in fields)
+            List<SentinelField> result = new List<SentinelField>();
+            FindSentinelsRecursively(fields, FieldPath.Empty);
+            return result;
+
+            void FindSentinelsRecursively(IDictionary<string, Value> currentFields, FieldPath currentParentPath)
             {
-                Value value = pair.Value;
-                string key = pair.Key;
-                SentinelKind sentinelKind = SentinelValue.GetKind(value);
-                if (sentinelKind == SentinelKind.ServerTimestamp)
+                foreach (var pair in currentFields)
                 {
-                    serverTimestamps.Add(parentPath.Append(key));
-                }
-                else if (sentinelKind == SentinelKind.Delete)
-                {
-                    deletes.Add(parentPath.Append(key));
-                }
-                else if (value.MapValue != null)
-                {
-                    FindSentinels(value.MapValue.Fields, parentPath.Append(pair.Key), serverTimestamps, deletes);
-                }
-                else if (value.ArrayValue != null)
-                {
-                    ValidateNoSentinelValues(value.ArrayValue.Values);
+                    Value value = pair.Value;
+                    string key = pair.Key;
+                    SentinelKind sentinelKind = SentinelValue.GetKind(value);
+                    if (sentinelKind != SentinelKind.None)
+                    {
+                        result.Add(new SentinelField(currentParentPath.Append(key), value));
+                    }
+                    else if (value.MapValue != null)
+                    {
+                        FindSentinelsRecursively(value.MapValue.Fields, currentParentPath.Append(pair.Key));
+                    }
+                    else if (value.ArrayValue != null)
+                    {
+                        ValidateNoSentinelValues(value.ArrayValue.Values);
+                    }
                 }
             }
 
@@ -341,15 +336,19 @@ namespace Google.Cloud.Firestore
         /// removed along the way.
         /// </summary>
         /// <returns>true iff the map was non-empty before, but is now empty (i.e. removing the sentinels has removed all data)</returns>
-        private static bool RemoveSentinels(IDictionary<string, Value> fields, List<FieldPath> sentinelPaths)
+        private static bool RemoveSentinels(IDictionary<string, Value> fields, IEnumerable<SentinelField> sentinelFields)
         {
-            foreach (var path in sentinelPaths)
+            // Keep track of whether the set of paths was empty of not while only iterating once.
+            bool anyPaths = false;
+
+            foreach (var sentinelField in sentinelFields)
             {
-                RemoveSentinel(fields, path, 0);
+                anyPaths = true;
+                RemoveSentinel(fields, sentinelField.FieldPath, 0);
             }
             // If we don't have any fields left and we removed anything, we must have removed
             // everything.
-            return fields.Count == 0 && sentinelPaths.Count > 0;
+            return fields.Count == 0 && anyPaths;
 
             bool RemoveSentinel(IDictionary<string, Value> currentFields, FieldPath path, int segmentIndex)
             {
@@ -503,6 +502,38 @@ namespace Google.Cloud.Firestore
             {
                 Write = write;
                 IncludeInWriteResults = includeInWriteResults;
+            }
+        }
+
+        /// <summary>
+        /// A sentinel field value detected within a document.
+        /// </summary>
+        internal struct SentinelField
+        {
+            internal FieldPath FieldPath { get; }
+            internal Value Value { get; }
+            internal SentinelKind Kind => SentinelValue.GetKind(Value);
+            internal bool IsDelete => Kind == SentinelKind.Delete;
+
+            internal SentinelField(FieldPath fieldPath, Value value)
+            {
+                FieldPath = fieldPath;
+                Value = value;
+            }
+
+            internal FieldTransform ToFieldTransform()
+            {
+                switch (Kind)
+                {
+                    case SentinelKind.ServerTimestamp:
+                        return new FieldTransform
+                        {
+                            FieldPath = FieldPath.EncodedPath,
+                            SetToServerValue = ServerValue.RequestTime
+                        };
+                    default:
+                        throw new InvalidOperationException($"Cannot convert sentinel value of kind {Kind} to field transform");
+                }
             }
         }
     }
