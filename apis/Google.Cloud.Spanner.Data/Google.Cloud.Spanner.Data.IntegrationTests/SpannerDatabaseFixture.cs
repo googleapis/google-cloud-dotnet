@@ -26,9 +26,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CollectionDefinition(nameof(SpannerDatabaseFixture))]
     public class SpannerDatabaseFixture : SpannerFixtureBase, ICollectionFixture<SpannerDatabaseFixture>
     {
-        public SpannerDatabaseFixture()
-        {
-            GrpcInfo.EnableSubchannelCounting();
-        }
     }
 }
