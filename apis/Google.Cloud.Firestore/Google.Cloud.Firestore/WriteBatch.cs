@@ -523,17 +523,22 @@ namespace Google.Cloud.Firestore
 
             internal FieldTransform ToFieldTransform()
             {
+                var transform = new FieldTransform { FieldPath = FieldPath.EncodedPath };
                 switch (Kind)
                 {
                     case SentinelKind.ServerTimestamp:
-                        return new FieldTransform
-                        {
-                            FieldPath = FieldPath.EncodedPath,
-                            SetToServerValue = ServerValue.RequestTime
-                        };
+                        transform.SetToServerValue = ServerValue.RequestTime;
+                        break;
+                    case SentinelKind.ArrayRemove:
+                        transform.RemoveAllFromArray = SentinelValue.GetArrayValue(Value);
+                        break;
+                    case SentinelKind.ArrayUnion:
+                        transform.AppendMissingElements = SentinelValue.GetArrayValue(Value);
+                        break;
                     default:
                         throw new InvalidOperationException($"Cannot convert sentinel value of kind {Kind} to field transform");
                 }
+                return transform;
             }
         }
     }

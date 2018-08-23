@@ -111,6 +111,57 @@ namespace Google.Cloud.Firestore.IntegrationTests
             AssertSerialized(snapshot, new { Text = "Different" });
         }
 
+        [Fact]
+        public async Task Set_ArrayUnion()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", Values = new[] { 1, 2, 3 } });
+            await doc.SetAsync(new { Name = "Modified", Values = FieldValue.ArrayUnion(2, 4) }, SetOptions.MergeAll);
+            var snapshot = await doc.GetSnapshotAsync();
+            AssertSerialized(snapshot, new { Name = "Modified", Values = new[] { 1, 2, 3, 4 } });
+        }
+
+        [Fact]
+        public async Task Set_ArrayRemove()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", Values = new[] { 1, 2, 3 } });
+            await doc.SetAsync(new { Name = "Modified", Values = FieldValue.ArrayRemove(2, 4) }, SetOptions.MergeAll);
+            var snapshot = await doc.GetSnapshotAsync();
+            AssertSerialized(snapshot, new { Name = "Modified", Values = new[] { 1, 3 } });
+        }
+
+        [Fact]
+        public async Task Update_ArrayUnion()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", Values = new[] { 1, 2, 3 } });
+            await doc.UpdateAsync("Values", FieldValue.ArrayUnion(2, 4));
+            var snapshot = await doc.GetSnapshotAsync();
+            AssertSerialized(snapshot, new { Name = "Original", Values = new[] { 1, 2, 3, 4 } });
+        }
+
+        [Fact]
+        public async Task Update_ArrayRemove()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", Values = new[] { 1, 2, 3 } });
+            await doc.UpdateAsync("Values", FieldValue.ArrayRemove(2, 4));
+            var snapshot = await doc.GetSnapshotAsync();
+            AssertSerialized(snapshot, new { Name = "Original", Values = new[] { 1, 3 } });
+        }
+
+        // This shows how it's possible to perform an array union and an array remove on the same field
+        // in a single server operation. It's slightly uglier than trying to specify both in a single doc.Update
+        // call, but it keeps the API small.
+        [Fact]
+        public async Task Update_MixedArrayRemoveAndUnion()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", Values = new[] { 1, 2, 3 } });
+            var batch = doc.Database.StartBatch();
+            batch.Update(doc, "Values", FieldValue.ArrayRemove(2, 4));
+            batch.Update(doc, "Values", FieldValue.ArrayUnion(3, 5));
+            await batch.CommitAsync();
+            var snapshot = await doc.GetSnapshotAsync();
+            AssertSerialized(snapshot, new { Name = "Original", Values = new[] { 1, 3, 5 } });
+        }
+
         /// <summary>
         /// Execute a sequence of operations as per the specification, validating the result at each step.
         /// </summary>
