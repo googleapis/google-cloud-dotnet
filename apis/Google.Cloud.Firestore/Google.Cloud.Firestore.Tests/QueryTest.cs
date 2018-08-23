@@ -896,6 +896,35 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new[] { documentIdOrder }, structured.OrderBy);
         }
 
+        // TODO: Proto-based conformance tests for these
+        [Fact]
+        public void Filter_SentinelsProhibited_InArray()
+        {
+            var collection = s_db.Collection("col");
+            Assert.Throws<ArgumentException>(() => collection.WhereEqualTo("field", new[] { FieldValue.Delete }));
+        }
+
+        [Fact]
+        public void Filter_SentinelsProhibited_InMap()
+        {
+            var collection = s_db.Collection("col");
+            Assert.Throws<ArgumentException>(() => collection.WhereEqualTo("field", new { Nested = FieldValue.Delete }));
+        }
+
+        [Fact]
+        public void Cursor_SentinelsProhibited_InArray()
+        {
+            var collection = s_db.Collection("col");
+            Assert.Throws<ArgumentException>(() => collection.OrderBy("field").StartAt(new[] { new[] { FieldValue.Delete } }));
+        }
+
+        [Fact]
+        public void Cursor_SentinelsProhibited_InMap()
+        {
+            var collection = s_db.Collection("col");
+            Assert.Throws<ArgumentException>(() => collection.OrderBy("field").StartAt(new[] { new { Nested = FieldValue.Delete } }));
+        }
+
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };
         private static Filter Filter(UnaryFilter filter) => new Filter { UnaryFilter = filter };
         private static Filter Filter(FieldFilter filter) => new Filter { FieldFilter = filter };
