@@ -23,7 +23,11 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
     {
         public SpannerTestDatabase Database { get; }
 
-        public SpannerFixtureBase() => Database = SpannerTestDatabase.GetInstance(ProjectId);
+        public SpannerFixtureBase()
+        {
+            GrpcInfo.EnableSubchannelCounting();
+            Database = SpannerTestDatabase.GetInstance(ProjectId);
+        }
 
         public SpannerConnection GetConnection() => Database.GetConnection();
         public string ConnectionString => Database.ConnectionString;
