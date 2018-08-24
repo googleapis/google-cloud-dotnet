@@ -23,15 +23,33 @@ Several custom conversions, additional constructors,
 factory methods (particularly on [Filter](obj/api/Google.Cloud.Datastore.V1.Filter.yml)
 are provided to simplify working with the protobuf messages.
 
+# Using the Datastore Emulator
+
+This package does not automatically connect to an emulator via
+environment variables. However, it is reasonably simple do so. If
+you wish to automatically connect to an emulator, simply include the
+following method in your code, and call that instead of
+`DatastoreDb.Create`.
+
+{{sample:DatastoreDb.EmulatorInit}}
+
+Note that if you use this technique for automated testing with large
+amounts of data, you may wish to write an alternative method that
+*only* connects to the emulator and fails if the emulator has not
+been configured. That avoids accidentally connecting to the
+production Datastore service and potentially incurring large bills
+due to forgetting to set an environment variable.
+
 # Sample code
 
-Inserting data:
+## Inserting data
 
 {{sample:DatastoreDb.InsertOverview}}
 
-Querying data:
+## Querying data
 
 {{sample:DatastoreDb.QueryOverview}}
 
 Lots more samples:
 [github.com/GoogleCloudPlatform/dotnet-docs-samples](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/tree/master/datastore/api)
+
