@@ -14,6 +14,8 @@
 
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
+using Google.Protobuf.WellKnownTypes;
+using System;
 using Xunit;
 
 namespace Google.Cloud.Asset.V1Beta1.Snippets
@@ -34,7 +36,13 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
             // an actual asset history...
             AssetServiceClient client = AssetServiceClient.Create();
             var project = new ProjectName(_fixture.ProjectId);
-            BatchGetAssetsHistoryResponse response = client.BatchGetAssetsHistory(project.ToString());
+            var request = new BatchGetAssetsHistoryRequest
+            {
+                ParentAsProjectName = project,
+                ContentType = ContentType.Resource,
+                ReadTimeWindow = new TimeWindow { StartTime = DateTime.UtcNow.AddDays(-30).ToTimestamp() }
+            };
+            BatchGetAssetsHistoryResponse response = client.BatchGetAssetsHistory(request);
             Assert.Equal(0, response.Assets.Count);
         }
     }
