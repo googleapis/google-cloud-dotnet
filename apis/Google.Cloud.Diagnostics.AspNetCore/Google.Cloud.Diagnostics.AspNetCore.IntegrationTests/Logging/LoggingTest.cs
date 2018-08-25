@@ -236,6 +236,32 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
+        public async Task Logging_ScopeFormatParameter()
+        {
+            string testId = IdGenerator.FromDateTime();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/ScopeFormatParameters/{testId}");
+                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
+                var message = MainController.GetMessage(nameof(MainController.Scope), testId);
+                var json = results.Single().JsonPayload.Fields;
+                Assert.Equal(message, json["message"].StringValue);
+
+                var parentScopes = json["parent_scopes"]?.ListValue?.Values;
+                Assert.NotNull(parentScopes);
+                Assert.Single(parentScopes);
+
+                var scope0 = parentScopes[0].StructValue.Fields;
+                Assert.Equal(testId, scope0["id"].StringValue);
+                Assert.Equal(nameof(MainController.ScopeFormatParameters) + " - {id}", scope0["{OriginalFormat}"].StringValue);
+            }
+        }
+
+        [Fact]
         public async Task Logging_Trace()
         {
             string traceId = "105445aa7843bc8bf206b12000100f00";
@@ -471,6 +497,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string message = "{message} - {id}";
             _logger.LogCritical(message, nameof(FormatParameters), id);
             return message;
+        }
+
+        public string ScopeFormatParameters(string id)
+        {
+            using (_logger.BeginScope(nameof(ScopeFormatParameters) + " - {id}"))
+            {
+                string message = GetMessage(nameof(Scope), id);
+                _logger.LogCritical(message);
+                return message;
+            }
         }
 
         public string Exception(string id)
