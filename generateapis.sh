@@ -4,7 +4,6 @@ set -e
 
 source toolversions.sh
 declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
-declare -r BASH=/c/Windows/System32/bash.exe
 
 # This script generates all APIs from the googleapis/googleapis github repository,
 # using the code generator from googleapis/gapic-generator.
@@ -13,21 +12,12 @@ declare -r BASH=/c/Windows/System32/bash.exe
 # Currently it will only work on Windows due to the way nuget packages installed;
 # changing toolversions.sh could mitigate that, if it's ever necessary.
 #
-# Most of the script can be run directly in Windows, but the codegen itself has to be
-# run via Windows Subsystem for Linux due to a bug in a subproject.
 # Prerequisites
 # - Bash as supplied with Windows git
-# - Windows Subsystem for Linux with Ubuntu 16.04, including Java 8 (e.g. openjdk-8-jdk-headless)
 # - git
 # - wget
 # - unzip
-
-# Running on Linux
-# Prerequisites:
-# - git
-# - wget
-# - unzip
-# - Java 8 (e.g. openjdk-8-jdk-headless)
+# - Java 9
 
 OUTDIR=tmp
 
@@ -73,6 +63,11 @@ generate_api() {
     cp $i $API_TMP_DIR/gapic.yaml
   done
   
+  jvm_args=()
+  jvm_args+=(--add-opens=java.base/java.nio=ALL-UNNAMED)
+  jvm_args+=(--add-opens=java.base/java.lang=ALL-UNNAMED)
+  jvm_args+=(-cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar)
+  
   args=()
   args+=(--descriptor_set=$OUTDIR/protos.desc)
   args+=(--service_yaml=$API_YAML)
@@ -80,7 +75,9 @@ generate_api() {
   args+=(--output=$API_TMP_DIR)
   args+=(--language=csharp)
   
-  $BASH -c "java -cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]}"
+  # Suppress protobuf warnings in Java 9/10. By the time they
+  # become a problem, we won't be using Java...
+  java ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]}
   
   cp -r $API_TMP_DIR/$1 $API_OUT_DIR
 
