@@ -16,6 +16,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Bigtable.Common.V2;
 using Google.Protobuf;
 using Grpc.Core;
+using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,14 +31,16 @@ namespace Google.Cloud.Bigtable.V2.Tests
         [Fact]
         public void AppProfileId()
         {
-            var settings = new BigtableClient.ClientCreationSettings(credentials: ChannelCredentials.Insecure);
-            var client = BigtableClient.Create(settings);
+            var callInvoker = new GcpCallInvoker(
+                target: BigtableServiceApiClient.DefaultEndpoint.ToString(),
+                credentials: ChannelCredentials.Insecure);
+            var client = BigtableClient.Create(callInvoker);
             Assert.Null(client.AppProfileId);
 
             client = client.WithAppProfileId("abc");
             Assert.Equal("abc", client.AppProfileId);
 
-            client = BigtableClient.Create(settings, appProfileId: "xyz");
+            client = BigtableClient.Create(callInvoker, appProfileId: "xyz");
             Assert.Equal("xyz", client.AppProfileId);
 
             client = client.WithAppProfileId(null);

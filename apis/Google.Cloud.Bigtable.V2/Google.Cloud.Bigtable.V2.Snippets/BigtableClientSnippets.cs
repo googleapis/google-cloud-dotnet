@@ -37,7 +37,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
         [Fact]
         public async Task Overview()
         {
-            if (_fixture.EmulatorChannel != null)
+            if (_fixture.EmulatorCallInvoker != null)
             {
                 // Because we're creating the client in the sample, we can't pass
                 // in the emulator channel, so skip this when there is one.

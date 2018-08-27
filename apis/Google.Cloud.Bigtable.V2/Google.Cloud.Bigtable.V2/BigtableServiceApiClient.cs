@@ -321,7 +321,7 @@ namespace Google.Cloud.Bigtable.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified settings,
@@ -359,8 +359,9 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The task representing the created <see cref="BigtableServiceApiClient"/>.</returns>
         public static async stt::Task<BigtableServiceApiClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
-            grpccore::Channel channel = await s_channelPool.GetChannelAsync(endpoint ?? DefaultEndpoint).ConfigureAwait(false);
-            return Create(channel, settings);
+            // TODO: Figure out how to update the auto-generation to allow for this and the change below.
+            var callInvoker = await s_channelPool.GetGcpCallInvokerAsync(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions()).ConfigureAwait(false);
+            return Create(callInvoker, settings);
         }
 
         /// <summary>
@@ -399,8 +400,8 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
         public static BigtableServiceApiClient Create(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
-            grpccore::Channel channel = s_channelPool.GetChannel(endpoint ?? DefaultEndpoint);
-            return Create(channel, settings);
+            grpccore::CallInvoker callInvoker = s_channelPool.GetGcpCallInvoker(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions());
+            return Create(callInvoker, settings);
         }
 
         /// <summary>
