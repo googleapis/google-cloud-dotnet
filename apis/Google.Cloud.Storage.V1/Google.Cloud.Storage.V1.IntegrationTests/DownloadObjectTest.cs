@@ -288,9 +288,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        // See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1784 for the background to
+        // See https://github.com/googleapis/google-cloud-dotnet/issues/1784 for the background to
         // the following two tests.
-        [Fact(Skip = "https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1784")]
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/1784")]
         public void DownloadGzippedFile_NoClientDecompression()
         {
             var service = new StorageService(new BaseClientService.Initializer

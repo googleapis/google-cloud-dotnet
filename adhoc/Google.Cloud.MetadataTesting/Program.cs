@@ -26,7 +26,7 @@ using static Google.Cloud.Language.V1.AnnotateTextRequest.Types;
 namespace Google.Cloud.MetadataTesting
 {
     /// <summary>
-    /// Used to investigate https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1394
+    /// Used to investigate https://github.com/googleapis/google-cloud-dotnet/issues/1394
     /// </summary>
     class Program
     {

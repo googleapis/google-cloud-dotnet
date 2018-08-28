@@ -43,7 +43,7 @@ fi
 cd $(dirname $0)
 
 rm -rf releasebuild
-git clone ${clone_path_prefix}GoogleCloudPlatform/google-cloud-dotnet.git releasebuild -c core.autocrlf=input
+git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasebuild -c core.autocrlf=input
 cd releasebuild
 export CI=true # Forces SourceLink in the main build.
 
@@ -91,7 +91,7 @@ fi
 (cd docs && ./builddocs.sh root $projects)
 
 rm -rf releasedocs
-git clone ${clone_path_prefix}GoogleCloudPlatform/google-cloud-dotnet.git releasedocs -b gh-pages --depth 1 -c core.autocrlf=input
+git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasedocs -b gh-pages --depth 1 -c core.autocrlf=input
 cd releasedocs
 
 for project in $projects

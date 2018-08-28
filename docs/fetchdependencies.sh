@@ -9,7 +9,7 @@ declare -r GRPC_BRANCH=v1.13.x
 
 # Blow away any previous files and clone the repo
 rm -rf dependencies
-git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet dependencies --quiet -b dependencies
+git clone https://github.com/googleapis/google-cloud-dotnet dependencies --quiet -b dependencies
 # Start with a clean slate other than README.md and .gitignore
 git -C dependencies rm -rf .
 git -C dependencies reset -- README.md .gitignore

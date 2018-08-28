@@ -80,7 +80,7 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <remarks>
         /// This is effectively an escape hatch for situations where hash validation fails.
-        /// See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1641 for background
+        /// See https://github.com/googleapis/google-cloud-dotnet/issues/1641 for background
         /// on this option. It is recommended that you leave this option unset unless you are knowingly
         /// downloading data for an object where hashing will fail.
         /// </remarks>

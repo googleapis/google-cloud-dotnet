@@ -59,7 +59,7 @@ build_api_docs() {
 if [[ ! -d "dependencies" ]]
 then
   echo "Fetching external dependencies repo"
-  git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet dependencies --quiet -b dependencies --depth=1
+  git clone https://github.com/googleapis/google-cloud-dotnet dependencies --quiet -b dependencies --depth=1
 fi
 
 rm -rf output

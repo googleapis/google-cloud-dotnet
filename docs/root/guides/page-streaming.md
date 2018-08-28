@@ -95,5 +95,5 @@ page if it reaches the end of the data.
 ## Feedback
 
 What other use cases should we consider? Does this meet your current needs?
-Please [raise an issue on github](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new)
+Please [raise an issue on github](https://github.com/googleapis/google-cloud-dotnet/issues/new)
 to provide feedback.

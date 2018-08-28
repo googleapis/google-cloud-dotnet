@@ -22,7 +22,7 @@ Relevant repositories:
 
 - [googleapis](https://github.com/googleapis/googleapis): API definitions
 - [toolkit](https://github.com/googleapis/toolkit): Code generator, also known as GAPIC
-- [google-cloud-dotnet](https://github.com/GoogleCloudPlatform/google-cloud-dotnet): This
+- [google-cloud-dotnet](https://github.com/googleapis/google-cloud-dotnet): This
   repository, where code will end up
 
 This list of instructions looks daunting, but it's not as bad as it

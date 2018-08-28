@@ -5,7 +5,7 @@ set -e
 cd $(dirname $0)
 
 # Disable automatic test reporting to AppVeyor.
-# See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1232
+# See https://github.com/googleapis/google-cloud-dotnet/issues/1232
 unset APPVEYOR_API_URL
 
 # Make it easier to handle globbing that doesn't

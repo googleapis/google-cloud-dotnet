@@ -129,5 +129,5 @@ the client.
 
 The intent is that the most commonly-used functionality should be wrapped, however: if you
 find yourself frequently having to dig below the `StorageClient` abstraction, please
-[file a feature request](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new)
+[file a feature request](https://github.com/googleapis/google-cloud-dotnet/issues/new)
 with details of what functionality isn't being wrapped at the moment.

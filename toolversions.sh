@@ -77,7 +77,7 @@ install_docfx() {
      curl -sSL https://github.com/dotnet/docfx/releases/download/v${DOCFX_VERSION}/docfx.zip -o tmp.zip;
      unzip -q tmp.zip;
      rm tmp.zip;
-     # Temporary fix for https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1969
+     # Temporary fix for https://github.com/googleapis/google-cloud-dotnet/issues/1969
      cp -f "$VSINSTALLDIR"/MSBuild/15.0/Bin/Microsoft.Build*.dll .
      )
   fi  
