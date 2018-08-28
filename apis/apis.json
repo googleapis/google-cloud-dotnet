@@ -323,7 +323,7 @@
     "id": "Google.Cloud.Firestore.V1Beta1",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com",
-    "version": "1.0.0-beta06",
+    "version": "1.0.0-beta07",
     "type": "grpc",
     "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore.Data package instead.",
     "tags": [ "firestore", "firebase" ],
@@ -680,12 +680,12 @@
     "id": "Google.Cloud.Storage.V1",
     "productName": "Google Cloud Storage",
     "productUrl": "https://cloud.google.com/storage/",
-    "version": "2.2.0-beta02",
+    "version": "2.2.0",
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
       "Google.Api.Gax.Rest": "2.5.0",
-      "Google.Apis.Storage.v1": "1.34.0.1233"
+      "Google.Apis.Storage.v1": "1.35.1.1266"
     },
     "testDependencies": {
       "Google.Cloud.Iam.V1": "1.0.0",
