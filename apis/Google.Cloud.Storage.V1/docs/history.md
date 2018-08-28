@@ -1,8 +1,8 @@
 # Version history
 
-# 2.2.0-beta02, 2018-07-18
+# 2.2.0, 2018-08-28
 
-New features since 2.2.0:
+New features since 2.1.0:
 
 - New interface `UrlSigner.IBlobSigner` for more flexibility when
   creating signed URLs
