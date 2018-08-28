@@ -27,7 +27,7 @@ New features:
 - Support upload and download hash validation, including the ability to disable it
 - `StorageClient` now implements `IDisposable` to dispose the
   underlying service, where appropriate (see [the user
-  guide](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis)
+  guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis)
   for more information)
 
 # 2.0.0, 2017-06-22

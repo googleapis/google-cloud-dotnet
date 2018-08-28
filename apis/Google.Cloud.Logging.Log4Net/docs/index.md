@@ -12,7 +12,7 @@ Logging](https://cloud.google.com/logging/) with
 
 # Getting started
 
-See the [readme](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.Log4Net/Google.Cloud.Logging.Log4Net/readme.md) for all GoogleStackdriverAppender configuration options.
+See the [readme](https://github.com/googleapis/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.Log4Net/Google.Cloud.Logging.Log4Net/readme.md) for all GoogleStackdriverAppender configuration options.
 
 ## ASP.NET
 

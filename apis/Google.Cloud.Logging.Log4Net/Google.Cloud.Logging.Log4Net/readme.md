@@ -40,7 +40,7 @@ log.Info("An exciting log entry!");
 
 ## Custom configuration
 
-Within a `GoogleStackdriverAppender` the following options are available (also see [GoogleStackdriverAppender_Configuration.cs](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Log4Net/GoogleStackdriverAppender_Configuration.cs)):
+Within a `GoogleStackdriverAppender` the following options are available (also see [GoogleStackdriverAppender_Configuration.cs](https://github.com/googleapis/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Log4Net/GoogleStackdriverAppender_Configuration.cs)):
 
 ### projectId
 

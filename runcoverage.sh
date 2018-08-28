@@ -15,7 +15,7 @@ install_dotcover
 # has been run (so we already have an AllTests.txt file).
 
 # Disable automatic test reporting to AppVeyor.
-# See https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/1232
+# See https://github.com/googleapis/google-cloud-dotnet/issues/1232
 unset APPVEYOR_API_URL
 
 if [ ! -d coverage ]

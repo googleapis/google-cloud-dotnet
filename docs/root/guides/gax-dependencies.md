@@ -135,4 +135,4 @@ it would be painful to continue with our legacy set of dependencies.
 This document hopefully clears up any concerns or questions around
 why the versions are changing, but if you have any further
 questions, please [file an
-issue](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new).
+issue](https://github.com/googleapis/google-cloud-dotnet/issues/new).

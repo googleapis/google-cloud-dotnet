@@ -59,7 +59,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Analyzers
                 defaultSeverity: DiagnosticSeverity.Warning,
                 isEnabledByDefault: true,
                 description: Description,
-                helpLinkUri: "http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/#initializing-tracing");
+                helpLinkUri: "http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/#initializing-tracing");
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 

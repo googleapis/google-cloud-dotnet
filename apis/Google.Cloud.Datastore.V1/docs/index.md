@@ -51,5 +51,5 @@ due to forgetting to set an environment variable.
 {{sample:DatastoreDb.QueryOverview}}
 
 Lots more samples:
-[github.com/GoogleCloudPlatform/dotnet-docs-samples](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/tree/master/datastore/api)
+[github.com/googleapis/dotnet-docs-samples](https://github.com/googleapis/dotnet-docs-samples/tree/master/datastore/api)
 

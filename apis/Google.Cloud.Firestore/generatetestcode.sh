@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fetches the Firestore automated tests from
-# https://github.com/GoogleCloudPlatform/google-cloud-common
+# https://github.com/googleapis/google-cloud-common
 # then copies the data into the right place and generates the
 # C# code from the proto.
 
@@ -16,7 +16,7 @@ declare -r PROTO_TEST_ROOT=$LIB_ROOT/Google.Cloud.Firestore.Tests/Proto
 
 cd $API_PROTO_ROOT
 rm -rf tmp
-git clone https://github.com/GoogleCloudPlatform/google-cloud-common --depth 1 tmp
+git clone https://github.com/googleapis/google-cloud-common --depth 1 tmp
 cp tmp/testing/firestore/proto/*.proto $PROTO_TEST_ROOT
 cp tmp/testing/firestore/testdata/test-suite.binproto $PROTO_TEST_ROOT
 
