@@ -38,7 +38,7 @@ namespace Google.Cloud.Tools.TagReleases
     /// </summary>
     internal class Program
     {
-        private const string RepositoryOwner = "GoogleCloudPlatform";
+        private const string RepositoryOwner = "googleapis";
         private const string RepositoryName = "google-cloud-dotnet";
         private const string TargetBranch = "master";
         private const string ApplicationName = "google-cloud-dotnet-tagreleases";

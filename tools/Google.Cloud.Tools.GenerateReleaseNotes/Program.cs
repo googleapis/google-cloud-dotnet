@@ -95,7 +95,7 @@ namespace Google.Cloud.Tools.GenerateReleaseNotes
                             message = message.Substring(0, 72) + "...";
                         }
                         Console.WriteLine(message);
-                        Console.WriteLine($"https://github.com/GoogleCloudPlatform/google-cloud-dotnet/commit/{commit.Sha.Substring(0, 7)}");
+                        Console.WriteLine($"https://github.com/googleapis/google-cloud-dotnet/commit/{commit.Sha.Substring(0, 7)}");
                         Console.WriteLine();
                     }
                 }
