@@ -361,7 +361,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadRowsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -374,7 +374,7 @@ namespace Google.Cloud.Bigtable.V2
             SampleRowKeysRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -387,7 +387,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -400,7 +400,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -418,7 +418,7 @@ namespace Google.Cloud.Bigtable.V2
             MutateRowsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if(request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -431,7 +431,7 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -444,7 +444,7 @@ namespace Google.Cloud.Bigtable.V2
             CheckAndMutateRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -457,7 +457,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
@@ -470,7 +470,7 @@ namespace Google.Cloud.Bigtable.V2
             ReadModifyWriteRowRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            if (request.AppProfileId == null)
+            if (request.AppProfileId.Length == 0)
             {
                 request.AppProfileId = _appProfileId;
             }
