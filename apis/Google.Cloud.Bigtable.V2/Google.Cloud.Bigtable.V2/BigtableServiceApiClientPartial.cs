@@ -141,7 +141,7 @@ namespace Google.Cloud.Bigtable.V2
                 // TODO: Figure out if there's a good way to test this
                 new ChannelOption(ChannelOptions.PrimaryUserAgentString, BigtableClient.UserAgent),
 
-                new ChannelOption(Grpc.Gcp.GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
+                new ChannelOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
             };
         }
     }
@@ -252,18 +252,17 @@ namespace Google.Cloud.Bigtable.V2
         {
             public readonly ServiceEndpoint Endpoint;
             public readonly List<ChannelOption> Options;
-            public readonly int _hash;
 
             public GcpCallInvokerKey(ServiceEndpoint endpoint, List<ChannelOption> options)
             {
                 Endpoint = endpoint;
                 Options = options;
-                _hash = EqualityHelpers.CombineHashCodes(
-                    endpoint.GetHashCode(),
-                    EqualityHelpers.GetListHashCode(options, ChannelOptionComparer.Instance));
             }
 
-            public override int GetHashCode() => _hash;
+            public override int GetHashCode() =>
+                EqualityHelpers.CombineHashCodes(
+                    Endpoint.GetHashCode(),
+                    EqualityHelpers.GetListHashCode(Options, ChannelOptionComparer.Instance));
 
             public override bool Equals(object obj) => obj is GcpCallInvokerKey other && Equals(other);
 
