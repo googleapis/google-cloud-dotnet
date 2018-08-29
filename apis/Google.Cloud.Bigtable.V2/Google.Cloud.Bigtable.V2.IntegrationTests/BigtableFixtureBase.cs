@@ -55,7 +55,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             if (!string.IsNullOrEmpty(emulatorHost))
             {
                 projectId = "emulator-test-project";
-                EmulatorCallInvoker = new GcpCallInvoker(emulatorHost, ChannelCredentials.Insecure);
+                EmulatorCallInvoker = new GcpCallInvoker(
+                    emulatorHost,
+                    ChannelCredentials.Insecure,
+                    BigtableServiceApiSettings.GetDefault().CreateChannelOptions());
 
                 instanceId = "doesnt-matter";
             }
