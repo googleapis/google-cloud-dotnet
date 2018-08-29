@@ -321,7 +321,7 @@ namespace Google.Cloud.Bigtable.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
+        private static readonly gaxgrpc::GcpCallInvokerPool s_callInvokerPool = new gaxgrpc::GcpCallInvokerPool(DefaultScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified settings,
@@ -360,7 +360,7 @@ namespace Google.Cloud.Bigtable.V2
         public static async stt::Task<BigtableServiceApiClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
             // TODO: Figure out how to update the auto-generation to allow for this and the change below.
-            var callInvoker = await s_channelPool.GetGcpCallInvokerAsync(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions()).ConfigureAwait(false);
+            var callInvoker = await s_callInvokerPool.GetCallInvokerAsync(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions()).ConfigureAwait(false);
             return Create(callInvoker, settings);
         }
 
@@ -400,7 +400,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The created <see cref="BigtableServiceApiClient"/>.</returns>
         public static BigtableServiceApiClient Create(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
-            grpccore::CallInvoker callInvoker = s_channelPool.GetGcpCallInvoker(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions());
+            grpccore::CallInvoker callInvoker = s_callInvokerPool.GetCallInvoker(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions());
             return Create(callInvoker, settings);
         }
 
@@ -443,7 +443,7 @@ namespace Google.Cloud.Bigtable.V2
         /// and <see cref="CreateAsync(gaxgrpc::ServiceEndpoint, BigtableServiceApiSettings)"/> will create new channels, which could
         /// in turn be shut down by another call to this method.</remarks>
         /// <returns>A task representing the asynchronous shutdown operation.</returns>
-        public static stt::Task ShutdownDefaultChannelsAsync() => s_channelPool.ShutdownChannelsAsync();
+        public static stt::Task ShutdownDefaultChannelsAsync() => s_callInvokerPool.ShutdownChannelsAsync();
 
         /// <summary>
         /// The underlying gRPC Bigtable client.
