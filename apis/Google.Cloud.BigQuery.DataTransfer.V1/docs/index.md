@@ -16,7 +16,7 @@
 
 # Sample code
 
-## List clusters
+## List all data sources
 
 {{sample:DataTransferServiceClient.ListAllDataSources}}
 
