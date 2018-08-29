@@ -49,6 +49,12 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static BinaryExpressionSyntax EqualTo(this ExpressionSyntax left, ExpressionSyntax right) =>
             BinaryExpression(SyntaxKind.EqualsExpression, left, right);
 
+        internal static BinaryExpressionSyntax NotEqualTo(this string left, ExpressionSyntax right) =>
+            BinaryExpression(SyntaxKind.NotEqualsExpression, left.ToExpression(), right);
+
+        internal static BinaryExpressionSyntax And(this ExpressionSyntax left, ExpressionSyntax right) =>
+            BinaryExpression(SyntaxKind.LogicalAndExpression, left, right);
+
         internal static IfStatementSyntax If(ExpressionSyntax condition, params StatementSyntax[] statements) =>
             IfStatement(condition, Block(statements));
 
@@ -90,6 +96,15 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         internal static LiteralExpressionSyntax Null() =>
             LiteralExpression(SyntaxKind.NullLiteralExpression);
+
+        internal static ExpressionSyntax Zero() =>
+            0.ToExpression();
+
+        internal static ExpressionSyntax IsEmpty(this ExpressionSyntax value) =>
+            value.Member("Length").EqualTo(Zero());
+
+        internal static ExpressionSyntax ToExpression<T>(this T a) =>
+            ParseExpression(a.ToString());
 
         internal static AliasQualifiedNameSyntax Of(this AliasQualifiedNameSyntax typeName, params TypeSyntax[] typeArguments) =>
             typeName.WithName((SimpleNameSyntax)typeName.Name.Of(typeArguments));
