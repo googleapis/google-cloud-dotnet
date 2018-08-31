@@ -102,7 +102,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 .Setup(x => x.CheckAndMutateRowAsync(request_with_appProfileId, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new CheckAndMutateRowResponse());
             BigtableClient client = new BigtableClientImpl(
-                new[] { mockGrpcClient.Object }, appProfileId_on_client, BigtableServiceApiSettings.GetDefault());
+                new[] { mockGrpcClient.Object }, appProfileId_on_client);
             client.CheckAndMutateRow(request);
             await client.CheckAndMutateRowAsync(request2);
             Assert.Equal(appProfileId_on_client, request.AppProfileId);
@@ -250,7 +250,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             mockGrpcClient.Setup(x => x.MutateRowAsync(request_with_appProfileId, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new MutateRowResponse());
             BigtableClient client = new BigtableClientImpl(
-                new[] {mockGrpcClient.Object}, appProfileId_on_client, BigtableServiceApiSettings.GetDefault());
+                new[] {mockGrpcClient.Object}, appProfileId_on_client);
             client.MutateRow(request);
             await client.MutateRowAsync(request2);
             Assert.Equal(appProfileId_on_client, request.AppProfileId);
@@ -346,7 +346,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             mockGrpcClient.Setup(x => x.MutateRows(request_with_appProfileId, It.IsAny<CallSettings>()))
                 .Returns(new BigtableServiceApiClientImpl.MutateRowsStreamImpl(null));
             BigtableClient client = new BigtableClientImpl(
-                new[] { mockGrpcClient.Object }, appProfileId_on_client, BigtableServiceApiSettings.GetDefault());
+                new[] { mockGrpcClient.Object }, appProfileId_on_client);
             client.MutateRowsAsync(request);
             Assert.Equal(appProfileId_on_client, request.AppProfileId);
             client.MutateRowsAsync(request);
@@ -435,7 +435,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 .Setup(x => x.ReadModifyWriteRowAsync(request_with_appProfileId, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new ReadModifyWriteRowResponse());
             BigtableClient client = new BigtableClientImpl(
-                new[] { mockGrpcClient.Object }, appProfileId_on_client, BigtableServiceApiSettings.GetDefault());
+                new[] { mockGrpcClient.Object }, appProfileId_on_client);
             client.ReadModifyWriteRow(request);
             await client.ReadModifyWriteRowAsync(request2);
             Assert.Equal(appProfileId_on_client, request.AppProfileId);
@@ -657,7 +657,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 .Setup(x => x.ReadRows(request_with_appProfileId, It.IsAny<CallSettings>()))
                 .Returns(new BigtableServiceApiClientImpl.ReadRowsStreamImpl(null));
             BigtableClient client = new BigtableClientImpl(
-                new[] { mockGrpcClient.Object }, appProfileId_on_client, BigtableServiceApiSettings.GetDefault());
+                new[] { mockGrpcClient.Object }, appProfileId_on_client);
             client.ReadRows(request);
             Assert.Equal(appProfileId_on_client, request.AppProfileId);
             client.ReadRows(request_with_appProfileId);
@@ -734,7 +734,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             mockGrpcClient.Setup(x => x.SampleRowKeys(request_with_appProfileId, It.IsAny<CallSettings>()))
                 .Returns(new BigtableServiceApiClientImpl.SampleRowKeysStreamImpl(null));
             BigtableClient client = new BigtableClientImpl(
-                new[] { mockGrpcClient.Object }, appProfileId_on_client, BigtableServiceApiSettings.GetDefault());
+                new[] { mockGrpcClient.Object }, appProfileId_on_client);
             client.SampleRowKeys(request);
             Assert.Equal(appProfileId_on_client, request.AppProfileId);
             client.SampleRowKeys(request_with_appProfileId);
