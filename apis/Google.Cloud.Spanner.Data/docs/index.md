@@ -48,7 +48,7 @@ rows matching a query, or update rows to set the value of one column equal to an
 
 DML can be executed in standard mode using `ExecuteNonQuery` or `ExecuteNonQueryAsync`:
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#Dml)]
+{{sample:SpannerConnection.Dml}}
 
 If you execute DML within a transaction, queries are able to observe the changes already made by DML statements,
 and later DML statements can use the values created or updated by earlier ones.
@@ -56,7 +56,7 @@ and later DML statements can use the values created or updated by earlier ones.
 Some DML statements can be executed in a *partitioned* manner, enabling an efficient
 update of large data sets. `ExecutePartitionedUpdate` or `ExecutePartitionedUpdateAsync`:
 
-[!code-cs[](obj/snippets/Google.Cloud.Spanner.Data.SpannerConnection.txt#PartitionedDml)]
+{{sample:SpannerConnection.PartitionedDml}}
 
 Partitioned DML updates cannot be performed within another transaction, and have "at least once" semantics:
 the update can be applied more than once to a row in some cases, and so is best used with idempotent updates.
