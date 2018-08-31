@@ -31,6 +31,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static IEnumerable<ArgumentSyntax> AddArgument(this IEnumerable<ArgumentSyntax> arguments, ExpressionSyntax additionalArgument) =>
             arguments.Concat(Enumerable.Repeat(SyntaxFactory.Argument(additionalArgument), 1));
 
+        internal static BinaryExpressionSyntax And(this ExpressionSyntax left, ExpressionSyntax right) =>
+            BinaryExpression(SyntaxKind.LogicalAndExpression, left, right);
+
         internal static ArgumentSyntax Argument(SyntaxToken identifier) =>
             SyntaxFactory.Argument(IdentifierName(identifier));
 
@@ -48,12 +51,6 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         internal static BinaryExpressionSyntax EqualTo(this ExpressionSyntax left, ExpressionSyntax right) =>
             BinaryExpression(SyntaxKind.EqualsExpression, left, right);
-
-        internal static BinaryExpressionSyntax NotEqualTo(this string left, ExpressionSyntax right) =>
-            BinaryExpression(SyntaxKind.NotEqualsExpression, left.ToExpression(), right);
-
-        internal static BinaryExpressionSyntax And(this ExpressionSyntax left, ExpressionSyntax right) =>
-            BinaryExpression(SyntaxKind.LogicalAndExpression, left, right);
 
         internal static IfStatementSyntax If(ExpressionSyntax condition, params StatementSyntax[] statements) =>
             IfStatement(condition, Block(statements));
@@ -94,17 +91,11 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static ObjectCreationExpressionSyntax New(this TypeSyntax type, IEnumerable<ArgumentSyntax> arguments) =>
             ObjectCreationExpression(type, ArgumentList(SeparatedList(arguments)), initializer: null);
 
+        internal static BinaryExpressionSyntax NotEqualTo(this ExpressionSyntax left, ExpressionSyntax right) =>
+            BinaryExpression(SyntaxKind.NotEqualsExpression, left, right);
+
         internal static LiteralExpressionSyntax Null() =>
             LiteralExpression(SyntaxKind.NullLiteralExpression);
-
-        internal static ExpressionSyntax Zero() =>
-            0.ToExpression();
-
-        internal static ExpressionSyntax IsEmpty(this ExpressionSyntax value) =>
-            value.Member("Length").EqualTo(Zero());
-
-        internal static ExpressionSyntax ToExpression<T>(this T a) =>
-            ParseExpression(a.ToString());
 
         internal static AliasQualifiedNameSyntax Of(this AliasQualifiedNameSyntax typeName, params TypeSyntax[] typeArguments) =>
             typeName.WithName((SimpleNameSyntax)typeName.Name.Of(typeArguments));
@@ -151,5 +142,8 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         internal static MethodDeclarationSyntax WithBodySafe(this MethodDeclarationSyntax method, BlockSyntax body) =>
             method.WithExpressionBody(null).WithSemicolonToken(Token(SyntaxKind.None)).WithBody(body);
+
+        internal static LiteralExpressionSyntax Zero() =>
+            LiteralExpression(SyntaxKind.NumericLiteralExpression, Literal(0));
     }
 }

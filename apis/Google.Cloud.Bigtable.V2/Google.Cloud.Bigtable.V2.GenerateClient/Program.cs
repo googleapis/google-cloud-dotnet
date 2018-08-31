@@ -492,8 +492,10 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     var underlyingMethod = IdentifierName(GetUnderlyingClientMethodName).Invoke().Member(node.Identifier);
                     resultExpression = underlyingMethod.Invoke(node.ParameterList.AsArguments());
                 }
+
                 node = node.WithBodySafe(Block(
-                    If(AppProfileIdFieldName.NotEqualTo(Null()).And(appProfileIdProperty.IsEmpty()),
+                    If(IdentifierName(AppProfileIdFieldName).NotEqualTo(Null())
+                            .And(appProfileIdProperty.Member("Length").EqualTo(Zero())),
                         appProfileIdProperty.AssignFrom(AppProfileIdFieldName).ToStatement()),
                     ReturnStatement(resultExpression)));
 
