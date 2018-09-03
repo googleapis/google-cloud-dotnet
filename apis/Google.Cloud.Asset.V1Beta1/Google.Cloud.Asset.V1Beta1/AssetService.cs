@@ -28,46 +28,46 @@ namespace Google.Cloud.Asset.V1Beta1 {
             "b3RvEhpnb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMRocZ29vZ2xlL2FwaS9h",
             "bm5vdGF0aW9ucy5wcm90bxonZ29vZ2xlL2Nsb3VkL2Fzc2V0L3YxYmV0YTEv",
             "YXNzZXRzLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5w",
-            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLqAQoTRXhw",
+            "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLpAQoTRXhw",
             "b3J0QXNzZXRzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSLQoJcmVhZF90aW1l",
             "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgthc3NldF90",
-            "eXBlcxgDIAMoCRI+Cg1jb250ZW50X3R5cGVzGAQgAygOMicuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxYmV0YTEuQ29udGVudFR5cGUSPwoNb3V0cHV0X2NvbmZp",
-            "ZxgFIAEoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLk91dHB1dENv",
-            "bmZpZyKGAQoURXhwb3J0QXNzZXRzUmVzcG9uc2USLQoJcmVhZF90aW1lGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI/Cg1vdXRwdXRfY29u",
-            "ZmlnGAIgASgLMiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuT3V0cHV0",
-            "Q29uZmlnIsQBChxCYXRjaEdldEFzc2V0c0hpc3RvcnlSZXF1ZXN0Eg4KBnBh",
-            "cmVudBgBIAEoCRITCgthc3NldF9uYW1lcxgCIAMoCRI9Cgxjb250ZW50X3R5",
-            "cGUYAyABKA4yJy5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5Db250ZW50",
-            "VHlwZRJAChByZWFkX3RpbWVfd2luZG93GAQgASgLMiYuZ29vZ2xlLmNsb3Vk",
-            "LmFzc2V0LnYxYmV0YTEuVGltZVdpbmRvdyJaCh1CYXRjaEdldEFzc2V0c0hp",
-            "c3RvcnlSZXNwb25zZRI5CgZhc3NldHMYASADKAsyKS5nb29nbGUuY2xvdWQu",
-            "YXNzZXQudjFiZXRhMS5UZW1wb3JhbEFzc2V0ImQKDE91dHB1dENvbmZpZxJF",
-            "Cg9nY3NfZGVzdGluYXRpb24YASABKAsyKi5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djFiZXRhMS5HY3NEZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0aW9uIh0KDkdj",
-            "c0Rlc3RpbmF0aW9uEgsKA3VyaRgBIAEoCSpJCgtDb250ZW50VHlwZRIcChhD",
-            "T05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghSRVNPVVJDRRABEg4KCklB",
-            "TV9QT0xJQ1kQAjLfAwoMQXNzZXRTZXJ2aWNlEskBCgxFeHBvcnRBc3NldHMS",
-            "Ly5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5FeHBvcnRBc3NldHNSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJpgtPkkwJjIikv",
-            "djFiZXRhMS97cGFyZW50PXByb2plY3RzLyp9OmV4cG9ydEFzc2V0czoBKloz",
-            "Ii4vdjFiZXRhMS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKn06ZXhwb3J0QXNz",
-            "ZXRzOgEqEoICChVCYXRjaEdldEFzc2V0c0hpc3RvcnkSOC5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjFiZXRhMS5CYXRjaEdldEFzc2V0c0hpc3RvcnlSZXF1ZXN0",
-            "GjkuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuQmF0Y2hHZXRBc3NldHNI",
-            "aXN0b3J5UmVzcG9uc2UidILT5JMCbhIyL3YxYmV0YTEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qfTpiYXRjaEdldEFzc2V0c0hpc3RvcnlaOBI2L3YxYmV0YTEve3Bh",
-            "cmVudD1vcmdhbml6YXRpb25zLyp9OmJhdGNoR2V0QXNzZXRIaXN0b3J5QrAB",
-            "Ch5jb20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTFCEUFzc2V0U2Vydmlj",
-            "ZVByb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvYXNzZXQvdjFiZXRhMTthc3NldKoCGkdvb2dsZS5DbG91ZC5B",
-            "c3NldC5WMUJldGExygIaR29vZ2xlXENsb3VkXEFzc2V0XFYxYmV0YTFiBnBy",
-            "b3RvMw=="));
+            "eXBlcxgDIAMoCRI9Cgxjb250ZW50X3R5cGUYBCABKA4yJy5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjFiZXRhMS5Db250ZW50VHlwZRI/Cg1vdXRwdXRfY29uZmln",
+            "GAUgASgLMiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuT3V0cHV0Q29u",
+            "ZmlnIoYBChRFeHBvcnRBc3NldHNSZXNwb25zZRItCglyZWFkX3RpbWUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEj8KDW91dHB1dF9jb25m",
+            "aWcYAiABKAsyKC5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5PdXRwdXRD",
+            "b25maWcixAEKHEJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3QSDgoGcGFy",
+            "ZW50GAEgASgJEhMKC2Fzc2V0X25hbWVzGAIgAygJEj0KDGNvbnRlbnRfdHlw",
+            "ZRgDIAEoDjInLmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLkNvbnRlbnRU",
+            "eXBlEkAKEHJlYWRfdGltZV93aW5kb3cYBCABKAsyJi5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjFiZXRhMS5UaW1lV2luZG93IloKHUJhdGNoR2V0QXNzZXRzSGlz",
+            "dG9yeVJlc3BvbnNlEjkKBmFzc2V0cxgBIAMoCzIpLmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MWJldGExLlRlbXBvcmFsQXNzZXQiZAoMT3V0cHV0Q29uZmlnEkUK",
+            "D2djc19kZXN0aW5hdGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91ZC5hc3NldC52",
+            "MWJldGExLkdjc0Rlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24iHQoOR2Nz",
+            "RGVzdGluYXRpb24SCwoDdXJpGAEgASgJKkkKC0NvbnRlbnRUeXBlEhwKGENP",
+            "TlRFTlRfVFlQRV9VTlNQRUNJRklFRBAAEgwKCFJFU09VUkNFEAESDgoKSUFN",
+            "X1BPTElDWRACMt8DCgxBc3NldFNlcnZpY2USyQEKDEV4cG9ydEFzc2V0cxIv",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLkV4cG9ydEFzc2V0c1JlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAmMiKS92",
+            "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn06ZXhwb3J0QXNzZXRzOgEqWjMi",
+            "Li92MWJldGExL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfTpleHBvcnRBc3Nl",
+            "dHM6ASoSggIKFUJhdGNoR2V0QXNzZXRzSGlzdG9yeRI4Lmdvb2dsZS5jbG91",
+            "ZC5hc3NldC52MWJldGExLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3Qa",
+            "OS5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5CYXRjaEdldEFzc2V0c0hp",
+            "c3RvcnlSZXNwb25zZSJ0gtPkkwJuEjIvdjFiZXRhMS97cGFyZW50PXByb2pl",
+            "Y3RzLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeVo4EjYvdjFiZXRhMS97cGFy",
+            "ZW50PW9yZ2FuaXphdGlvbnMvKn06YmF0Y2hHZXRBc3NldEhpc3RvcnlCsAEK",
+            "HmNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMUIRQXNzZXRTZXJ2aWNl",
+            "UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9hc3NldC92MWJldGExO2Fzc2V0qgIaR29vZ2xlLkNsb3VkLkFz",
+            "c2V0LlYxQmV0YTHKAhpHb29nbGVcQ2xvdWRcQXNzZXRcVjFiZXRhMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Asset.V1Beta1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1Beta1.ContentType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.ExportAssetsRequest), global::Google.Cloud.Asset.V1Beta1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentTypes", "OutputConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.ExportAssetsRequest), global::Google.Cloud.Asset.V1Beta1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentType", "OutputConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.ExportAssetsResponse), global::Google.Cloud.Asset.V1Beta1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null),
@@ -131,7 +131,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       parent_ = other.parent_;
       readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       assetTypes_ = other.assetTypes_.Clone();
-      contentTypes_ = other.contentTypes_.Clone();
+      contentType_ = other.contentType_;
       outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -145,9 +145,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative name of the root asset. It can only be an
-    /// organization number (e.g. "organizations/123") or a project number
-    /// (e.g. "projects/12345").
+    /// Required. The relative name of the root asset. Can only be an organization
+    /// number (such as "organizations/123"), or a project id (such as
+    /// "projects/my-project-id") or a project number (such as "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -161,10 +161,11 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ReadTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp readTime_;
     /// <summary>
-    /// Timestamp to take an asset snapshot. This can only be current or past
-    /// time. If not specified, the current time will be used. Due to delays in
-    /// resource data collection and indexing, there is a volatile window during
-    /// which running the same query may get different results.
+    /// Timestamp to take an asset snapshot. This can only be set to a timestamp in
+    /// the past or of the current time. If not specified, the current time will be
+    /// used. Due to delays in resource data collection and indexing, there is a
+    /// volatile window during which running the same query may get different
+    /// results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
@@ -180,7 +181,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of asset types to take a snapshot for. Example:
+    /// A list of asset types of which to take a snapshot for. Example:
     /// "google.compute.disk". If specified, only matching assets will be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -188,18 +189,19 @@ namespace Google.Cloud.Asset.V1Beta1 {
       get { return assetTypes_; }
     }
 
-    /// <summary>Field number for the "content_types" field.</summary>
-    public const int ContentTypesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1Beta1.ContentType> _repeated_contentTypes_codec
-        = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::Google.Cloud.Asset.V1Beta1.ContentType) x);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1Beta1.ContentType> contentTypes_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1Beta1.ContentType>();
+    /// <summary>Field number for the "content_type" field.</summary>
+    public const int ContentTypeFieldNumber = 4;
+    private global::Google.Cloud.Asset.V1Beta1.ContentType contentType_ = 0;
     /// <summary>
-    /// A list of asset content types. If specified, only matching content will be
-    /// returned. Otherwise, no content but the asset name will be returned.
+    /// Asset content type. If not specified, no content but the asset name will be
+    /// returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Asset.V1Beta1.ContentType> ContentTypes {
-      get { return contentTypes_; }
+    public global::Google.Cloud.Asset.V1Beta1.ContentType ContentType {
+      get { return contentType_; }
+      set {
+        contentType_ = value;
+      }
     }
 
     /// <summary>Field number for the "output_config" field.</summary>
@@ -233,7 +235,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       if (Parent != other.Parent) return false;
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if(!assetTypes_.Equals(other.assetTypes_)) return false;
-      if(!contentTypes_.Equals(other.contentTypes_)) return false;
+      if (ContentType != other.ContentType) return false;
       if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -244,7 +246,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (readTime_ != null) hash ^= ReadTime.GetHashCode();
       hash ^= assetTypes_.GetHashCode();
-      hash ^= contentTypes_.GetHashCode();
+      if (ContentType != 0) hash ^= ContentType.GetHashCode();
       if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -268,7 +270,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
         output.WriteMessage(ReadTime);
       }
       assetTypes_.WriteTo(output, _repeated_assetTypes_codec);
-      contentTypes_.WriteTo(output, _repeated_contentTypes_codec);
+      if (ContentType != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ContentType);
+      }
       if (outputConfig_ != null) {
         output.WriteRawTag(42);
         output.WriteMessage(OutputConfig);
@@ -288,7 +293,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadTime);
       }
       size += assetTypes_.CalculateSize(_repeated_assetTypes_codec);
-      size += contentTypes_.CalculateSize(_repeated_contentTypes_codec);
+      if (ContentType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
+      }
       if (outputConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputConfig);
       }
@@ -313,7 +320,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
         ReadTime.MergeFrom(other.ReadTime);
       }
       assetTypes_.Add(other.assetTypes_);
-      contentTypes_.Add(other.contentTypes_);
+      if (other.ContentType != 0) {
+        ContentType = other.ContentType;
+      }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
           outputConfig_ = new global::Google.Cloud.Asset.V1Beta1.OutputConfig();
@@ -346,9 +355,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
             assetTypes_.AddEntriesFrom(input, _repeated_assetTypes_codec);
             break;
           }
-          case 34:
           case 32: {
-            contentTypes_.AddEntriesFrom(input, _repeated_contentTypes_codec);
+            contentType_ = (global::Google.Cloud.Asset.V1Beta1.ContentType) input.ReadEnum();
             break;
           }
           case 42: {
@@ -408,7 +416,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ReadTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp readTime_;
     /// <summary>
-    /// Required. Time the snapshot was taken.
+    /// Time the snapshot was taken.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
@@ -422,7 +430,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int OutputConfigFieldNumber = 2;
     private global::Google.Cloud.Asset.V1Beta1.OutputConfig outputConfig_;
     /// <summary>
-    /// Required. Output configuration indicating where the results were output to.
+    /// Output configuration indicating where the results were output to.
     /// All results are in JSON format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -590,8 +598,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The relative name of the root asset. It can only be an
-    /// organization ID (e.g. "organizations/123") or a project ID
-    /// (e.g. "projects/12345").
+    /// organization number (such as "organizations/123"), or a project id (such as
+    /// "projects/my-project-id")"or a project number (such as "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -612,7 +620,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
     /// Example:
     /// "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1".
     ///
-    /// The request becomes a no-op if the asset name list is empty.
+    /// The request becomes a no-op if the asset name list is empty, and the max
+    /// size of the asset name list is 100 in one request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> AssetNames {
@@ -637,9 +646,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ReadTimeWindowFieldNumber = 4;
     private global::Google.Cloud.Asset.V1Beta1.TimeWindow readTimeWindow_;
     /// <summary>
-    /// Required. The time window for the asset history. The returned results
-    /// contain all temporal assets whose time window overlap with
-    /// read_time_window.
+    /// Required. The time window for the asset history. The start time is
+    /// required. The returned results contain all temporal assets whose time
+    /// window overlap with read_time_window.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1Beta1.TimeWindow ReadTimeWindow {

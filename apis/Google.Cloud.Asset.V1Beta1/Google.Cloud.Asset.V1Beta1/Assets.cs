@@ -312,7 +312,6 @@ namespace Google.Cloud.Asset.V1Beta1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
     /// Start time of the time window (inclusive).
-    /// Infinite past if not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -327,7 +326,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
     /// End time of the time window (exclusive).
-    /// Infinite future if not specified.
+    /// Current timestamp if not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
