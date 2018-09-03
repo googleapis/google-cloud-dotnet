@@ -3,7 +3,7 @@
 //     source: google/cloud/asset/v1beta1/asset_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 1591
 #region Designer generated code
@@ -60,7 +61,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     {
       /// <summary>
       /// Exports assets with time and resource types to a given Google Cloud Storage
-      /// location. The output format is newline delimited JSON.
+      /// location. The output format is newline-delimited JSON.
       /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
       /// to keep track of the export.
       /// </summary>
@@ -114,7 +115,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
 
       /// <summary>
       /// Exports assets with time and resource types to a given Google Cloud Storage
-      /// location. The output format is newline delimited JSON.
+      /// location. The output format is newline-delimited JSON.
       /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
       /// to keep track of the export.
       /// </summary>
@@ -129,7 +130,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       /// <summary>
       /// Exports assets with time and resource types to a given Google Cloud Storage
-      /// location. The output format is newline delimited JSON.
+      /// location. The output format is newline-delimited JSON.
       /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
       /// to keep track of the export.
       /// </summary>
@@ -142,7 +143,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       /// <summary>
       /// Exports assets with time and resource types to a given Google Cloud Storage
-      /// location. The output format is newline delimited JSON.
+      /// location. The output format is newline-delimited JSON.
       /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
       /// to keep track of the export.
       /// </summary>
@@ -157,7 +158,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
       }
       /// <summary>
       /// Exports assets with time and resource types to a given Google Cloud Storage
-      /// location. The output format is newline delimited JSON.
+      /// location. The output format is newline-delimited JSON.
       /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
       /// to keep track of the export.
       /// </summary>
