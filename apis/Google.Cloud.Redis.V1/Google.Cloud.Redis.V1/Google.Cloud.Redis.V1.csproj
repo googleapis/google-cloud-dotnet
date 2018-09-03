@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.0-beta02</Version>
+    <Version>1.0.0-beta00</Version>
     <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.5</TargetFrameworks>
     <LangVersion>latest</LangVersion>
@@ -10,7 +10,7 @@
     <SignAssembly>true</SignAssembly>
     <Deterministic>true</Deterministic>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).</Description>
+    <Description>Recommended Google client library to administer Cloud Memorystore for Redis.</Description>
     <PackageTags>Redis;Memorystore;Google;Cloud</PackageTags>
     <Copyright>Copyright 2018 Google LLC</Copyright>
     <Authors>Google Inc.</Authors>
