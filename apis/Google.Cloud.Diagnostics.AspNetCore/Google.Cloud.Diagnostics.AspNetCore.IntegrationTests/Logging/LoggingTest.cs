@@ -247,7 +247,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 await client.GetAsync($"/Main/ScopeFormatParameters/{testId}");
                 var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
-                var message = MainController.GetMessage(nameof(MainController.Scope), testId);
+                var message = MainController.GetMessage(nameof(MainController.ScopeFormatParameters), testId);
                 var json = results.Single().JsonPayload.Fields;
                 Assert.Equal(message, json["message"].StringValue);
 
@@ -501,9 +501,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public string ScopeFormatParameters(string id)
         {
-            using (_logger.BeginScope(nameof(ScopeFormatParameters) + " - {id}"))
+            using (_logger.BeginScope(nameof(ScopeFormatParameters) + " - {id}", id))
             {
-                string message = GetMessage(nameof(Scope), id);
+                string message = GetMessage(nameof(ScopeFormatParameters), id);
                 _logger.LogCritical(message);
                 return message;
             }
