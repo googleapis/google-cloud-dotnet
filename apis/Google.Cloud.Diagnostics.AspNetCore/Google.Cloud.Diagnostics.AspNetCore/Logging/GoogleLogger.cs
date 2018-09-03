@@ -19,6 +19,7 @@ using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -151,7 +152,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             while (currentLogScope != null)
             {
                 // Determine if the state of the scope are format params
-                if (currentLogScope.State is IEnumerable<KeyValuePair<string, object>> scopeFormatParams)
+                if (currentLogScope.State is FormattedLogValues scopeFormatParams)
                 {
                     var scopeParams = new Struct();
                     foreach (var pair in scopeFormatParams)
