@@ -56,7 +56,9 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (beta)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
 * [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) (beta)
-* [Google Cloud Tasks](https://cloud.google.com/cloud-tasks/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2Beta2/) (beta)
+* [Google Cloud Tasks](https://cloud.google.com/cloud-tasks/) (available for V2Beta2 and V2Beta3 API versions)
+  * [V2Beta2 API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2Beta2/) (beta)
+  * [V2Beta3 API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2Beta3/) (beta)
 * [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.TextToSpeech.V1/) (beta)
 * [Stackdriver Trace v2](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V2/) (beta)
 
