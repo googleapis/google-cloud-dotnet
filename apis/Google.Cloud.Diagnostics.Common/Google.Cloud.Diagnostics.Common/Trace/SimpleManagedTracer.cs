@@ -32,8 +32,9 @@ namespace Google.Cloud.Diagnostics.Common
     {
         /// <summary>
         /// A class that represents a trace span.
+        /// <code>internal</code> for testing purposes.
         /// </summary>
-        private sealed class Span : ISpan
+        internal sealed class Span : ISpan
         {
             private const int NanosPerMillisecond = Duration.NanosecondsPerSecond / 1000;
             internal TraceSpan TraceSpan { get; private set; }
@@ -70,7 +71,7 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     // Efficient way of effectively computing start + 1ms
                     int newNanos = start.Nanos + NanosPerMillisecond;
-                    if (newNanos > Duration.NanosecondsPerSecond)
+                    if (newNanos >= Duration.NanosecondsPerSecond)
                     {
                         end.Nanos = newNanos - Duration.NanosecondsPerSecond;
                         end.Seconds = start.Seconds + 1;
