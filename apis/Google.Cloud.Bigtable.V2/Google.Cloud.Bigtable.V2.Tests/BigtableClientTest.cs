@@ -244,7 +244,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public async Task MutateRow_AppProfileId_From_client()
+        public async Task MutateRow_AppProfileId_From_Client()
         {
             var appProfileIdOnClient = "csharp";
             var request = new MutateRowRequest
@@ -362,7 +362,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public void MutateRows_AppProfileId_From_client()
+        public void MutateRows_AppProfileId_From_Client()
         {
             var appProfileIdOnClient = "csharp";
             var request = new MutateRowsRequest
@@ -380,7 +380,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             Assert.Equal(appProfileIdOnClient, request.AppProfileId);
         }
 
-                [Fact]
+        [Fact]
         public void MutateRows_With_AppProfileId()
         {
             var appProfileIdOnClient = "csharp";
@@ -483,7 +483,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public async Task ReadModifyWriteRow_With_AppProfileIdt()
+        public async Task ReadModifyWriteRow_With_AppProfileId()
         {
             var appProfileIdOnClient = "csharp";
             var appProfileIdOnRequest = "other";
@@ -796,7 +796,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
         }
 
         [Fact]
-        public void SampleRowKeys_AppProfileId_From_client()
+        public void SampleRowKeys_AppProfileId_From_Client()
         {
             var appProfileIdOnClient = "csharp";
             var request =
