@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Trace.V1;
-using Xunit;
+using Google.Protobuf.WellKnownTypes;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Xunit;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -30,6 +30,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         private const string TraceId = "trace-id";
         private const string ProjectId = "project-id";
+        // Constanst used to check if a Timestamp is normalized.
+        private const long BclSecondsAtUnixEpoch = 62135596800;
+        internal const long UnixSecondsAtBclMaxValue = 253402300799;
+        internal const long UnixSecondsAtBclMinValue = -BclSecondsAtUnixEpoch;
 
         private static readonly IConsumer<TraceProto> UnusedConsumer = (new Mock<IConsumer<TraceProto>>()).Object;
         private static readonly Dictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
@@ -73,10 +77,89 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// a difference of 1ms between start and end. If we do not the Trace
         /// API will not record the span.
         /// </summary>
-        private static bool Is1MsSpan(TraceSpan span)
+        private static bool IsAtLeast1MsSpan(TraceSpan span)
         {
             var duration = span.EndTime - span.StartTime;
-            return duration.Seconds == 0 && duration.Nanos == 1_000_000;
+            return duration.Seconds >= 1 ||
+                // Checking Seconds again to avoid returning true for cases
+                // in which StartTime is greater than EndTime.
+                (duration.Seconds == 0 && duration.Nanos >= 1_000_000);
+        }
+
+        /// <summary>
+        /// Used to ensure that <see cref="Timestamp"/>s manipulated by
+        /// <see cref="SimpleManagedTracer"/> are normalized after
+        /// manipulation.
+        /// </summary>
+        private static bool IsNormalized(Timestamp timestamp) =>
+            timestamp.Nanos >= 0 &&
+            timestamp.Nanos < Duration.NanosecondsPerSecond &&
+            timestamp.Seconds >= UnixSecondsAtBclMinValue &&
+            timestamp.Seconds <= UnixSecondsAtBclMaxValue;
+
+        [Theory]
+        [InlineData(10, 10, 10, 15)]
+        [InlineData(10, 999_000_000, 10, 999_000_015)]
+        [InlineData(10, 999_999_900, 10, 999_999_915)]
+        [InlineData(10, 999_999_999, 11, 15)]
+        [InlineData(10, 15, 10, 10)]
+        public void Span_EnsureVisibleDuration_ShortSpan(int startSeconds, int startNanos, int endSeconds, int endNanos)
+        {
+            var tracer = SimpleManagedTracer.Create(new NoOpConsumer(), ProjectId, TraceId);
+
+            var traceSpan = new TraceSpan
+            {
+                StartTime = new Timestamp
+                {
+                    Seconds = startSeconds,
+                    Nanos = startNanos
+                },
+                EndTime = new Timestamp
+                {
+                    Seconds = endSeconds,
+                    Nanos = endNanos
+                }
+            };
+
+            var span = new SimpleManagedTracer.Span(tracer, traceSpan);
+            span.EnsureVisibleDuration();
+
+            Assert.True(IsNormalized(span.TraceSpan.StartTime));
+            Assert.True(IsNormalized(span.TraceSpan.EndTime));
+            Assert.True(IsAtLeast1MsSpan(span.TraceSpan));
+        }
+
+        [Theory]
+        [InlineData(10, 0, 10, 1_000_000)]
+        [InlineData(10, 999_000_000, 11, 0)]
+        [InlineData(10, 15, 10, 999_999_915)]
+        [InlineData(10, 15, 11, 250)]
+        [InlineData(10, 15, 15, 10)]
+        public void Span_EnsureVisibleDuration_LongSpan(int startSeconds, int startNanos, int endSeconds, int endNanos)
+        {
+            var tracer = SimpleManagedTracer.Create(new NoOpConsumer(), ProjectId, TraceId);
+
+            var traceSpan = new TraceSpan
+            {
+                StartTime = new Timestamp
+                {
+                    Seconds = startSeconds,
+                    Nanos = startNanos
+                },
+                EndTime = new Timestamp
+                {
+                    Seconds = endSeconds,
+                    Nanos = endNanos
+                }
+            };
+
+            var span = new SimpleManagedTracer.Span(tracer, traceSpan);
+            span.EnsureVisibleDuration();
+
+            Assert.Equal(startSeconds, traceSpan.StartTime.Seconds);
+            Assert.Equal(startNanos, traceSpan.StartTime.Nanos);
+            Assert.Equal(endSeconds, traceSpan.EndTime.Seconds);
+            Assert.Equal(endNanos, traceSpan.EndTime.Nanos);
         }
 
         [Fact]
@@ -87,7 +170,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => Is1MsSpan(t.Single().Spans.Single()) &&
+                    t => IsAtLeast1MsSpan(t.Single().Spans.Single()) &&
                         IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
             tracer.StartSpan("span-name").Dispose();
@@ -102,7 +185,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => Is1MsSpan(t.Single().Spans.Single()) &&
+                    t => IsAtLeast1MsSpan(t.Single().Spans.Single()) &&
                         IsValidSpan(t.Single().Spans.Single(), "span-name"))));
 
             tracer.StartSpan("span-name").Dispose();
@@ -117,7 +200,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => Is1MsSpan(t.Single().Spans.Single()) &&
+                    t => IsAtLeast1MsSpan(t.Single().Spans.Single()) &&
                         IsValidSpan(t.Single().Spans.Single(), "span-name", 123))));
 
             tracer.StartSpan("span-name").Dispose();
