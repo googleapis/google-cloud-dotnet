@@ -31,6 +31,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static IEnumerable<ArgumentSyntax> AddArgument(this IEnumerable<ArgumentSyntax> arguments, ExpressionSyntax additionalArgument) =>
             arguments.Concat(Enumerable.Repeat(SyntaxFactory.Argument(additionalArgument), 1));
 
+        internal static BinaryExpressionSyntax And(this ExpressionSyntax left, ExpressionSyntax right) =>
+            BinaryExpression(SyntaxKind.LogicalAndExpression, left, right);
+
         internal static ArgumentSyntax Argument(SyntaxToken identifier) =>
             SyntaxFactory.Argument(IdentifierName(identifier));
 
@@ -88,6 +91,9 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         internal static ObjectCreationExpressionSyntax New(this TypeSyntax type, IEnumerable<ArgumentSyntax> arguments) =>
             ObjectCreationExpression(type, ArgumentList(SeparatedList(arguments)), initializer: null);
 
+        internal static BinaryExpressionSyntax NotEqualTo(this ExpressionSyntax left, ExpressionSyntax right) =>
+            BinaryExpression(SyntaxKind.NotEqualsExpression, left, right);
+
         internal static LiteralExpressionSyntax Null() =>
             LiteralExpression(SyntaxKind.NullLiteralExpression);
 
@@ -136,5 +142,8 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         internal static MethodDeclarationSyntax WithBodySafe(this MethodDeclarationSyntax method, BlockSyntax body) =>
             method.WithExpressionBody(null).WithSemicolonToken(Token(SyntaxKind.None)).WithBody(body);
+
+        internal static LiteralExpressionSyntax Zero() =>
+            LiteralExpression(SyntaxKind.NumericLiteralExpression, Literal(0));
     }
 }

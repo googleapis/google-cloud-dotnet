@@ -472,7 +472,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
                 // Replace the body with something like this:
                 //------------------------------------------------------------------------
-                //  if (request.AppProfileId == null)
+                //  if (_appProfileId != null && request.AppProfileId.Length == 0)
                 //  {
                 //      request.AppProfileId = _appProfileId;
                 //  }
@@ -492,8 +492,10 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     var underlyingMethod = IdentifierName(GetUnderlyingClientMethodName).Invoke().Member(node.Identifier);
                     resultExpression = underlyingMethod.Invoke(node.ParameterList.AsArguments());
                 }
+
                 node = node.WithBodySafe(Block(
-                    If(appProfileIdProperty.EqualTo(Null()),
+                    If(IdentifierName(AppProfileIdFieldName).NotEqualTo(Null())
+                            .And(appProfileIdProperty.Member("Length").EqualTo(Zero())),
                         appProfileIdProperty.AssignFrom(AppProfileIdFieldName).ToStatement()),
                     ReturnStatement(resultExpression)));
 

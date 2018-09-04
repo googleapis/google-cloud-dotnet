@@ -1080,7 +1080,7 @@ namespace Google.Cloud.Bigtable.V2
         internal BigtableClientImpl(
             BigtableServiceApiClient[] clients,
             string appProfileId,
-            BigtableServiceApiSettings underlyingClientSettings)
+            BigtableServiceApiSettings underlyingClientSettings = null)
         {
             _clients = clients;
             _appProfileId = appProfileId;
