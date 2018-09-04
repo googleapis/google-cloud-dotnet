@@ -41,8 +41,8 @@ namespace Google.Cloud.Bigtable.V2
         /// and creating channels connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint"></param>
-        /// <param name="settings"></param>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/> to use when connecting to Bigtable.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/> to control API requests.</param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used by the server.
@@ -59,8 +59,8 @@ namespace Google.Cloud.Bigtable.V2
         /// and creating channels connecting to the given endpoint with application default credentials where
         /// necessary.
         /// </summary>
-        /// <param name="endpoint"></param>
-        /// <param name="settings"></param>
+        /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/> to use when connecting to Bigtable.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/> to control API requests.</param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used by the server.
@@ -70,9 +70,11 @@ namespace Google.Cloud.Bigtable.V2
             Task.Run(() => CreateAsync(endpoint, settings, appProfileId)).ResultWithUnwrappedExceptions();
 
         /// <summary>
-        /// Synchronously creates a <see cref="BigtableClient"/> from a pre-existing client.
+        /// Synchronously creates a <see cref="BigtableClient"/> from a pre-existing API client.
         /// </summary>
-        /// <param name="client"></param>
+        /// <param name="client">
+        /// The <see cref="BigtableServiceApiClient"/> to use in the <see cref="BigtableClient"/>. Must not be null.
+        /// </param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used by the server.
@@ -84,17 +86,20 @@ namespace Google.Cloud.Bigtable.V2
                 appProfileId,
                 underlyingClientSettings: null);
 
+        // TODO: Add snippet showing how to use this and the extension on BigtableServiceApiSettings to create a GcpCallInvoker with non-default credentials.
         /// <summary>
-        /// 
+        /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
+        /// using the specified <see cref="CallInvoker"/> for API requests.
         /// </summary>
-        /// <param name="callInvoker"></param>
+        /// <param name="callInvoker">The <see cref="CallInvoker"/> which performs API requests. Must not be null.</param>
+        /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/> to control API requests.</param>
         /// <param name="appProfileId">
         /// This value specifies routing for replication. If not specified, the
         /// "default" application profile will be used by the server.
         /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(CallInvoker callInvoker, string appProfileId = null) =>
-            Create(BigtableServiceApiClient.Create(GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker))), appProfileId);
+        public static BigtableClient Create(CallInvoker callInvoker, BigtableServiceApiSettings settings = null, string appProfileId = null) =>
+            Create(BigtableServiceApiClient.Create(GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker)), settings), appProfileId);
 
         /// <summary>
         /// Gets the value which specifies routing for replication. If null, the "default" application profile will be used by the server.

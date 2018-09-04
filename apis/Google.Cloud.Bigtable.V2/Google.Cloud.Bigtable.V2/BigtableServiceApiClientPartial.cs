@@ -89,17 +89,40 @@ namespace Google.Cloud.Bigtable.V2
                 retryFilter: IdempotentRetryFilter
             );
 
-        // TODO: Validate range, make sure this default makes sense
+        // TODO: Validate range
+        // TODO: Link to snippet for creating GcpCallInvoker manually from here.
         /// <summary>
-        /// 
+        /// The maximum number of channels than will be open concurrently to the Bigtable endpoint.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that channels are managed and shared amongst <see cref="BigtableClient"/> instances using the same
+        /// endpoint and channel options and which use the default credentials. So this property will have no bearing
+        /// across clients using different options. To create a custom grouping of channels to be managed, create a
+        /// <see cref="GcpCallInvoker"/> manually and use the
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// overload taking a <see cref="CallInvoker"/> to create clients from it.
+        /// </para>
+        /// </remarks>
         public int MaxChannels { get; set; } = 20;
 
-        // TODO: Validate range, make sure this default makes sense
+        // TODO: Validate range
+        // TODO: Link to snippet for creating GcpCallInvoker manually from here.
         /// <summary>
-        /// 
+        /// The number of streams open concurrently in a channel which will trigger a new channel to be opened, as
+        /// long as fewer than <see cref="MaxChannels"/> are currently open.
         /// </summary>
-        public int PreferredMaxStreamsPerChannel { get; set; } = 4;
+        /// <remarks>
+        /// <para>
+        /// Note that channels are managed and shared amongst <see cref="BigtableClient"/> instances using the same
+        /// endpoint and channel options and which use the default credentials. So this property will have no bearing
+        /// across clients using different options. To create a custom grouping of channels to be managed, create a
+        /// <see cref="GcpCallInvoker"/> manually and use the
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// overload taking a <see cref="CallInvoker"/> to create clients from it.
+        /// </para>
+        /// </remarks>
+        public int PreferredMaxStreamsPerChannel { get; set; } = 5;
 
         partial void OnCopy(BigtableServiceApiSettings existing)
         {
@@ -111,15 +134,25 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     /// <summary>
-    /// 
+    /// Extensions for use on <see cref="BigtableServiceApiSettings"/>.
     /// </summary>
     public static class BigtableServiceApiSettingsExtensions
     {
         /// <summary>
-        /// 
+        /// Creates a collection of <see cref="ChannelOption"/> instances which can be used to create a <see cref="Channel"/>
+        /// or <see cref="GcpCallInvoker"/> pre-configured based on the specified settings (or the default settings if they
+        /// are null).
         /// </summary>
-        /// <param name="settings"></param>
-        /// <returns></returns>
+        /// <remarks>
+        /// <para>
+        /// Note that if the options returned are used to create a <see cref="Channel"/>, the <see cref="BigtableServiceApiSettings.MaxChannels"/>
+        /// and <see cref="BigtableServiceApiSettings.PreferredMaxStreamsPerChannel"/> settings values will be ignored.
+        /// </para>
+        /// </remarks>
+        /// <param name="settings">
+        /// The settings with which to create channel options. May be null, in which case the default settings will be used.
+        /// </param>
+        /// <returns>A collection of <see cref="ChannelOption"/> instances.</returns>
         public static IEnumerable<ChannelOption> CreateChannelOptions(this BigtableServiceApiSettings settings)
         {
             var effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
