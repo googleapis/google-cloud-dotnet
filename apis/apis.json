@@ -102,7 +102,7 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Grpc.Gcp":  "0.1.2",
+      "Google.Api.Gax.Grpc.Gcp": "2.5.0-beta01",
       "Google.Cloud.Bigtable.Common.V2": "project"
     },
     "testDependencies": {

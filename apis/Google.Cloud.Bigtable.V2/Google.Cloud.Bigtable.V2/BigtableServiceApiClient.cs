@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxgrpcgcp = Google.Api.Gax.Grpc.Gcp;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -321,7 +322,7 @@ namespace Google.Cloud.Bigtable.V2
             "https://www.googleapis.com/auth/cloud-platform.read-only",
         });
 
-        private static readonly gaxgrpc::GcpCallInvokerPool s_callInvokerPool = new gaxgrpc::GcpCallInvokerPool(DefaultScopes);
+        private static readonly gaxgrpcgcp::GcpCallInvokerPool s_callInvokerPool = new gaxgrpcgcp::GcpCallInvokerPool(DefaultScopes);
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified settings,
