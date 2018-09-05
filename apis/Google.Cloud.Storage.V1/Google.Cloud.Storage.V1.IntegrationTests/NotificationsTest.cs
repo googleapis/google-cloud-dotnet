@@ -45,7 +45,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 projectId = projectId.Substring(orgSeparatorIndex + 1);
             }
-            Assert.Equal($"{projectId}@gs-project-accounts.iam.gserviceaccount.com", email);
+            Assert.EndsWith("@gs-project-accounts.iam.gserviceaccount.com", email);
         }
 
         /// <summary>
