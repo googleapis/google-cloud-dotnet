@@ -294,7 +294,7 @@ namespace Google.Cloud.Firestore.Tests
             internal TestSequence(CancellationToken initialCancellationToken = default)
             {
                 _streams = new List<FakeWatchStream>();
-                _client = new FakeFirestoreListenClient(_streams);
+                _client = new FakeFirestoreListenClient(_streams, "projects/project/databases/db");
                 _watchState = new FakeWatchState(TriggerCompletion);
                 var db = FirestoreDb.Create("project", "db", _client);
                 var target = WatchStream.CreateTarget(db.Document("col/doc"));
@@ -459,16 +459,27 @@ namespace Google.Cloud.Firestore.Tests
 
         private class FakeFirestoreListenClient : FakeFirestoreClient
         {
+            private readonly string _expectedResourceName;
             private readonly List<FakeWatchStream> _streams;
             private int _index;
 
-            internal FakeFirestoreListenClient(List<FakeWatchStream> streams) =>
+            internal FakeFirestoreListenClient(List<FakeWatchStream> streams, string expectedResourceName)
+            {
                 _streams = streams;
+                _expectedResourceName = expectedResourceName;
+            }
 
             public override ListenStream Listen(
                 CallSettings callSettings = null,
-                BidirectionalStreamingSettings streamingSettings = null) =>
-                _streams[_index++];
+                BidirectionalStreamingSettings streamingSettings = null)
+            {
+                var metadata = new Metadata();
+                callSettings.HeaderMutation?.Invoke(metadata);
+                var resourcePrefixHeader = metadata.FirstOrDefault(entry => entry.Key == FirestoreClientImpl.ResourcePrefixHeader);
+                Assert.NotNull(resourcePrefixHeader);
+                Assert.Equal(_expectedResourceName, resourcePrefixHeader.Value);
+                return _streams[_index++];
+            }
 
             internal void Verify()
             {

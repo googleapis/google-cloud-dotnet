@@ -12,9 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -41,6 +38,11 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 latestValue = snapshot.Exists ? snapshot.GetValue<int?>("Value") : null;
                 semaphore.Release();
             });
+            // The document doesn't exist at first, and we should be notified of that initially.
+            // If we create the document *immediately* before waiting for any change notification,
+            // we sometimes "see" the non-existent state first, and sometimes don't.
+            await ExpectChangeAsync(null);
+
             await doc.CreateAsync(new { Value = 10 });
             await ExpectChangeAsync(10);
 

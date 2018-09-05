@@ -50,6 +50,7 @@ namespace Google.Cloud.Firestore
         private readonly RetrySettings.IJitter _backoffJitter;
         private readonly BackoffSettings _backoffSettings;
         private readonly Target _target;
+        private readonly CallSettings _listenCallSettings;
 
         private readonly object _stateLock = new object();
 
@@ -72,6 +73,7 @@ namespace Google.Cloud.Firestore
             _db = db;
             _callbackCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             _networkCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(_callbackCancellationTokenSource.Token);
+            _listenCallSettings = CallSettings.FromHeader(FirestoreClientImpl.ResourcePrefixHeader, db.RootPath);
 
             // TODO: Make these configurable?
             _backoffSettings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(30), 2.0);
@@ -144,7 +146,7 @@ namespace Google.Cloud.Firestore
                         {
                             await _scheduler.Delay(_backoffJitter.GetDelay(nextBackoff), _networkCancellationTokenSource.Token).ConfigureAwait(false);
                             nextBackoff = _backoffSettings.NextDelay(nextBackoff);
-                            underlyingStream = _db.Client.Listen();
+                            underlyingStream = _db.Client.Listen(_listenCallSettings);
                             await underlyingStream.TryWriteAsync(CreateRequest(_state.ResumeToken)).ConfigureAwait(false);
                             _state.OnStreamInitialization(cause);
                         }

@@ -19,7 +19,18 @@ namespace Google.Cloud.Firestore.V1Beta1
 {
     public partial class FirestoreClientImpl
     {
-        private const string ResourcePrefixHeader = "google-cloud-resource-prefix";
+        /// <summary>
+        /// The name of the header used for efficiently routing requests.
+        /// </summary>
+        /// <remarks>
+        /// This should be set to the database resource name ("projects/{projectId}/databases/{databaseId}") for any RPC.
+        /// For non-streaming calls, <see cref="FirestoreClientImpl"/> performs this automatically. This cannot be performed
+        /// automatically for streaming calls due to the separation between initializing the stream and sending requests, so
+        /// client code should set the value in a <see cref="CallSettings"/>. Typically this is performed with either the
+        /// <see cref="CallSettings.FromHeader(string, string)"/> factory method or the
+        /// <see cref="CallSettingsExtensions.WithHeader(CallSettings, string, string)"/> extension method.
+        /// </remarks>
+        public const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
         partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Database);
@@ -53,8 +64,6 @@ namespace Google.Cloud.Firestore.V1Beta1
 
         partial void Modify_UpdateDocumentRequest(ref UpdateDocumentRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeader(ref settings, request.Document?.Name);
-
-        // TODO: Consider Write and Listen, where the settings and the requests are separate.
 
         private static void ApplyResourcePrefixHeader(ref CallSettings settings, string resource)
         {
