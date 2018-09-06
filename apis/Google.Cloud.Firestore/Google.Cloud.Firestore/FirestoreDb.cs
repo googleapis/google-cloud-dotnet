@@ -22,7 +22,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Firestore.V1Beta1.TransactionOptions.Types;
 
 namespace Google.Cloud.Firestore
 {
@@ -60,7 +59,9 @@ namespace Google.Cloud.Firestore
         /// </summary>
         internal string DocumentsPath { get; }
 
-        private FirestoreDb(string projectId, string databaseId, FirestoreClient client)
+        private Action<string> WarningLogger { get; }
+
+        private FirestoreDb(string projectId, string databaseId, FirestoreClient client, Action<string> warningLogger)
         {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             DatabaseId = GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
@@ -68,6 +69,7 @@ namespace Google.Cloud.Firestore
             // TODO: Investigate using DatabaseName and DocumentPathName.
             RootPath = $"projects/{ProjectId}/databases/{DatabaseId}";
             DocumentsPath = $"{RootPath}/documents";
+            WarningLogger = warningLogger;
         }
 
         /// <summary>
@@ -83,7 +85,8 @@ namespace Google.Cloud.Firestore
             new FirestoreDb(
                 projectId ?? Platform.Instance().ProjectId,
                 databaseId ?? DefaultDatabaseId,
-                client ?? FirestoreClient.Create());
+                client ?? FirestoreClient.Create(),
+                null);
 
         /// <summary>
         /// Asynchronously creates an instance for the specified project and database, using the specified <see cref="FirestoreClient"/>
@@ -98,8 +101,24 @@ namespace Google.Cloud.Firestore
             new FirestoreDb(
                 projectId ?? (await Platform.InstanceAsync().ConfigureAwait(false)).ProjectId,
                 databaseId ?? DefaultDatabaseId,
-                client ?? await FirestoreClient.CreateAsync().ConfigureAwait(false)
+                client ?? await FirestoreClient.CreateAsync().ConfigureAwait(false),
+                null
             );
+
+        /// <summary>
+        /// Returns a new <see cref="FirestoreDb"/> with the same project, database and client as this one,
+        /// but the given writer for warning logs.
+        /// </summary>
+        /// <remarks>
+        /// This method is experimental, in lieu of a more sophisticated logging. It is likely to be removed before
+        /// this library becomes GA.
+        /// </remarks>
+        /// <param name="warningLogger">The logger for warnings. May be null.</param>
+        /// <returns>A new <see cref="FirestoreDb"/> based on this one, with the given warning logger.</returns>
+        public FirestoreDb WithWarningLogger(Action<string> warningLogger) =>
+            new FirestoreDb(ProjectId, DatabaseId, Client, warningLogger);
+
+        internal void LogWarning(string message) => WarningLogger?.Invoke(message);
 
         /// <summary>
         /// Creates a local <see cref="CollectionReference"/> for the given path, which must include

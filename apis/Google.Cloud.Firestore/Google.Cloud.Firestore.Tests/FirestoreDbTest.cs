@@ -303,5 +303,31 @@ namespace Google.Cloud.Firestore.Tests
             await Assert.ThrowsAsync<InvalidOperationException>(() => db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, null, default));
             mock.VerifyAll();
         }
+
+        [Fact]
+        public void WithWarningLogger()
+        {
+            var originalDb = FirestoreDb.Create("project", "database", new FakeFirestoreClient());
+            var loggingDb = originalDb.WithWarningLogger(message => { });
+            Assert.Equal(originalDb.ProjectId, loggingDb.ProjectId);
+            Assert.Equal(originalDb.DatabaseId, loggingDb.DatabaseId);
+            Assert.Same(originalDb.Client, loggingDb.Client);
+        }
+
+        [Fact]
+        public void LogWarning_NoLogger()
+        {
+            var db = FirestoreDb.Create("project", "database", new FakeFirestoreClient());
+            db.LogWarning("Message");
+        }
+
+        [Fact]
+        public void LogWarning_WithLogger()
+        {
+            string result = null;
+            var db = FirestoreDb.Create("project", "database", new FakeFirestoreClient()).WithWarningLogger(message => result = message);
+            db.LogWarning("Message");
+            Assert.Equal("Message", result);
+        }
     }
 }
