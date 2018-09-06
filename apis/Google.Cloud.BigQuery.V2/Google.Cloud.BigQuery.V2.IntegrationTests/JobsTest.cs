@@ -66,11 +66,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Find all jobs started in the last minute.
             // Using TakeWhile because, as documented:
             // The job list is sorted in reverse chronological order, by job creation time.
-            var recentJobs = client.ListJobs().TakeWhile(job => job.Statistics.CreationTime >= oneMinuteAgo).ToList();
+            var foundJob = client
+                .ListJobs()
+                .TakeWhile(job => job.Statistics.CreationTime >= oneMinuteAgo)
+                .FirstOrDefault(job => job.Reference.JobId == jobToFind.Reference.JobId);
 
-            // Note: can't find the job reference itself, as that would check equality by reference :(
-            var jobIds = recentJobs.Select(job => job.Reference.JobId).ToList();
-            Assert.Contains(jobToFind.Reference.JobId, jobIds);
+            Assert.NotNull(foundJob);
         }
 
         [Fact]
@@ -83,8 +84,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             // Find the job after listing with full projection.
             var options = new ListJobsOptions { Projection = ProjectionEnum.Full };
-            var jobFound = client.ListJobs(options).Single(job => job.Reference.JobId == jobToFind.Reference.JobId);
+            var jobFound = client.ListJobs(options).FirstOrDefault(job => job.Reference.JobId == jobToFind.Reference.JobId);
 
+            Assert.NotNull(jobFound);
             Assert.NotNull(jobFound.Resource.Configuration);
         }
 
@@ -98,8 +100,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             // Find the job after listing with full projection.
             var options = new ListJobsOptions { Projection = ProjectionEnum.Full };
-            var jobFound = client.ListJobs(options).Single(job => job.Reference.JobId == jobToFind.Reference.JobId);
+            var jobFound = client.ListJobs(options).FirstOrDefault(job => job.Reference.JobId == jobToFind.Reference.JobId);
 
+            Assert.NotNull(jobFound);
             VerifyJobLabels(jobFound.Resource.Configuration.Labels);
         }
 

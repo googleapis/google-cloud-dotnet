@@ -65,14 +65,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Find jobs marked with a certain label.
             KeyValuePair<string, string> labelToBeFound = labels.First();
-            List<BigQueryJob> jobs = client
-                .ListJobs(new ListJobsOptions
-                {
                     // Specify full projection to make sure that
                     // label information, if it exists, is returned for listed jobs.
-                    Projection = ProjectionEnum.Full
-                })
+            ListJobsOptions options = new ListJobsOptions { Projection = ProjectionEnum.Full };
+            List <BigQueryJob> jobs = client
+                .ListJobs(options)
                 .Where(job => job.Resource.Configuration.Labels?.Contains(labelToBeFound) ?? false)
+                .Take(2)
                 .ToList();
             foreach (BigQueryJob job in jobs)
             {
