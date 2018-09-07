@@ -13,8 +13,11 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using Xunit;
 using static Google.Apis.Storage.v1.Data.Bucket;
+using static Google.Apis.Storage.v1.Data.Bucket.LifecycleData;
+using static Google.Apis.Storage.v1.Data.Bucket.LifecycleData.RuleData;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -51,6 +54,55 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var bucket = client.GetBucket(_fixture.ReadBucket, new GetBucketOptions { Projection = Projection.Full });
             bucket.Name = null;
             Assert.Throws<ArgumentException>(() => client.UpdateBucket(bucket));
+        }
+
+        [Fact]
+        public void ObjectLifeCycle_Valid()
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.GenerateBucketName();
+            var bucket = _fixture.CreateBucket(bucketName, false);
+
+            bucket.Lifecycle = new LifecycleData
+            {
+                Rule = new List<RuleData>
+                {
+                    new RuleData
+                    {
+                        Condition = new ConditionData { Age = 5 },
+                        Action = new ActionData { Type = "Delete" }
+                    }
+                }
+            };
+
+            client.UpdateBucket(bucket);
+
+            var fetched = client.GetBucket(bucketName);
+            var rule = Assert.Single(fetched.Lifecycle?.Rule);
+            Assert.Equal(5, rule.Condition.Age);
+            Assert.Equal("Delete", rule.Action.Type);
+        }
+
+        [Fact]
+        public void ObjectLifeCycle_Invalid()
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.GenerateBucketName();
+            var bucket = _fixture.CreateBucket(bucketName, false);
+
+            bucket.Lifecycle = new LifecycleData
+            {
+                Rule = new List<RuleData>
+                {
+                    new RuleData
+                    {
+                        Condition = new ConditionData { Age = 5 },
+                        Action = new ActionData { Type = "HideDownBackOfSofa" }
+                    }
+                }
+            };
+
+            Assert.Throws<GoogleApiException>(() => client.UpdateBucket(bucket));
         }
     }
 }
