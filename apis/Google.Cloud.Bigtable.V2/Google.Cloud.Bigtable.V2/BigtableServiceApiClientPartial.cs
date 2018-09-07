@@ -89,7 +89,6 @@ namespace Google.Cloud.Bigtable.V2
                 retryFilter: IdempotentRetryFilter
             );
 
-        // TODO: Validate range
         // TODO: Link to snippet for creating GcpCallInvoker manually from here.
         /// <summary>
         /// The maximum number of channels than will be open concurrently to the Bigtable endpoint.
@@ -104,9 +103,8 @@ namespace Google.Cloud.Bigtable.V2
         /// overload taking a <see cref="CallInvoker"/> to create clients from it.
         /// </para>
         /// </remarks>
-        public int MaxChannels { get; set; } = 20;
+        public uint MaxChannels { get; set; } = 16;
 
-        // TODO: Validate range
         // TODO: Link to snippet for creating GcpCallInvoker manually from here.
         /// <summary>
         /// The number of streams open concurrently in a channel which will trigger a new channel to be opened, as
@@ -122,7 +120,7 @@ namespace Google.Cloud.Bigtable.V2
         /// overload taking a <see cref="CallInvoker"/> to create clients from it.
         /// </para>
         /// </remarks>
-        public int PreferredMaxStreamsPerChannel { get; set; } = 5;
+        public uint PreferredMaxStreamsPerChannel { get; set; } = 5;
 
         partial void OnCopy(BigtableServiceApiSettings existing)
         {
@@ -155,13 +153,14 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>A collection of <see cref="ChannelOption"/> instances.</returns>
         public static IEnumerable<ChannelOption> CreateChannelOptions(this BigtableServiceApiSettings settings)
         {
+            // TODO: Use a cached collection of channel options if settings is null.
             var effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
             var apiConfig = new ApiConfig
             {
                 ChannelPool = new ChannelPoolConfig
                 {
-                    MaxSize = (uint)effectiveSettings.MaxChannels,
-                    MaxConcurrentStreamsLowWatermark = (uint)effectiveSettings.PreferredMaxStreamsPerChannel
+                    MaxSize = effectiveSettings.MaxChannels,
+                    MaxConcurrentStreamsLowWatermark = effectiveSettings.PreferredMaxStreamsPerChannel
                 }
             };
 

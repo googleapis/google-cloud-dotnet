@@ -40,7 +40,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             var settings = new BigtableServiceApiSettings
             {
                 PreferredMaxStreamsPerChannel = 1,
-                MaxChannels = clientCount
+                MaxChannels = (uint)clientCount
             };
             var client = await BigtableClient.CreateAsync(settings: settings);
 

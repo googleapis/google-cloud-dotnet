@@ -34,7 +34,6 @@ namespace Google.Cloud.Bigtable.V2
             $"cbt-csharp/v{typeof(BigtableClient).GetTypeInfo().Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion}";
 
         // TODO: Auto-generate these if possible/easy after multi-channel support is added.
-        // TODO: Other overloads for providing a Channel or CallInvoker?
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
