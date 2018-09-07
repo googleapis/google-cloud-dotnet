@@ -157,18 +157,13 @@ namespace Google.Cloud.Firestore
 
         private static Dictionary<string, Value> ConvertFirestoreAttributedType(object value)
         {
-            var typeInfo = value.GetType().GetTypeInfo();
+            var attributedType = FirestoreDataAttributedType.ForType(value.GetType());
             var ret = new Dictionary<string, Value>();
-            // TODO(optimization): We almost certainly want to cache this.
-            foreach (var property in typeInfo.DeclaredProperties.Where(p => p.CanRead && p.GetGetMethod().IsPublic && !p.GetGetMethod().IsStatic))
+            foreach (var property in attributedType.ReadableProperties)
             {
-                var attribute = property.GetCustomAttribute<FirestorePropertyAttribute>();
-                if (attribute != null)
-                {
-                    var sentinel = SentinelValue.FromPropertyAttributes(property);
-                    Value protoValue = sentinel == null ? Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
-                    ret[attribute.Name ?? property.Name] = protoValue;
-                }
+                var sentinel = property.SentinelValue;
+                Value protoValue = sentinel == null ? Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
+                ret[property.FirestoreName] = protoValue;
             }
             return ret;
         }

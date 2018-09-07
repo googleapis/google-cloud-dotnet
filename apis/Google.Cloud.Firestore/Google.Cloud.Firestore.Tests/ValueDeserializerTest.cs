@@ -16,6 +16,7 @@ using Google.Cloud.Firestore.V1Beta1;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.IO;
 using Xunit;
 using BclType = System.Type;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -98,7 +99,6 @@ namespace Google.Cloud.Firestore.Tests
             { new Value { MapValue = new MapValue() }, typeof(IUnsupportedDictionary) }, // See below
             // Invalid original value
             { new Value(), typeof(object) },
-            { ValueSerializer.Serialize(new { Missing = "Surprise!" }), typeof(SerializationTestData.GameResult) },
             { new Value { NullValue = wkt::NullValue.NullValue }, typeof(int) },
             { new Value { NullValue = wkt::NullValue.NullValue }, typeof(Guid) },
             { new Value { NullValue = wkt::NullValue.NullValue }, typeof(Blob) }
@@ -142,6 +142,104 @@ namespace Google.Cloud.Firestore.Tests
         {
             var value = new Value { DoubleValue = 1.234 };
             Assert.Same(value, DeserializeDefault(value, typeof(Value)));
+        }
+
+        // These three classes exist for testing unknown property handling
+        [FirestoreData(UnknownPropertyHandling.Ignore)]
+        internal class IgnoreUnknownResult { }
+
+        [FirestoreData(UnknownPropertyHandling.Warn)]
+        internal class WarnUnknownResult { }
+
+        [FirestoreData(UnknownPropertyHandling.Throw)]
+        internal class ThrowUnknownResult { }
+
+        [FirestoreData]
+        internal class DefaultUnknownResult { }
+
+        [FirestoreData(UnknownPropertyHandling.Warn)]
+        internal class NonPublicProperties
+        {
+            [FirestoreProperty]
+            internal string InternalProperty { get; set; }
+
+            [FirestoreProperty]
+            internal string PrivateProperty { get; set; }
+
+            // Note: not a FirestoreProperty
+            public string PublicAccessToPrivateProperty
+            {
+                get => PrivateProperty;
+                set => PrivateProperty = value;
+            }
+        }
+
+        [Fact]
+        public void Deserialize_UnknownProperty_Ignore()
+        {
+            var value = new { Missing = "xyz" };
+            string log = DeserializeAndReturnWarnings<IgnoreUnknownResult>(value);
+            Assert.Null(log);
+        }
+
+        [Fact]
+        public void Deserialize_UnknownProperty_Warn()
+        {
+            var value = new { Missing = "xyz" };
+            string log = DeserializeAndReturnWarnings<WarnUnknownResult>(value);
+            Assert.Contains(nameof(value.Missing), log);
+            Assert.Contains(nameof(WarnUnknownResult), log);
+        }
+
+        [Fact]
+        public void Deserialize_UnknownProperty_Default()
+        {
+            var value = new { Missing = "xyz" };
+            string log = DeserializeAndReturnWarnings<DefaultUnknownResult>(value);
+            Assert.Contains(nameof(value.Missing), log);
+            Assert.Contains(nameof(DefaultUnknownResult), log);
+        }
+
+        [Fact]
+        public void Deserialize_UnknownProperty_Throw()
+        {
+            Assert.Throws<ArgumentException>(() => DeserializeAndReturnWarnings<ThrowUnknownResult>(new { Missing = "xyz" }));
+        }
+
+        [Fact]
+        public void RoundTrip_NonPublicProperties()
+        {
+            var poco = new NonPublicProperties
+            {
+                InternalProperty = "x",
+                PublicAccessToPrivateProperty = "y"
+            };
+            var value = ValueSerializer.Serialize(poco);
+            // Just verify that we're not using the public property directly...
+            Assert.True(value.MapValue.Fields.ContainsKey("PrivateProperty"));
+            Assert.False(value.MapValue.Fields.ContainsKey("PublicAccessToPrivateProperty"));
+            var deserialized = (NonPublicProperties) DeserializeDefault(value, typeof(NonPublicProperties));
+            Assert.Equal("x", deserialized.InternalProperty);
+            Assert.Equal("y", deserialized.PublicAccessToPrivateProperty);
+        }
+
+        private string DeserializeAndReturnWarnings<T>(object valueToSerialize)
+        {
+            var value = ValueSerializer.Serialize(valueToSerialize);
+            string warning = null;
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient()).WithWarningLogger(Log);
+            ValueDeserializer.Default.Deserialize(db, value, typeof(T));
+            return warning;
+
+            void Log(string message)
+            {
+                if (warning != null)
+                {
+                    throw new InvalidOperationException("Multiple warnings logged unexpectedly");
+                }
+                Assert.NotNull(message);
+                warning = message;
+            }
         }
 
         // Just a convenience method to avoid having to specify all of this on each call.

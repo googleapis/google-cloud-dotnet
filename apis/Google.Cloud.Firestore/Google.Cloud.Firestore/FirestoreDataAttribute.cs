@@ -22,5 +22,26 @@ namespace Google.Cloud.Firestore
     [AttributeUsage(AttributeTargets.Class)]
     public sealed class FirestoreDataAttribute : Attribute
     {
+        /// <summary>
+        /// The strategy to use when handling unknown properties. The default is
+        /// <see cref="UnknownPropertyHandling.Warn"/>.
+        /// </summary>
+        public UnknownPropertyHandling UnknownPropertyHandling { get; set; }
+
+        /// <summary>
+        /// Constructs a new instance with default values for options.
+        /// </summary>
+        public FirestoreDataAttribute() : this(UnknownPropertyHandling.Warn)
+        {
+        }
+
+        /// <summary>
+        /// Constructs a new instance with the given handling for unknown properties.
+        /// </summary>
+        /// <param name="unknownPropertyHandling">The unknown property handling strategy to use.</param>
+        public FirestoreDataAttribute(UnknownPropertyHandling unknownPropertyHandling)
+        {
+            UnknownPropertyHandling = unknownPropertyHandling;
+        }
     }
 }
