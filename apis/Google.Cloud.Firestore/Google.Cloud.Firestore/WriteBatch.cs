@@ -123,7 +123,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckNotNull(updates, nameof(updates));
             GaxPreconditions.CheckArgument(updates.Count != 0, nameof(updates), "Empty set of updates specified");
-            GaxPreconditions.CheckArgument(precondition?.Proto.Exists != true, nameof(precondition), "Cannot specify a must-exist precondition for update");
+            GaxPreconditions.CheckArgument(precondition?.Exists != true, nameof(precondition), "Cannot specify a must-exist precondition for update");
 
             var serializedUpdates = updates.ToDictionary(pair => pair.Key, pair => ValueSerializer.Serialize(pair.Value));
             var expanded = ExpandObject(serializedUpdates);
