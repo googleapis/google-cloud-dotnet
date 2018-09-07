@@ -136,6 +136,31 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void Update_WithPreconditionNone()
+        {
+            var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());
+            var batch = db.StartBatch();
+            var doc = db.Document("col/doc");
+            var updates = new Dictionary<FieldPath, object>
+            {
+                { new FieldPath("x"), "y" }
+            };
+
+            batch.Update(doc, updates, Precondition.None);
+
+            var expectedWrite = new Write
+            {
+                Update = new Document
+                {
+                    Name = doc.Path,
+                    Fields = { { "x", CreateValue("y") } }
+                },
+                UpdateMask = new DocumentMask { FieldPaths = { "x" } }
+            };
+            AssertWrites(batch, (expectedWrite, true));
+        }
+
+        [Fact]
         public void Update_StringKeyedDictionary_WithPrecondition()
         {
             var db = FirestoreDb.Create("project", "db", new FakeFirestoreClient());

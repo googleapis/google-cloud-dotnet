@@ -66,6 +66,18 @@ namespace Google.Cloud.Firestore.IntegrationTests
             AssertSerialized(snapshot, new { Name = "Changed again", Level = 2, Score = new { CustomTime = timestamp, Value = 40 } });
         }
 
+        // https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/2479
+        [Fact]
+        public async Task Update_NewDocument_PreconditionNone()
+        {
+            var doc = _fixture.NonQueryCollection.Document();
+            var updates = new Dictionary<FieldPath, object> { { new FieldPath("Score"), 20 } };
+            await doc.UpdateAsync(updates, Precondition.None);
+
+            var snapshot = await doc.GetSnapshotAsync();
+            Assert.Equal(20, snapshot.GetValue<int>("Score"));
+        }
+
         [Fact]
         public async Task Update_SentinelValues()
         {
