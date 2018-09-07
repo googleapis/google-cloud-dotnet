@@ -70,6 +70,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(value, nameof(value));
 
             // If we're asked for a Value, just provide it directly, even for null values.
+            // FIXME: Should we clone?
             if (targetType == typeof(Value))
             {
                 return value;
@@ -179,26 +180,29 @@ namespace Google.Cloud.Firestore
             }
             if (IsFirestoreAttributedType(targetType))
             {
+                var attributedType = FirestoreDataAttributedType.ForType(targetType);
                 var ret = Activator.CreateInstance(targetType);
-                // TODO(optimization): We almost certainly want to cache this.
-                var setterMap = new Dictionary<string, PropertyInfo>();
-                foreach (var property in targetType.GetTypeInfo().DeclaredProperties.Where(p => p.CanWrite && p.GetSetMethod().IsPublic && !p.GetSetMethod().IsStatic))
-                {
-                    var attribute = property.GetCustomAttribute<FirestorePropertyAttribute>();
-                    if (attribute != null)
-                    {
-                        setterMap[attribute.Name ?? property.Name] = property;
-                    }
-                }
 
                 foreach (var pair in values)
                 {
-                    if (!setterMap.TryGetValue(pair.Key, out var property))
+                    if (attributedType.WritableProperties.TryGetValue(pair.Key, out var property))
                     {
-                        throw new ArgumentException($"No property for Firestore field {pair.Key}");
+                        var converted = Deserialize(db, pair.Value, property.PropertyType);
+                        property.SetValue(ret, converted);
                     }
-                    var converted = Deserialize(db, pair.Value, property.PropertyType);
-                    property.SetValue(ret, converted);
+                    else
+                    {
+                        switch (attributedType.UnknownPropertyHandling)
+                        {
+                            case UnknownPropertyHandling.Ignore:
+                                break;
+                            case UnknownPropertyHandling.Warn:
+                                db.LogWarning($"No writable property for Firestore field {pair.Key} in type {targetType.FullName}");
+                                break;
+                            case UnknownPropertyHandling.Throw:
+                                throw new ArgumentException($"No writable property for Firestore field {pair.Key} in type {targetType.FullName}");
+                        }
+                    }                    
                 }
                 return ret;
             }
