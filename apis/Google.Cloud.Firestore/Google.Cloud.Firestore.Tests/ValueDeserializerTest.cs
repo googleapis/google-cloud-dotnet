@@ -134,14 +134,20 @@ namespace Google.Cloud.Firestore.Tests
         public void DeserializeNullToValue()
         {
             var value = new Value { NullValue = wkt::NullValue.NullValue };
-            Assert.Same(value, DeserializeDefault(value, typeof(Value)));
+            var deserialized = DeserializeDefault(value, typeof(Value));
+            // We should get a clone back.
+            Assert.NotSame(value, deserialized);
+            Assert.Equal(value, deserialized);
         }
 
         [Fact]
         public void DeserializeToValue()
         {
             var value = new Value { DoubleValue = 1.234 };
-            Assert.Same(value, DeserializeDefault(value, typeof(Value)));
+            var deserialized = DeserializeDefault(value, typeof(Value));
+            // We should get a clone back.
+            Assert.NotSame(value, deserialized);
+            Assert.Equal(value, deserialized);
         }
 
         // These three classes exist for testing unknown property handling

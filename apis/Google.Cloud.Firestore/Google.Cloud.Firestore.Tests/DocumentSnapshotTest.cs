@@ -19,6 +19,9 @@ using System.Collections.Generic;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 
+using wkt = Google.Protobuf.WellKnownTypes;
+using BclType = System.Type;
+
 namespace Google.Cloud.Firestore.Tests
 {
     public class DocumentSnapshotTest
@@ -69,7 +72,32 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void ConvertTo()
+        public void ConvertTo_CustomType()
+        {
+            var doc = GetSampleSnapshot();
+            var sample = doc.ConvertTo<SampleData>();
+            Assert.Equal("Test", sample.Name);
+            Assert.Equal(20, sample.Nested.Score);
+        }
+
+        [Fact]
+        public void ConvertTo_ProtoValueDictionary()
+        {
+            var doc = GetSampleSnapshot();
+            // Conversion should clone the values
+            var dictionary = doc.ConvertTo<Dictionary<string, Value>>();
+            dictionary["Name"].StringValue = "Modified";
+
+            // So fetching a field should show the original value
+            Assert.Equal("Test", doc.GetValue<string>("Name"));
+
+            // And deserializing again should show the original value too
+            var sample = doc.ConvertTo<SampleData>();
+            Assert.Equal("Test", sample.Name);
+        }
+
+        [Fact]
+        public void GetField_ProtoValue()
         {
             var doc = GetSampleSnapshot();
             var sample = doc.ConvertTo<SampleData>();
@@ -95,6 +123,59 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("Test", doc.GetValue<string>("Name"));
             Assert.Equal(20, doc.GetValue<int>("Nested.Score"));
             Assert.Null(doc.GetValue<string>("NullField"));
+        }
+
+        [Fact]
+        public void GetValue_CloneTimestamp()
+        {
+            var proto = new Document
+            {
+                CreateTime = CreateProtoTimestamp(1, 10),
+                UpdateTime = CreateProtoTimestamp(2, 20),
+                Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2",
+                Fields =
+                {
+                    { "Timestamp", new Value { TimestampValue = CreateProtoTimestamp(1, 30) } },
+                }
+            };
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var readTime = new Timestamp(10, 2);
+            var snapshot = DocumentSnapshot.ForDocument(db, proto, readTime);
+            // If we ask for the field twice, the results should be independent. (We clone the value.)
+            var fieldValue1 = snapshot.GetValue<wkt::Timestamp>("Timestamp");
+            var fieldValue2 = snapshot.GetValue<wkt::Timestamp>("Timestamp");
+            Assert.NotSame(fieldValue1, fieldValue2);
+            Assert.Equal(fieldValue1, fieldValue2);
+
+            fieldValue1.Nanos = 999;
+            Assert.NotEqual(fieldValue1, fieldValue2);
+        }
+
+        [Fact]
+        public void GetValue_CloneLatLng()
+        {
+            var proto = new Document
+            {
+                CreateTime = CreateProtoTimestamp(1, 10),
+                UpdateTime = CreateProtoTimestamp(2, 20),
+                Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2",
+                Fields =
+                {
+                    { "GeoPoint", new Value { GeoPointValue = new Type.LatLng { Latitude = 2.5, Longitude = 3.75 } } }
+                }
+            };
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var readTime = new Timestamp(10, 2);
+            var snapshot = DocumentSnapshot.ForDocument(db, proto, readTime);
+
+            // If we ask for the field twice, the results should be independent. (We clone the value.)
+            var fieldValue1 = snapshot.GetValue<Type.LatLng>("GeoPoint");
+            var fieldValue2 = snapshot.GetValue<Type.LatLng>("GeoPoint");
+            Assert.NotSame(fieldValue1, fieldValue2);
+            Assert.Equal(fieldValue1, fieldValue2);
+
+            fieldValue1.Longitude = 4.5;
+            Assert.NotEqual(fieldValue1, fieldValue2);
         }
 
         [Fact]
