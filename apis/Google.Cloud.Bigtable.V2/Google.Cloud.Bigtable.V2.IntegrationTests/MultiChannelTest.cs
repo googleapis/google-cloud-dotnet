@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -28,14 +29,28 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact]
         public async Task SeparateSubchannels()
         {
+            if (_fixture.EmulatorCallInvoker != null)
+            {
+                return;
+            }
+
             int originalSubchannelCount = GrpcInfo.SubchannelCount;
             int clientCount = 2;
 
-            var client = await BigtableClient.CreateAsync(new BigtableClient.ClientCreationSettings(clientCount));
+            var settings = new BigtableServiceApiSettings
+            {
+                PreferredMaxStreamsPerChannel = 1,
+                MaxChannels = (uint)clientCount
+            };
+            var client = await BigtableClient.CreateAsync(settings: settings);
+
+            var tasks = new List<Task>();
             for (int i = 0; i < 10; i++)
             {
-                await client.ReadRowAsync(_fixture.TableName, "abc");
+                tasks.Add(client.ReadRowAsync(_fixture.TableName, "abc"));
             }
+
+            await Task.WhenAll(tasks);
 
             int subchannelsCreated = GrpcInfo.SubchannelCount- originalSubchannelCount;
             Assert.Equal(clientCount, subchannelsCreated);

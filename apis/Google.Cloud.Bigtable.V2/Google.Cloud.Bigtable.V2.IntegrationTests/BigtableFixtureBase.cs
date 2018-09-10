@@ -18,6 +18,7 @@ using Google.Cloud.Bigtable.Common.V2;
 using Google.Cloud.ClientTesting;
 using Google.Rpc;
 using Grpc.Core;
+using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         public BigtableClient TableClient { get; private set; }
 
         public List<TableName> CreatedTables { get; } = new List<TableName>();
-        public Channel EmulatorChannel { get; }
+        public CallInvoker EmulatorCallInvoker { get; }
 
         public BigtableFixtureBase()
         {
@@ -54,7 +55,10 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             if (!string.IsNullOrEmpty(emulatorHost))
             {
                 projectId = "emulator-test-project";
-                EmulatorChannel = new Channel(emulatorHost, ChannelCredentials.Insecure);
+                EmulatorCallInvoker = new GcpCallInvoker(
+                    emulatorHost,
+                    ChannelCredentials.Insecure,
+                    BigtableServiceApiSettings.GetDefault().CreateChannelOptions());
 
                 instanceId = "doesnt-matter";
             }
@@ -96,7 +100,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         private async Task InitBigtableInstanceAndTable()
         {
-            if (EmulatorChannel == null)
+            if (EmulatorCallInvoker == null)
             {
                 InstanceAdminClient = BigtableInstanceAdminClient.Create();
                 TableAdminClient = BigtableTableAdminClient.Create();
@@ -113,8 +117,8 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             }
             else
             {
-                TableAdminClient = BigtableTableAdminClient.Create(EmulatorChannel);
-                TableClient = BigtableClient.Create(BigtableClient.ClientCreationSettings.FromEndpointTarget(EmulatorChannel.Target));
+                TableAdminClient = BigtableTableAdminClient.Create(EmulatorCallInvoker);
+                TableClient = BigtableClient.Create(EmulatorCallInvoker);
             }
 
             TableName = await CreateTable();

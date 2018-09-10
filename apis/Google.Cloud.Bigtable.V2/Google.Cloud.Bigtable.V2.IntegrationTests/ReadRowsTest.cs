@@ -35,7 +35,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
         [Fact(Skip = "Server doesn't support cell splitting yet")]
         public async Task SplitCell()
         {
-            if (_fixture.EmulatorChannel != null)
+            if (_fixture.EmulatorCallInvoker != null)
             {
                 // Don't run the test on the emulator.
                 return;

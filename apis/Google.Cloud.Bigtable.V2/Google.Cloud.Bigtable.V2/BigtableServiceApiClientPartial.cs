@@ -14,9 +14,13 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Apis.Auth.OAuth2;
+using Grpc.Auth;
 using Grpc.Core;
+using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -85,10 +89,92 @@ namespace Google.Cloud.Bigtable.V2
                 retryFilter: IdempotentRetryFilter
             );
 
+        // TODO: Link to snippet for creating GcpCallInvoker manually from here.
+        /// <summary>
+        /// The maximum number of channels than will be open concurrently to the Bigtable endpoint.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that channels are managed and shared amongst <see cref="BigtableClient"/> instances using the same
+        /// endpoint and channel options and which use the default credentials. So this property will have no bearing
+        /// across clients using different options. To create a custom grouping of channels to be managed, create a
+        /// <see cref="GcpCallInvoker"/> manually and use the
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// overload taking a <see cref="CallInvoker"/> to create clients from it.
+        /// </para>
+        /// </remarks>
+        public uint MaxChannels { get; set; } = 16;
+
+        // TODO: Link to snippet for creating GcpCallInvoker manually from here.
+        /// <summary>
+        /// The number of streams open concurrently in a channel which will trigger a new channel to be opened, as
+        /// long as fewer than <see cref="MaxChannels"/> are currently open.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that channels are managed and shared amongst <see cref="BigtableClient"/> instances using the same
+        /// endpoint and channel options and which use the default credentials. So this property will have no bearing
+        /// across clients using different options. To create a custom grouping of channels to be managed, create a
+        /// <see cref="GcpCallInvoker"/> manually and use the
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// overload taking a <see cref="CallInvoker"/> to create clients from it.
+        /// </para>
+        /// </remarks>
+        public uint PreferredMaxStreamsPerChannel { get; set; } = 5;
+
         partial void OnCopy(BigtableServiceApiSettings existing)
         {
             MutateRowsRetrySettings = existing.MutateRowsRetrySettings;
             ReadRowsRetrySettings = existing.ReadRowsRetrySettings;
+            MaxChannels = existing.MaxChannels;
+            PreferredMaxStreamsPerChannel = existing.PreferredMaxStreamsPerChannel;
+        }
+    }
+
+    /// <summary>
+    /// Extensions for use on <see cref="BigtableServiceApiSettings"/>.
+    /// </summary>
+    public static class BigtableServiceApiSettingsExtensions
+    {
+        /// <summary>
+        /// Creates a collection of <see cref="ChannelOption"/> instances which can be used to create a <see cref="Channel"/>
+        /// or <see cref="GcpCallInvoker"/> pre-configured based on the specified settings (or the default settings if they
+        /// are null).
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Note that if the options returned are used to create a <see cref="Channel"/>, the <see cref="BigtableServiceApiSettings.MaxChannels"/>
+        /// and <see cref="BigtableServiceApiSettings.PreferredMaxStreamsPerChannel"/> settings values will be ignored.
+        /// </para>
+        /// </remarks>
+        /// <param name="settings">
+        /// The settings with which to create channel options. May be null, in which case the default settings will be used.
+        /// </param>
+        /// <returns>A collection of <see cref="ChannelOption"/> instances.</returns>
+        public static IEnumerable<ChannelOption> CreateChannelOptions(this BigtableServiceApiSettings settings)
+        {
+            // TODO: Use a cached collection of channel options if settings is null.
+            var effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
+            var apiConfig = new ApiConfig
+            {
+                ChannelPool = new ChannelPoolConfig
+                {
+                    MaxSize = effectiveSettings.MaxChannels,
+                    MaxConcurrentStreamsLowWatermark = effectiveSettings.PreferredMaxStreamsPerChannel
+                }
+            };
+
+            return new[]
+            {
+                // Set channel send/recv message size to unlimited.
+                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
+                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
+
+                // TODO: Figure out if there's a good way to test this
+                new ChannelOption(ChannelOptions.PrimaryUserAgentString, BigtableClient.UserAgent),
+
+                new ChannelOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
+            };
         }
     }
 

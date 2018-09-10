@@ -379,7 +379,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetUnderlyingClient().SampleRowKeys(request, callSettings);
+            return _client.SampleRowKeys(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -392,7 +392,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetUnderlyingClient().MutateRowAsync(request, callSettings);
+            return _client.MutateRowAsync(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -405,7 +405,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetUnderlyingClient().MutateRow(request, callSettings);
+            return _client.MutateRow(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -436,7 +436,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetUnderlyingClient().CheckAndMutateRowAsync(request, callSettings);
+            return _client.CheckAndMutateRowAsync(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -449,7 +449,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetUnderlyingClient().CheckAndMutateRow(request, callSettings);
+            return _client.CheckAndMutateRow(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -462,7 +462,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetUnderlyingClient().ReadModifyWriteRowAsync(request, callSettings);
+            return _client.ReadModifyWriteRowAsync(request, callSettings);
         }
 
         /// <inheritdoc/>
@@ -475,7 +475,7 @@ namespace Google.Cloud.Bigtable.V2
                 request.AppProfileId = _appProfileId;
             }
 
-            return GetUnderlyingClient().ReadModifyWriteRow(request, callSettings);
+            return _client.ReadModifyWriteRow(request, callSettings);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         private const string AppProfileIdFieldName = "_appProfileId";
         private const string AppProfileIdPropertyName = "AppProfileId";
         private const string CancellationTokenParameterName = "cancellationToken";
-        private const string GetUnderlyingClientMethodName = "GetUnderlyingClient";
+        private const string ClientFieldName = "_client";
 
         /// <summary>
         /// Information about how to modify stream methods from the underlying client when customizing them.
@@ -489,7 +489,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 }
                 else
                 {
-                    var underlyingMethod = IdentifierName(GetUnderlyingClientMethodName).Invoke().Member(node.Identifier);
+                    var underlyingMethod = IdentifierName(ClientFieldName).Invoke().Member(node.Identifier);
                     resultExpression = underlyingMethod.Invoke(node.ParameterList.AsArguments());
                 }
 

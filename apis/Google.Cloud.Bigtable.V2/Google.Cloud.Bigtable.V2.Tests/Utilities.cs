@@ -189,7 +189,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 return initialResponse;
             });
 
-            return new BigtableClientImpl(new[] { mock.Object }, appProfileId: null, underlyingClientSettings: settings);
+            return new BigtableClientImpl(mock.Object, appProfileId: null, underlyingClientSettings: settings);
         }
     }
 }
