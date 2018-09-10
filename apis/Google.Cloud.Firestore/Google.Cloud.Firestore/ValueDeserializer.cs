@@ -73,7 +73,7 @@ namespace Google.Cloud.Firestore
             // FIXME: Should we clone?
             if (targetType == typeof(Value))
             {
-                return value;
+                return value.Clone();
             }
 
             checked
@@ -90,7 +90,7 @@ namespace Google.Cloud.Firestore
                             ?? NoConversion();
                     case GeoPointValue:
                         return ConvertDefault(v => GeoPoint.FromProto(v.GeoPointValue))
-                            ?? ConvertSpecific(v => v.GeoPointValue)
+                            ?? ConvertSpecific(v => v.GeoPointValue.Clone())
                             ?? NoConversion();
                     case IntegerValue:
                         return ConvertDefault(v => v.IntegerValue)
@@ -109,7 +109,7 @@ namespace Google.Cloud.Firestore
                             ?? NoConversion();
                     case TimestampValue:
                         return ConvertDefault(v => Timestamp.FromProto(v.TimestampValue))
-                            ?? ConvertSpecific(v => v.TimestampValue)
+                            ?? ConvertSpecific(v => v.TimestampValue.Clone())
                             ?? ConvertSpecific(v => v.TimestampValue.ToDateTime())
                             ?? ConvertSpecific(v => v.TimestampValue.ToDateTimeOffset())
                             ?? NoConversion();
@@ -118,6 +118,7 @@ namespace Google.Cloud.Firestore
                     case BytesValue:
                         return ConvertDefault(v => Blob.FromByteString(v.BytesValue))
                             ?? ConvertSpecific(v => v.BytesValue.ToByteArray())
+                            // No need to clone this; ByteString is immutable
                             ?? ConvertSpecific(v => v.BytesValue)
                             ?? NoConversion();
                     case Value.ValueTypeOneofCase.MapValue:
