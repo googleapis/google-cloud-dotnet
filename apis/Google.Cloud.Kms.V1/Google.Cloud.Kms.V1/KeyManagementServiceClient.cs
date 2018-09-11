@@ -1684,7 +1684,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="parent">
         /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing associated with the
@@ -1719,7 +1721,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="parent">
         /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing associated with the
@@ -1751,7 +1755,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="parent">
         /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing associated with the
@@ -1786,7 +1792,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1807,7 +1815,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1827,7 +1837,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2303,6 +2315,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] or [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
@@ -2313,6 +2327,13 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="plaintext">
         /// Required. The data to encrypt. Must be no larger than 64KiB.
+        ///
+        /// The maximum size depends on the key version's
+        /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
+        /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the plaintext must be no larger
+        /// than 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
+        /// plaintext and additional_authenticated_data fields must be no larger than
+        /// 8KiB.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2333,6 +2354,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] or [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
@@ -2343,6 +2366,13 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="plaintext">
         /// Required. The data to encrypt. Must be no larger than 64KiB.
+        ///
+        /// The maximum size depends on the key version's
+        /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
+        /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the plaintext must be no larger
+        /// than 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
+        /// plaintext and additional_authenticated_data fields must be no larger than
+        /// 8KiB.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -2360,6 +2390,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] or [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
@@ -2370,6 +2402,13 @@ namespace Google.Cloud.Kms.V1
         /// </param>
         /// <param name="plaintext">
         /// Required. The data to encrypt. Must be no larger than 64KiB.
+        ///
+        /// The maximum size depends on the key version's
+        /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
+        /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the plaintext must be no larger
+        /// than 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
+        /// plaintext and additional_authenticated_data fields must be no larger than
+        /// 8KiB.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2390,6 +2429,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2409,6 +2450,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2427,6 +2470,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2445,7 +2490,8 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption.
@@ -2473,7 +2519,8 @@ namespace Google.Cloud.Kms.V1
                 callSettings);
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption.
@@ -2498,7 +2545,8 @@ namespace Google.Cloud.Kms.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption.
@@ -2526,7 +2574,8 @@ namespace Google.Cloud.Kms.V1
                 callSettings);
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2545,7 +2594,8 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2563,7 +2613,8 @@ namespace Google.Cloud.Kms.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2582,7 +2633,9 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="name">
         /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -2608,7 +2661,9 @@ namespace Google.Cloud.Kms.V1
                 callSettings);
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="name">
         /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -2631,7 +2686,9 @@ namespace Google.Cloud.Kms.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="name">
         /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
@@ -2657,7 +2714,9 @@ namespace Google.Cloud.Kms.V1
                 callSettings);
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2676,7 +2735,9 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2694,7 +2755,9 @@ namespace Google.Cloud.Kms.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2896,7 +2959,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -2923,7 +2986,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -2947,7 +3010,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -2974,7 +3037,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -2999,7 +3062,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -3023,7 +3086,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -3970,7 +4033,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3992,7 +4057,9 @@ namespace Google.Cloud.Kms.V1
         /// <summary>
         /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
         ///
-        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+        /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+        /// are required.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4153,6 +4220,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4173,6 +4242,8 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+        /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4192,7 +4263,8 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4212,7 +4284,8 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4232,7 +4305,9 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4252,7 +4327,9 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+        /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+        ///
+        /// Returns an error if called on an asymmetric key.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4335,7 +4412,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -4361,7 +4438,7 @@ namespace Google.Cloud.Kms.V1
 
         /// <summary>
         /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+        /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
         /// state.
         ///
         /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]

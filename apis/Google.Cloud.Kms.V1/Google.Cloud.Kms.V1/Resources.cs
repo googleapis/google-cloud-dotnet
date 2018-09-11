@@ -29,41 +29,99 @@ namespace Google.Cloud.Kms.V1 {
             "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
             "dWYvdGltZXN0YW1wLnByb3RvIkgKB0tleVJpbmcSDAoEbmFtZRgBIAEoCRIv",
             "CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXAi/wMKCUNyeXB0b0tleRIMCgRuYW1lGAEgASgJEjYKB3ByaW1hcnkYAiAB",
+            "bXAi9QQKCUNyeXB0b0tleRIMCgRuYW1lGAEgASgJEjYKB3ByaW1hcnkYAiAB",
             "KAsyJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24SQAoH",
             "cHVycG9zZRgDIAEoDjIvLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
             "LkNyeXB0b0tleVB1cnBvc2USLwoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wEjYKEm5leHRfcm90YXRpb25fdGltZRgH",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNAoPcm90YXRpb25f",
-            "cGVyaW9kGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASOgoG",
-            "bGFiZWxzGAogAygLMiouZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXku",
-            "TGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
-            "bHVlGAIgASgJOgI4ASJLChBDcnlwdG9LZXlQdXJwb3NlEiIKHkNSWVBUT19L",
-            "RVlfUFVSUE9TRV9VTlNQRUNJRklFRBAAEhMKD0VOQ1JZUFRfREVDUllQVBAB",
-            "QhMKEXJvdGF0aW9uX3NjaGVkdWxlIowDChBDcnlwdG9LZXlWZXJzaW9uEgwK",
-            "BG5hbWUYASABKAkSSgoFc3RhdGUYAyABKA4yOy5nb29nbGUuY2xvdWQua21z",
-            "LnYxLkNyeXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvblN0YXRlEi8K",
-            "C2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBIwCgxkZXN0cm95X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEjYKEmRlc3Ryb3lfZXZlbnRfdGltZRgGIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXAiggEKFUNyeXB0b0tleVZlcnNpb25TdGF0ZRIo",
-            "CiRDUllQVE9fS0VZX1ZFUlNJT05fU1RBVEVfVU5TUEVDSUZJRUQQABILCgdF",
-            "TkFCTEVEEAESDAoIRElTQUJMRUQQAhINCglERVNUUk9ZRUQQAxIVChFERVNU",
-            "Uk9ZX1NDSEVEVUxFRBAEQpUBChdjb20uZ29vZ2xlLmNsb3VkLmttcy52MUIR",
-            "S21zUmVzb3VyY2VzUHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9rbXMvdjE7a21z+AEBqgITR29vZ2xlLkNs",
-            "b3VkLkttcy5WMcoCE0dvb2dsZVxDbG91ZFxLbXNcVjFiBnByb3RvMw=="));
+            "cGVyaW9kGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASRwoQ",
+            "dmVyc2lvbl90ZW1wbGF0ZRgLIAEoCzItLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "Q3J5cHRvS2V5VmVyc2lvblRlbXBsYXRlEjoKBmxhYmVscxgKIAMoCzIqLmdv",
+            "b2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5LkxhYmVsc0VudHJ5Gi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEieAoQ",
+            "Q3J5cHRvS2V5UHVycG9zZRIiCh5DUllQVE9fS0VZX1BVUlBPU0VfVU5TUEVD",
+            "SUZJRUQQABITCg9FTkNSWVBUX0RFQ1JZUFQQARITCg9BU1lNTUVUUklDX1NJ",
+            "R04QBRIWChJBU1lNTUVUUklDX0RFQ1JZUFQQBkITChFyb3RhdGlvbl9zY2hl",
+            "ZHVsZSKuAQoYQ3J5cHRvS2V5VmVyc2lvblRlbXBsYXRlEj4KEHByb3RlY3Rp",
+            "b25fbGV2ZWwYASABKA4yJC5nb29nbGUuY2xvdWQua21zLnYxLlByb3RlY3Rp",
+            "b25MZXZlbBJSCglhbGdvcml0aG0YAyABKA4yPy5nb29nbGUuY2xvdWQua21z",
+            "LnYxLkNyeXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvbkFsZ29yaXRo",
+            "bSLNAQoXS2V5T3BlcmF0aW9uQXR0ZXN0YXRpb24STgoGZm9ybWF0GAQgASgO",
+            "Mj4uZ29vZ2xlLmNsb3VkLmttcy52MS5LZXlPcGVyYXRpb25BdHRlc3RhdGlv",
+            "bi5BdHRlc3RhdGlvbkZvcm1hdBIPCgdjb250ZW50GAUgASgMIlEKEUF0dGVz",
+            "dGF0aW9uRm9ybWF0EiIKHkFUVEVTVEFUSU9OX0ZPUk1BVF9VTlNQRUNJRklF",
+            "RBAAEhgKFENBVklVTV9WMV9DT01QUkVTU0VEEAMiuAkKEENyeXB0b0tleVZl",
+            "cnNpb24SDAoEbmFtZRgBIAEoCRJKCgVzdGF0ZRgDIAEoDjI7Lmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9u",
+            "U3RhdGUSPgoQcHJvdGVjdGlvbl9sZXZlbBgHIAEoDjIkLmdvb2dsZS5jbG91",
+            "ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsElIKCWFsZ29yaXRobRgKIAEoDjI/",
+            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9L",
+            "ZXlWZXJzaW9uQWxnb3JpdGhtEkEKC2F0dGVzdGF0aW9uGAggASgLMiwuZ29v",
+            "Z2xlLmNsb3VkLmttcy52MS5LZXlPcGVyYXRpb25BdHRlc3RhdGlvbhIvCgtj",
+            "cmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "MQoNZ2VuZXJhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASMAoMZGVzdHJveV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBI2ChJkZXN0cm95X2V2ZW50X3RpbWUYBiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wIrwDChlDcnlwdG9LZXlWZXJzaW9uQWxn",
+            "b3JpdGhtEiwKKENSWVBUT19LRVlfVkVSU0lPTl9BTEdPUklUSE1fVU5TUEVD",
+            "SUZJRUQQABIfChtHT09HTEVfU1lNTUVUUklDX0VOQ1JZUFRJT04QARIcChhS",
+            "U0FfU0lHTl9QU1NfMjA0OF9TSEEyNTYQAhIcChhSU0FfU0lHTl9QU1NfMzA3",
+            "Ml9TSEEyNTYQAxIcChhSU0FfU0lHTl9QU1NfNDA5Nl9TSEEyNTYQBBIeChpS",
+            "U0FfU0lHTl9QS0NTMV8yMDQ4X1NIQTI1NhAFEh4KGlJTQV9TSUdOX1BLQ1Mx",
+            "XzMwNzJfU0hBMjU2EAYSHgoaUlNBX1NJR05fUEtDUzFfNDA5Nl9TSEEyNTYQ",
+            "BxIgChxSU0FfREVDUllQVF9PQUVQXzIwNDhfU0hBMjU2EAgSIAocUlNBX0RF",
+            "Q1JZUFRfT0FFUF8zMDcyX1NIQTI1NhAJEiAKHFJTQV9ERUNSWVBUX09BRVBf",
+            "NDA5Nl9TSEEyNTYQChIXChNFQ19TSUdOX1AyNTZfU0hBMjU2EAwSFwoTRUNf",
+            "U0lHTl9QMzg0X1NIQTM4NBANIpoBChVDcnlwdG9LZXlWZXJzaW9uU3RhdGUS",
+            "KAokQ1JZUFRPX0tFWV9WRVJTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASFgoS",
+            "UEVORElOR19HRU5FUkFUSU9OEAUSCwoHRU5BQkxFRBABEgwKCERJU0FCTEVE",
+            "EAISDQoJREVTVFJPWUVEEAMSFQoRREVTVFJPWV9TQ0hFRFVMRUQQBCJJChRD",
+            "cnlwdG9LZXlWZXJzaW9uVmlldxInCiNDUllQVE9fS0VZX1ZFUlNJT05fVklF",
+            "V19VTlNQRUNJRklFRBAAEggKBEZVTEwQASJsCglQdWJsaWNLZXkSCwoDcGVt",
+            "GAEgASgJElIKCWFsZ29yaXRobRgCIAEoDjI/Lmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uQWxnb3JpdGht",
+            "KkoKD1Byb3RlY3Rpb25MZXZlbBIgChxQUk9URUNUSU9OX0xFVkVMX1VOU1BF",
+            "Q0lGSUVEEAASDAoIU09GVFdBUkUQARIHCgNIU00QAkKVAQoXY29tLmdvb2ds",
+            "ZS5jbG91ZC5rbXMudjFCEUttc1Jlc291cmNlc1Byb3RvUAFaNmdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQva21zL3YxO2tt",
+            "c/gBAaoCE0dvb2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVcQ2xvdWRcS21z",
+            "XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyRing), global::Google.Cloud.Kms.V1.KeyRing.Parser, new[]{ "Name", "CreateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKey), global::Google.Cloud.Kms.V1.CryptoKey.Parser, new[]{ "Name", "Primary", "Purpose", "CreateTime", "NextRotationTime", "RotationPeriod", "Labels" }, new[]{ "RotationSchedule" }, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser, new[]{ "Name", "State", "CreateTime", "DestroyTime", "DestroyEventTime" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKey), global::Google.Cloud.Kms.V1.CryptoKey.Parser, new[]{ "Name", "Primary", "Purpose", "CreateTime", "NextRotationTime", "RotationPeriod", "VersionTemplate", "Labels" }, new[]{ "RotationSchedule" }, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate), global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate.Parser, new[]{ "ProtectionLevel", "Algorithm" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation), global::Google.Cloud.Kms.V1.KeyOperationAttestation.Parser, new[]{ "Format", "Content" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser, new[]{ "Name", "State", "ProtectionLevel", "Algorithm", "Attestation", "CreateTime", "GenerateTime", "DestroyTime", "DestroyEventTime" }, null, new[]{ typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState), typeof(global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.PublicKey), global::Google.Cloud.Kms.V1.PublicKey.Parser, new[]{ "Pem", "Algorithm" }, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] specifies how cryptographic operations are performed.
+  /// </summary>
+  public enum ProtectionLevel {
+    /// <summary>
+    /// Not specified.
+    /// </summary>
+    [pbr::OriginalName("PROTECTION_LEVEL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Crypto operations are performed in software.
+    /// </summary>
+    [pbr::OriginalName("SOFTWARE")] Software = 1,
+    /// <summary>
+    /// Crypto operations are performed in a Hardware Security Module.
+    /// </summary>
+    [pbr::OriginalName("HSM")] Hsm = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A [KeyRing][google.cloud.kms.v1.KeyRing] is a toplevel logical grouping of [CryptoKeys][google.cloud.kms.v1.CryptoKey].
@@ -275,6 +333,7 @@ namespace Google.Cloud.Kms.V1 {
       purpose_ = other.purpose_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       nextRotationTime_ = other.nextRotationTime_ != null ? other.nextRotationTime_.Clone() : null;
+      versionTemplate_ = other.versionTemplate_ != null ? other.versionTemplate_.Clone() : null;
       labels_ = other.labels_.Clone();
       switch (other.RotationScheduleCase) {
         case RotationScheduleOneofCase.RotationPeriod:
@@ -315,6 +374,10 @@ namespace Google.Cloud.Kms.V1 {
     ///
     /// The [CryptoKey][google.cloud.kms.v1.CryptoKey]'s primary version can be updated via
     /// [UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
+    ///
+    /// All keys with [purpose][google.cloud.kms.v1.CryptoKey.purpose]
+    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT] have a
+    /// primary. For other keys, this field will be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion Primary {
@@ -328,8 +391,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PurposeFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose purpose_ = 0;
     /// <summary>
-    /// The immutable purpose of this [CryptoKey][google.cloud.kms.v1.CryptoKey]. Currently, the only acceptable
-    /// purpose is [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+    /// The immutable purpose of this [CryptoKey][google.cloud.kms.v1.CryptoKey].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose Purpose {
@@ -366,6 +428,10 @@ namespace Google.Cloud.Kms.V1 {
     /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] and
     /// [UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion]
     /// do not affect [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time].
+    ///
+    /// Keys with [purpose][google.cloud.kms.v1.CryptoKey.purpose]
+    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT] support
+    /// automatic rotation. For other keys, this field must be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp NextRotationTime {
@@ -382,6 +448,10 @@ namespace Google.Cloud.Kms.V1 {
     /// automatically rotates a key. Must be at least one day.
     ///
     /// If [rotation_period][google.cloud.kms.v1.CryptoKey.rotation_period] is set, [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time] must also be set.
+    ///
+    /// Keys with [purpose][google.cloud.kms.v1.CryptoKey.purpose]
+    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT] support
+    /// automatic rotation. For other keys, this field must be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration RotationPeriod {
@@ -389,6 +459,23 @@ namespace Google.Cloud.Kms.V1 {
       set {
         rotationSchedule_ = value;
         rotationScheduleCase_ = value == null ? RotationScheduleOneofCase.None : RotationScheduleOneofCase.RotationPeriod;
+      }
+    }
+
+    /// <summary>Field number for the "version_template" field.</summary>
+    public const int VersionTemplateFieldNumber = 11;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate versionTemplate_;
+    /// <summary>
+    /// A template describing settings for new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] instances.
+    /// The properties of new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] instances created by either
+    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] or
+    /// auto-rotation are controlled by this template.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate VersionTemplate {
+      get { return versionTemplate_; }
+      set {
+        versionTemplate_ = value;
       }
     }
 
@@ -443,6 +530,7 @@ namespace Google.Cloud.Kms.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(NextRotationTime, other.NextRotationTime)) return false;
       if (!object.Equals(RotationPeriod, other.RotationPeriod)) return false;
+      if (!object.Equals(VersionTemplate, other.VersionTemplate)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (RotationScheduleCase != other.RotationScheduleCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -457,6 +545,7 @@ namespace Google.Cloud.Kms.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (nextRotationTime_ != null) hash ^= NextRotationTime.GetHashCode();
       if (rotationScheduleCase_ == RotationScheduleOneofCase.RotationPeriod) hash ^= RotationPeriod.GetHashCode();
+      if (versionTemplate_ != null) hash ^= VersionTemplate.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= (int) rotationScheduleCase_;
       if (_unknownFields != null) {
@@ -497,6 +586,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteMessage(RotationPeriod);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (versionTemplate_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(VersionTemplate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -522,6 +615,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (rotationScheduleCase_ == RotationScheduleOneofCase.RotationPeriod) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RotationPeriod);
+      }
+      if (versionTemplate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VersionTemplate);
       }
       size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
@@ -558,6 +654,12 @@ namespace Google.Cloud.Kms.V1 {
           nextRotationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         NextRotationTime.MergeFrom(other.NextRotationTime);
+      }
+      if (other.versionTemplate_ != null) {
+        if (versionTemplate_ == null) {
+          versionTemplate_ = new global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate();
+        }
+        VersionTemplate.MergeFrom(other.VersionTemplate);
       }
       labels_.Add(other.labels_);
       switch (other.RotationScheduleCase) {
@@ -622,6 +724,13 @@ namespace Google.Cloud.Kms.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 90: {
+            if (versionTemplate_ == null) {
+              versionTemplate_ = new global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate();
+            }
+            input.ReadMessage(versionTemplate_);
+            break;
+          }
         }
       }
     }
@@ -631,9 +740,9 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// [CryptoKeyPurpose][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose] describes the capabilities of a [CryptoKey][google.cloud.kms.v1.CryptoKey]. Two
-      /// keys with the same purpose may use different underlying algorithms, but
-      /// must support the same set of operations.
+      /// [CryptoKeyPurpose][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose] describes the cryptographic capabilities of a
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey]. A given key can only be used for the operations allowed by
+      /// its purpose.
       /// </summary>
       public enum CryptoKeyPurpose {
         /// <summary>
@@ -646,6 +755,379 @@ namespace Google.Cloud.Kms.V1 {
         /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
         /// </summary>
         [pbr::OriginalName("ENCRYPT_DECRYPT")] EncryptDecrypt = 1,
+        /// <summary>
+        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used with
+        /// [AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign] and
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        [pbr::OriginalName("ASYMMETRIC_SIGN")] AsymmetricSign = 5,
+        /// <summary>
+        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used with
+        /// [AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt] and
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        [pbr::OriginalName("ASYMMETRIC_DECRYPT")] AsymmetricDecrypt = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A [CryptoKeyVersionTemplate][google.cloud.kms.v1.CryptoKeyVersionTemplate] specifies the properties to use when creating
+  /// a new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], either manually with
+  /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] or
+  /// automatically as a result of auto-rotation.
+  /// </summary>
+  public sealed partial class CryptoKeyVersionTemplate : pb::IMessage<CryptoKeyVersionTemplate> {
+    private static readonly pb::MessageParser<CryptoKeyVersionTemplate> _parser = new pb::MessageParser<CryptoKeyVersionTemplate>(() => new CryptoKeyVersionTemplate());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CryptoKeyVersionTemplate> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoKeyVersionTemplate() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoKeyVersionTemplate(CryptoKeyVersionTemplate other) : this() {
+      protectionLevel_ = other.protectionLevel_;
+      algorithm_ = other.algorithm_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CryptoKeyVersionTemplate Clone() {
+      return new CryptoKeyVersionTemplate(this);
+    }
+
+    /// <summary>Field number for the "protection_level" field.</summary>
+    public const int ProtectionLevelFieldNumber = 1;
+    private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = 0;
+    /// <summary>
+    /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when creating a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] based on
+    /// this template. Immutable. Defaults to [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
+      get { return protectionLevel_; }
+      set {
+        protectionLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "algorithm" field.</summary>
+    public const int AlgorithmFieldNumber = 3;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
+    /// <summary>
+    /// Required. [Algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] to use
+    /// when creating a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] based on this template.
+    ///
+    /// For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both
+    /// this field is omitted and [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is
+    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
+      get { return algorithm_; }
+      set {
+        algorithm_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CryptoKeyVersionTemplate);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CryptoKeyVersionTemplate other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProtectionLevel != other.ProtectionLevel) return false;
+      if (Algorithm != other.Algorithm) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProtectionLevel != 0) hash ^= ProtectionLevel.GetHashCode();
+      if (Algorithm != 0) hash ^= Algorithm.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ProtectionLevel != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) ProtectionLevel);
+      }
+      if (Algorithm != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Algorithm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProtectionLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProtectionLevel);
+      }
+      if (Algorithm != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Algorithm);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CryptoKeyVersionTemplate other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProtectionLevel != 0) {
+        ProtectionLevel = other.ProtectionLevel;
+      }
+      if (other.Algorithm != 0) {
+        Algorithm = other.Algorithm;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            protectionLevel_ = (global::Google.Cloud.Kms.V1.ProtectionLevel) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            algorithm_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Contains an HSM-generated attestation about a key operation.
+  /// </summary>
+  public sealed partial class KeyOperationAttestation : pb::IMessage<KeyOperationAttestation> {
+    private static readonly pb::MessageParser<KeyOperationAttestation> _parser = new pb::MessageParser<KeyOperationAttestation>(() => new KeyOperationAttestation());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<KeyOperationAttestation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KeyOperationAttestation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KeyOperationAttestation(KeyOperationAttestation other) : this() {
+      format_ = other.format_;
+      content_ = other.content_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KeyOperationAttestation Clone() {
+      return new KeyOperationAttestation(this);
+    }
+
+    /// <summary>Field number for the "format" field.</summary>
+    public const int FormatFieldNumber = 4;
+    private global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat format_ = 0;
+    /// <summary>
+    /// Output only. The format of the attestation data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat Format {
+      get { return format_; }
+      set {
+        format_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 5;
+    private pb::ByteString content_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Output only. The attestation data provided by the HSM when the key
+    /// operation was performed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Content {
+      get { return content_; }
+      set {
+        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as KeyOperationAttestation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(KeyOperationAttestation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Format != other.Format) return false;
+      if (Content != other.Content) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Format != 0) hash ^= Format.GetHashCode();
+      if (Content.Length != 0) hash ^= Content.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Format != 0) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Format);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Content);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Format != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Format);
+      }
+      if (Content.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(KeyOperationAttestation other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Format != 0) {
+        Format = other.Format;
+      }
+      if (other.Content.Length != 0) {
+        Content = other.Content;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 32: {
+            format_ = (global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            Content = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the KeyOperationAttestation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Attestion formats provided by the HSM.
+      /// </summary>
+      public enum AttestationFormat {
+        [pbr::OriginalName("ATTESTATION_FORMAT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Cavium HSM attestation compressed with gzip. Note that this format is
+        /// defined by Cavium and subject to change at any time.
+        /// </summary>
+        [pbr::OriginalName("CAVIUM_V1_COMPRESSED")] CaviumV1Compressed = 3,
       }
 
     }
@@ -657,14 +1139,13 @@ namespace Google.Cloud.Kms.V1 {
   /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] represents an individual cryptographic key, and the
   /// associated key material.
   ///
-  /// It can be used for cryptographic operations either directly, or via its
-  /// parent [CryptoKey][google.cloud.kms.v1.CryptoKey], in which case the server will choose the appropriate
-  /// version for the operation.
+  /// An [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED] version can be
+  /// used for cryptographic operations.
   ///
   /// For security reasons, the raw cryptographic key material represented by a
   /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] can never be viewed or exported. It can only be used to
-  /// encrypt or decrypt data when an authorized user or application invokes Cloud
-  /// KMS.
+  /// encrypt, decrypt, or sign data when an authorized user or application invokes
+  /// Cloud KMS.
   /// </summary>
   public sealed partial class CryptoKeyVersion : pb::IMessage<CryptoKeyVersion> {
     private static readonly pb::MessageParser<CryptoKeyVersion> _parser = new pb::MessageParser<CryptoKeyVersion>(() => new CryptoKeyVersion());
@@ -674,7 +1155,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -693,7 +1174,11 @@ namespace Google.Cloud.Kms.V1 {
     public CryptoKeyVersion(CryptoKeyVersion other) : this() {
       name_ = other.name_;
       state_ = other.state_;
+      protectionLevel_ = other.protectionLevel_;
+      algorithm_ = other.algorithm_;
+      attestation_ = other.attestation_ != null ? other.attestation_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      generateTime_ = other.generateTime_ != null ? other.generateTime_.Clone() : null;
       destroyTime_ = other.destroyTime_ != null ? other.destroyTime_.Clone() : null;
       destroyEventTime_ = other.destroyEventTime_ != null ? other.destroyEventTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -733,6 +1218,53 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "protection_level" field.</summary>
+    public const int ProtectionLevelFieldNumber = 7;
+    private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = 0;
+    /// <summary>
+    /// Output only. The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] describing how crypto operations are
+    /// performed with this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
+      get { return protectionLevel_; }
+      set {
+        protectionLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "algorithm" field.</summary>
+    public const int AlgorithmFieldNumber = 10;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
+    /// <summary>
+    /// Output only. The [CryptoKeyVersionAlgorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] that this
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] supports.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
+      get { return algorithm_; }
+      set {
+        algorithm_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attestation" field.</summary>
+    public const int AttestationFieldNumber = 8;
+    private global::Google.Cloud.Kms.V1.KeyOperationAttestation attestation_;
+    /// <summary>
+    /// Output only. Statement that was generated and signed by the HSM at key
+    /// creation time. Use this statement to verify attributes of the key as stored
+    /// on the HSM, independently of Google. Only provided for key versions with
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersion.protection_level] [HSM][google.cloud.kms.v1.ProtectionLevel.HSM].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.KeyOperationAttestation Attestation {
+      get { return attestation_; }
+      set {
+        attestation_ = value;
+      }
+    }
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
@@ -744,6 +1276,21 @@ namespace Google.Cloud.Kms.V1 {
       get { return createTime_; }
       set {
         createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "generate_time" field.</summary>
+    public const int GenerateTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp generateTime_;
+    /// <summary>
+    /// Output only. The time this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s key material was
+    /// generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp GenerateTime {
+      get { return generateTime_; }
+      set {
+        generateTime_ = value;
       }
     }
 
@@ -794,7 +1341,11 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Name != other.Name) return false;
       if (State != other.State) return false;
+      if (ProtectionLevel != other.ProtectionLevel) return false;
+      if (Algorithm != other.Algorithm) return false;
+      if (!object.Equals(Attestation, other.Attestation)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(GenerateTime, other.GenerateTime)) return false;
       if (!object.Equals(DestroyTime, other.DestroyTime)) return false;
       if (!object.Equals(DestroyEventTime, other.DestroyEventTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -805,7 +1356,11 @@ namespace Google.Cloud.Kms.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
+      if (ProtectionLevel != 0) hash ^= ProtectionLevel.GetHashCode();
+      if (Algorithm != 0) hash ^= Algorithm.GetHashCode();
+      if (attestation_ != null) hash ^= Attestation.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (generateTime_ != null) hash ^= GenerateTime.GetHashCode();
       if (destroyTime_ != null) hash ^= DestroyTime.GetHashCode();
       if (destroyEventTime_ != null) hash ^= DestroyEventTime.GetHashCode();
       if (_unknownFields != null) {
@@ -841,6 +1396,22 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(DestroyEventTime);
       }
+      if (ProtectionLevel != 0) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ProtectionLevel);
+      }
+      if (attestation_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Attestation);
+      }
+      if (Algorithm != 0) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Algorithm);
+      }
+      if (generateTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(GenerateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -855,8 +1426,20 @@ namespace Google.Cloud.Kms.V1 {
       if (State != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
+      if (ProtectionLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProtectionLevel);
+      }
+      if (Algorithm != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Algorithm);
+      }
+      if (attestation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attestation);
+      }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (generateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GenerateTime);
       }
       if (destroyTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DestroyTime);
@@ -881,11 +1464,29 @@ namespace Google.Cloud.Kms.V1 {
       if (other.State != 0) {
         State = other.State;
       }
+      if (other.ProtectionLevel != 0) {
+        ProtectionLevel = other.ProtectionLevel;
+      }
+      if (other.Algorithm != 0) {
+        Algorithm = other.Algorithm;
+      }
+      if (other.attestation_ != null) {
+        if (attestation_ == null) {
+          attestation_ = new global::Google.Cloud.Kms.V1.KeyOperationAttestation();
+        }
+        Attestation.MergeFrom(other.Attestation);
+      }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.generateTime_ != null) {
+        if (generateTime_ == null) {
+          generateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        GenerateTime.MergeFrom(other.GenerateTime);
       }
       if (other.destroyTime_ != null) {
         if (destroyTime_ == null) {
@@ -939,6 +1540,28 @@ namespace Google.Cloud.Kms.V1 {
             input.ReadMessage(destroyEventTime_);
             break;
           }
+          case 56: {
+            protectionLevel_ = (global::Google.Cloud.Kms.V1.ProtectionLevel) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            if (attestation_ == null) {
+              attestation_ = new global::Google.Cloud.Kms.V1.KeyOperationAttestation();
+            }
+            input.ReadMessage(attestation_);
+            break;
+          }
+          case 80: {
+            algorithm_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (generateTime_ == null) {
+              generateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(generateTime_);
+            break;
+          }
         }
       }
     }
@@ -948,6 +1571,94 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
+      /// The algorithm of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], indicating what
+      /// parameters must be used for each cryptographic operation.
+      ///
+      /// The
+      /// [GOOGLE_SYMMETRIC_ENCRYPTION][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.GOOGLE_SYMMETRIC_ENCRYPTION]
+      /// algorithm is usable with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
+      ///
+      /// Algorithms beginning with "RSA_SIGN_" are usable with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN].
+      ///
+      /// The fields in the name after "RSA_SIGN_" correspond to the following
+      /// parameters: padding algorithm, modulus bit length, and digest algorithm.
+      ///
+      /// For PSS, the salt length used is equal to the length of digest
+      /// algorithm. For example,
+      /// [RSA_SIGN_PSS_2048_SHA256][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.RSA_SIGN_PSS_2048_SHA256]
+      /// will use PSS with a salt length of 256 bits or 32 bytes.
+      ///
+      /// Algorithms beginning with "RSA_DECRYPT_" are usable with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+      ///
+      /// The fields in the name after "RSA_DECRYPT_" correspond to the following
+      /// parameters: padding algorithm, modulus bit length, and digest algorithm.
+      ///
+      /// Algorithms beginning with "EC_SIGN_" are usable with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN].
+      ///
+      /// The fields in the name after "EC_SIGN_" correspond to the following
+      /// parameters: elliptic curve, digest algorithm.
+      /// </summary>
+      public enum CryptoKeyVersionAlgorithm {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Creates symmetric encryption keys.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_SYMMETRIC_ENCRYPTION")] GoogleSymmetricEncryption = 1,
+        /// <summary>
+        /// RSASSA-PSS 2048 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_2048_SHA256")] RsaSignPss2048Sha256 = 2,
+        /// <summary>
+        /// RSASSA-PSS 3072 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_3072_SHA256")] RsaSignPss3072Sha256 = 3,
+        /// <summary>
+        /// RSASSA-PSS 4096 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_4096_SHA256")] RsaSignPss4096Sha256 = 4,
+        /// <summary>
+        /// RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PKCS1_2048_SHA256")] RsaSignPkcs12048Sha256 = 5,
+        /// <summary>
+        /// RSASSA-PKCS1-v1_5 with a 3072 bit key and a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PKCS1_3072_SHA256")] RsaSignPkcs13072Sha256 = 6,
+        /// <summary>
+        /// RSASSA-PKCS1-v1_5 with a 4096 bit key and a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PKCS1_4096_SHA256")] RsaSignPkcs14096Sha256 = 7,
+        /// <summary>
+        /// RSAES-OAEP 2048 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_DECRYPT_OAEP_2048_SHA256")] RsaDecryptOaep2048Sha256 = 8,
+        /// <summary>
+        /// RSAES-OAEP 3072 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_DECRYPT_OAEP_3072_SHA256")] RsaDecryptOaep3072Sha256 = 9,
+        /// <summary>
+        /// RSAES-OAEP 4096 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_DECRYPT_OAEP_4096_SHA256")] RsaDecryptOaep4096Sha256 = 10,
+        /// <summary>
+        /// ECDSA on the NIST P-256 curve with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("EC_SIGN_P256_SHA256")] EcSignP256Sha256 = 12,
+        /// <summary>
+        /// ECDSA on the NIST P-384 curve with a SHA384 digest.
+        /// </summary>
+        [pbr::OriginalName("EC_SIGN_P384_SHA384")] EcSignP384Sha384 = 13,
+      }
+
+      /// <summary>
       /// The state of a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], indicating if it can be used.
       /// </summary>
       public enum CryptoKeyVersionState {
@@ -956,8 +1667,13 @@ namespace Google.Cloud.Kms.V1 {
         /// </summary>
         [pbr::OriginalName("CRYPTO_KEY_VERSION_STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// This version may be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
-        /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt] requests.
+        /// This version is still being generated. It may not be used, enabled,
+        /// disabled, or destroyed yet. Cloud KMS will automatically mark this
+        /// version [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED] as soon as the version is ready.
+        /// </summary>
+        [pbr::OriginalName("PENDING_GENERATION")] PendingGeneration = 5,
+        /// <summary>
+        /// This version may be used for cryptographic operations.
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
@@ -979,8 +1695,199 @@ namespace Google.Cloud.Kms.V1 {
         [pbr::OriginalName("DESTROY_SCHEDULED")] DestroyScheduled = 4,
       }
 
+      /// <summary>
+      /// A view for [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]s. Controls the level of detail returned
+      /// for [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] in
+      /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions] and
+      /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
+      /// </summary>
+      public enum CryptoKeyVersionView {
+        /// <summary>
+        /// Default view for each [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Does not include
+        /// the [attestation][google.cloud.kms.v1.CryptoKeyVersion.attestation] field.
+        /// </summary>
+        [pbr::OriginalName("CRYPTO_KEY_VERSION_VIEW_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Provides all fields in each [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], including the
+        /// [attestation][google.cloud.kms.v1.CryptoKeyVersion.attestation].
+        /// </summary>
+        [pbr::OriginalName("FULL")] Full = 1,
+      }
+
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// The public key for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Obtained via
+  /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+  /// </summary>
+  public sealed partial class PublicKey : pb::IMessage<PublicKey> {
+    private static readonly pb::MessageParser<PublicKey> _parser = new pb::MessageParser<PublicKey>(() => new PublicKey());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PublicKey> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PublicKey() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PublicKey(PublicKey other) : this() {
+      pem_ = other.pem_;
+      algorithm_ = other.algorithm_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PublicKey Clone() {
+      return new PublicKey(this);
+    }
+
+    /// <summary>Field number for the "pem" field.</summary>
+    public const int PemFieldNumber = 1;
+    private string pem_ = "";
+    /// <summary>
+    /// The public key, encoded in PEM format. For more information, see the
+    /// [RFC 7468](https://tools.ietf.org/html/rfc7468) sections for
+    /// [General Considerations](https://tools.ietf.org/html/rfc7468#section-2) and
+    /// [Textual Encoding of Subject Public Key Info]
+    /// (https://tools.ietf.org/html/rfc7468#section-13).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Pem {
+      get { return pem_; }
+      set {
+        pem_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "algorithm" field.</summary>
+    public const int AlgorithmFieldNumber = 2;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
+    /// <summary>
+    /// The [Algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] associated
+    /// with this key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
+      get { return algorithm_; }
+      set {
+        algorithm_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PublicKey);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PublicKey other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Pem != other.Pem) return false;
+      if (Algorithm != other.Algorithm) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Pem.Length != 0) hash ^= Pem.GetHashCode();
+      if (Algorithm != 0) hash ^= Algorithm.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Pem.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Pem);
+      }
+      if (Algorithm != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Algorithm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Pem.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Pem);
+      }
+      if (Algorithm != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Algorithm);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PublicKey other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Pem.Length != 0) {
+        Pem = other.Pem;
+      }
+      if (other.Algorithm != 0) {
+        Algorithm = other.Algorithm;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Pem = input.ReadString();
+            break;
+          }
+          case 16: {
+            algorithm_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
 
   }
 

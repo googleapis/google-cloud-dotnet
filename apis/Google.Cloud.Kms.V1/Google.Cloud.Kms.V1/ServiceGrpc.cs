@@ -3,7 +3,7 @@
 //     source: google/cloud/kms/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2017 Google Inc.
+// Copyright 2018 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 1591
 #region Designer generated code
@@ -32,6 +33,9 @@ namespace Google.Cloud.Kms.V1 {
   /// * [KeyRing][google.cloud.kms.v1.KeyRing]
   /// * [CryptoKey][google.cloud.kms.v1.CryptoKey]
   /// * [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+  ///
+  /// If you are using manual gRPC libraries, see
+  /// [Using gRPC with Cloud KMS](https://cloud.google.com/kms/docs/grpc).
   /// </summary>
   public static partial class KeyManagementService
   {
@@ -49,6 +53,8 @@ namespace Google.Cloud.Kms.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKey> __Marshaller_CryptoKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CryptoKey.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest> __Marshaller_GetCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Marshaller_CryptoKeyVersion = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetPublicKeyRequest> __Marshaller_GetPublicKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.GetPublicKeyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.PublicKey> __Marshaller_PublicKey = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.PublicKey.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateKeyRingRequest> __Marshaller_CreateKeyRingRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest> __Marshaller_CreateCryptoKeyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest> __Marshaller_CreateCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser.ParseFrom);
@@ -58,6 +64,10 @@ namespace Google.Cloud.Kms.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EncryptResponse> __Marshaller_EncryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.EncryptResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptRequest> __Marshaller_DecryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DecryptRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptResponse> __Marshaller_DecryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DecryptResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignRequest> __Marshaller_AsymmetricSignRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Marshaller_AsymmetricSignResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest> __Marshaller_AsymmetricDecryptRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> __Marshaller_AsymmetricDecryptResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest> __Marshaller_UpdateCryptoKeyPrimaryVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest> __Marshaller_DestroyCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest> __Marshaller_RestoreCryptoKeyVersionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest.Parser.ParseFrom);
@@ -103,6 +113,13 @@ namespace Google.Cloud.Kms.V1 {
         "GetCryptoKeyVersion",
         __Marshaller_GetCryptoKeyVersionRequest,
         __Marshaller_CryptoKeyVersion);
+
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey> __Method_GetPublicKey = new grpc::Method<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPublicKey",
+        __Marshaller_GetPublicKeyRequest,
+        __Marshaller_PublicKey);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing> __Method_CreateKeyRing = new grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(
         grpc::MethodType.Unary,
@@ -152,6 +169,20 @@ namespace Google.Cloud.Kms.V1 {
         "Decrypt",
         __Marshaller_DecryptRequest,
         __Marshaller_DecryptResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Method_AsymmetricSign = new grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AsymmetricSign",
+        __Marshaller_AsymmetricSignRequest,
+        __Marshaller_AsymmetricSignResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> __Method_AsymmetricDecrypt = new grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AsymmetricDecrypt",
+        __Marshaller_AsymmetricDecryptRequest,
+        __Marshaller_AsymmetricDecryptResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_UpdateCryptoKeyPrimaryVersion = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
@@ -251,6 +282,20 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
+      /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+      /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.PublicKey> GetPublicKey(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Create a new [KeyRing][google.cloud.kms.v1.KeyRing] in a given Project and Location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -264,7 +309,9 @@ namespace Google.Cloud.Kms.V1 {
       /// <summary>
       /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
       ///
-      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+      /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+      /// are required.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -319,6 +366,8 @@ namespace Google.Cloud.Kms.V1 {
 
       /// <summary>
       /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+      /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -329,7 +378,8 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
-      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -340,7 +390,35 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
-      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+      /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+      /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> AsymmetricSign(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Decrypts data that was encrypted with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> AsymmetricDecrypt(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      ///
+      /// Returns an error if called on an asymmetric key.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -374,7 +452,7 @@ namespace Google.Cloud.Kms.V1 {
 
       /// <summary>
       /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
       /// state.
       ///
       /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -683,6 +761,62 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCryptoKeyVersion, null, options, request);
       }
       /// <summary>
+      /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+      /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Kms.V1.PublicKey GetPublicKey(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+      /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Kms.V1.PublicKey GetPublicKey(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPublicKey, null, options, request);
+      }
+      /// <summary>
+      /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+      /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.PublicKey> GetPublicKeyAsync(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+      /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.PublicKey> GetPublicKeyAsync(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPublicKey, null, options, request);
+      }
+      /// <summary>
       /// Create a new [KeyRing][google.cloud.kms.v1.KeyRing] in a given Project and Location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -729,7 +863,9 @@ namespace Google.Cloud.Kms.V1 {
       /// <summary>
       /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
       ///
-      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+      /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+      /// are required.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -743,7 +879,9 @@ namespace Google.Cloud.Kms.V1 {
       /// <summary>
       /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
       ///
-      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+      /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+      /// are required.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -755,7 +893,9 @@ namespace Google.Cloud.Kms.V1 {
       /// <summary>
       /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
       ///
-      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+      /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+      /// are required.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -769,7 +909,9 @@ namespace Google.Cloud.Kms.V1 {
       /// <summary>
       /// Create a new [CryptoKey][google.cloud.kms.v1.CryptoKey] within a [KeyRing][google.cloud.kms.v1.KeyRing].
       ///
-      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is required.
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] and
+      /// [CryptoKey.version_template.algorithm][google.cloud.kms.v1.CryptoKeyVersionTemplate.algorithm]
+      /// are required.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -952,6 +1094,8 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+      /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -964,6 +1108,8 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+      /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -974,6 +1120,8 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+      /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -986,6 +1134,8 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Encrypts data, so that it can only be recovered by a call to [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+      /// The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+      /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -995,7 +1145,8 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Encrypt, null, options, request);
       }
       /// <summary>
-      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1007,7 +1158,8 @@ namespace Google.Cloud.Kms.V1 {
         return Decrypt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1017,7 +1169,8 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_Decrypt, null, options, request);
       }
       /// <summary>
-      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1029,7 +1182,8 @@ namespace Google.Cloud.Kms.V1 {
         return DecryptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      /// Decrypts data that was protected by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]. The [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// must be [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1039,7 +1193,113 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Decrypt, null, options, request);
       }
       /// <summary>
-      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+      /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+      /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Kms.V1.AsymmetricSignResponse AsymmetricSign(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsymmetricSign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+      /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Kms.V1.AsymmetricSignResponse AsymmetricSign(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AsymmetricSign, null, options, request);
+      }
+      /// <summary>
+      /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+      /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> AsymmetricSignAsync(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsymmetricSignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+      /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> AsymmetricSignAsync(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AsymmetricSign, null, options, request);
+      }
+      /// <summary>
+      /// Decrypts data that was encrypted with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse AsymmetricDecrypt(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsymmetricDecrypt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Decrypts data that was encrypted with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse AsymmetricDecrypt(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AsymmetricDecrypt, null, options, request);
+      }
+      /// <summary>
+      /// Decrypts data that was encrypted with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> AsymmetricDecryptAsync(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AsymmetricDecryptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Decrypts data that was encrypted with a public key retrieved from
+      /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> AsymmetricDecryptAsync(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AsymmetricDecrypt, null, options, request);
+      }
+      /// <summary>
+      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      ///
+      /// Returns an error if called on an asymmetric key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1051,7 +1311,9 @@ namespace Google.Cloud.Kms.V1 {
         return UpdateCryptoKeyPrimaryVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      ///
+      /// Returns an error if called on an asymmetric key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1061,7 +1323,9 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCryptoKeyPrimaryVersion, null, options, request);
       }
       /// <summary>
-      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      ///
+      /// Returns an error if called on an asymmetric key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1073,7 +1337,9 @@ namespace Google.Cloud.Kms.V1 {
         return UpdateCryptoKeyPrimaryVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt]
+      /// Update the version of a [CryptoKey][google.cloud.kms.v1.CryptoKey] that will be used in [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+      ///
+      /// Returns an error if called on an asymmetric key.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1172,7 +1438,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
       /// state.
       ///
       /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -1190,7 +1456,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
       /// state.
       ///
       /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -1206,7 +1472,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
       /// state.
       ///
       /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -1224,7 +1490,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       /// <summary>
       /// Restore a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the
-      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED],
+      /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED]
       /// state.
       ///
       /// Upon restoration of the CryptoKeyVersion, [state][google.cloud.kms.v1.CryptoKeyVersion.state]
@@ -1256,6 +1522,7 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_GetKeyRing, serviceImpl.GetKeyRing)
           .AddMethod(__Method_GetCryptoKey, serviceImpl.GetCryptoKey)
           .AddMethod(__Method_GetCryptoKeyVersion, serviceImpl.GetCryptoKeyVersion)
+          .AddMethod(__Method_GetPublicKey, serviceImpl.GetPublicKey)
           .AddMethod(__Method_CreateKeyRing, serviceImpl.CreateKeyRing)
           .AddMethod(__Method_CreateCryptoKey, serviceImpl.CreateCryptoKey)
           .AddMethod(__Method_CreateCryptoKeyVersion, serviceImpl.CreateCryptoKeyVersion)
@@ -1263,6 +1530,8 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_UpdateCryptoKeyVersion, serviceImpl.UpdateCryptoKeyVersion)
           .AddMethod(__Method_Encrypt, serviceImpl.Encrypt)
           .AddMethod(__Method_Decrypt, serviceImpl.Decrypt)
+          .AddMethod(__Method_AsymmetricSign, serviceImpl.AsymmetricSign)
+          .AddMethod(__Method_AsymmetricDecrypt, serviceImpl.AsymmetricDecrypt)
           .AddMethod(__Method_UpdateCryptoKeyPrimaryVersion, serviceImpl.UpdateCryptoKeyPrimaryVersion)
           .AddMethod(__Method_DestroyCryptoKeyVersion, serviceImpl.DestroyCryptoKeyVersion)
           .AddMethod(__Method_RestoreCryptoKeyVersion, serviceImpl.RestoreCryptoKeyVersion).Build();
