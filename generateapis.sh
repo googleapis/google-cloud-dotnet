@@ -90,6 +90,12 @@ generate_api() {
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     $API_SRC_DIR/*.proto
+    
+  if [[ -f $API_OUT_DIR/$1/postgeneration.sh ]]
+  then
+    echo "Running post-generation script for $1"
+    (cd $API_OUT_DIR/$1; ./postgeneration.sh)
+  fi
 }
 
 # Entry point
@@ -183,7 +189,3 @@ generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision_v1.yaml
 generate_api Google.Cloud.Vision.V1P1Beta1 google/cloud/vision/v1p1beta1 vision_v1p1beta1.yaml
 generate_api Google.Cloud.Vision.V1P2Beta1 google/cloud/vision/v1p2beta1 vision_v1p2beta1.yaml
 
-dotnet run -f net461 -p apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.GenerateClient \
- apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.csproj \
- BigtableServiceApiClient \
- BigtableClient
