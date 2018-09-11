@@ -360,8 +360,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>The task representing the created <see cref="BigtableServiceApiClient"/>.</returns>
         public static async stt::Task<BigtableServiceApiClient> CreateAsync(gaxgrpc::ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
-            // TODO: Figure out how to update the auto-generation to allow for this and the change below.
-            var callInvoker = await s_callInvokerPool.GetCallInvokerAsync(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions()).ConfigureAwait(false);
+            grpccore::CallInvoker callInvoker = await s_callInvokerPool.GetCallInvokerAsync(endpoint ?? DefaultEndpoint, settings.CreateChannelOptions()).ConfigureAwait(false);
             return Create(callInvoker, settings);
         }
 
