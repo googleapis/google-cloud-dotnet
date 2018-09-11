@@ -985,7 +985,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently exactly one cluster must be specified.
+        /// Currently, at most two clusters can be specified.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1029,7 +1029,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently exactly one cluster must be specified.
+        /// Currently, at most two clusters can be specified.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1070,7 +1070,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently exactly one cluster must be specified.
+        /// Currently, at most two clusters can be specified.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2559,6 +2559,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The unique name of the instance for which a list of app profiles is
         /// requested. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Use `&lt;instance&gt; = '-'` to list AppProfiles for all Instances in a project,
+        /// e.g., `projects/myproject/instances/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2594,6 +2596,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The unique name of the instance for which a list of app profiles is
         /// requested. Values are of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Use `&lt;instance&gt; = '-'` to list AppProfiles for all Instances in a project,
+        /// e.g., `projects/myproject/instances/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.

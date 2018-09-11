@@ -77,87 +77,88 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "cm9maWxlX2lkGAIgASgJEjkKC2FwcF9wcm9maWxlGAMgASgLMiQuZ29vZ2xl",
             "LmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUSFwoPaWdub3JlX3dhcm5p",
             "bmdzGAQgASgIIiQKFEdldEFwcFByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUYASAB",
-            "KAkiPAoWTGlzdEFwcFByb2ZpbGVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
-            "EgoKcGFnZV90b2tlbhgCIAEoCSJuChdMaXN0QXBwUHJvZmlsZXNSZXNwb25z",
-            "ZRI6CgxhcHBfcHJvZmlsZXMYASADKAsyJC5nb29nbGUuYmlndGFibGUuYWRt",
-            "aW4udjIuQXBwUHJvZmlsZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkingEK",
-            "F1VwZGF0ZUFwcFByb2ZpbGVSZXF1ZXN0EjkKC2FwcF9wcm9maWxlGAEgASgL",
-            "MiQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUSLwoLdXBk",
-            "YXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhcK",
-            "D2lnbm9yZV93YXJuaW5ncxgDIAEoCCJAChdEZWxldGVBcHBQcm9maWxlUmVx",
-            "dWVzdBIMCgRuYW1lGAEgASgJEhcKD2lnbm9yZV93YXJuaW5ncxgCIAEoCCIa",
-            "ChhVcGRhdGVBcHBQcm9maWxlTWV0YWRhdGEyqhcKFUJpZ3RhYmxlSW5zdGFu",
-            "Y2VBZG1pbhKOAQoOQ3JlYXRlSW5zdGFuY2USLy5nb29nbGUuYmlndGFibGUu",
-            "YWRtaW4udjIuQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiIsgtPkkwImIiEvdjIve3BhcmVudD1wcm9qZWN0",
-            "cy8qfS9pbnN0YW5jZXM6ASoSigEKC0dldEluc3RhbmNlEiwuZ29vZ2xlLmJp",
-            "Z3RhYmxlLmFkbWluLnYyLkdldEluc3RhbmNlUmVxdWVzdBoiLmdvb2dsZS5i",
-            "aWd0YWJsZS5hZG1pbi52Mi5JbnN0YW5jZSIpgtPkkwIjEiEvdjIve25hbWU9",
-            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0SmwEKDUxpc3RJbnN0YW5jZXMSLi5n",
-            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEluc3RhbmNlc1JlcXVlc3Qa",
-            "Ly5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEluc3RhbmNlc1Jlc3Bv",
-            "bnNlIimC0+STAiMSIS92Mi97cGFyZW50PXByb2plY3RzLyp9L2luc3RhbmNl",
-            "cxKGAQoOVXBkYXRlSW5zdGFuY2USIi5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuSW5zdGFuY2UaIi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuSW5zdGFu",
-            "Y2UiLILT5JMCJhohL3YyL3tuYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9",
-            "OgEqEqwBChVQYXJ0aWFsVXBkYXRlSW5zdGFuY2USNi5nb29nbGUuYmlndGFi",
-            "bGUuYWRtaW4udjIuUGFydGlhbFVwZGF0ZUluc3RhbmNlUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iPILT5JMCNjIqL3YyL3tpbnN0",
-            "YW5jZS5uYW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OghpbnN0YW5jZRKE",
-            "AQoORGVsZXRlSW5zdGFuY2USLy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
-            "RGVsZXRlSW5zdGFuY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "IimC0+STAiMqIS92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfRKd",
-            "AQoNQ3JlYXRlQ2x1c3RlchIuLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5D",
-            "cmVhdGVDbHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24iPYLT5JMCNyIsL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5j",
-            "ZXMvKn0vY2x1c3RlcnM6B2NsdXN0ZXISkgEKCkdldENsdXN0ZXISKy5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuR2V0Q2x1c3RlclJlcXVlc3QaIS5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3RlciI0gtPkkwIuEiwvdjIve25h",
-            "bWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9jbHVzdGVycy8qfRKjAQoMTGlz",
-            "dENsdXN0ZXJzEi0uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RDbHVz",
-            "dGVyc1JlcXVlc3QaLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdENs",
-            "dXN0ZXJzUmVzcG9uc2UiNILT5JMCLhIsL3YyL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9pbnN0YW5jZXMvKn0vY2x1c3RlcnMSigEKDVVwZGF0ZUNsdXN0ZXISIS5n",
-            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3RlchodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24iN4LT5JMCMRosL3YyL3tuYW1lPXByb2plY3Rz",
-            "LyovaW5zdGFuY2VzLyovY2x1c3RlcnMvKn06ASoSjQEKDURlbGV0ZUNsdXN0",
-            "ZXISLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRGVsZXRlQ2x1c3RlclJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNILT5JMCLiosL3YyL3tu",
-            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovY2x1c3RlcnMvKn0SsQEKEENy",
-            "ZWF0ZUFwcFByb2ZpbGUSMS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ3Jl",
-            "YXRlQXBwUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuQXBwUHJvZmlsZSJEgtPkkwI+Ii8vdjIve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2luc3RhbmNlcy8qfS9hcHBQcm9maWxlczoLYXBwX3Byb2ZpbGUSngEKDUdl",
-            "dEFwcFByb2ZpbGUSLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2V0QXBw",
-            "UHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBw",
-            "UHJvZmlsZSI3gtPkkwIxEi8vdjIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5j",
-            "ZXMvKi9hcHBQcm9maWxlcy8qfRKvAQoPTGlzdEFwcFByb2ZpbGVzEjAuZ29v",
-            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RBcHBQcm9maWxlc1JlcXVlc3Qa",
-            "MS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuTGlzdEFwcFByb2ZpbGVzUmVz",
-            "cG9uc2UiN4LT5JMCMRIvL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9pbnN0YW5j",
-            "ZXMvKn0vYXBwUHJvZmlsZXMStgEKEFVwZGF0ZUFwcFByb2ZpbGUSMS5nb29n",
-            "bGUuYmlndGFibGUuYWRtaW4udjIuVXBkYXRlQXBwUHJvZmlsZVJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlCC0+STAkoyOy92Mi97",
-            "YXBwX3Byb2ZpbGUubmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2FwcFBy",
-            "b2ZpbGVzLyp9OgthcHBfcHJvZmlsZRKWAQoQRGVsZXRlQXBwUHJvZmlsZRIx",
-            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5EZWxldGVBcHBQcm9maWxlUmVx",
-            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI3gtPkkwIxKi8vdjIve25h",
-            "bWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9hcHBQcm9maWxlcy8qfRKIAQoM",
-            "R2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1",
-            "ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiPYLT5JMCNyIyL3YyL3tyZXNv",
-            "dXJjZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfTpnZXRJYW1Qb2xpY3k6ASoS",
-            "iAEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9saWN5",
-            "UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ij2C0+STAjciMi92Mi97",
-            "cmVzb3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06c2V0SWFtUG9saWN5",
-            "OgEqEq4BChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFtLnYxLlRl",
-            "c3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJ",
-            "YW1QZXJtaXNzaW9uc1Jlc3BvbnNlIkOC0+STAj0iOC92Mi97cmVzb3VyY2U9",
-            "cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq",
-            "Qr0BChxjb20uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyQhpCaWd0YWJsZUlu",
-            "c3RhbmNlQWRtaW5Qcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIeR29vZ2xl",
-            "LkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJpZ3Rh",
-            "YmxlXEFkbWluXFYyYgZwcm90bzM="));
+            "KAkiTwoWTGlzdEFwcFByb2ZpbGVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
+            "EQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkiiAEKF0xp",
+            "c3RBcHBQcm9maWxlc1Jlc3BvbnNlEjoKDGFwcF9wcm9maWxlcxgBIAMoCzIk",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCRIYChBmYWlsZWRfbG9jYXRpb25zGAMgAygJIp4B",
+            "ChdVcGRhdGVBcHBQcm9maWxlUmVxdWVzdBI5CgthcHBfcHJvZmlsZRgBIAEo",
+            "CzIkLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlEi8KC3Vw",
+            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIX",
+            "Cg9pZ25vcmVfd2FybmluZ3MYAyABKAgiQAoXRGVsZXRlQXBwUHJvZmlsZVJl",
+            "cXVlc3QSDAoEbmFtZRgBIAEoCRIXCg9pZ25vcmVfd2FybmluZ3MYAiABKAgi",
+            "GgoYVXBkYXRlQXBwUHJvZmlsZU1ldGFkYXRhMqoXChVCaWd0YWJsZUluc3Rh",
+            "bmNlQWRtaW4SjgEKDkNyZWF0ZUluc3RhbmNlEi8uZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24iLILT5JMCJiIhL3YyL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn0vaW5zdGFuY2VzOgEqEooBCgtHZXRJbnN0YW5jZRIsLmdvb2dsZS5i",
+            "aWd0YWJsZS5hZG1pbi52Mi5HZXRJbnN0YW5jZVJlcXVlc3QaIi5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuSW5zdGFuY2UiKYLT5JMCIxIhL3YyL3tuYW1l",
+            "PXByb2plY3RzLyovaW5zdGFuY2VzLyp9EpsBCg1MaXN0SW5zdGFuY2VzEi4u",
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RJbnN0YW5jZXNSZXF1ZXN0",
+            "Gi8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RJbnN0YW5jZXNSZXNw",
+            "b25zZSIpgtPkkwIjEiEvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9pbnN0YW5j",
+            "ZXMShgEKDlVwZGF0ZUluc3RhbmNlEiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
+            "LnYyLkluc3RhbmNlGiIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkluc3Rh",
+            "bmNlIiyC0+STAiYaIS92Mi97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "fToBKhKsAQoVUGFydGlhbFVwZGF0ZUluc3RhbmNlEjYuZ29vZ2xlLmJpZ3Rh",
+            "YmxlLmFkbWluLnYyLlBhcnRpYWxVcGRhdGVJbnN0YW5jZVJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIjyC0+STAjYyKi92Mi97aW5z",
+            "dGFuY2UubmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qfToIaW5zdGFuY2US",
+            "hAEKDkRlbGV0ZUluc3RhbmNlEi8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
+            "LkRlbGV0ZUluc3RhbmNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSIpgtPkkwIjKiEvdjIve25hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn0S",
+            "nQEKDUNyZWF0ZUNsdXN0ZXISLi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "Q3JlYXRlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIj2C0+STAjciLC92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyp9L2NsdXN0ZXJzOgdjbHVzdGVyEpIBCgpHZXRDbHVzdGVyEisuZ29v",
+            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdldENsdXN0ZXJSZXF1ZXN0GiEuZ29v",
+            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIiNILT5JMCLhIsL3YyL3tu",
+            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovY2x1c3RlcnMvKn0SowEKDExp",
+            "c3RDbHVzdGVycxItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0Q2x1",
+            "c3RlcnNSZXF1ZXN0Gi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RD",
+            "bHVzdGVyc1Jlc3BvbnNlIjSC0+STAi4SLC92Mi97cGFyZW50PXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyp9L2NsdXN0ZXJzEooBCg1VcGRhdGVDbHVzdGVyEiEu",
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNsdXN0ZXIaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIjeC0+STAjEaLC92Mi97bmFtZT1wcm9qZWN0",
+            "cy8qL2luc3RhbmNlcy8qL2NsdXN0ZXJzLyp9OgEqEo0BCg1EZWxldGVDbHVz",
+            "dGVyEi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkRlbGV0ZUNsdXN0ZXJS",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjSC0+STAi4qLC92Mi97",
+            "bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2NsdXN0ZXJzLyp9ErEBChBD",
+            "cmVhdGVBcHBQcm9maWxlEjEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkNy",
+            "ZWF0ZUFwcFByb2ZpbGVSZXF1ZXN0GiQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
+            "LnYyLkFwcFByb2ZpbGUiRILT5JMCPiIvL3YyL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9pbnN0YW5jZXMvKn0vYXBwUHJvZmlsZXM6C2FwcF9wcm9maWxlEp4BCg1H",
+            "ZXRBcHBQcm9maWxlEi4uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdldEFw",
+            "cFByb2ZpbGVSZXF1ZXN0GiQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFw",
+            "cFByb2ZpbGUiN4LT5JMCMRIvL3YyL3tuYW1lPXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyovYXBwUHJvZmlsZXMvKn0SrwEKD0xpc3RBcHBQcm9maWxlcxIwLmdv",
+            "b2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5MaXN0QXBwUHJvZmlsZXNSZXF1ZXN0",
+            "GjEuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkxpc3RBcHBQcm9maWxlc1Jl",
+            "c3BvbnNlIjeC0+STAjESLy92Mi97cGFyZW50PXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyp9L2FwcFByb2ZpbGVzErYBChBVcGRhdGVBcHBQcm9maWxlEjEuZ29v",
+            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyLlVwZGF0ZUFwcFByb2ZpbGVSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJQgtPkkwJKMjsvdjIv",
+            "e2FwcF9wcm9maWxlLm5hbWU9cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9hcHBQ",
+            "cm9maWxlcy8qfToLYXBwX3Byb2ZpbGUSlgEKEERlbGV0ZUFwcFByb2ZpbGUS",
+            "MS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRGVsZXRlQXBwUHJvZmlsZVJl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiN4LT5JMCMSovL3YyL3tu",
+            "YW1lPXByb2plY3RzLyovaW5zdGFuY2VzLyovYXBwUHJvZmlsZXMvKn0SiAEK",
+            "DEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVx",
+            "dWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5Ij2C0+STAjciMi92Mi97cmVz",
+            "b3VyY2U9cHJvamVjdHMvKi9pbnN0YW5jZXMvKn06Z2V0SWFtUG9saWN5OgEq",
+            "EogBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGlj",
+            "eVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSI9gtPkkwI3IjIvdjIv",
+            "e3Jlc291cmNlPXByb2plY3RzLyovaW5zdGFuY2VzLyp9OnNldElhbVBvbGlj",
+            "eToBKhKuAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5U",
+            "ZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0",
+            "SWFtUGVybWlzc2lvbnNSZXNwb25zZSJDgtPkkwI9IjgvdjIve3Jlc291cmNl",
+            "PXByb2plY3RzLyovaW5zdGFuY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoB",
+            "KkK9AQocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkIaQmlndGFibGVJ",
+            "bnN0YW5jZUFkbWluUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS9hZG1pbi92MjthZG1pbqoCHkdvb2ds",
+            "ZS5DbG91ZC5CaWd0YWJsZS5BZG1pbi5WMsoCHkdvb2dsZVxDbG91ZFxCaWd0",
+            "YWJsZVxBZG1pblxWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -178,8 +179,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateClusterMetadata.Parser, new[]{ "OriginalRequest", "RequestTime", "FinishTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest.Parser, new[]{ "Parent", "AppProfileId", "AppProfile", "IgnoreWarnings" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser, new[]{ "Parent", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser, new[]{ "AppProfiles", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse), global::Google.Cloud.Bigtable.Admin.V2.ListAppProfilesResponse.Parser, new[]{ "AppProfiles", "NextPageToken", "FailedLocations" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileRequest.Parser, new[]{ "AppProfile", "UpdateMask", "IgnoreWarnings" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest), global::Google.Cloud.Bigtable.Admin.V2.DeleteAppProfileRequest.Parser, new[]{ "Name", "IgnoreWarnings" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata), global::Google.Cloud.Bigtable.Admin.V2.UpdateAppProfileMetadata.Parser, null, null, null, null)
@@ -285,7 +286,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// cluster ID, e.g., just `mycluster` rather than
     /// `projects/myproject/instances/myinstance/clusters/mycluster`.
     /// Fields marked `OutputOnly` must be left blank.
-    /// Currently exactly one cluster must be specified.
+    /// Currently, at most two clusters can be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Cluster> Clusters {
@@ -616,7 +617,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// The value of `next_page_token` returned by a previous call.
+    /// DEPRECATED: This field is unused and ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -789,6 +790,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// Instances whose Clusters are all in one of the failed locations
     /// may be missing from `instances`, and Instances with at least one
     /// Cluster in a failed location may only have partial information returned.
+    /// Values are of the form `projects/&lt;project>/locations/&lt;zone_id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> FailedLocations {
@@ -799,9 +801,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NextPageTokenFieldNumber = 3;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Set if not all instances could be returned in a single response.
-    /// Pass this value to `page_token` in another request to get the next
-    /// page of results.
+    /// DEPRECATED: This field is unused and ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1631,7 +1631,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// The value of `next_page_token` returned by a previous call.
+    /// DEPRECATED: This field is unused and ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1803,6 +1803,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// due to an outage or some other transient condition.
     /// Clusters from these locations may be missing from `clusters`,
     /// or may only have partial information returned.
+    /// Values are of the form `projects/&lt;project>/locations/&lt;zone_id>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> FailedLocations {
@@ -1813,9 +1814,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NextPageTokenFieldNumber = 3;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Set if not all clusters could be returned in a single response.
-    /// Pass this value to `page_token` in another request to get the next
-    /// page of results.
+    /// DEPRECATED: This field is unused and ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -3327,6 +3326,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ListAppProfilesRequest(ListAppProfilesRequest other) : this() {
       parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3343,12 +3343,29 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// The unique name of the instance for which a list of app profiles is
     /// requested. Values are of the form
     /// `projects/&lt;project>/instances/&lt;instance>`.
+    /// Use `&lt;instance> = '-'` to list AppProfiles for all Instances in a project,
+    /// e.g., `projects/myproject/instances/-`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
       get { return parent_; }
       set {
         parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Maximum number of results per page.
+    /// CURRENTLY UNIMPLEMENTED AND IGNORED.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
       }
     }
 
@@ -3380,6 +3397,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3388,6 +3406,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3410,6 +3429,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(PageToken);
       }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3420,6 +3443,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int size = 0;
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
@@ -3437,6 +3463,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
@@ -3458,6 +3487,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 18: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
             break;
           }
         }
@@ -3496,6 +3529,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public ListAppProfilesResponse(ListAppProfilesResponse other) : this() {
       appProfiles_ = other.appProfiles_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      failedLocations_ = other.failedLocations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3533,6 +3567,22 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "failed_locations" field.</summary>
+    public const int FailedLocationsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_failedLocations_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> failedLocations_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations from which AppProfile information could not be retrieved,
+    /// due to an outage or some other transient condition.
+    /// AppProfiles from these locations may be missing from `app_profiles`.
+    /// Values are of the form `projects/&lt;project>/locations/&lt;zone_id>`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> FailedLocations {
+      get { return failedLocations_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListAppProfilesResponse);
@@ -3548,6 +3598,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if(!appProfiles_.Equals(other.appProfiles_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!failedLocations_.Equals(other.failedLocations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3556,6 +3607,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       int hash = 1;
       hash ^= appProfiles_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= failedLocations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3574,6 +3626,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      failedLocations_.WriteTo(output, _repeated_failedLocations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3586,6 +3639,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += failedLocations_.CalculateSize(_repeated_failedLocations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3601,6 +3655,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      failedLocations_.Add(other.failedLocations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3618,6 +3673,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            failedLocations_.AddEntriesFrom(input, _repeated_failedLocations_codec);
             break;
           }
         }
