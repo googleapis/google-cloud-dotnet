@@ -24,7 +24,7 @@ OUTDIR=tmp
 fetch_github_repos() {
   if [ -d "gapic-generator" ]
   then
-    git -C gapic-generator pull
+    git -C gapic-generator pull -q
     git -C gapic-generator submodule update
   else
     git clone --recursive https://github.com/googleapis/gapic-generator \
@@ -34,7 +34,7 @@ fetch_github_repos() {
           
   if [ -d "googleapis" ]
   then
-    git -C googleapis pull
+    git -C googleapis pull -q
   else
     # Auto-detect whether we're cloning the public or private googleapis repo.
     git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
@@ -77,7 +77,8 @@ generate_api() {
   
   # Suppress protobuf warnings in Java 9/10. By the time they
   # become a problem, we won't be using Java...
-  java ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]}
+  java ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]} \
+  2>&1 | grep -v "does not have control environment" || true # Ignore control environment warnings (and grep exit code)
   
   cp -r $API_TMP_DIR/$1 $API_OUT_DIR
 
@@ -89,7 +90,8 @@ generate_api() {
     -I googleapis \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    $API_SRC_DIR/*.proto
+    $API_SRC_DIR/*.proto \
+    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
     
   if [[ -f $API_OUT_DIR/$1/postgeneration.sh ]]
   then
@@ -106,8 +108,9 @@ fetch_github_repos
 GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 
 # Build GAPIC generator once with gradle so we can invoke it from Java directly
-# once per API.
-(cd gapic-generator; ./gradlew shadowJar)
+# once per API. We don't care that we're using deprecated Gradle features: we
+# won't be using Gradle at all by the end of 2018, with any luck...
+(cd gapic-generator; ./gradlew shadowJar --warning-mode=none)
 
 OUTDIR=tmp
 rm -rf $OUTDIR
@@ -121,7 +124,8 @@ $PROTOC \
   --include_source_info \
   -o $OUTDIR/protos.desc \
   $CORE_PROTOS_ROOT/google/protobuf/*.proto \
-  `find googleapis/google -name '*.proto'`
+  `find googleapis/google -name '*.proto'` \
+  2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
 # Generate LongRunning, after changing the license text (because we use
 # Apache for LRO where other languages use BSD)
