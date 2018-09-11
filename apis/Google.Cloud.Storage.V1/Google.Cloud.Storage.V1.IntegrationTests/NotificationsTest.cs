@@ -88,11 +88,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 // Wait 30 seconds to let the notification become active reliably.
                 await Task.Delay(TimeSpan.FromSeconds(30));
 
-                // Check we can fetch it
+                // Check we can fetch it, and that it looks the same as the resource we received on creation.
                 var fetched = storageClient.GetNotification(bucket, notificationId);
 
-                // We don't mind if the ETag is different. (It appears not to be populated in the originally-returned one.)
-                fetched.ETag = created.ETag;
                 Assert.Equal(
                     storageClient.Service.SerializeObject(created),
                     storageClient.Service.SerializeObject(fetched));
