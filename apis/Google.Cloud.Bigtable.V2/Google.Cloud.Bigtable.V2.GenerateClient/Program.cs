@@ -489,7 +489,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                 }
                 else
                 {
-                    var underlyingMethod = IdentifierName(ClientFieldName).Invoke().Member(node.Identifier);
+                    var underlyingMethod = IdentifierName(ClientFieldName).Member(node.Identifier);
                     resultExpression = underlyingMethod.Invoke(node.ParameterList.AsArguments());
                 }
 
