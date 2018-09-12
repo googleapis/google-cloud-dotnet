@@ -53,7 +53,6 @@ namespace Google.Cloud.PubSub.V1
             internal Settings(Settings other)
             {
                 BatchingSettings = other.BatchingSettings;
-                MaxBatchingSettings = other.MaxBatchingSettings;
                 Scheduler = other.Scheduler;
             }
 
@@ -64,15 +63,6 @@ namespace Google.Cloud.PubSub.V1
             public BatchingSettings BatchingSettings { get; set; }
 
             /// <summary>
-            /// <see cref="T:BatchingSettings"/> that specifies the maximum batch size allowed when a batch
-            /// matching <see cref="P:BatchingSettings"/> cannot be sent immediately because all underlying
-            /// clients are already busy publishing batches.
-            /// <see cref="BatchingSettings.DelayThreshold"/> is not relevant in this context.
-            /// If <c>null</c>, defaults to <see cref="ApiMaxBatchingSettings"/>.
-            /// </summary>
-            public BatchingSettings MaxBatchingSettings { get; set; }
-
-            /// <summary>
             /// The <see cref="IScheduler"/> to use.
             /// If <c>null</c>, defaults to <see cref="SystemScheduler"/>. Usually only useful for testing.
             /// </summary>
@@ -80,20 +70,15 @@ namespace Google.Cloud.PubSub.V1
 
             internal void Validate()
             {
-                void ValidateBatchingSettings(BatchingSettings batchingSettings, string name)
+                if (BatchingSettings != null)
                 {
-                    if (batchingSettings != null)
-                    {
-                        GaxPreconditions.CheckArgumentRange(batchingSettings.ElementCountThreshold,
-                            $"{name}.{nameof(BatchingSettings.ElementCountThreshold)}", 1, ApiMaxBatchingSettings.ElementCountThreshold.Value);
-                        GaxPreconditions.CheckArgumentRange(batchingSettings.ByteCountThreshold,
-                            $"{name}.{nameof(BatchingSettings.ByteCountThreshold)}", 1, ApiMaxBatchingSettings.ByteCountThreshold.Value);
-                        GaxPreconditions.CheckArgument((batchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero,
-                            $"{name}.{nameof(BatchingSettings.DelayThreshold)}", "Must be positive");
-                    }
+                    GaxPreconditions.CheckArgumentRange(BatchingSettings.ElementCountThreshold,
+                        $"{nameof(BatchingSettings)}.{nameof(BatchingSettings.ElementCountThreshold)}", 1, ApiMaxBatchingSettings.ElementCountThreshold.Value);
+                    GaxPreconditions.CheckArgumentRange(BatchingSettings.ByteCountThreshold,
+                        $"{nameof(BatchingSettings)}.{nameof(BatchingSettings.ByteCountThreshold)}", 1, ApiMaxBatchingSettings.ByteCountThreshold.Value);
+                    GaxPreconditions.CheckArgument((BatchingSettings.DelayThreshold ?? TimeSpan.FromSeconds(1)) > TimeSpan.Zero,
+                        $"{nameof(BatchingSettings)}.{nameof(BatchingSettings.DelayThreshold)}", "Must be positive");
                 }
-                ValidateBatchingSettings(BatchingSettings, nameof(BatchingSettings));
-                ValidateBatchingSettings(MaxBatchingSettings, nameof(MaxBatchingSettings));
             }
 
             /// <summary>
@@ -193,10 +178,10 @@ namespace Google.Cloud.PubSub.V1
         /// Default <see cref="BatchingSettings"/> for <see cref="PublisherClient"/>.
         /// Default values are:
         /// <see cref="BatchingSettings.ElementCountThreshold"/> = 100;
-        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 1,000;
+        /// <see cref="BatchingSettings.ByteCountThreshold"/> = 10,000;
         /// <see cref="BatchingSettings.DelayThreshold"/> = 1 millisecond;
         /// </summary>
-        public static BatchingSettings DefaultBatchingSettings { get; } = new BatchingSettings(100L, 1000L, TimeSpan.FromMilliseconds(1));
+        public static BatchingSettings DefaultBatchingSettings { get; } = new BatchingSettings(100L, 10_000L, TimeSpan.FromMilliseconds(1));
 
         /// <summary>
         /// The absolute maximum <see cref="BatchingSettings"/> supported by the service.
@@ -272,7 +257,7 @@ namespace Google.Cloud.PubSub.V1
         /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
         /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
-        public static PublisherClient Create(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings = null) =>
+        internal static PublisherClient Create(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings = null) =>
             // No need to clone clients, it's synchronously used to initialise a Queue<T> in the constructor
             new PublisherClientImpl(topicName, clients, settings?.Clone() ?? new Settings(), null);
 
@@ -419,9 +404,6 @@ namespace Google.Cloud.PubSub.V1
             _batchByteCountThreshold = batchingSettings.ByteCountThreshold ?? ApiMaxBatchingSettings.ByteCountThreshold.Value;
             _batchDelayThreshold = batchingSettings.DelayThreshold;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
-            var maxBatchingSettings = settings.MaxBatchingSettings ?? ApiMaxBatchingSettings;
-            _batchMaxElementCount = maxBatchingSettings.ElementCountThreshold ?? ApiMaxBatchingSettings.ElementCountThreshold.Value;
-            _batchMaxByteCount = maxBatchingSettings.ByteCountThreshold ?? ApiMaxBatchingSettings.ByteCountThreshold.Value;
 
             // Initialise internal state
             _batchesReady = new Queue<Batch>();
@@ -440,10 +422,6 @@ namespace Google.Cloud.PubSub.V1
         private readonly long _batchElementCountThreshold;
         private readonly long _batchByteCountThreshold;
         private readonly TimeSpan? _batchDelayThreshold;
-
-        // Absolute maximum batch values
-        private readonly long _batchMaxElementCount;
-        private readonly long _batchMaxByteCount;
 
         //Internal state
         private readonly Queue<PublisherServiceApiClient> _idleClients;
@@ -612,14 +590,8 @@ namespace Google.Cloud.PubSub.V1
             //   batch is considered already full.
             // * But if that is the first message in the batch, then that one message only is allowed
             //   to make the batch go over its maximum allowed byte-count.
-            // The maximum size depends on whether local queueing is occuring.
-            // If _idleClients is empty, then all clients are currently sending, so local queueing is occuring;
-            // which means the current batch cannot be sent, even if it is full.
-            bool currentBatchIsFull = _idleClients.Count == 0 ?
-                _currentBatch.Messages.Count >= _batchMaxElementCount ||
-                    (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchMaxByteCount) :
-                _currentBatch.Messages.Count >= _batchElementCountThreshold ||
-                    (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
+            bool currentBatchIsFull = _currentBatch.Messages.Count >= _batchElementCountThreshold ||
+                (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
             if (currentBatchIsFull)
             {
                 QueueCurrentBatch();
