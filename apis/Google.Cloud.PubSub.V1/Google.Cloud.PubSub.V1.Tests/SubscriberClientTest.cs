@@ -297,7 +297,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 var settings = new SubscriberClient.Settings
                 {
                     Scheduler = scheduler,
-                    StreamAckDeadline = ackDeadline,
+                    AckDeadline = ackDeadline,
                     AckExtensionWindow = ackExtendWindow,
                     FlowControlSettings = new FlowControlSettings(flowMaxElements, flowMaxBytes),
                 };
@@ -725,13 +725,13 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             var settingsAckDeadline1 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SubscriberClient.MinimumStreamAckDeadline
+                AckDeadline = SubscriberClient.MinimumAckDeadline
             };
             new SubscriberClientImpl(subscriptionName, clients, settingsAckDeadline1, null);
 
             var settingsAckDeadline2 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SubscriberClient.MaximumStreamAckDeadline
+                AckDeadline = SubscriberClient.MaximumAckDeadline
             };
             new SubscriberClientImpl(subscriptionName, clients, settingsAckDeadline2, null);
 
@@ -743,7 +743,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             
             var settingsAckExtension2 = new SubscriberClient.Settings
             {
-                AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultStreamAckDeadline.Ticks / 2)
+                AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultAckDeadline.Ticks / 2)
             };
             new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension2, null);
         }
@@ -769,17 +769,17 @@ namespace Google.Cloud.PubSub.V1.Tests
 
             var settingsBadAckDeadline1 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SubscriberClient.MinimumStreamAckDeadline - TimeSpan.FromMilliseconds(1)
+                AckDeadline = SubscriberClient.MinimumAckDeadline - TimeSpan.FromMilliseconds(1)
             };
             var ex5 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckDeadline1, null));
-            Assert.Equal("StreamAckDeadline", ex5.ParamName);
+            Assert.Equal("AckDeadline", ex5.ParamName);
 
             var settingsBadAckDeadline2 = new SubscriberClient.Settings
             {
-                StreamAckDeadline = SubscriberClient.MaximumStreamAckDeadline + TimeSpan.FromMilliseconds(1)
+                AckDeadline = SubscriberClient.MaximumAckDeadline + TimeSpan.FromMilliseconds(1)
             };
             var ex6 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckDeadline2, null));
-            Assert.Equal("StreamAckDeadline", ex6.ParamName);
+            Assert.Equal("AckDeadline", ex6.ParamName);
 
             var settingsBadAckExtension1 = new SubscriberClient.Settings
             {
@@ -791,7 +791,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             var settingsBadAckExtension2 = new SubscriberClient.Settings
             {
                 // This is too large. The ack extension window must be less than half the ack deadline.
-                AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultStreamAckDeadline.Ticks / 2 + 1)
+                AckExtensionWindow = TimeSpan.FromTicks(SubscriberClient.DefaultAckDeadline.Ticks / 2 + 1)
             };
             var ex8 = Assert.Throws<ArgumentOutOfRangeException>(() => new SubscriberClientImpl(subscriptionName, clients, settingsBadAckExtension2, null));
             Assert.Equal("AckExtensionWindow", ex8.ParamName);

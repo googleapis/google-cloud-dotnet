@@ -75,7 +75,7 @@ namespace Google.Cloud.PubSub.V1
             internal Settings(Settings other)
             {
                 FlowControlSettings = other.FlowControlSettings;
-                StreamAckDeadline = other.StreamAckDeadline;
+                AckDeadline = other.AckDeadline;
                 AckExtensionWindow = other.AckExtensionWindow;
                 Scheduler = other.Scheduler;
             }
@@ -89,12 +89,12 @@ namespace Google.Cloud.PubSub.V1
             /// <summary>
             /// The lease time before which a message must either be ACKed
             /// or have its lease extended. This is truncated to the nearest second.
-            /// If <c>null</c>, uses the default of <see cref="DefaultStreamAckDeadline"/>.
+            /// If <c>null</c>, uses the default of <see cref="AckDeadline"/>.
             /// </summary>
-            public TimeSpan? StreamAckDeadline { get; set; }
+            public TimeSpan? AckDeadline { get; set; }
 
             /// <summary>
-            /// Duration before <see cref="StreamAckDeadline"/> at which the message ACK deadline
+            /// Duration before <see cref="AckDeadline"/> at which the message ACK deadline
             /// is automatically extended.
             /// If <c>null</c>, uses the default of <see cref="DefaultAckExtensionWindow"/>.
             /// </summary>
@@ -109,8 +109,8 @@ namespace Google.Cloud.PubSub.V1
 
             internal void Validate()
             {
-                GaxPreconditions.CheckArgumentRange(StreamAckDeadline, nameof(StreamAckDeadline), MinimumStreamAckDeadline, MaximumStreamAckDeadline);
-                var maxAckExtension = TimeSpan.FromTicks((StreamAckDeadline ?? DefaultStreamAckDeadline).Ticks / 2);
+                GaxPreconditions.CheckArgumentRange(AckDeadline, nameof(AckDeadline), MinimumAckDeadline, MaximumAckDeadline);
+                var maxAckExtension = TimeSpan.FromTicks((AckDeadline ?? DefaultAckDeadline).Ticks / 2);
                 GaxPreconditions.CheckArgumentRange(AckExtensionWindow, nameof(AckExtensionWindow), MinimumAckExtensionWindow, maxAckExtension);
             }
 
@@ -189,17 +189,17 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// The service-defined minimum message ACKnowledgement deadline of 10 seconds.
         /// </summary>
-        public static TimeSpan MinimumStreamAckDeadline { get; } = TimeSpan.FromSeconds(10);
+        public static TimeSpan MinimumAckDeadline { get; } = TimeSpan.FromSeconds(10);
 
         /// <summary>
         /// The service-defined maximum message ACKnowledgement deadline of 10 minutes.
         /// </summary>
-        public static TimeSpan MaximumStreamAckDeadline { get; } = TimeSpan.FromMinutes(10);
+        public static TimeSpan MaximumAckDeadline { get; } = TimeSpan.FromMinutes(10);
 
         /// <summary>
         /// The default message ACKnowledgement deadline of 60 seconds.
         /// </summary>
-        public static TimeSpan DefaultStreamAckDeadline { get; } = TimeSpan.FromSeconds(60);
+        public static TimeSpan DefaultAckDeadline { get; } = TimeSpan.FromSeconds(60);
 
         /// <summary>
         /// The minimum message ACKnowledgement extension window of 50 milliseconds.
@@ -215,7 +215,7 @@ namespace Google.Cloud.PubSub.V1
         /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.
         /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
         /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
-        /// settings may need changing; especially <see cref="Settings.StreamAckDeadline"/>.
+        /// settings may need changing; especially <see cref="Settings.AckDeadline"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
@@ -270,7 +270,7 @@ namespace Google.Cloud.PubSub.V1
         /// possibly causing a deadlock.
         /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth (e.g. Google
         /// Compute Engine instances). If running with more limited network bandwidth, some settings may need changing;
-        /// especially <see cref="Settings.StreamAckDeadline"/>.
+        /// especially <see cref="Settings.AckDeadline"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clients">The <see cref="SubscriberServiceApiClient"/>s to use in a <see cref="SubscriberClient"/>.
@@ -351,7 +351,7 @@ namespace Google.Cloud.PubSub.V1
             GaxPreconditions.CheckNotNull(settings, nameof(settings));
             settings.Validate();
             // These values are validated in Settings.Validate() above, so no need to re-validate here.
-            _modifyDeadlineSeconds = (int)((settings.StreamAckDeadline ?? DefaultStreamAckDeadline).TotalSeconds);
+            _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
             _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;

@@ -109,7 +109,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 clientCreationSettings: new SubscriberClient.ClientCreationSettings(clientCount: clientCount),
                 settings: new SubscriberClient.Settings
                 {
-                    StreamAckDeadline = timeouts,
+                    AckDeadline = timeouts,
                     FlowControlSettings = new FlowControlSettings(maxMessagesInFlight, null)
                 }).ConfigureAwait(false);
 
