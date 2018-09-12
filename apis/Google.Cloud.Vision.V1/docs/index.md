@@ -72,6 +72,10 @@ All IO-related methods have async equivalents.
 
 {{sample:ImageAnnotatorClient.DetectWebInformation}}
 
+## Detect localized objects in a single image
+
+{{sample:ImageAnnotatorClient.DetectLocalizedObjects}}
+
 ## Detect faces and landmarks in a single image
 
 {{sample:ImageAnnotatorClient.Annotate}}
