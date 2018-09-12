@@ -2570,6 +2570,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The size of page to request. The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.
         /// </param>
+        /// <param name="failedLocationBehavior"></param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2580,6 +2581,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
+            FailedLocationBehavior failedLocationBehavior = FailedLocationBehavior.Continue,
             gaxgrpc::CallSettings callSettings = null) => ListAppProfilesAsync(
                 new ListAppProfilesRequest
                 {
@@ -2587,6 +2589,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
+                failedLocationBehavior,
                 callSettings);
 
         /// <summary>
@@ -2607,6 +2610,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The size of page to request. The response will not be larger than this, but may be smaller.
         /// A value of <c>null</c> or 0 uses a server-defined page size.
         /// </param>
+        /// <param name="failedLocationBehavior"></param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2617,6 +2621,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
+            FailedLocationBehavior failedLocationBehavior = FailedLocationBehavior.Continue,
             gaxgrpc::CallSettings callSettings = null) => ListAppProfiles(
                 new ListAppProfilesRequest
                 {
@@ -2624,6 +2629,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
+                failedLocationBehavior,
                 callSettings);
 
         /// <summary>
@@ -2632,6 +2638,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="failedLocationBehavior"></param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2640,6 +2647,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
             ListAppProfilesRequest request,
+            FailedLocationBehavior failedLocationBehavior = FailedLocationBehavior.Continue,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -2651,6 +2659,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="failedLocationBehavior"></param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -2659,6 +2668,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
             ListAppProfilesRequest request,
+            FailedLocationBehavior failedLocationBehavior = FailedLocationBehavior.Continue,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -4057,6 +4067,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="failedLocationBehavior"></param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -4065,10 +4076,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
             ListAppProfilesRequest request,
+            FailedLocationBehavior failedLocationBehavior = FailedLocationBehavior.Continue,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppProfilesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
+            return new ListAppProfilesAsyncEnumerable(new gaxgrpc::GrpcPagedAsyncEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings), failedLocationBehavior);
         }
 
         /// <summary>
@@ -4077,6 +4089,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
+        /// <param name="failedLocationBehavior"></param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -4085,10 +4098,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </returns>
         public override gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
             ListAppProfilesRequest request,
+            FailedLocationBehavior failedLocationBehavior = FailedLocationBehavior.Continue,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListAppProfilesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings);
+            return new ListAppProfilesEnumerable(new gaxgrpc::GrpcPagedEnumerable<ListAppProfilesRequest, ListAppProfilesResponse, AppProfile>(_callListAppProfiles, request, callSettings), failedLocationBehavior);
         }
 
         /// <summary>
