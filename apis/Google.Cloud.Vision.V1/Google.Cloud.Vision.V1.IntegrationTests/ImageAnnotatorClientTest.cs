@@ -47,8 +47,7 @@ namespace Google.Cloud.Vision.V1.IntegrationTests
         {
             var client = ImageAnnotatorClient.Create();
             var exception = Assert.Throws<AnnotateImageException>(() => client.DetectSafeSearch(s_badImage));
-            // TODO: Re-enable this assertion. At the moment the code is "Internal"...
-            // Assert.Equal((int)Code.InvalidArgument, exception.Response.Error.Code);
+            Assert.Equal((int) Code.InvalidArgument, exception.Response.Error.Code);
         }
 
         // No "bad image" tests for the other Detect* methods; the behaviour is covered by the above.
