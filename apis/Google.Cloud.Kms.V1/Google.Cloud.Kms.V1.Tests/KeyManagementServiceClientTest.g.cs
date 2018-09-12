@@ -1335,5 +1335,287 @@ namespace Google.Cloud.Kms.V1.Tests
             mockGrpcClient.VerifyAll();
         }
 
+        [Fact]
+        public void GetPublicKey()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetPublicKeyRequest expectedRequest = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pem110872",
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKey(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            PublicKey response = client.GetPublicKey(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetPublicKeyAsync()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetPublicKeyRequest expectedRequest = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pem110872",
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKeyAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<PublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            PublicKey response = await client.GetPublicKeyAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetPublicKey2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pem110872",
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKey(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            PublicKey response = client.GetPublicKey(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetPublicKeyAsync2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            PublicKey expectedResponse = new PublicKey
+            {
+                Pem = "pem110872",
+            };
+            mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<PublicKey>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            PublicKey response = await client.GetPublicKeyAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void AsymmetricDecrypt()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricDecryptRequest expectedRequest = new AsymmetricDecryptRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.CopyFromUtf8("-72"),
+            };
+            AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
+            {
+                Plaintext = ByteString.CopyFromUtf8("-9"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricDecrypt(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString ciphertext = ByteString.CopyFromUtf8("-72");
+            AsymmetricDecryptResponse response = client.AsymmetricDecrypt(name, ciphertext);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AsymmetricDecryptAsync()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricDecryptRequest expectedRequest = new AsymmetricDecryptRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.CopyFromUtf8("-72"),
+            };
+            AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
+            {
+                Plaintext = ByteString.CopyFromUtf8("-9"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AsymmetricDecryptResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString ciphertext = ByteString.CopyFromUtf8("-72");
+            AsymmetricDecryptResponse response = await client.AsymmetricDecryptAsync(name, ciphertext);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void AsymmetricDecrypt2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.CopyFromUtf8("-72"),
+            };
+            AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
+            {
+                Plaintext = ByteString.CopyFromUtf8("-9"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            AsymmetricDecryptResponse response = client.AsymmetricDecrypt(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AsymmetricDecryptAsync2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.CopyFromUtf8("-72"),
+            };
+            AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
+            {
+                Plaintext = ByteString.CopyFromUtf8("-9"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AsymmetricDecryptResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            AsymmetricDecryptResponse response = await client.AsymmetricDecryptAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void AsymmetricSign()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricSignRequest expectedRequest = new AsymmetricSignRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Digest = new Digest(),
+            };
+            AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
+            {
+                Signature = ByteString.CopyFromUtf8("106"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricSign(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            Digest digest = new Digest();
+            AsymmetricSignResponse response = client.AsymmetricSign(name, digest);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AsymmetricSignAsync()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricSignRequest expectedRequest = new AsymmetricSignRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Digest = new Digest(),
+            };
+            AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
+            {
+                Signature = ByteString.CopyFromUtf8("-100"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricSignAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AsymmetricSignResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            Digest digest = new Digest();
+            AsymmetricSignResponse response = await client.AsymmetricSignAsync(name, digest);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void AsymmetricSign2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricSignRequest request = new AsymmetricSignRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Digest = new Digest(),
+            };
+            AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
+            {
+                Signature = ByteString.CopyFromUtf8("78"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricSign(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            AsymmetricSignResponse response = client.AsymmetricSign(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task AsymmetricSignAsync2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            AsymmetricSignRequest request = new AsymmetricSignRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Digest = new Digest(),
+            };
+            AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
+            {
+                Signature = ByteString.CopyFromUtf8("-128"),
+            };
+            mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<AsymmetricSignResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            AsymmetricSignResponse response = await client.AsymmetricSignAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
     }
 }

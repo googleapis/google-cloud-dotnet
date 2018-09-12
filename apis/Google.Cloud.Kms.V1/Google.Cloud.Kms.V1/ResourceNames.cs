@@ -741,6 +741,32 @@ namespace Google.Cloud.Kms.V1
     }
 
 
+    public partial class AsymmetricDecryptRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Kms.V1.CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Kms.V1.CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Kms.V1.CryptoKeyVersionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class AsymmetricSignRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Kms.V1.CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Kms.V1.CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Kms.V1.CryptoKeyVersionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class CreateCryptoKeyRequest
     {
         /// <summary>
@@ -879,6 +905,19 @@ namespace Google.Cloud.Kms.V1
         public Google.Cloud.Kms.V1.KeyRingName KeyRingName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Kms.V1.KeyRingName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetPublicKeyRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Kms.V1.CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Kms.V1.CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Kms.V1.CryptoKeyVersionName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 

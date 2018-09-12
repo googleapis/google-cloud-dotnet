@@ -1444,6 +1444,194 @@ namespace Google.Cloud.Kms.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetPublicKeyAsync</summary>
+        public async Task GetPublicKeyAsync()
+        {
+            // Snippet: GetPublicKeyAsync(CryptoKeyVersionName,CallSettings)
+            // Additional: GetPublicKeyAsync(CryptoKeyVersionName,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            PublicKey response = await keyManagementServiceClient.GetPublicKeyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPublicKey</summary>
+        public void GetPublicKey()
+        {
+            // Snippet: GetPublicKey(CryptoKeyVersionName,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            // Make the request
+            PublicKey response = keyManagementServiceClient.GetPublicKey(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPublicKeyAsync</summary>
+        public async Task GetPublicKeyAsync_RequestObject()
+        {
+            // Snippet: GetPublicKeyAsync(GetPublicKeyRequest,CallSettings)
+            // Additional: GetPublicKeyAsync(GetPublicKeyRequest,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            PublicKey response = await keyManagementServiceClient.GetPublicKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPublicKey</summary>
+        public void GetPublicKey_RequestObject()
+        {
+            // Snippet: GetPublicKey(GetPublicKeyRequest,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            GetPublicKeyRequest request = new GetPublicKeyRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            PublicKey response = keyManagementServiceClient.GetPublicKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricDecryptAsync</summary>
+        public async Task AsymmetricDecryptAsync()
+        {
+            // Snippet: AsymmetricDecryptAsync(CryptoKeyVersionName,ByteString,CallSettings)
+            // Additional: AsymmetricDecryptAsync(CryptoKeyVersionName,ByteString,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString ciphertext = ByteString.Empty;
+            // Make the request
+            AsymmetricDecryptResponse response = await keyManagementServiceClient.AsymmetricDecryptAsync(name, ciphertext);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricDecrypt</summary>
+        public void AsymmetricDecrypt()
+        {
+            // Snippet: AsymmetricDecrypt(CryptoKeyVersionName,ByteString,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            ByteString ciphertext = ByteString.Empty;
+            // Make the request
+            AsymmetricDecryptResponse response = keyManagementServiceClient.AsymmetricDecrypt(name, ciphertext);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricDecryptAsync</summary>
+        public async Task AsymmetricDecryptAsync_RequestObject()
+        {
+            // Snippet: AsymmetricDecryptAsync(AsymmetricDecryptRequest,CallSettings)
+            // Additional: AsymmetricDecryptAsync(AsymmetricDecryptRequest,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.Empty,
+            };
+            // Make the request
+            AsymmetricDecryptResponse response = await keyManagementServiceClient.AsymmetricDecryptAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricDecrypt</summary>
+        public void AsymmetricDecrypt_RequestObject()
+        {
+            // Snippet: AsymmetricDecrypt(AsymmetricDecryptRequest,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Ciphertext = ByteString.Empty,
+            };
+            // Make the request
+            AsymmetricDecryptResponse response = keyManagementServiceClient.AsymmetricDecrypt(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricSignAsync</summary>
+        public async Task AsymmetricSignAsync()
+        {
+            // Snippet: AsymmetricSignAsync(CryptoKeyVersionName,Digest,CallSettings)
+            // Additional: AsymmetricSignAsync(CryptoKeyVersionName,Digest,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            Digest digest = new Digest();
+            // Make the request
+            AsymmetricSignResponse response = await keyManagementServiceClient.AsymmetricSignAsync(name, digest);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricSign</summary>
+        public void AsymmetricSign()
+        {
+            // Snippet: AsymmetricSign(CryptoKeyVersionName,Digest,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            CryptoKeyVersionName name = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]");
+            Digest digest = new Digest();
+            // Make the request
+            AsymmetricSignResponse response = keyManagementServiceClient.AsymmetricSign(name, digest);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricSignAsync</summary>
+        public async Task AsymmetricSignAsync_RequestObject()
+        {
+            // Snippet: AsymmetricSignAsync(AsymmetricSignRequest,CallSettings)
+            // Additional: AsymmetricSignAsync(AsymmetricSignRequest,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AsymmetricSignRequest request = new AsymmetricSignRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Digest = new Digest(),
+            };
+            // Make the request
+            AsymmetricSignResponse response = await keyManagementServiceClient.AsymmetricSignAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AsymmetricSign</summary>
+        public void AsymmetricSign_RequestObject()
+        {
+            // Snippet: AsymmetricSign(AsymmetricSignRequest,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            AsymmetricSignRequest request = new AsymmetricSignRequest
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Digest = new Digest(),
+            };
+            // Make the request
+            AsymmetricSignResponse response = keyManagementServiceClient.AsymmetricSign(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetIamPolicyAsync</summary>
         public async Task SetIamPolicyAsync()
         {

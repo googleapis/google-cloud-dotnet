@@ -66,6 +66,9 @@ namespace Google.Cloud.Kms.V1
             UpdateCryptoKeyPrimaryVersionSettings = existing.UpdateCryptoKeyPrimaryVersionSettings;
             DestroyCryptoKeyVersionSettings = existing.DestroyCryptoKeyVersionSettings;
             RestoreCryptoKeyVersionSettings = existing.RestoreCryptoKeyVersionSettings;
+            GetPublicKeySettings = existing.GetPublicKeySettings;
+            AsymmetricDecryptSettings = existing.AsymmetricDecryptSettings;
+            AsymmetricSignSettings = existing.AsymmetricSignSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
@@ -601,6 +604,94 @@ namespace Google.Cloud.Kms.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings RestoreCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.GetPublicKey</c> and <c>KeyManagementServiceClient.GetPublicKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>KeyManagementServiceClient.GetPublicKey</c> and
+        /// <c>KeyManagementServiceClient.GetPublicKeyAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPublicKeySettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.AsymmetricDecrypt</c> and <c>KeyManagementServiceClient.AsymmetricDecryptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>KeyManagementServiceClient.AsymmetricDecrypt</c> and
+        /// <c>KeyManagementServiceClient.AsymmetricDecryptAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings AsymmetricDecryptSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.AsymmetricSign</c> and <c>KeyManagementServiceClient.AsymmetricSignAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>KeyManagementServiceClient.AsymmetricSign</c> and
+        /// <c>KeyManagementServiceClient.AsymmetricSignAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings AsymmetricSignSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -3110,6 +3201,441 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(
+            CryptoKeyVersionName name,
+            gaxgrpc::CallSettings callSettings = null) => GetPublicKeyAsync(
+                new GetPublicKeyRequest
+                {
+                    CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(
+            CryptoKeyVersionName name,
+            st::CancellationToken cancellationToken) => GetPublicKeyAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="name">
+        /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+        /// get.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual PublicKey GetPublicKey(
+            CryptoKeyVersionName name,
+            gaxgrpc::CallSettings callSettings = null) => GetPublicKey(
+                new GetPublicKeyRequest
+                {
+                    CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(
+            GetPublicKeyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<PublicKey> GetPublicKeyAsync(
+            GetPublicKeyRequest request,
+            st::CancellationToken cancellationToken) => GetPublicKeyAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual PublicKey GetPublicKey(
+            GetPublicKeyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+        /// decryption.
+        /// </param>
+        /// <param name="ciphertext">
+        /// Required. The data encrypted with the named [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public
+        /// key using OAEP.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricDecryptResponse> AsymmetricDecryptAsync(
+            CryptoKeyVersionName name,
+            pb::ByteString ciphertext,
+            gaxgrpc::CallSettings callSettings = null) => AsymmetricDecryptAsync(
+                new AsymmetricDecryptRequest
+                {
+                    CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Ciphertext = gax::GaxPreconditions.CheckNotNull(ciphertext, nameof(ciphertext)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+        /// decryption.
+        /// </param>
+        /// <param name="ciphertext">
+        /// Required. The data encrypted with the named [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public
+        /// key using OAEP.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricDecryptResponse> AsymmetricDecryptAsync(
+            CryptoKeyVersionName name,
+            pb::ByteString ciphertext,
+            st::CancellationToken cancellationToken) => AsymmetricDecryptAsync(
+                name,
+                ciphertext,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+        /// decryption.
+        /// </param>
+        /// <param name="ciphertext">
+        /// Required. The data encrypted with the named [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public
+        /// key using OAEP.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AsymmetricDecryptResponse AsymmetricDecrypt(
+            CryptoKeyVersionName name,
+            pb::ByteString ciphertext,
+            gaxgrpc::CallSettings callSettings = null) => AsymmetricDecrypt(
+                new AsymmetricDecryptRequest
+                {
+                    CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Ciphertext = gax::GaxPreconditions.CheckNotNull(ciphertext, nameof(ciphertext)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricDecryptResponse> AsymmetricDecryptAsync(
+            AsymmetricDecryptRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricDecryptResponse> AsymmetricDecryptAsync(
+            AsymmetricDecryptRequest request,
+            st::CancellationToken cancellationToken) => AsymmetricDecryptAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AsymmetricDecryptResponse AsymmetricDecrypt(
+            AsymmetricDecryptRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+        /// </param>
+        /// <param name="digest">
+        /// Required. The digest of the data to sign. The digest must be produced with
+        /// the same digest algorithm as specified by the key version's
+        /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricSignResponse> AsymmetricSignAsync(
+            CryptoKeyVersionName name,
+            Digest digest,
+            gaxgrpc::CallSettings callSettings = null) => AsymmetricSignAsync(
+                new AsymmetricSignRequest
+                {
+                    CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Digest = gax::GaxPreconditions.CheckNotNull(digest, nameof(digest)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+        /// </param>
+        /// <param name="digest">
+        /// Required. The digest of the data to sign. The digest must be produced with
+        /// the same digest algorithm as specified by the key version's
+        /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricSignResponse> AsymmetricSignAsync(
+            CryptoKeyVersionName name,
+            Digest digest,
+            st::CancellationToken cancellationToken) => AsymmetricSignAsync(
+                name,
+                digest,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+        /// </param>
+        /// <param name="digest">
+        /// Required. The digest of the data to sign. The digest must be produced with
+        /// the same digest algorithm as specified by the key version's
+        /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AsymmetricSignResponse AsymmetricSign(
+            CryptoKeyVersionName name,
+            Digest digest,
+            gaxgrpc::CallSettings callSettings = null) => AsymmetricSign(
+                new AsymmetricSignRequest
+                {
+                    CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Digest = gax::GaxPreconditions.CheckNotNull(digest, nameof(digest)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricSignResponse> AsymmetricSignAsync(
+            AsymmetricSignRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AsymmetricSignResponse> AsymmetricSignAsync(
+            AsymmetricSignRequest request,
+            st::CancellationToken cancellationToken) => AsymmetricSignAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AsymmetricSignResponse AsymmetricSign(
+            AsymmetricSignRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// </summary>
@@ -3576,6 +4102,9 @@ namespace Google.Cloud.Kms.V1
         private readonly gaxgrpc::ApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey> _callUpdateCryptoKeyPrimaryVersion;
         private readonly gaxgrpc::ApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion> _callDestroyCryptoKeyVersion;
         private readonly gaxgrpc::ApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion> _callRestoreCryptoKeyVersion;
+        private readonly gaxgrpc::ApiCall<GetPublicKeyRequest, PublicKey> _callGetPublicKey;
+        private readonly gaxgrpc::ApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse> _callAsymmetricDecrypt;
+        private readonly gaxgrpc::ApiCall<AsymmetricSignRequest, AsymmetricSignResponse> _callAsymmetricSign;
         private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> _callTestIamPermissions;
@@ -3639,6 +4168,15 @@ namespace Google.Cloud.Kms.V1
             _callRestoreCryptoKeyVersion = clientHelper.BuildApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion>(
                 GrpcClient.RestoreCryptoKeyVersionAsync, GrpcClient.RestoreCryptoKeyVersion, effectiveSettings.RestoreCryptoKeyVersionSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callGetPublicKey = clientHelper.BuildApiCall<GetPublicKeyRequest, PublicKey>(
+                GrpcClient.GetPublicKeyAsync, GrpcClient.GetPublicKey, effectiveSettings.GetPublicKeySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callAsymmetricDecrypt = clientHelper.BuildApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse>(
+                GrpcClient.AsymmetricDecryptAsync, GrpcClient.AsymmetricDecrypt, effectiveSettings.AsymmetricDecryptSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callAsymmetricSign = clientHelper.BuildApiCall<AsymmetricSignRequest, AsymmetricSignResponse>(
+                GrpcClient.AsymmetricSignAsync, GrpcClient.AsymmetricSign, effectiveSettings.AsymmetricSignSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
                 grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
@@ -3680,6 +4218,12 @@ namespace Google.Cloud.Kms.V1
             Modify_DestroyCryptoKeyVersionApiCall(ref _callDestroyCryptoKeyVersion);
             Modify_ApiCall(ref _callRestoreCryptoKeyVersion);
             Modify_RestoreCryptoKeyVersionApiCall(ref _callRestoreCryptoKeyVersion);
+            Modify_ApiCall(ref _callGetPublicKey);
+            Modify_GetPublicKeyApiCall(ref _callGetPublicKey);
+            Modify_ApiCall(ref _callAsymmetricDecrypt);
+            Modify_AsymmetricDecryptApiCall(ref _callAsymmetricDecrypt);
+            Modify_ApiCall(ref _callAsymmetricSign);
+            Modify_AsymmetricSignApiCall(ref _callAsymmetricSign);
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
             Modify_ApiCall(ref _callGetIamPolicy);
@@ -3715,6 +4259,9 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_UpdateCryptoKeyPrimaryVersionApiCall(ref gaxgrpc::ApiCall<UpdateCryptoKeyPrimaryVersionRequest, CryptoKey> call);
         partial void Modify_DestroyCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<DestroyCryptoKeyVersionRequest, CryptoKeyVersion> call);
         partial void Modify_RestoreCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<RestoreCryptoKeyVersionRequest, CryptoKeyVersion> call);
+        partial void Modify_GetPublicKeyApiCall(ref gaxgrpc::ApiCall<GetPublicKeyRequest, PublicKey> call);
+        partial void Modify_AsymmetricDecryptApiCall(ref gaxgrpc::ApiCall<AsymmetricDecryptRequest, AsymmetricDecryptResponse> call);
+        partial void Modify_AsymmetricSignApiCall(ref gaxgrpc::ApiCall<AsymmetricSignRequest, AsymmetricSignResponse> call);
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> call);
@@ -3744,6 +4291,9 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_UpdateCryptoKeyPrimaryVersionRequest(ref UpdateCryptoKeyPrimaryVersionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DestroyCryptoKeyVersionRequest(ref DestroyCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_RestoreCryptoKeyVersionRequest(ref RestoreCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetPublicKeyRequest(ref GetPublicKeyRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AsymmetricDecryptRequest(ref AsymmetricDecryptRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AsymmetricSignRequest(ref AsymmetricSignRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SetIamPolicyRequest(ref iam::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetIamPolicyRequest(ref iam::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_TestIamPermissionsRequest(ref iam::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
@@ -4460,6 +5010,140 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_RestoreCryptoKeyVersionRequest(ref request, ref callSettings);
             return _callRestoreCryptoKeyVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<PublicKey> GetPublicKeyAsync(
+            GetPublicKeyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPublicKeyRequest(ref request, ref callSettings);
+            return _callGetPublicKey.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the public key for the given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. The
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] must be
+        /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN] or
+        /// [ASYMMETRIC_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_DECRYPT].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override PublicKey GetPublicKey(
+            GetPublicKeyRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPublicKeyRequest(ref request, ref callSettings);
+            return _callGetPublicKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<AsymmetricDecryptResponse> AsymmetricDecryptAsync(
+            AsymmetricDecryptRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsymmetricDecryptRequest(ref request, ref callSettings);
+            return _callAsymmetricDecrypt.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Decrypts data that was encrypted with a public key retrieved from
+        /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey] corresponding to a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+        /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] ASYMMETRIC_DECRYPT.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override AsymmetricDecryptResponse AsymmetricDecrypt(
+            AsymmetricDecryptRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsymmetricDecryptRequest(ref request, ref callSettings);
+            return _callAsymmetricDecrypt.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<AsymmetricSignResponse> AsymmetricSignAsync(
+            AsymmetricSignRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsymmetricSignRequest(ref request, ref callSettings);
+            return _callAsymmetricSign.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Signs data using a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+        /// ASYMMETRIC_SIGN, producing a signature that can be verified with the public
+        /// key retrieved from [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override AsymmetricSignResponse AsymmetricSign(
+            AsymmetricSignRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsymmetricSignRequest(ref request, ref callSettings);
+            return _callAsymmetricSign.Sync(request, callSettings);
         }
 
         /// <summary>
