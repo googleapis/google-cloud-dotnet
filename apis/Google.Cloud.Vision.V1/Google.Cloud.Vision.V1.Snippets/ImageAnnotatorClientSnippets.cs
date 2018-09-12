@@ -65,6 +65,12 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.Equal(0, response.LandmarkAnnotations.Count);
         }
 
+        // See-also: Annotate(*, *)
+        // Member: AnnotateAsync(*, CallSettings)
+        // Member: AnnotateAsync(*, CancellationToken)
+        // See [Annotate](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void BatchAnnotateImages()
         {
@@ -132,6 +138,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.True(rectangles[2].Equals(new Rectangle(1009, 113, 1149, 276), 5.0));
         }
 
+        // See-also: DetectFaces(*, *, *, *)
+        // Member: DetectFacesAsync(*, *, *, *)
+        // See [DetectFaces](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void DetectLandmarks()
         {
@@ -150,6 +161,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.Equal(new[] { "Sydney Harbour Bridge", "Sydney Opera House" }, descriptions);
         }
 
+        // See-also: DetectLandmarks(*, *, *, *)
+        // Member: DetectLandmarksAsync(*, *, *, *)
+        // See [DetectLandmarks](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void DetectImageProperties()
         {
@@ -164,6 +180,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.Equal(0.18, dominantColor.PixelFraction, 2);
             Assert.Equal(new Color { Red = 16, Green = 13, Blue = 8 }, dominantColor.Color);
         }
+
+        // See-also: DetectImageProperties(*, *, *)
+        // Member: DetectImagePropertiesAsync(*, *, *)
+        // See [DetectImageProperties](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void DetectLabels()
@@ -185,6 +206,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.Contains("vase", descriptions);
         }
 
+        // See-also: DetectLabels(*, *, *, *)
+        // Member: DetectLabelsAsync(*, *, *, *)
+        // See [DetectLabels](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void DetectText()
         {
@@ -201,6 +227,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             var descriptions = textAnnotations.Select(t => t.Description).ToList();
             Assert.Contains("Ellesborough", descriptions);
         }
+
+        // See-also: DetectText(*, *, *, *)
+        // Member: DetectTextAsync(*, *, *, *)
+        // See [DetectText](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void DetectSafeSearch()
@@ -221,6 +252,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.InRange(annotation.Medical, Likelihood.VeryUnlikely, Likelihood.Unlikely);
         }
 
+        // See-also: DetectSafeSearch(*, *, *)
+        // Member: DetectSafeSearchAsync(*, *, *)
+        // See [DetectSafeSearch](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void DetectLogos()
         {
@@ -236,6 +272,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.Equal(1, logos.Count);
             Assert.Equal("Google Chrome", logos[0].Description);
         }
+
+        // See-also: DetectLogos(*, *, *, *)
+        // Member: DetectLogosAsync(*, *, *, *)
+        // See [DetectLogos](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void DetectCropHints()
@@ -255,6 +296,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
             Assert.Equal(1, cropHints.CropHints.Count);
         }
+
+        // See-also: DetectCropHints(*, *, *)
+        // Member: DetectCropHintsAsync(*, *, *)
+        // See [DetectCropHints](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void DetectDocumentText()
@@ -290,6 +336,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             Assert.Equal(new[] { "Text", "near", "bottom", "right", }, lines[2]);
         }
 
+        // See-also: DetectDocumentText(*, *, *)
+        // Member: DetectDocumentTextAsync(*, *, *)
+        // See [DetectDocumentText](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void DetectWebInformation()
         {
@@ -316,6 +367,11 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        // See-also: DetectWebInformation(*, *, *)
+        // Member: DetectWebInformationAsync(*, *, *)
+        // See [DetectWebInformation](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void DetectLocalizedObjects()
         {
@@ -333,6 +389,11 @@ namespace Google.Cloud.Vision.V1.Snippets
 
             // TODO: Add assertions about the annotations.
         }
+
+        // See-also: DetectLocalizedObjects(*, *, *, *)
+        // Member: DetectLocalizedObjectsAsync(*, *, *, *)
+        // See [DetectLocalizedObjects](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void ErrorHandling_SingleImage()
