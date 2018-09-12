@@ -349,6 +349,42 @@ namespace Google.Cloud.Vision.V1
             => AnnotateSingleSingularFeatureTypeAsync(Feature.Types.Type.ImageProperties, r => r.ImagePropertiesAnnotation, image, context, callSettings);
 
         /// <summary>
+        /// Detects localized objects in a single image.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If <see cref="AnnotateImageException"/> is thrown, the original response can still be retrieved using
+        /// <see cref="AnnotateImageException.Response"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="image">The image to process. Must not be null.</param>
+        /// <param name="context">Additional contextual information, if any.</param>
+        /// <param name="maxResults">The maximum number of results to return. 0 (the default) means "unlimited". Must not be negative.</param>
+        /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
+        /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
+        /// <returns>A set of annotations.</returns>
+        public virtual IReadOnlyList<LocalizedObjectAnnotation> DetectLocalizedObjects(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)
+            => AnnotateSingleFeatureType(Feature.Types.Type.ObjectLocalization, r => r.LocalizedObjectAnnotations, image, context, maxResults, callSettings);
+
+        /// <summary>
+        /// Detects localized objects in a single image asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If <see cref="AnnotateImageException"/> is thrown, the original response can still be retrieved using
+        /// <see cref="AnnotateImageException.Response"/>.
+        /// </para>
+        /// </remarks>
+        /// <param name="image">The image to process. Must not be null.</param>
+        /// <param name="context">Additional contextual information, if any.</param>
+        /// <param name="maxResults">The maximum number of results to return. 0 (the default) means "unlimited". Must not be negative.</param>
+        /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
+        /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
+        /// <returns>A task representing the asynchronous operation. The task result will be a set of annotations.</returns>
+        public virtual Task<IReadOnlyList<LocalizedObjectAnnotation>> DetectLocalizedObjectsAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)
+            => AnnotateSingleFeatureTypeAsync(Feature.Types.Type.ObjectLocalization, r => r.LocalizedObjectAnnotations, image, context, maxResults, callSettings);
+
+        /// <summary>
         /// Annotates a single image.
         /// </summary>
         /// <remarks>

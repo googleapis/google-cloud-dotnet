@@ -314,6 +314,24 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         [Fact]
+        public void DetectLocalizedObjects()
+        {
+            Image image = Image.FromUri("https://cloud.google.com/vision/docs/images/bicycle_example.png");
+            // Snippet: DetectLocalizedObjects
+            ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+            IReadOnlyList<LocalizedObjectAnnotation> annotations = client.DetectLocalizedObjects(image);
+            foreach (LocalizedObjectAnnotation annotation in annotations)
+            {
+                string poly = string.Join(" - ", annotation.BoundingPoly.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                Console.WriteLine(
+                    $"Name: {annotation.Name}; ID: {annotation.Mid}; Score: {annotation.Score}; Bounding poly: {poly}");
+            }
+            // End snippet
+
+            // TODO: Add assertions about the annotations.
+        }
+
+        [Fact]
         public void ErrorHandling_SingleImage()
         {
             // Sample: ErrorHandling_SingleImage
