@@ -47,7 +47,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             Console.WriteLine("Faces:");
             foreach (FaceAnnotation face in response.FaceAnnotations)
             {
-                Console.WriteLine($"  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}");
+                string poly = string.Join(" - ", face.BoundingPoly.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                Console.WriteLine($"  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {poly}");
             }
             Console.WriteLine("Landmarks:");
             foreach (EntityAnnotation landmark in response.LandmarkAnnotations)
@@ -88,7 +89,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             Console.WriteLine("Faces in image 1:");
             foreach (FaceAnnotation face in response.Responses[0].FaceAnnotations)
             {
-                Console.WriteLine($"  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}");
+                string poly = string.Join(" - ", face.BoundingPoly.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                Console.WriteLine($"  Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {poly}");
             }
             Console.WriteLine("Logos in image 2:");
             foreach (EntityAnnotation logo in response.Responses[1].LogoAnnotations)
@@ -114,7 +116,8 @@ namespace Google.Cloud.Vision.V1.Snippets
             IReadOnlyList<FaceAnnotation> result = client.DetectFaces(image);
             foreach (FaceAnnotation face in result)
             {
-                Console.WriteLine($"Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {face.BoundingPoly}");
+                string poly = string.Join(" - ", face.BoundingPoly.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                Console.WriteLine($"Confidence: {(int)(face.DetectionConfidence * 100)}%; BoundingPoly: {poly}");
             }            
             // End snippet
 
