@@ -203,18 +203,6 @@ namespace Google.Cloud.PubSub.V1.Tests
             Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { BatchingSettings = new BatchingSettings(null, PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold + 1, null) }.Validate());
             new PublisherClient.Settings { BatchingSettings = new BatchingSettings(null, 1, null) }.Validate();
             new PublisherClient.Settings { BatchingSettings = new BatchingSettings(null, PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold, null) }.Validate();
-
-            Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.Zero) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.FromSeconds(-1)) }.Validate());
-            new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(null, null, TimeSpan.FromMilliseconds(1)) }.Validate();
-            Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(0, null, null) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold.Value + 1, null, null) }.Validate());
-            new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(1, null, null) }.Validate();
-            new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold, null, null) }.Validate();
-            Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(null, 0, null) }.Validate());
-            Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(null, PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold + 1, null) }.Validate());
-            new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(null, 1, null) }.Validate();
-            new PublisherClient.Settings { MaxBatchingSettings = new BatchingSettings(null, PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold, null) }.Validate();
         }
     }
 }

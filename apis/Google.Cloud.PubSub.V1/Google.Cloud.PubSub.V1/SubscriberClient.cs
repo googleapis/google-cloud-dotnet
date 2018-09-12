@@ -277,7 +277,7 @@ namespace Google.Cloud.PubSub.V1
         /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
         /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        public static SubscriberClient Create(SubscriptionName subscriptionName, IEnumerable<SubscriberServiceApiClient> clients, Settings settings = null) =>
+        internal static SubscriberClient Create(SubscriptionName subscriptionName, IEnumerable<SubscriberServiceApiClient> clients, Settings settings = null) =>
             new SubscriberClientImpl(subscriptionName, clients, settings?.Clone() ?? new Settings(), null);
 
         /// <summary>
