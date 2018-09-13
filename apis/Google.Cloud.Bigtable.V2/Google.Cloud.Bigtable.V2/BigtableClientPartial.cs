@@ -85,7 +85,6 @@ namespace Google.Cloud.Bigtable.V2
                 appProfileId,
                 underlyingClientSettings: null);
 
-        // TODO: Add snippet showing how to use this and the extension on BigtableServiceApiSettings to create a GcpCallInvoker with non-default credentials.
         /// <summary>
         /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
         /// using the specified <see cref="CallInvoker"/> for API requests.

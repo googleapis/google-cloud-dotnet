@@ -89,7 +89,6 @@ namespace Google.Cloud.Bigtable.V2
                 retryFilter: IdempotentRetryFilter
             );
 
-        // TODO: Link to snippet for creating GcpCallInvoker manually from here.
         /// <summary>
         /// The maximum number of channels than will be open concurrently to the Bigtable endpoint.
         /// </summary>
@@ -105,7 +104,6 @@ namespace Google.Cloud.Bigtable.V2
         /// </remarks>
         public uint MaxChannels { get; set; } = 16;
 
-        // TODO: Link to snippet for creating GcpCallInvoker manually from here.
         /// <summary>
         /// The number of streams open concurrently in a channel which will trigger a new channel to be opened, as
         /// long as fewer than <see cref="MaxChannels"/> are currently open.

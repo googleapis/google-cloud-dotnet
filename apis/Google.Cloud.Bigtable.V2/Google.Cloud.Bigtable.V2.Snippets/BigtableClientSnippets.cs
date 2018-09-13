@@ -17,6 +17,7 @@ using Google.Cloud.Bigtable.Common.V2;
 using Google.Cloud.Bigtable.V2.IntegrationTests;
 using Google.Cloud.ClientTesting;
 using Grpc.Core;
+using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -102,6 +103,43 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                     Assert.Equal(456, (long)cellValue);
                 }
             }
+        }
+
+        [Fact]
+        public async Task CustomCallInvoker()
+        {
+            ChannelCredentials credentials = ChannelCredentials.Insecure;
+
+            // Sample: CustomCallInvoker
+            // Create a client from a custom credentials and a GcpCallInvoker that has
+            // non-default gRPC stream/channel options.
+            // Note: the GcpCallInvoker should be long-lived while the BigtableClient
+            // instances can be emphemeral and each use the same call invoker
+            BigtableServiceApiSettings settings = new BigtableServiceApiSettings
+            {
+                MaxChannels = 10,
+                PreferredMaxStreamsPerChannel = 4
+            };
+            string endpoint = BigtableServiceApiClient.DefaultEndpoint.ToString();
+            GcpCallInvoker callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
+
+            // These will share the same set of channels to the Bigtable service.
+            BigtableClient client1 = BigtableClient.Create(callInvoker, settings);
+            // ...
+            BigtableClient client2 = BigtableClient.Create(callInvoker, settings);
+            // ...
+
+            await callInvoker.ShutdownAsync();
+
+            // Alternatively, to just create a GcpCallInvoker will standard settings, but using non-default
+            // credentials, use null or BigtableServiceApiSettings.GetDefault() for the settings
+            settings = null;
+            callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
+            BigtableClient client3 = BigtableClient.Create(callInvoker, settings);
+            // ...
+
+            await callInvoker.ShutdownAsync();
+            // End sample
         }
 
         [Fact]
