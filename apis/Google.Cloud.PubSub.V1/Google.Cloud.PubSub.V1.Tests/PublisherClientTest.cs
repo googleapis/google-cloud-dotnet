@@ -166,28 +166,6 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
-        public void FlowState()
-        {
-            var topicName = new TopicName("FakeProject", "FakeTopic");
-            var scheduler = new TestScheduler();
-            TaskHelper taskHelper = scheduler.TaskHelper;
-            var client = new FakePublisherServiceApiClient(scheduler, taskHelper, TimeSpan.FromSeconds(1));
-            var settings = MakeSettings(scheduler);
-            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, null, taskHelper);
-            var msgSize = new PubsubMessage { Data = ByteString.CopyFromUtf8("1") }.CalculateSize();
-            scheduler.Run(async () =>
-            {
-                // Publish 2 msgs; 1st will be immediately sent, 2nd will stay in queue for 1 second.
-                var pubTask = Task.WhenAll(pub.PublishAsync("1"), pub.PublishAsync("2"));
-                Assert.Equal(1, pub.GetCurrentFlowState().ElementCount);
-                Assert.Equal(msgSize, pub.GetCurrentFlowState().ByteCount);
-                await taskHelper.ConfigureAwait(pubTask);
-                Assert.Equal(0, pub.GetCurrentFlowState().ElementCount);
-                Assert.Equal(0, pub.GetCurrentFlowState().ByteCount);
-            });
-        }
-
-        [Fact]
         public void SettingsValidation()
         {
             new PublisherClient.Settings().Validate();

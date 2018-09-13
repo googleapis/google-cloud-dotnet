@@ -145,33 +145,6 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        /// <summary>
-        /// A snapshot of the flow state of a <see cref="PublisherClient"/>.
-        /// </summary>
-        public struct FlowState
-        {
-            /// <summary>
-            /// Instantiate a <see cref="FlowState"/>.
-            /// </summary>
-            /// <param name="elementCount">The number of elements (messages) currently queued.</param>
-            /// <param name="byteCount">The number of bytes currently queued.</param>
-            public FlowState(long elementCount, long byteCount)
-            {
-                ElementCount = elementCount;
-                ByteCount = byteCount;
-            }
-
-            /// <summary>
-            /// The number of elements (messages) currently queued.
-            /// </summary>
-            public long ElementCount { get; }
-
-            /// <summary>
-            /// The number of bytes currently queued.
-            /// </summary>
-            public long ByteCount { get; }
-        }
-
         // All defaults taken from Java (reference) implementation.
 
         /// <summary>
@@ -325,12 +298,6 @@ namespace Google.Cloud.PubSub.V1
             });
 
         /// <summary>
-        /// Retrieve a snapshot of the flow state.
-        /// </summary>
-        /// <returns></returns>
-        public virtual FlowState GetCurrentFlowState() => throw new NotImplementedException();
-
-        /// <summary>
         /// Shutdown this <see cref="PublisherClient"/>. Cancelling <paramref name="hardStopToken"/> aborts the
         /// clean shutdown process, and may leave some locally queued messages unsent.
         /// The returned <see cref="Task"/> completes when all queued messages have been published.
@@ -471,9 +438,6 @@ namespace Google.Cloud.PubSub.V1
             // Return the message ID sent from the server.
             return ids[index];
         }
-
-        /// <inheritdoc/>
-        public override FlowState GetCurrentFlowState() => _lock.Locked(() => new FlowState(_queueElementCount, _queueByteCount));
 
         /// <inheritdoc/>
         public override Task ShutdownAsync(CancellationToken hardStopToken)
