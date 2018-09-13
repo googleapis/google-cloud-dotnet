@@ -44,8 +44,9 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// When executing multiple DML commands in a single transaction, each is given a specific sequence number
         /// to indicate the difference between "apply this DML command twice" and "I'm replaying a request due to a transient failure".
+        /// The first request uses a sequence number of 1 to make it clear that it's been set deliberately.
         /// </summary>
-        private int _lastDmlSequenceNumber = -1;
+        private int _lastDmlSequenceNumber = 0;
 
         /// <inheritdoc />
         public override IsolationLevel IsolationLevel => IsolationLevel.Serializable;
@@ -249,7 +250,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
             request.Transaction = GetTransactionSelector(TransactionMode.ReadWrite);
-            return _connection.ExecuteDmlAsync(Session, request, cancellationToken, timeoutSeconds);
+            return _connection.ExecuteDmlAsync(Session, request, cancellationToken, timeoutSeconds, nameof(SpannerTransaction));
         }
 
         /// <inheritdoc />
