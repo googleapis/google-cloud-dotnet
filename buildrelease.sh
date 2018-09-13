@@ -65,6 +65,11 @@ fi
 
 ./build.sh $projects
 
+# Build LRO and IAM to make docs simpler. We always build the docs from "current" even if there's
+# a different package reference version... which means it's *possible* they'll be inaccurate,
+# but it's simpler than getting it perfectly correct.
+./build.sh Google.LongRunning Google.Cloud.Iam.V1
+
 # Retry integration tests up to 3 times as they can sometimes
 # be a little flakey.
 if [[ "$run_tests" = true ]]
