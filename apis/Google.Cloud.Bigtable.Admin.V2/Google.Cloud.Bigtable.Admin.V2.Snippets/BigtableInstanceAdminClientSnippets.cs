@@ -44,7 +44,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // Make the request and throw if AppProfile information could not be retrieved from any locations
             PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> response =
                 bigtableInstanceAdminClient.ListAppProfilesAsync(
-                    parent, failedLocationBehavior: FailedLocationBehavior.Throw);
+                    parent, FailedLocationBehavior.Throw);
 
             try
             {
@@ -74,7 +74,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
 
             // Or make the request and allow it to continue on failed locations, so they can be inspected manually.
             response = bigtableInstanceAdminClient.ListAppProfilesAsync(
-                parent, failedLocationBehavior: FailedLocationBehavior.Continue);
+                parent, FailedLocationBehavior.Continue);
 
             await response.AsRawResponses().ForEachAsync((ListAppProfilesResponse page) =>
             {

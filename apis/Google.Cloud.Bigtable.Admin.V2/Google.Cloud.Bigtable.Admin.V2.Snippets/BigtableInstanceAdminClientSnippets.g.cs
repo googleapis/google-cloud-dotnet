@@ -1035,7 +1035,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
             PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> response =
-                bigtableInstanceAdminClient.ListAppProfilesAsync(parent);
+                bigtableInstanceAdminClient.ListAppProfilesAsync(parent, FailedLocationBehavior.Continue);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((AppProfile item) =>
@@ -1079,7 +1079,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
             PagedEnumerable<ListAppProfilesResponse, AppProfile> response =
-                bigtableInstanceAdminClient.ListAppProfiles(parent);
+                bigtableInstanceAdminClient.ListAppProfiles(parent, FailedLocationBehavior.Continue);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppProfile item in response)
@@ -1126,7 +1126,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             };
             // Make the request
             PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> response =
-                bigtableInstanceAdminClient.ListAppProfilesAsync(request);
+                bigtableInstanceAdminClient.ListAppProfilesAsync(request, FailedLocationBehavior.Continue);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((AppProfile item) =>
@@ -1173,7 +1173,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             };
             // Make the request
             PagedEnumerable<ListAppProfilesResponse, AppProfile> response =
-                bigtableInstanceAdminClient.ListAppProfiles(request);
+                bigtableInstanceAdminClient.ListAppProfiles(request, FailedLocationBehavior.Continue);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (AppProfile item in response)

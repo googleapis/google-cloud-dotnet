@@ -60,7 +60,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 return result;
             }
 
-            public override IEnumerator<AppProfile> GetEnumerator() => _inner.GetEnumerator();
+            public override IEnumerator<AppProfile> GetEnumerator() =>
+                AsRawResponses().SelectMany(page => page).GetEnumerator();
 
             public override Page<AppProfile> ReadPage(int pageSize) => _inner.ReadPage(pageSize);
         }
@@ -88,7 +89,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 return result;
             }
 
-            public override IAsyncEnumerator<AppProfile> GetEnumerator() => _inner.GetEnumerator();
+            public override IAsyncEnumerator<AppProfile> GetEnumerator() =>
+                AsRawResponses().SelectMany(page => page.ToAsyncEnumerable()).GetEnumerator();
 
             public override Task<Page<AppProfile>> ReadPageAsync(
                 int pageSize,
