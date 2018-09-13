@@ -87,7 +87,7 @@ namespace Google.Cloud.Tools.TagReleases
 
             await MakeReleasesAsync(client, newReleases, commit);
             Console.WriteLine();
-            Console.WriteLine($"Release tags created. Please wait for emails confirming the automated build and push process.");
+            Console.WriteLine($"Release tags created. Please start the Kokoro release job with commit hash \"{commit}\" and wait for an email with the result.");
             Console.WriteLine($"For a manual release, run ./buildrelease.sh {commit}");
             return 0;
         }
