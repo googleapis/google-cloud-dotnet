@@ -25,7 +25,7 @@
     "id": "Google.Cloud.Asset.V1Beta1",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cai/",
-    "version": "1.0.0-beta00",
+    "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Asset Inventory API.",
     "dependencies": {
@@ -349,7 +349,7 @@
     "id": "Google.Cloud.Kms.V1",
     "productName": "Google Cloud Key Management Service",
     "productUrl": "https://cloud.google.com/kms/",
-    "version": "1.0.0-beta03",
+    "version": "1.0.0-beta04",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Key Management Service API, which manages encryption for your cloud services the same way you do on-premises. You can generate, use, rotate, and destroy AES256 encryption keys.",
     "tags": [ "kms", "keys", "security", "encryption" ],
