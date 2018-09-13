@@ -41,6 +41,7 @@ GA:
 
 Beta:
 
+- [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
 - [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html)
 - [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
 - [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html)
@@ -60,6 +61,7 @@ Beta:
 - [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html)
 - [Google.Cloud.OsLogin.V1](Google.Cloud.OsLogin.V1/index.html)
 - [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
+- [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Google.Cloud.Tasks.V2Beta2](Google.Cloud.Tasks.V2Beta2/index.html)
 - [Google.Cloud.Tasks.V2Beta3](Google.Cloud.Tasks.V2Beta3/index.html)
