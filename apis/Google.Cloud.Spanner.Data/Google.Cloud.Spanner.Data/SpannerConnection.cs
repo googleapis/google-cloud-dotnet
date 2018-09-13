@@ -20,6 +20,7 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
@@ -855,32 +856,29 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Helper method for common code to execute DML via a ReliableStreamReader.
         /// </summary>
-        internal Task<long> ExecuteDmlAsync(Session session, ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds) =>
+        internal Task<long> ExecuteDmlAsync(Session session, ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds, string callerType) =>
             ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
-                using (var reader = SpannerClient.GetSqlStreamReader(request, session, timeoutSeconds))
+                var callSettings = SpannerClient.Settings.ExecuteSqlSettings
+                    .WithExpiration(SpannerClient.Settings.ConvertTimeoutToExpiration(timeoutSeconds));
+
+                request.Session = session.Name;
+                ResultSet resultSet = await SpannerClient.ExecuteSqlAsync(request, callSettings).ConfigureAwait(false);
+                var stats = resultSet.Stats;
+                if (stats == null)
                 {
-                    Value value = await reader.NextAsync(cancellationToken).ConfigureAwait(false);
-                    if (value != null)
-                    {
-                        throw new SpannerException(ErrorCode.Internal, "DML returned results unexpectedly.");
-                    }
-                    var stats = reader.Stats;
-                    if (stats == null)
-                    {
-                        throw new SpannerException(ErrorCode.Internal, "DML completed without statistics.");
-                    }
-                    switch (stats.RowCountCase)
-                    {
-                        case ResultSetStats.RowCountOneofCase.RowCountExact:
-                            return stats.RowCountExact;
-                        case ResultSetStats.RowCountOneofCase.RowCountLowerBound:
-                            return stats.RowCountLowerBound;
-                        default:
-                            throw new SpannerException(ErrorCode.Internal, $"Unknown row count type: {stats.RowCountCase}");
-                    }
+                    throw new SpannerException(ErrorCode.Internal, "DML completed without statistics.");
                 }
-            }, "PartitionedUpdateTransaction.ExecuteDml", Logger);
+                switch (stats.RowCountCase)
+                {
+                    case ResultSetStats.RowCountOneofCase.RowCountExact:
+                        return stats.RowCountExact;
+                    case ResultSetStats.RowCountOneofCase.RowCountLowerBound:
+                        return stats.RowCountLowerBound;
+                    default:
+                        throw new SpannerException(ErrorCode.Internal, $"Unknown row count type: {stats.RowCountCase}");
+                }
+            }, $"{callerType}.ExecuteDml", Logger);
 
         private Task<SpannerTransaction> BeginTransactionImplAsync(
             TransactionOptions transactionOptions,

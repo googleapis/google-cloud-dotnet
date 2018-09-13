@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             request.Transaction = new TransactionSelector { Id = _wireTransaction.Id };
-            return _connection.ExecuteDmlAsync(_session, request, cancellationToken, timeoutSeconds);
+            return _connection.ExecuteDmlAsync(_session, request, cancellationToken, timeoutSeconds, nameof(PartitionedUpdateTransaction));
         }
 
         public Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request,
