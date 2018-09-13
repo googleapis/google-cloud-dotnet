@@ -121,13 +121,17 @@ Releasing consists of five steps:
 - After the version number is committed, run `tagreleases.sh` from the
   root directory to tag all updated versions.
 - Confirm that you wish to create the given tags.
-- A Jenkins build system will now notice the tags (after a short
-  delay; it checks periodically) and perform the rest of the build
-  and push process automatically.
-  - If you wish to perform a manual build, use the command line
-    displayed by `tagreleases.sh` to run `buildrelease.sh`, which
-    then displays final instructions for pushing to nuget.org and
-    updating the docs.
+- On a Google corp machine, trigger a Kokoro release build. (This
+  can only be performed by Googlers.)
+  - If you want to release anything other than the current head
+    of `master`, specify the commitish that was tagged.
+  - The Kokoro build will build the packages, run integration
+    tests, build the docs, then (on success) push the packages
+    to NuGet and the docs to GitHub pages.
+- If you wish to perform a manual build, use the command line
+  displayed by `tagreleases.sh` to run `buildrelease.sh`, which
+  then displays final instructions for pushing to nuget.org and
+  updating the docs.
 
 Note that `tagreleases.sh` checks that there are no project
 references from APIs being released now to APIs that *aren't* being
