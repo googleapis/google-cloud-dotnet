@@ -134,7 +134,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Alternatively, to just create a GcpCallInvoker will standard settings, but using non-default
             // credentials, use null or BigtableServiceApiSettings.GetDefault() for the settings.
             // Note that CreateChannelOptions() is an extension method which allows the receiver to be null,
-            // and will just act as it the default settings were specified.
+            // and will just act as if the default settings were specified.
             settings = null;
             callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
             BigtableClient client3 = BigtableClient.Create(callInvoker, settings);
