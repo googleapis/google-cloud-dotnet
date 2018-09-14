@@ -24,7 +24,7 @@ By default, clients share an internally managed Grpc.Gcp.GcpCallInvoker to
 establish gRPC channels with the Bigtable service using default credentials.
 This class allows for multiple channels to be used concurrently and
 load-balances requests and streams among them. BigtableClient instances are
-intended to be emphermal and will reuse an existing GcpCallInvoker instance
+intended to be ephermal and will reuse an existing GcpCallInvoker instance
 behind the scenes where possible.
 
 Note that this reuse is dependent upon the settings which control the usage of
