@@ -114,7 +114,7 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             // Create a client from a custom credentials and a GcpCallInvoker that has
             // non-default gRPC stream/channel options.
             // Note: the GcpCallInvoker should be long-lived while the BigtableClient
-            // instances can be emphemeral and each use the same call invoker
+            // instances can be ephemeral and each use the same call invoker.
             BigtableServiceApiSettings settings = new BigtableServiceApiSettings
             {
                 MaxChannels = 10,
@@ -132,7 +132,9 @@ namespace Google.Cloud.Bigtable.V2.Snippets
             await callInvoker.ShutdownAsync();
 
             // Alternatively, to just create a GcpCallInvoker will standard settings, but using non-default
-            // credentials, use null or BigtableServiceApiSettings.GetDefault() for the settings
+            // credentials, use null or BigtableServiceApiSettings.GetDefault() for the settings.
+            // Note that CreateChannelOptions() is an extension method which allows the receiver to be null,
+            // and will just act as it the default settings were specified.
             settings = null;
             callInvoker = new GcpCallInvoker(endpoint, credentials, settings.CreateChannelOptions());
             BigtableClient client3 = BigtableClient.Create(callInvoker, settings);
