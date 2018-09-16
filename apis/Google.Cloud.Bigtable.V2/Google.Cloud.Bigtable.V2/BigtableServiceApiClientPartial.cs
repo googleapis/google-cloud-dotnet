@@ -91,6 +91,12 @@ namespace Google.Cloud.Bigtable.V2
             );
 
         /// <summary>
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used by the server.
+        /// </summary>
+        public string AppProfileId { get; set; }
+
+        /// <summary>
         /// The maximum number of channels than will be open concurrently to the Bigtable endpoint.
         /// </summary>
         /// <remarks>
@@ -99,7 +105,7 @@ namespace Google.Cloud.Bigtable.V2
         /// endpoint and channel options and which use the default credentials. So this property will have no bearing
         /// across clients using different options. To create a custom grouping of channels to be managed, create a
         /// <see cref="GcpCallInvoker"/> manually and use the
-        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings)">BigtableClient.Create</see>
         /// overload taking a <see cref="CallInvoker"/> to create clients from it.
         /// </para>
         /// </remarks>
@@ -115,7 +121,7 @@ namespace Google.Cloud.Bigtable.V2
         /// endpoint and channel options and which use the default credentials. So this property will have no bearing
         /// across clients using different options. To create a custom grouping of channels to be managed, create a
         /// <see cref="GcpCallInvoker"/> manually and use the
-        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings)">BigtableClient.Create</see>
         /// overload taking a <see cref="CallInvoker"/> to create clients from it.
         /// </para>
         /// </remarks>
@@ -125,6 +131,7 @@ namespace Google.Cloud.Bigtable.V2
         {
             MutateRowsRetrySettings = existing.MutateRowsRetrySettings;
             ReadRowsRetrySettings = existing.ReadRowsRetrySettings;
+            AppProfileId = existing.AppProfileId;
             MaxChannels = existing.MaxChannels;
             PreferredMaxStreamsPerChannel = existing.PreferredMaxStreamsPerChannel;
         }
@@ -191,6 +198,11 @@ namespace Google.Cloud.Bigtable.V2
 
     public partial class BigtableServiceApiClient
     {
+        /// <summary>
+        /// Gets the default settings used with requests.
+        /// </summary>
+        public virtual BigtableServiceApiSettings DefaultSettings => null;
+
         public partial class SampleRowKeysStream
         {
             /// <summary>
@@ -220,6 +232,17 @@ namespace Google.Cloud.Bigtable.V2
     
     public partial class BigtableServiceApiClientImpl
     {
+        private BigtableServiceApiSettings _defaultSettings;
+
+        /// <inheritdoc/>
+        public override BigtableServiceApiSettings DefaultSettings => _defaultSettings;
+
+        partial void OnConstruction(
+            Bigtable.BigtableClient grpcClient,
+            BigtableServiceApiSettings effectiveSettings,
+            ClientHelper clientHelper) =>
+            _defaultSettings = effectiveSettings.Clone();
+
         partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings) =>
             GaxPreconditions.CheckState(
                 request.IsIdempotent(), 

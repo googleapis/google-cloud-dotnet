@@ -158,6 +158,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
             where TMockStream : class, TStream
         {
             var mock = new Mock<BigtableServiceApiClient>();
+            mock.SetupGet(x => x.DefaultSettings).Returns(settings);
 
             // Even though we want to setup the initial call last, we should call the stream conversion for it
             // first so `itemsToStream` is called in the order the streams will be returned, just in case the
@@ -189,7 +190,7 @@ namespace Google.Cloud.Bigtable.V2.Tests
                 return initialResponse;
             });
 
-            return new BigtableClientImpl(mock.Object, serviceClientSettings: settings, appProfileId: null);
+            return new BigtableClientImpl(mock.Object);
         }
     }
 }
