@@ -20,6 +20,7 @@ using Grpc.Core;
 using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -136,7 +137,8 @@ namespace Google.Cloud.Bigtable.V2
     {
         private static readonly Lazy<IEnumerable<ChannelOption>> s_defaultChannelOptions =
             new Lazy<IEnumerable<ChannelOption>>(
-                () => BigtableServiceApiSettings.GetDefault().CreateChannelOptions());
+                () => new ReadOnlyCollection<ChannelOption>(
+                    BigtableServiceApiSettings.GetDefault().CreateChannelOptionsImpl()));
 
         /// <summary>
         /// Creates a collection of <see cref="ChannelOption"/> instances which can be used to create a <see cref="Channel"/>
@@ -159,7 +161,11 @@ namespace Google.Cloud.Bigtable.V2
             {
                 return s_defaultChannelOptions.Value;
             }
+            return CreateChannelOptionsImpl(settings);
+        }
 
+        private static ChannelOption[] CreateChannelOptionsImpl(this BigtableServiceApiSettings settings)
+        {
             var apiConfig = new ApiConfig
             {
                 ChannelPool = new ChannelPoolConfig
