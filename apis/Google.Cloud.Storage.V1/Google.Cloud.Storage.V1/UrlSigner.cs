@@ -22,6 +22,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -700,6 +701,9 @@ namespace Google.Cloud.Storage.V1
             return extensionHeaders;
         }
 
+        private static readonly Regex s_newlineRegex = new Regex(@"\r?\n", RegexOptions.Compiled);
+        private static readonly Regex s_whitespaceRegex = new Regex(@"\s+", RegexOptions.Compiled);
+
         private static void PopulateExtensionHeaders(
             Dictionary<string, IEnumerable<string>> headers,
             SortedDictionary<string, StringBuilder> extensionHeaders,
@@ -731,8 +735,21 @@ namespace Google.Cloud.Storage.V1
                     values.Append(',');
                 }
 
-                values.Append(string.Join(", ",
-                    header.Value.Select(s => s.Trim().Replace("\r\n", "").Replace("\n", ""))));
+                values.Append(string.Join(", ", header.Value.Select(PrepareHeaderValue)));
+            }
+
+            string PrepareHeaderValue(string value)
+            {
+                // Remove leading/trailing whitespace
+                value = value.Trim();
+
+                // Collapse whitespace runs: only keep the last character
+                value = s_whitespaceRegex.Replace(value, match => match.Value[match.Value.Length - 1].ToString());
+
+                // Remove newlines
+                value = s_newlineRegex.Replace(value, "");
+
+                return value;
             }
         }
 
