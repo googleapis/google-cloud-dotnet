@@ -29,6 +29,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.Projection);
             Assert.Null(request.Prefix);
             Assert.Null(request.MaxResults);
+            Assert.Null(request.PageToken);
         }
 
         [Fact]
@@ -39,12 +40,14 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 PageSize = 10,
                 Prefix = "prefix",
-                Projection = Projection.Full
+                Projection = Projection.Full,
+                PageToken = "nextpage"
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
             Assert.Equal("prefix", request.Prefix);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
+            Assert.Equal("nextpage", request.PageToken);
         }
     }
 }
