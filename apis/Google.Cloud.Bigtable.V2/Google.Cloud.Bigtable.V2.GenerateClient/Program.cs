@@ -34,7 +34,6 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 {
     class Program
     {
-        private const string AppProfileIdFieldName = "_appProfileId";
         private const string AppProfileIdPropertyName = "AppProfileId";
         private const string CancellationTokenParameterName = "cancellationToken";
         private const string ClientFieldName = "_client";
@@ -472,12 +471,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
                 // Replace the body with something like this:
                 //------------------------------------------------------------------------
-                //  if (_appProfileId != null && request.AppProfileId.Length == 0)
-                //  {
-                //      request.AppProfileId = _appProfileId;
-                //  }
-                //
-                //  return GetUnderlyingClient().MethodName(request, callSettings);
+                //  => _client.MethodName(request, callSettings);
                 //------------------------------------------------------------------------
                 var appProfileIdProperty = node.ParameterList.Parameters[0].Identifier.Member(AppProfileIdPropertyName);
                 ExpressionSyntax resultExpression;
@@ -493,11 +487,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
                     resultExpression = underlyingMethod.Invoke(node.ParameterList.AsArguments());
                 }
 
-                node = node.WithBodySafe(Block(
-                    If(IdentifierName(AppProfileIdFieldName).NotEqualTo(Null())
-                            .And(appProfileIdProperty.Member("Length").EqualTo(Zero())),
-                        appProfileIdProperty.AssignFrom(AppProfileIdFieldName).ToStatement()),
-                    ReturnStatement(resultExpression)));
+                node = node.WithBodySafe(resultExpression);
 
                 return node;
             }

@@ -91,6 +91,12 @@ namespace Google.Cloud.Bigtable.V2
             );
 
         /// <summary>
+        /// This value specifies routing for replication. If not specified, the
+        /// "default" application profile will be used by the server.
+        /// </summary>
+        public string AppProfileId { get; set; }
+
+        /// <summary>
         /// The maximum number of channels than will be open concurrently to the Bigtable endpoint.
         /// </summary>
         /// <remarks>
@@ -99,7 +105,7 @@ namespace Google.Cloud.Bigtable.V2
         /// endpoint and channel options and which use the default credentials. So this property will have no bearing
         /// across clients using different options. To create a custom grouping of channels to be managed, create a
         /// <see cref="GcpCallInvoker"/> manually and use the
-        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings)">BigtableClient.Create</see>
         /// overload taking a <see cref="CallInvoker"/> to create clients from it.
         /// </para>
         /// </remarks>
@@ -115,7 +121,7 @@ namespace Google.Cloud.Bigtable.V2
         /// endpoint and channel options and which use the default credentials. So this property will have no bearing
         /// across clients using different options. To create a custom grouping of channels to be managed, create a
         /// <see cref="GcpCallInvoker"/> manually and use the
-        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings, string)">BigtableClient.Create</see>
+        /// <see cref="BigtableClient.Create(CallInvoker, BigtableServiceApiSettings)">BigtableClient.Create</see>
         /// overload taking a <see cref="CallInvoker"/> to create clients from it.
         /// </para>
         /// </remarks>
@@ -125,6 +131,7 @@ namespace Google.Cloud.Bigtable.V2
         {
             MutateRowsRetrySettings = existing.MutateRowsRetrySettings;
             ReadRowsRetrySettings = existing.ReadRowsRetrySettings;
+            AppProfileId = existing.AppProfileId;
             MaxChannels = existing.MaxChannels;
             PreferredMaxStreamsPerChannel = existing.PreferredMaxStreamsPerChannel;
         }
@@ -191,6 +198,14 @@ namespace Google.Cloud.Bigtable.V2
 
     public partial class BigtableServiceApiClient
     {
+        /// <summary>
+        /// Gets the value which specifies routing for replication.
+        /// If null or empty, the "default" application profile will be used by the server.
+        /// </summary>
+        public virtual string AppProfileId => throw new NotImplementedException();
+
+        internal virtual BigtableServiceApiSettings DefaultSettings => null;
+
         public partial class SampleRowKeysStream
         {
             /// <summary>
@@ -217,17 +232,63 @@ namespace Google.Cloud.Bigtable.V2
             }
         }
     }
-    
+
     public partial class BigtableServiceApiClientImpl
     {
-        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings) =>
+        private BigtableServiceApiSettings _defaultSettings;
+
+        /// <inheritdoc/>
+        public override string AppProfileId => _defaultSettings.AppProfileId;
+
+        internal override BigtableServiceApiSettings DefaultSettings => _defaultSettings;
+
+        partial void OnConstruction(
+            Bigtable.BigtableClient grpcClient,
+            BigtableServiceApiSettings effectiveSettings,
+            ClientHelper clientHelper) =>
+            _defaultSettings = effectiveSettings.Clone();
+
+        // Note: the callbacks below intentionally take the specified request as the 1st argument so callers don't need
+        // to create closure objects at callsites.
+        private void TryApplyAppProfileId<TRequest>(
+            TRequest request,
+            Func<TRequest, string> appProfileIdGetter,
+            Action<TRequest, string> appProfileIdSetter)
+        {
+            if (AppProfileId != null && appProfileIdGetter(request).Length == 0)
+            {
+                appProfileIdSetter(request, AppProfileId);
+            }
+        }
+
+        partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings) =>
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+
+        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings)
+        {
             GaxPreconditions.CheckState(
-                request.IsIdempotent(), 
+                request.IsIdempotent(),
                 "Non-idempotent MutateRow requests are not allowed. Specify a version with all SetCell mutations.");
 
-        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings) =>
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
+
+        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings)
+        {
             GaxPreconditions.CheckState(
                 request.IsIdempotent(),
                 "Non-idempotent MutateRows requests are not allowed. Specify a version with all SetCell mutations.");
+
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
+
+        partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings) =>
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+
+        partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+
+        partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings) =>
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
     }
 }

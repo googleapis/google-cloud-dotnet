@@ -42,15 +42,11 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/> to use when connecting to Bigtable.</param>
         /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/> to control API requests.</param>
-        /// <param name="appProfileId">
-        /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used by the server.
-        /// </param>
         /// <returns>The task representing the created <see cref="BigtableClient"/>.</returns>
-        public static async Task<BigtableClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null)
+        public static async Task<BigtableClient> CreateAsync(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null)
         {
             var client = await BigtableServiceApiClient.CreateAsync(endpoint, settings).ConfigureAwait(false);
-            return new BigtableClientImpl(client, appProfileId, settings);
+            return new BigtableClientImpl(client);
         }
 
         /// <summary>
@@ -60,13 +56,9 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="endpoint">Optional <see cref="ServiceEndpoint"/> to use when connecting to Bigtable.</param>
         /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/> to control API requests.</param>
-        /// <param name="appProfileId">
-        /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used by the server.
-        /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null, string appProfileId = null) =>
-            Task.Run(() => CreateAsync(endpoint, settings, appProfileId)).ResultWithUnwrappedExceptions();
+        public static BigtableClient Create(ServiceEndpoint endpoint = null, BigtableServiceApiSettings settings = null) =>
+            Task.Run(() => CreateAsync(endpoint, settings)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Synchronously creates a <see cref="BigtableClient"/> from a pre-existing API client.
@@ -74,16 +66,9 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="client">
         /// The <see cref="BigtableServiceApiClient"/> to use in the <see cref="BigtableClient"/>. Must not be null.
         /// </param>
-        /// <param name="appProfileId">
-        /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used by the server.
-        /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(BigtableServiceApiClient client, string appProfileId = null) => 
-            new BigtableClientImpl(
-                GaxPreconditions.CheckNotNull(client, nameof(client)),
-                appProfileId,
-                underlyingClientSettings: null);
+        public static BigtableClient Create(BigtableServiceApiClient client) => 
+            new BigtableClientImpl(GaxPreconditions.CheckNotNull(client, nameof(client)));
 
         /// <summary>
         /// Synchronously creates a <see cref="BigtableClient"/>, applying defaults for all unspecified settings,
@@ -91,28 +76,15 @@ namespace Google.Cloud.Bigtable.V2
         /// </summary>
         /// <param name="callInvoker">The <see cref="CallInvoker"/> which performs API requests. Must not be null.</param>
         /// <param name="settings">Optional <see cref="BigtableServiceApiSettings"/> to control API requests.</param>
-        /// <param name="appProfileId">
-        /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used by the server.
-        /// </param>
         /// <returns>The created <see cref="BigtableClient"/>.</returns>
-        public static BigtableClient Create(CallInvoker callInvoker, BigtableServiceApiSettings settings = null, string appProfileId = null) =>
-            Create(BigtableServiceApiClient.Create(GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker)), settings), appProfileId);
+        public static BigtableClient Create(CallInvoker callInvoker, BigtableServiceApiSettings settings = null) =>
+            Create(BigtableServiceApiClient.Create(GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker)), settings));
 
         /// <summary>
-        /// Gets the value which specifies routing for replication. If null, the "default" application profile will be used by the server.
+        /// Gets the value which specifies routing for replication.
+        /// If null or empty, the "default" application profile will be used by the server.
         /// </summary>
-        public virtual string AppProfileId => null;
-
-        /// <summary>
-        /// Gets a <see cref="BigtableClient"/> matching this one but with the specified <paramref name="appProfileId"/>.
-        /// </summary>
-        /// <param name="appProfileId">
-        /// This value specifies routing for replication. If not specified, the
-        /// "default" application profile will be used by the server.
-        /// </param>
-        /// <returns>The updated <see cref="BigtableClient"/>.</returns>
-        public virtual BigtableClient WithAppProfileId(string appProfileId) => this;
+        public virtual string AppProfileId => throw new NotImplementedException();
 
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
@@ -974,35 +946,27 @@ namespace Google.Cloud.Bigtable.V2
                     RowsLimit = GaxPreconditions.CheckArgumentRange(rowsLimit ?? 0, nameof(rowsLimit), 0, long.MaxValue)
                 },
                 callSettings);
-
-        private protected BigtableServiceApiSettings UnderlyingClientSettings { get; set; }
     }
 
     public partial class BigtableClientImpl
     {
-        private readonly string _appProfileId;
         private readonly BigtableServiceApiClient _client;
 
-        // TODO: Add a public constructor after multi-channel support?
-        internal BigtableClientImpl(
-            BigtableServiceApiClient client,
-            string appProfileId,
-            BigtableServiceApiSettings underlyingClientSettings = null)
+        /// <summary>
+        /// Constructs a client wrapper for the Bigtable service, with the specified <see cref="BigtableServiceApiClient"/> and settings.
+        /// </summary>
+        /// <param name="serviceClient">The underlying <see cref="BigtableServiceApiClient"/> which performs the requests to the service.</param>
+        public BigtableClientImpl(BigtableServiceApiClient serviceClient)
         {
-            _client = client;
-            _appProfileId = appProfileId;
+            _client = serviceClient;
 
-            Clock = underlyingClientSettings?.Clock ?? SystemClock.Instance;
-            Scheduler = underlyingClientSettings?.Scheduler ?? SystemScheduler.Instance;
-            UnderlyingClientSettings = underlyingClientSettings?.Clone();
+            var serviceClientSettings = serviceClient.DefaultSettings;
+            Clock = serviceClientSettings?.Clock ?? SystemClock.Instance;
+            Scheduler = serviceClientSettings?.Scheduler ?? SystemScheduler.Instance;
         }
 
         /// <inheritdoc/>
-        public override string AppProfileId => _appProfileId;
-
-        /// <inheritdoc/>
-        public override BigtableClient WithAppProfileId(string appProfileId) =>
-            new BigtableClientImpl(_client, appProfileId, UnderlyingClientSettings);
+        public override string AppProfileId => _client.AppProfileId;
 
         internal IClock Clock { get; }
         internal IScheduler Scheduler { get; }
@@ -1012,7 +976,7 @@ namespace Google.Cloud.Bigtable.V2
 
         private ReadRowsStream ReadRowsImpl(ReadRowsRequest request, CallSettings callSettings)
         {
-            var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
+            var defaultSettings = _client.DefaultSettings ?? new BigtableServiceApiSettings();
             var effectiveCallSettings = defaultSettings.ReadRowsSettings.MergedWith(callSettings);
             var effectiveRetrySettings = defaultSettings.ReadRowsRetrySettings;
 
@@ -1021,7 +985,7 @@ namespace Google.Cloud.Bigtable.V2
 
         private async Task<MutateRowsResponse> MutateRowsImpl(MutateRowsRequest request, CallSettings callSettings)
         {
-            var defaultSettings = UnderlyingClientSettings ?? new BigtableServiceApiSettings();
+            var defaultSettings = _client.DefaultSettings ?? new BigtableServiceApiSettings();
             var effectiveCallSettings = defaultSettings.MutateRowsSettings.MergedWith(callSettings);
             var effectiveRetrySettings = defaultSettings.MutateRowsRetrySettings;
 
