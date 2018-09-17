@@ -360,54 +360,22 @@ namespace Google.Cloud.Bigtable.V2
         /// <inheritdoc/>
         public override ReadRowsStream ReadRows(
             ReadRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return ReadRowsImpl(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => ReadRowsImpl(request, callSettings);
 
         /// <inheritdoc/>
         public override BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
             SampleRowKeysRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return _client.SampleRowKeys(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => _client.SampleRowKeys(request, callSettings);
 
         /// <inheritdoc/>
         public override stt::Task<MutateRowResponse> MutateRowAsync(
             MutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return _client.MutateRowAsync(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => _client.MutateRowAsync(request, callSettings);
 
         /// <inheritdoc/>
         public override MutateRowResponse MutateRow(
             MutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return _client.MutateRow(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => _client.MutateRow(request, callSettings);
 
         /// <inheritdoc/>
         public override MutateRowsResponse MutateRows(
@@ -417,66 +385,26 @@ namespace Google.Cloud.Bigtable.V2
         /// <inheritdoc/>
         public override stt::Task<MutateRowsResponse> MutateRowsAsync(
             MutateRowsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return MutateRowsImpl(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => MutateRowsImpl(request, callSettings);
 
         /// <inheritdoc/>
         public override stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(
             CheckAndMutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return _client.CheckAndMutateRowAsync(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => _client.CheckAndMutateRowAsync(request, callSettings);
 
         /// <inheritdoc/>
         public override CheckAndMutateRowResponse CheckAndMutateRow(
             CheckAndMutateRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return _client.CheckAndMutateRow(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => _client.CheckAndMutateRow(request, callSettings);
 
         /// <inheritdoc/>
         public override stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(
             ReadModifyWriteRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return _client.ReadModifyWriteRowAsync(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => _client.ReadModifyWriteRowAsync(request, callSettings);
 
         /// <inheritdoc/>
         public override ReadModifyWriteRowResponse ReadModifyWriteRow(
             ReadModifyWriteRowRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            if (_appProfileId != null && request.AppProfileId.Length == 0)
-            {
-                request.AppProfileId = _appProfileId;
-            }
-
-            return _client.ReadModifyWriteRow(request, callSettings);
-        }
+            gaxgrpc::CallSettings callSettings = null) => _client.ReadModifyWriteRow(request, callSettings);
     }
 }
