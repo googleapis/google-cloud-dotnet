@@ -1,6 +1,6 @@
 # Version history
 
-# 1.3.0-beta04, 2018-08-22
+# 1.3.0-beta05, 2018-09-17
 
 New features since 1.2.0:
 
@@ -12,6 +12,7 @@ New features since 1.2.0:
 - Support for Parquet load jobs
 - Support for ORC load jobs
 - Support for job labels
+- Support for supplying page tokens to all list operations
 - Public constructors for BigQueryTable etc, for improved testability
 
 # 1.2.0, 2018-04-09
