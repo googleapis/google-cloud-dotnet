@@ -41,6 +41,23 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             await AssertObjects(null, options, _fixture.ReadBucketObjects.ToArray());
         }
 
+        [Fact]
+        public void ResumeWithPageToken()
+        {
+            string bucket = _fixture.ReadBucket;
+            var client = _fixture.Client;
+            var totalCount = _fixture.ReadBucketObjects.Count();
+            // We want to check that when reading the remained, we still need to paginate.
+            // (If we had a bug that always used the original page token, we'd end up in an infinite loop.)
+            Assert.True(totalCount > 4, "Must have more than 4 objects for pagination test");
+            var firstPage = client.ListObjects(bucket).ReadPage(2);
+            Assert.NotNull(firstPage.NextPageToken);
+
+            var options = new ListObjectsOptions { PageSize = 2, PageToken = firstPage.NextPageToken };
+            var remainder = client.ListObjects(bucket, prefix: null, options).ToList();
+            Assert.Equal(totalCount - 2, remainder.Count);
+        }
+
         // Note: this test unfortunately relies on the test data, but in a way which is hard to make "safe"
         // using the fixture.
         [Theory]

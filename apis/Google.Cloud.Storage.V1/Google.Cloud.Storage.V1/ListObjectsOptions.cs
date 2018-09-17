@@ -58,6 +58,13 @@ namespace Google.Cloud.Storage.V1
         public string UserProject { get; set; }
 
         /// <summary>
+        /// If set, this token is used to indicate a continued list operation.
+        /// The value should be taken from the <c>NextPageToken</c> property of either
+        /// a <see cref="Page{TResource}"/> or a raw response from <see cref="PagedEnumerable{TResponse, TResource}.AsRawResponses"/>.
+        /// </summary>
+        public string PageToken { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
@@ -82,6 +89,10 @@ namespace Google.Cloud.Storage.V1
             if (UserProject != null)
             {
                 request.UserProject = UserProject;
+            }
+            if (PageToken != null)
+            {
+                request.PageToken = PageToken;
             }
         }
     }

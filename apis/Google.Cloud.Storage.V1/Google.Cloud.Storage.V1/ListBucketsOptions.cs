@@ -40,6 +40,13 @@ namespace Google.Cloud.Storage.V1
         public Projection? Projection { get; set; }
 
         /// <summary>
+        /// If set, this token is used to indicate a continued list operation.
+        /// The value should be taken from the <c>NextPageToken</c> property of either
+        /// a <see cref="Page{TResource}"/> or a raw response from <see cref="PagedEnumerable{TResponse, TResource}.AsRawResponses"/>.
+        /// </summary>
+        public string PageToken { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
@@ -56,6 +63,10 @@ namespace Google.Cloud.Storage.V1
             if (Projection != null)
             {
                 request.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+            }
+            if (PageToken != null)
+            {
+                request.PageToken = PageToken;
             }
         }
     }
