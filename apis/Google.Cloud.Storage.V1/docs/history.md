@@ -1,5 +1,11 @@
 # Version history
 
+# 2.3.0-beta01, 2018-09-17
+
+New features since 2.2.0:
+
+- Support for supplying page tokens when listing buckets or objects
+
 # 2.2.0, 2018-08-28
 
 New features since 2.1.0:
