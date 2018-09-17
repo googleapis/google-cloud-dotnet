@@ -20,6 +20,7 @@ using Grpc.Core;
 using Grpc.Gcp;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -134,6 +135,11 @@ namespace Google.Cloud.Bigtable.V2
     /// </summary>
     public static class BigtableServiceApiSettingsExtensions
     {
+        private static readonly Lazy<IEnumerable<ChannelOption>> s_defaultChannelOptions =
+            new Lazy<IEnumerable<ChannelOption>>(
+                () => new ReadOnlyCollection<ChannelOption>(
+                    BigtableServiceApiSettings.GetDefault().CreateChannelOptionsImpl()));
+
         /// <summary>
         /// Creates a collection of <see cref="ChannelOption"/> instances which can be used to create a <see cref="Channel"/>
         /// or <see cref="GcpCallInvoker"/> pre-configured based on the specified settings (or the default settings if they
@@ -151,14 +157,21 @@ namespace Google.Cloud.Bigtable.V2
         /// <returns>A collection of <see cref="ChannelOption"/> instances.</returns>
         public static IEnumerable<ChannelOption> CreateChannelOptions(this BigtableServiceApiSettings settings)
         {
-            // TODO: Use a cached collection of channel options if settings is null.
-            var effectiveSettings = settings ?? BigtableServiceApiSettings.GetDefault();
+            if (settings == null)
+            {
+                return s_defaultChannelOptions.Value;
+            }
+            return CreateChannelOptionsImpl(settings);
+        }
+
+        private static ChannelOption[] CreateChannelOptionsImpl(this BigtableServiceApiSettings settings)
+        {
             var apiConfig = new ApiConfig
             {
                 ChannelPool = new ChannelPoolConfig
                 {
-                    MaxSize = effectiveSettings.MaxChannels,
-                    MaxConcurrentStreamsLowWatermark = effectiveSettings.PreferredMaxStreamsPerChannel
+                    MaxSize = settings.MaxChannels,
+                    MaxConcurrentStreamsLowWatermark = settings.PreferredMaxStreamsPerChannel
                 }
             };
 
