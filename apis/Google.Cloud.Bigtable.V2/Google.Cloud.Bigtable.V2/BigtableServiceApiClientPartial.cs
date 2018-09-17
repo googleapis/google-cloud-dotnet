@@ -199,9 +199,12 @@ namespace Google.Cloud.Bigtable.V2
     public partial class BigtableServiceApiClient
     {
         /// <summary>
-        /// Gets the default settings used with requests.
+        /// Gets the value which specifies routing for replication.
+        /// If null or emtpy, the "default" application profile will be used by the server.
         /// </summary>
-        public virtual BigtableServiceApiSettings DefaultSettings => null;
+        public virtual string AppProfileId => null;
+
+        internal virtual BigtableServiceApiSettings DefaultSettings => null;
 
         public partial class SampleRowKeysStream
         {
@@ -229,13 +232,15 @@ namespace Google.Cloud.Bigtable.V2
             }
         }
     }
-    
+
     public partial class BigtableServiceApiClientImpl
     {
         private BigtableServiceApiSettings _defaultSettings;
 
         /// <inheritdoc/>
-        public override BigtableServiceApiSettings DefaultSettings => _defaultSettings;
+        public override string AppProfileId => _defaultSettings.AppProfileId;
+
+        internal override BigtableServiceApiSettings DefaultSettings => _defaultSettings;
 
         partial void OnConstruction(
             Bigtable.BigtableClient grpcClient,
@@ -243,14 +248,55 @@ namespace Google.Cloud.Bigtable.V2
             ClientHelper clientHelper) =>
             _defaultSettings = effectiveSettings.Clone();
 
-        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings) =>
+        // Note: the callbacks below intentionally take the specified request as the 1st argument so callers don't need
+        // to create closure objects at callsites.
+        private void TryApplyAppProfileId<TRequest>(
+            TRequest request,
+            Func<TRequest, string> appProfileIdGetter,
+            Action<TRequest, string> appProfileIdSetter)
+        {
+            if (AppProfileId != null && appProfileIdGetter(request).Length == 0)
+            {
+                appProfileIdSetter(request, AppProfileId);
+            }
+        }
+
+        partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings)
+        {
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
+
+        partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings)
+        {
             GaxPreconditions.CheckState(
-                request.IsIdempotent(), 
+                request.IsIdempotent(),
                 "Non-idempotent MutateRow requests are not allowed. Specify a version with all SetCell mutations.");
 
-        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings) =>
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
+
+        partial void Modify_MutateRowsRequest(ref MutateRowsRequest request, ref CallSettings settings)
+        {
             GaxPreconditions.CheckState(
                 request.IsIdempotent(),
                 "Non-idempotent MutateRows requests are not allowed. Specify a version with all SetCell mutations.");
+
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
+
+        partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings)
+        {
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
+
+        partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings)
+        {
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
+
+        partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings)
+        {
+            TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
+        }
     }
 }

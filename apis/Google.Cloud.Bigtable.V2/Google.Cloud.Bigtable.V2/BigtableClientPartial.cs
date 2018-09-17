@@ -81,7 +81,8 @@ namespace Google.Cloud.Bigtable.V2
             Create(BigtableServiceApiClient.Create(GaxPreconditions.CheckNotNull(callInvoker, nameof(callInvoker)), settings));
 
         /// <summary>
-        /// Gets the value which specifies routing for replication. If null, the "default" application profile will be used by the server.
+        /// Gets the value which specifies routing for replication.
+        /// If null or emtpy, the "default" application profile will be used by the server.
         /// </summary>
         public virtual string AppProfileId => null;
 
@@ -949,7 +950,6 @@ namespace Google.Cloud.Bigtable.V2
 
     public partial class BigtableClientImpl
     {
-        private readonly string _appProfileId;
         private readonly BigtableServiceApiClient _client;
 
         /// <summary>
@@ -958,17 +958,15 @@ namespace Google.Cloud.Bigtable.V2
         /// <param name="serviceClient">The underlying <see cref="BigtableServiceApiClient"/> which performs the requests to the service.</param>
         public BigtableClientImpl(BigtableServiceApiClient serviceClient)
         {
-            var serviceClientSettings = serviceClient.DefaultSettings;
-
             _client = serviceClient;
-            _appProfileId = serviceClientSettings?.AppProfileId;
 
+            var serviceClientSettings = serviceClient.DefaultSettings;
             Clock = serviceClientSettings?.Clock ?? SystemClock.Instance;
             Scheduler = serviceClientSettings?.Scheduler ?? SystemScheduler.Instance;
         }
 
         /// <inheritdoc/>
-        public override string AppProfileId => _appProfileId;
+        public override string AppProfileId => _client.AppProfileId;
 
         internal IClock Clock { get; }
         internal IScheduler Scheduler { get; }
