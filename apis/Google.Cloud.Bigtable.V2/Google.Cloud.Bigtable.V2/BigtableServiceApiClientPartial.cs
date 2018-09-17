@@ -200,9 +200,9 @@ namespace Google.Cloud.Bigtable.V2
     {
         /// <summary>
         /// Gets the value which specifies routing for replication.
-        /// If null or emtpy, the "default" application profile will be used by the server.
+        /// If null or empty, the "default" application profile will be used by the server.
         /// </summary>
-        public virtual string AppProfileId => null;
+        public virtual string AppProfileId => throw new NotImplementedException();
 
         internal virtual BigtableServiceApiSettings DefaultSettings => null;
 
@@ -261,10 +261,8 @@ namespace Google.Cloud.Bigtable.V2
             }
         }
 
-        partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings)
-        {
+        partial void Modify_CheckAndMutateRowRequest(ref CheckAndMutateRowRequest request, ref CallSettings settings) =>
             TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
-        }
 
         partial void Modify_MutateRowRequest(ref MutateRowRequest request, ref CallSettings settings)
         {
@@ -284,19 +282,13 @@ namespace Google.Cloud.Bigtable.V2
             TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
         }
 
-        partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings)
-        {
+        partial void Modify_ReadModifyWriteRowRequest(ref ReadModifyWriteRowRequest request, ref CallSettings settings) =>
             TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
-        }
 
-        partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings)
-        {
+        partial void Modify_ReadRowsRequest(ref ReadRowsRequest request, ref CallSettings settings) =>
             TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
-        }
 
-        partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings)
-        {
+        partial void Modify_SampleRowKeysRequest(ref SampleRowKeysRequest request, ref CallSettings settings) =>
             TryApplyAppProfileId(request, r => r.AppProfileId, (r, a) => r.AppProfileId = a);
-        }
     }
 }

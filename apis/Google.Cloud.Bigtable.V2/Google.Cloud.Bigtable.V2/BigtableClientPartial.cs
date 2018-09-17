@@ -82,9 +82,9 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <summary>
         /// Gets the value which specifies routing for replication.
-        /// If null or emtpy, the "default" application profile will be used by the server.
+        /// If null or empty, the "default" application profile will be used by the server.
         /// </summary>
-        public virtual string AppProfileId => null;
+        public virtual string AppProfileId => throw new NotImplementedException();
 
         /// <summary>
         /// Mutates a row atomically based on the output of a predicate Reader filter.
