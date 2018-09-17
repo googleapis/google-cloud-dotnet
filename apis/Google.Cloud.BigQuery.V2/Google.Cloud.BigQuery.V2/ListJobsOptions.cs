@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using static Google.Apis.Bigquery.v2.JobsResource;
 using static Google.Apis.Bigquery.v2.JobsResource.ListRequest;
 
@@ -44,6 +45,13 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public ProjectionEnum? Projection { get; set; }
 
+        /// <summary>
+        /// If set, this token is used to indicate a continued list operation.
+        /// The value should be taken from the <c>NextPageToken</c> property of either
+        /// a <see cref="Page{TResource}"/> or a raw response from <see cref="PagedEnumerable{TResponse, TResource}.AsRawResponses"/>.
+        /// </summary>
+        public string PageToken { get; set; }
+
         internal void ModifyRequest(ListRequest request)
         {
             if (StateFilter != null)
@@ -64,6 +72,11 @@ namespace Google.Cloud.BigQuery.V2
             if (Projection != null)
             {
                 request.Projection = Projection;
+            }
+
+            if (PageToken != null)
+            {
+                request.PageToken = PageToken;
             }
         }
     }

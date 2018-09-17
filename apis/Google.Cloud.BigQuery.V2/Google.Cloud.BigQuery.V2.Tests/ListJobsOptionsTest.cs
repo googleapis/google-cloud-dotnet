@@ -29,7 +29,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 PageSize = 25,
                 StateFilter = JobState.Pending,
                 AllUsers = true,
-                Projection = ProjectionEnum.Full
+                Projection = ProjectionEnum.Full,
+                PageToken = "nextpage"
             };
             ListRequest request = new ListRequest(new BigqueryService(), "project");
             options.ModifyRequest(request);
@@ -37,6 +38,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(StateFilterEnum.Pending, request.StateFilter);
             Assert.Equal(true, request.AllUsers);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
+            Assert.Equal("nextpage", request.PageToken);
         }
     }
 }
