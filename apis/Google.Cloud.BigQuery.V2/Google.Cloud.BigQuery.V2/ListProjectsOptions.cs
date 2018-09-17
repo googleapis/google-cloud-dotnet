@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Bigquery.v2;
 
 namespace Google.Cloud.BigQuery.V2
@@ -27,11 +28,23 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// If set, this token is used to indicate a continued list operation.
+        /// The value should be taken from the <c>NextPageToken</c> property of either
+        /// a <see cref="Page{TResource}"/> or a raw response from <see cref="PagedEnumerable{TResponse, TResource}.AsRawResponses"/>.
+        /// </summary>
+        public string PageToken { get; set; }
+
         internal void ModifyRequest(ProjectsResource.ListRequest request)
         {
             if (PageSize != null)
             {
                 request.MaxResults = PageSize;
+            }
+
+            if (PageToken != null)
+            {
+                request.PageToken = PageToken;
             }
         }
     }

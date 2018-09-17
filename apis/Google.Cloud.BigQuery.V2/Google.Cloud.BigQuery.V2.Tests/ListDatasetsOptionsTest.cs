@@ -28,13 +28,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 PageSize = 25,
                 Filter = Filters.FromLabel("x", "y"),
-                IncludeHidden = true
+                IncludeHidden = true,
+                PageToken = "nextpage"
             };
             ListRequest request = new ListRequest(new BigqueryService(), "project");
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal("labels.x:y", request.Filter);
             Assert.True(request.All);
+            Assert.Equal("nextpage", request.PageToken);
         }
     }
 }

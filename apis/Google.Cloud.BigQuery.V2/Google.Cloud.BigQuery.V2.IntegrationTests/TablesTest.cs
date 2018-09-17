@@ -289,5 +289,24 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var list = client.ListTables(datasetId).ToList();
             Assert.Contains(list, candidate => candidate.Reference.TableId == tableId && candidate.Resource.FriendlyName == "FriendlyName");
         }
+
+
+        [Fact]
+        public void ListTables_ResumeWithPageToken()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var totalCount = client.ListTables(datasetId).Count();
+            // We want to check that when reading the remained, we still need to paginate.
+            // (If we had a bug that always used the original page token, we'd end up in an infinite loop.)
+            Assert.True(totalCount > 4, "Must have more than 4 tables for pagination test");
+            var firstPage = client.ListTables(datasetId).ReadPage(2);
+            Assert.NotNull(firstPage.NextPageToken);
+
+            var options = new ListTablesOptions { PageSize = 2, PageToken = firstPage.NextPageToken };
+            var remainder = client.ListTables(datasetId, options).ToList();
+            Assert.Equal(totalCount - 2, remainder.Count);
+        }
+
     }
 }

@@ -25,11 +25,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var options = new ListProjectsOptions
             {
-                PageSize = 25                
+                PageSize = 25,
+                PageToken = "nextpage"
             };
             ListRequest request = new ListRequest(new BigqueryService());
             options.ModifyRequest(request);
             Assert.Equal(25, request.MaxResults);
+            Assert.Equal("nextpage", request.PageToken);
         }
     }
 }
