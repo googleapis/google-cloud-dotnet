@@ -381,13 +381,15 @@ namespace Google.Cloud.Vision.V1.Snippets
             IReadOnlyList<LocalizedObjectAnnotation> annotations = client.DetectLocalizedObjects(image);
             foreach (LocalizedObjectAnnotation annotation in annotations)
             {
-                string poly = string.Join(" - ", annotation.BoundingPoly.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                string poly = string.Join(" - ", annotation.BoundingPoly.NormalizedVertices.Select(v => $"({v.X}, {v.Y})"));
                 Console.WriteLine(
                     $"Name: {annotation.Name}; ID: {annotation.Mid}; Score: {annotation.Score}; Bounding poly: {poly}");
             }
             // End snippet
 
-            // TODO: Add assertions about the annotations.
+            // We don't want to be too strict about what we get back here, but these should be okay.            
+            Assert.Contains(annotations, a => a.Name == "Bicycle");
+            Assert.Contains(annotations, a => a.Name == "Picture frame");
         }
 
         // See-also: DetectLocalizedObjects(*, *, *, *)
