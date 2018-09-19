@@ -32,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             requestMessage.Headers.UserAgent.ParseAdd(userAgent1);
             requestMessage.Headers.UserAgent.ParseAdd(userAgent2);
 
-            var responseMessage = new HttpResponseMessage(HttpStatusCode.OK);
+            var responseMessage = new HttpResponseMessage();
 
             var controllerContext = new HttpControllerContext();
             controllerContext.Request = requestMessage;
@@ -46,7 +46,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Equal(uri, wrapper.GetUri());
             Assert.Contains(userAgent1, wrapper.GetUserAgent());
             Assert.Contains(userAgent2, wrapper.GetUserAgent());
-            Assert.Equal((int)HttpStatusCode.OK, wrapper.GetStatusCode());
         }
 
         [Fact]
@@ -56,7 +55,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Null(wrapper.GetHttpMethod());
             Assert.Null(wrapper.GetUri());
             Assert.Null(wrapper.GetUserAgent());
-            Assert.Equal(0, wrapper.GetStatusCode());
         }
     }
 }

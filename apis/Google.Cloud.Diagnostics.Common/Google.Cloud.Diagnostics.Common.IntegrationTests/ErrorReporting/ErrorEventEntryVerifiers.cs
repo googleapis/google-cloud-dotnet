@@ -25,10 +25,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// Checks that an <see cref="ErrorEvent"/> contains valid data,
         /// including HTTP Context data.
         /// </summary>
-        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName, int responseStatusCode)
+        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName)
         {
             VerifyErrorEventLogged(errorEvent, testId, functionName);
-            VerifyHttpContextLogged(errorEvent, responseStatusCode);
+            VerifyHttpContextLogged(errorEvent);
         }
 
         /// <summary>
@@ -57,11 +57,12 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>
         /// Checks that an <see cref="ErrorEvent"/> contains valid HTTP Context data.
         /// </summary>
-        public static void VerifyHttpContextLogged(ErrorEvent errorEvent, int responseStatusCode)
+        public static void VerifyHttpContextLogged(ErrorEvent errorEvent)
         {
             Assert.Equal(HttpMethod.Get.Method, errorEvent.Context.HttpRequest.Method);
             Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
-            Assert.Equal(responseStatusCode, errorEvent.Context.HttpRequest.ResponseStatusCode);
+            // Verify that we are not storing any HTTP StatusCode
+            Assert.Equal(0, errorEvent.Context.HttpRequest.ResponseStatusCode);
         }
     }
 }

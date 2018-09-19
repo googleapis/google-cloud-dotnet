@@ -73,7 +73,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             var errorEvent = s_errorPolling.GetEvents(_startTime, _testId, 1).Single();
 
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException), (int)HttpStatusCode.OK);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
 
         /// <summary>

@@ -35,9 +35,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         private const string Version = EntryData.Version;
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
-        // In self hosted Web Apis we don't have access to the response StatusCode at the time
-        // of logging.
-        private const int s_expectedStatusCode = 0;
         private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
 
         private readonly string _testId;
@@ -72,7 +69,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
 
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
-                errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), s_expectedStatusCode);
+                errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
         }
 
         [Fact]
@@ -85,7 +82,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
-                errorEvent, _testId, "DoSomething", s_expectedStatusCode);
+                errorEvent, _testId, "DoSomething");
         }
 
         public void Dispose()

@@ -32,7 +32,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Equal("GET", wrapper.GetHttpMethod());
             Assert.Equal(uri, wrapper.GetUri());
             Assert.Null(wrapper.GetUserAgent());
-            Assert.Equal(200, wrapper.GetStatusCode());
         }
 
         [Fact]
@@ -42,7 +41,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Null(wrapper.GetHttpMethod());
             Assert.Null(wrapper.GetUri());
             Assert.Null(wrapper.GetUserAgent());
-            Assert.Equal(0, wrapper.GetStatusCode());
         }
     }
 }

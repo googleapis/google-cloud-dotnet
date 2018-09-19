@@ -30,14 +30,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             request.Scheme = "http";
             request.Headers["User-Agent"] = "user-agent";
 
-            var response = context.Response;
-            response.StatusCode = 409;
-
             var wrapper = new HttpContextWrapper(context);
             Assert.Equal("POST", wrapper.GetHttpMethod());
             Assert.Equal("http://google.com", wrapper.GetUri());
             Assert.Equal("user-agent", wrapper.GetUserAgent());
-            Assert.Equal(409, wrapper.GetStatusCode());
         }
 
         [Fact]
@@ -53,7 +49,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal("", wrapper.GetHttpMethod());
             Assert.Equal("http://google.com", wrapper.GetUri());
             Assert.Equal("", wrapper.GetUserAgent());
-            Assert.Equal(200, wrapper.GetStatusCode());
         }
     }
 }

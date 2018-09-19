@@ -32,7 +32,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             mockRequest.Setup(r => r.UserAgent).Returns("user-agent");
 
             var mockResponse = new Mock<HttpResponseBase>();
-            mockResponse.Setup(r => r.StatusCode).Returns(409);
 
             var mockContext = new Mock<HttpContextBase>();
             mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
@@ -48,7 +47,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Equal("POST", wrapper.GetHttpMethod());
             Assert.Equal(uri, wrapper.GetUri());
             Assert.Equal("user-agent", wrapper.GetUserAgent());
-            Assert.Equal(409, wrapper.GetStatusCode());
         }
 
         [Fact]
@@ -68,7 +66,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Null(wrapper.GetHttpMethod());
             Assert.Null(wrapper.GetUri());
             Assert.Null(wrapper.GetUserAgent());
-            Assert.Equal(0, wrapper.GetStatusCode());
         }
     }
 }

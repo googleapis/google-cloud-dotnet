@@ -64,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
 
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException), (int)HttpStatusCode.OK);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Verifying with function name ThrowsExceptions because that is the function
             // that actually throws the Exception so will be the one included as
             // ErrorEvent.Context.ReportLocation.FunctionName
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException), (int)HttpStatusCode.OK);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
 
         public void Dispose()

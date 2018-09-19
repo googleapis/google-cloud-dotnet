@@ -33,7 +33,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             requestMessage.Headers.UserAgent.Add(userAgent);
 
             var responseMessage = new HttpResponseMessage();
-            responseMessage.StatusCode = (HttpStatusCode) 409;
 
             var exceptionContext = new ExceptionContext(
                 new Exception(), ExceptionCatchBlocks.HttpServer, requestMessage, responseMessage);
@@ -43,7 +42,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Equal("POST", wrapper.GetHttpMethod());
             Assert.Equal("http://google.com/", wrapper.GetUri());
             Assert.Equal("user-agent/user-agent-value", wrapper.GetUserAgent());
-            Assert.Equal(409, wrapper.GetStatusCode());
         }
 
         [Fact]
@@ -58,7 +56,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.Equal("GET", wrapper.GetHttpMethod());
             Assert.Null(wrapper.GetUri());
             Assert.Equal("", wrapper.GetUserAgent());
-            Assert.Equal(200, wrapper.GetStatusCode());
         }
     }
 }
