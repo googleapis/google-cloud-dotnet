@@ -77,6 +77,16 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "NoRetry" <see cref="NotificationChannelServiceClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NoRetry" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NoRetryRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="NotificationChannelServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
