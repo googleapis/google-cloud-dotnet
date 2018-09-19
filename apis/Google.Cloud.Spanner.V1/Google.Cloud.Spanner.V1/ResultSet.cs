@@ -39,21 +39,22 @@ namespace Google.Cloud.Spanner.V1 {
             "KAwSMAoFc3RhdHMYBSABKAsyIS5nb29nbGUuc3Bhbm5lci52MS5SZXN1bHRT",
             "ZXRTdGF0cyJ5ChFSZXN1bHRTZXRNZXRhZGF0YRIvCghyb3dfdHlwZRgBIAEo",
             "CzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5cGUSMwoLdHJhbnNhY3Rp",
-            "b24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbiJwCg5S",
-            "ZXN1bHRTZXRTdGF0cxIwCgpxdWVyeV9wbGFuGAEgASgLMhwuZ29vZ2xlLnNw",
-            "YW5uZXIudjEuUXVlcnlQbGFuEiwKC3F1ZXJ5X3N0YXRzGAIgASgLMhcuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cnVjdEKaAQoVY29tLmdvb2dsZS5zcGFubmVyLnYx",
-            "Qg5SZXN1bHRTZXRQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL3NwYW5uZXIvdjE7c3Bhbm5lcvgBAaoCF0dvb2dsZS5D",
-            "bG91ZC5TcGFubmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjFiBnBy",
-            "b3RvMw=="));
+            "b24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbiK5AQoO",
+            "UmVzdWx0U2V0U3RhdHMSMAoKcXVlcnlfcGxhbhgBIAEoCzIcLmdvb2dsZS5z",
+            "cGFubmVyLnYxLlF1ZXJ5UGxhbhIsCgtxdWVyeV9zdGF0cxgCIAEoCzIXLmdv",
+            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3QSGQoPcm93X2NvdW50X2V4YWN0GAMgASgD",
+            "SAASHwoVcm93X2NvdW50X2xvd2VyX2JvdW5kGAQgASgDSABCCwoJcm93X2Nv",
+            "dW50QpoBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCDlJlc3VsdFNldFByb3Rv",
+            "UAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvc3Bh",
+            "bm5lci92MTtzcGFubmVy+AEBqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHK",
+            "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats", "RowCountExact", "RowCountLowerBound" }, new[]{ "RowCount" }, null, null)
           }));
     }
     #endregion
@@ -136,8 +137,13 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StatsFieldNumber = 3;
     private global::Google.Cloud.Spanner.V1.ResultSetStats stats_;
     /// <summary>
-    /// Query plan and execution statistics for the query that produced this
-    /// result set. These can be requested by setting
+    /// Query plan and execution statistics for the SQL statement that
+    /// produced this result set. These can be requested by setting
+    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
+    /// DML statements always produce stats containing the number of rows
+    /// modified, unless executed using the
+    /// [ExecuteSqlRequest.QueryMode.PLAN][google.spanner.v1.ExecuteSqlRequest.QueryMode.PLAN] [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
+    /// Other fields may or may not be populated, based on the
     /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -450,10 +456,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StatsFieldNumber = 5;
     private global::Google.Cloud.Spanner.V1.ResultSetStats stats_;
     /// <summary>
-    /// Query plan and execution statistics for the query that produced this
+    /// Query plan and execution statistics for the statement that produced this
     /// streaming result set. These can be requested by setting
     /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] and are sent
     /// only once with the last response in the stream.
+    /// This field will also be present in the last response for DML
+    /// statements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ResultSetStats Stats {
@@ -832,6 +840,15 @@ namespace Google.Cloud.Spanner.V1 {
     public ResultSetStats(ResultSetStats other) : this() {
       queryPlan_ = other.queryPlan_ != null ? other.queryPlan_.Clone() : null;
       queryStats_ = other.queryStats_ != null ? other.queryStats_.Clone() : null;
+      switch (other.RowCountCase) {
+        case RowCountOneofCase.RowCountExact:
+          RowCountExact = other.RowCountExact;
+          break;
+        case RowCountOneofCase.RowCountLowerBound:
+          RowCountLowerBound = other.RowCountLowerBound;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -876,6 +893,54 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "row_count_exact" field.</summary>
+    public const int RowCountExactFieldNumber = 3;
+    /// <summary>
+    /// Standard DML returns an exact count of rows that were modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RowCountExact {
+      get { return rowCountCase_ == RowCountOneofCase.RowCountExact ? (long) rowCount_ : 0L; }
+      set {
+        rowCount_ = value;
+        rowCountCase_ = RowCountOneofCase.RowCountExact;
+      }
+    }
+
+    /// <summary>Field number for the "row_count_lower_bound" field.</summary>
+    public const int RowCountLowerBoundFieldNumber = 4;
+    /// <summary>
+    /// Partitioned DML does not offer exactly-once semantics, so it
+    /// returns a lower bound of the rows modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RowCountLowerBound {
+      get { return rowCountCase_ == RowCountOneofCase.RowCountLowerBound ? (long) rowCount_ : 0L; }
+      set {
+        rowCount_ = value;
+        rowCountCase_ = RowCountOneofCase.RowCountLowerBound;
+      }
+    }
+
+    private object rowCount_;
+    /// <summary>Enum of possible cases for the "row_count" oneof.</summary>
+    public enum RowCountOneofCase {
+      None = 0,
+      RowCountExact = 3,
+      RowCountLowerBound = 4,
+    }
+    private RowCountOneofCase rowCountCase_ = RowCountOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RowCountOneofCase RowCountCase {
+      get { return rowCountCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearRowCount() {
+      rowCountCase_ = RowCountOneofCase.None;
+      rowCount_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ResultSetStats);
@@ -891,6 +956,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (!object.Equals(QueryPlan, other.QueryPlan)) return false;
       if (!object.Equals(QueryStats, other.QueryStats)) return false;
+      if (RowCountExact != other.RowCountExact) return false;
+      if (RowCountLowerBound != other.RowCountLowerBound) return false;
+      if (RowCountCase != other.RowCountCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -899,6 +967,9 @@ namespace Google.Cloud.Spanner.V1 {
       int hash = 1;
       if (queryPlan_ != null) hash ^= QueryPlan.GetHashCode();
       if (queryStats_ != null) hash ^= QueryStats.GetHashCode();
+      if (rowCountCase_ == RowCountOneofCase.RowCountExact) hash ^= RowCountExact.GetHashCode();
+      if (rowCountCase_ == RowCountOneofCase.RowCountLowerBound) hash ^= RowCountLowerBound.GetHashCode();
+      hash ^= (int) rowCountCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -920,6 +991,14 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(QueryStats);
       }
+      if (rowCountCase_ == RowCountOneofCase.RowCountExact) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RowCountExact);
+      }
+      if (rowCountCase_ == RowCountOneofCase.RowCountLowerBound) {
+        output.WriteRawTag(32);
+        output.WriteInt64(RowCountLowerBound);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -933,6 +1012,12 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (queryStats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryStats);
+      }
+      if (rowCountCase_ == RowCountOneofCase.RowCountExact) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowCountExact);
+      }
+      if (rowCountCase_ == RowCountOneofCase.RowCountLowerBound) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RowCountLowerBound);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -957,6 +1042,15 @@ namespace Google.Cloud.Spanner.V1 {
         }
         QueryStats.MergeFrom(other.QueryStats);
       }
+      switch (other.RowCountCase) {
+        case RowCountOneofCase.RowCountExact:
+          RowCountExact = other.RowCountExact;
+          break;
+        case RowCountOneofCase.RowCountLowerBound:
+          RowCountLowerBound = other.RowCountLowerBound;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -980,6 +1074,14 @@ namespace Google.Cloud.Spanner.V1 {
               queryStats_ = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
             input.ReadMessage(queryStats_);
+            break;
+          }
+          case 24: {
+            RowCountExact = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            RowCountLowerBound = input.ReadInt64();
             break;
           }
         }

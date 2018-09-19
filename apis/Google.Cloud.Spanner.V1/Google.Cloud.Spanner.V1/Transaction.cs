@@ -27,31 +27,34 @@ namespace Google.Cloud.Spanner.V1 {
             "CiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90bxIRZ29vZ2xl",
             "LnNwYW5uZXIudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aHmdv",
             "b2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byLgAwoSVHJhbnNhY3Rpb25PcHRpb25zEkUKCnJl",
+            "L3RpbWVzdGFtcC5wcm90byLDBAoSVHJhbnNhY3Rpb25PcHRpb25zEkUKCnJl",
             "YWRfd3JpdGUYASABKAsyLy5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlv",
-            "bk9wdGlvbnMuUmVhZFdyaXRlSAASQwoJcmVhZF9vbmx5GAIgASgLMi4uZ29v",
-            "Z2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRPbmx5SAAa",
-            "CwoJUmVhZFdyaXRlGqgCCghSZWFkT25seRIQCgZzdHJvbmcYASABKAhIABI4",
-            "ChJtaW5fcmVhZF90aW1lc3RhbXAYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wSAASMgoNbWF4X3N0YWxlbmVzcxgDIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbkgAEjQKDnJlYWRfdGltZXN0YW1wGAQgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEjQKD2V4YWN0X3N0YWxlbmVz",
-            "cxgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEh0KFXJldHVy",
-            "bl9yZWFkX3RpbWVzdGFtcBgGIAEoCEIRCg90aW1lc3RhbXBfYm91bmRCBgoE",
-            "bW9kZSJNCgtUcmFuc2FjdGlvbhIKCgJpZBgBIAEoDBIyCg5yZWFkX3RpbWVz",
-            "dGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAipAEKE1Ry",
-            "YW5zYWN0aW9uU2VsZWN0b3ISOwoKc2luZ2xlX3VzZRgBIAEoCzIlLmdvb2ds",
-            "ZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gAEgwKAmlkGAIgASgM",
-            "SAASNgoFYmVnaW4YAyABKAsyJS5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2Fj",
-            "dGlvbk9wdGlvbnNIAEIKCghzZWxlY3RvckKZAQoVY29tLmdvb2dsZS5zcGFu",
-            "bmVyLnYxQhBUcmFuc2FjdGlvblByb3RvUAFaOGdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvc3Bhbm5lci92MTtzcGFubmVyqgIXR29v",
-            "Z2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxW",
-            "MWIGcHJvdG8z"));
+            "bk9wdGlvbnMuUmVhZFdyaXRlSAASTwoPcGFydGl0aW9uZWRfZG1sGAMgASgL",
+            "MjQuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlBhcnRp",
+            "dGlvbmVkRG1sSAASQwoJcmVhZF9vbmx5GAIgASgLMi4uZ29vZ2xlLnNwYW5u",
+            "ZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRPbmx5SAAaCwoJUmVhZFdy",
+            "aXRlGhAKDlBhcnRpdGlvbmVkRG1sGqgCCghSZWFkT25seRIQCgZzdHJvbmcY",
+            "ASABKAhIABI4ChJtaW5fcmVhZF90aW1lc3RhbXAYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wSAASMgoNbWF4X3N0YWxlbmVzcxgDIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEjQKDnJlYWRfdGltZXN0YW1w",
+            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEjQKD2V4YWN0",
+            "X3N0YWxlbmVzcxgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgA",
+            "Eh0KFXJldHVybl9yZWFkX3RpbWVzdGFtcBgGIAEoCEIRCg90aW1lc3RhbXBf",
+            "Ym91bmRCBgoEbW9kZSJNCgtUcmFuc2FjdGlvbhIKCgJpZBgBIAEoDBIyCg5y",
+            "ZWFkX3RpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXAipAEKE1RyYW5zYWN0aW9uU2VsZWN0b3ISOwoKc2luZ2xlX3VzZRgBIAEo",
+            "CzIlLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gAEgwK",
+            "AmlkGAIgASgMSAASNgoFYmVnaW4YAyABKAsyJS5nb29nbGUuc3Bhbm5lci52",
+            "MS5UcmFuc2FjdGlvbk9wdGlvbnNIAEIKCghzZWxlY3RvckKZAQoVY29tLmdv",
+            "b2dsZS5zcGFubmVyLnYxQhBUcmFuc2FjdGlvblByb3RvUAFaOGdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvc3Bhbm5lci92MTtzcGFu",
+            "bmVyqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHKAhdHb29nbGVcQ2xvdWRc",
+            "U3Bhbm5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "ReadOnly" }, new[]{ "Mode" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly" }, new[]{ "Mode" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "Strong", "MinReadTimestamp", "MaxStaleness", "ReadTimestamp", "ExactStaleness", "ReturnReadTimestamp" }, new[]{ "TimestampBound" }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionSelector), global::Google.Cloud.Spanner.V1.TransactionSelector.Parser, new[]{ "SingleUse", "Id", "Begin" }, new[]{ "Selector" }, null, null)
@@ -71,7 +74,7 @@ namespace Google.Cloud.Spanner.V1 {
   ///
   /// # Transaction Modes
   ///
-  /// Cloud Spanner supports two transaction modes:
+  /// Cloud Spanner supports three transaction modes:
   ///
   ///   1. Locking read-write. This type of transaction is the only way
   ///      to write data into Cloud Spanner. These transactions rely on
@@ -84,6 +87,13 @@ namespace Google.Cloud.Spanner.V1 {
   ///      writes. Snapshot read-only transactions can be configured to
   ///      read at timestamps in the past. Snapshot read-only
   ///      transactions do not need to be committed.
+  ///
+  ///   3. Partitioned DML. This type of transaction is used to execute
+  ///      a single Partitioned DML statement. Partitioned DML partitions
+  ///      the key space and runs the DML statement over each partition
+  ///      in parallel using separate, internal transactions that commit
+  ///      independently. Partitioned DML transactions do not need to be
+  ///      committed.
   ///
   /// For transactions that only read, snapshot read-only transactions
   /// provide simpler semantics and are almost always faster. In
@@ -111,11 +121,8 @@ namespace Google.Cloud.Spanner.V1 {
   /// inactivity at the client may cause Cloud Spanner to release a
   /// transaction's locks and abort it.
   ///
-  /// Reads performed within a transaction acquire locks on the data
-  /// being read. Writes can only be done at commit time, after all reads
-  /// have been completed.
   /// Conceptually, a read-write transaction consists of zero or more
-  /// reads or SQL queries followed by
+  /// reads or SQL statements followed by
   /// [Commit][google.spanner.v1.Spanner.Commit]. At any time before
   /// [Commit][google.spanner.v1.Spanner.Commit], the client can send a
   /// [Rollback][google.spanner.v1.Spanner.Rollback] request to abort the
@@ -278,6 +285,62 @@ namespace Google.Cloud.Spanner.V1 {
   /// restriction also applies to in-progress reads and/or SQL queries whose
   /// timestamp become too old while executing. Reads and SQL queries with
   /// too-old read timestamps fail with the error `FAILED_PRECONDITION`.
+  ///
+  /// ## Partitioned DML Transactions
+  ///
+  /// Partitioned DML transactions are used to execute DML statements with a
+  /// different execution strategy that provides different, and often better,
+  /// scalability properties for large, table-wide operations than DML in a
+  /// ReadWrite transaction. Smaller scoped statements, such as an OLTP workload,
+  /// should prefer using ReadWrite transactions.
+  ///
+  /// Partitioned DML partitions the keyspace and runs the DML statement on each
+  /// partition in separate, internal transactions. These transactions commit
+  /// automatically when complete, and run independently from one another.
+  ///
+  /// To reduce lock contention, this execution strategy only acquires read locks
+  /// on rows that match the WHERE clause of the statement. Additionally, the
+  /// smaller per-partition transactions hold locks for less time.
+  ///
+  /// That said, Partitioned DML is not a drop-in replacement for standard DML used
+  /// in ReadWrite transactions.
+  ///
+  ///  - The DML statement must be fully-partitionable. Specifically, the statement
+  ///    must be expressible as the union of many statements which each access only
+  ///    a single row of the table.
+  ///
+  ///  - The statement is not applied atomically to all rows of the table. Rather,
+  ///    the statement is applied atomically to partitions of the table, in
+  ///    independent transactions. Secondary index rows are updated atomically
+  ///    with the base table rows.
+  ///
+  ///  - Partitioned DML does not guarantee exactly-once execution semantics
+  ///    against a partition. The statement will be applied at least once to each
+  ///    partition. It is strongly recommended that the DML statement should be
+  ///    idempotent to avoid unexpected results. For instance, it is potentially
+  ///    dangerous to run a statement such as
+  ///    `UPDATE table SET column = column + 1` as it could be run multiple times
+  ///    against some rows.
+  ///
+  ///  - The partitions are committed automatically - there is no support for
+  ///    Commit or Rollback. If the call returns an error, or if the client issuing
+  ///    the ExecuteSql call dies, it is possible that some rows had the statement
+  ///    executed on them successfully. It is also possible that statement was
+  ///    never executed against other rows.
+  ///
+  ///  - Partitioned DML transactions may only contain the execution of a single
+  ///    DML statement via ExecuteSql or ExecuteStreamingSql.
+  ///
+  ///  - If any error is encountered during the execution of the partitioned DML
+  ///    operation (for instance, a UNIQUE INDEX violation, division by zero, or a
+  ///    value that cannot be stored due to schema constraints), then the
+  ///    operation is stopped at that point and an error is returned. It is
+  ///    possible that at this point, some partitions have been committed (or even
+  ///    committed multiple times), and other partitions have not been run at all.
+  ///
+  /// Given the above, Partitioned DML is good fit for large, database-wide,
+  /// operations that are idempotent, such as deleting old rows from a very large
+  /// table.
   /// </summary>
   public sealed partial class TransactionOptions : pb::IMessage<TransactionOptions> {
     private static readonly pb::MessageParser<TransactionOptions> _parser = new pb::MessageParser<TransactionOptions>(() => new TransactionOptions());
@@ -307,6 +370,9 @@ namespace Google.Cloud.Spanner.V1 {
       switch (other.ModeCase) {
         case ModeOneofCase.ReadWrite:
           ReadWrite = other.ReadWrite.Clone();
+          break;
+        case ModeOneofCase.PartitionedDml:
+          PartitionedDml = other.PartitionedDml.Clone();
           break;
         case ModeOneofCase.ReadOnly:
           ReadOnly = other.ReadOnly.Clone();
@@ -339,6 +405,24 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "partitioned_dml" field.</summary>
+    public const int PartitionedDmlFieldNumber = 3;
+    /// <summary>
+    /// Partitioned DML transaction.
+    ///
+    /// Authorization to begin a Partitioned DML transaction requires
+    /// `spanner.databases.beginPartitionedDmlTransaction` permission
+    /// on the `session` resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml PartitionedDml {
+      get { return modeCase_ == ModeOneofCase.PartitionedDml ? (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml) mode_ : null; }
+      set {
+        mode_ = value;
+        modeCase_ = value == null ? ModeOneofCase.None : ModeOneofCase.PartitionedDml;
+      }
+    }
+
     /// <summary>Field number for the "read_only" field.</summary>
     public const int ReadOnlyFieldNumber = 2;
     /// <summary>
@@ -362,6 +446,7 @@ namespace Google.Cloud.Spanner.V1 {
     public enum ModeOneofCase {
       None = 0,
       ReadWrite = 1,
+      PartitionedDml = 3,
       ReadOnly = 2,
     }
     private ModeOneofCase modeCase_ = ModeOneofCase.None;
@@ -390,6 +475,7 @@ namespace Google.Cloud.Spanner.V1 {
         return true;
       }
       if (!object.Equals(ReadWrite, other.ReadWrite)) return false;
+      if (!object.Equals(PartitionedDml, other.PartitionedDml)) return false;
       if (!object.Equals(ReadOnly, other.ReadOnly)) return false;
       if (ModeCase != other.ModeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -399,6 +485,7 @@ namespace Google.Cloud.Spanner.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (modeCase_ == ModeOneofCase.ReadWrite) hash ^= ReadWrite.GetHashCode();
+      if (modeCase_ == ModeOneofCase.PartitionedDml) hash ^= PartitionedDml.GetHashCode();
       if (modeCase_ == ModeOneofCase.ReadOnly) hash ^= ReadOnly.GetHashCode();
       hash ^= (int) modeCase_;
       if (_unknownFields != null) {
@@ -422,6 +509,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(ReadOnly);
       }
+      if (modeCase_ == ModeOneofCase.PartitionedDml) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PartitionedDml);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -432,6 +523,9 @@ namespace Google.Cloud.Spanner.V1 {
       int size = 0;
       if (modeCase_ == ModeOneofCase.ReadWrite) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadWrite);
+      }
+      if (modeCase_ == ModeOneofCase.PartitionedDml) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartitionedDml);
       }
       if (modeCase_ == ModeOneofCase.ReadOnly) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadOnly);
@@ -453,6 +547,12 @@ namespace Google.Cloud.Spanner.V1 {
             ReadWrite = new global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite();
           }
           ReadWrite.MergeFrom(other.ReadWrite);
+          break;
+        case ModeOneofCase.PartitionedDml:
+          if (PartitionedDml == null) {
+            PartitionedDml = new global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml();
+          }
+          PartitionedDml.MergeFrom(other.PartitionedDml);
           break;
         case ModeOneofCase.ReadOnly:
           if (ReadOnly == null) {
@@ -489,6 +589,15 @@ namespace Google.Cloud.Spanner.V1 {
             }
             input.ReadMessage(subBuilder);
             ReadOnly = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml subBuilder = new global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml();
+            if (modeCase_ == ModeOneofCase.PartitionedDml) {
+              subBuilder.MergeFrom(PartitionedDml);
+            }
+            input.ReadMessage(subBuilder);
+            PartitionedDml = subBuilder;
             break;
           }
         }
@@ -605,6 +714,110 @@ namespace Google.Cloud.Spanner.V1 {
       }
 
       /// <summary>
+      /// Message type to initiate a Partitioned DML transaction.
+      /// </summary>
+      public sealed partial class PartitionedDml : pb::IMessage<PartitionedDml> {
+        private static readonly pb::MessageParser<PartitionedDml> _parser = new pb::MessageParser<PartitionedDml>(() => new PartitionedDml());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<PartitionedDml> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.TransactionOptions.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PartitionedDml() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PartitionedDml(PartitionedDml other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PartitionedDml Clone() {
+          return new PartitionedDml(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as PartitionedDml);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(PartitionedDml other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(PartitionedDml other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
       /// Message type to initiate a read-only transaction.
       /// </summary>
       public sealed partial class ReadOnly : pb::IMessage<ReadOnly> {
@@ -615,7 +828,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Spanner.V1.TransactionOptions.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.Spanner.V1.TransactionOptions.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
