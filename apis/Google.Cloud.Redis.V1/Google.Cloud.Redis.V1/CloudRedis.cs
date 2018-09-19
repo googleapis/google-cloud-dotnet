@@ -1988,7 +1988,7 @@ namespace Google.Cloud.Redis.V1 {
     public const int CancelRequestedFieldNumber = 6;
     private bool cancelRequested_;
     /// <summary>
-    /// Specifies if cancellation was requested for the operaiton.
+    /// Specifies if cancellation was requested for the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool CancelRequested {
