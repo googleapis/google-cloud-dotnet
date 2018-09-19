@@ -319,7 +319,15 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private void DeleteBucket(StorageClient client, string bucket, string userProject)
         {
-            client.DeleteBucket(bucket, new DeleteBucketOptions { UserProject = userProject, DeleteObjects = true });
+            try
+            {
+                client.DeleteBucket(bucket, new DeleteBucketOptions { UserProject = userProject, DeleteObjects = true });
+            }
+            catch (GoogleApiException)
+            {
+                // Some tests fail to delete buckets due to object retention locks etc.
+                // They can be cleaned up later.
+            }
             SleepAfterBucketCreateDelete();
         }
 
