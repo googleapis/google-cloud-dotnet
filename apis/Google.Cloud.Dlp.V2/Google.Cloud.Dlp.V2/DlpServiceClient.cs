@@ -95,12 +95,36 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "HttpGet" <see cref="DlpServiceClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "HttpGet" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> HttpGetRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="DlpServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "NoRetry" <see cref="DlpServiceClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NoRetry" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NoRetryRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
