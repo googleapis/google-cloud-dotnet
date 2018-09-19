@@ -69,7 +69,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog), (int)HttpStatusCode.OK);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog));
         }
 
         [Fact]
@@ -79,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), (int)HttpStatusCode.OK);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
         }
 
         [Fact]
@@ -101,11 +101,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(3, exceptionEvents.Count());
             foreach (var errorEvent in exceptionEvents)
             {
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), (int)HttpStatusCode.OK);
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
             }
 
             var argumentExceptionEvent = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException))).Single();
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException), (int)HttpStatusCode.OK);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException));
         }
 
         public void Dispose()

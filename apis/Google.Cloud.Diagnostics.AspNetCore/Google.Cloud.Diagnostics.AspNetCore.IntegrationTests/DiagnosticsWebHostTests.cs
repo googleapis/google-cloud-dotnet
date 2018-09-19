@@ -136,7 +136,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var polling = new ErrorEventEntryPolling();
             await Assert.ThrowsAsync<Exception>(() => client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}"));
             var errorEvent = polling.GetEvents(startTime, testId, 1).Single();
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowsException), 200);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
         }
     }
 }

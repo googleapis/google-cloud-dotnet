@@ -30,9 +30,6 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
     public class ErrorReportingTest : IDisposable
     {
-        // In self hosted Web Apis we don't have access to the response StatusCode at the time
-        // of logging.
-        private const int s_expectedStatusCode = 0;
         private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
 
         private readonly string _testId;
@@ -73,7 +70,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
 
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), s_expectedStatusCode);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
 
             var content = await contentTask;
             Assert.Contains(nameof(ErrorReportingController.ThrowsException), content);
@@ -105,13 +102,13 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.Equal(3, exceptionEvents.Count());
             foreach (var errorEvent in exceptionEvents)
             {
-                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException), s_expectedStatusCode);
+                ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
             }
 
             var argumentExceptionEvent = errorEvents
                 .Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException)))
                 .Single();
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException), s_expectedStatusCode);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException));
         }
 
         [Fact]
@@ -123,7 +120,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
 
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, "SendAsync", s_expectedStatusCode);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, "SendAsync");
         }
 
         [Fact]
@@ -145,7 +142,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
             var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
-            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger), s_expectedStatusCode);
+            ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger));
         }
 
         public void Dispose()

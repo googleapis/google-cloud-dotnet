@@ -39,8 +39,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <inheritdoc />
         public string GetUserAgent() => _context.Request?.Headers["User-Agent"].ToString();
-
-        /// <inheritdoc />
-        public int GetStatusCode() => _context.Response?.StatusCode ?? 0;
     }
 }

@@ -33,7 +33,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private const string _method = "GET";
         private const string _uri = "https://google.com/";
         private const string _userAgent = "user-agent";
-        private const int _statusCode = 409;
 
         private static readonly bool _isWindows = TestEnvironment.IsWindows();
 
@@ -43,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var options = ErrorReportingOptions.Create(
                 EventTarget.ForLogging("pid", loggingClient: new Mock<LoggingServiceV2Client>().Object));
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
-            mockConsumer.Setup(c => c.Receive(IsContext(_method, _uri, _userAgent, _statusCode, options)));
+            mockConsumer.Setup(c => c.Receive(IsContext(_method, _uri, _userAgent, options)));
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
                 mockConsumer.Object, _service, _version, options);
@@ -59,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var options = ErrorReportingOptions.Create(
                 EventTarget.ForLogging("pid", loggingClient: new Mock<LoggingServiceV2Client>().Object));
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
-            mockConsumer.Setup(c => c.Receive(IsContext("", "", "", 0, options)));
+            mockConsumer.Setup(c => c.Receive(IsContext("", "", "", options)));
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
                  mockConsumer.Object, _service, _version, options);
@@ -76,7 +75,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 EventTarget.ForLogging("pid", loggingClient: new Mock<LoggingServiceV2Client>().Object));
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.ReceiveAsync(
-                IsContext(_method, _uri, _userAgent, _statusCode, options), It.IsAny<CancellationToken>()))
+                IsContext(_method, _uri, _userAgent, options), It.IsAny<CancellationToken>()))
                 .Returns(Task.FromResult(true));
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
@@ -88,7 +87,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         internal IEnumerable<LogEntry> IsContext(
-            string method, string uri, string userAgent, int statusCode, ErrorReportingOptions options)
+            string method, string uri, string userAgent, ErrorReportingOptions options)
         {
             return Match.Create<IEnumerable<LogEntry>>(enumerable => {
                 var e = enumerable.Single();
@@ -101,7 +100,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 var methodVal = httpRequest["method"].StringValue;
                 var urlVal = httpRequest["url"].StringValue;
                 var userAgentVal = httpRequest["userAgent"].StringValue;
-                var responseStatusCodeVal = httpRequest["responseStatusCode"].NumberValue;
                 var reportLocation = context["reportLocation"]?.StructValue?.Fields;
                 var filePathVal = reportLocation["filePath"].StringValue;
                 var lineNumberVal = reportLocation["lineNumber"].NumberValue;
@@ -118,7 +116,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     method.Equals(methodVal) &&
                     uri.Equals(urlVal) &&
                     userAgent.Equals(userAgentVal) &&
-                    statusCode  == responseStatusCodeVal &&
                     (!_isWindows || lineNumberVal > 0) &&
                     (!_isWindows || !string.IsNullOrEmpty(filePathVal)) &&
                     nameof(CreateException).Equals(functionNameVal) &&
@@ -143,7 +140,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private class FakeContextWrapper : IContextWrapper
         {
             string IContextWrapper.GetHttpMethod() => _method;
-            int IContextWrapper.GetStatusCode() => _statusCode;
             string IContextWrapper.GetUri() => _uri;
             string IContextWrapper.GetUserAgent() => _userAgent;
         }
@@ -151,7 +147,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private class EmptyContextWrapper : IContextWrapper
         {
             string IContextWrapper.GetHttpMethod() => null;
-            int IContextWrapper.GetStatusCode() => 0;
             string IContextWrapper.GetUri() => null;
             string IContextWrapper.GetUserAgent() => null;
         }

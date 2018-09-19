@@ -107,7 +107,6 @@ namespace Google.Cloud.Diagnostics.Common
                     { "method", Value.ForString(context?.GetHttpMethod() ?? "") },
                     { "url", Value.ForString(context?.GetUri() ?? "") },
                     { "userAgent", Value.ForString(context?.GetUserAgent() ?? "") },
-                    { "responseStatusCode", Value.ForNumber(context?.GetStatusCode() ?? 0) }
                 }
             };
         }

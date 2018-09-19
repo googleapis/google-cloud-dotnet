@@ -33,10 +33,5 @@ namespace Google.Cloud.Diagnostics.Common
         /// Gets the user agent. Can be null.
         /// </summary>
         string GetUserAgent();
-
-        /// <summary>
-        /// Gets the HTTP status code. If not set 0 will be returned.
-        /// </summary>
-        int GetStatusCode();
     }
 }
