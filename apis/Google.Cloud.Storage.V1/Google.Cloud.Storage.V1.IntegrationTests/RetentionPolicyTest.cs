@@ -14,11 +14,11 @@
 
 using Google.Apis.Storage.v1.Data;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
 using Xunit;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -29,78 +29,182 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         public RetentionPolicyTest(StorageFixture fixture) => _fixture = fixture;
 
-        // This is a single test, but it checks a fairly long scenario. See comments for details.
+        /// <summary>
+        /// Define a retention policy with a retention period of 5 seconds and verify retention period is set.
+        /// Insert a new object and verify retentionExpirationTime is not null.
+        /// Attempts to delete object before 5 seconds have elapsed will fail.
+        /// </summary>
         [Fact]
-        public void RetentionPolicy()
+        public void SimpleRetentionPolicy()
         {
             var client = _fixture.Client;
             var bucketName = _fixture.GenerateBucketName();
-            _fixture.CreateBucket(bucketName, false);
+            var bucket = _fixture.CreateBucket(bucketName, false);
 
-            // Create an object and delete it, to prove that we can.
-            CreateObject("deletable");
-            client.DeleteObject(bucketName, "deletable");
+            // Set the retention policy
+            bucket.RetentionPolicy = new Bucket.RetentionPolicyData { RetentionPeriod = 5 };
+            client.UpdateBucket(bucket);
 
-            // Set the retention period, create an object then fail to delete it.
-            SetRetentionPolicy(20);
-            CreateObject("retained");
-            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, "retained"));
+            // Fetch the bucket again to check it was set.
+            bucket = client.GetBucket(bucketName);
+            Assert.Equal(5L, bucket.RetentionPolicy.RetentionPeriod);
+            Assert.NotNull(bucket.RetentionPolicy.EffectiveTime);
 
-            // Shorten the retention period - that's valid.
-            SetRetentionPolicy(15);
+            // Create an object, which should have a retention expiration.
+            string objectName = "object.txt";
+            CreateObject(bucketName, objectName);
 
-            // Remove the retention period - that's valid too
-            SetRetentionPolicy(null);
+            var obj = client.GetObject(bucketName, objectName);
+            Assert.NotNull(obj.RetentionExpirationTime);
 
-            // Set it back to 15 seconds, try (and fail) to lock it with the wrong metageneration,
-            // then lock it with the right metageneration.
-            var readyToLock = SetRetentionPolicy(15);
-            Assert.Throws<GoogleApiException>(() => client.LockBucketRetentionPolicy(bucketName, readyToLock.Metageneration.Value - 1));
-            client.LockBucketRetentionPolicy(bucketName, readyToLock.Metageneration.Value);
+            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
+        }
 
-            // We now can't delete the object, shorten the retention period or remove it.
-            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, "retained"));
-            Assert.Throws<GoogleApiException>(() => SetRetentionPolicy(10));
-            Assert.Throws<GoogleApiException>(() => SetRetentionPolicy(null));
+        /// <summary>
+        /// Test the client is able to remove a retention policy when a retention policy is not locked.
+        /// </summary>
+        [Fact]
+        public void RemoveRetentionPolicy()
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.GenerateBucketName();
+            var bucket = _fixture.CreateBucket(bucketName, false);
 
-            // We can extend it though
-            SetRetentionPolicy(20);
+            // Set the retention policy
+            bucket.RetentionPolicy = new Bucket.RetentionPolicyData { RetentionPeriod = 5 };
+            client.UpdateBucket(bucket);
 
-            // If we wait long enough, we can delete the object, too... and then the bucket.
-            Thread.Sleep(TimeSpan.FromSeconds(25));
-            client.DeleteObject(bucketName, "retained");
-            client.DeleteBucket(bucketName);
+            // Fetch the bucket again and check the policy was set.
+            bucket = client.GetBucket(bucketName);
+            Assert.NotNull(bucket.RetentionPolicy);
 
-            // If the DeleteBucket call succeeded, we don't want the fixture to try to delete it again.
-            _fixture.UnregisterBucket(bucketName);
+            // Remove the retention policy
+            bucket.RetentionPolicy = null;
+            client.UpdateBucket(bucket);
 
-            StorageFixture.SleepAfterBucketCreateDelete();
+            // Fetch the bucket again and check the policy was removed.
+            bucket = client.GetBucket(bucketName);
+            Assert.Null(bucket.RetentionPolicy);
+        }
 
-            void CreateObject(string objectName)
-            {
-                string text = $"This is the content of {objectName}";
-                var bytes = Encoding.UTF8.GetBytes(text);
-                _fixture.Client.UploadObject(bucketName, objectName, "text/plain", new MemoryStream(bytes));
-            }
+        /// <summary>
+        /// Test the lock of a retention policy and verify RetentionPolicy.IsLocked is true after locking the policy.
+        /// </summary>
+        [Fact]
+        public void LockRetentionPolicy()
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.GenerateBucketName();
+            var bucket = _fixture.CreateBucket(bucketName, false);
 
-            Bucket SetRetentionPolicy(int? seconds)
-            {
-                Bucket bucket = client.GetBucket(bucketName);
-                if (seconds == null)
-                {
-                    bucket.RetentionPolicy = null;
-                }
-                else
-                {
-                    // Create a new policy if necessary, or just overwrite the retention period of the current one.
-                    if (bucket.RetentionPolicy == null)
-                    {
-                        bucket.RetentionPolicy = new Bucket.RetentionPolicyData();
-                    }
-                    bucket.RetentionPolicy.RetentionPeriod = seconds.Value;
-                }
-                return client.UpdateBucket(bucket);
-            }
+            // Set the retention policy
+            bucket.RetentionPolicy = new Bucket.RetentionPolicyData { RetentionPeriod = 5 };
+            var updated = client.UpdateBucket(bucket);
+
+            // Lock it
+            client.LockBucketRetentionPolicy(bucketName, updated.Metageneration.Value);
+
+            // Check it's locked with the policy in place
+            bucket = client.GetBucket(bucketName);
+            Assert.Equal(5L, bucket.RetentionPolicy.RetentionPeriod);
+            Assert.True(bucket.RetentionPolicy.IsLocked);
+        }
+
+        /// <summary>
+        /// Test Set/Update temporary hold on an object and attempt to delete an object.
+        /// It should fail until temporaryHold is set to false.
+        /// </summary>
+        [Fact]
+        public void TemporaryHold()
+        {
+            var client = _fixture.Client;
+            // This test doesn't modify the bucket, so we can use an existing one.
+            var bucketName = _fixture.InitiallyEmptyBucket;
+
+            string objectName = "temporary-hold.txt";
+            var obj = CreateObject(bucketName, objectName);
+
+            // Set a temporary hold. We should fail to delete the object.
+            obj.TemporaryHold = true;
+            client.UpdateObject(obj);
+            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
+
+            // Clear the temporary hold. We should be able to delete the object.
+            obj.TemporaryHold = false;
+            client.UpdateObject(obj);
+            client.DeleteObject(bucketName, objectName);
+        }
+
+        /// <summary>
+        /// Test Set/Update event-based hold on an object and attempt to delete an object.
+        /// It should fail when event-based hold is true and for a short period after setting it to false per the retention policy period.
+        /// </summary>
+        [Fact]
+        public void EventBasedHold()
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.GenerateBucketName();
+            var bucket = _fixture.CreateBucket(bucketName, false);
+
+            // Set an event-based hold. We should fail to delete the object.
+            string objectName = "event-based-hold.txt";
+            var obj = CreateObject(bucketName, objectName);
+            Assert.Null(obj.EventBasedHold);
+            obj.EventBasedHold = true;
+            client.UpdateObject(obj);
+            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
+
+            // Set the retention policy for the bucket to 10s.
+            bucket.RetentionPolicy = new Bucket.RetentionPolicyData { RetentionPeriod = 10L };
+            client.UpdateBucket(bucket);
+
+            // Clear the event-based hold.
+            obj.EventBasedHold = false;
+            client.UpdateObject(obj);
+
+            // After 5 seconds, we should still not be able to delete the object: it is protected
+            // by the retention policy.
+            Thread.Sleep(TimeSpan.FromSeconds(5));
+            Assert.Throws<GoogleApiException>(() => client.DeleteObject(bucketName, objectName));
+
+            // After another 10 seconds, we should be able to delete the object.
+            Thread.Sleep(TimeSpan.FromSeconds(10));
+            client.DeleteObject(bucketName, objectName);
+        }
+
+        /// <summary>
+        /// Test Set/Update default event-based hold for a bucket.
+        /// When a new object is inserted and the default event-based hold is set to true, the object event-based hold metadata should be true.
+        /// </summary>
+        [Fact]
+        public void DefaultEventBasedHold()
+        {
+            var client = _fixture.Client;
+            var bucketName = _fixture.GenerateBucketName();
+            var bucket = _fixture.CreateBucket(bucketName, false);
+
+            bucket.DefaultEventBasedHold = true;
+            client.UpdateBucket(bucket);
+
+            string objectName = "default-event-based-hold.txt";
+            CreateObject(bucketName, objectName);
+
+            var obj = client.GetObject(bucketName, objectName);
+            Assert.True(obj.EventBasedHold);
+
+            // Remove the event-based hold for the object and bucket so we'll be able to delete
+            // the objects and bucket later.
+            bucket.DefaultEventBasedHold = false;
+            client.UpdateBucket(bucket);
+            obj.EventBasedHold = false;
+            client.UpdateObject(obj);
+        }
+
+        private Object CreateObject(string bucketName, string objectName)
+        {
+            string text = $"This is the content of {objectName}";
+            var bytes = Encoding.UTF8.GetBytes(text);
+            return _fixture.Client.UploadObject(bucketName, objectName, "text/plain", new MemoryStream(bytes));
         }
     }
 }

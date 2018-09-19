@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using Google.Cloud.Storage.V1;
 using System;
 using System.Linq;
@@ -45,6 +46,7 @@ namespace Google.Storage.V2.CleanTestData
                 catch (GoogleApiException e)
                 {
                     Console.WriteLine($"Failed to delete {bucket}: {e.Message}");
+                    RemoveHolds(client, bucket);
                 }
             }
             return 0;
@@ -56,6 +58,26 @@ namespace Google.Storage.V2.CleanTestData
             // Avoid running into quota issues
             Thread.Sleep(2000);
             Console.WriteLine($"Deleted {bucket}");
+        }
+
+        private static void RemoveHolds(StorageClient client, string bucketName)
+        {
+            var bucket = client.GetBucket(bucketName);
+            if (bucket.DefaultEventBasedHold == true)
+            {
+                Console.WriteLine($"Removing default event based hold from bucket {bucket.Name}");
+                bucket.DefaultEventBasedHold = false;
+                client.UpdateBucket(bucket);
+            }
+            foreach (var obj in client.ListObjects(bucketName))
+            {
+                if (obj.EventBasedHold == true)
+                {
+                    Console.WriteLine($"Removing event based hold from object {obj.Name}");
+                }
+                obj.EventBasedHold = false;
+                client.UpdateObject(obj);
+            }
         }
 
         private static bool IsTestBucket(string name) =>
