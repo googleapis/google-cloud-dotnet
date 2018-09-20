@@ -17,6 +17,7 @@ using Google.Cloud.Firestore.V1Beta1;
 using Google.Protobuf;
 using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using wkt = Google.Protobuf.WellKnownTypes;
 
@@ -101,8 +102,24 @@ namespace Google.Cloud.Firestore
             // This is just checking that the simple approach we've taken in the previous line
             // really did what we expect.
             GaxPreconditions.CheckState(array != null, "Input wasn't serialized as an array");
+            GaxPreconditions.CheckState(!array.Values.Any(FindNestedSentinels), "Sentinel values cannot be nested in array union/remove values.");
             AugmentedValue augmented = new AugmentedValue { Kind = sentinelKind, Array = array };
             return new SentinelValue(augmented);
+        }
+
+        private static bool FindNestedSentinels(Value value)
+        {
+            switch (value.ValueTypeCase)
+            {
+                case Value.ValueTypeOneofCase.NullValue:
+                    return GetKind(value) != SentinelKind.None;
+                case Value.ValueTypeOneofCase.ArrayValue:
+                    return value.ArrayValue.Values.Any(FindNestedSentinels);
+                case Value.ValueTypeOneofCase.MapValue:
+                    return value.MapValue.Fields.Values.Any(FindNestedSentinels);
+                default:
+                    return false;
+            }
         }
 
         internal static ArrayValue GetArrayValue(Value value)
