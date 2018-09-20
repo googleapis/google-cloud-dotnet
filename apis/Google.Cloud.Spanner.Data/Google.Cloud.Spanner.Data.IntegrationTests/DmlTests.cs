@@ -424,7 +424,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public void PartitionedUpdate()
+        public void PartitionedUpdate_Small()
         {
             string key = CreateTestRows();
             string table = _fixture.TableName;
@@ -452,9 +452,88 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        // Further tests:
-        // - Simple PDML
-        // - Longrunning PDML (skipped by default)
+        // Until we have a large test database to test against, this is a reasonable starting point.
+        // It takes about 5 minutes to run though, which is too long for a single test on every test run.
+        [Fact(Skip = "Long-running")]
+        public void PartitionedUpdate_Medium()
+        {
+            string key = $"{nameof(PartitionedUpdate_Medium)} - {Guid.NewGuid()}";
+            string table = _fixture.TableName;
+
+            // First insert 1000 rows with "low" values, then add 100,000 to each value.
+            // We should end up with 0 rows with "low" values, and 1000 rows with "high" values
+            int rowsPerInsertBatch = 10;
+            int insertBatches = 100;
+            int totalRows = rowsPerInsertBatch * insertBatches;
+            int amountToAdd = 100_000;
+
+            // Check that we'll be adding enough to distinguish between non-updated and updated rows.
+            Assert.True(amountToAdd > totalRows);
+
+            int row = 1;
+            for (int i = 0; i < insertBatches; i++)
+            {
+                RetryHelpers.RetryOnce(() =>
+                {
+                    using (var connection = _fixture.GetConnection())
+                    {
+                        connection.Open();
+                        using (var transaction = connection.BeginTransaction())
+                        {
+                            using (var command = connection.CreateInsertCommand(_fixture.TableName))
+                            {
+                                command.Parameters.Add("Key", SpannerDbType.String, key);
+                                command.Parameters.Add("UpdateMe", SpannerDbType.Bool, true);
+                                command.Parameters.Add("DeleteMe", SpannerDbType.Bool, false);
+                                command.Parameters.Add("CopyMe", SpannerDbType.Bool, false);
+
+                                var originalValueParameter = command.Parameters.Add("OriginalValue", SpannerDbType.Int64);
+                                var valueParameter = command.Parameters.Add("Value", SpannerDbType.Int64);
+
+                                for (int j = 0; j < rowsPerInsertBatch; j++)
+                                {
+                                    originalValueParameter.Value = row;
+                                    valueParameter.Value = row;
+                                    command.ExecuteNonQuery();
+                                    row++;
+                                }
+                            }
+                            transaction.Commit();
+                        }
+                    }
+                });
+            }
+
+            using (var connection = _fixture.GetConnection())
+            {
+                // Perform the update
+                RetryHelpers.RetryOnce(() =>
+                {
+                    string dml = $"UPDATE {table} SET {table}.Value = {table}.OriginalValue + @amountToAdd WHERE {table}.UpdateMe AND {table}.Key=@key";
+                    using (var command = connection.CreateDmlCommand(dml))
+                    {
+                        command.Parameters.Add("key", SpannerDbType.String, key);
+                        command.Parameters.Add("amountToAdd", SpannerDbType.Int64, amountToAdd);
+                        Assert.Equal(totalRows, command.ExecutePartitionedUpdate());
+                    }
+                });
+
+                // Check results via query counts rather than fetching all values.
+                using (var command = connection.CreateSelectCommand($"SELECT COUNT(1) FROM {table} WHERE Value >= @cutoff AND Key=@key"))
+                {
+                    command.Parameters.Add("key", SpannerDbType.String, key);
+                    command.Parameters.Add("cutoff", SpannerDbType.Int64, amountToAdd);
+                    Assert.Equal(totalRows, (long) command.ExecuteScalar());
+                }
+
+                using (var command = connection.CreateSelectCommand($"SELECT COUNT(1) FROM {table} WHERE Value < @cutoff AND Key=@key"))
+                {
+                    command.Parameters.Add("key", SpannerDbType.String, key);
+                    command.Parameters.Add("cutoff", SpannerDbType.Int64, amountToAdd);
+                    Assert.Equal(0, (long)command.ExecuteScalar());
+                }
+            }
+        }
 
         private Dictionary<int, int> FetchValues(string key, SpannerTransaction transaction = null)
         {
