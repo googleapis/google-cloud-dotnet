@@ -82,6 +82,30 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "HttpGet" <see cref="PublisherServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "HttpGet" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> HttpGetRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "OnePlusDelivery" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
@@ -98,16 +122,6 @@ namespace Google.Cloud.PubSub.V1
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> OnePlusDeliveryRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown);
-
-        /// <summary>
-        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
-        /// </remarks>
-        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
