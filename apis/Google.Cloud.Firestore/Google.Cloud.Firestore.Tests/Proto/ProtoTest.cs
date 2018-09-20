@@ -397,7 +397,20 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 case wkt::Value.KindOneofCase.BoolValue:
                     return value.BoolValue;
                 case wkt::Value.KindOneofCase.ListValue:
-                    return value.ListValue.Values.Select(ConvertValue).ToArray();
+                    var values = value.ListValue.Values;
+                    var first = values.FirstOrDefault();
+                    if (first?.StringValue == "ArrayRemove")
+                    {
+                        return FieldValue.ArrayRemove(values.Skip(1).Select(ConvertValue).ToArray());
+                    }
+                    else if (first?.StringValue == "ArrayUnion")
+                    {
+                        return FieldValue.ArrayUnion(values.Skip(1).Select(ConvertValue).ToArray());
+                    }
+                    else
+                    {
+                        return values.Select(ConvertValue).ToArray();
+                    }
                 case wkt::Value.KindOneofCase.NullValue:
                     return null;
                 case wkt::Value.KindOneofCase.NumberValue:
