@@ -29,7 +29,7 @@ namespace Google.Cloud.Dlp.V2 {
             "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIhgKCEluZm9UeXBl",
             "EgwKBG5hbWUYASABKAkiSwoKU3RvcmVkVHlwZRIMCgRuYW1lGAEgASgJEi8K",
             "C2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cCKXCgoOQ3VzdG9tSW5mb1R5cGUSMgoJaW5mb190eXBlGAEgASgLMh8uZ29v",
+            "cCKxCwoOQ3VzdG9tSW5mb1R5cGUSMgoJaW5mb190eXBlGAEgASgLMh8uZ29v",
             "Z2xlLnByaXZhY3kuZGxwLnYyLkluZm9UeXBlEjUKCmxpa2VsaWhvb2QYBiAB",
             "KA4yIS5nb29nbGUucHJpdmFjeS5kbHAudjIuTGlrZWxpaG9vZBJGCgpkaWN0",
             "aW9uYXJ5GAIgASgLMjAuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUlu",
@@ -39,92 +39,95 @@ namespace Google.Cloud.Dlp.V2 {
             "bUluZm9UeXBlLlN1cnJvZ2F0ZVR5cGVIABI4CgtzdG9yZWRfdHlwZRgFIAEo",
             "CzIhLmdvb2dsZS5wcml2YWN5LmRscC52Mi5TdG9yZWRUeXBlSAASTAoPZGV0",
             "ZWN0aW9uX3J1bGVzGAcgAygLMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1",
-            "c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUayAEKCkRpY3Rpb25hcnkSTgoJ",
-            "d29yZF9saXN0GAEgASgLMjkuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3Rv",
-            "bUluZm9UeXBlLkRpY3Rpb25hcnkuV29yZExpc3RIABJFChJjbG91ZF9zdG9y",
-            "YWdlX3BhdGgYAyABKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xvdWRT",
-            "dG9yYWdlUGF0aEgAGhkKCFdvcmRMaXN0Eg0KBXdvcmRzGAEgAygJQggKBnNv",
-            "dXJjZRoYCgVSZWdleBIPCgdwYXR0ZXJuGAEgASgJGg8KDVN1cnJvZ2F0ZVR5",
-            "cGUavgQKDURldGVjdGlvblJ1bGUSVwoMaG90d29yZF9ydWxlGAEgASgLMj8u",
-            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlv",
-            "blJ1bGUuSG90d29yZFJ1bGVIABo4CglQcm94aW1pdHkSFQoNd2luZG93X2Jl",
-            "Zm9yZRgBIAEoBRIUCgx3aW5kb3dfYWZ0ZXIYAiABKAUaggEKFExpa2VsaWhv",
-            "b2RBZGp1c3RtZW50Ej0KEGZpeGVkX2xpa2VsaWhvb2QYASABKA4yIS5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuTGlrZWxpaG9vZEgAEh0KE3JlbGF0aXZlX2xp",
-            "a2VsaWhvb2QYAiABKAVIAEIMCgphZGp1c3RtZW50GowCCgtIb3R3b3JkUnVs",
-            "ZRJCCg1ob3R3b3JkX3JlZ2V4GAEgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxw",
-            "LnYyLkN1c3RvbUluZm9UeXBlLlJlZ2V4ElAKCXByb3hpbWl0eRgCIAEoCzI9",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5EZXRlY3Rp",
-            "b25SdWxlLlByb3hpbWl0eRJnChVsaWtlbGlob29kX2FkanVzdG1lbnQYAyAB",
-            "KAsySC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0",
-            "ZWN0aW9uUnVsZS5MaWtlbGlob29kQWRqdXN0bWVudEIGCgR0eXBlQgYKBHR5",
-            "cGUiFwoHRmllbGRJZBIMCgRuYW1lGAEgASgJIjcKC1BhcnRpdGlvbklkEhIK",
-            "CnByb2plY3RfaWQYAiABKAkSFAoMbmFtZXNwYWNlX2lkGAQgASgJIh4KDktp",
-            "bmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkigQEKEERhdGFzdG9yZU9wdGlv",
-            "bnMSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxw",
-            "LnYyLlBhcnRpdGlvbklkEjMKBGtpbmQYAiABKAsyJS5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuS2luZEV4cHJlc3Npb24iowMKE0Nsb3VkU3RvcmFnZU9wdGlv",
-            "bnMSRAoIZmlsZV9zZXQYASABKAsyMi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "Q2xvdWRTdG9yYWdlT3B0aW9ucy5GaWxlU2V0EhwKFGJ5dGVzX2xpbWl0X3Bl",
-            "cl9maWxlGAQgASgDEiQKHGJ5dGVzX2xpbWl0X3Blcl9maWxlX3BlcmNlbnQY",
-            "CCABKAUSMwoKZmlsZV90eXBlcxgFIAMoDjIfLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5GaWxlVHlwZRJOCg1zYW1wbGVfbWV0aG9kGAYgASgOMjcuZ29vZ2xl",
-            "LnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnMuU2FtcGxlTWV0",
-            "aG9kEhsKE2ZpbGVzX2xpbWl0X3BlcmNlbnQYByABKAUaFgoHRmlsZVNldBIL",
-            "CgN1cmwYASABKAkiSAoMU2FtcGxlTWV0aG9kEh0KGVNBTVBMRV9NRVRIT0Rf",
-            "VU5TUEVDSUZJRUQQABIHCgNUT1AQARIQCgxSQU5ET01fU1RBUlQQAiIiChND",
-            "bG91ZFN0b3JhZ2VGaWxlU2V0EgsKA3VybBgBIAEoCSIgChBDbG91ZFN0b3Jh",
-            "Z2VQYXRoEgwKBHBhdGgYASABKAki0gIKD0JpZ1F1ZXJ5T3B0aW9ucxI9Cg90",
-            "YWJsZV9yZWZlcmVuY2UYASABKAsyJC5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "QmlnUXVlcnlUYWJsZRI6ChJpZGVudGlmeWluZ19maWVsZHMYAiADKAsyHi5n",
-            "b29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBISCgpyb3dzX2xpbWl0GAMg",
-            "ASgDEhoKEnJvd3NfbGltaXRfcGVyY2VudBgGIAEoBRJKCg1zYW1wbGVfbWV0",
-            "aG9kGAQgASgOMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5T3B0",
-            "aW9ucy5TYW1wbGVNZXRob2QiSAoMU2FtcGxlTWV0aG9kEh0KGVNBTVBMRV9N",
-            "RVRIT0RfVU5TUEVDSUZJRUQQABIHCgNUT1AQARIQCgxSQU5ET01fU1RBUlQQ",
-            "AiKaBAoNU3RvcmFnZUNvbmZpZxJEChFkYXRhc3RvcmVfb3B0aW9ucxgCIAEo",
-            "CzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhc3RvcmVPcHRpb25zSAAS",
-            "SwoVY2xvdWRfc3RvcmFnZV9vcHRpb25zGAMgASgLMiouZ29vZ2xlLnByaXZh",
-            "Y3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnNIABJDChFiaWdfcXVlcnlf",
-            "b3B0aW9ucxgEIAEoCzImLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVy",
-            "eU9wdGlvbnNIABJMCg90aW1lc3Bhbl9jb25maWcYBiABKAsyMy5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuU3RvcmFnZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxra",
-            "AQoOVGltZXNwYW5Db25maWcSLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEjcKD3RpbWVzdGFtcF9maWVsZBgDIAEo",
-            "CzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkEjEKKWVuYWJsZV9h",
-            "dXRvX3BvcHVsYXRpb25fb2ZfdGltZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5",
-            "cGUiYAoLQmlnUXVlcnlLZXkSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQu",
-            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSEgoKcm93X251",
-            "bWJlchgCIAEoAyI+CgxEYXRhc3RvcmVLZXkSLgoKZW50aXR5X2tleRgBIAEo",
-            "CzIaLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkiuwEKA0tleRI4CgxwYXJ0",
-            "aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIuUGFydGl0",
-            "aW9uSWQSNAoEcGF0aBgCIAMoCzImLmdvb2dsZS5wcml2YWN5LmRscC52Mi5L",
-            "ZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQSDAoEa2luZBgBIAEoCRIM",
-            "CgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJCgdpZF90eXBlIo4BCglS",
-            "ZWNvcmRLZXkSPAoNZGF0YXN0b3JlX2tleRgCIAEoCzIjLmdvb2dsZS5wcml2",
-            "YWN5LmRscC52Mi5EYXRhc3RvcmVLZXlIABI7Cg1iaWdfcXVlcnlfa2V5GAMg",
-            "ASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5S2V5SABCBgoE",
-            "dHlwZSJJCg1CaWdRdWVyeVRhYmxlEhIKCnByb2plY3RfaWQYASABKAkSEgoK",
-            "ZGF0YXNldF9pZBgCIAEoCRIQCgh0YWJsZV9pZBgDIAEoCSJzCg1CaWdRdWVy",
-            "eUZpZWxkEjMKBXRhYmxlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
-            "LkJpZ1F1ZXJ5VGFibGUSLQoFZmllbGQYAiABKAsyHi5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuRmllbGRJZCI5CghFbnRpdHlJZBItCgVmaWVsZBgBIAEoCzIe",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QS",
-            "GgoWTElLRUxJSE9PRF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQ",
-            "ARIMCghVTkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoL",
-            "VkVSWV9MSUtFTFkQBSpFCghGaWxlVHlwZRIZChVGSUxFX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIPCgtCSU5BUllfRklMRRABEg0KCVRFWFRfRklMRRACQo8BChlj",
-            "b20uZ29vZ2xlLnByaXZhY3kuZGxwLnYyQgpEbHBTdG9yYWdlUAFaOGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvcHJpdmFjeS9kbHAv",
-            "djI7ZGxwqgITR29vZ2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91ZFxE",
-            "bHBcVjJiBnByb3RvMw=="));
+            "c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUSSwoOZXhjbHVzaW9uX3R5cGUY",
+            "CCABKA4yMy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUu",
+            "RXhjbHVzaW9uVHlwZRrIAQoKRGljdGlvbmFyeRJOCgl3b3JkX2xpc3QYASAB",
+            "KAsyOS5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGlj",
+            "dGlvbmFyeS5Xb3JkTGlzdEgAEkUKEmNsb3VkX3N0b3JhZ2VfcGF0aBgDIAEo",
+            "CzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VQYXRoSAAa",
+            "GQoIV29yZExpc3QSDQoFd29yZHMYASADKAlCCAoGc291cmNlGhgKBVJlZ2V4",
+            "Eg8KB3BhdHRlcm4YASABKAkaDwoNU3Vycm9nYXRlVHlwZRq+BAoNRGV0ZWN0",
+            "aW9uUnVsZRJXCgxob3R3b3JkX3J1bGUYASABKAsyPy5nb29nbGUucHJpdmFj",
+            "eS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZS5Ib3R3b3Jk",
+            "UnVsZUgAGjgKCVByb3hpbWl0eRIVCg13aW5kb3dfYmVmb3JlGAEgASgFEhQK",
+            "DHdpbmRvd19hZnRlchgCIAEoBRqCAQoUTGlrZWxpaG9vZEFkanVzdG1lbnQS",
+            "PQoQZml4ZWRfbGlrZWxpaG9vZBgBIAEoDjIhLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5MaWtlbGlob29kSAASHQoTcmVsYXRpdmVfbGlrZWxpaG9vZBgCIAEo",
+            "BUgAQgwKCmFkanVzdG1lbnQajAIKC0hvdHdvcmRSdWxlEkIKDWhvdHdvcmRf",
+            "cmVnZXgYASABKAsyKy5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5m",
+            "b1R5cGUuUmVnZXgSUAoJcHJveGltaXR5GAIgASgLMj0uZ29vZ2xlLnByaXZh",
+            "Y3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUuUHJveGlt",
+            "aXR5EmcKFWxpa2VsaWhvb2RfYWRqdXN0bWVudBgDIAEoCzJILmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5EZXRlY3Rpb25SdWxlLkxp",
+            "a2VsaWhvb2RBZGp1c3RtZW50QgYKBHR5cGUiSwoNRXhjbHVzaW9uVHlwZRIe",
+            "ChpFWENMVVNJT05fVFlQRV9VTlNQRUNJRklFRBAAEhoKFkVYQ0xVU0lPTl9U",
+            "WVBFX0VYQ0xVREUQAUIGCgR0eXBlIhcKB0ZpZWxkSWQSDAoEbmFtZRgBIAEo",
+            "CSI3CgtQYXJ0aXRpb25JZBISCgpwcm9qZWN0X2lkGAIgASgJEhQKDG5hbWVz",
+            "cGFjZV9pZBgEIAEoCSIeCg5LaW5kRXhwcmVzc2lvbhIMCgRuYW1lGAEgASgJ",
+            "IoEBChBEYXRhc3RvcmVPcHRpb25zEjgKDHBhcnRpdGlvbl9pZBgBIAEoCzIi",
+            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5QYXJ0aXRpb25JZBIzCgRraW5kGAIg",
+            "ASgLMiUuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLktpbmRFeHByZXNzaW9uIqMD",
+            "ChNDbG91ZFN0b3JhZ2VPcHRpb25zEkQKCGZpbGVfc2V0GAEgASgLMjIuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNl",
+            "dBIcChRieXRlc19saW1pdF9wZXJfZmlsZRgEIAEoAxIkChxieXRlc19saW1p",
+            "dF9wZXJfZmlsZV9wZXJjZW50GAggASgFEjMKCmZpbGVfdHlwZXMYBSADKA4y",
+            "Hy5nb29nbGUucHJpdmFjeS5kbHAudjIuRmlsZVR5cGUSTgoNc2FtcGxlX21l",
+            "dGhvZBgGIAEoDjI3Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3Jh",
+            "Z2VPcHRpb25zLlNhbXBsZU1ldGhvZBIbChNmaWxlc19saW1pdF9wZXJjZW50",
+            "GAcgASgFGhYKB0ZpbGVTZXQSCwoDdXJsGAEgASgJIkgKDFNhbXBsZU1ldGhv",
+            "ZBIdChlTQU1QTEVfTUVUSE9EX1VOU1BFQ0lGSUVEEAASBwoDVE9QEAESEAoM",
+            "UkFORE9NX1NUQVJUEAIiIgoTQ2xvdWRTdG9yYWdlRmlsZVNldBILCgN1cmwY",
+            "ASABKAkiIAoQQ2xvdWRTdG9yYWdlUGF0aBIMCgRwYXRoGAEgASgJItICCg9C",
+            "aWdRdWVyeU9wdGlvbnMSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSOgoSaWRlbnRpZnlp",
+            "bmdfZmllbGRzGAIgAygLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxk",
+            "SWQSEgoKcm93c19saW1pdBgDIAEoAxIaChJyb3dzX2xpbWl0X3BlcmNlbnQY",
+            "BiABKAUSSgoNc2FtcGxlX21ldGhvZBgEIAEoDjIzLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5CaWdRdWVyeU9wdGlvbnMuU2FtcGxlTWV0aG9kIkgKDFNhbXBs",
+            "ZU1ldGhvZBIdChlTQU1QTEVfTUVUSE9EX1VOU1BFQ0lGSUVEEAASBwoDVE9Q",
+            "EAESEAoMUkFORE9NX1NUQVJUEAIimgQKDVN0b3JhZ2VDb25maWcSRAoRZGF0",
+            "YXN0b3JlX29wdGlvbnMYAiABKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "RGF0YXN0b3JlT3B0aW9uc0gAEksKFWNsb3VkX3N0b3JhZ2Vfb3B0aW9ucxgD",
+            "IAEoCzIqLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRp",
+            "b25zSAASQwoRYmlnX3F1ZXJ5X29wdGlvbnMYBCABKAsyJi5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zSAASTAoPdGltZXNwYW5fY29u",
+            "ZmlnGAYgASgLMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlN0b3JhZ2VDb25m",
+            "aWcuVGltZXNwYW5Db25maWca2gEKDlRpbWVzcGFuQ29uZmlnEi4KCnN0YXJ0",
+            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVu",
+            "ZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3Cg90",
+            "aW1lc3RhbXBfZmllbGQYAyABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "RmllbGRJZBIxCillbmFibGVfYXV0b19wb3B1bGF0aW9uX29mX3RpbWVzcGFu",
+            "X2NvbmZpZxgEIAEoCEIGCgR0eXBlImAKC0JpZ1F1ZXJ5S2V5Ej0KD3RhYmxl",
+            "X3JlZmVyZW5jZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdR",
+            "dWVyeVRhYmxlEhIKCnJvd19udW1iZXIYAiABKAMiPgoMRGF0YXN0b3JlS2V5",
+            "Ei4KCmVudGl0eV9rZXkYASABKAsyGi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "S2V5IrsBCgNLZXkSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLlBhcnRpdGlvbklkEjQKBHBhdGgYAiADKAsyJi5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuS2V5LlBhdGhFbGVtZW50GkQKC1BhdGhFbGVt",
+            "ZW50EgwKBGtpbmQYASABKAkSDAoCaWQYAiABKANIABIOCgRuYW1lGAMgASgJ",
+            "SABCCQoHaWRfdHlwZSKOAQoJUmVjb3JkS2V5EjwKDWRhdGFzdG9yZV9rZXkY",
+            "AiABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YXN0b3JlS2V5SAAS",
+            "OwoNYmlnX3F1ZXJ5X2tleRgDIAEoCzIiLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5CaWdRdWVyeUtleUgAQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJsZRISCgpw",
+            "cm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFibGVf",
+            "aWQYAyABKAkicwoNQmlnUXVlcnlGaWVsZBIzCgV0YWJsZRgBIAEoCzIkLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeVRhYmxlEi0KBWZpZWxkGAIg",
+            "ASgLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiOQoIRW50aXR5",
+            "SWQSLQoFZmllbGQYASABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmll",
+            "bGRJZCp0CgpMaWtlbGlob29kEhoKFkxJS0VMSUhPT0RfVU5TUEVDSUZJRUQQ",
+            "ABIRCg1WRVJZX1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NTSUJM",
+            "RRADEgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZEAUqRQoIRmlsZVR5cGUS",
+            "GQoVRklMRV9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLQklOQVJZX0ZJTEUQARIN",
+            "CglURVhUX0ZJTEUQAkKPAQoZY29tLmdvb2dsZS5wcml2YWN5LmRscC52MkIK",
+            "RGxwU3RvcmFnZVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL3ByaXZhY3kvZGxwL3YyO2RscKoCE0dvb2dsZS5DbG91ZC5EbHAu",
+            "VjLKAhNHb29nbGVcQ2xvdWRcRGxwXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredType), global::Google.Cloud.Dlp.V2.StoredType.Parser, new[]{ "Name", "CreateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null),
@@ -548,6 +551,7 @@ namespace Google.Cloud.Dlp.V2 {
       infoType_ = other.infoType_ != null ? other.infoType_.Clone() : null;
       likelihood_ = other.likelihood_;
       detectionRules_ = other.detectionRules_.Clone();
+      exclusionType_ = other.exclusionType_;
       switch (other.TypeCase) {
         case TypeOneofCase.Dictionary:
           Dictionary = other.Dictionary.Clone();
@@ -575,8 +579,12 @@ namespace Google.Cloud.Dlp.V2 {
     public const int InfoTypeFieldNumber = 1;
     private global::Google.Cloud.Dlp.V2.InfoType infoType_;
     /// <summary>
-    /// All CustomInfoTypes must have a name
-    /// that does not conflict with built-in InfoTypes or other CustomInfoTypes.
+    /// CustomInfoType can either be a new infoType, or an extension of built-in
+    /// infoType, when the name matches one of existing infoTypes and that infoType
+    /// is specified in `InspectContent.info_types` field. Specifying the latter
+    /// adds findings to the one detected by the system. If built-in info type is
+    /// not specified in `InspectContent.info_types` list then the name is treated
+    /// as a custom info type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.InfoType InfoType {
@@ -675,6 +683,21 @@ namespace Google.Cloud.Dlp.V2 {
       get { return detectionRules_; }
     }
 
+    /// <summary>Field number for the "exclusion_type" field.</summary>
+    public const int ExclusionTypeFieldNumber = 8;
+    private global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType exclusionType_ = 0;
+    /// <summary>
+    /// If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding
+    /// to be returned. It still can be used for rules matching.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType ExclusionType {
+      get { return exclusionType_; }
+      set {
+        exclusionType_ = value;
+      }
+    }
+
     private object type_;
     /// <summary>Enum of possible cases for the "type" oneof.</summary>
     public enum TypeOneofCase {
@@ -716,6 +739,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (!object.Equals(SurrogateType, other.SurrogateType)) return false;
       if (!object.Equals(StoredType, other.StoredType)) return false;
       if(!detectionRules_.Equals(other.detectionRules_)) return false;
+      if (ExclusionType != other.ExclusionType) return false;
       if (TypeCase != other.TypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -730,6 +754,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.SurrogateType) hash ^= SurrogateType.GetHashCode();
       if (typeCase_ == TypeOneofCase.StoredType) hash ^= StoredType.GetHashCode();
       hash ^= detectionRules_.GetHashCode();
+      if (ExclusionType != 0) hash ^= ExclusionType.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -769,6 +794,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteEnum((int) Likelihood);
       }
       detectionRules_.WriteTo(output, _repeated_detectionRules_codec);
+      if (ExclusionType != 0) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) ExclusionType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -796,6 +825,9 @@ namespace Google.Cloud.Dlp.V2 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoredType);
       }
       size += detectionRules_.CalculateSize(_repeated_detectionRules_codec);
+      if (ExclusionType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExclusionType);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -817,6 +849,9 @@ namespace Google.Cloud.Dlp.V2 {
         Likelihood = other.Likelihood;
       }
       detectionRules_.Add(other.detectionRules_);
+      if (other.ExclusionType != 0) {
+        ExclusionType = other.ExclusionType;
+      }
       switch (other.TypeCase) {
         case TypeOneofCase.Dictionary:
           if (Dictionary == null) {
@@ -906,6 +941,10 @@ namespace Google.Cloud.Dlp.V2 {
             detectionRules_.AddEntriesFrom(input, _repeated_detectionRules_codec);
             break;
           }
+          case 64: {
+            exclusionType_ = (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -914,6 +953,18 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Container for nested types declared in the CustomInfoType message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
+      public enum ExclusionType {
+        /// <summary>
+        /// A finding of this custom info type will not be excluded from results.
+        /// </summary>
+        [pbr::OriginalName("EXCLUSION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// A finding of this custom info type will be excluded from final results,
+        /// but can still affect rule execution.
+        /// </summary>
+        [pbr::OriginalName("EXCLUSION_TYPE_EXCLUDE")] Exclude = 1,
+      }
+
       /// <summary>
       /// Custom information type based on a dictionary of words or phrases. This can
       /// be used to match sensitive information specific to the data, such as a list
@@ -1327,7 +1378,9 @@ namespace Google.Cloud.Dlp.V2 {
         public const int PatternFieldNumber = 1;
         private string pattern_ = "";
         /// <summary>
-        /// Pattern defining the regular expression.
+        /// Pattern defining the regular expression. Its syntax
+        /// (https://github.com/google/re2/wiki/Syntax) can be found under the
+        /// google/re2 repository on GitHub.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Pattern {
@@ -2934,8 +2987,8 @@ namespace Google.Cloud.Dlp.V2 {
   }
 
   /// <summary>
-  /// Options defining a file or a set of files (path ending with *) within
-  /// a Google Cloud Storage bucket.
+  /// Options defining a file or a set of files within a Google Cloud Storage
+  /// bucket.
   /// </summary>
   public sealed partial class CloudStorageOptions : pb::IMessage<CloudStorageOptions> {
     private static readonly pb::MessageParser<CloudStorageOptions> _parser = new pb::MessageParser<CloudStorageOptions>(() => new CloudStorageOptions());
@@ -2979,6 +3032,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "file_set" field.</summary>
     public const int FileSetFieldNumber = 1;
     private global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet fileSet_;
+    /// <summary>
+    /// The set of one or more files to scan.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet FileSet {
       get { return fileSet_; }
@@ -3287,8 +3343,8 @@ namespace Google.Cloud.Dlp.V2 {
         public const int UrlFieldNumber = 1;
         private string url_ = "";
         /// <summary>
-        /// The url, in the format `gs://&lt;bucket>/&lt;path>`. Trailing wildcard in the
-        /// path is allowed.
+        /// The Cloud Storage url of the file(s) to scan, in the format
+        /// `gs://&lt;bucket>/&lt;path>`. Trailing wildcard in the path is allowed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Url {
