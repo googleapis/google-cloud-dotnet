@@ -12,7 +12,7 @@ maybe_upload_coverage() {
   
   ./createcoveragereport.sh
   # Assume we've created the coverage file by this point. If we haven't, there should already have been an error.
-  codecov -f "coverage/coverage-filtered.xml" --flag $1 --c $KOKORO_GITHUB_COMMIT --b KOKORO_BUILD_NUMBER
+  codecov -f "coverage/coverage-filtered.xml" --flag $1 --c $KOKORO_GITHUB_COMMIT --b $KOKORO_BUILD_NUMBER
 }
 
 # Script entry point
