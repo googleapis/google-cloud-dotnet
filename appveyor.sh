@@ -11,8 +11,7 @@ then
   # Not in a pull request.
   # Run a full build (no --diff) but without tests,  then test with code coverage.
   choco install codecov
-  ./build.sh --notests
-  ./runcoverage.sh
+  ./build.sh --coverage
   ./createcoveragereport.sh
   if [[ -f "coverage/coverage-filtered.xml" ]]
   then
