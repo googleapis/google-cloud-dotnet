@@ -4,6 +4,8 @@ set -e
 
 cd $(dirname $0)
 
+source toolversions.sh
+
 # Disable automatic test reporting to AppVeyor.
 # See https://github.com/googleapis/google-cloud-dotnet/issues/1232
 unset APPVEYOR_API_URL
@@ -20,8 +22,10 @@ shopt -s nullglob
 # --diff: Detect which APIs to build based on a diff to the master branch
 # --regex regex: Only build APIs that match the given regex
 # --nobuild: Just list which APIs would be built; don't run the build
+# --coverage: Run tests with coverage enabled
 apis=()
 runtests=true
+runcoverage=false
 apiregex=
 nobuild=false
 while (( "$#" )); do
@@ -39,6 +43,11 @@ while (( "$#" )); do
   elif [[ "$1" == "--nobuild" ]]
   then
     nobuild=true
+  elif [[ "$1" == "--coverage" ]]
+  then
+    runcoverage=true
+    install_dotcover
+    mkdir -p coverage
   else
     apis+=($1)
   fi
@@ -121,7 +130,14 @@ then
   while read testproject
   do  
     echo "$(date +%T) Testing $testproject"
-    dotnet test -c Release $testproject
+    testdir=$(dirname $testproject)
+    if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
+    then
+      echo "(Running with coverage)"
+      (cd "$testdir"; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode)    
+    else
+      dotnet test -c Release $testproject
+    fi
   done < AllTests.txt
 fi
 
