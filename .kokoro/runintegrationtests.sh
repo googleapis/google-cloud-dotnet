@@ -44,6 +44,10 @@ fi
 
 maybe_upload_coverage unittests
 
+# Remove the reports potentially created for the unit tests so we only
+# maybe upload the ones related to integration tests next.
+rm -rf coverage
+
 # Allow each integration test 3 chances to pass.
 ./runintegrationtests.sh $SCRIPT_FLAGS || true
 ./runintegrationtests.sh $SCRIPT_FLAGS --retry || true
