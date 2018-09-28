@@ -15,7 +15,7 @@ then
   ./createcoveragereport.sh
   if [[ -f "coverage/coverage-filtered.xml" ]]
   then
-    codecov -f "coverage/coverage-filtered.xml"
+    codecov -f "coverage/coverage-filtered.xml" --flag unittests
   fi
 else
   # We're in a pull request. Don't do any coverage; just
