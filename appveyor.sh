@@ -9,14 +9,9 @@ bash generateprojects.sh && git diff --exit-code
 if [[ -z "$APPVEYOR_PULL_REQUEST_NUMBER" ]]
 then
   # Not in a pull request.
-  # Run a full build (no --diff) but without tests,  then test with code coverage.
-  choco install codecov
+  # Run a full build (no --diff) with tests and coverage, then create and upload coverage report.
   ./build.sh --coverage
-  ./createcoveragereport.sh
-  if [[ -f "coverage/coverage-filtered.xml" ]]
-  then
-    codecov -f "coverage/coverage-filtered.xml" --flag unittests
-  fi
+  ./createcoveragereport.sh --upload --upload_reportname unittests
 else
   # We're in a pull request. Don't do any coverage; just
   # build and run tests.

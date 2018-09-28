@@ -18,6 +18,31 @@ then
   exit 0
 fi
 
+codecov_params=
+upload_report=false
+while (( "$#" )); do
+  if [[ "$1" == "--upload" ]]
+  then
+    upload_report=true
+  elif [[ "$1" == "--upload_reportname" ]]
+  then
+    shift
+    codecov_params="$codecov_params --flag $1"
+  elif [[ "$1" == "--upload_commit" ]]
+  then
+    shift
+    codecov_params="$codecov_params --c $1"
+  elif [[ "$1" == "--upload_build" ]]
+  then
+    shift
+    codecov_params="$codecov_params --b $1"
+  else
+    echo "Unexpected param: $1"
+    exit 1
+  fi
+  shift
+done
+
 rm -f coverage/all.dvcr
 
 echo "Merging reports..."
@@ -37,4 +62,11 @@ $REPORTGENERATOR \
    -targetdir:coverage/report \
    -verbosity:Error
 
-# TODO(benwu): upload coverage/report to public blob storage
+if [[ "$upload_report" = true ]]
+then
+  choco install codecov
+
+  # Assume we've created the coverage file by this point. If we haven't, there should already have been an error.
+  # Pass whatever parameters we recieved.
+  codecov -f "coverage/coverage-filtered.xml" $codecov_params
+fi
