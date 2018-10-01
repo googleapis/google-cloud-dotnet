@@ -615,7 +615,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 fake.Scheduler.Run(() =>
                 {
                     fake.Subscriber.StartAsync((msg, ct) => throw new Exception());
-                    // Only allowed to start a SimpleSubscriber once.
+                    // Only allowed to start a Subscriber once.
                     Assert.Throws<InvalidOperationException>((Action)(() => fake.Subscriber.StartAsync((msg, ct) => throw new Exception())));
                 });
             }
