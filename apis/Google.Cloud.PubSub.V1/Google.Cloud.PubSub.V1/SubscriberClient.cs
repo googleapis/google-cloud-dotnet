@@ -452,6 +452,10 @@ namespace Google.Cloud.PubSub.V1
             }
             _globalSoftStopCts.Cancel();
             var registration = hardStopToken.Register(() => _globalHardStopCts.Cancel());
+            if (hardStopToken.IsCancellationRequested)
+            {
+                _globalHardStopCts.Cancel();
+            }
             // Do not register this Task to be awaited on at shutdown.
             // It completes *after* _mainTcs, and all registered tasks must complete before _mainTcs
             _taskHelper.Run(async () =>
