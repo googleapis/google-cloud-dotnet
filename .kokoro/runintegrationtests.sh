@@ -14,7 +14,7 @@ export REQUESTER_PAYS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_gcloud-devel-servi
 
 # Non-coverage run doesn't need any extra flags
 script_flags=
-report_flags=--upload_commit $KOKORO_GITHUB_COMMIT --upload_build $KOKORO_BUILD_NUMBER
+report_flags="--upload_commit $KOKORO_GITHUB_COMMIT --upload_build $KOKORO_BUILD_NUMBER"
 
 # If we have any previous coverage runs, remove them, regardless
 # of whether we're about to create any.
