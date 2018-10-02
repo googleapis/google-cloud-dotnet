@@ -50,7 +50,6 @@ namespace Google.Cloud.Firestore
         public void OnStreamInitialization(StreamInitializationCause cause)
         {
             _current = false;
-            _hasPushed = false;
             if (cause == StreamInitializationCause.StreamCompleted || cause == StreamInitializationCause.RpcError)
             {
                 _changeMap.Clear();
