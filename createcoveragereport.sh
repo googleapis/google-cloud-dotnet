@@ -3,9 +3,6 @@
 set -e
 source toolversions.sh
 
-install_dotcover
-install_reportgenerator
-
 if [ ! -d coverage ]
 then
  mkdir coverage
@@ -17,6 +14,9 @@ then
   # This isn't an error
   exit 0
 fi
+
+install_dotcover
+install_reportgenerator
 
 codecov_params=
 upload_report=false
