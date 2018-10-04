@@ -37,18 +37,17 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private readonly ProjectName _projectName = new ProjectName(TestEnvironment.GetTestProjectId());
 
         // Give the error reporting events a little extra time to be processed.
-        internal ErrorEventEntryPolling() : base(TimeSpan.FromSeconds(120), TimeSpan.FromSeconds(30)) { }
+        internal ErrorEventEntryPolling() : base(TimeSpan.FromSeconds(180), TimeSpan.FromSeconds(30)) { }
 
         /// <summary>
         /// Gets error events that contain the passed in testId in the message.  Will poll
         /// and wait for the entries to appear.
         /// </summary>
-        /// <param name="startTime">The earliest error event time that will be looked at.</param>
         /// <param name="testId">The test id to filter error events on.</param>
         /// <param name="minEntries">The minimum number of error events that should be waited for.
         ///     If minEntries is zero this method will wait the full timeout before checking for the
         ///     entries.</param>
-        public IEnumerable<ErrorEvent> GetEvents(DateTime startTime, string testId, int minEntries)
+        public IEnumerable<ErrorEvent> GetEvents(string testId, int minEntries)
         {
             return GetEntries(minEntries, () =>
             {

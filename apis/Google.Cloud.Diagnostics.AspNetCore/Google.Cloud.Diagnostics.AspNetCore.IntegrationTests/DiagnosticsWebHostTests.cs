@@ -93,7 +93,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 await TestTrace(testId, startTime, client);
                 await TestLogging(testId, startTime, client);
-                await TestErrorReporting(testId, startTime, client);
+                await TestErrorReporting(testId, client);
             }
         }
 
@@ -131,11 +131,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-        private static async Task TestErrorReporting(string testId, DateTime startTime, HttpClient client)
+        private static async Task TestErrorReporting(string testId, HttpClient client)
         {
             var polling = new ErrorEventEntryPolling();
             await Assert.ThrowsAsync<Exception>(() => client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}"));
-            var errorEvent = polling.GetEvents(startTime, testId, 1).Single();
+            var errorEvent = polling.GetEvents(testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, testId, nameof(ErrorReportingController.ThrowsException));
         }
     }
