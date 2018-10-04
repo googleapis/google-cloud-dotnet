@@ -364,9 +364,9 @@ namespace Google.Cloud.Asset.V1Beta1
         }
 
         /// <summary>
-        /// Exports assets with time and resource types to a given Google Cloud Storage
+        /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
+        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
         /// to keep track of the export.
         /// </summary>
         /// <param name="request">
@@ -399,9 +399,9 @@ namespace Google.Cloud.Asset.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Exports assets with time and resource types to a given Google Cloud Storage
+        /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
+        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
         /// to keep track of the export.
         /// </summary>
         /// <param name="request">
@@ -442,11 +442,11 @@ namespace Google.Cloud.Asset.V1Beta1
                 callSettings);
 
         /// <summary>
-        /// Batch gets assets update history that overlaps a time window.
+        /// Batch gets the update history of assets that overlap a time window.
         /// For RESOURCE content, this API outputs history with asset in both
         /// non-delete or deleted status.
-        /// For IAM_POLICY content, this API only outputs history when asset and its
-        /// attached IAM POLICY both exist. So there may be gaps in the output history.
+        /// For IAM_POLICY content, this API outputs history when the asset and its
+        /// attached IAM POLICY both exist. This can create gaps in the output history.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -465,11 +465,11 @@ namespace Google.Cloud.Asset.V1Beta1
         }
 
         /// <summary>
-        /// Batch gets assets update history that overlaps a time window.
+        /// Batch gets the update history of assets that overlap a time window.
         /// For RESOURCE content, this API outputs history with asset in both
         /// non-delete or deleted status.
-        /// For IAM_POLICY content, this API only outputs history when asset and its
-        /// attached IAM POLICY both exist. So there may be gaps in the output history.
+        /// For IAM_POLICY content, this API outputs history when the asset and its
+        /// attached IAM POLICY both exist. This can create gaps in the output history.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -487,11 +487,11 @@ namespace Google.Cloud.Asset.V1Beta1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Batch gets assets update history that overlaps a time window.
+        /// Batch gets the update history of assets that overlap a time window.
         /// For RESOURCE content, this API outputs history with asset in both
         /// non-delete or deleted status.
-        /// For IAM_POLICY content, this API only outputs history when asset and its
-        /// attached IAM POLICY both exist. So there may be gaps in the output history.
+        /// For IAM_POLICY content, this API outputs history when the asset and its
+        /// attached IAM POLICY both exist. This can create gaps in the output history.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -568,9 +568,9 @@ namespace Google.Cloud.Asset.V1Beta1
         partial void Modify_BatchGetAssetsHistoryRequest(ref BatchGetAssetsHistoryRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Exports assets with time and resource types to a given Google Cloud Storage
+        /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
+        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
         /// to keep track of the export.
         /// </summary>
         /// <param name="request">
@@ -592,9 +592,9 @@ namespace Google.Cloud.Asset.V1Beta1
         }
 
         /// <summary>
-        /// Exports assets with time and resource types to a given Google Cloud Storage
+        /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing users
+        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
         /// to keep track of the export.
         /// </summary>
         /// <param name="request">
@@ -621,11 +621,11 @@ namespace Google.Cloud.Asset.V1Beta1
         public override lro::OperationsClient ExportAssetsOperationsClient { get; }
 
         /// <summary>
-        /// Batch gets assets update history that overlaps a time window.
+        /// Batch gets the update history of assets that overlap a time window.
         /// For RESOURCE content, this API outputs history with asset in both
         /// non-delete or deleted status.
-        /// For IAM_POLICY content, this API only outputs history when asset and its
-        /// attached IAM POLICY both exist. So there may be gaps in the output history.
+        /// For IAM_POLICY content, this API outputs history when the asset and its
+        /// attached IAM POLICY both exist. This can create gaps in the output history.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -645,11 +645,11 @@ namespace Google.Cloud.Asset.V1Beta1
         }
 
         /// <summary>
-        /// Batch gets assets update history that overlaps a time window.
+        /// Batch gets the update history of assets that overlap a time window.
         /// For RESOURCE content, this API outputs history with asset in both
         /// non-delete or deleted status.
-        /// For IAM_POLICY content, this API only outputs history when asset and its
-        /// attached IAM POLICY both exist. So there may be gaps in the output history.
+        /// For IAM_POLICY content, this API outputs history when the asset and its
+        /// attached IAM POLICY both exist. This can create gaps in the output history.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

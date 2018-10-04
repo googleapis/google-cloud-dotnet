@@ -48,22 +48,22 @@ namespace Google.Cloud.Asset.V1Beta1 {
             "MWJldGExLkdjc0Rlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24iHQoOR2Nz",
             "RGVzdGluYXRpb24SCwoDdXJpGAEgASgJKkkKC0NvbnRlbnRUeXBlEhwKGENP",
             "TlRFTlRfVFlQRV9VTlNQRUNJRklFRBAAEgwKCFJFU09VUkNFEAESDgoKSUFN",
-            "X1BPTElDWRACMt8DCgxBc3NldFNlcnZpY2USyQEKDEV4cG9ydEFzc2V0cxIv",
+            "X1BPTElDWRACMuADCgxBc3NldFNlcnZpY2USyQEKDEV4cG9ydEFzc2V0cxIv",
             "Lmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLkV4cG9ydEFzc2V0c1JlcXVl",
             "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAmMiKS92",
             "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn06ZXhwb3J0QXNzZXRzOgEqWjMi",
             "Li92MWJldGExL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfTpleHBvcnRBc3Nl",
-            "dHM6ASoSggIKFUJhdGNoR2V0QXNzZXRzSGlzdG9yeRI4Lmdvb2dsZS5jbG91",
+            "dHM6ASoSgwIKFUJhdGNoR2V0QXNzZXRzSGlzdG9yeRI4Lmdvb2dsZS5jbG91",
             "ZC5hc3NldC52MWJldGExLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3Qa",
             "OS5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5CYXRjaEdldEFzc2V0c0hp",
-            "c3RvcnlSZXNwb25zZSJ0gtPkkwJuEjIvdjFiZXRhMS97cGFyZW50PXByb2pl",
-            "Y3RzLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeVo4EjYvdjFiZXRhMS97cGFy",
-            "ZW50PW9yZ2FuaXphdGlvbnMvKn06YmF0Y2hHZXRBc3NldEhpc3RvcnlCsAEK",
-            "HmNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMUIRQXNzZXRTZXJ2aWNl",
-            "UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9hc3NldC92MWJldGExO2Fzc2V0qgIaR29vZ2xlLkNsb3VkLkFz",
-            "c2V0LlYxQmV0YTHKAhpHb29nbGVcQ2xvdWRcQXNzZXRcVjFiZXRhMWIGcHJv",
-            "dG8z"));
+            "c3RvcnlSZXNwb25zZSJ1gtPkkwJvEjIvdjFiZXRhMS97cGFyZW50PXByb2pl",
+            "Y3RzLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeVo5EjcvdjFiZXRhMS97cGFy",
+            "ZW50PW9yZ2FuaXphdGlvbnMvKn06YmF0Y2hHZXRBc3NldHNIaXN0b3J5QrAB",
+            "Ch5jb20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTFCEUFzc2V0U2Vydmlj",
+            "ZVByb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvYXNzZXQvdjFiZXRhMTthc3NldKoCGkdvb2dsZS5DbG91ZC5B",
+            "c3NldC5WMUJldGExygIaR29vZ2xlXENsb3VkXEFzc2V0XFYxYmV0YTFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Asset.V1Beta1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1Beta1.ContentType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -145,9 +145,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative name of the root asset. Can only be an organization
-    /// number (such as "organizations/123"), or a project id (such as
-    /// "projects/my-project-id") or a project number (such as "projects/12345").
+    /// Required. The relative name of the root asset. This can only be an organization
+    /// number (such as "organizations/123"), a project ID (such as
+    /// "projects/my-project-id"), or a project number (such as "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -181,7 +181,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of asset types of which to take a snapshot for. Example:
+    /// A list of asset types of which to take a snapshot for. For example:
     /// "google.compute.disk". If specified, only matching assets will be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -598,8 +598,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The relative name of the root asset. It can only be an
-    /// organization number (such as "organizations/123"), or a project id (such as
-    /// "projects/my-project-id")"or a project number (such as "projects/12345").
+    /// organization number (such as "organizations/123"), a project ID (such as
+    /// "projects/my-project-id")", or a project number (such as "projects/12345").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -615,10 +615,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> assetNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of the full names of the assets. See:
-    /// https://cloud.google.com/apis/design/resource_names#full_resource_name
-    /// Example:
-    /// "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1".
+    /// A list of the full names of the assets. For example:
+    /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
+    /// See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+    /// for more info.
     ///
     /// The request becomes a no-op if the asset name list is empty, and the max
     /// size of the asset name list is 100 in one request.
@@ -961,7 +961,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     /// <summary>Field number for the "gcs_destination" field.</summary>
     public const int GcsDestinationFieldNumber = 1;
     /// <summary>
-    /// Destination on Google Cloud Storage (GCS).
+    /// Destination on Cloud Storage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1Beta1.GcsDestination GcsDestination {
@@ -1088,7 +1088,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
   }
 
   /// <summary>
-  /// A Google Cloud Storage (GCS) location.
+  /// A Cloud Storage location.
   /// </summary>
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination> {
     private static readonly pb::MessageParser<GcsDestination> _parser = new pb::MessageParser<GcsDestination>(() => new GcsDestination());
@@ -1128,10 +1128,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// The path of the GCS objects. It's the same path that is used by gsutil, for
-    /// example: "gs://bucket_name/object_path". See:
-    /// https://cloud.google.com/storage/docs/viewing-editing-metadata for more
-    /// information.
+    /// The path of the Cloud Storage objects. It's the same path that is used by
+    ///  gsutil. For example: "gs://bucket_name/object_path". See [Viewing and Editing Object Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
+    /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
