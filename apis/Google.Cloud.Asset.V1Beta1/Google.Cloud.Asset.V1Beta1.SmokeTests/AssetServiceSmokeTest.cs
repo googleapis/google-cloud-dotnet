@@ -50,7 +50,7 @@ namespace Google.Cloud.Asset.V1Beta1.SmokeTests
             {
                 ParentAsProjectName = new ProjectName(projectId),
                 ContentType = ContentType.Resource,
-                ReadTimeWindow = new TimeWindow { StartTime = DateTime.UtcNow.AddDays(-30).ToTimestamp() },
+                ReadTimeWindow = new TimeWindow { StartTime = DateTime.UtcNow.AddDays(-1).ToTimestamp() },
             };
 
             // Call API method
