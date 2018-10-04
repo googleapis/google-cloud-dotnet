@@ -145,7 +145,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// App Engine HTTP queue.
     ///
-    /// An App Engine queue is a queue that has an [AppEngineHttpQeueue][] type.
+    /// An App Engine queue is a queue that has an [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpQueue AppEngineHttpQueue {
