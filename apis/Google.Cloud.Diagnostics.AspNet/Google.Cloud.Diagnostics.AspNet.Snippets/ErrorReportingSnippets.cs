@@ -42,16 +42,12 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         private readonly TestServer _server;
         private readonly HttpClient _client;
 
-        private readonly DateTime _startTime;
-
         public ErrorReportingSnippetsTests()
         {
             _testId = IdGenerator.FromDateTime();
 
             _server = TestServer.Create<ErrorReportingTestApplication>();
             _client = _server.HttpClient;
-
-            _startTime = DateTime.UtcNow;
         }
 
         /// <summary>
@@ -66,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 
             Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
 
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
                 errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
@@ -80,7 +76,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
                 errorEvent, _testId, "DoSomething");
         }

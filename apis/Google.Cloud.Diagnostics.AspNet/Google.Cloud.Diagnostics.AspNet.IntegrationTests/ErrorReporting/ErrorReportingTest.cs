@@ -37,16 +37,12 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         private readonly TestServer _server;
         private readonly HttpClient _client;
 
-        private readonly DateTime _startTime;
-
         public ErrorReportingTest()
         {
             _testId = IdGenerator.FromDateTime();
 
             _server = TestServer.Create<ErrorReportingTestApplication>();
             _client = _server.HttpClient;
-
-            _startTime = DateTime.UtcNow;
         }
 
         [Fact]
@@ -56,7 +52,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvents = s_polling.GetEvents(_startTime, _testId, 0);
+            var errorEvents = s_polling.GetEvents(_testId, 0);
             Assert.Empty(errorEvents);
         }
 
@@ -68,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
 
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
 
@@ -94,7 +90,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             response = await requestTask4;
             Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
-            var errorEvents = s_polling.GetEvents(_startTime, _testId, 4);
+            var errorEvents = s_polling.GetEvents(_testId, 4);
             Assert.Equal(4, errorEvents.Count());
 
             var exceptionEvents = errorEvents
@@ -118,7 +114,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
 
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, "SendAsync");
         }
@@ -130,7 +126,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchWithGoogleLogger));
         }
 
@@ -141,7 +137,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger));
         }
 

@@ -38,8 +38,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         private readonly TestServer _server;
         private readonly HttpClient _client;
 
-        private readonly DateTime _startTime;
-
         public ErrorReportingSnippetsTests()
         {
             _testId = IdGenerator.FromDateTime();
@@ -47,8 +45,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
             _server = new TestServer(builder);
             _client = _server.CreateClient();
-
-            _startTime = DateTime.UtcNow;
         }
 
         /// <summary>
@@ -62,7 +58,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             await Assert.ThrowsAsync<Exception>(()
                 => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
 
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
@@ -80,7 +76,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
 
             // Verifying with function name ThrowsExceptions because that is the function
             // that actually throws the Exception so will be the one included as

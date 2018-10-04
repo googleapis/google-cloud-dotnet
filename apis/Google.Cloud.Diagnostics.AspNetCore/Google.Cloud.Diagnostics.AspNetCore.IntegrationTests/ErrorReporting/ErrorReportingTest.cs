@@ -37,8 +37,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private readonly TestServer _server;
         private readonly HttpClient _client;
 
-        private readonly DateTime _startTime;
-
         public ErrorReportingTest()
         {
             _testId = IdGenerator.FromDateTime();
@@ -46,8 +44,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
             _server = new TestServer(builder);
             _client = _server.CreateClient();
-
-            _startTime = DateTime.UtcNow;
         }
 
         [Fact]
@@ -57,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvents = s_polling.GetEvents(_startTime, _testId, 0);
+            var errorEvents = s_polling.GetEvents(_testId, 0);
             Assert.Empty(errorEvents);
         }
 
@@ -68,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog));
         }
 
@@ -78,7 +74,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             await Assert.ThrowsAsync<Exception>(() =>
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = s_polling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
         }
 
@@ -94,7 +90,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             await Assert.ThrowsAsync<Exception>(() =>
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
-            var errorEvents = s_polling.GetEvents(_startTime, _testId, 4);
+            var errorEvents = s_polling.GetEvents(_testId, 4);
             Assert.Equal(4, errorEvents.Count());
 
             var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException)));

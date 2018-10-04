@@ -71,7 +71,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             await Assert.ThrowsAsync<Exception>(() => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = s_errorPolling.GetEvents(_startTime, _testId, 1).Single();
+            var errorEvent = s_errorPolling.GetEvents(_testId, 1).Single();
 
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
