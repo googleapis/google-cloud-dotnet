@@ -290,6 +290,32 @@
   },
 
   {
+    "id": "Google.Cloud.EntityFrameworkCore.Spanner",
+    "version": "1.0.0-alpha05",
+    "type": "other",
+    "targetFrameworks": "netstandard2.0",
+    "testTargetFrameworks": "netcoreapp2.0;net461",
+    "description": "Google EntityFrameworkCore Provider for Google Cloud Spanner.",
+    "tags": [ "Spanner", "ADO", "EntityFramework" ],
+    "dependencies": {
+      "Google.Cloud.Spanner.Data": "project",
+      "Google.Cloud.Spanner.V1": "project",
+      "Google.Cloud.Spanner.Admin.Database.V1": "project",
+      "Google.Cloud.Spanner.Admin.Instance.V1": "project",
+      "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
+      "Grpc.Core": "1.13.1"
+    },
+    "testDependencies": {
+      "Microsoft.EntityFrameworkCore.Relational.Specification.Tests": "2.0.1",
+      "Microsoft.EntityFrameworkCore.Specification.Tests": "2.0.1",
+      "Microsoft.Extensions.Configuration": "2.0.0",
+      "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
+      "Microsoft.Extensions.Configuration.Json": "2.0.0",
+      "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.0"
+    }
+  },
+  
+  {
     "id": "Google.Cloud.ErrorReporting.V1Beta1",
     "productName": "Stackdriver Error Reporting",
     "productUrl": "https://cloud.google.com/error-reporting/",
@@ -602,32 +628,6 @@
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3"
-    }
-  },
-
-  {
-    "id": "Google.Cloud.EntityFrameworkCore.Spanner",
-    "version": "1.0.0-alpha05",
-    "type": "other",
-    "targetFrameworks": "netstandard2.0",
-    "testTargetFrameworks": "netcoreapp2.0;net461",
-    "description": "Google EntityFrameworkCore Provider for Google Cloud Spanner.",
-    "tags": [ "Spanner", "ADO", "EntityFramework" ],
-    "dependencies": {
-      "Google.Cloud.Spanner.Data": "project",
-      "Google.Cloud.Spanner.V1": "project",
-      "Google.Cloud.Spanner.Admin.Database.V1": "project",
-      "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
-      "Grpc.Core": "1.13.1"
-    },
-    "testDependencies": {
-      "Microsoft.EntityFrameworkCore.Relational.Specification.Tests": "2.0.1",
-      "Microsoft.EntityFrameworkCore.Specification.Tests": "2.0.1",
-      "Microsoft.Extensions.Configuration": "2.0.0",
-      "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
-      "Microsoft.Extensions.Configuration.Json": "2.0.0",
-      "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.0"
     }
   },
 
