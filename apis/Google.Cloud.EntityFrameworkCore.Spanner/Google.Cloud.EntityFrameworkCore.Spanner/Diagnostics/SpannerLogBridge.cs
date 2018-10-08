@@ -20,7 +20,7 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
     /// <summary>
     /// This is internal functionality and not intended for public use.
     /// </summary>
-    public class SpannerLogBridge<TLoggerCategory> : DefaultLogger
+    public class SpannerLogBridge<TLoggerCategory> : Logger
         where TLoggerCategory : LoggerCategory<TLoggerCategory>, new()
     {
         //Note: This class is used to forward logging messages from within the ADO.NET layer
@@ -76,7 +76,7 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         /// <summary>
         /// This is internal functionality and not intended for public use.
         /// </summary>
-        public override void Warn(Func<string> messageFunc)
+        public override void Warn(Func<string> messageFunc, Exception exception = null)
         {
             _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Warning,
                 SpannerEventId.SpannerDiagnosticLog, messageFunc, null, (x, e) => x());
@@ -89,6 +89,24 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         {
             _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Information,
                 SpannerEventId.SpannerDiagnosticLog, message, null, (x, e) => x);
+        }
+
+        /// <inheritdoc />
+        public override void Debug(string message) => Debug(() => message);
+
+        /// <inheritdoc />
+        public override void Info(string message) => Info(() => message);
+
+        /// <inheritdoc />
+        public override void Warn(string message, Exception exception = null) => Warn(() => message, exception);
+
+        /// <inheritdoc />
+        public override void Error(string message, Exception exception = null) => Error(() => message, exception);
+
+        /// <inheritdoc />
+        protected override void WriteLine(LogLevel level, string message)
+        {
+            throw new NotImplementedException();
         }
     }
 }
