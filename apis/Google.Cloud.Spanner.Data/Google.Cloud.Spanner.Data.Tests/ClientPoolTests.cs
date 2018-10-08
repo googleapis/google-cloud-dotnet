@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
@@ -30,11 +31,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         private static readonly SpannerConnectionStringBuilder s_defaultConnectionStringBuilder =
             new SpannerConnectionStringBuilder("Host=test; Data Source=projects/foo/instances/bar/databases/baz", ChannelCredentials.Insecure);
 
-        public ClientPoolTests(ITestOutputHelper outputHelper)
+        public ClientPoolTests()
         {
-            TestLogger.TestOutputHelper = outputHelper;
             TestLogger.Install();
-            Logger.DefaultLogger.LogLevel = V1.Internal.Logging.LogLevel.Debug;
         }
 
         private static MockClientFactory SetupMockClientFactory(Mock<SpannerClient> firstClient = null)

@@ -120,7 +120,7 @@ namespace Google.Cloud.Spanner.Data
                 }
 
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
-                Logger?.Sensitive_Info(() => $"SpannerCommand.ExecuteReader.Query={request.Sql}");
+                Logger?.SensitiveInfo(() => $"SpannerCommand.ExecuteReader.Query={request.Sql}");
 
                 // Execute the command.
                 var resultSet = await effectiveTransaction.ExecuteQueryAsync(request, cancellationToken, CommandTimeout)
