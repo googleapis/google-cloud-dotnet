@@ -37,12 +37,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private static ThreadLocal<Random> s_rnd = new ThreadLocal<Random>(() => new Random(Environment.TickCount));
         private SpannerStressTestTableFixture _fixture;
 
-        public SpannerStressTests(SpannerStressTestTableFixture fixture, ITestOutputHelper outputHelper)
-        {
+        public SpannerStressTests(SpannerStressTestTableFixture fixture) =>
             _fixture = fixture;
-            SpannerOptions.Instance.LogPerformanceTraces = true;
-            TestLogger.TestOutputHelper = outputHelper;
-        }
 
         private async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)
         {

@@ -27,11 +27,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private readonly SpannerDatabaseFixture _fixture;
 
-        public BindingTests(SpannerDatabaseFixture fixture, ITestOutputHelper outputHelper)
-        {
+        public BindingTests(SpannerDatabaseFixture fixture) =>
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
-        }
 
         public static TheoryData<SpannerDbType> BindNullData { get; } = new TheoryData<SpannerDbType>
         {

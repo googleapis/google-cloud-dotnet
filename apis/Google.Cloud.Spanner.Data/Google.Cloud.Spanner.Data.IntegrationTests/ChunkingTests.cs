@@ -21,7 +21,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -41,10 +40,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private readonly Random _random;
         private readonly int _seed;
 
-        public ChunkingTests(ChunkingTableFixture fixture, ITestOutputHelper outputHelper)
+        public ChunkingTests(ChunkingTableFixture fixture)
         {
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
             _seed = Environment.TickCount;
             _random = new Random(_seed);
         }
@@ -93,7 +91,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task TestChunking()
         {
-            Logger.DefaultLogger.Info(() => $"Seed={_seed}");
+            Logger.DefaultLogger.Info($"Seed={_seed}");
             var rowsRead = 0;
             int rowsToWrite = _random.Next(1, 6);
 

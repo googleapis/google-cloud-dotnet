@@ -17,7 +17,6 @@ using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -26,8 +25,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CommonTestDiagnostics]
     public class TransactionTests : TransactionTestBase
     {
-        public TransactionTests(TransactionTableFixture fixture, ITestOutputHelper outputHelper)
-            : base(fixture, outputHelper)
+        public TransactionTests(TransactionTableFixture fixture)
+            : base(fixture)
         {
         }
 

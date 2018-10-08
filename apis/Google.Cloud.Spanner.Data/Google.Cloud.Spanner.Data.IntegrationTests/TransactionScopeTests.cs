@@ -28,8 +28,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CommonTestDiagnostics]
     public class TransactionScopeTests : TransactionTestBase
     {
-        public TransactionScopeTests(TransactionTableFixture fixture, ITestOutputHelper outputHelper)
-            : base(fixture, outputHelper)
+        public TransactionScopeTests(TransactionTableFixture fixture) : base(fixture)
         {
         }
 

@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
-using Xunit.Abstractions;
+using System;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
@@ -24,14 +24,11 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         private TestLogger()
         {
+            LogLevel = V1.Internal.Logging.LogLevel.Debug;
         }
 
         public static void Install() => SetDefaultLogger(s_instance);
 
-        /// <summary>
-        /// The current xUnit output helper, used to write logs from Spanner.
-        /// </summary>
-        public static ITestOutputHelper TestOutputHelper { get; set; }
         protected override void WriteLine(V1.Internal.Logging.LogLevel level, string message) => WriteLine($"{level}: {message}");
 
         public override void LogPerformanceMessage(string message) => WriteLine($"PERF: {message}");
@@ -40,12 +37,12 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         {
             try
             {
-                TestOutputHelper?.WriteLine(message);
+                FileLogger.Log(line);
             }
             catch (Exception)
             {
                 // Eat the exception.  This can happen if we try to output a log
-                // after a test has completed (some action ocurred asynchronously).
+                // after a test has completed (some action occurred asynchronously).
             }
         }
     }
