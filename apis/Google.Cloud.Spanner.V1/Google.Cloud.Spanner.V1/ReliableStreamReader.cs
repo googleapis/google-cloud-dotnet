@@ -201,9 +201,7 @@ namespace Google.Cloud.Spanner.V1
             //reconnect on failure which will call reliableconnect and respect resumetoken and resumeskip
             cancellationToken.ThrowIfCancellationRequested();
 
-            Logger.Warn(
-                () =>
-                    $"An error occurred attemping to iterate through the sql query.  Attempting to recover. Exception:{exception}");
+            Logger.Warn("An error occurred attemping to iterate through the sql query. Attempting to recover.", exception);
 
             //when we reconnect, we purposely do not do a *reliable*movenext.  If we fail to fast forward on the reconnect
             //we bail out completely and surface the error.
@@ -222,7 +220,7 @@ namespace Google.Cloud.Spanner.V1
                 }
                 catch (Exception e)
                 {
-                    Logger.Warn(() => $"An error occurred attemping to recover. Exception:{e}");
+                    Logger.Warn("An error occurred while attemping to recover.", e);
                     //At this point, we give up, rethrowing and setting state such that it will
                     //need to reconnect if the user calls MoveNext again.
                     _currentCall?.Dispose();
