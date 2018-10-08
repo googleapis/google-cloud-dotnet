@@ -186,7 +186,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Begins a readonly transaction using the optionally provided <see cref="CancellationToken" />.
+        /// Begins a read-only transaction using the optionally provided <see cref="CancellationToken" />.
         /// Read transactions are preferred if possible because they do not impose locks internally.
         /// ReadOnly transactions run with strong consistency and return the latest copy of data.
         /// This method is thread safe.
@@ -198,7 +198,7 @@ namespace Google.Cloud.Spanner.Data
             TimestampBound.Strong, cancellationToken);
 
         /// <summary>
-        /// Begins a readonly transaction using the optionally provided <see cref="CancellationToken" />
+        /// Begins a read-only transaction using the optionally provided <see cref="CancellationToken" />
         /// and provided <see cref="TimestampBound" /> to control the read timestamp and/or staleness
         /// of data.
         /// Read transactions are preferred if possible because they do not impose locks internally.
@@ -230,35 +230,45 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Begins a readonly transaction.
-        /// Read transactions are preferred if possible because they do not impose locks internally.
-        /// ReadOnly transactions run with strong consistency and return the latest copy of data.
-        /// This method is thread safe.
+        /// Begins a read-only transaction.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Read-only transactions are preferred if possible because they do not impose locks internally.
+        /// Read-only transactions run with strong consistency and return the latest copy of data.
+        /// </para>
+        /// <para>This method is thread safe.</para>
+        /// </remarks>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
         public SpannerTransaction BeginReadOnlyTransaction() => BeginReadOnlyTransaction(TimestampBound.Strong);
 
         /// <summary>
-        /// Begins a readonly transaction using the provided <see cref="TimestampBound"/> to control the read timestamp
+        /// Begins a read-only transaction using the provided <see cref="TimestampBound"/> to control the read timestamp
         /// and/or staleness of data.
-        /// Read transactions are preferred if possible because they do not impose locks internally.
-        /// ReadOnly transactions run with strong consistency and return the latest copy of data.
-        /// This method is thread safe.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Read-only transactions are preferred if possible because they do not impose locks internally.
+        /// Read-only transactions run with strong consistency and return the latest copy of data.
+        /// </para>
+        /// <para>This method is thread safe.</para>
+        /// </remarks>
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
         public SpannerTransaction BeginReadOnlyTransaction(TimestampBound targetReadTimestamp) =>
             BeginReadOnlyTransactionAsync(targetReadTimestamp).ResultWithUnwrappedExceptions();
 
         /// <summary>
-        /// Begins a readonly transaction using the provided <see cref="TransactionId" /> to refer to an existing server-side transaction.
-        /// Read transactions are preferred if possible because they do not impose locks internally.
-        /// Providing a transaction id will connect to an already created transaction which is useful
+        /// Begins a read-only transaction using the provided <see cref="TransactionId" /> to refer to an existing server-side transaction.
+        /// </summary>
+        /// <remarks>
+        /// Read-only transactions are preferred if possible because they do not impose locks internally.
+        /// Providing a transaction ID will connect to an already created transaction which is useful
         /// for batch reads. This method differs from <see cref="BeginReadOnlyTransaction()">the parameterless overload</see>
         /// and <see cref="BeginReadOnlyTransaction(TimestampBound)">the overload accepting a TimestampBound</see> as it
         /// uses an existing transaction rather than creating a new server-side transaction.
-        /// </summary>
-        /// <param name="transactionId">Specifies the transactionId of an existing readonly transaction.</param>
+        /// </remarks>
+        /// <param name="transactionId">Specifies the transaction ID of an existing read-only transaction.</param>
         /// <returns>A <see cref="SpannerTransaction"/> attached to the existing transaction represented by
         /// <paramref name="transactionId"/>.</returns>
         public SpannerTransaction BeginReadOnlyTransaction(TransactionId transactionId)

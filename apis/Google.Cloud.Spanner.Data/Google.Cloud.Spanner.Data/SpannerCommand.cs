@@ -159,10 +159,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
         /// Defaults to <see cref="SpannerOptions.Timeout"/> which is 60 seconds.
+        /// </summary>
+        /// <remarks>
         /// A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
         /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
         /// that expires immediately. This is normally used only for testing purposes.
-        /// </summary>
+        /// </remarks>
         public override int CommandTimeout
         {
             get => _commandTimeout;
@@ -259,8 +261,12 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Executes the command against the <see cref="SpannerConnection"/>.
-        /// This method is thread safe.
         /// </summary>
+        /// <remarks>
+        /// <para>This method is thread safe.</para>
+        /// </remarks>
+        /// <param name="singleUseReadSettings">The settings to use for the implicit single-use read-only transaction.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>A <see cref="SpannerDataReader"/>.</returns>
         public Task<DbDataReader> ExecuteReaderAsync(TimestampBound singleUseReadSettings, CancellationToken cancellationToken = default) =>
             CreateExecutableCommand().ExecuteDbDataReaderAsync(

@@ -20,23 +20,24 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
     public enum LogLevel
     {
         /// <summary>
-        /// 
+        /// Never used for an actual log entry, a logger with this level will never log.
         /// </summary>
         None = 0,
         /// <summary>
-        /// 
+        /// Used for logging errors, usually indicating a problem with the Spanner libraries.
         /// </summary>
         Error = 1,
         /// <summary>
-        /// 
+        /// Used for logging warnings, for example to indicate a non-critical error such as a failure
+        /// to refresh a session.
         /// </summary>
         Warn = 2,
         /// <summary>
-        /// 
+        /// Used for logging general-purpose information.
         /// </summary>
         Info = 3,
         /// <summary>
-        /// 
+        /// Used for logging debug (diagnostic) information, primarily for debugging library issues.
         /// </summary>
         Debug = 4
     }

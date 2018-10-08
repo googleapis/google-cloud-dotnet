@@ -68,8 +68,8 @@ namespace Google.Cloud.Spanner.Data
         Unauthenticated = StatusCode.Unauthenticated,
 
         /// <summary>
-        /// <see cref="SpannerOptions.MaximumActiveSessions"/> has been reached.
-        /// Therefore a new session with Spanner could not be created.
+        /// A resource associated with Spanner has been exhausted. This may occur due to a server-side
+        /// failure, or due to the local maximum number of sessions being reached.
         /// </summary>
         ResourceExhausted = StatusCode.ResourceExhausted,
 
