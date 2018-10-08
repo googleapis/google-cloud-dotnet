@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.EntityFrameworkCore.Spanner.Snippets", "Google.Cloud.EntityFrameworkCore.Spanner.Snippets\Google.Cloud.EntityFrameworkCore.Spanner.Snippets.csproj", "{4C32D6C2-A08C-492D-A3D3-5FC01AF5EAFD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Spanner.Common.V1", "..\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1\Google.Cloud.Spanner.Common.V1.csproj", "{2C711C88-C6B7-4468-A47E-1F6C90888085}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,6 +126,18 @@ Global
 		{4C32D6C2-A08C-492D-A3D3-5FC01AF5EAFD}.Release|x64.Build.0 = Release|Any CPU
 		{4C32D6C2-A08C-492D-A3D3-5FC01AF5EAFD}.Release|x86.ActiveCfg = Release|Any CPU
 		{4C32D6C2-A08C-492D-A3D3-5FC01AF5EAFD}.Release|x86.Build.0 = Release|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Debug|x64.Build.0 = Debug|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Debug|x86.Build.0 = Debug|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Release|x64.ActiveCfg = Release|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Release|x64.Build.0 = Release|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C711C88-C6B7-4468-A47E-1F6C90888085}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
