@@ -19,11 +19,9 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
     /// <summary>
     /// This class is for internal use and not meant to be consumed directly.
     /// </summary>
-    public class DefaultLogger : Logger
+    internal class DefaultLogger : Logger
     {
-        /// <summary>
-        /// This class is for internal use and not meant to be consumed directly.
-        /// </summary>
+        /// <inheritdoc />
         protected override void WriteLine(LogLevel level, string message) => WriteLine($"{level}: {message}");
 
         /// <inheritdoc />
