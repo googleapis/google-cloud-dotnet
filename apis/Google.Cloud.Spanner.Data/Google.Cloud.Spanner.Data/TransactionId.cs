@@ -32,6 +32,7 @@ namespace Google.Cloud.Spanner.Data
             TimestampBound = timestampBound;
             Id = id;
         }
+
         /// <summary>
         /// The connection string this transaction was created in.
         /// </summary>

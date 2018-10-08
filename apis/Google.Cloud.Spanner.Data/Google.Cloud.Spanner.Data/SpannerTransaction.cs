@@ -53,16 +53,26 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Indicates the <see cref="TransactionMode"/> for the transaction.
+        /// </summary>
+        /// <remarks>
+        /// <para>
         /// Cloud Spanner supports two transaction modes:
+        /// <list type="bullet">
+        /// <item><description>
         /// Locking read-write transactions are the only transaction type that support writing
         /// data into Cloud Spanner. These transactions rely on pessimistic locking and, if
         /// necessary, two-phase commit. Locking read-write transactions may abort, requiring
         /// the application to retry.
+        /// </description></item>
+        /// <item><description>
         /// Read-only transactions provide guaranteed consistency across several reads,
         /// but do not allow writes. Read-only transactions can be configured to read at
         /// timestamps in the past. Read-only transactions do not need to be committed and
         /// do not take locks.
-        /// </summary>
+        /// </description></item>
+        /// </list>
+        /// </para>
+        /// </remarks>
         public TransactionMode Mode { get; }
 
         private Session Session { get; }
@@ -81,11 +91,17 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Tells Cloud Spanner how to choose a timestamp at which to read the data for read-only
         /// transactions.
-        /// The types of timestamp bounds are:
-        ///  Strong (the default): read the latest data.
-        ///  Bounded staleness: read a version of the data that's no staler than a bound.
-        ///  Exact staleness: read the version of the data at an exact timestamp.
         /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The types of timestamp bounds are:
+        /// <list type="bullet">
+        ///   <item><description>Strong (the default): read the latest data.</description></item>
+        ///   <item><description>Bounded staleness: read a version of the data that's no staler than a bound.</description></item>
+        ///   <item><description>Exact staleness: read the version of the data at an exact timestamp.</description></item>
+        /// </list>
+        /// </para>
+        /// </remarks>
         public TimestampBound TimestampBound { get; }
 
         /// <inheritdoc />
