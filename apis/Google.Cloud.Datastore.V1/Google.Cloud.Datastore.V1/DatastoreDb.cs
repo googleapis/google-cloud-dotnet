@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,6 +83,61 @@ namespace Google.Cloud.Datastore.V1
         /// <returns>A <see cref="DatastoreDb"/> operating on the specified partition.</returns>
         public static DatastoreDb Create(string projectId, string namespaceId = "", DatastoreClient client = null) =>
             new DatastoreDbImpl(projectId, namespaceId, client ?? DatastoreClient.Create());
+
+        /// <summary>
+        /// Creates a <see cref="DatastoreDb"/> by either connecting to the production servers using the
+        /// default application credentials, or by connecting to a local emulator. The behavior depends on
+        /// the DATASTORE_EMULATOR_HOST and DATASTORE_PROJECT_ID environment variables, with further control
+        /// provided by the <paramref name="environmentBehavior"/> parameter.
+        /// </summary>
+        /// <param name="environmentBehavior">The way to behave in different environments. See the enum
+        /// definition for more details.</param>
+        /// <param name="projectId">The project ID to use when connecting to production servers. Ignored
+        /// when connecting to the emulator. Must not be null for production scenarios.</param>
+        /// <param name="namespaceId">The namespace ID to use in operations requiring a partition. Must not be null.</param>
+        /// <exception cref="InvalidOperationException">The environment was not configured appropriately
+        /// for the requested behavior.</exception>
+        /// <returns>A <see cref="DatastoreDb"/> operating on the specified partition, either connected
+        /// to production servers or the Datastore emulator.</returns>
+        public static DatastoreDb CreateWithEnvironment(EnvironmentBehavior environmentBehavior, string projectId, string namespaceId = "")
+        {
+            GaxPreconditions.CheckEnumValue(environmentBehavior, nameof(environmentBehavior));
+            string emulatorHost = Environment.GetEnvironmentVariable("DATASTORE_EMULATOR_HOST");
+            string emulatorProjectId = Environment.GetEnvironmentVariable("DATASTORE_PROJECT_ID");
+            bool hasEmulatorHost = !string.IsNullOrEmpty(emulatorHost);
+            bool hasEmulatorProjectId = !string.IsNullOrEmpty(emulatorProjectId);
+
+            bool useEmulator;
+            switch (environmentBehavior)
+            {
+                case EnvironmentBehavior.ProductionOnlyThrowOnEmulatorEnvironment:
+                    GaxPreconditions.CheckState(!hasEmulatorHost && !hasEmulatorProjectId,
+                        "DATASTORE_EMULATOR_HOST and/or DATASTORE_PROJECT_ID environment configured unexpectedly.");
+                    useEmulator = false;
+                    break;
+                case EnvironmentBehavior.ProductionOnlyIgnoreEnvironment:
+                    useEmulator = false;
+                    break;
+                case EnvironmentBehavior.EmulatorOnly:
+                    GaxPreconditions.CheckState(hasEmulatorHost && hasEmulatorProjectId,
+                        "DATASTORE_EMULATOR_HOST and DATASTORE_PROJECT_ID environment must be configured.");
+                    useEmulator = true;
+                    break;
+                case EnvironmentBehavior.ProductionOrEmulator:
+                    GaxPreconditions.CheckState(!(hasEmulatorHost ^ hasEmulatorProjectId),
+                        "Exactly one of DATASTORE_EMULATOR_HOST and DATASTORE_PROJECT_ID environment configured. Either both or neither should be configured.");
+                    useEmulator = hasEmulatorHost;
+                    break;
+                default:
+                    // We shouldn't get here, due to the first line of the method.
+                    throw new InvalidOperationException($"EnvironmentBehaviour value {environmentBehavior} encountered unexpectedly.");
+            }
+            DatastoreClient client = useEmulator
+                ? DatastoreClient.Create(new Channel(emulatorHost, ChannelCredentials.Insecure))
+                : DatastoreClient.Create();
+            // This will validate projectId and namespaceId
+            return Create(useEmulator ? emulatorProjectId : projectId, namespaceId, client);
+        }
 
         /// <summary>
         /// Creates a key factory for root entities in this objects's partition.
