@@ -24,13 +24,16 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This class is for internal use and not meant to be consumed directly.
         /// </summary>
-        protected override void WriteLine(string message)
-        {
+        protected override void WriteLine(LogLevel level, string message) => WriteLine($"{level}: {message}");
+
+        /// <inheritdoc />
+        public override void LogPerformanceMessage(string message) => WriteLine($"PERF: {message}");
+
+        private void WriteLine(string line) =>
 #if !NETSTANDARD1_5
-            System.Diagnostics.Trace.TraceInformation(message);
+            System.Diagnostics.Trace.TraceInformation(line);
 #else
-            Console.Error.WriteLine(message);
+            Console.Error.WriteLine(line);
 #endif
-        }
     }
 }

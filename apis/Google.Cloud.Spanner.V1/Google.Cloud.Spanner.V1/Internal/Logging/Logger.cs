@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -26,7 +26,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
     /// </summary>
     public abstract class Logger
     {
-        private static Logger s_instance;
+        private static Logger s_defaultLogger = new DefaultLogger();
         private int _perfLoggingTaskEnabled;
         private readonly Dictionary<string, PerformanceTimeEntry> _perfCounterDictionary
             = new Dictionary<string, PerformanceTimeEntry>();
@@ -34,24 +34,22 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        public static Logger DefaultLogger
-        {
-            get => s_instance ?? (s_instance = new DefaultLogger());
-            private set => s_instance = value;
-        }
+        public static Logger DefaultLogger => Interlocked.CompareExchange(ref s_defaultLogger, null, null);
 
         /// <summary>
-        /// This is an internal property and is not intended to be used by external code.
+        /// This is an internal method and is not intended to be used by external code.
         /// </summary>
+        /// <param name="instance">The new default logger. Must not be null.</param>
         public static void SetDefaultLogger(Logger instance)
         {
-            DefaultLogger = instance;
+            GaxPreconditions.CheckNotNull(instance, nameof(instance));
+            Interlocked.Exchange(ref s_defaultLogger, instance);
         }
 
         /// <summary>
         /// This is an internal property and is not intended to be used by external code.
         /// </summary>
-        public LogLevel LogLevel { get; set; } = LogLevel.Error;
+        public LogLevel LogLevel { get; set; } = LogLevel.None;
 
         /// <summary>
         /// This is an internal property and is not intended to be used by external code.
@@ -140,34 +138,36 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void LogPerformanceMessage(string message) => WriteLine(message);
+        public abstract void LogPerformanceMessage(string message);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Debug(Func<string> messageFunc)
-        {
-            if (LogLevel >= LogLevel.Debug)
-            {
-                WriteLine(messageFunc());
-            }
-        }
+        public virtual void Debug(string message) =>
+            Log(LogLevel.Debug, message, null);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Info(Func<string> messageFunc)
-        {
-            if (LogLevel >= LogLevel.Info)
-            {
-                WriteLine(messageFunc());
-            }
-        }
+        public virtual void Debug(Func<string> messageFunc) =>
+            Log(LogLevel.Debug, messageFunc, null);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public void Sensitive_Info(Func<string> messageFunc)
+        public virtual void Info(string message) =>
+            Log(LogLevel.Info, message, null);
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public virtual void Info(Func<string> messageFunc) =>
+            Log(LogLevel.Info, messageFunc, null);
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public void SensitiveInfo(Func<string> messageFunc)
         {
             if (EnableSensitiveDataLogging)
             {
@@ -178,22 +178,41 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Warn(Func<string> messageFunc)
-        {
-            if (LogLevel >= LogLevel.Warn)
-            {
-                WriteLine(messageFunc());
-            }
-        }
+        public virtual void Warn(string message, Exception exception = null) =>
+            Log(LogLevel.Warn, message, exception);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Error(Func<string> messageFunc, Exception exception = null)
+        public virtual void Warn(Func<string> messageFunc, Exception exception = null) =>
+            Log(LogLevel.Warn, messageFunc, exception);
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public virtual void Error(string message, Exception exception = null) =>
+            Log(LogLevel.Error, message, exception);
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public virtual void Error(Func<string> messageFunc, Exception exception = null) =>
+            Log(LogLevel.Error, messageFunc, exception);
+
+        private void Log(LogLevel level, string message, Exception exception)
         {
-            if (LogLevel >= LogLevel.Error)
+            if (LogLevel >= level)
             {
-                WriteLine($"{messageFunc()}, Exception = {exception}");
+                WriteLine(level, exception == null ? message : $"{message}, Exception = {exception}");
+            }
+        }
+
+        private void Log(LogLevel level, Func<string> messageFunc, Exception exception)
+        {
+            if (LogLevel >= level)
+            {
+                string message = messageFunc();
+                WriteLine(level, exception == null ? message : $"{message}, Exception = {exception}");
             }
         }
 
@@ -222,22 +241,22 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        protected abstract void WriteLine(string message);
+        protected abstract void WriteLine(LogLevel level, string message);
 
         private async Task PerformanceLogAsync()
         {
             while (true)
             {
-                //while this method is only started once performance logging is turned on,
-                //we also allow performance logging to be turned off
-                //If that happens, we'll just poll every second to see if it was turned back on.
-                //TODO(benwu): if/when we expose profile stats publicly, we should end and restart
+                // While this method is only started once performance logging is turned on,
+                // we also allow performance logging to be turned off.
+                // If that happens, we'll just poll every second to see if it was turned back on.
+                // TODO: if/when we expose profile stats publicly, we should end and restart
                 // the task properly.
-                await Task.Delay(PerformanceTraceLogInterval != TimeSpan.Zero ?
-                    PerformanceTraceLogInterval
-                    : TimeSpan.FromSeconds(1)
-                ).ConfigureAwait(false);
-                if (PerformanceTraceLogInterval.TotalMilliseconds > 0)
+                var delay = PerformanceTraceLogInterval != TimeSpan.Zero ? PerformanceTraceLogInterval : TimeSpan.FromSeconds(1);
+                await Task.Delay(delay).ConfigureAwait(false);
+
+                // FIXME: Should be LogPerformanceTraces, but we never disable that...
+                if (PerformanceTraceLogInterval != TimeSpan.Zero)
                 {
                     LogPerformanceDataImpl();
                 }
@@ -277,9 +296,6 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
             }
         }
 
-        /// <summary>
-        /// This class is for internal use and not meant to be consumed directly.
-        /// </summary>
         private void LogPerformanceCounter(string name, Func<double, double> valueFunc)
         {
             if (Interlocked.CompareExchange(ref _perfLoggingTaskEnabled, 1, 0) == 0)

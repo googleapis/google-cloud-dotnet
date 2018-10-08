@@ -32,8 +32,11 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         /// The current xUnit output helper, used to write logs from Spanner.
         /// </summary>
         public static ITestOutputHelper TestOutputHelper { get; set; }
+        protected override void WriteLine(V1.Internal.Logging.LogLevel level, string message) => WriteLine($"{level}: {message}");
 
-        protected override void WriteLine(string message)
+        public override void LogPerformanceMessage(string message) => WriteLine($"PERF: {message}");
+
+        private void WriteLine(string line)
         {
             try
             {
