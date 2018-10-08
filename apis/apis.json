@@ -303,7 +303,7 @@
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
       "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
-      "Grpc.Core": "1.13.1"
+      "Grpc.Core": "1.15.0"
     },
     "testDependencies": {
       "Microsoft.EntityFrameworkCore.Relational.Specification.Tests": "2.0.1",
@@ -624,7 +624,8 @@
       "Google.Cloud.Spanner.V1": "project",
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Grpc.Core": "1.13.1"
+      "Grpc.Core": "1.15.0",
+      "Grpc.Gcp": "1.1.0"
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3"
@@ -655,7 +656,7 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.Api.Gax.Grpc": "2.5.0",
-      "Grpc.Core": "1.13.1",
+      "Grpc.Core": "1.15.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
