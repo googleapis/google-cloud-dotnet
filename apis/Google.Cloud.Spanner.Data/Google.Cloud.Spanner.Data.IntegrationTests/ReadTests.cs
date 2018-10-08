@@ -32,11 +32,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private readonly ReadTableFixture _fixture;
 
-        public ReadTests(ReadTableFixture fixture, ITestOutputHelper outputHelper)
-        {
+        public ReadTests(ReadTableFixture fixture) =>
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
-        }
 
         /// <summary>
         /// This class ensures that the credential in TestDeadlineExceeded is seen as a new instance.

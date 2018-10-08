@@ -29,11 +29,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private readonly SpannerDatabaseFixture _fixture;
         private static int _counter;
 
-        public AdminTests(SpannerDatabaseFixture fixture, ITestOutputHelper outputHelper)
-        {
+        public AdminTests(SpannerDatabaseFixture fixture) =>
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
-        }
 
         private string GenerateDatabaseName() => $"{_fixture.Database.SpannerDatabase}_admin{_counter++}";
 

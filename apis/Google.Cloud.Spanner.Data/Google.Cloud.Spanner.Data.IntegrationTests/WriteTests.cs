@@ -21,7 +21,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -32,11 +31,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private readonly AllTypesTableFixture _fixture;
         private string _lastKey;
 
-        public WriteTests(AllTypesTableFixture fixture, ITestOutputHelper outputHelper)
-        {
+        public WriteTests(AllTypesTableFixture fixture) =>
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
-        }
 
         private Task<int> InsertAsync(string name, SpannerDbType type, object value) =>
             InsertAsync(new SpannerParameterCollection { { name, type, value } });

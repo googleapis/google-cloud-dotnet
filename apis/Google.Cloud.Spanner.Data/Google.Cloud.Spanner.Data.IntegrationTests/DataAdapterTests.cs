@@ -32,11 +32,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private DataAdapterTableFixture _fixture;
 
-        public DataAdapterTests(DataAdapterTableFixture fixture, ITestOutputHelper outputHelper)
-        {
+        public DataAdapterTests(DataAdapterTableFixture fixture) =>
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
-        }
 
         [Fact]
         public void AdapterFill()

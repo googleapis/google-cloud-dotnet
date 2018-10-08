@@ -28,11 +28,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private readonly PartitionedReadTableFixture _fixture;
         private int _rowsRead = 0;
 
-        public PartitionedReadTests(PartitionedReadTableFixture fixture, ITestOutputHelper outputHelper)
-        {
+        public PartitionedReadTests(PartitionedReadTableFixture fixture) =>
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
-        }
 
         [Fact]
         public async Task DistributedReadAsync()

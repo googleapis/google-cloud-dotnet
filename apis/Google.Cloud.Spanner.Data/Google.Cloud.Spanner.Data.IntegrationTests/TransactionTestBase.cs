@@ -36,10 +36,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         protected readonly HistoryEntry _oldestEntry;
         protected readonly HistoryEntry _newestEntry;
 
-        public TransactionTestBase(TransactionTableFixture fixture, ITestOutputHelper outputHelper)
+        public TransactionTestBase(TransactionTableFixture fixture)
         {
             _fixture = fixture;
-            TestLogger.TestOutputHelper = outputHelper;
             _key = IdGenerator.FromGuid();
             (_oldestEntry, _newestEntry) = PopulateTableForTest(fixture, _key);
         }
