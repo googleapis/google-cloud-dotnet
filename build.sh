@@ -46,7 +46,6 @@ while (( "$#" )); do
   elif [[ "$1" == "--coverage" ]]
   then
     runcoverage=true
-    install_dotcover
     mkdir -p coverage
   else
     apis+=($1)
