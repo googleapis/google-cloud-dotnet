@@ -170,14 +170,24 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
 
-            //now run the test.
-            double result = await TestWriteLatencyWithQps(TargetQps, TestDuration, writeFunc);
-            Logger.DefaultLogger.Info(() => $"Spanner latency= {result}ms");
+            // Run the test with only info logging enabled.
+            var previousLogLevel = Logger.DefaultLogger.LogLevel;
+            Logger.DefaultLogger.LogLevel = V1.Internal.Logging.LogLevel.Info;
+            double latencyMs;
+            try
+            {
+                latencyMs = await TestWriteLatencyWithQps(TargetQps, TestDuration, writeFunc);
+            }
+            finally
+            {
+                Logger.DefaultLogger.LogLevel = previousLogLevel;
+            }
+            Logger.DefaultLogger.Info(() => $"Spanner latency = {latencyMs}ms");
 
             ValidatePoolInfo();
 
-            //spanner latency with 100 qps simulated is usually around 75ms.
-            Assert.InRange(result, 0, 150);
+            // Spanner latency with 100 qps simulated is usually around 75ms.
+            Assert.InRange(latencyMs, 0, 150);
         }
     }
 }
