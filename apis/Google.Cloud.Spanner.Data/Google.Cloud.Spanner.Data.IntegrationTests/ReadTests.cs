@@ -64,27 +64,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task BadColumnName()
         {
-            int rowsRead = -1;
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT badjuju FROM {_fixture.TableName}");
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    using (var connection = _fixture.GetConnection())
-                    {
-                        var cmd = connection.CreateSelectCommand($"SELECT badjuju FROM {_fixture.TableName}");
-                        using (var reader = await cmd.ExecuteReaderAsync())
-                        {
-                            rowsRead = 0;
-                            while (await reader.ReadAsync())
-                            {
-                                rowsRead++;
-                            }
-                        }
-                    }
-                }).ConfigureAwait(false);
-
-            Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
-            Assert.True(rowsRead < 1);
+                    var e = await Assert.ThrowsAsync<SpannerException>(() => reader.ReadAsync());
+                    Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
+                    Assert.False(e.IsTransientSpannerFault());
+                }
+            }
         }
 
         [Fact]
@@ -93,80 +82,47 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string connectionString = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
                 .WithDatabase("badjuju")
                 .ConnectionString;
-            int rowsRead = -1;
 
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
-                {
-                    using (var connection = new SpannerConnection(connectionString))
-                    {
-                        var cmd = connection.CreateSelectCommand(
-                            $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
-                        using (var reader = await cmd.ExecuteReaderAsync())
-                        {
-                            rowsRead = 0;
-                            while (await reader.ReadAsync())
-                            {
-                                rowsRead++;
-                            }
-                        }
-                    }
-                }).ConfigureAwait(false);
-
-            Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
-            Assert.Equal(-1, rowsRead);
+            using (var connection = new SpannerConnection(connectionString))
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
+                var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteReaderAsync());
+                Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
+                Assert.False(e.IsTransientSpannerFault());
+            }
         }
 
         [Fact]
         public async Task BadTableName()
         {
-            int rowsRead = -1;
-
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand("SELECT * FROM badjuju WHERE Key = 'k99'");
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    using (var connection = _fixture.GetConnection())
-                    {
-                        var cmd = connection.CreateSelectCommand("SELECT * FROM badjuju WHERE Key = 'k99'");
-                        using (var reader = await cmd.ExecuteReaderAsync())
-                        {
-                            rowsRead = 0;
-                            while (await reader.ReadAsync())
-                            {
-                                rowsRead++;
-                            }
-                        }
-                    }
-                }).ConfigureAwait(false);
-
-            Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
-            Assert.Equal(0, rowsRead);
+                    var e = await Assert.ThrowsAsync<SpannerException>(() => reader.ReadAsync());
+                    Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
+                    Assert.False(e.IsTransientSpannerFault());
+                }
+            }
         }
 
         [Fact]
         public async Task CancelRead()
         {
-            var e = await Assert.ThrowsAsync<OperationCanceledException>(
-                async () =>
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
+
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    using (var connection = _fixture.GetConnection())
-                    {
-                        var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
-
-                        using (var reader = await cmd.ExecuteReaderAsync())
-                        {
-                            var cancellationTokenSource =
-                                new CancellationTokenSource();
-                            var task = reader.ReadAsync(cancellationTokenSource.Token);
-                            cancellationTokenSource.Cancel();
-                            await task;
-                        }
-                    }
-                }).ConfigureAwait(false);
-
-            Assert.False(e.IsTransientSpannerFault());
+                    var cancellationTokenSource = new CancellationTokenSource();
+                    var task = reader.ReadAsync(cancellationTokenSource.Token);
+                    cancellationTokenSource.Cancel();
+                    var e = await Assert.ThrowsAsync<OperationCanceledException>(() => task);
+                    Assert.False(e.IsTransientSpannerFault());
+                }
+            }
         }
 
         [Fact]
@@ -280,28 +236,16 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task QueryTypo()
         {
-            int rowsRead = -1;
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SLECT * FROM {_fixture.TableName}");
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    using (var connection = _fixture.GetConnection())
-                    {
-                        var cmd = connection.CreateSelectCommand(
-                            $"SLECT * FROM {_fixture.TableName}");
-                        using (var reader = await cmd.ExecuteReaderAsync())
-                        {
-                            rowsRead = 0;
-                            while (await reader.ReadAsync())
-                            {
-                                rowsRead++;
-                            }
-                        }
-                    }
-                }).ConfigureAwait(false);
-
-            Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
-            Assert.False(e.IsTransientSpannerFault());
-            Assert.True(rowsRead < 1);
+                    var e = await Assert.ThrowsAsync<SpannerException>(() => reader.ReadAsync());
+                    Assert.Equal(ErrorCode.InvalidArgument, e.ErrorCode);
+                    Assert.False(e.IsTransientSpannerFault());
+                }
+            }
         }
 
         [Fact]
@@ -312,8 +256,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 // All our keys start with "k" so there shouldn't be anything starting with "l"
-                var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_fixture.TableName} WHERE Key >= 'l'");
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key >= 'l'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     rowsRead = 0;
@@ -434,21 +377,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task CommandTimeout()
         {
-            long result = 0;
-            var e = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
-                {
-                    using (var connection =
-                        new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
-                    {
-                        var cmd = connection.CreateSelectCommand("SELECT 1");
-                        cmd.CommandTimeout = 0;
-                        result = await cmd.ExecuteScalarAsync<long>();
-                    }
-                }).ConfigureAwait(false);
-
-            SpannerAssert.IsTimeout(e);
-            Assert.Equal(0, result);
+            using (var connection =
+                new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
+            {
+                var cmd = connection.CreateSelectCommand("SELECT 1");
+                cmd.CommandTimeout = 0;
+                var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteScalarAsync<long>());
+                SpannerAssert.IsTimeout(e);
+            }
         }
 
         [Fact]

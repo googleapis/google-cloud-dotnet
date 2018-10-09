@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #if !NETCOREAPP1_0
+using System;
 using System.Threading.Tasks;
 using System.Transactions;
 using Xunit;
@@ -162,28 +163,26 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task OneReadOneWrite_ThrowsAsync()
         {
-            await Assert.ThrowsAsync<TransactionAbortedException>(async() =>
+            await AssertDisposeThrowsAsync(async scope =>
+            {
+                using (var readConnection = _fixture.GetConnection())
+                using (var writeConnection = _fixture.GetConnection())
                 {
-                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                    using (var readConnection = _fixture.GetConnection())
-                    using (var writeConnection = _fixture.GetConnection())
-                    {
-                        await readConnection.OpenAsReadOnlyAsync();
-                        await writeConnection.OpenAsync();
+                    await readConnection.OpenAsReadOnlyAsync();
+                    await writeConnection.OpenAsync();
 
-                        await AssertReadLatestValueAsync(readConnection);
-                        await UpdateValueAsync(writeConnection);
-                        scope.Complete();
-                    }
-                });
+                    await AssertReadLatestValueAsync(readConnection);
+                    await UpdateValueAsync(writeConnection);
+                    scope.Complete();
+                }
+            });
         }
 
         [Fact]
         public void OneReadOneWrite_Throws()
         {
-            Assert.Throws<TransactionAbortedException>(() =>
+            AssertDisposeThrows(scope =>
             {
-                using (var scope = new TransactionScope())
                 using (var readConnection = _fixture.GetConnection())
                 using (var writeConnection = _fixture.GetConnection())
                 {
@@ -224,41 +223,39 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task TwoWritesDifferentTransactions_ThrowsAsync()
         {
-            await Assert.ThrowsAsync<TransactionAbortedException>(async () =>
+            await AssertDisposeThrowsAsync(async scope =>
+            {
+                using (var writeConnection1 = _fixture.GetConnection())
+                using (var writeConnection2 = _fixture.GetConnection())
                 {
-                    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
-                    using (var writeConnection1 = _fixture.GetConnection())
-                    using (var writeConnection2 = _fixture.GetConnection())
-                    {
-                        await writeConnection1.OpenAsync();
-                        await writeConnection2.OpenAsync();
+                    await writeConnection1.OpenAsync();
+                    await writeConnection2.OpenAsync();
 
-                        await UpdateValueAsync(writeConnection1);
-                        await UpdateValueAsync(writeConnection2);
+                    await UpdateValueAsync(writeConnection1);
+                    await UpdateValueAsync(writeConnection2);
 
-                        scope.Complete();
-                    }
-                });
+                    scope.Complete();
+                }
+            });
         }
 
         [Fact]
         public void TwoWritesDifferentTransactions_Throws()
         {
-            Assert.Throws<TransactionAbortedException>(() =>
+            AssertDisposeThrows(scope =>
+            {
+                using (var writeConnection1 = _fixture.GetConnection())
+                using (var writeConnection2 = _fixture.GetConnection())
                 {
-                    using (var scope = new TransactionScope())
-                    using (var writeConnection1 = _fixture.GetConnection())
-                    using (var writeConnection2 = _fixture.GetConnection())
-                    {
-                        writeConnection1.Open();
-                        writeConnection2.Open();
+                    writeConnection1.Open();
+                    writeConnection2.Open();
 
-                        UpdateValue(writeConnection1);
-                        UpdateValue(writeConnection2);
+                    UpdateValue(writeConnection1);
+                    UpdateValue(writeConnection2);
 
-                        scope.Complete();
-                    }
-                });
+                    scope.Complete();
+                }
+            });
         }
 
         // The second transaction will fail to prepare; these tests validate that all three transactions
@@ -266,9 +263,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ThreeWritesDifferentTransactions_ThrowsAsync()
         {
-            await Assert.ThrowsAsync<TransactionAbortedException>(async () =>
+            await AssertDisposeThrowsAsync(async scope =>
             {
-                using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 using (var writeConnection1 = _fixture.GetConnection())
                 using (var writeConnection2 = _fixture.GetConnection())
                 using (var writeConnection3 = _fixture.GetConnection())
@@ -289,9 +285,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public void ThreeWritesDifferentTransactions_Throws()
         {
-            Assert.Throws<TransactionAbortedException>(() =>
+            AssertDisposeThrows(scope =>
             {
-                using (var scope = new TransactionScope())
                 using (var writeConnection1 = _fixture.GetConnection())
                 using (var writeConnection2 = _fixture.GetConnection())
                 using (var writeConnection3 = _fixture.GetConnection())
@@ -307,6 +302,32 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     scope.Complete();
                 }
             });
+        }
+
+        private void AssertDisposeThrows(Action<TransactionScope> action)
+        {
+            var scope = new TransactionScope();
+            try
+            {
+                action(scope);
+            }
+            finally
+            {
+                Assert.Throws<TransactionAbortedException>(() => scope.Dispose());
+            }
+        }
+
+        private async Task AssertDisposeThrowsAsync(Func<TransactionScope, Task> action)
+        {
+            var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
+            try
+            {
+                await action(scope);
+            }
+            finally
+            {
+                Assert.Throws<TransactionAbortedException>(() => scope.Dispose());
+            }
         }
     }
 }

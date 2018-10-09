@@ -118,63 +118,68 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // connection 2 starts a transaction and reads the same row
             // connection 1 writes and commits
             // connection 2 reads again -- abort should be thrown.
-            var connection1 = new SpannerConnection(_fixture.ConnectionString);
-            var connection2 = new SpannerConnection(_fixture.ConnectionString);
 
-            await Task.WhenAll(connection1.OpenAsync(), connection2.OpenAsync());
-            var tx1 = await connection1.BeginTransactionAsync();
-
-            // TX1 READ
-            using (var cmd = CreateSelectAllCommandForKey(connection1))
+            // Note: deeply nested using statements to ensure that we dispose of everything even in the case of failure,
+            // but we manually dispose of both tx1 and connection1. 
+            using (var connection1 = new SpannerConnection(_fixture.ConnectionString))
             {
-                cmd.Transaction = tx1;
-                using (var reader = await cmd.ExecuteReaderAsync())
+                using (var connection2 = new SpannerConnection(_fixture.ConnectionString))
                 {
-                    Assert.True(await reader.ReadAsync());
-                }
-            }
 
-            // TX2 START
-            var tx2 = await connection2.BeginTransactionAsync();
-
-            // TX2 READ
-            using (var cmd = CreateSelectAllCommandForKey(connection2))
-            {
-                cmd.Transaction = tx2;
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-                }
-            }
-
-            // TX1 WRITE/COMMIT
-            using (var cmd = connection1.CreateUpdateCommand(_fixture.TableName))
-            {
-                cmd.Parameters.Add("k", SpannerDbType.String, _key);
-                cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
-                cmd.Transaction = tx1;
-                await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
-                await tx1.CommitAsync().ConfigureAwait(false);
-                tx1.Dispose();
-            }
-            connection1.Dispose();
-
-            // TX2 READ AGAIN/THROWS
-            var thrownException = await Assert.ThrowsAsync<SpannerException>(
-                async () =>
-                {
-                    using (var cmd = CreateSelectAllCommandForKey(connection2))
+                    await Task.WhenAll(connection1.OpenAsync(), connection2.OpenAsync());
+                    using (var tx1 = await connection1.BeginTransactionAsync())
                     {
-                        cmd.Transaction = tx2;
-                        using (var reader = await cmd.ExecuteReaderAsync())
+
+                        // TX1 READ
+                        using (var cmd = CreateSelectAllCommandForKey(connection1))
                         {
-                            Assert.True(await reader.ReadAsync());
+                            cmd.Transaction = tx1;
+                            using (var reader = await cmd.ExecuteReaderAsync())
+                            {
+                                Assert.True(await reader.ReadAsync());
+                            }
+                        }
+
+                        // TX2 START
+                        using (var tx2 = await connection2.BeginTransactionAsync())
+                        {
+
+                            // TX2 READ
+                            using (var cmd = CreateSelectAllCommandForKey(connection2))
+                            {
+                                cmd.Transaction = tx2;
+                                using (var reader = await cmd.ExecuteReaderAsync())
+                                {
+                                    Assert.True(await reader.ReadAsync());
+                                }
+                            }
+
+                            // TX1 WRITE/COMMIT
+                            using (var cmd = connection1.CreateUpdateCommand(_fixture.TableName))
+                            {
+                                cmd.Parameters.Add("k", SpannerDbType.String, _key);
+                                cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
+                                cmd.Transaction = tx1;
+                                await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
+                                await tx1.CommitAsync().ConfigureAwait(false);
+                                tx1.Dispose();
+                            }
+                            connection1.Dispose();
+
+                            // TX2 READ AGAIN/THROWS            
+                            using (var cmd = CreateSelectAllCommandForKey(connection2))
+                            {
+                                cmd.Transaction = tx2;
+                                using (var reader = await cmd.ExecuteReaderAsync())
+                                {
+                                    var thrownException = await Assert.ThrowsAsync<SpannerException>(() => reader.ReadAsync());
+                                    Assert.True(thrownException.IsRetryable);
+                                }
+                            }
                         }
                     }
-                }).ConfigureAwait(false);
-            tx2.Dispose();
-            connection2.Dispose();
-            Assert.True(thrownException?.IsRetryable ?? false);
+                }
+            }
         }
 
         [Fact]
@@ -260,18 +265,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 await connection.OpenAsync();
-                await Assert.ThrowsAsync<ArgumentException>(
-                    async () =>
-                    {
-                        await connection.BeginReadOnlyTransactionAsync(
-                            TimestampBound.OfMinReadTimestamp(_newestEntry.Timestamp));
 
-                    }).ConfigureAwait(false);
+                // Can't use MinReadTimestamp to create a transaction
+                var bound = TimestampBound.OfMinReadTimestamp(_newestEntry.Timestamp);
+                await Assert.ThrowsAsync<ArgumentException>(() => connection.BeginReadOnlyTransactionAsync(bound));
 
                 var cmd = CreateSelectAllCommandForKey(connection);
-                using (var reader =
-                    await cmd.ExecuteReaderAsync(
-                        TimestampBound.OfMinReadTimestamp(_newestEntry.Timestamp)))
+                using (var reader = await cmd.ExecuteReaderAsync(bound))
                 {
                     if (await reader.ReadAsync())
                     {
@@ -324,12 +324,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 await connection.OpenAsync();
-                await Assert.ThrowsAsync<ArgumentException>(
-                    async () =>
-                    {
-                        var bound = TimestampBound.OfMaxStaleness(_fixture.Staleness);
-                        await connection.BeginReadOnlyTransactionAsync(bound);
-                    }).ConfigureAwait(false);
+
+                // Can't use MaxStaleness to create a transaction
+                var staleBound = TimestampBound.OfMaxStaleness(_fixture.Staleness);
+                await Assert.ThrowsAsync<ArgumentException>(() => connection.BeginReadOnlyTransactionAsync(staleBound));
 
                 var cmd = CreateSelectAllCommandForKey(connection);
                 var recentBound = TimestampBound.OfMaxStaleness(TimeSpan.FromMilliseconds(5));
