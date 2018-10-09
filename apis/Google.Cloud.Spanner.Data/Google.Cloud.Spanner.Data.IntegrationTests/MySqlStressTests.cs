@@ -80,8 +80,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             double result = await TestWriteLatencyWithQps(TargetQps, TestDuration, TestWriteOneRow);
             Logger.DefaultLogger.Info(() => $"MySql latency= {result}ms");
 
-            ValidatePoolInfo();
-
             //mysql latency with 100 qps simulated is usually around 150ms.
             Assert.InRange(result, 0, 250);
         }
