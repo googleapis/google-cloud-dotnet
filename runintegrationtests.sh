@@ -20,7 +20,6 @@ while (( "$#" )); do
     RETRY_ARG=yes
   elif [[ "$1" == "--coverage" ]]
   then
-    install_dotcover
     mkdir -p coverage
     COVERAGE_ARG=yes
   elif [[ "$1" == "--smoke" ]]
