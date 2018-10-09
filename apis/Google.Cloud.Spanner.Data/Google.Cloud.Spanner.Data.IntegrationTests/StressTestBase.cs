@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -67,10 +68,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var completed = all.Where(x => x.IsCompleted).ToList();
             var sum = completed.Sum(x => x.Result.TotalMilliseconds);
             var result = sum / completed.Count;
-            Console.WriteLine($"Elapsed ms:{sw.ElapsedMilliseconds} all_count:{all.Count} sum:{sum} result:{result}");
+            FileLogger.LogWithCallerMember($"Elapsed ms: {sw.ElapsedMilliseconds}; Completed tasks: {completed.Count}/{all.Count}; Average latency: {result}");
             if (completedTask == timeout)
             {
-                Console.WriteLine("FAILED!");
+                FileLogger.LogWithCallerMember("FAILED!");
                 return -1;
             }
             return result;
