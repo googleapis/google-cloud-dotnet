@@ -102,13 +102,9 @@ do
     dotnet run -p $testdir -- $TEST_PROJECT || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
-    (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
+    (cd $testdir; dotnet dotcover test -c Release --no-build --dcXML=coverage.xml || echo "$testdir" >> $FAILURE_TEMP_FILE)
   else
-    # For a non-coverage run, just run dotnet with the same arguments that we would have run
-    # for coverage.
-    (cd $testdir;
-     dotnetargs=$(grep TargetArguments coverage.xml | sed -E 's/<\/?TargetArguments>//g');
-     dotnet $dotnetargs || echo "$testdir" >> $FAILURE_TEMP_FILE) 
+    (cd $testdir; dotnet test -c Release --no-build || echo "$testdir" >> $FAILURE_TEMP_FILE)
   fi
 done
 
