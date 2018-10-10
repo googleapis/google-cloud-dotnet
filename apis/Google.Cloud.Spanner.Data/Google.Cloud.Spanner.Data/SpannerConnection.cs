@@ -118,7 +118,7 @@ namespace Google.Cloud.Spanner.Data
         /// set. Otherwise, this method returns null, usually indicating that default application credentials should be used.
         /// See Google Cloud documentation for more information.
         /// </summary>
-        public ChannelCredentials GetCredentials() => _connectionStringBuilder?.GetCredentials();
+        public ChannelCredentials GetCredentials() => _connectionStringBuilder.GetCredentials();
 
         /// <inheritdoc />
         public override string Database => _connectionStringBuilder.SpannerDatabase;

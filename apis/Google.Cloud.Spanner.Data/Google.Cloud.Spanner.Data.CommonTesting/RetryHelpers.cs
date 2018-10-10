@@ -22,12 +22,8 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
     /// <summary>
-    /// Helper methods to provide *very* simplistic retry behavior:
-    /// - No backoff
-    /// - A single retry
-    /// - Only if the error code is "aborted"
-    /// 
-    /// This is enough to make the snippet/integration tests significantly more stable.
+    /// Helper methods to provide simple retry behavior for testing purposes.
+    /// This functionality may be moved to production code in the future.
     /// </summary>
     public static class RetryHelpers
     {
