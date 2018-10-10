@@ -64,7 +64,8 @@ $REPORTGENERATOR \
 
 if [[ "$upload_report" = true ]]
 then
-  choco install codecov
+  # -y option to confirm all prompts.
+  choco install codecov -y
 
   # Assume we've created the coverage file by this point. If we haven't, there should already have been an error.
   # Pass whatever parameters we recieved.
