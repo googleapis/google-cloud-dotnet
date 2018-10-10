@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Common.V1;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
@@ -29,6 +30,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             Database = SpannerTestDatabase.GetInstance(ProjectId);
         }
 
+        public DatabaseName DatabaseName => Database.DatabaseName;
         public SpannerConnection GetConnection() => Database.GetConnection();
         public string ConnectionString => Database.ConnectionString;
     }

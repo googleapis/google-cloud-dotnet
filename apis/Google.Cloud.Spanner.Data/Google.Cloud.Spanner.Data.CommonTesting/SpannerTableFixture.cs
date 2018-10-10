@@ -12,9 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
-using System;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
@@ -30,9 +31,15 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             TableName = tableName;
             if (Database.Fresh)
             {
+                Logger.DefaultLogger.Debug($"Creating table {TableName}");
                 CreateTable();
             }
+            RetryHelpers.ResetStats();
+            Logger.DefaultLogger.Debug($"Populating table {TableName}");
             PopulateTable(Database.Fresh);
+            Logger.DefaultLogger.Debug($"Ready to run tests");
+            RetryHelpers.MaybeLogStats($"Population of {TableName}");
+            RetryHelpers.ResetStats();
         }
 
         /// <summary>
@@ -54,6 +61,12 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             {
                 connection.CreateDdlCommand(ddl).ExecuteNonQuery();
             }
+        }
+
+        public override void Dispose()
+        {
+            base.Dispose();
+            RetryHelpers.MaybeLogStats($"Disposal of fixture for {TableName}");
         }
     }
 }
