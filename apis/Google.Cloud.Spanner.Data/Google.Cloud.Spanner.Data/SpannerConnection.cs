@@ -454,11 +454,8 @@ namespace Google.Cloud.Spanner.Data
         /// that correspond to the parameters used in the SQL query. May be null.
         /// </param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
-        public SpannerCommand CreateSelectCommand(
-            string sqlQueryStatement,
-            SpannerParameterCollection selectParameters = null) => new SpannerCommand(
-            SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null,
-            selectParameters);
+        public SpannerCommand CreateSelectCommand(string sqlQueryStatement, SpannerParameterCollection selectParameters = null) =>
+            new SpannerCommand(SpannerCommandTextBuilder.CreateSelectTextBuilder(sqlQueryStatement), this, null, selectParameters);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> from a <see cref="CommandPartition"/>.
@@ -470,8 +467,8 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="transaction">The <see cref="SpannerTransaction"/> used when
         /// creating the <see cref="CommandPartition"/>.  See <see cref="SpannerConnection.BeginReadOnlyTransaction(TransactionId)"/>.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
-        public SpannerCommand CreateCommandWithPartition(CommandPartition partition, SpannerTransaction transaction)
-            => new SpannerCommand(this, transaction, partition);
+        public SpannerCommand CreateCommandWithPartition(CommandPartition partition, SpannerTransaction transaction) =>
+            new SpannerCommand(this, transaction, partition);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to update rows in a Spanner database table.
@@ -485,11 +482,8 @@ namespace Google.Cloud.Spanner.Data
         /// May be null.
         /// </param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
-        public SpannerCommand CreateUpdateCommand(
-            string databaseTable,
-            SpannerParameterCollection updateColumns = null) => new SpannerCommand(
-            SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null,
-            updateColumns);
+        public SpannerCommand CreateUpdateCommand(string databaseTable, SpannerParameterCollection updateColumns = null) =>
+            new SpannerCommand(SpannerCommandTextBuilder.CreateUpdateTextBuilder(databaseTable), this, null, updateColumns);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to execute a DDL (CREATE/DROP TABLE, etc) statement.
@@ -500,8 +494,8 @@ namespace Google.Cloud.Spanner.Data
         /// the first statement.  Extra Ddl statements cannot be used to create additional databases.</param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDdlCommand(
-            string ddlStatement, params string[] extraDdlStatements) => new SpannerCommand(
-            SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this);
+            string ddlStatement, params string[] extraDdlStatements) =>
+            new SpannerCommand(SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to execute a general DML (UPDATE, INSERT, DELETE) statement.
@@ -518,8 +512,7 @@ namespace Google.Cloud.Spanner.Data
         /// that correspond to the parameters used in the SQL query. May be null.
         /// </param>
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
-        public SpannerCommand CreateDmlCommand(
-            string dmlStatement, SpannerParameterCollection dmlParameters = null) =>
+        public SpannerCommand CreateDmlCommand(string dmlStatement, SpannerParameterCollection dmlParameters = null) =>
             new SpannerCommand(SpannerCommandTextBuilder.CreateDmlTextBuilder(dmlStatement), this, null, dmlParameters);
 
         /// <inheritdoc />
