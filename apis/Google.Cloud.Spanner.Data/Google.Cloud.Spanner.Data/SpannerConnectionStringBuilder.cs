@@ -270,7 +270,7 @@ namespace Google.Cloud.Spanner.Data
         /// </param>
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials = null)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(connectionString, nameof(connectionString));
+            GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
             CredentialOverride = credentials;
             ConnectionString = connectionString;
         }
