@@ -87,7 +87,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
                 builder.Port = int.Parse(SpannerPort);
             }
             NoDbConnectionString = builder.ConnectionString;
-            ConnectionString = builder.WithDatabase(SpannerDatabase).ConnectionString;
             var databaseBuilder = builder.WithDatabase(SpannerDatabase);
             ConnectionString = databaseBuilder.ConnectionString;
             DatabaseName = databaseBuilder.DatabaseName;
