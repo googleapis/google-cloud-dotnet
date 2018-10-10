@@ -225,7 +225,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             return BeginTransactionImplAsync(
-                CreateReadOnlyTransactionOptions(targetReadTimestamp),
+                targetReadTimestamp.ToTransactionOptions(),
                 TransactionMode.ReadOnly,
                 cancellationToken,
                 targetReadTimestamp);
@@ -277,34 +277,7 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
             return SpannerTransaction.FromTransactionId(this, transactionId);
-        }
-
-        private static TransactionOptions CreateReadOnlyTransactionOptions(TimestampBound targetReadTimestamp)
-        {
-            var innerOptions = new TransactionOptions.Types.ReadOnly();
-
-            switch (targetReadTimestamp.Mode)
-            {
-                case TimestampBoundMode.Strong:
-                    innerOptions.Strong = true;
-                    break;
-                case TimestampBoundMode.ReadTimestamp:
-                    innerOptions.ReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp);
-                    break;
-                case TimestampBoundMode.MinReadTimestamp:
-                    innerOptions.MinReadTimestamp = Timestamp.FromDateTime(targetReadTimestamp.Timestamp);
-                    break;
-                case TimestampBoundMode.ExactStaleness:
-                    innerOptions.ExactStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness);
-                    break;
-                case TimestampBoundMode.MaxStaleness:
-                    innerOptions.MaxStaleness = Duration.FromTimeSpan(targetReadTimestamp.Staleness);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-            return new TransactionOptions { ReadOnly = innerOptions };
-        }
+        }        
 
         /// <summary>
         /// Begins a new Spanner transaction synchronously. This method hides <see cref="DbConnection.BeginTransaction()"/>, but behaves
@@ -826,7 +799,7 @@ namespace Google.Cloud.Spanner.Data
             TimestampBound targetReadTimestamp,
             CancellationToken cancellationToken)
         {
-            var options = CreateReadOnlyTransactionOptions(targetReadTimestamp);
+            var options = targetReadTimestamp.ToTransactionOptions();
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
