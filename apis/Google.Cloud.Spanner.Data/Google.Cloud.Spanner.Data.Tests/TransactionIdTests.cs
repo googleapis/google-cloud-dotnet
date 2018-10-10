@@ -21,9 +21,9 @@ namespace Google.Cloud.Spanner.Data.Tests
     {
         public static TheoryData<TransactionId> SampleTransactionIds = new TheoryData<TransactionId>
         {
-            new TransactionId("ConnectionString", "Session", "Id", new TimestampBound(TimestampBoundMode.MaxStaleness, TimeSpan.FromHours(1))),
-            new TransactionId("ConnectionString2", "Session2", "Id2", new TimestampBound(TimestampBoundMode.ReadTimestamp, new DateTime(1999, 12, 31, 3, 33, 33, DateTimeKind.Local))),
-            new TransactionId("ConnectionString3", "Session3", "Id3", new TimestampBound(TimestampBoundMode.Strong))
+            new TransactionId("ConnectionString", "Session", "Id", TimestampBound.OfMaxStaleness(TimeSpan.FromHours(1))),
+            new TransactionId("ConnectionString2", "Session2", "Id2", TimestampBound.OfReadTimestamp(new DateTime(1999, 12, 31, 3, 33, 33, DateTimeKind.Utc))),
+            new TransactionId("ConnectionString3", "Session3", "Id3", TimestampBound.Strong)
         };
 
         [Theory]
