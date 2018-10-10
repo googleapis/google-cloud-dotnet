@@ -12,7 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
@@ -27,11 +31,18 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
     /// </summary>
     public static class RetryHelpers
     {
+        // Allow up to 10 seconds each time.
+        private static readonly BackoffSettings s_backoffSettings =
+            new BackoffSettings(delay: TimeSpan.FromMilliseconds(50), maxDelay: TimeSpan.FromSeconds(1), delayMultiplier: 2);
+        private static readonly TimeSpan s_timeout = TimeSpan.FromSeconds(10);
+
         /// <summary>
         /// Executes a single command, retrying once if the first attempt is aborted.
         /// Only for use in "one-shot" commands (not in a transaction).
         public static Task<int> ExecuteNonQueryAsyncWithRetry(this SpannerCommand command) =>
             ExecuteWithRetryAsync(() => command.ExecuteNonQueryAsync());
+
+        // FIXME: Rename these methods later, as they clearly don't retry just once...
 
         /// <summary>
         /// Executes the given action, retrying once if the first attempt is aborted.
@@ -43,30 +54,95 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         /// </summary>
         public static Task RetryOnceAsync(Func<Task> action) => ExecuteWithRetryAsync(async () => { await action(); return 0; });
 
+        private static int _calls;
+        private static int _retries;
+
+        // TODO: Move this retry code into production code, so that everyone can use it.
+
         private static T ExecuteWithRetry<T>(Func<T> func)
         {
-            try
+            Interlocked.Increment(ref _calls);
+
+            // Make it easy to move this into production code later on by using IClock/IScheduler/IJitter
+            var clock = SystemClock.Instance;
+            var scheduler = SystemScheduler.Instance;
+            var jitter = RetrySettings.RandomJitter;
+
+            DateTime start = DateTime.UtcNow;
+            DateTime end = start + s_timeout;
+            // Immediate initial retry, before the exponential delay starts.
+            TimeSpan retryDelay = TimeSpan.Zero;
+            while (true)
             {
-                return func();
-            }
-            catch (SpannerException e) when (e.ErrorCode == ErrorCode.Aborted)
-            {
-                // Try it once more...
-                return func();
+                try
+                {
+                    return func();
+                }
+                catch (SpannerException e) when (e.IsRetryable)
+                {
+                    TimeSpan actualDelay = jitter.GetDelay(retryDelay);
+                    DateTime expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
+                    if (expectedRetryTime > end)
+                    {
+                        throw;
+                    }
+                    scheduler.Sleep(actualDelay, CancellationToken.None);
+                    retryDelay = s_backoffSettings.NextDelay(retryDelay);
+                    Interlocked.Increment(ref _retries);
+                }
             }
         }
 
         private static async Task<T> ExecuteWithRetryAsync<T>(Func<Task<T>> func)
         {
-            try
+            Interlocked.Increment(ref _calls);
+
+            // Make it easy to move this into production code later on by using IClock/IScheduler/IJitter
+            var clock = SystemClock.Instance;
+            var scheduler = SystemScheduler.Instance;
+            var jitter = RetrySettings.RandomJitter;
+
+            DateTime start = DateTime.UtcNow;
+            DateTime end = start + s_timeout;
+            // Immediate initial retry, before the exponential delay starts.
+            TimeSpan retryDelay = TimeSpan.Zero;
+            while (true)
             {
-                return await func();
+                try
+                {
+                    return await func();
+                }
+                catch (SpannerException e) when (e.IsRetryable)
+                {
+                    TimeSpan actualDelay = jitter.GetDelay(retryDelay);
+                    DateTime expectedRetryTime = clock.GetCurrentDateTimeUtc() + actualDelay;
+                    if (expectedRetryTime > end)
+                    {
+                        throw;
+                    }
+                    await scheduler.Delay(actualDelay, CancellationToken.None).ConfigureAwait(false);
+                    retryDelay = s_backoffSettings.NextDelay(retryDelay);
+                    Interlocked.Increment(ref _retries);
+                }
             }
-            catch (SpannerException e) when (e.ErrorCode == ErrorCode.Aborted)
+        }
+
+        public static void MaybeLogStats(string description)
+        {
+            int calls = Interlocked.CompareExchange(ref _calls, 1, 1);
+            int retries = Interlocked.CompareExchange(ref _retries, 1, 1);
+            // Don't log anything if nothing interesting has happened.
+            if (calls == 0 && retries == 0)
             {
-                // Try it once more...
-                return await func();
+                return;
             }
+            Logger.DefaultLogger.Debug($"{description}: RetryHelper stats: {retries} retries out of {calls} calls");
+        }
+
+        public static void ResetStats()
+        {
+            Interlocked.Exchange(ref _calls, 0);
+            Interlocked.Exchange(ref _retries, 0);
         }
     }
 }
