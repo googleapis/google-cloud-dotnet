@@ -142,16 +142,13 @@ namespace Google.Cloud.Spanner.Data
             set => this[DataSourceKeyword] = ValidatedDataSource(value);
         }
 
-        private bool ParseCurrentDataSource()
-        {
-            return ParseDataSource(DataSource);
-        }
+        private bool ParseCurrentDataSource() => ParseDataSource(DataSource);
 
-        private bool ParseDataSource(string dataSource)
-        {
-            return DatabaseName.TryParse(dataSource, out _databaseName)
-                || InstanceName.TryParse(dataSource, out _instanceName);
-        }
+        // Note: this won't reset _instanceName if we manage to parse it as a DatabaseName, but we never
+        // use _instanceName if _databaseName is valid. (This is a little fragile, and may be worth revisiting.)
+        private bool ParseDataSource(string dataSource) =>
+            DatabaseName.TryParse(dataSource, out _databaseName) ||
+            InstanceName.TryParse(dataSource, out _instanceName);
 
         private string ValidatedDataSource(string dataSource)
         {
@@ -205,7 +202,21 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// The fully-qualified database name parsed from <see cref="DataSource"/>.
+        /// May be null, if the data source isn't set, or is invalid, or doesn't contain a database name.
+        /// </summary>
+        internal DatabaseName DatabaseName
+        {
+            get
+            {
+                ParseCurrentDataSource();
+                return _databaseName;
+            }
+        }
+
+        /// <summary>
         /// The Spanner Project name parsed from <see cref="DataSource"/>
+        /// May be null, if the data source isn't set, or is invalid.
         /// </summary>
         public string Project
         {
@@ -217,7 +228,8 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The Spanner Database name parsed from <see cref="DataSource"/>
+        /// The Spanner Database name parsed from <see cref="DataSource"/>.
+        /// May be null, if the data source isn't set, or is invalid, or doesn't contain a database name.
         /// </summary>
         public string SpannerDatabase
         {
@@ -230,6 +242,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The Spanner Instance name parsed from <see cref="DataSource"/>
+        /// May be null, if the data source isn't set, or is invalid.
         /// </summary>
         public string SpannerInstance
         {
@@ -244,7 +257,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
-        /// connection string and optional credential
+        /// connection string and optional credential.
         /// </summary>
         /// <param name="connectionString">A connection string of the form
         /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
