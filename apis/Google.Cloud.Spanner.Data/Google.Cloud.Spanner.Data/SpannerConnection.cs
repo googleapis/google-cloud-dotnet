@@ -72,7 +72,7 @@ namespace Google.Cloud.Spanner.Data
         /// The current connection string builder. The object is never mutated and never exposed to consumers.
         /// The field itself may be changed to a new builder by setting the <see cref="ConnectionString"/>
         /// property, or within this class via the <see cref="TrySetNewConnectionInfo(SpannerConnectionStringBuilder)"/> method.
-        /// This value may return null.
+        /// This field is never null.
         /// </summary>
         private SpannerConnectionStringBuilder _connectionStringBuilder;
 
@@ -108,9 +108,9 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string ConnectionString
         {
-            get => _connectionStringBuilder?.ToString();
+            get => _connectionStringBuilder.ToString();
             set => TrySetNewConnectionInfo(
-                new SpannerConnectionStringBuilder(value, _connectionStringBuilder?.CredentialOverride));
+                new SpannerConnectionStringBuilder(value, _connectionStringBuilder.CredentialOverride));
         }
 
         /// <summary>
@@ -121,16 +121,16 @@ namespace Google.Cloud.Spanner.Data
         public ChannelCredentials GetCredentials() => _connectionStringBuilder?.GetCredentials();
 
         /// <inheritdoc />
-        public override string Database => _connectionStringBuilder?.SpannerDatabase;
+        public override string Database => _connectionStringBuilder.SpannerDatabase;
 
         /// <inheritdoc />
-        public override string DataSource => _connectionStringBuilder?.DataSource;
+        public override string DataSource => _connectionStringBuilder.DataSource;
 
         /// <summary>
         /// The Spanner project name.
         /// </summary>
         [Category("Data")]
-        public string Project => _connectionStringBuilder?.Project;
+        public string Project => _connectionStringBuilder.Project;
 
         /// <inheritdoc />
         public override string ServerVersion => "0.0";
@@ -139,7 +139,7 @@ namespace Google.Cloud.Spanner.Data
         /// The Spanner instance name
         /// </summary>
         [Category("Data")]
-        public string SpannerInstance => _connectionStringBuilder?.SpannerInstance;
+        public string SpannerInstance => _connectionStringBuilder.SpannerInstance;
 
         /// <summary>
         /// This property is intended for internal use only.
@@ -158,7 +158,9 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Creates a SpannerConnection with no datasource or credential specified.
         /// </summary>
-        public SpannerConnection() { }
+        public SpannerConnection() : this(new SpannerConnectionStringBuilder())
+        {
+        }
 
         /// <summary>
         /// Creates a SpannerConnection with a datasource contained in connectionString
@@ -327,7 +329,7 @@ namespace Google.Cloud.Spanner.Data
                 Close();
             }
 
-            TrySetNewConnectionInfo(_connectionStringBuilder?.CloneWithNewDataSource(newDataSource));
+            TrySetNewConnectionInfo(_connectionStringBuilder.CloneWithNewDataSource(newDataSource));
         }
 
         /// <inheritdoc />
@@ -558,7 +560,7 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
-                    if (string.IsNullOrEmpty(_connectionStringBuilder?.SpannerDatabase))
+                    if (string.IsNullOrEmpty(_connectionStringBuilder.SpannerDatabase))
                     {
                         Logger.Info(() => "No database was defined. Therefore OpenAsync did not establish a session.");
                         _state = ConnectionState.Open;
@@ -661,7 +663,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The current connection string builder; this may be null. Callers must not mutate the returned builder.
+        /// The current connection string builder. This is never null. Callers must not mutate the returned builder.
         /// </summary>
         internal SpannerConnectionStringBuilder SpannerConnectionStringBuilder => _connectionStringBuilder;
 
