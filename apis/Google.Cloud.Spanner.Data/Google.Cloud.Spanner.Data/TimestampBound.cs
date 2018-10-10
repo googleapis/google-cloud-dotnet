@@ -15,8 +15,10 @@
 using System;
 using System.Globalization;
 using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -26,19 +28,24 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class TimestampBound : IEquatable<TimestampBound>
     {
-        internal TimestampBound(TimestampBoundMode mode)
+        private TimestampBound(TimestampBoundMode mode)
         {
             Mode = mode;
         }
 
-        internal TimestampBound(TimestampBoundMode mode, TimeSpan staleness)
+        private TimestampBound(TimestampBoundMode mode, TimeSpan staleness)
         {
+            if (staleness.Ticks < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(staleness), "Staleness must not be negative");
+            }
             Mode = mode;
             Staleness = staleness;
         }
 
-        internal TimestampBound(TimestampBoundMode mode, DateTime timestamp)
+        private TimestampBound(TimestampBoundMode mode, DateTime timestamp)
         {
+            GaxPreconditions.CheckArgument(timestamp.Kind == DateTimeKind.Utc, nameof(timestamp), "Timestamps must be expressed in UTC");
             Mode = mode;
             Timestamp = timestamp;
         }
@@ -86,10 +93,10 @@ namespace Google.Cloud.Spanner.Data
         /// Useful for reading at nearby replicas without the distributed
         /// timestamp negotiation overhead of <see cref="OfMaxStaleness"/>.
         /// </summary>
-        /// <param name="duration">The exact staleness to use.</param>
+        /// <param name="duration">The exact staleness to use. Must not be negative.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfExactStaleness(TimeSpan duration) => new TimestampBound(
-            TimestampBoundMode.ExactStaleness, duration);
+        public static TimestampBound OfExactStaleness(TimeSpan duration) =>
+            new TimestampBound(TimestampBoundMode.ExactStaleness, duration);
 
         /// <summary>
         /// Read data at a timestamp >= `NOW - <paramref name="duration"/>`. Guarantees that all
@@ -106,10 +113,10 @@ namespace Google.Cloud.Spanner.Data
         /// Note that this option can only be used in single-use
         /// transactions.
         /// </summary>
-        /// <param name="duration">The maximum duration of staleness to use.</param>
+        /// <param name="duration">The maximum duration of staleness to use. Must not be negative.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfMaxStaleness(TimeSpan duration) => new TimestampBound(
-            TimestampBoundMode.MaxStaleness, duration);
+        public static TimestampBound OfMaxStaleness(TimeSpan duration) =>
+            new TimestampBound(TimestampBoundMode.MaxStaleness, duration);
 
         /// <summary>
         /// Executes all reads at a timestamp >= <paramref name="minReadTimestamp"/>.
@@ -120,10 +127,10 @@ namespace Google.Cloud.Spanner.Data
         ///
         /// Note that this option can only be used in single-use transactions
         /// </summary>
-        /// <param name="minReadTimestamp">The earliest timestamp to read from.</param>
+        /// <param name="minReadTimestamp">The earliest timestamp to read from. Must be in UTC.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfMinReadTimestamp(DateTime minReadTimestamp) => new TimestampBound(
-            TimestampBoundMode.MinReadTimestamp, minReadTimestamp);
+        public static TimestampBound OfMinReadTimestamp(DateTime minReadTimestamp) =>
+            new TimestampBound(TimestampBoundMode.MinReadTimestamp, minReadTimestamp);
 
         /// <summary>
         /// Executes all reads at the given timestamp. Unlike other modes,
@@ -136,10 +143,10 @@ namespace Google.Cloud.Spanner.Data
         /// for coordinating many reads against a consistent snapshot of the
         /// data.
         /// </summary>
-        /// <param name="timestamp">The timestamp to read from.</param>
+        /// <param name="timestamp">The timestamp to read from. Must be in UTC.</param>
         /// <returns>A created <see cref="TimestampBound"/>.</returns>
-        public static TimestampBound OfReadTimestamp(DateTime timestamp) => new TimestampBound(
-            TimestampBoundMode.ReadTimestamp, timestamp);
+        public static TimestampBound OfReadTimestamp(DateTime timestamp) =>
+            new TimestampBound(TimestampBoundMode.ReadTimestamp, timestamp);
 
         /// <inheritdoc />
         public bool Equals(TimestampBound other)
@@ -156,19 +163,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-            var timestampBound = obj as TimestampBound;
-            return timestampBound != null && Equals(timestampBound);
-        }
+        public override bool Equals(object obj) => Equals(obj as TimestampBound);
 
         /// <inheritdoc />
         public override int GetHashCode()
@@ -189,10 +184,15 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>The base64 encoded string.</returns>
         public string ToBase64String()
         {
-            var structValue = new Struct();
-            structValue.Fields[nameof(Mode)] = new Value { StringValue = Mode.ToString() };
-            structValue.Fields[nameof(Timestamp)] = new Value { StringValue = Timestamp.ToString("O")};
-            structValue.Fields[nameof(Staleness)] = new Value { StringValue = Staleness.Ticks.ToString() };
+            var structValue = new Struct
+            {
+                Fields =
+                {
+                    [nameof(Mode)] = Value.ForString(Mode.ToString()),
+                    [nameof(Timestamp)] = Value.ForString(Timestamp.ToString("O")),
+                    [nameof(Staleness)] = Value.ForString(Staleness.Ticks.ToString(CultureInfo.InvariantCulture))
+                }
+            };
             return structValue.ToByteString().ToBase64();
         }
 
@@ -203,42 +203,70 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A new instance of <see cref="TimestampBound"/>.</returns>
         public static TimestampBound FromBase64String(string base64String)
         {
-            var structValue = new Struct();
-            structValue.MergeFrom(ByteString.FromBase64(base64String));
+            var structValue = Struct.Parser.ParseFrom(ByteString.FromBase64(base64String));
             TimestampBoundMode? mode = null;
             DateTime? timestamp = null;
             TimeSpan? staleness = null;
 
             if (structValue.Fields.TryGetValue(nameof(Mode), out Value timestampBoundModeValue))
             {
-                mode = (TimestampBoundMode) System.Enum.Parse(
-                    typeof(TimestampBoundMode),
-                    timestampBoundModeValue.StringValue);
+                mode = (TimestampBoundMode) System.Enum.Parse(typeof(TimestampBoundMode), timestampBoundModeValue.StringValue);
             }
             if (structValue.Fields.TryGetValue(nameof(Timestamp), out Value timestampValue))
             {
-                timestamp = DateTime.ParseExact(timestampValue.StringValue, "O", CultureInfo.InvariantCulture); ;
+                timestamp = DateTime.ParseExact(timestampValue.StringValue, "O", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
             }
             if (structValue.Fields.TryGetValue(nameof(Staleness), out Value stalenessValue))
             {
-                staleness = new TimeSpan(Convert.ToInt64(stalenessValue.StringValue));
+                staleness = new TimeSpan(long.Parse(stalenessValue.StringValue, CultureInfo.InvariantCulture));
             }
             if (!mode.HasValue)
             {
                 throw new InvalidOperationException($"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Mode)}");
             }
-            if (mode.Value == TimestampBoundMode.ExactStaleness || mode.Value == TimestampBoundMode.MaxStaleness)
+            switch (mode.Value)
             {
-                GaxPreconditions.CheckState(staleness.HasValue, $"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Staleness)}");
-                return new TimestampBound(mode.Value, staleness.Value);
+                case TimestampBoundMode.ExactStaleness:
+                case TimestampBoundMode.MaxStaleness:
+                    GaxPreconditions.CheckArgument(staleness.HasValue, nameof(base64String), "Unable to properly deserialize {0}.{1}", nameof(TimestampBound), nameof(Staleness));
+                    return new TimestampBound(mode.Value, staleness.Value);
+                case TimestampBoundMode.MinReadTimestamp:
+                case TimestampBoundMode.ReadTimestamp:
+                    GaxPreconditions.CheckArgument(timestamp.HasValue, nameof(base64String), "Unable to properly deserialize {0}.{1}", nameof(TimestampBound), nameof(Timestamp));
+                    return new TimestampBound(mode.Value, timestamp.Value);
+                case TimestampBoundMode.Strong:
+                    // No need to create a new instance
+                    return Strong;
+                default:
+                    throw new ArgumentException($"Invalid mode for timestamp bound: {mode.Value}");
             }
-            else if (mode.Value == TimestampBoundMode.MinReadTimestamp ||
-                mode.Value == TimestampBoundMode.ReadTimestamp)
+        }
+
+        internal TransactionOptions ToTransactionOptions()
+        {
+            var innerOptions = new TransactionOptions.Types.ReadOnly();
+
+            switch (Mode)
             {
-                GaxPreconditions.CheckState(timestamp.HasValue, $"Unable to properly deserialize {nameof(TimestampBound)}.{nameof(Timestamp)}");
-                return new TimestampBound(mode.Value, timestamp.Value);
+                case TimestampBoundMode.Strong:
+                    innerOptions.Strong = true;
+                    break;
+                case TimestampBoundMode.ReadTimestamp:
+                    innerOptions.ReadTimestamp = wkt::Timestamp.FromDateTime(Timestamp);
+                    break;
+                case TimestampBoundMode.MinReadTimestamp:
+                    innerOptions.MinReadTimestamp = wkt::Timestamp.FromDateTime(Timestamp);
+                    break;
+                case TimestampBoundMode.ExactStaleness:
+                    innerOptions.ExactStaleness = Duration.FromTimeSpan(Staleness);
+                    break;
+                case TimestampBoundMode.MaxStaleness:
+                    innerOptions.MaxStaleness = Duration.FromTimeSpan(Staleness);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
-            return new TimestampBound(mode.Value);
+            return new TransactionOptions { ReadOnly = innerOptions };
         }
     }
 }
