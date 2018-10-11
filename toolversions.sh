@@ -3,7 +3,7 @@
 
 # TODO: Make all of this work under Linux too, if it's useful
 
-declare -r REPO_ROOT=$(realpath $(dirname ${BASH_SOURCE}))
+declare -r REPO_ROOT=$(readlink -f $(dirname ${BASH_SOURCE}))
 declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
 declare -r DOCFX_VERSION=2.39.1
