@@ -65,7 +65,8 @@ $REPORTGENERATOR \
 if [[ "$upload_report" = true ]]
 then
   # -y option to confirm all prompts.
-  choco install codecov -y
+  # --no-progress to avoid our log file being spammed with download progress
+  choco install codecov -y --no-progress
 
   # Assume we've created the coverage file by this point. If we haven't, there should already have been an error.
   # Pass whatever parameters we recieved.
