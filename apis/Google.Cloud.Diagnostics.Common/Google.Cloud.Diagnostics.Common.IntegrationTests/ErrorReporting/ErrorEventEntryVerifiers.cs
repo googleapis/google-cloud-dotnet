@@ -14,13 +14,38 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
-    public static class ErrorEventEntryVerifiers
+    internal static class ErrorEventEntryVerifiers
     {
+        /// <summary>
+        /// Checks that there's only one event present.
+        /// Includes a message with context info to help track the possible issue.
+        /// </summary>
+        public static ErrorEvent VerifySingle(ErrorEventEntryPolling polling, string contextInfo)
+        {
+            var events = polling.GetEvents(contextInfo, 1);
+            var errorEvent = events.SingleOrDefault();
+            Assert.True(errorEvent != null, $"No entries found for context {contextInfo}");
+            return errorEvent;
+        }
+
+        /// <summary>
+        /// Checks that there are <paramref name="expected"/> events present.
+        /// Includes a message with context info to help track the possible issue.
+        /// </summary>
+        public static IEnumerable<ErrorEvent> VerifyMany(ErrorEventEntryPolling polling, string contextInfo, int expected)
+        {
+            var events = polling.GetEvents(contextInfo, expected).ToList();
+            Assert.True(expected == events.Count, $"Should have found {expected} entries for contest {contextInfo} but found {events.Count}");
+            return events;
+        }
+
         /// <summary>
         /// Checks that an <see cref="ErrorEvent"/> contains valid data,
         /// including HTTP Context data.

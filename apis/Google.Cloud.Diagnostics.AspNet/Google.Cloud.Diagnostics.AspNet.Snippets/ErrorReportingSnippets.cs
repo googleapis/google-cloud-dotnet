@@ -62,8 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 
             Assert.Equal(HttpStatusCode.InternalServerError, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
-
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
                 errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
         }
@@ -76,7 +75,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
                 errorEvent, _testId, "DoSomething");
         }

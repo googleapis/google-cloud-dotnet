@@ -20,7 +20,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using System;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
@@ -71,8 +70,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             await Assert.ThrowsAsync<Exception>(() => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = s_errorPolling.GetEvents(_testId, 1).Single();
-
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_errorPolling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
 

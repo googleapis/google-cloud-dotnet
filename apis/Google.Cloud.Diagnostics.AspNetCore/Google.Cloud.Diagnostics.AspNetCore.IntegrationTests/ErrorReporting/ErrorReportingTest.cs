@@ -64,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog));
         }
 
@@ -74,7 +74,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             await Assert.ThrowsAsync<Exception>(() =>
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
         }
 
@@ -90,8 +90,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             await Assert.ThrowsAsync<Exception>(() =>
                 _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
-            var errorEvents = s_polling.GetEvents(_testId, 4);
-            Assert.Equal(4, errorEvents.Count());
+            var errorEvents = ErrorEventEntryVerifiers.VerifyMany(s_polling, _testId, 4);
 
             var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException)));
             Assert.Equal(3, exceptionEvents.Count());
