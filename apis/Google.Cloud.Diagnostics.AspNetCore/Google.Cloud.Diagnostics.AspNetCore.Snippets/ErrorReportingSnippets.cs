@@ -58,8 +58,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             await Assert.ThrowsAsync<Exception>(()
                 => _client.GetAsync($"/ErrorLoggingSamples/{nameof(ErrorLoggingSamplesController.ThrowsException)}/{_testId}"));
 
-            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
-
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorLoggingSamplesController.ThrowsException));
         }
 
@@ -76,7 +75,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-            var errorEvent = s_polling.GetEvents(_testId, 1).Single();
+            var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
 
             // Verifying with function name ThrowsExceptions because that is the function
             // that actually throws the Exception so will be the one included as
