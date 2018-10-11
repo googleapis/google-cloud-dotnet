@@ -1,10 +1,10 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+﻿// Copyright 2018 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 // 
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     https://www.apache.org/licenses/LICENSE-2.0
 // 
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Spanner.Data
+namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    /// Specifies the behavior when <see cref="SpannerOptions.MaximumActiveSessions"/>
+    /// Specifies the behavior when <see cref="SessionPoolOptions.MaximumActiveSessions"/>
     /// is reached.
     /// </summary>
     public enum ResourcesExhaustedBehavior
@@ -30,9 +30,7 @@ namespace Google.Cloud.Spanner.Data
         Block = 0,
 
         /// <summary>
-        /// The operation will fail with a <see cref="SpannerException"/>
-        /// with <see cref="SpannerException.ErrorCode"/> equal to
-        /// <see cref="ErrorCode.ResourceExhausted"/>.
+        /// The operation will fail with an exception with the ErrorCode set to ResourceExhausted.
         /// </summary>
         Fail = 1
     }
