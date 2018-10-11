@@ -24,6 +24,7 @@ GA:
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate Log4Net integration package is available](Google.Cloud.Logging.Log4Net/index.html)
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
+- [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - Google Cloud Spanner:
   - [Google.Cloud.Spanner.Data](Google.Cloud.Spanner.Data/index.html): ADO.NET provider for Google Cloud Spanner (recommended)
   - [Google.Cloud.Spanner.V1](Google.Cloud.Spanner.V1/index.html): Low-level access to Spanner API
@@ -60,7 +61,6 @@ Beta:
   - Additionally, a [separate NLog integration package is available](Google.Cloud.Logging.NLog/index.html)
 - [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html)
 - [Google.Cloud.OsLogin.V1](Google.Cloud.OsLogin.V1/index.html)
-- [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
 - [Google.Cloud.Tasks.V2Beta2](Google.Cloud.Tasks.V2Beta2/index.html)
