@@ -10,3 +10,4 @@ cd ..
 
 ./build.sh
 
+./processbuildtiminglog.sh
