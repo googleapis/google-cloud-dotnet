@@ -85,8 +85,10 @@ else
   declare -r testdirs=$(echo */*.IntegrationTests */*.Snippets */*.SmokeTests)
 fi
 
+log_build_action "(Start) Integration tests"
 for testdir in $testdirs
 do
+  log_build_action "Testing $testdir"
   if [[ "$testdir" =~ Metadata || "$testdir" =~ EntityFrameworkCore.Spanner ]]
   then
     echo "Skipping $testdir; test not supported yet."
@@ -106,6 +108,7 @@ do
     (cd $testdir; dotnet test -c Release --no-build || echo "$testdir" >> $FAILURE_TEMP_FILE)
   fi
 done
+log_build_action "(End) Integration tests"
 
 mv -f $FAILURE_TEMP_FILE $FAILURE_FILE
 
