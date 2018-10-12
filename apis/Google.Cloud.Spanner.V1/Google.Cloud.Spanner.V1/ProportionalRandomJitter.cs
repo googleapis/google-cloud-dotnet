@@ -24,7 +24,7 @@ namespace Google.Cloud.Spanner.V1
     /// Jitter that is random for some proportion of the given delay, but fixed for the rest.
     /// For example, if an instance created with a proportion of 0.1 (corresponding to 10%) is
     /// asked for a delay with an input of 1 hour, the result will be uniformly random between 54 minutes and 60 minutes.
-    /// (10% of one hour is 6 minutes.)
+    /// (10% of one hour is 6 minutes.) Note that the result is never greater than the specified maximum delay.
     /// </summary>
     internal sealed class ProportionalRandomJitter : RetrySettings.IJitter
     {
@@ -44,6 +44,9 @@ namespace Google.Cloud.Spanner.V1
         /// <inheritdoc/>
         public TimeSpan GetDelay(TimeSpan maxDelay)
         {
+            // All our jitters are permissive like this. It can make some maths simpler, but
+            // means the caller needs to use the result carefully.
+            // TODO: Document in GAX.
             if (maxDelay <= TimeSpan.Zero)
             {
                 return maxDelay;
