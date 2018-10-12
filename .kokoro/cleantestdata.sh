@@ -10,3 +10,4 @@ cd ..
 
 ./cleantestdata.sh
 
+./processbuildtiminglog.sh

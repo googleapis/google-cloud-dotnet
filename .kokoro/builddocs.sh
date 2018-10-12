@@ -14,3 +14,5 @@ cd ..
 # Build the docs.
 cd docs
 ./builddocs.sh
+cd ..
+./processbuildtiminglog.sh

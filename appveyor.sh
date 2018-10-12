@@ -17,3 +17,5 @@ else
   # build and run tests.
   ./build.sh --diff
 fi
+
+./processbuildtiminglog.sh

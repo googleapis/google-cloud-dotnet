@@ -19,3 +19,4 @@ addons:
 
 script:
   - ./build.sh --diff --regex $API_REGEX
+  - ./processbuildtiminglog.sh

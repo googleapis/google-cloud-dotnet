@@ -26,3 +26,7 @@ cd ../..
 # Push the changes to nuget.
 cd ./releasebuild/nuget
 for pkg in *.nupkg; do dotnet nuget push -s https://api.nuget.org/v3/index.json -k $NUGET_API_KEY $pkg; done
+
+# Process the build log in releasebuild
+cd ..
+./processbuildtiminglog.sh

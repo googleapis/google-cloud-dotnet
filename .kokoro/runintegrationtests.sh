@@ -46,3 +46,5 @@ rm -rf coverage
 ./runintegrationtests.sh $script_flags --retry
 # Even if we set up here some upload report flags, if --upload is not present we won't upload the report.
 ./createcoveragereport.sh $report_flags --upload_reportname integrationtests
+
+./processbuildtiminglog.sh
