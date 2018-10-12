@@ -39,6 +39,13 @@ namespace Google.Cloud.Tools.ProcessBuildTimingLog
             {
                 throw new ArgumentException("Invalid log line: {line}");
             }
+            // Horrible hack: on Travis, we end up with +0000 instead of +00:00. It's simpler
+            // to fix when processing than in the shell scripts.
+            if (bits[0].EndsWith("+0000"))
+            {
+                bits[0] = bits[0].Insert(bits[0].Length - 2, ":");
+            }
+
             var instant = OffsetDateTimePattern.ExtendedIso.Parse(bits[0]).Value.ToInstant();
             return new LogEntry(bits[1], instant);
         }
