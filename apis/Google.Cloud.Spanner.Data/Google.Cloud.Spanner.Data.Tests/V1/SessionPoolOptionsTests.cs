@@ -18,9 +18,7 @@ using System;
 using System.Reflection;
 using Xunit;
 
-using Google.Cloud.Spanner.V1.PoolRewrite;
-
-namespace Google.Cloud.Spanner.V1.Tests
+namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 {
     public class SessionPoolOptionsTests
     {
