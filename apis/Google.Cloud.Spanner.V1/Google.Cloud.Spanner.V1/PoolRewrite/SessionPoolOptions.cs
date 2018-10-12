@@ -23,13 +23,13 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
     /// </summary>
     public sealed class SessionPoolOptions
     {
-        // Note: if any of these defaults are changed, update the documentation accordingly.
+        // Note: if any of these defaults are changed, update the XML documentation comments on the properties accordingly.
         private int _maximumActiveSessions = 100;
         private int _minimumPooledSessions = 10;
         private TimeSpan _idleSessionRefreshDelay = TimeSpan.FromMinutes(15);
         private TimeSpan _poolEvictionDelay = TimeSpan.FromDays(7);
         private ResourcesExhaustedBehavior _waitOnResourcesExhausted = ResourcesExhaustedBehavior.Block;
-        private double _writeSessionsFraction;
+        private double _writeSessionsFraction = 0.2;
         private int _timeout = 60;
         private TimeSpan _maintenanceLoopDelay = TimeSpan.FromSeconds(30);
         private int _maximumConcurrentSessionCreates = 10;
@@ -135,8 +135,8 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         /// </summary>
         /// <remarks>
         /// <para>
-        /// This is an optimisation to avoid the cost of sending a BeginTransaction() rpc.If all such sessions are in use and a
-        /// write request comes, we will make the BeginTransaction() rpc inline. The must be between 0 and 1 (inclusive).
+        /// This is an optimisation to avoid the cost of sending a BeginTransaction() rpc. If all such sessions are in use and a
+        /// write request comes, we will make the BeginTransaction() rpc inline.
         /// </para>
         /// <para>This property must always be in the range 0-1 (inclusive). The default value is 0.2.</para>
         /// </remarks>
@@ -213,7 +213,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         }
 
         /// <summary>
-        /// Clock used for timings; can be replaced for testing.
+        /// Scheduler used for delays (e.g. the pool maintenance loop); can be replaced for testing.
         /// </summary>
         internal IScheduler Scheduler
         {
@@ -221,6 +221,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             set => _scheduler = GaxPreconditions.CheckNotNull(value, nameof(value));
         }
 
+        // TODO: Move to GAX if we find we need it in other libraries. (We have CheckNonNegative already.)
         private static TimeSpan CheckPositiveTimeSpan(TimeSpan value)
         {
             if (value.Ticks <= 0)
