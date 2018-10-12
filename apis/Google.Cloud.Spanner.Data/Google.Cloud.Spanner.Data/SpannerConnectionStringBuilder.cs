@@ -135,6 +135,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// DataSource of the Spanner database in the form of 'projects/{project}/instances/{instance}/databases/{database}'
+        /// or 'projects/{project}/instances/{instance}'.
         /// </summary>
         public string DataSource
         {
@@ -144,15 +145,15 @@ namespace Google.Cloud.Spanner.Data
 
         private bool ParseCurrentDataSource() => ParseDataSource(DataSource);
 
-        // Note: this won't reset _instanceName if we manage to parse it as a DatabaseName, but we never
-        // use _instanceName if _databaseName is valid. (This is a little fragile, and may be worth revisiting.)
+        // We parse both every time; only one will ever be non-null afterwards (if any).
         private bool ParseDataSource(string dataSource) =>
-            DatabaseName.TryParse(dataSource, out _databaseName) ||
+            DatabaseName.TryParse(dataSource, out _databaseName) |
             InstanceName.TryParse(dataSource, out _instanceName);
 
         private string ValidatedDataSource(string dataSource)
         {
-            if (!ParseDataSource(dataSource))
+            // It's okay to set the data source to an empty string or null to clear it.
+            if (!string.IsNullOrEmpty(dataSource) && !ParseDataSource(dataSource))
             {
                 throw new ArgumentException(
                     $"'{dataSource}' is not a valid value for ${nameof(DataSource)}. It should be of the form "
@@ -161,6 +162,8 @@ namespace Google.Cloud.Spanner.Data
 
             return dataSource;
         }
+
+        // Note: EndPoint rather than Endpoint to avoid an unnecessary breaking change from V1.
 
         /// <summary>
         /// The <see cref="ServiceEndpoint"/> to use to connect to Spanner. If not supplied in the
@@ -205,12 +208,26 @@ namespace Google.Cloud.Spanner.Data
         /// The fully-qualified database name parsed from <see cref="DataSource"/>.
         /// May be null, if the data source isn't set, or is invalid, or doesn't contain a database name.
         /// </summary>
-        internal DatabaseName DatabaseName
+        public DatabaseName DatabaseName
         {
             get
             {
                 ParseCurrentDataSource();
                 return _databaseName;
+            }
+            set
+            {
+                // .NET Core 1.0 behaves bizarrely around null values: setting a null value in the
+                // indexer appears to be ignored. We can remove the value instead. Even though this is fixed
+                // in .NET Core 2.0, we might as well be consistent.
+                if (value == null)
+                {
+                    Remove(DataSourceKeyword);
+                }
+                else
+                {
+                    DataSource = value.ToString();
+                }
             }
         }
 
@@ -295,14 +312,14 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="database">The new database name. Can be null to open a connection for Ddl commands.</param>
         /// <returns>A new instance of <see cref="SpannerConnectionStringBuilder"/></returns>
-        public SpannerConnectionStringBuilder WithDatabase(string database)
-            => string.IsNullOrEmpty(database)
+        public SpannerConnectionStringBuilder WithDatabase(string database) =>
+            string.IsNullOrEmpty(database)
                 ? CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}")
                 : CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}/databases/{database}");
 
         private string GetValueOrDefault(string key, string defaultValue = "")
         {
-            key = key.ToLower();
+            key = key.ToLowerInvariant();
             if (ContainsKey(key))
             {
                 return (string) this[key];
@@ -326,6 +343,7 @@ namespace Google.Cloud.Spanner.Data
             get => base[keyword];
             set
             {
+                // TODO: Other validation? (For integer values etc?)
                 if (string.Equals(keyword, DataSourceKeyword, StringComparison.OrdinalIgnoreCase))
                 {
                     value = ValidatedDataSource((string)value);
