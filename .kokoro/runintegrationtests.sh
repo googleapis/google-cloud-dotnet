@@ -20,12 +20,16 @@ report_flags="--upload_commit $KOKORO_GITHUB_COMMIT --upload_build $KOKORO_BUILD
 # of whether we're about to create any.
 rm -rf coverage
 
-if [[ -f "$KOKORO_KEYSTORE_DIR/73609_codecov-token" ]]
-then
-  export CODECOV_TOKEN=$(cat "$KOKORO_KEYSTORE_DIR/73609_codecov-token")
-  script_flags=--coverage
-  report_flags="--upload $report_flags"
-fi
+# Temporarily disable coverage. For some reason, 4 net452 unit tests are taking
+# 50 minutes each, in a way that's hard to reproduce locally. Get back to green
+# builds while we investigate.
+#
+# if [[ -f "$KOKORO_KEYSTORE_DIR/73609_codecov-token" ]]
+# then
+#  export CODECOV_TOKEN=$(cat "$KOKORO_KEYSTORE_DIR/73609_codecov-token")
+#  script_flags=--coverage
+#  report_flags="--upload $report_flags"
+# fi
 
 # Build the libraries and run unit tests, optionally with coverage.
 ./build.sh $script_flags
