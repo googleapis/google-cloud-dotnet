@@ -15,11 +15,6 @@ init:
   - rmdir C:\cygwin /s /q
   - rmdir C:\QT /s /q
 
-  
-environment:
-  COVERALLS_REPO_TOKEN:
-    secure: 0F41/ccYgoYS098AEpBDGjBToFMvBsrjGLRzOW+ViyY4QrIzVIUmMlKiuNXDDeAs
-
 # Install the pre-requisites for the build.
 install:
   # add dotnet and curl to PATH
