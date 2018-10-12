@@ -6,7 +6,7 @@ source ../toolversions.sh
 install_docfx
 
 build_api_docs() {
-  echo "$(date +%T) Building docs for $1"
+  log_build_action "Building docs for $1"
   local api=$1
 
   # Special case "root" where we don't need to generate the sources
@@ -58,7 +58,7 @@ build_api_docs() {
 
 if [[ ! -d "dependencies" ]]
 then
-  echo "Fetching external dependencies repo"
+  log_build_action "Fetching external dependencies repo"
   git clone https://github.com/googleapis/google-cloud-dotnet dependencies --quiet -b dependencies --depth=1
 fi
 
@@ -78,7 +78,9 @@ then
   apis="`/usr/bin/find ../apis -mindepth 2 -maxdepth 2 -name docs -type d | cut -d/ -f3` root"
 fi
 
+log_build_action "(Start) Building docs"
 for api in $apis
 do 
   build_api_docs $api
 done
+log_build_action "(End) Building docs"

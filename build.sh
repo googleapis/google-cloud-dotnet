@@ -93,7 +93,8 @@ then
 fi
 
 # First build the analyzers, for use in everything else.
-echo "$(date +%T) Building analyzers"
+log_build_action "(Start) build.sh"
+log_build_action "Building analyzers"
 
 dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
 
@@ -110,6 +111,7 @@ do
     continue
   fi
 
+  log_build_action "Building $apidir"
   dotnet build -c Release $apidir
 
   # On Linux, we don't have desktop .NET, so any projects which only
@@ -123,13 +125,14 @@ do
   done
 done
 
+log_build_action "(Start) Unit tests"
 if [[ "$runtests" = true ]]
 then
   # Could use xargs, but this is more flexible
   while read testproject
   do  
-    echo "$(date +%T) Testing $testproject"
     testdir=$(dirname $testproject)
+    log_build_action "Testing $testdir"
     if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
     then
       echo "(Running with coverage)"
@@ -140,4 +143,5 @@ then
   done < AllTests.txt
 fi
 
-echo "$(date +%T) Build finished."
+log_build_action "(End) Unit tests"
+log_build_action "(End) build.sh"

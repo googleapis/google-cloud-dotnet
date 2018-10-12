@@ -9,6 +9,8 @@ set -e
 
 cd $(dirname $0)
 
+source toolversions.sh
+
 apis=$(echo apis/Google.* | sed 's/apis\///g')
 
 echo "Using test project '$TEST_PROJECT'"
@@ -18,7 +20,7 @@ do
   cleantestdir=apis/$api/$api.CleanTestData
   if [[ -d "$cleantestdir" ]]
   then
-    echo "Cleaning test data for $api"
+    log_build_action "Cleaning test data for $api"
     dotnet build -c Release $cleantestdir
     dotnet run --project $cleantestdir -- $TEST_PROJECT
   fi
