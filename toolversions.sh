@@ -82,3 +82,9 @@ install_docfx() {
      )
   fi  
 }
+
+# Logs to both stdout and a build timing log, allowing
+# post-processing to see how long each part of the build takes.
+log_build_action() {
+  echo "$(date -u -Iseconds) $1" | tee -a $REPO_ROOT/build_timing_log.txt
+}

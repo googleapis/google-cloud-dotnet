@@ -48,3 +48,6 @@ AllTests.txt
 
 # Benchmarks
 BenchmarkDotNet.Artifacts
+
+# Log files
+build_timing_log.txt
