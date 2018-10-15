@@ -86,14 +86,16 @@ namespace Google.Cloud.Tools.ProcessBuildTimingLog
                 PrintEntry(entry.Timestamp, nextEnd.Timestamp, $"({unprefixedAction})");
                 return;
             }
-            // Simple case: just one line for this action. Use the next entry if we have one.
-            if (index == entries.Count)
-            {
-                PrintEntry(entry.Timestamp, null, $"Final line of file: {entry.Action}");
-            }
-            else
+            // Simple case: just one line for this action, and we're not at the end. Use the next entry.
+            if (index < entries.Count - 1)
             {
                 PrintEntry(entry.Timestamp, entries[index + 1].Timestamp, entry.Action);
+            }
+            // We only have one line for the action, but it's also the last line of the file. We have a start
+            // but no end, so we can't work out the duration.
+            else
+            {
+                PrintEntry(entry.Timestamp, null, $"Final line of file: {entry.Action}");
             }
         
             void PrintEntry(Instant start, Instant? end, string action)
@@ -101,7 +103,7 @@ namespace Google.Cloud.Tools.ProcessBuildTimingLog
                 string formattedDuration = end != null
                     ? s_durationPattern.Format(end.Value - start)
                     : NoDurationText;
-                Console.WriteLine($"{InstantPattern.General.Format(start)} {formattedDuration} {action}");
+                Console.WriteLine($"{InstantPattern.General.Format(start)}   {formattedDuration}   {action}");
             }
         }
     }
