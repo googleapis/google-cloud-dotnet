@@ -3,7 +3,7 @@
 //     source: google/logging/v2/logging.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google Inc.
+// Copyright 2018 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 1591
 #region Designer generated code
@@ -100,11 +101,10 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Writes log entries to Stackdriver Logging. This API method is the
-      /// only way to send log entries to Stackdriver Logging. This method
-      /// is used, directly or indirectly, by the Stackdriver Logging agent
-      /// (fluentd) and all logging libraries configured to use Stackdriver
-      /// Logging.
+      /// Writes log entries to Logging. This API method is the
+      /// only way to send log entries to Logging. This method
+      /// is used, directly or indirectly, by the Logging agent
+      /// (fluentd) and all logging libraries configured to use Logging.
       /// A single request may contain log entries for a maximum of 1000
       /// different resources (projects, organizations, billing accounts or
       /// folders)
@@ -119,7 +119,7 @@ namespace Google.Cloud.Logging.V2 {
 
       /// <summary>
       /// Lists log entries.  Use this method to retrieve log entries from
-      /// Stackdriver Logging.  For ways to export log entries, see
+      /// Logging.  For ways to export log entries, see
       /// [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -131,8 +131,7 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      /// Lists the descriptors for monitored resource types used by Stackdriver
-      /// Logging.
+      /// Lists the descriptors for monitored resource types used by Logging.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -236,11 +235,10 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLog, null, options, request);
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging. This API method is the
-      /// only way to send log entries to Stackdriver Logging. This method
-      /// is used, directly or indirectly, by the Stackdriver Logging agent
-      /// (fluentd) and all logging libraries configured to use Stackdriver
-      /// Logging.
+      /// Writes log entries to Logging. This API method is the
+      /// only way to send log entries to Logging. This method
+      /// is used, directly or indirectly, by the Logging agent
+      /// (fluentd) and all logging libraries configured to use Logging.
       /// A single request may contain log entries for a maximum of 1000
       /// different resources (projects, organizations, billing accounts or
       /// folders)
@@ -255,11 +253,10 @@ namespace Google.Cloud.Logging.V2 {
         return WriteLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging. This API method is the
-      /// only way to send log entries to Stackdriver Logging. This method
-      /// is used, directly or indirectly, by the Stackdriver Logging agent
-      /// (fluentd) and all logging libraries configured to use Stackdriver
-      /// Logging.
+      /// Writes log entries to Logging. This API method is the
+      /// only way to send log entries to Logging. This method
+      /// is used, directly or indirectly, by the Logging agent
+      /// (fluentd) and all logging libraries configured to use Logging.
       /// A single request may contain log entries for a maximum of 1000
       /// different resources (projects, organizations, billing accounts or
       /// folders)
@@ -272,11 +269,10 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_WriteLogEntries, null, options, request);
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging. This API method is the
-      /// only way to send log entries to Stackdriver Logging. This method
-      /// is used, directly or indirectly, by the Stackdriver Logging agent
-      /// (fluentd) and all logging libraries configured to use Stackdriver
-      /// Logging.
+      /// Writes log entries to Logging. This API method is the
+      /// only way to send log entries to Logging. This method
+      /// is used, directly or indirectly, by the Logging agent
+      /// (fluentd) and all logging libraries configured to use Logging.
       /// A single request may contain log entries for a maximum of 1000
       /// different resources (projects, organizations, billing accounts or
       /// folders)
@@ -291,11 +287,10 @@ namespace Google.Cloud.Logging.V2 {
         return WriteLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Writes log entries to Stackdriver Logging. This API method is the
-      /// only way to send log entries to Stackdriver Logging. This method
-      /// is used, directly or indirectly, by the Stackdriver Logging agent
-      /// (fluentd) and all logging libraries configured to use Stackdriver
-      /// Logging.
+      /// Writes log entries to Logging. This API method is the
+      /// only way to send log entries to Logging. This method
+      /// is used, directly or indirectly, by the Logging agent
+      /// (fluentd) and all logging libraries configured to use Logging.
       /// A single request may contain log entries for a maximum of 1000
       /// different resources (projects, organizations, billing accounts or
       /// folders)
@@ -309,7 +304,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       /// <summary>
       /// Lists log entries.  Use this method to retrieve log entries from
-      /// Stackdriver Logging.  For ways to export log entries, see
+      /// Logging.  For ways to export log entries, see
       /// [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -323,7 +318,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       /// <summary>
       /// Lists log entries.  Use this method to retrieve log entries from
-      /// Stackdriver Logging.  For ways to export log entries, see
+      /// Logging.  For ways to export log entries, see
       /// [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -335,7 +330,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       /// <summary>
       /// Lists log entries.  Use this method to retrieve log entries from
-      /// Stackdriver Logging.  For ways to export log entries, see
+      /// Logging.  For ways to export log entries, see
       /// [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -349,7 +344,7 @@ namespace Google.Cloud.Logging.V2 {
       }
       /// <summary>
       /// Lists log entries.  Use this method to retrieve log entries from
-      /// Stackdriver Logging.  For ways to export log entries, see
+      /// Logging.  For ways to export log entries, see
       /// [Exporting Logs](/logging/docs/export).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -360,8 +355,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogEntries, null, options, request);
       }
       /// <summary>
-      /// Lists the descriptors for monitored resource types used by Stackdriver
-      /// Logging.
+      /// Lists the descriptors for monitored resource types used by Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -373,8 +367,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListMonitoredResourceDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the descriptors for monitored resource types used by Stackdriver
-      /// Logging.
+      /// Lists the descriptors for monitored resource types used by Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -384,8 +377,7 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      /// Lists the descriptors for monitored resource types used by Stackdriver
-      /// Logging.
+      /// Lists the descriptors for monitored resource types used by Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -397,8 +389,7 @@ namespace Google.Cloud.Logging.V2 {
         return ListMonitoredResourceDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the descriptors for monitored resource types used by Stackdriver
-      /// Logging.
+      /// Lists the descriptors for monitored resource types used by Logging.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
