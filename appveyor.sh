@@ -6,6 +6,8 @@ dotnet --info
 echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
 bash generateprojects.sh && git diff --exit-code
 
+> build_timing_log.txt
+
 if [[ -z "$APPVEYOR_PULL_REQUEST_NUMBER" ]]
 then
   # Not in a pull request.
