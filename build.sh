@@ -102,7 +102,6 @@ dotnet publish -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
 > AllTests.txt
 for api in ${apis[*]}
 do
-  echo "$(date +%T) Building $api"
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
 
   # Only build ASP.NET support on Windows

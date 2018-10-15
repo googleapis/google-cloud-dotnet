@@ -15,6 +15,7 @@ apis=$(echo apis/Google.* | sed 's/apis\///g')
 
 echo "Using test project '$TEST_PROJECT'"
 
+log_build_action "(Start) Cleaning test data"
 for api in ${apis[*]}
 do  
   cleantestdir=apis/$api/$api.CleanTestData
@@ -25,3 +26,4 @@ do
     dotnet run --project $cleantestdir -- $TEST_PROJECT
   fi
 done
+log_build_action "(End) Cleaning test data"
