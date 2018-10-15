@@ -22,44 +22,44 @@ using linq = System.Linq;
 namespace Google.Cloud.Dialogflow.V2
 {
     /// <summary>
-    /// Resource name for the 'session' resource.
+    /// Resource name for the 'agent' resource.
     /// </summary>
-    public sealed partial class SessionName : gax::IResourceName, sys::IEquatable<SessionName>
+    public sealed partial class AgentName : gax::IResourceName, sys::IEquatable<AgentName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/agent/sessions/{session}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/agents/{agent}");
 
         /// <summary>
-        /// Parses the given session resource name in string form into a new
-        /// <see cref="SessionName"/> instance.
+        /// Parses the given agent resource name in string form into a new
+        /// <see cref="AgentName"/> instance.
         /// </summary>
-        /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="SessionName"/> if successful.</returns>
-        public static SessionName Parse(string sessionName)
+        /// <param name="agentName">The agent resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AgentName"/> if successful.</returns>
+        public static AgentName Parse(string agentName)
         {
-            gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(sessionName);
-            return new SessionName(resourceName[0], resourceName[1]);
+            gax::GaxPreconditions.CheckNotNull(agentName, nameof(agentName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(agentName);
+            return new AgentName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given session resource name in string form into a new
-        /// <see cref="SessionName"/> instance.
+        /// Tries to parse the given agent resource name in string form into a new
+        /// <see cref="AgentName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="sessionName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="agentName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="SessionName"/>,
+        /// <param name="agentName">The agent resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="AgentName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string sessionName, out SessionName result)
+        public static bool TryParse(string agentName, out AgentName result)
         {
-            gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            gax::GaxPreconditions.CheckNotNull(agentName, nameof(agentName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(sessionName, out resourceName))
+            if (s_template.TryParseName(agentName, out resourceName))
             {
-                result = new SessionName(resourceName[0], resourceName[1]);
+                result = new AgentName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -70,15 +70,15 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="SessionName"/> resource name class
+        /// Constructs a new instance of the <see cref="AgentName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="sessionId">The session ID. Must not be <c>null</c>.</param>
-        public SessionName(string projectId, string sessionId)
+        /// <param name="agentId">The agent ID. Must not be <c>null</c>.</param>
+        public AgentName(string projectId, string agentId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            SessionId = gax::GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId));
+            AgentId = gax::GaxPreconditions.CheckNotNull(agentId, nameof(agentId));
         }
 
         /// <summary>
@@ -87,30 +87,30 @@ namespace Google.Cloud.Dialogflow.V2
         public string ProjectId { get; }
 
         /// <summary>
-        /// The session ID. Never <c>null</c>.
+        /// The agent ID. Never <c>null</c>.
         /// </summary>
-        public string SessionId { get; }
+        public string AgentId { get; }
 
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, SessionId);
+        public override string ToString() => s_template.Expand(ProjectId, AgentId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as SessionName);
+        public override bool Equals(object obj) => Equals(obj as AgentName);
 
         /// <inheritdoc />
-        public bool Equals(SessionName other) => ToString() == other?.ToString();
+        public bool Equals(AgentName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(SessionName a, SessionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(AgentName a, AgentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(SessionName a, SessionName b) => !(a == b);
+        public static bool operator !=(AgentName a, AgentName b) => !(a == b);
     }
 
     /// <summary>
@@ -210,91 +210,6 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <inheritdoc />
         public static bool operator !=(ContextName a, ContextName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'project_agent' resource.
-    /// </summary>
-    public sealed partial class ProjectAgentName : gax::IResourceName, sys::IEquatable<ProjectAgentName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/agent");
-
-        /// <summary>
-        /// Parses the given project_agent resource name in string form into a new
-        /// <see cref="ProjectAgentName"/> instance.
-        /// </summary>
-        /// <param name="projectAgentName">The project_agent resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ProjectAgentName"/> if successful.</returns>
-        public static ProjectAgentName Parse(string projectAgentName)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectAgentName, nameof(projectAgentName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(projectAgentName);
-            return new ProjectAgentName(resourceName[0]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given project_agent resource name in string form into a new
-        /// <see cref="ProjectAgentName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectAgentName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="projectAgentName">The project_agent resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ProjectAgentName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string projectAgentName, out ProjectAgentName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectAgentName, nameof(projectAgentName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(projectAgentName, out resourceName))
-            {
-                result = new ProjectAgentName(resourceName[0]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ProjectAgentName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        public ProjectAgentName(string projectId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ProjectAgentName);
-
-        /// <inheritdoc />
-        public bool Equals(ProjectAgentName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ProjectAgentName a, ProjectAgentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ProjectAgentName a, ProjectAgentName b) => !(a == b);
     }
 
     /// <summary>
@@ -482,44 +397,44 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>
-    /// Resource name for the 'agent' resource.
+    /// Resource name for the 'project_agent' resource.
     /// </summary>
-    public sealed partial class AgentName : gax::IResourceName, sys::IEquatable<AgentName>
+    public sealed partial class ProjectAgentName : gax::IResourceName, sys::IEquatable<ProjectAgentName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/agents/{agent}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/agent");
 
         /// <summary>
-        /// Parses the given agent resource name in string form into a new
-        /// <see cref="AgentName"/> instance.
+        /// Parses the given project_agent resource name in string form into a new
+        /// <see cref="ProjectAgentName"/> instance.
         /// </summary>
-        /// <param name="agentName">The agent resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="AgentName"/> if successful.</returns>
-        public static AgentName Parse(string agentName)
+        /// <param name="projectAgentName">The project_agent resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectAgentName"/> if successful.</returns>
+        public static ProjectAgentName Parse(string projectAgentName)
         {
-            gax::GaxPreconditions.CheckNotNull(agentName, nameof(agentName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(agentName);
-            return new AgentName(resourceName[0], resourceName[1]);
+            gax::GaxPreconditions.CheckNotNull(projectAgentName, nameof(projectAgentName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectAgentName);
+            return new ProjectAgentName(resourceName[0]);
         }
 
         /// <summary>
-        /// Tries to parse the given agent resource name in string form into a new
-        /// <see cref="AgentName"/> instance.
+        /// Tries to parse the given project_agent resource name in string form into a new
+        /// <see cref="ProjectAgentName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="agentName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectAgentName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="agentName">The agent resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="AgentName"/>,
+        /// <param name="projectAgentName">The project_agent resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectAgentName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string agentName, out AgentName result)
+        public static bool TryParse(string projectAgentName, out ProjectAgentName result)
         {
-            gax::GaxPreconditions.CheckNotNull(agentName, nameof(agentName));
+            gax::GaxPreconditions.CheckNotNull(projectAgentName, nameof(projectAgentName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(agentName, out resourceName))
+            if (s_template.TryParseName(projectAgentName, out resourceName))
             {
-                result = new AgentName(resourceName[0], resourceName[1]);
+                result = new ProjectAgentName(resourceName[0]);
                 return true;
             }
             else
@@ -530,15 +445,100 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="AgentName"/> resource name class
+        /// Constructs a new instance of the <see cref="ProjectAgentName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="agentId">The agent ID. Must not be <c>null</c>.</param>
-        public AgentName(string projectId, string agentId)
+        public ProjectAgentName(string projectId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            AgentId = gax::GaxPreconditions.CheckNotNull(agentId, nameof(agentId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectAgentName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectAgentName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectAgentName a, ProjectAgentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectAgentName a, ProjectAgentName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'session' resource.
+    /// </summary>
+    public sealed partial class SessionName : gax::IResourceName, sys::IEquatable<SessionName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/agent/sessions/{session}");
+
+        /// <summary>
+        /// Parses the given session resource name in string form into a new
+        /// <see cref="SessionName"/> instance.
+        /// </summary>
+        /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SessionName"/> if successful.</returns>
+        public static SessionName Parse(string sessionName)
+        {
+            gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(sessionName);
+            return new SessionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given session resource name in string form into a new
+        /// <see cref="SessionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="sessionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="SessionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sessionName, out SessionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(sessionName, out resourceName))
+            {
+                result = new SessionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="SessionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="sessionId">The session ID. Must not be <c>null</c>.</param>
+        public SessionName(string projectId, string sessionId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            SessionId = gax::GaxPreconditions.CheckNotNull(sessionId, nameof(sessionId));
         }
 
         /// <summary>
@@ -547,30 +547,30 @@ namespace Google.Cloud.Dialogflow.V2
         public string ProjectId { get; }
 
         /// <summary>
-        /// The agent ID. Never <c>null</c>.
+        /// The session ID. Never <c>null</c>.
         /// </summary>
-        public string AgentId { get; }
+        public string SessionId { get; }
 
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, AgentId);
+        public override string ToString() => s_template.Expand(ProjectId, SessionId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as AgentName);
+        public override bool Equals(object obj) => Equals(obj as SessionName);
 
         /// <inheritdoc />
-        public bool Equals(AgentName other) => ToString() == other?.ToString();
+        public bool Equals(SessionName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(AgentName a, AgentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(SessionName a, SessionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(AgentName a, AgentName b) => !(a == b);
+        public static bool operator !=(SessionName a, SessionName b) => !(a == b);
     }
 
     /// <summary>

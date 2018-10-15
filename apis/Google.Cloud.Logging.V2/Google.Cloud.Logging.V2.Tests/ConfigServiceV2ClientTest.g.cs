@@ -44,7 +44,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -69,7 +69,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -94,7 +94,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -118,7 +118,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -143,7 +143,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -170,7 +170,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -197,7 +197,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -222,7 +222,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -248,7 +248,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -277,7 +277,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -305,7 +305,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -332,7 +332,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -359,7 +359,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,
@@ -384,7 +384,7 @@ namespace Google.Cloud.Logging.V2.Tests
             LogSink expectedResponse = new LogSink
             {
                 Name = "name3373707",
-                DestinationAsResourceName = new ProjectName("[PROJECT]"),
+                DestinationAsResourceName = new BillingName("[BILLING_ACCOUNT]"),
                 Filter = "filter-1274492040",
                 WriterIdentity = "writerIdentity775638794",
                 IncludeChildren = true,

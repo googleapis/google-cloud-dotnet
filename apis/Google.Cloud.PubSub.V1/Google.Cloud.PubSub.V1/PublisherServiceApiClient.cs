@@ -61,6 +61,7 @@ namespace Google.Cloud.PubSub.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            ListTopicSnapshotsSettings = existing.ListTopicSnapshotsSettings;
             OnCopy(existing);
         }
 
@@ -82,6 +83,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "OnePlusDelivery" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
@@ -98,16 +109,6 @@ namespace Google.Cloud.PubSub.V1
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> OnePlusDeliveryRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown);
-
-        /// <summary>
-        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
-        /// </remarks>
-        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
@@ -490,6 +491,36 @@ namespace Google.Cloud.PubSub.V1
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublisherServiceApiClient.ListTopicSnapshots</c> and <c>PublisherServiceApiClient.ListTopicSnapshotsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>PublisherServiceApiClient.ListTopicSnapshots</c> and
+        /// <c>PublisherServiceApiClient.ListTopicSnapshotsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListTopicSnapshotsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: HttpGetRetryFilter
             )));
 
         /// <summary>
@@ -1909,6 +1940,71 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists the names of the snapshots on this topic.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListTopicSnapshotsResponse> ListTopicSnapshotsAsync(
+            ListTopicSnapshotsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the names of the snapshots on this topic.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListTopicSnapshotsResponse> ListTopicSnapshotsAsync(
+            ListTopicSnapshotsRequest request,
+            st::CancellationToken cancellationToken) => ListTopicSnapshotsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the names of the snapshots on this topic.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ListTopicSnapshotsResponse ListTopicSnapshots(
+            ListTopicSnapshotsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -1926,6 +2022,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> _callSetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> _callGetIamPolicy;
         private readonly gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> _callTestIamPermissions;
+        private readonly gaxgrpc::ApiCall<ListTopicSnapshotsRequest, ListTopicSnapshotsResponse> _callListTopicSnapshots;
 
         /// <summary>
         /// Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.
@@ -1958,6 +2055,8 @@ namespace Google.Cloud.PubSub.V1
                 grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
             _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
                 grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+            _callListTopicSnapshots = clientHelper.BuildApiCall<ListTopicSnapshotsRequest, ListTopicSnapshotsResponse>(
+                GrpcClient.ListTopicSnapshotsAsync, GrpcClient.ListTopicSnapshots, effectiveSettings.ListTopicSnapshotsSettings);
             Modify_ApiCall(ref _callCreateTopic);
             Modify_CreateTopicApiCall(ref _callCreateTopic);
             Modify_ApiCall(ref _callUpdateTopic);
@@ -1978,6 +2077,8 @@ namespace Google.Cloud.PubSub.V1
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            Modify_ApiCall(ref _callListTopicSnapshots);
+            Modify_ListTopicSnapshotsApiCall(ref _callListTopicSnapshots);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2001,6 +2102,7 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::SetIamPolicyRequest, iam::Policy> call);
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<iam::GetIamPolicyRequest, iam::Policy> call);
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse> call);
+        partial void Modify_ListTopicSnapshotsApiCall(ref gaxgrpc::ApiCall<ListTopicSnapshotsRequest, ListTopicSnapshotsResponse> call);
         partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -2021,6 +2123,7 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_SetIamPolicyRequest(ref iam::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetIamPolicyRequest(ref iam::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_TestIamPermissionsRequest(ref iam::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListTopicSnapshotsRequest(ref ListTopicSnapshotsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates the given topic with the given name. See the
@@ -2443,6 +2546,52 @@ namespace Google.Cloud.PubSub.V1
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the names of the snapshots on this topic.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ListTopicSnapshotsResponse> ListTopicSnapshotsAsync(
+            ListTopicSnapshotsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTopicSnapshotsRequest(ref request, ref callSettings);
+            return _callListTopicSnapshots.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the names of the snapshots on this topic.&lt;br&gt;&lt;br&gt;
+        /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
+        /// changed in backward-incompatible ways and is not recommended for production
+        /// use. It is not subject to any SLA or deprecation policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ListTopicSnapshotsResponse ListTopicSnapshots(
+            ListTopicSnapshotsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTopicSnapshotsRequest(ref request, ref callSettings);
+            return _callListTopicSnapshots.Sync(request, callSettings);
         }
 
     }

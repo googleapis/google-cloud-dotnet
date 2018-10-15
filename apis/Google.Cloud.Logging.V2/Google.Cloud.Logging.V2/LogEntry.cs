@@ -30,7 +30,7 @@ namespace Google.Cloud.Logging.V2 {
             "bmcvdHlwZS9odHRwX3JlcXVlc3QucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3R5",
             "cGUvbG9nX3NldmVyaXR5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnBy",
             "b3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIvMFCghMb2dFbnRyeRIQCghsb2dfbmFt",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIooGCghMb2dFbnRyeRIQCghsb2dfbmFt",
             "ZRgMIAEoCRIvCghyZXNvdXJjZRgIIAEoCzIdLmdvb2dsZS5hcGkuTW9uaXRv",
             "cmVkUmVzb3VyY2USLQoNcHJvdG9fcGF5bG9hZBgCIAEoCzIULmdvb2dsZS5w",
             "cm90b2J1Zi5BbnlIABIWCgx0ZXh0X3BheWxvYWQYAyABKAlIABIvCgxqc29u",
@@ -44,21 +44,21 @@ namespace Google.Cloud.Logging.V2 {
             "LkxhYmVsc0VudHJ5EjcKCG1ldGFkYXRhGBkgASgLMiUuZ29vZ2xlLmFwaS5N",
             "b25pdG9yZWRSZXNvdXJjZU1ldGFkYXRhEjcKCW9wZXJhdGlvbhgPIAEoCzIk",
             "Lmdvb2dsZS5sb2dnaW5nLnYyLkxvZ0VudHJ5T3BlcmF0aW9uEg0KBXRyYWNl",
-            "GBYgASgJEg8KB3NwYW5faWQYGyABKAkSQgoPc291cmNlX2xvY2F0aW9uGBcg",
-            "ASgLMikuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnlTb3VyY2VMb2NhdGlv",
-            "bhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBQgkKB3BheWxvYWQiTgoRTG9nRW50cnlPcGVyYXRpb24SCgoCaWQYASAB",
-            "KAkSEAoIcHJvZHVjZXIYAiABKAkSDQoFZmlyc3QYAyABKAgSDAoEbGFzdBgE",
-            "IAEoCCJGChZMb2dFbnRyeVNvdXJjZUxvY2F0aW9uEgwKBGZpbGUYASABKAkS",
-            "DAoEbGluZRgCIAEoAxIQCghmdW5jdGlvbhgDIAEoCUKZAQoVY29tLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyQg1Mb2dFbnRyeVByb3RvUAFaOGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbG9nZ2luZy92Mjtsb2dnaW5n+AEB",
-            "qgIXR29vZ2xlLkNsb3VkLkxvZ2dpbmcuVjLKAhdHb29nbGVcQ2xvdWRcTG9n",
-            "Z2luZ1xWMmIGcHJvdG8z"));
+            "GBYgASgJEg8KB3NwYW5faWQYGyABKAkSFQoNdHJhY2Vfc2FtcGxlZBgeIAEo",
+            "CBJCCg9zb3VyY2VfbG9jYXRpb24YFyABKAsyKS5nb29nbGUubG9nZ2luZy52",
+            "Mi5Mb2dFbnRyeVNvdXJjZUxvY2F0aW9uGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCQoHcGF5bG9hZCJOChFMb2dF",
+            "bnRyeU9wZXJhdGlvbhIKCgJpZBgBIAEoCRIQCghwcm9kdWNlchgCIAEoCRIN",
+            "CgVmaXJzdBgDIAEoCBIMCgRsYXN0GAQgASgIIkYKFkxvZ0VudHJ5U291cmNl",
+            "TG9jYXRpb24SDAoEZmlsZRgBIAEoCRIMCgRsaW5lGAIgASgDEhAKCGZ1bmN0",
+            "aW9uGAMgASgJQpkBChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJCDUxvZ0VudHJ5",
+            "UHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2lu",
+            "Zy5WMsoCF0dvb2dsZVxDbG91ZFxMb2dnaW5nXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Metadata", "Operation", "Trace", "SpanId", "SourceLocation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "ReceiveTimestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Metadata", "Operation", "Trace", "SpanId", "TraceSampled", "SourceLocation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null)
           }));
@@ -107,6 +107,7 @@ namespace Google.Cloud.Logging.V2 {
       operation_ = other.operation_ != null ? other.operation_.Clone() : null;
       trace_ = other.trace_;
       spanId_ = other.spanId_;
+      traceSampled_ = other.traceSampled_;
       sourceLocation_ = other.sourceLocation_ != null ? other.sourceLocation_.Clone() : null;
       switch (other.PayloadCase) {
         case PayloadOneofCase.ProtoPayload:
@@ -232,7 +233,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Optional. The time the event described by the log entry occurred.
     /// This time is used to compute the log entry's age and to enforce
     /// the logs retention period. If this field is omitted in a new log
-    /// entry, then Stackdriver Logging assigns it the current time.
+    /// entry, then Logging assigns it the current time.
     /// Timestamps have nanosecond accuracy, but trailing zeros in the fractional
     /// seconds might be omitted when the timestamp is displayed.
     ///
@@ -255,7 +256,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int ReceiveTimestampFieldNumber = 24;
     private global::Google.Protobuf.WellKnownTypes.Timestamp receiveTimestamp_;
     /// <summary>
-    /// Output only. The time the log entry was received by Stackdriver Logging.
+    /// Output only. The time the log entry was received by Logging.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReceiveTimestamp {
@@ -285,9 +286,9 @@ namespace Google.Cloud.Logging.V2 {
     private string insertId_ = "";
     /// <summary>
     /// Optional. A unique identifier for the log entry. If you provide a value,
-    /// then Stackdriver Logging considers other log entries in the same project,
+    /// then Logging considers other log entries in the same project,
     /// with the same `timestamp`, and with the same `insert_id` to be duplicates
-    /// which can be removed.  If omitted in new log entries, then Stackdriver
+    /// which can be removed.  If omitted in new log entries, then
     /// Logging assigns its own unique identifier. The `insert_id` is also used
     /// to order log entries that have the same `timestamp` value.
     /// </summary>
@@ -380,8 +381,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int SpanIdFieldNumber = 27;
     private string spanId_ = "";
     /// <summary>
-    /// Optional. The span ID within the trace associated with the log entry. For
-    /// Stackdriver Trace spans, this is the same format that the Stackdriver Trace
+    /// Optional. The span ID within the trace associated with the log entry.
+    /// For Trace spans, this is the same format that the Trace
     /// API v2 uses: a 16-character hexadecimal encoding of an 8-byte array, such
     /// as &lt;code>"000000000000004a"&lt;/code>.
     /// </summary>
@@ -390,6 +391,25 @@ namespace Google.Cloud.Logging.V2 {
       get { return spanId_; }
       set {
         spanId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "trace_sampled" field.</summary>
+    public const int TraceSampledFieldNumber = 30;
+    private bool traceSampled_;
+    /// <summary>
+    /// Optional. The sampling decision of the trace associated with the log entry.
+    /// True means that the trace resource name in the `trace` field was sampled
+    /// for storage in a trace backend. False means that the trace was not sampled
+    /// for storage when this log entry was written, or the sampling decision was
+    /// unknown at the time. A non-sampled `trace` value is still useful as a
+    /// request correlation identifier. The default is False.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool TraceSampled {
+      get { return traceSampled_; }
+      set {
+        traceSampled_ = value;
       }
     }
 
@@ -456,6 +476,7 @@ namespace Google.Cloud.Logging.V2 {
       if (!object.Equals(Operation, other.Operation)) return false;
       if (Trace != other.Trace) return false;
       if (SpanId != other.SpanId) return false;
+      if (TraceSampled != other.TraceSampled) return false;
       if (!object.Equals(SourceLocation, other.SourceLocation)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -479,6 +500,7 @@ namespace Google.Cloud.Logging.V2 {
       if (operation_ != null) hash ^= Operation.GetHashCode();
       if (Trace.Length != 0) hash ^= Trace.GetHashCode();
       if (SpanId.Length != 0) hash ^= SpanId.GetHashCode();
+      if (TraceSampled != false) hash ^= TraceSampled.GetHashCode();
       if (sourceLocation_ != null) hash ^= SourceLocation.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
@@ -555,6 +577,10 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(218, 1);
         output.WriteString(SpanId);
       }
+      if (TraceSampled != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(TraceSampled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -605,6 +631,9 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (SpanId.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SpanId);
+      }
+      if (TraceSampled != false) {
+        size += 2 + 1;
       }
       if (sourceLocation_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SourceLocation);
@@ -671,6 +700,9 @@ namespace Google.Cloud.Logging.V2 {
       }
       if (other.SpanId.Length != 0) {
         SpanId = other.SpanId;
+      }
+      if (other.TraceSampled != false) {
+        TraceSampled = other.TraceSampled;
       }
       if (other.sourceLocation_ != null) {
         if (sourceLocation_ == null) {
@@ -800,6 +832,10 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 218: {
             SpanId = input.ReadString();
+            break;
+          }
+          case 240: {
+            TraceSampled = input.ReadBool();
             break;
           }
         }

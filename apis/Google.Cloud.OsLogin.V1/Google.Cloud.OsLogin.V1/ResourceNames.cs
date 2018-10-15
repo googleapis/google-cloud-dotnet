@@ -21,44 +21,44 @@ using linq = System.Linq;
 namespace Google.Cloud.OsLogin.V1
 {
     /// <summary>
-    /// Resource name for the 'user' resource.
+    /// Resource name for the 'fingerprint' resource.
     /// </summary>
-    public sealed partial class UserName : gax::IResourceName, sys::IEquatable<UserName>
+    public sealed partial class FingerprintName : gax::IResourceName, sys::IEquatable<FingerprintName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
 
         /// <summary>
-        /// Parses the given user resource name in string form into a new
-        /// <see cref="UserName"/> instance.
+        /// Parses the given fingerprint resource name in string form into a new
+        /// <see cref="FingerprintName"/> instance.
         /// </summary>
-        /// <param name="userName">The user resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="UserName"/> if successful.</returns>
-        public static UserName Parse(string userName)
+        /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FingerprintName"/> if successful.</returns>
+        public static FingerprintName Parse(string fingerprintName)
         {
-            gax::GaxPreconditions.CheckNotNull(userName, nameof(userName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(userName);
-            return new UserName(resourceName[0]);
+            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(fingerprintName);
+            return new FingerprintName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given user resource name in string form into a new
-        /// <see cref="UserName"/> instance.
+        /// Tries to parse the given fingerprint resource name in string form into a new
+        /// <see cref="FingerprintName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="userName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="fingerprintName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="userName">The user resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="UserName"/>,
+        /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="FingerprintName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string userName, out UserName result)
+        public static bool TryParse(string fingerprintName, out FingerprintName result)
         {
-            gax::GaxPreconditions.CheckNotNull(userName, nameof(userName));
+            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(userName, out resourceName))
+            if (s_template.TryParseName(fingerprintName, out resourceName))
             {
-                result = new UserName(resourceName[0]);
+                result = new FingerprintName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -69,13 +69,15 @@ namespace Google.Cloud.OsLogin.V1
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="UserName"/> resource name class
+        /// Constructs a new instance of the <see cref="FingerprintName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="userId">The user ID. Must not be <c>null</c>.</param>
-        public UserName(string userId)
+        /// <param name="fingerprintId">The fingerprint ID. Must not be <c>null</c>.</param>
+        public FingerprintName(string userId, string fingerprintId)
         {
             UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
+            FingerprintId = gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId));
         }
 
         /// <summary>
@@ -83,26 +85,31 @@ namespace Google.Cloud.OsLogin.V1
         /// </summary>
         public string UserId { get; }
 
+        /// <summary>
+        /// The fingerprint ID. Never <c>null</c>.
+        /// </summary>
+        public string FingerprintId { get; }
+
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(UserId);
+        public override string ToString() => s_template.Expand(UserId, FingerprintId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as UserName);
+        public override bool Equals(object obj) => Equals(obj as FingerprintName);
 
         /// <inheritdoc />
-        public bool Equals(UserName other) => ToString() == other?.ToString();
+        public bool Equals(FingerprintName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(UserName a, UserName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(FingerprintName a, FingerprintName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(UserName a, UserName b) => !(a == b);
+        public static bool operator !=(FingerprintName a, FingerprintName b) => !(a == b);
     }
 
     /// <summary>
@@ -198,44 +205,44 @@ namespace Google.Cloud.OsLogin.V1
     }
 
     /// <summary>
-    /// Resource name for the 'fingerprint' resource.
+    /// Resource name for the 'user' resource.
     /// </summary>
-    public sealed partial class FingerprintName : gax::IResourceName, sys::IEquatable<FingerprintName>
+    public sealed partial class UserName : gax::IResourceName, sys::IEquatable<UserName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("users/{user}");
 
         /// <summary>
-        /// Parses the given fingerprint resource name in string form into a new
-        /// <see cref="FingerprintName"/> instance.
+        /// Parses the given user resource name in string form into a new
+        /// <see cref="UserName"/> instance.
         /// </summary>
-        /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="FingerprintName"/> if successful.</returns>
-        public static FingerprintName Parse(string fingerprintName)
+        /// <param name="userName">The user resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="UserName"/> if successful.</returns>
+        public static UserName Parse(string userName)
         {
-            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(fingerprintName);
-            return new FingerprintName(resourceName[0], resourceName[1]);
+            gax::GaxPreconditions.CheckNotNull(userName, nameof(userName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(userName);
+            return new UserName(resourceName[0]);
         }
 
         /// <summary>
-        /// Tries to parse the given fingerprint resource name in string form into a new
-        /// <see cref="FingerprintName"/> instance.
+        /// Tries to parse the given user resource name in string form into a new
+        /// <see cref="UserName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="fingerprintName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="userName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="fingerprintName">The fingerprint resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="FingerprintName"/>,
+        /// <param name="userName">The user resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="UserName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string fingerprintName, out FingerprintName result)
+        public static bool TryParse(string userName, out UserName result)
         {
-            gax::GaxPreconditions.CheckNotNull(fingerprintName, nameof(fingerprintName));
+            gax::GaxPreconditions.CheckNotNull(userName, nameof(userName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(fingerprintName, out resourceName))
+            if (s_template.TryParseName(userName, out resourceName))
             {
-                result = new FingerprintName(resourceName[0], resourceName[1]);
+                result = new UserName(resourceName[0]);
                 return true;
             }
             else
@@ -246,15 +253,13 @@ namespace Google.Cloud.OsLogin.V1
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="FingerprintName"/> resource name class
+        /// Constructs a new instance of the <see cref="UserName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="userId">The user ID. Must not be <c>null</c>.</param>
-        /// <param name="fingerprintId">The fingerprint ID. Must not be <c>null</c>.</param>
-        public FingerprintName(string userId, string fingerprintId)
+        public UserName(string userId)
         {
             UserId = gax::GaxPreconditions.CheckNotNull(userId, nameof(userId));
-            FingerprintId = gax::GaxPreconditions.CheckNotNull(fingerprintId, nameof(fingerprintId));
         }
 
         /// <summary>
@@ -262,31 +267,26 @@ namespace Google.Cloud.OsLogin.V1
         /// </summary>
         public string UserId { get; }
 
-        /// <summary>
-        /// The fingerprint ID. Never <c>null</c>.
-        /// </summary>
-        public string FingerprintId { get; }
-
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(UserId, FingerprintId);
+        public override string ToString() => s_template.Expand(UserId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as FingerprintName);
+        public override bool Equals(object obj) => Equals(obj as UserName);
 
         /// <inheritdoc />
-        public bool Equals(FingerprintName other) => ToString() == other?.ToString();
+        public bool Equals(UserName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(FingerprintName a, FingerprintName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(UserName a, UserName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(FingerprintName a, FingerprintName b) => !(a == b);
+        public static bool operator !=(UserName a, UserName b) => !(a == b);
     }
 
 

@@ -1349,5 +1349,32 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetSnapshotAsync</summary>
+        public async Task GetSnapshotAsync_RequestObject()
+        {
+            // Snippet: GetSnapshotAsync(GetSnapshotRequest,CallSettings)
+            // Additional: GetSnapshotAsync(GetSnapshotRequest,CancellationToken)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = await SubscriberServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSnapshotRequest request = new GetSnapshotRequest();
+            // Make the request
+            Snapshot response = await subscriberServiceApiClient.GetSnapshotAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSnapshot</summary>
+        public void GetSnapshot_RequestObject()
+        {
+            // Snippet: GetSnapshot(GetSnapshotRequest,CallSettings)
+            // Create client
+            SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
+            // Initialize request argument(s)
+            GetSnapshotRequest request = new GetSnapshotRequest();
+            // Make the request
+            Snapshot response = subscriberServiceApiClient.GetSnapshot(request);
+            // End snippet
+        }
+
     }
 }

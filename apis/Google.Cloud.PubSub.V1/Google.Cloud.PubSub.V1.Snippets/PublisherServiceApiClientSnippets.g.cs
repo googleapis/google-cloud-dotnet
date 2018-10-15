@@ -888,5 +888,32 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListTopicSnapshotsAsync</summary>
+        public async Task ListTopicSnapshotsAsync_RequestObject()
+        {
+            // Snippet: ListTopicSnapshotsAsync(ListTopicSnapshotsRequest,CallSettings)
+            // Additional: ListTopicSnapshotsAsync(ListTopicSnapshotsRequest,CancellationToken)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest();
+            // Make the request
+            ListTopicSnapshotsResponse response = await publisherServiceApiClient.ListTopicSnapshotsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListTopicSnapshots</summary>
+        public void ListTopicSnapshots_RequestObject()
+        {
+            // Snippet: ListTopicSnapshots(ListTopicSnapshotsRequest,CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest();
+            // Make the request
+            ListTopicSnapshotsResponse response = publisherServiceApiClient.ListTopicSnapshots(request);
+            // End snippet
+        }
+
     }
 }
