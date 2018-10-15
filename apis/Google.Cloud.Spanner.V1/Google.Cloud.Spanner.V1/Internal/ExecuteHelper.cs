@@ -23,6 +23,9 @@ namespace Google.Cloud.Spanner.V1.Internal
     /// </summary>
     public static class ExecuteHelper
     {
+        // Legacy methods.
+        // TODO: Remove when other SessionPool work is complete.
+
         /// <summary>
         /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
         /// </summary>
@@ -58,6 +61,47 @@ namespace Google.Cloud.Spanner.V1.Internal
             if (rpcException.IsSessionExpiredError())
             {
                 SessionPool.MarkSessionExpired(sessionFunc());
+            }
+            return false;
+        }
+
+        // End legacy methods
+
+        /// <summary>
+        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
+        /// </summary>
+        public static async Task<T> WithSessionChecking<T>(this Task<T> task, Session session)
+        {
+            try
+            {
+                return await task.ConfigureAwait(false);
+            }
+            catch (RpcException ex) when (ex.CheckForSessionExpiredError(session))
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
+        /// </summary>
+        public static async Task WithSessionChecking(this Task task, Session session)
+        {
+            try
+            {
+                await task.ConfigureAwait(false);
+            }
+            catch (RpcException ex) when (ex.CheckForSessionExpiredError(session))
+            {
+                throw;
+            }
+        }
+
+        private static bool CheckForSessionExpiredError(this RpcException rpcException, Session session)
+        {
+            if (rpcException.IsSessionExpiredError())
+            {
+                session.Expired = true;
             }
             return false;
         }
