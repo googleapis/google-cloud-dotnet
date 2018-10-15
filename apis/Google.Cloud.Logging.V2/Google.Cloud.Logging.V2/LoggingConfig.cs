@@ -288,7 +288,7 @@ namespace Google.Cloud.Logging.V2 {
     private string writerIdentity_ = "";
     /// <summary>
     /// Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;under
-    /// which Stackdriver Logging writes the exported log entries to the sink's
+    /// which Logging writes the exported log entries to the sink's
     /// destination.  This field is set by
     /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create)
     /// and
@@ -577,7 +577,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Available log entry formats. Log entries can be written to Stackdriver
+      /// Available log entry formats. Log entries can be written to
       /// Logging in either format and can be exported in either format.
       /// Version 2 is the preferred format.
       /// </summary>
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Optional. Determines the kind of IAM identity returned as `writer_identity`
     /// in the new sink.  If this value is omitted or set to false, and if the
     /// sink's parent is a project, then the value returned as `writer_identity` is
-    /// the same group or service account used by Stackdriver Logging before the
+    /// the same group or service account used by Logging before the
     /// addition of writer identities to this API. The sink's destination must be
     /// in the same project as the sink itself.
     ///
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.Logging.V2 {
     /// empty updateMask will be an error.
     ///
     /// For a detailed `FieldMask` definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
     ///
     /// Example: `updateMask=filter`.
     /// </summary>
@@ -1748,7 +1748,7 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  /// Specifies a set of log entries that are not to be stored in Stackdriver
+  /// Specifies a set of log entries that are not to be stored in
   /// Logging. If your project receives a large volume of logs, you might be able
   /// to use exclusions to reduce your chargeable logs. Exclusions are processed
   /// after log sinks, so you can export log entries before they are excluded.

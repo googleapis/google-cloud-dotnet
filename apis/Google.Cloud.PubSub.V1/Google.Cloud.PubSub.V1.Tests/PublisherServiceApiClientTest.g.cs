@@ -471,5 +471,43 @@ namespace Google.Cloud.PubSub.V1.Tests
             mockGrpcClient.VerifyAll();
         }
 
+        [Fact]
+        public void ListTopicSnapshots()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest();
+            ListTopicSnapshotsResponse expectedResponse = new ListTopicSnapshotsResponse
+            {
+                NextPageToken = "nextPageToken-1530815211",
+            };
+            mockGrpcClient.Setup(x => x.ListTopicSnapshots(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            ListTopicSnapshotsResponse response = client.ListTopicSnapshots(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ListTopicSnapshotsAsync()
+        {
+            Mock<Publisher.PublisherClient> mockGrpcClient = new Mock<Publisher.PublisherClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            ListTopicSnapshotsRequest request = new ListTopicSnapshotsRequest();
+            ListTopicSnapshotsResponse expectedResponse = new ListTopicSnapshotsResponse
+            {
+                NextPageToken = "nextPageToken-1530815211",
+            };
+            mockGrpcClient.Setup(x => x.ListTopicSnapshotsAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ListTopicSnapshotsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            ListTopicSnapshotsResponse response = await client.ListTopicSnapshotsAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
     }
 }

@@ -22,558 +22,6 @@ using linq = System.Linq;
 namespace Google.Cloud.Dlp.V2
 {
     /// <summary>
-    /// Resource name for the 'organization_deidentify_template' resource.
-    /// </summary>
-    public sealed partial class OrganizationDeidentifyTemplateName : gax::IResourceName, sys::IEquatable<OrganizationDeidentifyTemplateName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/deidentifyTemplates/{deidentify_template}");
-
-        /// <summary>
-        /// Parses the given organization_deidentify_template resource name in string form into a new
-        /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
-        /// </summary>
-        /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="OrganizationDeidentifyTemplateName"/> if successful.</returns>
-        public static OrganizationDeidentifyTemplateName Parse(string organizationDeidentifyTemplateName)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationDeidentifyTemplateName);
-            return new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given organization_deidentify_template resource name in string form into a new
-        /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationDeidentifyTemplateName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="OrganizationDeidentifyTemplateName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string organizationDeidentifyTemplateName, out OrganizationDeidentifyTemplateName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(organizationDeidentifyTemplateName, out resourceName))
-            {
-                result = new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="OrganizationDeidentifyTemplateName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
-        /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
-        public OrganizationDeidentifyTemplateName(string organizationId, string deidentifyTemplateId)
-        {
-            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-            DeidentifyTemplateId = gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
-        }
-
-        /// <summary>
-        /// The organization ID. Never <c>null</c>.
-        /// </summary>
-        public string OrganizationId { get; }
-
-        /// <summary>
-        /// The deidentifyTemplate ID. Never <c>null</c>.
-        /// </summary>
-        public string DeidentifyTemplateId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(OrganizationId, DeidentifyTemplateId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as OrganizationDeidentifyTemplateName);
-
-        /// <inheritdoc />
-        public bool Equals(OrganizationDeidentifyTemplateName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(OrganizationDeidentifyTemplateName a, OrganizationDeidentifyTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(OrganizationDeidentifyTemplateName a, OrganizationDeidentifyTemplateName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'project_deidentify_template' resource.
-    /// </summary>
-    public sealed partial class ProjectDeidentifyTemplateName : gax::IResourceName, sys::IEquatable<ProjectDeidentifyTemplateName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/deidentifyTemplates/{deidentify_template}");
-
-        /// <summary>
-        /// Parses the given project_deidentify_template resource name in string form into a new
-        /// <see cref="ProjectDeidentifyTemplateName"/> instance.
-        /// </summary>
-        /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ProjectDeidentifyTemplateName"/> if successful.</returns>
-        public static ProjectDeidentifyTemplateName Parse(string projectDeidentifyTemplateName)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(projectDeidentifyTemplateName);
-            return new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given project_deidentify_template resource name in string form into a new
-        /// <see cref="ProjectDeidentifyTemplateName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectDeidentifyTemplateName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ProjectDeidentifyTemplateName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string projectDeidentifyTemplateName, out ProjectDeidentifyTemplateName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(projectDeidentifyTemplateName, out resourceName))
-            {
-                result = new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ProjectDeidentifyTemplateName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
-        public ProjectDeidentifyTemplateName(string projectId, string deidentifyTemplateId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DeidentifyTemplateId = gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The deidentifyTemplate ID. Never <c>null</c>.
-        /// </summary>
-        public string DeidentifyTemplateId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, DeidentifyTemplateId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ProjectDeidentifyTemplateName);
-
-        /// <inheritdoc />
-        public bool Equals(ProjectDeidentifyTemplateName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ProjectDeidentifyTemplateName a, ProjectDeidentifyTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ProjectDeidentifyTemplateName a, ProjectDeidentifyTemplateName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'organization_inspect_template' resource.
-    /// </summary>
-    public sealed partial class OrganizationInspectTemplateName : gax::IResourceName, sys::IEquatable<OrganizationInspectTemplateName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/inspectTemplates/{inspect_template}");
-
-        /// <summary>
-        /// Parses the given organization_inspect_template resource name in string form into a new
-        /// <see cref="OrganizationInspectTemplateName"/> instance.
-        /// </summary>
-        /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="OrganizationInspectTemplateName"/> if successful.</returns>
-        public static OrganizationInspectTemplateName Parse(string organizationInspectTemplateName)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationInspectTemplateName);
-            return new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given organization_inspect_template resource name in string form into a new
-        /// <see cref="OrganizationInspectTemplateName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationInspectTemplateName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="OrganizationInspectTemplateName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string organizationInspectTemplateName, out OrganizationInspectTemplateName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(organizationInspectTemplateName, out resourceName))
-            {
-                result = new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="OrganizationInspectTemplateName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
-        /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
-        public OrganizationInspectTemplateName(string organizationId, string inspectTemplateId)
-        {
-            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-            InspectTemplateId = gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
-        }
-
-        /// <summary>
-        /// The organization ID. Never <c>null</c>.
-        /// </summary>
-        public string OrganizationId { get; }
-
-        /// <summary>
-        /// The inspectTemplate ID. Never <c>null</c>.
-        /// </summary>
-        public string InspectTemplateId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(OrganizationId, InspectTemplateId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as OrganizationInspectTemplateName);
-
-        /// <inheritdoc />
-        public bool Equals(OrganizationInspectTemplateName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(OrganizationInspectTemplateName a, OrganizationInspectTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(OrganizationInspectTemplateName a, OrganizationInspectTemplateName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'project_inspect_template' resource.
-    /// </summary>
-    public sealed partial class ProjectInspectTemplateName : gax::IResourceName, sys::IEquatable<ProjectInspectTemplateName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/inspectTemplates/{inspect_template}");
-
-        /// <summary>
-        /// Parses the given project_inspect_template resource name in string form into a new
-        /// <see cref="ProjectInspectTemplateName"/> instance.
-        /// </summary>
-        /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ProjectInspectTemplateName"/> if successful.</returns>
-        public static ProjectInspectTemplateName Parse(string projectInspectTemplateName)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(projectInspectTemplateName);
-            return new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given project_inspect_template resource name in string form into a new
-        /// <see cref="ProjectInspectTemplateName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectInspectTemplateName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ProjectInspectTemplateName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string projectInspectTemplateName, out ProjectInspectTemplateName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(projectInspectTemplateName, out resourceName))
-            {
-                result = new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ProjectInspectTemplateName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
-        public ProjectInspectTemplateName(string projectId, string inspectTemplateId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InspectTemplateId = gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The inspectTemplate ID. Never <c>null</c>.
-        /// </summary>
-        public string InspectTemplateId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, InspectTemplateId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ProjectInspectTemplateName);
-
-        /// <inheritdoc />
-        public bool Equals(ProjectInspectTemplateName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ProjectInspectTemplateName a, ProjectInspectTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ProjectInspectTemplateName a, ProjectInspectTemplateName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'project_job_trigger' resource.
-    /// </summary>
-    public sealed partial class ProjectJobTriggerName : gax::IResourceName, sys::IEquatable<ProjectJobTriggerName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobTriggers/{job_trigger}");
-
-        /// <summary>
-        /// Parses the given project_job_trigger resource name in string form into a new
-        /// <see cref="ProjectJobTriggerName"/> instance.
-        /// </summary>
-        /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ProjectJobTriggerName"/> if successful.</returns>
-        public static ProjectJobTriggerName Parse(string projectJobTriggerName)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(projectJobTriggerName);
-            return new ProjectJobTriggerName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given project_job_trigger resource name in string form into a new
-        /// <see cref="ProjectJobTriggerName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectJobTriggerName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ProjectJobTriggerName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string projectJobTriggerName, out ProjectJobTriggerName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(projectJobTriggerName, out resourceName))
-            {
-                result = new ProjectJobTriggerName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ProjectJobTriggerName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="jobTriggerId">The jobTrigger ID. Must not be <c>null</c>.</param>
-        public ProjectJobTriggerName(string projectId, string jobTriggerId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            JobTriggerId = gax::GaxPreconditions.CheckNotNull(jobTriggerId, nameof(jobTriggerId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The jobTrigger ID. Never <c>null</c>.
-        /// </summary>
-        public string JobTriggerId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, JobTriggerId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ProjectJobTriggerName);
-
-        /// <inheritdoc />
-        public bool Equals(ProjectJobTriggerName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ProjectJobTriggerName a, ProjectJobTriggerName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ProjectJobTriggerName a, ProjectJobTriggerName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'dlp_job' resource.
-    /// </summary>
-    public sealed partial class DlpJobName : gax::IResourceName, sys::IEquatable<DlpJobName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/dlpJobs/{dlp_job}");
-
-        /// <summary>
-        /// Parses the given dlp_job resource name in string form into a new
-        /// <see cref="DlpJobName"/> instance.
-        /// </summary>
-        /// <param name="dlpJobName">The dlp_job resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DlpJobName"/> if successful.</returns>
-        public static DlpJobName Parse(string dlpJobName)
-        {
-            gax::GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(dlpJobName);
-            return new DlpJobName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given dlp_job resource name in string form into a new
-        /// <see cref="DlpJobName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="dlpJobName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="dlpJobName">The dlp_job resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DlpJobName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string dlpJobName, out DlpJobName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(dlpJobName, out resourceName))
-            {
-                result = new DlpJobName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="DlpJobName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="dlpJobId">The dlpJob ID. Must not be <c>null</c>.</param>
-        public DlpJobName(string projectId, string dlpJobId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DlpJobId = gax::GaxPreconditions.CheckNotNull(dlpJobId, nameof(dlpJobId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The dlpJob ID. Never <c>null</c>.
-        /// </summary>
-        public string DlpJobId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, DlpJobId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DlpJobName);
-
-        /// <inheritdoc />
-        public bool Equals(DlpJobName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(DlpJobName a, DlpJobName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(DlpJobName a, DlpJobName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name which will contain one of a choice of resource names.
     /// </summary>
     /// <remarks>
@@ -778,6 +226,98 @@ namespace Google.Cloud.Dlp.V2
     }
 
     /// <summary>
+    /// Resource name for the 'dlp_job' resource.
+    /// </summary>
+    public sealed partial class DlpJobName : gax::IResourceName, sys::IEquatable<DlpJobName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/dlpJobs/{dlp_job}");
+
+        /// <summary>
+        /// Parses the given dlp_job resource name in string form into a new
+        /// <see cref="DlpJobName"/> instance.
+        /// </summary>
+        /// <param name="dlpJobName">The dlp_job resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DlpJobName"/> if successful.</returns>
+        public static DlpJobName Parse(string dlpJobName)
+        {
+            gax::GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(dlpJobName);
+            return new DlpJobName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given dlp_job resource name in string form into a new
+        /// <see cref="DlpJobName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="dlpJobName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="dlpJobName">The dlp_job resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="DlpJobName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string dlpJobName, out DlpJobName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(dlpJobName, nameof(dlpJobName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(dlpJobName, out resourceName))
+            {
+                result = new DlpJobName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="DlpJobName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="dlpJobId">The dlpJob ID. Must not be <c>null</c>.</param>
+        public DlpJobName(string projectId, string dlpJobId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DlpJobId = gax::GaxPreconditions.CheckNotNull(dlpJobId, nameof(dlpJobId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The dlpJob ID. Never <c>null</c>.
+        /// </summary>
+        public string DlpJobId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, DlpJobId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as DlpJobName);
+
+        /// <inheritdoc />
+        public bool Equals(DlpJobName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(DlpJobName a, DlpJobName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(DlpJobName a, DlpJobName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name which will contain one of a choice of resource names.
     /// </summary>
     /// <remarks>
@@ -979,6 +519,466 @@ namespace Google.Cloud.Dlp.V2
 
         /// <inheritdoc />
         public static bool operator !=(InspectTemplateNameOneof a, InspectTemplateNameOneof b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'organization_deidentify_template' resource.
+    /// </summary>
+    public sealed partial class OrganizationDeidentifyTemplateName : gax::IResourceName, sys::IEquatable<OrganizationDeidentifyTemplateName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/deidentifyTemplates/{deidentify_template}");
+
+        /// <summary>
+        /// Parses the given organization_deidentify_template resource name in string form into a new
+        /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
+        /// </summary>
+        /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationDeidentifyTemplateName"/> if successful.</returns>
+        public static OrganizationDeidentifyTemplateName Parse(string organizationDeidentifyTemplateName)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationDeidentifyTemplateName);
+            return new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization_deidentify_template resource name in string form into a new
+        /// <see cref="OrganizationDeidentifyTemplateName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationDeidentifyTemplateName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationDeidentifyTemplateName">The organization_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationDeidentifyTemplateName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationDeidentifyTemplateName, out OrganizationDeidentifyTemplateName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationDeidentifyTemplateName, nameof(organizationDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationDeidentifyTemplateName, out resourceName))
+            {
+                result = new OrganizationDeidentifyTemplateName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationDeidentifyTemplateName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
+        public OrganizationDeidentifyTemplateName(string organizationId, string deidentifyTemplateId)
+        {
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            DeidentifyTemplateId = gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The deidentifyTemplate ID. Never <c>null</c>.
+        /// </summary>
+        public string DeidentifyTemplateId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId, DeidentifyTemplateId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationDeidentifyTemplateName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationDeidentifyTemplateName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationDeidentifyTemplateName a, OrganizationDeidentifyTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationDeidentifyTemplateName a, OrganizationDeidentifyTemplateName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'organization_inspect_template' resource.
+    /// </summary>
+    public sealed partial class OrganizationInspectTemplateName : gax::IResourceName, sys::IEquatable<OrganizationInspectTemplateName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/inspectTemplates/{inspect_template}");
+
+        /// <summary>
+        /// Parses the given organization_inspect_template resource name in string form into a new
+        /// <see cref="OrganizationInspectTemplateName"/> instance.
+        /// </summary>
+        /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationInspectTemplateName"/> if successful.</returns>
+        public static OrganizationInspectTemplateName Parse(string organizationInspectTemplateName)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationInspectTemplateName);
+            return new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization_inspect_template resource name in string form into a new
+        /// <see cref="OrganizationInspectTemplateName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationInspectTemplateName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationInspectTemplateName">The organization_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationInspectTemplateName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationInspectTemplateName, out OrganizationInspectTemplateName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationInspectTemplateName, nameof(organizationInspectTemplateName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationInspectTemplateName, out resourceName))
+            {
+                result = new OrganizationInspectTemplateName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationInspectTemplateName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
+        public OrganizationInspectTemplateName(string organizationId, string inspectTemplateId)
+        {
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            InspectTemplateId = gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The inspectTemplate ID. Never <c>null</c>.
+        /// </summary>
+        public string InspectTemplateId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId, InspectTemplateId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationInspectTemplateName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationInspectTemplateName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationInspectTemplateName a, OrganizationInspectTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationInspectTemplateName a, OrganizationInspectTemplateName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'project_deidentify_template' resource.
+    /// </summary>
+    public sealed partial class ProjectDeidentifyTemplateName : gax::IResourceName, sys::IEquatable<ProjectDeidentifyTemplateName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/deidentifyTemplates/{deidentify_template}");
+
+        /// <summary>
+        /// Parses the given project_deidentify_template resource name in string form into a new
+        /// <see cref="ProjectDeidentifyTemplateName"/> instance.
+        /// </summary>
+        /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectDeidentifyTemplateName"/> if successful.</returns>
+        public static ProjectDeidentifyTemplateName Parse(string projectDeidentifyTemplateName)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectDeidentifyTemplateName);
+            return new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_deidentify_template resource name in string form into a new
+        /// <see cref="ProjectDeidentifyTemplateName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectDeidentifyTemplateName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectDeidentifyTemplateName">The project_deidentify_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectDeidentifyTemplateName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectDeidentifyTemplateName, out ProjectDeidentifyTemplateName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectDeidentifyTemplateName, nameof(projectDeidentifyTemplateName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectDeidentifyTemplateName, out resourceName))
+            {
+                result = new ProjectDeidentifyTemplateName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectDeidentifyTemplateName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="deidentifyTemplateId">The deidentifyTemplate ID. Must not be <c>null</c>.</param>
+        public ProjectDeidentifyTemplateName(string projectId, string deidentifyTemplateId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DeidentifyTemplateId = gax::GaxPreconditions.CheckNotNull(deidentifyTemplateId, nameof(deidentifyTemplateId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The deidentifyTemplate ID. Never <c>null</c>.
+        /// </summary>
+        public string DeidentifyTemplateId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, DeidentifyTemplateId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectDeidentifyTemplateName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectDeidentifyTemplateName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectDeidentifyTemplateName a, ProjectDeidentifyTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectDeidentifyTemplateName a, ProjectDeidentifyTemplateName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'project_inspect_template' resource.
+    /// </summary>
+    public sealed partial class ProjectInspectTemplateName : gax::IResourceName, sys::IEquatable<ProjectInspectTemplateName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/inspectTemplates/{inspect_template}");
+
+        /// <summary>
+        /// Parses the given project_inspect_template resource name in string form into a new
+        /// <see cref="ProjectInspectTemplateName"/> instance.
+        /// </summary>
+        /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectInspectTemplateName"/> if successful.</returns>
+        public static ProjectInspectTemplateName Parse(string projectInspectTemplateName)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectInspectTemplateName);
+            return new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_inspect_template resource name in string form into a new
+        /// <see cref="ProjectInspectTemplateName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectInspectTemplateName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectInspectTemplateName">The project_inspect_template resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectInspectTemplateName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectInspectTemplateName, out ProjectInspectTemplateName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectInspectTemplateName, nameof(projectInspectTemplateName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectInspectTemplateName, out resourceName))
+            {
+                result = new ProjectInspectTemplateName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectInspectTemplateName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="inspectTemplateId">The inspectTemplate ID. Must not be <c>null</c>.</param>
+        public ProjectInspectTemplateName(string projectId, string inspectTemplateId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InspectTemplateId = gax::GaxPreconditions.CheckNotNull(inspectTemplateId, nameof(inspectTemplateId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The inspectTemplate ID. Never <c>null</c>.
+        /// </summary>
+        public string InspectTemplateId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, InspectTemplateId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectInspectTemplateName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectInspectTemplateName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectInspectTemplateName a, ProjectInspectTemplateName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectInspectTemplateName a, ProjectInspectTemplateName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'project_job_trigger' resource.
+    /// </summary>
+    public sealed partial class ProjectJobTriggerName : gax::IResourceName, sys::IEquatable<ProjectJobTriggerName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobTriggers/{job_trigger}");
+
+        /// <summary>
+        /// Parses the given project_job_trigger resource name in string form into a new
+        /// <see cref="ProjectJobTriggerName"/> instance.
+        /// </summary>
+        /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectJobTriggerName"/> if successful.</returns>
+        public static ProjectJobTriggerName Parse(string projectJobTriggerName)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectJobTriggerName);
+            return new ProjectJobTriggerName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_job_trigger resource name in string form into a new
+        /// <see cref="ProjectJobTriggerName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectJobTriggerName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectJobTriggerName">The project_job_trigger resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectJobTriggerName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectJobTriggerName, out ProjectJobTriggerName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectJobTriggerName, nameof(projectJobTriggerName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectJobTriggerName, out resourceName))
+            {
+                result = new ProjectJobTriggerName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectJobTriggerName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="jobTriggerId">The jobTrigger ID. Must not be <c>null</c>.</param>
+        public ProjectJobTriggerName(string projectId, string jobTriggerId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            JobTriggerId = gax::GaxPreconditions.CheckNotNull(jobTriggerId, nameof(jobTriggerId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The jobTrigger ID. Never <c>null</c>.
+        /// </summary>
+        public string JobTriggerId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, JobTriggerId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectJobTriggerName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectJobTriggerName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectJobTriggerName a, ProjectJobTriggerName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectJobTriggerName a, ProjectJobTriggerName b) => !(a == b);
     }
 
 

@@ -1091,5 +1091,140 @@ namespace Google.Cloud.Dlp.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
+        public async Task CreateStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: CreateStoredInfoTypeAsync(CreateStoredInfoTypeRequest,CallSettings)
+            // Additional: CreateStoredInfoTypeAsync(CreateStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest();
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoType</summary>
+        public void CreateStoredInfoType_RequestObject()
+        {
+            // Snippet: CreateStoredInfoType(CreateStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest();
+            // Make the request
+            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateStoredInfoTypeAsync</summary>
+        public async Task UpdateStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: UpdateStoredInfoTypeAsync(UpdateStoredInfoTypeRequest,CallSettings)
+            // Additional: UpdateStoredInfoTypeAsync(UpdateStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest();
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.UpdateStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateStoredInfoType</summary>
+        public void UpdateStoredInfoType_RequestObject()
+        {
+            // Snippet: UpdateStoredInfoType(UpdateStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest();
+            // Make the request
+            StoredInfoType response = dlpServiceClient.UpdateStoredInfoType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetStoredInfoTypeAsync</summary>
+        public async Task GetStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: GetStoredInfoTypeAsync(GetStoredInfoTypeRequest,CallSettings)
+            // Additional: GetStoredInfoTypeAsync(GetStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest();
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.GetStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetStoredInfoType</summary>
+        public void GetStoredInfoType_RequestObject()
+        {
+            // Snippet: GetStoredInfoType(GetStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest();
+            // Make the request
+            StoredInfoType response = dlpServiceClient.GetStoredInfoType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListStoredInfoTypesAsync</summary>
+        public async Task ListStoredInfoTypesAsync_RequestObject()
+        {
+            // Snippet: ListStoredInfoTypesAsync(ListStoredInfoTypesRequest,CallSettings)
+            // Additional: ListStoredInfoTypesAsync(ListStoredInfoTypesRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest();
+            // Make the request
+            ListStoredInfoTypesResponse response = await dlpServiceClient.ListStoredInfoTypesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListStoredInfoTypes</summary>
+        public void ListStoredInfoTypes_RequestObject()
+        {
+            // Snippet: ListStoredInfoTypes(ListStoredInfoTypesRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest();
+            // Make the request
+            ListStoredInfoTypesResponse response = dlpServiceClient.ListStoredInfoTypes(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteStoredInfoTypeAsync</summary>
+        public async Task DeleteStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: DeleteStoredInfoTypeAsync(DeleteStoredInfoTypeRequest,CallSettings)
+            // Additional: DeleteStoredInfoTypeAsync(DeleteStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest();
+            // Make the request
+            await dlpServiceClient.DeleteStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteStoredInfoType</summary>
+        public void DeleteStoredInfoType_RequestObject()
+        {
+            // Snippet: DeleteStoredInfoType(DeleteStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest();
+            // Make the request
+            dlpServiceClient.DeleteStoredInfoType(request);
+            // End snippet
+        }
+
     }
 }

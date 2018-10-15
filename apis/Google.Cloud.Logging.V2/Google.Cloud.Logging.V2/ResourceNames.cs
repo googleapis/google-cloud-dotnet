@@ -22,1181 +22,6 @@ using linq = System.Linq;
 namespace Google.Cloud.Logging.V2
 {
     /// <summary>
-    /// Resource name for the 'project' resource.
-    /// </summary>
-    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Parses the given project resource name in string form into a new
-        /// <see cref="ProjectName"/> instance.
-        /// </summary>
-        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
-        public static ProjectName Parse(string projectName)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
-            return new ProjectName(resourceName[0]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given project resource name in string form into a new
-        /// <see cref="ProjectName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ProjectName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string projectName, out ProjectName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(projectName, out resourceName))
-            {
-                result = new ProjectName(resourceName[0]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        public ProjectName(string projectId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ProjectName);
-
-        /// <inheritdoc />
-        public bool Equals(ProjectName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ProjectName a, ProjectName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ProjectName a, ProjectName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'log' resource.
-    /// </summary>
-    public sealed partial class LogName : gax::IResourceName, sys::IEquatable<LogName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/logs/{log}");
-
-        /// <summary>
-        /// Parses the given log resource name in string form into a new
-        /// <see cref="LogName"/> instance.
-        /// </summary>
-        /// <param name="logName">The log resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="LogName"/> if successful.</returns>
-        public static LogName Parse(string logName)
-        {
-            gax::GaxPreconditions.CheckNotNull(logName, nameof(logName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(logName);
-            return new LogName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given log resource name in string form into a new
-        /// <see cref="LogName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="logName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="logName">The log resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="LogName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string logName, out LogName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(logName, nameof(logName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(logName, out resourceName))
-            {
-                result = new LogName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="LogName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
-        public LogName(string projectId, string logId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LogId = gax::GaxPreconditions.CheckNotNull(logId, nameof(logId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The log ID. Never <c>null</c>.
-        /// </summary>
-        public string LogId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, LogId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as LogName);
-
-        /// <inheritdoc />
-        public bool Equals(LogName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(LogName a, LogName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(LogName a, LogName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'sink' resource.
-    /// </summary>
-    public sealed partial class SinkName : gax::IResourceName, sys::IEquatable<SinkName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/sinks/{sink}");
-
-        /// <summary>
-        /// Parses the given sink resource name in string form into a new
-        /// <see cref="SinkName"/> instance.
-        /// </summary>
-        /// <param name="sinkName">The sink resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="SinkName"/> if successful.</returns>
-        public static SinkName Parse(string sinkName)
-        {
-            gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(sinkName);
-            return new SinkName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given sink resource name in string form into a new
-        /// <see cref="SinkName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="sinkName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="sinkName">The sink resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="SinkName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string sinkName, out SinkName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(sinkName, out resourceName))
-            {
-                result = new SinkName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="SinkName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
-        public SinkName(string projectId, string sinkId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            SinkId = gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The sink ID. Never <c>null</c>.
-        /// </summary>
-        public string SinkId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, SinkId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as SinkName);
-
-        /// <inheritdoc />
-        public bool Equals(SinkName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(SinkName a, SinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(SinkName a, SinkName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'metric' resource.
-    /// </summary>
-    public sealed partial class MetricName : gax::IResourceName, sys::IEquatable<MetricName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/metrics/{metric}");
-
-        /// <summary>
-        /// Parses the given metric resource name in string form into a new
-        /// <see cref="MetricName"/> instance.
-        /// </summary>
-        /// <param name="metricName">The metric resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="MetricName"/> if successful.</returns>
-        public static MetricName Parse(string metricName)
-        {
-            gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(metricName);
-            return new MetricName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given metric resource name in string form into a new
-        /// <see cref="MetricName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="metricName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="metricName">The metric resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="MetricName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string metricName, out MetricName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(metricName, out resourceName))
-            {
-                result = new MetricName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="MetricName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="metricId">The metric ID. Must not be <c>null</c>.</param>
-        public MetricName(string projectId, string metricId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            MetricId = gax::GaxPreconditions.CheckNotNull(metricId, nameof(metricId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The metric ID. Never <c>null</c>.
-        /// </summary>
-        public string MetricId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, MetricId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as MetricName);
-
-        /// <inheritdoc />
-        public bool Equals(MetricName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(MetricName a, MetricName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(MetricName a, MetricName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'exclusion' resource.
-    /// </summary>
-    public sealed partial class ExclusionName : gax::IResourceName, sys::IEquatable<ExclusionName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/exclusions/{exclusion}");
-
-        /// <summary>
-        /// Parses the given exclusion resource name in string form into a new
-        /// <see cref="ExclusionName"/> instance.
-        /// </summary>
-        /// <param name="exclusionName">The exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ExclusionName"/> if successful.</returns>
-        public static ExclusionName Parse(string exclusionName)
-        {
-            gax::GaxPreconditions.CheckNotNull(exclusionName, nameof(exclusionName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(exclusionName);
-            return new ExclusionName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given exclusion resource name in string form into a new
-        /// <see cref="ExclusionName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="exclusionName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="exclusionName">The exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ExclusionName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string exclusionName, out ExclusionName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(exclusionName, nameof(exclusionName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(exclusionName, out resourceName))
-            {
-                result = new ExclusionName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ExclusionName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
-        public ExclusionName(string projectId, string exclusionId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            ExclusionId = gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The exclusion ID. Never <c>null</c>.
-        /// </summary>
-        public string ExclusionId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, ExclusionId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ExclusionName);
-
-        /// <inheritdoc />
-        public bool Equals(ExclusionName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ExclusionName a, ExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ExclusionName a, ExclusionName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'organization' resource.
-    /// </summary>
-    public sealed partial class OrganizationName : gax::IResourceName, sys::IEquatable<OrganizationName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}");
-
-        /// <summary>
-        /// Parses the given organization resource name in string form into a new
-        /// <see cref="OrganizationName"/> instance.
-        /// </summary>
-        /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="OrganizationName"/> if successful.</returns>
-        public static OrganizationName Parse(string organizationName)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationName);
-            return new OrganizationName(resourceName[0]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given organization resource name in string form into a new
-        /// <see cref="OrganizationName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="OrganizationName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string organizationName, out OrganizationName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(organizationName, out resourceName))
-            {
-                result = new OrganizationName(resourceName[0]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="OrganizationName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
-        public OrganizationName(string organizationId)
-        {
-            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-        }
-
-        /// <summary>
-        /// The organization ID. Never <c>null</c>.
-        /// </summary>
-        public string OrganizationId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(OrganizationId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as OrganizationName);
-
-        /// <inheritdoc />
-        public bool Equals(OrganizationName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(OrganizationName a, OrganizationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(OrganizationName a, OrganizationName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'organization_log' resource.
-    /// </summary>
-    public sealed partial class OrganizationLogName : gax::IResourceName, sys::IEquatable<OrganizationLogName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/logs/{log}");
-
-        /// <summary>
-        /// Parses the given organization_log resource name in string form into a new
-        /// <see cref="OrganizationLogName"/> instance.
-        /// </summary>
-        /// <param name="organizationLogName">The organization_log resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="OrganizationLogName"/> if successful.</returns>
-        public static OrganizationLogName Parse(string organizationLogName)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationLogName, nameof(organizationLogName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationLogName);
-            return new OrganizationLogName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given organization_log resource name in string form into a new
-        /// <see cref="OrganizationLogName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationLogName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="organizationLogName">The organization_log resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="OrganizationLogName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string organizationLogName, out OrganizationLogName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationLogName, nameof(organizationLogName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(organizationLogName, out resourceName))
-            {
-                result = new OrganizationLogName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="OrganizationLogName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
-        /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
-        public OrganizationLogName(string organizationId, string logId)
-        {
-            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-            LogId = gax::GaxPreconditions.CheckNotNull(logId, nameof(logId));
-        }
-
-        /// <summary>
-        /// The organization ID. Never <c>null</c>.
-        /// </summary>
-        public string OrganizationId { get; }
-
-        /// <summary>
-        /// The log ID. Never <c>null</c>.
-        /// </summary>
-        public string LogId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(OrganizationId, LogId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as OrganizationLogName);
-
-        /// <inheritdoc />
-        public bool Equals(OrganizationLogName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(OrganizationLogName a, OrganizationLogName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(OrganizationLogName a, OrganizationLogName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'organization_sink' resource.
-    /// </summary>
-    public sealed partial class OrganizationSinkName : gax::IResourceName, sys::IEquatable<OrganizationSinkName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/sinks/{sink}");
-
-        /// <summary>
-        /// Parses the given organization_sink resource name in string form into a new
-        /// <see cref="OrganizationSinkName"/> instance.
-        /// </summary>
-        /// <param name="organizationSinkName">The organization_sink resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="OrganizationSinkName"/> if successful.</returns>
-        public static OrganizationSinkName Parse(string organizationSinkName)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationSinkName, nameof(organizationSinkName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationSinkName);
-            return new OrganizationSinkName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given organization_sink resource name in string form into a new
-        /// <see cref="OrganizationSinkName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationSinkName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="organizationSinkName">The organization_sink resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="OrganizationSinkName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string organizationSinkName, out OrganizationSinkName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationSinkName, nameof(organizationSinkName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(organizationSinkName, out resourceName))
-            {
-                result = new OrganizationSinkName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="OrganizationSinkName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
-        /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
-        public OrganizationSinkName(string organizationId, string sinkId)
-        {
-            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-            SinkId = gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId));
-        }
-
-        /// <summary>
-        /// The organization ID. Never <c>null</c>.
-        /// </summary>
-        public string OrganizationId { get; }
-
-        /// <summary>
-        /// The sink ID. Never <c>null</c>.
-        /// </summary>
-        public string SinkId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(OrganizationId, SinkId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as OrganizationSinkName);
-
-        /// <inheritdoc />
-        public bool Equals(OrganizationSinkName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(OrganizationSinkName a, OrganizationSinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(OrganizationSinkName a, OrganizationSinkName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'organization_exclusion' resource.
-    /// </summary>
-    public sealed partial class OrganizationExclusionName : gax::IResourceName, sys::IEquatable<OrganizationExclusionName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/exclusions/{exclusion}");
-
-        /// <summary>
-        /// Parses the given organization_exclusion resource name in string form into a new
-        /// <see cref="OrganizationExclusionName"/> instance.
-        /// </summary>
-        /// <param name="organizationExclusionName">The organization_exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="OrganizationExclusionName"/> if successful.</returns>
-        public static OrganizationExclusionName Parse(string organizationExclusionName)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationExclusionName, nameof(organizationExclusionName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationExclusionName);
-            return new OrganizationExclusionName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given organization_exclusion resource name in string form into a new
-        /// <see cref="OrganizationExclusionName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationExclusionName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="organizationExclusionName">The organization_exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="OrganizationExclusionName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string organizationExclusionName, out OrganizationExclusionName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(organizationExclusionName, nameof(organizationExclusionName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(organizationExclusionName, out resourceName))
-            {
-                result = new OrganizationExclusionName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="OrganizationExclusionName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
-        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
-        public OrganizationExclusionName(string organizationId, string exclusionId)
-        {
-            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
-            ExclusionId = gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
-        }
-
-        /// <summary>
-        /// The organization ID. Never <c>null</c>.
-        /// </summary>
-        public string OrganizationId { get; }
-
-        /// <summary>
-        /// The exclusion ID. Never <c>null</c>.
-        /// </summary>
-        public string ExclusionId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(OrganizationId, ExclusionId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as OrganizationExclusionName);
-
-        /// <inheritdoc />
-        public bool Equals(OrganizationExclusionName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(OrganizationExclusionName a, OrganizationExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(OrganizationExclusionName a, OrganizationExclusionName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'folder' resource.
-    /// </summary>
-    public sealed partial class FolderName : gax::IResourceName, sys::IEquatable<FolderName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}");
-
-        /// <summary>
-        /// Parses the given folder resource name in string form into a new
-        /// <see cref="FolderName"/> instance.
-        /// </summary>
-        /// <param name="folderName">The folder resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="FolderName"/> if successful.</returns>
-        public static FolderName Parse(string folderName)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderName, nameof(folderName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(folderName);
-            return new FolderName(resourceName[0]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given folder resource name in string form into a new
-        /// <see cref="FolderName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="folderName">The folder resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="FolderName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string folderName, out FolderName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderName, nameof(folderName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(folderName, out resourceName))
-            {
-                result = new FolderName(resourceName[0]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="FolderName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
-        public FolderName(string folderId)
-        {
-            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
-        }
-
-        /// <summary>
-        /// The folder ID. Never <c>null</c>.
-        /// </summary>
-        public string FolderId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(FolderId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as FolderName);
-
-        /// <inheritdoc />
-        public bool Equals(FolderName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(FolderName a, FolderName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(FolderName a, FolderName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'folder_log' resource.
-    /// </summary>
-    public sealed partial class FolderLogName : gax::IResourceName, sys::IEquatable<FolderLogName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}/logs/{log}");
-
-        /// <summary>
-        /// Parses the given folder_log resource name in string form into a new
-        /// <see cref="FolderLogName"/> instance.
-        /// </summary>
-        /// <param name="folderLogName">The folder_log resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="FolderLogName"/> if successful.</returns>
-        public static FolderLogName Parse(string folderLogName)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderLogName, nameof(folderLogName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(folderLogName);
-            return new FolderLogName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given folder_log resource name in string form into a new
-        /// <see cref="FolderLogName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderLogName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="folderLogName">The folder_log resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="FolderLogName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string folderLogName, out FolderLogName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderLogName, nameof(folderLogName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(folderLogName, out resourceName))
-            {
-                result = new FolderLogName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="FolderLogName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
-        /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
-        public FolderLogName(string folderId, string logId)
-        {
-            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
-            LogId = gax::GaxPreconditions.CheckNotNull(logId, nameof(logId));
-        }
-
-        /// <summary>
-        /// The folder ID. Never <c>null</c>.
-        /// </summary>
-        public string FolderId { get; }
-
-        /// <summary>
-        /// The log ID. Never <c>null</c>.
-        /// </summary>
-        public string LogId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(FolderId, LogId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as FolderLogName);
-
-        /// <inheritdoc />
-        public bool Equals(FolderLogName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(FolderLogName a, FolderLogName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(FolderLogName a, FolderLogName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'folder_sink' resource.
-    /// </summary>
-    public sealed partial class FolderSinkName : gax::IResourceName, sys::IEquatable<FolderSinkName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}/sinks/{sink}");
-
-        /// <summary>
-        /// Parses the given folder_sink resource name in string form into a new
-        /// <see cref="FolderSinkName"/> instance.
-        /// </summary>
-        /// <param name="folderSinkName">The folder_sink resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="FolderSinkName"/> if successful.</returns>
-        public static FolderSinkName Parse(string folderSinkName)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderSinkName, nameof(folderSinkName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(folderSinkName);
-            return new FolderSinkName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given folder_sink resource name in string form into a new
-        /// <see cref="FolderSinkName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderSinkName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="folderSinkName">The folder_sink resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="FolderSinkName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string folderSinkName, out FolderSinkName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderSinkName, nameof(folderSinkName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(folderSinkName, out resourceName))
-            {
-                result = new FolderSinkName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="FolderSinkName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
-        /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
-        public FolderSinkName(string folderId, string sinkId)
-        {
-            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
-            SinkId = gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId));
-        }
-
-        /// <summary>
-        /// The folder ID. Never <c>null</c>.
-        /// </summary>
-        public string FolderId { get; }
-
-        /// <summary>
-        /// The sink ID. Never <c>null</c>.
-        /// </summary>
-        public string SinkId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(FolderId, SinkId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as FolderSinkName);
-
-        /// <inheritdoc />
-        public bool Equals(FolderSinkName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(FolderSinkName a, FolderSinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(FolderSinkName a, FolderSinkName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'folder_exclusion' resource.
-    /// </summary>
-    public sealed partial class FolderExclusionName : gax::IResourceName, sys::IEquatable<FolderExclusionName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}/exclusions/{exclusion}");
-
-        /// <summary>
-        /// Parses the given folder_exclusion resource name in string form into a new
-        /// <see cref="FolderExclusionName"/> instance.
-        /// </summary>
-        /// <param name="folderExclusionName">The folder_exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="FolderExclusionName"/> if successful.</returns>
-        public static FolderExclusionName Parse(string folderExclusionName)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderExclusionName, nameof(folderExclusionName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(folderExclusionName);
-            return new FolderExclusionName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given folder_exclusion resource name in string form into a new
-        /// <see cref="FolderExclusionName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderExclusionName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="folderExclusionName">The folder_exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="FolderExclusionName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string folderExclusionName, out FolderExclusionName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(folderExclusionName, nameof(folderExclusionName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(folderExclusionName, out resourceName))
-            {
-                result = new FolderExclusionName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="FolderExclusionName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
-        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
-        public FolderExclusionName(string folderId, string exclusionId)
-        {
-            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
-            ExclusionId = gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
-        }
-
-        /// <summary>
-        /// The folder ID. Never <c>null</c>.
-        /// </summary>
-        public string FolderId { get; }
-
-        /// <summary>
-        /// The exclusion ID. Never <c>null</c>.
-        /// </summary>
-        public string ExclusionId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(FolderId, ExclusionId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as FolderExclusionName);
-
-        /// <inheritdoc />
-        public bool Equals(FolderExclusionName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(FolderExclusionName a, FolderExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(FolderExclusionName a, FolderExclusionName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name for the 'billing' resource.
     /// </summary>
     public sealed partial class BillingName : gax::IResourceName, sys::IEquatable<BillingName>
@@ -1279,6 +104,98 @@ namespace Google.Cloud.Logging.V2
 
         /// <inheritdoc />
         public static bool operator !=(BillingName a, BillingName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'billing_exclusion' resource.
+    /// </summary>
+    public sealed partial class BillingExclusionName : gax::IResourceName, sys::IEquatable<BillingExclusionName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("billingAccounts/{billing_account}/exclusions/{exclusion}");
+
+        /// <summary>
+        /// Parses the given billing_exclusion resource name in string form into a new
+        /// <see cref="BillingExclusionName"/> instance.
+        /// </summary>
+        /// <param name="billingExclusionName">The billing_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="BillingExclusionName"/> if successful.</returns>
+        public static BillingExclusionName Parse(string billingExclusionName)
+        {
+            gax::GaxPreconditions.CheckNotNull(billingExclusionName, nameof(billingExclusionName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(billingExclusionName);
+            return new BillingExclusionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given billing_exclusion resource name in string form into a new
+        /// <see cref="BillingExclusionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="billingExclusionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="billingExclusionName">The billing_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="BillingExclusionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string billingExclusionName, out BillingExclusionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(billingExclusionName, nameof(billingExclusionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(billingExclusionName, out resourceName))
+            {
+                result = new BillingExclusionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="BillingExclusionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="billingAccountId">The billingAccount ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
+        public BillingExclusionName(string billingAccountId, string exclusionId)
+        {
+            BillingAccountId = gax::GaxPreconditions.CheckNotNull(billingAccountId, nameof(billingAccountId));
+            ExclusionId = gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
+        }
+
+        /// <summary>
+        /// The billingAccount ID. Never <c>null</c>.
+        /// </summary>
+        public string BillingAccountId { get; }
+
+        /// <summary>
+        /// The exclusion ID. Never <c>null</c>.
+        /// </summary>
+        public string ExclusionId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(BillingAccountId, ExclusionId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as BillingExclusionName);
+
+        /// <inheritdoc />
+        public bool Equals(BillingExclusionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(BillingExclusionName a, BillingExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(BillingExclusionName a, BillingExclusionName b) => !(a == b);
     }
 
     /// <summary>
@@ -1466,44 +383,44 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>
-    /// Resource name for the 'billing_exclusion' resource.
+    /// Resource name for the 'exclusion' resource.
     /// </summary>
-    public sealed partial class BillingExclusionName : gax::IResourceName, sys::IEquatable<BillingExclusionName>
+    public sealed partial class ExclusionName : gax::IResourceName, sys::IEquatable<ExclusionName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("billingAccounts/{billing_account}/exclusions/{exclusion}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/exclusions/{exclusion}");
 
         /// <summary>
-        /// Parses the given billing_exclusion resource name in string form into a new
-        /// <see cref="BillingExclusionName"/> instance.
+        /// Parses the given exclusion resource name in string form into a new
+        /// <see cref="ExclusionName"/> instance.
         /// </summary>
-        /// <param name="billingExclusionName">The billing_exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="BillingExclusionName"/> if successful.</returns>
-        public static BillingExclusionName Parse(string billingExclusionName)
+        /// <param name="exclusionName">The exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ExclusionName"/> if successful.</returns>
+        public static ExclusionName Parse(string exclusionName)
         {
-            gax::GaxPreconditions.CheckNotNull(billingExclusionName, nameof(billingExclusionName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(billingExclusionName);
-            return new BillingExclusionName(resourceName[0], resourceName[1]);
+            gax::GaxPreconditions.CheckNotNull(exclusionName, nameof(exclusionName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(exclusionName);
+            return new ExclusionName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given billing_exclusion resource name in string form into a new
-        /// <see cref="BillingExclusionName"/> instance.
+        /// Tries to parse the given exclusion resource name in string form into a new
+        /// <see cref="ExclusionName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="billingExclusionName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="exclusionName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="billingExclusionName">The billing_exclusion resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="BillingExclusionName"/>,
+        /// <param name="exclusionName">The exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ExclusionName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string billingExclusionName, out BillingExclusionName result)
+        public static bool TryParse(string exclusionName, out ExclusionName result)
         {
-            gax::GaxPreconditions.CheckNotNull(billingExclusionName, nameof(billingExclusionName));
+            gax::GaxPreconditions.CheckNotNull(exclusionName, nameof(exclusionName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(billingExclusionName, out resourceName))
+            if (s_template.TryParseName(exclusionName, out resourceName))
             {
-                result = new BillingExclusionName(resourceName[0], resourceName[1]);
+                result = new ExclusionName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -1514,21 +431,21 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="BillingExclusionName"/> resource name class
+        /// Constructs a new instance of the <see cref="ExclusionName"/> resource name class
         /// from its component parts.
         /// </summary>
-        /// <param name="billingAccountId">The billingAccount ID. Must not be <c>null</c>.</param>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
-        public BillingExclusionName(string billingAccountId, string exclusionId)
+        public ExclusionName(string projectId, string exclusionId)
         {
-            BillingAccountId = gax::GaxPreconditions.CheckNotNull(billingAccountId, nameof(billingAccountId));
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             ExclusionId = gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
         }
 
         /// <summary>
-        /// The billingAccount ID. Never <c>null</c>.
+        /// The project ID. Never <c>null</c>.
         /// </summary>
-        public string BillingAccountId { get; }
+        public string ProjectId { get; }
 
         /// <summary>
         /// The exclusion ID. Never <c>null</c>.
@@ -1539,558 +456,22 @@ namespace Google.Cloud.Logging.V2
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(BillingAccountId, ExclusionId);
+        public override string ToString() => s_template.Expand(ProjectId, ExclusionId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as BillingExclusionName);
+        public override bool Equals(object obj) => Equals(obj as ExclusionName);
 
         /// <inheritdoc />
-        public bool Equals(BillingExclusionName other) => ToString() == other?.ToString();
+        public bool Equals(ExclusionName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(BillingExclusionName a, BillingExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(ExclusionName a, ExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(BillingExclusionName a, BillingExclusionName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name which will contain one of a choice of resource names.
-    /// </summary>
-    /// <remarks>
-    /// This resource name will contain one of the following:
-    /// <list type="bullet">
-    /// <item><description>ProjectName: A resource of type 'project'.</description></item>
-    /// <item><description>OrganizationName: A resource of type 'organization'.</description></item>
-    /// <item><description>FolderName: A resource of type 'folder'.</description></item>
-    /// <item><description>BillingName: A resource of type 'billing'.</description></item>
-    /// </list>
-    /// </remarks>
-    public sealed partial class ParentNameOneof : gax::IResourceName, sys::IEquatable<ParentNameOneof>
-    {
-        /// <summary>
-        /// The possible contents of <see cref="ParentNameOneof"/>.
-        /// </summary>
-        public enum OneofType
-        {
-            /// <summary>
-            /// A resource of an unknown type.
-            /// </summary>
-            Unknown = 0,
-
-            /// <summary>
-            /// A resource of type 'project'.
-            /// </summary>
-            ProjectName = 1,
-
-            /// <summary>
-            /// A resource of type 'organization'.
-            /// </summary>
-            OrganizationName = 2,
-
-            /// <summary>
-            /// A resource of type 'folder'.
-            /// </summary>
-            FolderName = 3,
-
-            /// <summary>
-            /// A resource of type 'billing'.
-            /// </summary>
-            BillingName = 4,
-        }
-
-        /// <summary>
-        /// Parses a resource name in string form into a new <see cref="ParentNameOneof"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully the resource name must be one of the following:
-        /// <list type="bullet">
-        /// <item><description>ProjectName: A resource of type 'project'.</description></item>
-        /// <item><description>OrganizationName: A resource of type 'organization'.</description></item>
-        /// <item><description>FolderName: A resource of type 'folder'.</description></item>
-        /// <item><description>BillingName: A resource of type 'billing'.</description></item>
-        /// </list>
-        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
-        /// <see cref="sys::ArgumentException"/> if an unknown resource name is given.</param>
-        /// <returns>The parsed <see cref="ParentNameOneof"/> if successful.</returns>
-        public static ParentNameOneof Parse(string name, bool allowUnknown)
-        {
-            ParentNameOneof result;
-            if (TryParse(name, allowUnknown, out result))
-            {
-                return result;
-            }
-            throw new sys::ArgumentException("Invalid name", nameof(name));
-        }
-
-        /// <summary>
-        /// Tries to parse a resource name in string form into a new <see cref="ParentNameOneof"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully the resource name must be one of the following:
-        /// <list type="bullet">
-        /// <item><description>ProjectName: A resource of type 'project'.</description></item>
-        /// <item><description>OrganizationName: A resource of type 'organization'.</description></item>
-        /// <item><description>FolderName: A resource of type 'folder'.</description></item>
-        /// <item><description>BillingName: A resource of type 'billing'.</description></item>
-        /// </list>
-        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="gax::UnknownResourceName"/>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ParentNameOneof"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string name, bool allowUnknown, out ParentNameOneof result)
-        {
-            gax::GaxPreconditions.CheckNotNull(name, nameof(name));
-            ProjectName projectName;
-            if (ProjectName.TryParse(name, out projectName))
-            {
-                result = new ParentNameOneof(OneofType.ProjectName, projectName);
-                return true;
-            }
-            OrganizationName organizationName;
-            if (OrganizationName.TryParse(name, out organizationName))
-            {
-                result = new ParentNameOneof(OneofType.OrganizationName, organizationName);
-                return true;
-            }
-            FolderName folderName;
-            if (FolderName.TryParse(name, out folderName))
-            {
-                result = new ParentNameOneof(OneofType.FolderName, folderName);
-                return true;
-            }
-            BillingName billingName;
-            if (BillingName.TryParse(name, out billingName))
-            {
-                result = new ParentNameOneof(OneofType.BillingName, billingName);
-                return true;
-            }
-            if (allowUnknown)
-            {
-                gax::UnknownResourceName unknownResourceName;
-                if (gax::UnknownResourceName.TryParse(name, out unknownResourceName))
-                {
-                    result = new ParentNameOneof(OneofType.Unknown, unknownResourceName);
-                    return true;
-                }
-            }
-            result = null;
-            return false;
-        }
-
-        /// <summary>
-        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="ProjectName"/>
-        /// </summary>
-        /// <param name="projectName">The <see cref="ProjectName"/> to be contained within
-        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="projectName"/>.</returns>
-        public static ParentNameOneof From(ProjectName projectName) => new ParentNameOneof(OneofType.ProjectName, projectName);
-
-        /// <summary>
-        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="OrganizationName"/>
-        /// </summary>
-        /// <param name="organizationName">The <see cref="OrganizationName"/> to be contained within
-        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="organizationName"/>.</returns>
-        public static ParentNameOneof From(OrganizationName organizationName) => new ParentNameOneof(OneofType.OrganizationName, organizationName);
-
-        /// <summary>
-        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="FolderName"/>
-        /// </summary>
-        /// <param name="folderName">The <see cref="FolderName"/> to be contained within
-        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="folderName"/>.</returns>
-        public static ParentNameOneof From(FolderName folderName) => new ParentNameOneof(OneofType.FolderName, folderName);
-
-        /// <summary>
-        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="BillingName"/>
-        /// </summary>
-        /// <param name="billingName">The <see cref="BillingName"/> to be contained within
-        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="billingName"/>.</returns>
-        public static ParentNameOneof From(BillingName billingName) => new ParentNameOneof(OneofType.BillingName, billingName);
-
-        private static bool IsValid(OneofType type, gax::IResourceName name)
-        {
-            switch (type)
-            {
-                case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.ProjectName: return name is ProjectName;
-                case OneofType.OrganizationName: return name is OrganizationName;
-                case OneofType.FolderName: return name is FolderName;
-                case OneofType.BillingName: return name is BillingName;
-                default: return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ParentNameOneof"/> resource name class
-        /// from a suitable <see cref="gax::IResourceName"/> instance.
-        /// </summary>
-        public ParentNameOneof(OneofType type, gax::IResourceName name)
-        {
-            Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
-            Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
-            if (!IsValid(type, name))
-            {
-                throw new sys::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="OneofType"/> of the Name contained in this instance.
-        /// </summary>
-        public OneofType Type { get; }
-
-        /// <summary>
-        /// The <see cref="gax::IResourceName"/> contained in this instance.
-        /// </summary>
-        public gax::IResourceName Name { get; }
-
-        private T CheckAndReturn<T>(OneofType type)
-        {
-            if (Type != type)
-            {
-                throw new sys::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
-            }
-            return (T)Name;
-        }
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="ProjectName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="ProjectName"/>.
-        /// </remarks>
-        public ProjectName ProjectName => CheckAndReturn<ProjectName>(OneofType.ProjectName);
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="OrganizationName"/>.
-        /// </remarks>
-        public OrganizationName OrganizationName => CheckAndReturn<OrganizationName>(OneofType.OrganizationName);
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="FolderName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="FolderName"/>.
-        /// </remarks>
-        public FolderName FolderName => CheckAndReturn<FolderName>(OneofType.FolderName);
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="BillingName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="BillingName"/>.
-        /// </remarks>
-        public BillingName BillingName => CheckAndReturn<BillingName>(OneofType.BillingName);
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
-
-        /// <inheritdoc />
-        public override string ToString() => Name.ToString();
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ParentNameOneof);
-
-        /// <inheritdoc />
-        public bool Equals(ParentNameOneof other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ParentNameOneof a, ParentNameOneof b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ParentNameOneof a, ParentNameOneof b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name which will contain one of a choice of resource names.
-    /// </summary>
-    /// <remarks>
-    /// This resource name will contain one of the following:
-    /// <list type="bullet">
-    /// <item><description>SinkName: A resource of type 'sink'.</description></item>
-    /// <item><description>OrganizationSinkName: A resource of type 'organization_sink'.</description></item>
-    /// <item><description>FolderSinkName: A resource of type 'folder_sink'.</description></item>
-    /// <item><description>BillingSinkName: A resource of type 'billing_sink'.</description></item>
-    /// </list>
-    /// </remarks>
-    public sealed partial class SinkNameOneof : gax::IResourceName, sys::IEquatable<SinkNameOneof>
-    {
-        /// <summary>
-        /// The possible contents of <see cref="SinkNameOneof"/>.
-        /// </summary>
-        public enum OneofType
-        {
-            /// <summary>
-            /// A resource of an unknown type.
-            /// </summary>
-            Unknown = 0,
-
-            /// <summary>
-            /// A resource of type 'sink'.
-            /// </summary>
-            SinkName = 1,
-
-            /// <summary>
-            /// A resource of type 'organization_sink'.
-            /// </summary>
-            OrganizationSinkName = 2,
-
-            /// <summary>
-            /// A resource of type 'folder_sink'.
-            /// </summary>
-            FolderSinkName = 3,
-
-            /// <summary>
-            /// A resource of type 'billing_sink'.
-            /// </summary>
-            BillingSinkName = 4,
-        }
-
-        /// <summary>
-        /// Parses a resource name in string form into a new <see cref="SinkNameOneof"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully the resource name must be one of the following:
-        /// <list type="bullet">
-        /// <item><description>SinkName: A resource of type 'sink'.</description></item>
-        /// <item><description>OrganizationSinkName: A resource of type 'organization_sink'.</description></item>
-        /// <item><description>FolderSinkName: A resource of type 'folder_sink'.</description></item>
-        /// <item><description>BillingSinkName: A resource of type 'billing_sink'.</description></item>
-        /// </list>
-        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
-        /// <see cref="sys::ArgumentException"/> if an unknown resource name is given.</param>
-        /// <returns>The parsed <see cref="SinkNameOneof"/> if successful.</returns>
-        public static SinkNameOneof Parse(string name, bool allowUnknown)
-        {
-            SinkNameOneof result;
-            if (TryParse(name, allowUnknown, out result))
-            {
-                return result;
-            }
-            throw new sys::ArgumentException("Invalid name", nameof(name));
-        }
-
-        /// <summary>
-        /// Tries to parse a resource name in string form into a new <see cref="SinkNameOneof"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully the resource name must be one of the following:
-        /// <list type="bullet">
-        /// <item><description>SinkName: A resource of type 'sink'.</description></item>
-        /// <item><description>OrganizationSinkName: A resource of type 'organization_sink'.</description></item>
-        /// <item><description>FolderSinkName: A resource of type 'folder_sink'.</description></item>
-        /// <item><description>BillingSinkName: A resource of type 'billing_sink'.</description></item>
-        /// </list>
-        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="gax::UnknownResourceName"/>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="SinkNameOneof"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string name, bool allowUnknown, out SinkNameOneof result)
-        {
-            gax::GaxPreconditions.CheckNotNull(name, nameof(name));
-            SinkName sinkName;
-            if (SinkName.TryParse(name, out sinkName))
-            {
-                result = new SinkNameOneof(OneofType.SinkName, sinkName);
-                return true;
-            }
-            OrganizationSinkName organizationSinkName;
-            if (OrganizationSinkName.TryParse(name, out organizationSinkName))
-            {
-                result = new SinkNameOneof(OneofType.OrganizationSinkName, organizationSinkName);
-                return true;
-            }
-            FolderSinkName folderSinkName;
-            if (FolderSinkName.TryParse(name, out folderSinkName))
-            {
-                result = new SinkNameOneof(OneofType.FolderSinkName, folderSinkName);
-                return true;
-            }
-            BillingSinkName billingSinkName;
-            if (BillingSinkName.TryParse(name, out billingSinkName))
-            {
-                result = new SinkNameOneof(OneofType.BillingSinkName, billingSinkName);
-                return true;
-            }
-            if (allowUnknown)
-            {
-                gax::UnknownResourceName unknownResourceName;
-                if (gax::UnknownResourceName.TryParse(name, out unknownResourceName))
-                {
-                    result = new SinkNameOneof(OneofType.Unknown, unknownResourceName);
-                    return true;
-                }
-            }
-            result = null;
-            return false;
-        }
-
-        /// <summary>
-        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="SinkName"/>
-        /// </summary>
-        /// <param name="sinkName">The <see cref="SinkName"/> to be contained within
-        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="sinkName"/>.</returns>
-        public static SinkNameOneof From(SinkName sinkName) => new SinkNameOneof(OneofType.SinkName, sinkName);
-
-        /// <summary>
-        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="OrganizationSinkName"/>
-        /// </summary>
-        /// <param name="organizationSinkName">The <see cref="OrganizationSinkName"/> to be contained within
-        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="organizationSinkName"/>.</returns>
-        public static SinkNameOneof From(OrganizationSinkName organizationSinkName) => new SinkNameOneof(OneofType.OrganizationSinkName, organizationSinkName);
-
-        /// <summary>
-        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="FolderSinkName"/>
-        /// </summary>
-        /// <param name="folderSinkName">The <see cref="FolderSinkName"/> to be contained within
-        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="folderSinkName"/>.</returns>
-        public static SinkNameOneof From(FolderSinkName folderSinkName) => new SinkNameOneof(OneofType.FolderSinkName, folderSinkName);
-
-        /// <summary>
-        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="BillingSinkName"/>
-        /// </summary>
-        /// <param name="billingSinkName">The <see cref="BillingSinkName"/> to be contained within
-        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="billingSinkName"/>.</returns>
-        public static SinkNameOneof From(BillingSinkName billingSinkName) => new SinkNameOneof(OneofType.BillingSinkName, billingSinkName);
-
-        private static bool IsValid(OneofType type, gax::IResourceName name)
-        {
-            switch (type)
-            {
-                case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.SinkName: return name is SinkName;
-                case OneofType.OrganizationSinkName: return name is OrganizationSinkName;
-                case OneofType.FolderSinkName: return name is FolderSinkName;
-                case OneofType.BillingSinkName: return name is BillingSinkName;
-                default: return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="SinkNameOneof"/> resource name class
-        /// from a suitable <see cref="gax::IResourceName"/> instance.
-        /// </summary>
-        public SinkNameOneof(OneofType type, gax::IResourceName name)
-        {
-            Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
-            Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
-            if (!IsValid(type, name))
-            {
-                throw new sys::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
-            }
-        }
-
-        /// <summary>
-        /// The <see cref="OneofType"/> of the Name contained in this instance.
-        /// </summary>
-        public OneofType Type { get; }
-
-        /// <summary>
-        /// The <see cref="gax::IResourceName"/> contained in this instance.
-        /// </summary>
-        public gax::IResourceName Name { get; }
-
-        private T CheckAndReturn<T>(OneofType type)
-        {
-            if (Type != type)
-            {
-                throw new sys::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
-            }
-            return (T)Name;
-        }
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="SinkName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="SinkName"/>.
-        /// </remarks>
-        public SinkName SinkName => CheckAndReturn<SinkName>(OneofType.SinkName);
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationSinkName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="OrganizationSinkName"/>.
-        /// </remarks>
-        public OrganizationSinkName OrganizationSinkName => CheckAndReturn<OrganizationSinkName>(OneofType.OrganizationSinkName);
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="FolderSinkName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="FolderSinkName"/>.
-        /// </remarks>
-        public FolderSinkName FolderSinkName => CheckAndReturn<FolderSinkName>(OneofType.FolderSinkName);
-
-        /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="BillingSinkName"/>.
-        /// </summary>
-        /// <remarks>
-        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="BillingSinkName"/>.
-        /// </remarks>
-        public BillingSinkName BillingSinkName => CheckAndReturn<BillingSinkName>(OneofType.BillingSinkName);
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
-
-        /// <inheritdoc />
-        public override string ToString() => Name.ToString();
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as SinkNameOneof);
-
-        /// <inheritdoc />
-        public bool Equals(SinkNameOneof other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(SinkNameOneof a, SinkNameOneof b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(SinkNameOneof a, SinkNameOneof b) => !(a == b);
+        public static bool operator !=(ExclusionName a, ExclusionName b) => !(a == b);
     }
 
     /// <summary>
@@ -2362,6 +743,459 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>
+    /// Resource name for the 'folder' resource.
+    /// </summary>
+    public sealed partial class FolderName : gax::IResourceName, sys::IEquatable<FolderName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}");
+
+        /// <summary>
+        /// Parses the given folder resource name in string form into a new
+        /// <see cref="FolderName"/> instance.
+        /// </summary>
+        /// <param name="folderName">The folder resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FolderName"/> if successful.</returns>
+        public static FolderName Parse(string folderName)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderName, nameof(folderName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(folderName);
+            return new FolderName(resourceName[0]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given folder resource name in string form into a new
+        /// <see cref="FolderName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="folderName">The folder resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="FolderName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string folderName, out FolderName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderName, nameof(folderName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(folderName, out resourceName))
+            {
+                result = new FolderName(resourceName[0]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="FolderName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
+        public FolderName(string folderId)
+        {
+            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
+        }
+
+        /// <summary>
+        /// The folder ID. Never <c>null</c>.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(FolderId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as FolderName);
+
+        /// <inheritdoc />
+        public bool Equals(FolderName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(FolderName a, FolderName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(FolderName a, FolderName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'folder_exclusion' resource.
+    /// </summary>
+    public sealed partial class FolderExclusionName : gax::IResourceName, sys::IEquatable<FolderExclusionName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}/exclusions/{exclusion}");
+
+        /// <summary>
+        /// Parses the given folder_exclusion resource name in string form into a new
+        /// <see cref="FolderExclusionName"/> instance.
+        /// </summary>
+        /// <param name="folderExclusionName">The folder_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FolderExclusionName"/> if successful.</returns>
+        public static FolderExclusionName Parse(string folderExclusionName)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderExclusionName, nameof(folderExclusionName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(folderExclusionName);
+            return new FolderExclusionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given folder_exclusion resource name in string form into a new
+        /// <see cref="FolderExclusionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderExclusionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="folderExclusionName">The folder_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="FolderExclusionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string folderExclusionName, out FolderExclusionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderExclusionName, nameof(folderExclusionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(folderExclusionName, out resourceName))
+            {
+                result = new FolderExclusionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="FolderExclusionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
+        public FolderExclusionName(string folderId, string exclusionId)
+        {
+            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
+            ExclusionId = gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
+        }
+
+        /// <summary>
+        /// The folder ID. Never <c>null</c>.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The exclusion ID. Never <c>null</c>.
+        /// </summary>
+        public string ExclusionId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(FolderId, ExclusionId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as FolderExclusionName);
+
+        /// <inheritdoc />
+        public bool Equals(FolderExclusionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(FolderExclusionName a, FolderExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(FolderExclusionName a, FolderExclusionName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'folder_log' resource.
+    /// </summary>
+    public sealed partial class FolderLogName : gax::IResourceName, sys::IEquatable<FolderLogName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}/logs/{log}");
+
+        /// <summary>
+        /// Parses the given folder_log resource name in string form into a new
+        /// <see cref="FolderLogName"/> instance.
+        /// </summary>
+        /// <param name="folderLogName">The folder_log resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FolderLogName"/> if successful.</returns>
+        public static FolderLogName Parse(string folderLogName)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderLogName, nameof(folderLogName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(folderLogName);
+            return new FolderLogName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given folder_log resource name in string form into a new
+        /// <see cref="FolderLogName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderLogName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="folderLogName">The folder_log resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="FolderLogName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string folderLogName, out FolderLogName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderLogName, nameof(folderLogName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(folderLogName, out resourceName))
+            {
+                result = new FolderLogName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="FolderLogName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
+        /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
+        public FolderLogName(string folderId, string logId)
+        {
+            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
+            LogId = gax::GaxPreconditions.CheckNotNull(logId, nameof(logId));
+        }
+
+        /// <summary>
+        /// The folder ID. Never <c>null</c>.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The log ID. Never <c>null</c>.
+        /// </summary>
+        public string LogId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(FolderId, LogId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as FolderLogName);
+
+        /// <inheritdoc />
+        public bool Equals(FolderLogName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(FolderLogName a, FolderLogName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(FolderLogName a, FolderLogName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'folder_sink' resource.
+    /// </summary>
+    public sealed partial class FolderSinkName : gax::IResourceName, sys::IEquatable<FolderSinkName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("folders/{folder}/sinks/{sink}");
+
+        /// <summary>
+        /// Parses the given folder_sink resource name in string form into a new
+        /// <see cref="FolderSinkName"/> instance.
+        /// </summary>
+        /// <param name="folderSinkName">The folder_sink resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FolderSinkName"/> if successful.</returns>
+        public static FolderSinkName Parse(string folderSinkName)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderSinkName, nameof(folderSinkName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(folderSinkName);
+            return new FolderSinkName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given folder_sink resource name in string form into a new
+        /// <see cref="FolderSinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="folderSinkName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="folderSinkName">The folder_sink resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="FolderSinkName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string folderSinkName, out FolderSinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(folderSinkName, nameof(folderSinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(folderSinkName, out resourceName))
+            {
+                result = new FolderSinkName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="FolderSinkName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
+        /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
+        public FolderSinkName(string folderId, string sinkId)
+        {
+            FolderId = gax::GaxPreconditions.CheckNotNull(folderId, nameof(folderId));
+            SinkId = gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId));
+        }
+
+        /// <summary>
+        /// The folder ID. Never <c>null</c>.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The sink ID. Never <c>null</c>.
+        /// </summary>
+        public string SinkId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(FolderId, SinkId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as FolderSinkName);
+
+        /// <inheritdoc />
+        public bool Equals(FolderSinkName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(FolderSinkName a, FolderSinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(FolderSinkName a, FolderSinkName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'log' resource.
+    /// </summary>
+    public sealed partial class LogName : gax::IResourceName, sys::IEquatable<LogName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/logs/{log}");
+
+        /// <summary>
+        /// Parses the given log resource name in string form into a new
+        /// <see cref="LogName"/> instance.
+        /// </summary>
+        /// <param name="logName">The log resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LogName"/> if successful.</returns>
+        public static LogName Parse(string logName)
+        {
+            gax::GaxPreconditions.CheckNotNull(logName, nameof(logName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(logName);
+            return new LogName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given log resource name in string form into a new
+        /// <see cref="LogName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="logName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="logName">The log resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="LogName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string logName, out LogName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(logName, nameof(logName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(logName, out resourceName))
+            {
+                result = new LogName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="LogName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
+        public LogName(string projectId, string logId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            LogId = gax::GaxPreconditions.CheckNotNull(logId, nameof(logId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The log ID. Never <c>null</c>.
+        /// </summary>
+        public string LogId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, LogId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as LogName);
+
+        /// <inheritdoc />
+        public bool Equals(LogName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(LogName a, LogName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(LogName a, LogName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name which will contain one of a choice of resource names.
     /// </summary>
     /// <remarks>
@@ -2630,6 +1464,98 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>
+    /// Resource name for the 'metric' resource.
+    /// </summary>
+    public sealed partial class MetricName : gax::IResourceName, sys::IEquatable<MetricName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/metrics/{metric}");
+
+        /// <summary>
+        /// Parses the given metric resource name in string form into a new
+        /// <see cref="MetricName"/> instance.
+        /// </summary>
+        /// <param name="metricName">The metric resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MetricName"/> if successful.</returns>
+        public static MetricName Parse(string metricName)
+        {
+            gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(metricName);
+            return new MetricName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given metric resource name in string form into a new
+        /// <see cref="MetricName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="metricName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="metricName">The metric resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="MetricName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string metricName, out MetricName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(metricName, nameof(metricName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(metricName, out resourceName))
+            {
+                result = new MetricName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="MetricName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="metricId">The metric ID. Must not be <c>null</c>.</param>
+        public MetricName(string projectId, string metricId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            MetricId = gax::GaxPreconditions.CheckNotNull(metricId, nameof(metricId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The metric ID. Never <c>null</c>.
+        /// </summary>
+        public string MetricId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, MetricId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as MetricName);
+
+        /// <inheritdoc />
+        public bool Equals(MetricName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(MetricName a, MetricName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(MetricName a, MetricName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name which will contain one of a choice of resource names.
     /// </summary>
     /// <remarks>
@@ -2799,6 +1725,1080 @@ namespace Google.Cloud.Logging.V2
 
         /// <inheritdoc />
         public static bool operator !=(MetricNameOneof a, MetricNameOneof b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'organization' resource.
+    /// </summary>
+    public sealed partial class OrganizationName : gax::IResourceName, sys::IEquatable<OrganizationName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}");
+
+        /// <summary>
+        /// Parses the given organization resource name in string form into a new
+        /// <see cref="OrganizationName"/> instance.
+        /// </summary>
+        /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationName"/> if successful.</returns>
+        public static OrganizationName Parse(string organizationName)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationName);
+            return new OrganizationName(resourceName[0]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization resource name in string form into a new
+        /// <see cref="OrganizationName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationName, out OrganizationName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationName, nameof(organizationName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationName, out resourceName))
+            {
+                result = new OrganizationName(resourceName[0]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        public OrganizationName(string organizationId)
+        {
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationName a, OrganizationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationName a, OrganizationName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'organization_exclusion' resource.
+    /// </summary>
+    public sealed partial class OrganizationExclusionName : gax::IResourceName, sys::IEquatable<OrganizationExclusionName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/exclusions/{exclusion}");
+
+        /// <summary>
+        /// Parses the given organization_exclusion resource name in string form into a new
+        /// <see cref="OrganizationExclusionName"/> instance.
+        /// </summary>
+        /// <param name="organizationExclusionName">The organization_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationExclusionName"/> if successful.</returns>
+        public static OrganizationExclusionName Parse(string organizationExclusionName)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationExclusionName, nameof(organizationExclusionName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationExclusionName);
+            return new OrganizationExclusionName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization_exclusion resource name in string form into a new
+        /// <see cref="OrganizationExclusionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationExclusionName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationExclusionName">The organization_exclusion resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationExclusionName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationExclusionName, out OrganizationExclusionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationExclusionName, nameof(organizationExclusionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationExclusionName, out resourceName))
+            {
+                result = new OrganizationExclusionName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationExclusionName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        /// <param name="exclusionId">The exclusion ID. Must not be <c>null</c>.</param>
+        public OrganizationExclusionName(string organizationId, string exclusionId)
+        {
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            ExclusionId = gax::GaxPreconditions.CheckNotNull(exclusionId, nameof(exclusionId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The exclusion ID. Never <c>null</c>.
+        /// </summary>
+        public string ExclusionId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId, ExclusionId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationExclusionName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationExclusionName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationExclusionName a, OrganizationExclusionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationExclusionName a, OrganizationExclusionName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'organization_log' resource.
+    /// </summary>
+    public sealed partial class OrganizationLogName : gax::IResourceName, sys::IEquatable<OrganizationLogName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/logs/{log}");
+
+        /// <summary>
+        /// Parses the given organization_log resource name in string form into a new
+        /// <see cref="OrganizationLogName"/> instance.
+        /// </summary>
+        /// <param name="organizationLogName">The organization_log resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationLogName"/> if successful.</returns>
+        public static OrganizationLogName Parse(string organizationLogName)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationLogName, nameof(organizationLogName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationLogName);
+            return new OrganizationLogName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization_log resource name in string form into a new
+        /// <see cref="OrganizationLogName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationLogName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationLogName">The organization_log resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationLogName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationLogName, out OrganizationLogName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationLogName, nameof(organizationLogName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationLogName, out resourceName))
+            {
+                result = new OrganizationLogName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationLogName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
+        public OrganizationLogName(string organizationId, string logId)
+        {
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            LogId = gax::GaxPreconditions.CheckNotNull(logId, nameof(logId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The log ID. Never <c>null</c>.
+        /// </summary>
+        public string LogId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId, LogId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationLogName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationLogName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationLogName a, OrganizationLogName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationLogName a, OrganizationLogName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'organization_sink' resource.
+    /// </summary>
+    public sealed partial class OrganizationSinkName : gax::IResourceName, sys::IEquatable<OrganizationSinkName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/sinks/{sink}");
+
+        /// <summary>
+        /// Parses the given organization_sink resource name in string form into a new
+        /// <see cref="OrganizationSinkName"/> instance.
+        /// </summary>
+        /// <param name="organizationSinkName">The organization_sink resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationSinkName"/> if successful.</returns>
+        public static OrganizationSinkName Parse(string organizationSinkName)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationSinkName, nameof(organizationSinkName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationSinkName);
+            return new OrganizationSinkName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization_sink resource name in string form into a new
+        /// <see cref="OrganizationSinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationSinkName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationSinkName">The organization_sink resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationSinkName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationSinkName, out OrganizationSinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationSinkName, nameof(organizationSinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationSinkName, out resourceName))
+            {
+                result = new OrganizationSinkName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationSinkName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
+        public OrganizationSinkName(string organizationId, string sinkId)
+        {
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            SinkId = gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The sink ID. Never <c>null</c>.
+        /// </summary>
+        public string SinkId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId, SinkId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationSinkName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationSinkName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationSinkName a, OrganizationSinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationSinkName a, OrganizationSinkName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name which will contain one of a choice of resource names.
+    /// </summary>
+    /// <remarks>
+    /// This resource name will contain one of the following:
+    /// <list type="bullet">
+    /// <item><description>ProjectName: A resource of type 'project'.</description></item>
+    /// <item><description>OrganizationName: A resource of type 'organization'.</description></item>
+    /// <item><description>FolderName: A resource of type 'folder'.</description></item>
+    /// <item><description>BillingName: A resource of type 'billing'.</description></item>
+    /// </list>
+    /// </remarks>
+    public sealed partial class ParentNameOneof : gax::IResourceName, sys::IEquatable<ParentNameOneof>
+    {
+        /// <summary>
+        /// The possible contents of <see cref="ParentNameOneof"/>.
+        /// </summary>
+        public enum OneofType
+        {
+            /// <summary>
+            /// A resource of an unknown type.
+            /// </summary>
+            Unknown = 0,
+
+            /// <summary>
+            /// A resource of type 'project'.
+            /// </summary>
+            ProjectName = 1,
+
+            /// <summary>
+            /// A resource of type 'organization'.
+            /// </summary>
+            OrganizationName = 2,
+
+            /// <summary>
+            /// A resource of type 'folder'.
+            /// </summary>
+            FolderName = 3,
+
+            /// <summary>
+            /// A resource of type 'billing'.
+            /// </summary>
+            BillingName = 4,
+        }
+
+        /// <summary>
+        /// Parses a resource name in string form into a new <see cref="ParentNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>ProjectName: A resource of type 'project'.</description></item>
+        /// <item><description>OrganizationName: A resource of type 'organization'.</description></item>
+        /// <item><description>FolderName: A resource of type 'folder'.</description></item>
+        /// <item><description>BillingName: A resource of type 'billing'.</description></item>
+        /// </list>
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="sys::ArgumentException"/> if an unknown resource name is given.</param>
+        /// <returns>The parsed <see cref="ParentNameOneof"/> if successful.</returns>
+        public static ParentNameOneof Parse(string name, bool allowUnknown)
+        {
+            ParentNameOneof result;
+            if (TryParse(name, allowUnknown, out result))
+            {
+                return result;
+            }
+            throw new sys::ArgumentException("Invalid name", nameof(name));
+        }
+
+        /// <summary>
+        /// Tries to parse a resource name in string form into a new <see cref="ParentNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>ProjectName: A resource of type 'project'.</description></item>
+        /// <item><description>OrganizationName: A resource of type 'organization'.</description></item>
+        /// <item><description>FolderName: A resource of type 'folder'.</description></item>
+        /// <item><description>BillingName: A resource of type 'billing'.</description></item>
+        /// </list>
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="gax::UnknownResourceName"/>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ParentNameOneof"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string name, bool allowUnknown, out ParentNameOneof result)
+        {
+            gax::GaxPreconditions.CheckNotNull(name, nameof(name));
+            ProjectName projectName;
+            if (ProjectName.TryParse(name, out projectName))
+            {
+                result = new ParentNameOneof(OneofType.ProjectName, projectName);
+                return true;
+            }
+            OrganizationName organizationName;
+            if (OrganizationName.TryParse(name, out organizationName))
+            {
+                result = new ParentNameOneof(OneofType.OrganizationName, organizationName);
+                return true;
+            }
+            FolderName folderName;
+            if (FolderName.TryParse(name, out folderName))
+            {
+                result = new ParentNameOneof(OneofType.FolderName, folderName);
+                return true;
+            }
+            BillingName billingName;
+            if (BillingName.TryParse(name, out billingName))
+            {
+                result = new ParentNameOneof(OneofType.BillingName, billingName);
+                return true;
+            }
+            if (allowUnknown)
+            {
+                gax::UnknownResourceName unknownResourceName;
+                if (gax::UnknownResourceName.TryParse(name, out unknownResourceName))
+                {
+                    result = new ParentNameOneof(OneofType.Unknown, unknownResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="ProjectName"/>
+        /// </summary>
+        /// <param name="projectName">The <see cref="ProjectName"/> to be contained within
+        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="projectName"/>.</returns>
+        public static ParentNameOneof From(ProjectName projectName) => new ParentNameOneof(OneofType.ProjectName, projectName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="OrganizationName"/>
+        /// </summary>
+        /// <param name="organizationName">The <see cref="OrganizationName"/> to be contained within
+        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="organizationName"/>.</returns>
+        public static ParentNameOneof From(OrganizationName organizationName) => new ParentNameOneof(OneofType.OrganizationName, organizationName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="FolderName"/>
+        /// </summary>
+        /// <param name="folderName">The <see cref="FolderName"/> to be contained within
+        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="folderName"/>.</returns>
+        public static ParentNameOneof From(FolderName folderName) => new ParentNameOneof(OneofType.FolderName, folderName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="BillingName"/>
+        /// </summary>
+        /// <param name="billingName">The <see cref="BillingName"/> to be contained within
+        /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="ParentNameOneof"/>, containing <paramref name="billingName"/>.</returns>
+        public static ParentNameOneof From(BillingName billingName) => new ParentNameOneof(OneofType.BillingName, billingName);
+
+        private static bool IsValid(OneofType type, gax::IResourceName name)
+        {
+            switch (type)
+            {
+                case OneofType.Unknown: return true; // Anything goes with Unknown.
+                case OneofType.ProjectName: return name is ProjectName;
+                case OneofType.OrganizationName: return name is OrganizationName;
+                case OneofType.FolderName: return name is FolderName;
+                case OneofType.BillingName: return name is BillingName;
+                default: return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ParentNameOneof"/> resource name class
+        /// from a suitable <see cref="gax::IResourceName"/> instance.
+        /// </summary>
+        public ParentNameOneof(OneofType type, gax::IResourceName name)
+        {
+            Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
+            Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
+            if (!IsValid(type, name))
+            {
+                throw new sys::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="OneofType"/> of the Name contained in this instance.
+        /// </summary>
+        public OneofType Type { get; }
+
+        /// <summary>
+        /// The <see cref="gax::IResourceName"/> contained in this instance.
+        /// </summary>
+        public gax::IResourceName Name { get; }
+
+        private T CheckAndReturn<T>(OneofType type)
+        {
+            if (Type != type)
+            {
+                throw new sys::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+            }
+            return (T)Name;
+        }
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="ProjectName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="ProjectName"/>.
+        /// </remarks>
+        public ProjectName ProjectName => CheckAndReturn<ProjectName>(OneofType.ProjectName);
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="OrganizationName"/>.
+        /// </remarks>
+        public OrganizationName OrganizationName => CheckAndReturn<OrganizationName>(OneofType.OrganizationName);
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="FolderName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="FolderName"/>.
+        /// </remarks>
+        public FolderName FolderName => CheckAndReturn<FolderName>(OneofType.FolderName);
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="BillingName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="BillingName"/>.
+        /// </remarks>
+        public BillingName BillingName => CheckAndReturn<BillingName>(OneofType.BillingName);
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
+
+        /// <inheritdoc />
+        public override string ToString() => Name.ToString();
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ParentNameOneof);
+
+        /// <inheritdoc />
+        public bool Equals(ParentNameOneof other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ParentNameOneof a, ParentNameOneof b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ParentNameOneof a, ParentNameOneof b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'project' resource.
+    /// </summary>
+    public sealed partial class ProjectName : gax::IResourceName, sys::IEquatable<ProjectName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}");
+
+        /// <summary>
+        /// Parses the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
+        /// </summary>
+        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
+        public static ProjectName Parse(string projectName)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectName);
+            return new ProjectName(resourceName[0]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectName, out ProjectName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectName, out resourceName))
+            {
+                result = new ProjectName(resourceName[0]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        public ProjectName(string projectId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectName a, ProjectName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectName a, ProjectName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'sink' resource.
+    /// </summary>
+    public sealed partial class SinkName : gax::IResourceName, sys::IEquatable<SinkName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/sinks/{sink}");
+
+        /// <summary>
+        /// Parses the given sink resource name in string form into a new
+        /// <see cref="SinkName"/> instance.
+        /// </summary>
+        /// <param name="sinkName">The sink resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SinkName"/> if successful.</returns>
+        public static SinkName Parse(string sinkName)
+        {
+            gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(sinkName);
+            return new SinkName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given sink resource name in string form into a new
+        /// <see cref="SinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="sinkName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="sinkName">The sink resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="SinkName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string sinkName, out SinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(sinkName, nameof(sinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(sinkName, out resourceName))
+            {
+                result = new SinkName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="SinkName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
+        public SinkName(string projectId, string sinkId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            SinkId = gax::GaxPreconditions.CheckNotNull(sinkId, nameof(sinkId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The sink ID. Never <c>null</c>.
+        /// </summary>
+        public string SinkId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, SinkId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as SinkName);
+
+        /// <inheritdoc />
+        public bool Equals(SinkName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(SinkName a, SinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(SinkName a, SinkName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name which will contain one of a choice of resource names.
+    /// </summary>
+    /// <remarks>
+    /// This resource name will contain one of the following:
+    /// <list type="bullet">
+    /// <item><description>SinkName: A resource of type 'sink'.</description></item>
+    /// <item><description>OrganizationSinkName: A resource of type 'organization_sink'.</description></item>
+    /// <item><description>FolderSinkName: A resource of type 'folder_sink'.</description></item>
+    /// <item><description>BillingSinkName: A resource of type 'billing_sink'.</description></item>
+    /// </list>
+    /// </remarks>
+    public sealed partial class SinkNameOneof : gax::IResourceName, sys::IEquatable<SinkNameOneof>
+    {
+        /// <summary>
+        /// The possible contents of <see cref="SinkNameOneof"/>.
+        /// </summary>
+        public enum OneofType
+        {
+            /// <summary>
+            /// A resource of an unknown type.
+            /// </summary>
+            Unknown = 0,
+
+            /// <summary>
+            /// A resource of type 'sink'.
+            /// </summary>
+            SinkName = 1,
+
+            /// <summary>
+            /// A resource of type 'organization_sink'.
+            /// </summary>
+            OrganizationSinkName = 2,
+
+            /// <summary>
+            /// A resource of type 'folder_sink'.
+            /// </summary>
+            FolderSinkName = 3,
+
+            /// <summary>
+            /// A resource of type 'billing_sink'.
+            /// </summary>
+            BillingSinkName = 4,
+        }
+
+        /// <summary>
+        /// Parses a resource name in string form into a new <see cref="SinkNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>SinkName: A resource of type 'sink'.</description></item>
+        /// <item><description>OrganizationSinkName: A resource of type 'organization_sink'.</description></item>
+        /// <item><description>FolderSinkName: A resource of type 'folder_sink'.</description></item>
+        /// <item><description>BillingSinkName: A resource of type 'billing_sink'.</description></item>
+        /// </list>
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="sys::ArgumentException"/> if an unknown resource name is given.</param>
+        /// <returns>The parsed <see cref="SinkNameOneof"/> if successful.</returns>
+        public static SinkNameOneof Parse(string name, bool allowUnknown)
+        {
+            SinkNameOneof result;
+            if (TryParse(name, allowUnknown, out result))
+            {
+                return result;
+            }
+            throw new sys::ArgumentException("Invalid name", nameof(name));
+        }
+
+        /// <summary>
+        /// Tries to parse a resource name in string form into a new <see cref="SinkNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>SinkName: A resource of type 'sink'.</description></item>
+        /// <item><description>OrganizationSinkName: A resource of type 'organization_sink'.</description></item>
+        /// <item><description>FolderSinkName: A resource of type 'folder_sink'.</description></item>
+        /// <item><description>BillingSinkName: A resource of type 'billing_sink'.</description></item>
+        /// </list>
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="gax::UnknownResourceName"/>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="SinkNameOneof"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string name, bool allowUnknown, out SinkNameOneof result)
+        {
+            gax::GaxPreconditions.CheckNotNull(name, nameof(name));
+            SinkName sinkName;
+            if (SinkName.TryParse(name, out sinkName))
+            {
+                result = new SinkNameOneof(OneofType.SinkName, sinkName);
+                return true;
+            }
+            OrganizationSinkName organizationSinkName;
+            if (OrganizationSinkName.TryParse(name, out organizationSinkName))
+            {
+                result = new SinkNameOneof(OneofType.OrganizationSinkName, organizationSinkName);
+                return true;
+            }
+            FolderSinkName folderSinkName;
+            if (FolderSinkName.TryParse(name, out folderSinkName))
+            {
+                result = new SinkNameOneof(OneofType.FolderSinkName, folderSinkName);
+                return true;
+            }
+            BillingSinkName billingSinkName;
+            if (BillingSinkName.TryParse(name, out billingSinkName))
+            {
+                result = new SinkNameOneof(OneofType.BillingSinkName, billingSinkName);
+                return true;
+            }
+            if (allowUnknown)
+            {
+                gax::UnknownResourceName unknownResourceName;
+                if (gax::UnknownResourceName.TryParse(name, out unknownResourceName))
+                {
+                    result = new SinkNameOneof(OneofType.Unknown, unknownResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        /// <summary>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="SinkName"/>
+        /// </summary>
+        /// <param name="sinkName">The <see cref="SinkName"/> to be contained within
+        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="sinkName"/>.</returns>
+        public static SinkNameOneof From(SinkName sinkName) => new SinkNameOneof(OneofType.SinkName, sinkName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="OrganizationSinkName"/>
+        /// </summary>
+        /// <param name="organizationSinkName">The <see cref="OrganizationSinkName"/> to be contained within
+        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="organizationSinkName"/>.</returns>
+        public static SinkNameOneof From(OrganizationSinkName organizationSinkName) => new SinkNameOneof(OneofType.OrganizationSinkName, organizationSinkName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="FolderSinkName"/>
+        /// </summary>
+        /// <param name="folderSinkName">The <see cref="FolderSinkName"/> to be contained within
+        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="folderSinkName"/>.</returns>
+        public static SinkNameOneof From(FolderSinkName folderSinkName) => new SinkNameOneof(OneofType.FolderSinkName, folderSinkName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="BillingSinkName"/>
+        /// </summary>
+        /// <param name="billingSinkName">The <see cref="BillingSinkName"/> to be contained within
+        /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="SinkNameOneof"/>, containing <paramref name="billingSinkName"/>.</returns>
+        public static SinkNameOneof From(BillingSinkName billingSinkName) => new SinkNameOneof(OneofType.BillingSinkName, billingSinkName);
+
+        private static bool IsValid(OneofType type, gax::IResourceName name)
+        {
+            switch (type)
+            {
+                case OneofType.Unknown: return true; // Anything goes with Unknown.
+                case OneofType.SinkName: return name is SinkName;
+                case OneofType.OrganizationSinkName: return name is OrganizationSinkName;
+                case OneofType.FolderSinkName: return name is FolderSinkName;
+                case OneofType.BillingSinkName: return name is BillingSinkName;
+                default: return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="SinkNameOneof"/> resource name class
+        /// from a suitable <see cref="gax::IResourceName"/> instance.
+        /// </summary>
+        public SinkNameOneof(OneofType type, gax::IResourceName name)
+        {
+            Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
+            Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
+            if (!IsValid(type, name))
+            {
+                throw new sys::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="OneofType"/> of the Name contained in this instance.
+        /// </summary>
+        public OneofType Type { get; }
+
+        /// <summary>
+        /// The <see cref="gax::IResourceName"/> contained in this instance.
+        /// </summary>
+        public gax::IResourceName Name { get; }
+
+        private T CheckAndReturn<T>(OneofType type)
+        {
+            if (Type != type)
+            {
+                throw new sys::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+            }
+            return (T)Name;
+        }
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="SinkName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="SinkName"/>.
+        /// </remarks>
+        public SinkName SinkName => CheckAndReturn<SinkName>(OneofType.SinkName);
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationSinkName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="OrganizationSinkName"/>.
+        /// </remarks>
+        public OrganizationSinkName OrganizationSinkName => CheckAndReturn<OrganizationSinkName>(OneofType.OrganizationSinkName);
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="FolderSinkName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="FolderSinkName"/>.
+        /// </remarks>
+        public FolderSinkName FolderSinkName => CheckAndReturn<FolderSinkName>(OneofType.FolderSinkName);
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="BillingSinkName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="BillingSinkName"/>.
+        /// </remarks>
+        public BillingSinkName BillingSinkName => CheckAndReturn<BillingSinkName>(OneofType.BillingSinkName);
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
+
+        /// <inheritdoc />
+        public override string ToString() => Name.ToString();
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as SinkNameOneof);
+
+        /// <inheritdoc />
+        public bool Equals(SinkNameOneof other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(SinkNameOneof a, SinkNameOneof b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(SinkNameOneof a, SinkNameOneof b) => !(a == b);
     }
 
 

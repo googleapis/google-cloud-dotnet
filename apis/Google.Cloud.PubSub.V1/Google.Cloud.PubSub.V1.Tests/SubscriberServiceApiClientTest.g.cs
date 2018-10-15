@@ -1010,5 +1010,45 @@ namespace Google.Cloud.PubSub.V1.Tests
             mockGrpcClient.VerifyAll();
         }
 
+        [Fact]
+        public void GetSnapshot()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetSnapshotRequest request = new GetSnapshotRequest();
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSnapshot(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot response = client.GetSnapshot(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetSnapshotAsync()
+        {
+            Mock<Subscriber.SubscriberClient> mockGrpcClient = new Mock<Subscriber.SubscriberClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetSnapshotRequest request = new GetSnapshotRequest();
+            Snapshot expectedResponse = new Snapshot
+            {
+                SnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            mockGrpcClient.Setup(x => x.GetSnapshotAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Snapshot>(Task.FromResult(expectedResponse), null, null, null, null));
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
+            Snapshot response = await client.GetSnapshotAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
     }
 }
