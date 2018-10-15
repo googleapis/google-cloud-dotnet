@@ -841,5 +841,167 @@ namespace Google.Cloud.Dlp.V2.Tests
             mockGrpcClient.VerifyAll();
         }
 
+        [Fact]
+        public void CreateStoredInfoType()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest();
+            StoredInfoType expectedResponse = new StoredInfoType
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            StoredInfoType response = client.CreateStoredInfoType(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateStoredInfoTypeAsync()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest();
+            StoredInfoType expectedResponse = new StoredInfoType
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<StoredInfoType>(Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            StoredInfoType response = await client.CreateStoredInfoTypeAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateStoredInfoType()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest();
+            StoredInfoType expectedResponse = new StoredInfoType
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.UpdateStoredInfoType(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            StoredInfoType response = client.UpdateStoredInfoType(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateStoredInfoTypeAsync()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest();
+            StoredInfoType expectedResponse = new StoredInfoType
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.UpdateStoredInfoTypeAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<StoredInfoType>(Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            StoredInfoType response = await client.UpdateStoredInfoTypeAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetStoredInfoType()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest();
+            StoredInfoType expectedResponse = new StoredInfoType
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.GetStoredInfoType(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            StoredInfoType response = client.GetStoredInfoType(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetStoredInfoTypeAsync()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest();
+            StoredInfoType expectedResponse = new StoredInfoType
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.GetStoredInfoTypeAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<StoredInfoType>(Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            StoredInfoType response = await client.GetStoredInfoTypeAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void ListStoredInfoTypes()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest();
+            ListStoredInfoTypesResponse expectedResponse = new ListStoredInfoTypesResponse
+            {
+                NextPageToken = "nextPageToken-1530815211",
+            };
+            mockGrpcClient.Setup(x => x.ListStoredInfoTypes(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            ListStoredInfoTypesResponse response = client.ListStoredInfoTypes(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ListStoredInfoTypesAsync()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest();
+            ListStoredInfoTypesResponse expectedResponse = new ListStoredInfoTypesResponse
+            {
+                NextPageToken = "nextPageToken-1530815211",
+            };
+            mockGrpcClient.Setup(x => x.ListStoredInfoTypesAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ListStoredInfoTypesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            ListStoredInfoTypesResponse response = await client.ListStoredInfoTypesAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteStoredInfoType()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest();
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteStoredInfoType(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            client.DeleteStoredInfoType(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteStoredInfoTypeAsync()
+        {
+            Mock<DlpService.DlpServiceClient> mockGrpcClient = new Mock<DlpService.DlpServiceClient>(MockBehavior.Strict);
+            DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest();
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteStoredInfoTypeAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteStoredInfoTypeAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
     }
 }

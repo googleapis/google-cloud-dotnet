@@ -74,6 +74,11 @@ namespace Google.Cloud.Dlp.V2
             DeleteJobTriggerSettings = existing.DeleteJobTriggerSettings;
             UpdateJobTriggerSettings = existing.UpdateJobTriggerSettings;
             CreateJobTriggerSettings = existing.CreateJobTriggerSettings;
+            CreateStoredInfoTypeSettings = existing.CreateStoredInfoTypeSettings;
+            UpdateStoredInfoTypeSettings = existing.UpdateStoredInfoTypeSettings;
+            GetStoredInfoTypeSettings = existing.GetStoredInfoTypeSettings;
+            ListStoredInfoTypesSettings = existing.ListStoredInfoTypesSettings;
+            DeleteStoredInfoTypeSettings = existing.DeleteStoredInfoTypeSettings;
             OnCopy(existing);
         }
 
@@ -883,6 +888,153 @@ namespace Google.Cloud.Dlp.V2
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.CreateStoredInfoType</c> and <c>DlpServiceClient.CreateStoredInfoTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.CreateStoredInfoType</c> and
+        /// <c>DlpServiceClient.CreateStoredInfoTypeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateStoredInfoTypeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NoRetryRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.UpdateStoredInfoType</c> and <c>DlpServiceClient.UpdateStoredInfoTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.UpdateStoredInfoType</c> and
+        /// <c>DlpServiceClient.UpdateStoredInfoTypeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateStoredInfoTypeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NoRetryRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.GetStoredInfoType</c> and <c>DlpServiceClient.GetStoredInfoTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.GetStoredInfoType</c> and
+        /// <c>DlpServiceClient.GetStoredInfoTypeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetStoredInfoTypeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: HttpGetRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.ListStoredInfoTypes</c> and <c>DlpServiceClient.ListStoredInfoTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.ListStoredInfoTypes</c> and
+        /// <c>DlpServiceClient.ListStoredInfoTypesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListStoredInfoTypesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: HttpGetRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DlpServiceClient.DeleteStoredInfoType</c> and <c>DlpServiceClient.DeleteStoredInfoTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DlpServiceClient.DeleteStoredInfoType</c> and
+        /// <c>DlpServiceClient.DeleteStoredInfoTypeAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteStoredInfoTypeSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NoRetryRetryFilter
             )));
 
         /// <summary>
@@ -2557,6 +2709,316 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Creates a pre-built stored infoType to be used for inspection.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(
+            CreateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a pre-built stored infoType to be used for inspection.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(
+            CreateStoredInfoTypeRequest request,
+            st::CancellationToken cancellationToken) => CreateStoredInfoTypeAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a pre-built stored infoType to be used for inspection.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual StoredInfoType CreateStoredInfoType(
+            CreateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates the stored infoType by creating a new version. The existing version
+        /// will continue to be used until the new version is ready.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StoredInfoType> UpdateStoredInfoTypeAsync(
+            UpdateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates the stored infoType by creating a new version. The existing version
+        /// will continue to be used until the new version is ready.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StoredInfoType> UpdateStoredInfoTypeAsync(
+            UpdateStoredInfoTypeRequest request,
+            st::CancellationToken cancellationToken) => UpdateStoredInfoTypeAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the stored infoType by creating a new version. The existing version
+        /// will continue to be used until the new version is ready.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual StoredInfoType UpdateStoredInfoType(
+            UpdateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StoredInfoType> GetStoredInfoTypeAsync(
+            GetStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StoredInfoType> GetStoredInfoTypeAsync(
+            GetStoredInfoTypeRequest request,
+            st::CancellationToken cancellationToken) => GetStoredInfoTypeAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual StoredInfoType GetStoredInfoType(
+            GetStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists stored infoTypes.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListStoredInfoTypesResponse> ListStoredInfoTypesAsync(
+            ListStoredInfoTypesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists stored infoTypes.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListStoredInfoTypesResponse> ListStoredInfoTypesAsync(
+            ListStoredInfoTypesRequest request,
+            st::CancellationToken cancellationToken) => ListStoredInfoTypesAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists stored infoTypes.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ListStoredInfoTypesResponse ListStoredInfoTypes(
+            ListStoredInfoTypesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteStoredInfoTypeAsync(
+            DeleteStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteStoredInfoTypeAsync(
+            DeleteStoredInfoTypeRequest request,
+            st::CancellationToken cancellationToken) => DeleteStoredInfoTypeAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteStoredInfoType(
+            DeleteStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -2589,6 +3051,11 @@ namespace Google.Cloud.Dlp.V2
         private readonly gaxgrpc::ApiCall<DeleteJobTriggerRequest, pbwkt::Empty> _callDeleteJobTrigger;
         private readonly gaxgrpc::ApiCall<UpdateJobTriggerRequest, JobTrigger> _callUpdateJobTrigger;
         private readonly gaxgrpc::ApiCall<CreateJobTriggerRequest, JobTrigger> _callCreateJobTrigger;
+        private readonly gaxgrpc::ApiCall<CreateStoredInfoTypeRequest, StoredInfoType> _callCreateStoredInfoType;
+        private readonly gaxgrpc::ApiCall<UpdateStoredInfoTypeRequest, StoredInfoType> _callUpdateStoredInfoType;
+        private readonly gaxgrpc::ApiCall<GetStoredInfoTypeRequest, StoredInfoType> _callGetStoredInfoType;
+        private readonly gaxgrpc::ApiCall<ListStoredInfoTypesRequest, ListStoredInfoTypesResponse> _callListStoredInfoTypes;
+        private readonly gaxgrpc::ApiCall<DeleteStoredInfoTypeRequest, pbwkt::Empty> _callDeleteStoredInfoType;
 
         /// <summary>
         /// Constructs a client wrapper for the DlpService service, with the specified gRPC client and settings.
@@ -2650,6 +3117,16 @@ namespace Google.Cloud.Dlp.V2
                 GrpcClient.UpdateJobTriggerAsync, GrpcClient.UpdateJobTrigger, effectiveSettings.UpdateJobTriggerSettings);
             _callCreateJobTrigger = clientHelper.BuildApiCall<CreateJobTriggerRequest, JobTrigger>(
                 GrpcClient.CreateJobTriggerAsync, GrpcClient.CreateJobTrigger, effectiveSettings.CreateJobTriggerSettings);
+            _callCreateStoredInfoType = clientHelper.BuildApiCall<CreateStoredInfoTypeRequest, StoredInfoType>(
+                GrpcClient.CreateStoredInfoTypeAsync, GrpcClient.CreateStoredInfoType, effectiveSettings.CreateStoredInfoTypeSettings);
+            _callUpdateStoredInfoType = clientHelper.BuildApiCall<UpdateStoredInfoTypeRequest, StoredInfoType>(
+                GrpcClient.UpdateStoredInfoTypeAsync, GrpcClient.UpdateStoredInfoType, effectiveSettings.UpdateStoredInfoTypeSettings);
+            _callGetStoredInfoType = clientHelper.BuildApiCall<GetStoredInfoTypeRequest, StoredInfoType>(
+                GrpcClient.GetStoredInfoTypeAsync, GrpcClient.GetStoredInfoType, effectiveSettings.GetStoredInfoTypeSettings);
+            _callListStoredInfoTypes = clientHelper.BuildApiCall<ListStoredInfoTypesRequest, ListStoredInfoTypesResponse>(
+                GrpcClient.ListStoredInfoTypesAsync, GrpcClient.ListStoredInfoTypes, effectiveSettings.ListStoredInfoTypesSettings);
+            _callDeleteStoredInfoType = clientHelper.BuildApiCall<DeleteStoredInfoTypeRequest, pbwkt::Empty>(
+                GrpcClient.DeleteStoredInfoTypeAsync, GrpcClient.DeleteStoredInfoType, effectiveSettings.DeleteStoredInfoTypeSettings);
             Modify_ApiCall(ref _callInspectContent);
             Modify_InspectContentApiCall(ref _callInspectContent);
             Modify_ApiCall(ref _callRedactImage);
@@ -2700,6 +3177,16 @@ namespace Google.Cloud.Dlp.V2
             Modify_UpdateJobTriggerApiCall(ref _callUpdateJobTrigger);
             Modify_ApiCall(ref _callCreateJobTrigger);
             Modify_CreateJobTriggerApiCall(ref _callCreateJobTrigger);
+            Modify_ApiCall(ref _callCreateStoredInfoType);
+            Modify_CreateStoredInfoTypeApiCall(ref _callCreateStoredInfoType);
+            Modify_ApiCall(ref _callUpdateStoredInfoType);
+            Modify_UpdateStoredInfoTypeApiCall(ref _callUpdateStoredInfoType);
+            Modify_ApiCall(ref _callGetStoredInfoType);
+            Modify_GetStoredInfoTypeApiCall(ref _callGetStoredInfoType);
+            Modify_ApiCall(ref _callListStoredInfoTypes);
+            Modify_ListStoredInfoTypesApiCall(ref _callListStoredInfoTypes);
+            Modify_ApiCall(ref _callDeleteStoredInfoType);
+            Modify_DeleteStoredInfoTypeApiCall(ref _callDeleteStoredInfoType);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2738,6 +3225,11 @@ namespace Google.Cloud.Dlp.V2
         partial void Modify_DeleteJobTriggerApiCall(ref gaxgrpc::ApiCall<DeleteJobTriggerRequest, pbwkt::Empty> call);
         partial void Modify_UpdateJobTriggerApiCall(ref gaxgrpc::ApiCall<UpdateJobTriggerRequest, JobTrigger> call);
         partial void Modify_CreateJobTriggerApiCall(ref gaxgrpc::ApiCall<CreateJobTriggerRequest, JobTrigger> call);
+        partial void Modify_CreateStoredInfoTypeApiCall(ref gaxgrpc::ApiCall<CreateStoredInfoTypeRequest, StoredInfoType> call);
+        partial void Modify_UpdateStoredInfoTypeApiCall(ref gaxgrpc::ApiCall<UpdateStoredInfoTypeRequest, StoredInfoType> call);
+        partial void Modify_GetStoredInfoTypeApiCall(ref gaxgrpc::ApiCall<GetStoredInfoTypeRequest, StoredInfoType> call);
+        partial void Modify_ListStoredInfoTypesApiCall(ref gaxgrpc::ApiCall<ListStoredInfoTypesRequest, ListStoredInfoTypesResponse> call);
+        partial void Modify_DeleteStoredInfoTypeApiCall(ref gaxgrpc::ApiCall<DeleteStoredInfoTypeRequest, pbwkt::Empty> call);
         partial void OnConstruction(DlpService.DlpServiceClient grpcClient, DlpServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -2773,6 +3265,11 @@ namespace Google.Cloud.Dlp.V2
         partial void Modify_DeleteJobTriggerRequest(ref DeleteJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateJobTriggerRequest(ref UpdateJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateJobTriggerRequest(ref CreateJobTriggerRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateStoredInfoTypeRequest(ref CreateStoredInfoTypeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateStoredInfoTypeRequest(ref UpdateStoredInfoTypeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetStoredInfoTypeRequest(ref GetStoredInfoTypeRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListStoredInfoTypesRequest(ref ListStoredInfoTypesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteStoredInfoTypeRequest(ref DeleteStoredInfoTypeRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Finds potentially sensitive info in content.
@@ -3893,6 +4390,225 @@ namespace Google.Cloud.Dlp.V2
         {
             Modify_CreateJobTriggerRequest(ref request, ref callSettings);
             return _callCreateJobTrigger.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a pre-built stored infoType to be used for inspection.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(
+            CreateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateStoredInfoTypeRequest(ref request, ref callSettings);
+            return _callCreateStoredInfoType.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a pre-built stored infoType to be used for inspection.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override StoredInfoType CreateStoredInfoType(
+            CreateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateStoredInfoTypeRequest(ref request, ref callSettings);
+            return _callCreateStoredInfoType.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the stored infoType by creating a new version. The existing version
+        /// will continue to be used until the new version is ready.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<StoredInfoType> UpdateStoredInfoTypeAsync(
+            UpdateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateStoredInfoTypeRequest(ref request, ref callSettings);
+            return _callUpdateStoredInfoType.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the stored infoType by creating a new version. The existing version
+        /// will continue to be used until the new version is ready.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override StoredInfoType UpdateStoredInfoType(
+            UpdateStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateStoredInfoTypeRequest(ref request, ref callSettings);
+            return _callUpdateStoredInfoType.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<StoredInfoType> GetStoredInfoTypeAsync(
+            GetStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetStoredInfoTypeRequest(ref request, ref callSettings);
+            return _callGetStoredInfoType.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override StoredInfoType GetStoredInfoType(
+            GetStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetStoredInfoTypeRequest(ref request, ref callSettings);
+            return _callGetStoredInfoType.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists stored infoTypes.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ListStoredInfoTypesResponse> ListStoredInfoTypesAsync(
+            ListStoredInfoTypesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListStoredInfoTypesRequest(ref request, ref callSettings);
+            return _callListStoredInfoTypes.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists stored infoTypes.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ListStoredInfoTypesResponse ListStoredInfoTypes(
+            ListStoredInfoTypesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListStoredInfoTypesRequest(ref request, ref callSettings);
+            return _callListStoredInfoTypes.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task DeleteStoredInfoTypeAsync(
+            DeleteStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteStoredInfoTypeRequest(ref request, ref callSettings);
+            return _callDeleteStoredInfoType.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a stored infoType.
+        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
+        /// learn more.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void DeleteStoredInfoType(
+            DeleteStoredInfoTypeRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteStoredInfoTypeRequest(ref request, ref callSettings);
+            _callDeleteStoredInfoType.Sync(request, callSettings);
         }
 
     }
