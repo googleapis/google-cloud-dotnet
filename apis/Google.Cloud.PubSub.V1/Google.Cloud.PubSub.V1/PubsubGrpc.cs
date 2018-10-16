@@ -3,7 +3,7 @@
 //     source: google/pubsub/v1/pubsub.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google Inc.
+// Copyright 2018 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 1591
 #region Designer generated code
@@ -136,8 +137,7 @@ namespace Google.Cloud.PubSub.V1 {
 
       /// <summary>
       /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
+      /// does not exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -332,8 +332,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
+      /// does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -346,8 +345,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
+      /// does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -358,8 +356,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
+      /// does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -372,8 +369,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
       /// <summary>
       /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-      /// does not exist. The message payload must not be empty; it must contain
-      ///  either a non-empty data field, or at least one attribute.
+      /// does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -910,8 +906,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Pulls messages from the server. Returns an empty list if there are no
-      /// messages available in the backlog. The server may return `UNAVAILABLE` if
+      /// Pulls messages from the server. The server may return `UNAVAILABLE` if
       /// there are too many concurrent pull requests pending for the given
       /// subscription.
       /// </summary>
@@ -989,7 +984,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
       /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
       /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -1492,8 +1487,7 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Acknowledge, null, options, request);
       }
       /// <summary>
-      /// Pulls messages from the server. Returns an empty list if there are no
-      /// messages available in the backlog. The server may return `UNAVAILABLE` if
+      /// Pulls messages from the server. The server may return `UNAVAILABLE` if
       /// there are too many concurrent pull requests pending for the given
       /// subscription.
       /// </summary>
@@ -1507,8 +1501,7 @@ namespace Google.Cloud.PubSub.V1 {
         return Pull(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Pulls messages from the server. Returns an empty list if there are no
-      /// messages available in the backlog. The server may return `UNAVAILABLE` if
+      /// Pulls messages from the server. The server may return `UNAVAILABLE` if
       /// there are too many concurrent pull requests pending for the given
       /// subscription.
       /// </summary>
@@ -1520,8 +1513,7 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_Pull, null, options, request);
       }
       /// <summary>
-      /// Pulls messages from the server. Returns an empty list if there are no
-      /// messages available in the backlog. The server may return `UNAVAILABLE` if
+      /// Pulls messages from the server. The server may return `UNAVAILABLE` if
       /// there are too many concurrent pull requests pending for the given
       /// subscription.
       /// </summary>
@@ -1535,8 +1527,7 @@ namespace Google.Cloud.PubSub.V1 {
         return PullAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Pulls messages from the server. Returns an empty list if there are no
-      /// messages available in the backlog. The server may return `UNAVAILABLE` if
+      /// Pulls messages from the server. The server may return `UNAVAILABLE` if
       /// there are too many concurrent pull requests pending for the given
       /// subscription.
       /// </summary>
@@ -1759,7 +1750,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
       /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
       /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -1785,7 +1776,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
       /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
       /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -1809,7 +1800,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
       /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
       /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -1835,7 +1826,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// Creates a snapshot from the requested subscription.&lt;br>&lt;br>
       /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
       /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
       /// If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot

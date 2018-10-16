@@ -91,22 +91,11 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="SubscriberServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
-        /// </remarks>
-        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes();
-
-        /// <summary>
-        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "Pull" <see cref="SubscriberServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
         /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Pull" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="grpccore::StatusCode.Cancelled"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.ResourceExhausted"/></description></item>
@@ -114,7 +103,17 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> PullRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable);
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "NonIdempotent" <see cref="SubscriberServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="SubscriberServiceApiClient"/> RPC methods.
@@ -432,7 +431,8 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -441,7 +441,7 @@ namespace Google.Cloud.PubSub.V1
                 retryBackoff: GetMessagingRetryBackoff(),
                 timeoutBackoff: GetMessagingTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
+                retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
@@ -461,7 +461,6 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.Cancelled"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.ResourceExhausted"/></description></item>
@@ -1415,8 +1414,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">
-        /// The name of the cloud project that subscriptions belong to.
-        /// Format is `projects/{project}`.
+        /// The name of the project in which to list subscriptions.
+        /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1449,8 +1448,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching subscriptions.
         /// </summary>
         /// <param name="project">
-        /// The name of the cloud project that subscriptions belong to.
-        /// Format is `projects/{project}`.
+        /// The name of the project in which to list subscriptions.
+        /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2007,8 +2006,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -2020,9 +2018,7 @@ namespace Google.Cloud.PubSub.V1
         /// If this field set to true, the system will respond immediately even if
         /// it there are no messages available to return in the `Pull` response.
         /// Otherwise, the system may wait (for a bounded amount of time) until at
-        /// least one message is available, rather than returning no messages. The
-        /// client may cancel the request if it does not wish to wait any longer for
-        /// the response.
+        /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -2048,8 +2044,7 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -2061,9 +2056,7 @@ namespace Google.Cloud.PubSub.V1
         /// If this field set to true, the system will respond immediately even if
         /// it there are no messages available to return in the `Pull` response.
         /// Otherwise, the system may wait (for a bounded amount of time) until at
-        /// least one message is available, rather than returning no messages. The
-        /// client may cancel the request if it does not wish to wait any longer for
-        /// the response.
+        /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -2086,8 +2079,7 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -2099,9 +2091,7 @@ namespace Google.Cloud.PubSub.V1
         /// If this field set to true, the system will respond immediately even if
         /// it there are no messages available to return in the `Pull` response.
         /// Otherwise, the system may wait (for a bounded amount of time) until at
-        /// least one message is available, rather than returning no messages. The
-        /// client may cancel the request if it does not wish to wait any longer for
-        /// the response.
+        /// least one message is available, rather than returning no messages.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -2127,8 +2117,7 @@ namespace Google.Cloud.PubSub.V1
                 callSettings);
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -2149,8 +2138,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -2170,8 +2158,7 @@ namespace Google.Cloud.PubSub.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -2403,8 +2390,8 @@ namespace Google.Cloud.PubSub.V1
         /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="project">
-        /// The name of the cloud project that snapshots belong to.
-        /// Format is `projects/{project}`.
+        /// The name of the project in which to list snapshots.
+        /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2440,8 +2427,8 @@ namespace Google.Cloud.PubSub.V1
         /// use. It is not subject to any SLA or deprecation policy.
         /// </summary>
         /// <param name="project">
-        /// The name of the cloud project that snapshots belong to.
-        /// Format is `projects/{project}`.
+        /// The name of the project in which to list snapshots.
+        /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2518,7 +2505,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -2535,7 +2522,8 @@ namespace Google.Cloud.PubSub.V1
         /// Optional user-provided name for this snapshot.
         /// If the name is not provided in the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription.
-        /// Note that for REST API requests, you must specify a name.
+        /// Note that for REST API requests, you must specify a name.  See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt;resource name rules&lt;/a&gt;.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
@@ -2570,7 +2558,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -2587,7 +2575,8 @@ namespace Google.Cloud.PubSub.V1
         /// Optional user-provided name for this snapshot.
         /// If the name is not provided in the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription.
-        /// Note that for REST API requests, you must specify a name.
+        /// Note that for REST API requests, you must specify a name.  See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt;resource name rules&lt;/a&gt;.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
@@ -2619,7 +2608,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -2636,7 +2625,8 @@ namespace Google.Cloud.PubSub.V1
         /// Optional user-provided name for this snapshot.
         /// If the name is not provided in the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription.
-        /// Note that for REST API requests, you must specify a name.
+        /// Note that for REST API requests, you must specify a name.  See the
+        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt;resource name rules&lt;/a&gt;.
         /// Format is `projects/{project}/snapshots/{snap}`.
         /// </param>
         /// <param name="subscription">
@@ -2671,7 +2661,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -2704,7 +2694,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -2736,7 +2726,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -3995,8 +3985,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -4018,8 +4007,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Pulls messages from the server. Returns an empty list if there are no
-        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// Pulls messages from the server. The server may return `UNAVAILABLE` if
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
@@ -4230,7 +4218,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
@@ -4264,7 +4252,7 @@ namespace Google.Cloud.PubSub.V1
         /// Creates a snapshot from the requested subscription.&lt;br&gt;&lt;br&gt;
         /// &lt;b&gt;ALPHA:&lt;/b&gt; This feature is part of an alpha release. This API might be
         /// changed in backward-incompatible ways and is not recommended for production
-        /// use. It is not subject to any SLA or deprecation policy.
+        /// use. It is not subject to any SLA or deprecation policy.&lt;br&gt;&lt;br&gt;
         /// If the snapshot already exists, returns `ALREADY_EXISTS`.
         /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
         /// If the backlog in the subscription is too old -- and the resulting snapshot
