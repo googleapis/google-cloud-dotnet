@@ -18,6 +18,6 @@ addons:
     - dotnet-sharedframework-microsoft.netcore.app-1.0.5
 
 script:
-  - > build_timing_log.txt
+  - touch build_timing_log.txt
   - ./build.sh --diff --regex $API_REGEX
   - ./processbuildtiminglog.sh
