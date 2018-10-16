@@ -82,6 +82,16 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes();
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "OnePlusDelivery" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
@@ -98,16 +108,6 @@ namespace Google.Cloud.PubSub.V1
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> OnePlusDeliveryRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown);
-
-        /// <summary>
-        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
-        /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
-        /// </summary>
-        /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
-        /// </remarks>
-        public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// "Default" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
@@ -853,8 +853,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
@@ -882,8 +881,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
@@ -908,8 +906,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
@@ -937,8 +934,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -958,8 +954,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -978,8 +973,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1120,8 +1114,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// The name of the cloud project that topics belong to.
-        /// Format is `projects/{project}`.
+        /// The name of the project in which to list topics.
+        /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1154,8 +1148,8 @@ namespace Google.Cloud.PubSub.V1
         /// Lists matching topics.
         /// </summary>
         /// <param name="project">
-        /// The name of the cloud project that topics belong to.
-        /// Format is `projects/{project}`.
+        /// The name of the project in which to list topics.
+        /// Format is `projects/{project-id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2108,8 +2102,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2130,8 +2123,7 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
-        /// does not exist. The message payload must not be empty; it must contain
-        ///  either a non-empty data field, or at least one attribute.
+        /// does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
