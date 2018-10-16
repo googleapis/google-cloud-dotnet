@@ -574,6 +574,190 @@ namespace Google.Cloud.Dlp.V2
     }
 
     /// <summary>
+    /// Resource name for the 'organization_stored_info_type' resource.
+    /// </summary>
+    public sealed partial class OrganizationStoredInfoTypeName : gax::IResourceName, sys::IEquatable<OrganizationStoredInfoTypeName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("organizations/{organization}/storedInfoTypes/{stored_info_type}");
+
+        /// <summary>
+        /// Parses the given organization_stored_info_type resource name in string form into a new
+        /// <see cref="OrganizationStoredInfoTypeName"/> instance.
+        /// </summary>
+        /// <param name="organizationStoredInfoTypeName">The organization_stored_info_type resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OrganizationStoredInfoTypeName"/> if successful.</returns>
+        public static OrganizationStoredInfoTypeName Parse(string organizationStoredInfoTypeName)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationStoredInfoTypeName, nameof(organizationStoredInfoTypeName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(organizationStoredInfoTypeName);
+            return new OrganizationStoredInfoTypeName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given organization_stored_info_type resource name in string form into a new
+        /// <see cref="OrganizationStoredInfoTypeName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="organizationStoredInfoTypeName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="organizationStoredInfoTypeName">The organization_stored_info_type resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OrganizationStoredInfoTypeName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string organizationStoredInfoTypeName, out OrganizationStoredInfoTypeName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(organizationStoredInfoTypeName, nameof(organizationStoredInfoTypeName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(organizationStoredInfoTypeName, out resourceName))
+            {
+                result = new OrganizationStoredInfoTypeName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OrganizationStoredInfoTypeName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
+        /// <param name="storedInfoTypeId">The storedInfoType ID. Must not be <c>null</c>.</param>
+        public OrganizationStoredInfoTypeName(string organizationId, string storedInfoTypeId)
+        {
+            OrganizationId = gax::GaxPreconditions.CheckNotNull(organizationId, nameof(organizationId));
+            StoredInfoTypeId = gax::GaxPreconditions.CheckNotNull(storedInfoTypeId, nameof(storedInfoTypeId));
+        }
+
+        /// <summary>
+        /// The organization ID. Never <c>null</c>.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The storedInfoType ID. Never <c>null</c>.
+        /// </summary>
+        public string StoredInfoTypeId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(OrganizationId, StoredInfoTypeId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OrganizationStoredInfoTypeName);
+
+        /// <inheritdoc />
+        public bool Equals(OrganizationStoredInfoTypeName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OrganizationStoredInfoTypeName a, OrganizationStoredInfoTypeName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OrganizationStoredInfoTypeName a, OrganizationStoredInfoTypeName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'project_stored_info_type' resource.
+    /// </summary>
+    public sealed partial class ProjectStoredInfoTypeName : gax::IResourceName, sys::IEquatable<ProjectStoredInfoTypeName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/storedInfoTypes/{stored_info_type}");
+
+        /// <summary>
+        /// Parses the given project_stored_info_type resource name in string form into a new
+        /// <see cref="ProjectStoredInfoTypeName"/> instance.
+        /// </summary>
+        /// <param name="projectStoredInfoTypeName">The project_stored_info_type resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ProjectStoredInfoTypeName"/> if successful.</returns>
+        public static ProjectStoredInfoTypeName Parse(string projectStoredInfoTypeName)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectStoredInfoTypeName, nameof(projectStoredInfoTypeName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(projectStoredInfoTypeName);
+            return new ProjectStoredInfoTypeName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given project_stored_info_type resource name in string form into a new
+        /// <see cref="ProjectStoredInfoTypeName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="projectStoredInfoTypeName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="projectStoredInfoTypeName">The project_stored_info_type resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ProjectStoredInfoTypeName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string projectStoredInfoTypeName, out ProjectStoredInfoTypeName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(projectStoredInfoTypeName, nameof(projectStoredInfoTypeName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(projectStoredInfoTypeName, out resourceName))
+            {
+                result = new ProjectStoredInfoTypeName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ProjectStoredInfoTypeName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="storedInfoTypeId">The storedInfoType ID. Must not be <c>null</c>.</param>
+        public ProjectStoredInfoTypeName(string projectId, string storedInfoTypeId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            StoredInfoTypeId = gax::GaxPreconditions.CheckNotNull(storedInfoTypeId, nameof(storedInfoTypeId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The storedInfoType ID. Never <c>null</c>.
+        /// </summary>
+        public string StoredInfoTypeId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, StoredInfoTypeId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ProjectStoredInfoTypeName);
+
+        /// <inheritdoc />
+        public bool Equals(ProjectStoredInfoTypeName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ProjectStoredInfoTypeName a, ProjectStoredInfoTypeName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ProjectStoredInfoTypeName a, ProjectStoredInfoTypeName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name which will contain one of a choice of resource names.
     /// </summary>
     /// <remarks>
@@ -981,6 +1165,210 @@ namespace Google.Cloud.Dlp.V2
         public static bool operator !=(InspectTemplateNameOneof a, InspectTemplateNameOneof b) => !(a == b);
     }
 
+    /// <summary>
+    /// Resource name which will contain one of a choice of resource names.
+    /// </summary>
+    /// <remarks>
+    /// This resource name will contain one of the following:
+    /// <list type="bullet">
+    /// <item><description>OrganizationStoredInfoTypeName: A resource of type 'organization_stored_info_type'.</description></item>
+    /// <item><description>ProjectStoredInfoTypeName: A resource of type 'project_stored_info_type'.</description></item>
+    /// </list>
+    /// </remarks>
+    public sealed partial class StoredInfoTypeNameOneof : gax::IResourceName, sys::IEquatable<StoredInfoTypeNameOneof>
+    {
+        /// <summary>
+        /// The possible contents of <see cref="StoredInfoTypeNameOneof"/>.
+        /// </summary>
+        public enum OneofType
+        {
+            /// <summary>
+            /// A resource of an unknown type.
+            /// </summary>
+            Unknown = 0,
+
+            /// <summary>
+            /// A resource of type 'organization_stored_info_type'.
+            /// </summary>
+            OrganizationStoredInfoTypeName = 1,
+
+            /// <summary>
+            /// A resource of type 'project_stored_info_type'.
+            /// </summary>
+            ProjectStoredInfoTypeName = 2,
+        }
+
+        /// <summary>
+        /// Parses a resource name in string form into a new <see cref="StoredInfoTypeNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>OrganizationStoredInfoTypeName: A resource of type 'organization_stored_info_type'.</description></item>
+        /// <item><description>ProjectStoredInfoTypeName: A resource of type 'project_stored_info_type'.</description></item>
+        /// </list>
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="gax::UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="sys::ArgumentException"/> if an unknown resource name is given.</param>
+        /// <returns>The parsed <see cref="StoredInfoTypeNameOneof"/> if successful.</returns>
+        public static StoredInfoTypeNameOneof Parse(string name, bool allowUnknown)
+        {
+            StoredInfoTypeNameOneof result;
+            if (TryParse(name, allowUnknown, out result))
+            {
+                return result;
+            }
+            throw new sys::ArgumentException("Invalid name", nameof(name));
+        }
+
+        /// <summary>
+        /// Tries to parse a resource name in string form into a new <see cref="StoredInfoTypeNameOneof"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully the resource name must be one of the following:
+        /// <list type="bullet">
+        /// <item><description>OrganizationStoredInfoTypeName: A resource of type 'organization_stored_info_type'.</description></item>
+        /// <item><description>ProjectStoredInfoTypeName: A resource of type 'project_stored_info_type'.</description></item>
+        /// </list>
+        /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
+        /// into an <see cref="gax::UnknownResourceName"/>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="StoredInfoTypeNameOneof"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string name, bool allowUnknown, out StoredInfoTypeNameOneof result)
+        {
+            gax::GaxPreconditions.CheckNotNull(name, nameof(name));
+            OrganizationStoredInfoTypeName organizationStoredInfoTypeName;
+            if (OrganizationStoredInfoTypeName.TryParse(name, out organizationStoredInfoTypeName))
+            {
+                result = new StoredInfoTypeNameOneof(OneofType.OrganizationStoredInfoTypeName, organizationStoredInfoTypeName);
+                return true;
+            }
+            ProjectStoredInfoTypeName projectStoredInfoTypeName;
+            if (ProjectStoredInfoTypeName.TryParse(name, out projectStoredInfoTypeName))
+            {
+                result = new StoredInfoTypeNameOneof(OneofType.ProjectStoredInfoTypeName, projectStoredInfoTypeName);
+                return true;
+            }
+            if (allowUnknown)
+            {
+                gax::UnknownResourceName unknownResourceName;
+                if (gax::UnknownResourceName.TryParse(name, out unknownResourceName))
+                {
+                    result = new StoredInfoTypeNameOneof(OneofType.Unknown, unknownResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        /// <summary>
+        /// Construct a new instance of <see cref="StoredInfoTypeNameOneof"/> from the provided <see cref="OrganizationStoredInfoTypeName"/>
+        /// </summary>
+        /// <param name="organizationStoredInfoTypeName">The <see cref="OrganizationStoredInfoTypeName"/> to be contained within
+        /// the returned <see cref="StoredInfoTypeNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="StoredInfoTypeNameOneof"/>, containing <paramref name="organizationStoredInfoTypeName"/>.</returns>
+        public static StoredInfoTypeNameOneof From(OrganizationStoredInfoTypeName organizationStoredInfoTypeName) => new StoredInfoTypeNameOneof(OneofType.OrganizationStoredInfoTypeName, organizationStoredInfoTypeName);
+
+        /// <summary>
+        /// Construct a new instance of <see cref="StoredInfoTypeNameOneof"/> from the provided <see cref="ProjectStoredInfoTypeName"/>
+        /// </summary>
+        /// <param name="projectStoredInfoTypeName">The <see cref="ProjectStoredInfoTypeName"/> to be contained within
+        /// the returned <see cref="StoredInfoTypeNameOneof"/>. Must not be <c>null</c>.</param>
+        /// <returns>A new <see cref="StoredInfoTypeNameOneof"/>, containing <paramref name="projectStoredInfoTypeName"/>.</returns>
+        public static StoredInfoTypeNameOneof From(ProjectStoredInfoTypeName projectStoredInfoTypeName) => new StoredInfoTypeNameOneof(OneofType.ProjectStoredInfoTypeName, projectStoredInfoTypeName);
+
+        private static bool IsValid(OneofType type, gax::IResourceName name)
+        {
+            switch (type)
+            {
+                case OneofType.Unknown: return true; // Anything goes with Unknown.
+                case OneofType.OrganizationStoredInfoTypeName: return name is OrganizationStoredInfoTypeName;
+                case OneofType.ProjectStoredInfoTypeName: return name is ProjectStoredInfoTypeName;
+                default: return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="StoredInfoTypeNameOneof"/> resource name class
+        /// from a suitable <see cref="gax::IResourceName"/> instance.
+        /// </summary>
+        public StoredInfoTypeNameOneof(OneofType type, gax::IResourceName name)
+        {
+            Type = gax::GaxPreconditions.CheckEnumValue<OneofType>(type, nameof(type));
+            Name = gax::GaxPreconditions.CheckNotNull(name, nameof(name));
+            if (!IsValid(type, name))
+            {
+                throw new sys::ArgumentException($"Mismatched OneofType '{type}' and resource name '{name}'");
+            }
+        }
+
+        /// <summary>
+        /// The <see cref="OneofType"/> of the Name contained in this instance.
+        /// </summary>
+        public OneofType Type { get; }
+
+        /// <summary>
+        /// The <see cref="gax::IResourceName"/> contained in this instance.
+        /// </summary>
+        public gax::IResourceName Name { get; }
+
+        private T CheckAndReturn<T>(OneofType type)
+        {
+            if (Type != type)
+            {
+                throw new sys::InvalidOperationException($"Requested type {type}, but this one-of contains type {Type}");
+            }
+            return (T)Name;
+        }
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OrganizationStoredInfoTypeName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="OrganizationStoredInfoTypeName"/>.
+        /// </remarks>
+        public OrganizationStoredInfoTypeName OrganizationStoredInfoTypeName => CheckAndReturn<OrganizationStoredInfoTypeName>(OneofType.OrganizationStoredInfoTypeName);
+
+        /// <summary>
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="ProjectStoredInfoTypeName"/>.
+        /// </summary>
+        /// <remarks>
+        /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
+        /// contain an instance of <see cref="ProjectStoredInfoTypeName"/>.
+        /// </remarks>
+        public ProjectStoredInfoTypeName ProjectStoredInfoTypeName => CheckAndReturn<ProjectStoredInfoTypeName>(OneofType.ProjectStoredInfoTypeName);
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
+
+        /// <inheritdoc />
+        public override string ToString() => Name.ToString();
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as StoredInfoTypeNameOneof);
+
+        /// <inheritdoc />
+        public bool Equals(StoredInfoTypeNameOneof other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(StoredInfoTypeNameOneof a, StoredInfoTypeNameOneof b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(StoredInfoTypeNameOneof a, StoredInfoTypeNameOneof b) => !(a == b);
+    }
+
 
     public partial class CancelDlpJobRequest
     {
@@ -1042,6 +1430,19 @@ namespace Google.Cloud.Dlp.V2
         public gaxres::ProjectName ParentAsProjectName
         {
             get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateStoredInfoTypeRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::OrganizationName ParentAsOrganizationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -1112,6 +1513,19 @@ namespace Google.Cloud.Dlp.V2
 
     }
 
+    public partial class DeleteStoredInfoTypeRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof StoredInfoTypeNameOneof
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof.Parse(Name, true); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetDeidentifyTemplateRequest
     {
         /// <summary>
@@ -1159,6 +1573,19 @@ namespace Google.Cloud.Dlp.V2
         public Google.Cloud.Dlp.V2.ProjectJobTriggerName ProjectJobTriggerName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.ProjectJobTriggerName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetStoredInfoTypeRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof StoredInfoTypeNameOneof
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -1229,6 +1656,19 @@ namespace Google.Cloud.Dlp.V2
 
     }
 
+    public partial class ListStoredInfoTypesRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::OrganizationName ParentAsOrganizationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::OrganizationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class RedactImageRequest
     {
         /// <summary>
@@ -1289,6 +1729,19 @@ namespace Google.Cloud.Dlp.V2
         public Google.Cloud.Dlp.V2.ProjectJobTriggerName ProjectJobTriggerName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.ProjectJobTriggerName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class UpdateStoredInfoTypeRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof StoredInfoTypeNameOneof
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Dlp.V2.StoredInfoTypeNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 

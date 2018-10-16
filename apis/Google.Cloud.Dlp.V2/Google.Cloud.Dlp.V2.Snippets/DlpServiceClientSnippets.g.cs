@@ -1091,5 +1091,231 @@ namespace Google.Cloud.Dlp.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
+        public async Task CreateStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: CreateStoredInfoTypeAsync(CreateStoredInfoTypeRequest,CallSettings)
+            // Additional: CreateStoredInfoTypeAsync(CreateStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
+            {
+                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+            };
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateStoredInfoType</summary>
+        public void CreateStoredInfoType_RequestObject()
+        {
+            // Snippet: CreateStoredInfoType(CreateStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
+            {
+                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+            };
+            // Make the request
+            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateStoredInfoTypeAsync</summary>
+        public async Task UpdateStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: UpdateStoredInfoTypeAsync(UpdateStoredInfoTypeRequest,CallSettings)
+            // Additional: UpdateStoredInfoTypeAsync(UpdateStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
+            {
+                StoredInfoTypeNameOneof = StoredInfoTypeNameOneof.From(new OrganizationStoredInfoTypeName("[ORGANIZATION]", "[STORED_INFO_TYPE]")),
+            };
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.UpdateStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateStoredInfoType</summary>
+        public void UpdateStoredInfoType_RequestObject()
+        {
+            // Snippet: UpdateStoredInfoType(UpdateStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
+            {
+                StoredInfoTypeNameOneof = StoredInfoTypeNameOneof.From(new OrganizationStoredInfoTypeName("[ORGANIZATION]", "[STORED_INFO_TYPE]")),
+            };
+            // Make the request
+            StoredInfoType response = dlpServiceClient.UpdateStoredInfoType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetStoredInfoTypeAsync</summary>
+        public async Task GetStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: GetStoredInfoTypeAsync(GetStoredInfoTypeRequest,CallSettings)
+            // Additional: GetStoredInfoTypeAsync(GetStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
+            {
+                StoredInfoTypeNameOneof = StoredInfoTypeNameOneof.From(new OrganizationStoredInfoTypeName("[ORGANIZATION]", "[STORED_INFO_TYPE]")),
+            };
+            // Make the request
+            StoredInfoType response = await dlpServiceClient.GetStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetStoredInfoType</summary>
+        public void GetStoredInfoType_RequestObject()
+        {
+            // Snippet: GetStoredInfoType(GetStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
+            {
+                StoredInfoTypeNameOneof = StoredInfoTypeNameOneof.From(new OrganizationStoredInfoTypeName("[ORGANIZATION]", "[STORED_INFO_TYPE]")),
+            };
+            // Make the request
+            StoredInfoType response = dlpServiceClient.GetStoredInfoType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListStoredInfoTypesAsync</summary>
+        public async Task ListStoredInfoTypesAsync_RequestObject()
+        {
+            // Snippet: ListStoredInfoTypesAsync(ListStoredInfoTypesRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
+            {
+                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response =
+                dlpServiceClient.ListStoredInfoTypesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((StoredInfoType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListStoredInfoTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (StoredInfoType item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<StoredInfoType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (StoredInfoType item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListStoredInfoTypes</summary>
+        public void ListStoredInfoTypes_RequestObject()
+        {
+            // Snippet: ListStoredInfoTypes(ListStoredInfoTypesRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            ListStoredInfoTypesRequest request = new ListStoredInfoTypesRequest
+            {
+                ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListStoredInfoTypesResponse, StoredInfoType> response =
+                dlpServiceClient.ListStoredInfoTypes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (StoredInfoType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListStoredInfoTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (StoredInfoType item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<StoredInfoType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (StoredInfoType item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteStoredInfoTypeAsync</summary>
+        public async Task DeleteStoredInfoTypeAsync_RequestObject()
+        {
+            // Snippet: DeleteStoredInfoTypeAsync(DeleteStoredInfoTypeRequest,CallSettings)
+            // Additional: DeleteStoredInfoTypeAsync(DeleteStoredInfoTypeRequest,CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
+            {
+                StoredInfoTypeNameOneof = StoredInfoTypeNameOneof.From(new OrganizationStoredInfoTypeName("[ORGANIZATION]", "[STORED_INFO_TYPE]")),
+            };
+            // Make the request
+            await dlpServiceClient.DeleteStoredInfoTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteStoredInfoType</summary>
+        public void DeleteStoredInfoType_RequestObject()
+        {
+            // Snippet: DeleteStoredInfoType(DeleteStoredInfoTypeRequest,CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
+            {
+                StoredInfoTypeNameOneof = StoredInfoTypeNameOneof.From(new OrganizationStoredInfoTypeName("[ORGANIZATION]", "[STORED_INFO_TYPE]")),
+            };
+            // Make the request
+            dlpServiceClient.DeleteStoredInfoType(request);
+            // End snippet
+        }
+
     }
 }
