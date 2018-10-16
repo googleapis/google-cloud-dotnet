@@ -21,44 +21,44 @@ using linq = System.Linq;
 namespace Google.Cloud.Kms.V1
 {
     /// <summary>
-    /// Resource name for the 'key_ring' resource.
+    /// Resource name for the 'crypto_key' resource.
     /// </summary>
-    public sealed partial class KeyRingName : gax::IResourceName, sys::IEquatable<KeyRingName>
+    public sealed partial class CryptoKeyName : gax::IResourceName, sys::IEquatable<CryptoKeyName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}");
 
         /// <summary>
-        /// Parses the given key_ring resource name in string form into a new
-        /// <see cref="KeyRingName"/> instance.
+        /// Parses the given crypto_key resource name in string form into a new
+        /// <see cref="CryptoKeyName"/> instance.
         /// </summary>
-        /// <param name="keyRingName">The key_ring resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="KeyRingName"/> if successful.</returns>
-        public static KeyRingName Parse(string keyRingName)
+        /// <param name="cryptoKeyName">The crypto_key resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CryptoKeyName"/> if successful.</returns>
+        public static CryptoKeyName Parse(string cryptoKeyName)
         {
-            gax::GaxPreconditions.CheckNotNull(keyRingName, nameof(keyRingName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(keyRingName);
-            return new KeyRingName(resourceName[0], resourceName[1], resourceName[2]);
+            gax::GaxPreconditions.CheckNotNull(cryptoKeyName, nameof(cryptoKeyName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(cryptoKeyName);
+            return new CryptoKeyName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
         }
 
         /// <summary>
-        /// Tries to parse the given key_ring resource name in string form into a new
-        /// <see cref="KeyRingName"/> instance.
+        /// Tries to parse the given crypto_key resource name in string form into a new
+        /// <see cref="CryptoKeyName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="keyRingName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="cryptoKeyName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="keyRingName">The key_ring resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="KeyRingName"/>,
+        /// <param name="cryptoKeyName">The crypto_key resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="CryptoKeyName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string keyRingName, out KeyRingName result)
+        public static bool TryParse(string cryptoKeyName, out CryptoKeyName result)
         {
-            gax::GaxPreconditions.CheckNotNull(keyRingName, nameof(keyRingName));
+            gax::GaxPreconditions.CheckNotNull(cryptoKeyName, nameof(cryptoKeyName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(keyRingName, out resourceName))
+            if (s_template.TryParseName(cryptoKeyName, out resourceName))
             {
-                result = new KeyRingName(resourceName[0], resourceName[1], resourceName[2]);
+                result = new CryptoKeyName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
             else
@@ -69,17 +69,19 @@ namespace Google.Cloud.Kms.V1
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="KeyRingName"/> resource name class
+        /// Constructs a new instance of the <see cref="CryptoKeyName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
         /// <param name="keyRingId">The keyRing ID. Must not be <c>null</c>.</param>
-        public KeyRingName(string projectId, string locationId, string keyRingId)
+        /// <param name="cryptoKeyId">The cryptoKey ID. Must not be <c>null</c>.</param>
+        public CryptoKeyName(string projectId, string locationId, string keyRingId, string cryptoKeyId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
             KeyRingId = gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId));
+            CryptoKeyId = gax::GaxPreconditions.CheckNotNull(cryptoKeyId, nameof(cryptoKeyId));
         }
 
         /// <summary>
@@ -97,26 +99,31 @@ namespace Google.Cloud.Kms.V1
         /// </summary>
         public string KeyRingId { get; }
 
+        /// <summary>
+        /// The cryptoKey ID. Never <c>null</c>.
+        /// </summary>
+        public string CryptoKeyId { get; }
+
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, LocationId, KeyRingId);
+        public override string ToString() => s_template.Expand(ProjectId, LocationId, KeyRingId, CryptoKeyId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as KeyRingName);
+        public override bool Equals(object obj) => Equals(obj as CryptoKeyName);
 
         /// <inheritdoc />
-        public bool Equals(KeyRingName other) => ToString() == other?.ToString();
+        public bool Equals(CryptoKeyName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(KeyRingName a, KeyRingName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(CryptoKeyName a, CryptoKeyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(KeyRingName a, KeyRingName b) => !(a == b);
+        public static bool operator !=(CryptoKeyName a, CryptoKeyName b) => !(a == b);
     }
 
     /// <summary>
@@ -223,204 +230,6 @@ namespace Google.Cloud.Kms.V1
 
         /// <inheritdoc />
         public static bool operator !=(CryptoKeyPathName a, CryptoKeyPathName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'location' resource.
-    /// </summary>
-    public sealed partial class LocationName : gax::IResourceName, sys::IEquatable<LocationName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}");
-
-        /// <summary>
-        /// Parses the given location resource name in string form into a new
-        /// <see cref="LocationName"/> instance.
-        /// </summary>
-        /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="LocationName"/> if successful.</returns>
-        public static LocationName Parse(string locationName)
-        {
-            gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(locationName);
-            return new LocationName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given location resource name in string form into a new
-        /// <see cref="LocationName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="locationName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="LocationName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string locationName, out LocationName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(locationName, out resourceName))
-            {
-                result = new LocationName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="LocationName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
-        public LocationName(string projectId, string locationId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The location ID. Never <c>null</c>.
-        /// </summary>
-        public string LocationId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, LocationId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as LocationName);
-
-        /// <inheritdoc />
-        public bool Equals(LocationName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(LocationName a, LocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(LocationName a, LocationName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'crypto_key' resource.
-    /// </summary>
-    public sealed partial class CryptoKeyName : gax::IResourceName, sys::IEquatable<CryptoKeyName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}");
-
-        /// <summary>
-        /// Parses the given crypto_key resource name in string form into a new
-        /// <see cref="CryptoKeyName"/> instance.
-        /// </summary>
-        /// <param name="cryptoKeyName">The crypto_key resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="CryptoKeyName"/> if successful.</returns>
-        public static CryptoKeyName Parse(string cryptoKeyName)
-        {
-            gax::GaxPreconditions.CheckNotNull(cryptoKeyName, nameof(cryptoKeyName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(cryptoKeyName);
-            return new CryptoKeyName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given crypto_key resource name in string form into a new
-        /// <see cref="CryptoKeyName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="cryptoKeyName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="cryptoKeyName">The crypto_key resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="CryptoKeyName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string cryptoKeyName, out CryptoKeyName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(cryptoKeyName, nameof(cryptoKeyName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(cryptoKeyName, out resourceName))
-            {
-                result = new CryptoKeyName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="CryptoKeyName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
-        /// <param name="keyRingId">The keyRing ID. Must not be <c>null</c>.</param>
-        /// <param name="cryptoKeyId">The cryptoKey ID. Must not be <c>null</c>.</param>
-        public CryptoKeyName(string projectId, string locationId, string keyRingId, string cryptoKeyId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
-            KeyRingId = gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId));
-            CryptoKeyId = gax::GaxPreconditions.CheckNotNull(cryptoKeyId, nameof(cryptoKeyId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The location ID. Never <c>null</c>.
-        /// </summary>
-        public string LocationId { get; }
-
-        /// <summary>
-        /// The keyRing ID. Never <c>null</c>.
-        /// </summary>
-        public string KeyRingId { get; }
-
-        /// <summary>
-        /// The cryptoKey ID. Never <c>null</c>.
-        /// </summary>
-        public string CryptoKeyId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, LocationId, KeyRingId, CryptoKeyId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as CryptoKeyName);
-
-        /// <inheritdoc />
-        public bool Equals(CryptoKeyName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(CryptoKeyName a, CryptoKeyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(CryptoKeyName a, CryptoKeyName b) => !(a == b);
     }
 
     /// <summary>
@@ -738,6 +547,197 @@ namespace Google.Cloud.Kms.V1
 
         /// <inheritdoc />
         public static bool operator !=(KeyNameOneof a, KeyNameOneof b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'key_ring' resource.
+    /// </summary>
+    public sealed partial class KeyRingName : gax::IResourceName, sys::IEquatable<KeyRingName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}");
+
+        /// <summary>
+        /// Parses the given key_ring resource name in string form into a new
+        /// <see cref="KeyRingName"/> instance.
+        /// </summary>
+        /// <param name="keyRingName">The key_ring resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="KeyRingName"/> if successful.</returns>
+        public static KeyRingName Parse(string keyRingName)
+        {
+            gax::GaxPreconditions.CheckNotNull(keyRingName, nameof(keyRingName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(keyRingName);
+            return new KeyRingName(resourceName[0], resourceName[1], resourceName[2]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given key_ring resource name in string form into a new
+        /// <see cref="KeyRingName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="keyRingName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="keyRingName">The key_ring resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="KeyRingName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string keyRingName, out KeyRingName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(keyRingName, nameof(keyRingName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(keyRingName, out resourceName))
+            {
+                result = new KeyRingName(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="KeyRingName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
+        /// <param name="keyRingId">The keyRing ID. Must not be <c>null</c>.</param>
+        public KeyRingName(string projectId, string locationId, string keyRingId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
+            KeyRingId = gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The location ID. Never <c>null</c>.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The keyRing ID. Never <c>null</c>.
+        /// </summary>
+        public string KeyRingId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, LocationId, KeyRingId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as KeyRingName);
+
+        /// <inheritdoc />
+        public bool Equals(KeyRingName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(KeyRingName a, KeyRingName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(KeyRingName a, KeyRingName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'location' resource.
+    /// </summary>
+    public sealed partial class LocationName : gax::IResourceName, sys::IEquatable<LocationName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}");
+
+        /// <summary>
+        /// Parses the given location resource name in string form into a new
+        /// <see cref="LocationName"/> instance.
+        /// </summary>
+        /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LocationName"/> if successful.</returns>
+        public static LocationName Parse(string locationName)
+        {
+            gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(locationName);
+            return new LocationName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given location resource name in string form into a new
+        /// <see cref="LocationName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="locationName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="locationName">The location resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="LocationName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string locationName, out LocationName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(locationName, out resourceName))
+            {
+                result = new LocationName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="LocationName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
+        public LocationName(string projectId, string locationId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The location ID. Never <c>null</c>.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, LocationId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as LocationName);
+
+        /// <inheritdoc />
+        public bool Equals(LocationName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(LocationName a, LocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(LocationName a, LocationName b) => !(a == b);
     }
 
 
