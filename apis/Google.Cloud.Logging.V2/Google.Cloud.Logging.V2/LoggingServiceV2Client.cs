@@ -649,11 +649,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -667,11 +666,15 @@ namespace Google.Cloud.Logging.V2
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"` or
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
+        /// `[LOG_ID]` must be URL-encoded. For example:
+        ///
+        ///     "projects/my-project-id/logs/syslog"
+        ///     "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
+        ///
+        /// The permission &lt;code&gt;logging.logEntries.create&lt;/code&gt; is needed on each
+        /// project, organization, billing account, or folder that is receiving
+        /// new log entries, whether the resource is specified in
+        /// &lt;code&gt;logName&lt;/code&gt; or in an individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -690,7 +693,7 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required. The log entries to send to Stackdriver Logging. The order of log
+        /// Required. The log entries to send to Logging. The order of log
         /// entries in this list does not matter. Values supplied in this method's
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
@@ -736,11 +739,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -754,11 +756,15 @@ namespace Google.Cloud.Logging.V2
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"` or
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
+        /// `[LOG_ID]` must be URL-encoded. For example:
+        ///
+        ///     "projects/my-project-id/logs/syslog"
+        ///     "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
+        ///
+        /// The permission &lt;code&gt;logging.logEntries.create&lt;/code&gt; is needed on each
+        /// project, organization, billing account, or folder that is receiving
+        /// new log entries, whether the resource is specified in
+        /// &lt;code&gt;logName&lt;/code&gt; or in an individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -777,7 +783,7 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required. The log entries to send to Stackdriver Logging. The order of log
+        /// Required. The log entries to send to Logging. The order of log
         /// entries in this list does not matter. Values supplied in this method's
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
@@ -820,11 +826,10 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -838,11 +843,15 @@ namespace Google.Cloud.Logging.V2
         ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
         ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
-        /// `[LOG_ID]` must be URL-encoded. For example,
-        /// `"projects/my-project-id/logs/syslog"` or
-        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-        /// For more information about log names, see
-        /// [LogEntry][google.logging.v2.LogEntry].
+        /// `[LOG_ID]` must be URL-encoded. For example:
+        ///
+        ///     "projects/my-project-id/logs/syslog"
+        ///     "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
+        ///
+        /// The permission &lt;code&gt;logging.logEntries.create&lt;/code&gt; is needed on each
+        /// project, organization, billing account, or folder that is receiving
+        /// new log entries, whether the resource is specified in
+        /// &lt;code&gt;logName&lt;/code&gt; or in an individual log entry.
         /// </param>
         /// <param name="resource">
         /// Optional. A default monitored resource object that is assigned to all log
@@ -861,7 +870,7 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required. The log entries to send to Stackdriver Logging. The order of log
+        /// Required. The log entries to send to Logging. The order of log
         /// entries in this list does not matter. Values supplied in this method's
         /// `log_name`, `resource`, and `labels` fields are copied into those log
         /// entries in this list that do not include values for their corresponding
@@ -907,11 +916,10 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -933,11 +941,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -958,11 +965,10 @@ namespace Google.Cloud.Logging.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -985,7 +991,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from
-        /// Stackdriver Logging.  For ways to export log entries, see
+        /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
@@ -1049,7 +1055,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from
-        /// Stackdriver Logging.  For ways to export log entries, see
+        /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
@@ -1113,7 +1119,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from
-        /// Stackdriver Logging.  For ways to export log entries, see
+        /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -1134,7 +1140,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from
-        /// Stackdriver Logging.  For ways to export log entries, see
+        /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -1154,8 +1160,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the descriptors for monitored resource types used by Stackdriver
-        /// Logging.
+        /// Lists the descriptors for monitored resource types used by Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1174,8 +1179,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the descriptors for monitored resource types used by Stackdriver
-        /// Logging.
+        /// Lists the descriptors for monitored resource types used by Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1432,11 +1436,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -1459,11 +1462,10 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging. This API method is the
-        /// only way to send log entries to Stackdriver Logging. This method
-        /// is used, directly or indirectly, by the Stackdriver Logging agent
-        /// (fluentd) and all logging libraries configured to use Stackdriver
-        /// Logging.
+        /// Writes log entries to Logging. This API method is the
+        /// only way to send log entries to Logging. This method
+        /// is used, directly or indirectly, by the Logging agent
+        /// (fluentd) and all logging libraries configured to use Logging.
         /// A single request may contain log entries for a maximum of 1000
         /// different resources (projects, organizations, billing accounts or
         /// folders)
@@ -1487,7 +1489,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from
-        /// Stackdriver Logging.  For ways to export log entries, see
+        /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -1509,7 +1511,7 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries from
-        /// Stackdriver Logging.  For ways to export log entries, see
+        /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -1530,8 +1532,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the descriptors for monitored resource types used by Stackdriver
-        /// Logging.
+        /// Lists the descriptors for monitored resource types used by Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1551,8 +1552,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the descriptors for monitored resource types used by Stackdriver
-        /// Logging.
+        /// Lists the descriptors for monitored resource types used by Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

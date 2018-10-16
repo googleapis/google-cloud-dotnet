@@ -301,11 +301,15 @@ namespace Google.Cloud.Logging.V2 {
     ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
     ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
     ///
-    /// `[LOG_ID]` must be URL-encoded. For example,
-    /// `"projects/my-project-id/logs/syslog"` or
-    /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-    /// For more information about log names, see
-    /// [LogEntry][google.logging.v2.LogEntry].
+    /// `[LOG_ID]` must be URL-encoded. For example:
+    ///
+    ///     "projects/my-project-id/logs/syslog"
+    ///     "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"
+    ///
+    /// The permission &lt;code>logging.logEntries.create&lt;/code> is needed on each
+    /// project, organization, billing account, or folder that is receiving
+    /// new log entries, whether the resource is specified in
+    /// &lt;code>logName&lt;/code> or in an individual log entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LogName {
@@ -358,7 +362,7 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Logging.V2.LogEntry.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry>();
     /// <summary>
-    /// Required. The log entries to send to Stackdriver Logging. The order of log
+    /// Required. The log entries to send to Logging. The order of log
     /// entries in this list does not matter. Values supplied in this method's
     /// `log_name`, `resource`, and `labels` fields are copied into those log
     /// entries in this list that do not include values for their corresponding

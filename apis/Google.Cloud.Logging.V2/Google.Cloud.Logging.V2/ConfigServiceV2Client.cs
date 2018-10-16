@@ -1099,7 +1099,7 @@ namespace Google.Cloud.Logging.V2
         /// empty updateMask will be an error.
         ///
         /// For a detailed `FieldMask` definition, see
-        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         ///
         /// Example: `updateMask=filter`.
         /// </param>
@@ -1155,7 +1155,7 @@ namespace Google.Cloud.Logging.V2
         /// empty updateMask will be an error.
         ///
         /// For a detailed `FieldMask` definition, see
-        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         ///
         /// Example: `updateMask=filter`.
         /// </param>
@@ -1208,7 +1208,7 @@ namespace Google.Cloud.Logging.V2
         /// empty updateMask will be an error.
         ///
         /// For a detailed `FieldMask` definition, see
-        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMask
         ///
         /// Example: `updateMask=filter`.
         /// </param>
