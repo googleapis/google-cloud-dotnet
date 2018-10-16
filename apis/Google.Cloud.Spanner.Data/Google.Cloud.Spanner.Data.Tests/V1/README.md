@@ -1,8 +1,8 @@
 ﻿This directory contains unit tests for classes in Google.Cloud.Spanner.V1.
 Tests should be in the Google.Cloud.Spanner.V1.Tests namespace.
 
-While it's slightly odd that they're here rather than under Google.Cloud.Spanner.V1,
-it makes things significantly simpler:
+While it's slightly odd that they're here rather than under
+Google.Cloud.Spanner.V1/Google.Cloud.Spanner.V1.Tests, it makes things significantly simpler:
 
 - It means we can have all our common test infrastructure in Google.Cloud.Spanner.Data
 - It means fewer test projects to keep track of
