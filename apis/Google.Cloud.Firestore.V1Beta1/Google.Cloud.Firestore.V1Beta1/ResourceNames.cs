@@ -21,289 +21,6 @@ using linq = System.Linq;
 namespace Google.Cloud.Firestore.V1Beta1
 {
     /// <summary>
-    /// Resource name for the 'database_root' resource.
-    /// </summary>
-    public sealed partial class DatabaseRootName : gax::IResourceName, sys::IEquatable<DatabaseRootName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}");
-
-        /// <summary>
-        /// Parses the given database_root resource name in string form into a new
-        /// <see cref="DatabaseRootName"/> instance.
-        /// </summary>
-        /// <param name="databaseRootName">The database_root resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DatabaseRootName"/> if successful.</returns>
-        public static DatabaseRootName Parse(string databaseRootName)
-        {
-            gax::GaxPreconditions.CheckNotNull(databaseRootName, nameof(databaseRootName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(databaseRootName);
-            return new DatabaseRootName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given database_root resource name in string form into a new
-        /// <see cref="DatabaseRootName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="databaseRootName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="databaseRootName">The database_root resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DatabaseRootName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string databaseRootName, out DatabaseRootName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(databaseRootName, nameof(databaseRootName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(databaseRootName, out resourceName))
-            {
-                result = new DatabaseRootName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="DatabaseRootName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
-        public DatabaseRootName(string projectId, string databaseId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The database ID. Never <c>null</c>.
-        /// </summary>
-        public string DatabaseId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, DatabaseId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DatabaseRootName);
-
-        /// <inheritdoc />
-        public bool Equals(DatabaseRootName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(DatabaseRootName a, DatabaseRootName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(DatabaseRootName a, DatabaseRootName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'document_root' resource.
-    /// </summary>
-    public sealed partial class DocumentRootName : gax::IResourceName, sys::IEquatable<DocumentRootName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}/documents");
-
-        /// <summary>
-        /// Parses the given document_root resource name in string form into a new
-        /// <see cref="DocumentRootName"/> instance.
-        /// </summary>
-        /// <param name="documentRootName">The document_root resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DocumentRootName"/> if successful.</returns>
-        public static DocumentRootName Parse(string documentRootName)
-        {
-            gax::GaxPreconditions.CheckNotNull(documentRootName, nameof(documentRootName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(documentRootName);
-            return new DocumentRootName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given document_root resource name in string form into a new
-        /// <see cref="DocumentRootName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="documentRootName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="documentRootName">The document_root resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DocumentRootName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string documentRootName, out DocumentRootName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(documentRootName, nameof(documentRootName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(documentRootName, out resourceName))
-            {
-                result = new DocumentRootName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="DocumentRootName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
-        public DocumentRootName(string projectId, string databaseId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The database ID. Never <c>null</c>.
-        /// </summary>
-        public string DatabaseId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, DatabaseId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DocumentRootName);
-
-        /// <inheritdoc />
-        public bool Equals(DocumentRootName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(DocumentRootName a, DocumentRootName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(DocumentRootName a, DocumentRootName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'document_path' resource.
-    /// </summary>
-    public sealed partial class DocumentPathName : gax::IResourceName, sys::IEquatable<DocumentPathName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}/documents/{document_path=**}");
-
-        /// <summary>
-        /// Parses the given document_path resource name in string form into a new
-        /// <see cref="DocumentPathName"/> instance.
-        /// </summary>
-        /// <param name="documentPathName">The document_path resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DocumentPathName"/> if successful.</returns>
-        public static DocumentPathName Parse(string documentPathName)
-        {
-            gax::GaxPreconditions.CheckNotNull(documentPathName, nameof(documentPathName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(documentPathName);
-            return new DocumentPathName(resourceName[0], resourceName[1], resourceName[2]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given document_path resource name in string form into a new
-        /// <see cref="DocumentPathName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="documentPathName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="documentPathName">The document_path resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="DocumentPathName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string documentPathName, out DocumentPathName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(documentPathName, nameof(documentPathName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(documentPathName, out resourceName))
-            {
-                result = new DocumentPathName(resourceName[0], resourceName[1], resourceName[2]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="DocumentPathName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
-        /// <param name="documentPathId">The documentPath ID. Must not be <c>null</c>.</param>
-        public DocumentPathName(string projectId, string databaseId, string documentPathId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
-            DocumentPathId = gax::GaxPreconditions.CheckNotNull(documentPathId, nameof(documentPathId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The database ID. Never <c>null</c>.
-        /// </summary>
-        public string DatabaseId { get; }
-
-        /// <summary>
-        /// The documentPath ID. Never <c>null</c>.
-        /// </summary>
-        public string DocumentPathId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, DatabaseId, DocumentPathId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DocumentPathName);
-
-        /// <inheritdoc />
-        public bool Equals(DocumentPathName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(DocumentPathName a, DocumentPathName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(DocumentPathName a, DocumentPathName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name for the 'any_path' resource.
     /// </summary>
     public sealed partial class AnyPathName : gax::IResourceName, sys::IEquatable<AnyPathName>
@@ -407,6 +124,289 @@ namespace Google.Cloud.Firestore.V1Beta1
 
         /// <inheritdoc />
         public static bool operator !=(AnyPathName a, AnyPathName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'database_root' resource.
+    /// </summary>
+    public sealed partial class DatabaseRootName : gax::IResourceName, sys::IEquatable<DatabaseRootName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}");
+
+        /// <summary>
+        /// Parses the given database_root resource name in string form into a new
+        /// <see cref="DatabaseRootName"/> instance.
+        /// </summary>
+        /// <param name="databaseRootName">The database_root resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DatabaseRootName"/> if successful.</returns>
+        public static DatabaseRootName Parse(string databaseRootName)
+        {
+            gax::GaxPreconditions.CheckNotNull(databaseRootName, nameof(databaseRootName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(databaseRootName);
+            return new DatabaseRootName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given database_root resource name in string form into a new
+        /// <see cref="DatabaseRootName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="databaseRootName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="databaseRootName">The database_root resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="DatabaseRootName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string databaseRootName, out DatabaseRootName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(databaseRootName, nameof(databaseRootName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(databaseRootName, out resourceName))
+            {
+                result = new DatabaseRootName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="DatabaseRootName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
+        public DatabaseRootName(string projectId, string databaseId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The database ID. Never <c>null</c>.
+        /// </summary>
+        public string DatabaseId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, DatabaseId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as DatabaseRootName);
+
+        /// <inheritdoc />
+        public bool Equals(DatabaseRootName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(DatabaseRootName a, DatabaseRootName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(DatabaseRootName a, DatabaseRootName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'document_path' resource.
+    /// </summary>
+    public sealed partial class DocumentPathName : gax::IResourceName, sys::IEquatable<DocumentPathName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}/documents/{document_path=**}");
+
+        /// <summary>
+        /// Parses the given document_path resource name in string form into a new
+        /// <see cref="DocumentPathName"/> instance.
+        /// </summary>
+        /// <param name="documentPathName">The document_path resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DocumentPathName"/> if successful.</returns>
+        public static DocumentPathName Parse(string documentPathName)
+        {
+            gax::GaxPreconditions.CheckNotNull(documentPathName, nameof(documentPathName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(documentPathName);
+            return new DocumentPathName(resourceName[0], resourceName[1], resourceName[2]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given document_path resource name in string form into a new
+        /// <see cref="DocumentPathName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="documentPathName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="documentPathName">The document_path resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="DocumentPathName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string documentPathName, out DocumentPathName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(documentPathName, nameof(documentPathName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(documentPathName, out resourceName))
+            {
+                result = new DocumentPathName(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="DocumentPathName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
+        /// <param name="documentPathId">The documentPath ID. Must not be <c>null</c>.</param>
+        public DocumentPathName(string projectId, string databaseId, string documentPathId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
+            DocumentPathId = gax::GaxPreconditions.CheckNotNull(documentPathId, nameof(documentPathId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The database ID. Never <c>null</c>.
+        /// </summary>
+        public string DatabaseId { get; }
+
+        /// <summary>
+        /// The documentPath ID. Never <c>null</c>.
+        /// </summary>
+        public string DocumentPathId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, DatabaseId, DocumentPathId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as DocumentPathName);
+
+        /// <inheritdoc />
+        public bool Equals(DocumentPathName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(DocumentPathName a, DocumentPathName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(DocumentPathName a, DocumentPathName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'document_root' resource.
+    /// </summary>
+    public sealed partial class DocumentRootName : gax::IResourceName, sys::IEquatable<DocumentRootName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/databases/{database}/documents");
+
+        /// <summary>
+        /// Parses the given document_root resource name in string form into a new
+        /// <see cref="DocumentRootName"/> instance.
+        /// </summary>
+        /// <param name="documentRootName">The document_root resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="DocumentRootName"/> if successful.</returns>
+        public static DocumentRootName Parse(string documentRootName)
+        {
+            gax::GaxPreconditions.CheckNotNull(documentRootName, nameof(documentRootName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(documentRootName);
+            return new DocumentRootName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given document_root resource name in string form into a new
+        /// <see cref="DocumentRootName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="documentRootName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="documentRootName">The document_root resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="DocumentRootName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string documentRootName, out DocumentRootName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(documentRootName, nameof(documentRootName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(documentRootName, out resourceName))
+            {
+                result = new DocumentRootName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="DocumentRootName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="databaseId">The database ID. Must not be <c>null</c>.</param>
+        public DocumentRootName(string projectId, string databaseId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            DatabaseId = gax::GaxPreconditions.CheckNotNull(databaseId, nameof(databaseId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The database ID. Never <c>null</c>.
+        /// </summary>
+        public string DatabaseId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, DatabaseId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as DocumentRootName);
+
+        /// <inheritdoc />
+        public bool Equals(DocumentRootName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(DocumentRootName a, DocumentRootName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(DocumentRootName a, DocumentRootName b) => !(a == b);
     }
 
 

@@ -23,6 +23,78 @@ using linq = System.Linq;
 namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
+    /// Resource name to represent the fixed string "_deleted-topic_".
+    /// </summary>
+    public sealed partial class DeletedTopicNameFixed : gax::IResourceName, sys::IEquatable<DeletedTopicNameFixed>
+    {
+        /// <summary>
+        /// The fixed string value: "_deleted-topic_".
+        /// </summary>
+        public const string FixedValue = "_deleted-topic_";
+
+        /// <summary>
+        /// An instance of <see cref="DeletedTopicNameFixed"/>.
+        /// </summary>
+        public static DeletedTopicNameFixed Instance => new DeletedTopicNameFixed();
+
+        /// <summary>
+        /// Parses the given string into a new <see cref="DeletedTopicNameFixed"/> instance.
+        /// Only succeeds if the string is equal to "_deleted-topic_".
+        /// </summary>
+        public static DeletedTopicNameFixed Parse(string deletedTopicNameFixed)
+        {
+            DeletedTopicNameFixed result;
+            if (!TryParse(deletedTopicNameFixed, out result))
+            {
+                throw new sys::ArgumentException($"Invalid resource name, must be \"{FixedValue}\"", nameof(deletedTopicNameFixed));
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Tries to parse the given string into a new <see cref="DeletedTopicNameFixed"/> instance.
+        /// Only succeeds if the string is equal to "_deleted-topic_".
+        /// </summary>
+        public static bool TryParse(string deletedTopicNameFixed, out DeletedTopicNameFixed result)
+        {
+            gax::GaxPreconditions.CheckNotNull(deletedTopicNameFixed, nameof(deletedTopicNameFixed));
+            if (deletedTopicNameFixed == FixedValue)
+            {
+                result = Instance;
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        private DeletedTopicNameFixed() { }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Fixed;
+
+        /// <inheritdoc />
+        public override string ToString() => FixedValue;
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as DeletedTopicNameFixed);
+
+        /// <inheritdoc />
+        public bool Equals(DeletedTopicNameFixed other) => other != null;
+
+        /// <inheritdoc />
+        public static bool operator ==(DeletedTopicNameFixed a, DeletedTopicNameFixed b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(DeletedTopicNameFixed a, DeletedTopicNameFixed b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'snapshot' resource.
     /// </summary>
     public sealed partial class SnapshotName : gax::IResourceName, sys::IEquatable<SnapshotName>
@@ -500,78 +572,6 @@ namespace Google.Cloud.PubSub.V1
 
         /// <inheritdoc />
         public static bool operator !=(TopicNameOneof a, TopicNameOneof b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name to represent the fixed string "_deleted-topic_".
-    /// </summary>
-    public sealed partial class DeletedTopicNameFixed : gax::IResourceName, sys::IEquatable<DeletedTopicNameFixed>
-    {
-        /// <summary>
-        /// The fixed string value: "_deleted-topic_".
-        /// </summary>
-        public const string FixedValue = "_deleted-topic_";
-
-        /// <summary>
-        /// An instance of <see cref="DeletedTopicNameFixed"/>.
-        /// </summary>
-        public static DeletedTopicNameFixed Instance => new DeletedTopicNameFixed();
-
-        /// <summary>
-        /// Parses the given string into a new <see cref="DeletedTopicNameFixed"/> instance.
-        /// Only succeeds if the string is equal to "_deleted-topic_".
-        /// </summary>
-        public static DeletedTopicNameFixed Parse(string deletedTopicNameFixed)
-        {
-            DeletedTopicNameFixed result;
-            if (!TryParse(deletedTopicNameFixed, out result))
-            {
-                throw new sys::ArgumentException($"Invalid resource name, must be \"{FixedValue}\"", nameof(deletedTopicNameFixed));
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Tries to parse the given string into a new <see cref="DeletedTopicNameFixed"/> instance.
-        /// Only succeeds if the string is equal to "_deleted-topic_".
-        /// </summary>
-        public static bool TryParse(string deletedTopicNameFixed, out DeletedTopicNameFixed result)
-        {
-            gax::GaxPreconditions.CheckNotNull(deletedTopicNameFixed, nameof(deletedTopicNameFixed));
-            if (deletedTopicNameFixed == FixedValue)
-            {
-                result = Instance;
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        private DeletedTopicNameFixed() { }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Fixed;
-
-        /// <inheritdoc />
-        public override string ToString() => FixedValue;
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as DeletedTopicNameFixed);
-
-        /// <inheritdoc />
-        public bool Equals(DeletedTopicNameFixed other) => other != null;
-
-        /// <inheritdoc />
-        public static bool operator ==(DeletedTopicNameFixed a, DeletedTopicNameFixed b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(DeletedTopicNameFixed a, DeletedTopicNameFixed b) => !(a == b);
     }
 
 

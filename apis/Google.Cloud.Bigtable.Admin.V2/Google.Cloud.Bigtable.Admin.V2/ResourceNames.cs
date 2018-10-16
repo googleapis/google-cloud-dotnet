@@ -23,98 +23,6 @@ using linq = System.Linq;
 namespace Google.Cloud.Bigtable.Admin.V2
 {
     /// <summary>
-    /// Resource name for the 'instance' resource.
-    /// </summary>
-    public sealed partial class InstanceName : gax::IResourceName, sys::IEquatable<InstanceName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}");
-
-        /// <summary>
-        /// Parses the given instance resource name in string form into a new
-        /// <see cref="InstanceName"/> instance.
-        /// </summary>
-        /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="InstanceName"/> if successful.</returns>
-        public static InstanceName Parse(string instanceName)
-        {
-            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(instanceName);
-            return new InstanceName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given instance resource name in string form into a new
-        /// <see cref="InstanceName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="InstanceName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string instanceName, out InstanceName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(instanceName, out resourceName))
-            {
-                result = new InstanceName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="InstanceName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
-        public InstanceName(string projectId, string instanceId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The instance ID. Never <c>null</c>.
-        /// </summary>
-        public string InstanceId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, InstanceId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as InstanceName);
-
-        /// <inheritdoc />
-        public bool Equals(InstanceName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(InstanceName a, InstanceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(InstanceName a, InstanceName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name for the 'app_profile' resource.
     /// </summary>
     public sealed partial class AppProfileName : gax::IResourceName, sys::IEquatable<AppProfileName>
@@ -310,6 +218,98 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <inheritdoc />
         public static bool operator !=(ClusterName a, ClusterName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'instance' resource.
+    /// </summary>
+    public sealed partial class InstanceName : gax::IResourceName, sys::IEquatable<InstanceName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/instances/{instance}");
+
+        /// <summary>
+        /// Parses the given instance resource name in string form into a new
+        /// <see cref="InstanceName"/> instance.
+        /// </summary>
+        /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="InstanceName"/> if successful.</returns>
+        public static InstanceName Parse(string instanceName)
+        {
+            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(instanceName);
+            return new InstanceName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given instance resource name in string form into a new
+        /// <see cref="InstanceName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="instanceName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="InstanceName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string instanceName, out InstanceName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(instanceName, out resourceName))
+            {
+                result = new InstanceName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="InstanceName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
+        public InstanceName(string projectId, string instanceId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            InstanceId = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The instance ID. Never <c>null</c>.
+        /// </summary>
+        public string InstanceId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, InstanceId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as InstanceName);
+
+        /// <inheritdoc />
+        public bool Equals(InstanceName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(InstanceName a, InstanceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(InstanceName a, InstanceName b) => !(a == b);
     }
 
     /// <summary>
