@@ -46,6 +46,7 @@ while (( "$#" )); do
   elif [[ "$1" == "--coverage" ]]
   then
     runcoverage=true
+    install_dotcover
     mkdir -p coverage
   else
     apis+=($1)
@@ -135,7 +136,7 @@ then
     if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
     then
       echo "(Running with coverage)"
-      (cd "$testdir"; dotnet dotcover test -c Release --no-build --dcXML=coverage.xml)    
+      (cd "$testdir"; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode)
     else
       dotnet test -c Release --no-build $testproject
     fi

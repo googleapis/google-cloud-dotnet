@@ -461,10 +461,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 );
             string project = Path.GetFileName(directory);
             var dependenciesElement = CreateDependenciesElement(project, dependencies, api.IsReleaseVersion, testProject: true, apiNames: apiNames);
-            // Include dotCover CLI tool for dotnet
-            dependenciesElement.Add(new XElement("DotNetCliToolReference",
-                new XAttribute("Include", "JetBrains.dotCover.CommandLineTools"),
-                new XAttribute("Version", "2018.2.0")));
             // Allow test projects to use dynamic...
             dependenciesElement.Add(new XElement("Reference",
                 new XAttribute("Condition", "'$(TargetFramework)' == 'net452'"),
@@ -481,6 +477,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 return;
             }
+            var targetExecutable = new XElement("TargetExecutable", "C:/Program Files/dotnet/dotnet.exe");
+            var targetArguments = new XElement("TargetArguments",
+                $"test --no-build -c Release");
             var filters = new XElement("Filters", new XElement("IncludeFilters",
                 new XElement("FilterEntry", new XElement("ModuleMask", api.Id)),
                 // Allow tests to contribute coverage to project dependencies, but not package dependencies
@@ -495,10 +494,14 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("AttributeFilterEntry", "System.Diagnostics.DebuggerNonUserCodeAttribute")
             );
             var output = new XElement("Output", $"../../../coverage/{Path.GetFileName(directory)}.dvcr");
+            var workingDir = new XElement("TargetWorkingDir", ".");
 
             var doc = new XElement("CoverageParams",
+                targetExecutable,
+                targetArguments,
                 filters,
                 attributeFilters,
+                workingDir,
                 output
             );
 
