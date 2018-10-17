@@ -104,7 +104,7 @@ do
     dotnet run -p $testdir -- $TEST_PROJECT || echo "$testdir" >> $FAILURE_TEMP_FILE
   elif [[ "$COVERAGE_ARG" == "yes" && -f "$testdir/coverage.xml" ]]
   then
-    (cd $testdir; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
+    (cd $testdir; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode || echo "$testdir" >> $FAILURE_TEMP_FILE)
   else
     (cd $testdir; dotnet test -c Release --no-build || echo "$testdir" >> $FAILURE_TEMP_FILE)
   fi
