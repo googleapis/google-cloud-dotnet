@@ -342,6 +342,22 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void StartAt_Empty()
+        {
+            var query = GetEmptyQuery().OrderBy("foo").StartAt(new object[0]);
+            var expected = new StructuredQuery
+            {
+                OrderBy =
+                {
+                    new Order { Field = Field("foo"), Direction = Direction.Ascending }
+                },
+                StartAt = new Cursor { Before = true },
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
         public void StartAfter()
         {
             var query = GetEmptyQuery().OrderBy("foo").OrderBy("bar").OrderBy("baz").StartAfter(1, "x");
@@ -354,6 +370,22 @@ namespace Google.Cloud.Firestore.Tests
                     new Order { Field = Field("baz"), Direction = Direction.Ascending },
                 },
                 StartAt = new Cursor { Before = false, Values = { CreateValue(1), CreateValue("x") } },
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void StartAfter_Empty()
+        {
+            var query = GetEmptyQuery().OrderBy("foo").StartAfter(new object[0]);
+            var expected = new StructuredQuery
+            {
+                OrderBy =
+                {
+                    new Order { Field = Field("foo"), Direction = Direction.Ascending }
+                },
+                StartAt = new Cursor { Before = false },
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
@@ -378,6 +410,22 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void EndAt_Empty()
+        {
+            var query = GetEmptyQuery().OrderBy("foo").EndAt(new object[0]);
+            var expected = new StructuredQuery
+            {
+                OrderBy =
+                {
+                    new Order { Field = Field("foo"), Direction = Direction.Ascending }
+                },
+                EndAt = new Cursor { Before = false },
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
         public void EndBefore()
         {
             var query = GetEmptyQuery().OrderBy("foo").OrderBy("bar").OrderBy("baz").EndBefore(1, "x");
@@ -395,8 +443,24 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expected, query.ToStructuredQuery());
         }
 
+        [Fact]
+        public void EndBefore_Empty()
+        {
+            var query = GetEmptyQuery().OrderBy("foo").EndBefore(new object[0]);
+            var expected = new StructuredQuery
+            {
+                OrderBy =
+                {
+                    new Order { Field = Field("foo"), Direction = Direction.Ascending }
+                },
+                EndAt = new Cursor { Before = true },
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+
         [Theory]
-        [InlineData(new object[0])]
         [InlineData("x", "y")]
         public void InvalidCursor(params object[] values)
         {
