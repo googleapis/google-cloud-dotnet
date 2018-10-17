@@ -21,7 +21,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         /// </summary>
         private abstract class SessionPoolBase : ISessionPool
         {
-            public SpannerClient Client => Parent.Client;
+            public SpannerClient Client => Parent._client;
             public SessionPoolOptions Options => Parent.Options;
             protected SessionPool Parent { get; }
             public abstract void Release(PooledSession session, bool deleteSession);

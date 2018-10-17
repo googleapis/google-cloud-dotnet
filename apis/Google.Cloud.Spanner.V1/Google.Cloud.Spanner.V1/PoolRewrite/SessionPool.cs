@@ -39,12 +39,13 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
 
         private readonly Logger _logger;
 
+        private readonly SpannerClient _client;
+
         /// <summary>
         /// The options governing this session pool.
         /// </summary>
         public SessionPoolOptions Options { get; }
 
-        internal SpannerClient Client { get; }
 
         /// <summary>
         /// Creates a session pool for the given client.
@@ -54,7 +55,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         /// <param name="logger">The logger to use. May be null, in which case the default logger is used.</param>
         public SessionPool(SpannerClient client, SessionPoolOptions options, Logger logger)
         {
-            Client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             Options = GaxPreconditions.CheckNotNull(options, nameof(options));
             _logger = logger ?? Logger.DefaultLogger;
             _detachedSessionPool = new DetachedSessionPool(this);
@@ -103,7 +104,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         {
             try
             {
-                await Client.DeleteSessionAsync(new DeleteSessionRequest { SessionName = session.SessionName }).ConfigureAwait(false);
+                await _client.DeleteSessionAsync(new DeleteSessionRequest { SessionName = session.SessionName }).ConfigureAwait(false);
             }
             catch (RpcException e)
             {
