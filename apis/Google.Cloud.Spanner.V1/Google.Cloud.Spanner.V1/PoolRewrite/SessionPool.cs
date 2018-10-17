@@ -12,6 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf;
+using Grpc.Core;
+using System;
+using System.Collections.Concurrent;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using static Google.Cloud.Spanner.V1.TransactionOptions;
+
 namespace Google.Cloud.Spanner.V1.PoolRewrite
 {
     /// <summary>
@@ -23,5 +35,81 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
     /// </summary>
     public sealed partial class SessionPool
     {
+        private readonly ISessionPool _detachedSessionPool;
+
+        private readonly Logger _logger;
+
+        /// <summary>
+        /// The options governing this session pool.
+        /// </summary>
+        public SessionPoolOptions Options { get; }
+
+        internal SpannerClient Client { get; }
+
+        /// <summary>
+        /// Creates a session pool for the given client.
+        /// </summary>
+        /// <param name="client">The client to use for this session pool. Must not be null.</param>
+        /// <param name="options">The options for this session pool. Must not be null.</param>
+        /// <param name="logger">The logger to use. May be null, in which case the default logger is used.</param>
+        public SessionPool(SpannerClient client, SessionPoolOptions options, Logger logger)
+        {
+            Client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            Options = GaxPreconditions.CheckNotNull(options, nameof(options));
+            _logger = logger ?? Logger.DefaultLogger;
+            _detachedSessionPool = new DetachedSessionPool(this);
+        }
+
+        // TODO: Rename?
+
+        /// <summary>
+        /// Creates a <see cref="PooledSession"/> with a known name and transaction ID/mode, with the client associated
+        /// with this pool, but is otherwise not part of this pool. This method does not query the server for the session state.
+        /// When the returned <see cref="PooledSession"/> is released, it will not become part of this pool.
+        /// </summary>
+        /// <param name="sessionName">The name of the transaction. Must not be null.</param>
+        /// <param name="transactionId">The ID of the transaction. Must not be null.</param>
+        /// <param name="transactionMode">The mode of the transaction.</param>
+        /// <returns>A <see cref="PooledSession"/> for the given session and transaction.</returns>
+        public PooledSession RecreateSession(SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode)
+        {
+            GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
+            GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
+            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionMode);
+        }
+
+        /// <summary>
+        /// Awooga! Async void method! This is almost always a bad idea, but in this case we have "fire and forget" background
+        /// tasks (all created within this method). We want to log errors, but that's all.
+        /// </summary>
+        private async void ConsumeBackgroundTask(Task task, string purpose)
+        {
+            try
+            {
+                await task.ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                _logger.Error($"Error in background session pool task for {purpose}", e);
+            }
+        }
+
+        private void DeleteSessionFireAndForget(PooledSession session)
+        {
+            ConsumeBackgroundTask(DeleteSessionAsync(session), "session deletion");
+        }
+
+        private async Task DeleteSessionAsync(PooledSession session)
+        {
+            try
+            {
+                await Client.DeleteSessionAsync(new DeleteSessionRequest { SessionName = session.SessionName }).ConfigureAwait(false);
+            }
+            catch (RpcException e)
+            {
+                _logger.Warn("Failed to delete session. Session will be abandoned to garbage collection.", e);
+            }
+        }
+
     }
 }

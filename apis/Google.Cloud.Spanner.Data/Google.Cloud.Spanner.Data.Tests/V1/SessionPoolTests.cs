@@ -12,9 +12,80 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Spanner.Data.Tests.V1
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf;
+using Moq;
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using Xunit;
+using static Google.Cloud.Spanner.V1.TransactionOptions;
+
+namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 {
     public partial class SessionPoolTests
     {
+        private static readonly SessionName s_sampleSessionName = new SessionName("project", "instance", "database", "session");
+        private static readonly ByteString s_sampleTransactionId = ByteString.CopyFromUtf8("transaction-id");
+
+        [Fact]
+        public void RecreateSession()
+        {
+            var logger = new InMemoryLogger();
+            var mock = new Mock<SpannerClient>();
+            var pool = new SessionPool(mock.Object, new SessionPoolOptions(), logger);
+
+            var mode = ModeOneofCase.ReadOnly;
+            var session = pool.RecreateSession(s_sampleSessionName, s_sampleTransactionId, mode);
+            Assert.Equal(s_sampleSessionName, session.SessionName);
+            Assert.Equal(s_sampleTransactionId, session.TransactionId);
+            Assert.Equal(mode, session.TransactionMode);
+            logger.AssertNoWarningsOrErrors();
+        }
+
+        // TODO: Would this be useful in CommonTesting?
+        /// <summary>
+        /// Logger which retains log entries, allowing us to detect warnings and errors.
+        /// </summary>
+        private class InMemoryLogger : Logger
+        {
+            private readonly ConcurrentDictionary<LogLevel, List<string>> _logsByLevel = new ConcurrentDictionary<LogLevel, List<string>>();
+
+            internal InMemoryLogger()
+            {
+                LogLevel = LogLevel.Debug;
+            }
+
+            public override void LogPerformanceMessage(string message)
+            {
+            }
+
+            protected override void WriteLine(LogLevel level, string message)
+            {
+                var list = _logsByLevel.GetOrAdd(level, _ => new List<string>());
+                lock (list)
+                {
+                    list.Add(message);
+                }
+            }
+
+            internal void AssertNoWarningsOrErrors()
+            {
+                AssertNoEntries(LogLevel.Error);
+                AssertNoEntries(LogLevel.Warn);
+            }
+
+            private void AssertNoEntries(LogLevel level)
+            {
+                var list = _logsByLevel.GetOrAdd(level, _ => new List<string>());
+                lock (list)
+                {
+                    if (list.Count != 0)
+                    {
+                        Assert.True(false, $"Level {level}:{Environment.NewLine}{string.Join(Environment.NewLine, list)}");
+                    }
+                }
+            }
+        }
     }
 }
