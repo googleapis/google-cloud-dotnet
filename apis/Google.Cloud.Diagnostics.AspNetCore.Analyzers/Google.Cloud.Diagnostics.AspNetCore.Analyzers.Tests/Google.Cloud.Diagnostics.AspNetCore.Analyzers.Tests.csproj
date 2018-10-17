@@ -13,8 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\tools\Google.Cloud.AnalyzersTesting\Google.Cloud.AnalyzersTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore.Analyzers\Google.Cloud.Diagnostics.AspNetCore.Analyzers.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="1.0.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
     <PackageReference Include="Moq" Version="4.9.0" />
     <PackageReference Include="xunit" Version="2.4.0" />

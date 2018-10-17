@@ -224,8 +224,8 @@
       "Google.Api.Gax.Testing": "2.5.0"
     },
     "additionalAnalyzerTestDependencies": {
-      "Microsoft.AspNetCore.Mvc.Core": "1.0.2",
-      "Microsoft.AspNetCore.Routing": "1.0.2"
+      "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
+      "Microsoft.AspNetCore.Routing": "1.0.4"
     }
   },
 
@@ -238,8 +238,8 @@
     "description": "Guidelines for using Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
     "tags": [ "CodeAnalysis", "Analyzers", "CSharp" ],
     "testDependencies": {
-      "Microsoft.AspNetCore.Mvc.Core": "1.0.2",
-      "Microsoft.AspNetCore.Routing": "1.0.2"
+      "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
+      "Microsoft.AspNetCore.Routing": "1.0.4"
     }
   },
 
@@ -275,7 +275,7 @@
       "Grpc.Core": "1.13.1"
     },
     "testDependencies": {
-      "Microsoft.AspNetCore.Mvc.Core": "1.0.2"
+      "Microsoft.AspNetCore.Mvc.Core": "1.0.4"
     }
   },
 
