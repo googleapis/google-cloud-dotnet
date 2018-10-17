@@ -603,7 +603,6 @@ namespace Google.Cloud.Firestore
         private Cursor CreateCursor(object[] fieldValues, bool before)
         {
             GaxPreconditions.CheckNotNull(fieldValues, nameof(fieldValues));
-            GaxPreconditions.CheckArgument(fieldValues.Length != 0, nameof(fieldValues), "Cannot specify an empty set of values for a start/end query cursor.");
             GaxPreconditions.CheckArgument(
                 fieldValues.Length <= _orderings.Count,
                 nameof(fieldValues),
