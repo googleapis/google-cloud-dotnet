@@ -136,7 +136,7 @@ then
     if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
     then
       echo "(Running with coverage)"
-      (cd "$testdir"; $DOTCOVER cover "coverage.xml" /ReturnTargetExitCode)
+      (cd "$testdir"; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode)
     else
       dotnet test -c Release --no-build $testproject
     fi
