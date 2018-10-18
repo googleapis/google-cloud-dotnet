@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
 using System.Reflection;
@@ -24,14 +23,12 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
     {
         public static TheoryData<string, object> ValidPropertyValues = new TheoryData<string, object>
         {
-            { nameof(SessionPoolOptions.Clock), SystemClock.Instance },
             { nameof(SessionPoolOptions.IdleSessionRefreshDelay), TimeSpan.FromSeconds(1) },
             { nameof(SessionPoolOptions.MaintenanceLoopDelay), TimeSpan.FromSeconds(1) },
             { nameof(SessionPoolOptions.MaximumActiveSessions), 1 },
             { nameof(SessionPoolOptions.MaximumConcurrentSessionCreates), 5 },
             { nameof(SessionPoolOptions.MinimumPooledSessions), 0 },
             { nameof(SessionPoolOptions.PoolEvictionDelay), TimeSpan.FromSeconds(1) },
-            { nameof(SessionPoolOptions.Scheduler), SystemScheduler.Instance },
             { nameof(SessionPoolOptions.SessionEvictionJitter), RetrySettings.NoJitter },
             { nameof(SessionPoolOptions.SessionRefreshJitter), RetrySettings.NoJitter },
             { nameof(SessionPoolOptions.WaitOnResourcesExhausted), ResourcesExhaustedBehavior.Fail },
@@ -40,14 +37,12 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 
         public static TheoryData<string, object> InvalidPropertyValues = new TheoryData<string, object>
         {
-            { nameof(SessionPoolOptions.Clock), null },
             { nameof(SessionPoolOptions.IdleSessionRefreshDelay), TimeSpan.FromSeconds(0) },
             { nameof(SessionPoolOptions.MaintenanceLoopDelay), TimeSpan.FromSeconds(0) },
             { nameof(SessionPoolOptions.MaximumActiveSessions), 0 },
             { nameof(SessionPoolOptions.MaximumConcurrentSessionCreates), 0 },
             { nameof(SessionPoolOptions.MinimumPooledSessions), -1 },
             { nameof(SessionPoolOptions.PoolEvictionDelay), TimeSpan.FromSeconds(0) },
-            { nameof(SessionPoolOptions.Scheduler), null },
             { nameof(SessionPoolOptions.SessionEvictionJitter), null },
             { nameof(SessionPoolOptions.SessionRefreshJitter), null },
             { nameof(SessionPoolOptions.WaitOnResourcesExhausted), (ResourcesExhaustedBehavior) 10 },

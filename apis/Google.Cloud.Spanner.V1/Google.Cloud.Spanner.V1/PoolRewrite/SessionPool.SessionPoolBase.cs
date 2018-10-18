@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+
 namespace Google.Cloud.Spanner.V1.PoolRewrite
 {
     public partial class SessionPool
@@ -22,6 +24,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         private abstract class SessionPoolBase : ISessionPool
         {
             public SpannerClient Client => Parent._client;
+            public IClock Clock => Parent._clock;
             public SessionPoolOptions Options => Parent.Options;
             protected SessionPool Parent { get; }
             public abstract void Release(PooledSession session, bool deleteSession);

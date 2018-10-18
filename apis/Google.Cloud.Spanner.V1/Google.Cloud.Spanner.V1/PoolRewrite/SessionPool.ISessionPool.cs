@@ -13,6 +13,8 @@
 // limitations under the License.
 
 
+using Google.Api.Gax;
+
 namespace Google.Cloud.Spanner.V1.PoolRewrite
 {
     public partial class SessionPool
@@ -23,6 +25,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         internal interface ISessionPool
         {
             SpannerClient Client { get; }
+            IClock Clock { get; }
             void Release(PooledSession session, bool deleteSession);
             SessionPoolOptions Options { get; }
         }

@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
         public void RecreateSession()
         {
             var logger = new InMemoryLogger();
-            var mock = new Mock<SpannerClient>();
+            var mock = SpannerClientHelpers.CreateMockClient();
             var pool = new SessionPool(mock.Object, new SessionPoolOptions(), logger);
 
             var mode = ModeOneofCase.ReadOnly;
