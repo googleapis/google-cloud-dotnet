@@ -35,8 +35,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         private int _maximumConcurrentSessionCreates = 10;
         private RetrySettings.IJitter _sessionRefreshJitter = new ProportionalRandomJitter(0.1);
         private RetrySettings.IJitter _sessionEvictionJitter = new ProportionalRandomJitter(0.1);
-        private IClock _clock = SystemClock.Instance;
-        private IScheduler _scheduler= SystemScheduler.Instance;
 
         /// <summary>
         /// Constructs a new <see cref="SessionPoolOptions"/> with default values.
@@ -201,24 +199,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         {
             get => _sessionEvictionJitter;
             set => _sessionEvictionJitter = GaxPreconditions.CheckNotNull(value, nameof(value));
-        }
-
-        /// <summary>
-        /// Clock used for timings; can be replaced for testing.
-        /// </summary>
-        internal IClock Clock
-        {
-            get => _clock;
-            set => _clock = GaxPreconditions.CheckNotNull(value, nameof(value));
-        }
-
-        /// <summary>
-        /// Scheduler used for delays (e.g. the pool maintenance loop); can be replaced for testing.
-        /// </summary>
-        internal IScheduler Scheduler
-        {
-            get => _scheduler;
-            set => _scheduler = GaxPreconditions.CheckNotNull(value, nameof(value));
         }
 
         // TODO: Move to GAX if we find we need it in other libraries. (We have CheckNonNegative already.)

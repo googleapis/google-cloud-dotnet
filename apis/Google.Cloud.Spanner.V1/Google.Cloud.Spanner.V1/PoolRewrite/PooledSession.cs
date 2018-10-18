@@ -109,7 +109,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         internal static PooledSession FromSessionName(SessionPool.ISessionPool pool, SessionName sessionName)
         {
             var options = pool.Options;
-            var now = options.Clock.GetCurrentDateTimeUtc();
+            var now = pool.Clock.GetCurrentDateTimeUtc();
             var refreshDelay = options.SessionRefreshJitter.GetDelay(options.IdleSessionRefreshDelay);
             var evictionDelay = options.SessionEvictionJitter.GetDelay(options.PoolEvictionDelay);
             return new PooledSession(pool, sessionName, transactionId: null, ModeOneofCase.None, now + evictionDelay, now.Ticks + refreshDelay.Ticks);
@@ -127,12 +127,12 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         /// <summary>
         /// Indicates whether the associated session has expired and should be evicted from the pool.
         /// </summary>
-        internal bool ShouldBeEvicted => _pool.Options.Clock.GetCurrentDateTimeUtc() > _evictionTime;
+        internal bool ShouldBeEvicted => _pool.Clock.GetCurrentDateTimeUtc() > _evictionTime;
 
         /// <summary>
         /// Indicates whether the associated session should be refreshed due to inactivity.
         /// </summary>
-        internal bool RequiresRefresh => _pool.Options.Clock.GetCurrentDateTimeUtc().Ticks > RefreshTicks;
+        internal bool RequiresRefresh => _pool.Clock.GetCurrentDateTimeUtc().Ticks > RefreshTicks;
 
         /// <summary>
         /// Indicates the next refresh time; only used by tests.
@@ -303,7 +303,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         private void UpdateRefreshTime()
         {
             var options = _pool.Options;
-            var nowTicks = options.Clock.GetCurrentDateTimeUtc().Ticks;
+            var nowTicks = _pool.Clock.GetCurrentDateTimeUtc().Ticks;
             var refreshDelay = options.SessionRefreshJitter.GetDelay(options.IdleSessionRefreshDelay);
             Interlocked.Exchange(ref _refreshTicks, nowTicks + refreshDelay.Ticks);
         }

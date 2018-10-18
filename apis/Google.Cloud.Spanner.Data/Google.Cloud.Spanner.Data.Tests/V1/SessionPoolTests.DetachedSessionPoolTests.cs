@@ -29,7 +29,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             public void ReleaseDetachedSession_NoDelete()
             {
                 var logger = new InMemoryLogger();
-                var mock = new Mock<SpannerClient>(MockBehavior.Strict);
+                var mock = SpannerClientHelpers.CreateMockClient();
                 var pool = new SessionPool(mock.Object, new SessionPoolOptions(), logger);
                 var session = pool.RecreateSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadOnly);
 
@@ -42,7 +42,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             public void ReleaseDetachedSession_Delete()
             {
                 var logger = new InMemoryLogger();
-                var mock = new Mock<SpannerClient>(MockBehavior.Strict);
+                var mock = SpannerClientHelpers.CreateMockClient();
                 // We will force the session to be deleted, so check it happens in the mock.
                 mock.Setup(client => client.DeleteSessionAsync(new DeleteSessionRequest { SessionName = s_sampleSessionName }, null))
                     .Returns(Task.FromResult(0))

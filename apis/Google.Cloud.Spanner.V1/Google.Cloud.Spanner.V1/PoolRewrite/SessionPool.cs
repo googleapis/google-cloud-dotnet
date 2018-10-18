@@ -36,10 +36,10 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
     public sealed partial class SessionPool
     {
         private readonly ISessionPool _detachedSessionPool;
-
         private readonly Logger _logger;
-
         private readonly SpannerClient _client;
+        private readonly IClock _clock;
+        private readonly IScheduler _scheduler;
 
         /// <summary>
         /// The options governing this session pool.
@@ -56,6 +56,8 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         public SessionPool(SpannerClient client, SessionPoolOptions options, Logger logger)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _clock = _client.Settings.Clock ?? SystemClock.Instance;
+            _scheduler = _client.Settings.Scheduler ?? SystemScheduler.Instance;
             Options = GaxPreconditions.CheckNotNull(options, nameof(options));
             _logger = logger ?? Logger.DefaultLogger;
             _detachedSessionPool = new DetachedSessionPool(this);
