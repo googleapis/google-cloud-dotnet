@@ -51,3 +51,8 @@ BenchmarkDotNet.Artifacts
 
 # Log files
 build_timing_log.txt
+
+# Website build result files
+**/node_modules/**
+*.min.js
+*.min.css

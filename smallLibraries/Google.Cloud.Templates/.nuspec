@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Google.Cloud.Templates</id>
+        <version>1.0.0</version>
+        <title>Google Cloud Platform Templates</title>
+        <authors>Google Cloud Tools</authors>
+        <description>.NET Core Templates for Web applications using Google Cloud Platform resources.</description>
+        <packageTypes>
+            <packageType name="Template" />
+        </packageTypes>
+        <projectUrl>https://github.com/googleapis/google-cloud-dotnet</projectUrl>
+        <licenseUrl>https://github.com/googleapis/google-cloud-dotnet/blob/master/LICENSE</licenseUrl>
+        <repository>https://github.com/googleapis/google-cloud-dotnet.git</repository>
+    </metadata>
+</package>
