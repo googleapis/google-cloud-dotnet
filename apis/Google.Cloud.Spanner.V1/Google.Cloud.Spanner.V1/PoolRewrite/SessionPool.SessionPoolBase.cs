@@ -20,8 +20,9 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
     {
         /// <summary>
         /// Trivial base class for TargetedSessionPool and DetachedSessionPool.
+        /// Only internal so that <see cref="TargetedSessionPool"/> can be internal too.
         /// </summary>
-        private abstract class SessionPoolBase : ISessionPool
+        internal abstract class SessionPoolBase : ISessionPool
         {
             public SpannerClient Client => Parent._client;
             public IClock Clock => Parent._clock;

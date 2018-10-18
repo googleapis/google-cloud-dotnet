@@ -20,14 +20,14 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 {
     public class TestLogger : Logger
     {
-        private static readonly TestLogger s_instance = new TestLogger();
-
+        public static TestLogger Instance { get; } = new TestLogger();
+        
         private TestLogger()
         {
             LogLevel = V1.Internal.Logging.LogLevel.Debug;
         }
 
-        public static void Install() => SetDefaultLogger(s_instance);
+        public static void Install() => SetDefaultLogger(Instance);
 
         protected override void WriteLine(V1.Internal.Logging.LogLevel level, string message) => WriteLine($"{level}: {message}");
 

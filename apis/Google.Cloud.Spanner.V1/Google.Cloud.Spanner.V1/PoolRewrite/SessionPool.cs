@@ -41,6 +41,8 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
 
+        private readonly SemaphoreSlim _sessionAcquisitionSemaphore;
+
         /// <summary>
         /// The options governing this session pool.
         /// </summary>
@@ -61,6 +63,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             Options = GaxPreconditions.CheckNotNull(options, nameof(options));
             _logger = logger ?? Logger.DefaultLogger;
             _detachedSessionPool = new DetachedSessionPool(this);
+            _sessionAcquisitionSemaphore = new SemaphoreSlim(Options.MaximumConcurrentSessionCreates);
         }
 
         // TODO: Rename?
@@ -114,5 +117,22 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             }
         }
 
+        // FIXME: Work out somewhere decent to put this.
+        private static Task<T> TcsWithCancellationToken<T>(TaskCompletionSource<T> tcs, CancellationToken cancellationToken)
+        {
+            if (!cancellationToken.CanBeCanceled)
+            {
+                return tcs.Task;
+            }
+            return Wait();
+            
+            async Task<T> Wait()
+            {
+                using (var registration = cancellationToken.Register(() => tcs.TrySetCanceled()))
+                {
+                    return await tcs.Task.ConfigureAwait(false);
+                }
+            }
+        }
     }
 }

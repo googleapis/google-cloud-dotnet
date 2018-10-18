@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Moq;
@@ -46,6 +47,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
         // TODO: Would this be useful in CommonTesting?
         /// <summary>
         /// Logger which retains log entries, allowing us to detect warnings and errors.
+        /// All log entries are also written to the test logger.
         /// </summary>
         private class InMemoryLogger : Logger
         {
@@ -62,6 +64,9 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 
             protected override void WriteLine(LogLevel level, string message)
             {
+                // TODO: Make this cleaner. We don't currently have a Log(LogLevel, string message) public method in Logger.
+                // We have a little way to go yet in terms of the Logger API...
+                TestLogger.Instance.Debug($"({nameof(InMemoryLogger)}.{level}) {message}");
                 var list = _logsByLevel.GetOrAdd(level, _ => new List<string>());
                 lock (list)
                 {
