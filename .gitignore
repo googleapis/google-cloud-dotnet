@@ -56,3 +56,4 @@ build_timing_log.txt
 **/node_modules/**
 *.min.js
 *.min.css
+smallLibraries/Google.Cloud.Templates/**/package-lock.json
