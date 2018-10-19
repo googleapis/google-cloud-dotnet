@@ -155,6 +155,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                     var firstSession = sessions[0];
                     await client.Scheduler.Delay(TimeSpan.FromMinutes(20)); // So a refresh is required
                     Assert.Equal(0, client.ExecuteSqlRequests.Count);
+                    var timeBeforeRelease = client.Clock.GetCurrentDateTimeUtc();
                     firstSession.ReleaseToPool(false);
 
                     var refreshedSession = await pool.AcquireSessionAsync(new TransactionOptions(), default);
@@ -162,6 +163,9 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                     Assert.Equal(1, client.ExecuteSqlRequests.Count);
                     Assert.True(client.ExecuteSqlRequests.TryDequeue(out var refreshRequest));
                     Assert.Equal("SELECT 1", refreshRequest.Sql);
+                    // The refresh time should have been reset due to the successful call.
+                    Assert.InRange(refreshedSession.RefreshTimeForTest,
+                        timeBeforeRelease.AddMinutes(15), client.Clock.GetCurrentDateTimeUtc().AddMinutes(15));
                 });
 
                 client.Logger.AssertNoWarningsOrErrors();

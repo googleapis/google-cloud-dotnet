@@ -63,11 +63,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 };
             }
 
-            public override Task<CommitResponse> CommitAsync(CommitRequest request, CallSettings callSettings = null)
-            {
-                return base.CommitAsync(request, callSettings);
-            }
-
             public override async Task<Session> CreateSessionAsync(CreateSessionRequest request, CallSettings callSettings = null)
             {
                 await Scheduler.Delay(CreateSessionDelay);

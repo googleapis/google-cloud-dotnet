@@ -36,7 +36,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             // Read-only state
             private readonly object _lock = new object();
             private readonly DatabaseName _databaseName;
-            private readonly SessionPool _parent;
             private readonly CreateSessionRequest _createSessionRequest;
 
             // Mutable state, which should be accessed within the lock
@@ -46,8 +45,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             private readonly ConcurrentQueue<PooledSession> _readWriteSessions = new ConcurrentQueue<PooledSession>();
             private readonly ConcurrentQueue<TaskCompletionSource<PooledSession>> _pendingAcquisitions =
                 new ConcurrentQueue<TaskCompletionSource<PooledSession>>();
-            // Convenience property. Should only be used within the lock.
-            private int PoolSize => _readOnlySessions.Count + _readWriteSessions.Count;
 
             // Tasks waiting for the pool to reach its minimum size or become unhealthy.
             private readonly LinkedList<TaskCompletionSource<int>> _minimumSizeWaiters = new LinkedList<TaskCompletionSource<int>>();
@@ -89,7 +86,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
 
             internal TargetedSessionPool(SessionPool parent, DatabaseName databaseName, bool acquireSessionsImmediately) : base(parent)
             {
-                _parent = parent;
                 _databaseName = GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
                 _createSessionRequest = new CreateSessionRequest { DatabaseAsDatabaseName = databaseName };
                 if (acquireSessionsImmediately)
@@ -104,6 +100,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 // session as being active. (If we have 99 active sessions at the moment, and nothing in the pool, we want to start a task
                 // to create the session we'll end up acquiring. If we wait until we've counted this session as being active, we won't
                 // start the new task as it'll take us over the limit.)
+                // FIXME: We don't cope with the "Minimum pool size of 0, max active = 100, currently active = 99" case.
                 StartAcquisitionTasksIfNecessary();
 
                 bool success = false;
@@ -147,14 +144,20 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                     }
                 }
 
-                if (session.TransactionMode != transactionMode)
+                // If we've already got the right transaction mode, we're done.
+                if (session.TransactionMode == transactionMode)
+                {
+                    return session;
+                }
+                // Otherwise, we may need to forget an existing transaction, or request a new one.
+                else
                 {
                     // If we asked for a session with no transaction but we got one *with* a tranasction,
                     // we don't need to perform any RPCs - but we do need to return a PooledSession with
                     // no transaction ID.
                     if (transactionMode == ModeOneofCase.None)
                     {
-                        session = session.WithTransaction(null, ModeOneofCase.None);
+                        return session.WithTransaction(null, ModeOneofCase.None);
                     }
                     else
                     {
@@ -163,11 +166,14 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                         {
                             session = await BeginTransactionAsync(session, transactionOptions, cancellationToken).ConfigureAwait(false);
                             success = true;
+                            return session;
                         }
                         finally
                         {
                             // If we succeeded in getting a session but not a transaction, we can reuse the session later, but still fail this call.
                             // It counts as "inactive" because the failure will decrement the active session count already.
+                            // Note that the only way success is false is if we're throwing an exception, so we'll never release it
+                            // *and* then return it.
                             if (!success)
                             {
                                 ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: false);
@@ -175,8 +181,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                         }
                     }
                 }
-
-                return session;
             }
 
             private Task<PooledSession> GetSessionAcquisitionTask(ModeOneofCase transactionMode, CancellationToken cancellationToken)
@@ -245,6 +249,9 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
 
                 if (session.RequiresRefresh)
                 {
+                    // RefreshAsync will then release the refreshed session itself - which
+                    // may trigger a transaction request as well. But eventually, it'll get
+                    // back to the pool (or a waiting consumer).
                     Parent.ConsumeBackgroundTask(RefreshAsync(session), "session refresh");
                     return;
                 }
@@ -292,15 +299,17 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                                 }
                                 else
                                 {
-                                    // Determine the right queue based on its transaction mode.
-                                    queue = session.TransactionMode == ModeOneofCase.ReadWrite ? _readWriteSessions : _readOnlySessions;
+                                    // At this point we didn't already have a r/w transaction, and we don't want to
+                                    // create one, so add it to the pool of read-only sessions.
+                                    queue = _readOnlySessions;
                                 }
                             }
                             // We definitely have a queue now, so add the session to it, and
                             // potentially release tasks waiting for the pool to reach minimum size.
                             queue.Enqueue(session);
 
-                            if (PoolSize >= Options.MinimumPooledSessions && _minimumSizeWaiters.Count > 0)
+                            int poolSize = _readOnlySessions.Count + _readWriteSessions.Count;
+                            if (poolSize >= Options.MinimumPooledSessions && _minimumSizeWaiters.Count > 0)
                             {
                                 var minimumSizeWaiters = _minimumSizeWaiters.ToList();
                                 outsideLockAction = () => minimumSizeWaiters.ForEach(tcs => tcs.TrySetResult(0));
@@ -336,7 +345,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 }
                 catch (RpcException e)
                 {
-                    _parent._logger.Warn("Failed to refresh session. Session will be deleted.", e);
+                    Parent._logger.Warn("Failed to refresh session. Session will be deleted.", e);
                     Parent.DeleteSessionFireAndForget(session);
                     return;
                 }
@@ -523,6 +532,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                             }
                             minimumSizeWaiters = _minimumSizeWaiters.ToList();
                         }
+                        // TODO: Is this too drastic, just for a single failure?
                         pendingAcquisitionsList.ForEach(tcs => tcs.TrySetException(e));
                         minimumSizeWaiters.ForEach(tcs => tcs.TrySetException(e));
                     }
@@ -544,7 +554,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                     bool acquiredSemaphore = false;
                     try
                     {
-                        await _parent._sessionAcquisitionSemaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
+                        await Parent._sessionAcquisitionSemaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
                         acquiredSemaphore = true;
                         sessionProto = await Client.CreateSessionAsync(_createSessionRequest, callSettings).ConfigureAwait(false);
                         success = true;
@@ -559,7 +569,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                     {
                         if (acquiredSemaphore)
                         {
-                            _parent._sessionAcquisitionSemaphore.Release();
+                            Parent._sessionAcquisitionSemaphore.Release();
                         }
                     }
                 }
