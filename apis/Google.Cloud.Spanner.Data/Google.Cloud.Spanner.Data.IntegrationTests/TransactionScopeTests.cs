@@ -13,6 +13,8 @@
 // limitations under the License.
 
 #if !NETCOREAPP1_0
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -302,6 +304,67 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     scope.Complete();
                 }
             });
+        }
+
+        // Note: this is deliberately parallel to TransactionTests.MultiTableWrite.
+        // It is intended to check that the same functionality works whether with an implicit
+        // scoped transaction, or an explicit transaction.
+        [Fact]
+        public void MultiTableWrite()
+        {
+            // For simplicity, use a new key so that this test is entirely self-contained.
+            string key = IdGenerator.FromGuid();
+            RetryHelpers.RetryOnce(() =>
+            {
+                using (var scope = new TransactionScope())
+                {
+                    using (var connection = _fixture.GetConnection())
+                    {
+                        connection.Open();
+                        using (var cmd1 = connection.CreateInsertCommand(_fixture.TableName))
+                        {
+                            cmd1.Parameters.Add("K", SpannerDbType.String).Value = key;
+                            cmd1.Parameters.Add("StringValue", SpannerDbType.String).Value = "text";
+                            cmd1.ExecuteNonQuery();
+                        }
+
+                        using (var cmd2 = connection.CreateInsertCommand(_fixture.TableName2))
+                        {
+                            cmd2.Parameters.Add("K", SpannerDbType.String).Value = key;
+                            cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
+                            cmd2.ExecuteNonQuery();
+                        }
+                    }
+
+                    scope.Complete();
+                }
+            });
+
+            // Read the values from both tables
+            using (var connection = _fixture.GetConnection())
+            {
+                using (var command = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE K=@Key"))
+                {
+                    command.Parameters.Add("Key", SpannerDbType.String).Value = key;
+                    using (var reader = command.ExecuteReader())
+                    {
+                        Assert.True(reader.Read());
+                        Assert.Equal("text", reader["StringValue"]);
+                        Assert.False(reader.Read());
+                    }
+                }
+
+                using (var command = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName2} WHERE K=@Key"))
+                {
+                    command.Parameters.Add("Key", SpannerDbType.String).Value = key;
+                    using (var reader = command.ExecuteReader())
+                    {
+                        Assert.True(reader.Read());
+                        Assert.Equal(50L, reader["Int64Value"]);
+                        Assert.False(reader.Read());
+                    }
+                }
+            }
         }
 
         private void AssertDisposeThrows(Action<TransactionScope> action)
