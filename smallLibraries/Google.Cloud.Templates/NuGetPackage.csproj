@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" DefaultTargets="Pack">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PackageId>Google.Cloud.Templates</PackageId>
+    <PackageVersionPrefix>1.0.0</PackageVersionPrefix>
+    <PackageVersionSuffix>alpha.1</PackageVersionSuffix>
+    <Authors>Google Inc.</Authors>
+    <Title>Google Cloud Platform Templates</Title>
+    <Description>.NET Core Templates for Web applications using Google Cloud Platform resources.</Description>
+    <Copyright>Copyright 2018 Google LLC</Copyright>
+    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+    <PackageLicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/googleapis/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
+    <PackageType>Template</PackageType>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="content/**" Exclude="**/*.user;**/.vs/**;**/node_modules/**;**/bin/**;**/obj/**" >
+      <Pack>true</Pack>
+      <PackagePath>content\</PackagePath>
+    </Content>
+    <Compile Remove="content/**" />
+  </ItemGroup>
+</Project>

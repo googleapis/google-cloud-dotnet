@@ -1,108 +1,121 @@
 {
-    "$schema": "http://json.schemastore.org/template",
-    "author": "Google Cloud Tools",
-    "groupIdentity": "GCP.ASP.NET.MVC",
-    "identity": "GCP.ASP.NET.MVC.CSharp",
-    "name": "Google ASP.NET Core MVC",
-    "shortName": "gcpmvc",
-    "description": "ASP.NET Core MVC template for Google Cloud",
-    "classifications": [
-        "GCP",
-        "Web",
-        "ASP.NET",
-        "MVC"
-    ],
-    "defaultName": "MyGoogleCloudMvcApp",
-    "sourceName": "MyGcpMvcProject",
-    "preferNameDirectory": true,
-    "sources": [
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Google Cloud Tools",
+  "groupIdentity": "GCP.ASP.NET.MVC",
+  "identity": "GCP.ASP.NET.MVC.CSharp",
+  "name": "Google ASP.NET Core MVC",
+  "shortName": "gcpmvc",
+  "description": "ASP.NET Core MVC template for Google Cloud",
+  "classifications": [ "GCP", "Web", "ASP.NET", "MVC" ],
+  "defaultName": "MyGoogleCloudMvcApp",
+  "sourceName": "MyGcpMvcProject",
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "**/.vs/**"
+      ],
+      "modifiers": [
         {
-            "source": "./",
-            "target": "./",
-            "exclude": [
-                "**/[Bb]in/**",
-                "**/[Oo]bj/**",
-                ".template.config/**/*",
-                "**/*.filelist",
-                "**/*.user",
-                "**/*.lock.json"
-            ],
-            "modifiers": [
-                {
-                    "condition": "(!Framework1)",
-                    "exclude": [
-                        "Startup.cs"
-                    ]
-                }
-            ]
+          "condition": "(!Framework1)",
+          "exclude": [ "Startup.cs" ]
         }
-    ],
-    "symbols": {
-        "Framework": {
-            "type": "parameter",
-            "datatype": "choice",
-            "choices": [
-                "netcoreapp1.0",
-                "netcoreapp1.1",
-                "netcoreapp2.0",
-                "netcoreapp2.1"
-            ],
-            "defaultValue": "netcoreapp2.1",
-            "replaces": "netcoreapp2.1",
-            "description": "The target Framework."
-        },
-        "gcp-project-id": {
-            "type": "parameter",
-            "datatype": "text",
-            "defaultValue": "",
-            "description": "The id of the Google Cloud Platform project to send Stackdriver logs to. Only reqired when running outside of GCP.",
-            "replaces": "gcp-project-id",
-        },
-        "createYear": {
-            "type": "generated",
-            "generator": "now",
-            "parameters": {
-                "format": "yyyy"
-            },
-            "replaces": "2017"
-        },
-        "port": {
-            "type": "generated",
-            "generator": "port",
-            "parameters": {
-                "fallback": 5000
-            },
-            "replaces": "5000"
-        },
-        "Framework2_1": {
-            "type": "computed",
-            "datatype": "bool",
-            "value": "(Framework == \"netcoreapp2.1\")"
-        },
-        "Framework2_0": {
-            "type": "computed",
-            "datatype": "bool",
-            "value": "(Framework == \"netcoreapp2.0\")"
-        },
-        "Framework2": {
-            "type": "computed",
-            "datatype": "bool",
-            "value": "(Framework2_0 || Framework2_1)"
-        },
-        "Framework1_1": {
-            "type": "computed",
-            "datatype": "bool",
-            "value": "(Framework == \"netcoreapp1.1\")"
-        },
-        "Framework1_0": {
-            "type": "computed",
-            "datatype": "bool",
-            "value": "(Framework == \"netcoreapp1.0\")"
-        },
-        "Framework1": {
-            "type": "computed",
-            "datatype": "bool",
-            "value": "(Framework1_1 || Framework1_0)"
-        }
+      ]
     }
+  ],
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "datatype": "choice",
+
+      "choices": [
+        {
+          "choice": "netcoreapp1.0",
+          "description": ".NET Core 1.0"
+        },
+        {
+          "choice": "netcoreapp1.1",
+          "description": ".NET Core 1.1"
+        },
+        {
+          "choice": "netcoreapp2.0",
+          "description": ".NET Core 2.0"
+        },
+        {
+          "choice": "netcoreapp2.1",
+          "description": ".NET Core 2.1"
+        }
+      ],
+
+      "defaultValue": "netcoreapp2.1",
+      "replaces": "netcoreapp2.1",
+      "description": "The target Framework."
+    },
+
+    "gcp-project-id": {
+      "type": "parameter",
+      "datatype": "text",
+      "defaultValue": "",
+      "description": "The id of the Google Cloud Platform project to send Stackdriver logs to. Only reqired when running outside of GCP.",
+      "replaces": "gcp-project-id"
+    },
+
+    "createYear": {
+      "type": "generated",
+      "generator": "now",
+      "parameters": { "format": "yyyy" },
+      "replaces": "2017"
+    },
+
+    "port": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": { "fallback": 5000 },
+      "replaces": "5000"
+    },
+
+    "Framework2_1": {
+      "type": "computed",
+      "datatype": "bool",
+      "value": "(Framework == \"netcoreapp2.1\")"
+    },
+
+    "Framework2_0": {
+      "type": "computed",
+      "datatype": "bool",
+      "value": "(Framework == \"netcoreapp2.0\")"
+    },
+
+    "Framework2": {
+      "type": "computed",
+      "datatype": "bool",
+      "value": "(Framework2_0 || Framework2_1)"
+    },
+
+    "Framework1_1": {
+      "type": "computed",
+      "datatype": "bool",
+      "value": "(Framework == \"netcoreapp1.1\")"
+    },
+
+    "Framework1_0": {
+      "type": "computed",
+      "datatype": "bool",
+      "value": "(Framework == \"netcoreapp1.0\")"
+    },
+
+    "Framework1": {
+      "type": "computed",
+      "datatype": "bool",
+      "value": "(Framework1_1 || Framework1_0)"
+    }
+  }
 }

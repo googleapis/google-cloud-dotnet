@@ -1,18 +1,21 @@
 #if (Framework2)
 using Google.Cloud.Diagnostics.AspNetCore;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using System;
-#endif
-
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore;
 using System.IO;
 
+#else
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
+
+#endif
 namespace MyGcpMvcProject
 {
     public class Program
@@ -25,18 +28,24 @@ namespace MyGcpMvcProject
         public static bool HasGcpProjectId => !string.IsNullOrEmpty(GcpProjectId);
 
 #endif
-        public static void Main(string[] args) =>
+        public static void Main(string[] args)
+        {
             BuildWebHost(args).Run();
+        }
 
-        public static IWebHost BuildWebHost(string[] args) =>
+        private static IWebHost BuildWebHost(string[] args) =>
+#if (Framework1)
+            new WebHostBuilder()
+                .UseKestrel()
+                .UseIISIntegration()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseStartup<Startup>()
+                .Build();
+#elif (Framework2)
             WebHost.CreateDefaultBuilder(args)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
-#if (Framework1)
-                .UseStartup<Startup>()
-#elif (Framework2)
-                .ConfigureAppConfiguration((context, configBuilder) =>
-                {
+                .ConfigureAppConfiguration((context, configBuilder) => {
                     HostingEnvironment = context.HostingEnvironment;
 
                     configBuilder.SetBasePath(HostingEnvironment.ContentRootPath)
@@ -47,8 +56,7 @@ namespace MyGcpMvcProject
                     Configuration = configBuilder.Build();
                     GcpProjectId = GetProjectId(Configuration);
                 })
-                .ConfigureServices(services =>
-                {
+                .ConfigureServices(services => {
                     // Add framework services.Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService
                     services.AddMvc();
 
@@ -58,8 +66,7 @@ namespace MyGcpMvcProject
                         services.AddGoogleTrace(options => options.ProjectId = GcpProjectId);
                         // Sends Exceptions to Stackdriver Error Reporting.
                         services.AddGoogleExceptionLogging(
-                            options =>
-                            {
+                            options => {
                                 options.ProjectId = GcpProjectId;
                                 options.ServiceName = GetServiceName(Configuration);
                                 options.Version = GetVersion(Configuration);
@@ -67,8 +74,7 @@ namespace MyGcpMvcProject
                         services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(GcpProjectId));
                     }
                 })
-                .ConfigureLogging(loggingBuilder =>
-                {
+                .ConfigureLogging(loggingBuilder => {
                     loggingBuilder.AddConfiguration(Configuration.GetSection("Logging"));
                     if (HostingEnvironment.IsDevelopment())
                     {
@@ -78,8 +84,7 @@ namespace MyGcpMvcProject
                         loggingBuilder.AddDebug();
                     }
                 })
-                .Configure((app) =>
-                {
+                .Configure((app) => {
                     var logger = app.ApplicationServices.GetService<ILoggerFactory>().CreateLogger("Startup");
                     if (HasGcpProjectId)
                     {
@@ -113,26 +118,17 @@ namespace MyGcpMvcProject
                     {
                         app.UseExceptionHandler("/Home/Error");
                     }
-                    
-                    app.UseStaticFiles(new StaticFileOptions
-                    {
+
+                    app.UseStaticFiles(new StaticFileOptions {
                         FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
                         RequestPath = new PathString("/lib")
                     });
 
                     app.UseStaticFiles();
 
-                    app.UseMvc(routes =>
-                    {
-                        routes.MapRoute(
-                            name: "default",
-                            template: "{controller=Home}/{action=Index}/{id?}");
-                    });
+                    app.UseMvc(routes => routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}"));
                 })
-#endif
                 .Build();
-
-#if (Framework2)
 
         /// <summary>
         /// Get the Google Cloud Platform Project ID from the platform it is running on,

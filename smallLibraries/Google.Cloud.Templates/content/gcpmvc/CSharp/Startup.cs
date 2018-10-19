@@ -1,4 +1,5 @@
-﻿using Google.Cloud.Diagnostics.AspNetCore;
+﻿#if Framework1
+using Google.Cloud.Diagnostics.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -42,8 +43,7 @@ namespace MyGcpMvcProject
                 services.AddGoogleTrace(options => options.ProjectId = ProjectId);
                 // Sends Exceptions to Stackdriver Error Reporting.
                 services.AddGoogleExceptionLogging(
-                    options =>
-                    {
+                    options => {
                         options.ProjectId = ProjectId;
                         options.ServiceName = GetServiceName();
                         options.Version = GetVersion();
@@ -63,8 +63,7 @@ namespace MyGcpMvcProject
 
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
-                app.UseStaticFiles(new StaticFileOptions
-                {
+                app.UseStaticFiles(new StaticFileOptions {
                     FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
                     RequestPath = new PathString("/lib")
                 });
@@ -103,8 +102,7 @@ namespace MyGcpMvcProject
 
             app.UseStaticFiles();
 
-            app.UseMvc(routes =>
-            {
+            app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
@@ -158,3 +156,4 @@ namespace MyGcpMvcProject
         }
     }
 }
+#endif
