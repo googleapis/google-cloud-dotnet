@@ -21,11 +21,11 @@ namespace MyGcpMvcProject
     public class Program
     {
 #if (Framework2)
-        public static IHostingEnvironment HostingEnvironment { get; private set; }
-        public static IConfiguration Configuration { get; private set; }
+        private static IHostingEnvironment HostingEnvironment { get; set; }
+        private static IConfiguration Configuration { get; set; }
 
-        public static string GcpProjectId { get; private set; }
-        public static bool HasGcpProjectId => !string.IsNullOrEmpty(GcpProjectId);
+        private static string GcpProjectId { get; set; }
+        private static bool HasGcpProjectId => !string.IsNullOrEmpty(GcpProjectId);
 
 #endif
         public static void Main(string[] args)
