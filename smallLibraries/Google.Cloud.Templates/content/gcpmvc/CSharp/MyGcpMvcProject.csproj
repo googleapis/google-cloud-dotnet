@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>MyGcpMvcProject</AssemblyName>
     <OutputType>Exe</OutputType>
@@ -12,9 +11,12 @@
     <DefineConstants Condition="$(TargetFramework) == 'netcoreapp2.0'">Framework2;Framework2_0</DefineConstants>
     <DefineConstants Condition="$(TargetFramework) == 'netcoreapp1.1'">Framework1;Framework1_1</DefineConstants>
     <DefineConstants Condition="$(TargetFramework) == 'netcoreapp1.0'">Framework1;Framework1_0</DefineConstants>
-    <!--#endif-->
   </PropertyGroup>
-  
+  <PropertyGroup Condition="'false' == 'true'">
+    <!--#endif-->
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Update="wwwroot\**\*;Views\**\*;Areas\**\Views">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
