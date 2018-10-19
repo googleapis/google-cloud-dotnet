@@ -200,6 +200,11 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 }
                 lock (_lock)
                 {
+                    // FIXME: Is this the right place to check for shutdown? We need a test of:
+                    // - Create pool and populate it
+                    // - Shut pool down (and wait for that to finish)
+                    // - Try to acquire a session (should fail)
+
                     // First try the pool.
                     if (preferredQueue.TryDequeue(out var session) || alternateQueue.TryDequeue(out session))
                     {
