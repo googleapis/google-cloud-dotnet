@@ -28,6 +28,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         /// </summary>
         internal DateTime TimestampBeforeEntries { get; private set; }
 
+        // Note: this *must* have an initializer here rather than in the constructor, as it's used before
+        // the constructor body executes.
+        public string TableName2 { get; } = "TxTable2";
+
         /// <summary>
         /// A reasonable staleness such that the table will exist this long before tests run, but shouldn't
         /// have any entries for TestKey. (The population process pauses for at least this long, and this should
@@ -42,6 +46,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         protected override void CreateTable()
         {
             ExecuteDdl($@"CREATE TABLE {TableName} (
+                              K                   STRING(MAX) NOT NULL,
+                              Int64Value          INT64,
+                              StringValue         STRING(MAX),
+                            ) PRIMARY KEY (K)");
+
+            // Create a second table, only used in multi-table transaction tests. The alternative
+            // would be to have a whole separate fixture just for those tests, creating two entirely
+            // separate tables, which is far from ideal.
+            ExecuteDdl($@"CREATE TABLE {TableName2} (
                               K                   STRING(MAX) NOT NULL,
                               Int64Value          INT64,
                               StringValue         STRING(MAX),
