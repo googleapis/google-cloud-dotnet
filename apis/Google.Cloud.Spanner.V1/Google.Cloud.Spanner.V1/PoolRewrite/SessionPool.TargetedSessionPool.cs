@@ -627,7 +627,42 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                         Healthy,
                         Shutdown);
                 }
-            }            
+            }
+
+            /// <summary>
+            /// Waits for the session pool to be populated up to its minimum size.
+            /// </summary>
+            /// <remarks>
+            /// If the pool is unhealthy or becomes unhealthy before it reaches its minimum size,
+            /// the returned task will be faulted with an <see cref="RpcException"/>.
+            /// </remarks>
+            /// <param name="cancellationToken">An optional token for canceling the call.</param>
+            /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
+            internal async Task WaitForPoolAsync(CancellationToken cancellationToken = default)
+            {
+                Task task;
+                LinkedListNode<TaskCompletionSource<int>> node;
+                // Check whether we know the result immediately.
+                lock (_lock)
+                {
+                    if (!Healthy)
+                    {
+                        throw new RpcException(new Status(StatusCode.Unknown, "Session pool was unhealthy"));
+                    }
+                    if (_readOnlySessions.Count + _readWriteSessions.Count >= Options.MinimumPooledSessions)
+                    {
+                        return;
+                    }
+                    var tcs = new TaskCompletionSource<int>();
+                    node = _minimumSizeWaiters.AddLast(tcs);
+                    task = TcsWithCancellationToken(tcs, cancellationToken);
+                }
+                await task.ConfigureAwait(false);
+                lock (_lock)
+                {
+                    node.List.Remove(node);
+                }
+            }
         }
     }
 }
