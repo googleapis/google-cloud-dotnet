@@ -408,7 +408,18 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                     ReleaseInactiveSession(session, maybeCreateReadWriteTransaction: true);
                 }
             }
-            
+
+            internal void MaintainPool()
+            {
+                if (Shutdown)
+                {
+                    return;
+                }
+                EvictAndRefreshSessions();
+                StartAcquisitionTasksIfNecessary(ActiveSessionCount);
+                Parent._logger.Debug(() => $"After maintenance: {GetStatisticsSnapshot()}");
+            }
+
             private void EvictAndRefreshSessions()
             {
                 LinkedList<PooledSession> sessionsToEvict = new LinkedList<PooledSession>();
