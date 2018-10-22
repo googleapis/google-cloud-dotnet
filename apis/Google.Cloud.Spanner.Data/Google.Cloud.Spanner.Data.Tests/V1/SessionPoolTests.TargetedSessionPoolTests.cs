@@ -455,6 +455,70 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
+            [Fact]
+            public async Task ShutdownPoolAsync_AllStatsToZero()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    await pool.WaitForPoolAsync(default);
+                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+
+                    // Shut down the pool, but keep one active session for now
+                    Task task = pool.ShutdownPoolAsync(default);
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    var stats = pool.GetStatisticsSnapshot();
+                    Assert.Equal(true, stats.Shutdown);
+                    Assert.Equal(1, stats.ActiveSessionCount);
+                    Assert.Equal(0, stats.InFlightCreationCount);
+                    Assert.Equal(0, stats.ReadPoolCount);
+                    Assert.Equal(0, stats.ReadWritePoolCount);
+                    Assert.Equal(TaskStatus.WaitingForActivation, task.Status);
+
+                    session.ReleaseToPool(false);
+                    // Now we should be able to wait for the shutdown task to complete
+                    await task;
+
+                    stats = pool.GetStatisticsSnapshot();
+                    Assert.Equal(0, stats.ActiveSessionCount);
+                });
+            }
+
+            [Fact]
+            public async Task ShutdownPoolAsync_PendingAcquisitionsFail()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    // Make sure we won't be able to get any more sessions immediately.
+                    var sessions = await AcquireAllSessionsAsync(pool);
+                    var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    var shutdownTask = pool.ShutdownPoolAsync(default);
+
+                    // The existing acquisition task should fail.
+                    await Assert.ThrowsAsync<TaskCanceledException>(() => acquisitionTask);
+
+                    sessions.ForEach(s => s.ReleaseToPool(false));
+                    await shutdownTask;
+                });
+            }
+
+            [Fact]
+            public async Task ShutdownPoolAsync_CannotAcquireAfterShutdown()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    await pool.WaitForPoolAsync(default);
+                    await pool.ShutdownPoolAsync(default);
+                    // TODO: Is this the right exception? It feels appropriate.
+                    await Assert.ThrowsAsync<InvalidOperationException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
+                });
+            }
+
             private async Task<List<PooledSession>> AcquireAllSessionsAsync(TargetedSessionPool pool)
             {
                 List<PooledSession> sessions = new List<PooledSession>();
