@@ -107,6 +107,14 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                         throw new RpcException(new Status(StatusCode.ResourceExhausted, "Local maximum number of active sessions exceeded."));
                     }
 
+                    // We check for shutdown after incrementing ActiveSessionCount, and we *set* shutdown before checking ActiveSessionCount,
+                    // so it shouldn't be possible for us to miss this check but still end up with an acquisition task which waits forever because
+                    // the shutdown loop starts and finishes too quickly.
+                    if (Shutdown)
+                    {
+                        throw new InvalidOperationException("Session pool has already been shut down");
+                    }
+
                     // We pass in the "session count before we incremented" so that we can still start a new session creation task if necessary.
                     // (For example, if the maximum number of sessions is 100, and sessionCount==100, that means it *was* 99, so we're still okay
                     // to create a new session.)
@@ -206,11 +214,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 }
                 lock (_lock)
                 {
-                    // FIXME: Is this the right place to check for shutdown? We need a test of:
-                    // - Create pool and populate it
-                    // - Shut pool down (and wait for that to finish)
-                    // - Try to acquire a session (should fail)
-
                     // First try the pool.
                     if (preferredQueue.TryDequeue(out var session) || alternateQueue.TryDequeue(out session))
                     {
@@ -661,6 +664,99 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 lock (_lock)
                 {
                     node.List.Remove(node);
+                }
+            }
+
+            internal Task ShutdownPoolAsync(CancellationToken cancellationToken)
+            {
+                // Shutdown can only be started once, but we can acquire the same task as often as we want.
+                var newTcs = new TaskCompletionSource<int>();
+                var previousTcs = Interlocked.CompareExchange(ref _shutdownTask, newTcs, null);
+
+                if (previousTcs == null)
+                {
+                    Parent.ConsumeBackgroundTask(ExecuteShutdownAsync(newTcs), "shutdown");
+                }
+
+                // Return the appropriate TCS, with the given cancellation token.
+                var tcs = previousTcs ?? newTcs;
+                return TcsWithCancellationToken(tcs, cancellationToken);
+            }
+
+            /// <summary>
+            /// Performs the actual shutdown of the pool. This method should only be called once per pool.
+            /// </summary>
+            private async Task ExecuteShutdownAsync(TaskCompletionSource<int> tcsToSignal)
+            {
+                // It's somewhat ugly to do this in a loop, and after the first iteration we'll *mostly* just be waiting for
+                // the active session count and in-flight session creation count to hit 0... but it means we don't need to worry
+                // about race conditions of one thread checking the shutdown flag just before it was set, but then adding a
+                // pending acquisition just after we've cancelled everything.
+                Parent._logger.Debug(() => $"Executing shutdown for {_databaseName}");
+                try
+                {
+                    while (true)
+                    {
+                        lock (_lock)
+                        {
+                            if (_readWriteSessions.Count == 0 &&
+                                _readOnlySessions.Count == 0 &&
+                                ActiveSessionCount == 0 &&
+                                InFlightSessionCreationCount == 0 &&
+                                _pendingAcquisitions.Count == 0 &&
+                                _minimumSizeWaiters.Count == 0)
+                            {
+                                // It's possible that there are some sessions still being deleted at this point, but waiting for those
+                                // tasks to complete would be awkward and it's very unlikely to make any material difference.
+                                break;
+                            }
+                        }
+
+                        Parent._logger.Debug(() => $"Pending shutdown: {GetStatisticsSnapshot()}");
+
+                        var sessionsToDelete = new List<PooledSession>();
+                        List<TaskCompletionSource<int>> minSizeWaitersToCancel;
+                        List<TaskCompletionSource<PooledSession>> pendingAcquisitionsToCancel = new List<TaskCompletionSource<PooledSession>>();
+                        lock (_lock)
+                        {
+                            while (_readOnlySessions.TryDequeue(out var session))
+                            {
+                                sessionsToDelete.Add(session);
+                            }
+                            while (_readWriteSessions.TryDequeue(out var session))
+                            {
+                                sessionsToDelete.Add(session);
+                            }
+                            // These will clear themselves out of the list when they complete, even with a fault.
+                            minSizeWaitersToCancel = _minimumSizeWaiters.ToList();
+                            while (_pendingAcquisitions.TryDequeue(out var pendingAcquisitions))
+                            {
+                                pendingAcquisitionsToCancel.Add(pendingAcquisitions);
+                            }
+                        }
+
+                        pendingAcquisitionsToCancel.ForEach(tcs => tcs.TrySetCanceled());
+                        minSizeWaitersToCancel.ForEach(tcs => tcs.TrySetCanceled());
+                        List<Task> tasks = sessionsToDelete.Select(cs => Parent.DeleteSessionAsync(cs)).ToList();
+
+                        try
+                        {
+                            await Task.WhenAll(tasks).ConfigureAwait(false);
+                        }
+                        catch
+                        {
+                            var failureCount = tasks.Count(t => t.Status != TaskStatus.RanToCompletion);
+                            Parent._logger.Warn($"{failureCount} out of {tasks.Count} deletion tasks failed during shutdown");
+                        }
+
+                        await Parent._scheduler.Delay(TimeSpan.FromSeconds(1), CancellationToken.None).ConfigureAwait(false);
+                    }
+                }
+                // However we complete, signal that shutdown is finished.
+                finally
+                {
+                    Parent._logger.Debug(() => $"Shutdown complete for {_databaseName}");
+                    tcsToSignal.TrySetResult(0);
                 }
             }
         }
