@@ -75,11 +75,10 @@ namespace Google.Cloud.Spanner.Data
         public override int Depth => 0;
 
         /// <inheritdoc />
-        public override int FieldCount => PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions()
-            .RowType.Fields.Count;
+        public override int FieldCount => PopulateMetadata().RowType.Fields.Count;
 
         /// <inheritdoc />
-        public override bool HasRows => _resultSet.HasDataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
+        public override bool HasRows => Task.Run(() => _resultSet.HasDataAsync(CancellationToken.None)).ResultWithUnwrappedExceptions();
 
         /// <inheritdoc />
         public override bool IsClosed => _resultSet.IsClosed;
@@ -88,8 +87,7 @@ namespace Google.Cloud.Spanner.Data
         public override object this[int i] => GetSpannerFieldType(i).ConvertToClrType(_innerList[i], _conversionOptions);
 
         /// <inheritdoc />
-        public override object this[string name] => this[
-            GetFieldIndexAsync(name, CancellationToken.None).ResultWithUnwrappedExceptions()];
+        public override object this[string name] => this[GetOrdinal(name)];
 
         /// <inheritdoc />
         public override int RecordsAffected => -1;
@@ -136,8 +134,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override System.Type GetFieldType(int i)
         {
-            var fieldMetadata = PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions().RowType
-                .Fields[i];
+            var fieldMetadata = PopulateMetadata().RowType.Fields[i];
             return SpannerDbType.FromProtobufType(fieldMetadata.Type).DefaultClrType;
         }
 
@@ -191,13 +188,21 @@ namespace Google.Cloud.Spanner.Data
         public Value GetJsonValue(int i) => _innerList[i];
 
         /// <inheritdoc />
-        public override string GetName(int i) => _resultSet.GetMetadataAsync(CancellationToken.None)
-            .ResultWithUnwrappedExceptions().RowType.Fields[i]
-            .Name;
+        public override string GetName(int i) => PopulateMetadata().RowType.Fields[i].Name;
 
         /// <inheritdoc />
-        public override int GetOrdinal(string name) 
-            => GetFieldIndexAsync(name, CancellationToken.None).ResultWithUnwrappedExceptions();
+        public override int GetOrdinal(string name)
+        {
+            // If we've already populated the field index, complete synchronously.
+            GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
+            if (_fieldIndex.Count != 0)
+            {
+                return _fieldIndex[name];
+            }
+            // Otherwise, fetch metadata in a new task and wait for it.
+            return Task.Run(() => GetFieldIndexAsync(name, CancellationToken.None)).ResultWithUnwrappedExceptions();
+        }
+        
 
         /// <inheritdoc />
         public override string GetString(int i) => GetSpannerFieldType(i).ConvertToClrType<string>(_innerList[i], _conversionOptions);
@@ -235,7 +240,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <inheritdoc />
-        public override bool Read() => ReadAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
+        public override bool Read() => Task.Run(() => ReadAsync(CancellationToken.None)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Reads the next row of values from Cloud Spanner.
@@ -299,6 +304,17 @@ namespace Google.Cloud.Spanner.Data
             return _fieldIndex[fieldName];
         }
 
+        internal ResultSetMetadata PopulateMetadata()
+        {
+            // If we've already got the metadata, complete synchronously
+            if (_metadata != null)
+            {
+                return _metadata;
+            }
+            // Otherwise, run the async population code in a new task.
+            return Task.Run(() => PopulateMetadataAsync(CancellationToken.None)).ResultWithUnwrappedExceptions();
+        }
+
         internal Task<ResultSetMetadata> PopulateMetadataAsync(CancellationToken cancellationToken)
         {
             if (_metadata != null)
@@ -313,8 +329,7 @@ namespace Google.Cloud.Spanner.Data
 
         private SpannerDbType GetSpannerFieldType(int i)
         {
-            var fieldMetadata = PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions().RowType
-                .Fields[i];
+            var fieldMetadata = PopulateMetadata().RowType.Fields[i];
             return SpannerDbType.FromProtobufType(fieldMetadata.Type);
         }
 
@@ -390,7 +405,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return null;
             }
-            var resultSet = PopulateMetadataAsync(CancellationToken.None).ResultWithUnwrappedExceptions();
+            var resultSet = PopulateMetadata();
 
             // If the metadata couldn't be loaded, or there were no fields, just return null to indicate
             // that the schema isn't available.

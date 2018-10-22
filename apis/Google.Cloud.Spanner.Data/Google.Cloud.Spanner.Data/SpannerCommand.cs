@@ -257,7 +257,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         public override int ExecuteNonQuery() =>
-            ExecuteNonQueryAsync(_synchronousCancellationTokenSource.Token).ResultWithUnwrappedExceptions();
+            Task.Run(() => ExecuteNonQueryAsync(_synchronousCancellationTokenSource.Token)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Executes the command against the <see cref="SpannerConnection"/>.
@@ -280,7 +280,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         public override object ExecuteScalar() =>
-            ExecuteScalarAsync(_synchronousCancellationTokenSource.Token).ResultWithUnwrappedExceptions();
+            Task.Run(() => ExecuteScalarAsync(_synchronousCancellationTokenSource.Token)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Executes the query and returns the first column of the first row in the result set returned by the query.
@@ -375,7 +375,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         protected override DbDataReader ExecuteDbDataReader(CommandBehavior behavior) =>
-            CreateExecutableCommand().ExecuteDbDataReaderAsync(behavior, null, _synchronousCancellationTokenSource.Token).ResultWithUnwrappedExceptions();
+            Task.Run(() => CreateExecutableCommand().ExecuteDbDataReaderAsync(behavior, null, _synchronousCancellationTokenSource.Token)).ResultWithUnwrappedExceptions();
 
         /// <inheritdoc />
         protected override Task<DbDataReader> ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) =>
@@ -394,7 +394,7 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <returns>A lower bound for the number of rows affected.</returns>
         public long ExecutePartitionedUpdate() =>
-            ExecutePartitionedUpdateAsync(_synchronousCancellationTokenSource.Token).ResultWithUnwrappedExceptions();
+            Task.Run(() => ExecutePartitionedUpdateAsync(_synchronousCancellationTokenSource.Token)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Executes this command as a partitioned update. The command must be a generalized DML command;
