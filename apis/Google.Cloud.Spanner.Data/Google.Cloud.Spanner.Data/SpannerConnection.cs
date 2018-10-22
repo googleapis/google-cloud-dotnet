@@ -258,7 +258,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
         public SpannerTransaction BeginReadOnlyTransaction(TimestampBound targetReadTimestamp) =>
-            BeginReadOnlyTransactionAsync(targetReadTimestamp).ResultWithUnwrappedExceptions();
+            Task.Run(() => BeginReadOnlyTransactionAsync(targetReadTimestamp)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Begins a read-only transaction using the provided <see cref="TransactionId" /> to refer to an existing server-side transaction.
@@ -503,6 +503,8 @@ namespace Google.Cloud.Spanner.Data
             Func<Task> taskRunner = () => OpenAsyncImpl(transaction, CancellationToken.None);
 #endif
 
+            // TODO: Use WaitWithUnwrappedExceptions, but that doesn't currently take a timeout.
+            // (Alternatively, write an Open(Transaction) method, and use it from the various places we need it.)
             if (!Task.Run(taskRunner).Wait(TimeSpan.FromSeconds(SpannerOptions.Instance.Timeout)))
             {
                 throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
@@ -602,7 +604,7 @@ namespace Google.Cloud.Spanner.Data
                 throw new NotSupportedException(
                     $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
             }
-            return BeginTransactionAsync().ResultWithUnwrappedExceptions();
+            return Task.Run(() => BeginTransactionAsync()).ResultWithUnwrappedExceptions();
         }
 
         /// <inheritdoc />
@@ -985,7 +987,7 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
             _timestampBound = timestampBound ?? TimestampBound.Strong;
-            OpenAsyncImpl(transaction, CancellationToken.None).WaitWithUnwrappedExceptions(); ;
+            Task.Run(() => OpenAsyncImpl(transaction, CancellationToken.None)).WaitWithUnwrappedExceptions();
         }
 
         /// <summary>
@@ -1006,7 +1008,7 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
             _transactionId = transactionId;
-            OpenAsyncImpl(transaction, CancellationToken.None).WaitWithUnwrappedExceptions();
+            Task.Run(() => OpenAsyncImpl(transaction, CancellationToken.None)).WaitWithUnwrappedExceptions();
         }
 
         /// <summary>
