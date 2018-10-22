@@ -255,6 +255,98 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
+            [Fact]
+            public async Task MaintainPool_CreatesNewSessions()
+            {
+                var pool = CreatePool(false);
+                pool.Options.WriteSessionsFraction = 1; // Just for simplicity.
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    // Allow any pending tasks to execute.
+                    Thread.Sleep(2000);
+
+                    var stats = pool.GetStatisticsSnapshot();
+                    Assert.Equal(0, stats.ReadWritePoolCount);
+
+                    pool.MaintainPool();
+
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    Thread.Sleep(2000);
+
+                    stats = pool.GetStatisticsSnapshot();
+                    Assert.Equal(10, stats.ReadWritePoolCount);
+                });
+            }
+
+            [Fact]
+            public async Task MaintainPool_RefreshesSessions()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    // Allow any pending tasks to execute.
+                    Thread.Sleep(2000);
+
+                    // Let all the sessions idle out.
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(20));
+
+                    var timeBeforeMaintenance = client.Clock.GetCurrentDateTimeUtc();
+
+                    // Start everything refreshing.
+                    pool.MaintainPool();
+
+                    // Give the refresh tasks time to run.
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    Thread.Sleep(2000);
+
+                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    Assert.InRange(session.RefreshTimeForTest, timeBeforeMaintenance.AddMinutes(15), client.Clock.GetCurrentDateTimeUtc().AddMinutes(15));
+
+                    // We shouldn't have asked for any more sessions from the client, because the refreshing tasks
+                    // would count as in-flight sessions.
+                    Assert.Equal(10, client.SessionsCreated);
+                });
+            }
+
+            [Fact]
+            public async Task MaintainPool_EvictsSessions()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    // Allow any pending tasks to execute.
+                    Thread.Sleep(2000);
+
+                    // Let all the sessions go beyond their eviction time.
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(101));
+
+                    var timeBeforeMaintenance = client.Clock.GetCurrentDateTimeUtc();
+
+                    // Start everything refreshing.
+                    pool.MaintainPool();
+
+                    // Give the eviction tasks time to run.
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    Thread.Sleep(2000);
+
+                    // The newly created session should have an appropriate refresh time.
+                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    Assert.InRange(session.RefreshTimeForTest, timeBeforeMaintenance.AddMinutes(15), client.Clock.GetCurrentDateTimeUtc().AddMinutes(15));
+
+                    // All the previous sessions should be evicted, and the pool refilled.
+                    Assert.Equal(20, client.SessionsCreated);
+                });
+            }
+
             private async Task<List<PooledSession>> AcquireAllSessionsAsync(TargetedSessionPool pool)
             {
                 List<PooledSession> sessions = new List<PooledSession>();
