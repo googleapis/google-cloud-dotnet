@@ -17,6 +17,7 @@ using Google.Api.Gax.Testing;
 using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
 using System.Threading;
@@ -40,6 +41,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             public InMemoryLogger Logger { get; } = new InMemoryLogger();
             public int SessionsCreated => Interlocked.CompareExchange(ref _sessionCounter, 0, 0);
             public int SessionsDeleted => Interlocked.CompareExchange(ref _deletionCounter, 0, 0);
+            public bool FailAllRpcs { get; set; } = false;
 
             public ConcurrentQueue<ExecuteSqlRequest> ExecuteSqlRequests { get; } = new ConcurrentQueue<ExecuteSqlRequest>();
 
@@ -54,6 +56,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 
             public override async Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)
             {
+                CheckFailAllRpcs();
                 await Scheduler.Delay(BeginTransactionDelay);
                 int count = Interlocked.Increment(ref _transactionCounter);
                 return new Transaction
@@ -65,6 +68,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 
             public override async Task<Session> CreateSessionAsync(CreateSessionRequest request, CallSettings callSettings = null)
             {
+                CheckFailAllRpcs();
                 await Scheduler.Delay(CreateSessionDelay);
                 int count = Interlocked.Increment(ref _sessionCounter);
                 var database = request.DatabaseAsDatabaseName;
@@ -73,15 +77,25 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 
             public override async Task DeleteSessionAsync(DeleteSessionRequest request, CallSettings callSettings = null)
             {
+                CheckFailAllRpcs();
                 await Scheduler.Delay(DeleteSessionDelay);
                 int count = Interlocked.Increment(ref _deletionCounter);
             }
 
             public override async Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings = null)
             {
+                CheckFailAllRpcs();
                 ExecuteSqlRequests.Enqueue(request.Clone());
                 await Scheduler.Delay(ExecuteSqlDelay);
                 return new ResultSet();
+            }
+
+            private void CheckFailAllRpcs()
+            {
+                if (FailAllRpcs)
+                {
+                    throw new RpcException(new Status(StatusCode.Internal, "Bang"));
+                }
             }
         }
     }

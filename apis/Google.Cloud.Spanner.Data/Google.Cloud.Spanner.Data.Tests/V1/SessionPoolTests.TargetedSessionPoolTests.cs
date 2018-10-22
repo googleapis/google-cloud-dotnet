@@ -347,6 +347,114 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
+            [Fact]
+            public async Task WaitForPoolAsync_Normal()
+            {
+                var pool = CreatePool(false);
+                pool.Options.MinimumPooledSessions = 30;
+                pool.MaintainPool();
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var timeBefore = client.Clock.GetCurrentDateTimeUtc();
+                    await pool.WaitForPoolAsync(default);
+
+                    // We allow 20 session creates at a time, and each takes 5 seconds.
+                    // We'll need at least 6 read/write sessions too, but those will be taken from the first 20
+                    // as we err on the side of over-creating read/write transactions. (When the first 20
+                    // all return, they'll all notice we have no transactions.) That won't slow down the
+                    // second set of creations.
+                    var timeAfter = client.Clock.GetCurrentDateTimeUtc();
+                    Assert.Equal(TimeSpan.FromSeconds(10), timeAfter - timeBefore);
+                    var stats = pool.GetStatisticsSnapshot();
+                    Assert.Equal(10, stats.ReadPoolCount);
+                    Assert.Equal(20, stats.ReadWritePoolCount);
+                });
+            }
+
+            [Fact]
+            public async Task WaitForPoolAsync_CancelOneOfTwo()
+            {
+                var pool = CreatePool(false);
+                pool.Options.MinimumPooledSessions = 30;
+                pool.MaintainPool();
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var timeBefore = client.Clock.GetCurrentDateTimeUtc();
+                    var cts = new CancellationTokenSource();
+                    var task1 = pool.WaitForPoolAsync(cts.Token);
+                    var task2 = pool.WaitForPoolAsync(default);
+
+                    await client.Scheduler.Delay(TimeSpan.FromSeconds(8));
+                    
+                    Assert.Equal(TaskStatus.WaitingForActivation, task1.Status);
+                    Assert.Equal(TaskStatus.WaitingForActivation, task2.Status);
+
+                    // If we cancel one cancelation token, that task will fail,
+                    // but the other won't.
+                    cts.Cancel();
+                    await client.Scheduler.Delay(TimeSpan.FromSeconds(1));
+                    Thread.Sleep(1000);
+                    Assert.Equal(TaskStatus.Canceled, task1.Status);
+                    Assert.Equal(TaskStatus.WaitingForActivation, task2.Status);
+
+                    // The uncancelled task completes normally
+                    await task2;
+                });
+            }
+
+            [Fact]
+            public async Task WaitForPoolAsync_AlreadyCompleted()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    // Wait for it to come up to minimum size
+                    await pool.WaitForPoolAsync(default);
+
+                    // Asking for it again should return an already completed task
+                    Task task = pool.WaitForPoolAsync(default);
+                    Assert.Equal(TaskStatus.RanToCompletion, task.Status);
+                });
+            }
+
+            [Fact]
+            public async Task WaitForPoolAsync_AlreadyUnhealthy()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                client.FailAllRpcs = true;
+                pool.MaintainPool();
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.WaitForPoolAsync(default));
+                    Assert.Equal(StatusCode.Unknown, exception.StatusCode);
+                });
+            }
+
+            [Fact]
+            public async Task WaitForPoolAsync_BecomesUnhealthyWhileWaiting()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                client.FailAllRpcs = true;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var task = pool.WaitForPoolAsync(default);
+                    pool.MaintainPool();
+                    var exception = await Assert.ThrowsAsync<RpcException>(() => task);
+                    // If we go unhealthy while waiting, the status code from the RPC is used for the exception.
+                    Assert.Equal(StatusCode.Internal, exception.StatusCode);
+                });
+            }
+
             private async Task<List<PooledSession>> AcquireAllSessionsAsync(TargetedSessionPool pool)
             {
                 List<PooledSession> sessions = new List<PooledSession>();
