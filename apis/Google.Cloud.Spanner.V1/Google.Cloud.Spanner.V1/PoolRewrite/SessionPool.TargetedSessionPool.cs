@@ -90,24 +90,27 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 _createSessionRequest = new CreateSessionRequest { DatabaseAsDatabaseName = databaseName };
                 if (acquireSessionsImmediately)
                 {
-                    StartAcquisitionTasksIfNecessary();
+                    StartAcquisitionTasksIfNecessary(0);
                 }
             }
 
             public async Task<PooledSession> AcquireSessionAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
             {
-                // We may need to start more tasks just acquire a session. We need to try this *before* counting the requested
-                // session as being active. (If we have 99 active sessions at the moment, and nothing in the pool, we want to start a task
-                // to create the session we'll end up acquiring. If we wait until we've counted this session as being active, we won't
-                // start the new task as it'll take us over the limit.)
-                // FIXME: We don't cope with the "Minimum pool size of 0, max active = 100, currently active = 99" case.
-                StartAcquisitionTasksIfNecessary();
-
                 bool success = false;
                 try
                 {
-                    Interlocked.Increment(ref _activeSessionCount);
-                    PooledSession session = await AcquireSessionImplAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
+                    int sessionCount = Interlocked.Increment(ref _activeSessionCount);
+                    if (sessionCount > Options.MaximumActiveSessions && Options.WaitOnResourcesExhausted == ResourcesExhaustedBehavior.Fail)
+                    {
+                        // Not really an RpcException, but the cleanest way of representing it.
+                        // (The ADO.NET provider will convert it to a SpannerException with the same code.)
+                        throw new RpcException(new Status(StatusCode.ResourceExhausted, "Local maximum number of active sessions exceeded."));
+                    }
+
+                    // We pass in the "session count before we incremented" so that we can still start a new session creation task if necessary.
+                    // (For example, if the maximum number of sessions is 100, and sessionCount==100, that means it *was* 99, so we're still okay
+                    // to create a new session.)
+                    PooledSession session = await AcquireSessionImplAsync(sessionCount - 1, transactionOptions, cancellationToken).ConfigureAwait(false);
                     success = true;
                     return session;
                 }
@@ -120,15 +123,18 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 }
             }
 
-            private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
+            private async Task<PooledSession> AcquireSessionImplAsync(int logicalActiveSessionCount, TransactionOptions transactionOptions, CancellationToken cancellationToken)
             {
                 var transactionMode = transactionOptions?.ModeCase ?? ModeOneofCase.None;
                 var sessionAcquisitionTask = GetSessionAcquisitionTask(transactionMode, cancellationToken);
 
-                var session = await sessionAcquisitionTask.ConfigureAwait(false);
+                // We've either fetched a task from the pool, or registered that a caller is waiting for one.
+                // We may want to start creation tasks, either to replenish the pool or (if there were no pool entries)
+                // to make sure that there's something creating a session for us. If the logical active session count is greater
+                // than or equal to the maximum, this won't start anything.
+                StartAcquisitionTasksIfNecessary(logicalActiveSessionCount);
 
-                // Now we've "taken" this session, we may want to start acquiring more to replenish the pool
-                StartAcquisitionTasksIfNecessary();
+                var session = await sessionAcquisitionTask.ConfigureAwait(false);
 
                 // Note: deliberately no test for refresh or eviction.
                 // We do this when a session is released, and in the maintenance task.
@@ -212,14 +218,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                         return Task.FromResult(session);
                     }
 
-                    // No pool entries. Check whether we've reached the limit of active sessions.
-                    if (ActiveSessionCount >= Options.MaximumActiveSessions && Options.WaitOnResourcesExhausted == ResourcesExhaustedBehavior.Fail)
-                    {
-                        // Not really an RpcException, but the cleanest way of representing it.
-                        // (The ADO.NET provider will convert it to a SpannerException with the same code.)
-                        throw new RpcException(new Status(StatusCode.ResourceExhausted, "Local maximum number of active sessions exceeded."));
-                    }
-
+                    // No pool entries.
                     // If the pool is currently healthy, register a TCS in the queue that will be checked by incoming sessions.
                     if (Healthy)
                     {
@@ -463,7 +462,15 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             /// if an active request calls this at exactly the same time as the maintenance task, but that's not too
             /// bad.
             /// </summary>
-            private void StartAcquisitionTasksIfNecessary()
+            /// <remarks>
+            /// This method accepts a "logical active session count" which allows a call to AcquireSessionAsync
+            /// to pass in the number of sessions that were active when the call started, as part of incrementing it.
+            /// This allows the final call to still be able to acquire a session, without allowing flooding due to lots of
+            /// simultaneous calls. We can still end up with too many sessions if a background task calls this method and
+            /// works out that it's okay to create a new session, at "roughly the same time" as an acquisition call is made
+            /// which guarantees its place. We can be more precise than this using a semaphore, but this is probably simpler.
+            /// </remarks>
+            private void StartAcquisitionTasksIfNecessary(int logicalActiveSessionCount)
             {
                 if (!Healthy || Shutdown)
                 {
@@ -476,7 +483,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 int poolSize;
                 int pendingAcquisitionCount;
                 int inFlightRequests;
-                int activeSessions;
                 lock (_lock)
                 {
                     poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
@@ -484,7 +490,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                     pendingAcquisitionCount = _pendingAcquisitions.Count;
                     minPoolSize = Options.MinimumPooledSessions;
                     maxActiveSessions = Options.MaximumActiveSessions;
-                    activeSessions = ActiveSessionCount;
                 }
 
                 // Determine how many more requests to start.
@@ -502,7 +507,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 // pending callers, assuming that all the in-flight requests succeed, and there are no more requests?
                 int newRequestsToSatisfyPool = (pendingAcquisitionCount + minPoolSize) - (poolSize + inFlightRequests);
                 // How many more requests *can* we make without going over the maximum number of active sessions?
-                int maxAvailableRequests = maxActiveSessions - (activeSessions + poolSize + inFlightRequests);
+                int maxAvailableRequests = maxActiveSessions - (logicalActiveSessionCount + poolSize + inFlightRequests);
 
                 int actualNewRequests = Math.Min(newRequestsToSatisfyPool, maxAvailableRequests);
                 for (int i = 0; i < actualNewRequests; i++)

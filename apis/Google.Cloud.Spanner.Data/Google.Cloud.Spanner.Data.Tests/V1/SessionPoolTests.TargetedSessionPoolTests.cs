@@ -14,6 +14,7 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -196,6 +197,71 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
 
                 client.Logger.AssertNoWarningsOrErrors();
+            }
+
+            [Fact]
+            public async Task AcquireAsync_ZeroPoolSizeAcquireUpToMaximum()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                pool.Options.MinimumPooledSessions = 0;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    await AcquireAllSessionsAsync(pool);
+                });
+            }
+
+            [Fact]
+            public async Task AcquireAsync_MaxActiveSessions_Fail()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                pool.Options.WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Fail;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    await AcquireAllSessionsAsync(pool);
+                    Assert.Equal(pool.Options.MaximumActiveSessions, pool.ActiveSessionCount);
+
+                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
+                    Assert.Equal(StatusCode.ResourceExhausted, exception.StatusCode);
+                });
+            }
+
+            [Fact]
+            public async Task AcquireAsync_MaxActiveSessions_Block()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                pool.Options.WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Block;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var sessions = await AcquireAllSessionsAsync(pool);
+                    Assert.Equal(pool.Options.MaximumActiveSessions, pool.ActiveSessionCount);
+
+                    // We can't exceed the maximum active session count
+                    var acquisitionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
+                    Assert.False(acquisitionTask.IsCompleted);
+
+                    // But we can get a released session
+                    sessions[0].ReleaseToPool(false);
+                    await acquisitionTask;
+
+                    Assert.Equal(pool.Options.MaximumActiveSessions, pool.ActiveSessionCount);
+                });
+            }
+
+            private async Task<List<PooledSession>> AcquireAllSessionsAsync(TargetedSessionPool pool)
+            {
+                List<PooledSession> sessions = new List<PooledSession>();
+                for (int i = 0; i < pool.Options.MaximumActiveSessions; i++)
+                {
+                    sessions.Add(await pool.AcquireSessionAsync(new TransactionOptions(), default));
+                }
+                return sessions;
             }
         }
     }
