@@ -352,7 +352,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Skip="Currently flaky on CI. Fixing via GAX changes")]
             public async Task WaitForPoolAsync_Normal()
             {
                 var pool = CreatePool(false);
