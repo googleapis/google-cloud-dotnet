@@ -334,13 +334,18 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                     // Start everything refreshing.
                     pool.MaintainPool();
 
-                    // Give the eviction tasks time to run.
+                    // Give the eviction and reacquisition tasks time to run.
                     await client.Scheduler.Delay(TimeSpan.FromMinutes(1));
                     Thread.Sleep(2000);
 
                     // The newly created session should have an appropriate refresh time.
                     var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
                     Assert.InRange(session.RefreshTimeForTest, timeBeforeMaintenance.AddMinutes(15), client.Clock.GetCurrentDateTimeUtc().AddMinutes(15));
+                    session.ReleaseToPool(false);
+
+                    // Pool should be full again.
+                    var stats = pool.GetStatisticsSnapshot();
+                    Assert.Equal(10, stats.ReadPoolCount + stats.ReadWritePoolCount);
 
                     // All the previous sessions should be evicted, and the pool refilled.
                     Assert.Equal(20, client.SessionsCreated);
@@ -452,6 +457,32 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                     var exception = await Assert.ThrowsAsync<RpcException>(() => task);
                     // If we go unhealthy while waiting, the status code from the RPC is used for the exception.
                     Assert.Equal(StatusCode.Internal, exception.StatusCode);
+                });
+            }
+
+            [Fact]
+            public async Task WaitForPoolAsync_ReleaseSession()
+            {
+                var pool = CreatePool(false);
+                pool.Options.MaximumActiveSessions = 10; // Same as minimum pool size
+                var client = (SessionTestingSpannerClient)pool.Client;
+
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+
+                    Task task = pool.WaitForPoolAsync(default);
+
+                    // Wait a bit - but nothing should happen, because we can't get any more sessions
+                    await client.Scheduler.Delay(TimeSpan.FromSeconds(10));
+                    Thread.Sleep(1000);
+                    // Having acquired a session, we can't reach the minimum pool size
+                    Assert.Equal(TaskStatus.WaitingForActivation, task.Status);
+
+                    session.ReleaseToPool(false);
+
+                    // Now the pool can be full again.
+                    await task;
                 });
             }
 
