@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Api.Gax.Testing;
 using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -22,6 +21,8 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
+
+using FakeClock = Google.Api.Gax.Testing.FakeClock;
 
 namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 {
@@ -36,7 +37,16 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             public TimeSpan BeginTransactionDelay { get; set; } = TimeSpan.FromSeconds(1);
             public TimeSpan ExecuteSqlDelay { get; set; } = TimeSpan.FromSeconds(1);
             public TimeSpan DeleteSessionDelay { get; set; } = TimeSpan.FromSeconds(1);
-            public FakeScheduler Scheduler { get; } = new FakeScheduler();
+            // We do quite a bit of work in our continuations, so allow a bit longer than the default of 10ms.
+            // Ditto allow a bit longer than normal for any test assertions to complete; this is particularly
+            // relevant in tests that generate a lot of logs.
+            // This will increase test times, but reduce flakiness.
+            public FakeScheduler Scheduler { get; } = new FakeScheduler
+            {
+                IdleTimeBeforeAdvancing = TimeSpan.FromMilliseconds(100),
+                // This is particularly long, but some CI machines are really slow.
+                PostLoopSettleTime = TimeSpan.FromMilliseconds(500)
+            };
             public FakeClock Clock => Scheduler.Clock;
             public InMemoryLogger Logger { get; } = new InMemoryLogger();
             public int SessionsCreated => Interlocked.CompareExchange(ref _sessionCounter, 0, 0);
