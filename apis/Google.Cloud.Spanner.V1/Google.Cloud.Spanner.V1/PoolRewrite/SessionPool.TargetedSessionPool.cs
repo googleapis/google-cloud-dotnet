@@ -29,6 +29,9 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
     public partial class SessionPool
     {
         // Note: Internal for test purposes.
+        // TODO:
+        // - Revisit naming for KnownSessionCount/ActiveSessionCount
+        // - Consider exposing KnownSessionCount via statistics
         internal sealed class TargetedSessionPool : SessionPoolBase
         {
             private static readonly TransactionOptions s_readWriteOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
@@ -70,6 +73,11 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             private int _inFlightSessionCreationCount;
 
             /// <summary>
+            /// The number of sessions we know we've started creating and haven't yet deleted.
+            /// </summary>
+            private int _knownSessionCount;
+
+            /// <summary>
             /// Thread-safe read-only access to active session count.
             /// </summary>
             internal int ActiveSessionCount => Interlocked.CompareExchange(ref _activeSessionCount, 0, 0);
@@ -78,6 +86,11 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             /// Thread-safe read-only access to in-flight session creation count.
             /// </summary>
             internal int InFlightSessionCreationCount => Interlocked.CompareExchange(ref _inFlightSessionCreationCount, 0, 0);
+
+            /// <summary>
+            /// Thread-safe read-only access to known session count.
+            /// </summary>
+            internal int KnownSessionCount => Interlocked.CompareExchange(ref _knownSessionCount, 0, 0);
 
             // Statistics maintained purely for diagnostic purposes. This lets us evaluate
             // how effective transaction pre-warming is.
@@ -90,7 +103,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 _createSessionRequest = new CreateSessionRequest { DatabaseAsDatabaseName = databaseName };
                 if (acquireSessionsImmediately)
                 {
-                    StartAcquisitionTasksIfNecessary(0);
+                    StartAcquisitionTasksIfNecessary();
                 }
             }
 
@@ -115,10 +128,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                         throw new InvalidOperationException("Session pool has already been shut down");
                     }
 
-                    // We pass in the "session count before we incremented" so that we can still start a new session creation task if necessary.
-                    // (For example, if the maximum number of sessions is 100, and sessionCount==100, that means it *was* 99, so we're still okay
-                    // to create a new session.)
-                    PooledSession session = await AcquireSessionImplAsync(sessionCount - 1, transactionOptions, cancellationToken).ConfigureAwait(false);
+                    PooledSession session = await AcquireSessionImplAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
                     success = true;
                     return session;
                 }
@@ -131,16 +141,15 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 }
             }
 
-            private async Task<PooledSession> AcquireSessionImplAsync(int logicalActiveSessionCount, TransactionOptions transactionOptions, CancellationToken cancellationToken)
+            private async Task<PooledSession> AcquireSessionImplAsync(TransactionOptions transactionOptions, CancellationToken cancellationToken)
             {
                 var transactionMode = transactionOptions?.ModeCase ?? ModeOneofCase.None;
                 var sessionAcquisitionTask = GetSessionAcquisitionTask(transactionMode, cancellationToken);
 
                 // We've either fetched a task from the pool, or registered that a caller is waiting for one.
                 // We may want to start creation tasks, either to replenish the pool or (if there were no pool entries)
-                // to make sure that there's something creating a session for us. If the logical active session count is greater
-                // than or equal to the maximum, this won't start anything.
-                StartAcquisitionTasksIfNecessary(logicalActiveSessionCount);
+                // to make sure that there's something creating a session for us.
+                StartAcquisitionTasksIfNecessary();
 
                 var session = await sessionAcquisitionTask.ConfigureAwait(false);
 
@@ -238,6 +247,12 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 return CreatePooledSessionAsync(cancellationToken);
             }
 
+            private void EvictSession(PooledSession session)
+            {
+                Interlocked.Decrement(ref _knownSessionCount);
+                Parent.DeleteSessionFireAndForget(session);
+            }
+
             /// <summary>
             /// Release a session back to the pool (or refresh) but don't change the number of active sessions.
             /// </summary>
@@ -250,7 +265,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             {
                 if (Shutdown)
                 {
-                    Parent.DeleteSessionFireAndForget(session);
+                    EvictSession(session);
                     return;
                 }
 
@@ -353,7 +368,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 catch (RpcException e)
                 {
                     Parent._logger.Warn("Failed to refresh session. Session will be deleted.", e);
-                    Parent.DeleteSessionFireAndForget(session);
+                    EvictSession(session);
                     return;
                 }
                 finally
@@ -404,7 +419,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 Interlocked.Decrement(ref _activeSessionCount);
                 if (deleteSession)
                 {
-                    Parent.DeleteSessionFireAndForget(session);
+                    EvictSession(session);
                 }
                 else
                 {
@@ -419,7 +434,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                     return;
                 }
                 EvictAndRefreshSessions();
-                StartAcquisitionTasksIfNecessary(ActiveSessionCount);
+                StartAcquisitionTasksIfNecessary();
                 Parent._logger.Debug(() => $"After maintenance: {GetStatisticsSnapshot()}");
             }
 
@@ -435,7 +450,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
 
                 foreach (var session in sessionsToEvict)
                 {
-                    Parent.DeleteSessionFireAndForget(session);
+                    EvictSession(session);
                 }
                 foreach (var session in staleSessions)
                 {
@@ -476,15 +491,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             /// if an active request calls this at exactly the same time as the maintenance task, but that's not too
             /// bad.
             /// </summary>
-            /// <remarks>
-            /// This method accepts a "logical active session count" which allows a call to AcquireSessionAsync
-            /// to pass in the number of sessions that were active when the call started, as part of incrementing it.
-            /// This allows the final call to still be able to acquire a session, without allowing flooding due to lots of
-            /// simultaneous calls. We can still end up with too many sessions if a background task calls this method and
-            /// works out that it's okay to create a new session, at "roughly the same time" as an acquisition call is made
-            /// which guarantees its place. We can be more precise than this using a semaphore, but this is probably simpler.
-            /// </remarks>
-            private void StartAcquisitionTasksIfNecessary(int logicalActiveSessionCount)
+            private void StartAcquisitionTasksIfNecessary()
             {
                 if (!Healthy || Shutdown)
                 {
@@ -497,6 +504,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 int poolSize;
                 int pendingAcquisitionCount;
                 int inFlightRequests;
+                int knownSessions;
                 lock (_lock)
                 {
                     poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
@@ -504,6 +512,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                     pendingAcquisitionCount = _pendingAcquisitions.Count;
                     minPoolSize = Options.MinimumPooledSessions;
                     maxActiveSessions = Options.MaximumActiveSessions;
+                    knownSessions = KnownSessionCount;
                 }
 
                 // Determine how many more requests to start.
@@ -521,9 +530,10 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 // pending callers, assuming that all the in-flight requests succeed, and there are no more requests?
                 int newRequestsToSatisfyPool = (pendingAcquisitionCount + minPoolSize) - (poolSize + inFlightRequests);
                 // How many more requests *can* we make without going over the maximum number of active sessions?
-                int maxAvailableRequests = maxActiveSessions - (logicalActiveSessionCount + poolSize + inFlightRequests);
+                int maxAvailableRequests = maxActiveSessions - KnownSessionCount;
 
                 int actualNewRequests = Math.Min(newRequestsToSatisfyPool, maxAvailableRequests);
+
                 for (int i = 0; i < actualNewRequests; i++)
                 {
                     Parent.ConsumeBackgroundTask(PrepareNewSessionAsync(), "session creation");
@@ -568,6 +578,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                 bool success = false;
                 bool canceled = false;
                 Interlocked.Increment(ref _inFlightSessionCreationCount);
+                Interlocked.Increment(ref _knownSessionCount);
                 try
                 {
                     var callSettings = Client.Settings.CreateSessionSettings
@@ -609,6 +620,11 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
                         {
                             Parent._logger.Info(() => $"Session pool for {_databaseName} is now {(success ? "healthy" : "unhealthy")}.");
                         }
+                    }
+                    // If this call failed, we can make another attempt.
+                    if (!success)
+                    {
+                        Interlocked.Decrement(ref _knownSessionCount);
                     }
                     Interlocked.Decrement(ref _inFlightSessionCreationCount);
                 }

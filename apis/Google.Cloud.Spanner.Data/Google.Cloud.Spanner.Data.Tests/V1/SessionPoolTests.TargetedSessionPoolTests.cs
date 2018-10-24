@@ -17,6 +17,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -210,6 +211,38 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 {
                     await AcquireAllSessionsAsync(pool);
                     Assert.Equal(pool.Options.MaximumActiveSessions, pool.ActiveSessionCount);
+                });
+            }
+
+            [Fact]
+            public async Task AcquireAsync_UpToMaxActiveSessionsOneAtATime()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    for (int i = 0; i < pool.Options.MaximumActiveSessions; i++)
+                    {
+                        await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    }
+                });
+            }
+
+            [Fact]
+            public async Task AcquireAsync_UpToMaxActiveSessionsAllInOneGo()
+            {
+                var pool = CreatePool(false);
+                var client = (SessionTestingSpannerClient)pool.Client;
+                // Create all the tasks before we let anything else happen
+                var tasks = Enumerable
+                    .Range(0, pool.Options.MaximumActiveSessions)
+                    .Select(_ => pool.AcquireSessionAsync(new TransactionOptions(), default))
+                    .ToList();
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    // Now we're running, all the acquisition tasks should be able to start requests
+                    // running etc.
+                    await Task.WhenAll(tasks);
                 });
             }
 
