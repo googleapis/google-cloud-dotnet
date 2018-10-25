@@ -232,7 +232,44 @@ namespace Google.Cloud.Bigtable.V2.Tests
             // Assert that BuildUpdatedRequest did not modify the original RowSet.
             Assert.Equal(originalRequest, originalRequestClone);
         }
-        
+
+        /// <summary>
+        /// Test rows limit only request scenario for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
+        /// </summary>
+        [Fact]
+        public void TestRowsLimitOnlyRequest()
+        {
+            BigtableByteString lastFoundKey = "row015";
+
+            ReadRowsRequest originalRequest = new ReadRowsRequest { RowsLimit = 1000 };
+
+            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
+            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+            underTest.LastFoundKey = lastFoundKey;
+            underTest.IncrementRowsReadSoFar(10);
+
+            ReadRowsRequest updatedRequest = CreateRowRangeRequest(RowRange.Open(lastFoundKey, null));
+            updatedRequest.RowsLimit = 990;
+            Assert.Equal(updatedRequest, underTest.BuildUpdatedRequest());
+        }
+
+        /// <summary>
+        /// Test request with no parameters scenario for <see cref="BigtableReadRowsRequestManager.BuildUpdatedRequest()"/>
+        /// </summary>
+        [Fact]
+        public void TestDefaultRequest()
+        {
+            BigtableByteString lastFoundKey = "row015";
+
+            ReadRowsRequest originalRequest = new ReadRowsRequest ();
+
+            BigtableReadRowsRequestManager underTest = new BigtableReadRowsRequestManager(originalRequest);
+            Assert.Equal(originalRequest, underTest.BuildUpdatedRequest());
+            underTest.LastFoundKey = lastFoundKey;
+
+            Assert.Equal(CreateRowRangeRequest(RowRange.Open(lastFoundKey, null)), underTest.BuildUpdatedRequest());
+        }
+
         /// <summary>
         /// For this test we will assume that the table contains sequentially numbered rowkeys from "row000" to "row999"
         /// </summary>
