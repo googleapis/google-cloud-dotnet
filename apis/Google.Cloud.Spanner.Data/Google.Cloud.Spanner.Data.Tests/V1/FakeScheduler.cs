@@ -68,6 +68,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
         private readonly object _monitor = new object();
         private LinkedList<DelayTimer> _actions = new LinkedList<DelayTimer>();
         private bool _stopped;
+        private long _pendingDelays;
 
         /// <summary>
         /// Constructs a fake scheduler which works with the given clock.
@@ -87,8 +88,11 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 
         // Defaulting cancellation token makes it simpler to use for some tests.
         /// <inheritdoc />
-        public Task Delay(TimeSpan delay, CancellationToken cancellationToken = default(CancellationToken)) =>
-            AddTimer(Clock.GetCurrentDateTimeUtc() + delay, cancellationToken);
+        public Task Delay(TimeSpan delay, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            Interlocked.Increment(ref _pendingDelays);
+            return AddTimer(Clock.GetCurrentDateTimeUtc() + delay, cancellationToken);
+        }
 
         /// <summary>
         /// Specialization of <see cref="Run{T}(Func{T})"/> for tasks, to prevent a common usage error.
@@ -316,7 +320,11 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                         // Repeats until no further delays are created within IdleTimeBeforeAdvancing.
                         // It would be much better to track all created Tasks and make sure they've all completed;
                         // But that's fairly invasive.
-                        while (DateTime.UtcNow < realDeadline && Monitor.Wait(_monitor, IdleTimeBeforeAdvancing)) ;
+                        do
+                        {
+                            Monitor.Wait(_monitor, IdleTimeBeforeAdvancing);
+                        }
+                        while (DateTime.UtcNow < realDeadline && !_stopped && Interlocked.Read(ref _pendingDelays) != 0);
 
                         // We don't expect this to be observed, as the calling code will probably have timed
                         // out already, but it's clearer than returning normally.
@@ -363,7 +371,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 {
                     _actions.AddLast(timer);
                 }
-                Monitor.PulseAll(_monitor);
+                Interlocked.Decrement(ref _pendingDelays);
             }
             return timer.CompletionSource.Task;
         }
