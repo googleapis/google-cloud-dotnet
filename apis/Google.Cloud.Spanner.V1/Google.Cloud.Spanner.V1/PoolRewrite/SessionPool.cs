@@ -66,7 +66,10 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             _logger = logger ?? Logger.DefaultLogger;
             _detachedSessionPool = new DetachedSessionPool(this);
             _sessionAcquisitionSemaphore = new SemaphoreSlim(Options.MaximumConcurrentSessionCreates);
-            Task.Run(() => PoolMaintenanceLoop(this));
+            if (Options.MaintenanceLoopDelay != TimeSpan.Zero)
+            {
+                Task.Run(() => PoolMaintenanceLoop(this));
+            }
         }
 
         /// <summary>

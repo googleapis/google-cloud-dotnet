@@ -176,11 +176,12 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
 
         /// <summary>
         /// The delay between maintenance loop iterations. Defaults to 30 seconds.
+        /// This may be zero, in which case the maintenance loop will not be run.
         /// </summary>
         internal TimeSpan MaintenanceLoopDelay
         {
             get => _maintenanceLoopDelay;
-            set => _maintenanceLoopDelay = CheckPositiveTimeSpan(value);
+            set => _maintenanceLoopDelay = GaxPreconditions.CheckNonNegativeDelay(value, nameof(value));
         }
 
         /// <summary>

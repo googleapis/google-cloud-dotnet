@@ -56,7 +56,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 var options = new SessionPoolOptions
                 {
                      IdleSessionRefreshDelay = TimeSpan.FromMinutes(15),
-                     MaintenanceLoopDelay = TimeSpan.FromMinutes(1),
+                     MaintenanceLoopDelay = TimeSpan.FromSeconds(0), // Disable automatic pool maintenance
                      PoolEvictionDelay = TimeSpan.FromMinutes(100), // Deliberately not a multiple of 15
                      SessionEvictionJitter = RetrySettings.NoJitter,
                      SessionRefreshJitter = RetrySettings.NoJitter,
