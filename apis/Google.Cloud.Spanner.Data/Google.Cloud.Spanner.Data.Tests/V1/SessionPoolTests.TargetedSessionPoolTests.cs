@@ -27,6 +27,8 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 {
     public partial class SessionPoolTests
     {
+        private const int TestTimeoutMilliseconds = 15000;
+
         /// <summary>
         /// Tests for <see cref="SessionPool.TargetedSessionPool" />, mostly
         /// involving direct construction of the pool to avoid any maintenance loops etc.
@@ -69,7 +71,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 return new TargetedSessionPool(parent, s_databaseName, acquireSessionsImmediately);
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public void Construction_NoAcquireSessionsImmediately()
             {
                 var pool = CreatePool(false);
@@ -84,7 +86,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 client.Logger.AssertNoWarningsOrErrors();
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task Construction_AcquireSessionsImmediately()
             {
                 var pool = CreatePool(true);
@@ -109,7 +111,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 client.Logger.AssertNoWarningsOrErrors();
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task ReleaseSession_NoRefreshRequired()
             {
                 var pool = CreatePool(true);
@@ -142,7 +144,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 client.Logger.AssertNoWarningsOrErrors();
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task ReleaseSession_RefreshRequired()
             {
                 var pool = CreatePool(true);
@@ -171,7 +173,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 client.Logger.AssertNoWarningsOrErrors();
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task ReleaseSession_SessionEvicted()
             {
                 var pool = CreatePool(true);
@@ -198,7 +200,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 client.Logger.AssertNoWarningsOrErrors();
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task AcquireAsync_ZeroPoolSizeAcquireUpToMaximum()
             {
                 var pool = CreatePool(false);
@@ -212,7 +214,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task AcquireAsync_UpToMaxActiveSessionsOneAtATime()
             {
                 var pool = CreatePool(true);
@@ -230,7 +232,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 Assert.Equal(100, stats.ActiveSessionCount);
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task AcquireAsync_UpToMaxActiveSessionsAllInOneGo()
             {
                 var pool = CreatePool(false);
@@ -252,7 +254,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 Assert.Equal(100, stats.ActiveSessionCount);
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task AcquireAsync_MaxActiveSessions_Fail()
             {
                 var pool = CreatePool(false);
@@ -269,7 +271,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task AcquireAsync_MaxActiveSessions_Block()
             {
                 var pool = CreatePool(false);
@@ -294,7 +296,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task MaintainPool_CreatesNewSessions()
             {
                 var pool = CreatePool(false);
@@ -313,7 +315,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 Assert.Equal(10, stats.ReadWritePoolCount);
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task MaintainPool_RefreshesSessions()
             {
                 var pool = CreatePool(true);
@@ -345,7 +347,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task MaintainPool_EvictsSessions()
             {
                 var pool = CreatePool(true);
@@ -380,7 +382,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 Assert.Equal(10, client.SessionsDeleted);
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task WaitForPoolAsync_Normal()
             {
                 var pool = CreatePool(false);
@@ -409,7 +411,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task WaitForPoolAsync_CancelOneOfTwo()
             {
                 var pool = CreatePool(false);
@@ -442,7 +444,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 await task2;
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task WaitForPoolAsync_AlreadyCompleted()
             {
                 var pool = CreatePool(true);
@@ -459,7 +461,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task WaitForPoolAsync_AlreadyUnhealthy()
             {
                 var pool = CreatePool(false);
@@ -474,7 +476,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task WaitForPoolAsync_BecomesUnhealthyWhileWaiting()
             {
                 var pool = CreatePool(false);
@@ -496,7 +498,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task WaitForPoolAsync_ReleaseSession()
             {
                 var pool = CreatePool(false);
@@ -517,10 +519,10 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 sessionTask.Result.ReleaseToPool(false);
                 // We don't check the status directly, as we need continuations to run, but it should
                 // complete pretty quickly. (The timeout is just to avoid the test hanging if there's a bug.)
-                waitTask.Wait(1000);
+                Assert.True(waitTask.Wait(1000));
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task ShutdownPoolAsync_AllStatsToZero()
             {
                 var pool = CreatePool(true);
@@ -553,7 +555,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task ShutdownPoolAsync_PendingAcquisitionsFail()
             {
                 var pool = CreatePool(true);
@@ -573,7 +575,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task ShutdownPoolAsync_CannotAcquireAfterShutdown()
             {
                 var pool = CreatePool(true);
