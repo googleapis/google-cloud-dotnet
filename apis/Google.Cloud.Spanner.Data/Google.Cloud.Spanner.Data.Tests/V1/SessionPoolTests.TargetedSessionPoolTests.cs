@@ -399,15 +399,18 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                     // We'll need at least 6 read/write sessions too. In reality, all 20 initially-created
                     // sessions will have read/write transactions created for them, because they'll all check that
                     // before any transactions are created.
+                    // We check the most important part first: that we actually have the required sessions.
+                    var stats = pool.GetStatisticsSnapshot();
+                    Assert.Equal(30, stats.ReadWritePoolCount + stats.ReadPoolCount);
+                    // Implicitly checks that we have 10 read-only sessions
+                    Assert.Equal(20, stats.ReadWritePoolCount);
+
                     // We're loose when checking the elapsed time, as on slow CI machines it can take around half
                     // a second for a released SemaphoreSlim to be acquired again, which means we don't start the second
                     // session creation batch  until the virtual clock has advanced for the transaction creation.
                     var timeAfter = client.Clock.GetCurrentDateTimeUtc();
                     var elapsedSeconds = (timeAfter - timeBefore).TotalSeconds;
                     Assert.InRange(elapsedSeconds, 10, 11);
-                    var stats = pool.GetStatisticsSnapshot();
-                    Assert.Equal(10, stats.ReadPoolCount);
-                    Assert.Equal(20, stats.ReadWritePoolCount);
                 });
             }
 
