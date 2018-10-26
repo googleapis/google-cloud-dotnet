@@ -48,6 +48,8 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         /// </summary>
         public SessionPoolOptions Options { get; }
 
+        private readonly ConcurrentDictionary<DatabaseName, TargetedSessionPool> _targetedPools =
+            new ConcurrentDictionary<DatabaseName, TargetedSessionPool>();
 
         /// <summary>
         /// Creates a session pool for the given client.
@@ -64,6 +66,87 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             _logger = logger ?? Logger.DefaultLogger;
             _detachedSessionPool = new DetachedSessionPool(this);
             _sessionAcquisitionSemaphore = new SemaphoreSlim(Options.MaximumConcurrentSessionCreates);
+            Task.Run(() => PoolMaintenanceLoop(this));
+        }
+
+        /// <summary>
+        /// A long-running loop performing pool maintenance. Each iteration runs <see cref="MaintainPool"/>.
+        /// This is a static method to allow the target pool to be garbage collected, at which point the
+        /// method will complete. (This method only retains a week reference to the specified pool.)
+        /// </summary>
+        /// <param name="pool">The pool to maintain.</param>
+        /// <returns>A task which completes when the maintenance loop has finished, due to the session pool being
+        /// garbage collected</returns>
+        private static async Task PoolMaintenanceLoop(SessionPool pool)
+        {
+            // Keep a weak reference so that the pool can be garbage collected and we can stop the
+            // maintenance task.
+            var weakRef = new WeakReference(pool);
+            // Make sure that even if the pool variable is captured due to compiler implementation details,
+            // it won't prevent garbage collection.
+            pool = null;
+            while (true)
+            {
+                var localPool = (SessionPool) weakRef.Target;
+                if (localPool == null)
+                {
+                    return;
+                }
+                try
+                {
+                    localPool.MaintainPool();
+                }
+                catch (Exception e)
+                {
+                    localPool._logger.Error($"Error running {nameof(SessionPool)} maintenance task", e);
+                }
+                var scheduler = localPool._scheduler;
+                var delay = localPool.Options.MaintenanceLoopDelay;
+                // Allow the pool to be collected while we're waiting.
+                localPool = null;
+                await scheduler.Delay(delay, CancellationToken.None).ConfigureAwait(false);
+            }
+        }
+
+        private void MaintainPool()
+        {
+            var snapshot = _targetedPools.ToArray();
+            foreach (var pool in snapshot.Select(pair => pair.Value))
+            {
+                pool.MaintainPool();
+            }
+        }
+
+        /// <summary>
+        /// Provides a snapshot of statistics for this pool.
+        /// </summary>
+        /// <returns>A snapshot of statistics for this pool.</returns>
+        public Statistics GetStatisticsSnapshot() =>
+            new Statistics(_targetedPools.ToArray().Select(p => p.Value.GetStatisticsSnapshot()).ToList().AsReadOnly());
+
+        /// <summary>
+        /// Provides a snapshot of statistics for a database-specific pool.
+        /// </summary>
+        /// <returns>A snapshot of statistics for this pool.</returns>
+        public DatabaseStatistics GetStatisticsSnapshot(DatabaseName databaseName)
+        {
+            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            return _targetedPools.TryGetValue(databaseName, out var pool) ? pool.GetStatisticsSnapshot() : null;
+        }
+
+        /// <summary>
+        /// Asynchronously acquires a session, potentially associated with a transaction.
+        /// </summary>
+        /// <param name="databaseName">The name of the database to acquire the session for.</param>
+        /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
+        /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and transaction.</returns>
+        public Task<PooledSession> AcquireSessionAsync(DatabaseName databaseName, TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            var targetedPool = _targetedPools.GetOrAdd(databaseName, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
+            return targetedPool.AcquireSessionAsync(transactionOptions, cancellationToken);
         }
 
         // TODO: Rename?
@@ -82,6 +165,45 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
             return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionMode);
+        }
+
+        // TODO: Check that we're happy with these names.
+
+        /// <summary>
+        /// Waits for the session pool associated with the given database name to be populated up to its minimum size.
+        /// </summary>
+        /// <remarks>
+        /// If the pool is unhealthy or becomes unhealthy before it reaches its minimum size,
+        /// the returned task will be faulted with an <see cref="RpcException"/>.
+        /// </remarks>
+        /// <param name="databaseName">The database whose session pool should be populated. Must not be null.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
+        public Task WaitForPoolAsync(DatabaseName databaseName, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            var targetedPool = _targetedPools.GetOrAdd(databaseName, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
+            return targetedPool.WaitForPoolAsync(cancellationToken);
+        }
+
+        /// <summary>
+        /// Shuts down the session pool associated with the given database name.
+        /// Further attempts to acquire sessions will fail immediately.
+        /// </summary>
+        /// <remarks>
+        /// This call will delete all pooled sessions, and wait for all active sessions to be released back to the pool
+        /// and also deleted.
+        /// </remarks>
+        /// <param name="databaseName">The database whose session pool should be shut down. Must not be null.</param>
+        /// <param name="cancellationToken">An optional token for canceling the returned task. This does not cancel the shutdown itself.</param>
+        /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
+        public Task ShutdownPoolAsync(DatabaseName databaseName, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            // Note that we do potentially create a pool, so that we consistently end the call with a shut-down session pool
+            // associated with the given name.
+            var targetedPool = _targetedPools.GetOrAdd(databaseName, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: false));
+            return targetedPool.ShutdownPoolAsync(cancellationToken);
         }
 
         /// <summary>

@@ -44,6 +44,12 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             logger.AssertNoWarningsOrErrors();
         }
 
+        // Tests to write once the TargetedSessionPool tests are stable:
+        // - Maintenance happens regularly (check that sessions are evicted, for example)
+        // - Single test for each of ShutdownPoolAsync, WaitForPoolAsync, AcquireSessionAsync
+        // - GetStatisticsSnapshot with multiple databases
+        // - If it proves feasible, check that maintenance stops after GC. (Via logging?)
+
         // TODO: Would this be useful in CommonTesting?
         /// <summary>
         /// Logger which retains log entries, allowing us to detect warnings and errors.
