@@ -84,14 +84,13 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite
         {
             // Keep a weak reference so that the pool can be garbage collected and we can stop the
             // maintenance task.
-            var weakRef = new WeakReference(pool);
+            var weakRef = new WeakReference<SessionPool>(pool);
             // Make sure that even if the pool variable is captured due to compiler implementation details,
             // it won't prevent garbage collection.
             pool = null;
             while (true)
             {
-                var localPool = (SessionPool) weakRef.Target;
-                if (localPool == null)
+                if (!weakRef.TryGetTarget(out var localPool))
                 {
                     return;
                 }
