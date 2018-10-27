@@ -14,6 +14,7 @@
 
 using System;
 using System.Data.Common;
+using System.Globalization;
 using System.IO;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
