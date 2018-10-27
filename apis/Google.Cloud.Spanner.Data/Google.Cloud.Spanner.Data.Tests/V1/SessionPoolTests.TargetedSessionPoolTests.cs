@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
 using Grpc.Core;
 using System;
@@ -27,8 +28,6 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 {
     public partial class SessionPoolTests
     {
-        private const int TestTimeoutMilliseconds = 15000;
-
         /// <summary>
         /// Tests for <see cref="SessionPool.TargetedSessionPool" />, mostly
         /// involving direct construction of the pool to avoid any maintenance loops etc.
@@ -45,6 +44,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
         /// without further tasks completing. These use FakeScheduler.RunAndPause.
         /// </para>
         /// </remarks>
+        [FileLoggerBeforeAfterTest]
         public sealed class TargetedSessionPoolTests
         {
             private static readonly DatabaseName s_databaseName = new DatabaseName("project", "instance", "database");
