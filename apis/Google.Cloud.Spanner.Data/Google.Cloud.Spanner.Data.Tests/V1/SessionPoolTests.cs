@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
+using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
@@ -19,13 +22,20 @@ using Moq;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
 
 namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
 {
+    [FileLoggerBeforeAfterTest]
     public partial class SessionPoolTests
     {
+        private const int TestTimeoutMilliseconds = 15000;
+
+        private static readonly DatabaseName s_sampleDatabaseName = new DatabaseName("project", "instance", "database");
+        private static readonly DatabaseName s_sampleDatabaseName2 = new DatabaseName("project", "instance", "database2");
         private static readonly SessionName s_sampleSessionName = new SessionName("project", "instance", "database", "session");
         private static readonly ByteString s_sampleTransactionId = ByteString.CopyFromUtf8("transaction-id");
 
@@ -44,11 +54,172 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             logger.AssertNoWarningsOrErrors();
         }
 
-        // Tests to write once the TargetedSessionPool tests are stable:
-        // - Maintenance happens regularly (check that sessions are evicted, for example)
-        // - Single test for each of ShutdownPoolAsync, WaitForPoolAsync, AcquireSessionAsync
-        // - GetStatisticsSnapshot with multiple databases
-        // - If it proves feasible, check that maintenance stops after GC. (Via logging?)
+        [Fact(Timeout = TestTimeoutMilliseconds)]
+        public async Task ScheduledMaintenanceEvictsSessions()
+        {
+            var client = new SessionTestingSpannerClient();
+            var options = new SessionPoolOptions
+            {
+                // We'll never actually hit a refresh, as the eviction delay is shorter.
+                IdleSessionRefreshDelay = TimeSpan.FromMinutes(30),
+                PoolEvictionDelay = TimeSpan.FromMinutes(3),
+                MaintenanceLoopDelay = TimeSpan.FromMinutes(1),
+                SessionEvictionJitter = RetrySettings.NoJitter,
+                MinimumPooledSessions = 10,
+                MaximumConcurrentSessionCreates = 20,
+                WriteSessionsFraction = 0
+            };
+            var sessionPool = new SessionPool(client, options, client.Logger);
+            var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
+
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+
+            // Our session should be ready, the pool should be up to size, and we should
+            // have created 11 sessions in total.
+            var session = await acquisitionTask;
+            var stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(11, client.SessionsCreated);
+            Assert.Equal(0, client.SessionsDeleted);
+
+            // If we allow the maintenance pool to run until T=5 minutes, we should have evicted
+            // all the 10 sessions in the pool and replaced them.
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(4));
+            stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            Assert.Equal(10, stats.ReadPoolCount);
+            Assert.Equal(21, client.SessionsCreated);
+            Assert.Equal(10, client.SessionsDeleted);
+        }
+
+        [Fact(Timeout = TestTimeoutMilliseconds)]
+        public async Task ShutdownPoolAsync()
+        {
+            var client = new SessionTestingSpannerClient();
+            var options = new SessionPoolOptions
+            {
+                IdleSessionRefreshDelay = TimeSpan.FromMinutes(30),
+                PoolEvictionDelay = TimeSpan.FromMinutes(30),
+                MaintenanceLoopDelay = TimeSpan.FromMinutes(1),
+                MinimumPooledSessions = 10,
+                MaximumConcurrentSessionCreates = 20,
+                WriteSessionsFraction = 0
+            };
+            var sessionPool = new SessionPool(client, options, client.Logger);
+            var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
+
+            // After a minute, we should have a session. Release it immediately for simplicity.
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            var session = await acquisitionTask;
+            session.ReleaseToPool(false);
+
+            // Shut the pool down, and wait a minute. (It won't take that long, as nothing's pending.)
+            var shutdownTask = sessionPool.ShutdownPoolAsync(s_sampleDatabaseName, default);
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+
+            // Now the shutdown task should have completed, and the stats will know that it's shut down.
+            await shutdownTask;
+
+            var stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
+            Assert.True(stats.Shutdown);
+
+            // We can't get sessions any more for this database
+            await Assert.ThrowsAsync<InvalidOperationException>(() => sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default));
+
+            // But we can for a different database. (It shuts down a single database pool, not the whole session pool.)
+            var acquisitionTask2 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName2, new TransactionOptions(), default);
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            await acquisitionTask2;
+        }
+
+        [Fact(Timeout = TestTimeoutMilliseconds)]
+        public async Task WaitForPoolAsync()
+        {
+            var client = new SessionTestingSpannerClient();
+            var options = new SessionPoolOptions
+            {
+                IdleSessionRefreshDelay = TimeSpan.FromMinutes(30),
+                PoolEvictionDelay = TimeSpan.FromMinutes(30),
+                MaintenanceLoopDelay = TimeSpan.FromMinutes(1),
+                MinimumPooledSessions = 10,
+                MaximumConcurrentSessionCreates = 20,
+                WriteSessionsFraction = 0
+            };
+            var sessionPool = new SessionPool(client, options, client.Logger);
+
+            // Ask when the pool is ready, which shouldn't take a minute.
+            var poolReadyTask = sessionPool.WaitForPoolAsync(s_sampleDatabaseName, default);
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            await poolReadyTask;
+
+            // When the pool *is* ready, we should be able to acquire a session directly from the pool,
+            // without any further delays.
+            await sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);            
+        }
+
+        [Fact]
+        public void GetStatisticsSnapshot_UnrepresentedDatabase()
+        {
+            var client = new SessionTestingSpannerClient();
+            var options = new SessionPoolOptions();
+            var sessionPool = new SessionPool(client, options, client.Logger);
+            // We haven't used the database in this session pool, so there are no statistics for it.
+            Assert.Null(sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName));
+        }
+
+        [Fact(Timeout = TestTimeoutMilliseconds)]
+        public async Task GetStatisticsSnapshot_MultipleDatabases()
+        {
+            var client = new SessionTestingSpannerClient();
+            var options = new SessionPoolOptions
+            {
+                MinimumPooledSessions = 10,
+            };
+            var sessionPool = new SessionPool(client, options, client.Logger);
+            var acquisitionTask1 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
+            var acquisitionTask2 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName2, new TransactionOptions(), default);
+            var stats = sessionPool.GetStatisticsSnapshot();
+            Assert.Equal(2, stats.PerDatabaseStatistics.Count);
+            Assert.Equal(2, stats.TotalActiveSessionCount);
+            Assert.Equal(0, stats.TotalReadPoolCount);
+            // We've asked for 2 sessions, and the databases "know" they need 10 in the pool (each), so
+            // there will be 22 in-flight requests in total.
+            Assert.Equal(22, stats.TotalInFlightCreationCount);
+
+            Assert.Contains(stats.PerDatabaseStatistics, s => s.DatabaseName == s_sampleDatabaseName);
+            Assert.Contains(stats.PerDatabaseStatistics, s => s.DatabaseName == s_sampleDatabaseName2);
+
+            // xUnit waits until tasks registered in its synchronization context have completed before considering the
+            // test itself complete, so we need to let the pool complete the acquisition tasks.
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(2));
+        }
+
+        [Fact(Timeout = TestTimeoutMilliseconds)]
+        public async Task MaintenanceTaskCompletesWhenPoolIsGarbageCollected()
+        {
+            var client = new SessionTestingSpannerClient();
+            var options = new SessionPoolOptions
+            {
+                MinimumPooledSessions = 10,
+                MaintenanceLoopDelay = TimeSpan.FromMinutes(1)
+            };
+            var sessionPool = new SessionPool(client, options, client.Logger);
+            var waitingTask = sessionPool.WaitForPoolAsync(s_sampleDatabaseName);
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(5.5));
+            await waitingTask;
+            var maintenanceCount = client.Logger.GetEntries(LogLevel.Debug).Count(entry => entry.Contains("maintenance"));
+            Assert.InRange(maintenanceCount, 5, 6);
+            // Make sure the session pool is "alive" up until this point
+            GC.KeepAlive(sessionPool);
+
+            sessionPool = null;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(10));
+            maintenanceCount = client.Logger.GetEntries(LogLevel.Debug).Count(entry => entry.Contains("maintenance"));
+            // We're really just checking that at *some* point, we stopped logging.
+            // If the maintenance loop hadn't stopped, we'd have 15 entries.
+            Assert.InRange(maintenanceCount, 5, 8);
+        }
 
         // TODO: Would this be useful in CommonTesting?
         /// <summary>
@@ -86,15 +257,21 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 AssertNoEntries(LogLevel.Warn);
             }
 
-            private void AssertNoEntries(LogLevel level)
+            internal List<string> GetEntries(LogLevel level)
             {
                 var list = _logsByLevel.GetOrAdd(level, _ => new List<string>());
                 lock (list)
                 {
-                    if (list.Count != 0)
-                    {
-                        Assert.True(false, $"Level {level}:{Environment.NewLine}{string.Join(Environment.NewLine, list)}");
-                    }
+                    return list.ToList();
+                }
+            }
+
+            private void AssertNoEntries(LogLevel level)
+            {
+                var list = GetEntries(level);
+                if (list.Count != 0)
+                {
+                    Assert.True(false, $"Level {level}:{Environment.NewLine}{string.Join(Environment.NewLine, list)}");
                 }
             }
         }
