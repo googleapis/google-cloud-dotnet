@@ -92,7 +92,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public void BadDataSourceThrows(string dataSource)
         {
             Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder { DataSource = dataSource });
-        }        
+        }
 
         [Fact]
         public void DefaultEndpointIfNotSpecified()
@@ -122,8 +122,56 @@ namespace Google.Cloud.Spanner.Data.Tests
             };
             Assert.Equal("foo", connectionStringBuilder.Host);
             Assert.Equal(1234, connectionStringBuilder.Port);
+            Assert.Throws<ArgumentOutOfRangeException>(() => connectionStringBuilder.Port = 0);
         }
-        
+
+        [Fact]
+        public void AllowImmediateTimeouts()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("AllowImmediateTimeouts=true");
+            Assert.True(connectionStringBuilder.AllowImmediateTimeouts);
+            connectionStringBuilder.AllowImmediateTimeouts = false;
+            Assert.False(connectionStringBuilder.AllowImmediateTimeouts);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("allowimmediatetimeouts=False", connectionStringBuilder.ToString());
+        }
+
+        [Fact]
+        public void MaximumGrpcChannels()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("MaximumGrpcChannels=5");
+            Assert.Equal(5, connectionStringBuilder.MaximumGrpcChannels);
+            connectionStringBuilder.MaximumGrpcChannels = 10;
+            Assert.Equal(10, connectionStringBuilder.MaximumGrpcChannels);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("maximumgrpcchannels=10", connectionStringBuilder.ToString());
+            Assert.Throws<ArgumentOutOfRangeException>(() => connectionStringBuilder.MaximumGrpcChannels = 0);
+        }
+
+        [Fact]
+        public void MaxConcurrentStreamsLowWatermark()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("MaxConcurrentStreamsLowWatermark=100");
+            Assert.Equal(100, connectionStringBuilder.MaxConcurrentStreamsLowWatermark);
+            connectionStringBuilder.MaxConcurrentStreamsLowWatermark = 10;
+            Assert.Equal(10, connectionStringBuilder.MaxConcurrentStreamsLowWatermark);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("maxconcurrentstreamslowwatermark=10", connectionStringBuilder.ToString());
+            Assert.Throws<ArgumentOutOfRangeException>(() => connectionStringBuilder.MaxConcurrentStreamsLowWatermark = 0);
+        }
+
+        [Fact]
+        public void Timeout()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("timeout=100");
+            Assert.Equal(100, connectionStringBuilder.Timeout);
+            connectionStringBuilder.Timeout = 10;
+            Assert.Equal(10, connectionStringBuilder.Timeout);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("timeout=10", connectionStringBuilder.ToString());
+            Assert.Throws<ArgumentOutOfRangeException>(() => connectionStringBuilder.Timeout = -1);
+        }
+
         [Fact]
         public void CredentialFile()
         {

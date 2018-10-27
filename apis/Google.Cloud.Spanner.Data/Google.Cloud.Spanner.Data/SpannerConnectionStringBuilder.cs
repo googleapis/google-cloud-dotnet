@@ -33,10 +33,26 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnectionStringBuilder : DbConnectionStringBuilder
     {
+        /// <summary>
+        /// The default value for <see cref="Timeout"/>.
+        /// </summary>
+        internal const int DefaultTimeout = 60;
+
+        /// <summary>
+        /// The default value for <see cref="MaximumGrpcChannels"/>.
+        /// </summary>
+        internal const int DefaultMaximumGrpcChannels = 4;
+
+        /// <summary>
+        /// The default value for <see cref="MaxConcurrentStreamsLowWatermark"/>.
+        /// </summary>
+        internal const int DefaultMaxConcurrentStreamsLowWatermark = 20;
+
         private const string CredentialFileKeyword = "CredentialFile";
         private const string DataSourceKeyword = "Data Source";
         private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
+
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
 
@@ -187,21 +203,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public int Port
         {
-            get
-            {
-                int result = SpannerClient.DefaultEndpoint.Port;
-                string value = GetValueOrDefault(nameof(Port));
-                if (!string.IsNullOrEmpty(value))
-                {
-                    if (!int.TryParse(value, out result))
-                    {
-                        result = SpannerClient.DefaultEndpoint.Port;
-                    }
-                }
-
-                return result;
-            }
-            set => this[nameof(Port)] = value.ToString();
+            get => GetInt32OrDefault(nameof(Port), 1, 65535, SpannerClient.DefaultEndpoint.Port);
+            set => SetInt32WithValidation(nameof(Port), 1, 65535, value);
         }
 
         /// <summary>
@@ -270,6 +273,54 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        // TODO: Make this public? No obvious reason not to...
+        internal bool AllowImmediateTimeouts
+        {
+            // Allow both a bool value and a text value of "true", case-insensitively.
+            get => TryGetValue(nameof(SpannerSettings.AllowImmediateTimeouts), out var value) &&
+                (value is true || (value is string textValue && textValue.Equals("true", StringComparison.OrdinalIgnoreCase)));
+            set => this[nameof(SpannerSettings.AllowImmediateTimeouts)] = value;
+        }
+
+        /// <summary>
+        /// The maximum number of gRPC channels used for connections with the same settings.
+        /// Defaults to 4.
+        /// </summary>
+        public int MaximumGrpcChannels
+        {
+            get => GetInt32OrDefault(nameof(MaximumGrpcChannels), 1, int.MaxValue, DefaultMaximumGrpcChannels);
+            set => SetInt32WithValidation(nameof(MaximumGrpcChannels), 1, int.MaxValue, value);
+        }
+
+        /// <summary>
+        /// The low watermark of max number of concurrent streams in a channel.
+        /// A new channel will be created once this is reached, until the maximum size
+        /// of the channel pool is reached. This rarely needs to be modified.
+        /// </summary>
+        public int MaxConcurrentStreamsLowWatermark
+        {
+            get => GetInt32OrDefault(nameof(MaxConcurrentStreamsLowWatermark), 1, int.MaxValue, DefaultMaxConcurrentStreamsLowWatermark);
+            set => SetInt32WithValidation(nameof(MaxConcurrentStreamsLowWatermark), 1, int.MaxValue, value);
+        }
+
+        /// <summary>
+        /// Defines the default values for <see cref="SpannerCommand.CommandTimeout"/> and
+        /// <see cref="SpannerTransaction.CommitTimeout"/> along with all network operations to a Cloud
+        /// Spanner database. Defaults to 60 seconds.
+        /// </summary>
+        /// <remarks>
+        /// Operations sent to the server that take greater than this duration will fail
+        /// with a <see cref="SpannerException"/> and error code <see cref="ErrorCode.DeadlineExceeded"/>.
+        /// A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
+        /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
+        /// that expires immediately. This is normally used only for testing purposes.
+        /// </remarks>
+        public int Timeout
+        {
+            get => GetInt32OrDefault(nameof(Timeout), 0, int.MaxValue, DefaultTimeout);
+            set => SetInt32WithValidation(nameof(Timeout), 0, int.MaxValue, value);
+        }
+
         internal ChannelCredentials CredentialOverride { get; }
 
         /// <summary>
@@ -316,6 +367,22 @@ namespace Google.Cloud.Spanner.Data
             string.IsNullOrEmpty(database)
                 ? CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}")
                 : CloneWithNewDataSource($"projects/{Project}/instances/{SpannerInstance}/databases/{database}");
+
+        private int GetInt32OrDefault(string key, int minValue, int maxValue, int defaultValue)
+        {
+            if (TryGetValue(key, out object value) &&
+                (value is int parsed || (value is string text && int.TryParse(text, NumberStyles.None, CultureInfo.InvariantCulture, out parsed))))
+            {
+                return parsed >= minValue && parsed <= maxValue ? parsed : defaultValue;
+            }
+            return defaultValue;            
+        }
+
+        private void SetInt32WithValidation(string key, int minValue, int maxValue, int value)
+        {
+            GaxPreconditions.CheckArgumentRange(value, "value", minValue, maxValue);
+            this[key] = value.ToString(CultureInfo.InvariantCulture);
+        }
 
         private string GetValueOrDefault(string key, string defaultValue = "")
         {
