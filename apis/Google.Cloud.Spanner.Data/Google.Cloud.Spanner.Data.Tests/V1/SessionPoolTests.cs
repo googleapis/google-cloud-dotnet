@@ -18,7 +18,6 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
-using Moq;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -211,14 +210,22 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             // Make sure the session pool is "alive" up until this point
             GC.KeepAlive(sessionPool);
 
+            var weakReference = new WeakReference<SessionPool>(sessionPool);
             sessionPool = null;
             GC.Collect();
             GC.WaitForPendingFinalizers();
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(10));
-            maintenanceCount = client.Logger.GetEntries(LogLevel.Debug).Count(entry => entry.Contains("maintenance"));
-            // We're really just checking that at *some* point, we stopped logging.
-            // If the maintenance loop hadn't stopped, we'd have 15 entries.
-            Assert.InRange(maintenanceCount, 5, 8);
+            
+            // Depending on the frameowrk version and the release mode, the pool may or may not be collected
+            // at this point. If this weak reference has been cleared, we'll assume the internal one has been
+            // as well. Otherwise, this test is pointless but harmless.
+            if (!weakReference.TryGetTarget(out _))
+            {
+                await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(10));
+                maintenanceCount = client.Logger.GetEntries(LogLevel.Debug).Count(entry => entry.Contains("maintenance"));
+                // We're really just checking that at *some* point, we stopped logging.
+                // If the maintenance loop hadn't stopped, we'd have 15 entries.
+                Assert.InRange(maintenanceCount, 5, 8);
+            }
         }
 
         // TODO: Would this be useful in CommonTesting?
