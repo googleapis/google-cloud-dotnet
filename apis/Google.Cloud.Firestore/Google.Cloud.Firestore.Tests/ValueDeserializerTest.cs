@@ -229,6 +229,19 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("y", deserialized.PublicAccessToPrivateProperty);
         }
 
+        [Fact]
+        public void DeserializePrivateConstructor()
+        {
+            var original = PrivateConstructor.Create("test", 15);
+            var value = ValueSerializer.Serialize(original);
+            Assert.Equal("test", value.MapValue.Fields["Name"].StringValue);
+            Assert.Equal(15L, value.MapValue.Fields["Value"].IntegerValue);
+
+            var deserialized = (PrivateConstructor) DeserializeDefault(value, typeof(PrivateConstructor));
+            Assert.Equal("test", deserialized.Name);
+            Assert.Equal(15, deserialized.Value);
+        }
+        
         private string DeserializeAndReturnWarnings<T>(object valueToSerialize)
         {
             var value = ValueSerializer.Serialize(valueToSerialize);
@@ -256,5 +269,22 @@ namespace Google.Cloud.Firestore.Tests
         /// An interface that we can't deserialize to, because Dictionary{,} doesn't implement it.
         /// </summary>
         public interface IUnsupportedDictionary : IDictionary<string, string> { }
+
+        [FirestoreData]
+        private class PrivateConstructor
+        {
+            [FirestoreProperty]
+            public string Name { get; private set; }
+
+            [FirestoreProperty]
+            public int Value { get; private set; }
+
+            private PrivateConstructor()
+            {
+            }
+
+            public static PrivateConstructor Create(string name, int value) =>
+                new PrivateConstructor { Name = name, Value = value };
+        }
     }
 }
