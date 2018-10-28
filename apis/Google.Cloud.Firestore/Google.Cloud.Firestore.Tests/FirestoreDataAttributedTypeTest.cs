@@ -60,6 +60,14 @@ namespace Google.Cloud.Firestore.Tests
             [FirestoreProperty] public int this[string index] => 0;
         }
 
+        [FirestoreData]
+        private class NoParameterlessConstructor
+        {
+            [FirestoreProperty] public int Foo { get; set; }
+
+            public NoParameterlessConstructor(int foo) => Foo = foo;
+        }
+
         public static TheoryData<BclType, string> InvalidTypes = new TheoryData<BclType, string>
         {
             { typeof(NotAttributed), nameof(FirestoreDataAttribute) },
@@ -68,7 +76,8 @@ namespace Google.Cloud.Firestore.Tests
             { typeof(DuplicateWritableProperties), "Foo" },
             { typeof(StaticReadableProperty), "static" },
             { typeof(StaticWritableProperty), "static" },
-            { typeof(Indexer), "indexer" }
+            { typeof(Indexer), "indexer" },
+            { typeof(NoParameterlessConstructor), "constructor" }
         };
 
         [Theory, MemberData(nameof(InvalidTypes))]

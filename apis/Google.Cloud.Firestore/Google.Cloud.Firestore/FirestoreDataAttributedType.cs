@@ -44,6 +44,8 @@ namespace Google.Cloud.Firestore
         internal IReadOnlyList<AttributedProperty> ReadableProperties { get; }
         internal UnknownPropertyHandling UnknownPropertyHandling => _attribute.UnknownPropertyHandling;
 
+        private readonly ConstructorInfo _ctor;
+
         private FirestoreDataAttributedType(BclType type)
         {
             var typeInfo = type.GetTypeInfo();
@@ -54,6 +56,11 @@ namespace Google.Cloud.Firestore
             // The rest are user bugs.
             GaxPreconditions.CheckState(Enum.IsDefined(typeof(UnknownPropertyHandling), UnknownPropertyHandling),
                 "Type {0} has invalid {1} value", type.FullName, nameof(UnknownPropertyHandling));
+
+            _ctor = typeInfo
+                .GetConstructors(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance)
+                .SingleOrDefault(ctor => ctor.GetParameters().Length == 0);
+            GaxPreconditions.CheckState(_ctor != null, "Type {0} has no parameterless constructor", type.FullName);
 
             List<AttributedProperty> readableProperties = new List<AttributedProperty>();
             Dictionary<string, AttributedProperty> writableProperties = new Dictionary<string, AttributedProperty>();
@@ -87,6 +94,11 @@ namespace Google.Cloud.Firestore
             ReadableProperties = readableProperties.AsReadOnly();
             WritableProperties = new ReadOnlyDictionary<string, AttributedProperty>(writableProperties);
         }
+
+        /// <summary>
+        /// Creates an instance of the attributed type, using the parameterless constructor.
+        /// </summary>
+        internal object CreateInstance() => _ctor.Invoke(parameters: null);
 
         /// <summary>
         /// Returns an instance of <see cref="FirestoreDataAttributedType"/> for the given type,

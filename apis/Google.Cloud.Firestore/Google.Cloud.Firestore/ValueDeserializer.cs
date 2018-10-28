@@ -182,7 +182,7 @@ namespace Google.Cloud.Firestore
             if (IsFirestoreAttributedType(targetType))
             {
                 var attributedType = FirestoreDataAttributedType.ForType(targetType);
-                var ret = Activator.CreateInstance(targetType);
+                var ret = attributedType.CreateInstance();
 
                 foreach (var pair in values)
                 {
