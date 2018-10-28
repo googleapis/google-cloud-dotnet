@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     internal sealed class SpannerClientCreationOptions : IEquatable<SpannerClientCreationOptions>
     {
-        private static Lazy<Task<ChannelCredentials>> _defaultCredentialsTaskProvider = new Lazy<Task<ChannelCredentials>>(CreatedScopedDefaultCredentials);
+        private static Lazy<Task<ChannelCredentials>> s_defaultCredentialsTaskProvider = new Lazy<Task<ChannelCredentials>>(CreatedScopedDefaultCredentials);
 
         private static async Task<ChannelCredentials> CreatedScopedDefaultCredentials()
         {
@@ -138,7 +138,7 @@ namespace Google.Cloud.Spanner.Data
             }
             if (string.IsNullOrEmpty(_credentialsFile))
             {
-                return await _defaultCredentialsTaskProvider.Value.ConfigureAwait(false);
+                return await s_defaultCredentialsTaskProvider.Value.ConfigureAwait(false);
             }
 
             string file = _credentialsFile;
