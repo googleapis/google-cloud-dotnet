@@ -192,7 +192,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(2));
         }
 
-        [Fact(Timeout = TestTimeoutMilliseconds)]
+        [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Flaky in CI; needs further investigation")]
         public async Task MaintenanceTaskCompletesWhenPoolIsGarbageCollected()
         {
             var client = new SessionTestingSpannerClient();
