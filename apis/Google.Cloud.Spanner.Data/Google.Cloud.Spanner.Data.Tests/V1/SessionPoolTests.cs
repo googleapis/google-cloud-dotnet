@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
             logger.AssertNoWarningsOrErrors();
         }
 
-        [Fact(Timeout = TestTimeoutMilliseconds)]
+        [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Flaky in CI; needs further investigation")]
         public async Task ScheduledMaintenanceEvictsSessions()
         {
             var client = new SessionTestingSpannerClient();

@@ -414,7 +414,7 @@ namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
                 });
             }
 
-            [Fact(Timeout = TestTimeoutMilliseconds)]
+            [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Flaky in CI; needs further investigation")]
             public async Task WaitForPoolAsync_CancelOneOfTwo()
             {
                 var pool = CreatePool(false);
