@@ -58,45 +58,6 @@ namespace Google.Cloud.Spanner.Data
         private DatabaseName _databaseName;
 
         /// <summary>
-        /// The <see cref="ChannelCredentials"/> credential used to communicate with Spanner, if explicitly
-        /// set. Otherwise, this method returns null, usually indicating that default application credentials should be used.
-        /// Credentials can be retrieved from a file or obtained interactively.
-        /// See Google Cloud documentation for more information.
-        /// </summary>
-        public ChannelCredentials GetCredentials()
-        {
-            // Check the ctor override.
-            if (CredentialOverride != null)
-            {
-                return CredentialOverride;
-            }
-
-            //Calculate it from the CredentialFile argument in the connection string.
-            GoogleCredential credentials = null;
-            string jsonFile = CredentialFile;
-            if (!string.IsNullOrEmpty(jsonFile))
-            {
-                if (!string.Equals(Path.GetExtension(jsonFile), ".json", StringComparison.OrdinalIgnoreCase))
-                {
-                    throw new InvalidOperationException($"{nameof(CredentialFile)} should only be set to a JSON file.");
-                }
-
-                if (!File.Exists(jsonFile))
-                {
-                    //try some relative locations.
-                    jsonFile = $"{GetApplicationFolder()}{Path.DirectorySeparatorChar}{jsonFile}";
-                }
-                if (!File.Exists(jsonFile))
-                {
-                    //throw a meaningful error that tells the developer where we looked.
-                    throw new FileNotFoundException($"Could not find {nameof(CredentialFile)}. Also looked in {jsonFile}.");
-                }
-                credentials = GoogleCredential.FromFile(jsonFile).CreateScoped(SpannerClient.DefaultScopes);
-            }
-            return credentials?.ToChannelCredentials();
-        }
-
-        /// <summary>
         /// Optional path to a JSON Credential file. If a Credential is not supplied, Cloud Spanner
         /// will use Default Application Credentials.
         /// </summary>

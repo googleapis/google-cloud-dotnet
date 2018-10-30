@@ -173,50 +173,6 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void CredentialFile()
-        {
-            string appFolder;
-#if NETCOREAPP1_0
-            appFolder = AppContext.BaseDirectory;
-#else
-            appFolder = AppDomain.CurrentDomain.BaseDirectory;
-#endif
-            string jsonFile = $"{appFolder}{Path.DirectorySeparatorChar}SpannerEF-8dfc036f6000.json";
-            Assert.True(File.Exists(jsonFile));
-            using (var connection = new SpannerConnection($"CredentialFile={jsonFile}"))
-            {
-                Assert.NotNull(connection.GetCredentials());
-            }
-        }
-
-        [Fact]
-        public void CredentialFileRelative()
-        {
-            using (var connection = new SpannerConnection("CredentialFile=SpannerEF-8dfc036f6000.json"))
-            {
-                Assert.NotNull(connection.GetCredentials());
-            }
-        }
-
-        [Fact]
-        public void CredentialFileP12Error()
-        {
-            using (var connection = new SpannerConnection("CredentialFile=SpannerEF-8dfc036f6000.p12"))
-            {
-                Assert.Throws<InvalidOperationException>(() => connection.GetCredentials());
-            }
-        }
-
-        [Fact]
-        public void CredentialFileNotFound()
-        {
-            using (var connection = new SpannerConnection("CredentialFile=..\\BadFilePath.json"))
-            {
-                Assert.Throws<FileNotFoundException>(() => connection.GetCredentials());
-            }
-        }        
-
-        [Fact]
         public void WithDatabase()
         {
             var builder = new SpannerConnectionStringBuilder("Data Source=projects/project1/instances/instance1");
