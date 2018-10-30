@@ -17,11 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {
@@ -75,24 +71,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 return -1;
             }
             return result;
-        }
-
-        /// <summary>
-        /// The purpose of this method is to review the state of both the client (grpc channel) pool and session pool.
-        /// The session pool should have sessions perfectly evenly distributed among each channel.
-        /// The channel pool at test end should all have refcounts = 0.
-        /// </summary>
-        protected static void ValidatePoolInfo()
-        {
-            StringBuilder s = new StringBuilder();
-            int sessions = SessionPool.Default.GetPoolInfo(s);
-            Assert.True(sessions < 2, s.ToString());
-            Logger.DefaultLogger.Info(() => s.ToString());
-
-            s.Clear();
-            int clients = ClientPool.Default.GetPoolInfo(s);
-            Assert.True(clients == 0, s.ToString());
-            Logger.DefaultLogger.Info(() => s.ToString());
         }
     }
 }
