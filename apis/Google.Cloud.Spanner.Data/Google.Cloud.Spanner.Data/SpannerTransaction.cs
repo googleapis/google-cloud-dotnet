@@ -172,7 +172,7 @@ namespace Google.Cloud.Spanner.Data
 
             // Calling this method marks the used transaction as "shared" - but does not set
             // DisposeBehavior to any value. This will cause an exception during dispose that tells the developer
-            // that they need to handle this condition by explcitly setting DisposeBehavior to some value.
+            // that they need to handle this condition by explicitly setting DisposeBehavior to some value.
             Shared = true;
 
             var partitionRequest = new PartitionQueryRequest

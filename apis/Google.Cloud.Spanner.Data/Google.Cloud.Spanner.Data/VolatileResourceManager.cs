@@ -127,7 +127,7 @@ namespace Google.Cloud.Spanner.Data
                 // We don't need to roll back if we're in a read-only transaction, and indeed doing so will cause an error.
                 if (_transaction != null && _transaction.Mode != TransactionMode.ReadOnly)
                 {
-                    ExecuteHelper.WithErrorTranslationAndProfiling(() => _transaction?.Rollback(), "VolatileResourceManager.Rollback", Logger);
+                    ExecuteHelper.WithErrorTranslationAndProfiling(() => _transaction.Rollback(), "VolatileResourceManager.Rollback", Logger);
                 }
                 enlistment.Done();
             }
