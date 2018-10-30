@@ -26,8 +26,6 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 
-using Google.Cloud.Spanner.V1.PoolRewrite;
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

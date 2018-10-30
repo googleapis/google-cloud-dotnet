@@ -19,9 +19,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-using SessionPool = Google.Cloud.Spanner.V1.PoolRewrite.SessionPool;
-using SessionPoolOptions = Google.Cloud.Spanner.V1.PoolRewrite.SessionPoolOptions;
-
 namespace Google.Cloud.Spanner.Data.Tests
 {
     using ClientFactory = Func<SpannerClientCreationOptions, Task<SpannerClient>>;

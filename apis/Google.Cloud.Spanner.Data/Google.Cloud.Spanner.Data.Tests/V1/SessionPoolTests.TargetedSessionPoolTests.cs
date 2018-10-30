@@ -22,9 +22,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Spanner.V1.PoolRewrite.SessionPool;
+using static Google.Cloud.Spanner.V1.SessionPool;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
+namespace Google.Cloud.Spanner.V1.Tests
 {
     public partial class SessionPoolTests
     {

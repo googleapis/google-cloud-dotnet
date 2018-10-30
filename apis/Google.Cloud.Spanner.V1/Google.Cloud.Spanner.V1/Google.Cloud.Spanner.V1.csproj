@@ -31,8 +31,8 @@
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="PoolRewrite\SessionPool.*.cs">
-      <DependentUpon>PoolRewrite\SessionPool.cs</DependentUpon>
+    <Compile Update="SessionPool.*.cs">
+      <DependentUpon>SessionPool.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

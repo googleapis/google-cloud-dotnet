@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 
 using FakeClock = Google.Api.Gax.Testing.FakeClock;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
+namespace Google.Cloud.Spanner.V1.Tests
 {
     public partial class SessionPoolTests
     {

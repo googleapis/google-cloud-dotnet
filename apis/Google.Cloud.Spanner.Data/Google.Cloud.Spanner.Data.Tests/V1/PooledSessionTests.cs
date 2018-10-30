@@ -23,7 +23,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
+namespace Google.Cloud.Spanner.V1.Tests
 {
     public class PooledSessionTests
     {

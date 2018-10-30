@@ -15,7 +15,7 @@
 
 using Google.Cloud.Spanner.Common.V1;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite
+namespace Google.Cloud.Spanner.V1
 {
     public partial class SessionPool
     {

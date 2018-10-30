@@ -16,7 +16,6 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.PoolRewrite;
 using Grpc.Core;
 using System;
 using System.Data.Common;
