@@ -94,44 +94,41 @@ namespace Google.Cloud.Bigtable.V2
                 return originalRows;
             }
 
-            RowSet newRowSet;
-
-            if (originalRows != null)
+            // If the original request didn't specify a row set at all, create an open range from the last key
+            // to specify "all rows after this key".
+            if (originalRows == null)
             {
-                newRowSet = new RowSet
-                {
-                    RowKeys = {originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key))}
-                };
-
-                foreach (RowRange rowRange in originalRows.RowRanges)
-                {
-                    RowRange.EndKeyOneofCase endKeyOneofCase = rowRange.EndKeyCase;
-                    if (endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyClosed &&
-                        EndKeyIsAlreadyRead(rowRange.EndKeyClosed)
-                        || endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyOpen &&
-                        EndKeyIsAlreadyRead(rowRange.EndKeyOpen))
-                    {
-                        continue;
-                    }
-
-                    RowRange.StartKeyOneofCase startKeyOneofCase = rowRange.StartKeyCase;
-                    RowRange newRange = rowRange;
-                    if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed &&
-                        StartKeyIsAlreadyRead(rowRange.StartKeyClosed)
-                        || (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyOpen &&
-                            StartKeyIsAlreadyRead(rowRange.StartKeyOpen))
-                        || startKeyOneofCase == RowRange.StartKeyOneofCase.None)
-                    {
-                        newRange = newRange.Clone();
-                        newRange.StartKeyOpen = LastFoundKey.Value;
-                    }
-
-                    newRowSet.RowRanges.Add(newRange);
-                }
+                return RowSet.FromRowRanges(RowRange.Open(LastFoundKey, null));
             }
-            else
+
+            RowSet newRowSet = new RowSet
             {
-                newRowSet = RowSet.FromRowRanges(RowRange.Open(LastFoundKey, null));
+                RowKeys = { originalRows.RowKeys.Where(key => !StartKeyIsAlreadyRead(key)) }
+            };
+
+            foreach (RowRange rowRange in originalRows.RowRanges)
+            {
+                RowRange.EndKeyOneofCase endKeyOneofCase = rowRange.EndKeyCase;
+                if (endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyClosed &&
+                    EndKeyIsAlreadyRead(rowRange.EndKeyClosed)
+                    || endKeyOneofCase == RowRange.EndKeyOneofCase.EndKeyOpen &&
+                    EndKeyIsAlreadyRead(rowRange.EndKeyOpen))
+                {
+                    continue;
+                }
+
+                RowRange.StartKeyOneofCase startKeyOneofCase = rowRange.StartKeyCase;
+                RowRange newRange = rowRange;
+                if (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyClosed &&
+                    StartKeyIsAlreadyRead(rowRange.StartKeyClosed)
+                    || (startKeyOneofCase == RowRange.StartKeyOneofCase.StartKeyOpen &&
+                        StartKeyIsAlreadyRead(rowRange.StartKeyOpen))
+                    || startKeyOneofCase == RowRange.StartKeyOneofCase.None)
+                {
+                    newRange = newRange.Clone();
+                    newRange.StartKeyOpen = LastFoundKey.Value;
+                }
+                newRowSet.RowRanges.Add(newRange);
             }
 
             return newRowSet;
