@@ -296,7 +296,9 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
                     }
 
                     var command = (SpannerCommand) connection.DbConnection.CreateCommand();
-                    command.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(Logger);
+                    // TODO: Reinstate this if possible. We allow the logger to be set on a connection, but not on
+                    // a command.
+                    // command.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(Logger);
                     command.CommandText = CommandText;
 
                     if (connection.CurrentTransaction != null)
