@@ -12,18 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.PoolRewrite;
+using Grpc.Core;
 using System;
 using System.Data.Common;
 using System.Globalization;
-using System.IO;
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Apis.Auth.OAuth2;
-using Google.Cloud.Spanner.Admin.Database.V1;
-using Google.Cloud.Spanner.Common.V1;
-using Google.Cloud.Spanner.V1;
-using Grpc.Auth;
-using Grpc.Core;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -285,6 +283,26 @@ namespace Google.Cloud.Spanner.Data
 
         internal ChannelCredentials CredentialOverride { get; }
 
+        // TODO: Is this a reasonable place to put it?
+        private SessionPoolManager _sessionPoolManager = SessionPoolManager.Default;
+
+        /// <summary>
+        /// The <see cref="SessionPoolManager"/> to use for server interactions.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="SessionPoolManager.Default"/>, and
+        /// most code will not need to change this. It can be convenient for isolation purposes,
+        /// particularly in testing.
+        /// </remarks>
+        public SessionPoolManager SessionPoolManager
+        {
+            get => _sessionPoolManager;
+            set => _sessionPoolManager = GaxPreconditions.CheckNotNull(value, nameof(value));
+        }
+
+        internal Task<SessionPool> AcquireSessionPoolAsync() =>
+            SessionPoolManager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(this));
+
         /// <summary>
         /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
         /// connection string and optional credential.
@@ -299,10 +317,24 @@ namespace Google.Cloud.Spanner.Data
         /// See Google Cloud documentation for more information. May be null.
         /// </param>
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials = null)
+            : this(connectionString, credentials, SessionPoolManager.Default)
         {
-            GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerConnectionStringBuilder"/> with the given
+        /// connection string, optional credential, and session pool manager.
+        /// </summary>
+        /// <param name="connectionString">>A connection string of the form
+        /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
+        /// Must not be null.</param>
+        /// <param name="credentials">The credential to use for the connection. May be null.</param>
+        /// <param name="sessionPoolManager">The session pool manager to use.</param>
+        public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager)
+        {
+            ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
             CredentialOverride = credentials;
-            ConnectionString = connectionString;
+            SessionPoolManager = GaxPreconditions.CheckNotNull(sessionPoolManager, nameof(sessionPoolManager));
         }
 
         /// <summary>
@@ -311,13 +343,10 @@ namespace Google.Cloud.Spanner.Data
         public SpannerConnectionStringBuilder() { }
 
 
-        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride);
+        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager);
 
-        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
-            => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride)
-            {
-                DataSource = dataSource
-            };
+        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource) =>
+            new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager) { DataSource = dataSource };
 
         /// <summary>
         /// Returns a new instance of a <see cref="SpannerConnectionStringBuilder"/> with the database

@@ -14,6 +14,7 @@
 
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
@@ -50,6 +51,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
+
+            // No sessions created, so no session pool.
         }
 
         [Fact]
@@ -94,6 +97,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
+
+            await SessionPoolHelpers.ShutdownPoolAsync(builder.WithDatabase(dbName));
         }
 
         [Fact]
@@ -143,6 +148,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var dropCommand = connection.CreateDdlCommand($"DROP DATABASE {dbName}");
                 await dropCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
             }
+
+            await SessionPoolHelpers.ShutdownPoolAsync(builder.WithDatabase(dbName));
         }
 
         [Fact]

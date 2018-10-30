@@ -12,49 +12,55 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
+using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax;
-using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Google.Protobuf.WellKnownTypes;
+
+using Google.Cloud.Spanner.V1.PoolRewrite;
 
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
-    /// EphemeralTransaction acquires sessions from the provided SpannerConnection on an as-needed basis.
-    /// It holds no long term refcounts or state of its own and can be created and GC'd at will.
+    /// EphemeralTransaction acquires and releases PooledSessions from the provided SessionPool on an as-needed basis.
+    /// It needs no explicit disposal, as each operation cleans up after itself. (In the case of readers being returned,
+    /// the session is only released when the ReliableStreamReader is disposed.)
     /// </summary>
     internal sealed class EphemeralTransaction : ISpannerTransaction
     {
         private readonly SpannerConnection _connection;
+        private readonly TransactionOptions _transactionOptions;
 
-        public EphemeralTransaction(SpannerConnection connection, Logger logger)
+        internal EphemeralTransaction(SpannerConnection connection, TransactionOptions transactionOptions)
         {
-            GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            _connection = connection;
-            Logger = logger ?? Logger.DefaultLogger;
+            _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
+            _transactionOptions = transactionOptions;
         }
 
-        /// <summary>
-        /// This property is intended for internal use only.
-        /// </summary>
-        private Logger Logger { get; }
+        public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteDmlAsync", _connection.Logger);
 
-        public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds) =>
-            ExecuteHelper.WithErrorTranslationAndProfiling(
-                async () =>
+            async Task<long> Impl()
+            {
+                using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
-                    using (var transaction = await _connection.BeginTransactionAsync(cancellationToken).ConfigureAwait(false))
+                    transaction.CommitTimeout = timeoutSeconds;
+                    long count = await ((ISpannerTransaction)transaction)
+                        .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
+                        .ConfigureAwait(false);
+
+                    // This is somewhat ugly. PDML commits as it goes, so we don't need to, whereas non-partitioned
+                    // DML needs the commit afterwards to finish up.
+                    if (_transactionOptions.ModeCase != TransactionOptions.ModeOneofCase.PartitionedDml)
                     {
-                        transaction.CommitTimeout = timeoutSeconds;
-                        long count = await ((ISpannerTransaction)transaction).ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
                         await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-                        return count;
                     }
-                }, "EphemeralTransaction.ExecuteDmlAsync", Logger);
+                    return count;
+                }
+            }
+        }
 
         /// <summary>
         /// Acquires a read/write transaction from Spannerconnection and releases the transaction back into the pool
@@ -68,52 +74,36 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>The number of rows modified.</returns>
         public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            GaxPreconditions.CheckNotNull(mutations, nameof(mutations));
-            Logger.Debug(() => "Executing a mutation change through an ephemeral transaction.");
-            int count;
+            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteMutationsAsync", _connection.Logger);
 
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                async () =>
+            async Task<int> Impl()
+            {
+                using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
-                    using (var transaction = await _connection.BeginTransactionAsync(cancellationToken)
-                        .ConfigureAwait(false))
-                    {
-                        // Importantly, we need to set timeout on the transaction, because
-                        // ExecuteMutations on SpannerTransaction doesnt actually hit the network
-                        // until you commit or rollback.
-                        transaction.CommitTimeout = timeoutSeconds;
-                        count = await ((ISpannerTransaction) transaction)
-                            .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
-                            .ConfigureAwait(false);
-                        await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
-                    }
+                    // Importantly, we need to set timeout on the transaction, because
+                    // ExecuteMutations on SpannerTransaction doesnt actually hit the network
+                    // until you commit or rollback.
+                    transaction.CommitTimeout = timeoutSeconds;
+                    int count = await ((ISpannerTransaction)transaction)
+                        .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
+                        .ConfigureAwait(false);
+                    await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
                     return count;
-                }, "EphemeralTransaction.ExecuteMutations", Logger);
+                }
+            }
         }
 
-        public Task<ReliableStreamReader> ExecuteQueryAsync(
-            ExecuteSqlRequest request,
-            CancellationToken cancellationToken,
-            int timeoutSeconds)
+        public Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                async () =>
-                {
-                    GaxPreconditions.CheckNotNull(request, nameof(request));
-                    Logger.Debug(() => "Executing a query through an ephemeral transaction.");
+            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteQuery", _connection.Logger);
 
-                    using (var holder = await SpannerConnection.SessionHolder
-                        .Allocate(_connection, cancellationToken)
-                        .ConfigureAwait(false))
-                    {
-                        var client = _connection.SpannerClient;
-                        var streamReader = client.GetSqlStreamReader(request, holder.Session, timeoutSeconds);
-                        holder.TakeOwnership();
-                        streamReader.StreamClosed += (o, e) => { _connection.ReleaseSession(streamReader.Session, client); };
-
-                        return streamReader;
-                    }
-                }, "EphemeralTransaction.ExecuteQuery", Logger);
+            async Task<ReliableStreamReader> Impl()
+            {
+                PooledSession session = await _connection.AcquireSessionAsync(_transactionOptions, cancellationToken).ConfigureAwait(false);
+                var reader = session.ExecuteSqlStreamReader(request, timeoutSeconds);
+                reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
+                return reader;
+            }
         }
     }
 }

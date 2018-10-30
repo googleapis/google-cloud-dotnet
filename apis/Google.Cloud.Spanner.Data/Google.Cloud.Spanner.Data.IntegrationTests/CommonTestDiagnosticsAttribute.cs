@@ -29,9 +29,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private static readonly List<BeforeAfterTestAttribute> s_attributes = new List<BeforeAfterTestAttribute>
         {
-            // new ValidatePoolBeforeAfterTestAttribute(),
-            // new DumpPoolSummariesBeforeAfterTestAttribute(),
-            // new FileLoggerBeforeAfterTestAttribute()
+            new ValidatePoolBeforeAfterTestAttribute(),
+            //new DumpPoolSummariesBeforeAfterTestAttribute(),
+            new FileLoggerBeforeAfterTestAttribute()
         };
 
         public override void Before(MethodInfo methodUnderTest) =>

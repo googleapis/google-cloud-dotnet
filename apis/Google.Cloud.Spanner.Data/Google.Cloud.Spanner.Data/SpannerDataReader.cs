@@ -235,7 +235,7 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool NextResult()
         {
-            Logger.Warn(() => "Spanner does not support multiple SQL queries in a single command");
+            Logger.Warn("Spanner does not support multiple SQL queries in a single command");
             return false;
         }
 

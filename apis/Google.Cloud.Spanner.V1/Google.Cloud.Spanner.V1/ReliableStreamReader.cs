@@ -97,14 +97,14 @@ namespace Google.Cloud.Spanner.V1
             Logger.LogPerformanceCounterFn("StreamReader.ConnectCount", x => x + 1);
             if (_resumeToken != null)
             {
-                Logger.Debug(() => $"Resuming at location:{_resumeToken}");
+                Logger.Debug($"Resuming at location:{_resumeToken}");
                 _request.ResumeToken = _resumeToken;
             }
 
             _currentCall = _spannerClient.ExecuteSqlStream(_request,
                 _spannerClient.Settings.ExecuteSqlStreamSettings.WithExpiration(
                     _spannerClient.Settings.ConvertTimeoutToExpiration(_timeoutSeconds)));
-            return WithTiming(_currentCall.ResponseHeadersAsync.WithSessionChecking(() => _session), "ResponseHeaders");
+            return WithTiming(_currentCall.ResponseHeadersAsync.WithSessionChecking(_session), "ResponseHeaders");
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Google.Cloud.Spanner.V1
 
                     _isReading = await WithTiming(
                             _currentCall.ResponseStream.MoveNext(cancellationToken)
-                                .WithSessionChecking(() => _session),
+                                .WithSessionChecking(_session),
                             "ResponseStream.MoveNext")
                         .ConfigureAwait(false);
                     if (!_isReading || _currentCall.ResponseStream.Current == null)
@@ -178,7 +178,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 Logger.LogPerformanceCounterFn("StreamReader.MoveNextCount", x => x + 1);
                 _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
-                    .WithSessionChecking(() => _session).ConfigureAwait(false);
+                    .WithSessionChecking(_session).ConfigureAwait(false);
 
                 //we only increment our skip count after we know the MoveNext has succeeded
                 _resumeSkipCount++;
@@ -215,7 +215,7 @@ namespace Google.Cloud.Spanner.V1
                 try
                 {
                     _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
-                        .WithSessionChecking(() => _session).ConfigureAwait(false);
+                        .WithSessionChecking(_session).ConfigureAwait(false);
                     _resumeSkipCount++;
                 }
                 catch (Exception e)
@@ -342,7 +342,7 @@ namespace Google.Cloud.Spanner.V1
         ~ReliableStreamReader()
         {
             // If our finalizer runs, it means we were not disposed properly.
-            Logger.Warn(() => "ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
+            Logger.Warn("ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
         }
 
         /// <summary>

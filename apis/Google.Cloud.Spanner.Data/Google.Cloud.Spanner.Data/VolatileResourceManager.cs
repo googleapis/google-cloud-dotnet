@@ -12,17 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 #if !NETSTANDARD1_5
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Transactions;
-using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Google.Protobuf;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -32,10 +29,8 @@ namespace Google.Cloud.Spanner.Data
         private readonly TimestampBound _timestampBound;
         private readonly TransactionId _transactionId;
         private SpannerTransaction _transaction;
-        private SpannerClient _spannerClient;
-        private Action _spannerClientDisposal;
 
-        public VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId)
+        internal VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId)
         {
             _spannerConnection = spannerConnection;
             _timestampBound = timestampBound;
@@ -48,16 +43,14 @@ namespace Google.Cloud.Spanner.Data
         {
             try
             {
-                _transaction?.DisposeWithClient(_spannerClient);
-                _spannerClientDisposal?.Invoke();
+                _transaction?.Dispose();
                 // Protect against multiple disposals
                 _transaction = null;
-                _spannerClientDisposal = null;
             }
             catch (Exception e)
             {
 
-                Logger.DefaultLogger.Error(() => "Error disposing", e);
+                Logger.Error("Error disposing", e);
             }
         }
 
@@ -79,7 +72,7 @@ namespace Google.Cloud.Spanner.Data
                     CommitToSpanner();
                     return;
                 }
-                Logger.Warn(() => "Received a call to Commit, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+                Logger.Warn("Received a call to Commit, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
                 throw new NotSupportedException(
                     "Spanner only supports single phase commit (2-P Commit not supported)." +
                     " This error can happen when attempting to use multiple transaction resources but may also happen for" +
@@ -93,9 +86,7 @@ namespace Google.Cloud.Spanner.Data
 
         public void InDoubt(Enlistment enlistment)
         {
-            Logger.Warn(
-                () =>
-                    "Got a InDoubt call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
+            Logger.Warn("Got an InDoubt call, which indicates two phase commit inside a transaction scope. This is currently not supported in Spanner.");
             enlistment.Done();
         }
 
@@ -136,16 +127,13 @@ namespace Google.Cloud.Spanner.Data
                 // We don't need to roll back if we're in a read-only transaction, and indeed doing so will cause an error.
                 if (_transaction != null && _transaction.Mode != TransactionMode.ReadOnly)
                 {
-                    ExecuteHelper.WithErrorTranslationAndProfiling(() =>
-                        _transaction?.Rollback(), "VolatileResourceManager.Rollback", Logger);
+                    ExecuteHelper.WithErrorTranslationAndProfiling(() => _transaction?.Rollback(), "VolatileResourceManager.Rollback", Logger);
                 }
                 enlistment.Done();
             }
             catch (Exception e)
             {
-                Logger.Error(
-                    () =>
-                        "Error attempting to rollback a transaction.", e);
+                Logger.Error("Error attempting to rollback a transaction.", e);
             }
             finally
             {
@@ -176,74 +164,47 @@ namespace Google.Cloud.Spanner.Data
 
         private void CommitToSpanner()
         {
-            // If its a read-only transaction, then just tell the outer transaction that everything is good.
-            // This can happen with a readonly transaction or a write transaction where we never
+            // If it's a read-only transaction, then just tell the outer transaction that everything is good.
+            // This can happen with a read-only transaction or a write transaction where we never
             // executed any mutations.
-            if (_transaction?.Mode != TransactionMode.ReadOnly)
+            if (_transaction != null && _transaction.Mode != TransactionMode.ReadOnly)
             {
-                ExecuteHelper.WithErrorTranslationAndProfiling(
-                    () =>
-                        _transaction?.Commit(), "VolatileResourceManager.Commit", Logger);
+                ExecuteHelper.WithErrorTranslationAndProfiling(() => _transaction.Commit(), "VolatileResourceManager.Commit", Logger);
             }
         }
 
         public async Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            var transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
-            if (transaction == null)
-            {
-                throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
-            }
-            return await ((ISpannerTransaction)transaction).ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            ISpannerTransaction transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await transaction.ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
         public async Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            var transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
-            if (transaction == null)
-            {
-                throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
-            }
-            return await ((ISpannerTransaction)transaction).ExecuteQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            ISpannerTransaction transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await transaction.ExecuteQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
         public async Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
-            var transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
-            if (transaction == null)
-            {
-                throw new InvalidOperationException("Unable to obtain a spanner transaction to execute within.");
-            }
-            return await ((ISpannerTransaction)transaction).ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            ISpannerTransaction transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await transaction.ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
         private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken, int timeoutSeconds)
         {
-            //note that we delay transaction creation (and thereby session allocation)
-            if (_timestampBound != null)
+            // Note that we delay transaction creation (and thereby session allocation) until the first operation
+            // (ExecuteMutations, ExecuteQuery, ExecuteDml)
+            if (_transaction == null)
             {
-                return _transaction ?? (_transaction =
-                    await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken)
-                        .ConfigureAwait(false));
+                _transaction =
+                    _timestampBound != null ? await _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound, cancellationToken).ConfigureAwait(false)
+                    : _transactionId != null ? _spannerConnection.BeginReadOnlyTransaction(_transactionId)
+                    : await _spannerConnection.BeginTransactionAsync(cancellationToken).ConfigureAwait(false);
+                // The commit timeout is irrelevant for read-only transactions, but it's easier to set it unconditionally.
+                _transaction.CommitTimeout = timeoutSeconds;
             }
-            else if (_transactionId != null)
-            {
-                return SpannerTransaction.FromTransactionId(_spannerConnection, _transactionId);
-            }
-            var result = _transaction ?? (_transaction = await _spannerConnection.BeginTransactionAsync(cancellationToken)
-                .ConfigureAwait(false));
-            result.CommitTimeout = timeoutSeconds;
-            return result;
-        }
-
-        /// <summary>
-        /// The SpannerConnection is usually closed before the transaction is disposed. SpannerConnection.Dispose
-        /// calls this method to transfer ownership of the SpannerClient it currently has.
-        /// </summary>
-        internal void TransferClientOwnership(SpannerClient spannerClient, Action disposalAction)
-        {
-            _spannerClient = spannerClient;
-            _spannerClientDisposal = disposalAction;
+            return _transaction;
         }
     }
 }

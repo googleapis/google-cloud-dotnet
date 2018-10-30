@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,24 +44,32 @@ namespace Google.Cloud.Spanner.Data
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
         private SpannerTransaction _transaction;
-        private Logger _logger;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="SpannerCommand"/>.
+        /// Initializes a new instance of <see cref="SpannerCommand"/>, using a default command timeout.
         /// </summary>
         public SpannerCommand()
         {
             DesignTimeVisible = true;
-            _commandTimeout = SpannerOptions.Instance.Timeout;
+            _commandTimeout = SpannerConnectionStringBuilder.DefaultTimeout;
+        }
+
+        internal SpannerCommand(SpannerConnection connection)
+        {
+            SpannerConnection = connection;
+            // If we have a connection, use its configuration for the default timeout.
+            if (connection != null)
+            {
+                _commandTimeout = connection.SpannerConnectionStringBuilder.Timeout;
+            }
         }
 
         private SpannerCommand(
             SpannerConnection connection,
             SpannerTransaction transaction,
             SpannerParameterCollection parameters,
-            CommandPartition commandPartition) : this()
+            CommandPartition commandPartition) : this(connection)
         {
-            SpannerConnection = connection;
             _transaction = transaction;
             Partition = commandPartition;
             if (parameters != null)
@@ -74,6 +81,9 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>.
         /// </summary>
+        /// <remarks>
+        /// The initial command timeout is taken from the options associated with <paramref name="connection"/>.
+        /// </remarks>
         /// <param name="commandTextBuilder">The <see cref="SpannerCommandTextBuilder"/>
         /// that configures the text of this command. Must not be null.</param>
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
@@ -148,17 +158,8 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// This property is for internal use only.
-        /// </summary>
-        public Logger Logger
-        {
-            get => _logger ?? SpannerConnection?.Logger;
-            set => _logger = value;
-        }
-
-        /// <summary>
         /// Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
-        /// Defaults to <see cref="SpannerOptions.Timeout"/> which is 60 seconds.
+        /// Defaults to the timeout from the connection string.
         /// </summary>
         /// <remarks>
         /// A value of '0' normally indicates that no timeout should be used (it waits an infinite amount of time).
@@ -168,7 +169,7 @@ namespace Google.Cloud.Spanner.Data
         public override int CommandTimeout
         {
             get => _commandTimeout;
-            set => _commandTimeout = value;
+            set => _commandTimeout = GaxPreconditions.CheckArgumentRange(value, nameof(value), 0, int.MaxValue);
         }
 
         /// <inheritdoc />
