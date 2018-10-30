@@ -120,22 +120,26 @@ namespace Google.Cloud.Spanner.Data.Ycsb
                 }
             }
 
+            int channels;
+            int maxActiveSessions;
             int targetQps = GetOptionWithDefault(TargetQps, 0);
             if (targetQps > 0)
             {
                 int countToPreWarm = Math.Min(targetQps / 4, 800);
                 Options[Prewarm] = countToPreWarm;
-                SpannerOptions.Instance.MaximumActiveSessions = Math.Max(countToPreWarm + 50, 400);
-                SpannerOptions.Instance.MaximumPooledSessions = Math.Max(countToPreWarm + 50, 400);
-                SpannerOptions.Instance.MaximumGrpcChannels = Math.Max(4, 8 * targetQps / 2000);
+                maxActiveSessions = Math.Max(countToPreWarm + 50, 400);
+                channels = Math.Max(4, 8 * targetQps / 2000);
             }
             else
             {
-                SpannerConnection.SpannerOptions.MaximumGrpcChannels = GetOptionWithDefault(s_numchannels, 1);
-                SpannerConnection.SpannerOptions.MaximumPooledSessions = Math.Max(
-                    GetOption<int>(NumWorker) + 1,
-                    GetOptionWithDefault(Prewarm, 0));
+                maxActiveSessions = Math.Max(GetOption<int>(NumWorker) + 1, GetOptionWithDefault(Prewarm, 0));
+                channels = GetOptionWithDefault(s_numchannels, 1);
             }
+            SessionPoolManager.Default.SessionPoolOptions.MaximumActiveSessions = maxActiveSessions;
+            s_connectionString = $"Data Source=projects/{s_project}/instances/{s_instance}/databases/{s_database}; MaximumGrpcChannels={channels}";
+            s_selectQuery = $"SELECT u.* FROM {s_table} u WHERE u.id=@p";
+            s_connection = new SpannerConnection(s_connectionString);
+            s_connection.Open();
             LoadKeys();
             s_timestampbound = s_boundedStalenessSeconds > 0
                 ? TimestampBound.OfMaxStaleness(TimeSpan.FromSeconds(s_boundedStalenessSeconds))
@@ -144,11 +148,6 @@ namespace Google.Cloud.Spanner.Data.Ycsb
 
         private void LoadKeys()
         {
-            s_connectionString = $"Data Source=projects/{s_project}/instances/{s_instance}/databases/{s_database}";
-            s_selectQuery = $"SELECT u.* FROM {s_table} u WHERE u.id=@p";
-            s_connection = new SpannerConnection(s_connectionString);
-            s_connection.Open();
-
             DebugMessage("Loading keys...");
             var cmd = s_connection.CreateSelectCommand($"SELECT u.id FROM {s_table} u");
             var reader = cmd.ExecuteReader();

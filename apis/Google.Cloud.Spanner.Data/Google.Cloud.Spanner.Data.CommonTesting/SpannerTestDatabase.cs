@@ -71,6 +71,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         public string NoDbConnectionString { get; }
         public string ProjectId { get; }
         public DatabaseName DatabaseName { get; }
+        internal SpannerClientCreationOptions SpannerClientCreationOptions { get; }
 
         private SpannerTestDatabase(string projectId)
         {
@@ -87,6 +88,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
                 builder.Port = int.Parse(SpannerPort);
             }
             NoDbConnectionString = builder.ConnectionString;
+            SpannerClientCreationOptions = new SpannerClientCreationOptions(builder);
             var databaseBuilder = builder.WithDatabase(SpannerDatabase);
             ConnectionString = databaseBuilder.ConnectionString;
             DatabaseName = databaseBuilder.DatabaseName;

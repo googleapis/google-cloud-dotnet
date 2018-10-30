@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Spanner.V1;
 using System.Reflection;
 using Xunit.Sdk;
 
@@ -32,9 +31,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         private void DumpPoolSummaries(MethodInfo method, string description)
         {
             FileLogger.Log($"Pool summaries {description} {method.DeclaringType.Name}.{method.Name}");
-            FileLogger.Log($"Session pool: {SessionPool.Default.ToDiagnosticSummary()}");
-            FileLogger.Log($"Client pool: {ClientPool.Default.ToDiagnosticSummary()}");
-            FileLogger.Log($"Transaction pool: {TransactionPool.ToDiagnosticSummary()}");
+            FileLogger.Log(SessionPoolManager.Default.ToDiagnosticSummary());
             FileLogger.Log("");
         }
     }

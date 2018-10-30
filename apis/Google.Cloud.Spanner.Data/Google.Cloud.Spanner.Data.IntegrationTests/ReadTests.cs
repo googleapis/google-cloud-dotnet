@@ -90,6 +90,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(ErrorCode.NotFound, e.ErrorCode);
                 Assert.False(e.IsTransientSpannerFault());
             }
+
+            // Shut the pool associated with the bad database down, to avoid seeing spurious connection failures
+            // later in the log.
+            await SessionPoolHelpers.ShutdownPoolAsync(connectionString);
         }
 
         [Fact]
@@ -286,7 +290,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(2, result.Count);
 
             Assert.Equal("a", result[0]["C1"]);
-            Assert.Equal(1L , result[0]["C2"]);
+            Assert.Equal(1L, result[0]["C2"]);
 
             Assert.Equal("b", result[1]["C1"]);
             Assert.Equal(2L, result[1]["C2"]);
@@ -390,41 +394,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task TimeoutFromOptions()
         {
-            var oldTimeout = SpannerOptions.Instance.Timeout;
-            SpannerOptions.Instance.Timeout = 0;
-
-            try
+            var connectionStringBuilder = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
             {
-                // We use a new instance of a credential to force create a new SpannerClient,
-                // which will cause the new options to be respected (Timeout in this case).
-                // Normally setting the timeout in SpannerOptions.Instance is only supported before creation of any client and cannot
-                // be changed due to the fact we pool clients.
-                var appDefaultCredentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-                if (appDefaultCredentials.IsCreateScopedRequired)
-                {
-                    appDefaultCredentials = appDefaultCredentials.CreateScoped(SpannerClient.DefaultScopes);
-                }
+                Timeout = 0,
+                AllowImmediateTimeouts = true,
+            };
 
-                long result = 0;
-                var e = await Assert.ThrowsAsync<SpannerException>(
-                    async () =>
-                    {
-                        string connectionString = $"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true";
-                        var channelCredentials = new CredentialWrapper(appDefaultCredentials).ToChannelCredentials();
-                        using (var connection = new SpannerConnection(connectionString, channelCredentials))
-                        {
-                            var cmd = connection.CreateSelectCommand("SELECT 1");
-                            Assert.Equal(0, cmd.CommandTimeout);
-                            result = await cmd.ExecuteScalarAsync<long>();
-                        }
-                    }).ConfigureAwait(false);
-
+            using (var connection = new SpannerConnection(connectionStringBuilder))
+            {
+                var cmd = connection.CreateSelectCommand("SELECT 1");
+                Assert.Equal(0, cmd.CommandTimeout);
+                var e = await Assert.ThrowsAsync<SpannerException>(() => cmd.ExecuteScalarAsync<long>());
                 SpannerAssert.IsTimeout(e);
-                Assert.Equal(0, result);
-            }
-            finally
-            {
-                SpannerOptions.Instance.Timeout = oldTimeout;
             }
         }
     }

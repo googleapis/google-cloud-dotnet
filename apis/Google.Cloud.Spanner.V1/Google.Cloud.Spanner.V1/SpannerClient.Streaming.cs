@@ -76,7 +76,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// If true, then timeouts of '0' converted with <see cref="ConvertTimeoutToExpiration(int)"/>
-        /// will result in an <see cref="Expiration"/> with an immediate timeout.
+        /// will result in an <see cref="Expiration"/> with an immediate timeout. Otherwise, 0 means an infinite
+        /// timeout.
         /// </summary>
         public bool AllowImmediateTimeouts { get; set; } = false;
 
