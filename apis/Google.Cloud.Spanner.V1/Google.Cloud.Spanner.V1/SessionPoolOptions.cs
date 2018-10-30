@@ -16,7 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite
+namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
     /// Options for session pools.

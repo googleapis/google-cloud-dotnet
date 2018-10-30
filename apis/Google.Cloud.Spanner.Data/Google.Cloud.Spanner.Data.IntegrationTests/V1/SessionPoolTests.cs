@@ -23,7 +23,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite.IntegrationTests
+namespace Google.Cloud.Spanner.V1.IntegrationTests
 {
     [Collection(nameof(AllTypesTableFixture))]
     [CommonTestDiagnostics]

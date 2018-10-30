@@ -24,7 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite
+namespace Google.Cloud.Spanner.V1
 {
     public partial class SessionPool
     {

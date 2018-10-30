@@ -26,9 +26,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using static Grpc.Gcp.AffinityConfig.Types;
 
-using SessionPool = Google.Cloud.Spanner.V1.PoolRewrite.SessionPool;
-using SessionPoolOptions = Google.Cloud.Spanner.V1.PoolRewrite.SessionPoolOptions;
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

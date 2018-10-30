@@ -32,7 +32,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
     <Compile Update="V1\SessionPoolTests.*.cs">
-      <DependentUpon>V1\SessionPoolTests.cs</DependentUpon>
+      <DependentUpon>SessionPoolTests.cs</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

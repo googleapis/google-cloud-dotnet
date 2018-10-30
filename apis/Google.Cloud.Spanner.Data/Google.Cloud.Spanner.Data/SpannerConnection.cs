@@ -32,8 +32,6 @@ using Grpc.Core;
 using Transaction = System.Transactions.Transaction;
 #endif
 
-using Google.Cloud.Spanner.V1.PoolRewrite;
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

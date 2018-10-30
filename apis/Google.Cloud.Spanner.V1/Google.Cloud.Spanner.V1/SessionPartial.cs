@@ -14,8 +14,6 @@
 
 using Google.Cloud.Spanner.V1.Internal;
 
-using Google.Cloud.Spanner.V1.PoolRewrite;
-
 namespace Google.Cloud.Spanner.V1
 {
     public partial class Session

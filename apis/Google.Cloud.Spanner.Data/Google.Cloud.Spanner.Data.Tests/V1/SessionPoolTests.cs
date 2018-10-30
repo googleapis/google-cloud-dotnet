@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
+namespace Google.Cloud.Spanner.V1.Tests
 {
     [FileLoggerBeforeAfterTest]
     public partial class SessionPoolTests

@@ -18,8 +18,6 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-using Google.Cloud.Spanner.V1.PoolRewrite;
-
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>

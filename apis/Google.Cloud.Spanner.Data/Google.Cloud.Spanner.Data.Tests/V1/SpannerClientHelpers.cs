@@ -15,7 +15,7 @@
 using Google.Api.Gax.Testing;
 using Moq;
 
-namespace Google.Cloud.Spanner.V1.PoolRewrite.Tests
+namespace Google.Cloud.Spanner.V1.Tests
 {
     /// <summary>
     /// Helpers for tests that need SpannerClient instances.
