@@ -66,7 +66,7 @@ namespace Microsoft.EntityFrameworkCore.Update.Internal
         public override void Execute(IRelationalConnection connection)
         {
             //TODO(benwu): call sync down the stack.
-            ExecuteAsync(connection).WaitWithUnwrappedExceptions();
+            Task.Run(() => ExecuteAsync(connection)).WaitWithUnwrappedExceptions();
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Microsoft.EntityFrameworkCore.Update.Internal
                     throw new NotSupportedException(
                         $"Modification type {modificationCommand.EntityState} is not supported.");
             }
-            cmd.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(_logger);
+            spannerConnection.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(_logger);
             cmd.Transaction = transaction;
             foreach (var columnModification in modificationCommand.ColumnModifications)
                 cmd.Parameters.Add(

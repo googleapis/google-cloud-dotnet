@@ -362,8 +362,6 @@ namespace Microsoft.EntityFrameworkCore.Utilities
             using (var master = new SpannerConnection(CreateAdminConnectionString()))
             {
                 ExecuteNonQuery(master, GetDropDatabaseSql(name));
-
-                SpannerConnection.ClearPooledResourcesAsync().WaitWithUnwrappedExceptions();
             }
         }
 

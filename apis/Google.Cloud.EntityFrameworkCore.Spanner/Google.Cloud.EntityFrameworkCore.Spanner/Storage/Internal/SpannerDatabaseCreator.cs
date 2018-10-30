@@ -95,7 +95,7 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             });
 
         /// <inheritdoc />
-        public override bool Exists() => ExistsAsync().ResultWithUnwrappedExceptions();
+        public override bool Exists() => Task.Run(() => ExistsAsync()).ResultWithUnwrappedExceptions();
 
         /// <inheritdoc />
         public override async Task<bool> ExistsAsync(CancellationToken cancellationToken = default)
