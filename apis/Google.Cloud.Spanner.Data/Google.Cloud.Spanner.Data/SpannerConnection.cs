@@ -255,7 +255,6 @@ namespace Google.Cloud.Spanner.Data
         /// <paramref name="transactionId"/>.</returns>
         public SpannerTransaction BeginReadOnlyTransaction(TransactionId transactionId)
         {
-            // FIXME: Is this okay? (Users can open asynchronously explicitly if they need to.)
             Open();
 
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));

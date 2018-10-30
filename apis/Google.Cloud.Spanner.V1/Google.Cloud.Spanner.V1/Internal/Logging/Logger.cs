@@ -274,7 +274,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
                 var total = entry.Instances * entry.Average;
                 entry.Instances++;
                 entry.Average = (total + value) / entry.Instances;
-                entry.Maximum = entry.LastMeasureTime == default(DateTime) ? value : Math.Max(entry.Minimum, value);
+                entry.Maximum = entry.LastMeasureTime == default(DateTime) ? value : Math.Max(entry.Maximum, value);
                 entry.Minimum = entry.LastMeasureTime == default(DateTime) ? value : Math.Min(entry.Minimum, value);
                 var now = DateTime.UtcNow;
                 UpdateTimeWeightedAvg(entry, now);
@@ -287,13 +287,19 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         {
             lock (entry)
             {
+                // For periodically sampled values, we take an average by weighting it with the time since the last
+                // measurement, effectively assuming that the value has been "the new value" for all of the preceding
+                // time. For example, consider a "number of active sessions" statistic:
+                // t=0 value=0
+                // t=1 value=10 (tavg=10)
+                // t=2 value=15 (tavg=12.5 - we think of it as having been 10 for 1 second and 15 for 1 second)
+                // t=6 value=20 (tavg=17.5 - we think of it as having been 12.5 for 2 seconds and 20 for 4 seconds)
                 if (entry.LastMeasureTime != default(DateTime))
                 {
-                    double milliSoFar = 0;
-                    var deltaTime = (now - entry.LastMeasureTime).TotalMilliseconds;
-                    milliSoFar += entry.TotalTime.TotalMilliseconds;
-                    entry.TotalTime = entry.TotalTime.Add(TimeSpan.FromMilliseconds(deltaTime));
-                    entry.TimeWeightedAverage = (milliSoFar * entry.TimeWeightedAverage + entry.Last * deltaTime) /
+                    var deltaTime = now - entry.LastMeasureTime;
+                    var milliSoFar = entry.TotalTime.TotalMilliseconds;
+                    entry.TotalTime += deltaTime;
+                    entry.TimeWeightedAverage = (milliSoFar * entry.TimeWeightedAverage + entry.Last * deltaTime.TotalMilliseconds) /
                                                 entry.TotalTime.TotalMilliseconds;
                 }
             }

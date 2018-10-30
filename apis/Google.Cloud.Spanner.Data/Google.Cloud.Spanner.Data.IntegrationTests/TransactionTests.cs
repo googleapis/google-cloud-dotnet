@@ -112,7 +112,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact(Skip = "Fails in current implementation due to multiple disposal. Will be fixed in new session pooling implementation.")]
+        [Fact]
         public async Task AbortedThrownCorrectly()
         {
             // connection 1 starts a transaction and reads
