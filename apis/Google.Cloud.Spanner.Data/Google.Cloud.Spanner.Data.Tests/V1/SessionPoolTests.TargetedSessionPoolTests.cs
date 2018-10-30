@@ -347,7 +347,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 });
             }
 
-            [Fact(Timeout = TestTimeoutMilliseconds)]
+            [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Another flaky test - needs looking into")]
             public async Task MaintainPool_EvictsSessions()
             {
                 var pool = CreatePool(true);
