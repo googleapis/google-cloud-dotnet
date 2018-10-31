@@ -48,16 +48,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 insertCommand.Parameters.Add("Title", SpannerDbType.String, "Title");
 
                 // This uses an ephemeral transaction, so it's legal to retry it.
-                // TODO: Use RetryHelpers instead
-                await ExecuteWithRetry(insertCommand.ExecuteNonQueryAsync);
+                await insertCommand.ExecuteNonQueryAsyncWithRetry();
             }
             return sw.Elapsed;
         }
 
         private async Task<TimeSpan> TestWriteTx(SpannerConnectionStringBuilder connectionStringBuilder, Stopwatch sw)
         {
-            // TODO: Use RetryHelpers instead
-            await ExecuteWithRetry(async () =>
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
                 using (var connection = new SpannerConnection(connectionStringBuilder))
                 {
@@ -89,30 +87,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             });
             return sw.Elapsed;
-        }
-
-        private static async Task ExecuteWithRetry(Func<Task> actionToRetry)
-        {
-            var retry = true;
-            long delay = 0;
-            while (retry)
-            {
-                retry = false;
-                try
-                {
-                    await actionToRetry();
-                }
-                catch (Exception e) when (e.IsTransientSpannerFault())
-                {
-                    //TODO(benwu): replace with topaz.
-                    retry = true;
-                    Console.WriteLine("retrying due to " + e.Message);
-                    delay = delay * 2;
-                    delay += s_rnd.Value.Next(100);
-                    delay = Math.Min(delay, 5000);
-                    await Task.Delay(TimeSpan.FromMilliseconds(delay));
-                }
-            }
         }
 
         [Fact]
