@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -25,6 +26,7 @@ namespace Google.Cloud.Spanner.V1
         internal abstract class SessionPoolBase : ISessionPool
         {
             public SpannerClient Client => Parent._client;
+            public Logger Logger => Parent._logger;
             public IClock Clock => Parent._clock;
             public SessionPoolOptions Options => Parent.Options;
             protected SessionPool Parent { get; }
