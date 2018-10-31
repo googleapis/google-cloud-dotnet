@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             logger.AssertNoWarningsOrErrors();
         }
 
-        [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Flaky in CI; needs further investigation")]
+        [Fact(Timeout = TestTimeoutMilliseconds)]
         public async Task ScheduledMaintenanceEvictsSessions()
         {
             var client = new SessionTestingSpannerClient();
@@ -192,7 +192,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(2));
         }
 
-        [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Flaky in CI; needs further investigation")]
+        [Fact(Timeout = TestTimeoutMilliseconds)]
         public async Task MaintenanceTaskCompletesWhenPoolIsGarbageCollected()
         {
             var client = new SessionTestingSpannerClient();

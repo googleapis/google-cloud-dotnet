@@ -573,6 +573,7 @@ namespace Google.Cloud.Spanner.V1
                 }
             }
 
+            static int logId;
             private async Task<PooledSession> CreatePooledSessionAsync(CancellationToken cancellationToken)
             {
                 bool success = false;
@@ -589,7 +590,10 @@ namespace Google.Cloud.Spanner.V1
                     bool acquiredSemaphore = false;
                     try
                     {
+                        int id = Interlocked.Increment(ref logId);
+                        Parent._logger.Debug($"Acquiring semaphore {logId}");
                         await Parent._sessionAcquisitionSemaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
+                        Parent._logger.Debug($"Semaphore acquired {logId}");
                         acquiredSemaphore = true;
                         sessionProto = await Client.CreateSessionAsync(_createSessionRequest, callSettings).ConfigureAwait(false);
                         success = true;

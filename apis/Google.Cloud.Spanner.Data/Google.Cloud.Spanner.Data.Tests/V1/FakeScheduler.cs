@@ -16,6 +16,7 @@
 // Those changes will be backported to Google.Api.Gax.Testing.
 
 using Google.Api.Gax;
+using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -284,6 +285,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 while (nextClockTime <= simulatedTimeout)
                 {
+                    FileLogger.Log($"Advancing time to {nextClockTime:mm:ss}");
                     // Pointless on the first iteration, but on later iterations this will
                     // be the time of the next timer waiting to execute.
                     Clock.AdvanceTo(nextClockTime);
