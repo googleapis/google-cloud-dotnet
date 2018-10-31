@@ -233,7 +233,9 @@ namespace Google.Cloud.Spanner.V1
             {
                 request.Transaction = new TransactionSelector { Id = TransactionId };
             }
-            return Client.GetSqlStreamReader(request, _session, timeoutSeconds);
+            var reader = Client.GetSqlStreamReader(request, _session, timeoutSeconds);
+            reader.Logger = _pool.Logger;
+            return reader;
         }
 
         /// <summary>

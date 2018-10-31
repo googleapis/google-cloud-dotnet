@@ -64,6 +64,8 @@ namespace Google.Cloud.Spanner.V1
             _request.SessionAsSessionName = _session.SessionName;
         }
 
+        // TODO: Take this in the constructor instead? Or maybe put it in SpannerClientSettings?
+
         /// <summary>
         /// This property is intended for internal use only.
         /// </summary>
@@ -156,10 +158,10 @@ namespace Google.Cloud.Spanner.V1
             return _isReading;
         }
 
-        private static async Task<T> WithTiming<T>(Task<T> task, string name)
+        private async Task<T> WithTiming<T>(Task<T> task, string name)
         {
             Stopwatch sw = null;
-            if (Logger.DefaultLogger.LogPerformanceTraces)
+            if (Logger.LogPerformanceTraces)
             {
                 sw = Stopwatch.StartNew();
             }
@@ -167,7 +169,7 @@ namespace Google.Cloud.Spanner.V1
             var result = await task.ConfigureAwait(false);
             if (sw != null)
             {
-                Logger.DefaultLogger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                Logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
             }
             return result;
         }
