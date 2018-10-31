@@ -14,15 +14,14 @@
 
 #if NET452
 
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
@@ -36,7 +35,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         private static readonly string s_guid = IdGenerator.FromGuid();
         private static int s_myCounter = 1;
 
-        private async Task<TimeSpan> TestWriteOneRow(Stopwatch sw)
+        private async Task TestWriteOneRow()
         {
             using (var connection = new MySqlConnection(MySqlConnectionString))
             {
@@ -53,7 +52,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
                 await connection.CloseAsync();
             }
-            return sw.Elapsed;
         }
 
         // Uncomment this to run equivalent MySQL benchmarks.
@@ -77,8 +75,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
 
             //now run the test.
-            double result = await TestWriteLatencyWithQps(TargetQps, TestDuration, TestWriteOneRow);
-            Logger.DefaultLogger.Info(() => $"MySql latency= {result}ms");
+            double result = await TestLatencyWithQps(TargetQps, TestDuration, TestWriteOneRow);
+            Logger.DefaultLogger.Info(() => $"MySql latency = {result}ms");
 
             //mysql latency with 100 qps simulated is usually around 150ms.
             Assert.InRange(result, 0, 250);

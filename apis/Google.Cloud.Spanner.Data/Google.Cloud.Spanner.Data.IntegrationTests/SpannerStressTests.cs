@@ -17,7 +17,6 @@ using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,24 +37,25 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public SpannerStressTests(SpannerStressTestTableFixture fixture) =>
             _fixture = fixture;
 
-        private async Task<TimeSpan> TestWriteOneRow(SpannerConnectionStringBuilder connectionStringBuilder, Stopwatch sw)
-        {
-            using (var connection = new SpannerConnection(connectionStringBuilder))
+        [Fact]
+        public Task RunWriteStress() =>
+            RunStress(async connectionStringBuilder =>
             {
-                var localCounter = Interlocked.Increment(ref s_rowCounter);
-                var insertCommand = connection.CreateInsertCommand(_fixture.TableName);
-                insertCommand.Parameters.Add("ID", SpannerDbType.String, $"{s_guid}{localCounter}");
-                insertCommand.Parameters.Add("Title", SpannerDbType.String, "Title");
+                using (var connection = new SpannerConnection(connectionStringBuilder))
+                {
+                    var localCounter = Interlocked.Increment(ref s_rowCounter);
+                    var insertCommand = connection.CreateInsertCommand(_fixture.TableName);
+                    insertCommand.Parameters.Add("ID", SpannerDbType.String, $"{s_guid}{localCounter}");
+                    insertCommand.Parameters.Add("Title", SpannerDbType.String, "Title");
 
-                // This uses an ephemeral transaction, so it's legal to retry it.
-                await insertCommand.ExecuteNonQueryAsyncWithRetry();
-            }
-            return sw.Elapsed;
-        }
+                    // This uses an ephemeral transaction, so it's legal to retry it.
+                    await insertCommand.ExecuteNonQueryAsyncWithRetry();
+                }
+            });
 
-        private async Task<TimeSpan> TestWriteTx(SpannerConnectionStringBuilder connectionStringBuilder, Stopwatch sw)
-        {
-            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+        [Fact]
+        public Task RunParallelTransactionStress() =>
+            RunStress(connectionStringBuilder => RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
                 using (var connection = new SpannerConnection(connectionStringBuilder))
                 {
@@ -85,17 +85,43 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         await tx.CommitAsync();
                     }
                 }
-            });
-            return sw.Elapsed;
+            }));
+
+        [Fact]
+        public async Task RunReadStress()
+        {
+            // Insert a single row first, but remember the ID so we can read it.
+            int localCounter = Interlocked.Increment(ref s_rowCounter);
+            string id = $"{s_guid}{localCounter}";
+            string title = "Title {id}";
+            using (var connection = new SpannerConnection(_fixture.ConnectionString))
+            {
+                var insertCommand = connection.CreateInsertCommand(_fixture.TableName);
+                insertCommand.Parameters.Add("ID", SpannerDbType.String).Value = $"{s_guid}{localCounter}";
+                insertCommand.Parameters.Add("Title", SpannerDbType.String).Value = title;
+                await insertCommand.ExecuteNonQueryAsyncWithRetry();
+            }
+
+            await RunStress(TestReadOneRow);
+
+            async Task TestReadOneRow(SpannerConnectionStringBuilder connectionStringBuilder)
+            {
+                using (var connection = new SpannerConnection(connectionStringBuilder))
+                {
+                    var command = connection.CreateSelectCommand($"SELECT Title FROM {_fixture.TableName} WHERE ID=@id");
+                    command.Parameters.Add("@ID", SpannerDbType.String).Value = id;
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        Assert.True(await reader.ReadAsync());
+                        Assert.Equal(title, reader.GetString(0));
+                        Assert.False(await reader.ReadAsync());
+                    }
+                }
+            }
         }
 
-        [Fact]
-        public Task RunWriteStress() => RunStress(TestWriteOneRow);
-
-        [Fact]
-        public Task RunParallelTransactionStress() => RunStress(TestWriteTx);
-
-        private async Task RunStress(Func<SpannerConnectionStringBuilder, Stopwatch, Task<TimeSpan>> writeFunc)
+        private async Task RunStress(Func<SpannerConnectionStringBuilder, Task> func)
         {
             // Create a new session pool manager to eliminate the chance of a previous test altering the pool state.
 
@@ -135,7 +161,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             double latencyMs;
             try
             {
-                latencyMs = await TestWriteLatencyWithQps(TargetQps, TestDuration, stopwatch => writeFunc(connectionStringBuilder, stopwatch));
+                latencyMs = await TestLatencyWithQps(TargetQps, TestDuration, () => func(connectionStringBuilder));
                 logger.LogPerformanceData();
             }
             finally
