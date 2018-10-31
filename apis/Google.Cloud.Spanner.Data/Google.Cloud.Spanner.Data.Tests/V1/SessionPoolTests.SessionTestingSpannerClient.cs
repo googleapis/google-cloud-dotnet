@@ -82,7 +82,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 CheckFailAllRpcs();
                 FileLogger.Log($"CreateSession starting at {Clock.GetCurrentDateTimeUtc():mm:ss}");
                 await Scheduler.Delay(CreateSessionDelay);
-                FileLogger.Log($"CreateSession starting at {Clock.GetCurrentDateTimeUtc():mm:ss}");
+                FileLogger.Log($"CreateSession completing at {Clock.GetCurrentDateTimeUtc():mm:ss}");
                 int count = Interlocked.Increment(ref _sessionCounter);
                 var database = request.DatabaseAsDatabaseName;
                 return new Session { SessionName = new SessionName(database.ProjectId, database.InstanceId, database.DatabaseId, $"session-{count}") };
