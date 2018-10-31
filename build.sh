@@ -138,7 +138,8 @@ then
       echo "(Running with coverage)"
       (cd "$testdir"; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode)
     else
-      dotnet test -c Release --no-build $testproject -f netcoreapp2.0
+      dotnet test -c Release --no-build $testproject -f netcoreapp2.0 || echo "Tests failed"
+      echo "Test log"
       cat bin/Debug/netcoreapp2.0/testlog.txt
     fi
   done < AllTests.txt
