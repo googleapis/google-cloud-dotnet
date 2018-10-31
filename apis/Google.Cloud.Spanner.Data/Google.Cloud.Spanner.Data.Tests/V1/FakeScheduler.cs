@@ -88,8 +88,12 @@ namespace Google.Cloud.Spanner.V1.Tests
 
         // Defaulting cancellation token makes it simpler to use for some tests.
         /// <inheritdoc />
-        public Task Delay(TimeSpan delay, CancellationToken cancellationToken = default(CancellationToken)) =>
-            AddTimer(Clock.GetCurrentDateTimeUtc() + delay, cancellationToken);
+        public async Task Delay(TimeSpan delay, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var expected = Clock.GetCurrentDateTimeUtc() + delay;
+            await AddTimer(expected, cancellationToken);
+            FileLogger.Log($"Woke from task expected at {expected}; now {Clock.GetCurrentDateTimeUtc()}");
+        }
 
         /// <summary>
         /// Specialization of <see cref="Run{T}(Func{T})"/> for tasks, to prevent a common usage error.
