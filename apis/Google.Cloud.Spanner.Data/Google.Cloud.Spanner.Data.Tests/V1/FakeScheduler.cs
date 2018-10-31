@@ -92,7 +92,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var expected = Clock.GetCurrentDateTimeUtc() + delay;
             await AddTimer(expected, cancellationToken);
-            FileLogger.Log($"Woke from task expected at {expected}; now {Clock.GetCurrentDateTimeUtc()}");
+            FileLogger.Log($"Woke from task expected at {expected:mm:ss}; now {Clock.GetCurrentDateTimeUtc():mm:ss}");
         }
 
         /// <summary>
@@ -303,19 +303,19 @@ namespace Google.Cloud.Spanner.V1.Tests
                         }
                     }
 
-                    var now = Clock.GetCurrentDateTimeUtc();
                     // Find all timers that are due now.
                     List<DelayTimer> timers = new List<DelayTimer>();
                     lock (_monitor)
                     {
-                        while (_actions.Count != 0 && _actions.First.Value.ScheduledTime <= now)
+                        while (_actions.Count != 0 && _actions.First.Value.ScheduledTime <= nextClockTime)
                         {
                             timers.Add(_actions.First.Value);
                             _actions.RemoveFirst();
                         }
                     }
-                    
+
                     // Release all due, non-cancelled timers. (A cancelled TCS will ignore this.)
+                    FileLogger.Log($"Completing {timers.Count} timers at {nextClockTime:mm:ss}");
                     timers.ForEach(t => t.CompletionSource.TrySetResult(0));
 
                     lock (_monitor)
