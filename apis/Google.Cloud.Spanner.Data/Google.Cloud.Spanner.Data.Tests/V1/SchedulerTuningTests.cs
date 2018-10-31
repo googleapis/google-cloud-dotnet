@@ -40,6 +40,6 @@ public class SchedulerTuningTests
         tcs.ForEach(t => t.SetResult(0));
         await Task.WhenAll(awaitingTasks);
         sw.Stop();
-        FileLogger.Log($"All tasks complated in {sw.ElapsedMilliseconds}ms");
+        Assert.Equal(-1, sw.ElapsedMilliseconds);
     }
 }
