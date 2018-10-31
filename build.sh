@@ -138,7 +138,7 @@ then
       echo "(Running with coverage)"
       (cd "$testdir"; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode)
     else
-      dotnet test -c Release --no-build $testproject
+      dotnet test -c Release --no-build $testproject --filter SchedulerTuning
     fi
   done < AllTests.txt
 fi
