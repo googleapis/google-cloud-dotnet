@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             void Insert(int value, bool update, bool delete, bool copy)
             {
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var connection = _fixture.GetConnection())
                     {
@@ -59,7 +59,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             command.Parameters.Add("UpdateMe", SpannerDbType.Bool, update);
                             command.Parameters.Add("DeleteMe", SpannerDbType.Bool, delete);
                             command.Parameters.Add("CopyMe", SpannerDbType.Bool, copy);
-                            RetryHelpers.RetryOnce(() => command.ExecuteNonQuery());
+                            RetryHelpers.ExecuteWithRetry(() => command.ExecuteNonQuery());
                         }
                     }
                 });
@@ -73,7 +73,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string key = CreateTestRows();
             using (var connection = _fixture.GetConnection())
             {
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     string dml = $"UPDATE {_fixture.TableName} SET Value = OriginalValue + 1 WHERE UpdateMe AND Key=@key";
                     using (var command = connection.CreateDmlCommand(dml))
@@ -102,7 +102,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string key = CreateTestRows();
             using (var connection = _fixture.GetConnection())
             {
-                await RetryHelpers.RetryOnceAsync(async () =>
+                await RetryHelpers.ExecuteWithRetryAsync(async () =>
                 {
                     string dml = $"UPDATE {_fixture.TableName} SET Value = OriginalValue + 1 WHERE UpdateMe AND Key=@key";
                     using (var command = connection.CreateDmlCommand(dml))
@@ -130,7 +130,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string key = CreateTestRows();
             using (var connection = _fixture.GetConnection())
             {
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     string dml = $"DELETE FROM {_fixture.TableName} WHERE DeleteMe AND Key=@key";
                     using (var command = connection.CreateDmlCommand(dml))
@@ -157,7 +157,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string key = CreateTestRows();
             using (var connection = _fixture.GetConnection())
             {
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     string dml = $"INSERT INTO {_fixture.TableName} (Key, OriginalValue, Value) VALUES (@key, @ov1, @v1), (@key, @ov2, @v2)";
                     using (var command = connection.CreateDmlCommand(dml))
@@ -191,7 +191,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string key = CreateTestRows();
             using (var connection = _fixture.GetConnection())
             {
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     // Slightly odd choice here: "OriginalValue" has to be unique, so we end up with the inserted Value being the real original value.
                     string dml = $"INSERT INTO {_fixture.TableName} (Key, OriginalValue, Value) SELECT Key, OriginalValue + 10, Value FROM {_fixture.TableName} WHERE CopyMe AND KEY=@Key";
@@ -275,7 +275,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 connection.Open();
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var transaction = connection.BeginTransaction())
                     {
@@ -313,7 +313,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 connection.Open();
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var transaction = connection.BeginTransaction())
                     {
@@ -349,7 +349,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 connection.Open();
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var transaction = connection.BeginTransaction())
                     {
@@ -385,7 +385,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 connection.Open();
                 string dml = $"INSERT INTO {_fixture.TableName} (Key, OriginalValue, Value) VALUES (@key, @ov1, @v1)";
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var transaction = connection.BeginTransaction())
                     {
@@ -430,7 +430,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string table = _fixture.TableName;
             using (var connection = _fixture.GetConnection())
             {
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     string dml = $"UPDATE {table} SET {table}.Value = {table}.OriginalValue + 1 WHERE {table}.UpdateMe AND {table}.Key=@key";
                     using (var command = connection.CreateDmlCommand(dml))
@@ -473,7 +473,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             int row = 1;
             for (int i = 0; i < insertBatches; i++)
             {
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var connection = _fixture.GetConnection())
                     {
@@ -507,7 +507,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 // Perform the update
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     string dml = $"UPDATE {table} SET {table}.Value = {table}.OriginalValue + @amountToAdd WHERE {table}.UpdateMe AND {table}.Key=@key";
                     using (var command = connection.CreateDmlCommand(dml))

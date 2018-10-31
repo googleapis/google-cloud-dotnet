@@ -59,7 +59,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 connection.Open();
                 Assert.True(connection.IsOpen);
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var tx = connection.BeginTransaction())
                     {

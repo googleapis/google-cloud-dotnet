@@ -98,7 +98,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 await connection.OpenAsync();
-                await RetryHelpers.RetryOnceAsync(async () =>
+                await RetryHelpers.ExecuteWithRetryAsync(async () =>
                 {
                     using (var tx = await connection.BeginTransactionAsync())
                     {
