@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 cd $(dirname $0)
 
@@ -138,7 +138,8 @@ then
       echo "(Running with coverage)"
       (cd "$testdir"; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode)
     else
-      dotnet test -c Release --no-build $testproject
+      dotnet test -c Release --no-build $testproject -f netcoreapp2.0
+      cat bin/Debug/netcoreapp2.0/testlog.txt
     fi
   done < AllTests.txt
 fi
