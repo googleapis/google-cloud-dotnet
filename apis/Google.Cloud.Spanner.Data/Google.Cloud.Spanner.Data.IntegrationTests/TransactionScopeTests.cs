@@ -314,7 +314,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // For simplicity, use a new key so that this test is entirely self-contained.
             string key = IdGenerator.FromGuid();
-            RetryHelpers.RetryOnce(() =>
+            RetryHelpers.ExecuteWithRetry(() =>
             {
                 using (var scope = new TransactionScope())
                 {

@@ -93,7 +93,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 // to get disposed (which releases the session).
                 await IncrementByOneAsync(connection, true);
 
-                await RetryHelpers.RetryOnceAsync(async () =>
+                await RetryHelpers.ExecuteWithRetryAsync(async () =>
                 {
                     using (var tx = await connection.BeginTransactionAsync())
                     {
@@ -222,7 +222,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             // For simplicity, use a new key so that this test is entirely self-contained.
             string key = IdGenerator.FromGuid();
-            RetryHelpers.RetryOnce(() =>
+            RetryHelpers.ExecuteWithRetry(() =>
             {
                 using (var connection = _fixture.GetConnection())
                 {

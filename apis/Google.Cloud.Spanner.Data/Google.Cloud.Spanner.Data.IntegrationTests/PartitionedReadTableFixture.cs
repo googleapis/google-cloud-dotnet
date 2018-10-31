@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 connection.Open();
                 for (var i = 0; i < NumPartitionReadRows / PartitionSize; i++)
                 {
-                    RetryHelpers.RetryOnce(() =>
+                    RetryHelpers.ExecuteWithRetry(() =>
                     {
                         using (var tx = connection.BeginTransaction())
                         {

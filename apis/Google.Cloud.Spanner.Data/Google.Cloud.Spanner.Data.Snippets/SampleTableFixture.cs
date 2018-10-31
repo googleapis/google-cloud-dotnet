@@ -52,7 +52,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
             using (var connection = GetConnection())
             {
                 connection.Open();
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var tx = connection.BeginTransaction())
                     {

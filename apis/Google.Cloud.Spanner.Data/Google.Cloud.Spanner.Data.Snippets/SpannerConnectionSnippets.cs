@@ -100,7 +100,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.RetryOnceAsync(async () =>
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
                 // Sample: InsertDataAsync
                 using (SpannerConnection connection = new SpannerConnection(connectionString))
@@ -131,7 +131,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.RetryOnceAsync(async () =>
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
                 // Sample: Dml
                 using (SpannerConnection connection = new SpannerConnection(connectionString))
@@ -153,7 +153,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.RetryOnceAsync(async () =>
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
                 // Sample: PartitionedDml
                 using (SpannerConnection connection = new SpannerConnection(connectionString))
@@ -175,7 +175,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.RetryOnceAsync(async () =>
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
                 // Sample: CommitTimestamp
                 using (SpannerConnection connection = new SpannerConnection(connectionString))
@@ -233,7 +233,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            await RetryHelpers.RetryOnceAsync(async () =>
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
             {
                 // Sample: ReadUpdateDeleteAsync
                 // Additional: CreateUpdateCommand
@@ -373,7 +373,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
         {
             string connectionString = _fixture.ConnectionString;
 
-            RetryHelpers.RetryOnce(() =>
+            RetryHelpers.ExecuteWithRetry(() =>
             {
                 // Sample: DataAdapter
                 using (SpannerConnection connection = new SpannerConnection(connectionString))

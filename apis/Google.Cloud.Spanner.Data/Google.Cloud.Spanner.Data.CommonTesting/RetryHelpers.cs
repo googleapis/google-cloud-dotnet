@@ -36,26 +36,24 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         /// Executes a single command, retrying once if the first attempt is aborted.
         /// Only for use in "one-shot" commands (not in a transaction).
         public static Task<int> ExecuteNonQueryAsyncWithRetry(this SpannerCommand command) =>
-            ExecuteWithRetryAsync(() => command.ExecuteNonQueryAsync());
-
-        // FIXME: Rename these methods later, as they clearly don't retry just once...
+            ExecuteWithRetryAsyncImpl(() => command.ExecuteNonQueryAsync());
 
         /// <summary>
         /// Executes the given action, retrying once if the first attempt is aborted.
         /// </summary>
-        public static void RetryOnce(Action action) => ExecuteWithRetry(() => { action(); return 0; });
+        public static void ExecuteWithRetry(Action action) => ExecuteWithRetryImpl(() => { action(); return 0; });
 
         /// <summary>
         /// Executes the given asynchronous action, retrying once if the first attempt is aborted.
         /// </summary>
-        public static Task RetryOnceAsync(Func<Task> action) => ExecuteWithRetryAsync(async () => { await action(); return 0; });
+        public static Task ExecuteWithRetryAsync(Func<Task> action) => ExecuteWithRetryAsyncImpl(async () => { await action(); return 0; });
 
         private static int _calls;
         private static int _retries;
 
         // TODO: Move this retry code into production code, so that everyone can use it.
 
-        private static T ExecuteWithRetry<T>(Func<T> func)
+        private static T ExecuteWithRetryImpl<T>(Func<T> func)
         {
             Interlocked.Increment(ref _calls);
 
@@ -89,7 +87,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             }
         }
 
-        private static async Task<T> ExecuteWithRetryAsync<T>(Func<Task<T>> func)
+        private static async Task<T> ExecuteWithRetryAsyncImpl<T>(Func<Task<T>> func)
         {
             Interlocked.Increment(ref _calls);
 

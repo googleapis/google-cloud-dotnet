@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 var valueParameter = command.Parameters.Add("StringValue", SpannerDbType.String);
 
                 // 1st update with TestKey
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var tx = connection.BeginTransaction())
                     {
@@ -75,7 +75,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Thread.Sleep(250);
 
                 // 2nd update
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var tx = connection.BeginTransaction())
                     {
@@ -90,7 +90,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Thread.Sleep(250);
 
                 // 3rd update
-                RetryHelpers.RetryOnce(() =>
+                RetryHelpers.ExecuteWithRetry(() =>
                 {
                     using (var tx = connection.BeginTransaction())
                     {

@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public void AdapterDeleteInsert()
         {
-            RetryHelpers.RetryOnce(() =>
+            RetryHelpers.ExecuteWithRetry(() =>
             {
                 using (var connection = _fixture.GetConnection())
                 {
@@ -90,7 +90,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public void AdapterUpdate()
         {
-            RetryHelpers.RetryOnce(() =>
+            RetryHelpers.ExecuteWithRetry(() =>
             {
                 using (var connection = _fixture.GetConnection())
                 {
@@ -126,7 +126,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public void AdapterOverrideSelect()
         {
-            RetryHelpers.RetryOnce(() =>
+            RetryHelpers.ExecuteWithRetry(() =>
             {
 
                 using (var connection = _fixture.GetConnection())
