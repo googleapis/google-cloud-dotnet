@@ -126,24 +126,10 @@ do
 done
 
 log_build_action "(Start) Unit tests"
-if [[ "$runtests" = true ]]
-then
-  # Could use xargs, but this is more flexible
-  while read testproject
-  do  
-    testdir=$(dirname $testproject)
-    log_build_action "Testing $testdir"
-    if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
-    then
-      echo "(Running with coverage)"
-      (cd "$testdir"; $DOTCOVER cover "coverage.xml" -ReturnTargetExitCode)
-    else
-      dotnet test -c Release --no-build $testproject -f netcoreapp2.0 || echo "Tests failed"
-      echo "Test log"
-      cat $testdir/bin/Release/netcoreapp2.0/testlog.txt
-    fi
-  done < AllTests.txt
-fi
+
+dotnet test -c Release --no-build apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.Tests -f netcoreapp2.0 || echo "Tests failed"
+echo "Test log"
+cat apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.Tests/bin/Release/netcoreapp2.0/testlog.txt
 
 log_build_action "(End) Unit tests"
 log_build_action "(End) build.sh"
