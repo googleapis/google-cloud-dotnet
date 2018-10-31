@@ -15,6 +15,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.ClientTesting;
 using Xunit;
@@ -22,23 +23,35 @@ using Xunit;
 public class SchedulerTuningTests
 {
     [Fact]
-    public async Task TimeContinuations()
+    public void TimeContinuations()
     {
-        int tasks = 20;
+        int tasks = 50;
         List<TaskCompletionSource<int>> tcs = Enumerable.Range(0, tasks)
             .Select(_ => new TaskCompletionSource<int>())
             .ToList();
 
+        object monitor = new object();
+        int count = 0;
         Task[] awaitingTasks = tcs.Select(async t =>
         {
-            FileLogger.Log($"Before");
             await t.Task.ConfigureAwait(false);
-            FileLogger.Log($"After {t.Task.Result}");
+            FileLogger.Log($"Woken");
+            Interlocked.Increment(ref count);
+            lock (monitor)
+            {
+                Monitor.Pulse(monitor);
+            }
         }).ToArray();
 
         Stopwatch sw = Stopwatch.StartNew();
         tcs.ForEach(t => t.SetResult(0));
-        await Task.WhenAll(awaitingTasks);
+        lock (monitor)
+        {
+            while (Interlocked.CompareExchange(ref count, 0, 0) < tasks)
+            {
+                Monitor.Wait(monitor);
+            }
+        }
         sw.Stop();
         Assert.Equal(-1, sw.ElapsedMilliseconds);
     }
