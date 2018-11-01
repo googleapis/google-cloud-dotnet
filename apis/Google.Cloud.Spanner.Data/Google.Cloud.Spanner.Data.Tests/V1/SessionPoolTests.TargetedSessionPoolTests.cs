@@ -347,7 +347,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 });
             }
 
-            [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Another flaky test - needs looking into")]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task MaintainPool_EvictsSessions()
             {
                 var pool = CreatePool(true);
@@ -414,7 +414,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 });
             }
 
-            [Fact(Timeout = TestTimeoutMilliseconds, Skip = "Flaky in CI; needs further investigation")]
+            [Fact(Timeout = TestTimeoutMilliseconds)]
             public async Task WaitForPoolAsync_CancelOneOfTwo()
             {
                 var pool = CreatePool(false);

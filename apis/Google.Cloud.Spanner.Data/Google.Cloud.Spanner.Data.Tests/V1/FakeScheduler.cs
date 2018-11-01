@@ -274,7 +274,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// <param name="runTestCode">true if test code is running as well, and should be given some extra time to
         /// execute on each iteration. false if only the scheduled tasks are running.</param>
         private Task StartLoopAsync(DateTime simulatedTimeout, bool runTestCode) =>
-            Task.Run(() =>
+            Task.Run(async () =>
             {
                 // In-method protection against infinite loops. Each caller provides the actual timeout check,
                 // throwing an exception appropriately.
@@ -297,12 +297,11 @@ namespace Google.Cloud.Spanner.V1.Tests
                         }
                     }
 
-                    var now = Clock.GetCurrentDateTimeUtc();
                     // Find all timers that are due now.
                     List<DelayTimer> timers = new List<DelayTimer>();
                     lock (_monitor)
                     {
-                        while (_actions.Count != 0 && _actions.First.Value.ScheduledTime <= now)
+                        while (_actions.Count != 0 && _actions.First.Value.ScheduledTime <= nextClockTime)
                         {
                             timers.Add(_actions.First.Value);
                             _actions.RemoveFirst();
@@ -312,10 +311,16 @@ namespace Google.Cloud.Spanner.V1.Tests
                     // Release all due, non-cancelled timers. (A cancelled TCS will ignore this.)
                     timers.ForEach(t => t.CompletionSource.TrySetResult(0));
 
+                    // Give a little time for things to run before we enter the monitor at all.
+                    // On CI platforms, we've seen odd behaviour where tasks appear to be effectively
+                    // blocked by this thread. Using a Task.Delay instead of Thread.Sleep will allow
+                    // other tasks (e.g. those unblocked by TCS.TrySetResult) a better chance to run.
+                    await Task.Delay(IdleTimeBeforeAdvancing).ConfigureAwait(false);
+
                     lock (_monitor)
                     {
                         // If the test code is running (RunAsync) give that a bit of time - wait for at least
-                        // one more delay to be scheduled, or the test to complete.
+                        // one delay to be scheduled, or the test to complete.
                         if (runTestCode)
                         {
                             while (!_stopped && _actions.Count == 0)
