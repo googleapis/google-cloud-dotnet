@@ -66,9 +66,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             public override async Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)
             {
                 CheckFailAllRpcs();
-                FileLogger.Log($"BeginTransaction starting at {Clock.GetCurrentDateTimeUtc():mm:ss}");
+                //FileLogger.Log($"BeginTransaction starting at {Clock.GetCurrentDateTimeUtc():mm:ss}");
                 await Scheduler.Delay(BeginTransactionDelay);
-                FileLogger.Log($"BeginTransaction completing at {Clock.GetCurrentDateTimeUtc():mm:ss}");
+                //FileLogger.Log($"BeginTransaction completing at {Clock.GetCurrentDateTimeUtc():mm:ss}");
                 int count = Interlocked.Increment(ref _transactionCounter);
                 return new Transaction
                 {
@@ -80,9 +80,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             public override async Task<Session> CreateSessionAsync(CreateSessionRequest request, CallSettings callSettings = null)
             {
                 CheckFailAllRpcs();
-                FileLogger.Log($"CreateSession starting at {Clock.GetCurrentDateTimeUtc():mm:ss}");
+                //FileLogger.Log($"CreateSession starting at {Clock.GetCurrentDateTimeUtc():mm:ss}");
                 await Scheduler.Delay(CreateSessionDelay);
-                FileLogger.Log($"CreateSession completing at {Clock.GetCurrentDateTimeUtc():mm:ss}");
+                //FileLogger.Log($"CreateSession completing at {Clock.GetCurrentDateTimeUtc():mm:ss}");
                 int count = Interlocked.Increment(ref _sessionCounter);
                 var database = request.DatabaseAsDatabaseName;
                 return new Session { SessionName = new SessionName(database.ProjectId, database.InstanceId, database.DatabaseId, $"session-{count}") };

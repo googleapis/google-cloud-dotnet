@@ -49,7 +49,19 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             private static readonly DatabaseName s_databaseName = new DatabaseName("project", "instance", "database");
 
-            private static TargetedSessionPool CreatePool(bool acquireSessionsImmediately)
+#if NETCOREAPP2_0
+            public TargetedSessionPoolTests()
+            {
+                ThreadPool.GetAvailableThreads(out var workers, out _);
+                ThreadPool.GetMaxThreads(out var maxWorkers, out _);
+                ThreadPool.GetMinThreads(out var minWorkers, out _);
+                FileLogger.Log($"Worker threads: {workers}");
+                FileLogger.Log($"Min workers: {minWorkers}");
+                FileLogger.Log($"Max workers: {maxWorkers}");
+            }
+#endif
+
+        private static TargetedSessionPool CreatePool(bool acquireSessionsImmediately)
             {
                 var client = new SessionTestingSpannerClient();
                 // Fixed session pool options so we can hard-code values without worrying about the defaults changing

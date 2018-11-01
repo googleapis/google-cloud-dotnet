@@ -318,6 +318,8 @@ namespace Google.Cloud.Spanner.V1.Tests
                     FileLogger.Log($"Completing {timers.Count} timers at {nextClockTime:mm:ss}");
                     timers.ForEach(t => t.CompletionSource.TrySetResult(0));
 
+                    Thread.Sleep(PostLoopSettleTime);
+                    
                     lock (_monitor)
                     {
                         // If the test code is running (RunAsync) give that a bit of time - wait for at least
