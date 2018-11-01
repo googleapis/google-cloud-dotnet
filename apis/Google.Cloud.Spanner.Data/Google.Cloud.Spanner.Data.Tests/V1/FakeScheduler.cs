@@ -279,7 +279,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// <param name="runTestCode">true if test code is running as well, and should be given some extra time to
         /// execute on each iteration. false if only the scheduled tasks are running.</param>
         private Task StartLoopAsync(DateTime simulatedTimeout, bool runTestCode) =>
-            Task.Run(() =>
+            Task.Run(async () =>
             {
                 // In-method protection against infinite loops. Each caller provides the actual timeout check,
                 // throwing an exception appropriately.
@@ -318,7 +318,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     FileLogger.Log($"Completing {timers.Count} timers at {nextClockTime:mm:ss}");
                     timers.ForEach(t => t.CompletionSource.TrySetResult(0));
 
-                    Thread.Sleep(PostLoopSettleTime);
+                    await Task.Delay(PostLoopSettleTime);
                     
                     lock (_monitor)
                     {
