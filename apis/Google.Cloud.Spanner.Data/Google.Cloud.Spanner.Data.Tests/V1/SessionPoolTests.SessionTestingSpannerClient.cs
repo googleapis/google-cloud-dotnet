@@ -43,7 +43,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // This will increase test times, but reduce flakiness.
             public FakeScheduler Scheduler { get; } = new FakeScheduler
             {
-                IdleTimeBeforeAdvancing = TimeSpan.FromMilliseconds(200),
+                IdleTimeBeforeAdvancing = TimeSpan.FromMilliseconds(150),
                 PostLoopSettleTime = TimeSpan.FromMilliseconds(200),
             };
             public FakeClock Clock => Scheduler.Clock;

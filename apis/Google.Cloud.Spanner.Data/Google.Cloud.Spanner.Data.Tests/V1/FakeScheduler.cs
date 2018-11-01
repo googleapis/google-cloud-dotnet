@@ -366,6 +366,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                         }
                     }
                 }
+                FileLogger.Log($"End of loop: advancing time to {nextClockTime:mm:ss}");
                 Clock.AdvanceTo(simulatedTimeout);
             });
 
