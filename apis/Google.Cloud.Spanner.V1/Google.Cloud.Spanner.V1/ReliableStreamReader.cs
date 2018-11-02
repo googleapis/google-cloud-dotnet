@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.V1
 
         private Task<Metadata> ConnectAsync()
         {
-            Logger.LogPerformanceCounterFn("StreamReader.ConnectCount", x => x + 1);
+            Logger.LogPerformanceCounter("StreamReader.ConnectCount", x => x + 1);
             if (_resumeToken != null)
             {
                 Logger.Debug($"Resuming at location:{_resumeToken}");
@@ -169,7 +169,7 @@ namespace Google.Cloud.Spanner.V1
             var result = await task.ConfigureAwait(false);
             if (sw != null)
             {
-                Logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                Logger.LogPerformanceCounter($"{name}.Duration", sw.ElapsedMilliseconds);
             }
             return result;
         }
@@ -178,7 +178,7 @@ namespace Google.Cloud.Spanner.V1
         {
             try
             {
-                Logger.LogPerformanceCounterFn("StreamReader.MoveNextCount", x => x + 1);
+                Logger.LogPerformanceCounter("StreamReader.MoveNextCount", x => x + 1);
                 _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
                     .WithSessionChecking(_session).ConfigureAwait(false);
 

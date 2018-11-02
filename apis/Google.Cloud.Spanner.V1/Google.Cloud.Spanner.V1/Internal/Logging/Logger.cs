@@ -14,7 +14,9 @@
 
 using Google.Api.Gax;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -30,9 +32,8 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
     public abstract class Logger
     {
         private static Logger s_defaultLogger = new DefaultLogger();
-        private int _perfLoggingTaskEnabled;
-        private readonly Dictionary<string, PerformanceTimeEntry> _perfCounterDictionary
-            = new Dictionary<string, PerformanceTimeEntry>();
+        private readonly ConcurrentDictionary<string, PerformanceTimeEntry> _perfCounterDictionary
+            = new ConcurrentDictionary<string, PerformanceTimeEntry>();
 
         /// <summary>
         /// This is an internal property and is not intended to be used by external code.
@@ -65,83 +66,34 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         public virtual bool EnableSensitiveDataLogging { get; set; }
 
         /// <summary>
-        /// This is an internal property and is not intended to be used by external code.
-        /// </summary>
-        public TimeSpan PerformanceTraceLogInterval { get; set; } = TimeSpan.Zero;
-
-        /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
         public void LogPerformanceData()
         {
             if (LogPerformanceTraces)
             {
-                LogPerformanceDataImpl();
-            }
-        }
-
-        /// <summary>
-        /// Performs the real performance logging.
-        /// </summary>
-        private void LogPerformanceDataImpl()
-        {
-            lock (_perfCounterDictionary)
-            {
-                if (_perfCounterDictionary.Count == 0)
+                var snapshot = _perfCounterDictionary.ToArray();
+                if (snapshot.Length == 0)
                 {
                     return;
                 }
-                var message = new StringBuilder();
-                var metricList = new SortedList<string, string>();
-                message.AppendLine("Spanner performance metrics:");
 
-                foreach (var kvp in _perfCounterDictionary)
-                {
-                    //to make the tavg correct, we re-record the last value at the current timestamp.
-                    UpdateTimeWeightedAvg(kvp.Value, DateTime.UtcNow);
-
-                    //log it.
-                    metricList.Add(
-                        kvp.Key,
-                        $" {kvp.Key}({kvp.Value.Instances}) tavg={kvp.Value.TimeWeightedAverage} " +
-                        $"avg={kvp.Value.Average} max={kvp.Value.Maximum} min={kvp.Value.Minimum}" +
-                        $" last={kvp.Value.Last}");
-
-                    //now reset to last.
-                    if (ResetPerformanceTracesEachInterval)
-                    {
-                        lock (kvp.Value)
-                        {
-                            kvp.Value.Last = 0;
-                            kvp.Value.Instances = 0;
-                            kvp.Value.TotalTime = default(TimeSpan);
-                            kvp.Value.LastMeasureTime = DateTime.UtcNow;
-                            kvp.Value.Maximum = 0;
-                            kvp.Value.Minimum = 0;
-                            kvp.Value.Average = 0;
-                            kvp.Value.TimeWeightedAverage = 0;
-                        }
-                    }
-                }
-
-                foreach (string s in metricList.Values)
-                {
-                    message.AppendLine(s);
-                }
-
-                LogPerformanceMessage(message.ToString());
+                LogPerformanceEntries(snapshot.OrderBy(kvp => kvp.Key).Select(kvp => kvp.Value.ToString()));
             }
         }
-
-        /// <summary>
-        /// This is an internal property and is not intended to be used by external code.
-        /// </summary>
-        public bool ResetPerformanceTracesEachInterval { get; set; } = true;
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public abstract void LogPerformanceMessage(string message);
+        public void ResetPerformanceData()
+        {
+            _perfCounterDictionary.Clear();
+        }
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public abstract void LogPerformanceEntries(IEnumerable<string> entries);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
@@ -202,6 +154,11 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         public virtual void Error(Func<string> messageFunc, Exception exception = null) =>
             Log(LogLevel.Error, messageFunc, exception);
 
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        protected abstract void WriteLine(LogLevel level, string message);
+
         private void Log(LogLevel level, string message, Exception exception)
         {
             if (LogLevel >= level)
@@ -222,55 +179,42 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
+        public void LogPerformanceCounter(string name, double value)
+        {
+            if (LogPerformanceTraces)
+            {
+                LogPerformanceCounterImpl(name, x => value);
+            }
+        }
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
         public void LogPerformanceCounter(string name, Func<double> valueFunc)
         {
             if (LogPerformanceTraces)
             {
-                LogPerformanceCounter(name, x => valueFunc());
+                LogPerformanceCounterImpl(name, x => valueFunc());
             }
         }
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public void LogPerformanceCounterFn(string name, Func<double, double> valueFunc)
+        public void LogPerformanceCounter(string name, Func<double, double> valueFunc)
         {
             if (LogPerformanceTraces)
             {
-                LogPerformanceCounter(name, valueFunc);
+                LogPerformanceCounterImpl(name, valueFunc);
             }
         }
 
-        /// <summary>
-        /// This is an internal method and is not intended to be used by external code.
-        /// </summary>
-        protected abstract void WriteLine(LogLevel level, string message);
-
-        private async Task PerformanceLogAsync()
+        private void LogPerformanceCounterImpl(string name, Func<double, double> valueFunc)
         {
-            while (true)
-            {
-                // While this method is only started once performance logging is turned on,
-                // we also allow performance logging to be turned off.
-                // If that happens, we'll just poll every second to see if it was turned back on.
-                // TODO: if/when we expose profile stats publicly, we should end and restart
-                // the task properly.
-                var delay = PerformanceTraceLogInterval != TimeSpan.Zero ? PerformanceTraceLogInterval : TimeSpan.FromSeconds(1);
-                await Task.Delay(delay).ConfigureAwait(false);
-
-                // FIXME: Should be LogPerformanceTraces, but we never disable that...
-                if (PerformanceTraceLogInterval != TimeSpan.Zero)
-                {
-                    LogPerformanceDataImpl();
-                }
-            }
-        }
-
-        private void RecordEntryValue(PerformanceTimeEntry entry, Func<double, double> valueFunc)
-        {
+            var entry = _perfCounterDictionary.GetOrAdd(name, key => new PerformanceTimeEntry(key));
+            var value = valueFunc(entry.Last);
             lock (entry)
             {
-                var value = valueFunc(entry.Last);
                 var total = entry.Instances * entry.Average;
                 entry.Instances++;
                 entry.Average = (total + value) / entry.Instances;
@@ -305,27 +249,9 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
             }
         }
 
-        private void LogPerformanceCounter(string name, Func<double, double> valueFunc)
-        {
-            if (Interlocked.CompareExchange(ref _perfLoggingTaskEnabled, 1, 0) == 0)
-            {
-                //kick off perf logging.
-                Task.Run(PerformanceLogAsync);
-            }
-
-            lock (_perfCounterDictionary)
-            {
-                if (!_perfCounterDictionary.TryGetValue(name, out PerformanceTimeEntry entry))
-                {
-                    entry = new PerformanceTimeEntry();
-                    _perfCounterDictionary[name] = entry;
-                }
-                RecordEntryValue(entry, valueFunc);
-            }
-        }
-
         private class PerformanceTimeEntry
         {
+            public string Name { get; set; }
             public int Instances { get; set; }
             public double Average { get; set; }
             public double TimeWeightedAverage { get; set; }
@@ -335,10 +261,16 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
             public double Last { get; set; }
             public DateTime LastMeasureTime { get; set; }
 
+            public PerformanceTimeEntry(string name) => Name = name;
+
             /// <inheritdoc />
             public override string ToString()
             {
-                return $"Recordings({Instances}) Average({Average}) TAvg({TimeWeightedAverage})";
+                // Prevent updates while we're reading
+                lock (this)
+                {
+                    return $"{Name}: ({Instances}) tavg={TimeWeightedAverage} avg={Average} max={Maximum} min={Minimum} last={Last}";
+                }
             }
         }
     }
