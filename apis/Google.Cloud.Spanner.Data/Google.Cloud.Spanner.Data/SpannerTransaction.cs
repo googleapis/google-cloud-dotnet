@@ -259,22 +259,25 @@ namespace Google.Cloud.Spanner.Data
         /// Commits the database transaction synchronously, returning the database timestamp for the commit via <paramref name="timestamp"/>.
         /// </summary>
         /// <param name="timestamp">Returns the UTC timestamp when the data was written to the database.</param>
-        public void Commit(out DateTime? timestamp) => timestamp = Task.Run(() => CommitAsync(default)).ResultWithUnwrappedExceptions();
+        public void Commit(out DateTime timestamp) => timestamp = Task.Run(() => CommitAsync(default)).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Commits the database transaction asynchronously.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
-        public Task<DateTime?> CommitAsync(CancellationToken cancellationToken = default)
+        public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
             var request = new CommitRequest { Mutations = { _mutations } };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var response = await _session.CommitAsync(request, CommitTimeout, cancellationToken).ConfigureAwait(false);
-                // TODO: Can this ever legitimately be null? If not, let's fix the API.
-                return response.CommitTimestamp?.ToDateTime();
+                if (response.CommitTimestamp == null)
+                {
+                    throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
+                }
+                return response.CommitTimestamp.ToDateTime();
             },
             "SpannerTransaction.Commit", _connection.Logger);
         }
