@@ -30,7 +30,8 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         public static void Install() => SetDefaultLogger(Instance);
 
-        protected override void WriteLine(V1.Internal.Logging.LogLevel level, string message) => WriteLine($"{level}: {message}");
+        protected override void LogImpl(V1.Internal.Logging.LogLevel level, string message, Exception exception) =>
+            WriteLine(exception == null ? $"{level}: {message}" : $"{level}: {message}, Exception: {exception}");
 
         public override void LogPerformanceEntries(IEnumerable<string> entries)
         {

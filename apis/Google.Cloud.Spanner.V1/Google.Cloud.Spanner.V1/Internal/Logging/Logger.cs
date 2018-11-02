@@ -98,25 +98,25 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Debug(string message) =>
+        public void Debug(string message) =>
             Log(LogLevel.Debug, message, null);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Debug(Func<string> messageFunc) =>
+        public void Debug(Func<string> messageFunc) =>
             Log(LogLevel.Debug, messageFunc, null);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Info(string message) =>
+        public void Info(string message) =>
             Log(LogLevel.Info, message, null);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Info(Func<string> messageFunc) =>
+        public void Info(Func<string> messageFunc) =>
             Log(LogLevel.Info, messageFunc, null);
 
         /// <summary>
@@ -133,48 +133,54 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Warn(string message, Exception exception = null) =>
+        public void Warn(string message, Exception exception = null) =>
             Log(LogLevel.Warn, message, exception);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Warn(Func<string> messageFunc, Exception exception = null) =>
+        public void Warn(Func<string> messageFunc, Exception exception = null) =>
             Log(LogLevel.Warn, messageFunc, exception);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Error(string message, Exception exception = null) =>
+        public void Error(string message, Exception exception = null) =>
             Log(LogLevel.Error, message, exception);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public virtual void Error(Func<string> messageFunc, Exception exception = null) =>
+        public void Error(Func<string> messageFunc, Exception exception = null) =>
             Log(LogLevel.Error, messageFunc, exception);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        protected abstract void WriteLine(LogLevel level, string message);
-
-        private void Log(LogLevel level, string message, Exception exception)
+        public void Log(LogLevel level, string message, Exception exception)
         {
             if (LogLevel >= level)
             {
-                WriteLine(level, exception == null ? message : $"{message}, Exception = {exception}");
+                LogImpl(level, message, exception);
             }
         }
 
-        private void Log(LogLevel level, Func<string> messageFunc, Exception exception)
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        public void Log(LogLevel level, Func<string> messageFunc, Exception exception)
         {
             if (LogLevel >= level)
             {
                 string message = messageFunc();
-                WriteLine(level, exception == null ? message : $"{message}, Exception = {exception}");
+                LogImpl(level, message, exception);
             }
         }
+
+        /// <summary>
+        /// This is an internal method and is not intended to be used by external code.
+        /// </summary>
+        protected abstract void LogImpl(LogLevel level, string message, Exception exception);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
