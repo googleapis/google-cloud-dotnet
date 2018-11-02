@@ -247,12 +247,12 @@ namespace Google.Cloud.Spanner.V1.Tests
                 // No-op
             }
 
-            protected override void WriteLine(LogLevel level, string message)
+            protected override void LogImpl(LogLevel level, string message, Exception exception)
             {
-                // TODO: Make this cleaner. We don't currently have a Log(LogLevel, string message) public method in Logger.
-                // We have a little way to go yet in terms of the Logger API...
-                TestLogger.Instance.Debug($"({nameof(InMemoryLogger)}.{level}) {message}");
+                TestLogger.Instance.Log(level, message, exception);
                 var list = _logsByLevel.GetOrAdd(level, _ => new List<string>());
+
+                // We don't care about any exceptions at the moment.
                 lock (list)
                 {
                     list.Add(message);

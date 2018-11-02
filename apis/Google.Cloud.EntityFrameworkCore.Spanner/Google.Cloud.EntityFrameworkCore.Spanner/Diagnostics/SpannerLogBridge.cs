@@ -46,55 +46,7 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
                 "EnableSensitiveDataLogging should only be configured from DbContextOptionsBuilder.EnableSensitiveDataLogging",
                 null, (x, e) => x);
         }
-
-        /// <summary>
-        /// This is internal functionality and not intended for public use.
-        /// </summary>
-        public override void Debug(Func<string> messageFunc)
-        {
-            _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Debug,
-                SpannerEventId.SpannerDiagnosticLog, messageFunc, null, (x, e) => x());
-        }
-
-        /// <summary>
-        /// This is internal functionality and not intended for public use.
-        /// </summary>
-        public override void Error(Func<string> messageFunc, Exception exception = null)
-        {
-            _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Error,
-                SpannerEventId.SpannerDiagnosticLog, messageFunc, exception, (x, e) => $"{x()}, detail:{e}");
-        }
-
-        /// <summary>
-        /// This is internal functionality and not intended for public use.
-        /// </summary>
-        public override void Info(Func<string> messageFunc)
-        {
-            _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Information,
-                SpannerEventId.SpannerDiagnosticLog, messageFunc, null, (x, e) => x());
-        }
-
-        /// <summary>
-        /// This is internal functionality and not intended for public use.
-        /// </summary>
-        public override void Warn(Func<string> messageFunc, Exception exception = null)
-        {
-            _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Warning,
-                SpannerEventId.SpannerDiagnosticLog, messageFunc, null, (x, e) => x());
-        }
-
-        /// <inheritdoc />
-        public override void Debug(string message) => Debug(() => message);
-
-        /// <inheritdoc />
-        public override void Info(string message) => Info(() => message);
-
-        /// <inheritdoc />
-        public override void Warn(string message, Exception exception = null) => Warn(() => message, exception);
-
-        /// <inheritdoc />
-        public override void Error(string message, Exception exception = null) => Error(() => message, exception);
-
+        
         /// <summary>
         /// This is internal functionality and not intended for public use.
         /// </summary>
@@ -106,9 +58,24 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         }
 
         /// <inheritdoc />
-        protected override void WriteLine(LogLevel level, string message)
+        protected override void LogImpl(LogLevel level, string message, Exception exception)
         {
-            throw new NotImplementedException();
+            var translatedLevel = TranslateLevel(level);
+            _efLogger.Logger.Log(translatedLevel, SpannerEventId.SpannerDiagnosticLog, message, exception,
+                // Note: don't capture message or exception here. Use the parameters instead.
+                (m, ex) => ex == null ? m : $"{m}, Exception: {ex}");
+        }
+
+        private Microsoft.Extensions.Logging.LogLevel TranslateLevel(LogLevel level)
+        {
+            switch (level)
+            {
+                case LogLevel.Debug: return Microsoft.Extensions.Logging.LogLevel.Debug;
+                case LogLevel.Info: return Microsoft.Extensions.Logging.LogLevel.Information;
+                case LogLevel.Warn: return Microsoft.Extensions.Logging.LogLevel.Warning;
+                case LogLevel.Error: return Microsoft.Extensions.Logging.LogLevel.Error;
+                default: return Microsoft.Extensions.Logging.LogLevel.None;
+            }
         }
     }
 }

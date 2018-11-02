@@ -23,7 +23,8 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
     internal class DefaultLogger : Logger
     {
         /// <inheritdoc />
-        protected override void WriteLine(LogLevel level, string message) => WriteLine($"{level}: {message}");
+        protected override void LogImpl(LogLevel level, string message, Exception exception) =>
+            WriteLine(exception == null ? $"{level}: {message}" : $"{level}: {message}, Exception: {exception}");
 
         /// <inheritdoc />
         public override void LogPerformanceEntries(IEnumerable<string> entries)
