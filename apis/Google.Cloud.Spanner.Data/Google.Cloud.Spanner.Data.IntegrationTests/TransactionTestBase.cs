@@ -15,10 +15,7 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {

@@ -15,7 +15,6 @@
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using System;
-using System.IO;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests

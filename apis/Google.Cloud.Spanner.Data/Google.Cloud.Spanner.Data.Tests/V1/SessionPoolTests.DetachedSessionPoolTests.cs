@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Spanner.V1.TransactionOptions;

@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,12 +22,6 @@ using System.Data.Common;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
-using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data
 {

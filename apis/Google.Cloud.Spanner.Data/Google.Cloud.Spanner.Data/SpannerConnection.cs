@@ -12,21 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf;
+using Grpc.Core;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax;
-using Google.Cloud.Spanner.Common.V1;
-using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
 
 #if !NETSTANDARD1_5
 using Transaction = System.Transactions.Transaction;

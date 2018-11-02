@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using static System.Globalization.CultureInfo;
 using System.Linq;
 using System.Reflection;
 using System.Xml;
-using Google.Protobuf.WellKnownTypes;
+using static System.Globalization.CultureInfo;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
