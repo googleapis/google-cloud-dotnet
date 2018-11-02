@@ -90,7 +90,7 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerException(ErrorCode code, RpcException innerException)
             : base(GetMessageFromErrorCode(code), innerException)
         {
-            Logger.DefaultLogger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
+            Logger.DefaultLogger.LogPerformanceCounter("SpannerException.Count", x => x + 1);
             ErrorCode = innerException.IsSessionExpiredError() ? ErrorCode.Aborted : code;
         }
 
@@ -101,7 +101,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="message">A descriptive message about the exception.</param>
         public SpannerException(ErrorCode code, string message) : base(message)
         {
-            Logger.DefaultLogger.LogPerformanceCounterFn("SpannerException.Count", x => x + 1);
+            Logger.DefaultLogger.LogPerformanceCounter("SpannerException.Count", x => x + 1);
             ErrorCode = code;
         }
 

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Microsoft.EntityFrameworkCore.Diagnostics
@@ -82,15 +83,6 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
                 SpannerEventId.SpannerDiagnosticLog, messageFunc, null, (x, e) => x());
         }
 
-        /// <summary>
-        /// This is internal functionality and not intended for public use.
-        /// </summary>
-        public override void LogPerformanceMessage(string message)
-        {
-            _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Information,
-                SpannerEventId.SpannerDiagnosticLog, message, null, (x, e) => x);
-        }
-
         /// <inheritdoc />
         public override void Debug(string message) => Debug(() => message);
 
@@ -102,6 +94,16 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
 
         /// <inheritdoc />
         public override void Error(string message, Exception exception = null) => Error(() => message, exception);
+
+        /// <summary>
+        /// This is internal functionality and not intended for public use.
+        /// </summary>
+        public override void LogPerformanceEntries(IEnumerable<string> entries)
+        {
+            string message = $"Performance entries{Environment.NewLine}{string.Join(Environment.NewLine, entries)}";
+            _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Information,
+                SpannerEventId.SpannerDiagnosticLog, message, null, (x, e) => x);
+        }
 
         /// <inheritdoc />
         protected override void WriteLine(LogLevel level, string message)

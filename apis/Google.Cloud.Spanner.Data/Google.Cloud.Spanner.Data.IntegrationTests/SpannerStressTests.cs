@@ -145,6 +145,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             };
             var pool = await connectionStringBuilder.AcquireSessionPoolAsync();
             var logger = Logger.DefaultLogger;
+            logger.ResetPerformanceData();
 
             logger.Info("Prewarming session pool for stress test");
             // Prewarm step: allow up to 30 seconds for the session pool to be populated.
@@ -155,8 +156,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             // Now run the test, with performance logging enabled, but without debug logging.
             // (Debug logging can write a lot to our log file, breaking the test.)
-            var previousLogLevel = Logger.DefaultLogger.LogLevel;
-            Logger.DefaultLogger.LogLevel = V1.Internal.Logging.LogLevel.Info;
+            var previousLogLevel = logger.LogLevel;
+            logger.LogLevel = V1.Internal.Logging.LogLevel.Info;
             logger.LogPerformanceTraces = true;
             double latencyMs;
             try

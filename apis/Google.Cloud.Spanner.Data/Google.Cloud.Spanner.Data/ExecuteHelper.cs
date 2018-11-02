@@ -35,7 +35,7 @@ namespace Google.Cloud.Spanner.Data
                 t();
                 if (sw != null)
                 {
-                    logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                    logger.LogPerformanceCounter($"{name}.Duration", sw.ElapsedMilliseconds);
                 }
             }
             catch (Exception e) when ((translatedException = SpannerException.TryTranslateRpcException(e)) != null)
@@ -69,7 +69,7 @@ namespace Google.Cloud.Spanner.Data
                 var result = await t().ConfigureAwait(false);
                 if (sw != null)
                 {
-                    logger.LogPerformanceCounterFn($"{name}.Duration", x => sw.ElapsedMilliseconds);
+                    logger.LogPerformanceCounter($"{name}.Duration", sw.ElapsedMilliseconds);
                 }
 
                 return result;

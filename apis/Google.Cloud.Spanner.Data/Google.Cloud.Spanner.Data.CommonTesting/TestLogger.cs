@@ -15,6 +15,7 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
@@ -31,7 +32,14 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         protected override void WriteLine(V1.Internal.Logging.LogLevel level, string message) => WriteLine($"{level}: {message}");
 
-        public override void LogPerformanceMessage(string message) => WriteLine($"PERF: {message}");
+        public override void LogPerformanceEntries(IEnumerable<string> entries)
+        {
+            WriteLine("Performance:");
+            foreach (var entry in entries)
+            {
+                WriteLine($"  {entry}");
+            }
+        }
 
         private void WriteLine(string line)
         {

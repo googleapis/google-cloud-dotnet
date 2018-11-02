@@ -242,8 +242,9 @@ namespace Google.Cloud.Spanner.V1.Tests
                 LogLevel = LogLevel.Debug;
             }
 
-            public override void LogPerformanceMessage(string message)
+            public override void LogPerformanceEntries(IEnumerable<string> entries)
             {
+                // No-op
             }
 
             protected override void WriteLine(LogLevel level, string message)

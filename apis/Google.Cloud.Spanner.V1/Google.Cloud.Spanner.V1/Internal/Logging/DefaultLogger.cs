@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
@@ -25,7 +26,11 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         protected override void WriteLine(LogLevel level, string message) => WriteLine($"{level}: {message}");
 
         /// <inheritdoc />
-        public override void LogPerformanceMessage(string message) => WriteLine($"PERF: {message}");
+        public override void LogPerformanceEntries(IEnumerable<string> entries)
+        {
+            string separator = Environment.NewLine + "  ";
+            WriteLine($"Performance:{separator}{string.Join(separator, entries)}");
+        }
 
         private void WriteLine(string line) =>
 #if !NETSTANDARD1_5
