@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Spanner.Data.CommonTesting;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {

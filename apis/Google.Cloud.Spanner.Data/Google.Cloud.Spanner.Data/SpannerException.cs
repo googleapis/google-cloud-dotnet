@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.LongRunning;
 using Google.Rpc;
 using Grpc.Core;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Spanner.Data
 {

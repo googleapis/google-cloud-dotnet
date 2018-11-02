@@ -15,14 +15,12 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
-using Grpc.Auth;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
 {

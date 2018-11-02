@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System;
 using System.Data;
 using System.Data.Common;
-using Google.Api.Gax;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data

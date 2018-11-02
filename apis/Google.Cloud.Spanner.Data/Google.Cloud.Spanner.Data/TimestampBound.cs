@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Globalization;
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using System;
+using System.Globalization;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data

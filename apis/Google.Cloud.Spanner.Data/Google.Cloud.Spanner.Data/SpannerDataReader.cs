@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
@@ -19,11 +23,6 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax;
-using Google.Cloud.Spanner.V1;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Google.Protobuf.WellKnownTypes;
-using static System.String;
 
 #if !NETSTANDARD1_5
 using System.Data;

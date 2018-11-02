@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Cloud.Spanner.V1;
 
 namespace Google.Cloud.Spanner.Data
 {

@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Protobuf.Collections;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
-using Google.Api.Gax;
-using Google.Protobuf.Collections;
-using Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Data
 {
