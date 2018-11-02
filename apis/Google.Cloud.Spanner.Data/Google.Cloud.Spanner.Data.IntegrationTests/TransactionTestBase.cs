@@ -65,7 +65,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         valueParameter.Value = IdGenerator.FromGuid();
                         command.ExecuteNonQuery();
                         tx.Commit(out var timestamp);
-                        oldest = new HistoryEntry((string)valueParameter.Value, timestamp.Value);
+                        oldest = new HistoryEntry((string)valueParameter.Value, timestamp);
                     }
                 });
 
@@ -95,7 +95,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         valueParameter.Value = IdGenerator.FromGuid();
                         command.ExecuteNonQuery();
                         tx.Commit(out var timestamp);
-                        newest = new HistoryEntry((string)valueParameter.Value, timestamp.Value);
+                        newest = new HistoryEntry((string)valueParameter.Value, timestamp);
                     }
                 });
 

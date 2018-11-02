@@ -80,7 +80,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         command.Transaction = tx;
                         command.ExecuteNonQuery();
                         tx.Commit(out var timestamp);
-                        TimestampBeforeEntries = timestamp.Value;
+                        TimestampBeforeEntries = timestamp;
                     }
                 });
 
