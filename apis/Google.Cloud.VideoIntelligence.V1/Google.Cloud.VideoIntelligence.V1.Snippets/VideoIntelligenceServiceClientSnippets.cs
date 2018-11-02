@@ -15,6 +15,8 @@
 using Google.Cloud.ClientTesting;
 using Google.LongRunning;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.VideoIntelligence.V1.Snippets
@@ -46,6 +48,45 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // End sample
 
             Assert.Contains(result.ShotLabelAnnotations, lab => lab.Entity.Description == "dinosaur");
+        }
+
+        [Fact]
+        public void SpeechTranscription()
+        {
+            // Sample: SpeechTranscription
+            VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.Create();
+            AnnotateVideoRequest request = new AnnotateVideoRequest
+            {
+                InputUri = "gs://bucket-name-123/google-next-17-videointelligence-short.mp4",
+                Features = { Feature.SpeechTranscription },
+                VideoContext = new VideoContext
+                {
+                    SpeechTranscriptionConfig = new SpeechTranscriptionConfig
+                    {
+                        LanguageCode = "en-US",
+                        EnableAutomaticPunctuation = true
+                    }
+                }
+            };
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> operation = client.AnnotateVideo(request);
+            Operation<AnnotateVideoResponse, AnnotateVideoProgress> resultOperation = operation.PollUntilCompleted();
+
+            VideoAnnotationResults result = resultOperation.Result.AnnotationResults[0];
+            foreach (SpeechTranscription transcription in result.SpeechTranscriptions)
+            {
+                Console.WriteLine($"Language code: {transcription.LanguageCode}");
+                Console.WriteLine("Alternatives:");
+                foreach (SpeechRecognitionAlternative alternative in transcription.Alternatives)
+                {
+                    Console.WriteLine($"({alternative.Confidence}) {alternative.Transcript}");
+                }
+            }
+            // End sample
+
+            IEnumerable<string> allTranscripts = result.SpeechTranscriptions
+                .SelectMany(st => st.Alternatives)
+                .Select(alt => alt.Transcript);
+            Assert.Contains(allTranscripts, t => t.Contains("looks like most of you"));
         }
     }
 }

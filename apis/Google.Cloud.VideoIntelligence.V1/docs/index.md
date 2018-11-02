@@ -24,3 +24,6 @@ check for completion and the results.
 
 {{sample:VideoIntelligenceServiceClient.AnnotateVideo}}
 
+## Transcribe speech from a video
+
+{{sample:VideoIntelligenceServiceClient.SpeechTranscription}}
