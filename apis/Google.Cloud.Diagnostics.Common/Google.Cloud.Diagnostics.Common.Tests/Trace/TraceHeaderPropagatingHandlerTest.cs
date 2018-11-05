@@ -14,7 +14,6 @@
 
 using Moq;
 using System;
-using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
@@ -36,6 +35,15 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockTracer.Setup(t => t.GetCurrentTraceId()).Returns(traceId);
             mockTracer.Setup(t => t.GetCurrentSpanId()).Returns(spanId);
             return mockTracer;
+        }
+
+        [Fact]
+        public void InnerHandler_Set()
+        {
+            var mockTracer = new Mock<IManagedTracer>();
+            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object);
+
+            Assert.NotNull(traceHandler.InnerHandler);
         }
 
         [Fact]

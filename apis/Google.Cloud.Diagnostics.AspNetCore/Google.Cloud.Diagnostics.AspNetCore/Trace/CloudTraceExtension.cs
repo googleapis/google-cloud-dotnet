@@ -121,8 +121,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             // This is needed to get the `TraceHeaderContext`. See `CreateTraceHeaderContext`.
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            services.AddSingleton(ManagedTracer.CreateDelegatingTracer(() => ContextTracerManager.GetCurrentTracer()));
-            services.AddSingleton(new TraceHeaderPropagatingHandler(() => ContextTracerManager.GetCurrentTracer()));
+            services.AddSingleton(ManagedTracer.CreateDelegatingTracer(ContextTracerManager.GetCurrentTracer));
+
+#if NETSTANDARD2_0
+            // On .Net Standard 2.0 or higher, we can use the System.Net.Http.IHttpClientFactory defined in Microsoft.Extensions.Http,
+            // for which we need a DelagatingHandler with no InnerHandler set. This is the recommended way.
+            // It should be registered as follows.
+            services.AddTransient(sp => new UnchainedTraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer));
+#endif
+            // This is to be used for explicitly creating an HttpClient instance. Valid for all platforms.
+            services.AddSingleton(new TraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer));
+
             return services.AddSingleton(traceFallbackPredicate);
         }
 

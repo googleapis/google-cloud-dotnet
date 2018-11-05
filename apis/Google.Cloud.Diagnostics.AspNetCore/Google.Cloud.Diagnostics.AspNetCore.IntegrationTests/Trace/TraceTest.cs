@@ -95,6 +95,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
         }
 
+        [Theory]
+        [InlineData(nameof(TraceController.TraceOutgoing))]
+#if NETCOREAPP2_0
+        [InlineData(nameof(TraceController.TraceOutgoingClientFactory))]
+#endif
+        public async Task Trace_OutGoing(string methodName)
+        {
+            var uri = $"/Trace/{methodName}/{_testId}";
+            var childSpanName = EntryData.GetMessage(methodName, _testId);
+            var outgoingSpanName = "https://google.com/";
+
+            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>()))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync(uri);
+
+                var trace = _polling.GetTrace(uri, _startTime);
+
+                TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
+            }
+        }
+
         [Fact]
         public async Task Trace_StackTrace()
         {
@@ -355,6 +377,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 options.ProjectId = TestEnvironment.GetTestProjectId();
                 options.Options = traceOptions;
             });
+
+#if NETCOREAPP2_0
+            services.AddHttpClient("google", c =>
+            {
+                c.BaseAddress = new Uri("https://google.com/");
+            })
+            .AddHttpMessageHandler<UnchainedTraceHeaderPropagatingHandler>();
+#endif
+
             services.AddMvc();
         }
 
@@ -434,6 +465,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 Thread.Sleep(10);
                 tracer.SetStackTrace(TraceEntryData.CreateStackTrace());
+            }
+            return message;
+        }
+
+#if NETCOREAPP2_0
+        public async Task<string> TraceOutgoingClientFactory(string id, [FromServices] IManagedTracer tracer, [FromServices] IHttpClientFactory httpClientFactory)
+        {
+            string message = EntryData.GetMessage(nameof(TraceOutgoingClientFactory), id);
+            using (tracer.StartSpan(message))
+            {
+                var httpClient = httpClientFactory.CreateClient("google");
+                await httpClient.GetAsync("");
+            }
+            return message;
+        }
+#endif
+        public async Task<string> TraceOutgoing(string id, [FromServices] IManagedTracer tracer, [FromServices] TraceHeaderPropagatingHandler propagatingHandler)
+        {
+            string message = EntryData.GetMessage(nameof(TraceOutgoing), id);
+            using (tracer.StartSpan(message))
+            using (var httpClient = new HttpClient(propagatingHandler))
+            {
+                await httpClient.GetAsync("https://google.com/");
             }
             return message;
         }

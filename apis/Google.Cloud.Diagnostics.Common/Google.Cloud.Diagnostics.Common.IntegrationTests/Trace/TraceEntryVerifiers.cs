@@ -44,23 +44,34 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// Checks a trace for the following:
         /// <list type="bullet">
         /// <term>The trace is not null.</term>
-        /// <term>The trace has two spans.</term>
+        /// <term>The trace has <code>2 + <paramref name="subsequentDescendants"/>.Length</code> spans.</term>
         /// <term>The trace has a root span with name rootSpanName</term>
         /// <term>The root span has a single child span with name childSpanName</term>
+        /// <term>Subsequent descendants are present (in depth, not width) in the same order as they are present on <paramref name="subsequentDescendants"/>.</term>
         /// </list>
         /// </summary>
         /// <param name="trace">The trace to check.</param>
         /// <param name="rootSpanName">The name of the root span.</param>
         /// <param name="childSpanName">The name of the child span.</param>
-        public static void AssertParentChildSpan(TraceProto trace, string rootSpanName, string childSpanName)
+        /// <param name="subsequentDescendants">The names of extra descendtans of child span.</param>
+        public static void AssertParentChildSpan(TraceProto trace, string rootSpanName, string childSpanName, params string[] subsequentDescendants)
         {
             Assert.NotNull(trace);
             var spans = trace.Spans;
-            Assert.Equal(2, spans.Count);
+            Assert.Equal(2 + subsequentDescendants?.Length ?? 0, spans.Count);
             var mainSpan = spans.Single(s => s.Name == rootSpanName);
-            var innerSpan = spans.Single(s => s.Name != rootSpanName);
-            Assert.Equal(childSpanName, innerSpan.Name);
+            var innerSpan = spans.Single(s => s.Name == childSpanName);
             Assert.Equal(mainSpan.SpanId, innerSpan.ParentSpanId);
+            if (subsequentDescendants != null)
+            {
+                mainSpan = innerSpan;
+                foreach (string spanName in subsequentDescendants)
+                {
+                    innerSpan = spans.Single(s => s.Name == spanName);
+                    Assert.Equal(mainSpan.SpanId, innerSpan.ParentSpanId);
+                    mainSpan = innerSpan;
+                }
+            }
         }
 
         /// <summary>

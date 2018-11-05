@@ -128,6 +128,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
+#if NETCOREAPP2_0
+        [Fact]
+        public async Task Traces_OutgoingClientFactory()
+        {
+            var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoingClientFactory)}/{_testId}";
+
+            var builder = new WebHostBuilder().UseStartup<TraceClientFactoryTestApplication>();
+            using(var server = new TestServer(builder))
+            using(var client = server.CreateClient())
+            {
+                var response = await client.GetAsync(uri);
+
+                var trace = s_polling.GetTrace(uri, _startTime);
+
+                TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "https://weather.com/");
+                TraceEntryVerifiers.AssertSpanLabelsContains(
+                    trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+                Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
+            }
+        }
+#endif
+
         public void Dispose()
         {
             _client.Dispose();
@@ -174,6 +196,50 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         }
         // End sample
     }
+
+#if NETCOREAPP2_0
+    internal class TraceClientFactoryTestApplication
+    {
+        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
+
+        // Sample: ConfigureHttpClient
+        public void ConfigureServices(IServiceCollection services)
+        {
+            // The line below is needed for trace ids to be added to logs.
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            // Replace ProjectId with your Google Cloud Project ID.
+            services.AddGoogleTrace(options =>
+            {
+                options.ProjectId = ProjectId;
+            });
+
+            // Register an HttpClient for outgoing requests.
+            services.AddHttpClient("tracesOutgoing")
+            // Be sure to add the UnchainedTraceHeaderPropagatingHandler which will guarantee
+            // that the outgoing requests will be traced.
+            .AddHttpMessageHandler<UnchainedTraceHeaderPropagatingHandler>();
+
+            services.AddMvc();
+        }
+
+        public void Configure(IApplicationBuilder app)
+        {
+            // Use at the start of the request pipeline to ensure the entire request is traced.
+            app.UseGoogleTrace();
+
+            // ...any other configuration your application requires.
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
+        // End sample
+    }
+#endif
 
     /// <summary>
     /// A controller for the <see cref="TraceTestApplication"/> used to trace operations.
@@ -232,6 +298,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             }
         }
         // End sample
+
+#if NETCOREAPP2_0
+        // Sample: TraceOutgoingClientFactory
+        /// <summary>
+        /// Use the <see cref="IHttpClientFactory"/> to create an HttpClient that will guarantee
+        /// the tracing of outgoing requests.
+        /// The <see cref="IHttpClientFactory"/> is populated by dependency injection
+        /// thanks to the use of the <see cref="FromServicesAttribute"/> attribute.
+        /// </summary>
+        public async Task<HttpResponseMessage> TraceOutgoingClientFactory([FromServices] IHttpClientFactory clientFactory)
+        {
+            var httpClient = clientFactory.CreateClient("tracesOutgoing");
+            // Any code that makes outgoing requests.
+            return await httpClient.GetAsync("https://weather.com/");
+        }
+        // End sample
+#endif
     }
 
     // Sample: TraceMVCConstructor
