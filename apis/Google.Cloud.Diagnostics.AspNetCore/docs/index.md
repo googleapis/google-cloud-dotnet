@@ -85,6 +85,21 @@ can in inject the `IManagedTracer` into the action method using the `[FromServic
 
 {{sample:Trace.UseTracerRunIn}}
 
-## Trace Outgoing HTTP Requests
+## Trace Outgoing HTTP Requests (all platforms)
 
 {{sample:Trace.TraceOutgoing}}
+
+## Trace Outgoing HTTP Requests (recommended for ASP.NET Core 2.0 upwards)
+
+The [recommended way of creating HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1) in ASP.NET Core 2.0 and upwards is to use the 
+`System.Net.Http.IHttpClientFactory` defined in the Microsoft.Extensions.Http package.
+The following example demonstrates how to register and use an HttpClient using Google Trace so that it traces
+outgoing requests.
+
+### Configuration
+
+{{sample:Trace.ConfigureHttpClient}}
+
+### Usage
+
+{{sample:Trace.TraceOutgoingClientFactory}}
