@@ -54,7 +54,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 var expectedRefreshTime = DateTime.UtcNow + options.IdleSessionRefreshDelay;
                 // Acquire all the sessions, which should all have a required refresh time within our upper bound
                 var initialSessions = await AcquireSessionsAsync(pool);
-                Assert.All(initialSessions, s => Assert.True(s.RefreshTimeForTest < expectedRefreshTime));
+                Assert.All(initialSessions, s => Assert.True(s.RefreshTimeForTest <= expectedRefreshTime));
 
                 // Wait for everything to idle out
                 await Task.Delay(options.IdleSessionRefreshDelay + TimeSpan.FromSeconds(1));
