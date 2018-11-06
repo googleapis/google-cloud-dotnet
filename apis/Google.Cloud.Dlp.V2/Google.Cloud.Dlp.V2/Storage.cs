@@ -81,51 +81,52 @@ namespace Google.Cloud.Dlp.V2 {
             "dG9yYWdlUmVnZXhGaWxlU2V0IkgKDFNhbXBsZU1ldGhvZBIdChlTQU1QTEVf",
             "TUVUSE9EX1VOU1BFQ0lGSUVEEAASBwoDVE9QEAESEAoMUkFORE9NX1NUQVJU",
             "EAIiIgoTQ2xvdWRTdG9yYWdlRmlsZVNldBILCgN1cmwYASABKAkiIAoQQ2xv",
-            "dWRTdG9yYWdlUGF0aBIMCgRwYXRoGAEgASgJItICCg9CaWdRdWVyeU9wdGlv",
+            "dWRTdG9yYWdlUGF0aBIMCgRwYXRoGAEgASgJIosDCg9CaWdRdWVyeU9wdGlv",
             "bnMSPQoPdGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3ku",
             "ZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSOgoSaWRlbnRpZnlpbmdfZmllbGRzGAIg",
             "AygLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQSEgoKcm93c19s",
             "aW1pdBgDIAEoAxIaChJyb3dzX2xpbWl0X3BlcmNlbnQYBiABKAUSSgoNc2Ft",
             "cGxlX21ldGhvZBgEIAEoDjIzLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdR",
-            "dWVyeU9wdGlvbnMuU2FtcGxlTWV0aG9kIkgKDFNhbXBsZU1ldGhvZBIdChlT",
-            "QU1QTEVfTUVUSE9EX1VOU1BFQ0lGSUVEEAASBwoDVE9QEAESEAoMUkFORE9N",
-            "X1NUQVJUEAIimgQKDVN0b3JhZ2VDb25maWcSRAoRZGF0YXN0b3JlX29wdGlv",
-            "bnMYAiABKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YXN0b3JlT3B0",
-            "aW9uc0gAEksKFWNsb3VkX3N0b3JhZ2Vfb3B0aW9ucxgDIAEoCzIqLmdvb2ds",
-            "ZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zSAASQwoRYmln",
-            "X3F1ZXJ5X29wdGlvbnMYBCABKAsyJi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "QmlnUXVlcnlPcHRpb25zSAASTAoPdGltZXNwYW5fY29uZmlnGAYgASgLMjMu",
-            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLlN0b3JhZ2VDb25maWcuVGltZXNwYW5D",
-            "b25maWca2gEKDlRpbWVzcGFuQ29uZmlnEi4KCnN0YXJ0X3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3Cg90aW1lc3RhbXBfZmll",
-            "bGQYAyABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBIxCill",
-            "bmFibGVfYXV0b19wb3B1bGF0aW9uX29mX3RpbWVzcGFuX2NvbmZpZxgEIAEo",
-            "CEIGCgR0eXBlImAKC0JpZ1F1ZXJ5S2V5Ej0KD3RhYmxlX3JlZmVyZW5jZRgB",
-            "IAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeVRhYmxlEhIK",
-            "CnJvd19udW1iZXIYAiABKAMiPgoMRGF0YXN0b3JlS2V5Ei4KCmVudGl0eV9r",
-            "ZXkYASABKAsyGi5nb29nbGUucHJpdmFjeS5kbHAudjIuS2V5IrsBCgNLZXkS",
-            "OAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
-            "LlBhcnRpdGlvbklkEjQKBHBhdGgYAiADKAsyJi5nb29nbGUucHJpdmFjeS5k",
-            "bHAudjIuS2V5LlBhdGhFbGVtZW50GkQKC1BhdGhFbGVtZW50EgwKBGtpbmQY",
-            "ASABKAkSDAoCaWQYAiABKANIABIOCgRuYW1lGAMgASgJSABCCQoHaWRfdHlw",
-            "ZSKOAQoJUmVjb3JkS2V5EjwKDWRhdGFzdG9yZV9rZXkYAiABKAsyIy5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuRGF0YXN0b3JlS2V5SAASOwoNYmlnX3F1ZXJ5",
-            "X2tleRgDIAEoCzIiLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeUtl",
-            "eUgAQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJsZRISCgpwcm9qZWN0X2lkGAEg",
-            "ASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFibGVfaWQYAyABKAkicwoN",
-            "QmlnUXVlcnlGaWVsZBIzCgV0YWJsZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5",
-            "LmRscC52Mi5CaWdRdWVyeVRhYmxlEi0KBWZpZWxkGAIgASgLMh4uZ29vZ2xl",
-            "LnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiOQoIRW50aXR5SWQSLQoFZmllbGQY",
-            "ASABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCp0CgpMaWtl",
-            "bGlob29kEhoKFkxJS0VMSUhPT0RfVU5TUEVDSUZJRUQQABIRCg1WRVJZX1VO",
-            "TElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NTSUJMRRADEgoKBkxJS0VM",
-            "WRAEEg8KC1ZFUllfTElLRUxZEAUqRQoIRmlsZVR5cGUSGQoVRklMRV9UWVBF",
-            "X1VOU1BFQ0lGSUVEEAASDwoLQklOQVJZX0ZJTEUQARINCglURVhUX0ZJTEUQ",
-            "AkKPAQoZY29tLmdvb2dsZS5wcml2YWN5LmRscC52MkIKRGxwU3RvcmFnZVAB",
-            "Wjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3ByaXZh",
-            "Y3kvZGxwL3YyO2RscKoCE0dvb2dsZS5DbG91ZC5EbHAuVjLKAhNHb29nbGVc",
-            "Q2xvdWRcRGxwXFYyYgZwcm90bzM="));
+            "dWVyeU9wdGlvbnMuU2FtcGxlTWV0aG9kEjcKD2V4Y2x1ZGVkX2ZpZWxkcxgF",
+            "IAMoCzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkIkgKDFNhbXBs",
+            "ZU1ldGhvZBIdChlTQU1QTEVfTUVUSE9EX1VOU1BFQ0lGSUVEEAASBwoDVE9Q",
+            "EAESEAoMUkFORE9NX1NUQVJUEAIimgQKDVN0b3JhZ2VDb25maWcSRAoRZGF0",
+            "YXN0b3JlX29wdGlvbnMYAiABKAsyJy5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "RGF0YXN0b3JlT3B0aW9uc0gAEksKFWNsb3VkX3N0b3JhZ2Vfb3B0aW9ucxgD",
+            "IAEoCzIqLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRp",
+            "b25zSAASQwoRYmlnX3F1ZXJ5X29wdGlvbnMYBCABKAsyJi5nb29nbGUucHJp",
+            "dmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zSAASTAoPdGltZXNwYW5fY29u",
+            "ZmlnGAYgASgLMjMuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlN0b3JhZ2VDb25m",
+            "aWcuVGltZXNwYW5Db25maWca2gEKDlRpbWVzcGFuQ29uZmlnEi4KCnN0YXJ0",
+            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVu",
+            "ZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3Cg90",
+            "aW1lc3RhbXBfZmllbGQYAyABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "RmllbGRJZBIxCillbmFibGVfYXV0b19wb3B1bGF0aW9uX29mX3RpbWVzcGFu",
+            "X2NvbmZpZxgEIAEoCEIGCgR0eXBlImAKC0JpZ1F1ZXJ5S2V5Ej0KD3RhYmxl",
+            "X3JlZmVyZW5jZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdR",
+            "dWVyeVRhYmxlEhIKCnJvd19udW1iZXIYAiABKAMiPgoMRGF0YXN0b3JlS2V5",
+            "Ei4KCmVudGl0eV9rZXkYASABKAsyGi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "S2V5IrsBCgNLZXkSOAoMcGFydGl0aW9uX2lkGAEgASgLMiIuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLlBhcnRpdGlvbklkEjQKBHBhdGgYAiADKAsyJi5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuS2V5LlBhdGhFbGVtZW50GkQKC1BhdGhFbGVt",
+            "ZW50EgwKBGtpbmQYASABKAkSDAoCaWQYAiABKANIABIOCgRuYW1lGAMgASgJ",
+            "SABCCQoHaWRfdHlwZSKOAQoJUmVjb3JkS2V5EjwKDWRhdGFzdG9yZV9rZXkY",
+            "AiABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuRGF0YXN0b3JlS2V5SAAS",
+            "OwoNYmlnX3F1ZXJ5X2tleRgDIAEoCzIiLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5CaWdRdWVyeUtleUgAQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJsZRISCgpw",
+            "cm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoIdGFibGVf",
+            "aWQYAyABKAkicwoNQmlnUXVlcnlGaWVsZBIzCgV0YWJsZRgBIAEoCzIkLmdv",
+            "b2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeVRhYmxlEi0KBWZpZWxkGAIg",
+            "ASgLMh4uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkZpZWxkSWQiOQoIRW50aXR5",
+            "SWQSLQoFZmllbGQYASABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmll",
+            "bGRJZCp0CgpMaWtlbGlob29kEhoKFkxJS0VMSUhPT0RfVU5TUEVDSUZJRUQQ",
+            "ABIRCg1WRVJZX1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NTSUJM",
+            "RRADEgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZEAUqRQoIRmlsZVR5cGUS",
+            "GQoVRklMRV9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLQklOQVJZX0ZJTEUQARIN",
+            "CglURVhUX0ZJTEUQAkKPAQoZY29tLmdvb2dsZS5wcml2YWN5LmRscC52MkIK",
+            "RGxwU3RvcmFnZVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL3ByaXZhY3kvZGxwL3YyO2RscKoCE0dvb2dsZS5DbG91ZC5EbHAu",
+            "VjLKAhNHb29nbGVcQ2xvdWRcRGxwXFYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -145,7 +146,7 @@ namespace Google.Cloud.Dlp.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Parser, new[]{ "FileSet", "BytesLimitPerFile", "BytesLimitPerFilePercent", "FileTypes", "SampleMethod", "FilesLimitPercent" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet), global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.FileSet.Parser, new[]{ "Url", "RegexFileSet" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStorageFileSet), global::Google.Cloud.Dlp.V2.CloudStorageFileSet.Parser, new[]{ "Url" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CloudStoragePath), global::Google.Cloud.Dlp.V2.CloudStoragePath.Parser, new[]{ "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields", "RowsLimit", "RowsLimitPercent", "SampleMethod" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions), global::Google.Cloud.Dlp.V2.BigQueryOptions.Parser, new[]{ "TableReference", "IdentifyingFields", "RowsLimit", "RowsLimitPercent", "SampleMethod", "ExcludedFields" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Parser, new[]{ "DatastoreOptions", "CloudStorageOptions", "BigQueryOptions", "TimespanConfig" }, new[]{ "Type" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig), global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig.Parser, new[]{ "StartTime", "EndTime", "TimestampField", "EnableAutoPopulationOfTimespanConfig" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryKey), global::Google.Cloud.Dlp.V2.BigQueryKey.Parser, new[]{ "TableReference", "RowNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.DatastoreKey), global::Google.Cloud.Dlp.V2.DatastoreKey.Parser, new[]{ "EntityKey" }, null, null, null),
@@ -255,7 +256,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Name of the information type. Either a name of your choosing when
     /// creating a CustomInfoType, or one of the names listed
     /// at https://cloud.google.com/dlp/docs/infotypes-reference when specifying
-    /// a built-in type.
+    /// a built-in type. InfoType names should conform to the pattern
+    /// [a-zA-Z0-9_]{1,64}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3315,7 +3317,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// List of file type groups to include in the scan.
     /// If empty, all files are scanned and available data format processors
-    /// are applied.
+    /// are applied. In addition, the binary content of the selected files
+    /// is always scanned as well.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FileType> FileTypes {
@@ -4018,6 +4021,7 @@ namespace Google.Cloud.Dlp.V2 {
       rowsLimit_ = other.rowsLimit_;
       rowsLimitPercent_ = other.rowsLimitPercent_;
       sampleMethod_ = other.sampleMethod_;
+      excludedFields_ = other.excludedFields_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4100,6 +4104,20 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "excluded_fields" field.</summary>
+    public const int ExcludedFieldsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dlp.V2.FieldId> _repeated_excludedFields_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dlp.V2.FieldId.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FieldId> excludedFields_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FieldId>();
+    /// <summary>
+    /// References to fields excluded from scanning. This allows you to skip
+    /// inspection of entire columns which you know have no findings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FieldId> ExcludedFields {
+      get { return excludedFields_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BigQueryOptions);
@@ -4118,6 +4136,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (RowsLimit != other.RowsLimit) return false;
       if (RowsLimitPercent != other.RowsLimitPercent) return false;
       if (SampleMethod != other.SampleMethod) return false;
+      if(!excludedFields_.Equals(other.excludedFields_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4129,6 +4148,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (RowsLimit != 0L) hash ^= RowsLimit.GetHashCode();
       if (RowsLimitPercent != 0) hash ^= RowsLimitPercent.GetHashCode();
       if (SampleMethod != 0) hash ^= SampleMethod.GetHashCode();
+      hash ^= excludedFields_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4155,6 +4175,7 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(32);
         output.WriteEnum((int) SampleMethod);
       }
+      excludedFields_.WriteTo(output, _repeated_excludedFields_codec);
       if (RowsLimitPercent != 0) {
         output.WriteRawTag(48);
         output.WriteInt32(RowsLimitPercent);
@@ -4180,6 +4201,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (SampleMethod != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleMethod);
       }
+      size += excludedFields_.CalculateSize(_repeated_excludedFields_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4207,6 +4229,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (other.SampleMethod != 0) {
         SampleMethod = other.SampleMethod;
       }
+      excludedFields_.Add(other.excludedFields_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4235,6 +4258,10 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 32: {
             sampleMethod_ = (global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            excludedFields_.AddEntriesFrom(input, _repeated_excludedFields_codec);
             break;
           }
           case 48: {
