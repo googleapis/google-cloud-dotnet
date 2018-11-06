@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -230,20 +231,30 @@ namespace Google.Cloud.Spanner.Data
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
-                ResultSet resultSet = await _session.ExecuteSqlAsync(request, timeoutSeconds, cancellationToken).ConfigureAwait(false);
-                var stats = resultSet.Stats;
-                if (stats == null)
+                // Note: ExecuteSql would work, but by using a streaming call we enable potential future scenarios
+                // where the server returns interim resume tokens to avoid timeouts.
+                using (var reader = _session.ExecuteSqlStreamReader(request, timeoutSeconds))
                 {
-                    throw new SpannerException(ErrorCode.Internal, "DML completed without statistics.");
-                }
-                switch (stats.RowCountCase)
-                {
-                    case ResultSetStats.RowCountOneofCase.RowCountExact:
-                        return stats.RowCountExact;
-                    case ResultSetStats.RowCountOneofCase.RowCountLowerBound:
-                        return stats.RowCountLowerBound;
-                    default:
-                        throw new SpannerException(ErrorCode.Internal, $"Unknown row count type: {stats.RowCountCase}");
+                    Value value = await reader.NextAsync(cancellationToken).ConfigureAwait(false);
+                    if (value != null)
+                    {
+                        throw new SpannerException(ErrorCode.Internal, "DML returned results unexpectedly.");
+                    }
+
+                    var stats = reader.Stats;
+                    if (stats == null)
+                    {
+                        throw new SpannerException(ErrorCode.Internal, "DML completed without statistics.");
+                    }
+                    switch (stats.RowCountCase)
+                    {
+                        case ResultSetStats.RowCountOneofCase.RowCountExact:
+                            return stats.RowCountExact;
+                        case ResultSetStats.RowCountOneofCase.RowCountLowerBound:
+                            return stats.RowCountLowerBound;
+                        default:
+                            throw new SpannerException(ErrorCode.Internal, $"Unknown row count type: {stats.RowCountCase}");
+                    }
                 }
             }, "SpannerTransaction.ExecuteDml", _connection.Logger);
         }
