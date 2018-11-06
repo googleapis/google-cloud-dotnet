@@ -7691,8 +7691,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// from the predefined schema that are missing will be added. No columns in
     /// the existing table will be deleted.
     ///
-    /// If unspecified, then all available columns will be used for a new table,
-    /// and no changes will be made to an existing table.
+    /// If unspecified, then all available columns will be used for a new table or
+    /// an (existing) table with no schema, and no changes will be made to an
+    /// existing table that has a schema.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema OutputSchema {
@@ -10662,7 +10663,7 @@ namespace Google.Cloud.Dlp.V2 {
         /// <summary>
         /// Optional message indicating that multiple rows might be associated to a
         /// single individual. If the same entity_id is associated to multiple
-        /// quasi-identifier tuples over distict rows, we consider the entire
+        /// quasi-identifier tuples over distinct rows, we consider the entire
         /// collection of tuples as the composite quasi-identifier. This collection
         /// is a multiset: the order in which the different tuples appear in the
         /// dataset is ignored, but their frequency is taken into account.
@@ -15928,6 +15929,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "date_time" field.</summary>
     public const int DateTimeFieldNumber = 2;
+    /// <summary>
+    /// The date time indicated by the quote.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dlp.V2.DateTime DateTime {
       get { return parsedQuoteCase_ == ParsedQuoteOneofCase.DateTime ? (global::Google.Cloud.Dlp.V2.DateTime) parsedQuote_ : null; }
@@ -16054,6 +16058,7 @@ namespace Google.Cloud.Dlp.V2 {
 
   /// <summary>
   /// Message for a date time object.
+  /// e.g. 2018-01-01, 5th August.
   /// </summary>
   public sealed partial class DateTime : pb::IMessage<DateTime> {
     private static readonly pb::MessageParser<DateTime> _parser = new pb::MessageParser<DateTime>(() => new DateTime());
@@ -23675,7 +23680,7 @@ namespace Google.Cloud.Dlp.V2 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.Error> errors_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.Error>();
     /// <summary>
     /// A stream of errors encountered when the trigger was activated. Repeated
-    /// errors may result in the JobTrigger automaticaly being paused.
+    /// errors may result in the JobTrigger automatically being paused.
     /// Will return the last 100 errors. Whenever the JobTrigger is modified
     /// this list will be cleared. Output only field.
     /// </summary>
