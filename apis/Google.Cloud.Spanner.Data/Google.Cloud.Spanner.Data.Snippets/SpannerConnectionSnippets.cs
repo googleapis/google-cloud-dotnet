@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using Xunit;
 using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1;
 
 #if !NETCOREAPP1_0
 using System.Transactions;
@@ -258,7 +259,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     // Include the primary key and update columns.
                     SpannerCommand updateCmd = connection.CreateUpdateCommand("TestTable");
                     updateCmd.Parameters.Add("Key", SpannerDbType.String, keys[0]);
-                    updateCmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0L);            
+                    updateCmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0L);
                     await updateCmd.ExecuteNonQueryAsync();
 
                     // Delete row for keys[1]
@@ -320,6 +321,34 @@ namespace Google.Cloud.Spanner.Data.Snippets
                         }
                     }
                 });
+            // End sample
+        }
+
+        [Fact]
+        public void CustomSessionPoolManager()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            // Sample: CustomSessionPoolManager
+            SessionPoolOptions options = new SessionPoolOptions
+            {
+                MinimumPooledSessions = 100,
+                MaximumActiveSessions = 250
+            };
+            SessionPoolManager manager = SessionPoolManager.Create(options);
+
+            // Note: a single SpannerConnectionStringBuilder instance can be reused whenever you
+            // need to build a connection
+            SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder(connectionString)
+            {
+                SessionPoolManager = manager
+            };
+
+            // (Elsewhere in your code...)
+            using (SpannerConnection connection = new SpannerConnection(builder))
+            {
+                // Use the connection
+            }
             // End sample
         }
 

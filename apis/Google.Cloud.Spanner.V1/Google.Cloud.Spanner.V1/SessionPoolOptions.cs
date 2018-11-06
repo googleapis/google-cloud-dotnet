@@ -24,6 +24,7 @@ namespace Google.Cloud.Spanner.V1
     public sealed class SessionPoolOptions
     {
         // Note: if any of these defaults are changed, update the XML documentation comments on the properties accordingly.
+        // Also adjust docs/configuration.md
         private int _maximumActiveSessions = 100;
         private int _minimumPooledSessions = 10;
         private TimeSpan _idleSessionRefreshDelay = TimeSpan.FromMinutes(15);

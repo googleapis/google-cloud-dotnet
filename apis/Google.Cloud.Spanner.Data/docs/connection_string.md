@@ -1,4 +1,4 @@
-# Connection string options
+Connection string options
 
 Spanner connection strings support the following options:
 
@@ -65,3 +65,52 @@ v1.0.
 Example:
 
 - UseClrDefaultForNull=true
+
+# Timeout
+
+The default timeout used for `SpannerCommand.CommandTimeout`,
+`SpannerTransaction.CommitTimeout`, and other Spanner network
+operations. Defaults to 60 seconds.
+
+Example:
+
+- Timeout=30
+
+# AllowImmediateTimeouts
+
+When set to False, a timeout of 0 means an indefinite timeout.
+When set to True, a timeout of 0 means an immediate timeout.
+Defaults to False.
+
+Example:
+
+- AllowImmediateTimeouts=true
+
+# MaximumGrpcChannels
+
+The maximum number of gRPC channels to use per connection using the
+same settings. Defaults to 4. This setting rarely needs to be
+modified.
+
+Example:
+
+- MaximumGrpcChannels=8
+
+# MaxConcurrentStreamsLowWatermark
+
+The maximum number of concurrent streams per gRPC channel before
+using a new channel. Defaults to 20. This setting rarely needs to be
+modified.
+
+Example:
+
+- MaxConcurrentStreamsLowWatermark=30
+
+# Host and Port
+
+These control the Spanner service to connect to. These are primarily
+available for testing purposes.
+
+Examples:
+
+- Host=alternative-spanner.googleapis.com; Port=1443
