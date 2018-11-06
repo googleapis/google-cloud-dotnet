@@ -106,7 +106,8 @@ namespace Google.Cloud.Firestore
                 case object anon when IsAnonymousType(anon.GetType()):
                     return CreateMapValue(ConvertAnonymousType(anon));
                 case object attributed when IsFirestoreAttributedType(attributed.GetType()):
-                    return CreateMapValue(ConvertFirestoreAttributedType(attributed));
+                    var attributedType = FirestoreDataAttributedType.ForType(value.GetType());
+                    return attributedType.Serialize(value);
                 case IEnumerable sequence:
                     return CreateArrayValue(sequence.Cast<object>().Select(Serialize));
                 default:
@@ -123,7 +124,7 @@ namespace Google.Cloud.Firestore
         /// This is effectively the map-only part of <see cref="Serialize"/>, but without wrapping the
         /// result in a Value.
         /// </summary>
-        internal static Dictionary<string, Value> SerializeMap(object value)
+        internal static IDictionary<string, Value> SerializeMap(object value)
         {
             GaxPreconditions.CheckNotNull(value, nameof(value));
             switch (value)
@@ -138,7 +139,12 @@ namespace Google.Cloud.Firestore
                 case object anon when IsAnonymousType(anon.GetType()):
                     return ConvertAnonymousType(anon);
                 case object attributed when IsFirestoreAttributedType(attributed.GetType()):
-                    return ConvertFirestoreAttributedType(attributed);
+                    var converted = ConvertFirestoreAttributedType(attributed);
+                    if (converted.ValueTypeCase != Value.ValueTypeOneofCase.MapValue)
+                    {
+                        throw new ArgumentException($"Unable to convert value of type {value.GetType()} to a map");
+                    }
+                    return converted.MapValue.Fields;
                 default:
                     throw new ArgumentException($"Unable to convert value of type {value.GetType()} to a map");
             }
@@ -155,17 +161,10 @@ namespace Google.Cloud.Firestore
             return ret;
         }
 
-        private static Dictionary<string, Value> ConvertFirestoreAttributedType(object value)
+        private static Value ConvertFirestoreAttributedType(object value)
         {
             var attributedType = FirestoreDataAttributedType.ForType(value.GetType());
-            var ret = new Dictionary<string, Value>();
-            foreach (var property in attributedType.ReadableProperties)
-            {
-                var sentinel = property.SentinelValue;
-                Value protoValue = sentinel == null ? Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
-                ret[property.FirestoreName] = protoValue;
-            }
-            return ret;
+            return attributedType.Serialize(value);
         }
     }
 }

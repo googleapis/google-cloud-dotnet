@@ -131,6 +131,7 @@ namespace Google.Cloud.Firestore.Tests
             // Document references
             { Database.Document("a/b"),
                 new Value { ReferenceValue = "projects/proj/databases/db/documents/a/b" } },
+
         };
 
         public static TheoryData<IMessage, Func<Value, IMessage>> ProtoValues { get; } = new TheoryData<IMessage, Func<Value, IMessage>>
@@ -199,6 +200,42 @@ namespace Google.Cloud.Firestore.Tests
                 }
                 return Integers.All(pair => other.Integers.TryGetValue(pair.Key, out var otherValue) && pair.Value == otherValue);
             }
+        }
+
+        [FirestoreData]
+        public sealed class CustomUser
+        {
+            [FirestoreProperty]
+            public int HighScore { get; set; }
+
+            [FirestoreProperty]
+            public string Name { get; set; }
+
+            [FirestoreProperty]
+            public Email Email { get; set; }
+        }
+
+        [FirestoreData(Converter = typeof(EmailConverter))]
+        public sealed class Email
+        {
+            public string Address { get; }
+
+            public Email(string address) => Address = address;
+        }
+
+        public class EmailConverter : IFirestoreConverter<Email>
+        {
+            public Email FromFirestore(object value)
+            {
+                switch (value)
+                {
+                    case null: return null;
+                    case string address: return new Email(address);
+                    default: throw new ArgumentException($"Unexpected data: {value.GetType()}");
+                }
+            }
+
+            public object ToFirestore(Email value) => value?.Address;
         }
     }
 }

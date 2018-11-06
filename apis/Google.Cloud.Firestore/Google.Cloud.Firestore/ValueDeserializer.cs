@@ -69,11 +69,16 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(db, nameof(db));
             GaxPreconditions.CheckNotNull(value, nameof(value));
 
-            // If we're asked for a Value, just provide it directly, even for null values.
-            // FIXME: Should we clone?
+            // If we're asked for a Value, just clone it.
             if (targetType == typeof(Value))
             {
                 return value.Clone();
+            }
+
+            if (IsFirestoreAttributedType(targetType))
+            {
+                var attributedType = FirestoreDataAttributedType.ForType(targetType);
+                return attributedType.Deserialize(this, db, value);
             }
 
             checked
@@ -182,30 +187,8 @@ namespace Google.Cloud.Firestore
             if (IsFirestoreAttributedType(targetType))
             {
                 var attributedType = FirestoreDataAttributedType.ForType(targetType);
-                var ret = attributedType.CreateInstance();
-
-                foreach (var pair in values)
-                {
-                    if (attributedType.WritableProperties.TryGetValue(pair.Key, out var property))
-                    {
-                        var converted = Deserialize(db, pair.Value, property.PropertyType);
-                        property.SetValue(ret, converted);
-                    }
-                    else
-                    {
-                        switch (attributedType.UnknownPropertyHandling)
-                        {
-                            case UnknownPropertyHandling.Ignore:
-                                break;
-                            case UnknownPropertyHandling.Warn:
-                                db.LogWarning($"No writable property for Firestore field {pair.Key} in type {targetType.FullName}");
-                                break;
-                            case UnknownPropertyHandling.Throw:
-                                throw new ArgumentException($"No writable property for Firestore field {pair.Key} in type {targetType.FullName}");
-                        }
-                    }                    
-                }
-                return ret;
+                // FIXME: This is really inefficient. We shouldn't need to do all this wrapping.
+                return attributedType.Deserialize(this, db, new Value { MapValue = new MapValue { Fields = { values } } });
             }
             throw new ArgumentException($"Unable to deserialize map to {targetType}");
         }

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Firestore.V1Beta1;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using BclType = System.Type;
+using static Google.Cloud.Firestore.SerializationHelpers;
 
 namespace Google.Cloud.Firestore
 {
@@ -38,6 +40,9 @@ namespace Google.Cloud.Firestore
 
         private readonly FirestoreDataAttribute _attribute;
 
+        private readonly BclType _targetType;
+        private readonly CustomConverterBase _converter;
+
         // Note: the use of a dictionary for writable properties and a list for readable ones is purely
         // driven by how we use this. If we ever want a dictionary for readable properties, that's easy to do.
         internal IReadOnlyDictionary<string, AttributedProperty> WritableProperties { get; }
@@ -48,10 +53,19 @@ namespace Google.Cloud.Firestore
 
         private FirestoreDataAttributedType(BclType type)
         {
+            _targetType = type;
             var typeInfo = type.GetTypeInfo();
             _attribute = typeInfo.GetCustomAttribute<FirestoreDataAttribute>(inherit: false);
             // This would be an internal library bug. We shouldn't be calling it in this case.
             GaxPreconditions.CheckState(_attribute != null, "Type {0} is not decorated with {1}.", type.FullName, nameof(FirestoreDataAttribute));
+
+            // FIXME: Validation
+            if (_attribute.Converter != null)
+            {
+                _converter = CustomConverterBase.CreateInstance(_attribute.Converter, type);
+                // None of the rest of our validation is required.
+                return;
+            }
 
             // The rest are user bugs.
             GaxPreconditions.CheckState(Enum.IsDefined(typeof(UnknownPropertyHandling), UnknownPropertyHandling),
@@ -99,6 +113,72 @@ namespace Google.Cloud.Firestore
         /// Creates an instance of the attributed type, using the parameterless constructor.
         /// </summary>
         internal object CreateInstance() => _ctor.Invoke(parameters: null);
+
+        /// <summary>
+        /// Serializes the given value according to the rules of the attributed type.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        internal Value Serialize(object value)
+        {
+            if (_converter != null)
+            {
+                var poco = _converter.ToFirestore(value);
+                return ValueSerializer.Serialize(poco);
+            }
+
+            var map = new Dictionary<string, Value>();
+            foreach (var property in ReadableProperties)
+            {
+                var sentinel = property.SentinelValue;
+                Value protoValue = sentinel == null ? ValueSerializer.Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
+                map[property.FirestoreName] = protoValue;
+            }
+            return CreateMapValue(map);
+        }
+
+        internal object Deserialize(ValueDeserializer deserializer, FirestoreDb db, Value value)
+        {
+            if (_converter != null)
+            {
+                var poco = deserializer.Deserialize(db, value, typeof(object));
+                return _converter.FromFirestore(poco);
+            }
+
+            var ret = CreateInstance();
+            if (value.ValueTypeCase == Value.ValueTypeOneofCase.NullValue)
+            {
+                // FIXME: Throw an appropriate exception if the target type is a non-nullable value type.
+                return null;
+            }
+            if (value.ValueTypeCase != Value.ValueTypeOneofCase.MapValue)
+            {
+                // FIXME: much better exception
+                throw new ArgumentException($"Unexpected type for conversion");
+            }
+            foreach (var pair in value.MapValue.Fields)
+            {
+                if (WritableProperties.TryGetValue(pair.Key, out var property))
+                {
+                    var converted = deserializer.Deserialize(db, pair.Value, property.PropertyType);
+                    property.SetValue(ret, converted);
+                }
+                else
+                {
+                    switch (UnknownPropertyHandling)
+                    {
+                        case UnknownPropertyHandling.Ignore:
+                            break;
+                        case UnknownPropertyHandling.Warn:
+                            db.LogWarning($"No writable property for Firestore field {pair.Key} in type {_targetType.FullName}");
+                            break;
+                        case UnknownPropertyHandling.Throw:
+                            throw new ArgumentException($"No writable property for Firestore field {pair.Key} in type {_targetType.FullName}");
+                    }
+                }
+            }
+            return ret;
+        }
 
         /// <summary>
         /// Returns an instance of <see cref="FirestoreDataAttributedType"/> for the given type,
@@ -151,6 +231,34 @@ namespace Google.Cloud.Firestore
 
             internal object GetValue(object obj) => _propertyInfo.GetValue(obj);
             internal void SetValue(object obj, object value) => _propertyInfo.SetValue(obj, value);
+        }
+
+        private abstract class CustomConverterBase
+        {
+            internal static CustomConverterBase CreateInstance(BclType converter, BclType targetType)
+            {
+                var impl = typeof(CustomConverter<>).MakeGenericType(targetType);
+                var ctor = impl.GetConstructors(BindingFlags.Instance | BindingFlags.NonPublic)[0];
+                // TODO: Handle converters with private constructors?
+                return (CustomConverterBase) ctor.Invoke(new[] { Activator.CreateInstance(converter) });
+            }
+
+            internal abstract object ToFirestore(object value);
+            internal abstract object FromFirestore(object value);
+
+            private sealed class CustomConverter<T> : CustomConverterBase
+            {
+                private readonly IFirestoreConverter<T> _converter;
+
+                internal CustomConverter(IFirestoreConverter<T> converter)
+                {
+                    _converter = converter;
+                }
+
+                internal override object FromFirestore(object value) => _converter.FromFirestore(value);
+
+                internal override object ToFirestore(object value) => _converter.ToFirestore((T) value);
+            }
         }
     }
 }

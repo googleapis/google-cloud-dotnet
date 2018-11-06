@@ -241,7 +241,28 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("test", deserialized.Name);
             Assert.Equal(15, deserialized.Value);
         }
-        
+
+        [Fact]
+        public void DeserializeCustomConversion()
+        {
+            var value = new Value
+            {
+                MapValue = new MapValue
+                {
+                    Fields =
+                    {
+                        { "Name", new Value { StringValue = "test" } },
+                        { "HighScore", new Value { IntegerValue = 10L } },
+                        { "Email", new Value { StringValue = "test@example.com" } },
+                    }
+                }
+            };
+            var user = (SerializationTestData.CustomUser) DeserializeDefault(value, typeof(SerializationTestData.CustomUser));
+            Assert.Equal("test", user.Name);
+            Assert.Equal(10, user.HighScore);
+            Assert.Equal("test@example.com", user.Email.Address);
+        }
+
         private string DeserializeAndReturnWarnings<T>(object valueToSerialize)
         {
             var value = ValueSerializer.Serialize(valueToSerialize);

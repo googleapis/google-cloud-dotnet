@@ -64,6 +64,10 @@ namespace Google.Cloud.Firestore.Tests
             // There's no attribute for deleted fields, so the score is just propagated.
             { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", new Value { IntegerValue = 10L } } } },
+
+            // Custom conversion
+            { new SerializationTestData.CustomUser { Name = "test", Email = new SerializationTestData.Email("test@example.com"), HighScore = 10 },
+                new Dictionary<string, Value> { { "Name", new Value { StringValue = "test" } }, { "Email", new Value { StringValue = "test@example.com" } }, { "HighScore", new Value { IntegerValue = 10L } } } }
         };
 
         [Theory]
@@ -131,7 +135,6 @@ namespace Google.Cloud.Firestore.Tests
             var badArray = new[] { new int[10] };
             Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(badArray));
         }
-        
 
         [FirestoreData]
         private class SentinelModel
