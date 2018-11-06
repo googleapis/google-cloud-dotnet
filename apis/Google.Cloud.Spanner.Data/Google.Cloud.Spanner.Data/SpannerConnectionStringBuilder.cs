@@ -328,7 +328,7 @@ namespace Google.Cloud.Spanner.Data
         /// Data Source=projects/{project}/instances/{instance}/databases/{database};[Host={hostname};][Port={portnumber}].
         /// Must not be null.</param>
         /// <param name="credentials">The credential to use for the connection. May be null.</param>
-        /// <param name="sessionPoolManager">The session pool manager to use.</param>
+        /// <param name="sessionPoolManager">The session pool manager to use. Must not be null.</param>
         public SpannerConnectionStringBuilder(string connectionString, ChannelCredentials credentials, SessionPoolManager sessionPoolManager)
         {
             ConnectionString = GaxPreconditions.CheckNotNull(connectionString, nameof(connectionString));
