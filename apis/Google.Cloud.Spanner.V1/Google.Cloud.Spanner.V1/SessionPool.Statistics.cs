@@ -25,30 +25,32 @@ namespace Google.Cloud.Spanner.V1
         public sealed class Statistics
         {
             /// <summary>
-            /// The total number of read-only sessions in the pool.
+            /// The total of <see cref="DatabaseStatistics.ReadPoolCount"/> values across all databases in the pool.
             /// </summary>
             public int TotalReadPoolCount => PerDatabaseStatistics.Sum(d => d.ReadPoolCount);
+
             /// <summary>
-            /// The total number of read/write sessions in the pool.
+            /// The total of <see cref="DatabaseStatistics.ReadWritePoolCount"/> values across all databases in the pool.
             /// </summary>
             public int TotalReadWritePoolCount => PerDatabaseStatistics.Sum(d => d.ReadWritePoolCount);
+
             /// <summary>
-            /// The total number of active sessions.
+            /// The total of <see cref="DatabaseStatistics.ActiveSessionCount"/> values across all databases in the pool.
             /// </summary>
             public int TotalActiveSessionCount => PerDatabaseStatistics.Sum(d => d.ActiveSessionCount);
 
             /// <summary>
-            /// The total number of session creation (or refresh, or transaction creation) requests in flight.
+            /// The total of <see cref="DatabaseStatistics.InFlightCreationCount"/> values across all databases in the pool.
             /// </summary>
             public int TotalInFlightCreationCount => PerDatabaseStatistics.Sum(d => d.InFlightCreationCount);
 
             /// <summary>
-            /// The total number of client calls awaiting sessions.
+            /// The total of <see cref="DatabaseStatistics.PendingAcquisitionCount"/> values across all databases in the pool.
             /// </summary>
             public int TotalPendingAcquisitionCount => PerDatabaseStatistics.Sum(d => d.PendingAcquisitionCount);
 
             /// <summary>
-            /// The statistics broken down by database.
+            /// The statistics broken down by database. This is never null, but may be empty.
             /// </summary>
             public IReadOnlyList<DatabaseStatistics> PerDatabaseStatistics { get; }
 

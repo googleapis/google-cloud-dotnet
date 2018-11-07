@@ -29,9 +29,6 @@ namespace Google.Cloud.Spanner.V1
     public partial class SessionPool
     {
         // Note: Internal for test purposes.
-        // TODO:
-        // - Revisit naming for KnownSessionCount/ActiveSessionCount
-        // - Consider exposing KnownSessionCount via statistics
         internal sealed class TargetedSessionPool : SessionPoolBase
         {
             private static readonly TransactionOptions s_readWriteOptions = new TransactionOptions { ReadWrite = new TransactionOptions.Types.ReadWrite() };
@@ -43,7 +40,6 @@ namespace Google.Cloud.Spanner.V1
 
             // Mutable state, which should be accessed within the lock
 
-            // TODO: Use linked lists instead?
             private readonly ConcurrentQueue<PooledSession> _readOnlySessions = new ConcurrentQueue<PooledSession>();
             private readonly ConcurrentQueue<PooledSession> _readWriteSessions = new ConcurrentQueue<PooledSession>();
             private readonly ConcurrentQueue<TaskCompletionSource<PooledSession>> _pendingAcquisitions =
@@ -73,9 +69,12 @@ namespace Google.Cloud.Spanner.V1
             private int _inFlightSessionCreationCount;
 
             /// <summary>
-            /// The number of sessions we know we've started creating and haven't yet deleted.
+            /// The number of sessions we know we've started creating and haven't yet deleted. This isn't the same as _activeSessionCount,
+            /// for two reasons. Firstly, sessions in the pool (or being refreshed etc) still count against this value.
+            /// Secondly, the number of *caller-requested* sessions can mount up, but we throttle how many *we* ask for.
+            /// This value is how we obey <see cref="SessionPoolOptions.MaximumActiveSessions"/>.
             /// </summary>
-            private int _knownSessionCount;
+            private int _liveOrRequestedSessionCount;
 
             /// <summary>
             /// Thread-safe read-only access to active session count.
@@ -86,12 +85,7 @@ namespace Google.Cloud.Spanner.V1
             /// Thread-safe read-only access to in-flight session creation count.
             /// </summary>
             internal int InFlightSessionCreationCount => Interlocked.CompareExchange(ref _inFlightSessionCreationCount, 0, 0);
-
-            /// <summary>
-            /// Thread-safe read-only access to known session count.
-            /// </summary>
-            internal int KnownSessionCount => Interlocked.CompareExchange(ref _knownSessionCount, 0, 0);
-
+            
             // Statistics maintained purely for diagnostic purposes. This lets us evaluate
             // how effective transaction pre-warming is.
             private long _rwTransactionRequests;
@@ -249,7 +243,7 @@ namespace Google.Cloud.Spanner.V1
 
             private void EvictSession(PooledSession session)
             {
-                Interlocked.Decrement(ref _knownSessionCount);
+                Interlocked.Decrement(ref _liveOrRequestedSessionCount);
                 Parent.DeleteSessionFireAndForget(session);
             }
 
@@ -504,7 +498,7 @@ namespace Google.Cloud.Spanner.V1
                 int poolSize;
                 int pendingAcquisitionCount;
                 int inFlightRequests;
-                int knownSessions;
+                int liveOrRequestedSessionCount;
                 lock (_lock)
                 {
                     poolSize = _readWriteSessions.Count + _readOnlySessions.Count;
@@ -512,7 +506,7 @@ namespace Google.Cloud.Spanner.V1
                     pendingAcquisitionCount = _pendingAcquisitions.Count;
                     minPoolSize = Options.MinimumPooledSessions;
                     maxActiveSessions = Options.MaximumActiveSessions;
-                    knownSessions = KnownSessionCount;
+                    liveOrRequestedSessionCount = Interlocked.CompareExchange(ref _liveOrRequestedSessionCount, 0, 0);
                 }
 
                 // Determine how many more requests to start.
@@ -530,7 +524,7 @@ namespace Google.Cloud.Spanner.V1
                 // pending callers, assuming that all the in-flight requests succeed, and there are no more requests?
                 int newRequestsToSatisfyPool = (pendingAcquisitionCount + minPoolSize) - (poolSize + inFlightRequests);
                 // How many more requests *can* we make without going over the maximum number of active sessions?
-                int maxAvailableRequests = maxActiveSessions - KnownSessionCount;
+                int maxAvailableRequests = maxActiveSessions - liveOrRequestedSessionCount;
 
                 int actualNewRequests = Math.Min(newRequestsToSatisfyPool, maxAvailableRequests);
 
@@ -578,7 +572,7 @@ namespace Google.Cloud.Spanner.V1
                 bool success = false;
                 bool canceled = false;
                 Interlocked.Increment(ref _inFlightSessionCreationCount);
-                Interlocked.Increment(ref _knownSessionCount);
+                Interlocked.Increment(ref _liveOrRequestedSessionCount);
                 try
                 {
                     var callSettings = Client.Settings.CreateSessionSettings
@@ -624,7 +618,7 @@ namespace Google.Cloud.Spanner.V1
                     // If this call failed, we can make another attempt.
                     if (!success)
                     {
-                        Interlocked.Decrement(ref _knownSessionCount);
+                        Interlocked.Decrement(ref _liveOrRequestedSessionCount);
                     }
                     Interlocked.Decrement(ref _inFlightSessionCreationCount);
                 }
