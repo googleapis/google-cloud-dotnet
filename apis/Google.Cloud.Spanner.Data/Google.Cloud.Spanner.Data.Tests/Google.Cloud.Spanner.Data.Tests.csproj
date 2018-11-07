@@ -34,5 +34,8 @@
     <Compile Update="V1\SessionPoolTests.*.cs">
       <DependentUpon>SessionPoolTests.cs</DependentUpon>
     </Compile>
+    <Compile Update="SpannerDbTypeTests.*.cs">
+      <DependentUpon>SpannerDbTypeTests.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

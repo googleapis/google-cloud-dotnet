@@ -19,7 +19,7 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
-    public class SpannerDbTypeTests
+    public partial class SpannerDbTypeTests
     {
         public static IEnumerable<object[]> GetSpannerDbTypes()
         {
