@@ -88,7 +88,7 @@
     "description": "Common code used by Bigtable V2 APIs",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax": "2.5.0",
+      "Google.Api.Gax": "2.6.0-beta02",
       "Google.Protobuf": "3.6.0"
     }
   },
@@ -102,12 +102,14 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc.Gcp": "2.5.0-beta01",
-      "Google.Cloud.Bigtable.Common.V2": "project"
+      "Google.Api.Gax.Grpc": "2.6.0-beta02",
+      "Google.Api.Gax.Grpc.Gcp": "2.6.0-beta02",
+      "Google.Cloud.Bigtable.Common.V2": "project",
+      "Grpc.Core": "1.16.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "default",
-      "Google.Cloud.Bigtable.Admin.V2": "project"
+      "Google.Api.Gax.Grpc.Testing": "2.6.0-beta02",
+      "Google.Cloud.Bigtable.Admin.V2": "project",
     }
   },
 
@@ -588,8 +590,8 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.LongRunning": "1.0.0",
-      "Google.Api.Gax.Grpc": "2.5.0",
-      "Grpc.Core": "1.13.1",
+      "Google.Api.Gax.Grpc": "2.6.0-beta02",
+      "Grpc.Core": "1.16.0",
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
@@ -605,8 +607,8 @@
     "tags": [ "Spanner" ],
     "dependencies": {
       "Google.LongRunning": "1.0.0",
-      "Google.Api.Gax.Grpc": "2.5.0",
-      "Grpc.Core": "1.13.1",
+      "Google.Api.Gax.Grpc": "2.6.0-beta02",
+      "Grpc.Core": "1.16.0",
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
@@ -624,12 +626,12 @@
       "Google.Cloud.Spanner.V1": "project",
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Grpc.Core": "1.15.0",
+      "Grpc.Core": "1.16.0",
       "Grpc.Gcp": "1.1.0"
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
-      "Google.Api.Gax.Testing": "2.5.0"
+      "Google.Api.Gax.Testing": "2.6.0-beta02"
     }
   },
 
@@ -641,7 +643,7 @@
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax": "2.5.0"
+      "Google.Api.Gax": "2.6.0-beta02"
     }
   },
   
@@ -656,8 +658,8 @@
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.5.0",
-      "Grpc.Core": "1.15.0",
+      "Google.Api.Gax.Grpc": "2.6.0-beta02",
+      "Grpc.Core": "1.16.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
