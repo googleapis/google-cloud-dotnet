@@ -148,11 +148,17 @@ namespace Google.Cloud.Spanner.Data
                 throw new InvalidOperationException($"{nameof(SpannerConnectionStringBuilder.CredentialFile)} should only be set to a JSON file.");
             }
 
-            if (!File.Exists(file))
+            if (!File.Exists(file) && !Path.IsPathRooted(file))
             {
+                string applicationFolder =
+#if NETSTANDARD1_5
+            AppContext.BaseDirectory;
+#else
+            AppDomain.CurrentDomain.BaseDirectory;
+#endif
+
                 // Try to find a file relative to the application's base directory.
-                // TODO: Use Path.Combine instead? This is what the original code did, and there could be interesting corner cases.
-                file = $"{GetApplicationFolder()}{Path.DirectorySeparatorChar}{file}";
+                file = Path.Combine(applicationFolder, file);
                 if (!File.Exists(file))
                 {
                     // throw a meaningful error that tells the developer where we looked.
@@ -164,12 +170,5 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Use an async overload
             return GoogleCredential.FromFile(file).CreateScoped(SpannerClient.DefaultScopes).ToChannelCredentials();
         }
-
-        private string GetApplicationFolder() =>
-#if NETSTANDARD1_5
-            AppContext.BaseDirectory;
-#else
-            AppDomain.CurrentDomain.BaseDirectory;
-#endif
     }
 }
