@@ -236,7 +236,7 @@ namespace Google.Cloud.Spanner.V1
                     {
                         TaskCompletionSource<PooledSession> receivingTcs = new TaskCompletionSource<PooledSession>();
                         _pendingAcquisitions.Enqueue(receivingTcs);
-                        return TcsWithCancellationToken(receivingTcs, cancellationToken);
+                        return receivingTcs.WithCancellationToken(cancellationToken);
                     }
                     else
                     {
@@ -674,7 +674,7 @@ namespace Google.Cloud.Spanner.V1
                     }
                     var tcs = new TaskCompletionSource<int>();
                     node = _minimumSizeWaiters.AddLast(tcs);
-                    task = TcsWithCancellationToken(tcs, cancellationToken);
+                    task = tcs.WithCancellationToken(cancellationToken);
                 }
                 await task.ConfigureAwait(false);
                 lock (_lock)
@@ -696,7 +696,7 @@ namespace Google.Cloud.Spanner.V1
 
                 // Return the appropriate TCS, with the given cancellation token.
                 var tcs = previousTcs ?? newTcs;
-                return TcsWithCancellationToken(tcs, cancellationToken);
+                return tcs.WithCancellationToken(cancellationToken);
             }
 
             /// <summary>
