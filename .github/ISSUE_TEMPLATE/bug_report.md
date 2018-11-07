@@ -11,7 +11,7 @@ Thanks for stopping by to let us know something could be better!
 Please run down the following list and make sure you've tried the usual "quick fixes":
 
   - Search the issues already opened: https://github.com/googleapis/google-cloud-dotnet/issues
-  - Search StackOverflow: http://stackoverflow.com/questions/tagged/google-cloud-platform+dotnet
+  - Search Stack Overflow: http://stackoverflow.com/questions/tagged/google-cloud-platform+dotnet
 
 If you are still having issues, please be sure to include as much information as possible:
 
@@ -19,7 +19,7 @@ If you are still having issues, please be sure to include as much information as
 
   - OS:
   - .NET version:
-  - NuGet package version:
+  - Package name and version:
 
 #### Steps to reproduce
 
