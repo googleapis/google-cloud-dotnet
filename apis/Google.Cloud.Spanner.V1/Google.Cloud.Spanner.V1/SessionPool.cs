@@ -240,23 +240,5 @@ namespace Google.Cloud.Spanner.V1
                 _logger.Warn("Failed to delete session. Session will be abandoned to garbage collection.", e);
             }
         }
-
-        // FIXME: Work out somewhere decent to put this.
-        private static Task<T> TcsWithCancellationToken<T>(TaskCompletionSource<T> tcs, CancellationToken cancellationToken)
-        {
-            if (!cancellationToken.CanBeCanceled)
-            {
-                return tcs.Task;
-            }
-            return Wait();
-            
-            async Task<T> Wait()
-            {
-                using (var registration = cancellationToken.Register(() => tcs.TrySetCanceled()))
-                {
-                    return await tcs.Task.ConfigureAwait(false);
-                }
-            }
-        }
     }
 }
