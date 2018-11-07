@@ -452,9 +452,11 @@ namespace Google.Cloud.Spanner.Data
             {
                 return;
             }
-            // Important: need to call GetTransactionEnlister on the current thread, *not* in the task.
-            // (The transaction may be bound to the current thread.)
-            var transactionEnlister = GetTransactionEnlister();
+            Open(GetTransactionEnlister());
+        }
+
+        private void Open(Action transactionEnlister)
+        {
             Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, CancellationToken.None);
 
             // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
@@ -463,9 +465,7 @@ namespace Google.Cloud.Spanner.Data
             TimeSpan timeout = _connectionStringBuilder.AllowImmediateTimeouts && timeoutSeconds == 0
                 ? TimeSpan.FromMilliseconds(-1)
                 : TimeSpan.FromSeconds(timeoutSeconds);
-            // TODO: Use WaitWithUnwrappedExceptions, but that doesn't currently take a timeout.
-            // (Alternatively, write an Open(Transaction) method, and use it from the various places we need it.)
-            if (!Task.Run(taskRunner).Wait(timeout))
+            if (!Task.Run(taskRunner).WaitWithUnwrappedExceptions(timeout))
             {
                 throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
             }
@@ -701,8 +701,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
-            Action transactionEnlister = () => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null);
-            Task.Run(() => OpenAsyncImpl(transactionEnlister, CancellationToken.None)).WaitWithUnwrappedExceptions();
+            Open(() => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null));
         }
 
         /// <summary>
@@ -722,8 +721,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
             }
-            Action transactionEnlister = () => EnlistTransaction(transaction, null, transactionId);
-            Task.Run(() => OpenAsyncImpl(transactionEnlister, CancellationToken.None)).WaitWithUnwrappedExceptions();
+            Open(() => EnlistTransaction(transaction, null, transactionId));
         }
 
         /// <summary>
