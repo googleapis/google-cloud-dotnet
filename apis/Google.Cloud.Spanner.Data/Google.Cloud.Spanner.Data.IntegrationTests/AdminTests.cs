@@ -175,6 +175,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
+        // This is just one example of DDL that isn't create/drop database.
+        [Fact]
+        public async Task CreateTableRequiresDatabase()
+        {
+            using (var connection = new SpannerConnection(_fixture.Database.NoDbConnectionString))
+            {
+                var cmd = connection.CreateDdlCommand("CREATE TABLE FOO(K STRING(MAX) NOT NULL) PRIMARY KEY (K)");
+                await Assert.ThrowsAsync<InvalidOperationException>(() => cmd.ExecuteNonQueryAsync());
+            }
+        }
+
         [Fact]
         public async Task CreateReturnsErrors()
         {
