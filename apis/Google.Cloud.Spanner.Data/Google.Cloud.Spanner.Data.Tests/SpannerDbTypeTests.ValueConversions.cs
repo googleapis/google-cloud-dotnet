@@ -24,18 +24,20 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
-    //more exhaustive (compared to integration tests) type conversion test cases.
-    public class TypeTests
+    /// <summary>
+    /// More exhaustive (compared to integration tests) type conversion test cases.
+    /// </summary>
+    public partial class SpannerDbTypeTests
     {
         public enum TestType
         {
-            //Only test the CLR type -> Value conversion
+            // Only test the CLR type -> Value conversion
             ClrToValue = 0,
 
-            //Only test the Value -> CLR Type conversion
+            // Only test the Value -> CLR Type conversion
             ValueToClr = 1,
 
-            //Test both ways.  There can be no loss of information or precision in the ClrToValue conversion.
+            // Test both ways.  There can be no loss of information or precision in the ClrToValue conversion.
             Both = 2
         }
 
@@ -126,14 +128,12 @@ namespace Google.Cloud.Spanner.Data.Tests
         // The inputs are used to test both ways (also deseralizing the generated json
         // to a requested clr type).  However some cases are specified as only one direction
         // usually because the conversion is by definition lossy.
-        // TODO(benwu):local specific tests (set current culture to ensure conversions use
-        // invariant cultures.
         public static IEnumerable<object[]> GetValidValueConversions()
         {
-            //format is:  LocalClrInstance,  SpannerType,  SerializedJsonFromProto, [test one or both ways]
-            //testing can be one way if there is loss of information in the conversion.
+            // Format is:  LocalClrInstance,  SpannerType,  SerializedJsonFromProto, [test one or both ways]
+            // Testing can be one way if there is loss of information in the conversion.
 
-            //Spanner type = Float64 tests.
+            // Spanner type = Float64 tests.
             yield return new object[] {true, SpannerDbType.Float64, "1"};
             yield return new object[] {false, SpannerDbType.Float64, "0"};
             yield return new object[] {(byte) 1, SpannerDbType.Float64, "1"};
@@ -154,7 +154,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {"1.5", SpannerDbType.Float64, "1.5"};
             yield return new object[] {DBNull.Value, SpannerDbType.Float64, "null"};
 
-            //Spanner type = Int64 tests.
+            // Spanner type = Int64 tests.
             yield return new object[] {true, SpannerDbType.Int64, Quote("1")};
             yield return new object[] {false, SpannerDbType.Int64, Quote("0")};
             yield return new object[] {(char) 1, SpannerDbType.Int64, Quote("1")};
@@ -174,7 +174,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {(ushort) 1, SpannerDbType.Int64, Quote("1")};
             yield return new object[] {"1", SpannerDbType.Int64, Quote("1")};
 
-            //Spanner type = Bool tests.
+            // Spanner type = Bool tests.
             yield return new object[] {true, SpannerDbType.Bool, "true"};
             yield return new object[] {false, SpannerDbType.Bool, "false"};
             yield return new object[] {(byte) 1, SpannerDbType.Bool, "true"};
@@ -209,8 +209,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {(ushort) 11, SpannerDbType.Bool, "true", TestType.ClrToValue };
             yield return new object[] {(ushort) 0, SpannerDbType.Bool, "false"};
 
-            //Spanner type = String tests.
-            //Note the casing on bool->string follows c# bool conversion semantics (by design).
+            // Spanner type = String tests.
+            // Note the casing on bool->string follows c# bool conversion semantics (by design).
             yield return new object[] {true, SpannerDbType.String, Quote("True")};
             yield return new object[] {false, SpannerDbType.String, Quote("False")};
             yield return new object[] {(char) 26, SpannerDbType.String, Quote("\\u001a")};
@@ -226,7 +226,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {(short) 1, SpannerDbType.String, Quote("1")};
             yield return new object[] {(ushort) 1, SpannerDbType.String, Quote("1")};
             yield return new object[] {s_testDate, SpannerDbType.String, Quote("2017-01-31T03:15:30.5Z")};
-            //Note the difference in C# conversions from special doubles.
+            // Note the difference in C# conversions from special doubles.
             yield return new object[] {double.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
             yield return new object[] {double.PositiveInfinity, SpannerDbType.String, Quote("Infinity") };
             yield return new object[] {double.NaN, SpannerDbType.String, Quote("NaN")};
@@ -234,7 +234,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
                 {new ToStringClass("hello"), SpannerDbType.String, Quote("hello"), TestType.ClrToValue};
 
-            //Spanner type = Date+Timestamp tests.  Some of these are one way due to either a lossy conversion (date loses time)
+            // Spanner type = Date+Timestamp tests.  Some of these are one way due to either a lossy conversion (date loses time)
             // or a string formatting difference.
             yield return new object[] {s_testDate, SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue};
             yield return new object[] {"1/31/2017", SpannerDbType.Date, Quote("2017-01-31"), TestType.ClrToValue};
@@ -250,12 +250,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[]
                 {"1/31/2017 3:15:30 AM", SpannerDbType.Timestamp, Quote("2017-01-31T03:15:30Z"), TestType.ClrToValue};
 
-            //Spanner type = Bytes tests.
+            // Spanner type = Bytes tests.
             yield return new object[] {s_base64Encoded, SpannerDbType.Bytes, Quote(s_base64Encoded)};
             yield return new object[] {s_bytesToEncode, SpannerDbType.Bytes, Quote(s_base64Encoded)};
             yield return new object[] {"passthrubadbytes", SpannerDbType.Bytes, Quote("passthrubadbytes")};
 
-            //list test cases (list of type X).
+            // List test cases (list of type X).
             yield return new object[]
             {
                 new List<string>(GetStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
@@ -287,7 +287,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 "[ \"2017-01-31T03:15:30.5Z\", \"2016-02-15T13:15:30Z\", \"2015-03-31T03:15:30.25Z\" ]"
             };
 
-            //list test cases (various source/target list types)
+            // List test cases (various source/target list types)
             yield return new object[]
             {
                 GetStringsForArray(), SpannerDbType.ArrayOf(SpannerDbType.String),
@@ -345,13 +345,13 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         public static IEnumerable<object[]> GetInvalidValueConversions()
         {
-            //Spanner type = Float64 tests.
+            // Spanner type = Float64 tests.
             yield return new object[] {(char) 1, SpannerDbType.Float64};
             yield return new object[] {s_testDate, SpannerDbType.Float64};
             yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Float64};
             yield return new object[] {"", SpannerDbType.Float64};
 
-            //Spanner type = Int64 tests.
+            // Spanner type = Int64 tests.
             yield return new object[] {s_testDate, SpannerDbType.Int64};
             yield return new object[] {double.NegativeInfinity, SpannerDbType.Int64};
             yield return new object[] {double.PositiveInfinity, SpannerDbType.Int64};
@@ -359,15 +359,15 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {"1.5", SpannerDbType.Int64};
             yield return new object[] {new ToStringClass("1.5"), SpannerDbType.Int64};
 
-            //Spanner type = Bool tests.
+            // Spanner type = Bool tests.
             yield return new object[] {(char) 1, SpannerDbType.Bool};
             yield return new object[] {"1", SpannerDbType.Bool};
             yield return new object[] {new ToStringClass("true"), SpannerDbType.Bool};
 
-            //Spanner type = String tests.
-            //(all work)
+            // Spanner type = String tests.
+            // (all work)
 
-            //Spanner type = Date tests.
+            // Spanner type = Date tests.
             yield return new object[] {new ToStringClass("hello"), SpannerDbType.Date};
             yield return new object[] {"badjuju", SpannerDbType.Date};
         }
@@ -393,7 +393,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var expectedObject = JsonParser.Default.Parse<T>(expected);
             var actualObject = JsonParser.Default.Parse<T>(actual);
 
-            //Assert equal handles various cases like out of order IDicitonaries (structs)
+            // Assert.Equal handles various cases like out of order IDicitonaries (structs)
             Assert.Equal(expectedObject, actualObject);
         }
 
@@ -426,8 +426,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                         }
                         else
                         {
-                            //our error message contains an informational addendum
-                            //which tells us which theory test case failed.
+                            // Our error message contains an informational addendum
+                            // which tells us which theory test case failed.
                             Assert.Equal(expected + infoAddendum, actual + infoAddendum);
                         }
                     }
@@ -442,7 +442,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         [Theory]
         [MemberData(nameof(GetValidValueConversionsWithCulture))]
-        public void TestDeSerializeFromValue(
+        public void ConvertToClrTypeWithCulture(
             CultureInfo culture,
             object expected,
             SpannerDbType spannerDbType,

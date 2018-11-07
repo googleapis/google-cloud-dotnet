@@ -42,6 +42,9 @@
     <Compile Update="SpannerCommand.*.cs">
       <DependentUpon>SpannerCommand.cs</DependentUpon>
     </Compile>
+    <Compile Update="SpannerDbType.*.cs">
+      <DependentUpon>SpannerDbType.cs</DependentUpon>
+    </Compile>
     <Compile Update="SpannerCommand.cs">
       <SubType>Component</SubType>
     </Compile>
