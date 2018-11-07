@@ -511,7 +511,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Opens the connection (which includes acquiring a SessionPool, unless there's no database)
+        /// Opens the connection, which involves acquiring a SessionPool,
         /// and potentially enlists the connection in the current transaction.
         /// </summary>
         /// <param name="transactionEnlister">Enlistment delegate; may be null.</param>
@@ -523,14 +523,6 @@ namespace Google.Cloud.Spanner.Data
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
-                    // FIXME: Prevent opening instead? It's an annoyingly inconsistent state (with no _sessionPool).
-                    // Although we don't actually need a database to get a session pool...
-                    if (string.IsNullOrEmpty(_connectionStringBuilder.SpannerDatabase))
-                    {
-                        _state = ConnectionState.Open;
-                        return;
-                    }
-
                     ConnectionState previousState;
                     lock (_sync)
                     {
