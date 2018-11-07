@@ -128,7 +128,7 @@ namespace Google.Cloud.Spanner.Data
             TimestampBound timestampBound)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            CommitTimeout = _connection.SpannerConnectionStringBuilder.Timeout;
+            CommitTimeout = _connection.Builder.Timeout;
             Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             TimestampBound = timestampBound;

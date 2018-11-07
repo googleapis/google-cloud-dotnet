@@ -60,7 +60,7 @@ namespace Google.Cloud.Spanner.Data
             // If we have a connection, use its configuration for the default timeout.
             if (connection != null)
             {
-                _commandTimeout = connection.SpannerConnectionStringBuilder.Timeout;
+                _commandTimeout = connection.Builder.Timeout;
             }
         }
 

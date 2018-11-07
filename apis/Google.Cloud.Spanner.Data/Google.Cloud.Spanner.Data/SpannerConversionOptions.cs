@@ -40,7 +40,7 @@ namespace Google.Cloud.Spanner.Data
         /// Determines the right conversion options to use based on the connection string of the given connection.
         /// </summary>
         internal static SpannerConversionOptions ForConnection(SpannerConnection spannerConnection) =>
-            ForConnectionStringBuilder(spannerConnection?.SpannerConnectionStringBuilder);
+            ForConnectionStringBuilder(spannerConnection?.Builder);
 
         /// <summary>
         /// Determines the right conversion options to use based on the connection string of the given connection string builder.
