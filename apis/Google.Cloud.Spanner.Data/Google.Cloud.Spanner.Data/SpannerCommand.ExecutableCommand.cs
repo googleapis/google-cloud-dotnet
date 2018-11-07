@@ -123,7 +123,7 @@ namespace Google.Cloud.Spanner.Data
                 var resultSet = await effectiveTransaction.ExecuteQueryAsync(request, cancellationToken, CommandTimeout)
                     .ConfigureAwait(false);
                 var conversionOptions = SpannerConversionOptions.ForConnection(Connection);
-                var enableGetSchemaTable = Connection.SpannerConnectionStringBuilder?.EnableGetSchemaTable ?? false;
+                var enableGetSchemaTable = Connection.Builder.EnableGetSchemaTable;
                 // When the data reader is closed, we may need to dispose of the connection.
                 IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
 
@@ -214,7 +214,7 @@ namespace Google.Cloud.Spanner.Data
             private async Task<int> ExecuteDdlAsync(CancellationToken cancellationToken)
             {
                 string commandText = CommandTextBuilder.CommandText;
-                var builder = Connection.SpannerConnectionStringBuilder;
+                var builder = Connection.Builder;
                 var channelOptions = new SpannerClientCreationOptions(builder);
                 var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
                 var channel = new Channel(channelOptions.Endpoint.Host, channelOptions.Endpoint.Port, credentials);

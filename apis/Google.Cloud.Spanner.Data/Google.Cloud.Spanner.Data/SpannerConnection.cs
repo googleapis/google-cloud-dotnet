@@ -53,16 +53,6 @@ namespace Google.Cloud.Spanner.Data
 
         private readonly object _sync = new object();
 
-        // This object is never mutated and never exposed to consumers.
-
-        /// <summary>
-        /// The current connection string builder. The object is never mutated and never exposed to consumers.
-        /// The field itself may be changed to a new builder by setting the <see cref="ConnectionString"/>
-        /// property, or within this class via the <see cref="TrySetNewConnectionInfo(SpannerConnectionStringBuilder)"/> method.
-        /// This field is never null.
-        /// </summary>
-        private SpannerConnectionStringBuilder _connectionStringBuilder;
-
         // The SessionPool to use to allocate sessions. This is obtained from the SessionPoolManager,
         // and released when the connection is closed/disposed.
         private SessionPool _sessionPool;
@@ -77,22 +67,21 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override string ConnectionString
         {
-            get => _connectionStringBuilder.ToString();
-            set => TrySetNewConnectionInfo(
-                new SpannerConnectionStringBuilder(value, _connectionStringBuilder.CredentialOverride));
+            get => Builder.ToString();
+            set => TrySetNewConnectionInfo(new SpannerConnectionStringBuilder(value, Builder.CredentialOverride, Builder.SessionPoolManager));
         }
 
         /// <inheritdoc />
-        public override string Database => _connectionStringBuilder.SpannerDatabase;
+        public override string Database => Builder.SpannerDatabase;
 
         /// <inheritdoc />
-        public override string DataSource => _connectionStringBuilder.DataSource;
+        public override string DataSource => Builder.DataSource;
 
         /// <summary>
         /// The Spanner project name.
         /// </summary>
         [Category("Data")]
-        public string Project => _connectionStringBuilder.Project;
+        public string Project => Builder.Project;
 
         /// <inheritdoc />
         public override string ServerVersion => "0.0";
@@ -101,7 +90,7 @@ namespace Google.Cloud.Spanner.Data
         /// The Spanner instance name
         /// </summary>
         [Category("Data")]
-        public string SpannerInstance => _connectionStringBuilder.SpannerInstance;
+        public string SpannerInstance => Builder.SpannerInstance;
 
         private Logger _logger = Logger.DefaultLogger;
         /// <summary>
@@ -287,7 +276,7 @@ namespace Google.Cloud.Spanner.Data
                 Close();
             }
 
-            TrySetNewConnectionInfo(_connectionStringBuilder.CloneWithNewDataSource(newDataSource));
+            TrySetNewConnectionInfo(Builder.CloneWithNewDataSource(newDataSource));
         }
 
         /// <inheritdoc />
@@ -315,7 +304,7 @@ namespace Google.Cloud.Spanner.Data
                 // Note: if we're in an implicit transaction using TransactionScope, this will "release" the session pool
                 // back to the session pool manager before we're really done with it, but that's okay - it will just report
                 // inaccurate connection counts temporarily. This is an inherent problem with implicit transactions.
-                _connectionStringBuilder.SessionPoolManager.Release(sessionPool);
+                Builder.SessionPoolManager.Release(sessionPool);
             }
 
             if (oldState != _state)
@@ -461,8 +450,8 @@ namespace Google.Cloud.Spanner.Data
 
             // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
             // a BCL-oriented timeout.
-            int timeoutSeconds = _connectionStringBuilder.Timeout;
-            TimeSpan timeout = _connectionStringBuilder.AllowImmediateTimeouts && timeoutSeconds == 0
+            int timeoutSeconds = Builder.Timeout;
+            TimeSpan timeout = Builder.AllowImmediateTimeouts && timeoutSeconds == 0
                 ? TimeSpan.FromMilliseconds(-1)
                 : TimeSpan.FromSeconds(timeoutSeconds);
             if (!Task.Run(taskRunner).WaitWithUnwrappedExceptions(timeout))
@@ -487,7 +476,7 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
         public async Task WaitForSessionPoolAsync(CancellationToken cancellationToken = default)
         {
-            DatabaseName databaseName = _connectionStringBuilder.DatabaseName;
+            DatabaseName databaseName = Builder.DatabaseName;
             GaxPreconditions.CheckState(databaseName != null, $"{nameof(WaitForSessionPoolAsync)} cannot be used without a database.");
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             await _sessionPool.WaitForPoolAsync(databaseName, cancellationToken).ConfigureAwait(false);
@@ -504,7 +493,7 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A task which will complete when the session pool has finished shutting down.</returns>
         public async Task ShutdownSessionPoolAsync(CancellationToken cancellationToken = default)
         {
-            DatabaseName databaseName = _connectionStringBuilder.DatabaseName;
+            DatabaseName databaseName = Builder.DatabaseName;
             GaxPreconditions.CheckState(databaseName != null, $"{nameof(ShutdownSessionPoolAsync)} cannot be used without a database.");
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             await _sessionPool.ShutdownPoolAsync(databaseName, cancellationToken).ConfigureAwait(false);
@@ -542,7 +531,7 @@ namespace Google.Cloud.Spanner.Data
                     OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
                     try
                     {
-                        _sessionPool = await _connectionStringBuilder.AcquireSessionPoolAsync().ConfigureAwait(false);
+                        _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
                     }
                     finally
                     {
@@ -598,11 +587,13 @@ namespace Google.Cloud.Spanner.Data
             null;
 #endif
 
-        // TODO: Just make this an automatically implemented property.
         /// <summary>
-        /// The current connection string builder. This is never null. Callers must not mutate the returned builder.
+        /// The current connection string builder. The object is never mutated and never exposed to consumers.
+        /// The value may be changed to a new builder by setting the <see cref="ConnectionString"/>
+        /// property, or within this class via the <see cref="TrySetNewConnectionInfo(SpannerConnectionStringBuilder)"/> method.
+        /// This value is never null.
         /// </summary>
-        internal SpannerConnectionStringBuilder SpannerConnectionStringBuilder => _connectionStringBuilder;        
+        internal SpannerConnectionStringBuilder Builder { get; private set; }
 
         private void AssertClosed(string message)
         {
@@ -628,7 +619,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 AssertOpen("acquire session.");
                 pool = _sessionPool;
-                databaseName = _connectionStringBuilder?.DatabaseName;
+                databaseName = Builder.DatabaseName;
             }
             if (databaseName is null)
             {
@@ -656,7 +647,7 @@ namespace Google.Cloud.Spanner.Data
         {
             AssertClosed("change connection information.");
             // We will never allow our internal SpannerConnectionStringBuilder to be touched from the outside, so it's cloned.
-            _connectionStringBuilder = newBuilder.Clone();
+            Builder = newBuilder.Clone();
         }
 
         /// <summary>
