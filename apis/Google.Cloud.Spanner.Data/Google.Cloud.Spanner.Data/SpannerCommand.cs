@@ -347,7 +347,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
         public new Task<SpannerDataReader> ExecuteReaderAsync() =>
-            ExecuteReaderAsync(CommandBehavior.Default, CancellationToken.None); // TODO: Use _synchronousCancellationTokenSource?
+            ExecuteReaderAsync(CommandBehavior.Default, CancellationToken.None);
 
         /// <summary>
         /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.
@@ -363,7 +363,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="behavior">Options for statement execution and data retrieval.</param>
         /// <returns>An asynchronous <see cref="Task"/> that produces a <see cref="SpannerDataReader"/>.</returns>
         public new Task<SpannerDataReader> ExecuteReaderAsync(CommandBehavior behavior) =>
-            ExecuteReaderAsync(behavior, CancellationToken.None); // TODO: Use _synchronousCancellationTokenSource?
+            ExecuteReaderAsync(behavior, CancellationToken.None);
 
         /// <summary>
         /// Sends the command to Cloud Spanner and builds a <see cref="SpannerDataReader"/>.
