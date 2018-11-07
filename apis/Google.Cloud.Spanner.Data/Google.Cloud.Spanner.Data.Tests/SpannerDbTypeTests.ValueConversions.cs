@@ -106,8 +106,9 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         private static void WithCulture(CultureInfo culture, Action action)
         {
-            // TODO: investigate how to change the current thread's culture in .NET Core.
-            // (There may be code in Noda Time to do it.)
+            // Even if there's a way of changing the current culture in .NET Core 1.0,
+            // it's probably not worth doing - if there's a bug in the code, we'll see it in
+            // one of the other builds.
 #if !NETCOREAPP1_0
             var originalCulture = Thread.CurrentThread.CurrentCulture;
             try
@@ -309,6 +310,18 @@ namespace Google.Cloud.Spanner.Data.Tests
                 "[ \"abc\", \"123\", \"def\" ]"
             };
 
+            // List test cases with null entries
+            yield return new object[]
+            {
+                new List<string>{ "x", null, "y" }, SpannerDbType.ArrayOf(SpannerDbType.String),
+                "[ \"x\", null, \"y\" ]"
+            };
+            yield return new object[]
+            {
+                new double?[] { 5.5, null, 10.5 }, SpannerDbType.ArrayOf(SpannerDbType.Float64),
+                "[ 5.5, null, 10.5 ]"
+            };
+
             // Struct test case includes nested complex conversions.
             // These are one-way only, because SpannerStruct doesn't (and can't generally) implement
             // IEquatable<T>. (By the time the nested value can be an array etc, it ends up being infeasible.)
@@ -393,7 +406,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var expectedObject = JsonParser.Default.Parse<T>(expected);
             var actualObject = JsonParser.Default.Parse<T>(actual);
 
-            // Assert.Equal handles various cases like out of order IDicitonaries (structs)
+            // Assert.Equal handles various cases like out of order IDictionaries (structs)
             Assert.Equal(expectedObject, actualObject);
         }
 
@@ -522,45 +535,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Assert.Equal(expectedField.Value, actualField.Value);
             }
         }        
-
-        // Note: Value.Parse fails for list values containing null, hence the separate tests
-        // TODO: Put these back in as normal tests when a new version of Google.Protobuf is
-        // available; this was fixed in https://github.com/google/protobuf/pull/4345
-        [Fact]
-        public void SerializeStringArrayContainingNull()
-        {
-            var input = new[] { "x", null, "y" };
-            var expected = new Value { ListValue = new ListValue { Values = { Value.ForString("x"), Value.ForNull(), Value.ForString("y") } } };
-            var options = SpannerConversionOptions.Default;
-            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.String).ToProtobufValue(input, options));
-        }
-
-        [Fact]
-        public void DeserializeStringArrayContainingNull()
-        {
-            var protobuf = new Value { ListValue = new ListValue { Values = { Value.ForString("x"), Value.ForNull(), Value.ForString("y") } } };
-            var options = SpannerConversionOptions.Default;
-            var expected = new[] { "x", null, "y" };
-            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.String).ConvertToClrType<string[]>(protobuf, options));
-        }
-
-        [Fact]
-        public void SerializeNullableDoubleArrayContainingNull()
-        {
-            var input = new double?[] { 5.5, null, 10.5 };
-            var expected = new Value { ListValue = new ListValue { Values = { Value.ForNumber(5.5), Value.ForNull(), Value.ForNumber(10.5) } } };
-            var options = SpannerConversionOptions.Default;
-            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.Float64).ToProtobufValue(input, options));
-        }
-
-        [Fact]
-        public void DeserializeNullableDoubleArrayContainingNull()
-        {
-            var protobuf = new Value { ListValue = new ListValue { Values = { Value.ForNumber(5.5), Value.ForNull(), Value.ForNumber(10.5) } } };
-            var options = SpannerConversionOptions.Default;
-            var expected = new double?[] { 5.5, null, 10.5 };
-            Assert.Equal(expected, SpannerDbType.ArrayOf(SpannerDbType.Float64).ConvertToClrType<double?[]>(protobuf, options));
-        }
 
         [Fact]
         public void DeserializeDoubleArrayContainingNull()
