@@ -71,7 +71,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var sessionPool = new SessionPool(client, options, client.Logger);
             var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
 
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
 
             // Our session should be ready, the pool should be up to size, and we should
             // have created 11 sessions in total.
@@ -83,7 +83,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // If we allow the maintenance pool to run until T=5 minutes, we should have evicted
             // all the 10 sessions in the pool and replaced them.
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(4));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(4));
             stats = sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName);
             Assert.Equal(10, stats.ReadPoolCount);
             Assert.Equal(21, client.SessionsCreated);
@@ -107,13 +107,13 @@ namespace Google.Cloud.Spanner.V1.Tests
             var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
 
             // After a minute, we should have a session. Release it immediately for simplicity.
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
             var session = await acquisitionTask;
             session.ReleaseToPool(false);
 
             // Shut the pool down, and wait a minute. (It won't take that long, as nothing's pending.)
             var shutdownTask = sessionPool.ShutdownPoolAsync(s_sampleDatabaseName, default);
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
 
             // Now the shutdown task should have completed, and the stats will know that it's shut down.
             await shutdownTask;
@@ -126,7 +126,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // But we can for a different database. (It shuts down a single database pool, not the whole session pool.)
             var acquisitionTask2 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName2, new TransactionOptions(), default);
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
             await acquisitionTask2;
         }
 
@@ -147,7 +147,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // Ask when the pool is ready, which shouldn't take a minute.
             var poolReadyTask = sessionPool.WaitForPoolAsync(s_sampleDatabaseName, default);
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(1));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
             await poolReadyTask;
 
             // When the pool *is* ready, we should be able to acquire a session directly from the pool,
@@ -189,7 +189,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // xUnit waits until tasks registered in its synchronization context have completed before considering the
             // test itself complete, so we need to let the pool complete the acquisition tasks.
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(2));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(2));
         }
 
         [Fact(Timeout = TestTimeoutMilliseconds)]
@@ -203,7 +203,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
             var sessionPool = new SessionPool(client, options, client.Logger);
             var waitingTask = sessionPool.WaitForPoolAsync(s_sampleDatabaseName);
-            await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(5.5));
+            await client.Scheduler.RunAsync(TimeSpan.FromMinutes(5.5));
             await waitingTask;
             var maintenanceCount = client.Logger.GetEntries(LogLevel.Debug).Count(entry => entry.Contains("maintenance"));
             Assert.InRange(maintenanceCount, 5, 6);
@@ -220,7 +220,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // as well. Otherwise, this test is pointless but harmless.
             if (!weakReference.TryGetTarget(out _))
             {
-                await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(10));
+                await client.Scheduler.RunAsync(TimeSpan.FromMinutes(10));
                 maintenanceCount = client.Logger.GetEntries(LogLevel.Debug).Count(entry => entry.Contains("maintenance"));
                 // We're really just checking that at *some* point, we stopped logging.
                 // If the maintenance loop hadn't stopped, we'd have 15 entries.
