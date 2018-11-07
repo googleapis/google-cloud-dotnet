@@ -249,18 +249,18 @@ namespace Google.Cloud.Spanner.Data
                     }
                     else
                     {
-                        // TODO: Validate that we have a database name?
-                        var ddlStatements = new List<string> { commandText };
-                        if (CommandTextBuilder.ExtraStatements != null)
+                        if (builder.DatabaseName == null)
                         {
-                            ddlStatements.AddRange(CommandTextBuilder.ExtraStatements);
+                            throw new InvalidOperationException(
+                                "DDL commands other than CREATE/DROP DATABASE require a database in the data source");
                         }
 
                         var request = new UpdateDatabaseDdlRequest
                         {
                             DatabaseAsDatabaseName = builder.DatabaseName,
-                            Statements = { ddlStatements }
+                            Statements = { commandText, CommandTextBuilder.ExtraStatements ?? Enumerable.Empty<string>() }
                         };
+
                         var response = await databaseAdminClient.UpdateDatabaseDdlAsync(request).ConfigureAwait(false);
                         response = await response.PollUntilCompletedAsync().ConfigureAwait(false);
                         if (response.IsFaulted)
