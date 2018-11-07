@@ -40,7 +40,10 @@ namespace Google.Cloud.Spanner.V1
             public int ReadWritePoolCount { get; }
 
             /// <summary>
-            /// The number of active sessions.
+            /// The number of active or requested sessions. This is the difference between the number of successful or
+            /// pending session acquisition requests and the number of released sessions. If this exceeds
+            /// <see cref="SessionPoolOptions.MaximumActiveSessions"/> it indicates that some acquisition calls are currently
+            /// pending; the limit is obeyed separately, in terms of how many session creation requests the pool has made to the server.
             /// </summary>
             public int ActiveSessionCount { get; }
 
@@ -108,7 +111,6 @@ namespace Google.Cloud.Spanner.V1
                 string status = Shutdown ? "Shutdown"
                     : Healthy ? "Healthy"
                     : "Unhealthy";
-                // TODO: Use multiple lines? There are definite pros and cons both ways.
                 return $"Database: {DatabaseName}; Active: {ActiveSessionCount}; Read pool: {ReadPoolCount}; Write pool: {ReadWritePoolCount}; In-flight creation: {InFlightCreationCount}; Pending acquisitions: {PendingAcquisitionCount}; Status: {status}; Read/write prewarming: {ReadWriteTransactionRequestsPrewarmed}/{ReadWriteTransactionRequests}";
             }
         }
