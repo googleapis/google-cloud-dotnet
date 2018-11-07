@@ -36,12 +36,13 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// <para>
         /// The tests use the scheduler in different ways. Some are slightly "interactive" - we
         /// want the scheduler to be triggering while we wait for tasks to complete (e.g. session
-        /// acquisition, or waiting for the pool to be up to size). These use FakeScheduler.RunAsync.
+        /// acquisition, or waiting for the pool to be up to size).
+        /// These use FakeScheduler.RunAsync with a delegate.
         /// </para>
         /// <para>
         /// Other tasks start asynchronous tasks running, then allow the scheduler to advance up to a
         /// certain time before stopping... at which point we're back in control and can make assertions
-        /// without further tasks completing. These use FakeScheduler.RunAndPause.
+        /// without further tasks completing. These use FakeScheduler.RunForSecondsAsync.
         /// </para>
         /// </remarks>
         [FileLoggerBeforeAfterTest]
@@ -96,7 +97,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Assert.Equal(0, stats.ReadPoolCount);
                 Assert.Equal(0, stats.ReadWritePoolCount);
 
-                await client.Scheduler.RunAndPauseForSeconds(15);
+                await client.Scheduler.RunForSecondsAsync(15);
 
                 stats = pool.GetStatisticsSnapshot();
                 
@@ -309,7 +310,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 pool.MaintainPool();
 
                 // Give it time to bring the pool up to size.
-                await client.Scheduler.RunAndPauseForSeconds(30);
+                await client.Scheduler.RunForSecondsAsync(30);
 
                 stats = pool.GetStatisticsSnapshot();
                 Assert.Equal(10, stats.ReadWritePoolCount);
@@ -322,11 +323,11 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var client = (SessionTestingSpannerClient)pool.Client;
 
                 // Give the pool a minute to fill up
-                await client.Scheduler.RunAndPauseForSeconds(60);
+                await client.Scheduler.RunForSecondsAsync(60);
                 Assert.Equal(10, pool.GetStatisticsSnapshot().ReadWritePoolCount);
 
-                // Let all the sessions idle out.
-                await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(20));
+                // Let all the sessions idle out over 20 minutes.
+                await client.Scheduler.RunForSecondsAsync(60 * 20);
 
                 var timeBeforeMaintenance = client.Clock.GetCurrentDateTimeUtc();
 
@@ -334,7 +335,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 pool.MaintainPool();
 
                 // Give the refresh tasks time to run.
-                await client.Scheduler.RunAndPauseForSeconds(60);
+                await client.Scheduler.RunForSecondsAsync(60);
 
                 await client.Scheduler.RunAsync(async () =>
                 {
@@ -354,18 +355,18 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var client = (SessionTestingSpannerClient)pool.Client;
 
                 // Give the pool a minute to fill up
-                await client.Scheduler.RunAndPauseForSeconds(60);
+                await client.Scheduler.RunForSecondsAsync(60);
                 Assert.Equal(10, pool.GetStatisticsSnapshot().ReadWritePoolCount);
 
                 // Let all the sessions go beyond their eviction time.
-                await client.Scheduler.RunAndPause(TimeSpan.FromMinutes(101));
+                await client.Scheduler.RunForSecondsAsync(60 * 101); // 100 minute eviction
 
                 // Start everything refreshing.
                 var timeBeforeMaintenance = client.Clock.GetCurrentDateTimeUtc();
                 pool.MaintainPool();
 
                 // Give the eviction and reacquisition tasks time to run.
-                await client.Scheduler.RunAndPauseForSeconds(60);
+                await client.Scheduler.RunForSecondsAsync(60);
                 Assert.Equal(10, pool.GetStatisticsSnapshot().ReadWritePoolCount);
 
                 // Pool should be full aagain
@@ -427,7 +428,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var task1 = pool.WaitForPoolAsync(cts.Token);
                 var task2 = pool.WaitForPoolAsync(default);
 
-                await client.Scheduler.RunAndPauseForSeconds(8);
+                await client.Scheduler.RunForSecondsAsync(8);
 
                 Assert.Equal(TaskStatus.WaitingForActivation, task1.Status);
                 Assert.Equal(TaskStatus.WaitingForActivation, task2.Status);
@@ -435,14 +436,14 @@ namespace Google.Cloud.Spanner.V1.Tests
                 // If we cancel one cancelation token, that task will fail,
                 // but the other won't.
                 cts.Cancel();
-                await client.Scheduler.RunAndPauseForSeconds(1);
+                await client.Scheduler.RunForSecondsAsync(1);
                 Assert.Equal(TaskStatus.Canceled, task1.Status);
                 Assert.Equal(TaskStatus.WaitingForActivation, task2.Status);
 
                 // Two seconds later (i.e. 11 seconds after starting), the uncancelled task completes normally.
                 // It may well complete after 10 (virtual) seconds, but it depends on how quickly the SemaphoreSlim
                 // is acquired for the second batch.
-                await client.Scheduler.RunAndPauseForSeconds(2);
+                await client.Scheduler.RunForSecondsAsync(2);
                 // Just await this normally to avoid race conditions for when it completes
                 await task2;
             }
@@ -513,7 +514,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Even if we wait for a minute, the WaitForPoolAsync task can't complete due to
                 // the limit on MaximumActiveSessions.
-                await client.Scheduler.RunAndPauseForSeconds(60);
+                await client.Scheduler.RunForSecondsAsync(60);
 
                 Assert.Equal(TaskStatus.RanToCompletion, sessionTask.Status);
                 Assert.Equal(TaskStatus.WaitingForActivation, waitTask.Status);

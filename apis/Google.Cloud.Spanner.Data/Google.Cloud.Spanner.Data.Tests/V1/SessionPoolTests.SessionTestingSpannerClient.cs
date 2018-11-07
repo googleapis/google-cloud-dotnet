@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Testing;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -20,8 +21,6 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-
-using FakeClock = Google.Api.Gax.Testing.FakeClock;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
