@@ -216,9 +216,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             // Register an HttpClient for outgoing requests.
             services.AddHttpClient("tracesOutgoing")
-            // Be sure to add the UnchainedTraceHeaderPropagatingHandler which will guarantee
-            // that the outgoing requests will be traced.
-            .AddHttpMessageHandler<UnchainedTraceHeaderPropagatingHandler>();
+                // The next call guarantees that trace information is propagated for outgoing
+                // requests that are already being traced.
+                .AddOutgoingGoogleTraceHandler();
 
             services.AddMvc();
         }
