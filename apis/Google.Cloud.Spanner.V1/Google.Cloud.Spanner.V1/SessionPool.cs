@@ -169,10 +169,8 @@ namespace Google.Cloud.Spanner.V1
             return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionMode);
         }
 
-        // TODO: Check that we're happy with these names.
-
         /// <summary>
-        /// Waits for the session pool associated with the given database name to be populated up to its minimum size.
+        /// Returns a task indicating when the session pool associated with the given database name is populated up to its minimum size.
         /// </summary>
         /// <remarks>
         /// If the pool is unhealthy or becomes unhealthy before it reaches its minimum size,
@@ -181,11 +179,11 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="databaseName">The database whose session pool should be populated. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
-        public Task WaitForPoolAsync(DatabaseName databaseName, CancellationToken cancellationToken = default)
+        public Task WhenPoolReady(DatabaseName databaseName, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
             var targetedPool = _targetedPools.GetOrAdd(databaseName, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
-            return targetedPool.WaitForPoolAsync(cancellationToken);
+            return targetedPool.WhenPoolReady(cancellationToken);
         }
 
         /// <summary>

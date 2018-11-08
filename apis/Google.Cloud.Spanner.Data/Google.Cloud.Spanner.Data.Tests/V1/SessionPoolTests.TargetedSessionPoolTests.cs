@@ -384,7 +384,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task WaitForPoolAsync_Normal()
+            public async Task WhenPoolReady_Normal()
             {
                 var pool = CreatePool(false);
                 pool.Options.MinimumPooledSessions = 30;
@@ -394,7 +394,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 await client.Scheduler.RunAsync(async () =>
                 {
                     var timeBefore = client.Clock.GetCurrentDateTimeUtc();
-                    await pool.WaitForPoolAsync(default);
+                    await pool.WhenPoolReady(default);
 
                     // We allow 20 session creates at a time, and each takes 5 seconds.
                     // We'll need at least 6 read/write sessions too. In reality, all 20 initially-created
@@ -416,7 +416,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task WaitForPoolAsync_CancelOneOfTwo()
+            public async Task WhenPoolReady_CancelOneOfTwo()
             {
                 var pool = CreatePool(false);
                 pool.Options.MinimumPooledSessions = 30;
@@ -425,8 +425,8 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 var timeBefore = client.Clock.GetCurrentDateTimeUtc();
                 var cts = new CancellationTokenSource();
-                var task1 = pool.WaitForPoolAsync(cts.Token);
-                var task2 = pool.WaitForPoolAsync(default);
+                var task1 = pool.WhenPoolReady(cts.Token);
+                var task2 = pool.WhenPoolReady(default);
 
                 await client.Scheduler.RunForSecondsAsync(8);
 
@@ -449,7 +449,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task WaitForPoolAsync_AlreadyCompleted()
+            public async Task WhenPoolReady_AlreadyCompleted()
             {
                 var pool = CreatePool(true);
                 var client = (SessionTestingSpannerClient)pool.Client;
@@ -457,16 +457,16 @@ namespace Google.Cloud.Spanner.V1.Tests
                 await client.Scheduler.RunAsync(async () =>
                 {
                     // Wait for it to come up to minimum size
-                    await pool.WaitForPoolAsync(default);
+                    await pool.WhenPoolReady(default);
 
                     // Asking for it again should return an already completed task
-                    Task task = pool.WaitForPoolAsync(default);
+                    Task task = pool.WhenPoolReady(default);
                     Assert.Equal(TaskStatus.RanToCompletion, task.Status);
                 });
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task WaitForPoolAsync_AlreadyUnhealthy()
+            public async Task WhenPoolReady_AlreadyUnhealthy()
             {
                 var pool = CreatePool(false);
                 var client = (SessionTestingSpannerClient)pool.Client;
@@ -475,13 +475,13 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 await client.Scheduler.RunAsync(async () =>
                 {
-                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.WaitForPoolAsync(default));
+                    var exception = await Assert.ThrowsAsync<RpcException>(() => pool.WhenPoolReady(default));
                     Assert.Equal(StatusCode.Unknown, exception.StatusCode);
                 });
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task WaitForPoolAsync_BecomesUnhealthyWhileWaiting()
+            public async Task WhenPoolReady_BecomesUnhealthyWhileWaiting()
             {
                 var pool = CreatePool(false);
                 var client = (SessionTestingSpannerClient)pool.Client;
@@ -494,7 +494,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 // will fail immediately, but it feels odd not to use it.
                 await client.Scheduler.RunAsync(async () =>
                 {
-                    var task = pool.WaitForPoolAsync(default);
+                    var task = pool.WhenPoolReady(default);
                     pool.MaintainPool();
                     var exception = await Assert.ThrowsAsync<RpcException>(() => task);
                     // If we go unhealthy while waiting, the status code from the RPC is used for the exception.
@@ -503,16 +503,16 @@ namespace Google.Cloud.Spanner.V1.Tests
             }
 
             [Fact(Timeout = TestTimeoutMilliseconds)]
-            public async Task WaitForPoolAsync_ReleaseSession()
+            public async Task WhenPoolReady_ReleaseSession()
             {
                 var pool = CreatePool(false);
                 pool.Options.MaximumActiveSessions = 10; // Same as minimum pool size
                 var client = (SessionTestingSpannerClient)pool.Client;
 
                 var sessionTask = pool.AcquireSessionAsync(new TransactionOptions(), default);
-                var waitTask = pool.WaitForPoolAsync(default);
+                var waitTask = pool.WhenPoolReady(default);
 
-                // Even if we wait for a minute, the WaitForPoolAsync task can't complete due to
+                // Even if we wait for a minute, the WhenPoolReady task can't complete due to
                 // the limit on MaximumActiveSessions.
                 await client.Scheduler.RunForSecondsAsync(60);
 
@@ -533,7 +533,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var client = (SessionTestingSpannerClient)pool.Client;
                 await client.Scheduler.RunAsync(async () =>
                 {
-                    await pool.WaitForPoolAsync(default);
+                    await pool.WhenPoolReady(default);
                     var session = await pool.AcquireSessionAsync(new TransactionOptions(), default);
 
                     // Shut down the pool, but keep one active session for now
@@ -586,7 +586,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var client = (SessionTestingSpannerClient)pool.Client;
                 await client.Scheduler.RunAsync(async () =>
                 {
-                    await pool.WaitForPoolAsync(default);
+                    await pool.WhenPoolReady(default);
                     await pool.ShutdownPoolAsync(default);
                     await Assert.ThrowsAsync<InvalidOperationException>(() => pool.AcquireSessionAsync(new TransactionOptions(), default));
                 });

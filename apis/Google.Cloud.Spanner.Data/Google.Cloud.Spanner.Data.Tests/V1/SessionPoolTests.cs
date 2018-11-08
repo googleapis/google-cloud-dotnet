@@ -131,7 +131,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact(Timeout = TestTimeoutMilliseconds)]
-        public async Task WaitForPoolAsync()
+        public async Task WhenPoolReady()
         {
             var client = new SessionTestingSpannerClient();
             var options = new SessionPoolOptions
@@ -146,7 +146,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var sessionPool = new SessionPool(client, options, client.Logger);
 
             // Ask when the pool is ready, which shouldn't take a minute.
-            var poolReadyTask = sessionPool.WaitForPoolAsync(s_sampleDatabaseName, default);
+            var poolReadyTask = sessionPool.WhenPoolReady(s_sampleDatabaseName, default);
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
             await poolReadyTask;
 
@@ -202,7 +202,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MaintenanceLoopDelay = TimeSpan.FromMinutes(1)
             };
             var sessionPool = new SessionPool(client, options, client.Logger);
-            var waitingTask = sessionPool.WaitForPoolAsync(s_sampleDatabaseName);
+            var waitingTask = sessionPool.WhenPoolReady(s_sampleDatabaseName);
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(5.5));
             await waitingTask;
             var maintenanceCount = client.Logger.GetEntries(LogLevel.Debug).Count(entry => entry.Contains("maintenance"));
