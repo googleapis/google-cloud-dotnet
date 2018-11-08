@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System.IO;
 using System.Text;
 using Xunit;
@@ -23,6 +24,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     /// The bucket <see cref="StorageFixture.CrossLanguageTestBucket"/> contains two files named "Café"
     /// but using different normalization. The client should be able to retrieve both.
     /// </summary>
+    [FileLoggerBeforeAfterTest]
     public class NormalizationTest
     {
         [Theory]

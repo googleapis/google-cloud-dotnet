@@ -21,10 +21,12 @@ using System;
 using System.Net.Http;
 using System.Threading;
 using System.Net;
+using Google.Cloud.ClientTesting;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public class ModifyBucketLabelsTest
     {
         private readonly StorageFixture _fixture;

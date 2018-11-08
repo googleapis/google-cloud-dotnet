@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using System.IO;
 using System.Text;
@@ -23,6 +24,7 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public class RetentionPolicyTest
     {
         private readonly StorageFixture _fixture;

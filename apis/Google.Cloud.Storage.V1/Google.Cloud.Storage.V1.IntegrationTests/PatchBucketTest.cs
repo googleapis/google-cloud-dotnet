@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using System;
 using Xunit;
 using static Google.Apis.Storage.v1.Data.Bucket;
@@ -20,6 +21,7 @@ using static Google.Apis.Storage.v1.Data.Bucket;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public class PatchBucketTest
     {
         private readonly StorageFixture _fixture;

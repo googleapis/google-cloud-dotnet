@@ -30,6 +30,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public class UploadObjectTest
     {
         private readonly StorageFixture _fixture;

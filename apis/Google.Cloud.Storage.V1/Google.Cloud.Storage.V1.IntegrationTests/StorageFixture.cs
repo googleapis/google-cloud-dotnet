@@ -39,6 +39,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     /// The Google Cloud Project name is fetched from the TEST_PROJECT environment variable.
     /// </summary>
     [CollectionDefinition(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public sealed class StorageFixture : CloudProjectFixtureBase, ICollectionFixture<StorageFixture>
     {
         internal const string CrossLanguageTestBucket = "storage-library-test-bucket";

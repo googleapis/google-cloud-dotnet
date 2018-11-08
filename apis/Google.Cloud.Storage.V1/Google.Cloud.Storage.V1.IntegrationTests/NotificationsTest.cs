@@ -29,6 +29,7 @@ using Google.Cloud.ClientTesting;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public class NotificationsTest
     {
         private readonly StorageFixture _fixture;

@@ -21,6 +21,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 {
 
     [Collection(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public class UpdateObjectTest
     {
         private readonly StorageFixture _fixture;

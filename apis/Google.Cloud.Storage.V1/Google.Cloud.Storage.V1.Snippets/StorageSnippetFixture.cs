@@ -32,6 +32,7 @@ namespace Google.Cloud.Storage.V1.Snippets
     /// environment variable.
     /// </summary>
     [CollectionDefinition(nameof(StorageSnippetFixture))]
+    [FileLoggerBeforeAfterTest]
     public sealed class StorageSnippetFixture : CloudProjectFixtureBase, ICollectionFixture<StorageSnippetFixture>
     {
         private const string NotificationUrlEnvironmentVariable = "TEST_PROJECT_NOTIFICATION_URL";
