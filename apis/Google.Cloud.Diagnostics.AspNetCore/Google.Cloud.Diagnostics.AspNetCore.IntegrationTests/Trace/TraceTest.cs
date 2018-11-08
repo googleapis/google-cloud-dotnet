@@ -380,10 +380,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
 #if NETCOREAPP2_0
             services.AddHttpClient("google", c =>
-            {
-                c.BaseAddress = new Uri("https://google.com/");
-            })
-            .AddHttpMessageHandler<UnchainedTraceHeaderPropagatingHandler>();
+                {
+                    c.BaseAddress = new Uri("https://google.com/");
+                })
+                .AddOutgoingGoogleTraceHandler();
 #endif
 
             services.AddMvc();
