@@ -26,7 +26,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public MultiChannelTest(BigtableFixture fixture) => _fixture = fixture;
 
-        [Fact]
+        [Fact(Skip = "See issue 2675")]
         public async Task SeparateSubchannels()
         {
             if (_fixture.EmulatorCallInvoker != null)
@@ -52,7 +52,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
             await Task.WhenAll(tasks);
 
-            int subchannelsCreated = GrpcInfo.SubchannelCount- originalSubchannelCount;
+            int subchannelsCreated = GrpcInfo.SubchannelCount - originalSubchannelCount;
             Assert.Equal(clientCount, subchannelsCreated);
         }
     }
