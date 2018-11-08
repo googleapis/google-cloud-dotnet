@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
             await TestWithPool(options, async pool =>
             {
                 var cts = new CancellationTokenSource(10000);
-                await pool.WaitForPoolAsync(_fixture.DatabaseName, cts.Token);
+                await pool.WhenPoolReady(_fixture.DatabaseName, cts.Token);
                 // Upper bound for when we expect we need to refresh.
                 var expectedRefreshTime = DateTime.UtcNow + options.IdleSessionRefreshDelay;
                 // Acquire all the sessions, which should all have a required refresh time within our upper bound
@@ -63,7 +63,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 // Release the sessions, wait for the pool to repopulate, then fetch again
                 initialSessions.ForEach(s => s.ReleaseToPool(false));
                 cts = new CancellationTokenSource(10000);
-                await pool.WaitForPoolAsync(_fixture.DatabaseName, cts.Token);
+                await pool.WhenPoolReady(_fixture.DatabaseName, cts.Token);
                 Logger.DefaultLogger.Info(pool.GetStatisticsSnapshot(_fixture.DatabaseName).ToString());
                 var refreshedSessions = await AcquireSessionsAsync(pool);
 

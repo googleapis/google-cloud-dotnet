@@ -463,10 +463,8 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(GetTransactionEnlister(), cancellationToken);
 
-        // FIXME: Naming of the next two methods.
-
         /// <summary>
-        /// Waits for the session pool associated with the connection to be populated up to its minimum size.
+        /// Returns a task indicating when the session pool associated with the connection is populated up to its minimum size.
         /// </summary>
         /// <remarks>
         /// If the pool is unhealthy or becomes unhealthy before it reaches its minimum size,
@@ -474,12 +472,12 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
-        public async Task WaitForSessionPoolAsync(CancellationToken cancellationToken = default)
+        public async Task WhenSessionPoolReady(CancellationToken cancellationToken = default)
         {
             DatabaseName databaseName = Builder.DatabaseName;
-            GaxPreconditions.CheckState(databaseName != null, $"{nameof(WaitForSessionPoolAsync)} cannot be used without a database.");
+            GaxPreconditions.CheckState(databaseName != null, $"{nameof(WhenSessionPoolReady)} cannot be used without a database.");
             await OpenAsync(cancellationToken).ConfigureAwait(false);
-            await _sessionPool.WaitForPoolAsync(databaseName, cancellationToken).ConfigureAwait(false);
+            await _sessionPool.WhenPoolReady(databaseName, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>

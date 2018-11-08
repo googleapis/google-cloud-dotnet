@@ -150,7 +150,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             logger.Info("Prewarming session pool for stress test");
             // Prewarm step: allow up to 30 seconds for the session pool to be populated.
             var cancellationToken = new CancellationTokenSource(30000).Token;
-            await pool.WaitForPoolAsync(_fixture.DatabaseName, cancellationToken);
+            await pool.WhenPoolReady(_fixture.DatabaseName, cancellationToken);
 
             logger.Info($"Prewarm complete. Pool stats: {pool.GetStatisticsSnapshot(_fixture.DatabaseName)}");
 

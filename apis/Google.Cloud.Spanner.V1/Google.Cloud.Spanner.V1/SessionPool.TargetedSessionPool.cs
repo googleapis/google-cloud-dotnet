@@ -643,7 +643,7 @@ namespace Google.Cloud.Spanner.V1
             }
 
             /// <summary>
-            /// Waits for the session pool to be populated up to its minimum size.
+            /// Returns a task indicating when the session pool is populated up to its minimum size.
             /// </summary>
             /// <remarks>
             /// If the pool is unhealthy or becomes unhealthy before it reaches its minimum size,
@@ -651,7 +651,7 @@ namespace Google.Cloud.Spanner.V1
             /// </remarks>
             /// <param name="cancellationToken">An optional token for canceling the call.</param>
             /// <returns>A task which will complete when the session pool has reached its minimum size.</returns>
-            internal async Task WaitForPoolAsync(CancellationToken cancellationToken = default)
+            internal async Task WhenPoolReady(CancellationToken cancellationToken = default)
             {
                 Task task;
                 LinkedListNode<TaskCompletionSource<int>> node;
