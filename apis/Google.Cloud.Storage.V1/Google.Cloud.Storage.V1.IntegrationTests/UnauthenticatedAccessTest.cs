@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System.IO;
 using System.Linq;
 using Xunit;
@@ -19,6 +20,7 @@ using Xunit;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
+    [FileLoggerBeforeAfterTest]
     public class UnauthenticatedAccessTest
     {
         // See https://cloud.google.com/storage/docs/public-datasets/landsat
