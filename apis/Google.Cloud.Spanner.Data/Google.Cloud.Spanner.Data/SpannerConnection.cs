@@ -92,15 +92,10 @@ namespace Google.Cloud.Spanner.Data
         [Category("Data")]
         public string SpannerInstance => Builder.SpannerInstance;
 
-        private Logger _logger = Logger.DefaultLogger;
         /// <summary>
-        /// This property is intended for internal use only.
+        /// The logger used by this connection. This is never null.
         /// </summary>
-        public Logger Logger
-        {
-            get => _logger;
-            set => _logger = GaxPreconditions.CheckNotNull(value, nameof(value));
-        }
+        internal Logger Logger => Builder.SessionPoolManager.Logger;
 
         /// <inheritdoc />
         public override ConnectionState State

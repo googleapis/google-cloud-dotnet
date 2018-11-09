@@ -45,8 +45,7 @@ namespace Google.Cloud.Spanner.Data
         public static SessionPoolManager Default { get; } =
             new SessionPoolManager(new SessionPoolOptions(), Logger.DefaultLogger, CreateClientAsync);
 
-        private readonly Func<SpannerClientCreationOptions, Task<SpannerClient>> _clientFactory;
-        private readonly Logger _logger;
+        private readonly Func<SpannerClientCreationOptions, Logger, Task<SpannerClient>> _clientFactory;
 
         private readonly ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool> _targetedPools =
             new ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool>();
@@ -59,6 +58,11 @@ namespace Google.Cloud.Spanner.Data
         public SessionPoolOptions SessionPoolOptions { get; }
 
         /// <summary>
+        /// The logger used by this SessionPoolManager and the session pools it creates.
+        /// </summary>
+        internal Logger Logger { get; }
+
+        /// <summary>
         /// Constructor for test purposes, allowing the SpannerClient creation to be customized (e.g. for
         /// fake clients).
         /// </summary>
@@ -68,10 +72,10 @@ namespace Google.Cloud.Spanner.Data
         internal SessionPoolManager(
             SessionPoolOptions options,
             Logger logger,
-            Func<SpannerClientCreationOptions, Task<SpannerClient>> clientFactory)
+            Func<SpannerClientCreationOptions, Logger, Task<SpannerClient>> clientFactory)
         {
             SessionPoolOptions = GaxPreconditions.CheckNotNull(options, nameof(options));
-            _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
+            Logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
             _clientFactory = GaxPreconditions.CheckNotNull(clientFactory, nameof(clientFactory));
         }
 
@@ -103,7 +107,7 @@ namespace Google.Cloud.Spanner.Data
             }
             else
             {
-                _logger.Warn("Attempt to release a session pool to the wrong session pool manager");
+                Logger.Warn("Attempt to release a session pool to the wrong session pool manager");
             }
         }
 
@@ -138,8 +142,8 @@ namespace Google.Cloud.Spanner.Data
 
                 async Task<SessionPool> CreateSessionPoolAsync()
                 {
-                    var client = await parent._clientFactory.Invoke(channelOptions).ConfigureAwait(false);
-                    var pool = new SessionPool(client, parent.SessionPoolOptions, parent._logger);
+                    var client = await parent._clientFactory.Invoke(channelOptions, parent.Logger).ConfigureAwait(false);
+                    var pool = new SessionPool(client, parent.SessionPoolOptions);
                     parent._poolReverseLookup.TryAdd(pool, this);
                     return pool;
                 }
@@ -246,7 +250,7 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <inheritdoc />
-        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions)
+        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, Logger logger)
         {
             var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
             var channel = new Channel(channelOptions.Endpoint.Host, channelOptions.Endpoint.Port, credentials);

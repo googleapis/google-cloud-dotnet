@@ -59,6 +59,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 Settings = SpannerSettings.GetDefault();
                 Settings.Scheduler = Scheduler;
                 Settings.Clock = Clock;
+                Settings.Logger = Logger;
             }
 
             public override async Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings = null)

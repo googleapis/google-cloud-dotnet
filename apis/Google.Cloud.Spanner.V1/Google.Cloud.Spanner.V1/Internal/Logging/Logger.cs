@@ -23,9 +23,6 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
-    // TODO: Clearer separation between default implementation and interface.
-    // (Use the EF provider and default logger to drive the design.)
-
     /// <summary>
     /// This is an internal class and is not intended to be used by external code.
     /// </summary>

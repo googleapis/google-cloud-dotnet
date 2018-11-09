@@ -56,14 +56,13 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="client">The client to use for this session pool. Must not be null.</param>
         /// <param name="options">The options for this session pool. Must not be null.</param>
-        /// <param name="logger">The logger to use. May be null, in which case the default logger is used.</param>
-        public SessionPool(SpannerClient client, SessionPoolOptions options, Logger logger)
+        public SessionPool(SpannerClient client, SessionPoolOptions options)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _clock = _client.Settings.Clock ?? SystemClock.Instance;
             _scheduler = _client.Settings.Scheduler ?? SystemScheduler.Instance;
             Options = GaxPreconditions.CheckNotNull(options, nameof(options));
-            _logger = logger ?? Logger.DefaultLogger;
+            _logger = client.Settings.Logger; // Just to avoid fetching it all the time
             _detachedSessionPool = new DetachedSessionPool(this);
             _sessionAcquisitionSemaphore = new SemaphoreSlim(Options.MaximumConcurrentSessionCreates);
             if (Options.MaintenanceLoopDelay != TimeSpan.Zero)

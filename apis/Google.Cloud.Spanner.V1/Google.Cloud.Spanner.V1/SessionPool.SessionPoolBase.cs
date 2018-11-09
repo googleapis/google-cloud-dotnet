@@ -26,7 +26,6 @@ namespace Google.Cloud.Spanner.V1
         internal abstract class SessionPoolBase : ISessionPool
         {
             public SpannerClient Client => Parent._client;
-            public Logger Logger => Parent._logger;
             public IClock Clock => Parent._clock;
             public SessionPoolOptions Options => Parent.Options;
             protected SessionPool Parent { get; }

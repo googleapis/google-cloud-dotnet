@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Testing;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Moq;
 
 namespace Google.Cloud.Spanner.V1.Tests
@@ -26,11 +27,12 @@ namespace Google.Cloud.Spanner.V1.Tests
         /// Creates a mock SpannerClient configured with settings that include a fake clock
         /// and a fake scheduler.
         /// </summary>
-        internal static Mock<SpannerClient> CreateMockClient(MockBehavior behavior = MockBehavior.Strict)
+        internal static Mock<SpannerClient> CreateMockClient(Logger logger, MockBehavior behavior = MockBehavior.Strict)
         {
             var settings = SpannerSettings.GetDefault();
             settings.Clock = new FakeClock();
             settings.Scheduler = new FakeScheduler();
+            settings.Logger = logger;
             var mock = new Mock<SpannerClient>(behavior);
             mock.SetupProperty(client => client.Settings, settings);
             return mock;

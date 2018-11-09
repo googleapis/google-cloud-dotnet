@@ -15,6 +15,7 @@
 using System;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
 
 namespace Google.Cloud.Spanner.V1
@@ -62,6 +63,18 @@ namespace Google.Cloud.Spanner.V1
         {
             ExecuteSqlStreamSettings = existing.ExecuteSqlStreamSettings;
             AllowImmediateTimeouts = existing.AllowImmediateTimeouts;
+            Logger = existing.Logger;
+        }
+
+        private Logger _logger = Logger.DefaultLogger;
+
+        /// <summary>
+        /// The logger to use for operations involving this client. This property is never null.
+        /// </summary>
+        public Logger Logger
+        {
+            get => _logger;
+            set => _logger = GaxPreconditions.CheckNotNull(value, nameof(value));
         }
 
         /// <summary>

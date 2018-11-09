@@ -37,7 +37,7 @@ namespace Google.Cloud.Spanner.Data
             _transactionId = transactionId;
         }
 
-        private Logger Logger => _spannerConnection?.Logger ?? Logger.DefaultLogger;
+        private Logger Logger => _spannerConnection.Logger;
 
         public void Dispose()
         {

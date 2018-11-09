@@ -16,10 +16,8 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1.Internal;
 using Google.Protobuf;
-using Grpc.Core;
 using System;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.TransactionOptions;
@@ -234,7 +232,6 @@ namespace Google.Cloud.Spanner.V1
                 request.Transaction = new TransactionSelector { Id = TransactionId };
             }
             var reader = Client.GetSqlStreamReader(request, _session, timeoutSeconds);
-            reader.Logger = _pool.Logger;
             return reader;
         }
 
