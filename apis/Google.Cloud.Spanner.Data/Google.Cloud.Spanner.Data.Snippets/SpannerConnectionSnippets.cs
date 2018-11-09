@@ -352,6 +352,39 @@ namespace Google.Cloud.Spanner.Data.Snippets
             // End sample
         }
 
+        [Fact]
+        public async Task ShutdownSessionPoolAsync()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            // Sample: ShutdownSessionPoolAsync
+            // Additional: ShutdownSessionPoolAsync
+            // When your application is shutting down. Note that any pending or future requests
+            // for sessions will fail.
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
+            {
+                await connection.ShutdownSessionPoolAsync();
+            }
+            // End sample
+        }
+
+        [Fact]
+        public async Task WhenSessionPoolReady()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            // Sample: WhenSessionPoolReady
+            // Additional: WhenSessionPoolReady
+            // This would usually be executed during application start-up, before any Spanner
+            // operations are performed. It can be used at any time, however. It is purely passive:
+            // it doesn't modify the session pool or trigger any other actions.
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
+            {
+                await connection.WhenSessionPoolReady();
+            }
+            // End sample
+        }
+
 #if !NETCOREAPP1_0
         [Fact]
         public async Task TransactionScopeAsync()
