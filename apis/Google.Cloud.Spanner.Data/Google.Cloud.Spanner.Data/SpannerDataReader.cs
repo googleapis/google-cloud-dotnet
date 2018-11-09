@@ -83,52 +83,7 @@ namespace Google.Cloud.Spanner.Data
         public override bool IsClosed => _resultSet.IsClosed;
 
         /// <inheritdoc />
-        public override object this[int i] => GetFieldValue<object>(i);
-
-        /// <inheritdoc />
-        public override object this[string name] => this[GetOrdinal(name)];
-
-        /// <inheritdoc />
         public override int RecordsAffected => -1;
-
-        /// <inheritdoc />
-        public override bool GetBoolean(int i) => GetFieldValue<bool>(i);
-
-        /// <inheritdoc />
-        public override byte GetByte(int i) => GetFieldValue<byte>(i);
-
-        /// <inheritdoc />
-        public override long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) => throw
-            new NotSupportedException("Spanner does not support conversion to byte arrays.");
-
-        /// <inheritdoc />
-        public override char GetChar(int i) => GetFieldValue<char>(i);
-
-        /// <inheritdoc />
-        public override long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) => throw
-            new NotSupportedException("Spanner does not support conversion to char arrays.");
-
-        /// <inheritdoc />
-        public override string GetDataTypeName(int i) => GetSpannerFieldType(i).ToString();
-
-        /// <inheritdoc />
-        public override DateTime GetDateTime(int i) => GetFieldValue<DateTime>(i);
-
-        /// <inheritdoc />
-        public override decimal GetDecimal(int i) => GetFieldValue<decimal>(i);
-
-        /// <inheritdoc />
-        public override double GetDouble(int i) => GetFieldValue<double>(i);
-
-        /// <inheritdoc />
-        public override IEnumerator GetEnumerator()
-        {
-#if !NETSTANDARD1_5
-            return new DbEnumerator(this);
-#else
-            throw new NotSupportedException("GetEnumerator not yet supported in .NET Core");
-#endif
-        }
 
         /// <inheritdoc />
         public override System.Type GetFieldType(int i)
@@ -163,6 +118,43 @@ namespace Google.Cloud.Spanner.Data
             return GetFieldValue<T>(ordinal);
         }
 
+        // Field access helpers, all implemented via GetFieldValue.
+
+        /// <inheritdoc />
+        public override object this[int i] => GetFieldValue<object>(i);
+
+        /// <inheritdoc />
+        public override object this[string name] => this[GetOrdinal(name)];
+
+        /// <inheritdoc />
+        public override bool GetBoolean(int i) => GetFieldValue<bool>(i);
+
+        /// <inheritdoc />
+        public override byte GetByte(int i) => GetFieldValue<byte>(i);
+
+        /// <inheritdoc />
+        public override long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) => throw
+            new NotSupportedException("Spanner does not support conversion to byte arrays.");
+
+        /// <inheritdoc />
+        public override char GetChar(int i) => GetFieldValue<char>(i);
+
+        /// <inheritdoc />
+        public override long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) => throw
+            new NotSupportedException("Spanner does not support conversion to char arrays.");
+
+        /// <inheritdoc />
+        public override string GetDataTypeName(int i) => GetSpannerFieldType(i).ToString();
+
+        /// <inheritdoc />
+        public override DateTime GetDateTime(int i) => GetFieldValue<DateTime>(i);
+
+        /// <inheritdoc />
+        public override decimal GetDecimal(int i) => GetFieldValue<decimal>(i);
+
+        /// <inheritdoc />
+        public override double GetDouble(int i) => GetFieldValue<double>(i);
+
         /// <inheritdoc />
         public override float GetFloat(int i) => GetFieldValue<float>(i);
 
@@ -177,6 +169,29 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         public override long GetInt64(int i) => GetFieldValue<long>(i);
+
+        /// <inheritdoc />
+        public override string GetString(int i) => GetFieldValue<string>(i);
+
+        /// <summary>
+        /// Gets the value of the specified column as type <see cref="Timestamp"/>.
+        /// </summary>
+        /// <param name="i">The index of the column to retrieve.</param>
+        /// <returns>The value converted to a <see cref="Timestamp"/>.</returns>
+        public Timestamp GetTimestamp(int i) => GetFieldValue<Timestamp>(i);
+
+        /// <inheritdoc />
+        public override object GetValue(int i) => this[i];
+
+        /// <inheritdoc />
+        public override IEnumerator GetEnumerator()
+        {
+#if !NETSTANDARD1_5
+            return new DbEnumerator(this);
+#else
+            throw new NotSupportedException("GetEnumerator not yet supported in .NET Core");
+#endif
+        }
 
         /// <summary>
         /// Gets the value of the specified column as a pure Protobuf type.
@@ -201,20 +216,6 @@ namespace Google.Cloud.Spanner.Data
             return Task.Run(() => GetFieldIndexAsync(name, CancellationToken.None)).ResultWithUnwrappedExceptions();
         }
         
-
-        /// <inheritdoc />
-        public override string GetString(int i) => GetFieldValue<string>(i);
-
-        /// <summary>
-        /// Gets the value of the specified column as type <see cref="Timestamp"/>.
-        /// </summary>
-        /// <param name="i">The index of the column to retrieve.</param>
-        /// <returns>The value converted to a <see cref="Timestamp"/>.</returns>
-        public Timestamp GetTimestamp(int i) => GetFieldValue<Timestamp>(i);
-
-        /// <inheritdoc />
-        public override object GetValue(int i) => this[i];
-
         /// <inheritdoc />
         public override int GetValues(object[] values)
         {
