@@ -232,8 +232,11 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        // TODO: Make this public? No obvious reason not to...
-        internal bool AllowImmediateTimeouts
+        /// <summary>
+        /// Option to allow a timeout of 0 to mean "fail immediately" rather than "continue indefinitely".
+        /// This is primarily used for testing.
+        /// </summary>
+        public bool AllowImmediateTimeouts
         {
             // Allow both a bool value and a text value of "true", case-insensitively.
             get => TryGetValue(nameof(SpannerSettings.AllowImmediateTimeouts), out var value) &&
@@ -282,7 +285,6 @@ namespace Google.Cloud.Spanner.Data
 
         internal ChannelCredentials CredentialOverride { get; }
 
-        // TODO: Is this a reasonable place to put it?
         private SessionPoolManager _sessionPoolManager = SessionPoolManager.Default;
 
         /// <summary>

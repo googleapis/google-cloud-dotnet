@@ -18,11 +18,6 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Spanner.Data
 {
-    // TODO: Indexer by string?
-    // TODO: Convenient view for accessing values instead of fields?
-    // TODO: Remove or modify fields?
-    // TODO: Hoist the nested Field type to a top-level type (SpannerStructField)?
-
     /// <summary>
     /// A struct parameter or returned value.
     /// </summary>
@@ -88,7 +83,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// A field within a struct.
         /// </summary>
-        public class Field
+        public sealed class Field
         {
             /// <summary>
             /// Name of the field in the struct; will never be null, but may be empty.
