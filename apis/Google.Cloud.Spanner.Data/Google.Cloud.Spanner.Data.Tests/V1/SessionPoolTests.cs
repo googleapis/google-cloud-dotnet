@@ -242,7 +242,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 LogLevel = LogLevel.Debug;
             }
 
-            public override void LogPerformanceEntries(IEnumerable<string> entries)
+            protected override void LogPerformanceEntries(IEnumerable<string> entries)
             {
                 // No-op
             }

@@ -33,7 +33,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         protected override void LogImpl(V1.Internal.Logging.LogLevel level, string message, Exception exception) =>
             WriteLine(exception == null ? $"{level}: {message}" : $"{level}: {message}, Exception: {exception}");
 
-        public override void LogPerformanceEntries(IEnumerable<string> entries)
+        protected override void LogPerformanceEntries(IEnumerable<string> entries)
         {
             WriteLine("Performance:");
             foreach (var entry in entries)

@@ -50,7 +50,7 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         /// <summary>
         /// This is internal functionality and not intended for public use.
         /// </summary>
-        public override void LogPerformanceEntries(IEnumerable<string> entries)
+        protected override void LogPerformanceEntries(IEnumerable<string> entries)
         {
             string message = $"Performance entries{Environment.NewLine}{string.Join(Environment.NewLine, entries)}";
             _efLogger.Logger.Log(Microsoft.Extensions.Logging.LogLevel.Information,

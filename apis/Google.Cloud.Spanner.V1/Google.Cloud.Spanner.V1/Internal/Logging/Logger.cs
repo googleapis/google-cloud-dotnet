@@ -90,7 +90,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.
         /// </summary>
-        public abstract void LogPerformanceEntries(IEnumerable<string> entries);
+        protected abstract void LogPerformanceEntries(IEnumerable<string> entries);
 
         /// <summary>
         /// This is an internal method and is not intended to be used by external code.

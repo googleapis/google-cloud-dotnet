@@ -27,7 +27,7 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
             WriteLine(exception == null ? $"{level}: {message}" : $"{level}: {message}, Exception: {exception}");
 
         /// <inheritdoc />
-        public override void LogPerformanceEntries(IEnumerable<string> entries)
+        protected override void LogPerformanceEntries(IEnumerable<string> entries)
         {
             string separator = Environment.NewLine + "  ";
             WriteLine($"Performance:{separator}{string.Join(separator, entries)}");
