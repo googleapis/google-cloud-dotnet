@@ -42,8 +42,8 @@ namespace Google.Cloud.Spanner.V1.Tests
         public void RecreateSession()
         {
             var logger = new InMemoryLogger();
-            var mock = SpannerClientHelpers.CreateMockClient();
-            var pool = new SessionPool(mock.Object, new SessionPoolOptions(), logger);
+            var mock = SpannerClientHelpers.CreateMockClient(logger);
+            var pool = new SessionPool(mock.Object, new SessionPoolOptions());
 
             var mode = ModeOneofCase.ReadOnly;
             var session = pool.RecreateSession(s_sampleSessionName, s_sampleTransactionId, mode);
@@ -68,7 +68,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MaximumConcurrentSessionCreates = 20,
                 WriteSessionsFraction = 0
             };
-            var sessionPool = new SessionPool(client, options, client.Logger);
+            var sessionPool = new SessionPool(client, options);
             var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
 
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(1));
@@ -103,7 +103,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MaximumConcurrentSessionCreates = 20,
                 WriteSessionsFraction = 0
             };
-            var sessionPool = new SessionPool(client, options, client.Logger);
+            var sessionPool = new SessionPool(client, options);
             var acquisitionTask = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
 
             // After a minute, we should have a session. Release it immediately for simplicity.
@@ -143,7 +143,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MaximumConcurrentSessionCreates = 20,
                 WriteSessionsFraction = 0
             };
-            var sessionPool = new SessionPool(client, options, client.Logger);
+            var sessionPool = new SessionPool(client, options);
 
             // Ask when the pool is ready, which shouldn't take a minute.
             var poolReadyTask = sessionPool.WhenPoolReady(s_sampleDatabaseName, default);
@@ -160,7 +160,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var client = new SessionTestingSpannerClient();
             var options = new SessionPoolOptions();
-            var sessionPool = new SessionPool(client, options, client.Logger);
+            var sessionPool = new SessionPool(client, options);
             // We haven't used the database in this session pool, so there are no statistics for it.
             Assert.Null(sessionPool.GetStatisticsSnapshot(s_sampleDatabaseName));
         }
@@ -173,7 +173,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 MinimumPooledSessions = 10,
             };
-            var sessionPool = new SessionPool(client, options, client.Logger);
+            var sessionPool = new SessionPool(client, options);
             var acquisitionTask1 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName, new TransactionOptions(), default);
             var acquisitionTask2 = sessionPool.AcquireSessionAsync(s_sampleDatabaseName2, new TransactionOptions(), default);
             var stats = sessionPool.GetStatisticsSnapshot();
@@ -201,7 +201,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 MinimumPooledSessions = 10,
                 MaintenanceLoopDelay = TimeSpan.FromMinutes(1)
             };
-            var sessionPool = new SessionPool(client, options, client.Logger);
+            var sessionPool = new SessionPool(client, options);
             var waitingTask = sessionPool.WhenPoolReady(s_sampleDatabaseName);
             await client.Scheduler.RunAsync(TimeSpan.FromMinutes(5.5));
             await waitingTask;

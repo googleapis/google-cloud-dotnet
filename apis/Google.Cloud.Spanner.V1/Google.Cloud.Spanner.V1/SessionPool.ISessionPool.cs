@@ -25,7 +25,6 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         internal interface ISessionPool
         {
-            Logger Logger { get; }
             SpannerClient Client { get; }
             IClock Clock { get; }
             void Release(PooledSession session, bool deleteSession);

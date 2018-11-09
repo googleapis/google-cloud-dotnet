@@ -302,7 +302,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             internal FakeSessionPool()
             {
-                Mock = SpannerClientHelpers.CreateMockClient();
+                Mock = SpannerClientHelpers.CreateMockClient(Logger);
                 Options = new SessionPoolOptions
                 {
                     SessionEvictionJitter = RetrySettings.NoJitter,

@@ -64,12 +64,7 @@ namespace Google.Cloud.Spanner.V1
             _request.SessionAsSessionName = _session.SessionName;
         }
 
-        // TODO: Take this in the constructor instead? Or maybe put it in SpannerClientSettings?
-
-        /// <summary>
-        /// This property is intended for internal use only.
-        /// </summary>
-        public Logger Logger { get; set; } = Logger.DefaultLogger;
+        private Logger Logger => _spannerClient.Settings.Logger;
 
         /// <summary>
         /// Indicates whether the reader is closed or not.

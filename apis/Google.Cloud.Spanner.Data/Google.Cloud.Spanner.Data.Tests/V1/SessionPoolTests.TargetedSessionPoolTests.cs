@@ -68,7 +68,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                      WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Block,
                      WriteSessionsFraction = 0.2
                 };
-                var parent = new SessionPool(client, options, client.Logger);
+                var parent = new SessionPool(client, options);
                 return new TargetedSessionPool(parent, s_databaseName, acquireSessionsImmediately);
             }
 

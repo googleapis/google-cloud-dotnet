@@ -21,7 +21,7 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
-    using ClientFactory = Func<SpannerClientCreationOptions, Task<SpannerClient>>;
+    using ClientFactory = Func<SpannerClientCreationOptions, Logger, Task<SpannerClient>>;
 
     public class SessionPoolManagerTests
     {
@@ -32,7 +32,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task EqualOptions_SameSessionPool()
         {
             int factoryCalls = 0;
-            ClientFactory factory = options =>
+            ClientFactory factory = (options, logger) =>
             {
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task DifferentOptions_DifferentSessionPools()
         {
             int factoryCalls = 0;
-            ClientFactory factory = options =>
+            ClientFactory factory = (options, logger) =>
             {
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
@@ -91,7 +91,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         private class FailingSpannerClient : SpannerClient
         {
             // A simple non-counting factory.
-            internal static ClientFactory Factory { get; } = _ => Task.FromResult<SpannerClient>(new FailingSpannerClient());
+            internal static ClientFactory Factory { get; } = (options, logger) => Task.FromResult<SpannerClient>(new FailingSpannerClient());
 
             public FailingSpannerClient()
             {
