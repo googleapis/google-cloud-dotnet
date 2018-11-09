@@ -52,12 +52,9 @@ namespace Microsoft.EntityFrameworkCore.Storage.Internal
             return new SpannerRelationalConnection(Dependencies.With(optionsBuilder.Options));
         }
 
+        // TODO: Integrate Spanner logging with EF logging
+
         /// <inheritdoc />
-        protected override DbConnection CreateDbConnection()
-            => new SpannerConnection(ConnectionString)
-            {
-                //This will route all contextual logs through the EF logger to give a consistent logging experience.
-                Logger = new SpannerLogBridge<DbLoggerCategory.Database.Connection>(Dependencies.ConnectionLogger)
-            };
+        protected override DbConnection CreateDbConnection() => new SpannerConnection(ConnectionString);
     }
 }

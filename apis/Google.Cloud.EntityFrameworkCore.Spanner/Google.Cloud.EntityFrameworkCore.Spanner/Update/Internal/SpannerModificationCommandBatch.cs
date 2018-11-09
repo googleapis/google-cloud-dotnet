@@ -109,7 +109,7 @@ namespace Microsoft.EntityFrameworkCore.Update.Internal
                     throw new NotSupportedException(
                         $"Modification type {modificationCommand.EntityState} is not supported.");
             }
-            spannerConnection.Logger = new SpannerLogBridge<DbLoggerCategory.Database.Command>(_logger);
+            // TODO: Integrate with Spanner logging
             cmd.Transaction = transaction;
             foreach (var columnModification in modificationCommand.ColumnModifications)
                 cmd.Parameters.Add(
