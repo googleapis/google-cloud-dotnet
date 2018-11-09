@@ -26,9 +26,6 @@ namespace Google.Cloud.Spanner.Data
 {
     public sealed partial class SpannerDbType
     {
-        internal object ConvertToClrType(Value protobufValue, SpannerConversionOptions options) =>
-            ConvertToClrType(protobufValue, typeof(object), options, topLevel: true);
-
         internal T ConvertToClrType<T>(Value protobufValue, SpannerConversionOptions options) =>
             (T) ConvertToClrType(protobufValue, typeof(T), options, topLevel: true);
 
