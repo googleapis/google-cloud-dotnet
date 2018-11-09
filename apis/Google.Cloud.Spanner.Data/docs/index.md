@@ -22,6 +22,7 @@ of setting CommandText manually.
 See examples below:
 
 # Sample code
+
 Once you have created your Google Cloud Project and Spanner Instance using the web console,
 you can start using the ADO.NET provider to create and modify a Cloud Spanner database.
 
@@ -117,3 +118,28 @@ single transaction.
 {{sample:SpannerConnection.TransactionScopeAsync}}
 
 
+## Session pool management
+
+`Google.Cloud.Spanner.Data` manages Spanner sessions for you via a
+session pool. The pool has various [configuration
+options](configuration.md), but additionally you may wish to take
+advantage of additional `SpannerConnection` methods at the start and
+end of your application.
+
+To ensure that the session pool is populated with the configured
+minimum number of sessions before serving requests from your
+application, you may wish to wait for the task returned by
+`SpannerConnection.WhenSessionPoolReady()` to complete before
+marking your application as "ready to serve".
+
+{{sample:SpannerConnection.WhenSessionPoolReady}}
+
+When your application is shutting down, you may wish to delete the
+sessions it has been using from the server. Most applications will
+not need to do this: sessions automatically expire after an idle
+time of an hour anyway, and the server-enforced session limit is
+high. Applications using a large number of sessions may wish to
+clean up sessions more actively, however. Again, `SpannerConnection`
+provides a simple method to accomplish this:
+
+{{sample:SpannerConnection.ShutdownSessionPoolAsync}}
