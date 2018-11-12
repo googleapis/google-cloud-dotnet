@@ -37,7 +37,6 @@ namespace Google.Cloud.Spanner.V1
     {
         private readonly ISessionPool _detachedSessionPool;
         private readonly Logger _logger;
-        private readonly SpannerClient _client;
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
 
@@ -47,6 +46,11 @@ namespace Google.Cloud.Spanner.V1
         /// The options governing this session pool.
         /// </summary>
         public SessionPoolOptions Options { get; }
+
+        /// <summary>
+        /// The client used for all operations in this pool.
+        /// </summary>
+        internal SpannerClient Client { get; }
 
         private readonly ConcurrentDictionary<DatabaseName, TargetedSessionPool> _targetedPools =
             new ConcurrentDictionary<DatabaseName, TargetedSessionPool>();
@@ -58,9 +62,9 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="options">The options for this session pool. Must not be null.</param>
         public SessionPool(SpannerClient client, SessionPoolOptions options)
         {
-            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
-            _clock = _client.Settings.Clock ?? SystemClock.Instance;
-            _scheduler = _client.Settings.Scheduler ?? SystemScheduler.Instance;
+            Client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _clock = client.Settings.Clock ?? SystemClock.Instance;
+            _scheduler = client.Settings.Scheduler ?? SystemScheduler.Instance;
             Options = GaxPreconditions.CheckNotNull(options, nameof(options));
             _logger = client.Settings.Logger; // Just to avoid fetching it all the time
             _detachedSessionPool = new DetachedSessionPool(this);
@@ -230,7 +234,7 @@ namespace Google.Cloud.Spanner.V1
         {
             try
             {
-                await _client.DeleteSessionAsync(new DeleteSessionRequest { SessionName = session.SessionName }).ConfigureAwait(false);
+                await Client.DeleteSessionAsync(new DeleteSessionRequest { SessionName = session.SessionName }).ConfigureAwait(false);
             }
             catch (RpcException e)
             {
