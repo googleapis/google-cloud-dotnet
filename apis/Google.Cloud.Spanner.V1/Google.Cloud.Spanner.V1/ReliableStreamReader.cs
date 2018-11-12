@@ -101,7 +101,7 @@ namespace Google.Cloud.Spanner.V1
             _currentCall = _spannerClient.ExecuteSqlStream(_request,
                 _spannerClient.Settings.ExecuteSqlStreamSettings.WithExpiration(
                     _spannerClient.Settings.ConvertTimeoutToExpiration(_timeoutSeconds)));
-            return WithTiming(_currentCall.ResponseHeadersAsync.WithSessionChecking(_session), "ResponseHeaders");
+            return WithTiming(_currentCall.ResponseHeadersAsync.WithSessionExpiryChecking(_session), "ResponseHeaders");
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Google.Cloud.Spanner.V1
 
                     _isReading = await WithTiming(
                             _currentCall.ResponseStream.MoveNext(cancellationToken)
-                                .WithSessionChecking(_session),
+                                .WithSessionExpiryChecking(_session),
                             "ResponseStream.MoveNext")
                         .ConfigureAwait(false);
                     if (!_isReading || _currentCall.ResponseStream.Current == null)
@@ -175,7 +175,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 Logger.LogPerformanceCounter("StreamReader.MoveNextCount", x => x + 1);
                 _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
-                    .WithSessionChecking(_session).ConfigureAwait(false);
+                    .WithSessionExpiryChecking(_session).ConfigureAwait(false);
 
                 //we only increment our skip count after we know the MoveNext has succeeded
                 _resumeSkipCount++;
@@ -212,7 +212,7 @@ namespace Google.Cloud.Spanner.V1
                 try
                 {
                     _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
-                        .WithSessionChecking(_session).ConfigureAwait(false);
+                        .WithSessionExpiryChecking(_session).ConfigureAwait(false);
                     _resumeSkipCount++;
                 }
                 catch (Exception e)
