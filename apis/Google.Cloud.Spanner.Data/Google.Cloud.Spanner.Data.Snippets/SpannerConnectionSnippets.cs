@@ -352,8 +352,12 @@ namespace Google.Cloud.Spanner.Data.Snippets
             // End sample
         }
 
-        [Fact]
+
+        // Deliberately not a Fact! We don't want to run this, otherwise the default session pool will be
+        // shut down after the test...
+#pragma warning disable xUnit1013 // Public method should be marked as test
         public async Task ShutdownSessionPoolAsync()
+#pragma warning restore xUnit1013 // Public method should be marked as test
         {
             string connectionString = _fixture.ConnectionString;
 
