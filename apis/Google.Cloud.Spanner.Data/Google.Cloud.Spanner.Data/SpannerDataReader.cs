@@ -26,7 +26,6 @@ using System.Threading.Tasks;
 
 #if !NETSTANDARD1_5
 using System.Data;
-
 #endif
 
 namespace Google.Cloud.Spanner.Data
@@ -37,6 +36,8 @@ namespace Google.Cloud.Spanner.Data
     public sealed class SpannerDataReader : DbDataReader
     {
         private static long s_readerCount;
+
+        private bool _rowValid = false;
         private readonly List<Value> _innerList = new List<Value>();
         private readonly ReliableStreamReader _resultSet;
         private readonly ConcurrentDictionary<string, int> _fieldIndex = new ConcurrentDictionary<string, int>();
@@ -92,10 +93,9 @@ namespace Google.Cloud.Spanner.Data
             return SpannerDbType.FromProtobufType(fieldMetadata.Type).DefaultClrType;
         }
 
-        // TODO: Validate that we're positioned on a row.
         /// <inheritdoc />
         public override T GetFieldValue<T>(int ordinal) =>
-            GetSpannerFieldType(ordinal).ConvertToClrType<T>(_innerList[ordinal], _conversionOptions);
+            GetSpannerFieldType(ordinal).ConvertToClrType<T>(GetJsonValue(ordinal), _conversionOptions);
 
         /// <summary>
         /// Gets the value of the specified column as type T.
@@ -198,7 +198,12 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="i">The index of the column whose value will be returned.</param>
         /// <returns>The raw protobuf as a <see cref="Value"/>.</returns>
-        public Value GetJsonValue(int i) => _innerList[i];
+        /// <exception cref="InvalidOperationException">The reader is not currently positioned on a valid row.</exception>
+        public Value GetJsonValue(int i)
+        {
+            GaxPreconditions.CheckState(_rowValid, "The reader is not currently positioned on a valid row.");
+            return _innerList[i];
+        }
 
         /// <inheritdoc />
         public override string GetName(int i) => PopulateMetadata().RowType.Fields[i].Name;
@@ -234,6 +239,8 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool NextResult()
         {
+            _rowValid = false;
+            _innerList.Clear();
             Logger.Warn("Spanner does not support multiple SQL queries in a single command");
             return false;
         }
@@ -257,8 +264,9 @@ namespace Google.Cloud.Spanner.Data
                     {
                         await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
                     }
+                    _rowValid = false;
                     _innerList.Clear();
-                    //read # values == # fields.
+                    
                     var first = await _resultSet.NextAsync(cancellationToken).ConfigureAwait(false);
                     if (first == null)
                     {
@@ -266,11 +274,14 @@ namespace Google.Cloud.Spanner.Data
                     }
 
                     _innerList.Add(first);
-                    //we expect to get full rows...
+                    // We expect to get full rows...
                     for (var i = 1; i < _metadata.RowType.Fields.Count; i++)
                     {
-                        _innerList.Add(await _resultSet.NextAsync(cancellationToken).ConfigureAwait(false));
+                        var value = await _resultSet.NextAsync(cancellationToken).ConfigureAwait(false);
+                        GaxPreconditions.CheckState(value != null, "Incomplete row returned by Spanner server");
+                        _innerList.Add(value);
                     }
+                    _rowValid = true;
 
                     return true;
                 },
