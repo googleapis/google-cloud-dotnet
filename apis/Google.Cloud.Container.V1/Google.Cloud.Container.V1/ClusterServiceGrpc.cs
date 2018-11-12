@@ -3,7 +3,7 @@
 //     source: google/container/v1/cluster_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2017 Google Inc.
+// Copyright 2018 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+//
 #pragma warning disable 1591
 #region Designer generated code
 
@@ -24,7 +25,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Container.V1 {
   /// <summary>
-  /// Google Container Engine Cluster Manager v1
+  /// Google Kubernetes Engine Cluster Manager v1
   /// </summary>
   public static partial class ClusterManager
   {
@@ -346,7 +347,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Updates the version and/or image type of a specific node pool.
+      /// Updates the version and/or image type for a specific node pool.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -357,7 +358,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Sets the autoscaling settings of a specific node pool.
+      /// Sets the autoscaling settings for a specific node pool.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -368,7 +369,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Sets the logging service of a specific cluster.
+      /// Sets the logging service for a specific cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -379,7 +380,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Sets the monitoring service of a specific cluster.
+      /// Sets the monitoring service for a specific cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -390,7 +391,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Sets the addons of a specific cluster.
+      /// Sets the addons for a specific cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -401,7 +402,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Sets the locations of a specific cluster.
+      /// Sets the locations for a specific cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -412,7 +413,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Updates the master of a specific cluster.
+      /// Updates the master for a specific cluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -424,7 +425,7 @@ namespace Google.Cloud.Container.V1 {
 
       /// <summary>
       /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password of a specific cluster.
+      /// Changing the admin password for a specific cluster.
       /// This can be either via password generation or explicitly set the password.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -488,7 +489,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Returns configuration info about the Container Engine service.
+      /// Returns configuration info about the Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -610,7 +611,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Sets the size of a specific node pool.
+      /// Sets the size for a specific node pool.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -896,7 +897,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCluster, null, options, request);
       }
       /// <summary>
-      /// Updates the version and/or image type of a specific node pool.
+      /// Updates the version and/or image type for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -908,7 +909,7 @@ namespace Google.Cloud.Container.V1 {
         return UpdateNodePool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the version and/or image type of a specific node pool.
+      /// Updates the version and/or image type for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -918,7 +919,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateNodePool, null, options, request);
       }
       /// <summary>
-      /// Updates the version and/or image type of a specific node pool.
+      /// Updates the version and/or image type for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -930,7 +931,7 @@ namespace Google.Cloud.Container.V1 {
         return UpdateNodePoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the version and/or image type of a specific node pool.
+      /// Updates the version and/or image type for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -940,7 +941,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateNodePool, null, options, request);
       }
       /// <summary>
-      /// Sets the autoscaling settings of a specific node pool.
+      /// Sets the autoscaling settings for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -952,7 +953,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNodePoolAutoscaling(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the autoscaling settings of a specific node pool.
+      /// Sets the autoscaling settings for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -962,7 +963,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetNodePoolAutoscaling, null, options, request);
       }
       /// <summary>
-      /// Sets the autoscaling settings of a specific node pool.
+      /// Sets the autoscaling settings for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -974,7 +975,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNodePoolAutoscalingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the autoscaling settings of a specific node pool.
+      /// Sets the autoscaling settings for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -984,7 +985,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetNodePoolAutoscaling, null, options, request);
       }
       /// <summary>
-      /// Sets the logging service of a specific cluster.
+      /// Sets the logging service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -996,7 +997,7 @@ namespace Google.Cloud.Container.V1 {
         return SetLoggingService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the logging service of a specific cluster.
+      /// Sets the logging service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1006,7 +1007,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetLoggingService, null, options, request);
       }
       /// <summary>
-      /// Sets the logging service of a specific cluster.
+      /// Sets the logging service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1018,7 +1019,7 @@ namespace Google.Cloud.Container.V1 {
         return SetLoggingServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the logging service of a specific cluster.
+      /// Sets the logging service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1028,7 +1029,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetLoggingService, null, options, request);
       }
       /// <summary>
-      /// Sets the monitoring service of a specific cluster.
+      /// Sets the monitoring service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1040,7 +1041,7 @@ namespace Google.Cloud.Container.V1 {
         return SetMonitoringService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the monitoring service of a specific cluster.
+      /// Sets the monitoring service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1050,7 +1051,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetMonitoringService, null, options, request);
       }
       /// <summary>
-      /// Sets the monitoring service of a specific cluster.
+      /// Sets the monitoring service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1062,7 +1063,7 @@ namespace Google.Cloud.Container.V1 {
         return SetMonitoringServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the monitoring service of a specific cluster.
+      /// Sets the monitoring service for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1072,7 +1073,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetMonitoringService, null, options, request);
       }
       /// <summary>
-      /// Sets the addons of a specific cluster.
+      /// Sets the addons for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1084,7 +1085,7 @@ namespace Google.Cloud.Container.V1 {
         return SetAddonsConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the addons of a specific cluster.
+      /// Sets the addons for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1094,7 +1095,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetAddonsConfig, null, options, request);
       }
       /// <summary>
-      /// Sets the addons of a specific cluster.
+      /// Sets the addons for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1106,7 +1107,7 @@ namespace Google.Cloud.Container.V1 {
         return SetAddonsConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the addons of a specific cluster.
+      /// Sets the addons for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1116,7 +1117,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetAddonsConfig, null, options, request);
       }
       /// <summary>
-      /// Sets the locations of a specific cluster.
+      /// Sets the locations for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1128,7 +1129,7 @@ namespace Google.Cloud.Container.V1 {
         return SetLocations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the locations of a specific cluster.
+      /// Sets the locations for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1138,7 +1139,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetLocations, null, options, request);
       }
       /// <summary>
-      /// Sets the locations of a specific cluster.
+      /// Sets the locations for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1150,7 +1151,7 @@ namespace Google.Cloud.Container.V1 {
         return SetLocationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the locations of a specific cluster.
+      /// Sets the locations for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1160,7 +1161,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetLocations, null, options, request);
       }
       /// <summary>
-      /// Updates the master of a specific cluster.
+      /// Updates the master for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1172,7 +1173,7 @@ namespace Google.Cloud.Container.V1 {
         return UpdateMaster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the master of a specific cluster.
+      /// Updates the master for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1182,7 +1183,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateMaster, null, options, request);
       }
       /// <summary>
-      /// Updates the master of a specific cluster.
+      /// Updates the master for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1194,7 +1195,7 @@ namespace Google.Cloud.Container.V1 {
         return UpdateMasterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the master of a specific cluster.
+      /// Updates the master for a specific cluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1205,7 +1206,7 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password of a specific cluster.
+      /// Changing the admin password for a specific cluster.
       /// This can be either via password generation or explicitly set the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1219,7 +1220,7 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password of a specific cluster.
+      /// Changing the admin password for a specific cluster.
       /// This can be either via password generation or explicitly set the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1231,7 +1232,7 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password of a specific cluster.
+      /// Changing the admin password for a specific cluster.
       /// This can be either via password generation or explicitly set the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1245,7 +1246,7 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Used to set master auth materials. Currently supports :-
-      /// Changing the admin password of a specific cluster.
+      /// Changing the admin password for a specific cluster.
       /// This can be either via password generation or explicitly set the password.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1464,7 +1465,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CancelOperation, null, options, request);
       }
       /// <summary>
-      /// Returns configuration info about the Container Engine service.
+      /// Returns configuration info about the Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1476,7 +1477,7 @@ namespace Google.Cloud.Container.V1 {
         return GetServerConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns configuration info about the Container Engine service.
+      /// Returns configuration info about the Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1486,7 +1487,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetServerConfig, null, options, request);
       }
       /// <summary>
-      /// Returns configuration info about the Container Engine service.
+      /// Returns configuration info about the Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1498,7 +1499,7 @@ namespace Google.Cloud.Container.V1 {
         return GetServerConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns configuration info about the Container Engine service.
+      /// Returns configuration info about the Kubernetes Engine service.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1952,7 +1953,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CompleteIPRotation, null, options, request);
       }
       /// <summary>
-      /// Sets the size of a specific node pool.
+      /// Sets the size for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1964,7 +1965,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNodePoolSize(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the size of a specific node pool.
+      /// Sets the size for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1974,7 +1975,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetNodePoolSize, null, options, request);
       }
       /// <summary>
-      /// Sets the size of a specific node pool.
+      /// Sets the size for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1986,7 +1987,7 @@ namespace Google.Cloud.Container.V1 {
         return SetNodePoolSizeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the size of a specific node pool.
+      /// Sets the size for a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

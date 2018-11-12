@@ -26,7 +26,7 @@ namespace Google.Cloud.Container.V1 {
           string.Concat(
             "Cilnb29nbGUvY29udGFpbmVyL3YxL2NsdXN0ZXJfc2VydmljZS5wcm90bxIT",
             "Z29vZ2xlLmNvbnRhaW5lci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
-            "cm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIu0DCgpOb2RlQ29u",
+            "cm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIoAECgpOb2RlQ29u",
             "ZmlnEhQKDG1hY2hpbmVfdHlwZRgBIAEoCRIUCgxkaXNrX3NpemVfZ2IYAiAB",
             "KAUSFAoMb2F1dGhfc2NvcGVzGAMgAygJEhcKD3NlcnZpY2VfYWNjb3VudBgJ",
             "IAEoCRI/CghtZXRhZGF0YRgEIAMoCzItLmdvb2dsZS5jb250YWluZXIudjEu",
@@ -35,342 +35,413 @@ namespace Google.Cloud.Container.V1 {
             "ZmlnLkxhYmVsc0VudHJ5EhcKD2xvY2FsX3NzZF9jb3VudBgHIAEoBRIMCgR0",
             "YWdzGAggAygJEhMKC3ByZWVtcHRpYmxlGAogASgIEjwKDGFjY2VsZXJhdG9y",
             "cxgLIAMoCzImLmdvb2dsZS5jb250YWluZXIudjEuQWNjZWxlcmF0b3JDb25m",
-            "aWcSGAoQbWluX2NwdV9wbGF0Zm9ybRgNIAEoCRovCg1NZXRhZGF0YUVudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLRAQoKTWFzdGVy",
-            "QXV0aBIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCRJPChlj",
-            "bGllbnRfY2VydGlmaWNhdGVfY29uZmlnGAMgASgLMiwuZ29vZ2xlLmNvbnRh",
-            "aW5lci52MS5DbGllbnRDZXJ0aWZpY2F0ZUNvbmZpZxIeChZjbHVzdGVyX2Nh",
-            "X2NlcnRpZmljYXRlGGQgASgJEhoKEmNsaWVudF9jZXJ0aWZpY2F0ZRhlIAEo",
-            "CRISCgpjbGllbnRfa2V5GGYgASgJIjsKF0NsaWVudENlcnRpZmljYXRlQ29u",
-            "ZmlnEiAKGGlzc3VlX2NsaWVudF9jZXJ0aWZpY2F0ZRgBIAEoCCK3AgoMQWRk",
-            "b25zQ29uZmlnEkMKE2h0dHBfbG9hZF9iYWxhbmNpbmcYASABKAsyJi5nb29n",
-            "bGUuY29udGFpbmVyLnYxLkh0dHBMb2FkQmFsYW5jaW5nElEKGmhvcml6b250",
-            "YWxfcG9kX2F1dG9zY2FsaW5nGAIgASgLMi0uZ29vZ2xlLmNvbnRhaW5lci52",
-            "MS5Ib3Jpem9udGFsUG9kQXV0b3NjYWxpbmcSRgoUa3ViZXJuZXRlc19kYXNo",
-            "Ym9hcmQYAyABKAsyKC5nb29nbGUuY29udGFpbmVyLnYxLkt1YmVybmV0ZXNE",
-            "YXNoYm9hcmQSRwoVbmV0d29ya19wb2xpY3lfY29uZmlnGAQgASgLMiguZ29v",
-            "Z2xlLmNvbnRhaW5lci52MS5OZXR3b3JrUG9saWN5Q29uZmlnIiUKEUh0dHBM",
-            "b2FkQmFsYW5jaW5nEhAKCGRpc2FibGVkGAEgASgIIiwKGEhvcml6b250YWxQ",
-            "b2RBdXRvc2NhbGluZxIQCghkaXNhYmxlZBgBIAEoCCInChNLdWJlcm5ldGVz",
-            "RGFzaGJvYXJkEhAKCGRpc2FibGVkGAEgASgIIicKE05ldHdvcmtQb2xpY3lD",
-            "b25maWcSEAoIZGlzYWJsZWQYASABKAgivAEKHk1hc3RlckF1dGhvcml6ZWRO",
-            "ZXR3b3Jrc0NvbmZpZxIPCgdlbmFibGVkGAEgASgIElIKC2NpZHJfYmxvY2tz",
-            "GAIgAygLMj0uZ29vZ2xlLmNvbnRhaW5lci52MS5NYXN0ZXJBdXRob3JpemVk",
-            "TmV0d29ya3NDb25maWcuQ2lkckJsb2NrGjUKCUNpZHJCbG9jaxIUCgxkaXNw",
-            "bGF5X25hbWUYASABKAkSEgoKY2lkcl9ibG9jaxgCIAEoCSIdCgpMZWdhY3lB",
-            "YmFjEg8KB2VuYWJsZWQYASABKAgikQEKDU5ldHdvcmtQb2xpY3kSPQoIcHJv",
-            "dmlkZXIYASABKA4yKy5nb29nbGUuY29udGFpbmVyLnYxLk5ldHdvcmtQb2xp",
-            "Y3kuUHJvdmlkZXISDwoHZW5hYmxlZBgCIAEoCCIwCghQcm92aWRlchIYChRQ",
-            "Uk9WSURFUl9VTlNQRUNJRklFRBAAEgoKBkNBTElDTxABIt0CChJJUEFsbG9j",
-            "YXRpb25Qb2xpY3kSFgoOdXNlX2lwX2FsaWFzZXMYASABKAgSGQoRY3JlYXRl",
-            "X3N1Ym5ldHdvcmsYAiABKAgSFwoPc3VibmV0d29ya19uYW1lGAMgASgJEhkK",
-            "EWNsdXN0ZXJfaXB2NF9jaWRyGAQgASgJEhYKDm5vZGVfaXB2NF9jaWRyGAUg",
-            "ASgJEhoKEnNlcnZpY2VzX2lwdjRfY2lkchgGIAEoCRIkChxjbHVzdGVyX3Nl",
-            "Y29uZGFyeV9yYW5nZV9uYW1lGAcgASgJEiUKHXNlcnZpY2VzX3NlY29uZGFy",
-            "eV9yYW5nZV9uYW1lGAggASgJEh8KF2NsdXN0ZXJfaXB2NF9jaWRyX2Jsb2Nr",
-            "GAkgASgJEhwKFG5vZGVfaXB2NF9jaWRyX2Jsb2NrGAogASgJEiAKGHNlcnZp",
-            "Y2VzX2lwdjRfY2lkcl9ibG9jaxgLIAEoCSKqCwoHQ2x1c3RlchIMCgRuYW1l",
-            "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhoKEmluaXRpYWxfbm9kZV9j",
-            "b3VudBgDIAEoBRI0Cgtub2RlX2NvbmZpZxgEIAEoCzIfLmdvb2dsZS5jb250",
-            "YWluZXIudjEuTm9kZUNvbmZpZxI0CgttYXN0ZXJfYXV0aBgFIAEoCzIfLmdv",
-            "b2dsZS5jb250YWluZXIudjEuTWFzdGVyQXV0aBIXCg9sb2dnaW5nX3NlcnZp",
-            "Y2UYBiABKAkSGgoSbW9uaXRvcmluZ19zZXJ2aWNlGAcgASgJEg8KB25ldHdv",
-            "cmsYCCABKAkSGQoRY2x1c3Rlcl9pcHY0X2NpZHIYCSABKAkSOAoNYWRkb25z",
-            "X2NvbmZpZxgKIAEoCzIhLmdvb2dsZS5jb250YWluZXIudjEuQWRkb25zQ29u",
-            "ZmlnEhIKCnN1Ym5ldHdvcmsYCyABKAkSMQoKbm9kZV9wb29scxgMIAMoCzId",
-            "Lmdvb2dsZS5jb250YWluZXIudjEuTm9kZVBvb2wSEQoJbG9jYXRpb25zGA0g",
-            "AygJEh8KF2VuYWJsZV9rdWJlcm5ldGVzX2FscGhhGA4gASgIEkkKD3Jlc291",
-            "cmNlX2xhYmVscxgPIAMoCzIwLmdvb2dsZS5jb250YWluZXIudjEuQ2x1c3Rl",
-            "ci5SZXNvdXJjZUxhYmVsc0VudHJ5EhkKEWxhYmVsX2ZpbmdlcnByaW50GBAg",
-            "ASgJEjQKC2xlZ2FjeV9hYmFjGBIgASgLMh8uZ29vZ2xlLmNvbnRhaW5lci52",
-            "MS5MZWdhY3lBYmFjEjoKDm5ldHdvcmtfcG9saWN5GBMgASgLMiIuZ29vZ2xl",
-            "LmNvbnRhaW5lci52MS5OZXR3b3JrUG9saWN5EkUKFGlwX2FsbG9jYXRpb25f",
-            "cG9saWN5GBQgASgLMicuZ29vZ2xlLmNvbnRhaW5lci52MS5JUEFsbG9jYXRp",
-            "b25Qb2xpY3kSXgohbWFzdGVyX2F1dGhvcml6ZWRfbmV0d29ya3NfY29uZmln",
-            "GBYgASgLMjMuZ29vZ2xlLmNvbnRhaW5lci52MS5NYXN0ZXJBdXRob3JpemVk",
-            "TmV0d29ya3NDb25maWcSQgoSbWFpbnRlbmFuY2VfcG9saWN5GBcgASgLMiYu",
-            "Z29vZ2xlLmNvbnRhaW5lci52MS5NYWludGVuYW5jZVBvbGljeRIRCglzZWxm",
-            "X2xpbmsYZCABKAkSDAoEem9uZRhlIAEoCRIQCghlbmRwb2ludBhmIAEoCRIf",
-            "Chdpbml0aWFsX2NsdXN0ZXJfdmVyc2lvbhhnIAEoCRIeChZjdXJyZW50X21h",
-            "c3Rlcl92ZXJzaW9uGGggASgJEhwKFGN1cnJlbnRfbm9kZV92ZXJzaW9uGGkg",
-            "ASgJEhMKC2NyZWF0ZV90aW1lGGogASgJEjMKBnN0YXR1cxhrIAEoDjIjLmdv",
-            "b2dsZS5jb250YWluZXIudjEuQ2x1c3Rlci5TdGF0dXMSFgoOc3RhdHVzX21l",
-            "c3NhZ2UYbCABKAkSGwoTbm9kZV9pcHY0X2NpZHJfc2l6ZRhtIAEoBRIaChJz",
-            "ZXJ2aWNlc19pcHY0X2NpZHIYbiABKAkSGwoTaW5zdGFuY2VfZ3JvdXBfdXJs",
-            "cxhvIAMoCRIaChJjdXJyZW50X25vZGVfY291bnQYcCABKAUSEwoLZXhwaXJl",
-            "X3RpbWUYcSABKAkaNQoTUmVzb3VyY2VMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBImkKBlN0YXR1cxIWChJTVEFUVVNfVU5T",
-            "UEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARILCgdSVU5OSU5HEAISDwoL",
-            "UkVDT05DSUxJTkcQAxIMCghTVE9QUElORxAEEgkKBUVSUk9SEAUiwQMKDUNs",
-            "dXN0ZXJVcGRhdGUSHAoUZGVzaXJlZF9ub2RlX3ZlcnNpb24YBCABKAkSIgoa",
-            "ZGVzaXJlZF9tb25pdG9yaW5nX3NlcnZpY2UYBSABKAkSQAoVZGVzaXJlZF9h",
-            "ZGRvbnNfY29uZmlnGAYgASgLMiEuZ29vZ2xlLmNvbnRhaW5lci52MS5BZGRv",
-            "bnNDb25maWcSHAoUZGVzaXJlZF9ub2RlX3Bvb2xfaWQYByABKAkSGgoSZGVz",
-            "aXJlZF9pbWFnZV90eXBlGAggASgJEk8KHWRlc2lyZWRfbm9kZV9wb29sX2F1",
-            "dG9zY2FsaW5nGAkgASgLMiguZ29vZ2xlLmNvbnRhaW5lci52MS5Ob2RlUG9v",
-            "bEF1dG9zY2FsaW5nEhkKEWRlc2lyZWRfbG9jYXRpb25zGAogAygJEmYKKWRl",
-            "c2lyZWRfbWFzdGVyX2F1dGhvcml6ZWRfbmV0d29ya3NfY29uZmlnGAwgASgL",
-            "MjMuZ29vZ2xlLmNvbnRhaW5lci52MS5NYXN0ZXJBdXRob3JpemVkTmV0d29y",
-            "a3NDb25maWcSHgoWZGVzaXJlZF9tYXN0ZXJfdmVyc2lvbhhkIAEoCSLlBQoJ",
-            "T3BlcmF0aW9uEgwKBG5hbWUYASABKAkSDAoEem9uZRgCIAEoCRI7Cg5vcGVy",
-            "YXRpb25fdHlwZRgDIAEoDjIjLmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0",
-            "aW9uLlR5cGUSNQoGc3RhdHVzGAQgASgOMiUuZ29vZ2xlLmNvbnRhaW5lci52",
-            "MS5PcGVyYXRpb24uU3RhdHVzEg4KBmRldGFpbBgIIAEoCRIWCg5zdGF0dXNf",
-            "bWVzc2FnZRgFIAEoCRIRCglzZWxmX2xpbmsYBiABKAkSEwoLdGFyZ2V0X2xp",
-            "bmsYByABKAkSEgoKc3RhcnRfdGltZRgKIAEoCRIQCghlbmRfdGltZRgLIAEo",
-            "CSJSCgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElO",
-            "RxABEgsKB1JVTk5JTkcQAhIICgRET05FEAMSDAoIQUJPUlRJTkcQBCL9AgoE",
-            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASEgoOQ1JFQVRFX0NMVVNURVIQ",
-            "ARISCg5ERUxFVEVfQ0xVU1RFUhACEhIKDlVQR1JBREVfTUFTVEVSEAMSEQoN",
-            "VVBHUkFERV9OT0RFUxAEEhIKDlJFUEFJUl9DTFVTVEVSEAUSEgoOVVBEQVRF",
-            "X0NMVVNURVIQBhIUChBDUkVBVEVfTk9ERV9QT09MEAcSFAoQREVMRVRFX05P",
-            "REVfUE9PTBAIEhwKGFNFVF9OT0RFX1BPT0xfTUFOQUdFTUVOVBAJEhUKEUFV",
-            "VE9fUkVQQUlSX05PREVTEAoSFgoSQVVUT19VUEdSQURFX05PREVTEAsSDgoK",
-            "U0VUX0xBQkVMUxAMEhMKD1NFVF9NQVNURVJfQVVUSBANEhYKElNFVF9OT0RF",
-            "X1BPT0xfU0laRRAOEhYKElNFVF9ORVRXT1JLX1BPTElDWRAPEhoKFlNFVF9N",
-            "QUlOVEVOQU5DRV9QT0xJQ1kQECJnChRDcmVhdGVDbHVzdGVyUmVxdWVzdBIS",
-            "Cgpwcm9qZWN0X2lkGAEgASgJEgwKBHpvbmUYAiABKAkSLQoHY2x1c3RlchgD",
-            "IAEoCzIcLmdvb2dsZS5jb250YWluZXIudjEuQ2x1c3RlciJJChFHZXRDbHVz",
-            "dGVyUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEgwKBHpvbmUYAiABKAkS",
-            "EgoKY2x1c3Rlcl9pZBgDIAEoCSKAAQoUVXBkYXRlQ2x1c3RlclJlcXVlc3QS",
-            "EgoKcHJvamVjdF9pZBgBIAEoCRIMCgR6b25lGAIgASgJEhIKCmNsdXN0ZXJf",
-            "aWQYAyABKAkSMgoGdXBkYXRlGAQgASgLMiIuZ29vZ2xlLmNvbnRhaW5lci52",
-            "MS5DbHVzdGVyVXBkYXRlIo0BChVVcGRhdGVOb2RlUG9vbFJlcXVlc3QSEgoK",
-            "cHJvamVjdF9pZBgBIAEoCRIMCgR6b25lGAIgASgJEhIKCmNsdXN0ZXJfaWQY",
-            "AyABKAkSFAoMbm9kZV9wb29sX2lkGAQgASgJEhQKDG5vZGVfdmVyc2lvbhgF",
-            "IAEoCRISCgppbWFnZV90eXBlGAYgASgJIqoBCh1TZXROb2RlUG9vbEF1dG9z",
-            "Y2FsaW5nUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEgwKBHpvbmUYAiAB",
-            "KAkSEgoKY2x1c3Rlcl9pZBgDIAEoCRIUCgxub2RlX3Bvb2xfaWQYBCABKAkS",
-            "PQoLYXV0b3NjYWxpbmcYBSABKAsyKC5nb29nbGUuY29udGFpbmVyLnYxLk5v",
-            "ZGVQb29sQXV0b3NjYWxpbmciaQoYU2V0TG9nZ2luZ1NlcnZpY2VSZXF1ZXN0",
-            "EhIKCnByb2plY3RfaWQYASABKAkSDAoEem9uZRgCIAEoCRISCgpjbHVzdGVy",
-            "X2lkGAMgASgJEhcKD2xvZ2dpbmdfc2VydmljZRgEIAEoCSJvChtTZXRNb25p",
-            "dG9yaW5nU2VydmljZVJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIMCgR6",
-            "b25lGAIgASgJEhIKCmNsdXN0ZXJfaWQYAyABKAkSGgoSbW9uaXRvcmluZ19z",
-            "ZXJ2aWNlGAQgASgJIogBChZTZXRBZGRvbnNDb25maWdSZXF1ZXN0EhIKCnBy",
-            "b2plY3RfaWQYASABKAkSDAoEem9uZRgCIAEoCRISCgpjbHVzdGVyX2lkGAMg",
-            "ASgJEjgKDWFkZG9uc19jb25maWcYBCABKAsyIS5nb29nbGUuY29udGFpbmVy",
-            "LnYxLkFkZG9uc0NvbmZpZyJeChNTZXRMb2NhdGlvbnNSZXF1ZXN0EhIKCnBy",
-            "b2plY3RfaWQYASABKAkSDAoEem9uZRgCIAEoCRISCgpjbHVzdGVyX2lkGAMg",
-            "ASgJEhEKCWxvY2F0aW9ucxgEIAMoCSJjChNVcGRhdGVNYXN0ZXJSZXF1ZXN0",
-            "EhIKCnByb2plY3RfaWQYASABKAkSDAoEem9uZRgCIAEoCRISCgpjbHVzdGVy",
-            "X2lkGAMgASgJEhYKDm1hc3Rlcl92ZXJzaW9uGAQgASgJIpECChRTZXRNYXN0",
-            "ZXJBdXRoUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEgwKBHpvbmUYAiAB",
-            "KAkSEgoKY2x1c3Rlcl9pZBgDIAEoCRJACgZhY3Rpb24YBCABKA4yMC5nb29n",
-            "bGUuY29udGFpbmVyLnYxLlNldE1hc3RlckF1dGhSZXF1ZXN0LkFjdGlvbhIv",
-            "CgZ1cGRhdGUYBSABKAsyHy5nb29nbGUuY29udGFpbmVyLnYxLk1hc3RlckF1",
-            "dGgiUAoGQWN0aW9uEgsKB1VOS05PV04QABIQCgxTRVRfUEFTU1dPUkQQARIV",
-            "ChFHRU5FUkFURV9QQVNTV09SRBACEhAKDFNFVF9VU0VSTkFNRRADIkwKFERl",
-            "bGV0ZUNsdXN0ZXJSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDAoEem9u",
-            "ZRgCIAEoCRISCgpjbHVzdGVyX2lkGAMgASgJIjcKE0xpc3RDbHVzdGVyc1Jl",
-            "cXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIMCgR6b25lGAIgASgJIl0KFExp",
-            "c3RDbHVzdGVyc1Jlc3BvbnNlEi4KCGNsdXN0ZXJzGAEgAygLMhwuZ29vZ2xl",
-            "LmNvbnRhaW5lci52MS5DbHVzdGVyEhUKDW1pc3Npbmdfem9uZXMYAiADKAki",
-            "TQoTR2V0T3BlcmF0aW9uUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEgwK",
-            "BHpvbmUYAiABKAkSFAoMb3BlcmF0aW9uX2lkGAMgASgJIjkKFUxpc3RPcGVy",
-            "YXRpb25zUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEgwKBHpvbmUYAiAB",
-            "KAkiUAoWQ2FuY2VsT3BlcmF0aW9uUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEg",
-            "ASgJEgwKBHpvbmUYAiABKAkSFAoMb3BlcmF0aW9uX2lkGAMgASgJImMKFkxp",
-            "c3RPcGVyYXRpb25zUmVzcG9uc2USMgoKb3BlcmF0aW9ucxgBIAMoCzIeLmdv",
-            "b2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uEhUKDW1pc3Npbmdfem9uZXMY",
-            "AiADKAkiOgoWR2V0U2VydmVyQ29uZmlnUmVxdWVzdBISCgpwcm9qZWN0X2lk",
-            "GAEgASgJEgwKBHpvbmUYAiABKAkiogEKDFNlcnZlckNvbmZpZxIfChdkZWZh",
-            "dWx0X2NsdXN0ZXJfdmVyc2lvbhgBIAEoCRIbChN2YWxpZF9ub2RlX3ZlcnNp",
-            "b25zGAMgAygJEhoKEmRlZmF1bHRfaW1hZ2VfdHlwZRgEIAEoCRIZChF2YWxp",
-            "ZF9pbWFnZV90eXBlcxgFIAMoCRIdChV2YWxpZF9tYXN0ZXJfdmVyc2lvbnMY",
-            "BiADKAkifwoVQ3JlYXRlTm9kZVBvb2xSZXF1ZXN0EhIKCnByb2plY3RfaWQY",
-            "ASABKAkSDAoEem9uZRgCIAEoCRISCgpjbHVzdGVyX2lkGAMgASgJEjAKCW5v",
-            "ZGVfcG9vbBgEIAEoCzIdLmdvb2dsZS5jb250YWluZXIudjEuTm9kZVBvb2wi",
-            "YwoVRGVsZXRlTm9kZVBvb2xSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkS",
-            "DAoEem9uZRgCIAEoCRISCgpjbHVzdGVyX2lkGAMgASgJEhQKDG5vZGVfcG9v",
-            "bF9pZBgEIAEoCSJMChRMaXN0Tm9kZVBvb2xzUmVxdWVzdBISCgpwcm9qZWN0",
-            "X2lkGAEgASgJEgwKBHpvbmUYAiABKAkSEgoKY2x1c3Rlcl9pZBgDIAEoCSJg",
-            "ChJHZXROb2RlUG9vbFJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIMCgR6",
-            "b25lGAIgASgJEhIKCmNsdXN0ZXJfaWQYAyABKAkSFAoMbm9kZV9wb29sX2lk",
-            "GAQgASgJIvADCghOb2RlUG9vbBIMCgRuYW1lGAEgASgJEi8KBmNvbmZpZxgC",
-            "IAEoCzIfLmdvb2dsZS5jb250YWluZXIudjEuTm9kZUNvbmZpZxIaChJpbml0",
-            "aWFsX25vZGVfY291bnQYAyABKAUSEQoJc2VsZl9saW5rGGQgASgJEg8KB3Zl",
-            "cnNpb24YZSABKAkSGwoTaW5zdGFuY2VfZ3JvdXBfdXJscxhmIAMoCRI0CgZz",
-            "dGF0dXMYZyABKA4yJC5nb29nbGUuY29udGFpbmVyLnYxLk5vZGVQb29sLlN0",
-            "YXR1cxIWCg5zdGF0dXNfbWVzc2FnZRhoIAEoCRI9CgthdXRvc2NhbGluZxgE",
-            "IAEoCzIoLmdvb2dsZS5jb250YWluZXIudjEuTm9kZVBvb2xBdXRvc2NhbGlu",
-            "ZxI3CgptYW5hZ2VtZW50GAUgASgLMiMuZ29vZ2xlLmNvbnRhaW5lci52MS5O",
-            "b2RlTWFuYWdlbWVudCKBAQoGU3RhdHVzEhYKElNUQVRVU19VTlNQRUNJRklF",
-            "RBAAEhAKDFBST1ZJU0lPTklORxABEgsKB1JVTk5JTkcQAhIWChJSVU5OSU5H",
-            "X1dJVEhfRVJST1IQAxIPCgtSRUNPTkNJTElORxAEEgwKCFNUT1BQSU5HEAUS",
-            "CQoFRVJST1IQBiJ9Cg5Ob2RlTWFuYWdlbWVudBIUCgxhdXRvX3VwZ3JhZGUY",
-            "ASABKAgSEwoLYXV0b19yZXBhaXIYAiABKAgSQAoPdXBncmFkZV9vcHRpb25z",
-            "GAogASgLMicuZ29vZ2xlLmNvbnRhaW5lci52MS5BdXRvVXBncmFkZU9wdGlv",
-            "bnMiSgoSQXV0b1VwZ3JhZGVPcHRpb25zEh8KF2F1dG9fdXBncmFkZV9zdGFy",
-            "dF90aW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJIksKEU1haW50ZW5h",
-            "bmNlUG9saWN5EjYKBndpbmRvdxgBIAEoCzImLmdvb2dsZS5jb250YWluZXIu",
-            "djEuTWFpbnRlbmFuY2VXaW5kb3cibgoRTWFpbnRlbmFuY2VXaW5kb3cSTwoY",
-            "ZGFpbHlfbWFpbnRlbmFuY2Vfd2luZG93GAIgASgLMisuZ29vZ2xlLmNvbnRh",
-            "aW5lci52MS5EYWlseU1haW50ZW5hbmNlV2luZG93SABCCAoGcG9saWN5Ij4K",
-            "FkRhaWx5TWFpbnRlbmFuY2VXaW5kb3cSEgoKc3RhcnRfdGltZRgCIAEoCRIQ",
-            "CghkdXJhdGlvbhgDIAEoCSKjAQocU2V0Tm9kZVBvb2xNYW5hZ2VtZW50UmVx",
-            "dWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEgwKBHpvbmUYAiABKAkSEgoKY2x1",
-            "c3Rlcl9pZBgDIAEoCRIUCgxub2RlX3Bvb2xfaWQYBCABKAkSNwoKbWFuYWdl",
-            "bWVudBgFIAEoCzIjLmdvb2dsZS5jb250YWluZXIudjEuTm9kZU1hbmFnZW1l",
-            "bnQieAoWU2V0Tm9kZVBvb2xTaXplUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEg",
-            "ASgJEgwKBHpvbmUYAiABKAkSEgoKY2x1c3Rlcl9pZBgDIAEoCRIUCgxub2Rl",
-            "X3Bvb2xfaWQYBCABKAkSEgoKbm9kZV9jb3VudBgFIAEoBSJsCh5Sb2xsYmFj",
-            "a05vZGVQb29sVXBncmFkZVJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIM",
-            "CgR6b25lGAIgASgJEhIKCmNsdXN0ZXJfaWQYAyABKAkSFAoMbm9kZV9wb29s",
-            "X2lkGAQgASgJIkoKFUxpc3ROb2RlUG9vbHNSZXNwb25zZRIxCgpub2RlX3Bv",
-            "b2xzGAEgAygLMh0uZ29vZ2xlLmNvbnRhaW5lci52MS5Ob2RlUG9vbCJWChNO",
-            "b2RlUG9vbEF1dG9zY2FsaW5nEg8KB2VuYWJsZWQYASABKAgSFgoObWluX25v",
-            "ZGVfY291bnQYAiABKAUSFgoObWF4X25vZGVfY291bnQYAyABKAUi7gEKEFNl",
-            "dExhYmVsc1JlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIMCgR6b25lGAIg",
-            "ASgJEhIKCmNsdXN0ZXJfaWQYAyABKAkSUgoPcmVzb3VyY2VfbGFiZWxzGAQg",
-            "AygLMjkuZ29vZ2xlLmNvbnRhaW5lci52MS5TZXRMYWJlbHNSZXF1ZXN0LlJl",
-            "c291cmNlTGFiZWxzRW50cnkSGQoRbGFiZWxfZmluZ2VycHJpbnQYBSABKAka",
-            "NQoTUmVzb3VyY2VMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBIl0KFFNldExlZ2FjeUFiYWNSZXF1ZXN0EhIKCnByb2plY3Rf",
-            "aWQYASABKAkSDAoEem9uZRgCIAEoCRISCgpjbHVzdGVyX2lkGAMgASgJEg8K",
-            "B2VuYWJsZWQYBCABKAgiTgoWU3RhcnRJUFJvdGF0aW9uUmVxdWVzdBISCgpw",
-            "cm9qZWN0X2lkGAEgASgJEgwKBHpvbmUYAiABKAkSEgoKY2x1c3Rlcl9pZBgD",
-            "IAEoCSJRChlDb21wbGV0ZUlQUm90YXRpb25SZXF1ZXN0EhIKCnByb2plY3Rf",
-            "aWQYASABKAkSDAoEem9uZRgCIAEoCRISCgpjbHVzdGVyX2lkGAMgASgJIkgK",
-            "EUFjY2VsZXJhdG9yQ29uZmlnEhkKEWFjY2VsZXJhdG9yX2NvdW50GAEgASgD",
-            "EhgKEGFjY2VsZXJhdG9yX3R5cGUYAiABKAkiiwEKF1NldE5ldHdvcmtQb2xp",
-            "Y3lSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDAoEem9uZRgCIAEoCRIS",
-            "CgpjbHVzdGVyX2lkGAMgASgJEjoKDm5ldHdvcmtfcG9saWN5GAQgASgLMiIu",
-            "Z29vZ2xlLmNvbnRhaW5lci52MS5OZXR3b3JrUG9saWN5IpcBChtTZXRNYWlu",
-            "dGVuYW5jZVBvbGljeVJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIMCgR6",
-            "b25lGAIgASgJEhIKCmNsdXN0ZXJfaWQYAyABKAkSQgoSbWFpbnRlbmFuY2Vf",
-            "cG9saWN5GAQgASgLMiYuZ29vZ2xlLmNvbnRhaW5lci52MS5NYWludGVuYW5j",
-            "ZVBvbGljeTLjKgoOQ2x1c3Rlck1hbmFnZXISnAEKDExpc3RDbHVzdGVycxIo",
-            "Lmdvb2dsZS5jb250YWluZXIudjEuTGlzdENsdXN0ZXJzUmVxdWVzdBopLmdv",
-            "b2dsZS5jb250YWluZXIudjEuTGlzdENsdXN0ZXJzUmVzcG9uc2UiN4LT5JMC",
-            "MRIvL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9uZX0vY2x1",
-            "c3RlcnMSmAEKCkdldENsdXN0ZXISJi5nb29nbGUuY29udGFpbmVyLnYxLkdl",
-            "dENsdXN0ZXJSZXF1ZXN0GhwuZ29vZ2xlLmNvbnRhaW5lci52MS5DbHVzdGVy",
-            "IkSC0+STAj4SPC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pv",
-            "bmV9L2NsdXN0ZXJzL3tjbHVzdGVyX2lkfRKWAQoNQ3JlYXRlQ2x1c3RlchIp",
-            "Lmdvb2dsZS5jb250YWluZXIudjEuQ3JlYXRlQ2x1c3RlclJlcXVlc3QaHi5n",
-            "b29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiI6gtPkkwI0Ii8vdjEvcHJv",
-            "amVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVyczoBKhKj",
-            "AQoNVXBkYXRlQ2x1c3RlchIpLmdvb2dsZS5jb250YWluZXIudjEuVXBkYXRl",
-            "Q2x1c3RlclJlcXVlc3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlv",
-            "biJHgtPkkwJBGjwvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6",
-            "b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH06ASoSxQEKDlVwZGF0ZU5vZGVQ",
-            "b29sEiouZ29vZ2xlLmNvbnRhaW5lci52MS5VcGRhdGVOb2RlUG9vbFJlcXVl",
-            "c3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiJngtPkkwJhIlwv",
-            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVy",
-            "cy97Y2x1c3Rlcl9pZH0vbm9kZVBvb2xzL3tub2RlX3Bvb2xfaWR9L3VwZGF0",
-            "ZToBKhLaAQoWU2V0Tm9kZVBvb2xBdXRvc2NhbGluZxIyLmdvb2dsZS5jb250",
-            "YWluZXIudjEuU2V0Tm9kZVBvb2xBdXRvc2NhbGluZ1JlcXVlc3QaHi5nb29n",
-            "bGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiJsgtPkkwJmImEvdjEvcHJvamVj",
+            "aWcSEQoJZGlza190eXBlGAwgASgJEhgKEG1pbl9jcHVfcGxhdGZvcm0YDSAB",
+            "KAkaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEi0QEKCk1hc3RlckF1dGgSEAoIdXNlcm5hbWUYASABKAkSEAoI",
+            "cGFzc3dvcmQYAiABKAkSTwoZY2xpZW50X2NlcnRpZmljYXRlX2NvbmZpZxgD",
+            "IAEoCzIsLmdvb2dsZS5jb250YWluZXIudjEuQ2xpZW50Q2VydGlmaWNhdGVD",
+            "b25maWcSHgoWY2x1c3Rlcl9jYV9jZXJ0aWZpY2F0ZRhkIAEoCRIaChJjbGll",
+            "bnRfY2VydGlmaWNhdGUYZSABKAkSEgoKY2xpZW50X2tleRhmIAEoCSI7ChdD",
+            "bGllbnRDZXJ0aWZpY2F0ZUNvbmZpZxIgChhpc3N1ZV9jbGllbnRfY2VydGlm",
+            "aWNhdGUYASABKAgitwIKDEFkZG9uc0NvbmZpZxJDChNodHRwX2xvYWRfYmFs",
+            "YW5jaW5nGAEgASgLMiYuZ29vZ2xlLmNvbnRhaW5lci52MS5IdHRwTG9hZEJh",
+            "bGFuY2luZxJRChpob3Jpem9udGFsX3BvZF9hdXRvc2NhbGluZxgCIAEoCzIt",
+            "Lmdvb2dsZS5jb250YWluZXIudjEuSG9yaXpvbnRhbFBvZEF1dG9zY2FsaW5n",
+            "EkYKFGt1YmVybmV0ZXNfZGFzaGJvYXJkGAMgASgLMiguZ29vZ2xlLmNvbnRh",
+            "aW5lci52MS5LdWJlcm5ldGVzRGFzaGJvYXJkEkcKFW5ldHdvcmtfcG9saWN5",
+            "X2NvbmZpZxgEIAEoCzIoLmdvb2dsZS5jb250YWluZXIudjEuTmV0d29ya1Bv",
+            "bGljeUNvbmZpZyIlChFIdHRwTG9hZEJhbGFuY2luZxIQCghkaXNhYmxlZBgB",
+            "IAEoCCIsChhIb3Jpem9udGFsUG9kQXV0b3NjYWxpbmcSEAoIZGlzYWJsZWQY",
+            "ASABKAgiJwoTS3ViZXJuZXRlc0Rhc2hib2FyZBIQCghkaXNhYmxlZBgBIAEo",
+            "CCInChNOZXR3b3JrUG9saWN5Q29uZmlnEhAKCGRpc2FibGVkGAEgASgIIqgB",
+            "ChRQcml2YXRlQ2x1c3RlckNvbmZpZxIcChRlbmFibGVfcHJpdmF0ZV9ub2Rl",
+            "cxgBIAEoCBIfChdlbmFibGVfcHJpdmF0ZV9lbmRwb2ludBgCIAEoCBIeChZt",
+            "YXN0ZXJfaXB2NF9jaWRyX2Jsb2NrGAMgASgJEhgKEHByaXZhdGVfZW5kcG9p",
+            "bnQYBCABKAkSFwoPcHVibGljX2VuZHBvaW50GAUgASgJIrwBCh5NYXN0ZXJB",
+            "dXRob3JpemVkTmV0d29ya3NDb25maWcSDwoHZW5hYmxlZBgBIAEoCBJSCgtj",
+            "aWRyX2Jsb2NrcxgCIAMoCzI9Lmdvb2dsZS5jb250YWluZXIudjEuTWFzdGVy",
+            "QXV0aG9yaXplZE5ldHdvcmtzQ29uZmlnLkNpZHJCbG9jaxo1CglDaWRyQmxv",
+            "Y2sSFAoMZGlzcGxheV9uYW1lGAEgASgJEhIKCmNpZHJfYmxvY2sYAiABKAki",
+            "HQoKTGVnYWN5QWJhYxIPCgdlbmFibGVkGAEgASgIIpEBCg1OZXR3b3JrUG9s",
+            "aWN5Ej0KCHByb3ZpZGVyGAEgASgOMisuZ29vZ2xlLmNvbnRhaW5lci52MS5O",
+            "ZXR3b3JrUG9saWN5LlByb3ZpZGVyEg8KB2VuYWJsZWQYAiABKAgiMAoIUHJv",
+            "dmlkZXISGAoUUFJPVklERVJfVU5TUEVDSUZJRUQQABIKCgZDQUxJQ08QASLp",
+            "AgoSSVBBbGxvY2F0aW9uUG9saWN5EhYKDnVzZV9pcF9hbGlhc2VzGAEgASgI",
+            "EhkKEWNyZWF0ZV9zdWJuZXR3b3JrGAIgASgIEhcKD3N1Ym5ldHdvcmtfbmFt",
+            "ZRgDIAEoCRIdChFjbHVzdGVyX2lwdjRfY2lkchgEIAEoCUICGAESGgoObm9k",
+            "ZV9pcHY0X2NpZHIYBSABKAlCAhgBEh4KEnNlcnZpY2VzX2lwdjRfY2lkchgG",
+            "IAEoCUICGAESJAocY2x1c3Rlcl9zZWNvbmRhcnlfcmFuZ2VfbmFtZRgHIAEo",
+            "CRIlCh1zZXJ2aWNlc19zZWNvbmRhcnlfcmFuZ2VfbmFtZRgIIAEoCRIfChdj",
+            "bHVzdGVyX2lwdjRfY2lkcl9ibG9jaxgJIAEoCRIcChRub2RlX2lwdjRfY2lk",
+            "cl9ibG9jaxgKIAEoCRIgChhzZXJ2aWNlc19pcHY0X2NpZHJfYmxvY2sYCyAB",
+            "KAki3QwKB0NsdXN0ZXISDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgC",
+            "IAEoCRIaChJpbml0aWFsX25vZGVfY291bnQYAyABKAUSNAoLbm9kZV9jb25m",
+            "aWcYBCABKAsyHy5nb29nbGUuY29udGFpbmVyLnYxLk5vZGVDb25maWcSNAoL",
+            "bWFzdGVyX2F1dGgYBSABKAsyHy5nb29nbGUuY29udGFpbmVyLnYxLk1hc3Rl",
+            "ckF1dGgSFwoPbG9nZ2luZ19zZXJ2aWNlGAYgASgJEhoKEm1vbml0b3Jpbmdf",
+            "c2VydmljZRgHIAEoCRIPCgduZXR3b3JrGAggASgJEhkKEWNsdXN0ZXJfaXB2",
+            "NF9jaWRyGAkgASgJEjgKDWFkZG9uc19jb25maWcYCiABKAsyIS5nb29nbGUu",
+            "Y29udGFpbmVyLnYxLkFkZG9uc0NvbmZpZxISCgpzdWJuZXR3b3JrGAsgASgJ",
+            "EjEKCm5vZGVfcG9vbHMYDCADKAsyHS5nb29nbGUuY29udGFpbmVyLnYxLk5v",
+            "ZGVQb29sEhEKCWxvY2F0aW9ucxgNIAMoCRIfChdlbmFibGVfa3ViZXJuZXRl",
+            "c19hbHBoYRgOIAEoCBJJCg9yZXNvdXJjZV9sYWJlbHMYDyADKAsyMC5nb29n",
+            "bGUuY29udGFpbmVyLnYxLkNsdXN0ZXIuUmVzb3VyY2VMYWJlbHNFbnRyeRIZ",
+            "ChFsYWJlbF9maW5nZXJwcmludBgQIAEoCRI0CgtsZWdhY3lfYWJhYxgSIAEo",
+            "CzIfLmdvb2dsZS5jb250YWluZXIudjEuTGVnYWN5QWJhYxI6Cg5uZXR3b3Jr",
+            "X3BvbGljeRgTIAEoCzIiLmdvb2dsZS5jb250YWluZXIudjEuTmV0d29ya1Bv",
+            "bGljeRJFChRpcF9hbGxvY2F0aW9uX3BvbGljeRgUIAEoCzInLmdvb2dsZS5j",
+            "b250YWluZXIudjEuSVBBbGxvY2F0aW9uUG9saWN5El4KIW1hc3Rlcl9hdXRo",
+            "b3JpemVkX25ldHdvcmtzX2NvbmZpZxgWIAEoCzIzLmdvb2dsZS5jb250YWlu",
+            "ZXIudjEuTWFzdGVyQXV0aG9yaXplZE5ldHdvcmtzQ29uZmlnEkIKEm1haW50",
+            "ZW5hbmNlX3BvbGljeRgXIAEoCzImLmdvb2dsZS5jb250YWluZXIudjEuTWFp",
+            "bnRlbmFuY2VQb2xpY3kSOgoObmV0d29ya19jb25maWcYGyABKAsyIi5nb29n",
+            "bGUuY29udGFpbmVyLnYxLk5ldHdvcmtDb25maWcSSQoWcHJpdmF0ZV9jbHVz",
+            "dGVyX2NvbmZpZxglIAEoCzIpLmdvb2dsZS5jb250YWluZXIudjEuUHJpdmF0",
+            "ZUNsdXN0ZXJDb25maWcSEQoJc2VsZl9saW5rGGQgASgJEhAKBHpvbmUYZSAB",
+            "KAlCAhgBEhAKCGVuZHBvaW50GGYgASgJEh8KF2luaXRpYWxfY2x1c3Rlcl92",
+            "ZXJzaW9uGGcgASgJEh4KFmN1cnJlbnRfbWFzdGVyX3ZlcnNpb24YaCABKAkS",
+            "IAoUY3VycmVudF9ub2RlX3ZlcnNpb24YaSABKAlCAhgBEhMKC2NyZWF0ZV90",
+            "aW1lGGogASgJEjMKBnN0YXR1cxhrIAEoDjIjLmdvb2dsZS5jb250YWluZXIu",
+            "djEuQ2x1c3Rlci5TdGF0dXMSFgoOc3RhdHVzX21lc3NhZ2UYbCABKAkSGwoT",
+            "bm9kZV9pcHY0X2NpZHJfc2l6ZRhtIAEoBRIaChJzZXJ2aWNlc19pcHY0X2Np",
+            "ZHIYbiABKAkSHwoTaW5zdGFuY2VfZ3JvdXBfdXJscxhvIAMoCUICGAESGgoS",
+            "Y3VycmVudF9ub2RlX2NvdW50GHAgASgFEhMKC2V4cGlyZV90aW1lGHEgASgJ",
+            "EhAKCGxvY2F0aW9uGHIgASgJGjUKE1Jlc291cmNlTGFiZWxzRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJ3CgZTdGF0dXMSFgoSU1RB",
+            "VFVTX1VOU1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESCwoHUlVOTklO",
+            "RxACEg8KC1JFQ09OQ0lMSU5HEAMSDAoIU1RPUFBJTkcQBBIJCgVFUlJPUhAF",
+            "EgwKCERFR1JBREVEEAYiwQMKDUNsdXN0ZXJVcGRhdGUSHAoUZGVzaXJlZF9u",
+            "b2RlX3ZlcnNpb24YBCABKAkSIgoaZGVzaXJlZF9tb25pdG9yaW5nX3NlcnZp",
+            "Y2UYBSABKAkSQAoVZGVzaXJlZF9hZGRvbnNfY29uZmlnGAYgASgLMiEuZ29v",
+            "Z2xlLmNvbnRhaW5lci52MS5BZGRvbnNDb25maWcSHAoUZGVzaXJlZF9ub2Rl",
+            "X3Bvb2xfaWQYByABKAkSGgoSZGVzaXJlZF9pbWFnZV90eXBlGAggASgJEk8K",
+            "HWRlc2lyZWRfbm9kZV9wb29sX2F1dG9zY2FsaW5nGAkgASgLMiguZ29vZ2xl",
+            "LmNvbnRhaW5lci52MS5Ob2RlUG9vbEF1dG9zY2FsaW5nEhkKEWRlc2lyZWRf",
+            "bG9jYXRpb25zGAogAygJEmYKKWRlc2lyZWRfbWFzdGVyX2F1dGhvcml6ZWRf",
+            "bmV0d29ya3NfY29uZmlnGAwgASgLMjMuZ29vZ2xlLmNvbnRhaW5lci52MS5N",
+            "YXN0ZXJBdXRob3JpemVkTmV0d29ya3NDb25maWcSHgoWZGVzaXJlZF9tYXN0",
+            "ZXJfdmVyc2lvbhhkIAEoCSL7BQoJT3BlcmF0aW9uEgwKBG5hbWUYASABKAkS",
+            "EAoEem9uZRgCIAEoCUICGAESOwoOb3BlcmF0aW9uX3R5cGUYAyABKA4yIy5n",
+            "b29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbi5UeXBlEjUKBnN0YXR1cxgE",
+            "IAEoDjIlLmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uLlN0YXR1cxIO",
+            "CgZkZXRhaWwYCCABKAkSFgoOc3RhdHVzX21lc3NhZ2UYBSABKAkSEQoJc2Vs",
+            "Zl9saW5rGAYgASgJEhMKC3RhcmdldF9saW5rGAcgASgJEhAKCGxvY2F0aW9u",
+            "GAkgASgJEhIKCnN0YXJ0X3RpbWUYCiABKAkSEAoIZW5kX3RpbWUYCyABKAki",
+            "UgoGU3RhdHVzEhYKElNUQVRVU19VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQ",
+            "ARILCgdSVU5OSU5HEAISCAoERE9ORRADEgwKCEFCT1JUSU5HEAQi/QIKBFR5",
+            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEhIKDkNSRUFURV9DTFVTVEVSEAES",
+            "EgoOREVMRVRFX0NMVVNURVIQAhISCg5VUEdSQURFX01BU1RFUhADEhEKDVVQ",
+            "R1JBREVfTk9ERVMQBBISCg5SRVBBSVJfQ0xVU1RFUhAFEhIKDlVQREFURV9D",
+            "TFVTVEVSEAYSFAoQQ1JFQVRFX05PREVfUE9PTBAHEhQKEERFTEVURV9OT0RF",
+            "X1BPT0wQCBIcChhTRVRfTk9ERV9QT09MX01BTkFHRU1FTlQQCRIVChFBVVRP",
+            "X1JFUEFJUl9OT0RFUxAKEhYKEkFVVE9fVVBHUkFERV9OT0RFUxALEg4KClNF",
+            "VF9MQUJFTFMQDBITCg9TRVRfTUFTVEVSX0FVVEgQDRIWChJTRVRfTk9ERV9Q",
+            "T09MX1NJWkUQDhIWChJTRVRfTkVUV09SS19QT0xJQ1kQDxIaChZTRVRfTUFJ",
+            "TlRFTkFOQ0VfUE9MSUNZEBAifwoUQ3JlYXRlQ2x1c3RlclJlcXVlc3QSFgoK",
+            "cHJvamVjdF9pZBgBIAEoCUICGAESEAoEem9uZRgCIAEoCUICGAESLQoHY2x1",
+            "c3RlchgDIAEoCzIcLmdvb2dsZS5jb250YWluZXIudjEuQ2x1c3RlchIOCgZw",
+            "YXJlbnQYBSABKAkiYwoRR2V0Q2x1c3RlclJlcXVlc3QSFgoKcHJvamVjdF9p",
+            "ZBgBIAEoCUICGAESEAoEem9uZRgCIAEoCUICGAESFgoKY2x1c3Rlcl9pZBgD",
+            "IAEoCUICGAESDAoEbmFtZRgFIAEoCSKaAQoUVXBkYXRlQ2x1c3RlclJlcXVl",
+            "c3QSFgoKcHJvamVjdF9pZBgBIAEoCUICGAESEAoEem9uZRgCIAEoCUICGAES",
+            "FgoKY2x1c3Rlcl9pZBgDIAEoCUICGAESMgoGdXBkYXRlGAQgASgLMiIuZ29v",
+            "Z2xlLmNvbnRhaW5lci52MS5DbHVzdGVyVXBkYXRlEgwKBG5hbWUYBSABKAki",
+            "qwEKFVVwZGF0ZU5vZGVQb29sUmVxdWVzdBIWCgpwcm9qZWN0X2lkGAEgASgJ",
+            "QgIYARIQCgR6b25lGAIgASgJQgIYARIWCgpjbHVzdGVyX2lkGAMgASgJQgIY",
+            "ARIYCgxub2RlX3Bvb2xfaWQYBCABKAlCAhgBEhQKDG5vZGVfdmVyc2lvbhgF",
+            "IAEoCRISCgppbWFnZV90eXBlGAYgASgJEgwKBG5hbWUYCCABKAkiyAEKHVNl",
+            "dE5vZGVQb29sQXV0b3NjYWxpbmdSZXF1ZXN0EhYKCnByb2plY3RfaWQYASAB",
+            "KAlCAhgBEhAKBHpvbmUYAiABKAlCAhgBEhYKCmNsdXN0ZXJfaWQYAyABKAlC",
+            "AhgBEhgKDG5vZGVfcG9vbF9pZBgEIAEoCUICGAESPQoLYXV0b3NjYWxpbmcY",
+            "BSABKAsyKC5nb29nbGUuY29udGFpbmVyLnYxLk5vZGVQb29sQXV0b3NjYWxp",
+            "bmcSDAoEbmFtZRgGIAEoCSJ/ChhTZXRMb2dnaW5nU2VydmljZVJlcXVlc3QS",
+            "FgoKcHJvamVjdF9pZBgBIAEoCUICGAESDAoEem9uZRgCIAEoCRIWCgpjbHVz",
+            "dGVyX2lkGAMgASgJQgIYARIXCg9sb2dnaW5nX3NlcnZpY2UYBCABKAkSDAoE",
+            "bmFtZRgFIAEoCSKJAQobU2V0TW9uaXRvcmluZ1NlcnZpY2VSZXF1ZXN0EhYK",
+            "CnByb2plY3RfaWQYASABKAlCAhgBEhAKBHpvbmUYAiABKAlCAhgBEhYKCmNs",
+            "dXN0ZXJfaWQYAyABKAlCAhgBEhoKEm1vbml0b3Jpbmdfc2VydmljZRgEIAEo",
+            "CRIMCgRuYW1lGAYgASgJIqIBChZTZXRBZGRvbnNDb25maWdSZXF1ZXN0EhYK",
+            "CnByb2plY3RfaWQYASABKAlCAhgBEhAKBHpvbmUYAiABKAlCAhgBEhYKCmNs",
+            "dXN0ZXJfaWQYAyABKAlCAhgBEjgKDWFkZG9uc19jb25maWcYBCABKAsyIS5n",
+            "b29nbGUuY29udGFpbmVyLnYxLkFkZG9uc0NvbmZpZxIMCgRuYW1lGAYgASgJ",
+            "IngKE1NldExvY2F0aW9uc1JlcXVlc3QSFgoKcHJvamVjdF9pZBgBIAEoCUIC",
+            "GAESEAoEem9uZRgCIAEoCUICGAESFgoKY2x1c3Rlcl9pZBgDIAEoCUICGAES",
+            "EQoJbG9jYXRpb25zGAQgAygJEgwKBG5hbWUYBiABKAkifQoTVXBkYXRlTWFz",
+            "dGVyUmVxdWVzdBIWCgpwcm9qZWN0X2lkGAEgASgJQgIYARIQCgR6b25lGAIg",
+            "ASgJQgIYARIWCgpjbHVzdGVyX2lkGAMgASgJQgIYARIWCg5tYXN0ZXJfdmVy",
+            "c2lvbhgEIAEoCRIMCgRuYW1lGAcgASgJIqsCChRTZXRNYXN0ZXJBdXRoUmVx",
+            "dWVzdBIWCgpwcm9qZWN0X2lkGAEgASgJQgIYARIQCgR6b25lGAIgASgJQgIY",
+            "ARIWCgpjbHVzdGVyX2lkGAMgASgJQgIYARJACgZhY3Rpb24YBCABKA4yMC5n",
+            "b29nbGUuY29udGFpbmVyLnYxLlNldE1hc3RlckF1dGhSZXF1ZXN0LkFjdGlv",
+            "bhIvCgZ1cGRhdGUYBSABKAsyHy5nb29nbGUuY29udGFpbmVyLnYxLk1hc3Rl",
+            "ckF1dGgSDAoEbmFtZRgHIAEoCSJQCgZBY3Rpb24SCwoHVU5LTk9XThAAEhAK",
+            "DFNFVF9QQVNTV09SRBABEhUKEUdFTkVSQVRFX1BBU1NXT1JEEAISEAoMU0VU",
+            "X1VTRVJOQU1FEAMiZgoURGVsZXRlQ2x1c3RlclJlcXVlc3QSFgoKcHJvamVj",
+            "dF9pZBgBIAEoCUICGAESEAoEem9uZRgCIAEoCUICGAESFgoKY2x1c3Rlcl9p",
+            "ZBgDIAEoCUICGAESDAoEbmFtZRgEIAEoCSJPChNMaXN0Q2x1c3RlcnNSZXF1",
+            "ZXN0EhYKCnByb2plY3RfaWQYASABKAlCAhgBEhAKBHpvbmUYAiABKAlCAhgB",
+            "Eg4KBnBhcmVudBgEIAEoCSJdChRMaXN0Q2x1c3RlcnNSZXNwb25zZRIuCghj",
+            "bHVzdGVycxgBIAMoCzIcLmdvb2dsZS5jb250YWluZXIudjEuQ2x1c3RlchIV",
+            "Cg1taXNzaW5nX3pvbmVzGAIgAygJImcKE0dldE9wZXJhdGlvblJlcXVlc3QS",
+            "FgoKcHJvamVjdF9pZBgBIAEoCUICGAESEAoEem9uZRgCIAEoCUICGAESGAoM",
+            "b3BlcmF0aW9uX2lkGAMgASgJQgIYARIMCgRuYW1lGAUgASgJIlEKFUxpc3RP",
+            "cGVyYXRpb25zUmVxdWVzdBIWCgpwcm9qZWN0X2lkGAEgASgJQgIYARIQCgR6",
+            "b25lGAIgASgJQgIYARIOCgZwYXJlbnQYBCABKAkiagoWQ2FuY2VsT3BlcmF0",
+            "aW9uUmVxdWVzdBIWCgpwcm9qZWN0X2lkGAEgASgJQgIYARIQCgR6b25lGAIg",
+            "ASgJQgIYARIYCgxvcGVyYXRpb25faWQYAyABKAlCAhgBEgwKBG5hbWUYBCAB",
+            "KAkiYwoWTGlzdE9wZXJhdGlvbnNSZXNwb25zZRIyCgpvcGVyYXRpb25zGAEg",
+            "AygLMh4uZ29vZ2xlLmNvbnRhaW5lci52MS5PcGVyYXRpb24SFQoNbWlzc2lu",
+            "Z196b25lcxgCIAMoCSJQChZHZXRTZXJ2ZXJDb25maWdSZXF1ZXN0EhYKCnBy",
+            "b2plY3RfaWQYASABKAlCAhgBEhAKBHpvbmUYAiABKAlCAhgBEgwKBG5hbWUY",
+            "BCABKAkiogEKDFNlcnZlckNvbmZpZxIfChdkZWZhdWx0X2NsdXN0ZXJfdmVy",
+            "c2lvbhgBIAEoCRIbChN2YWxpZF9ub2RlX3ZlcnNpb25zGAMgAygJEhoKEmRl",
+            "ZmF1bHRfaW1hZ2VfdHlwZRgEIAEoCRIZChF2YWxpZF9pbWFnZV90eXBlcxgF",
+            "IAMoCRIdChV2YWxpZF9tYXN0ZXJfdmVyc2lvbnMYBiADKAkimwEKFUNyZWF0",
+            "ZU5vZGVQb29sUmVxdWVzdBIWCgpwcm9qZWN0X2lkGAEgASgJQgIYARIQCgR6",
+            "b25lGAIgASgJQgIYARIWCgpjbHVzdGVyX2lkGAMgASgJQgIYARIwCglub2Rl",
+            "X3Bvb2wYBCABKAsyHS5nb29nbGUuY29udGFpbmVyLnYxLk5vZGVQb29sEg4K",
+            "BnBhcmVudBgGIAEoCSKBAQoVRGVsZXRlTm9kZVBvb2xSZXF1ZXN0EhYKCnBy",
+            "b2plY3RfaWQYASABKAlCAhgBEhAKBHpvbmUYAiABKAlCAhgBEhYKCmNsdXN0",
+            "ZXJfaWQYAyABKAlCAhgBEhgKDG5vZGVfcG9vbF9pZBgEIAEoCUICGAESDAoE",
+            "bmFtZRgGIAEoCSJoChRMaXN0Tm9kZVBvb2xzUmVxdWVzdBIWCgpwcm9qZWN0",
+            "X2lkGAEgASgJQgIYARIQCgR6b25lGAIgASgJQgIYARIWCgpjbHVzdGVyX2lk",
+            "GAMgASgJQgIYARIOCgZwYXJlbnQYBSABKAkifgoSR2V0Tm9kZVBvb2xSZXF1",
+            "ZXN0EhYKCnByb2plY3RfaWQYASABKAlCAhgBEhAKBHpvbmUYAiABKAlCAhgB",
+            "EhYKCmNsdXN0ZXJfaWQYAyABKAlCAhgBEhgKDG5vZGVfcG9vbF9pZBgEIAEo",
+            "CUICGAESDAoEbmFtZRgGIAEoCSLwAwoITm9kZVBvb2wSDAoEbmFtZRgBIAEo",
+            "CRIvCgZjb25maWcYAiABKAsyHy5nb29nbGUuY29udGFpbmVyLnYxLk5vZGVD",
+            "b25maWcSGgoSaW5pdGlhbF9ub2RlX2NvdW50GAMgASgFEhEKCXNlbGZfbGlu",
+            "axhkIAEoCRIPCgd2ZXJzaW9uGGUgASgJEhsKE2luc3RhbmNlX2dyb3VwX3Vy",
+            "bHMYZiADKAkSNAoGc3RhdHVzGGcgASgOMiQuZ29vZ2xlLmNvbnRhaW5lci52",
+            "MS5Ob2RlUG9vbC5TdGF0dXMSFgoOc3RhdHVzX21lc3NhZ2UYaCABKAkSPQoL",
+            "YXV0b3NjYWxpbmcYBCABKAsyKC5nb29nbGUuY29udGFpbmVyLnYxLk5vZGVQ",
+            "b29sQXV0b3NjYWxpbmcSNwoKbWFuYWdlbWVudBgFIAEoCzIjLmdvb2dsZS5j",
+            "b250YWluZXIudjEuTm9kZU1hbmFnZW1lbnQigQEKBlN0YXR1cxIWChJTVEFU",
+            "VVNfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARILCgdSVU5OSU5H",
+            "EAISFgoSUlVOTklOR19XSVRIX0VSUk9SEAMSDwoLUkVDT05DSUxJTkcQBBIM",
+            "CghTVE9QUElORxAFEgkKBUVSUk9SEAYifQoOTm9kZU1hbmFnZW1lbnQSFAoM",
+            "YXV0b191cGdyYWRlGAEgASgIEhMKC2F1dG9fcmVwYWlyGAIgASgIEkAKD3Vw",
+            "Z3JhZGVfb3B0aW9ucxgKIAEoCzInLmdvb2dsZS5jb250YWluZXIudjEuQXV0",
+            "b1VwZ3JhZGVPcHRpb25zIkoKEkF1dG9VcGdyYWRlT3B0aW9ucxIfChdhdXRv",
+            "X3VwZ3JhZGVfc3RhcnRfdGltZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEo",
+            "CSJLChFNYWludGVuYW5jZVBvbGljeRI2CgZ3aW5kb3cYASABKAsyJi5nb29n",
+            "bGUuY29udGFpbmVyLnYxLk1haW50ZW5hbmNlV2luZG93Im4KEU1haW50ZW5h",
+            "bmNlV2luZG93Ek8KGGRhaWx5X21haW50ZW5hbmNlX3dpbmRvdxgCIAEoCzIr",
+            "Lmdvb2dsZS5jb250YWluZXIudjEuRGFpbHlNYWludGVuYW5jZVdpbmRvd0gA",
+            "QggKBnBvbGljeSI+ChZEYWlseU1haW50ZW5hbmNlV2luZG93EhIKCnN0YXJ0",
+            "X3RpbWUYAiABKAkSEAoIZHVyYXRpb24YAyABKAkiwQEKHFNldE5vZGVQb29s",
+            "TWFuYWdlbWVudFJlcXVlc3QSFgoKcHJvamVjdF9pZBgBIAEoCUICGAESEAoE",
+            "em9uZRgCIAEoCUICGAESFgoKY2x1c3Rlcl9pZBgDIAEoCUICGAESGAoMbm9k",
+            "ZV9wb29sX2lkGAQgASgJQgIYARI3CgptYW5hZ2VtZW50GAUgASgLMiMuZ29v",
+            "Z2xlLmNvbnRhaW5lci52MS5Ob2RlTWFuYWdlbWVudBIMCgRuYW1lGAcgASgJ",
+            "IpYBChZTZXROb2RlUG9vbFNpemVSZXF1ZXN0EhYKCnByb2plY3RfaWQYASAB",
+            "KAlCAhgBEhAKBHpvbmUYAiABKAlCAhgBEhYKCmNsdXN0ZXJfaWQYAyABKAlC",
+            "AhgBEhgKDG5vZGVfcG9vbF9pZBgEIAEoCUICGAESEgoKbm9kZV9jb3VudBgF",
+            "IAEoBRIMCgRuYW1lGAcgASgJIooBCh5Sb2xsYmFja05vZGVQb29sVXBncmFk",
+            "ZVJlcXVlc3QSFgoKcHJvamVjdF9pZBgBIAEoCUICGAESEAoEem9uZRgCIAEo",
+            "CUICGAESFgoKY2x1c3Rlcl9pZBgDIAEoCUICGAESGAoMbm9kZV9wb29sX2lk",
+            "GAQgASgJQgIYARIMCgRuYW1lGAYgASgJIkoKFUxpc3ROb2RlUG9vbHNSZXNw",
+            "b25zZRIxCgpub2RlX3Bvb2xzGAEgAygLMh0uZ29vZ2xlLmNvbnRhaW5lci52",
+            "MS5Ob2RlUG9vbCJWChNOb2RlUG9vbEF1dG9zY2FsaW5nEg8KB2VuYWJsZWQY",
+            "ASABKAgSFgoObWluX25vZGVfY291bnQYAiABKAUSFgoObWF4X25vZGVfY291",
+            "bnQYAyABKAUiiAIKEFNldExhYmVsc1JlcXVlc3QSFgoKcHJvamVjdF9pZBgB",
+            "IAEoCUICGAESEAoEem9uZRgCIAEoCUICGAESFgoKY2x1c3Rlcl9pZBgDIAEo",
+            "CUICGAESUgoPcmVzb3VyY2VfbGFiZWxzGAQgAygLMjkuZ29vZ2xlLmNvbnRh",
+            "aW5lci52MS5TZXRMYWJlbHNSZXF1ZXN0LlJlc291cmNlTGFiZWxzRW50cnkS",
+            "GQoRbGFiZWxfZmluZ2VycHJpbnQYBSABKAkSDAoEbmFtZRgHIAEoCRo1ChNS",
+            "ZXNvdXJjZUxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEidwoUU2V0TGVnYWN5QWJhY1JlcXVlc3QSFgoKcHJvamVjdF9pZBgB",
+            "IAEoCUICGAESEAoEem9uZRgCIAEoCUICGAESFgoKY2x1c3Rlcl9pZBgDIAEo",
+            "CUICGAESDwoHZW5hYmxlZBgEIAEoCBIMCgRuYW1lGAYgASgJIoQBChZTdGFy",
+            "dElQUm90YXRpb25SZXF1ZXN0EhYKCnByb2plY3RfaWQYASABKAlCAhgBEhAK",
+            "BHpvbmUYAiABKAlCAhgBEhYKCmNsdXN0ZXJfaWQYAyABKAlCAhgBEgwKBG5h",
+            "bWUYBiABKAkSGgoScm90YXRlX2NyZWRlbnRpYWxzGAcgASgIImsKGUNvbXBs",
+            "ZXRlSVBSb3RhdGlvblJlcXVlc3QSFgoKcHJvamVjdF9pZBgBIAEoCUICGAES",
+            "EAoEem9uZRgCIAEoCUICGAESFgoKY2x1c3Rlcl9pZBgDIAEoCUICGAESDAoE",
+            "bmFtZRgHIAEoCSJIChFBY2NlbGVyYXRvckNvbmZpZxIZChFhY2NlbGVyYXRv",
+            "cl9jb3VudBgBIAEoAxIYChBhY2NlbGVyYXRvcl90eXBlGAIgASgJIqUBChdT",
+            "ZXROZXR3b3JrUG9saWN5UmVxdWVzdBIWCgpwcm9qZWN0X2lkGAEgASgJQgIY",
+            "ARIQCgR6b25lGAIgASgJQgIYARIWCgpjbHVzdGVyX2lkGAMgASgJQgIYARI6",
+            "Cg5uZXR3b3JrX3BvbGljeRgEIAEoCzIiLmdvb2dsZS5jb250YWluZXIudjEu",
+            "TmV0d29ya1BvbGljeRIMCgRuYW1lGAYgASgJIqUBChtTZXRNYWludGVuYW5j",
+            "ZVBvbGljeVJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIMCgR6b25lGAIg",
+            "ASgJEhIKCmNsdXN0ZXJfaWQYAyABKAkSQgoSbWFpbnRlbmFuY2VfcG9saWN5",
+            "GAQgASgLMiYuZ29vZ2xlLmNvbnRhaW5lci52MS5NYWludGVuYW5jZVBvbGlj",
+            "eRIMCgRuYW1lGAUgASgJIjQKDU5ldHdvcmtDb25maWcSDwoHbmV0d29yaxgB",
+            "IAEoCRISCgpzdWJuZXR3b3JrGAIgASgJMss5Cg5DbHVzdGVyTWFuYWdlchLM",
+            "AQoMTGlzdENsdXN0ZXJzEiguZ29vZ2xlLmNvbnRhaW5lci52MS5MaXN0Q2x1",
+            "c3RlcnNSZXF1ZXN0GikuZ29vZ2xlLmNvbnRhaW5lci52MS5MaXN0Q2x1c3Rl",
+            "cnNSZXNwb25zZSJngtPkkwJhEiwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9jbHVzdGVyc1oxEi8vdjEvcHJvamVjdHMve3Byb2plY3Rf",
+            "aWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycxLIAQoKR2V0Q2x1c3RlchImLmdv",
+            "b2dsZS5jb250YWluZXIudjEuR2V0Q2x1c3RlclJlcXVlc3QaHC5nb29nbGUu",
+            "Y29udGFpbmVyLnYxLkNsdXN0ZXIidILT5JMCbhIsL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovY2x1c3RlcnMvKn1aPhI8L3YxL3Byb2plY3Rz",
+            "L3twcm9qZWN0X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJf",
+            "aWR9EskBCg1DcmVhdGVDbHVzdGVyEikuZ29vZ2xlLmNvbnRhaW5lci52MS5D",
+            "cmVhdGVDbHVzdGVyUmVxdWVzdBoeLmdvb2dsZS5jb250YWluZXIudjEuT3Bl",
+            "cmF0aW9uIm2C0+STAmciLC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyp9L2NsdXN0ZXJzOgEqWjQiLy92MS9wcm9qZWN0cy97cHJvamVjdF9p",
+            "ZH0vem9uZXMve3pvbmV9L2NsdXN0ZXJzOgEqEtYBCg1VcGRhdGVDbHVzdGVy",
+            "EikuZ29vZ2xlLmNvbnRhaW5lci52MS5VcGRhdGVDbHVzdGVyUmVxdWVzdBoe",
+            "Lmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uInqC0+STAnQaLC92MS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyp9OgEqWkEa",
+            "PC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L2NsdXN0",
+            "ZXJzL3tjbHVzdGVyX2lkfToBKhKGAgoOVXBkYXRlTm9kZVBvb2wSKi5nb29n",
+            "bGUuY29udGFpbmVyLnYxLlVwZGF0ZU5vZGVQb29sUmVxdWVzdBoeLmdvb2ds",
+            "ZS5jb250YWluZXIudjEuT3BlcmF0aW9uIqcBgtPkkwKgARo4L3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY2x1c3RlcnMvKi9ub2RlUG9vbHMv",
+            "Kn06ASpaYSJcL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9u",
+            "ZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L25vZGVQb29scy97bm9kZV9wb29s",
+            "X2lkfS91cGRhdGU6ASoSqgIKFlNldE5vZGVQb29sQXV0b3NjYWxpbmcSMi5n",
+            "b29nbGUuY29udGFpbmVyLnYxLlNldE5vZGVQb29sQXV0b3NjYWxpbmdSZXF1",
+            "ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52MS5PcGVyYXRpb24iuwGC0+STArQB",
+            "IkcvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVycy8q",
+            "L25vZGVQb29scy8qfTpzZXRBdXRvc2NhbGluZzoBKlpmImEvdjEvcHJvamVj",
             "dHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rl",
             "cl9pZH0vbm9kZVBvb2xzL3tub2RlX3Bvb2xfaWR9L2F1dG9zY2FsaW5nOgEq",
-            "ErMBChFTZXRMb2dnaW5nU2VydmljZRItLmdvb2dsZS5jb250YWluZXIudjEu",
+            "EvMBChFTZXRMb2dnaW5nU2VydmljZRItLmdvb2dsZS5jb250YWluZXIudjEu",
             "U2V0TG9nZ2luZ1NlcnZpY2VSZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52",
-            "MS5PcGVyYXRpb24iT4LT5JMCSSJEL3YxL3Byb2plY3RzL3twcm9qZWN0X2lk",
-            "fS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L2xvZ2dpbmc6",
-            "ASoSvAEKFFNldE1vbml0b3JpbmdTZXJ2aWNlEjAuZ29vZ2xlLmNvbnRhaW5l",
-            "ci52MS5TZXRNb25pdG9yaW5nU2VydmljZVJlcXVlc3QaHi5nb29nbGUuY29u",
-            "dGFpbmVyLnYxLk9wZXJhdGlvbiJSgtPkkwJMIkcvdjEvcHJvamVjdHMve3By",
-            "b2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH0v",
-            "bW9uaXRvcmluZzoBKhKuAQoPU2V0QWRkb25zQ29uZmlnEisuZ29vZ2xlLmNv",
-            "bnRhaW5lci52MS5TZXRBZGRvbnNDb25maWdSZXF1ZXN0Gh4uZ29vZ2xlLmNv",
-            "bnRhaW5lci52MS5PcGVyYXRpb24iToLT5JMCSCJDL3YxL3Byb2plY3RzL3tw",
-            "cm9qZWN0X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9",
-            "L2FkZG9uczoBKhKrAQoMU2V0TG9jYXRpb25zEiguZ29vZ2xlLmNvbnRhaW5l",
-            "ci52MS5TZXRMb2NhdGlvbnNSZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52",
-            "MS5PcGVyYXRpb24iUYLT5JMCSyJGL3YxL3Byb2plY3RzL3twcm9qZWN0X2lk",
-            "fS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L2xvY2F0aW9u",
-            "czoBKhKoAQoMVXBkYXRlTWFzdGVyEiguZ29vZ2xlLmNvbnRhaW5lci52MS5V",
-            "cGRhdGVNYXN0ZXJSZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52MS5PcGVy",
-            "YXRpb24iToLT5JMCSCJDL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96b25l",
-            "cy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L21hc3RlcjoBKhKxAQoN",
-            "U2V0TWFzdGVyQXV0aBIpLmdvb2dsZS5jb250YWluZXIudjEuU2V0TWFzdGVy",
-            "QXV0aFJlcXVlc3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiJV",
-            "gtPkkwJPIkovdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25l",
-            "fS9jbHVzdGVycy97Y2x1c3Rlcl9pZH06c2V0TWFzdGVyQXV0aDoBKhKgAQoN",
-            "RGVsZXRlQ2x1c3RlchIpLmdvb2dsZS5jb250YWluZXIudjEuRGVsZXRlQ2x1",
-            "c3RlclJlcXVlc3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiJE",
-            "gtPkkwI+KjwvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25l",
-            "fS9jbHVzdGVycy97Y2x1c3Rlcl9pZH0SpAEKDkxpc3RPcGVyYXRpb25zEiou",
-            "Z29vZ2xlLmNvbnRhaW5lci52MS5MaXN0T3BlcmF0aW9uc1JlcXVlc3QaKy5n",
-            "b29nbGUuY29udGFpbmVyLnYxLkxpc3RPcGVyYXRpb25zUmVzcG9uc2UiOYLT",
-            "5JMCMxIxL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9uZX0v",
-            "b3BlcmF0aW9ucxKiAQoMR2V0T3BlcmF0aW9uEiguZ29vZ2xlLmNvbnRhaW5l",
-            "ci52MS5HZXRPcGVyYXRpb25SZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52",
-            "MS5PcGVyYXRpb24iSILT5JMCQhJAL3YxL3Byb2plY3RzL3twcm9qZWN0X2lk",
-            "fS96b25lcy97em9uZX0vb3BlcmF0aW9ucy97b3BlcmF0aW9uX2lkfRKqAQoP",
-            "Q2FuY2VsT3BlcmF0aW9uEisuZ29vZ2xlLmNvbnRhaW5lci52MS5DYW5jZWxP",
-            "cGVyYXRpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IlKC0+ST",
-            "AkwiRy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L29w",
-            "ZXJhdGlvbnMve29wZXJhdGlvbl9pZH06Y2FuY2VsOgEqEp4BCg9HZXRTZXJ2",
-            "ZXJDb25maWcSKy5nb29nbGUuY29udGFpbmVyLnYxLkdldFNlcnZlckNvbmZp",
-            "Z1JlcXVlc3QaIS5nb29nbGUuY29udGFpbmVyLnYxLlNlcnZlckNvbmZpZyI7",
-            "gtPkkwI1EjMvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25l",
-            "fS9zZXJ2ZXJjb25maWcStgEKDUxpc3ROb2RlUG9vbHMSKS5nb29nbGUuY29u",
-            "dGFpbmVyLnYxLkxpc3ROb2RlUG9vbHNSZXF1ZXN0GiouZ29vZ2xlLmNvbnRh",
-            "aW5lci52MS5MaXN0Tm9kZVBvb2xzUmVzcG9uc2UiToLT5JMCSBJGL3YxL3By",
-            "b2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2Ns",
-            "dXN0ZXJfaWR9L25vZGVQb29scxK0AQoLR2V0Tm9kZVBvb2wSJy5nb29nbGUu",
-            "Y29udGFpbmVyLnYxLkdldE5vZGVQb29sUmVxdWVzdBodLmdvb2dsZS5jb250",
-            "YWluZXIudjEuTm9kZVBvb2wiXYLT5JMCVxJVL3YxL3Byb2plY3RzL3twcm9q",
-            "ZWN0X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L25v",
-            "ZGVQb29scy97bm9kZV9wb29sX2lkfRKvAQoOQ3JlYXRlTm9kZVBvb2wSKi5n",
-            "b29nbGUuY29udGFpbmVyLnYxLkNyZWF0ZU5vZGVQb29sUmVxdWVzdBoeLmdv",
-            "b2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uIlGC0+STAksiRi92MS9wcm9q",
-            "ZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L2NsdXN0ZXJzL3tjbHVz",
-            "dGVyX2lkfS9ub2RlUG9vbHM6ASoSuwEKDkRlbGV0ZU5vZGVQb29sEiouZ29v",
-            "Z2xlLmNvbnRhaW5lci52MS5EZWxldGVOb2RlUG9vbFJlcXVlc3QaHi5nb29n",
-            "bGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiJdgtPkkwJXKlUvdjEvcHJvamVj",
-            "dHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rl",
-            "cl9pZH0vbm9kZVBvb2xzL3tub2RlX3Bvb2xfaWR9EtkBChdSb2xsYmFja05v",
-            "ZGVQb29sVXBncmFkZRIzLmdvb2dsZS5jb250YWluZXIudjEuUm9sbGJhY2tO",
-            "b2RlUG9vbFVwZ3JhZGVSZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52MS5P",
-            "cGVyYXRpb24iaYLT5JMCYyJeL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96",
-            "b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L25vZGVQb29scy97",
-            "bm9kZV9wb29sX2lkfTpyb2xsYmFjazoBKhLaAQoVU2V0Tm9kZVBvb2xNYW5h",
-            "Z2VtZW50EjEuZ29vZ2xlLmNvbnRhaW5lci52MS5TZXROb2RlUG9vbE1hbmFn",
-            "ZW1lbnRSZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52MS5PcGVyYXRpb24i",
-            "boLT5JMCaCJjL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9u",
-            "ZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L25vZGVQb29scy97bm9kZV9wb29s",
-            "X2lkfS9zZXRNYW5hZ2VtZW50OgEqEqoBCglTZXRMYWJlbHMSJS5nb29nbGUu",
-            "Y29udGFpbmVyLnYxLlNldExhYmVsc1JlcXVlc3QaHi5nb29nbGUuY29udGFp",
-            "bmVyLnYxLk9wZXJhdGlvbiJWgtPkkwJQIksvdjEvcHJvamVjdHMve3Byb2pl",
-            "Y3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH0vcmVz",
-            "b3VyY2VMYWJlbHM6ASoSrgEKDVNldExlZ2FjeUFiYWMSKS5nb29nbGUuY29u",
-            "dGFpbmVyLnYxLlNldExlZ2FjeUFiYWNSZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRh",
-            "aW5lci52MS5PcGVyYXRpb24iUoLT5JMCTCJHL3YxL3Byb2plY3RzL3twcm9q",
-            "ZWN0X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L2xl",
-            "Z2FjeUFiYWM6ASoStwEKD1N0YXJ0SVBSb3RhdGlvbhIrLmdvb2dsZS5jb250",
-            "YWluZXIudjEuU3RhcnRJUFJvdGF0aW9uUmVxdWVzdBoeLmdvb2dsZS5jb250",
-            "YWluZXIudjEuT3BlcmF0aW9uIleC0+STAlEiTC92MS9wcm9qZWN0cy97cHJv",
-            "amVjdF9pZH0vem9uZXMve3pvbmV9L2NsdXN0ZXJzL3tjbHVzdGVyX2lkfTpz",
-            "dGFydElwUm90YXRpb246ASoSwAEKEkNvbXBsZXRlSVBSb3RhdGlvbhIuLmdv",
-            "b2dsZS5jb250YWluZXIudjEuQ29tcGxldGVJUFJvdGF0aW9uUmVxdWVzdBoe",
-            "Lmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uIlqC0+STAlQiTy92MS9w",
+            "MS5PcGVyYXRpb24ijgGC0+STAocBIjcvdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9jbHVzdGVycy8qfTpzZXRMb2dnaW5nOgEqWkkiRC92MS9w",
             "cm9qZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L2NsdXN0ZXJzL3tj",
-            "bHVzdGVyX2lkfTpjb21wbGV0ZUlwUm90YXRpb246ASoSyAEKD1NldE5vZGVQ",
-            "b29sU2l6ZRIrLmdvb2dsZS5jb250YWluZXIudjEuU2V0Tm9kZVBvb2xTaXpl",
-            "UmVxdWVzdBoeLmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uImiC0+ST",
-            "AmIiXS92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L2Ns",
-            "dXN0ZXJzL3tjbHVzdGVyX2lkfS9ub2RlUG9vbHMve25vZGVfcG9vbF9pZH0v",
-            "c2V0U2l6ZToBKhK6AQoQU2V0TmV0d29ya1BvbGljeRIsLmdvb2dsZS5jb250",
-            "YWluZXIudjEuU2V0TmV0d29ya1BvbGljeVJlcXVlc3QaHi5nb29nbGUuY29u",
-            "dGFpbmVyLnYxLk9wZXJhdGlvbiJYgtPkkwJSIk0vdjEvcHJvamVjdHMve3By",
-            "b2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH06",
-            "c2V0TmV0d29ya1BvbGljeToBKhLGAQoUU2V0TWFpbnRlbmFuY2VQb2xpY3kS",
-            "MC5nb29nbGUuY29udGFpbmVyLnYxLlNldE1haW50ZW5hbmNlUG9saWN5UmVx",
-            "dWVzdBoeLmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uIlyC0+STAlYi",
-            "US92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L2NsdXN0",
-            "ZXJzL3tjbHVzdGVyX2lkfTpzZXRNYWludGVuYW5jZVBvbGljeToBKkKmAQoX",
-            "Y29tLmdvb2dsZS5jb250YWluZXIudjFCE0NsdXN0ZXJTZXJ2aWNlUHJvdG9Q",
-            "AVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jb250",
-            "YWluZXIvdjE7Y29udGFpbmVyqgIZR29vZ2xlLkNsb3VkLkNvbnRhaW5lci5W",
-            "McoCGUdvb2dsZVxDbG91ZFxDb250YWluZXJcVjFiBnByb3RvMw=="));
+            "bHVzdGVyX2lkfS9sb2dnaW5nOgEqEv8BChRTZXRNb25pdG9yaW5nU2Vydmlj",
+            "ZRIwLmdvb2dsZS5jb250YWluZXIudjEuU2V0TW9uaXRvcmluZ1NlcnZpY2VS",
+            "ZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52MS5PcGVyYXRpb24ilAGC0+ST",
+            "Ao0BIjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVy",
+            "cy8qfTpzZXRNb25pdG9yaW5nOgEqWkwiRy92MS9wcm9qZWN0cy97cHJvamVj",
+            "dF9pZH0vem9uZXMve3pvbmV9L2NsdXN0ZXJzL3tjbHVzdGVyX2lkfS9tb25p",
+            "dG9yaW5nOgEqEu0BCg9TZXRBZGRvbnNDb25maWcSKy5nb29nbGUuY29udGFp",
+            "bmVyLnYxLlNldEFkZG9uc0NvbmZpZ1JlcXVlc3QaHi5nb29nbGUuY29udGFp",
+            "bmVyLnYxLk9wZXJhdGlvbiKMAYLT5JMChQEiNi92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyp9OnNldEFkZG9uczoBKlpIIkMv",
+            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVy",
+            "cy97Y2x1c3Rlcl9pZH0vYWRkb25zOgEqEu0BCgxTZXRMb2NhdGlvbnMSKC5n",
+            "b29nbGUuY29udGFpbmVyLnYxLlNldExvY2F0aW9uc1JlcXVlc3QaHi5nb29n",
+            "bGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiKSAYLT5JMCiwEiOS92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyp9OnNldExvY2F0",
+            "aW9uczoBKlpLIkYvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6",
+            "b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH0vbG9jYXRpb25zOgEqEuoBCgxV",
+            "cGRhdGVNYXN0ZXISKC5nb29nbGUuY29udGFpbmVyLnYxLlVwZGF0ZU1hc3Rl",
+            "clJlcXVlc3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiKPAYLT",
+            "5JMCiAEiOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0",
+            "ZXJzLyp9OnVwZGF0ZU1hc3RlcjoBKlpIIkMvdjEvcHJvamVjdHMve3Byb2pl",
+            "Y3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH0vbWFz",
+            "dGVyOgEqEvQBCg1TZXRNYXN0ZXJBdXRoEikuZ29vZ2xlLmNvbnRhaW5lci52",
+            "MS5TZXRNYXN0ZXJBdXRoUmVxdWVzdBoeLmdvb2dsZS5jb250YWluZXIudjEu",
+            "T3BlcmF0aW9uIpcBgtPkkwKQASI6L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovY2x1c3RlcnMvKn06c2V0TWFzdGVyQXV0aDoBKlpPIkovdjEv",
+            "cHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97",
+            "Y2x1c3Rlcl9pZH06c2V0TWFzdGVyQXV0aDoBKhLQAQoNRGVsZXRlQ2x1c3Rl",
+            "chIpLmdvb2dsZS5jb250YWluZXIudjEuRGVsZXRlQ2x1c3RlclJlcXVlc3Qa",
+            "Hi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiJ0gtPkkwJuKiwvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVycy8qfVo+Kjwv",
+            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVy",
+            "cy97Y2x1c3Rlcl9pZH0S1gEKDkxpc3RPcGVyYXRpb25zEiouZ29vZ2xlLmNv",
+            "bnRhaW5lci52MS5MaXN0T3BlcmF0aW9uc1JlcXVlc3QaKy5nb29nbGUuY29u",
+            "dGFpbmVyLnYxLkxpc3RPcGVyYXRpb25zUmVzcG9uc2Uia4LT5JMCZRIuL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vb3BlcmF0aW9uc1oz",
+            "EjEvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9vcGVy",
+            "YXRpb25zEtQBCgxHZXRPcGVyYXRpb24SKC5nb29nbGUuY29udGFpbmVyLnYx",
+            "LkdldE9wZXJhdGlvblJlcXVlc3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9w",
+            "ZXJhdGlvbiJ6gtPkkwJ0Ei4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9vcGVyYXRpb25zLyp9WkISQC92MS9wcm9qZWN0cy97cHJvamVjdF9p",
+            "ZH0vem9uZXMve3pvbmV9L29wZXJhdGlvbnMve29wZXJhdGlvbl9pZH0S6AEK",
+            "D0NhbmNlbE9wZXJhdGlvbhIrLmdvb2dsZS5jb250YWluZXIudjEuQ2FuY2Vs",
+            "T3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSKPAYLT",
+            "5JMCiAEiNS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL29wZXJh",
+            "dGlvbnMvKn06Y2FuY2VsOgEqWkwiRy92MS9wcm9qZWN0cy97cHJvamVjdF9p",
+            "ZH0vem9uZXMve3pvbmV9L29wZXJhdGlvbnMve29wZXJhdGlvbl9pZH06Y2Fu",
+            "Y2VsOgEqEtABCg9HZXRTZXJ2ZXJDb25maWcSKy5nb29nbGUuY29udGFpbmVy",
+            "LnYxLkdldFNlcnZlckNvbmZpZ1JlcXVlc3QaIS5nb29nbGUuY29udGFpbmVy",
+            "LnYxLlNlcnZlckNvbmZpZyJtgtPkkwJnEi4vdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn0vc2VydmVyQ29uZmlnWjUSMy92MS9wcm9qZWN0cy97",
+            "cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L3NlcnZlcmNvbmZpZxL0AQoNTGlz",
+            "dE5vZGVQb29scxIpLmdvb2dsZS5jb250YWluZXIudjEuTGlzdE5vZGVQb29s",
+            "c1JlcXVlc3QaKi5nb29nbGUuY29udGFpbmVyLnYxLkxpc3ROb2RlUG9vbHNS",
+            "ZXNwb25zZSKLAYLT5JMChAESOC92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovY2x1c3RlcnMvKn0vbm9kZVBvb2xzWkgSRi92MS9wcm9qZWN0",
+            "cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L2NsdXN0ZXJzL3tjbHVzdGVy",
+            "X2lkfS9ub2RlUG9vbHMS8gEKC0dldE5vZGVQb29sEicuZ29vZ2xlLmNvbnRh",
+            "aW5lci52MS5HZXROb2RlUG9vbFJlcXVlc3QaHS5nb29nbGUuY29udGFpbmVy",
+            "LnYxLk5vZGVQb29sIpoBgtPkkwKTARI4L3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovY2x1c3RlcnMvKi9ub2RlUG9vbHMvKn1aVxJVL3YxL3By",
+            "b2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2Ns",
+            "dXN0ZXJfaWR9L25vZGVQb29scy97bm9kZV9wb29sX2lkfRLwAQoOQ3JlYXRl",
+            "Tm9kZVBvb2wSKi5nb29nbGUuY29udGFpbmVyLnYxLkNyZWF0ZU5vZGVQb29s",
+            "UmVxdWVzdBoeLmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uIpEBgtPk",
+            "kwKKASI4L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVz",
+            "dGVycy8qfS9ub2RlUG9vbHM6ASpaSyJGL3YxL3Byb2plY3RzL3twcm9qZWN0",
+            "X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L25vZGVQ",
+            "b29sczoBKhL5AQoORGVsZXRlTm9kZVBvb2wSKi5nb29nbGUuY29udGFpbmVy",
+            "LnYxLkRlbGV0ZU5vZGVQb29sUmVxdWVzdBoeLmdvb2dsZS5jb250YWluZXIu",
+            "djEuT3BlcmF0aW9uIpoBgtPkkwKTASo4L3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovY2x1c3RlcnMvKi9ub2RlUG9vbHMvKn1aVypVL3YxL3By",
+            "b2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2Ns",
+            "dXN0ZXJfaWR9L25vZGVQb29scy97bm9kZV9wb29sX2lkfRKjAgoXUm9sbGJh",
+            "Y2tOb2RlUG9vbFVwZ3JhZGUSMy5nb29nbGUuY29udGFpbmVyLnYxLlJvbGxi",
+            "YWNrTm9kZVBvb2xVcGdyYWRlUmVxdWVzdBoeLmdvb2dsZS5jb250YWluZXIu",
+            "djEuT3BlcmF0aW9uIrIBgtPkkwKrASJBL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovY2x1c3RlcnMvKi9ub2RlUG9vbHMvKn06cm9sbGJhY2s6",
+            "ASpaYyJeL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96b25lcy97em9uZX0v",
+            "Y2x1c3RlcnMve2NsdXN0ZXJfaWR9L25vZGVQb29scy97bm9kZV9wb29sX2lk",
+            "fTpyb2xsYmFjazoBKhKpAgoVU2V0Tm9kZVBvb2xNYW5hZ2VtZW50EjEuZ29v",
+            "Z2xlLmNvbnRhaW5lci52MS5TZXROb2RlUG9vbE1hbmFnZW1lbnRSZXF1ZXN0",
+            "Gh4uZ29vZ2xlLmNvbnRhaW5lci52MS5PcGVyYXRpb24ivAGC0+STArUBIkYv",
+            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVycy8qL25v",
+            "ZGVQb29scy8qfTpzZXRNYW5hZ2VtZW50OgEqWmgiYy92MS9wcm9qZWN0cy97",
+            "cHJvamVjdF9pZH0vem9uZXMve3pvbmV9L2NsdXN0ZXJzL3tjbHVzdGVyX2lk",
+            "fS9ub2RlUG9vbHMve25vZGVfcG9vbF9pZH0vc2V0TWFuYWdlbWVudDoBKhLx",
+            "AQoJU2V0TGFiZWxzEiUuZ29vZ2xlLmNvbnRhaW5lci52MS5TZXRMYWJlbHNS",
+            "ZXF1ZXN0Gh4uZ29vZ2xlLmNvbnRhaW5lci52MS5PcGVyYXRpb24inAGC0+ST",
+            "ApUBIj4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVy",
+            "cy8qfTpzZXRSZXNvdXJjZUxhYmVsczoBKlpQIksvdjEvcHJvamVjdHMve3By",
+            "b2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH0v",
+            "cmVzb3VyY2VMYWJlbHM6ASoS8QEKDVNldExlZ2FjeUFiYWMSKS5nb29nbGUu",
+            "Y29udGFpbmVyLnYxLlNldExlZ2FjeUFiYWNSZXF1ZXN0Gh4uZ29vZ2xlLmNv",
+            "bnRhaW5lci52MS5PcGVyYXRpb24ilAGC0+STAo0BIjovdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9jbHVzdGVycy8qfTpzZXRMZWdhY3lBYmFj",
+            "OgEqWkwiRy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vem9uZXMve3pvbmV9",
+            "L2NsdXN0ZXJzL3tjbHVzdGVyX2lkfS9sZWdhY3lBYmFjOgEqEvwBCg9TdGFy",
+            "dElQUm90YXRpb24SKy5nb29nbGUuY29udGFpbmVyLnYxLlN0YXJ0SVBSb3Rh",
+            "dGlvblJlcXVlc3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiKb",
+            "AYLT5JMClAEiPC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Ns",
+            "dXN0ZXJzLyp9OnN0YXJ0SXBSb3RhdGlvbjoBKlpRIkwvdjEvcHJvamVjdHMv",
+            "e3Byb2plY3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9p",
+            "ZH06c3RhcnRJcFJvdGF0aW9uOgEqEogCChJDb21wbGV0ZUlQUm90YXRpb24S",
+            "Li5nb29nbGUuY29udGFpbmVyLnYxLkNvbXBsZXRlSVBSb3RhdGlvblJlcXVl",
+            "c3QaHi5nb29nbGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiKhAYLT5JMCmgEi",
+            "Py92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyp9",
+            "OmNvbXBsZXRlSXBSb3RhdGlvbjoBKlpUIk8vdjEvcHJvamVjdHMve3Byb2pl",
+            "Y3RfaWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH06Y29t",
+            "cGxldGVJcFJvdGF0aW9uOgEqEpECCg9TZXROb2RlUG9vbFNpemUSKy5nb29n",
+            "bGUuY29udGFpbmVyLnYxLlNldE5vZGVQb29sU2l6ZVJlcXVlc3QaHi5nb29n",
+            "bGUuY29udGFpbmVyLnYxLk9wZXJhdGlvbiKwAYLT5JMCqQEiQC92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NsdXN0ZXJzLyovbm9kZVBvb2xz",
+            "Lyp9OnNldFNpemU6ASpaYiJdL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS96",
+            "b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9L25vZGVQb29scy97",
+            "bm9kZV9wb29sX2lkfS9zZXRTaXplOgEqEoACChBTZXROZXR3b3JrUG9saWN5",
+            "EiwuZ29vZ2xlLmNvbnRhaW5lci52MS5TZXROZXR3b3JrUG9saWN5UmVxdWVz",
+            "dBoeLmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uIp0BgtPkkwKWASI9",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2x1c3RlcnMvKn06",
+            "c2V0TmV0d29ya1BvbGljeToBKlpSIk0vdjEvcHJvamVjdHMve3Byb2plY3Rf",
+            "aWR9L3pvbmVzL3t6b25lfS9jbHVzdGVycy97Y2x1c3Rlcl9pZH06c2V0TmV0",
+            "d29ya1BvbGljeToBKhKQAgoUU2V0TWFpbnRlbmFuY2VQb2xpY3kSMC5nb29n",
+            "bGUuY29udGFpbmVyLnYxLlNldE1haW50ZW5hbmNlUG9saWN5UmVxdWVzdBoe",
+            "Lmdvb2dsZS5jb250YWluZXIudjEuT3BlcmF0aW9uIqUBgtPkkwKeASJBL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2x1c3RlcnMvKn06c2V0",
+            "TWFpbnRlbmFuY2VQb2xpY3k6ASpaViJRL3YxL3Byb2plY3RzL3twcm9qZWN0",
+            "X2lkfS96b25lcy97em9uZX0vY2x1c3RlcnMve2NsdXN0ZXJfaWR9OnNldE1h",
+            "aW50ZW5hbmNlUG9saWN5OgEqQqYBChdjb20uZ29vZ2xlLmNvbnRhaW5lci52",
+            "MUITQ2x1c3RlclNlcnZpY2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2NvbnRhaW5lci92MTtjb250YWluZXKqAhlH",
+            "b29nbGUuQ2xvdWQuQ29udGFpbmVyLlYxygIZR29vZ2xlXENsb3VkXENvbnRh",
+            "aW5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeConfig), global::Google.Cloud.Container.V1.NodeConfig.Parser, new[]{ "MachineType", "DiskSizeGb", "OauthScopes", "ServiceAccount", "Metadata", "ImageType", "Labels", "LocalSsdCount", "Tags", "Preemptible", "Accelerators", "MinCpuPlatform" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeConfig), global::Google.Cloud.Container.V1.NodeConfig.Parser, new[]{ "MachineType", "DiskSizeGb", "OauthScopes", "ServiceAccount", "Metadata", "ImageType", "Labels", "LocalSsdCount", "Tags", "Preemptible", "Accelerators", "DiskType", "MinCpuPlatform" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuth), global::Google.Cloud.Container.V1.MasterAuth.Parser, new[]{ "Username", "Password", "ClientCertificateConfig", "ClusterCaCertificate", "ClientCertificate", "ClientKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClientCertificateConfig), global::Google.Cloud.Container.V1.ClientCertificateConfig.Parser, new[]{ "IssueClientCertificate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AddonsConfig), global::Google.Cloud.Container.V1.AddonsConfig.Parser, new[]{ "HttpLoadBalancing", "HorizontalPodAutoscaling", "KubernetesDashboard", "NetworkPolicyConfig" }, null, null, null),
@@ -378,55 +449,57 @@ namespace Google.Cloud.Container.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.HorizontalPodAutoscaling), global::Google.Cloud.Container.V1.HorizontalPodAutoscaling.Parser, new[]{ "Disabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.KubernetesDashboard), global::Google.Cloud.Container.V1.KubernetesDashboard.Parser, new[]{ "Disabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkPolicyConfig), global::Google.Cloud.Container.V1.NetworkPolicyConfig.Parser, new[]{ "Disabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.PrivateClusterConfig), global::Google.Cloud.Container.V1.PrivateClusterConfig.Parser, new[]{ "EnablePrivateNodes", "EnablePrivateEndpoint", "MasterIpv4CidrBlock", "PrivateEndpoint", "PublicEndpoint" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig), global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Parser, new[]{ "Enabled", "CidrBlocks" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Types.CidrBlock), global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig.Types.CidrBlock.Parser, new[]{ "DisplayName", "CidrBlock_" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.LegacyAbac), global::Google.Cloud.Container.V1.LegacyAbac.Parser, new[]{ "Enabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkPolicy), global::Google.Cloud.Container.V1.NetworkPolicy.Parser, new[]{ "Provider", "Enabled" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NetworkPolicy.Types.Provider) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.IPAllocationPolicy), global::Google.Cloud.Container.V1.IPAllocationPolicy.Parser, new[]{ "UseIpAliases", "CreateSubnetwork", "SubnetworkName", "ClusterIpv4Cidr", "NodeIpv4Cidr", "ServicesIpv4Cidr", "ClusterSecondaryRangeName", "ServicesSecondaryRangeName", "ClusterIpv4CidrBlock", "NodeIpv4CidrBlock", "ServicesIpv4CidrBlock" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Cluster), global::Google.Cloud.Container.V1.Cluster.Parser, new[]{ "Name", "Description", "InitialNodeCount", "NodeConfig", "MasterAuth", "LoggingService", "MonitoringService", "Network", "ClusterIpv4Cidr", "AddonsConfig", "Subnetwork", "NodePools", "Locations", "EnableKubernetesAlpha", "ResourceLabels", "LabelFingerprint", "LegacyAbac", "NetworkPolicy", "IpAllocationPolicy", "MasterAuthorizedNetworksConfig", "MaintenancePolicy", "SelfLink", "Zone", "Endpoint", "InitialClusterVersion", "CurrentMasterVersion", "CurrentNodeVersion", "CreateTime", "Status", "StatusMessage", "NodeIpv4CidrSize", "ServicesIpv4Cidr", "InstanceGroupUrls", "CurrentNodeCount", "ExpireTime" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Cluster.Types.Status) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Cluster), global::Google.Cloud.Container.V1.Cluster.Parser, new[]{ "Name", "Description", "InitialNodeCount", "NodeConfig", "MasterAuth", "LoggingService", "MonitoringService", "Network", "ClusterIpv4Cidr", "AddonsConfig", "Subnetwork", "NodePools", "Locations", "EnableKubernetesAlpha", "ResourceLabels", "LabelFingerprint", "LegacyAbac", "NetworkPolicy", "IpAllocationPolicy", "MasterAuthorizedNetworksConfig", "MaintenancePolicy", "NetworkConfig", "PrivateClusterConfig", "SelfLink", "Zone", "Endpoint", "InitialClusterVersion", "CurrentMasterVersion", "CurrentNodeVersion", "CreateTime", "Status", "StatusMessage", "NodeIpv4CidrSize", "ServicesIpv4Cidr", "InstanceGroupUrls", "CurrentNodeCount", "ExpireTime", "Location" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Cluster.Types.Status) }, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ClusterUpdate), global::Google.Cloud.Container.V1.ClusterUpdate.Parser, new[]{ "DesiredNodeVersion", "DesiredMonitoringService", "DesiredAddonsConfig", "DesiredNodePoolId", "DesiredImageType", "DesiredNodePoolAutoscaling", "DesiredLocations", "DesiredMasterAuthorizedNetworksConfig", "DesiredMasterVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Operation), global::Google.Cloud.Container.V1.Operation.Parser, new[]{ "Name", "Zone", "OperationType", "Status", "Detail", "StatusMessage", "SelfLink", "TargetLink", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Operation.Types.Status), typeof(global::Google.Cloud.Container.V1.Operation.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateClusterRequest), global::Google.Cloud.Container.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "Cluster" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetClusterRequest), global::Google.Cloud.Container.V1.GetClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateClusterRequest), global::Google.Cloud.Container.V1.UpdateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Update" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateNodePoolRequest), global::Google.Cloud.Container.V1.UpdateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeVersion", "ImageType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest), global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Autoscaling" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLoggingServiceRequest), global::Google.Cloud.Container.V1.SetLoggingServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "LoggingService" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest), global::Google.Cloud.Container.V1.SetMonitoringServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MonitoringService" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetAddonsConfigRequest), global::Google.Cloud.Container.V1.SetAddonsConfigRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "AddonsConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLocationsRequest), global::Google.Cloud.Container.V1.SetLocationsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Locations" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateMasterRequest), global::Google.Cloud.Container.V1.UpdateMasterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MasterVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest), global::Google.Cloud.Container.V1.SetMasterAuthRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Action", "Update" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteClusterRequest), global::Google.Cloud.Container.V1.DeleteClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListClustersRequest), global::Google.Cloud.Container.V1.ListClustersRequest.Parser, new[]{ "ProjectId", "Zone" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.Operation), global::Google.Cloud.Container.V1.Operation.Parser, new[]{ "Name", "Zone", "OperationType", "Status", "Detail", "StatusMessage", "SelfLink", "TargetLink", "Location", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.Operation.Types.Status), typeof(global::Google.Cloud.Container.V1.Operation.Types.Type) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateClusterRequest), global::Google.Cloud.Container.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "Cluster", "Parent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetClusterRequest), global::Google.Cloud.Container.V1.GetClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateClusterRequest), global::Google.Cloud.Container.V1.UpdateClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Update", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateNodePoolRequest), global::Google.Cloud.Container.V1.UpdateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeVersion", "ImageType", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest), global::Google.Cloud.Container.V1.SetNodePoolAutoscalingRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Autoscaling", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLoggingServiceRequest), global::Google.Cloud.Container.V1.SetLoggingServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "LoggingService", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMonitoringServiceRequest), global::Google.Cloud.Container.V1.SetMonitoringServiceRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MonitoringService", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetAddonsConfigRequest), global::Google.Cloud.Container.V1.SetAddonsConfigRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "AddonsConfig", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLocationsRequest), global::Google.Cloud.Container.V1.SetLocationsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Locations", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.UpdateMasterRequest), global::Google.Cloud.Container.V1.UpdateMasterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MasterVersion", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest), global::Google.Cloud.Container.V1.SetMasterAuthRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Action", "Update", "Name" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.SetMasterAuthRequest.Types.Action) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteClusterRequest), global::Google.Cloud.Container.V1.DeleteClusterRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListClustersRequest), global::Google.Cloud.Container.V1.ListClustersRequest.Parser, new[]{ "ProjectId", "Zone", "Parent" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListClustersResponse), global::Google.Cloud.Container.V1.ListClustersResponse.Parser, new[]{ "Clusters", "MissingZones" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetOperationRequest), global::Google.Cloud.Container.V1.GetOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListOperationsRequest), global::Google.Cloud.Container.V1.ListOperationsRequest.Parser, new[]{ "ProjectId", "Zone" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CancelOperationRequest), global::Google.Cloud.Container.V1.CancelOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetOperationRequest), global::Google.Cloud.Container.V1.GetOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListOperationsRequest), global::Google.Cloud.Container.V1.ListOperationsRequest.Parser, new[]{ "ProjectId", "Zone", "Parent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CancelOperationRequest), global::Google.Cloud.Container.V1.CancelOperationRequest.Parser, new[]{ "ProjectId", "Zone", "OperationId", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListOperationsResponse), global::Google.Cloud.Container.V1.ListOperationsResponse.Parser, new[]{ "Operations", "MissingZones" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetServerConfigRequest), global::Google.Cloud.Container.V1.GetServerConfigRequest.Parser, new[]{ "ProjectId", "Zone" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetServerConfigRequest), global::Google.Cloud.Container.V1.GetServerConfigRequest.Parser, new[]{ "ProjectId", "Zone", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ServerConfig), global::Google.Cloud.Container.V1.ServerConfig.Parser, new[]{ "DefaultClusterVersion", "ValidNodeVersions", "DefaultImageType", "ValidImageTypes", "ValidMasterVersions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateNodePoolRequest), global::Google.Cloud.Container.V1.CreateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePool" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteNodePoolRequest), global::Google.Cloud.Container.V1.DeleteNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListNodePoolsRequest), global::Google.Cloud.Container.V1.ListNodePoolsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetNodePoolRequest), global::Google.Cloud.Container.V1.GetNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CreateNodePoolRequest), global::Google.Cloud.Container.V1.CreateNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePool", "Parent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DeleteNodePoolRequest), global::Google.Cloud.Container.V1.DeleteNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListNodePoolsRequest), global::Google.Cloud.Container.V1.ListNodePoolsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Parent" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.GetNodePoolRequest), global::Google.Cloud.Container.V1.GetNodePoolRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodePool), global::Google.Cloud.Container.V1.NodePool.Parser, new[]{ "Name", "Config", "InitialNodeCount", "SelfLink", "Version", "InstanceGroupUrls", "Status", "StatusMessage", "Autoscaling", "Management" }, null, new[]{ typeof(global::Google.Cloud.Container.V1.NodePool.Types.Status) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodeManagement), global::Google.Cloud.Container.V1.NodeManagement.Parser, new[]{ "AutoUpgrade", "AutoRepair", "UpgradeOptions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AutoUpgradeOptions), global::Google.Cloud.Container.V1.AutoUpgradeOptions.Parser, new[]{ "AutoUpgradeStartTime", "Description" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaintenancePolicy), global::Google.Cloud.Container.V1.MaintenancePolicy.Parser, new[]{ "Window" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.MaintenanceWindow), global::Google.Cloud.Container.V1.MaintenanceWindow.Parser, new[]{ "DailyMaintenanceWindow" }, new[]{ "Policy" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.DailyMaintenanceWindow), global::Google.Cloud.Container.V1.DailyMaintenanceWindow.Parser, new[]{ "StartTime", "Duration" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest), global::Google.Cloud.Container.V1.SetNodePoolManagementRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Management" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest), global::Google.Cloud.Container.V1.SetNodePoolSizeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeCount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest), global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolManagementRequest), global::Google.Cloud.Container.V1.SetNodePoolManagementRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Management", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNodePoolSizeRequest), global::Google.Cloud.Container.V1.SetNodePoolSizeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "NodeCount", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest), global::Google.Cloud.Container.V1.RollbackNodePoolUpgradeRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NodePoolId", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.ListNodePoolsResponse), global::Google.Cloud.Container.V1.ListNodePoolsResponse.Parser, new[]{ "NodePools" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NodePoolAutoscaling), global::Google.Cloud.Container.V1.NodePoolAutoscaling.Parser, new[]{ "Enabled", "MinNodeCount", "MaxNodeCount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLabelsRequest), global::Google.Cloud.Container.V1.SetLabelsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "ResourceLabels", "LabelFingerprint" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLegacyAbacRequest), global::Google.Cloud.Container.V1.SetLegacyAbacRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Enabled" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.StartIPRotationRequest), global::Google.Cloud.Container.V1.StartIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CompleteIPRotationRequest), global::Google.Cloud.Container.V1.CompleteIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLabelsRequest), global::Google.Cloud.Container.V1.SetLabelsRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "ResourceLabels", "LabelFingerprint", "Name" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetLegacyAbacRequest), global::Google.Cloud.Container.V1.SetLegacyAbacRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Enabled", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.StartIPRotationRequest), global::Google.Cloud.Container.V1.StartIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name", "RotateCredentials" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.CompleteIPRotationRequest), global::Google.Cloud.Container.V1.CompleteIPRotationRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.AcceleratorConfig), global::Google.Cloud.Container.V1.AcceleratorConfig.Parser, new[]{ "AcceleratorCount", "AcceleratorType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest), global::Google.Cloud.Container.V1.SetNetworkPolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NetworkPolicy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest), global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MaintenancePolicy" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetNetworkPolicyRequest), global::Google.Cloud.Container.V1.SetNetworkPolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "NetworkPolicy", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest), global::Google.Cloud.Container.V1.SetMaintenancePolicyRequest.Parser, new[]{ "ProjectId", "Zone", "ClusterId", "MaintenancePolicy", "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Container.V1.NetworkConfig), global::Google.Cloud.Container.V1.NetworkConfig.Parser, new[]{ "Network", "Subnetwork" }, null, null, null)
           }));
     }
     #endregion
@@ -472,6 +545,7 @@ namespace Google.Cloud.Container.V1 {
       tags_ = other.tags_.Clone();
       preemptible_ = other.preemptible_;
       accelerators_ = other.accelerators_.Clone();
+      diskType_ = other.diskType_;
       minCpuPlatform_ = other.minCpuPlatform_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -569,8 +643,18 @@ namespace Google.Cloud.Container.V1 {
     /// Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes
     /// in length. These are reflected as part of a URL in the metadata server.
     /// Additionally, to avoid ambiguity, keys must not conflict with any other
-    /// metadata keys for the project or be one of the four reserved keys:
-    /// "instance-template", "kube-env", "startup-script", and "user-data"
+    /// metadata keys for the project or be one of the reserved keys:
+    ///  "cluster-location"
+    ///  "cluster-name"
+    ///  "cluster-uid"
+    ///  "configure-sh"
+    ///  "enable-os-login"
+    ///  "gci-update-strategy"
+    ///  "gci-ensure-gke-docker"
+    ///  "instance-template"
+    ///  "kube-env"
+    ///  "startup-script"
+    ///  "user-data"
     ///
     /// Values are free-form strings, and only have meaning as interpreted by
     /// the image running in the instance. The only restriction placed on them is
@@ -684,6 +768,22 @@ namespace Google.Cloud.Container.V1 {
       get { return accelerators_; }
     }
 
+    /// <summary>Field number for the "disk_type" field.</summary>
+    public const int DiskTypeFieldNumber = 12;
+    private string diskType_ = "";
+    /// <summary>
+    /// Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd')
+    ///
+    /// If unspecified, the default disk type is 'pd-standard'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DiskType {
+      get { return diskType_; }
+      set {
+        diskType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "min_cpu_platform" field.</summary>
     public const int MinCpuPlatformFieldNumber = 13;
     private string minCpuPlatform_ = "";
@@ -693,7 +793,8 @@ namespace Google.Cloud.Container.V1 {
     /// friendly names of CPU platforms, such as
     /// &lt;code>minCpuPlatform: &amp;quot;Intel Haswell&amp;quot;&lt;/code> or
     /// &lt;code>minCpuPlatform: &amp;quot;Intel Sandy Bridge&amp;quot;&lt;/code>. For more
-    /// information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+    /// information, read [how to specify min CPU
+    /// platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MinCpuPlatform {
@@ -727,6 +828,7 @@ namespace Google.Cloud.Container.V1 {
       if(!tags_.Equals(other.tags_)) return false;
       if (Preemptible != other.Preemptible) return false;
       if(!accelerators_.Equals(other.accelerators_)) return false;
+      if (DiskType != other.DiskType) return false;
       if (MinCpuPlatform != other.MinCpuPlatform) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -745,6 +847,7 @@ namespace Google.Cloud.Container.V1 {
       hash ^= tags_.GetHashCode();
       if (Preemptible != false) hash ^= Preemptible.GetHashCode();
       hash ^= accelerators_.GetHashCode();
+      if (DiskType.Length != 0) hash ^= DiskType.GetHashCode();
       if (MinCpuPlatform.Length != 0) hash ^= MinCpuPlatform.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -788,6 +891,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteBool(Preemptible);
       }
       accelerators_.WriteTo(output, _repeated_accelerators_codec);
+      if (DiskType.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DiskType);
+      }
       if (MinCpuPlatform.Length != 0) {
         output.WriteRawTag(106);
         output.WriteString(MinCpuPlatform);
@@ -823,6 +930,9 @@ namespace Google.Cloud.Container.V1 {
         size += 1 + 1;
       }
       size += accelerators_.CalculateSize(_repeated_accelerators_codec);
+      if (DiskType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DiskType);
+      }
       if (MinCpuPlatform.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MinCpuPlatform);
       }
@@ -860,6 +970,9 @@ namespace Google.Cloud.Container.V1 {
         Preemptible = other.Preemptible;
       }
       accelerators_.Add(other.accelerators_);
+      if (other.DiskType.Length != 0) {
+        DiskType = other.DiskType;
+      }
       if (other.MinCpuPlatform.Length != 0) {
         MinCpuPlatform = other.MinCpuPlatform;
       }
@@ -916,6 +1029,10 @@ namespace Google.Cloud.Container.V1 {
           }
           case 90: {
             accelerators_.AddEntriesFrom(input, _repeated_accelerators_codec);
+            break;
+          }
+          case 98: {
+            DiskType = input.ReadString();
             break;
           }
           case 106: {
@@ -1009,8 +1126,9 @@ namespace Google.Cloud.Container.V1 {
     public const int ClientCertificateConfigFieldNumber = 3;
     private global::Google.Cloud.Container.V1.ClientCertificateConfig clientCertificateConfig_;
     /// <summary>
-    /// Configuration for client certificate authentication on the cluster.  If no
-    /// configuration is specified, a client certificate is issued.
+    /// Configuration for client certificate authentication on the cluster. For
+    /// clusters before v1.12, if no configuration is specified, a client
+    /// certificate is issued.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Container.V1.ClientCertificateConfig ClientCertificateConfig {
@@ -2178,7 +2296,270 @@ namespace Google.Cloud.Container.V1 {
   }
 
   /// <summary>
-  /// Master authorized networks is a Beta feature.
+  /// Configuration options for private clusters.
+  /// </summary>
+  public sealed partial class PrivateClusterConfig : pb::IMessage<PrivateClusterConfig> {
+    private static readonly pb::MessageParser<PrivateClusterConfig> _parser = new pb::MessageParser<PrivateClusterConfig>(() => new PrivateClusterConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrivateClusterConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateClusterConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateClusterConfig(PrivateClusterConfig other) : this() {
+      enablePrivateNodes_ = other.enablePrivateNodes_;
+      enablePrivateEndpoint_ = other.enablePrivateEndpoint_;
+      masterIpv4CidrBlock_ = other.masterIpv4CidrBlock_;
+      privateEndpoint_ = other.privateEndpoint_;
+      publicEndpoint_ = other.publicEndpoint_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateClusterConfig Clone() {
+      return new PrivateClusterConfig(this);
+    }
+
+    /// <summary>Field number for the "enable_private_nodes" field.</summary>
+    public const int EnablePrivateNodesFieldNumber = 1;
+    private bool enablePrivateNodes_;
+    /// <summary>
+    /// Whether nodes have internal IP addresses only. If enabled, all nodes are
+    /// given only RFC 1918 private addresses and communicate with the master via
+    /// private networking.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnablePrivateNodes {
+      get { return enablePrivateNodes_; }
+      set {
+        enablePrivateNodes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enable_private_endpoint" field.</summary>
+    public const int EnablePrivateEndpointFieldNumber = 2;
+    private bool enablePrivateEndpoint_;
+    /// <summary>
+    /// Whether the master's internal IP address is used as the cluster endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnablePrivateEndpoint {
+      get { return enablePrivateEndpoint_; }
+      set {
+        enablePrivateEndpoint_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "master_ipv4_cidr_block" field.</summary>
+    public const int MasterIpv4CidrBlockFieldNumber = 3;
+    private string masterIpv4CidrBlock_ = "";
+    /// <summary>
+    /// The IP range in CIDR notation to use for the hosted master network. This
+    /// range will be used for assigning internal IP addresses to the master or
+    /// set of masters, as well as the ILB VIP. This range must not overlap with
+    /// any other ranges in use within the cluster's network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MasterIpv4CidrBlock {
+      get { return masterIpv4CidrBlock_; }
+      set {
+        masterIpv4CidrBlock_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "private_endpoint" field.</summary>
+    public const int PrivateEndpointFieldNumber = 4;
+    private string privateEndpoint_ = "";
+    /// <summary>
+    /// Output only. The internal IP address of this cluster's master endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PrivateEndpoint {
+      get { return privateEndpoint_; }
+      set {
+        privateEndpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "public_endpoint" field.</summary>
+    public const int PublicEndpointFieldNumber = 5;
+    private string publicEndpoint_ = "";
+    /// <summary>
+    /// Output only. The external IP address of this cluster's master endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PublicEndpoint {
+      get { return publicEndpoint_; }
+      set {
+        publicEndpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateClusterConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrivateClusterConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnablePrivateNodes != other.EnablePrivateNodes) return false;
+      if (EnablePrivateEndpoint != other.EnablePrivateEndpoint) return false;
+      if (MasterIpv4CidrBlock != other.MasterIpv4CidrBlock) return false;
+      if (PrivateEndpoint != other.PrivateEndpoint) return false;
+      if (PublicEndpoint != other.PublicEndpoint) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnablePrivateNodes != false) hash ^= EnablePrivateNodes.GetHashCode();
+      if (EnablePrivateEndpoint != false) hash ^= EnablePrivateEndpoint.GetHashCode();
+      if (MasterIpv4CidrBlock.Length != 0) hash ^= MasterIpv4CidrBlock.GetHashCode();
+      if (PrivateEndpoint.Length != 0) hash ^= PrivateEndpoint.GetHashCode();
+      if (PublicEndpoint.Length != 0) hash ^= PublicEndpoint.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (EnablePrivateNodes != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnablePrivateNodes);
+      }
+      if (EnablePrivateEndpoint != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnablePrivateEndpoint);
+      }
+      if (MasterIpv4CidrBlock.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MasterIpv4CidrBlock);
+      }
+      if (PrivateEndpoint.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PrivateEndpoint);
+      }
+      if (PublicEndpoint.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PublicEndpoint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnablePrivateNodes != false) {
+        size += 1 + 1;
+      }
+      if (EnablePrivateEndpoint != false) {
+        size += 1 + 1;
+      }
+      if (MasterIpv4CidrBlock.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MasterIpv4CidrBlock);
+      }
+      if (PrivateEndpoint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PrivateEndpoint);
+      }
+      if (PublicEndpoint.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublicEndpoint);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrivateClusterConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnablePrivateNodes != false) {
+        EnablePrivateNodes = other.EnablePrivateNodes;
+      }
+      if (other.EnablePrivateEndpoint != false) {
+        EnablePrivateEndpoint = other.EnablePrivateEndpoint;
+      }
+      if (other.MasterIpv4CidrBlock.Length != 0) {
+        MasterIpv4CidrBlock = other.MasterIpv4CidrBlock;
+      }
+      if (other.PrivateEndpoint.Length != 0) {
+        PrivateEndpoint = other.PrivateEndpoint;
+      }
+      if (other.PublicEndpoint.Length != 0) {
+        PublicEndpoint = other.PublicEndpoint;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EnablePrivateNodes = input.ReadBool();
+            break;
+          }
+          case 16: {
+            EnablePrivateEndpoint = input.ReadBool();
+            break;
+          }
+          case 26: {
+            MasterIpv4CidrBlock = input.ReadString();
+            break;
+          }
+          case 34: {
+            PrivateEndpoint = input.ReadString();
+            break;
+          }
+          case 42: {
+            PublicEndpoint = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Configuration options for the master authorized networks feature. Enabled
   /// master authorized networks will disallow all external traffic to access
   /// Kubernetes master through HTTPS except traffic from the given CIDR blocks,
@@ -2192,7 +2573,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2525,7 +2906,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2664,7 +3045,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2851,7 +3232,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2939,6 +3320,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>
     /// This field is deprecated, use cluster_ipv4_cidr_block.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterIpv4Cidr {
       get { return clusterIpv4Cidr_; }
@@ -2953,6 +3335,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>
     /// This field is deprecated, use node_ipv4_cidr_block.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodeIpv4Cidr {
       get { return nodeIpv4Cidr_; }
@@ -2967,6 +3350,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>
     /// This field is deprecated, use services_ipv4_cidr_block.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ServicesIpv4Cidr {
       get { return servicesIpv4Cidr_; }
@@ -3343,7 +3727,7 @@ namespace Google.Cloud.Container.V1 {
   }
 
   /// <summary>
-  /// A Google Container Engine cluster.
+  /// A Google Kubernetes Engine cluster.
   /// </summary>
   public sealed partial class Cluster : pb::IMessage<Cluster> {
     private static readonly pb::MessageParser<Cluster> _parser = new pb::MessageParser<Cluster>(() => new Cluster());
@@ -3353,7 +3737,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3391,6 +3775,8 @@ namespace Google.Cloud.Container.V1 {
       ipAllocationPolicy_ = other.ipAllocationPolicy_ != null ? other.ipAllocationPolicy_.Clone() : null;
       masterAuthorizedNetworksConfig_ = other.masterAuthorizedNetworksConfig_ != null ? other.masterAuthorizedNetworksConfig_.Clone() : null;
       maintenancePolicy_ = other.maintenancePolicy_ != null ? other.maintenancePolicy_.Clone() : null;
+      networkConfig_ = other.networkConfig_ != null ? other.networkConfig_.Clone() : null;
+      privateClusterConfig_ = other.privateClusterConfig_ != null ? other.privateClusterConfig_.Clone() : null;
       selfLink_ = other.selfLink_;
       zone_ = other.zone_;
       endpoint_ = other.endpoint_;
@@ -3405,6 +3791,7 @@ namespace Google.Cloud.Container.V1 {
       instanceGroupUrls_ = other.instanceGroupUrls_.Clone();
       currentNodeCount_ = other.currentNodeCount_;
       expireTime_ = other.expireTime_;
+      location_ = other.location_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3729,7 +4116,6 @@ namespace Google.Cloud.Container.V1 {
     public const int MasterAuthorizedNetworksConfigFieldNumber = 22;
     private global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig_;
     /// <summary>
-    /// Master authorized networks is a Beta feature.
     /// The configuration options for master authorized networks feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3754,6 +4140,34 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "network_config" field.</summary>
+    public const int NetworkConfigFieldNumber = 27;
+    private global::Google.Cloud.Container.V1.NetworkConfig networkConfig_;
+    /// <summary>
+    /// Configuration for cluster networking.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Container.V1.NetworkConfig NetworkConfig {
+      get { return networkConfig_; }
+      set {
+        networkConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "private_cluster_config" field.</summary>
+    public const int PrivateClusterConfigFieldNumber = 37;
+    private global::Google.Cloud.Container.V1.PrivateClusterConfig privateClusterConfig_;
+    /// <summary>
+    /// Configuration for private cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Container.V1.PrivateClusterConfig PrivateClusterConfig {
+      get { return privateClusterConfig_; }
+      set {
+        privateClusterConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "self_link" field.</summary>
     public const int SelfLinkFieldNumber = 100;
     private string selfLink_ = "";
@@ -3775,7 +4189,9 @@ namespace Google.Cloud.Container.V1 {
     /// [Output only] The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field is deprecated, use location instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -3811,6 +4227,15 @@ namespace Google.Cloud.Container.V1 {
     /// found in validMasterVersions returned by getServerConfig.  The version can
     /// be upgraded over time; such upgrades are reflected in
     /// currentMasterVersion and currentNodeVersion.
+    ///
+    /// Users may specify either explicit versions offered by
+    /// Kubernetes Engine or version aliases, which have the following behavior:
+    ///
+    /// - "latest": picks the highest valid Kubernetes version
+    /// - "1.X": picks the highest valid patch+gke.N patch in the 1.X version
+    /// - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version
+    /// - "1.X.Y-gke.N": picks an explicit Kubernetes version
+    /// - "","-": picks the default Kubernetes version
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InitialClusterVersion {
@@ -3838,10 +4263,13 @@ namespace Google.Cloud.Container.V1 {
     public const int CurrentNodeVersionFieldNumber = 105;
     private string currentNodeVersion_ = "";
     /// <summary>
-    /// [Output only] The current version of the node software components.
-    /// If they are currently at multiple versions because they're in the process
-    /// of being upgraded, this reflects the minimum version of all nodes.
+    /// [Output only] Deprecated, use
+    /// [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+    /// instead. The current version of the node software components. If they are
+    /// currently at multiple versions because they're in the process of being
+    /// upgraded, this reflects the minimum version of all nodes.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CurrentNodeVersion {
       get { return currentNodeVersion_; }
@@ -3936,6 +4364,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>
     /// Deprecated. Use node_pools.instance_group_urls.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> InstanceGroupUrls {
       get { return instanceGroupUrls_; }
@@ -3967,6 +4396,23 @@ namespace Google.Cloud.Container.V1 {
       get { return expireTime_; }
       set {
         expireTime_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 114;
+    private string location_ = "";
+    /// <summary>
+    /// [Output only] The name of the Google Compute Engine
+    /// [zone](/compute/docs/regions-zones/regions-zones#available) or
+    /// [region](/compute/docs/regions-zones/regions-zones#available) in which
+    /// the cluster resides.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Location {
+      get { return location_; }
+      set {
+        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4004,6 +4450,8 @@ namespace Google.Cloud.Container.V1 {
       if (!object.Equals(IpAllocationPolicy, other.IpAllocationPolicy)) return false;
       if (!object.Equals(MasterAuthorizedNetworksConfig, other.MasterAuthorizedNetworksConfig)) return false;
       if (!object.Equals(MaintenancePolicy, other.MaintenancePolicy)) return false;
+      if (!object.Equals(NetworkConfig, other.NetworkConfig)) return false;
+      if (!object.Equals(PrivateClusterConfig, other.PrivateClusterConfig)) return false;
       if (SelfLink != other.SelfLink) return false;
       if (Zone != other.Zone) return false;
       if (Endpoint != other.Endpoint) return false;
@@ -4018,6 +4466,7 @@ namespace Google.Cloud.Container.V1 {
       if(!instanceGroupUrls_.Equals(other.instanceGroupUrls_)) return false;
       if (CurrentNodeCount != other.CurrentNodeCount) return false;
       if (ExpireTime != other.ExpireTime) return false;
+      if (Location != other.Location) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4045,6 +4494,8 @@ namespace Google.Cloud.Container.V1 {
       if (ipAllocationPolicy_ != null) hash ^= IpAllocationPolicy.GetHashCode();
       if (masterAuthorizedNetworksConfig_ != null) hash ^= MasterAuthorizedNetworksConfig.GetHashCode();
       if (maintenancePolicy_ != null) hash ^= MaintenancePolicy.GetHashCode();
+      if (networkConfig_ != null) hash ^= NetworkConfig.GetHashCode();
+      if (privateClusterConfig_ != null) hash ^= PrivateClusterConfig.GetHashCode();
       if (SelfLink.Length != 0) hash ^= SelfLink.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (Endpoint.Length != 0) hash ^= Endpoint.GetHashCode();
@@ -4059,6 +4510,7 @@ namespace Google.Cloud.Container.V1 {
       hash ^= instanceGroupUrls_.GetHashCode();
       if (CurrentNodeCount != 0) hash ^= CurrentNodeCount.GetHashCode();
       if (ExpireTime.Length != 0) hash ^= ExpireTime.GetHashCode();
+      if (Location.Length != 0) hash ^= Location.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4147,6 +4599,14 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(MaintenancePolicy);
       }
+      if (networkConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(NetworkConfig);
+      }
+      if (privateClusterConfig_ != null) {
+        output.WriteRawTag(170, 2);
+        output.WriteMessage(PrivateClusterConfig);
+      }
       if (SelfLink.Length != 0) {
         output.WriteRawTag(162, 6);
         output.WriteString(SelfLink);
@@ -4199,6 +4659,10 @@ namespace Google.Cloud.Container.V1 {
       if (ExpireTime.Length != 0) {
         output.WriteRawTag(138, 7);
         output.WriteString(ExpireTime);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(146, 7);
+        output.WriteString(Location);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4265,6 +4729,12 @@ namespace Google.Cloud.Container.V1 {
       if (maintenancePolicy_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenancePolicy);
       }
+      if (networkConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NetworkConfig);
+      }
+      if (privateClusterConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrivateClusterConfig);
+      }
       if (SelfLink.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SelfLink);
       }
@@ -4304,6 +4774,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ExpireTime.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ExpireTime);
+      }
+      if (Location.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Location);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4397,6 +4870,18 @@ namespace Google.Cloud.Container.V1 {
         }
         MaintenancePolicy.MergeFrom(other.MaintenancePolicy);
       }
+      if (other.networkConfig_ != null) {
+        if (networkConfig_ == null) {
+          networkConfig_ = new global::Google.Cloud.Container.V1.NetworkConfig();
+        }
+        NetworkConfig.MergeFrom(other.NetworkConfig);
+      }
+      if (other.privateClusterConfig_ != null) {
+        if (privateClusterConfig_ == null) {
+          privateClusterConfig_ = new global::Google.Cloud.Container.V1.PrivateClusterConfig();
+        }
+        PrivateClusterConfig.MergeFrom(other.PrivateClusterConfig);
+      }
       if (other.SelfLink.Length != 0) {
         SelfLink = other.SelfLink;
       }
@@ -4436,6 +4921,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.ExpireTime.Length != 0) {
         ExpireTime = other.ExpireTime;
+      }
+      if (other.Location.Length != 0) {
+        Location = other.Location;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4556,6 +5044,20 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(maintenancePolicy_);
             break;
           }
+          case 218: {
+            if (networkConfig_ == null) {
+              networkConfig_ = new global::Google.Cloud.Container.V1.NetworkConfig();
+            }
+            input.ReadMessage(networkConfig_);
+            break;
+          }
+          case 298: {
+            if (privateClusterConfig_ == null) {
+              privateClusterConfig_ = new global::Google.Cloud.Container.V1.PrivateClusterConfig();
+            }
+            input.ReadMessage(privateClusterConfig_);
+            break;
+          }
           case 802: {
             SelfLink = input.ReadString();
             break;
@@ -4612,6 +5114,10 @@ namespace Google.Cloud.Container.V1 {
             ExpireTime = input.ReadString();
             break;
           }
+          case 914: {
+            Location = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4652,6 +5158,11 @@ namespace Google.Cloud.Container.V1 {
         /// can be found in the `statusMessage` field.
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 5,
+        /// <summary>
+        /// The DEGRADED state indicates the cluster requires user action to restore
+        /// full functionality. Details can be found in the `statusMessage` field.
+        /// </summary>
+        [pbr::OriginalName("DEGRADED")] Degraded = 6,
       }
 
     }
@@ -4672,7 +5183,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4711,8 +5222,16 @@ namespace Google.Cloud.Container.V1 {
     private string desiredNodeVersion_ = "";
     /// <summary>
     /// The Kubernetes version to change the nodes to (typically an
-    /// upgrade). Use `-` to upgrade to the latest version supported by
-    /// the server.
+    /// upgrade).
+    ///
+    /// Users may specify either explicit versions offered by
+    /// Kubernetes Engine or version aliases, which have the following behavior:
+    ///
+    /// - "latest": picks the highest valid Kubernetes version
+    /// - "1.X": picks the highest valid patch+gke.N patch in the 1.X version
+    /// - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version
+    /// - "1.X.Y-gke.N": picks an explicit Kubernetes version
+    /// - "-": picks the Kubernetes master version
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DesiredNodeVersion {
@@ -4826,7 +5345,6 @@ namespace Google.Cloud.Container.V1 {
     public const int DesiredMasterAuthorizedNetworksConfigFieldNumber = 12;
     private global::Google.Cloud.Container.V1.MasterAuthorizedNetworksConfig desiredMasterAuthorizedNetworksConfig_;
     /// <summary>
-    /// Master authorized networks is a Beta feature.
     /// The desired configuration options for master authorized networks feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4841,9 +5359,16 @@ namespace Google.Cloud.Container.V1 {
     public const int DesiredMasterVersionFieldNumber = 100;
     private string desiredMasterVersion_ = "";
     /// <summary>
-    /// The Kubernetes version to change the master to. The only valid value is the
-    /// latest supported version. Use "-" to have the server automatically select
-    /// the latest version.
+    /// The Kubernetes version to change the master to.
+    ///
+    /// Users may specify either explicit versions offered by
+    /// Kubernetes Engine or version aliases, which have the following behavior:
+    ///
+    /// - "latest": picks the highest valid Kubernetes version
+    /// - "1.X": picks the highest valid patch+gke.N patch in the 1.X version
+    /// - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version
+    /// - "1.X.Y-gke.N": picks an explicit Kubernetes version
+    /// - "-": picks the default Kubernetes version
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DesiredMasterVersion {
@@ -5088,7 +5613,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5113,6 +5638,7 @@ namespace Google.Cloud.Container.V1 {
       statusMessage_ = other.statusMessage_;
       selfLink_ = other.selfLink_;
       targetLink_ = other.targetLink_;
+      location_ = other.location_;
       startTime_ = other.startTime_;
       endTime_ = other.endTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5144,7 +5670,9 @@ namespace Google.Cloud.Container.V1 {
     /// The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the operation
     /// is taking place.
+    /// This field is deprecated, use location instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -5237,6 +5765,23 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 9;
+    private string location_ = "";
+    /// <summary>
+    /// [Output only] The name of the Google Compute Engine
+    /// [zone](/compute/docs/regions-zones/regions-zones#available) or
+    /// [region](/compute/docs/regions-zones/regions-zones#available) in which
+    /// the cluster resides.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Location {
+      get { return location_; }
+      set {
+        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 10;
     private string startTime_ = "";
@@ -5288,6 +5833,7 @@ namespace Google.Cloud.Container.V1 {
       if (StatusMessage != other.StatusMessage) return false;
       if (SelfLink != other.SelfLink) return false;
       if (TargetLink != other.TargetLink) return false;
+      if (Location != other.Location) return false;
       if (StartTime != other.StartTime) return false;
       if (EndTime != other.EndTime) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -5304,6 +5850,7 @@ namespace Google.Cloud.Container.V1 {
       if (StatusMessage.Length != 0) hash ^= StatusMessage.GetHashCode();
       if (SelfLink.Length != 0) hash ^= SelfLink.GetHashCode();
       if (TargetLink.Length != 0) hash ^= TargetLink.GetHashCode();
+      if (Location.Length != 0) hash ^= Location.GetHashCode();
       if (StartTime.Length != 0) hash ^= StartTime.GetHashCode();
       if (EndTime.Length != 0) hash ^= EndTime.GetHashCode();
       if (_unknownFields != null) {
@@ -5351,6 +5898,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(66);
         output.WriteString(Detail);
       }
+      if (Location.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Location);
+      }
       if (StartTime.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(StartTime);
@@ -5390,6 +5941,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (TargetLink.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetLink);
+      }
+      if (Location.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
       }
       if (StartTime.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StartTime);
@@ -5431,6 +5985,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.TargetLink.Length != 0) {
         TargetLink = other.TargetLink;
+      }
+      if (other.Location.Length != 0) {
+        Location = other.Location;
       }
       if (other.StartTime.Length != 0) {
         StartTime = other.StartTime;
@@ -5479,6 +6036,10 @@ namespace Google.Cloud.Container.V1 {
           }
           case 66: {
             Detail = input.ReadString();
+            break;
+          }
+          case 74: {
+            Location = input.ReadString();
             break;
           }
           case 82: {
@@ -5613,7 +6174,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5633,6 +6194,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       cluster_ = other.cluster_ != null ? other.cluster_.Clone() : null;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5645,9 +6207,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -5660,10 +6224,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -5687,6 +6253,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 5;
+    private string parent_ = "";
+    /// <summary>
+    /// The parent (project and location) where the cluster will be created.
+    /// Specified in the format 'projects/*/locations/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateClusterRequest);
@@ -5703,6 +6284,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (!object.Equals(Cluster, other.Cluster)) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5712,6 +6294,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (cluster_ != null) hash ^= Cluster.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5737,6 +6320,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Cluster);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5753,6 +6340,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (cluster_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Cluster);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5776,6 +6366,9 @@ namespace Google.Cloud.Container.V1 {
           cluster_ = new global::Google.Cloud.Container.V1.Cluster();
         }
         Cluster.MergeFrom(other.Cluster);
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5803,6 +6396,10 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(cluster_);
             break;
           }
+          case 42: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -5820,7 +6417,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5840,6 +6437,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5852,9 +6450,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -5867,10 +6467,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -5883,13 +6485,30 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to retrieve.
+    /// Deprecated. The name of the cluster to retrieve.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
       set {
         clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to retrieve.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5909,6 +6528,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5918,6 +6538,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5943,6 +6564,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(ClusterId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5959,6 +6584,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ClusterId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5979,6 +6607,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.ClusterId.Length != 0) {
         ClusterId = other.ClusterId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6003,6 +6634,10 @@ namespace Google.Cloud.Container.V1 {
             ClusterId = input.ReadString();
             break;
           }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -6020,7 +6655,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6041,6 +6676,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       update_ = other.update_ != null ? other.update_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6053,9 +6689,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -6068,10 +6706,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -6084,8 +6724,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -6108,6 +6750,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to update.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UpdateClusterRequest);
@@ -6125,6 +6782,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (!object.Equals(Update, other.Update)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6135,6 +6793,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (update_ != null) hash ^= Update.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6164,6 +6823,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Update);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6183,6 +6846,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (update_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Update);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6209,6 +6875,9 @@ namespace Google.Cloud.Container.V1 {
           update_ = new global::Google.Cloud.Container.V1.ClusterUpdate();
         }
         Update.MergeFrom(other.Update);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6240,6 +6909,10 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(update_);
             break;
           }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -6257,7 +6930,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6280,6 +6953,7 @@ namespace Google.Cloud.Container.V1 {
       nodePoolId_ = other.nodePoolId_;
       nodeVersion_ = other.nodeVersion_;
       imageType_ = other.imageType_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6292,9 +6966,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -6307,10 +6983,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -6323,8 +7001,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -6337,8 +7017,10 @@ namespace Google.Cloud.Container.V1 {
     public const int NodePoolIdFieldNumber = 4;
     private string nodePoolId_ = "";
     /// <summary>
-    /// The name of the node pool to upgrade.
+    /// Deprecated. The name of the node pool to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodePoolId {
       get { return nodePoolId_; }
@@ -6352,8 +7034,16 @@ namespace Google.Cloud.Container.V1 {
     private string nodeVersion_ = "";
     /// <summary>
     /// The Kubernetes version to change the nodes to (typically an
-    /// upgrade). Use `-` to upgrade to the latest version supported by
-    /// the server.
+    /// upgrade).
+    ///
+    /// Users may specify either explicit versions offered by Kubernetes Engine or
+    /// version aliases, which have the following behavior:
+    ///
+    /// - "latest": picks the highest valid Kubernetes version
+    /// - "1.X": picks the highest valid patch+gke.N patch in the 1.X version
+    /// - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version
+    /// - "1.X.Y-gke.N": picks an explicit Kubernetes version
+    /// - "-": picks the Kubernetes master version
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodeVersion {
@@ -6377,6 +7067,22 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 8;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster, node pool) of the node pool to
+    /// update. Specified in the format
+    /// 'projects/*/locations/*/clusters/*/nodePools/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UpdateNodePoolRequest);
@@ -6396,6 +7102,7 @@ namespace Google.Cloud.Container.V1 {
       if (NodePoolId != other.NodePoolId) return false;
       if (NodeVersion != other.NodeVersion) return false;
       if (ImageType != other.ImageType) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6408,6 +7115,7 @@ namespace Google.Cloud.Container.V1 {
       if (NodePoolId.Length != 0) hash ^= NodePoolId.GetHashCode();
       if (NodeVersion.Length != 0) hash ^= NodeVersion.GetHashCode();
       if (ImageType.Length != 0) hash ^= ImageType.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6445,6 +7153,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(50);
         output.WriteString(ImageType);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6470,6 +7182,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ImageType.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageType);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6499,6 +7214,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.ImageType.Length != 0) {
         ImageType = other.ImageType;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6535,6 +7253,10 @@ namespace Google.Cloud.Container.V1 {
             ImageType = input.ReadString();
             break;
           }
+          case 66: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -6552,7 +7274,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6574,6 +7296,7 @@ namespace Google.Cloud.Container.V1 {
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
       autoscaling_ = other.autoscaling_ != null ? other.autoscaling_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6586,9 +7309,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -6601,10 +7326,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -6617,8 +7344,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -6631,8 +7360,10 @@ namespace Google.Cloud.Container.V1 {
     public const int NodePoolIdFieldNumber = 4;
     private string nodePoolId_ = "";
     /// <summary>
-    /// The name of the node pool to upgrade.
+    /// Deprecated. The name of the node pool to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodePoolId {
       get { return nodePoolId_; }
@@ -6655,6 +7386,22 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster, node pool) of the node pool to set
+    /// autoscaler settings. Specified in the format
+    /// 'projects/*/locations/*/clusters/*/nodePools/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetNodePoolAutoscalingRequest);
@@ -6673,6 +7420,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId != other.ClusterId) return false;
       if (NodePoolId != other.NodePoolId) return false;
       if (!object.Equals(Autoscaling, other.Autoscaling)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6684,6 +7432,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (NodePoolId.Length != 0) hash ^= NodePoolId.GetHashCode();
       if (autoscaling_ != null) hash ^= Autoscaling.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6717,6 +7466,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Autoscaling);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6739,6 +7492,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (autoscaling_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Autoscaling);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6768,6 +7524,9 @@ namespace Google.Cloud.Container.V1 {
           autoscaling_ = new global::Google.Cloud.Container.V1.NodePoolAutoscaling();
         }
         Autoscaling.MergeFrom(other.Autoscaling);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6803,6 +7562,10 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(autoscaling_);
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -6820,7 +7583,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6841,6 +7604,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       loggingService_ = other.loggingService_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6853,9 +7617,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -6868,9 +7634,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
@@ -6884,8 +7651,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -6912,6 +7681,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to set logging.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetLoggingServiceRequest);
@@ -6929,6 +7713,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (LoggingService != other.LoggingService) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6939,6 +7724,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (LoggingService.Length != 0) hash ^= LoggingService.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6968,6 +7754,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteString(LoggingService);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6987,6 +7777,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (LoggingService.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LoggingService);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7010,6 +7803,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.LoggingService.Length != 0) {
         LoggingService = other.LoggingService;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7038,6 +7834,10 @@ namespace Google.Cloud.Container.V1 {
             LoggingService = input.ReadString();
             break;
           }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -7055,7 +7855,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7076,6 +7876,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       monitoringService_ = other.monitoringService_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7088,9 +7889,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -7103,10 +7906,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -7119,8 +7924,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -7147,6 +7954,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to set monitoring.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetMonitoringServiceRequest);
@@ -7164,6 +7986,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (MonitoringService != other.MonitoringService) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7174,6 +7997,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (MonitoringService.Length != 0) hash ^= MonitoringService.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7203,6 +8027,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteString(MonitoringService);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7222,6 +8050,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (MonitoringService.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MonitoringService);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7245,6 +8076,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.MonitoringService.Length != 0) {
         MonitoringService = other.MonitoringService;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7273,6 +8107,10 @@ namespace Google.Cloud.Container.V1 {
             MonitoringService = input.ReadString();
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -7290,7 +8128,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7311,6 +8149,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       addonsConfig_ = other.addonsConfig_ != null ? other.addonsConfig_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7323,9 +8162,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -7338,10 +8179,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -7354,8 +8197,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -7379,6 +8224,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to set addons.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetAddonsConfigRequest);
@@ -7396,6 +8256,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (!object.Equals(AddonsConfig, other.AddonsConfig)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7406,6 +8267,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (addonsConfig_ != null) hash ^= AddonsConfig.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7435,6 +8297,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(AddonsConfig);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7454,6 +8320,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (addonsConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddonsConfig);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7480,6 +8349,9 @@ namespace Google.Cloud.Container.V1 {
           addonsConfig_ = new global::Google.Cloud.Container.V1.AddonsConfig();
         }
         AddonsConfig.MergeFrom(other.AddonsConfig);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7511,6 +8383,10 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(addonsConfig_);
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -7528,7 +8404,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7549,6 +8425,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       locations_ = other.locations_.Clone();
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7561,9 +8438,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -7576,10 +8455,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -7592,8 +8473,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -7621,6 +8504,21 @@ namespace Google.Cloud.Container.V1 {
       get { return locations_; }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to set locations.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetLocationsRequest);
@@ -7638,6 +8536,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if(!locations_.Equals(other.locations_)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7648,6 +8547,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       hash ^= locations_.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7674,6 +8574,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteString(ClusterId);
       }
       locations_.WriteTo(output, _repeated_locations_codec);
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7692,6 +8596,9 @@ namespace Google.Cloud.Container.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
       }
       size += locations_.CalculateSize(_repeated_locations_codec);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7713,6 +8620,9 @@ namespace Google.Cloud.Container.V1 {
         ClusterId = other.ClusterId;
       }
       locations_.Add(other.locations_);
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7740,6 +8650,10 @@ namespace Google.Cloud.Container.V1 {
             locations_.AddEntriesFrom(input, _repeated_locations_codec);
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -7757,7 +8671,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7778,6 +8692,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       masterVersion_ = other.masterVersion_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7790,9 +8705,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -7805,10 +8722,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -7821,8 +8740,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -7835,15 +8756,37 @@ namespace Google.Cloud.Container.V1 {
     public const int MasterVersionFieldNumber = 4;
     private string masterVersion_ = "";
     /// <summary>
-    /// The Kubernetes version to change the master to. The only valid value is the
-    /// latest supported version. Use "-" to have the server automatically select
-    /// the latest version.
+    /// The Kubernetes version to change the master to.
+    ///
+    /// Users may specify either explicit versions offered by Kubernetes Engine or
+    /// version aliases, which have the following behavior:
+    ///
+    /// - "latest": picks the highest valid Kubernetes version
+    /// - "1.X": picks the highest valid patch+gke.N patch in the 1.X version
+    /// - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version
+    /// - "1.X.Y-gke.N": picks an explicit Kubernetes version
+    /// - "-": picks the default Kubernetes version
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MasterVersion {
       get { return masterVersion_; }
       set {
         masterVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 7;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to update.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -7864,6 +8807,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (MasterVersion != other.MasterVersion) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7874,6 +8818,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (MasterVersion.Length != 0) hash ^= MasterVersion.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7903,6 +8848,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteString(MasterVersion);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7922,6 +8871,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (MasterVersion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MasterVersion);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7945,6 +8897,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.MasterVersion.Length != 0) {
         MasterVersion = other.MasterVersion;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7973,6 +8928,10 @@ namespace Google.Cloud.Container.V1 {
             MasterVersion = input.ReadString();
             break;
           }
+          case 58: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -7990,7 +8949,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8012,6 +8971,7 @@ namespace Google.Cloud.Container.V1 {
       clusterId_ = other.clusterId_;
       action_ = other.action_;
       update_ = other.update_ != null ? other.update_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8024,9 +8984,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -8039,10 +9001,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -8055,8 +9019,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to upgrade.
+    /// Deprecated. The name of the cluster to upgrade.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -8093,6 +9059,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 7;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to set auth.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetMasterAuthRequest);
@@ -8111,6 +9092,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId != other.ClusterId) return false;
       if (Action != other.Action) return false;
       if (!object.Equals(Update, other.Update)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8122,6 +9104,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (Action != 0) hash ^= Action.GetHashCode();
       if (update_ != null) hash ^= Update.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8155,6 +9138,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Update);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8177,6 +9164,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (update_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Update);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8206,6 +9196,9 @@ namespace Google.Cloud.Container.V1 {
           update_ = new global::Google.Cloud.Container.V1.MasterAuth();
         }
         Update.MergeFrom(other.Update);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8239,6 +9232,10 @@ namespace Google.Cloud.Container.V1 {
               update_ = new global::Google.Cloud.Container.V1.MasterAuth();
             }
             input.ReadMessage(update_);
+            break;
+          }
+          case 58: {
+            Name = input.ReadString();
             break;
           }
         }
@@ -8290,7 +9287,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8310,6 +9307,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8322,9 +9320,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -8337,10 +9337,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -8353,13 +9355,30 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to delete.
+    /// Deprecated. The name of the cluster to delete.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
       set {
         clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 4;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster) of the cluster to delete.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -8379,6 +9398,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8388,6 +9408,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8413,6 +9434,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(ClusterId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8429,6 +9454,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ClusterId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8449,6 +9477,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.ClusterId.Length != 0) {
         ClusterId = other.ClusterId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8473,6 +9504,10 @@ namespace Google.Cloud.Container.V1 {
             ClusterId = input.ReadString();
             break;
           }
+          case 34: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -8490,7 +9525,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8509,6 +9544,7 @@ namespace Google.Cloud.Container.V1 {
     public ListClustersRequest(ListClustersRequest other) : this() {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8521,9 +9557,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -8536,15 +9574,33 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides, or "-" for all zones.
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
       set {
         zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 4;
+    private string parent_ = "";
+    /// <summary>
+    /// The parent (project and location) where the clusters will be listed.
+    /// Specified in the format 'projects/*/locations/*'.
+    /// Location "-" matches all zones and all regions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -8563,6 +9619,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8571,6 +9628,7 @@ namespace Google.Cloud.Container.V1 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8592,6 +9650,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(18);
         output.WriteString(Zone);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8605,6 +9667,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (Zone.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8622,6 +9687,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8642,6 +9710,10 @@ namespace Google.Cloud.Container.V1 {
             Zone = input.ReadString();
             break;
           }
+          case 34: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -8659,7 +9731,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8811,7 +9883,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8831,6 +9903,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       operationId_ = other.operationId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8843,9 +9916,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -8858,10 +9933,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -8874,13 +9951,30 @@ namespace Google.Cloud.Container.V1 {
     public const int OperationIdFieldNumber = 3;
     private string operationId_ = "";
     /// <summary>
-    /// The server-assigned `name` of the operation.
+    /// Deprecated. The server-assigned `name` of the operation.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OperationId {
       get { return operationId_; }
       set {
         operationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, operation id) of the operation to get.
+    /// Specified in the format 'projects/*/locations/*/operations/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -8900,6 +9994,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (OperationId != other.OperationId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8909,6 +10004,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (OperationId.Length != 0) hash ^= OperationId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8934,6 +10030,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(OperationId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8950,6 +10050,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (OperationId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OperationId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8971,6 +10074,9 @@ namespace Google.Cloud.Container.V1 {
       if (other.OperationId.Length != 0) {
         OperationId = other.OperationId;
       }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8994,6 +10100,10 @@ namespace Google.Cloud.Container.V1 {
             OperationId = input.ReadString();
             break;
           }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -9011,7 +10121,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9030,6 +10140,7 @@ namespace Google.Cloud.Container.V1 {
     public ListOperationsRequest(ListOperationsRequest other) : this() {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9042,9 +10153,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -9057,14 +10170,32 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-    /// to return operations for, or `-` for all zones.
+    /// Deprecated. The name of the Google Compute Engine
+    /// [zone](/compute/docs/zones#available) to return operations for, or `-` for
+    /// all zones. This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
       set {
         zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 4;
+    private string parent_ = "";
+    /// <summary>
+    /// The parent (project and location) where the operations will be listed.
+    /// Specified in the format 'projects/*/locations/*'.
+    /// Location "-" matches all zones and all regions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -9083,6 +10214,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9091,6 +10223,7 @@ namespace Google.Cloud.Container.V1 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9112,6 +10245,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(18);
         output.WriteString(Zone);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9125,6 +10262,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (Zone.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9142,6 +10282,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9162,6 +10305,10 @@ namespace Google.Cloud.Container.V1 {
             Zone = input.ReadString();
             break;
           }
+          case 34: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -9179,7 +10326,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9199,6 +10346,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       operationId_ = other.operationId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9211,9 +10359,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -9226,9 +10376,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the operation resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -9241,13 +10393,30 @@ namespace Google.Cloud.Container.V1 {
     public const int OperationIdFieldNumber = 3;
     private string operationId_ = "";
     /// <summary>
-    /// The server-assigned `name` of the operation.
+    /// Deprecated. The server-assigned `name` of the operation.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OperationId {
       get { return operationId_; }
       set {
         operationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 4;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, operation id) of the operation to cancel.
+    /// Specified in the format 'projects/*/locations/*/operations/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -9267,6 +10436,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (OperationId != other.OperationId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9276,6 +10446,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (OperationId.Length != 0) hash ^= OperationId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9301,6 +10472,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(OperationId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9317,6 +10492,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (OperationId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OperationId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9337,6 +10515,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.OperationId.Length != 0) {
         OperationId = other.OperationId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9361,6 +10542,10 @@ namespace Google.Cloud.Container.V1 {
             OperationId = input.ReadString();
             break;
           }
+          case 34: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -9378,7 +10563,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9519,7 +10704,7 @@ namespace Google.Cloud.Container.V1 {
   }
 
   /// <summary>
-  /// Gets the current Container Engine service configuration.
+  /// Gets the current Kubernetes Engine service configuration.
   /// </summary>
   public sealed partial class GetServerConfigRequest : pb::IMessage<GetServerConfigRequest> {
     private static readonly pb::MessageParser<GetServerConfigRequest> _parser = new pb::MessageParser<GetServerConfigRequest>(() => new GetServerConfigRequest());
@@ -9529,7 +10714,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9548,6 +10733,7 @@ namespace Google.Cloud.Container.V1 {
     public GetServerConfigRequest(GetServerConfigRequest other) : this() {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9560,9 +10746,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -9575,14 +10763,31 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-    /// to return operations for.
+    /// Deprecated. The name of the Google Compute Engine
+    /// [zone](/compute/docs/zones#available) to return operations for.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
       set {
         zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 4;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project and location) of the server config to get
+    /// Specified in the format 'projects/*/locations/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -9601,6 +10806,7 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9609,6 +10815,7 @@ namespace Google.Cloud.Container.V1 {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9630,6 +10837,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(18);
         output.WriteString(Zone);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9643,6 +10854,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (Zone.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9660,6 +10874,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9680,6 +10897,10 @@ namespace Google.Cloud.Container.V1 {
             Zone = input.ReadString();
             break;
           }
+          case 34: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -9687,7 +10908,7 @@ namespace Google.Cloud.Container.V1 {
   }
 
   /// <summary>
-  /// Container Engine service configuration.
+  /// Kubernetes Engine service configuration.
   /// </summary>
   public sealed partial class ServerConfig : pb::IMessage<ServerConfig> {
     private static readonly pb::MessageParser<ServerConfig> _parser = new pb::MessageParser<ServerConfig>(() => new ServerConfig());
@@ -9697,7 +10918,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9932,7 +11153,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9953,6 +11174,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       nodePool_ = other.nodePool_ != null ? other.nodePool_.Clone() : null;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9965,9 +11187,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -9980,10 +11204,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -9996,8 +11222,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -10020,6 +11248,22 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 6;
+    private string parent_ = "";
+    /// <summary>
+    /// The parent (project, location, cluster id) where the node pool will be
+    /// created. Specified in the format
+    /// 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateNodePoolRequest);
@@ -10037,6 +11281,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (!object.Equals(NodePool, other.NodePool)) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10047,6 +11292,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (nodePool_ != null) hash ^= NodePool.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10076,6 +11322,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(NodePool);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10095,6 +11345,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (nodePool_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NodePool);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10121,6 +11374,9 @@ namespace Google.Cloud.Container.V1 {
           nodePool_ = new global::Google.Cloud.Container.V1.NodePool();
         }
         NodePool.MergeFrom(other.NodePool);
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10152,6 +11408,10 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(nodePool_);
             break;
           }
+          case 50: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -10169,7 +11429,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10190,6 +11450,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10202,9 +11463,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -10217,10 +11480,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -10233,8 +11498,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -10247,13 +11514,31 @@ namespace Google.Cloud.Container.V1 {
     public const int NodePoolIdFieldNumber = 4;
     private string nodePoolId_ = "";
     /// <summary>
-    /// The name of the node pool to delete.
+    /// Deprecated. The name of the node pool to delete.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodePoolId {
       get { return nodePoolId_; }
       set {
         nodePoolId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster, node pool id) of the node pool to
+    /// delete. Specified in the format
+    /// 'projects/*/locations/*/clusters/*/nodePools/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -10274,6 +11559,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (NodePoolId != other.NodePoolId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10284,6 +11570,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (NodePoolId.Length != 0) hash ^= NodePoolId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10313,6 +11600,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteString(NodePoolId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10332,6 +11623,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (NodePoolId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodePoolId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10356,6 +11650,9 @@ namespace Google.Cloud.Container.V1 {
       if (other.NodePoolId.Length != 0) {
         NodePoolId = other.NodePoolId;
       }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10383,6 +11680,10 @@ namespace Google.Cloud.Container.V1 {
             NodePoolId = input.ReadString();
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -10400,7 +11701,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10420,6 +11721,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
+      parent_ = other.parent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10432,9 +11734,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -10447,10 +11751,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -10463,13 +11769,30 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the parent field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
       set {
         clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 5;
+    private string parent_ = "";
+    /// <summary>
+    /// The parent (project, location, cluster id) where the node pools will be
+    /// listed. Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -10489,6 +11812,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
+      if (Parent != other.Parent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10498,6 +11822,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10523,6 +11848,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(ClusterId);
       }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Parent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10539,6 +11868,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ClusterId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10559,6 +11891,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.ClusterId.Length != 0) {
         ClusterId = other.ClusterId;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10583,6 +11918,10 @@ namespace Google.Cloud.Container.V1 {
             ClusterId = input.ReadString();
             break;
           }
+          case 42: {
+            Parent = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -10600,7 +11939,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10621,6 +11960,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10633,9 +11973,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -10648,10 +11990,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -10664,8 +12008,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -10678,13 +12024,31 @@ namespace Google.Cloud.Container.V1 {
     public const int NodePoolIdFieldNumber = 4;
     private string nodePoolId_ = "";
     /// <summary>
-    /// The name of the node pool.
+    /// Deprecated. The name of the node pool.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodePoolId {
       get { return nodePoolId_; }
       set {
         nodePoolId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster, node pool id) of the node pool to
+    /// get. Specified in the format
+    /// 'projects/*/locations/*/clusters/*/nodePools/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -10705,6 +12069,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (NodePoolId != other.NodePoolId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10715,6 +12080,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (NodePoolId.Length != 0) hash ^= NodePoolId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10744,6 +12110,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteString(NodePoolId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10763,6 +12133,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (NodePoolId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodePoolId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10786,6 +12159,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.NodePoolId.Length != 0) {
         NodePoolId = other.NodePoolId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10814,6 +12190,10 @@ namespace Google.Cloud.Container.V1 {
             NodePoolId = input.ReadString();
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -10836,7 +12216,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11316,7 +12696,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11525,7 +12905,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11694,7 +13074,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[42]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11835,7 +13215,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[43]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12006,7 +13386,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12178,7 +13558,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12200,6 +13580,7 @@ namespace Google.Cloud.Container.V1 {
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
       management_ = other.management_ != null ? other.management_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12212,9 +13593,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -12227,10 +13610,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -12243,8 +13628,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to update.
+    /// Deprecated. The name of the cluster to update.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -12257,8 +13644,10 @@ namespace Google.Cloud.Container.V1 {
     public const int NodePoolIdFieldNumber = 4;
     private string nodePoolId_ = "";
     /// <summary>
-    /// The name of the node pool to update.
+    /// Deprecated. The name of the node pool to update.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodePoolId {
       get { return nodePoolId_; }
@@ -12281,6 +13670,22 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 7;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster, node pool id) of the node pool to set
+    /// management properties. Specified in the format
+    /// 'projects/*/locations/*/clusters/*/nodePools/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetNodePoolManagementRequest);
@@ -12299,6 +13704,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId != other.ClusterId) return false;
       if (NodePoolId != other.NodePoolId) return false;
       if (!object.Equals(Management, other.Management)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12310,6 +13716,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (NodePoolId.Length != 0) hash ^= NodePoolId.GetHashCode();
       if (management_ != null) hash ^= Management.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12343,6 +13750,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Management);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12365,6 +13776,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (management_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Management);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -12394,6 +13808,9 @@ namespace Google.Cloud.Container.V1 {
           management_ = new global::Google.Cloud.Container.V1.NodeManagement();
         }
         Management.MergeFrom(other.Management);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -12429,6 +13846,10 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(management_);
             break;
           }
+          case 58: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -12447,7 +13868,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12469,6 +13890,7 @@ namespace Google.Cloud.Container.V1 {
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
       nodeCount_ = other.nodeCount_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12481,9 +13903,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -12496,10 +13920,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -12512,8 +13938,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to update.
+    /// Deprecated. The name of the cluster to update.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -12526,8 +13954,10 @@ namespace Google.Cloud.Container.V1 {
     public const int NodePoolIdFieldNumber = 4;
     private string nodePoolId_ = "";
     /// <summary>
-    /// The name of the node pool to update.
+    /// Deprecated. The name of the node pool to update.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodePoolId {
       get { return nodePoolId_; }
@@ -12550,6 +13980,22 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 7;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster, node pool id) of the node pool to set
+    /// size.
+    /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetNodePoolSizeRequest);
@@ -12568,6 +14014,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId != other.ClusterId) return false;
       if (NodePoolId != other.NodePoolId) return false;
       if (NodeCount != other.NodeCount) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12579,6 +14026,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (NodePoolId.Length != 0) hash ^= NodePoolId.GetHashCode();
       if (NodeCount != 0) hash ^= NodeCount.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12612,6 +14060,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(NodeCount);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12634,6 +14086,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (NodeCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(NodeCount);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -12660,6 +14115,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.NodeCount != 0) {
         NodeCount = other.NodeCount;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -12692,6 +14150,10 @@ namespace Google.Cloud.Container.V1 {
             NodeCount = input.ReadInt32();
             break;
           }
+          case 58: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -12711,7 +14173,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[47]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12732,6 +14194,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       nodePoolId_ = other.nodePoolId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12744,9 +14207,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -12759,10 +14224,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -12775,8 +14242,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to rollback.
+    /// Deprecated. The name of the cluster to rollback.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -12789,13 +14258,31 @@ namespace Google.Cloud.Container.V1 {
     public const int NodePoolIdFieldNumber = 4;
     private string nodePoolId_ = "";
     /// <summary>
-    /// The name of the node pool to rollback.
+    /// Deprecated. The name of the node pool to rollback.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NodePoolId {
       get { return nodePoolId_; }
       set {
         nodePoolId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster, node pool id) of the node poll to
+    /// rollback upgrade.
+    /// Specified in the format 'projects/*/locations/*/clusters/*/nodePools/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -12816,6 +14303,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (NodePoolId != other.NodePoolId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12826,6 +14314,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (NodePoolId.Length != 0) hash ^= NodePoolId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12855,6 +14344,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteString(NodePoolId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12874,6 +14367,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (NodePoolId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NodePoolId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -12897,6 +14393,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.NodePoolId.Length != 0) {
         NodePoolId = other.NodePoolId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -12925,6 +14424,10 @@ namespace Google.Cloud.Container.V1 {
             NodePoolId = input.ReadString();
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -12942,7 +14445,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[48]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13070,7 +14573,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[49]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13271,7 +14774,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[50]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13293,6 +14796,7 @@ namespace Google.Cloud.Container.V1 {
       clusterId_ = other.clusterId_;
       resourceLabels_ = other.resourceLabels_.Clone();
       labelFingerprint_ = other.labelFingerprint_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13305,9 +14809,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -13320,10 +14826,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -13336,8 +14844,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -13365,7 +14875,7 @@ namespace Google.Cloud.Container.V1 {
     /// <summary>
     /// The fingerprint of the previous set of labels for this resource,
     /// used to detect conflicts. The fingerprint is initially generated by
-    /// Container Engine and changes after every request to modify or update
+    /// Kubernetes Engine and changes after every request to modify or update
     /// labels. You must always provide an up-to-date fingerprint hash when
     /// updating or changing labels. Make a &lt;code>get()&lt;/code> request to the
     /// resource to get the latest fingerprint.
@@ -13375,6 +14885,21 @@ namespace Google.Cloud.Container.V1 {
       get { return labelFingerprint_; }
       set {
         labelFingerprint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 7;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster id) of the cluster to set labels.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -13396,6 +14921,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId != other.ClusterId) return false;
       if (!ResourceLabels.Equals(other.ResourceLabels)) return false;
       if (LabelFingerprint != other.LabelFingerprint) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13407,6 +14933,7 @@ namespace Google.Cloud.Container.V1 {
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       hash ^= ResourceLabels.GetHashCode();
       if (LabelFingerprint.Length != 0) hash ^= LabelFingerprint.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13437,6 +14964,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(42);
         output.WriteString(LabelFingerprint);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13457,6 +14988,9 @@ namespace Google.Cloud.Container.V1 {
       size += resourceLabels_.CalculateSize(_map_resourceLabels_codec);
       if (LabelFingerprint.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LabelFingerprint);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -13481,6 +15015,9 @@ namespace Google.Cloud.Container.V1 {
       resourceLabels_.Add(other.resourceLabels_);
       if (other.LabelFingerprint.Length != 0) {
         LabelFingerprint = other.LabelFingerprint;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -13513,6 +15050,10 @@ namespace Google.Cloud.Container.V1 {
             LabelFingerprint = input.ReadString();
             break;
           }
+          case 58: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -13531,7 +15072,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[51]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13552,6 +15093,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       enabled_ = other.enabled_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13564,9 +15106,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://support.google.com/cloud/answer/6158840).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -13579,10 +15123,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -13595,8 +15141,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster to update.
+    /// Deprecated. The name of the cluster to update.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -13619,6 +15167,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster id) of the cluster to set legacy abac.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetLegacyAbacRequest);
@@ -13636,6 +15199,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (Enabled != other.Enabled) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13646,6 +15210,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (Enabled != false) hash ^= Enabled.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13675,6 +15240,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(32);
         output.WriteBool(Enabled);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13694,6 +15263,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (Enabled != false) {
         size += 1 + 1;
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -13717,6 +15289,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.Enabled != false) {
         Enabled = other.Enabled;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -13745,6 +15320,10 @@ namespace Google.Cloud.Container.V1 {
             Enabled = input.ReadBool();
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -13763,7 +15342,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[52]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13783,6 +15362,8 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
+      name_ = other.name_;
+      rotateCredentials_ = other.rotateCredentials_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13795,9 +15376,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -13810,10 +15393,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -13826,13 +15411,44 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
       set {
         clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster id) of the cluster to start IP
+    /// rotation. Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rotate_credentials" field.</summary>
+    public const int RotateCredentialsFieldNumber = 7;
+    private bool rotateCredentials_;
+    /// <summary>
+    /// Whether to rotate credentials during IP rotation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool RotateCredentials {
+      get { return rotateCredentials_; }
+      set {
+        rotateCredentials_ = value;
       }
     }
 
@@ -13852,6 +15468,8 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
+      if (Name != other.Name) return false;
+      if (RotateCredentials != other.RotateCredentials) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13861,6 +15479,8 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RotateCredentials != false) hash ^= RotateCredentials.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13886,6 +15506,14 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(ClusterId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
+      if (RotateCredentials != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(RotateCredentials);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13902,6 +15530,12 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ClusterId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RotateCredentials != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -13923,6 +15557,12 @@ namespace Google.Cloud.Container.V1 {
       if (other.ClusterId.Length != 0) {
         ClusterId = other.ClusterId;
       }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.RotateCredentials != false) {
+        RotateCredentials = other.RotateCredentials;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -13946,6 +15586,14 @@ namespace Google.Cloud.Container.V1 {
             ClusterId = input.ReadString();
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
+          case 56: {
+            RotateCredentials = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -13963,7 +15611,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[53]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13983,6 +15631,7 @@ namespace Google.Cloud.Container.V1 {
       projectId_ = other.projectId_;
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13995,9 +15644,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -14010,10 +15661,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -14026,13 +15679,30 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
       set {
         clusterId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 7;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster id) of the cluster to complete IP
+    /// rotation. Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -14052,6 +15722,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -14061,6 +15732,7 @@ namespace Google.Cloud.Container.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -14086,6 +15758,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(26);
         output.WriteString(ClusterId);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -14102,6 +15778,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (ClusterId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -14122,6 +15801,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (other.ClusterId.Length != 0) {
         ClusterId = other.ClusterId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -14146,6 +15828,10 @@ namespace Google.Cloud.Container.V1 {
             ClusterId = input.ReadString();
             break;
           }
+          case 58: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -14163,7 +15849,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[54]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14330,7 +16016,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[55]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14351,6 +16037,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       networkPolicy_ = other.networkPolicy_ != null ? other.networkPolicy_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -14363,9 +16050,11 @@ namespace Google.Cloud.Container.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Developers Console [project ID or project
+    /// Deprecated. The Google Developers Console [project ID or project
     /// number](https://developers.google.com/console/help/new/#projectnumber).
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
       get { return projectId_; }
@@ -14378,10 +16067,12 @@ namespace Google.Cloud.Container.V1 {
     public const int ZoneFieldNumber = 2;
     private string zone_ = "";
     /// <summary>
-    /// The name of the Google Compute Engine
+    /// Deprecated. The name of the Google Compute Engine
     /// [zone](/compute/docs/zones#available) in which the cluster
     /// resides.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Zone {
       get { return zone_; }
@@ -14394,8 +16085,10 @@ namespace Google.Cloud.Container.V1 {
     public const int ClusterIdFieldNumber = 3;
     private string clusterId_ = "";
     /// <summary>
-    /// The name of the cluster.
+    /// Deprecated. The name of the cluster.
+    /// This field has been deprecated and replaced by the name field.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterId {
       get { return clusterId_; }
@@ -14418,6 +16111,21 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster id) of the cluster to set networking
+    /// policy. Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetNetworkPolicyRequest);
@@ -14435,6 +16143,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (!object.Equals(NetworkPolicy, other.NetworkPolicy)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -14445,6 +16154,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (networkPolicy_ != null) hash ^= NetworkPolicy.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -14474,6 +16184,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(NetworkPolicy);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -14493,6 +16207,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (networkPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NetworkPolicy);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -14519,6 +16236,9 @@ namespace Google.Cloud.Container.V1 {
           networkPolicy_ = new global::Google.Cloud.Container.V1.NetworkPolicy();
         }
         NetworkPolicy.MergeFrom(other.NetworkPolicy);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -14550,6 +16270,10 @@ namespace Google.Cloud.Container.V1 {
             input.ReadMessage(networkPolicy_);
             break;
           }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -14567,7 +16291,7 @@ namespace Google.Cloud.Container.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[56]; }
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14588,6 +16312,7 @@ namespace Google.Cloud.Container.V1 {
       zone_ = other.zone_;
       clusterId_ = other.clusterId_;
       maintenancePolicy_ = other.maintenancePolicy_ != null ? other.maintenancePolicy_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -14656,6 +16381,22 @@ namespace Google.Cloud.Container.V1 {
       }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
+    /// <summary>
+    /// The name (project, location, cluster id) of the cluster to set maintenance
+    /// policy.
+    /// Specified in the format 'projects/*/locations/*/clusters/*'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SetMaintenancePolicyRequest);
@@ -14673,6 +16414,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone != other.Zone) return false;
       if (ClusterId != other.ClusterId) return false;
       if (!object.Equals(MaintenancePolicy, other.MaintenancePolicy)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -14683,6 +16425,7 @@ namespace Google.Cloud.Container.V1 {
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
       if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
       if (maintenancePolicy_ != null) hash ^= MaintenancePolicy.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -14712,6 +16455,10 @@ namespace Google.Cloud.Container.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(MaintenancePolicy);
       }
+      if (Name.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -14731,6 +16478,9 @@ namespace Google.Cloud.Container.V1 {
       }
       if (maintenancePolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MaintenancePolicy);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -14757,6 +16507,9 @@ namespace Google.Cloud.Container.V1 {
           maintenancePolicy_ = new global::Google.Cloud.Container.V1.MaintenancePolicy();
         }
         MaintenancePolicy.MergeFrom(other.MaintenancePolicy);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -14786,6 +16539,181 @@ namespace Google.Cloud.Container.V1 {
               maintenancePolicy_ = new global::Google.Cloud.Container.V1.MaintenancePolicy();
             }
             input.ReadMessage(maintenancePolicy_);
+            break;
+          }
+          case 42: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// NetworkConfig reports the relative names of network &amp; subnetwork.
+  /// </summary>
+  public sealed partial class NetworkConfig : pb::IMessage<NetworkConfig> {
+    private static readonly pb::MessageParser<NetworkConfig> _parser = new pb::MessageParser<NetworkConfig>(() => new NetworkConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NetworkConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Container.V1.ClusterServiceReflection.Descriptor.MessageTypes[58]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetworkConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetworkConfig(NetworkConfig other) : this() {
+      network_ = other.network_;
+      subnetwork_ = other.subnetwork_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetworkConfig Clone() {
+      return new NetworkConfig(this);
+    }
+
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 1;
+    private string network_ = "";
+    /// <summary>
+    /// Output only. The relative name of the Google Compute Engine
+    /// [network][google.container.v1.NetworkConfig.network](/compute/docs/networks-and-firewalls#networks) to which
+    /// the cluster is connected.
+    /// Example: projects/my-project/global/networks/my-network
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Network {
+      get { return network_; }
+      set {
+        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "subnetwork" field.</summary>
+    public const int SubnetworkFieldNumber = 2;
+    private string subnetwork_ = "";
+    /// <summary>
+    /// Output only. The relative name of the Google Compute Engine
+    /// [subnetwork](/compute/docs/vpc) to which the cluster is connected.
+    /// Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Subnetwork {
+      get { return subnetwork_; }
+      set {
+        subnetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NetworkConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NetworkConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Network != other.Network) return false;
+      if (Subnetwork != other.Subnetwork) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (Subnetwork.Length != 0) hash ^= Subnetwork.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Network.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Network);
+      }
+      if (Subnetwork.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Subnetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Network.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (Subnetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Subnetwork);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NetworkConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Network.Length != 0) {
+        Network = other.Network;
+      }
+      if (other.Subnetwork.Length != 0) {
+        Subnetwork = other.Subnetwork;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Network = input.ReadString();
+            break;
+          }
+          case 18: {
+            Subnetwork = input.ReadString();
             break;
           }
         }

@@ -143,6 +143,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
+                Location = "location1901043637",
             };
             mockGrpcClient.Setup(x => x.GetCluster(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -189,6 +190,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
+                Location = "location1901043637",
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -235,6 +237,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
+                Location = "location1901043637",
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -278,6 +281,7 @@ namespace Google.Cloud.Container.V1.Tests
                 ServicesIpv4Cidr = "servicesIpv4Cidr1966438125",
                 CurrentNodeCount = 178977560,
                 ExpireTime = "expireTime-96179731",
+                Location = "location1901043637",
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Cluster>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -305,6 +309,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -337,6 +342,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -369,6 +375,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -398,6 +405,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -428,6 +436,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -462,6 +471,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -496,6 +506,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -526,6 +537,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -558,6 +570,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -590,6 +603,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -621,6 +635,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -652,6 +667,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -682,6 +698,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -716,6 +733,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -750,6 +768,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -780,6 +799,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -810,6 +830,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -844,6 +865,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -878,6 +900,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -908,6 +931,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -938,6 +962,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -972,6 +997,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1006,6 +1032,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1036,6 +1063,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1066,6 +1094,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1100,6 +1129,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1134,6 +1164,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1164,6 +1195,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1194,6 +1226,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1228,6 +1261,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1262,6 +1296,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1292,6 +1327,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1323,6 +1359,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1354,6 +1391,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1383,6 +1421,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1415,6 +1454,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1447,6 +1487,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1476,6 +1517,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1581,6 +1623,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1613,6 +1656,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1645,6 +1689,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -1674,6 +1719,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2072,6 +2118,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2106,6 +2153,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2140,6 +2188,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2170,6 +2219,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2200,6 +2250,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2234,6 +2285,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2268,6 +2320,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2298,6 +2351,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2328,6 +2382,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2362,6 +2417,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2396,6 +2452,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2426,6 +2483,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2457,6 +2515,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2488,6 +2547,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2519,6 +2579,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2550,6 +2611,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2580,6 +2642,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2614,6 +2677,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2648,6 +2712,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2678,6 +2743,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2707,6 +2773,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2739,6 +2806,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2771,6 +2839,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2800,6 +2869,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2829,6 +2899,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2861,6 +2932,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2893,6 +2965,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2922,6 +2995,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2953,6 +3027,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -2984,6 +3059,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3014,6 +3090,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3048,6 +3125,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3082,6 +3160,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3112,6 +3191,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3142,6 +3222,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3176,6 +3257,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3210,6 +3292,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
@@ -3240,6 +3323,7 @@ namespace Google.Cloud.Container.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 SelfLink = "selfLink-1691268851",
                 TargetLink = "targetLink-2084812312",
+                Location = "location1901043637",
                 StartTime = "startTime-1573145462",
                 EndTime = "endTime1725551537",
             };
