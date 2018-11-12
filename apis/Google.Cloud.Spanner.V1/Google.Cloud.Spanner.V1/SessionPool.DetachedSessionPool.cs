@@ -16,8 +16,6 @@ namespace Google.Cloud.Spanner.V1
 {
     public partial class SessionPool
     {
-        // TODO: Rename? (Name doesn't matter much as it's a private class.)
-
         /// <summary>
         /// A "session pool" for sessions that aren't really pooled. This is used by
         /// <see cref="SessionPool.RecreateSession(SessionName, Protobuf.ByteString, TransactionOptions.ModeOneofCase)"/>.
