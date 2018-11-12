@@ -439,7 +439,7 @@ namespace Google.Cloud.Spanner.Data
                 return ret;
             }
             
-            // TODO: Do we still want to support this?
+            // It's questionable as to whether we want to support this, but it does no harm to do so.
             if (typeof(IDictionary).IsAssignableFrom(targetClrType))
             {
                 if (targetClrType == typeof(IDictionary))
