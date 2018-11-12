@@ -1008,7 +1008,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is:
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is:
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is:
@@ -1107,7 +1107,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1127,7 +1127,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1146,7 +1146,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1712,7 +1712,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1733,7 +1733,7 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new notification channel, representing a single notification
-        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// endpoint such as an email address, SMS number, or pagerduty service.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
