@@ -33,22 +33,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public ReadTests(ReadTableFixture fixture) =>
             _fixture = fixture;
 
-        /// <summary>
-        /// This class ensures that the credential in TestDeadlineExceeded is seen as a new instance.
-        /// </summary>
-        private class CredentialWrapper : ITokenAccess
-        {
-            private readonly ITokenAccess _original;
-
-            public CredentialWrapper(ITokenAccess original) => _original = original;
-
-            /// <inheritdoc />
-            public Task<string> GetAccessTokenForRequestAsync(
-                string authUri = null,
-                CancellationToken cancellationToken = new CancellationToken()) => _original
-                .GetAccessTokenForRequestAsync(authUri, cancellationToken);
-        }
-
         private async Task<T> ExecuteAsync<T>(string sql)
         {
             using (var connection = _fixture.GetConnection())
@@ -164,68 +148,48 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task PointRead()
         {
-            int rowsRead = -1;
-
             using (var connection = _fixture.GetConnection())
             {
-                var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    rowsRead = 0;
-                    while (await reader.ReadAsync())
-                    {
-                        Assert.Equal("k1", reader.GetString(0));
-                        Assert.Equal("v1", reader.GetString(1));
-                        rowsRead++;
-                    }
+                    Assert.True(await reader.ReadAsync());
+                    Assert.Equal("k1", reader.GetString(0));
+                    Assert.Equal("v1", reader.GetString(1));
+
+                    Assert.False(await reader.ReadAsync());
                 }
             }
-            Assert.Equal(1, rowsRead);
         }
 
         [Fact]
         public async Task ReadAllowsNewApis()
         {
-            int rowsRead = -1;
-
             using (var connection = _fixture.GetConnection())
             {
-                var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    rowsRead = 0;
-                    while (await reader.ReadAsync())
-                    {
-                        Assert.Equal("k1", reader.GetFieldValue<string>("Key"));
-                        Assert.Equal("v1", reader.GetFieldValue<string>("StringValue"));
-                        rowsRead++;
-                    }
+                    Assert.True(await reader.ReadAsync());
+                    Assert.Equal("k1", reader.GetFieldValue<string>("Key"));
+                    Assert.Equal("v1", reader.GetFieldValue<string>("StringValue"));
+
+                    Assert.False(await reader.ReadAsync());
                 }
             }
-            Assert.Equal(1, rowsRead);
         }
 
         [Fact]
         public async Task PointReadEmpty()
         {
-            int rowsRead = -1;
-
             using (var connection = _fixture.GetConnection())
             {
-                var cmd = connection.CreateSelectCommand(
-                    $"SELECT * FROM {_fixture.TableName} WHERE Key = 'k99'");
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k99'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    rowsRead = 0;
-                    while (await reader.ReadAsync())
-                    {
-                        rowsRead++;
-                    }
+                    Assert.False(await reader.ReadAsync());
                 }
             }
-            Assert.Equal(0, rowsRead);
         }
 
         [Fact]
@@ -253,22 +217,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task ReadEmpty()
         {
-            int rowsRead = -1;
-
             using (var connection = _fixture.GetConnection())
             {
                 // All our keys start with "k" so there shouldn't be anything starting with "l"
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key >= 'l'");
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    rowsRead = 0;
-                    while (await reader.ReadAsync())
-                    {
-                        rowsRead++;
-                    }
+                    Assert.False(await reader.ReadAsync());
                 }
             }
-            Assert.Equal(0, rowsRead);
         }
 
         [Fact]
