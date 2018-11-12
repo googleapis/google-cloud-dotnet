@@ -14,6 +14,7 @@
 
 using Google.Cloud.Storage.V1;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,12 +27,12 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
     /// </summary>
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             if (args.Length != 2)
             {
-                // FIXME
-                return;
+                Console.WriteLine("Arguments: <directory containing product.json> <project ID>");
+                return 1;
             }
             string directory = args[0];
             var json = File.ReadAllText(Path.Combine(directory, "products.json"));
@@ -97,7 +98,8 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
                 productSearchClient.AddProductToProductSet(productSetResource.Name, productResource.Name);
 
                 productSearchClient.CreateReferenceImage(productResource.Name, new ReferenceImage { Uri = $"{bucketUri}/{product.Image}" }, product.Image);
-            }            
+            }
+            return 0;
         }
     }
 }
