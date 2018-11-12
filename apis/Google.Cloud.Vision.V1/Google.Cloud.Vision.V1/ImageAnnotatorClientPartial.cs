@@ -334,7 +334,7 @@ namespace Google.Cloud.Vision.V1
             => AnnotateSingleSingularFeatureType(Feature.Types.Type.ImageProperties, r => r.ImagePropertiesAnnotation, image, context, callSettings);
 
         /// <summary>
-        /// Performs product search detection on a single image asynchronously.
+        /// Performs product detection on a single image asynchronously.
         /// </summary>
         /// <remarks>
         /// If <see cref="AnnotateImageException"/> is thrown, the original response can still be retrieved using
@@ -355,7 +355,7 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
-        /// Performs product search detection on a single image asynchronously.
+        /// Performs product detection on a single image asynchronously.
         /// </summary>
         /// <remarks>
         /// If <see cref="AnnotateImageException"/> is thrown, the original response can still be retrieved using
