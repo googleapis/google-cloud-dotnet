@@ -84,6 +84,18 @@ All IO-related methods have async equivalents.
 
 {{sample:ImageAnnotatorClient.BatchAnnotateImages}}
 
+## Product search
+
+After creating and populating a product set, the products can be
+detected within images.
+
+{{sample:ImageAnnotatorClient.ProductSearch}}
+
+A filter can be applied to the search, to match only products with
+specific labels.
+
+{{sample:ImageAnnotatorClient.ProductSearchWithFilter}}
+
 ## Error handling
 
 All the methods which annotate a single image (and therefore have a single response) throw
