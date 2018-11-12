@@ -269,10 +269,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Empty(result);
         }
 
-        // TODO: Move these somewhere common, if this proves a useful pattern.
         private static T RunMaybeAsync<T>(bool runAsync, Func<T> sync, Func<Task<T>> async)
+        {
             // Run the async func separately to explicitly avoid synchronization etc.
-            => runAsync ? Task.Run(() => async().Result).Result : sync();
+            var result = runAsync? Task.Run(() => async().Result).Result : sync();
+            // Sleep, as everything in this test modifies buckets, and we can't do that very frequently.
+            StorageFixture.SleepAfterBucketCreateDelete();
+            return result;
+        }
 
         private static TException AssertThrowsMaybeAsync<TException>(bool runAsync, Action sync, Func<Task> async)
             where TException : Exception =>
