@@ -14,6 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
+// Ignore obsolete members within this file.
+// This is currently a hand-written addition to the generated file, until the
+// generator includes it automatically.
+#pragma warning disable CS0612 // Type or member is obsolete
+
 namespace Google.Cloud.Container.V1.Tests
 {
     using Google.Api.Gax;
