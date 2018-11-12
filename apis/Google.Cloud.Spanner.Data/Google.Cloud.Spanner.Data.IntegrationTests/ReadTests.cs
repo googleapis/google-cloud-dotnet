@@ -229,6 +229,55 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
+        public async Task GetFieldValue_NoReadCall()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.Throws<InvalidOperationException>(() => reader.GetFieldValue<string>("Key"));
+                    // Validate GetJsonValue at the same time...
+                    Assert.Throws<InvalidOperationException>(() => reader.GetJsonValue(0));
+                }
+            }
+        }
+
+        [Fact]
+        public async Task GetFieldValue_AfterFinalRead()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                    Assert.False(await reader.ReadAsync());
+                    Assert.Throws<InvalidOperationException>(() => reader.GetFieldValue<string>("Key"));
+                    // Validate GetJsonValue at the same time...
+                    Assert.Throws<InvalidOperationException>(() => reader.GetJsonValue(0));
+                }
+            }
+        }
+
+        [Fact]
+        public async Task GetFieldValue_AfterMoveNext()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                    Assert.False(await reader.NextResultAsync());
+                    Assert.Throws<InvalidOperationException>(() => reader.GetFieldValue<string>("Key"));
+                    // Validate GetJsonValue at the same time...
+                    Assert.Throws<InvalidOperationException>(() => reader.GetJsonValue(0));
+                }
+            }
+        }
+
+        [Fact]
         public async Task SelectOne()
         {
             long result = await ExecuteAsync<long>("SELECT 1");
