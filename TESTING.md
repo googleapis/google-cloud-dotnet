@@ -125,3 +125,17 @@ resource names):
   when testing the "requester pays" feature.
 - `REQUESTER_PAYS_CREDENTIALS`: The path to a service account credentials
   file for the requester pays project
+
+Google.Cloud.Vision.V1
+----------------------
+
+The test project must have a populated product set. To create the
+set expected by the snippets, change to the
+`apis/Google.Cloud.Vision.V1` directory and run:
+
+```text
+dotnet run -p Google.Cloud.Vision.V1.PopulateProductSearchTestSet -- Google.Cloud.Vision.V1.Snippets {YOUR_PROJECT_ID}
+```
+
+Wait about half an hour before running the snippets, so that the
+Vision service is able to train its model appropriately.

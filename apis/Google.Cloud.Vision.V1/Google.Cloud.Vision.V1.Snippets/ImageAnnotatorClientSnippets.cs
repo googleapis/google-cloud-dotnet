@@ -24,8 +24,14 @@ using Xunit;
 namespace Google.Cloud.Vision.V1.Snippets
 {
     [SnippetOutputCollector]
+    [Collection(nameof(VisionFixture))]
     public class ImageAnnotatorClientSnippets
     {
+        private readonly VisionFixture _fixture;
+
+        public ImageAnnotatorClientSnippets(VisionFixture fixture) =>
+            _fixture = fixture;
+
         [Fact]
         public void Annotate()
         {
@@ -413,6 +419,61 @@ namespace Google.Cloud.Vision.V1.Snippets
             {
                 AnnotateImageResponse response = e.Response;
                 Console.WriteLine(response.Error);
+            }
+            // End sample
+        }
+
+        [Fact]
+        public void DetectSimilarImages()
+        {
+            Image image = LoadResourceImage("shoes_1.jpg");
+            string projectId = _fixture.ProjectId;
+            string locationId = "us-west1";
+            string productSetId = $"{projectId}_product_search_test";
+
+            // Sample: ProductSearch
+            // Additional: DetectSimilarProducts(*, *, *)
+            ProductSetName productSetName = new ProductSetName(projectId, locationId, productSetId);
+            ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+            ProductSearchParams searchParams = new ProductSearchParams
+            {
+                ProductCategories = { "apparel" },
+                ProductSet = productSetName.ToString(),
+            };
+            ProductSearchResults results = client.DetectSimilarProducts(image, searchParams);
+            foreach (var result in results.Results)
+            {
+                Console.WriteLine($"{result.Product.DisplayName}: {result.Score}");
+            }
+            // End sample
+        }
+
+        // See-also: DetectSimilarProducts(*, *, *)
+        // Member: DetectSimilarProductsAsync(*, *, *, *)
+        // See [DetectSimilarProducts](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void DetectSimilarImages_WithFilter()
+        {
+            Image image = LoadResourceImage("shoes_1.jpg");
+            string projectId = _fixture.ProjectId;
+            string locationId = "us-west1";
+            string productSetId = $"{projectId}_product_search_test";
+
+            // Sample: ProductSearchWithFilter
+            ProductSetName productSetName = new ProductSetName(projectId, locationId, productSetId);
+            ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+            ProductSearchParams searchParams = new ProductSearchParams
+            {
+                ProductCategories = { "apparel" },
+                ProductSet = productSetName.ToString(),
+                Filter = "style=womens"
+            };
+            ProductSearchResults results = client.DetectSimilarProducts(image, searchParams);
+            foreach (var result in results.Results)
+            {
+                Console.WriteLine($"{result.Product.DisplayName}: {result.Score}");
             }
             // End sample
         }

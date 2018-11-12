@@ -334,6 +334,48 @@ namespace Google.Cloud.Vision.V1
             => AnnotateSingleSingularFeatureType(Feature.Types.Type.ImageProperties, r => r.ImagePropertiesAnnotation, image, context, callSettings);
 
         /// <summary>
+        /// Performs product search detection on a single image asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// If <see cref="AnnotateImageException"/> is thrown, the original response can still be retrieved using
+        /// <see cref="AnnotateImageException.Response"/>.
+        /// </remarks>
+        /// <param name="image">The image to process. Must not be null.</param>
+        /// <param name="productSearchParams">Product search parameters. Must not be null.</param>
+        /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
+        /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
+        /// <returns>A task representing the asynchronous operation. The task result will be the detected properties for the image.</returns>
+        public virtual Task<ProductSearchResults> DetectSimilarProductsAsync(Image image, ProductSearchParams productSearchParams, CallSettings callSettings = null)
+        {
+            // This would be done in the main call anyway, but check it before we check productSearchParams.
+            GaxPreconditions.CheckNotNull(image, nameof(image));
+            GaxPreconditions.CheckNotNull(productSearchParams, nameof(productSearchParams));
+            var context = new ImageContext { ProductSearchParams = productSearchParams };
+            return AnnotateSingleSingularFeatureTypeAsync(Feature.Types.Type.ProductSearch, r => r.ProductSearchResults, image, context, callSettings);
+        }
+
+        /// <summary>
+        /// Performs product search detection on a single image asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// If <see cref="AnnotateImageException"/> is thrown, the original response can still be retrieved using
+        /// <see cref="AnnotateImageException.Response"/>.
+        /// </remarks>
+        /// <param name="image">The image to process. Must not be null.</param>
+        /// <param name="productSearchParams">Product search parameters. Must not be null.</param>
+        /// <param name="callSettings">Call settings to apply to the RPC, if any.</param>
+        /// <exception cref="AnnotateImageException">The RPC returns a response, but the response contains an error.</exception>
+        /// <returns>The detected properties for the image.</returns>
+        public virtual ProductSearchResults DetectSimilarProducts(Image image, ProductSearchParams productSearchParams, CallSettings callSettings = null)
+        {
+            // This would be done in the main call anyway, but check it before we check productSearchParams.
+            GaxPreconditions.CheckNotNull(image, nameof(image));
+            GaxPreconditions.CheckNotNull(productSearchParams, nameof(productSearchParams));
+            var context = new ImageContext { ProductSearchParams = productSearchParams };
+            return AnnotateSingleSingularFeatureType(Feature.Types.Type.ProductSearch, r => r.ProductSearchResults, image, context, callSettings);
+        }
+
+        /// <summary>
         /// Performs image property processing on a single image asynchronously.
         /// </summary>
         /// <remarks>

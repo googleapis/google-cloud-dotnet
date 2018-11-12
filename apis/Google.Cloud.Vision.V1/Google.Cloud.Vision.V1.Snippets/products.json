@@ -1,0 +1,20 @@
+[
+  {
+    "id": "product1",
+    "image": "shoes_1.jpg",
+    "category": "apparel",
+    "displayName": "Black platform heels",
+    "description": "Black platform heels with neon green trim",
+    "labels":
+    {
+      "style": "womens"
+    }    
+  },
+  {
+    "id": "product2",
+    "image": "shoes_2.jpg",
+    "category": "apparel",
+    "displayName": "Old boots",
+    "description": "Pre-loved hiking boots. Laces included!"
+  }
+]
