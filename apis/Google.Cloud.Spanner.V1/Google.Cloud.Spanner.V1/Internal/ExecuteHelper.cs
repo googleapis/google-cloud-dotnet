@@ -22,12 +22,10 @@ namespace Google.Cloud.Spanner.V1.Internal
     /// </summary>
     public static class ExecuteHelper
     {
-        // TODO: Consider renaming these to WithSessionExpiryChecking or similar.
-
         /// <summary>
         /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
         /// </summary>
-        internal static async Task<T> WithSessionChecking<T>(this Task<T> task, Session session)
+        internal static async Task<T> WithSessionExpiryChecking<T>(this Task<T> task, Session session)
         {
             try
             {
@@ -42,7 +40,7 @@ namespace Google.Cloud.Spanner.V1.Internal
         /// <summary>
         /// Waits for <paramref name="task"/> to complete, handling session expiry by marking the session appropriately.
         /// </summary>
-        internal static async Task WithSessionChecking(this Task task, Session session)
+        internal static async Task WithSessionExpiryChecking(this Task task, Session session)
         {
             try
             {

@@ -279,14 +279,14 @@ namespace Google.Cloud.Spanner.V1
 
         private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task, [CallerMemberName] string caller = null)
         {
-            var result = await task.WithSessionChecking(_session).ConfigureAwait(false);
+            var result = await task.WithSessionExpiryChecking(_session).ConfigureAwait(false);
             UpdateRefreshTime();
             return result;
         }
 
         private async Task RecordSuccessAndExpiredSessions(Task task)
         {
-            await task.WithSessionChecking(_session).ConfigureAwait(false);
+            await task.WithSessionExpiryChecking(_session).ConfigureAwait(false);
             UpdateRefreshTime();
         }
 
