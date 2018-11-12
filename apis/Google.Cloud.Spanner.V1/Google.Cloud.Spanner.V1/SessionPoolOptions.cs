@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -174,6 +176,11 @@ namespace Google.Cloud.Spanner.V1
             get => _maximumConcurrentSessionCreates;
             set => _maximumConcurrentSessionCreates = GaxPreconditions.CheckArgumentRange(value, nameof(value), 1, int.MaxValue);
         }
+
+        /// <summary>
+        /// Labels to use for any sessions created with this pool.
+        /// </summary>
+        public IDictionary<string, string> SessionLabels { get; } = new ConcurrentDictionary<string, string>();
 
         /// <summary>
         /// The delay between maintenance loop iterations. Defaults to 30 seconds.

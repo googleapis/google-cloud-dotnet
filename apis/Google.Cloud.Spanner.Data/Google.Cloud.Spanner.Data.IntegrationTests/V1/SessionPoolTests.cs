@@ -90,6 +90,42 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
             }
         }
 
+        [Fact]
+        public async Task SessionLabels()
+        {
+            string guid = Guid.NewGuid().ToString().ToLowerInvariant();
+            var options = new SessionPoolOptions
+            {
+                SessionLabels =
+                {
+                    { "guid", guid },
+                    { "key1", "value1" }
+                }
+            };
+            await TestWithPool(options, async pool =>
+            {
+                var session = await pool.AcquireSessionAsync(_fixture.DatabaseName, new TransactionOptions(), CancellationToken.None);
+
+                // Use the underlying client to 
+                SpannerClient client = pool.Client;
+                var listRequest = new ListSessionsRequest
+                {
+                    Database = _fixture.DatabaseName.ToString(),
+                    Filter = $"labels.guid:{guid}"
+                };
+                var matchingSessions = client.ListSessions(listRequest).ToList();
+
+                // The only sessions matching our labels should be the ones we've created
+                Assert.InRange(matchingSessions.Count, 1, options.MinimumPooledSessions + 1);
+                // The session we've acquired from the pool should be there.
+                Assert.Contains(matchingSessions, s => s.SessionName == session.SessionName);
+                // All the matching sessions should also have the other label.
+                Assert.All(matchingSessions, s => Assert.Equal("value1", s.Labels["key1"]));
+
+                session.ReleaseToPool(false);
+            });
+        }
+
         private async Task TestWithPool(SessionPoolOptions options, Func<SessionPool, Task> test)
         {
             var poolManager = SessionPoolManager.Create(options);

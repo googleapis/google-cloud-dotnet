@@ -94,7 +94,14 @@ namespace Google.Cloud.Spanner.V1
             internal TargetedSessionPool(SessionPool parent, DatabaseName databaseName, bool acquireSessionsImmediately) : base(parent)
             {
                 _databaseName = GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
-                _createSessionRequest = new CreateSessionRequest { DatabaseAsDatabaseName = databaseName };
+                _createSessionRequest = new CreateSessionRequest
+                {
+                    DatabaseAsDatabaseName = databaseName,
+                    Session = new Session
+                    {
+                        Labels = { parent.Options.SessionLabels }
+                    }
+                };
                 if (acquireSessionsImmediately)
                 {
                     StartAcquisitionTasksIfNecessary();
