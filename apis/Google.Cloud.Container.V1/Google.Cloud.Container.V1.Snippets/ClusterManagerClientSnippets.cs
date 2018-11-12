@@ -16,6 +16,9 @@ using Google.Cloud.ClientTesting;
 using System;
 using Xunit;
 
+// TODO: Use location instead of zone when building the request.
+// The Container API config is being revisited to make all of this simpler.
+
 namespace Google.Cloud.Container.V1.Snippets
 {
     [SnippetOutputCollector]
@@ -37,7 +40,7 @@ namespace Google.Cloud.Container.V1.Snippets
             ListClustersResponse zones = client.ListClusters(projectId, zone: "-");
             foreach (Cluster cluster in zones.Clusters)
             {
-                Console.WriteLine($"Cluster {cluster.Name} in zone {cluster.Zone}");
+                Console.WriteLine($"Cluster {cluster.Name} in {cluster.Location}");
             }
             // End sample
         }
