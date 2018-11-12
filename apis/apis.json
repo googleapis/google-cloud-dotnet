@@ -105,7 +105,8 @@
       "Google.Api.Gax.Grpc": "2.6.0-beta02",
       "Google.Api.Gax.Grpc.Gcp": "2.6.0-beta02",
       "Google.Cloud.Bigtable.Common.V2": "project",
-      "Grpc.Core": "1.16.0"
+      "Grpc.Core": "1.16.0",
+      "Grpc.Gcp": "1.1.1"
     },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "2.6.0-beta02",
@@ -627,7 +628,7 @@
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
       "Grpc.Core": "1.16.0",
-      "Grpc.Gcp": "1.1.0"
+      "Grpc.Gcp": "1.1.1"
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
