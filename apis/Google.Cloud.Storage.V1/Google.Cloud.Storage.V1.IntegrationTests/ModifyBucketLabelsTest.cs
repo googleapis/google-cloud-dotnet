@@ -36,7 +36,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             _fixture = fixture;
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ModifyBucketLabels_Simple(bool runAsync)
@@ -88,7 +88,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expectedFinalLabels, finalLabels);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ClearBucketLabels_Simple(bool runAsync)
@@ -107,7 +107,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Null(finalLabels);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ModifyBucketLabels_RetrySucceeds(bool runAsync)
@@ -135,7 +135,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal("after", finalLabels["label"]);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ModifyBucketLabels_RetryFails(bool runAsync)
@@ -158,7 +158,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ModifyBucketLabels_ExplicitPreconditionFail(bool runAsync)
@@ -174,7 +174,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ClearBucketLabels_RetrySucceeds(bool runAsync)
@@ -201,7 +201,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Null(independentClient.GetBucket(bucketName).Labels);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ClearBucketLabels_RetryFails(bool runAsync)
@@ -225,7 +225,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ClearBucketLabels_ExplicitPreconditionFail(bool runAsync)
@@ -241,7 +241,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void RemoveBucketLabel_NoLabelsBefore(bool runAsync)
@@ -255,7 +255,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Null(result);
         }
 
-        [Theory]
+        [Theory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2702")]
         [InlineData(false)]
         [InlineData(true)]
         public void ClearBucketLabels_NoLabelsBefore(bool runAsync)
