@@ -124,12 +124,6 @@ documentation](https://googleapis.github.io/google-cloud-dotnet/docs/guides/plat
 for details on where the Google Cloud Libraries for .NET are
 supported.
 
-## Contributing
-
-Contributions to this library are always welcome and highly encouraged.
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information on how to get started.
-
 ## Versioning
 
 The Google Cloud Client Libraries for .NET follow [Semantic Versioning](http://semver.org/).
