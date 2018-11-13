@@ -424,7 +424,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         [Fact]
-        public void DetectSimilarImages()
+        public void DetectSimilarProducts()
         {
             Image image = LoadResourceImage("shoes_1.jpg");
             string projectId = _fixture.ProjectId;
@@ -449,7 +449,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         // See-also: DetectSimilarProducts(*, *, *)
-        // Member: DetectSimilarProductsAsync(*, *, *, *)
+        // Member: DetectSimilarProductsAsync(*, *, *)
         // See [DetectSimilarProducts](ref) for a synchronous example.
         // End see-also
 
