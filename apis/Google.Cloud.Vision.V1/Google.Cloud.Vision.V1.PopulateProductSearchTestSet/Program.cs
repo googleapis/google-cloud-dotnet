@@ -78,10 +78,6 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
             var productSetResource = productSearchClient.CreateProductSet(createProductSetRequest);
             foreach (var product in products)
             {
-                if (product.Id == "product1")
-                {
-                    continue;
-                }
                 var createProductRequest = new CreateProductRequest
                 {
                     Parent = location.ToString(),

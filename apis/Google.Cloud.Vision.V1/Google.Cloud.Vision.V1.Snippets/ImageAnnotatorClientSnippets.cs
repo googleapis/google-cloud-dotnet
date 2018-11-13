@@ -454,7 +454,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         // End see-also
 
         [Fact]
-        public void DetectSimilarImages_WithFilter()
+        public void DetectSimilarProducts_WithFilter()
         {
             Image image = LoadResourceImage("shoes_1.jpg");
             string projectId = _fixture.ProjectId;
