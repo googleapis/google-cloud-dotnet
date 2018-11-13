@@ -24,9 +24,6 @@ using static Google.Cloud.Spanner.V1.TransactionOptions;
 
 namespace Google.Cloud.Spanner.V1
 {
-    // TODO: Implement IDisposable? It isn't useful in the ADO.NET provider, but could be useful for
-    // any other callers.
-
     /// <summary>
     /// A session from a <see cref="SessionPool"/>, with an associated transaction if
     /// requested. Instances must be released back to the pool via <see cref="ReleaseToPool(bool)"/>.
@@ -42,7 +39,7 @@ namespace Google.Cloud.Spanner.V1
     /// RPCs in that case.
     /// </para>
     /// </remarks>
-    public sealed class PooledSession
+    public sealed class PooledSession : IDisposable
     {
         private readonly Session _session;
 
@@ -138,6 +135,15 @@ namespace Google.Cloud.Spanner.V1
         internal DateTime RefreshTimeForTest => new DateTime(RefreshTicks, DateTimeKind.Utc);
 
         /// <summary>
+        /// Releases this session back to the session pool. This method should only be called once per instance; subsequent
+        /// calls are ignored. No other methods can be called after this.
+        /// </summary>
+        /// <remarks>
+        /// This method is equivalent to calling <see cref="ReleaseToPool(bool)"/> with an argument of <c>false</c>.
+        /// </remarks>
+        public void Dispose() => ReleaseToPool(false);
+
+        /// <summary>
         /// Returns this session to the session pool from which it was acquired, unless
         /// it has become invalid. This method should only be called once per instance; subsequent
         /// calls are ignored. No other methods can be called after this.
@@ -148,6 +154,7 @@ namespace Google.Cloud.Spanner.V1
             bool wasDisposed = Interlocked.Exchange(ref _disposed, 1) == 1;
             if (!wasDisposed)
             {
+                GC.SuppressFinalize(this);
                 _pool.Release(AfterReset(), forceDelete || ServerExpired || ShouldBeEvicted);
             }
             else

@@ -239,7 +239,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
             SessionName sessionName = SessionName.Parse(transactionId.Session);
             ByteString transactionIdBytes = ByteString.FromBase64(transactionId.Id);
-            var session = _sessionPool.RecreateSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
+            var session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
             // This transaction is coming from another process potentially, so we don't auto close it.
             return new SpannerTransaction(this, TransactionMode.ReadOnly, session, transactionId.TimestampBound)
             {

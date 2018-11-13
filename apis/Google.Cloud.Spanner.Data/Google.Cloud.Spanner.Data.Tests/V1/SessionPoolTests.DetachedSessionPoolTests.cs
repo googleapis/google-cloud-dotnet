@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 var logger = new InMemoryLogger();
                 var mock = SpannerClientHelpers.CreateMockClient(logger);
                 var pool = new SessionPool(mock.Object, new SessionPoolOptions());
-                var session = pool.RecreateSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadOnly);
+                var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadOnly);
 
                 // No calls to DeleteSession
                 session.ReleaseToPool(false);
@@ -48,7 +48,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     .Verifiable();
 
                 var pool = new SessionPool(mock.Object, new SessionPoolOptions());
-                var session = pool.RecreateSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadOnly);
+                var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, ModeOneofCase.ReadOnly);
 
                 // Logically, the deletion happens asynchronously. However, everything completes synchronously so we don't need
                 // to sleep or anything to wait for the call to come through.

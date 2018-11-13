@@ -111,7 +111,7 @@ namespace Google.Cloud.Spanner.V1
                     {
                         // Not really an RpcException, but the cleanest way of representing it.
                         // (The ADO.NET provider will convert it to a SpannerException with the same code.)
-                        throw new RpcException(new Status(StatusCode.ResourceExhausted, "Local maximum number of active sessions exceeded."));
+                        throw new RpcException(new Status(StatusCode.ResourceExhausted, "Local maximum number of active sessions exceeded. Possibly resource leak in client code?"));
                     }
 
                     // We check for shutdown after incrementing ActiveSessionCount, and we *set* shutdown before checking ActiveSessionCount,

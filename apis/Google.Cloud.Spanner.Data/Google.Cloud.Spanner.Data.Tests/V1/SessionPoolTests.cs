@@ -39,14 +39,14 @@ namespace Google.Cloud.Spanner.V1.Tests
         private static readonly ByteString s_sampleTransactionId = ByteString.CopyFromUtf8("transaction-id");
 
         [Fact]
-        public void RecreateSession()
+        public void CreateDetachedSession()
         {
             var logger = new InMemoryLogger();
             var mock = SpannerClientHelpers.CreateMockClient(logger);
             var pool = new SessionPool(mock.Object, new SessionPoolOptions());
 
             var mode = ModeOneofCase.ReadOnly;
-            var session = pool.RecreateSession(s_sampleSessionName, s_sampleTransactionId, mode);
+            var session = pool.CreateDetachedSession(s_sampleSessionName, s_sampleTransactionId, mode);
             Assert.Equal(s_sampleSessionName, session.SessionName);
             Assert.Equal(s_sampleTransactionId, session.TransactionId);
             Assert.Equal(mode, session.TransactionMode);

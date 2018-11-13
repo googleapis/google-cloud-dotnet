@@ -150,18 +150,20 @@ namespace Google.Cloud.Spanner.V1
             return targetedPool.AcquireSessionAsync(transactionOptions, cancellationToken);
         }
 
-        // TODO: Rename?
-
         /// <summary>
         /// Creates a <see cref="PooledSession"/> with a known name and transaction ID/mode, with the client associated
         /// with this pool, but is otherwise not part of this pool. This method does not query the server for the session state.
         /// When the returned <see cref="PooledSession"/> is released, it will not become part of this pool.
         /// </summary>
+        /// <remarks>
+        /// This is typically used for partitioned queries, where the same session is used across multiple machines, so should
+        /// not be reused by the pool.
+        /// </remarks>
         /// <param name="sessionName">The name of the transaction. Must not be null.</param>
         /// <param name="transactionId">The ID of the transaction. Must not be null.</param>
         /// <param name="transactionMode">The mode of the transaction.</param>
         /// <returns>A <see cref="PooledSession"/> for the given session and transaction.</returns>
-        public PooledSession RecreateSession(SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode)
+        public PooledSession CreateDetachedSession(SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode)
         {
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
