@@ -54,8 +54,13 @@ namespace Google.Cloud.Storage.V1
         private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
 
         private readonly IBlobSigner _blobSigner;
+        private readonly SigningVersion _signingVersion;
 
-        private UrlSigner(IBlobSigner blobSigner) => _blobSigner = blobSigner;
+        private UrlSigner(IBlobSigner blobSigner, SigningVersion signingVersion)
+        {
+            _blobSigner = blobSigner;
+            _signingVersion = signingVersion;
+        }
 
         /// <summary>
         /// Creates a new <see cref="UrlSigner"/> instance for a service account.
@@ -93,7 +98,7 @@ namespace Google.Cloud.Storage.V1
         public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential)
         {
             GaxPreconditions.CheckNotNull(credential, nameof(credential));
-            return new UrlSigner(new ServiceAccountCredentialBlobSigner(credential));
+            return new UrlSigner(new ServiceAccountCredentialBlobSigner(credential), SigningVersion.Default);
         }
 
         /// <summary>
@@ -108,7 +113,19 @@ namespace Google.Cloud.Storage.V1
         public static UrlSigner FromBlobSigner(IBlobSigner signer)
         {
             GaxPreconditions.CheckNotNull(signer, nameof(signer));
-            return new UrlSigner(signer);
+            return new UrlSigner(signer, SigningVersion.Default);
+        }
+
+        /// <summary>
+        /// Returns a new instance of <see cref="UrlSigner"/> using the same signing source (e.g. a service account
+        /// private key) but with the specified URL signing algorithm version.
+        /// </summary>
+        /// <param name="signingVersion">The algorithm version to use when signing URLs.</param>
+        /// <returns>A new instance using the specified version.</returns>
+        public UrlSigner WithSigningVersion(SigningVersion signingVersion)
+        {
+            GaxPreconditions.CheckEnumValue(signingVersion, nameof(signingVersion));
+            return new UrlSigner(_blobSigner, signingVersion);
         }
 
         /// <summary>
@@ -579,6 +596,7 @@ namespace Google.Cloud.Storage.V1
             Dictionary<string, IEnumerable<string>> requestHeaders,
             Dictionary<string, IEnumerable<string>> contentHeaders)
         {
+            // TODO: Use _signingVersion
             var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
             var signature = _blobSigner.CreateSignature(state.blobToSign);
             return state.GetResult(signature);
@@ -593,6 +611,7 @@ namespace Google.Cloud.Storage.V1
             Dictionary<string, IEnumerable<string>> contentHeaders,
             CancellationToken cancellationToken = default)
         {
+            // TODO: Use _signingVersion
             var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
             var signature = await _blobSigner.CreateSignatureAsync(state.blobToSign, cancellationToken).ConfigureAwait(false);
             return state.GetResult(signature);
