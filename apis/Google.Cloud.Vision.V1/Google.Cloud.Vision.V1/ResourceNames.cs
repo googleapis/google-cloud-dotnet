@@ -21,112 +21,6 @@ using linq = System.Linq;
 namespace Google.Cloud.Vision.V1
 {
     /// <summary>
-    /// Resource name for the 'image' resource.
-    /// </summary>
-    public sealed partial class ImageName : gax::IResourceName, sys::IEquatable<ImageName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/products/{product}/referenceImages/{image}");
-
-        /// <summary>
-        /// Parses the given image resource name in string form into a new
-        /// <see cref="ImageName"/> instance.
-        /// </summary>
-        /// <param name="imageName">The image resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="ImageName"/> if successful.</returns>
-        public static ImageName Parse(string imageName)
-        {
-            gax::GaxPreconditions.CheckNotNull(imageName, nameof(imageName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(imageName);
-            return new ImageName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given image resource name in string form into a new
-        /// <see cref="ImageName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="imageName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="imageName">The image resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="ImageName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string imageName, out ImageName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(imageName, nameof(imageName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(imageName, out resourceName))
-            {
-                result = new ImageName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="ImageName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
-        /// <param name="productId">The product ID. Must not be <c>null</c>.</param>
-        /// <param name="imageId">The image ID. Must not be <c>null</c>.</param>
-        public ImageName(string projectId, string locationId, string productId, string imageId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
-            ProductId = gax::GaxPreconditions.CheckNotNull(productId, nameof(productId));
-            ImageId = gax::GaxPreconditions.CheckNotNull(imageId, nameof(imageId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The location ID. Never <c>null</c>.
-        /// </summary>
-        public string LocationId { get; }
-
-        /// <summary>
-        /// The product ID. Never <c>null</c>.
-        /// </summary>
-        public string ProductId { get; }
-
-        /// <summary>
-        /// The image ID. Never <c>null</c>.
-        /// </summary>
-        public string ImageId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, LocationId, ProductId, ImageId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as ImageName);
-
-        /// <inheritdoc />
-        public bool Equals(ImageName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(ImageName a, ImageName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(ImageName a, ImageName b) => !(a == b);
-    }
-
-    /// <summary>
     /// Resource name for the 'location' resource.
     /// </summary>
     public sealed partial class LocationName : gax::IResourceName, sys::IEquatable<LocationName>
@@ -416,6 +310,389 @@ namespace Google.Cloud.Vision.V1
         public static bool operator !=(ProductSetName a, ProductSetName b) => !(a == b);
     }
 
+    /// <summary>
+    /// Resource name for the 'reference_image' resource.
+    /// </summary>
+    public sealed partial class ReferenceImageName : gax::IResourceName, sys::IEquatable<ReferenceImageName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/products/{product}/referenceImages/{reference_image}");
 
+        /// <summary>
+        /// Parses the given reference_image resource name in string form into a new
+        /// <see cref="ReferenceImageName"/> instance.
+        /// </summary>
+        /// <param name="referenceImageName">The reference_image resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ReferenceImageName"/> if successful.</returns>
+        public static ReferenceImageName Parse(string referenceImageName)
+        {
+            gax::GaxPreconditions.CheckNotNull(referenceImageName, nameof(referenceImageName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(referenceImageName);
+            return new ReferenceImageName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given reference_image resource name in string form into a new
+        /// <see cref="ReferenceImageName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="referenceImageName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="referenceImageName">The reference_image resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ReferenceImageName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string referenceImageName, out ReferenceImageName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(referenceImageName, nameof(referenceImageName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(referenceImageName, out resourceName))
+            {
+                result = new ReferenceImageName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ReferenceImageName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
+        /// <param name="productId">The product ID. Must not be <c>null</c>.</param>
+        /// <param name="referenceImageId">The referenceImage ID. Must not be <c>null</c>.</param>
+        public ReferenceImageName(string projectId, string locationId, string productId, string referenceImageId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
+            ProductId = gax::GaxPreconditions.CheckNotNull(productId, nameof(productId));
+            ReferenceImageId = gax::GaxPreconditions.CheckNotNull(referenceImageId, nameof(referenceImageId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The location ID. Never <c>null</c>.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The product ID. Never <c>null</c>.
+        /// </summary>
+        public string ProductId { get; }
+
+        /// <summary>
+        /// The referenceImage ID. Never <c>null</c>.
+        /// </summary>
+        public string ReferenceImageId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, LocationId, ProductId, ReferenceImageId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ReferenceImageName);
+
+        /// <inheritdoc />
+        public bool Equals(ReferenceImageName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ReferenceImageName a, ReferenceImageName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ReferenceImageName a, ReferenceImageName b) => !(a == b);
+    }
+
+
+    public partial class AddProductToProductSetRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductSetName ProductSetName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductSetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductName"/>-typed view over the <see cref="Product"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductName ProductAsProductName
+        {
+            get { return string.IsNullOrEmpty(Product) ? null : Google.Cloud.Vision.V1.ProductName.Parse(Product); }
+            set { Product = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateProductRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateProductSetRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateReferenceImageRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductName ParentAsProductName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.ProductName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteProductRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductName ProductName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteProductSetRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductSetName ProductSetName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductSetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteReferenceImageRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ReferenceImageName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ReferenceImageName ReferenceImageName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ReferenceImageName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetProductRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductName ProductName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetProductSetRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductSetName ProductSetName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductSetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetReferenceImageRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ReferenceImageName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ReferenceImageName ReferenceImageName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ReferenceImageName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ImportProductSetsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListProductSetsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListProductsInProductSetRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductSetName ProductSetName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductSetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListProductsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListReferenceImagesRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductName ParentAsProductName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Vision.V1.ProductName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Product
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductName ProductName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ProductSearchParams
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductSetName"/>-typed view over the <see cref="ProductSet"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductSetName ProductSetAsProductSetName
+        {
+            get { return string.IsNullOrEmpty(ProductSet) ? null : Google.Cloud.Vision.V1.ProductSetName.Parse(ProductSet); }
+            set { ProductSet = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ProductSet
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductSetName ProductSetName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductSetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ReferenceImage
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ReferenceImageName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ReferenceImageName ReferenceImageName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ReferenceImageName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class RemoveProductFromProductSetRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductSetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductSetName ProductSetName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Vision.V1.ProductSetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="Google.Cloud.Vision.V1.ProductName"/>-typed view over the <see cref="Product"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Vision.V1.ProductName ProductAsProductName
+        {
+            get { return string.IsNullOrEmpty(Product) ? null : Google.Cloud.Vision.V1.ProductName.Parse(Product); }
+            set { Product = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }
