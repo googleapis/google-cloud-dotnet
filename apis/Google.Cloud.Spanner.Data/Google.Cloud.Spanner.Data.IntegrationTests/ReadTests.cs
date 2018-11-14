@@ -214,6 +214,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
+        // [START spanner_test_empty_read]
         [Fact]
         public async Task ReadEmpty()
         {
@@ -227,6 +228,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
+        // [END spanner_test_empty_read]
 
         [Fact]
         public async Task GetFieldValue_NoReadCall()
