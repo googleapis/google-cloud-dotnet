@@ -328,12 +328,18 @@ namespace Google.Cloud.Spanner.Data.Snippets
         public void CustomSessionPoolManager()
         {
             string connectionString = _fixture.ConnectionString;
+            string instanceId = Guid.NewGuid().ToString();
 
             // Sample: CustomSessionPoolManager
             SessionPoolOptions options = new SessionPoolOptions
             {
                 MinimumPooledSessions = 100,
-                MaximumActiveSessions = 250
+                MaximumActiveSessions = 250,
+                SessionLabels =
+                {
+                    { "service", "sales-report-generator" },
+                    { "service-instance", instanceId }
+                }
             };
             SessionPoolManager manager = SessionPoolManager.Create(options);
 
@@ -351,7 +357,6 @@ namespace Google.Cloud.Spanner.Data.Snippets
             }
             // End sample
         }
-
 
         // Deliberately not a Fact! We don't want to run this, otherwise the default session pool will be
         // shut down after the test...
