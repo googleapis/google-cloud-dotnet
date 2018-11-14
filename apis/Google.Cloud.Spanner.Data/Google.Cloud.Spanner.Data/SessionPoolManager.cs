@@ -35,8 +35,14 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SessionPoolManager
     {
-        // TODO: Provide a simpler way of getting at "the options used by the default session pool manager"?
-        // (Currently SessionPoolManager.Default.SessionPoolOptions.)
+        /// <summary>
+        /// Static constructor to ensure that the static initializers aren't run before the first explicit
+        /// reference to the class. This in turn ensures that a call to <see cref="Logger.SetDefaultLogger(Logger)" />
+        /// before any other code will result in the new logger being picked up by <see cref="SessionPoolManager.Default"/>.
+        /// </summary>
+        static SessionPoolManager()
+        {
+        }
 
         /// <summary>
         /// The default session pool manager, used by <see cref="SpannerConnection"/> unless a different pool
