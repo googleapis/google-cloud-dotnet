@@ -438,7 +438,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             ProductSearchParams searchParams = new ProductSearchParams
             {
                 ProductCategories = { "apparel" },
-                ProductSet = productSetName.ToString(),
+                ProductSetAsProductSetName = productSetName,
             };
             ProductSearchResults results = client.DetectSimilarProducts(image, searchParams);
             foreach (var result in results.Results)
@@ -467,7 +467,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             ProductSearchParams searchParams = new ProductSearchParams
             {
                 ProductCategories = { "apparel" },
-                ProductSet = productSetName.ToString(),
+                ProductSetAsProductSetName = productSetName,
                 Filter = "style=womens"
             };
             ProductSearchResults results = client.DetectSimilarProducts(image, searchParams);

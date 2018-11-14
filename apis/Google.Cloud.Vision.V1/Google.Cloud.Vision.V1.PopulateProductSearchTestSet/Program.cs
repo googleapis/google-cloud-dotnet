@@ -63,7 +63,7 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
             // Create the product set
             var createProductSetRequest = new CreateProductSetRequest
             {
-                Parent = location.ToString(),
+                ParentAsLocationName = location,
                 ProductSetId = productSetId,
                 ProductSet = new ProductSet
                 {
@@ -80,7 +80,7 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
             {
                 var createProductRequest = new CreateProductRequest
                 {
-                    Parent = location.ToString(),
+                    ParentAsLocationName = location,
                     ProductId = product.Id,
                     Product = new Product
                     {
@@ -91,9 +91,9 @@ namespace Google.Cloud.Vision.V1.PopulateProductSearchTestSet
                     }
                 };
                 var productResource = productSearchClient.CreateProduct(createProductRequest);
-                productSearchClient.AddProductToProductSet(productSetResource.Name, productResource.Name);
+                productSearchClient.AddProductToProductSet(productSetResource.ProductSetName, productResource.ProductName);
 
-                productSearchClient.CreateReferenceImage(productResource.Name, new ReferenceImage { Uri = $"{bucketUri}/{product.Image}" }, product.Image);
+                productSearchClient.CreateReferenceImage(productResource.ProductName, new ReferenceImage { Uri = $"{bucketUri}/{product.Image}" }, product.Image);
             }
             return 0;
         }
