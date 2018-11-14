@@ -890,13 +890,13 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Product> CreateProductAsync(
-            string parent,
+            LocationName parent,
             Product product,
             string productId,
             gaxgrpc::CallSettings callSettings = null) => CreateProductAsync(
                 new CreateProductRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Product = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
                     ProductId = productId ?? "", // Optional
                 },
@@ -934,7 +934,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Product> CreateProductAsync(
-            string parent,
+            LocationName parent,
             Product product,
             string productId,
             st::CancellationToken cancellationToken) => CreateProductAsync(
@@ -975,13 +975,13 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public virtual Product CreateProduct(
-            string parent,
+            LocationName parent,
             Product product,
             string productId,
             gaxgrpc::CallSettings callSettings = null) => CreateProduct(
                 new CreateProductRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Product = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
                     ProductId = productId ?? "", // Optional
                 },
@@ -1092,13 +1092,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable asynchronous sequence of <see cref="Product"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProductsAsync(
                 new ListProductsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1132,13 +1132,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable sequence of <see cref="Product"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProducts(
                 new ListProductsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1210,11 +1210,11 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Product> GetProductAsync(
-            string name,
+            ProductName name,
             gaxgrpc::CallSettings callSettings = null) => GetProductAsync(
                 new GetProductRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1238,7 +1238,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Product> GetProductAsync(
-            string name,
+            ProductName name,
             st::CancellationToken cancellationToken) => GetProductAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1263,11 +1263,11 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public virtual Product GetProduct(
-            string name,
+            ProductName name,
             gaxgrpc::CallSettings callSettings = null) => GetProduct(
                 new GetProductRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1593,11 +1593,11 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteProductAsync(
-            string name,
+            ProductName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteProductAsync(
                 new DeleteProductRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1625,7 +1625,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteProductAsync(
-            string name,
+            ProductName name,
             st::CancellationToken cancellationToken) => DeleteProductAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1651,11 +1651,11 @@ namespace Google.Cloud.Vision.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteProduct(
-            string name,
+            ProductName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteProduct(
                 new DeleteProductRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1766,13 +1766,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable asynchronous sequence of <see cref="ReferenceImage"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(
-            string parent,
+            ProductName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListReferenceImagesAsync(
                 new ListReferenceImagesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1808,13 +1808,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable sequence of <see cref="ReferenceImage"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(
-            string parent,
+            ProductName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListReferenceImages(
                 new ListReferenceImagesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1891,11 +1891,11 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReferenceImage> GetReferenceImageAsync(
-            string name,
+            ReferenceImageName name,
             gaxgrpc::CallSettings callSettings = null) => GetReferenceImageAsync(
                 new GetReferenceImageRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1920,7 +1920,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReferenceImage> GetReferenceImageAsync(
-            string name,
+            ReferenceImageName name,
             st::CancellationToken cancellationToken) => GetReferenceImageAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1946,11 +1946,11 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public virtual ReferenceImage GetReferenceImage(
-            string name,
+            ReferenceImageName name,
             gaxgrpc::CallSettings callSettings = null) => GetReferenceImage(
                 new GetReferenceImageRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2049,11 +2049,11 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteReferenceImageAsync(
-            string name,
+            ReferenceImageName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImageAsync(
                 new DeleteReferenceImageRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2084,7 +2084,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteReferenceImageAsync(
-            string name,
+            ReferenceImageName name,
             st::CancellationToken cancellationToken) => DeleteReferenceImageAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -2113,11 +2113,11 @@ namespace Google.Cloud.Vision.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteReferenceImage(
-            string name,
+            ReferenceImageName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImage(
                 new DeleteReferenceImageRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2248,13 +2248,13 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
-            string parent,
+            ProductName parent,
             ReferenceImage referenceImage,
             string referenceImageId,
             gaxgrpc::CallSettings callSettings = null) => CreateReferenceImageAsync(
                 new CreateReferenceImageRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
                     ReferenceImageId = referenceImageId ?? "", // Optional
                 },
@@ -2304,7 +2304,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
-            string parent,
+            ProductName parent,
             ReferenceImage referenceImage,
             string referenceImageId,
             st::CancellationToken cancellationToken) => CreateReferenceImageAsync(
@@ -2357,13 +2357,13 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public virtual ReferenceImage CreateReferenceImage(
-            string parent,
+            ProductName parent,
             ReferenceImage referenceImage,
             string referenceImageId,
             gaxgrpc::CallSettings callSettings = null) => CreateReferenceImage(
                 new CreateReferenceImageRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
                     ReferenceImageId = referenceImageId ?? "", // Optional
                 },
@@ -2508,13 +2508,13 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ProductSet> CreateProductSetAsync(
-            string parent,
+            LocationName parent,
             ProductSet productSet,
             string productSetId,
             gaxgrpc::CallSettings callSettings = null) => CreateProductSetAsync(
                 new CreateProductSetRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
                     ProductSetId = productSetId ?? "", // Optional
                 },
@@ -2549,7 +2549,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ProductSet> CreateProductSetAsync(
-            string parent,
+            LocationName parent,
             ProductSet productSet,
             string productSetId,
             st::CancellationToken cancellationToken) => CreateProductSetAsync(
@@ -2587,13 +2587,13 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public virtual ProductSet CreateProductSet(
-            string parent,
+            LocationName parent,
             ProductSet productSet,
             string productSetId,
             gaxgrpc::CallSettings callSettings = null) => CreateProductSet(
                 new CreateProductSetRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
                     ProductSetId = productSetId ?? "", // Optional
                 },
@@ -2698,13 +2698,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProductSetsAsync(
                 new ListProductSetsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2738,13 +2738,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable sequence of <see cref="ProductSet"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProductSets(
                 new ListProductSetsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2818,11 +2818,11 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ProductSet> GetProductSetAsync(
-            string name,
+            ProductSetName name,
             gaxgrpc::CallSettings callSettings = null) => GetProductSetAsync(
                 new GetProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2846,7 +2846,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ProductSet> GetProductSetAsync(
-            string name,
+            ProductSetName name,
             st::CancellationToken cancellationToken) => GetProductSetAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -2871,11 +2871,11 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public virtual ProductSet GetProductSet(
-            string name,
+            ProductSetName name,
             gaxgrpc::CallSettings callSettings = null) => GetProductSet(
                 new GetProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3152,11 +3152,11 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteProductSetAsync(
-            string name,
+            ProductSetName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteProductSetAsync(
                 new DeleteProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3183,7 +3183,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteProductSetAsync(
-            string name,
+            ProductSetName name,
             st::CancellationToken cancellationToken) => DeleteProductSetAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -3208,11 +3208,11 @@ namespace Google.Cloud.Vision.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteProductSet(
-            string name,
+            ProductSetName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteProductSet(
                 new DeleteProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3319,13 +3319,13 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task AddProductToProductSetAsync(
-            string name,
-            string product,
+            ProductSetName name,
+            ProductName product,
             gaxgrpc::CallSettings callSettings = null) => AddProductToProductSetAsync(
                 new AddProductToProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProductAsProductName = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
                 },
                 callSettings);
 
@@ -3358,8 +3358,8 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task AddProductToProductSetAsync(
-            string name,
-            string product,
+            ProductSetName name,
+            ProductName product,
             st::CancellationToken cancellationToken) => AddProductToProductSetAsync(
                 name,
                 product,
@@ -3391,13 +3391,13 @@ namespace Google.Cloud.Vision.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void AddProductToProductSet(
-            string name,
-            string product,
+            ProductSetName name,
+            ProductName product,
             gaxgrpc::CallSettings callSettings = null) => AddProductToProductSet(
                 new AddProductToProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProductAsProductName = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
                 },
                 callSettings);
 
@@ -3501,13 +3501,13 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task RemoveProductFromProductSetAsync(
-            string name,
-            string product,
+            ProductSetName name,
+            ProductName product,
             gaxgrpc::CallSettings callSettings = null) => RemoveProductFromProductSetAsync(
                 new RemoveProductFromProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProductAsProductName = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
                 },
                 callSettings);
 
@@ -3537,8 +3537,8 @@ namespace Google.Cloud.Vision.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task RemoveProductFromProductSetAsync(
-            string name,
-            string product,
+            ProductSetName name,
+            ProductName product,
             st::CancellationToken cancellationToken) => RemoveProductFromProductSetAsync(
                 name,
                 product,
@@ -3567,13 +3567,13 @@ namespace Google.Cloud.Vision.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void RemoveProductFromProductSet(
-            string name,
-            string product,
+            ProductSetName name,
+            ProductName product,
             gaxgrpc::CallSettings callSettings = null) => RemoveProductFromProductSet(
                 new RemoveProductFromProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ProductAsProductName = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
                 },
                 callSettings);
 
@@ -3672,13 +3672,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable asynchronous sequence of <see cref="Product"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(
-            string name,
+            ProductSetName name,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProductsInProductSetAsync(
                 new ListProductsInProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -3714,13 +3714,13 @@ namespace Google.Cloud.Vision.V1
         /// A pageable sequence of <see cref="Product"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(
-            string name,
+            ProductSetName name,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProductsInProductSet(
                 new ListProductsInProductSetRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -3804,12 +3804,12 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<ImportProductSetsResponse, BatchOperationMetadata>> ImportProductSetsAsync(
-            string parent,
+            LocationName parent,
             ImportProductSetsInputConfig inputConfig,
             gaxgrpc::CallSettings callSettings = null) => ImportProductSetsAsync(
                 new ImportProductSetsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
                 },
                 callSettings);
@@ -3842,7 +3842,7 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<ImportProductSetsResponse, BatchOperationMetadata>> ImportProductSetsAsync(
-            string parent,
+            LocationName parent,
             ImportProductSetsInputConfig inputConfig,
             st::CancellationToken cancellationToken) => ImportProductSetsAsync(
                 parent,
@@ -3877,12 +3877,12 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<ImportProductSetsResponse, BatchOperationMetadata> ImportProductSets(
-            string parent,
+            LocationName parent,
             ImportProductSetsInputConfig inputConfig,
             gaxgrpc::CallSettings callSettings = null) => ImportProductSets(
                 new ImportProductSetsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
                 },
                 callSettings);

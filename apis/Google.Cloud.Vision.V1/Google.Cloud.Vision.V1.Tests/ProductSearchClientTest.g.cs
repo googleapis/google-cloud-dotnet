@@ -42,13 +42,13 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductRequest expectedRequest = new CreateProductRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "productId1753008747",
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -56,10 +56,10 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateProduct(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Product product = new Product();
             string productId = "productId1753008747";
-            Product response = client.CreateProduct(formattedParent, product, productId);
+            Product response = client.CreateProduct(parent, product, productId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -72,13 +72,13 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductRequest expectedRequest = new CreateProductRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
                 ProductId = "productId1753008747",
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -86,10 +86,10 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.CreateProductAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Product product = new Product();
             string productId = "productId1753008747";
-            Product response = await client.CreateProductAsync(formattedParent, product, productId);
+            Product response = await client.CreateProductAsync(parent, product, productId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -102,12 +102,12 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -128,12 +128,12 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductRequest request = new CreateProductRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Product = new Product(),
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -154,11 +154,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductRequest expectedRequest = new GetProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Product expectedResponse = new Product
             {
-                Name = "name2-1052831874",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -166,8 +166,8 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.GetProduct(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString();
-            Product response = client.GetProduct(formattedName);
+            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            Product response = client.GetProduct(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -180,11 +180,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductRequest expectedRequest = new GetProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Product expectedResponse = new Product
             {
-                Name = "name2-1052831874",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -192,8 +192,8 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.Setup(x => x.GetProductAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Product>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString();
-            Product response = await client.GetProductAsync(formattedName);
+            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            Product response = await client.GetProductAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -206,11 +206,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Product expectedResponse = new Product
             {
-                Name = "name2-1052831874",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -231,11 +231,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductRequest request = new GetProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Product expectedResponse = new Product
             {
-                Name = "name2-1052831874",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -261,7 +261,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -289,7 +289,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -316,7 +316,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -341,7 +341,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             Product expectedResponse = new Product
             {
-                Name = "name3373707",
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
                 ProductCategory = "productCategory-1607451058",
@@ -362,14 +362,14 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductRequest expectedRequest = new DeleteProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProduct(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString();
-            client.DeleteProduct(formattedName);
+            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            client.DeleteProduct(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -381,14 +381,14 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductRequest expectedRequest = new DeleteProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProductAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString();
-            await client.DeleteProductAsync(formattedName);
+            ProductName name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            await client.DeleteProductAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -400,7 +400,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProduct(request, It.IsAny<CallOptions>()))
@@ -418,7 +418,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductRequest request = new DeleteProductRequest
             {
-                Name = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProductAsync(request, It.IsAny<CallOptions>()))
@@ -436,18 +436,18 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name2-1052831874",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString();
-            ReferenceImage response = client.GetReferenceImage(formattedName);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImage response = client.GetReferenceImage(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -460,18 +460,18 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name2-1052831874",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString();
-            ReferenceImage response = await client.GetReferenceImageAsync(formattedName);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImage response = await client.GetReferenceImageAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -484,11 +484,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetReferenceImageRequest request = new GetReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name2-1052831874",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.GetReferenceImage(request, It.IsAny<CallOptions>()))
@@ -507,11 +507,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetReferenceImageRequest request = new GetReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name2-1052831874",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, It.IsAny<CallOptions>()))
@@ -530,14 +530,14 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString();
-            client.DeleteReferenceImage(formattedName);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            client.DeleteReferenceImage(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -549,14 +549,14 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString();
-            await client.DeleteReferenceImageAsync(formattedName);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            await client.DeleteReferenceImageAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -568,7 +568,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, It.IsAny<CallOptions>()))
@@ -586,7 +586,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
-                Name = new ImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[IMAGE]").ToString(),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, It.IsAny<CallOptions>()))
@@ -604,22 +604,22 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateReferenceImageRequest expectedRequest = new CreateReferenceImageRequest
             {
-                Parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
                 ReferenceImageId = "referenceImageId1946713331",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name3373707",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString();
+            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             ReferenceImage referenceImage = new ReferenceImage();
             string referenceImageId = "referenceImageId1946713331";
-            ReferenceImage response = client.CreateReferenceImage(formattedParent, referenceImage, referenceImageId);
+            ReferenceImage response = client.CreateReferenceImage(parent, referenceImage, referenceImageId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -632,22 +632,22 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateReferenceImageRequest expectedRequest = new CreateReferenceImageRequest
             {
-                Parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
                 ReferenceImageId = "referenceImageId1946713331",
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name3373707",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString();
+            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
             ReferenceImage referenceImage = new ReferenceImage();
             string referenceImageId = "referenceImageId1946713331";
-            ReferenceImage response = await client.CreateReferenceImageAsync(formattedParent, referenceImage, referenceImageId);
+            ReferenceImage response = await client.CreateReferenceImageAsync(parent, referenceImage, referenceImageId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -660,12 +660,12 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
-                Parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name3373707",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImage(request, It.IsAny<CallOptions>()))
@@ -684,12 +684,12 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateReferenceImageRequest request = new CreateReferenceImageRequest
             {
-                Parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]").ToString(),
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
                 ReferenceImage = new ReferenceImage(),
             };
             ReferenceImage expectedResponse = new ReferenceImage
             {
-                Name = "name3373707",
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
                 Uri = "uri116076",
             };
             mockGrpcClient.Setup(x => x.CreateReferenceImageAsync(request, It.IsAny<CallOptions>()))
@@ -708,22 +708,22 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductSetRequest expectedRequest = new CreateProductSetRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "productSetId4216680",
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             ProductSet productSet = new ProductSet();
             string productSetId = "productSetId4216680";
-            ProductSet response = client.CreateProductSet(formattedParent, productSet, productSetId);
+            ProductSet response = client.CreateProductSet(parent, productSet, productSetId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -736,22 +736,22 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductSetRequest expectedRequest = new CreateProductSetRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
                 ProductSetId = "productSetId4216680",
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             ProductSet productSet = new ProductSet();
             string productSetId = "productSetId4216680";
-            ProductSet response = await client.CreateProductSetAsync(formattedParent, productSet, productSetId);
+            ProductSet response = await client.CreateProductSetAsync(parent, productSet, productSetId);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -764,12 +764,12 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.CreateProductSet(request, It.IsAny<CallOptions>()))
@@ -788,12 +788,12 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateProductSetRequest request = new CreateProductSetRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 ProductSet = new ProductSet(),
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, It.IsAny<CallOptions>()))
@@ -812,18 +812,18 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductSetRequest expectedRequest = new GetProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name2-1052831874",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetProductSet(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            ProductSet response = client.GetProductSet(formattedName);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSet response = client.GetProductSet(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -836,18 +836,18 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductSetRequest expectedRequest = new GetProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name2-1052831874",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            ProductSet response = await client.GetProductSetAsync(formattedName);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSet response = await client.GetProductSetAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -860,11 +860,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductSetRequest request = new GetProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name2-1052831874",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetProductSet(request, It.IsAny<CallOptions>()))
@@ -883,11 +883,11 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetProductSetRequest request = new GetProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name2-1052831874",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.GetProductSetAsync(request, It.IsAny<CallOptions>()))
@@ -911,7 +911,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.UpdateProductSet(expectedRequest, It.IsAny<CallOptions>()))
@@ -937,7 +937,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.UpdateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
@@ -962,7 +962,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.UpdateProductSet(request, It.IsAny<CallOptions>()))
@@ -985,7 +985,7 @@ namespace Google.Cloud.Vision.V1.Tests
             };
             ProductSet expectedResponse = new ProductSet
             {
-                Name = "name3373707",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
                 DisplayName = "displayName1615086568",
             };
             mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, It.IsAny<CallOptions>()))
@@ -1004,14 +1004,14 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProductSet(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            client.DeleteProductSet(formattedName);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            client.DeleteProductSet(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1023,14 +1023,14 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            await client.DeleteProductSetAsync(formattedName);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            await client.DeleteProductSetAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductSetRequest request = new DeleteProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProductSet(request, It.IsAny<CallOptions>()))
@@ -1060,7 +1060,7 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteProductSetRequest request = new DeleteProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, It.IsAny<CallOptions>()))
@@ -1078,16 +1078,16 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             AddProductToProductSetRequest expectedRequest = new AddProductToProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.AddProductToProductSet(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            string product = "product-309474065";
-            client.AddProductToProductSet(formattedName, product);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            client.AddProductToProductSet(name, product);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1099,16 +1099,16 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             AddProductToProductSetRequest expectedRequest = new AddProductToProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            string product = "product-309474065";
-            await client.AddProductToProductSetAsync(formattedName, product);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            await client.AddProductToProductSetAsync(name, product);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1120,8 +1120,8 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.AddProductToProductSet(request, It.IsAny<CallOptions>()))
@@ -1139,8 +1139,8 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             AddProductToProductSetRequest request = new AddProductToProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.AddProductToProductSetAsync(request, It.IsAny<CallOptions>()))
@@ -1158,16 +1158,16 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             RemoveProductFromProductSetRequest expectedRequest = new RemoveProductFromProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            string product = "product-309474065";
-            client.RemoveProductFromProductSet(formattedName, product);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            client.RemoveProductFromProductSet(name, product);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1179,16 +1179,16 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             RemoveProductFromProductSetRequest expectedRequest = new RemoveProductFromProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString();
-            string product = "product-309474065";
-            await client.RemoveProductFromProductSetAsync(formattedName, product);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductName product = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            await client.RemoveProductFromProductSetAsync(name, product);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1200,8 +1200,8 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSet(request, It.IsAny<CallOptions>()))
@@ -1219,8 +1219,8 @@ namespace Google.Cloud.Vision.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             RemoveProductFromProductSetRequest request = new RemoveProductFromProductSetRequest
             {
-                Name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]").ToString(),
-                Product = "product-309474065",
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ProductAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.RemoveProductFromProductSetAsync(request, It.IsAny<CallOptions>()))
