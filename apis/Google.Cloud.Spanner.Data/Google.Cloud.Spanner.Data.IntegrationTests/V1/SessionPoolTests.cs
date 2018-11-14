@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
             {
                 var session = await pool.AcquireSessionAsync(_fixture.DatabaseName, new TransactionOptions(), CancellationToken.None);
 
-                // Use the underlying client to 
+                // Use the underlying client to list the sessions with the labels we've specified.
                 SpannerClient client = pool.Client;
                 var listRequest = new ListSessionsRequest
                 {

@@ -155,6 +155,20 @@ operations, across all databases.
 
 Applications rarely need to change this setting.
 
+**SessionLabels**
+
+Default value: empty
+
+`SessionLabels` is a read-only property which returns a mutable
+string-to-string dictionary.
+
+When sessions are created, they can have key/value pairs as
+*labels*. These can be used diagnostically. For example, if your
+applicaiton contains a number of services, each service could use a
+different value for a "service" label so you could tell which
+services are creating how many sessions. You could additionally have
+a separate "service-instance" label for each instance of the service.
+
 ## Modifying the default SessionPoolOptions from ADO.NET
 
 When using the ADO.NET implementation (Google.Cloud.Spanner.Data), a
