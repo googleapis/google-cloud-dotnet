@@ -52,7 +52,7 @@ namespace Google.Cloud.Storage.V1
         {
             var request = CreateCopyObjectRequest(sourceBucket, sourceObjectName, destinationBucket, destinationObjectName, options);
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            while (response.RewriteToken != null)
+            while (response.Done != true)
             {
                 request.RewriteToken = response.RewriteToken;
                 response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);

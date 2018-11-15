@@ -19,6 +19,7 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
+    using System.Threading.Tasks;
     using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
@@ -48,6 +49,39 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
             client.CopyObject(sourceBucket, sourceName, destBucket, firstGenName, new CopyObjectOptions { SourceGeneration = generations[0] });
             client.CopyObject(sourceBucket, sourceName, destBucket, secondGenName, new CopyObjectOptions { SourceGeneration = generations[1] });
+
+            ValidateData(destBucket, firstGenName, _fixture.SmallContent);
+            ValidateData(destBucket, secondGenName, _fixture.LargeContent);
+        }
+
+        [Fact]
+        public async Task CopyLatestGenerationAsync()
+        {
+            var destName = IdGenerator.FromGuid();
+            await _fixture.Client.CopyObjectAsync(
+                _fixture.ReadBucket, _fixture.SmallThenLargeObject,
+                _fixture.SingleVersionBucket, destName);
+
+            ValidateData(_fixture.SingleVersionBucket, destName, _fixture.LargeContent);
+        }
+
+        [Fact]
+        public async Task CopySpecificGenerationAsync()
+        {
+            var client = _fixture.Client;
+            var sourceBucket = _fixture.ReadBucket;
+            var sourceName = _fixture.SmallThenLargeObject;
+            var destBucket = _fixture.SingleVersionBucket;
+            var firstGenName = IdGenerator.FromGuid();
+            var secondGenName = IdGenerator.FromGuid();
+            var generations = client.ListObjects(sourceBucket, sourceName, new ListObjectsOptions { Versions = true })
+                .Select(o => (long)o.Generation)
+                .OrderBy(o => o)
+                .ToList();
+            Assert.Equal(2, generations.Count);
+
+            await client.CopyObjectAsync(sourceBucket, sourceName, destBucket, firstGenName, new CopyObjectOptions { SourceGeneration = generations[0] });
+            await client.CopyObjectAsync(sourceBucket, sourceName, destBucket, secondGenName, new CopyObjectOptions { SourceGeneration = generations[1] });
 
             ValidateData(destBucket, firstGenName, _fixture.SmallContent);
             ValidateData(destBucket, secondGenName, _fixture.LargeContent);
