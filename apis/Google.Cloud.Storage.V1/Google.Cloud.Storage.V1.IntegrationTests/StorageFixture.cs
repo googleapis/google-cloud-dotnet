@@ -21,7 +21,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -336,7 +335,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// Sets the labels on <see cref="LabelsTestBucket"/> without using any of the client *Labels methods.
         /// Any old labels are wiped.
         /// </summary>
-        public void SetUpLabels(Dictionary<string, string> labels)
+        public void SetUpLabels(Dictionary<string, string> labels, [CallerMemberName] string callerName = null)
         {
             // Just avoid mutating the parameter...
             labels = new Dictionary<string, string>(labels);
@@ -345,7 +344,31 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 labels[key] = null;
             }
+
+            FileLogger.Log($"Starting patching {LabelsTestBucket} by {callerName}.");
             Client.PatchBucket(new Bucket { Name = LabelsTestBucket, Labels = labels });
+            FileLogger.Log($"Finished patching {LabelsTestBucket} by {callerName}.");
+
+            SleepAfterBucketCreateDelete();
+        }
+
+        /// <summary>
+        /// Clears the labels on <see cref="LabelsTestBucket"/> without using any of the client *Labels methods.
+        /// </summary>
+        public void ClearLabels([CallerMemberName] string callerName = null)
+        {
+            var oldLabels = Client.GetBucket(LabelsTestBucket).Labels ?? new Dictionary<string, string>();
+            var cleanLabels = new Dictionary<string, string>();
+            foreach (var key in oldLabels.Keys)
+            {
+                cleanLabels.Add(key, null);
+            }
+
+            FileLogger.Log($"Starting clearing labels for {LabelsTestBucket} by {callerName}.");
+            Client.PatchBucket(new Bucket { Name = LabelsTestBucket, Labels = cleanLabels });
+            FileLogger.Log($"Finished clearing labels for {LabelsTestBucket} by {callerName}.");
+
+            SleepAfterBucketCreateDelete();
         }
 
         private class DelayTestInfo
