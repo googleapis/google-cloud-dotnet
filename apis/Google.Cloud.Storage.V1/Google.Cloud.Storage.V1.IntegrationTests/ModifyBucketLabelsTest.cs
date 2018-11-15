@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -25,7 +26,6 @@ using Xunit;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class ModifyBucketLabelsTest
     {
         private readonly StorageFixture _fixture;
@@ -121,7 +121,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // We only do this twice though - on the third time, the read/modify/write cycle will work
             // - but we'll be able to tell that it *did* intercept twice, as the "old" value will be
             // the one set by the final intercept.
-            var interceptor = new PatchFoilingInterceptor(2, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"));
+            var interceptor = new PatchFoilingInterceptor(2, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"), bucketName);
             evilClient.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
 
             var options = new ModifyBucketLabelsOptions { Retries = 2 };
@@ -147,7 +147,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // Just before the "set-it-to-after" patch call is made, we modify the label ourselves,
             // which will change the metageneration and cause a conflict response to the patch.
             // We do this three times - which is why the overall result is failure.
-            var interceptor = new PatchFoilingInterceptor(3, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"));
+            var interceptor = new PatchFoilingInterceptor(3, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"), bucketName);
             evilClient.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
 
             var options = new ModifyBucketLabelsOptions { Retries = 2 };
@@ -188,7 +188,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // We only do this twice though - on the third time, the read/modify/write cycle will work
             // - but we'll be able to tell that it *did* intercept twice, as the "old" value will be
             // the one set by the final intercept.
-            var interceptor = new PatchFoilingInterceptor(2, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"));
+            var interceptor = new PatchFoilingInterceptor(2, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"), bucketName);
             evilClient.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
 
             var options = new ModifyBucketLabelsOptions { Retries = 2 };
@@ -213,7 +213,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             // Just before the "set-it-to-after" patch call is made, we modify the label ourselves,
             // which will change the metageneration and cause a conflict response to the patch.
             // We do this three times - which is why the overall result is failure.
-            var interceptor = new PatchFoilingInterceptor(3, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"));
+            var interceptor = new PatchFoilingInterceptor(3, count => independentClient.SetBucketLabel(bucketName, "label", $"intercept{count}"), bucketName);
             evilClient.Service.HttpClient.MessageHandler.AddExecuteInterceptor(interceptor);
 
             var options = new ModifyBucketLabelsOptions { Retries = 2 };
@@ -247,7 +247,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             var client = _fixture.Client;
             var bucketName = _fixture.LabelsTestBucket;
-            client.ClearBucketLabels(bucketName);
+
+            _fixture.ClearLabels();
+
             var result = RunMaybeAsync(runAsync,
                 () => client.RemoveBucketLabel(bucketName, "label"),
                 () => client.RemoveBucketLabelAsync(bucketName, "label"));
@@ -260,18 +262,26 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void ClearBucketLabels_NoLabelsBefore(bool runAsync)
         {
             var client = _fixture.Client;
-            var bucketName = _fixture.LabelsTestBucket;            
-            client.ClearBucketLabels(bucketName);
+            var bucketName = _fixture.LabelsTestBucket;
+
+            _fixture.ClearLabels();
+
             var result = RunMaybeAsync(runAsync,
                 () => client.ClearBucketLabels(bucketName),
                 () => client.ClearBucketLabelsAsync(bucketName));
             Assert.Empty(result);
         }
 
-        private static T RunMaybeAsync<T>(bool runAsync, Func<T> sync, Func<Task<T>> async)
+        private T RunMaybeAsync<T>(bool runAsync, Func<T> sync, Func<Task<T>> async, [CallerMemberName] string callerName = null)
         {
+            // This is the bucket used in all of these tests.
+            var bucketName = _fixture.LabelsTestBucket;
+
+            FileLogger.Log($"Starting {(runAsync ? "async" : "sync")}-modifying {bucketName} by {callerName}.");
             // Run the async func separately to explicitly avoid synchronization etc.
             var result = runAsync? Task.Run(() => async().Result).Result : sync();
+            FileLogger.Log($"Finished {(runAsync ? "async" : "sync")}-modifying {bucketName} by {callerName}.");
+
             // Sleep, as everything in this test modifies buckets, and we can't do that very frequently.
             StorageFixture.SleepAfterBucketCreateDelete();
             return result;
@@ -288,11 +298,15 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             private int interceptCount;
             private readonly int maxIntercepts;
             private readonly Action<int> action;
+            private readonly string bucketName;
+            private readonly string callerName;
 
-            public PatchFoilingInterceptor(int maxIntercepts, Action<int> action)
+            public PatchFoilingInterceptor(int maxIntercepts, Action<int> action, string bucketName, [CallerMemberName] string callerName = null)
             {
                 this.maxIntercepts = maxIntercepts;
                 this.action = action;
+                this.callerName = callerName;
+                this.bucketName = bucketName;
             }
 
             public Task InterceptAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -300,7 +314,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 if (request.Method.Method == "PATCH" && interceptCount < maxIntercepts)
                 {
                     interceptCount++;
+
+                    FileLogger.Log($"Starting patching from interceptor {bucketName} by {callerName}.");
                     action(interceptCount);
+                    FileLogger.Log($"Finished patching from interceptor {bucketName} by {callerName}.");
+
+                    // Sleep, as everything in this test modifies buckets, and we can't do that very frequently.
+                    StorageFixture.SleepAfterBucketCreateDelete();
                 }
                 return Task.FromResult(0);
             }
