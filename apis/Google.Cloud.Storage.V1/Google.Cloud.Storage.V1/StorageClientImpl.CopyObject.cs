@@ -33,7 +33,7 @@ namespace Google.Cloud.Storage.V1
         {
             var request = CreateCopyObjectRequest(sourceBucket, sourceObjectName, destinationBucket, destinationObjectName, options);
             var response = request.Execute();
-            while (response.RewriteToken != null)
+            while (response.Done != true)
             {
                 request.RewriteToken = response.RewriteToken;
                 response = request.Execute();
