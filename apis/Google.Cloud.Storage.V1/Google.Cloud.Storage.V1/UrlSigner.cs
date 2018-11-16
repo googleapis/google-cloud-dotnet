@@ -332,60 +332,8 @@ namespace Google.Cloud.Storage.V1
             DateTimeOffset? expiration,
             HttpMethod requestMethod = null,
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
-            Dictionary<string, IEnumerable<string>> contentHeaders = null)
-        {
-            // Note: if this implementation is changed, the SignAsync implementation should also change.
-            // (Extracting a common method is pretty ineffective here.)
-            StorageClientImpl.ValidateBucketName(bucket);
-
-            bool isResumableUpload = false;
-            if (requestMethod == null)
-            {
-                requestMethod = HttpMethod.Get;
-            }
-            else if (requestMethod == ResumableHttpMethod)
-            {
-                isResumableUpload = true;
-                requestMethod = HttpMethod.Post;
-            }
-
-            var expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
-            var resourcePath = $"/{bucket}";
-            if (objectName != null)
-            {
-                resourcePath += $"/{Uri.EscapeDataString(objectName)}";
-            }
-            var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
-            if (isResumableUpload)
-            {
-                extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
-            }
-
-            var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
-            var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
-
-            var signatureLines = new List<string>
-            {
-                requestMethod.ToString(),
-                contentMD5,
-                contentType,
-                expiryUnixSeconds
-            };
-            signatureLines.AddRange(extensionHeaders.Select(
-                header => $"{header.Key}:{string.Join(", ", header.Value)}"));
-            signatureLines.Add(resourcePath);
-            var blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
-
-            var signature = _blobSigner.CreateSignature(blobToSign);
-
-            var queryParameters = new List<string> { $"GoogleAccessId={_blobSigner.Id}" };
-            if (expiryUnixSeconds != null)
-            {
-                queryParameters.Add($"Expires={expiryUnixSeconds}");
-            }
-            queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
-            return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
-        }
+            Dictionary<string, IEnumerable<string>> contentHeaders = null) =>
+            SignImpl(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders);
 
         /// <summary>
         /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -613,13 +561,84 @@ namespace Google.Cloud.Storage.V1
         /// A task representing the asynchronous operation, with a result returning the
         /// signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
-        public async Task<string> SignAsync(
+        public Task<string> SignAsync(
             string bucket,
             string objectName,
             DateTimeOffset? expiration,
             HttpMethod requestMethod = null,
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null,
+            CancellationToken cancellationToken = default) =>
+            SignAsyncImpl(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, cancellationToken);
+
+        private string SignImpl(
+            string bucket,
+            string objectName,
+            DateTimeOffset? expiration,
+            HttpMethod requestMethod,
+            Dictionary<string, IEnumerable<string>> requestHeaders,
+            Dictionary<string, IEnumerable<string>> contentHeaders)
+        {
+            // Note: if this implementation is changed, the SignAsync implementation should also change.
+            // (Extracting a common method is pretty ineffective here.)
+            StorageClientImpl.ValidateBucketName(bucket);
+
+            bool isResumableUpload = false;
+            if (requestMethod == null)
+            {
+                requestMethod = HttpMethod.Get;
+            }
+            else if (requestMethod == ResumableHttpMethod)
+            {
+                isResumableUpload = true;
+                requestMethod = HttpMethod.Post;
+            }
+
+            var expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
+            var resourcePath = $"/{bucket}";
+            if (objectName != null)
+            {
+                resourcePath += $"/{Uri.EscapeDataString(objectName)}";
+            }
+            var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
+            if (isResumableUpload)
+            {
+                extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
+            }
+
+            var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
+            var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
+
+            var signatureLines = new List<string>
+            {
+                requestMethod.ToString(),
+                contentMD5,
+                contentType,
+                expiryUnixSeconds
+            };
+            signatureLines.AddRange(extensionHeaders.Select(
+                header => $"{header.Key}:{string.Join(", ", header.Value)}"));
+            signatureLines.Add(resourcePath);
+            var blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
+
+            var signature = _blobSigner.CreateSignature(blobToSign);
+
+            var queryParameters = new List<string> { $"GoogleAccessId={_blobSigner.Id}" };
+            if (expiryUnixSeconds != null)
+            {
+                queryParameters.Add($"Expires={expiryUnixSeconds}");
+            }
+            queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
+            return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
+        }
+
+        private async Task<string> SignAsyncImpl(
+            string bucket,
+            string objectName,
+            DateTimeOffset? expiration,
+            HttpMethod requestMethod,
+            Dictionary<string, IEnumerable<string>> requestHeaders,
+            Dictionary<string, IEnumerable<string>> contentHeaders,
             CancellationToken cancellationToken = default)
         {
             // Note: if this implementation is changed, the Sign implementation should also change.
