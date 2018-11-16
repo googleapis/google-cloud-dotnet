@@ -579,57 +579,9 @@ namespace Google.Cloud.Storage.V1
             Dictionary<string, IEnumerable<string>> requestHeaders,
             Dictionary<string, IEnumerable<string>> contentHeaders)
         {
-            // Note: if this implementation is changed, the SignAsync implementation should also change.
-            // (Extracting a common method is pretty ineffective here.)
-            StorageClientImpl.ValidateBucketName(bucket);
-
-            bool isResumableUpload = false;
-            if (requestMethod == null)
-            {
-                requestMethod = HttpMethod.Get;
-            }
-            else if (requestMethod == ResumableHttpMethod)
-            {
-                isResumableUpload = true;
-                requestMethod = HttpMethod.Post;
-            }
-
-            var expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
-            var resourcePath = $"/{bucket}";
-            if (objectName != null)
-            {
-                resourcePath += $"/{Uri.EscapeDataString(objectName)}";
-            }
-            var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
-            if (isResumableUpload)
-            {
-                extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
-            }
-
-            var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
-            var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
-
-            var signatureLines = new List<string>
-            {
-                requestMethod.ToString(),
-                contentMD5,
-                contentType,
-                expiryUnixSeconds
-            };
-            signatureLines.AddRange(extensionHeaders.Select(
-                header => $"{header.Key}:{string.Join(", ", header.Value)}"));
-            signatureLines.Add(resourcePath);
-            var blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
-
-            var signature = _blobSigner.CreateSignature(blobToSign);
-
-            var queryParameters = new List<string> { $"GoogleAccessId={_blobSigner.Id}" };
-            if (expiryUnixSeconds != null)
-            {
-                queryParameters.Add($"Expires={expiryUnixSeconds}");
-            }
-            queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
-            return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
+            var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
+            var signature = _blobSigner.CreateSignature(state.blobToSign);
+            return state.GetResult(signature);
         }
 
         private async Task<string> SignAsyncImpl(
@@ -641,57 +593,81 @@ namespace Google.Cloud.Storage.V1
             Dictionary<string, IEnumerable<string>> contentHeaders,
             CancellationToken cancellationToken = default)
         {
-            // Note: if this implementation is changed, the Sign implementation should also change.
-            // (Extracting a common method is pretty ineffective here.)
-            StorageClientImpl.ValidateBucketName(bucket);
+            var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
+            var signature = await _blobSigner.CreateSignatureAsync(state.blobToSign, cancellationToken).ConfigureAwait(false);
+            return state.GetResult(signature);
+        }
 
-            bool isResumableUpload = false;
-            if (requestMethod == null)
+        /// <summary>
+        /// State which needs to be carried between the "pre-signing" stage and "post-signing" stages
+        /// of the implementation.
+        /// </summary>
+        private struct SigningState
+        {
+            private string resourcePath;
+            private List<string> queryParameters;
+            internal byte[] blobToSign;
+
+            internal SigningState(
+                string bucket,
+                string objectName,
+                DateTimeOffset? expiration,
+                HttpMethod requestMethod,
+                Dictionary<string, IEnumerable<string>> requestHeaders,
+                Dictionary<string, IEnumerable<string>> contentHeaders,
+                IBlobSigner blobSigner)
             {
-                requestMethod = HttpMethod.Get;
+                StorageClientImpl.ValidateBucketName(bucket);
+
+                bool isResumableUpload = false;
+                if (requestMethod == null)
+                {
+                    requestMethod = HttpMethod.Get;
+                }
+                else if (requestMethod == ResumableHttpMethod)
+                {
+                    isResumableUpload = true;
+                    requestMethod = HttpMethod.Post;
+                }
+
+                string expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
+                resourcePath = $"/{bucket}";
+                if (objectName != null)
+                {
+                    resourcePath += $"/{Uri.EscapeDataString(objectName)}";
+                }
+                var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
+                if (isResumableUpload)
+                {
+                    extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
+                }
+
+                var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
+                var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
+
+                var signatureLines = new List<string>
+                {
+                    requestMethod.ToString(),
+                    contentMD5,
+                    contentType,
+                    expiryUnixSeconds
+                };
+                signatureLines.AddRange(extensionHeaders.Select(
+                    header => $"{header.Key}:{string.Join(", ", header.Value)}"));
+                signatureLines.Add(resourcePath);
+                blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
+                queryParameters = new List<string> { $"GoogleAccessId={blobSigner.Id}" };
+                if (expiryUnixSeconds != null)
+                {
+                    queryParameters.Add($"Expires={expiryUnixSeconds}");
+                }
             }
-            else if (requestMethod == ResumableHttpMethod)
+
+            internal string GetResult(string signature)
             {
-                isResumableUpload = true;
-                requestMethod = HttpMethod.Post;
+                queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
+                return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
             }
-
-            var expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
-            var resourcePath = $"/{bucket}";
-            if (objectName != null)
-            {
-                resourcePath += $"/{Uri.EscapeDataString(objectName)}";
-            }
-            var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
-            if (isResumableUpload)
-            {
-                extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
-            }
-
-            var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
-            var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
-
-            var signatureLines = new List<string>
-            {
-                requestMethod.ToString(),
-                contentMD5,
-                contentType,
-                expiryUnixSeconds
-            };
-            signatureLines.AddRange(extensionHeaders.Select(
-                header => $"{header.Key}:{string.Join(", ", header.Value)}"));
-            signatureLines.Add(resourcePath);
-            var blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
-
-            var signature = await _blobSigner.CreateSignatureAsync(blobToSign, cancellationToken).ConfigureAwait(false);
-
-            var queryParameters = new List<string> { $"GoogleAccessId={_blobSigner.Id}" };
-            if (expiryUnixSeconds != null)
-            {
-                queryParameters.Add($"Expires={expiryUnixSeconds}");
-            }
-            queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
-            return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
         }
 
         private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(
