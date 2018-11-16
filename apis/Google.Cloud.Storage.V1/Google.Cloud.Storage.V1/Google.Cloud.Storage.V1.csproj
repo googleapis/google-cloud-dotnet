@@ -35,5 +35,8 @@
     <Compile Update="StorageClientImpl.*.cs">
       <DependentUpon>StorageClientImpl.cs</DependentUpon>
     </Compile>
+    <Compile Update="UrlSigner.*.cs">
+      <DependentUpon>UrlSigner.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
