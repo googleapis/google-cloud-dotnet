@@ -35,8 +35,11 @@ namespace Google.Cloud.Storage.V1
     /// <remarks>
     /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
     /// </remarks>
-    public sealed class UrlSigner
+    public sealed partial class UrlSigner
     {
+        private static readonly ISigner s_v2Signer = new V2Signer();
+        private static readonly ISigner s_v4Signer = new V4Signer();
+
         private const string GoogHeaderPrefix = "x-goog-";
         private const string StorageHost = "https://storage.googleapis.com";
 
@@ -350,7 +353,7 @@ namespace Google.Cloud.Storage.V1
             HttpMethod requestMethod = null,
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null) =>
-            SignImpl(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders);
+            GetEffectiveSigner().Sign(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
 
         /// <summary>
         /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -586,106 +589,21 @@ namespace Google.Cloud.Storage.V1
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null,
             CancellationToken cancellationToken = default) =>
-            SignAsyncImpl(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, cancellationToken);
+            GetEffectiveSigner().SignAsync(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, cancellationToken, _blobSigner);
 
-        private string SignImpl(
-            string bucket,
-            string objectName,
-            DateTimeOffset? expiration,
-            HttpMethod requestMethod,
-            Dictionary<string, IEnumerable<string>> requestHeaders,
-            Dictionary<string, IEnumerable<string>> contentHeaders)
+        private ISigner GetEffectiveSigner()
         {
-            // TODO: Use _signingVersion
-            var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
-            var signature = _blobSigner.CreateSignature(state.blobToSign);
-            return state.GetResult(signature);
-        }
-
-        private async Task<string> SignAsyncImpl(
-            string bucket,
-            string objectName,
-            DateTimeOffset? expiration,
-            HttpMethod requestMethod,
-            Dictionary<string, IEnumerable<string>> requestHeaders,
-            Dictionary<string, IEnumerable<string>> contentHeaders,
-            CancellationToken cancellationToken = default)
-        {
-            // TODO: Use _signingVersion
-            var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
-            var signature = await _blobSigner.CreateSignatureAsync(state.blobToSign, cancellationToken).ConfigureAwait(false);
-            return state.GetResult(signature);
-        }
-
-        /// <summary>
-        /// State which needs to be carried between the "pre-signing" stage and "post-signing" stages
-        /// of the implementation.
-        /// </summary>
-        private struct SigningState
-        {
-            private string resourcePath;
-            private List<string> queryParameters;
-            internal byte[] blobToSign;
-
-            internal SigningState(
-                string bucket,
-                string objectName,
-                DateTimeOffset? expiration,
-                HttpMethod requestMethod,
-                Dictionary<string, IEnumerable<string>> requestHeaders,
-                Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner)
+            switch (_signingVersion)
             {
-                StorageClientImpl.ValidateBucketName(bucket);
-
-                bool isResumableUpload = false;
-                if (requestMethod == null)
-                {
-                    requestMethod = HttpMethod.Get;
-                }
-                else if (requestMethod == ResumableHttpMethod)
-                {
-                    isResumableUpload = true;
-                    requestMethod = HttpMethod.Post;
-                }
-
-                string expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
-                resourcePath = $"/{bucket}";
-                if (objectName != null)
-                {
-                    resourcePath += $"/{Uri.EscapeDataString(objectName)}";
-                }
-                var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
-                if (isResumableUpload)
-                {
-                    extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
-                }
-
-                var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
-                var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
-
-                var signatureLines = new List<string>
-                {
-                    requestMethod.ToString(),
-                    contentMD5,
-                    contentType,
-                    expiryUnixSeconds
-                };
-                signatureLines.AddRange(extensionHeaders.Select(
-                    header => $"{header.Key}:{string.Join(", ", header.Value)}"));
-                signatureLines.Add(resourcePath);
-                blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
-                queryParameters = new List<string> { $"GoogleAccessId={blobSigner.Id}" };
-                if (expiryUnixSeconds != null)
-                {
-                    queryParameters.Add($"Expires={expiryUnixSeconds}");
-                }
-            }
-
-            internal string GetResult(string signature)
-            {
-                queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
-                return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
+                case SigningVersion.Default:
+                    return s_v2Signer;
+                case SigningVersion.V2:
+                    return s_v2Signer;
+                case SigningVersion.V4:
+                    return s_v4Signer;
+                default:
+                    // We really shouldn't get here, as we validate any user-specified signing version.
+                    throw new InvalidOperationException($"Invalid signing version: {_signingVersion}");
             }
         }
 
@@ -775,55 +693,6 @@ namespace Google.Cloud.Storage.V1
                 return values.FirstOrDefault();
             }
             return null;
-        }
-
-        /// <summary>
-        /// Represents the capability of signing a blob in a suitable form for Google Cloud Storage signed URLs.
-        /// This allows testing URL signing without credentials being available, as well as using Google Cloud IAM
-        /// to sign blobs.
-        /// </summary>
-        public interface IBlobSigner
-        {
-            /// <summary>
-            /// Synchronously signs the given blob.
-            /// </summary>
-            /// <param name="data">The data to sign. Must not be null.</param>
-            /// <returns>The blob signature as base64 text.</returns>
-            string CreateSignature(byte[] data);
-
-            /// <summary>
-            /// Asynchronously signs the given blob.
-            /// </summary>
-            /// <param name="data">The data to sign. Must not be null.</param>
-            /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-            /// <returns>A task representing the asynchronous operation, with a result returning the
-            /// blob signature as base64 text.
-            /// </returns>
-            Task<string> CreateSignatureAsync(byte[] data, CancellationToken cancellationToken);
-
-            /// <summary>
-            /// The identity of the signer, typically an email address.
-            /// </summary>
-            string Id { get; }
-        }
-
-        /// <summary>
-        /// Implementation of <see cref="IBlobSigner"/> to sign a blob from a service account credential.
-        /// We already have the private key, so don't need to perform any IO.
-        /// </summary>
-        private sealed class ServiceAccountCredentialBlobSigner : IBlobSigner
-        {
-            private readonly ServiceAccountCredential _credential;
-
-            internal ServiceAccountCredentialBlobSigner(ServiceAccountCredential credential) =>
-                _credential = credential;
-
-            public string Id => _credential.Id;
-
-            public string CreateSignature(byte[] data) => _credential.CreateSignature(data);
-
-            public Task<string> CreateSignatureAsync(byte[] data, CancellationToken cancellationToken) =>
-                Task.FromResult(CreateSignature(data));
         }
     }
 }
