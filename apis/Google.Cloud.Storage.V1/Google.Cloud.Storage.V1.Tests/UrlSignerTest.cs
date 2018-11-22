@@ -97,8 +97,8 @@ namespace Google.Cloud.Storage.V1.Tests
             }
         }
 
-        private static ServiceAccountCredential CreateFakeServiceAccountCredential() =>
-            new ServiceAccountCredential(new ServiceAccountCredential.Initializer("test")
+        private static ServiceAccountCredential CreateFakeServiceAccountCredential(string id = "test") =>
+            new ServiceAccountCredential(new ServiceAccountCredential.Initializer(id)
             {
                 Key = (RsaKey)RSA.Create()
             });
