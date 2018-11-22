@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -35,7 +36,8 @@ namespace Google.Cloud.Storage.V1
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner);
+                IBlobSigner blobSigner,
+                IClock clock);
 
             Task<string> SignAsync(
                 string bucket,
@@ -44,8 +46,9 @@ namespace Google.Cloud.Storage.V1
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
-                CancellationToken cancellationToken,
-                IBlobSigner blobSigner);
+                IBlobSigner blobSigner,
+                IClock clock,
+                CancellationToken cancellationToken);
         }
     }
 }
