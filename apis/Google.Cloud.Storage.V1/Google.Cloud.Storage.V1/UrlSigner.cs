@@ -58,11 +58,13 @@ namespace Google.Cloud.Storage.V1
 
         private readonly IBlobSigner _blobSigner;
         private readonly SigningVersion _signingVersion;
+        private readonly IClock _clock;
 
-        private UrlSigner(IBlobSigner blobSigner, SigningVersion signingVersion)
+        private UrlSigner(IBlobSigner blobSigner, SigningVersion signingVersion, IClock clock)
         {
             _blobSigner = blobSigner;
             _signingVersion = signingVersion;
+            _clock = clock;
         }
 
         /// <summary>
@@ -101,7 +103,7 @@ namespace Google.Cloud.Storage.V1
         public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential)
         {
             GaxPreconditions.CheckNotNull(credential, nameof(credential));
-            return new UrlSigner(new ServiceAccountCredentialBlobSigner(credential), SigningVersion.Default);
+            return new UrlSigner(new ServiceAccountCredentialBlobSigner(credential), SigningVersion.Default, SystemClock.Instance);
         }
 
         /// <summary>
@@ -116,7 +118,7 @@ namespace Google.Cloud.Storage.V1
         public static UrlSigner FromBlobSigner(IBlobSigner signer)
         {
             GaxPreconditions.CheckNotNull(signer, nameof(signer));
-            return new UrlSigner(signer, SigningVersion.Default);
+            return new UrlSigner(signer, SigningVersion.Default, SystemClock.Instance);
         }
 
         /// <summary>
@@ -128,8 +130,13 @@ namespace Google.Cloud.Storage.V1
         public UrlSigner WithSigningVersion(SigningVersion signingVersion)
         {
             GaxPreconditions.CheckEnumValue(signingVersion, nameof(signingVersion));
-            return new UrlSigner(_blobSigner, signingVersion);
+            return new UrlSigner(_blobSigner, signingVersion, _clock);
         }
+
+        /// <summary>
+        /// Only available for testing purposes, this allows the clock used for signature generation to be replaced.
+        /// </summary>
+        internal UrlSigner WithClock(IClock clock) => new UrlSigner(_blobSigner, _signingVersion, clock);
 
         /// <summary>
         /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -176,7 +183,7 @@ namespace Google.Cloud.Storage.V1
         /// The signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
         public string Sign(string bucket, string objectName, TimeSpan duration, HttpRequestMessage request) =>
-            Sign(bucket, objectName, DateTimeOffset.UtcNow + duration, request);
+            Sign(bucket, objectName, _clock.GetCurrentDateTimeUtc() + duration, request);
 
         /// <summary>
         /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -291,7 +298,7 @@ namespace Google.Cloud.Storage.V1
                 Sign(
                     bucket,
                     objectName,
-                    DateTimeOffset.UtcNow + duration,
+                    _clock.GetCurrentDateTimeUtc() + duration,
                     requestMethod,
                     requestHeaders,
                     contentHeaders);
@@ -353,7 +360,7 @@ namespace Google.Cloud.Storage.V1
             HttpMethod requestMethod = null,
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null) =>
-            GetEffectiveSigner().Sign(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner);
+            GetEffectiveSigner().Sign(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner, _clock);
 
         /// <summary>
         /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -402,7 +409,7 @@ namespace Google.Cloud.Storage.V1
         /// signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
         public Task<string> SignAsync(string bucket, string objectName, TimeSpan duration, HttpRequestMessage request, CancellationToken cancellationToken = default) =>
-            SignAsync(bucket, objectName, DateTimeOffset.UtcNow + duration, request, cancellationToken);
+            SignAsync(bucket, objectName, _clock.GetCurrentDateTimeUtc() + duration, request, cancellationToken);
 
         /// <summary>
         /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -523,7 +530,7 @@ namespace Google.Cloud.Storage.V1
                 SignAsync(
                     bucket,
                     objectName,
-                    DateTimeOffset.UtcNow + duration,
+                    _clock.GetCurrentDateTimeUtc() + duration,
                     requestMethod,
                     requestHeaders,
                     contentHeaders,
@@ -589,7 +596,7 @@ namespace Google.Cloud.Storage.V1
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null,
             CancellationToken cancellationToken = default) =>
-            GetEffectiveSigner().SignAsync(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, cancellationToken, _blobSigner);
+            GetEffectiveSigner().SignAsync(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner, _clock, cancellationToken);
 
         private ISigner GetEffectiveSigner()
         {
