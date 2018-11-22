@@ -31,7 +31,8 @@ namespace Google.Cloud.Storage.V1
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
-                IBlobSigner blobSigner)
+                IBlobSigner blobSigner,
+                IClock clock)
             {
                 throw new NotImplementedException();
             }
@@ -43,8 +44,9 @@ namespace Google.Cloud.Storage.V1
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
-                CancellationToken cancellationToken,
-                IBlobSigner blobSigner)
+                IBlobSigner blobSigner,
+                IClock clock,
+                CancellationToken cancellationToken)
             {
                 throw new NotImplementedException();
             }
