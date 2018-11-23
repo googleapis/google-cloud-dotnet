@@ -69,12 +69,17 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(db, nameof(db));
             GaxPreconditions.CheckNotNull(value, nameof(value));
 
-            // If we're asked for a Value, just provide it directly, even for null values.
-            // FIXME: Should we clone?
+            // If we're asked for a Value, just clone it, even for null values.
+            // (We need to clone to avoid aliasing: modifying the result of serialization
+            // should not affect the original data.)
             if (targetType == typeof(Value))
             {
                 return value.Clone();
             }
+
+            // We deserialize to T and Nullable<T> the same way for all non-null values, so work out
+            // the non-nullable target type once.
+            BclType nonNullableTargetType = Nullable.GetUnderlyingType(targetType) ?? targetType;
 
             checked
             {
@@ -101,6 +106,7 @@ namespace Google.Cloud.Firestore
                             ?? ConvertSpecific(v => (ushort) v.IntegerValue)
                             ?? ConvertSpecific(v => (byte) v.IntegerValue)
                             ?? ConvertSpecific(v => (sbyte) v.IntegerValue)
+                            ?? ConvertEnum()
                             ?? NoConversion();
                     case NullValue:
                         return IsNonNullableValueType(targetType) ? NoConversion() : null;
@@ -134,13 +140,14 @@ namespace Google.Cloud.Firestore
             // Converts the value using the converter if the target type is either object (so general)
             // or T, or T?.
             object ConvertDefault<T>(Func<Value, T> conversion) =>
-                targetType == typeof(T) || Nullable.GetUnderlyingType(targetType) == typeof(T) || targetType == typeof(object)
-                ? (object) conversion(value) : null;
+                nonNullableTargetType == typeof(T) || targetType == typeof(object) ? (object) conversion(value) : null;
 
             // Converts the value using the converter only if the target type is exactly T or T?.
             object ConvertSpecific<T>(Func<Value, T> conversion) =>
-                targetType == typeof(T) || Nullable.GetUnderlyingType(targetType) == typeof(T)
-                ? (object) conversion(value) : null;
+                nonNullableTargetType == typeof(T) ? (object) conversion(value) : null;
+
+            object ConvertEnum() =>
+                nonNullableTargetType.GetTypeInfo().IsEnum ? EnumHelpers.Int64ToEnum(value.IntegerValue, nonNullableTargetType) : null;
 
             // Always throws - useful at the end of a chain of attempts.
             object NoConversion() =>

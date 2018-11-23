@@ -90,6 +90,20 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Throws<OverflowException>(() => DeserializeDefault(minLong, targetType));
         }
 
+        [Theory]
+        [InlineData(typeof(SerializationTestData.ByteEnum))]
+        [InlineData(typeof(SerializationTestData.SByteEnum))]
+        [InlineData(typeof(SerializationTestData.Int16Enum))]
+        [InlineData(typeof(SerializationTestData.UInt16Enum))]
+        [InlineData(typeof(SerializationTestData.Int32Enum))]
+        [InlineData(typeof(SerializationTestData.UInt32Enum))]
+        [InlineData(typeof(SerializationTestData.UInt64Enum))]
+        public void EnumOverflow(BclType targetType)
+        {
+            var minLong = new Value { IntegerValue = long.MinValue };
+            Assert.Throws<OverflowException>(() => DeserializeDefault(minLong, targetType));
+        }
+
         public static IEnumerable<object[]> InvalidDeserializationCalls = new List<object[]>
         {
             // Inappropriate target types
