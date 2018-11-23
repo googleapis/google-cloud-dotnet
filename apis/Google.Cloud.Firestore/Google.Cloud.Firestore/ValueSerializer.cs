@@ -107,6 +107,8 @@ namespace Google.Cloud.Firestore
                     return CreateMapValue(ConvertAnonymousType(anon));
                 case object attributed when IsFirestoreAttributedType(attributed.GetType()):
                     return CreateMapValue(ConvertFirestoreAttributedType(attributed));
+                case Enum _:
+                    return new Value { IntegerValue = EnumHelpers.EnumToInt64(value) };
                 case IEnumerable sequence:
                     return CreateArrayValue(sequence.Cast<object>().Select(Serialize));
                 default:

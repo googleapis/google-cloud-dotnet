@@ -73,6 +73,25 @@ namespace Google.Cloud.Firestore.Tests
             // We don't cover the whole range of ulong
             { (ulong) 0, new Value { IntegerValue = 0 } },
             { (ulong) long.MaxValue, new Value { IntegerValue = long.MaxValue } },
+
+            // Enum types
+            { ByteEnum.MinValue, new Value { IntegerValue = byte.MinValue } },
+            { ByteEnum.MaxValue, new Value { IntegerValue = byte.MaxValue } },
+            { SByteEnum.MinValue, new Value { IntegerValue = sbyte.MinValue } },
+            { SByteEnum.MaxValue, new Value { IntegerValue = sbyte.MaxValue } },
+            { Int16Enum.MinValue, new Value { IntegerValue = short.MinValue } },
+            { Int16Enum.MaxValue, new Value { IntegerValue = short.MaxValue } },
+            { UInt16Enum.MinValue, new Value { IntegerValue = ushort.MinValue } },
+            { UInt16Enum.MaxValue, new Value { IntegerValue = ushort.MaxValue } },
+            { Int32Enum.MinValue, new Value { IntegerValue = int.MinValue } },
+            { Int32Enum.MaxValue, new Value { IntegerValue = int.MaxValue } },
+            { UInt32Enum.MinValue, new Value { IntegerValue = uint.MinValue } },
+            { UInt32Enum.MaxValue, new Value { IntegerValue = uint.MaxValue } },
+            { Int64Enum.MinValue, new Value { IntegerValue = long.MinValue } },
+            { Int64Enum.MaxValue, new Value { IntegerValue = long.MaxValue } },
+            // We don't cover the whole range of ulong
+            { UInt64Enum.MinValue, new Value { IntegerValue = 0 } },
+            { UInt64Enum.MaxRepresentableValue, new Value { IntegerValue = long.MaxValue } },
             
             // Timestamps
             { new Timestamp(1, 500),
@@ -127,6 +146,10 @@ namespace Google.Cloud.Firestore.Tests
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
             { new NullableContainer { NullableValue = 10 },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { IntegerValue = 10L } } } } } },
+            { new NullableEnumContainer { NullableValue = null },
+                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
+            { new NullableEnumContainer { NullableValue = (Int32Enum) 10 },
+                new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { IntegerValue = 10L } } } } } },
 
             // Document references
             { Database.Document("a/b"),
@@ -162,11 +185,24 @@ namespace Google.Cloud.Firestore.Tests
             [FirestoreProperty]
             public int? NullableValue { get; set; }
 
-            public override int GetHashCode() => NullableValue ?? 0;
+            public override int GetHashCode() => NullableValue.GetValueOrDefault();
 
             public override bool Equals(object obj) => Equals(obj as NullableContainer);
 
             public bool Equals(NullableContainer other) => other != null && other.NullableValue == NullableValue;
+        }
+
+        [FirestoreData]
+        internal class NullableEnumContainer : IEquatable<NullableEnumContainer>
+        {
+            [FirestoreProperty]
+            public Int32Enum? NullableValue { get; set; }
+
+            public override int GetHashCode() => (int) NullableValue.GetValueOrDefault();
+
+            public override bool Equals(object obj) => Equals(obj as NullableEnumContainer);
+
+            public bool Equals(NullableEnumContainer other) => other != null && other.NullableValue == NullableValue;
         }
 
         [FirestoreData]
@@ -199,6 +235,54 @@ namespace Google.Cloud.Firestore.Tests
                 }
                 return Integers.All(pair => other.Integers.TryGetValue(pair.Key, out var otherValue) && pair.Value == otherValue);
             }
+        }
+
+        internal enum SByteEnum : sbyte
+        {
+            MinValue = sbyte.MinValue,
+            MaxValue = sbyte.MaxValue
+        }
+
+        internal enum Int16Enum : short
+        {
+            MinValue = short.MinValue,
+            MaxValue = short.MaxValue
+        }
+
+        internal enum Int32Enum : int
+        {
+            MinValue = int.MinValue,
+            MaxValue = int.MaxValue
+        }
+
+        internal enum Int64Enum : long
+        {
+            MinValue = long.MinValue,
+            MaxValue = long.MaxValue
+        }
+
+        internal enum ByteEnum : byte
+        {
+            MinValue = byte.MinValue,
+            MaxValue = byte.MaxValue
+        }
+
+        internal enum UInt16Enum : ushort
+        {
+            MinValue = ushort.MinValue,
+            MaxValue = ushort.MaxValue
+        }
+
+        internal enum UInt32Enum : uint
+        {
+            MinValue = uint.MinValue,
+            MaxValue = uint.MaxValue
+        }
+
+        internal enum UInt64Enum : ulong
+        {
+            MinValue = ulong.MinValue,
+            MaxRepresentableValue = long.MaxValue
         }
     }
 }
