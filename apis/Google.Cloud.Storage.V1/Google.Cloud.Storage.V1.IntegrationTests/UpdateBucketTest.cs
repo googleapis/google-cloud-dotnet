@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using Xunit;
@@ -23,7 +22,6 @@ using static Google.Apis.Storage.v1.Data.Bucket.LifecycleData.RuleData;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class UpdateBucketTest
     {
         private readonly StorageFixture _fixture;

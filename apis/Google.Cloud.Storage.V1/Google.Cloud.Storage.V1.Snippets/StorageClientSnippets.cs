@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Apis.Download;
 using Google.Apis.Storage.v1.Data;
 using Google.Apis.Upload;
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Iam.V1;
 using Google.Cloud.PubSub.V1;
 using System;
 using System.Collections.Generic;
@@ -35,7 +33,6 @@ namespace Google.Cloud.Storage.V1.Snippets
 {
     [SnippetOutputCollector]
     [Collection(nameof(StorageSnippetFixture))]
-    [FileLoggerBeforeAfterTest]
     public class StorageClientSnippets
     {
         private readonly StorageSnippetFixture _fixture;
