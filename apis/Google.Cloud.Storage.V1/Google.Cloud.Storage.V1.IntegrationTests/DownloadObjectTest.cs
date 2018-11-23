@@ -15,7 +15,6 @@
 using Google.Apis.Download;
 using Google.Apis.Services;
 using Google.Apis.Storage.v1;
-using Google.Cloud.ClientTesting;
 using System;
 using System.IO;
 using System.Linq;
@@ -31,7 +30,6 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class DownloadObjectTest
     {
         private readonly StorageFixture _fixture;

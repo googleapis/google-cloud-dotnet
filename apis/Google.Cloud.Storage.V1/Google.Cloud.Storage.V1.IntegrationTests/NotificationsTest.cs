@@ -12,24 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Xunit;
 using Google.Apis.Storage.v1.Data;
+using Google.Cloud.ClientTesting;
 using Google.Cloud.PubSub.V1;
 using System;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
-using Google.Cloud.Iam.V1;
-using Google.Cloud.ClientTesting;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class NotificationsTest
     {
         private readonly StorageFixture _fixture;

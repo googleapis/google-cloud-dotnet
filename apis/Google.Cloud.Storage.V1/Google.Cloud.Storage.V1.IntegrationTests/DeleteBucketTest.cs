@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Apis.Storage.v1.Data;
-using Google.Cloud.ClientTesting;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
@@ -23,7 +22,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class DeleteBucketTest
     {
         // Only overloads accepting Bucket are tested, but the overloads accepting string go

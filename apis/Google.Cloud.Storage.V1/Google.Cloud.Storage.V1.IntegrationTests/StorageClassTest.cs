@@ -20,7 +20,6 @@ using Object = Google.Apis.Storage.v1.Data.Object;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class StorageClassTest
     {
         private readonly StorageFixture _fixture;

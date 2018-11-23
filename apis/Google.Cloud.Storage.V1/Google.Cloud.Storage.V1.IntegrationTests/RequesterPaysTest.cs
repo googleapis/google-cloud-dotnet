@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
-using System;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -26,7 +24,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     // https://github.com/xunit/samples.xunit/tree/master/DynamicSkipExample
 
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class RequesterPaysTest
     {
         private readonly StorageFixture _fixture;

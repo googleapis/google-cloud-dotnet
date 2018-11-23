@@ -31,7 +31,6 @@ using Xunit;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class UrlSignerTest
     {
         private static readonly TimeSpan _duration = TimeSpan.FromSeconds(5);
