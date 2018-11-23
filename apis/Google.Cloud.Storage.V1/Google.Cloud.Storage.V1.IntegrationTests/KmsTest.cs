@@ -28,7 +28,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     /// Tests for customer-managed encryption keys (CMEK) that use Cloud KMS.
     /// </summary>
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class KmsTest
     {
         // Name of a US-based keyring, which is expected to be in the test project, in "locations/us"

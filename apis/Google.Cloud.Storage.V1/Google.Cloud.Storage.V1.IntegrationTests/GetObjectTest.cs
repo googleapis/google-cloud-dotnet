@@ -12,14 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ClientTesting;
 using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class GetObjectTest
     {
         private readonly StorageFixture _fixture;

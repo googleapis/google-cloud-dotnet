@@ -26,7 +26,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     /// see <see cref="KmsTest"/>.
     /// </summary>
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class EncryptionTest
     {
         private readonly StorageFixture _fixture;

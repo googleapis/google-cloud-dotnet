@@ -24,7 +24,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     using static TestHelpers;
 
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class DeleteObjectTest
     {
         private readonly StorageFixture _fixture;
