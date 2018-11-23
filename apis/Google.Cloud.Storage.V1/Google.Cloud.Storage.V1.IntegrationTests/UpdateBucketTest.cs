@@ -23,7 +23,6 @@ using static Google.Apis.Storage.v1.Data.Bucket.LifecycleData.RuleData;
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
     [Collection(nameof(StorageFixture))]
-    [FileLoggerBeforeAfterTest]
     public class UpdateBucketTest
     {
         private readonly StorageFixture _fixture;

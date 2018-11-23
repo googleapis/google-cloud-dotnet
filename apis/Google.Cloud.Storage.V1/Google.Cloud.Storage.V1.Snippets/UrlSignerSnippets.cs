@@ -31,7 +31,6 @@ namespace Google.Cloud.Storage.V1.Snippets
 {
     [SnippetOutputCollector]
     [Collection(nameof(StorageSnippetFixture))]
-    [FileLoggerBeforeAfterTest]
     public class UrlSignerSnippets
     {
         private readonly StorageSnippetFixture _fixture;
