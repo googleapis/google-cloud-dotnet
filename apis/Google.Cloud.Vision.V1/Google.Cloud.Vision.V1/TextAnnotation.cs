@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Vision.V1 {
     ///         |    |
     ///         1----0
     ///
-    ///   and the vertice order will still be (0, 1, 2, 3).
+    ///   and the vertex order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
@@ -1442,7 +1442,7 @@ namespace Google.Cloud.Vision.V1 {
     ///      2----3
     ///      |    |
     ///      1----0
-    ///   and the vertice order will still be (0, 1, 2, 3).
+    ///   and the vertex order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
@@ -1688,7 +1688,7 @@ namespace Google.Cloud.Vision.V1 {
     ///      2----3
     ///      |    |
     ///      1----0
-    ///   and the vertice order will still be (0, 1, 2, 3).
+    ///   and the vertex order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
