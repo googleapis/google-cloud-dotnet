@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Firestore.Converters;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -20,7 +21,7 @@ using BclType = System.Type;
 
 namespace Google.Cloud.Firestore.Tests
 {
-    public class SerializationHelpersTest
+    public class ConverterCacheTest
     {
         [Theory]
         [InlineData(typeof(Dictionary<string, int>), typeof(int))]
@@ -36,7 +37,7 @@ namespace Google.Cloud.Firestore.Tests
         [InlineData(typeof(List<string>), null)]
         public void TryGetStringDictionaryValueType(BclType input, BclType expectedElementType)
         {
-            var actual = SerializationHelpers.TryGetStringDictionaryValueType(input, out var actualElementType);
+            var actual = ConverterCache.TryGetStringDictionaryValueType(input, out var actualElementType);
             Assert.Equal(expectedElementType != null, actual);
             Assert.Equal(expectedElementType, actualElementType);
         }

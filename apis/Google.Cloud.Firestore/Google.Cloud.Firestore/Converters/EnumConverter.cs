@@ -12,33 +12,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Firestore.V1Beta1;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Reflection;
 using BclType = System.Type;
 
-namespace Google.Cloud.Firestore
+namespace Google.Cloud.Firestore.Converters
 {
     /// <summary>
-    /// Enum conversion helper methods.
+    /// A converter for a specific enum type.
     /// </summary>
-    internal static class EnumHelpers
+    internal sealed class EnumConverter : ConverterBase
     {
-        private static readonly ConcurrentDictionary<BclType, EnumConverter> s_converters =
-            new ConcurrentDictionary<BclType, EnumConverter>();
+        private static readonly ConcurrentDictionary<BclType, PrimitiveConverter> s_primitiveConverters =
+            new ConcurrentDictionary<BclType, PrimitiveConverter>();
 
-        private static EnumConverter GetConverter(BclType type) =>
-            s_converters.GetOrAdd(type, t => EnumConverter.ForType(type));
+        private readonly PrimitiveConverter _converter;
 
-        internal static long EnumToInt64(object value) =>
-            GetConverter(value.GetType()).EnumToInt64(value);
+        internal EnumConverter(BclType targetType) : base(targetType)
+        {
+            _converter = s_primitiveConverters.GetOrAdd(targetType, t => PrimitiveConverter.ForType(t));
+        }
 
-        internal static object Int64ToEnum(long value, BclType targetType) =>
-            GetConverter(targetType).Int64ToEnum(value);
+        protected override object DeserializeInteger(FirestoreDb db, long value) => _converter.Int64ToEnum(value);
+
+        public override Value Serialize(object value) => new Value { IntegerValue = _converter.EnumToInt64(value) };
 
         // This is really ugly in terms of repetition, but reasonably simple. I've failed to come up with anything cleaner :(
-        private abstract class EnumConverter
+        private abstract class PrimitiveConverter
         {
             private static readonly Dictionary<TypeCode, BclType> s_genericTypes = new Dictionary<TypeCode, BclType>
             {
@@ -55,59 +58,59 @@ namespace Google.Cloud.Firestore
             internal abstract object Int64ToEnum(long value);
             internal abstract long EnumToInt64(object value);
 
-            internal static EnumConverter ForType(BclType type)
+            internal static PrimitiveConverter ForType(BclType type)
             {
                 TypeCode underlyingTypeCode = BclType.GetTypeCode(type.GetTypeInfo().GetEnumUnderlyingType());
                 if (!s_genericTypes.TryGetValue(underlyingTypeCode, out var genericConverterType))
                 {
                     throw new InvalidOperationException($"Unexpected underlying type code for enum: {underlyingTypeCode}");
                 }
-                return (EnumConverter) Activator.CreateInstance(genericConverterType.MakeGenericType(type));
+                return (PrimitiveConverter) Activator.CreateInstance(genericConverterType.MakeGenericType(type));
             }
 
-            private sealed class ByteEnumConverter<T> : EnumConverter
+            private sealed class ByteEnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => checked((byte) value);
                 internal override object Int64ToEnum(long value) => (T) (object) checked((byte) value);
             }
 
-            private sealed class SByteEnumConverter<T> : EnumConverter
+            private sealed class SByteEnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => checked((sbyte) value);
                 internal override object Int64ToEnum(long value) => (T) (object) checked((sbyte) value);
             }
 
-            private sealed class Int16EnumConverter<T> : EnumConverter
+            private sealed class Int16EnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => checked((short) value);
                 internal override object Int64ToEnum(long value) => (T) (object) checked((short) value);
             }
 
-            private sealed class UInt16EnumConverter<T> : EnumConverter
+            private sealed class UInt16EnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => checked((ushort) value);
                 internal override object Int64ToEnum(long value) => (T) (object) checked((ushort) value);
             }
 
-            private sealed class Int32EnumConverter<T> : EnumConverter
+            private sealed class Int32EnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => checked((int) value);
                 internal override object Int64ToEnum(long value) => (T) (object) checked((int) value);
             }
 
-            private sealed class UInt32EnumConverter<T> : EnumConverter
+            private sealed class UInt32EnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => checked((uint) value);
                 internal override object Int64ToEnum(long value) => (T) (object) checked((uint) value);
             }
 
-            private sealed class Int64EnumConverter<T> : EnumConverter
+            private sealed class Int64EnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => (long) value;
                 internal override object Int64ToEnum(long value) => (T) (object) value;
             }
 
-            private sealed class UInt64EnumConverter<T> : EnumConverter
+            private sealed class UInt64EnumConverter<T> : PrimitiveConverter
             {
                 internal override long EnumToInt64(object value) => checked((long) (ulong) value);
                 internal override object Int64ToEnum(long value) => (T) (object) checked((ulong) value);
