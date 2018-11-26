@@ -25,32 +25,26 @@ namespace Google.Cloud.Firestore.Benchmarks
 
         [Benchmark]
         public object DeserializeMap_Attributed() =>
-            ValueDeserializer.Default.DeserializeMap(
-                FakeDb, SampleData.SerializedMap, typeof(HighScore));
+            ValueDeserializer.DeserializeMap(FakeDb, SampleData.SerializedMap, typeof(HighScore));
 
         [Benchmark]
         public object Deserialize_Attributed() =>
-            ValueDeserializer.Default.Deserialize(
-                FakeDb, SampleData.Serialized, typeof(HighScore));
+            ValueDeserializer.Deserialize(FakeDb, SampleData.Serialized, typeof(HighScore));
 
         [Benchmark]
         public object DeserializeMap_Dictionary() =>
-            ValueDeserializer.Default.DeserializeMap(
-                FakeDb, SampleData.SerializedMap, typeof(Dictionary<string, object>));
+            ValueDeserializer.DeserializeMap(FakeDb, SampleData.SerializedMap, typeof(Dictionary<string, object>));
 
         [Benchmark]
         public object Deserialize_Dictionary() =>
-            ValueDeserializer.Default.Deserialize(
-                FakeDb, SampleData.Serialized, typeof(Dictionary<string, object>));
+            ValueDeserializer.Deserialize(FakeDb, SampleData.Serialized, typeof(Dictionary<string, object>));
 
         [Benchmark]
         public object DeserializeMap_Expando() =>
-            ValueDeserializer.Default.DeserializeMap(
-                FakeDb, SampleData.SerializedMap, typeof(ExpandoObject));
+            ValueDeserializer.DeserializeMap(FakeDb, SampleData.SerializedMap, typeof(ExpandoObject));
 
         [Benchmark]
         public object Deserialize_Expando() =>
-            ValueDeserializer.Default.Deserialize(
-                FakeDb, SampleData.Serialized, typeof(ExpandoObject));
+            ValueDeserializer.Deserialize(FakeDb, SampleData.Serialized, typeof(ExpandoObject));
     }
 }

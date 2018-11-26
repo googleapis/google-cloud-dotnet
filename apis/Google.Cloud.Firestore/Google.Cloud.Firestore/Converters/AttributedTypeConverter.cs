@@ -13,54 +13,40 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Firestore.V1Beta1;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using BclType = System.Type;
 
-namespace Google.Cloud.Firestore
+namespace Google.Cloud.Firestore.Converters
 {
-    /// <summary>
-    /// Models a type decorated with <see cref="FirestoreDataAttribute"/> to provide access to attributed properties.
-    /// </summary>
-    internal sealed class FirestoreDataAttributedType
+    internal sealed class AttributedTypeConverter : MapConverterBase
     {
-        /// <summary>
-        /// Cache of all attributed types we've been asked about. This is "unbounded" in that we never remove an item,
-        /// but unless a user starts dynamically generating types, it's effectively bounded by the attributed types
-        /// in existence.
-        /// </summary>
-        private static readonly ConcurrentDictionary<BclType, FirestoreDataAttributedType> _cache =
-            new ConcurrentDictionary<BclType, FirestoreDataAttributedType>();
-
-        private readonly FirestoreDataAttribute _attribute;
-
         // Note: the use of a dictionary for writable properties and a list for readable ones is purely
         // driven by how we use this. If we ever want a dictionary for readable properties, that's easy to do.
-        internal IReadOnlyDictionary<string, AttributedProperty> WritableProperties { get; }
-        internal IReadOnlyList<AttributedProperty> ReadableProperties { get; }
-        internal UnknownPropertyHandling UnknownPropertyHandling => _attribute.UnknownPropertyHandling;
-
+        private readonly IReadOnlyDictionary<string, AttributedProperty> _writableProperties;
+        private readonly IReadOnlyList<AttributedProperty> _readableProperties;
         private readonly ConstructorInfo _ctor;
+        private readonly FirestoreDataAttribute _attribute;
 
-        private FirestoreDataAttributedType(BclType type)
+        private AttributedTypeConverter(BclType targetType) : base(targetType)
         {
-            var typeInfo = type.GetTypeInfo();
+            var typeInfo = targetType.GetTypeInfo();
             _attribute = typeInfo.GetCustomAttribute<FirestoreDataAttribute>(inherit: false);
             // This would be an internal library bug. We shouldn't be calling it in this case.
-            GaxPreconditions.CheckState(_attribute != null, "Type {0} is not decorated with {1}.", type.FullName, nameof(FirestoreDataAttribute));
+            GaxPreconditions.CheckState(_attribute != null, "Type {0} is not decorated with {1}.", targetType.FullName, nameof(FirestoreDataAttribute));
 
             // The rest are user bugs.
-            GaxPreconditions.CheckState(Enum.IsDefined(typeof(UnknownPropertyHandling), UnknownPropertyHandling),
-                "Type {0} has invalid {1} value", type.FullName, nameof(UnknownPropertyHandling));
+            GaxPreconditions.CheckState(Enum.IsDefined(typeof(UnknownPropertyHandling), _attribute.UnknownPropertyHandling),
+                "Type {0} has invalid {1} value", targetType.FullName, nameof(FirestoreDataAttribute.UnknownPropertyHandling));
 
             _ctor = typeInfo
                 .GetConstructors(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance)
                 .SingleOrDefault(ctor => ctor.GetParameters().Length == 0);
-            GaxPreconditions.CheckState(_ctor != null, "Type {0} has no parameterless constructor", type.FullName);
+            GaxPreconditions.CheckState(_ctor != null, "Type {0} has no parameterless constructor", targetType.FullName);
 
             List<AttributedProperty> readableProperties = new List<AttributedProperty>();
             Dictionary<string, AttributedProperty> writableProperties = new Dictionary<string, AttributedProperty>();
@@ -81,36 +67,74 @@ namespace Google.Cloud.Firestore
                 {
                     // This is O(N), but done once per type so should be okay.
                     GaxPreconditions.CheckState(!readableProperties.Any(p => p.FirestoreName == firestoreName),
-                        "Type {0} contains multiple readable properties with name {1}", type.FullName, firestoreName);
+                        "Type {0} contains multiple readable properties with name {1}", targetType.FullName, firestoreName);
                     readableProperties.Add(attributedProperty);
                 }
                 if (attributedProperty.CanWrite)
                 {
                     GaxPreconditions.CheckState(!writableProperties.ContainsKey(firestoreName),
-                        "Type {0} contains multiple writable properties with name {1}", type.FullName, firestoreName);
+                        "Type {0} contains multiple writable properties with name {1}", targetType.FullName, firestoreName);
                     writableProperties[firestoreName] = attributedProperty;
                 }
             }
-            ReadableProperties = readableProperties.AsReadOnly();
-            WritableProperties = new ReadOnlyDictionary<string, AttributedProperty>(writableProperties);
+            _readableProperties = readableProperties.AsReadOnly();
+            _writableProperties = new ReadOnlyDictionary<string, AttributedProperty>(writableProperties);
         }
 
         /// <summary>
-        /// Creates an instance of the attributed type, using the parameterless constructor.
+        /// Factory method to construct a converter for an attributed type.
+        /// (Currently just a constructor call, but this allows for custom conversions in the future.)
         /// </summary>
-        internal object CreateInstance() => _ctor.Invoke(parameters: null);
+        internal static IFirestoreInternalConverter ForType(BclType targetType) => new AttributedTypeConverter(targetType);
+        
+        public override object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values)
+        {
+            // TODO: Consider using a compiled expression tree for this.
+            object ret;
+            try
+            {
+                ret = _ctor.Invoke(parameters: null);
+            }
+            catch (TargetInvocationException e) when (e.InnerException != null)
+            {
+                throw e.InnerException;
+            }
 
-        /// <summary>
-        /// Returns an instance of <see cref="FirestoreDataAttributedType"/> for the given type,
-        /// either from the cache or creating it directly.
-        /// </summary>
-        /// <param name="type">The type to inspect.</param>
-        /// <exception cref="InvalidOperationException">The type has invalid attributes, or is not attributed at all.</exception>
-        /// <returns>The <see cref="FirestoreDataAttributedType"/> for the given type.</returns>
-        internal static FirestoreDataAttributedType ForType(BclType type) =>
-            _cache.GetOrAdd(type, t => new FirestoreDataAttributedType(t));
+            foreach (var pair in values)
+            {
+                if (_writableProperties.TryGetValue(pair.Key, out var property))
+                {
+                    var converted = ValueDeserializer.Deserialize(db, pair.Value, property.PropertyType);
+                    property.SetValue(ret, converted);
+                }
+                else
+                {
+                    switch (_attribute.UnknownPropertyHandling)
+                    {
+                        case UnknownPropertyHandling.Ignore:
+                            break;
+                        case UnknownPropertyHandling.Warn:
+                            db.LogWarning($"No writable property for Firestore field {pair.Key} in type {TargetType.FullName}");
+                            break;
+                        case UnknownPropertyHandling.Throw:
+                            throw new ArgumentException($"No writable property for Firestore field {pair.Key} in type {TargetType.FullName}");
+                    }
+                }
+            }
+            return ret;
+        }
 
-        internal sealed class AttributedProperty
+        public override void SerializeMap(object value, IDictionary<string, Value> map)
+        {
+            foreach (var property in _readableProperties)
+            {
+                var sentinel = property.SentinelValue;
+                Value protoValue = sentinel == null ? ValueSerializer.Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
+                map[property.FirestoreName] = protoValue;
+            }
+        }
+
+        private sealed class AttributedProperty
         {
             private readonly PropertyInfo _propertyInfo;
 
@@ -123,7 +147,7 @@ namespace Google.Cloud.Firestore
             internal bool CanRead => _propertyInfo.CanRead;
             internal bool CanWrite => _propertyInfo.CanWrite;
             internal BclType PropertyType => _propertyInfo.PropertyType;
-            
+
             internal AttributedProperty(PropertyInfo property, FirestorePropertyAttribute attribute)
             {
                 _propertyInfo = property;
@@ -149,8 +173,10 @@ namespace Google.Cloud.Firestore
                     typeName, property.Name);
             }
 
+            // TODO: Consider creating delegates for the get/set methods.
             internal object GetValue(object obj) => _propertyInfo.GetValue(obj);
             internal void SetValue(object obj, object value) => _propertyInfo.SetValue(obj, value);
         }
     }
+
 }

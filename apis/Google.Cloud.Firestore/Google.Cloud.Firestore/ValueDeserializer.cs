@@ -12,15 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 using Google.Api.Gax;
+using Google.Cloud.Firestore.Converters;
 using Google.Cloud.Firestore.V1Beta1;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
 using System.Reflection;
-using static Google.Cloud.Firestore.SerializationHelpers;
-using static Google.Cloud.Firestore.V1Beta1.Value.ValueTypeOneofCase;
 using BclType = System.Type;
 
 namespace Google.Cloud.Firestore
@@ -33,29 +29,8 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// Provides conversions from Firestore Value protos to .NET types.
     /// </summary>
-    internal sealed class ValueDeserializer
+    internal static class ValueDeserializer
     {
-        // The BCL type we create when deserializing map values and when our target type is
-        // just IDictionary<string, object> or object.
-        private readonly BclType _defaultMapType;
-
-        /// <summary>
-        /// A deserializer that uses ExpandoObject for maps when no type is specified.
-        /// </summary>
-        internal static ValueDeserializer Expando { get; } = new ValueDeserializer(typeof(ExpandoObject));
-
-        /// <summary>
-        /// A deserializer that uses Dictionary for maps when no type is specified.
-        /// </summary>
-        internal static ValueDeserializer Dictionary { get; } = new ValueDeserializer(typeof(Dictionary<string, object>));
-
-        /// <summary>
-        /// The default deserializer - currently <see cref="Dictionary"/>.
-        /// </summary>
-        internal static ValueDeserializer Default => Dictionary;
-
-        private ValueDeserializer(BclType defaultMapType) => _defaultMapType = defaultMapType;
-
         /// <summary>
         /// Deserializes from a Firestore Value proto to a .NET type.
         /// </summary>
@@ -64,7 +39,7 @@ namespace Google.Cloud.Firestore
         /// <param name="targetType">The target type. The method tries to convert to this type. If the type is
         /// object, it uses the default representation of the value.</param>
         /// <returns>The deserialized value</returns>
-        internal object Deserialize(FirestoreDb db, Value value, BclType targetType)
+        internal static object Deserialize(FirestoreDb db, Value value, BclType targetType)
         {
             GaxPreconditions.CheckNotNull(db, nameof(db));
             GaxPreconditions.CheckNotNull(value, nameof(value));
@@ -77,195 +52,23 @@ namespace Google.Cloud.Firestore
                 return value.Clone();
             }
 
-            // We deserialize to T and Nullable<T> the same way for all non-null values, so work out
-            // the non-nullable target type once.
-            BclType nonNullableTargetType = Nullable.GetUnderlyingType(targetType) ?? targetType;
-
-            checked
+            BclType underlyingType = Nullable.GetUnderlyingType(targetType);
+            if (value.ValueTypeCase == Value.ValueTypeOneofCase.NullValue)
             {
-                switch (value.ValueTypeCase)
-                {
-                    case BooleanValue:
-                        return ConvertDefault(v => v.BooleanValue)
-                            ?? NoConversion();
-                    case DoubleValue:
-                        // TODO: Decimal?
-                        return ConvertDefault(v => v.DoubleValue)
-                            ?? ConvertSpecific(v => (float) v.DoubleValue)
-                            ?? NoConversion();
-                    case GeoPointValue:
-                        return ConvertDefault(v => GeoPoint.FromProto(v.GeoPointValue))
-                            ?? ConvertSpecific(v => v.GeoPointValue.Clone())
-                            ?? NoConversion();
-                    case IntegerValue:
-                        return ConvertDefault(v => v.IntegerValue)
-                            ?? ConvertSpecific(v => (ulong) v.IntegerValue)
-                            ?? ConvertSpecific(v => (int) v.IntegerValue)
-                            ?? ConvertSpecific(v => (uint) v.IntegerValue)
-                            ?? ConvertSpecific(v => (short) v.IntegerValue)
-                            ?? ConvertSpecific(v => (ushort) v.IntegerValue)
-                            ?? ConvertSpecific(v => (byte) v.IntegerValue)
-                            ?? ConvertSpecific(v => (sbyte) v.IntegerValue)
-                            ?? ConvertEnum()
-                            ?? NoConversion();
-                    case NullValue:
-                        return IsNonNullableValueType(targetType) ? NoConversion() : null;
-                    case StringValue:
-                        return ConvertDefault(v => v.StringValue)
-                            ?? NoConversion();
-                    case TimestampValue:
-                        return ConvertDefault(v => Timestamp.FromProto(v.TimestampValue))
-                            ?? ConvertSpecific(v => v.TimestampValue.Clone())
-                            ?? ConvertSpecific(v => v.TimestampValue.ToDateTime())
-                            ?? ConvertSpecific(v => v.TimestampValue.ToDateTimeOffset())
-                            ?? NoConversion();
-                    case Value.ValueTypeOneofCase.ArrayValue:
-                        return DeserializeArray(db, value.ArrayValue.Values, targetType);
-                    case BytesValue:
-                        return ConvertDefault(v => Blob.FromByteString(v.BytesValue))
-                            ?? ConvertSpecific(v => v.BytesValue.ToByteArray())
-                            // No need to clone this; ByteString is immutable
-                            ?? ConvertSpecific(v => v.BytesValue)
-                            ?? NoConversion();
-                    case Value.ValueTypeOneofCase.MapValue:
-                        return DeserializeMap(db, value.MapValue.Fields, targetType);
-                    case ReferenceValue:
-                        return ConvertDefault(v => db.GetDocumentReferenceFromResourceName(v.ReferenceValue))
-                            ?? NoConversion();
-                    default:
-                        return NoConversion();
-                }
+                return !targetType.GetTypeInfo().IsValueType || underlyingType != null
+                    ? (object) null
+                    : throw new ArgumentException($"Unable to convert null value to {targetType.GetTypeInfo().FullName}");
             }
 
-            // Converts the value using the converter if the target type is either object (so general)
-            // or T, or T?.
-            object ConvertDefault<T>(Func<Value, T> conversion) =>
-                nonNullableTargetType == typeof(T) || targetType == typeof(object) ? (object) conversion(value) : null;
-
-            // Converts the value using the converter only if the target type is exactly T or T?.
-            object ConvertSpecific<T>(Func<Value, T> conversion) =>
-                nonNullableTargetType == typeof(T) ? (object) conversion(value) : null;
-
-            object ConvertEnum() =>
-                nonNullableTargetType.GetTypeInfo().IsEnum ? EnumHelpers.Int64ToEnum(value.IntegerValue, nonNullableTargetType) : null;
-
-            // Always throws - useful at the end of a chain of attempts.
-            object NoConversion() =>
-                throw new ArgumentException($"Unable to convert value type {value.ValueTypeCase} to {targetType}");
+            // We deserialize to T and Nullable<T> the same way for all non-null values. Use the converter
+            // associated with the non-nullable version of the target type.
+            BclType nonNullableTargetType = underlyingType ?? targetType;
+            return ConverterCache.GetConverter(nonNullableTargetType).DeserializeValue(db, value);
         }
 
-        internal object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
+        internal static object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
         {
-            // TODO: Support deserialization to IReadOnlyDictionary<,> as well? (It becomes somewhat awkward, for limited benefit.)
-            if (targetType == typeof(object) || targetType == typeof(IDictionary<string, object>))
-            {
-                targetType = _defaultMapType;
-            }
-
-            // Shortcut to avoid reflection
-            if (targetType == typeof(Dictionary<string, object>) || targetType == typeof(ExpandoObject))
-            {
-                return PopulateDictionary<object>(db, values, targetType);
-            }
-            if (TryGetStringDictionaryValueType(targetType, out var dictionaryElementType))
-            {
-                // If we've been asked to deserialize to an interface, let's just see if Dictionary<,>
-                // would work, but otherwise give up.
-                if (targetType.GetTypeInfo().IsInterface)
-                {
-                    var candidateType = typeof(Dictionary<,>).MakeGenericType(typeof(string), dictionaryElementType);
-                    if (targetType.IsAssignableFrom(candidateType))
-                    {
-                        targetType = candidateType;
-                    }
-                    else
-                    {
-                        throw new ArgumentException($"Unable to deserialize map to {targetType}");
-                    }
-                }
-                var method = typeof(ValueDeserializer).GetTypeInfo().GetMethod(nameof(PopulateDictionary), BindingFlags.Instance | BindingFlags.NonPublic);
-                return method.MakeGenericMethod(dictionaryElementType).Invoke(this, new object[] { db, values, targetType });
-            }
-            if (IsFirestoreAttributedType(targetType))
-            {
-                var attributedType = FirestoreDataAttributedType.ForType(targetType);
-                var ret = attributedType.CreateInstance();
-
-                foreach (var pair in values)
-                {
-                    if (attributedType.WritableProperties.TryGetValue(pair.Key, out var property))
-                    {
-                        var converted = Deserialize(db, pair.Value, property.PropertyType);
-                        property.SetValue(ret, converted);
-                    }
-                    else
-                    {
-                        switch (attributedType.UnknownPropertyHandling)
-                        {
-                            case UnknownPropertyHandling.Ignore:
-                                break;
-                            case UnknownPropertyHandling.Warn:
-                                db.LogWarning($"No writable property for Firestore field {pair.Key} in type {targetType.FullName}");
-                                break;
-                            case UnknownPropertyHandling.Throw:
-                                throw new ArgumentException($"No writable property for Firestore field {pair.Key} in type {targetType.FullName}");
-                        }
-                    }                    
-                }
-                return ret;
-            }
-            throw new ArgumentException($"Unable to deserialize map to {targetType}");
-        }
-
-        // Helper method called directly and via reflection
-        private IDictionary<string, TValue> PopulateDictionary<TValue>(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
-        {
-            var ret = (IDictionary<string, TValue>) Activator.CreateInstance(targetType);
-            foreach (var pair in values)
-            {
-                ret.Add(pair.Key, (TValue) Deserialize(db, pair.Value, typeof(TValue)));
-            }
-            return ret;
-        }
-
-        private object DeserializeArray(FirestoreDb db, IList<Value> values, BclType targetType)
-        {
-            // TODO: Handle typeof(IEnumerable<int>) etc.
-            if (targetType == typeof(object) || targetType == typeof(IEnumerable<object>) || targetType == typeof(IList<object>))
-            {
-                targetType = typeof(List<object>);
-            }
-            if (targetType.IsArray)
-            {
-                var elementType = targetType.GetElementType();
-                Array array = Array.CreateInstance(elementType, values.Count);
-                for (int i = 0; i < values.Count; i++)
-                {
-                    var converted = Deserialize(db, values[i], elementType);
-                    array.SetValue(converted, i);
-                }
-                return array;
-            }
-            if (typeof(IList).IsAssignableFrom(targetType))
-            {
-                var elementType = typeof(object);
-
-                var interfaces = targetType.GetTypeInfo().GetInterfaces();
-                var genericEnumerable = interfaces.Select(t => t.GetTypeInfo()).FirstOrDefault(iface => iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IList<>));
-                if (genericEnumerable != null)
-                {
-                    elementType = genericEnumerable.GenericTypeArguments[0];
-                }
-
-                var list = (IList) Activator.CreateInstance(targetType);
-                foreach (var value in values)
-                {
-                    var deserialized = Deserialize(db, value, elementType);
-                    list.Add(deserialized);
-                }
-                return list;
-            }
-            throw new ArgumentException($"Unable to deserialize array to {targetType}");
+            return ConverterCache.GetConverter(targetType).DeserializeMap(db, values);
         }
     }
 }

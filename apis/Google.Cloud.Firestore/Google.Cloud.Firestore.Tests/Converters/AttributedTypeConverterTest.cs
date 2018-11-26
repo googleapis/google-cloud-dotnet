@@ -12,14 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Firestore.Converters;
+using Google.Cloud.Firestore.V1Beta1;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using BclType = System.Type;
 
-namespace Google.Cloud.Firestore.Tests
+namespace Google.Cloud.Firestore.Tests.Converters
 {
-    public class FirestoreDataAttributedTypeTest
+    public class AttributedTypeConverterTest
     {
         private class NotAttributed { }
 
@@ -83,7 +86,7 @@ namespace Google.Cloud.Firestore.Tests
         [Theory, MemberData(nameof(InvalidTypes))]
         public void InvalidAttributedType(BclType type, string expectedErrorSubstring)
         {
-            var exception = Assert.Throws<InvalidOperationException>(() => FirestoreDataAttributedType.ForType(type));
+            var exception = Assert.Throws<InvalidOperationException>(() => AttributedTypeConverter.ForType(type));
             Assert.Contains(expectedErrorSubstring, exception.Message);
         }
 
@@ -115,49 +118,39 @@ namespace Google.Cloud.Firestore.Tests
             [FirestoreProperty, ServerTimestamp]
             public Timestamp Created { get; set; }
         }
-
+        
         [Fact]
-        public void ReadableProperties()
+        public void SerializeMap()
         {
-            var attributedType = FirestoreDataAttributedType.ForType(typeof(Model));
-            var properties = attributedType.ReadableProperties.ToDictionary(p => p.FirestoreName);
-
-            Assert.Equal(
-                new[] { nameof(Model.Created), nameof(Model.ReadOnly), nameof(Model.ReadWrite), "Separated" },
-                properties.Keys.OrderBy(x => x));
-
+            var converter = AttributedTypeConverter.ForType(typeof(Model));
             var sample = new Model { ReadWrite = 50, SeparatedBackingProperty = 100, Created = Timestamp.FromDateTime(DateTime.UtcNow) };
-            Assert.Equal(sample.ReadOnly, properties[nameof(sample.ReadOnly)].GetValue(sample));
-            Assert.Equal(sample.ReadWrite, properties[nameof(sample.ReadWrite)].GetValue(sample));
-            Assert.Equal(sample.SeparatedBackingProperty, properties["Separated"].GetValue(sample));
-            // Even though it's a sentinel, we can still read the actual value.
-            Assert.Equal(sample.Created, properties[nameof(sample.Created)].GetValue(sample));
+            var result = converter.Serialize(sample).MapValue.Fields;
 
-            Assert.Null(properties[nameof(sample.ReadWrite)].SentinelValue);
-            Assert.Same(SentinelValue.ServerTimestamp, properties[nameof(sample.Created)].SentinelValue);
+            Assert.Equal(new Value { IntegerValue = 20 }, result["ReadOnly"]);
+            Assert.Equal(new Value { IntegerValue = 50 }, result["ReadWrite"]);
+            Assert.Equal(new Value { IntegerValue = 100 }, result["Separated"]);
+            Assert.Equal(SentinelValue.ServerTimestamp.ToProtoValue(), result["Created"]);
         }
 
         [Fact]
-        public void WritableProperties()
+        public void DeserializeMap()
         {
-            var attributedType = FirestoreDataAttributedType.ForType(typeof(Model));
-            var properties = attributedType.WritableProperties;
+            var converter = AttributedTypeConverter.ForType(typeof(Model));
 
-            Assert.Equal(
-                new[] { nameof(Model.Created), nameof(Model.ReadWrite), "Separated", nameof(Model.WriteOnly) },
-                properties.Keys.OrderBy(x => x));
-
-            var sample = new Model();
             var now = Timestamp.FromDateTime(DateTime.UtcNow);
-            properties[nameof(sample.Created)].SetValue(sample, now);
-            properties[nameof(sample.ReadWrite)].SetValue(sample, 50);
-            properties["Separated"].SetValue(sample, 100);
-            properties[nameof(sample.WriteOnly)].SetValue(sample, 200);
-
-            Assert.Equal(50, sample.ReadWrite);
-            Assert.Equal(100, sample.SeparatedBackingProperty);
-            Assert.Equal(200, sample.WriteOnlyBackingProperty);
-            Assert.Equal(now, sample.Created);
+            var map = new Dictionary<string, Value>
+            {
+                { "Created", new Value { TimestampValue = now.ToProto() } },
+                { "ReadWrite", new Value { IntegerValue = 50 } },
+                { "Separated", new Value { IntegerValue = 100 } },
+                { "WriteOnly", new Value { IntegerValue = 200 } },
+            };
+            var db = FirestoreDb.Create("project", "database", new FakeFirestoreClient());
+            Model model = (Model) converter.DeserializeMap(db, map);
+            Assert.Equal(now, model.Created);
+            Assert.Equal(50, model.ReadWrite);
+            Assert.Equal(100, model.SeparatedBackingProperty);
+            Assert.Equal(200, model.WriteOnlyBackingProperty);
         }
 
         private abstract class ModelBase
@@ -191,16 +184,11 @@ namespace Google.Cloud.Firestore.Tests
                 DerivedOnly = 3
             };
 
-            var attributedType = FirestoreDataAttributedType.ForType(typeof(ModelDerived));
-            var properties = attributedType.ReadableProperties.ToDictionary(p => p.FirestoreName);
-
-            Assert.Equal(
-                new[] { nameof(sample.Abstract), nameof(sample.BaseOnly), nameof(sample.DerivedOnly) },
-                properties.Keys.OrderBy(x => x));
-
-            Assert.Equal(sample.Abstract, properties[nameof(sample.Abstract)].GetValue(sample));
-            Assert.Equal(sample.BaseOnly, properties[nameof(sample.BaseOnly)].GetValue(sample));
-            Assert.Equal(sample.DerivedOnly, properties[nameof(sample.DerivedOnly)].GetValue(sample));
+            var converter = AttributedTypeConverter.ForType(typeof(ModelDerived));
+            var result = converter.Serialize(sample).MapValue.Fields;
+            Assert.Equal(new Value { IntegerValue = 1 }, result["Abstract"]);
+            Assert.Equal(new Value { IntegerValue = 2 }, result["BaseOnly"]);
+            Assert.Equal(new Value { IntegerValue = 3 }, result["DerivedOnly"]);
         }
     }
 }
