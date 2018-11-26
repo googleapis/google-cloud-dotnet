@@ -273,8 +273,8 @@ namespace Google.Cloud.Vision.V1 {
       }
 
       /// <summary>
-      /// Permanently deletes a ProductSet. All Products and ReferenceImages in the
-      /// ProductSet will be deleted.
+      /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+      /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
       ///
@@ -821,8 +821,8 @@ namespace Google.Cloud.Vision.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateProductSet, null, options, request);
       }
       /// <summary>
-      /// Permanently deletes a ProductSet. All Products and ReferenceImages in the
-      /// ProductSet will be deleted.
+      /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+      /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
       ///
@@ -840,8 +840,8 @@ namespace Google.Cloud.Vision.V1 {
         return DeleteProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Permanently deletes a ProductSet. All Products and ReferenceImages in the
-      /// ProductSet will be deleted.
+      /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+      /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
       ///
@@ -857,8 +857,8 @@ namespace Google.Cloud.Vision.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteProductSet, null, options, request);
       }
       /// <summary>
-      /// Permanently deletes a ProductSet. All Products and ReferenceImages in the
-      /// ProductSet will be deleted.
+      /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+      /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
       ///
@@ -876,8 +876,8 @@ namespace Google.Cloud.Vision.V1 {
         return DeleteProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Permanently deletes a ProductSet. All Products and ReferenceImages in the
-      /// ProductSet will be deleted.
+      /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+      /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
       ///
