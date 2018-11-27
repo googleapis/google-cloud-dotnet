@@ -141,6 +141,19 @@
   },
 
   {
+    "id": "Google.Cloud.Dataproc.V1Beta2",
+    "productName": "Google Cloud Dataproc",
+    "productUrl": "https://cloud.google.com/dataproc/docs/concepts/overview",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Dataproc API v1beta2 with upcoming features. This API manages Hadoop-based clusters and jobs on Google Cloud Platform.",
+    "tags": [ "Dataproc", "Hadoop" ],
+    "dependencies": {
+      "Google.LongRunning": "1.0.0"
+    }
+  },
+
+  {
     "id": "Google.Cloud.Datastore.V1",
     "productName": "Google Cloud Datastore",
     "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
