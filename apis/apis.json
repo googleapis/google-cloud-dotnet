@@ -819,29 +819,6 @@
   },
 
   {
-    "id": "Google.Cloud.Vision.V1P1Beta1",
-    "productName": "Google Cloud Vision",
-    "productUrl": "https://cloud.google.com/vision",
-    "version": "1.0.0-beta02",
-    "type": "grpc",
-    "description": "Google client library to access the Google Cloud Vision API version v1p1beta1 with upcoming features.",
-    "tags": [ "Vision" ]
-  },
-
-  {
-    "id": "Google.Cloud.Vision.V1P2Beta1",
-    "productName": "Google Cloud Vision",
-    "productUrl": "https://cloud.google.com/vision",
-    "version": "1.0.0-beta02",
-    "type": "grpc",
-    "description": "Google client library to access the Google Cloud Vision API version v1p2beta1 with upcoming features.",
-    "tags": [ "Vision" ],
-    "dependencies": {
-      "Google.LongRunning": "1.0.0"
-    }
-  },
-
-  {
     "id": "Google.LongRunning",
     "version": "1.1.0-beta01",
     "type": "grpc",
