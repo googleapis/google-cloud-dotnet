@@ -29,6 +29,11 @@ namespace Google.Cloud.Firestore
         public string Name { get; set; }
 
         /// <summary>
+        /// A custom converter type to use for the attributed property.
+        /// </summary>
+        public System.Type ConverterType { get; set; }
+
+        /// <summary>
         /// Creates an instance with no specified name.
         /// </summary>
         public FirestorePropertyAttribute()

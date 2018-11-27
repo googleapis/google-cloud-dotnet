@@ -20,6 +20,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using BclType = System.Type;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Converters
 {
@@ -32,14 +33,12 @@ namespace Google.Cloud.Firestore.Converters
         private readonly ConstructorInfo _ctor;
         private readonly FirestoreDataAttribute _attribute;
 
-        private AttributedTypeConverter(BclType targetType) : base(targetType)
+        private AttributedTypeConverter(BclType targetType, FirestoreDataAttribute attribute) : base(targetType)
         {
             var typeInfo = targetType.GetTypeInfo();
-            _attribute = typeInfo.GetCustomAttribute<FirestoreDataAttribute>(inherit: false);
-            // This would be an internal library bug. We shouldn't be calling it in this case.
-            GaxPreconditions.CheckState(_attribute != null, "Type {0} is not decorated with {1}.", targetType.FullName, nameof(FirestoreDataAttribute));
-
-            // The rest are user bugs.
+            _attribute = attribute;
+            
+            // Check for user bugs in terms of attribute specifications.
             GaxPreconditions.CheckState(Enum.IsDefined(typeof(UnknownPropertyHandling), _attribute.UnknownPropertyHandling),
                 "Type {0} has invalid {1} value", targetType.FullName, nameof(FirestoreDataAttribute.UnknownPropertyHandling));
 
@@ -53,12 +52,12 @@ namespace Google.Cloud.Firestore.Converters
             // We look for static properties specifically to find problems. We'll never use static properties.
             foreach (var property in typeInfo.GetProperties(BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
             {
-                FirestorePropertyAttribute attribute = property.GetCustomAttribute<FirestorePropertyAttribute>(inherit: true);
-                if (attribute == null)
+                FirestorePropertyAttribute propertyAttribute = property.GetCustomAttribute<FirestorePropertyAttribute>(inherit: true);
+                if (propertyAttribute == null)
                 {
                     continue;
                 }
-                var attributedProperty = new AttributedProperty(property, attribute);
+                var attributedProperty = new AttributedProperty(property, propertyAttribute);
                 string firestoreName = attributedProperty.FirestoreName;
 
                 // Note that we check readable and writable properties separately. We could theoretically have
@@ -83,10 +82,19 @@ namespace Google.Cloud.Firestore.Converters
 
         /// <summary>
         /// Factory method to construct a converter for an attributed type.
-        /// (Currently just a constructor call, but this allows for custom conversions in the future.)
         /// </summary>
-        internal static IFirestoreInternalConverter ForType(BclType targetType) => new AttributedTypeConverter(targetType);
-        
+        internal static IFirestoreInternalConverter ForType(BclType targetType)
+        {
+            var typeInfo = targetType.GetTypeInfo();
+            var attribute = typeInfo.GetCustomAttribute<FirestoreDataAttribute>(inherit: false);
+            // This would be an internal library bug. We shouldn't be calling it in this case.
+            GaxPreconditions.CheckState(attribute != null, "Type {0} is not decorated with {1}.", targetType.FullName, nameof(FirestoreDataAttribute));
+
+            return attribute.ConverterType == null
+                ? new AttributedTypeConverter(targetType, attribute)
+                : CustomConverter.ForConverterType(attribute.ConverterType, targetType);
+        }
+
         public override object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values)
         {
             // TODO: Consider using a compiled expression tree for this.
@@ -104,8 +112,7 @@ namespace Google.Cloud.Firestore.Converters
             {
                 if (_writableProperties.TryGetValue(pair.Key, out var property))
                 {
-                    var converted = ValueDeserializer.Deserialize(db, pair.Value, property.PropertyType);
-                    property.SetValue(ret, converted);
+                    property.SetValue(db, pair.Value, ret);
                 }
                 else
                 {
@@ -128,31 +135,33 @@ namespace Google.Cloud.Firestore.Converters
         {
             foreach (var property in _readableProperties)
             {
-                var sentinel = property.SentinelValue;
-                Value protoValue = sentinel == null ? ValueSerializer.Serialize(property.GetValue(value)) : sentinel.ToProtoValue();
-                map[property.FirestoreName] = protoValue;
+                map[property.FirestoreName] = property.GetProtoValue(value);
             }
         }
 
         private sealed class AttributedProperty
         {
             private readonly PropertyInfo _propertyInfo;
+            private SentinelValue _sentinelValue;
+            private readonly IFirestoreInternalConverter _converter;
 
             /// <summary>
             /// The name to use in Firestore serialization/deserialization. Defaults to the property
             /// name, but may be specified in <see cref="FirestorePropertyAttribute"/>.
             /// </summary>
             internal string FirestoreName { get; }
-            internal SentinelValue SentinelValue { get; }
             internal bool CanRead => _propertyInfo.CanRead;
             internal bool CanWrite => _propertyInfo.CanWrite;
-            internal BclType PropertyType => _propertyInfo.PropertyType;
 
             internal AttributedProperty(PropertyInfo property, FirestorePropertyAttribute attribute)
             {
                 _propertyInfo = property;
                 FirestoreName = attribute.Name ?? property.Name;
-                SentinelValue = SentinelValue.FromPropertyAttributes(property);
+                _sentinelValue = SentinelValue.FromPropertyAttributes(property);
+                if (attribute.ConverterType != null)
+                {
+                    _converter = CustomConverter.ForConverterType(attribute.ConverterType, property.PropertyType);
+                }
 
                 // Note that the error messages in here don't use nameof, as we don't have an overload of CheckState accepting three
                 // format arguments.
@@ -173,10 +182,28 @@ namespace Google.Cloud.Firestore.Converters
                     typeName, property.Name);
             }
 
-            // TODO: Consider creating delegates for the get/set methods.
-            internal object GetValue(object obj) => _propertyInfo.GetValue(obj);
-            internal void SetValue(object obj, object value) => _propertyInfo.SetValue(obj, value);
+            // TODO: Consider creating delegates for the property get/set methods.
+            // Note: these methods have to handle null values when there's a custom converter involved, just like ValueSerializer/ValueDeserializer do.
+            internal Value GetProtoValue(object obj)
+            {
+                if (_sentinelValue != null)
+                {
+                    return _sentinelValue.ToProtoValue();
+                }
+                object propertyValue = _propertyInfo.GetValue(obj);
+                return _converter == null ? ValueSerializer.Serialize(propertyValue)
+                    : propertyValue == null ? new Value { NullValue = wkt::NullValue.NullValue }
+                    : _converter.Serialize(propertyValue);
+            }
+
+            internal void SetValue(FirestoreDb db, Value value, object target)
+            {
+                object converted =
+                    _converter == null ? ValueDeserializer.Deserialize(db, value, _propertyInfo.PropertyType)
+                    : value.ValueTypeCase == Value.ValueTypeOneofCase.NullValue ? null
+                    : _converter.DeserializeValue(db, value);
+                _propertyInfo.SetValue(target, converted);
+            }
         }
     }
-
 }
