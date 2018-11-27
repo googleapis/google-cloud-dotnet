@@ -3,7 +3,7 @@
 //     source: google/cloud/dataproc/v1/clusters.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2017 Google Inc.
+// Copyright 2018 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+//
 #pragma warning disable 1591
 #region Designer generated code
 
@@ -25,7 +26,7 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// The ClusterControllerService provides methods to manage clusters
-  /// of Google Compute Engine instances.
+  /// of Compute Engine instances.
   /// </summary>
   public static partial class ClusterController
   {

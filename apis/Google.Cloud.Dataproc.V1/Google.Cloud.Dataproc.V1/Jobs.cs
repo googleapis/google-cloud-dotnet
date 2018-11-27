@@ -107,7 +107,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "CHByb2dyZXNzGAMgASgCEhQKDHRyYWNraW5nX3VybBgEIAEoCSKHAQoFU3Rh",
             "dGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIHCgNORVcQARIOCgpORVdfU0FW",
             "SU5HEAISDQoJU1VCTUlUVEVEEAMSDAoIQUNDRVBURUQQBBILCgdSVU5OSU5H",
-            "EAUSDAoIRklOSVNIRUQQBhIKCgZGQUlMRUQQBxIKCgZLSUxMRUQQCCKJBwoD",
+            "EAUSDAoIRklOSVNIRUQQBhIKCgZGQUlMRUQQBxIKCgZLSUxMRUQQCCKbBwoD",
             "Sm9iEjkKCXJlZmVyZW5jZRgBIAEoCzImLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
             "Yy52MS5Kb2JSZWZlcmVuY2USOQoJcGxhY2VtZW50GAIgASgLMiYuZ29vZ2xl",
             "LmNsb3VkLmRhdGFwcm9jLnYxLkpvYlBsYWNlbWVudBI5CgpoYWRvb3Bfam9i",
@@ -126,52 +126,53 @@ namespace Google.Cloud.Dataproc.V1 {
             "b3VyY2VfdXJpGBEgASgJEiAKGGRyaXZlcl9jb250cm9sX2ZpbGVzX3VyaRgP",
             "IAEoCRI5CgZsYWJlbHMYEiADKAsyKS5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
             "djEuSm9iLkxhYmVsc0VudHJ5EjsKCnNjaGVkdWxpbmcYFCABKAsyJy5nb29n",
-            "bGUuY2xvdWQuZGF0YXByb2MudjEuSm9iU2NoZWR1bGluZxotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQgoKCHR5cGVf",
-            "am9iIi4KDUpvYlNjaGVkdWxpbmcSHQoVbWF4X2ZhaWx1cmVzX3Blcl9ob3Vy",
-            "GAEgASgFImIKEFN1Ym1pdEpvYlJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEo",
-            "CRIOCgZyZWdpb24YAyABKAkSKgoDam9iGAIgASgLMh0uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwcm9jLnYxLkpvYiJDCg1HZXRKb2JSZXF1ZXN0EhIKCnByb2plY3Rf",
-            "aWQYASABKAkSDgoGcmVnaW9uGAMgASgJEg4KBmpvYl9pZBgCIAEoCSKQAgoP",
-            "TGlzdEpvYnNSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGcmVnaW9u",
-            "GAYgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJ",
-            "EhQKDGNsdXN0ZXJfbmFtZRgEIAEoCRJUChFqb2Jfc3RhdGVfbWF0Y2hlchgF",
-            "IAEoDjI5Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0Sm9ic1JlcXVl",
-            "c3QuSm9iU3RhdGVNYXRjaGVyEg4KBmZpbHRlchgHIAEoCSI2Cg9Kb2JTdGF0",
-            "ZU1hdGNoZXISBwoDQUxMEAASCgoGQUNUSVZFEAESDgoKTk9OX0FDVElWRRAC",
-            "IqMBChBVcGRhdGVKb2JSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoG",
-            "cmVnaW9uGAIgASgJEg4KBmpvYl9pZBgDIAEoCRIqCgNqb2IYBCABKAsyHS5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iEi8KC3VwZGF0ZV9tYXNrGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJYChBMaXN0Sm9ic1Jl",
-            "c3BvbnNlEisKBGpvYnMYASADKAsyHS5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
-            "djEuSm9iEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJGChBDYW5jZWxKb2JS",
-            "ZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGcmVnaW9uGAMgASgJEg4K",
-            "BmpvYl9pZBgCIAEoCSJGChBEZWxldGVKb2JSZXF1ZXN0EhIKCnByb2plY3Rf",
-            "aWQYASABKAkSDgoGcmVnaW9uGAMgASgJEg4KBmpvYl9pZBgCIAEoCTK2BwoN",
-            "Sm9iQ29udHJvbGxlchKZAQoJU3VibWl0Sm9iEiouZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwcm9jLnYxLlN1Ym1pdEpvYlJlcXVlc3QaHS5nb29nbGUuY2xvdWQuZGF0",
-            "YXByb2MudjEuSm9iIkGC0+STAjsiNi92MS9wcm9qZWN0cy97cHJvamVjdF9p",
-            "ZH0vcmVnaW9ucy97cmVnaW9ufS9qb2JzOnN1Ym1pdDoBKhKSAQoGR2V0Sm9i",
-            "EicuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdldEpvYlJlcXVlc3QaHS5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iIkCC0+STAjoSOC92MS9wcm9q",
-            "ZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9qb2JzL3tqb2Jf",
-            "aWR9EpoBCghMaXN0Sm9icxIpLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5M",
-            "aXN0Sm9ic1JlcXVlc3QaKi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTGlz",
-            "dEpvYnNSZXNwb25zZSI3gtPkkwIxEi8vdjEvcHJvamVjdHMve3Byb2plY3Rf",
-            "aWR9L3JlZ2lvbnMve3JlZ2lvbn0vam9icxKdAQoJVXBkYXRlSm9iEiouZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLlVwZGF0ZUpvYlJlcXVlc3QaHS5nb29n",
-            "bGUuY2xvdWQuZGF0YXByb2MudjEuSm9iIkWC0+STAj8yOC92MS9wcm9qZWN0",
-            "cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9qb2JzL3tqb2JfaWR9",
-            "OgNqb2ISogEKCUNhbmNlbEpvYhIqLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
-            "MS5DYW5jZWxKb2JSZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "LkpvYiJKgtPkkwJEIj8vdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lv",
-            "bnMve3JlZ2lvbn0vam9icy97am9iX2lkfTpjYW5jZWw6ASoSkQEKCURlbGV0",
-            "ZUpvYhIqLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5EZWxldGVKb2JSZXF1",
-            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkCC0+STAjoqOC92MS9wcm9q",
-            "ZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9qb2JzL3tqb2Jf",
-            "aWR9Qm0KHGNvbS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjFCCUpvYnNQcm90",
-            "b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL2RhdGFwcm9jL3YxO2RhdGFwcm9jYgZwcm90bzM="));
+            "bGUuY2xvdWQuZGF0YXByb2MudjEuSm9iU2NoZWR1bGluZxIQCghqb2JfdXVp",
+            "ZBgWIAEoCRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBQgoKCHR5cGVfam9iIi4KDUpvYlNjaGVkdWxpbmcSHQoVbWF4",
+            "X2ZhaWx1cmVzX3Blcl9ob3VyGAEgASgFInYKEFN1Ym1pdEpvYlJlcXVlc3QS",
+            "EgoKcHJvamVjdF9pZBgBIAEoCRIOCgZyZWdpb24YAyABKAkSKgoDam9iGAIg",
+            "ASgLMh0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkpvYhISCgpyZXF1ZXN0",
+            "X2lkGAQgASgJIkMKDUdldEpvYlJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEo",
+            "CRIOCgZyZWdpb24YAyABKAkSDgoGam9iX2lkGAIgASgJIpACCg9MaXN0Sm9i",
+            "c1JlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIOCgZyZWdpb24YBiABKAkS",
+            "EQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSFAoMY2x1",
+            "c3Rlcl9uYW1lGAQgASgJElQKEWpvYl9zdGF0ZV9tYXRjaGVyGAUgASgOMjku",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RKb2JzUmVxdWVzdC5Kb2JT",
+            "dGF0ZU1hdGNoZXISDgoGZmlsdGVyGAcgASgJIjYKD0pvYlN0YXRlTWF0Y2hl",
+            "chIHCgNBTEwQABIKCgZBQ1RJVkUQARIOCgpOT05fQUNUSVZFEAIiowEKEFVw",
+            "ZGF0ZUpvYlJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIOCgZyZWdpb24Y",
+            "AiABKAkSDgoGam9iX2lkGAMgASgJEioKA2pvYhgEIAEoCzIdLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5Kb2ISLwoLdXBkYXRlX21hc2sYBSABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrIlgKEExpc3RKb2JzUmVzcG9uc2US",
+            "KwoEam9icxgBIAMoCzIdLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Kb2IS",
+            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIkYKEENhbmNlbEpvYlJlcXVlc3QS",
+            "EgoKcHJvamVjdF9pZBgBIAEoCRIOCgZyZWdpb24YAyABKAkSDgoGam9iX2lk",
+            "GAIgASgJIkYKEERlbGV0ZUpvYlJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEo",
+            "CRIOCgZyZWdpb24YAyABKAkSDgoGam9iX2lkGAIgASgJMrYHCg1Kb2JDb250",
+            "cm9sbGVyEpkBCglTdWJtaXRKb2ISKi5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuU3VibWl0Sm9iUmVxdWVzdBodLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5Kb2IiQYLT5JMCOyI2L3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdp",
+            "b25zL3tyZWdpb259L2pvYnM6c3VibWl0OgEqEpIBCgZHZXRKb2ISJy5nb29n",
+            "bGUuY2xvdWQuZGF0YXByb2MudjEuR2V0Sm9iUmVxdWVzdBodLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5Kb2IiQILT5JMCOhI4L3YxL3Byb2plY3RzL3tw",
+            "cm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pvYnMve2pvYl9pZH0SmgEK",
+            "CExpc3RKb2JzEikuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RKb2Jz",
+            "UmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0Sm9ic1Jl",
+            "c3BvbnNlIjeC0+STAjESLy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVn",
+            "aW9ucy97cmVnaW9ufS9qb2JzEp0BCglVcGRhdGVKb2ISKi5nb29nbGUuY2xv",
+            "dWQuZGF0YXByb2MudjEuVXBkYXRlSm9iUmVxdWVzdBodLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcHJvYy52MS5Kb2IiRYLT5JMCPzI4L3YxL3Byb2plY3RzL3twcm9q",
+            "ZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pvYnMve2pvYl9pZH06A2pvYhKi",
+            "AQoJQ2FuY2VsSm9iEiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNhbmNl",
+            "bEpvYlJlcXVlc3QaHS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSm9iIkqC",
+            "0+STAkQiPy92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVn",
+            "aW9ufS9qb2JzL3tqb2JfaWR9OmNhbmNlbDoBKhKRAQoJRGVsZXRlSm9iEiou",
+            "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRlbGV0ZUpvYlJlcXVlc3QaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiQILT5JMCOio4L3YxL3Byb2plY3RzL3tw",
+            "cm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2pvYnMve2pvYl9pZH1CbQoc",
+            "Y29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUIJSm9ic1Byb3RvUAFaQGdv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGF0",
+            "YXByb2MvdjE7ZGF0YXByb2NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -187,9 +188,9 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobStatus), global::Google.Cloud.Dataproc.V1.JobStatus.Parser, new[]{ "State", "Details", "StateStartTime", "Substate" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.State), typeof(global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobReference), global::Google.Cloud.Dataproc.V1.JobReference.Parser, new[]{ "ProjectId", "JobId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.YarnApplication), global::Google.Cloud.Dataproc.V1.YarnApplication.Parser, new[]{ "Name", "State", "Progress", "TrackingUrl" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.YarnApplication.Types.State) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkSqlJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling" }, new[]{ "TypeJob" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Job), global::Google.Cloud.Dataproc.V1.Job.Parser, new[]{ "Reference", "Placement", "HadoopJob", "SparkJob", "PysparkJob", "HiveJob", "PigJob", "SparkSqlJob", "Status", "StatusHistory", "YarnApplications", "DriverOutputResourceUri", "DriverControlFilesUri", "Labels", "Scheduling", "JobUuid" }, new[]{ "TypeJob" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.JobScheduling), global::Google.Cloud.Dataproc.V1.JobScheduling.Parser, new[]{ "MaxFailuresPerHour" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SubmitJobRequest), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser, new[]{ "ProjectId", "Region", "Job" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SubmitJobRequest), global::Google.Cloud.Dataproc.V1.SubmitJobRequest.Parser, new[]{ "ProjectId", "Region", "Job", "RequestId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetJobRequest), global::Google.Cloud.Dataproc.V1.GetJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest), global::Google.Cloud.Dataproc.V1.ListJobsRequest.Parser, new[]{ "ProjectId", "Region", "PageSize", "PageToken", "ClusterName", "JobStateMatcher", "Filter" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ListJobsRequest.Types.JobStateMatcher) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateJobRequest), global::Google.Cloud.Dataproc.V1.UpdateJobRequest.Parser, new[]{ "ProjectId", "Region", "JobId", "Job", "UpdateMask" }, null, null, null),
@@ -2607,7 +2608,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ClusterUuidFieldNumber = 2;
     private string clusterUuid_ = "";
     /// <summary>
-    /// Output-only. A cluster UUID generated by the Cloud Dataproc service when
+    /// Output only. A cluster UUID generated by the Cloud Dataproc service when
     /// the job is submitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2762,7 +2763,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.Dataproc.V1.JobStatus.Types.State state_ = 0;
     /// <summary>
-    /// Output-only. A state message specifying the overall job state.
+    /// Output only. A state message specifying the overall job state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.JobStatus.Types.State State {
@@ -2776,7 +2777,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DetailsFieldNumber = 2;
     private string details_ = "";
     /// <summary>
-    /// Output-only. Optional job state details, such as an error
+    /// Output only. Optional job state details, such as an error
     /// description if the state is &lt;code>ERROR&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2791,7 +2792,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StateStartTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp stateStartTime_;
     /// <summary>
-    /// Output-only. The time when this state was entered.
+    /// Output only. The time when this state was entered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StateStartTime {
@@ -2805,7 +2806,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int SubstateFieldNumber = 7;
     private global::Google.Cloud.Dataproc.V1.JobStatus.Types.Substate substate_ = 0;
     /// <summary>
-    /// Output-only. Additional state information, which includes
+    /// Output only. Additional state information, which includes
     /// status reported by the agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3007,7 +3008,13 @@ namespace Google.Cloud.Dataproc.V1 {
         [pbr::OriginalName("ATTEMPT_FAILURE")] AttemptFailure = 9,
       }
 
+      /// <summary>
+      /// The job substate.
+      /// </summary>
       public enum Substate {
+        /// <summary>
+        /// The job substate is unknown.
+        /// </summary>
         [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// The Job is submitted to the agent.
@@ -3531,6 +3538,7 @@ namespace Google.Cloud.Dataproc.V1 {
       driverControlFilesUri_ = other.driverControlFilesUri_;
       labels_ = other.labels_.Clone();
       scheduling_ = other.scheduling_ != null ? other.scheduling_.Clone() : null;
+      jobUuid_ = other.jobUuid_;
       switch (other.TypeJobCase) {
         case TypeJobOneofCase.HadoopJob:
           HadoopJob = other.HadoopJob.Clone();
@@ -3680,7 +3688,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StatusFieldNumber = 8;
     private global::Google.Cloud.Dataproc.V1.JobStatus status_;
     /// <summary>
-    /// Output-only. The job status. Additional application-specific
+    /// Output only. The job status. Additional application-specific
     /// status information may be contained in the &lt;code>type_job&lt;/code>
     /// and &lt;code>yarn_applications&lt;/code> fields.
     /// </summary>
@@ -3698,7 +3706,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForMessage(106, global::Google.Cloud.Dataproc.V1.JobStatus.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.JobStatus> statusHistory_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.JobStatus>();
     /// <summary>
-    /// Output-only. The previous job status.
+    /// Output only. The previous job status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.JobStatus> StatusHistory {
@@ -3711,7 +3719,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Dataproc.V1.YarnApplication.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.YarnApplication> yarnApplications_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.YarnApplication>();
     /// <summary>
-    /// Output-only. The collection of YARN applications spun up by this job.
+    /// Output only. The collection of YARN applications spun up by this job.
     ///
     /// **Beta** Feature: This report is available for testing purposes only. It may
     /// be changed before final release.
@@ -3725,7 +3733,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DriverOutputResourceUriFieldNumber = 17;
     private string driverOutputResourceUri_ = "";
     /// <summary>
-    /// Output-only. A URI pointing to the location of the stdout of the job's
+    /// Output only. A URI pointing to the location of the stdout of the job's
     /// driver program.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3740,7 +3748,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DriverControlFilesUriFieldNumber = 15;
     private string driverControlFilesUri_ = "";
     /// <summary>
-    /// Output-only. If present, the location of miscellaneous control files
+    /// Output only. If present, the location of miscellaneous control files
     /// which may be used as part of job setup and handling. If not present,
     /// control files may be placed in the same location as `driver_output_uri`.
     /// </summary>
@@ -3781,6 +3789,22 @@ namespace Google.Cloud.Dataproc.V1 {
       get { return scheduling_; }
       set {
         scheduling_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "job_uuid" field.</summary>
+    public const int JobUuidFieldNumber = 22;
+    private string jobUuid_ = "";
+    /// <summary>
+    /// Output only. A UUID that uniquely identifies a job within the project
+    /// over time. This is in contrast to a user-settable reference.job_id that
+    /// may be reused over time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string JobUuid {
+      get { return jobUuid_; }
+      set {
+        jobUuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3835,6 +3859,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (DriverControlFilesUri != other.DriverControlFilesUri) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(Scheduling, other.Scheduling)) return false;
+      if (JobUuid != other.JobUuid) return false;
       if (TypeJobCase != other.TypeJobCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3857,6 +3882,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (DriverControlFilesUri.Length != 0) hash ^= DriverControlFilesUri.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (scheduling_ != null) hash ^= Scheduling.GetHashCode();
+      if (JobUuid.Length != 0) hash ^= JobUuid.GetHashCode();
       hash ^= (int) typeJobCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3922,6 +3948,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(Scheduling);
       }
+      if (JobUuid.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(JobUuid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3969,6 +3999,9 @@ namespace Google.Cloud.Dataproc.V1 {
       if (scheduling_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Scheduling);
       }
+      if (JobUuid.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(JobUuid);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4012,6 +4045,9 @@ namespace Google.Cloud.Dataproc.V1 {
           scheduling_ = new global::Google.Cloud.Dataproc.V1.JobScheduling();
         }
         Scheduling.MergeFrom(other.Scheduling);
+      }
+      if (other.JobUuid.Length != 0) {
+        JobUuid = other.JobUuid;
       }
       switch (other.TypeJobCase) {
         case TypeJobOneofCase.HadoopJob:
@@ -4165,6 +4201,10 @@ namespace Google.Cloud.Dataproc.V1 {
             input.ReadMessage(scheduling_);
             break;
           }
+          case 178: {
+            JobUuid = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4173,9 +4213,6 @@ namespace Google.Cloud.Dataproc.V1 {
 
   /// <summary>
   /// Job scheduling options.
-  ///
-  /// **Beta Feature**: These options are available for testing purposes only.
-  /// They may be changed before final release.
   /// </summary>
   public sealed partial class JobScheduling : pb::IMessage<JobScheduling> {
     private static readonly pb::MessageParser<JobScheduling> _parser = new pb::MessageParser<JobScheduling>(() => new JobScheduling());
@@ -4347,6 +4384,7 @@ namespace Google.Cloud.Dataproc.V1 {
       projectId_ = other.projectId_;
       region_ = other.region_;
       job_ = other.job_ != null ? other.job_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4398,6 +4436,30 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique id used to identify the request. If the server
+    /// receives two [SubmitJobRequest][google.cloud.dataproc.v1.SubmitJobRequest] requests  with the same
+    /// id, then the second request will be ignored and the
+    /// first [Job][google.cloud.dataproc.v1.Job] created and stored in the backend
+    /// is returned.
+    ///
+    /// It is recommended to always set this value to a
+    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    ///
+    /// The id must contain only letters (a-z, A-Z), numbers (0-9),
+    /// underscores (_), and hyphens (-). The maximum length is 40 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SubmitJobRequest);
@@ -4414,6 +4476,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Region != other.Region) return false;
       if (!object.Equals(Job, other.Job)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4423,6 +4486,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Region.Length != 0) hash ^= Region.GetHashCode();
       if (job_ != null) hash ^= Job.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4448,6 +4512,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteString(Region);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4464,6 +4532,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (job_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Job);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4487,6 +4558,9 @@ namespace Google.Cloud.Dataproc.V1 {
           job_ = new global::Google.Cloud.Dataproc.V1.Job();
         }
         Job.MergeFrom(other.Job);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4512,6 +4586,10 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 26: {
             Region = input.ReadString();
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -5405,7 +5483,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataproc.V1.Job.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Job> jobs_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Job>();
     /// <summary>
-    /// Output-only. Jobs list.
+    /// Output only. Jobs list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Job> Jobs {

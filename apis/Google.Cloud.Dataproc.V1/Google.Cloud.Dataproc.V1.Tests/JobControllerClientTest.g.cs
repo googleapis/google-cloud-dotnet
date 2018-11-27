@@ -47,6 +47,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.SubmitJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -73,6 +74,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -99,6 +101,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.SubmitJob(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -122,6 +125,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.SubmitJobAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -145,6 +149,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.GetJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -171,6 +176,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -197,6 +203,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.GetJob(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -220,6 +227,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.GetJobAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -245,6 +253,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.UpdateJob(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -270,6 +279,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.UpdateJobAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -293,6 +303,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.CancelJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -319,6 +330,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -345,6 +357,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.CancelJob(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -368,6 +381,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
             {
                 DriverOutputResourceUri = "driverOutputResourceUri-542229086",
                 DriverControlFilesUri = "driverControlFilesUri207057643",
+                JobUuid = "jobUuid-1615012099",
             };
             mockGrpcClient.Setup(x => x.CancelJobAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));

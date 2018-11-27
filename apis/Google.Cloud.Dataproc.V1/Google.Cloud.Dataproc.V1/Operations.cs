@@ -26,28 +26,27 @@ namespace Google.Cloud.Dataproc.V1 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvZGF0YXByb2MvdjEvb3BlcmF0aW9ucy5wcm90bxIY",
             "Z29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
-            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvIvUBChZDbHVzdGVyT3BlcmF0aW9uU3RhdHVz",
-            "EkUKBXN0YXRlGAEgASgOMjYuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNs",
-            "dXN0ZXJPcGVyYXRpb25TdGF0dXMuU3RhdGUSEwoLaW5uZXJfc3RhdGUYAiAB",
-            "KAkSDwoHZGV0YWlscxgDIAEoCRI0ChBzdGF0ZV9zdGFydF90aW1lGAQgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI4CgVTdGF0ZRILCgdVTktO",
-            "T1dOEAASCwoHUEVORElORxABEgsKB1JVTk5JTkcQAhIICgRET05FEAMikAMK",
-            "GENsdXN0ZXJPcGVyYXRpb25NZXRhZGF0YRIUCgxjbHVzdGVyX25hbWUYByAB",
-            "KAkSFAoMY2x1c3Rlcl91dWlkGAggASgJEkAKBnN0YXR1cxgJIAEoCzIwLmdv",
-            "b2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyT3BlcmF0aW9uU3RhdHVz",
-            "EkgKDnN0YXR1c19oaXN0b3J5GAogAygLMjAuZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "cm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25TdGF0dXMSFgoOb3BlcmF0aW9uX3R5",
-            "cGUYCyABKAkSEwoLZGVzY3JpcHRpb24YDCABKAkSTgoGbGFiZWxzGA0gAygL",
-            "Mj4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25N",
-            "ZXRhZGF0YS5MYWJlbHNFbnRyeRIQCgh3YXJuaW5ncxgOIAMoCRotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQnMKHGNv",
-            "bS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjFCD09wZXJhdGlvbnNQcm90b1AB",
-            "WkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L2RhdGFwcm9jL3YxO2RhdGFwcm9jYgZwcm90bzM="));
+            "b25zLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvUB",
+            "ChZDbHVzdGVyT3BlcmF0aW9uU3RhdHVzEkUKBXN0YXRlGAEgASgOMjYuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25TdGF0dXMu",
+            "U3RhdGUSEwoLaW5uZXJfc3RhdGUYAiABKAkSDwoHZGV0YWlscxgDIAEoCRI0",
+            "ChBzdGF0ZV9zdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcCI4CgVTdGF0ZRILCgdVTktOT1dOEAASCwoHUEVORElORxABEgsK",
+            "B1JVTk5JTkcQAhIICgRET05FEAMikAMKGENsdXN0ZXJPcGVyYXRpb25NZXRh",
+            "ZGF0YRIUCgxjbHVzdGVyX25hbWUYByABKAkSFAoMY2x1c3Rlcl91dWlkGAgg",
+            "ASgJEkAKBnN0YXR1cxgJIAEoCzIwLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5DbHVzdGVyT3BlcmF0aW9uU3RhdHVzEkgKDnN0YXR1c19oaXN0b3J5GAog",
+            "AygLMjAuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJPcGVyYXRp",
+            "b25TdGF0dXMSFgoOb3BlcmF0aW9uX3R5cGUYCyABKAkSEwoLZGVzY3JpcHRp",
+            "b24YDCABKAkSTgoGbGFiZWxzGA0gAygLMj4uZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "cm9jLnYxLkNsdXN0ZXJPcGVyYXRpb25NZXRhZGF0YS5MYWJlbHNFbnRyeRIQ",
+            "Cgh3YXJuaW5ncxgOIAMoCRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBQnMKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBy",
+            "b2MudjFCD09wZXJhdGlvbnNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFwcm9jL3YxO2RhdGFwcm9j",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus), global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Parser, new[]{ "State", "InnerState", "Details", "StateStartTime" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata), global::Google.Cloud.Dataproc.V1.ClusterOperationMetadata.Parser, new[]{ "ClusterName", "ClusterUuid", "Status", "StatusHistory", "OperationType", "Description", "Labels", "Warnings" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
@@ -101,7 +100,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State state_ = 0;
     /// <summary>
-    /// Output-only. A message containing the operation state.
+    /// Output only. A message containing the operation state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State State {
@@ -115,7 +114,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int InnerStateFieldNumber = 2;
     private string innerState_ = "";
     /// <summary>
-    /// Output-only. A message containing the detailed operation state.
+    /// Output only. A message containing the detailed operation state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InnerState {
@@ -129,7 +128,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DetailsFieldNumber = 3;
     private string details_ = "";
     /// <summary>
-    /// Output-only.A message containing any operation metadata details.
+    /// Output only. A message containing any operation metadata details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Details {
@@ -143,7 +142,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StateStartTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp stateStartTime_;
     /// <summary>
-    /// Output-only. The time this state was entered.
+    /// Output only. The time this state was entered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StateStartTime {
@@ -368,7 +367,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ClusterNameFieldNumber = 7;
     private string clusterName_ = "";
     /// <summary>
-    /// Output-only. Name of the cluster for the operation.
+    /// Output only. Name of the cluster for the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterName {
@@ -382,7 +381,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ClusterUuidFieldNumber = 8;
     private string clusterUuid_ = "";
     /// <summary>
-    /// Output-only. Cluster UUID for the operation.
+    /// Output only. Cluster UUID for the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ClusterUuid {
@@ -396,7 +395,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StatusFieldNumber = 9;
     private global::Google.Cloud.Dataproc.V1.ClusterOperationStatus status_;
     /// <summary>
-    /// Output-only. Current operation status.
+    /// Output only. Current operation status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.ClusterOperationStatus Status {
@@ -412,7 +411,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.ClusterOperationStatus> statusHistory_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.ClusterOperationStatus>();
     /// <summary>
-    /// Output-only. The previous operation status.
+    /// Output only. The previous operation status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.ClusterOperationStatus> StatusHistory {
@@ -423,7 +422,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int OperationTypeFieldNumber = 11;
     private string operationType_ = "";
     /// <summary>
-    /// Output-only. The operation type.
+    /// Output only. The operation type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OperationType {
@@ -437,7 +436,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DescriptionFieldNumber = 12;
     private string description_ = "";
     /// <summary>
-    /// Output-only. Short description of operation.
+    /// Output only. Short description of operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -453,7 +452,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 106);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Output-only. Labels associated with the operation
+    /// Output only. Labels associated with the operation
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -466,7 +465,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(114);
     private readonly pbc::RepeatedField<string> warnings_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Output-only. Errors encountered during operation execution.
+    /// Output only. Errors encountered during operation execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Warnings {
