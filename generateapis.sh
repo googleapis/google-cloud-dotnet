@@ -163,6 +163,7 @@ generate_api Google.Cloud.Bigtable.Admin.V2 google/bigtable/admin/v2 bigtableadm
 generate_api Google.Cloud.Bigtable.V2 google/bigtable/v2 bigtable.yaml
 generate_api Google.Cloud.Container.V1 google/container/v1 container_v1.yaml
 generate_api Google.Cloud.Dataproc.V1 google/cloud/dataproc/v1 v1/dataproc.yaml
+generate_api Google.Cloud.Dataproc.V1Beta2 google/cloud/dataproc/v1beta2 v1beta2/dataproc.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebugger.yaml
 generate_api Google.Cloud.Dialogflow.V2 google/cloud/dialogflow/v2 dialogflow_v2.yaml
