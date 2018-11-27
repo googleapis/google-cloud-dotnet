@@ -26,133 +26,139 @@ namespace Google.Cloud.Dataproc.V1 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvZGF0YXByb2MvdjEvY2x1c3RlcnMucHJvdG8SGGdv",
             "b2dsZS5jbG91ZC5kYXRhcHJvYy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxopZ29vZ2xlL2Nsb3VkL2RhdGFwcm9jL3YxL29wZXJhdGlvbnMu",
-            "cHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGh5n",
-            "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1",
-            "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIqUDCgdDbHVzdGVyEhIKCnByb2plY3RfaWQYASABKAkSFAoMY2x1",
-            "c3Rlcl9uYW1lGAIgASgJEjcKBmNvbmZpZxgDIAEoCzInLmdvb2dsZS5jbG91",
-            "ZC5kYXRhcHJvYy52MS5DbHVzdGVyQ29uZmlnEj0KBmxhYmVscxgIIAMoCzIt",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyLkxhYmVsc0VudHJ5",
-            "EjcKBnN0YXR1cxgEIAEoCzInLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5D",
-            "bHVzdGVyU3RhdHVzEj8KDnN0YXR1c19oaXN0b3J5GAcgAygLMicuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJTdGF0dXMSFAoMY2x1c3Rlcl91",
-            "dWlkGAYgASgJEjkKB21ldHJpY3MYCSABKAsyKC5nb29nbGUuY2xvdWQuZGF0",
-            "YXByb2MudjEuQ2x1c3Rlck1ldHJpY3MaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLhAwoNQ2x1c3RlckNvbmZpZxIV",
-            "Cg1jb25maWdfYnVja2V0GAEgASgJEkYKEmdjZV9jbHVzdGVyX2NvbmZpZxgI",
-            "IAEoCzIqLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5HY2VDbHVzdGVyQ29u",
-            "ZmlnEkQKDW1hc3Rlcl9jb25maWcYCSABKAsyLS5nb29nbGUuY2xvdWQuZGF0",
-            "YXByb2MudjEuSW5zdGFuY2VHcm91cENvbmZpZxJECg13b3JrZXJfY29uZmln",
-            "GAogASgLMi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkluc3RhbmNlR3Jv",
-            "dXBDb25maWcSTgoXc2Vjb25kYXJ5X3dvcmtlcl9jb25maWcYDCABKAsyLS5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuSW5zdGFuY2VHcm91cENvbmZpZxJB",
-            "Cg9zb2Z0d2FyZV9jb25maWcYDSABKAsyKC5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuU29mdHdhcmVDb25maWcSUgoWaW5pdGlhbGl6YXRpb25fYWN0aW9u",
-            "cxgLIAMoCzIyLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Ob2RlSW5pdGlh",
-            "bGl6YXRpb25BY3Rpb24irwIKEEdjZUNsdXN0ZXJDb25maWcSEAoIem9uZV91",
-            "cmkYASABKAkSEwoLbmV0d29ya191cmkYAiABKAkSFgoOc3VibmV0d29ya191",
-            "cmkYBiABKAkSGAoQaW50ZXJuYWxfaXBfb25seRgHIAEoCBIXCg9zZXJ2aWNl",
-            "X2FjY291bnQYCCABKAkSHgoWc2VydmljZV9hY2NvdW50X3Njb3BlcxgDIAMo",
-            "CRIMCgR0YWdzGAQgAygJEkoKCG1ldGFkYXRhGAUgAygLMjguZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwcm9jLnYxLkdjZUNsdXN0ZXJDb25maWcuTWV0YWRhdGFFbnRy",
-            "eRovCg1NZXRhZGF0YUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEi0wIKE0luc3RhbmNlR3JvdXBDb25maWcSFQoNbnVtX2luc3RhbmNl",
-            "cxgBIAEoBRIWCg5pbnN0YW5jZV9uYW1lcxgCIAMoCRIRCglpbWFnZV91cmkY",
-            "AyABKAkSGAoQbWFjaGluZV90eXBlX3VyaRgEIAEoCRI5CgtkaXNrX2NvbmZp",
-            "ZxgFIAEoCzIkLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5EaXNrQ29uZmln",
-            "EhYKDmlzX3ByZWVtcHRpYmxlGAYgASgIEkoKFG1hbmFnZWRfZ3JvdXBfY29u",
-            "ZmlnGAcgASgLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLk1hbmFnZWRH",
-            "cm91cENvbmZpZxJBCgxhY2NlbGVyYXRvcnMYCCADKAsyKy5nb29nbGUuY2xv",
-            "dWQuZGF0YXByb2MudjEuQWNjZWxlcmF0b3JDb25maWciWQoSTWFuYWdlZEdy",
-            "b3VwQ29uZmlnEh4KFmluc3RhbmNlX3RlbXBsYXRlX25hbWUYASABKAkSIwob",
-            "aW5zdGFuY2VfZ3JvdXBfbWFuYWdlcl9uYW1lGAIgASgJIkwKEUFjY2VsZXJh",
-            "dG9yQ29uZmlnEhwKFGFjY2VsZXJhdG9yX3R5cGVfdXJpGAEgASgJEhkKEWFj",
-            "Y2VsZXJhdG9yX2NvdW50GAIgASgFIj8KCkRpc2tDb25maWcSGQoRYm9vdF9k",
-            "aXNrX3NpemVfZ2IYASABKAUSFgoObnVtX2xvY2FsX3NzZHMYAiABKAUiaQoY",
-            "Tm9kZUluaXRpYWxpemF0aW9uQWN0aW9uEhcKD2V4ZWN1dGFibGVfZmlsZRgB",
-            "IAEoCRI0ChFleGVjdXRpb25fdGltZW91dBgCIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbiLtAgoNQ2x1c3RlclN0YXR1cxI8CgVzdGF0ZRgBIAEo",
-            "DjItLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyU3RhdHVzLlN0",
-            "YXRlEg4KBmRldGFpbBgCIAEoCRI0ChBzdGF0ZV9zdGFydF90aW1lGAMgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJCCghzdWJzdGF0ZRgEIAEo",
-            "DjIwLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyU3RhdHVzLlN1",
-            "YnN0YXRlIlYKBVN0YXRlEgsKB1VOS05PV04QABIMCghDUkVBVElORxABEgsK",
-            "B1JVTk5JTkcQAhIJCgVFUlJPUhADEgwKCERFTEVUSU5HEAQSDAoIVVBEQVRJ",
-            "TkcQBSI8CghTdWJzdGF0ZRIPCgtVTlNQRUNJRklFRBAAEg0KCVVOSEVBTFRI",
-            "WRABEhAKDFNUQUxFX1NUQVRVUxACIqgBCg5Tb2Z0d2FyZUNvbmZpZxIVCg1p",
-            "bWFnZV92ZXJzaW9uGAEgASgJEkwKCnByb3BlcnRpZXMYAiADKAsyOC5nb29n",
-            "bGUuY2xvdWQuZGF0YXByb2MudjEuU29mdHdhcmVDb25maWcuUHJvcGVydGll",
-            "c0VudHJ5GjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBIpoCCg5DbHVzdGVyTWV0cmljcxJPCgxoZGZzX21ldHJp",
-            "Y3MYASADKAsyOS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck1l",
-            "dHJpY3MuSGRmc01ldHJpY3NFbnRyeRJPCgx5YXJuX21ldHJpY3MYAiADKAsy",
-            "OS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3Rlck1ldHJpY3MuWWFy",
-            "bk1ldHJpY3NFbnRyeRoyChBIZGZzTWV0cmljc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoAzoCOAEaMgoQWWFybk1ldHJpY3NFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgBIm4KFENyZWF0ZUNsdXN0ZXJS",
-            "ZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGcmVnaW9uGAMgASgJEjIK",
-            "B2NsdXN0ZXIYAiABKAsyIS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1",
-            "c3RlciK1AQoUVXBkYXRlQ2x1c3RlclJlcXVlc3QSEgoKcHJvamVjdF9pZBgB",
-            "IAEoCRIOCgZyZWdpb24YBSABKAkSFAoMY2x1c3Rlcl9uYW1lGAIgASgJEjIK",
-            "B2NsdXN0ZXIYAyABKAsyIS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1",
-            "c3RlchIvCgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2siUAoURGVsZXRlQ2x1c3RlclJlcXVlc3QSEgoKcHJvamVjdF9p",
-            "ZBgBIAEoCRIOCgZyZWdpb24YAyABKAkSFAoMY2x1c3Rlcl9uYW1lGAIgASgJ",
-            "Ik0KEUdldENsdXN0ZXJSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoG",
-            "cmVnaW9uGAMgASgJEhQKDGNsdXN0ZXJfbmFtZRgCIAEoCSJwChNMaXN0Q2x1",
-            "c3RlcnNSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGcmVnaW9uGAQg",
-            "ASgJEg4KBmZpbHRlchgFIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFn",
-            "ZV90b2tlbhgDIAEoCSJkChRMaXN0Q2x1c3RlcnNSZXNwb25zZRIzCghjbHVz",
-            "dGVycxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVy",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJSChZEaWFnbm9zZUNsdXN0ZXJS",
-            "ZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGcmVnaW9uGAMgASgJEhQK",
-            "DGNsdXN0ZXJfbmFtZRgCIAEoCSIsChZEaWFnbm9zZUNsdXN0ZXJSZXN1bHRz",
-            "EhIKCm91dHB1dF91cmkYASABKAkysggKEUNsdXN0ZXJDb250cm9sbGVyEqQB",
-            "Cg1DcmVhdGVDbHVzdGVyEi4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNy",
-            "ZWF0ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJEgtPkkwI+IjMvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lv",
-            "bnMve3JlZ2lvbn0vY2x1c3RlcnM6B2NsdXN0ZXISswEKDVVwZGF0ZUNsdXN0",
-            "ZXISLi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuVXBkYXRlQ2x1c3RlclJl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlOC0+STAk0y",
-            "Qi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9j",
-            "bHVzdGVycy97Y2x1c3Rlcl9uYW1lfToHY2x1c3RlchKqAQoNRGVsZXRlQ2x1",
-            "c3RlchIuLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5EZWxldGVDbHVzdGVy",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iSoLT5JMC",
-            "RCpCL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259",
-            "L2NsdXN0ZXJzL3tjbHVzdGVyX25hbWV9EqgBCgpHZXRDbHVzdGVyEisuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdldENsdXN0ZXJSZXF1ZXN0GiEuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXIiSoLT5JMCRBJCL3YxL3By",
+            "cy5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8a",
+            "Hmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxogZ29vZ2xlL3Byb3Rv",
+            "YnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8ipQMKB0NsdXN0ZXISEgoKcHJvamVjdF9pZBgBIAEoCRIUCgxj",
+            "bHVzdGVyX25hbWUYAiABKAkSNwoGY29uZmlnGAMgASgLMicuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXJDb25maWcSPQoGbGFiZWxzGAggAygL",
+            "Mi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0ZXIuTGFiZWxzRW50",
+            "cnkSNwoGc3RhdHVzGAQgASgLMicuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
+            "LkNsdXN0ZXJTdGF0dXMSPwoOc3RhdHVzX2hpc3RvcnkYByADKAsyJy5nb29n",
+            "bGUuY2xvdWQuZGF0YXByb2MudjEuQ2x1c3RlclN0YXR1cxIUCgxjbHVzdGVy",
+            "X3V1aWQYBiABKAkSOQoHbWV0cmljcxgJIAEoCzIoLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcHJvYy52MS5DbHVzdGVyTWV0cmljcxotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqgECg1DbHVzdGVyQ29uZmln",
+            "EhUKDWNvbmZpZ19idWNrZXQYASABKAkSRgoSZ2NlX2NsdXN0ZXJfY29uZmln",
+            "GAggASgLMiouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdjZUNsdXN0ZXJD",
+            "b25maWcSRAoNbWFzdGVyX2NvbmZpZxgJIAEoCzItLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcHJvYy52MS5JbnN0YW5jZUdyb3VwQ29uZmlnEkQKDXdvcmtlcl9jb25m",
+            "aWcYCiABKAsyLS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuSW5zdGFuY2VH",
+            "cm91cENvbmZpZxJOChdzZWNvbmRhcnlfd29ya2VyX2NvbmZpZxgMIAEoCzIt",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5JbnN0YW5jZUdyb3VwQ29uZmln",
+            "EkEKD3NvZnR3YXJlX2NvbmZpZxgNIAEoCzIoLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cHJvYy52MS5Tb2Z0d2FyZUNvbmZpZxJSChZpbml0aWFsaXphdGlvbl9hY3Rp",
+            "b25zGAsgAygLMjIuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLk5vZGVJbml0",
+            "aWFsaXphdGlvbkFjdGlvbhJFChFlbmNyeXB0aW9uX2NvbmZpZxgPIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5FbmNyeXB0aW9uQ29uZmlnIi8K",
+            "EEVuY3J5cHRpb25Db25maWcSGwoTZ2NlX3BkX2ttc19rZXlfbmFtZRgBIAEo",
+            "CSKvAgoQR2NlQ2x1c3RlckNvbmZpZxIQCgh6b25lX3VyaRgBIAEoCRITCgtu",
+            "ZXR3b3JrX3VyaRgCIAEoCRIWCg5zdWJuZXR3b3JrX3VyaRgGIAEoCRIYChBp",
+            "bnRlcm5hbF9pcF9vbmx5GAcgASgIEhcKD3NlcnZpY2VfYWNjb3VudBgIIAEo",
+            "CRIeChZzZXJ2aWNlX2FjY291bnRfc2NvcGVzGAMgAygJEgwKBHRhZ3MYBCAD",
+            "KAkSSgoIbWV0YWRhdGEYBSADKAsyOC5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuR2NlQ2x1c3RlckNvbmZpZy5NZXRhZGF0YUVudHJ5Gi8KDU1ldGFkYXRh",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLTAgoTSW5z",
+            "dGFuY2VHcm91cENvbmZpZxIVCg1udW1faW5zdGFuY2VzGAEgASgFEhYKDmlu",
+            "c3RhbmNlX25hbWVzGAIgAygJEhEKCWltYWdlX3VyaRgDIAEoCRIYChBtYWNo",
+            "aW5lX3R5cGVfdXJpGAQgASgJEjkKC2Rpc2tfY29uZmlnGAUgASgLMiQuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkRpc2tDb25maWcSFgoOaXNfcHJlZW1w",
+            "dGlibGUYBiABKAgSSgoUbWFuYWdlZF9ncm91cF9jb25maWcYByABKAsyLC5n",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuTWFuYWdlZEdyb3VwQ29uZmlnEkEK",
+            "DGFjY2VsZXJhdG9ycxgIIAMoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5BY2NlbGVyYXRvckNvbmZpZyJZChJNYW5hZ2VkR3JvdXBDb25maWcSHgoW",
+            "aW5zdGFuY2VfdGVtcGxhdGVfbmFtZRgBIAEoCRIjChtpbnN0YW5jZV9ncm91",
+            "cF9tYW5hZ2VyX25hbWUYAiABKAkiTAoRQWNjZWxlcmF0b3JDb25maWcSHAoU",
+            "YWNjZWxlcmF0b3JfdHlwZV91cmkYASABKAkSGQoRYWNjZWxlcmF0b3JfY291",
+            "bnQYAiABKAUiVwoKRGlza0NvbmZpZxIWCg5ib290X2Rpc2tfdHlwZRgDIAEo",
+            "CRIZChFib290X2Rpc2tfc2l6ZV9nYhgBIAEoBRIWCg5udW1fbG9jYWxfc3Nk",
+            "cxgCIAEoBSJpChhOb2RlSW5pdGlhbGl6YXRpb25BY3Rpb24SFwoPZXhlY3V0",
+            "YWJsZV9maWxlGAEgASgJEjQKEWV4ZWN1dGlvbl90aW1lb3V0GAIgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIu0CCg1DbHVzdGVyU3RhdHVzEjwK",
+            "BXN0YXRlGAEgASgOMi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0",
+            "ZXJTdGF0dXMuU3RhdGUSDgoGZGV0YWlsGAIgASgJEjQKEHN0YXRlX3N0YXJ0",
+            "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIKCHN1",
+            "YnN0YXRlGAQgASgOMjAuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNsdXN0",
+            "ZXJTdGF0dXMuU3Vic3RhdGUiVgoFU3RhdGUSCwoHVU5LTk9XThAAEgwKCENS",
+            "RUFUSU5HEAESCwoHUlVOTklORxACEgkKBUVSUk9SEAMSDAoIREVMRVRJTkcQ",
+            "BBIMCghVUERBVElORxAFIjwKCFN1YnN0YXRlEg8KC1VOU1BFQ0lGSUVEEAAS",
+            "DQoJVU5IRUFMVEhZEAESEAoMU1RBTEVfU1RBVFVTEAIiqAEKDlNvZnR3YXJl",
+            "Q29uZmlnEhUKDWltYWdlX3ZlcnNpb24YASABKAkSTAoKcHJvcGVydGllcxgC",
+            "IAMoCzI4Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5Tb2Z0d2FyZUNvbmZp",
+            "Zy5Qcm9wZXJ0aWVzRW50cnkaMQoPUHJvcGVydGllc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEimgIKDkNsdXN0ZXJNZXRyaWNzEk8K",
+            "DGhkZnNfbWV0cmljcxgBIAMoCzI5Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5DbHVzdGVyTWV0cmljcy5IZGZzTWV0cmljc0VudHJ5Ek8KDHlhcm5fbWV0",
+            "cmljcxgCIAMoCzI5Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVy",
+            "TWV0cmljcy5ZYXJuTWV0cmljc0VudHJ5GjIKEEhkZnNNZXRyaWNzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgDOgI4ARoyChBZYXJuTWV0cmlj",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCOAEiggEKFENy",
+            "ZWF0ZUNsdXN0ZXJSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGcmVn",
+            "aW9uGAMgASgJEjIKB2NsdXN0ZXIYAiABKAsyIS5nb29nbGUuY2xvdWQuZGF0",
+            "YXByb2MudjEuQ2x1c3RlchISCgpyZXF1ZXN0X2lkGAQgASgJIosCChRVcGRh",
+            "dGVDbHVzdGVyUmVxdWVzdBISCgpwcm9qZWN0X2lkGAEgASgJEg4KBnJlZ2lv",
+            "bhgFIAEoCRIUCgxjbHVzdGVyX25hbWUYAiABKAkSMgoHY2x1c3RlchgDIAEo",
+            "CzIhLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DbHVzdGVyEkAKHWdyYWNl",
+            "ZnVsX2RlY29tbWlzc2lvbl90aW1lb3V0GAYgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEi8KC3VwZGF0ZV9tYXNrGAQgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzaxISCgpyZXF1ZXN0X2lkGAcgASgJInoKFERlbGV0",
+            "ZUNsdXN0ZXJSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGcmVnaW9u",
+            "GAMgASgJEhQKDGNsdXN0ZXJfbmFtZRgCIAEoCRIUCgxjbHVzdGVyX3V1aWQY",
+            "BCABKAkSEgoKcmVxdWVzdF9pZBgFIAEoCSJNChFHZXRDbHVzdGVyUmVxdWVz",
+            "dBISCgpwcm9qZWN0X2lkGAEgASgJEg4KBnJlZ2lvbhgDIAEoCRIUCgxjbHVz",
+            "dGVyX25hbWUYAiABKAkicAoTTGlzdENsdXN0ZXJzUmVxdWVzdBISCgpwcm9q",
+            "ZWN0X2lkGAEgASgJEg4KBnJlZ2lvbhgEIAEoCRIOCgZmaWx0ZXIYBSABKAkS",
+            "EQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiZAoUTGlz",
+            "dENsdXN0ZXJzUmVzcG9uc2USMwoIY2x1c3RlcnMYASADKAsyIS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXByb2MudjEuQ2x1c3RlchIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkiUgoWRGlhZ25vc2VDbHVzdGVyUmVxdWVzdBISCgpwcm9qZWN0X2lk",
+            "GAEgASgJEg4KBnJlZ2lvbhgDIAEoCRIUCgxjbHVzdGVyX25hbWUYAiABKAki",
+            "LAoWRGlhZ25vc2VDbHVzdGVyUmVzdWx0cxISCgpvdXRwdXRfdXJpGAEgASgJ",
+            "MrIIChFDbHVzdGVyQ29udHJvbGxlchKkAQoNQ3JlYXRlQ2x1c3RlchIuLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcHJvYy52MS5DcmVhdGVDbHVzdGVyUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iRILT5JMCPiIzL3YxL3By",
             "b2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJz",
-            "L3tjbHVzdGVyX25hbWV9EqoBCgxMaXN0Q2x1c3RlcnMSLS5nb29nbGUuY2xv",
-            "dWQuZGF0YXByb2MudjEuTGlzdENsdXN0ZXJzUmVxdWVzdBouLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcHJvYy52MS5MaXN0Q2x1c3RlcnNSZXNwb25zZSI7gtPkkwI1",
-            "EjMvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0v",
-            "Y2x1c3RlcnMSugEKD0RpYWdub3NlQ2x1c3RlchIwLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcHJvYy52MS5EaWFnbm9zZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJWgtPkkwJQIksvdjEvcHJvamVjdHMve3By",
-            "b2plY3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0ZXJf",
-            "bmFtZX06ZGlhZ25vc2U6ASpCcQocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
-            "Yy52MUINQ2x1c3RlcnNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFwcm9jL3YxO2RhdGFwcm9jYgZw",
-            "cm90bzM="));
+            "OgdjbHVzdGVyErMBCg1VcGRhdGVDbHVzdGVyEi4uZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwcm9jLnYxLlVwZGF0ZUNsdXN0ZXJSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiJTgtPkkwJNMkIvdjEvcHJvamVjdHMve3Byb2pl",
+            "Y3RfaWR9L3JlZ2lvbnMve3JlZ2lvbn0vY2x1c3RlcnMve2NsdXN0ZXJfbmFt",
+            "ZX06B2NsdXN0ZXISqgEKDURlbGV0ZUNsdXN0ZXISLi5nb29nbGUuY2xvdWQu",
+            "ZGF0YXByb2MudjEuRGVsZXRlQ2x1c3RlclJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIkqC0+STAkQqQi92MS9wcm9qZWN0cy97cHJv",
+            "amVjdF9pZH0vcmVnaW9ucy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9u",
+            "YW1lfRKoAQoKR2V0Q2x1c3RlchIrLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5HZXRDbHVzdGVyUmVxdWVzdBohLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52",
+            "MS5DbHVzdGVyIkqC0+STAkQSQi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0v",
+            "cmVnaW9ucy97cmVnaW9ufS9jbHVzdGVycy97Y2x1c3Rlcl9uYW1lfRKqAQoM",
+            "TGlzdENsdXN0ZXJzEi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkxpc3RD",
+            "bHVzdGVyc1JlcXVlc3QaLi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTGlz",
+            "dENsdXN0ZXJzUmVzcG9uc2UiO4LT5JMCNRIzL3YxL3Byb2plY3RzL3twcm9q",
+            "ZWN0X2lkfS9yZWdpb25zL3tyZWdpb259L2NsdXN0ZXJzEroBCg9EaWFnbm9z",
+            "ZUNsdXN0ZXISMC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuRGlhZ25vc2VD",
+            "bHVzdGVyUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "VoLT5JMCUCJLL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9yZWdpb25zL3ty",
+            "ZWdpb259L2NsdXN0ZXJzL3tjbHVzdGVyX25hbWV9OmRpYWdub3NlOgEqQnEK",
+            "HGNvbS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjFCDUNsdXN0ZXJzUHJvdG9Q",
+            "AVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
+            "ZC9kYXRhcHJvYy92MTtkYXRhcHJvY2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dataproc.V1.OperationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Cluster), global::Google.Cloud.Dataproc.V1.Cluster.Parser, new[]{ "ProjectId", "ClusterName", "Config", "Labels", "Status", "StatusHistory", "ClusterUuid", "Metrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterConfig), global::Google.Cloud.Dataproc.V1.ClusterConfig.Parser, new[]{ "ConfigBucket", "GceClusterConfig", "MasterConfig", "WorkerConfig", "SecondaryWorkerConfig", "SoftwareConfig", "InitializationActions" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterConfig), global::Google.Cloud.Dataproc.V1.ClusterConfig.Parser, new[]{ "ConfigBucket", "GceClusterConfig", "MasterConfig", "WorkerConfig", "SecondaryWorkerConfig", "SoftwareConfig", "InitializationActions", "EncryptionConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.EncryptionConfig), global::Google.Cloud.Dataproc.V1.EncryptionConfig.Parser, new[]{ "GcePdKmsKeyName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GceClusterConfig), global::Google.Cloud.Dataproc.V1.GceClusterConfig.Parser, new[]{ "ZoneUri", "NetworkUri", "SubnetworkUri", "InternalIpOnly", "ServiceAccount", "ServiceAccountScopes", "Tags", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.InstanceGroupConfig), global::Google.Cloud.Dataproc.V1.InstanceGroupConfig.Parser, new[]{ "NumInstances", "InstanceNames", "ImageUri", "MachineTypeUri", "DiskConfig", "IsPreemptible", "ManagedGroupConfig", "Accelerators" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ManagedGroupConfig), global::Google.Cloud.Dataproc.V1.ManagedGroupConfig.Parser, new[]{ "InstanceTemplateName", "InstanceGroupManagerName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.AcceleratorConfig), global::Google.Cloud.Dataproc.V1.AcceleratorConfig.Parser, new[]{ "AcceleratorTypeUri", "AcceleratorCount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DiskConfig), global::Google.Cloud.Dataproc.V1.DiskConfig.Parser, new[]{ "BootDiskSizeGb", "NumLocalSsds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DiskConfig), global::Google.Cloud.Dataproc.V1.DiskConfig.Parser, new[]{ "BootDiskType", "BootDiskSizeGb", "NumLocalSsds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.NodeInitializationAction), global::Google.Cloud.Dataproc.V1.NodeInitializationAction.Parser, new[]{ "ExecutableFile", "ExecutionTimeout" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterStatus), global::Google.Cloud.Dataproc.V1.ClusterStatus.Parser, new[]{ "State", "Detail", "StateStartTime", "Substate" }, null, new[]{ typeof(global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.State), typeof(global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.Substate) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SoftwareConfig), global::Google.Cloud.Dataproc.V1.SoftwareConfig.Parser, new[]{ "ImageVersion", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ClusterMetrics), global::Google.Cloud.Dataproc.V1.ClusterMetrics.Parser, new[]{ "HdfsMetrics", "YarnMetrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CreateClusterRequest), global::Google.Cloud.Dataproc.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Region", "Cluster" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest), global::Google.Cloud.Dataproc.V1.UpdateClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName", "Cluster", "UpdateMask" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteClusterRequest), global::Google.Cloud.Dataproc.V1.DeleteClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.CreateClusterRequest), global::Google.Cloud.Dataproc.V1.CreateClusterRequest.Parser, new[]{ "ProjectId", "Region", "Cluster", "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.UpdateClusterRequest), global::Google.Cloud.Dataproc.V1.UpdateClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName", "Cluster", "GracefulDecommissionTimeout", "UpdateMask", "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteClusterRequest), global::Google.Cloud.Dataproc.V1.DeleteClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName", "ClusterUuid", "RequestId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.GetClusterRequest), global::Google.Cloud.Dataproc.V1.GetClusterRequest.Parser, new[]{ "ProjectId", "Region", "ClusterName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListClustersRequest), global::Google.Cloud.Dataproc.V1.ListClustersRequest.Parser, new[]{ "ProjectId", "Region", "Filter", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListClustersResponse), global::Google.Cloud.Dataproc.V1.ListClustersResponse.Parser, new[]{ "Clusters", "NextPageToken" }, null, null, null),
@@ -166,7 +172,7 @@ namespace Google.Cloud.Dataproc.V1 {
   #region Messages
   /// <summary>
   /// Describes the identifying information, config, and status of
-  /// a cluster of Google Compute Engine instances.
+  /// a cluster of Compute Engine instances.
   /// </summary>
   public sealed partial class Cluster : pb::IMessage<Cluster> {
     private static readonly pb::MessageParser<Cluster> _parser = new pb::MessageParser<Cluster>(() => new Cluster());
@@ -275,7 +281,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StatusFieldNumber = 4;
     private global::Google.Cloud.Dataproc.V1.ClusterStatus status_;
     /// <summary>
-    /// Output-only. Cluster status.
+    /// Output only. Cluster status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.ClusterStatus Status {
@@ -291,7 +297,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Dataproc.V1.ClusterStatus.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.ClusterStatus> statusHistory_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.ClusterStatus>();
     /// <summary>
-    /// Output-only. The previous cluster status.
+    /// Output only. The previous cluster status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.ClusterStatus> StatusHistory {
@@ -302,7 +308,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ClusterUuidFieldNumber = 6;
     private string clusterUuid_ = "";
     /// <summary>
-    /// Output-only. A cluster UUID (Unique Universal Identifier). Cloud Dataproc
+    /// Output only. A cluster UUID (Unique Universal Identifier). Cloud Dataproc
     /// generates this value when it creates the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -565,6 +571,7 @@ namespace Google.Cloud.Dataproc.V1 {
       secondaryWorkerConfig_ = other.secondaryWorkerConfig_ != null ? other.secondaryWorkerConfig_.Clone() : null;
       softwareConfig_ = other.softwareConfig_ != null ? other.softwareConfig_.Clone() : null;
       initializationActions_ = other.initializationActions_.Clone();
+      encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -577,7 +584,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ConfigBucketFieldNumber = 1;
     private string configBucket_ = "";
     /// <summary>
-    /// Optional. A Google Cloud Storage staging bucket used for sharing generated
+    /// Optional. A Cloud Storage staging bucket used for sharing generated
     /// SSH keys and config. If you do not specify a staging bucket, Cloud
     /// Dataproc will determine an appropriate Cloud Storage location (US,
     /// ASIA, or EU) for your cluster's staging bucket according to the Google
@@ -596,7 +603,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int GceClusterConfigFieldNumber = 8;
     private global::Google.Cloud.Dataproc.V1.GceClusterConfig gceClusterConfig_;
     /// <summary>
-    /// Required. The shared Google Compute Engine config settings for
+    /// Required. The shared Compute Engine config settings for
     /// all instances in a cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -611,7 +618,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MasterConfigFieldNumber = 9;
     private global::Google.Cloud.Dataproc.V1.InstanceGroupConfig masterConfig_;
     /// <summary>
-    /// Optional. The Google Compute Engine config settings for
+    /// Optional. The Compute Engine config settings for
     /// the master instance in a cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -626,7 +633,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int WorkerConfigFieldNumber = 10;
     private global::Google.Cloud.Dataproc.V1.InstanceGroupConfig workerConfig_;
     /// <summary>
-    /// Optional. The Google Compute Engine config settings for
+    /// Optional. The Compute Engine config settings for
     /// worker instances in a cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -641,7 +648,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int SecondaryWorkerConfigFieldNumber = 12;
     private global::Google.Cloud.Dataproc.V1.InstanceGroupConfig secondaryWorkerConfig_;
     /// <summary>
-    /// Optional. The Google Compute Engine config settings for
+    /// Optional. The Compute Engine config settings for
     /// additional worker instances in a cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -689,6 +696,20 @@ namespace Google.Cloud.Dataproc.V1 {
       get { return initializationActions_; }
     }
 
+    /// <summary>Field number for the "encryption_config" field.</summary>
+    public const int EncryptionConfigFieldNumber = 15;
+    private global::Google.Cloud.Dataproc.V1.EncryptionConfig encryptionConfig_;
+    /// <summary>
+    /// Optional. Encryption settings for the cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dataproc.V1.EncryptionConfig EncryptionConfig {
+      get { return encryptionConfig_; }
+      set {
+        encryptionConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ClusterConfig);
@@ -709,6 +730,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (!object.Equals(SecondaryWorkerConfig, other.SecondaryWorkerConfig)) return false;
       if (!object.Equals(SoftwareConfig, other.SoftwareConfig)) return false;
       if(!initializationActions_.Equals(other.initializationActions_)) return false;
+      if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -722,6 +744,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (secondaryWorkerConfig_ != null) hash ^= SecondaryWorkerConfig.GetHashCode();
       if (softwareConfig_ != null) hash ^= SoftwareConfig.GetHashCode();
       hash ^= initializationActions_.GetHashCode();
+      if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -760,6 +783,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(SoftwareConfig);
       }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EncryptionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -787,6 +814,9 @@ namespace Google.Cloud.Dataproc.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SoftwareConfig);
       }
       size += initializationActions_.CalculateSize(_repeated_initializationActions_codec);
+      if (encryptionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -832,6 +862,12 @@ namespace Google.Cloud.Dataproc.V1 {
         SoftwareConfig.MergeFrom(other.SoftwareConfig);
       }
       initializationActions_.Add(other.initializationActions_);
+      if (other.encryptionConfig_ != null) {
+        if (encryptionConfig_ == null) {
+          encryptionConfig_ = new global::Google.Cloud.Dataproc.V1.EncryptionConfig();
+        }
+        EncryptionConfig.MergeFrom(other.EncryptionConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -886,6 +922,13 @@ namespace Google.Cloud.Dataproc.V1 {
             input.ReadMessage(softwareConfig_);
             break;
           }
+          case 122: {
+            if (encryptionConfig_ == null) {
+              encryptionConfig_ = new global::Google.Cloud.Dataproc.V1.EncryptionConfig();
+            }
+            input.ReadMessage(encryptionConfig_);
+            break;
+          }
         }
       }
     }
@@ -893,7 +936,143 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// Common config settings for resources of Google Compute Engine cluster
+  /// Encryption settings for the cluster.
+  /// </summary>
+  public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig> {
+    private static readonly pb::MessageParser<EncryptionConfig> _parser = new pb::MessageParser<EncryptionConfig>(() => new EncryptionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<EncryptionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EncryptionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EncryptionConfig(EncryptionConfig other) : this() {
+      gcePdKmsKeyName_ = other.gcePdKmsKeyName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EncryptionConfig Clone() {
+      return new EncryptionConfig(this);
+    }
+
+    /// <summary>Field number for the "gce_pd_kms_key_name" field.</summary>
+    public const int GcePdKmsKeyNameFieldNumber = 1;
+    private string gcePdKmsKeyName_ = "";
+    /// <summary>
+    /// Optional. The Cloud KMS key name to use for PD disk encryption for all
+    /// instances in the cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string GcePdKmsKeyName {
+      get { return gcePdKmsKeyName_; }
+      set {
+        gcePdKmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as EncryptionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(EncryptionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GcePdKmsKeyName != other.GcePdKmsKeyName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GcePdKmsKeyName.Length != 0) hash ^= GcePdKmsKeyName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (GcePdKmsKeyName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GcePdKmsKeyName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (GcePdKmsKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GcePdKmsKeyName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(EncryptionConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GcePdKmsKeyName.Length != 0) {
+        GcePdKmsKeyName = other.GcePdKmsKeyName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            GcePdKmsKeyName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Common config settings for resources of Compute Engine cluster
   /// instances, applicable to all instances in the cluster.
   /// </summary>
   public sealed partial class GceClusterConfig : pb::IMessage<GceClusterConfig> {
@@ -904,7 +1083,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -941,7 +1120,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ZoneUriFieldNumber = 1;
     private string zoneUri_ = "";
     /// <summary>
-    /// Optional. The zone where the Google Compute Engine cluster will be located.
+    /// Optional. The zone where the Compute Engine cluster will be located.
     /// On a create request, it is required in the "global" region. If omitted
     /// in a non-global Cloud Dataproc region, the service will pick a zone in the
     /// corresponding Compute Engine region. On a get request, zone will
@@ -965,7 +1144,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int NetworkUriFieldNumber = 2;
     private string networkUri_ = "";
     /// <summary>
-    /// Optional. The Google Compute Engine network to be used for machine
+    /// Optional. The Compute Engine network to be used for machine
     /// communications. Cannot be specified with subnetwork_uri. If neither
     /// `network_uri` nor `subnetwork_uri` is specified, the "default" network of
     /// the project is used, if it exists. Cannot be a "Custom Subnet Network" (see
@@ -989,7 +1168,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int SubnetworkUriFieldNumber = 6;
     private string subnetworkUri_ = "";
     /// <summary>
-    /// Optional. The Google Compute Engine subnetwork to be used for machine
+    /// Optional. The Compute Engine subnetwork to be used for machine
     /// communications. Cannot be specified with network_uri.
     ///
     /// A full URL, partial URI, or short name are valid. Examples:
@@ -1030,8 +1209,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private string serviceAccount_ = "";
     /// <summary>
     /// Optional. The service account of the instances. Defaults to the default
-    /// Google Compute Engine service account. Custom service accounts need
-    /// permissions equivalent to the folloing IAM roles:
+    /// Compute Engine service account. Custom service accounts need
+    /// permissions equivalent to the following IAM roles:
     ///
     /// * roles/logging.logWriter
     /// * roles/storage.objectAdmin
@@ -1054,7 +1233,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> serviceAccountScopes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The URIs of service account scopes to be included in Google
+    /// Optional. The URIs of service account scopes to be included in
     /// Compute Engine instances. The following base set of scopes is always
     /// included:
     ///
@@ -1080,7 +1259,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The Google Compute Engine tags to add to all instances (see
+    /// The Compute Engine tags to add to all instances (see
     /// [Tagging instances](/compute/docs/label-or-tag-resources#tags)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1094,7 +1273,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
     private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The Google Compute Engine metadata entries to add to all instances (see
+    /// The Compute Engine metadata entries to add to all instances (see
     /// [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1278,7 +1457,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// Optional. The config settings for Google Compute Engine resources in
+  /// Optional. The config settings for Compute Engine resources in
   /// an instance group, such as a master or worker group.
   /// </summary>
   public sealed partial class InstanceGroupConfig : pb::IMessage<InstanceGroupConfig> {
@@ -1289,7 +1468,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1343,9 +1522,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> instanceNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The list of instance names. Cloud Dataproc derives the names from
-    /// `cluster_name`, `num_instances`, and the instance group if not set by user
-    /// (recommended practice is to let Cloud Dataproc derive the name).
+    /// Output only. The list of instance names. Cloud Dataproc derives the names
+    /// from `cluster_name`, `num_instances`, and the instance group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> InstanceNames {
@@ -1356,8 +1534,9 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ImageUriFieldNumber = 3;
     private string imageUri_ = "";
     /// <summary>
-    /// Output-only. The Google Compute Engine image resource used for cluster
-    /// instances. Inferred from `SoftwareConfig.image_version`.
+    /// Optional. The Compute Engine image resource used for cluster
+    /// instances. It can be specified or may be inferred from
+    /// `SoftwareConfig.image_version`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ImageUri {
@@ -1371,13 +1550,18 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MachineTypeUriFieldNumber = 4;
     private string machineTypeUri_ = "";
     /// <summary>
-    /// Optional. The Google Compute Engine machine type used for cluster instances.
+    /// Optional. The Compute Engine machine type used for cluster instances.
     ///
     /// A full URL, partial URI, or short name are valid. Examples:
     ///
     /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2`
     /// * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2`
     /// * `n1-standard-2`
+    ///
+    /// **Auto Zone Exception**: If you are using the Cloud Dataproc
+    /// [Auto Zone Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// feature, you must use the short name of the machine type
+    /// resource, for example, `n1-standard-2`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MachineTypeUri {
@@ -1419,7 +1603,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ManagedGroupConfigFieldNumber = 7;
     private global::Google.Cloud.Dataproc.V1.ManagedGroupConfig managedGroupConfig_;
     /// <summary>
-    /// Output-only. The config for Google Compute Engine Instance Group
+    /// Output only. The config for Compute Engine Instance Group
     /// Manager that manages this group.
     /// This is only used for preemptible instance groups.
     /// </summary>
@@ -1437,7 +1621,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Dataproc.V1.AcceleratorConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.AcceleratorConfig> accelerators_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.AcceleratorConfig>();
     /// <summary>
-    /// Optional. The Google Compute Engine accelerator configuration for these
+    /// Optional. The Compute Engine accelerator configuration for these
     /// instances.
     ///
     /// **Beta Feature**: This feature is still under development. It may be
@@ -1653,7 +1837,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1684,7 +1868,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int InstanceTemplateNameFieldNumber = 1;
     private string instanceTemplateName_ = "";
     /// <summary>
-    /// Output-only. The name of the Instance Template used for the Managed
+    /// Output only. The name of the Instance Template used for the Managed
     /// Instance Group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1699,7 +1883,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int InstanceGroupManagerNameFieldNumber = 2;
     private string instanceGroupManagerName_ = "";
     /// <summary>
-    /// Output-only. The name of the Instance Group Manager for this group.
+    /// Output only. The name of the Instance Group Manager for this group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InstanceGroupManagerName {
@@ -1811,7 +1995,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
   /// <summary>
   /// Specifies the type and number of accelerator cards attached to the instances
-  /// of an instance group (see [GPUs on Compute Engine](/compute/docs/gpus/)).
+  /// of an instance. See [GPUs on Compute Engine](/compute/docs/gpus/).
   /// </summary>
   public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig> {
     private static readonly pb::MessageParser<AcceleratorConfig> _parser = new pb::MessageParser<AcceleratorConfig>(() => new AcceleratorConfig());
@@ -1821,7 +2005,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1853,13 +2037,19 @@ namespace Google.Cloud.Dataproc.V1 {
     private string acceleratorTypeUri_ = "";
     /// <summary>
     /// Full URL, partial URI, or short name of the accelerator type resource to
-    /// expose to this instance. See [Google Compute Engine AcceleratorTypes](
-    /// /compute/docs/reference/beta/acceleratorTypes)
+    /// expose to this instance. See
+    /// [Compute Engine AcceleratorTypes](/compute/docs/reference/beta/acceleratorTypes).
     ///
-    /// Examples
+    /// Examples:
+    ///
     /// * `https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80`
     /// * `projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80`
     /// * `nvidia-tesla-k80`
+    ///
+    /// **Auto Zone Exception**: If you are using the Cloud Dataproc
+    /// [Auto Zone Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// feature, you must use the short name of the accelerator type
+    /// resource, for example, `nvidia-tesla-k80`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AcceleratorTypeUri {
@@ -1994,7 +2184,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2011,6 +2201,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DiskConfig(DiskConfig other) : this() {
+      bootDiskType_ = other.bootDiskType_;
       bootDiskSizeGb_ = other.bootDiskSizeGb_;
       numLocalSsds_ = other.numLocalSsds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2019,6 +2210,22 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DiskConfig Clone() {
       return new DiskConfig(this);
+    }
+
+    /// <summary>Field number for the "boot_disk_type" field.</summary>
+    public const int BootDiskTypeFieldNumber = 3;
+    private string bootDiskType_ = "";
+    /// <summary>
+    /// Optional. Type of the boot disk (default is "pd-standard").
+    /// Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or
+    /// "pd-standard" (Persistent Disk Hard Disk Drive).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BootDiskType {
+      get { return bootDiskType_; }
+      set {
+        bootDiskType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "boot_disk_size_gb" field.</summary>
@@ -2067,6 +2274,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (BootDiskType != other.BootDiskType) return false;
       if (BootDiskSizeGb != other.BootDiskSizeGb) return false;
       if (NumLocalSsds != other.NumLocalSsds) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2075,6 +2283,7 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (BootDiskType.Length != 0) hash ^= BootDiskType.GetHashCode();
       if (BootDiskSizeGb != 0) hash ^= BootDiskSizeGb.GetHashCode();
       if (NumLocalSsds != 0) hash ^= NumLocalSsds.GetHashCode();
       if (_unknownFields != null) {
@@ -2098,6 +2307,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(NumLocalSsds);
       }
+      if (BootDiskType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(BootDiskType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2106,6 +2319,9 @@ namespace Google.Cloud.Dataproc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (BootDiskType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BootDiskType);
+      }
       if (BootDiskSizeGb != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(BootDiskSizeGb);
       }
@@ -2122,6 +2338,9 @@ namespace Google.Cloud.Dataproc.V1 {
     public void MergeFrom(DiskConfig other) {
       if (other == null) {
         return;
+      }
+      if (other.BootDiskType.Length != 0) {
+        BootDiskType = other.BootDiskType;
       }
       if (other.BootDiskSizeGb != 0) {
         BootDiskSizeGb = other.BootDiskSizeGb;
@@ -2148,6 +2367,10 @@ namespace Google.Cloud.Dataproc.V1 {
             NumLocalSsds = input.ReadInt32();
             break;
           }
+          case 26: {
+            BootDiskType = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2166,7 +2389,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2197,7 +2420,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ExecutableFileFieldNumber = 1;
     private string executableFile_ = "";
     /// <summary>
-    /// Required. Google Cloud Storage URI of executable file.
+    /// Required. Cloud Storage URI of executable file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ExecutableFile {
@@ -2341,7 +2564,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2374,7 +2597,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StateFieldNumber = 1;
     private global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.State state_ = 0;
     /// <summary>
-    /// Output-only. The cluster's state.
+    /// Output only. The cluster's state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.State State {
@@ -2388,7 +2611,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DetailFieldNumber = 2;
     private string detail_ = "";
     /// <summary>
-    /// Output-only. Optional details of cluster's state.
+    /// Output only. Optional details of cluster's state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Detail {
@@ -2402,7 +2625,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int StateStartTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp stateStartTime_;
     /// <summary>
-    /// Output-only. Time when this state was entered.
+    /// Output only. Time when this state was entered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StateStartTime {
@@ -2416,7 +2639,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int SubstateFieldNumber = 4;
     private global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.Substate substate_ = 0;
     /// <summary>
-    /// Output-only. Additional state information that includes
+    /// Output only. Additional state information that includes
     /// status reported by the agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2597,7 +2820,13 @@ namespace Google.Cloud.Dataproc.V1 {
         [pbr::OriginalName("UPDATING")] Updating = 5,
       }
 
+      /// <summary>
+      /// The cluster substate.
+      /// </summary>
       public enum Substate {
+        /// <summary>
+        /// The cluster substate is unknown.
+        /// </summary>
         [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// The cluster is known to be in an unhealthy state
@@ -2632,7 +2861,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2663,9 +2892,11 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ImageVersionFieldNumber = 1;
     private string imageVersion_ = "";
     /// <summary>
-    /// Optional. The version of software inside the cluster. It must match the
-    /// regular expression `[0-9]+\.[0-9]+`. If unspecified, it defaults to the
-    /// latest version (see [Cloud Dataproc Versioning](/dataproc/versioning)).
+    /// Optional. The version of software inside the cluster. It must be one of the supported
+    /// [Cloud Dataproc Versions](/dataproc/docs/concepts/versioning/dataproc-versions#supported_cloud_dataproc_versions),
+    /// such as "1.2" (including a subminor version, such as "1.2.29"), or the
+    /// ["preview" version](/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
+    /// If unspecified, it defaults to the latest version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ImageVersion {
@@ -2812,7 +3043,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2962,7 +3193,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2982,6 +3213,7 @@ namespace Google.Cloud.Dataproc.V1 {
       projectId_ = other.projectId_;
       region_ = other.region_;
       cluster_ = other.cluster_ != null ? other.cluster_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3033,6 +3265,30 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique id used to identify the request. If the server
+    /// receives two [CreateClusterRequest][google.cloud.dataproc.v1.CreateClusterRequest] requests  with the same
+    /// id, then the second request will be ignored and the
+    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the backend
+    /// is returned.
+    ///
+    /// It is recommended to always set this value to a
+    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    ///
+    /// The id must contain only letters (a-z, A-Z), numbers (0-9),
+    /// underscores (_), and hyphens (-). The maximum length is 40 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateClusterRequest);
@@ -3049,6 +3305,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Region != other.Region) return false;
       if (!object.Equals(Cluster, other.Cluster)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3058,6 +3315,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Region.Length != 0) hash ^= Region.GetHashCode();
       if (cluster_ != null) hash ^= Cluster.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3083,6 +3341,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteString(Region);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3099,6 +3361,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (cluster_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Cluster);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3122,6 +3387,9 @@ namespace Google.Cloud.Dataproc.V1 {
           cluster_ = new global::Google.Cloud.Dataproc.V1.Cluster();
         }
         Cluster.MergeFrom(other.Cluster);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3149,6 +3417,10 @@ namespace Google.Cloud.Dataproc.V1 {
             Region = input.ReadString();
             break;
           }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3166,7 +3438,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3187,7 +3459,9 @@ namespace Google.Cloud.Dataproc.V1 {
       region_ = other.region_;
       clusterName_ = other.clusterName_;
       cluster_ = other.cluster_ != null ? other.cluster_.Clone() : null;
+      gracefulDecommissionTimeout_ = other.gracefulDecommissionTimeout_ != null ? other.gracefulDecommissionTimeout_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3253,6 +3527,27 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "graceful_decommission_timeout" field.</summary>
+    public const int GracefulDecommissionTimeoutFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Duration gracefulDecommissionTimeout_;
+    /// <summary>
+    /// Optional. Timeout for graceful YARN decomissioning. Graceful
+    /// decommissioning allows removing nodes from the cluster without
+    /// interrupting jobs in progress. Timeout specifies how long to wait for jobs
+    /// in progress to finish before forcefully removing nodes (and potentially
+    /// interrupting jobs). Default timeout is 0 (for forceful decommission), and
+    /// the maximum allowed timeout is 1 day.
+    ///
+    /// Only supported on Dataproc image versions 1.2 and higher.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration GracefulDecommissionTimeout {
+      get { return gracefulDecommissionTimeout_; }
+      set {
+        gracefulDecommissionTimeout_ = value;
+      }
+    }
+
     /// <summary>Field number for the "update_mask" field.</summary>
     public const int UpdateMaskFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
@@ -3313,6 +3608,30 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 7;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique id used to identify the request. If the server
+    /// receives two [UpdateClusterRequest][google.cloud.dataproc.v1.UpdateClusterRequest] requests  with the same
+    /// id, then the second request will be ignored and the
+    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
+    /// backend is returned.
+    ///
+    /// It is recommended to always set this value to a
+    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    ///
+    /// The id must contain only letters (a-z, A-Z), numbers (0-9),
+    /// underscores (_), and hyphens (-). The maximum length is 40 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UpdateClusterRequest);
@@ -3330,7 +3649,9 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Region != other.Region) return false;
       if (ClusterName != other.ClusterName) return false;
       if (!object.Equals(Cluster, other.Cluster)) return false;
+      if (!object.Equals(GracefulDecommissionTimeout, other.GracefulDecommissionTimeout)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3341,7 +3662,9 @@ namespace Google.Cloud.Dataproc.V1 {
       if (Region.Length != 0) hash ^= Region.GetHashCode();
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
       if (cluster_ != null) hash ^= Cluster.GetHashCode();
+      if (gracefulDecommissionTimeout_ != null) hash ^= GracefulDecommissionTimeout.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3375,6 +3698,14 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(42);
         output.WriteString(Region);
       }
+      if (gracefulDecommissionTimeout_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GracefulDecommissionTimeout);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3395,8 +3726,14 @@ namespace Google.Cloud.Dataproc.V1 {
       if (cluster_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Cluster);
       }
+      if (gracefulDecommissionTimeout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GracefulDecommissionTimeout);
+      }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3424,11 +3761,20 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         Cluster.MergeFrom(other.Cluster);
       }
+      if (other.gracefulDecommissionTimeout_ != null) {
+        if (gracefulDecommissionTimeout_ == null) {
+          gracefulDecommissionTimeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        GracefulDecommissionTimeout.MergeFrom(other.GracefulDecommissionTimeout);
+      }
       if (other.updateMask_ != null) {
         if (updateMask_ == null) {
           updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3467,6 +3813,17 @@ namespace Google.Cloud.Dataproc.V1 {
             Region = input.ReadString();
             break;
           }
+          case 50: {
+            if (gracefulDecommissionTimeout_ == null) {
+              gracefulDecommissionTimeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(gracefulDecommissionTimeout_);
+            break;
+          }
+          case 58: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3484,7 +3841,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3504,6 +3861,8 @@ namespace Google.Cloud.Dataproc.V1 {
       projectId_ = other.projectId_;
       region_ = other.region_;
       clusterName_ = other.clusterName_;
+      clusterUuid_ = other.clusterUuid_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3555,6 +3914,45 @@ namespace Google.Cloud.Dataproc.V1 {
       }
     }
 
+    /// <summary>Field number for the "cluster_uuid" field.</summary>
+    public const int ClusterUuidFieldNumber = 4;
+    private string clusterUuid_ = "";
+    /// <summary>
+    /// Optional. Specifying the `cluster_uuid` means the RPC should fail
+    /// (with error NOT_FOUND) if cluster with specified UUID does not exist.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClusterUuid {
+      get { return clusterUuid_; }
+      set {
+        clusterUuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 5;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique id used to identify the request. If the server
+    /// receives two [DeleteClusterRequest][google.cloud.dataproc.v1.DeleteClusterRequest] requests  with the same
+    /// id, then the second request will be ignored and the
+    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
+    /// backend is returned.
+    ///
+    /// It is recommended to always set this value to a
+    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    ///
+    /// The id must contain only letters (a-z, A-Z), numbers (0-9),
+    /// underscores (_), and hyphens (-). The maximum length is 40 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteClusterRequest);
@@ -3571,6 +3969,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (Region != other.Region) return false;
       if (ClusterName != other.ClusterName) return false;
+      if (ClusterUuid != other.ClusterUuid) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3580,6 +3980,8 @@ namespace Google.Cloud.Dataproc.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (Region.Length != 0) hash ^= Region.GetHashCode();
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
+      if (ClusterUuid.Length != 0) hash ^= ClusterUuid.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3605,6 +4007,14 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteRawTag(26);
         output.WriteString(Region);
       }
+      if (ClusterUuid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClusterUuid);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3621,6 +4031,12 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (ClusterName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterName);
+      }
+      if (ClusterUuid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterUuid);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3641,6 +4057,12 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (other.ClusterName.Length != 0) {
         ClusterName = other.ClusterName;
+      }
+      if (other.ClusterUuid.Length != 0) {
+        ClusterUuid = other.ClusterUuid;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3665,6 +4087,14 @@ namespace Google.Cloud.Dataproc.V1 {
             Region = input.ReadString();
             break;
           }
+          case 34: {
+            ClusterUuid = input.ReadString();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3682,7 +4112,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3880,7 +4310,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4158,7 +4588,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4191,7 +4621,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Dataproc.V1.Cluster.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Cluster> clusters_ = new pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Cluster>();
     /// <summary>
-    /// Output-only. The clusters in the project.
+    /// Output only. The clusters in the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.Cluster> Clusters {
@@ -4202,7 +4632,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Output-only. This token is included in the response if there are more
+    /// Output only. This token is included in the response if there are more
     /// results to fetch. To fetch additional results, provide this value as the
     /// `page_token` in a subsequent `ListClustersRequest`.
     /// </summary>
@@ -4318,7 +4748,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4516,7 +4946,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Dataproc.V1.ClustersReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4546,7 +4976,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int OutputUriFieldNumber = 1;
     private string outputUri_ = "";
     /// <summary>
-    /// Output-only. The Google Cloud Storage URI of the diagnostic output.
+    /// Output only. The Cloud Storage URI of the diagnostic output.
     /// The output report is a plain text file with a summary of collected
     /// diagnostics.
     /// </summary>
