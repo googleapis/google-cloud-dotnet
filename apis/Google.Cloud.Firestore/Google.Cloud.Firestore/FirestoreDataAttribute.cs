@@ -29,6 +29,11 @@ namespace Google.Cloud.Firestore
         public UnknownPropertyHandling UnknownPropertyHandling { get; set; }
 
         /// <summary>
+        /// A custom converter type to use for serializing and deserializing the attributed type.
+        /// </summary>
+        public System.Type ConverterType { get; set; }
+
+        /// <summary>
         /// Constructs a new instance with default values for options.
         /// </summary>
         public FirestoreDataAttribute() : this(UnknownPropertyHandling.Warn)

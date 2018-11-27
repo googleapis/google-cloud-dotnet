@@ -73,6 +73,72 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expected, result);
         }
 
+        [Fact]
+        public void DeserializeCustomTypeConversion()
+        {
+            var value = new Value
+            {
+                MapValue = new MapValue
+                {
+                    Fields =
+                    {
+                        { "Name", new Value { StringValue = "test" } },
+                        { "HighScore", new Value { IntegerValue = 10L } },
+                        { "Email", new Value { StringValue = "test@example.com" } },
+                    }
+                }
+            };
+            var user = (SerializationTestData.CustomUser) DeserializeDefault(value, typeof(SerializationTestData.CustomUser));
+            Assert.Equal("test", user.Name);
+            Assert.Equal(10, user.HighScore);
+            Assert.Equal("test@example.com", user.Email.Address);
+        }
+
+        [Fact]
+        public void DeserializeCustomPropertyConversion_NoNulls()
+        {
+            Guid guid1 = Guid.NewGuid();
+            Guid guid2 = Guid.NewGuid();
+            var value = new Value
+            {
+                MapValue = new MapValue
+                {
+                    Fields =
+                    {
+                        { "Name", new Value { StringValue = "test" } },
+                        { "Guid", new Value { StringValue = guid1.ToString("N") } },
+                        { "GuidOrNull", new Value { StringValue = guid2.ToString("N") } },
+                    }
+                }
+            };
+            var pair = (SerializationTestData.GuidPair) DeserializeDefault(value, typeof(SerializationTestData.GuidPair));
+            Assert.Equal("test", pair.Name);
+            Assert.Equal(guid1, pair.Guid);
+            Assert.Equal(guid2, pair.GuidOrNull);
+        }
+
+        [Fact]
+        public void DeserializeCustomPropertyConversion_WithNull()
+        {
+            Guid guid = Guid.NewGuid();
+            var value = new Value
+            {
+                MapValue = new MapValue
+                {
+                    Fields =
+                    {
+                        { "Name", new Value { StringValue = "test" } },
+                        { "Guid", new Value { StringValue = guid.ToString("N") } },
+                        { "GuidOrNull", new Value { NullValue = wkt::NullValue.NullValue } },
+                    }
+                }
+            };
+            var pair = (SerializationTestData.GuidPair) DeserializeDefault(value, typeof(SerializationTestData.GuidPair));
+            Assert.Equal("test", pair.Name);
+            Assert.Equal(guid, pair.Guid);
+            Assert.Null(pair.GuidOrNull);
+        }
+
         [Theory]
         [InlineData(typeof(byte))]
         [InlineData(typeof(sbyte))]

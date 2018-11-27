@@ -18,9 +18,9 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
-using wkt = Google.Protobuf.WellKnownTypes;
-using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using Xunit;
+using static Google.Cloud.Firestore.Tests.ProtoHelpers;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -128,19 +128,28 @@ namespace Google.Cloud.Firestore.Tests
             { new List<ByteString> { ByteString.CopyFromUtf8("abc"), ByteString.CopyFromUtf8("def") },
                 new Value { ArrayValue = new ArrayValue { Values = { new Value { BytesValue = ByteString.CopyFromUtf8("abc") }, new Value { BytesValue = ByteString.CopyFromUtf8("def") } } } } },
 
-            // Map values (that can be deserialized again): dictionaries, attributed types, expandos (which are just dictionaries)
+            // Map values (that can be deserialized again): dictionaries, attributed types, expandos (which are just dictionaries), custom serialized map-like values
+
+            // Dictionaries
             { new Dictionary<string, object> { { "name", "Jon" }, { "score", 10L } },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
             { new Dictionary<string, int> { { "A", 10 }, { "B", 20 } },
                 new Value { MapValue = new MapValue { Fields = { { "A", new Value { IntegerValue = 10L } }, { "B", new Value { IntegerValue = 20L } } } } } },
+            // Attributed type (each property has an attribute)
             { new GameResult { Name = "Jon", Score = 10 },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "Score", new Value { IntegerValue = 10L } } } } } },
+            // ExpandoObject (a dictionary)
             { () => { dynamic d = new ExpandoObject(); d.name = "Jon"; d.score = 10L; return d; },
                 new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } } },
+            // Attributed type containing a dictionary
             { new DictionaryInterfaceContainer { Integers = new Dictionary<string, int> { { "A", 10 }, { "B", 20 } } },
                 new Value { MapValue = new MapValue { Fields =
                     { { "Integers", new Value { MapValue = new MapValue { Fields = { { "A", new Value { IntegerValue = 10L } }, { "B", new Value { IntegerValue = 20L } } } } } } }
                 } } },
+            // Attributed type serialized and deserialized by CustomPlayerConverter
+            { new CustomPlayer { Name = "Amanda", Score = 15 },
+                new Value { MapValue = new MapValue { Fields = { { "PlayerName", new Value { StringValue = "Amanda" } }, { "PlayerScore", new Value { IntegerValue = 15L } } } } } },
+
             // Nullable type handling
             { new NullableContainer { NullableValue = null },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
@@ -283,6 +292,98 @@ namespace Google.Cloud.Firestore.Tests
         {
             MinValue = ulong.MinValue,
             MaxRepresentableValue = long.MaxValue
+        }
+
+        [FirestoreData]
+        public sealed class CustomUser
+        {
+            [FirestoreProperty]
+            public int HighScore { get; set; }
+            [FirestoreProperty]
+            public string Name { get; set; }
+            [FirestoreProperty]
+            public Email Email { get; set; }
+        }
+
+        [FirestoreData(ConverterType = typeof(EmailConverter))]
+        public sealed class Email
+        {
+            public string Address { get; }
+            public Email(string address) => Address = address;
+        }
+
+        public class EmailConverter : IFirestoreConverter<Email>
+        {
+            public Email FromFirestore(object value)
+            {
+                switch (value)
+                {
+                    case null: throw new ArgumentNullException(nameof(value)); // Shouldn't happen
+                    case string address: return new Email(address);
+                    default: throw new ArgumentException($"Unexpected data: {value.GetType()}");
+                }
+            }
+            public object ToFirestore(Email value) => value?.Address;
+        }
+
+        [FirestoreData]
+        public class GuidPair
+        {
+            [FirestoreProperty]
+            public string Name { get; set; }
+
+            [FirestoreProperty(ConverterType = typeof(GuidConverter))]
+            public Guid Guid { get; set; }
+
+            [FirestoreProperty(ConverterType = typeof(GuidConverter))]
+            public Guid? GuidOrNull { get; set; }
+        }
+
+        public class GuidConverter : IFirestoreConverter<Guid>
+        {
+            public Guid FromFirestore(object value)
+            {
+                switch (value)
+                {
+                    case null: throw new ArgumentNullException(nameof(value)); // Shouldn't happen
+                    case string guid: return Guid.ParseExact(guid, "N");
+                    default: throw new ArgumentException($"Unexpected data: {value.GetType()}");
+                }
+            }
+            public object ToFirestore(Guid value) => value.ToString("N");
+        }
+
+        // Only equatable for the sake of testing; that's not a requirement of the serialization code.
+        [FirestoreData(ConverterType = typeof(CustomPlayerConverter))]
+        public class CustomPlayer : IEquatable<CustomPlayer>
+        {
+            public string Name { get; set; }
+            public int Score { get; set; }
+
+            public override int GetHashCode() => Name.GetHashCode() ^ Score;
+            public override bool Equals(object obj) => Equals(obj as CustomPlayer);        
+            public bool Equals(CustomPlayer other) => other != null && other.Name == Name && other.Score == Score;
+        }
+
+        public class CustomPlayerConverter : IFirestoreConverter<CustomPlayer>
+        {
+            public CustomPlayer FromFirestore(object value)
+            {
+                var map = (IDictionary<string, object>) value;
+                return new CustomPlayer
+                {
+                    Name = (string) map["PlayerName"],
+                    // Unbox to long, then convert to int.
+                    Score = (int) (long) map["PlayerScore"]
+                };
+            }
+
+            public object ToFirestore(CustomPlayer value) =>
+                new Dictionary<string, object>
+                {
+                    ["PlayerName"] = value.Name,
+                    ["PlayerScore"] = value.Score
+                };
         }
     }
 }

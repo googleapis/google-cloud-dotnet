@@ -19,6 +19,8 @@ using System.Collections.Generic;
 using System.Dynamic;
 using Xunit;
 
+using wkt = Google.Protobuf.WellKnownTypes;
+
 namespace Google.Cloud.Firestore.Tests
 {
     // Note: deliberately not using the CreateValue helper to make the protos absolutely clear.
@@ -64,6 +66,30 @@ namespace Google.Cloud.Firestore.Tests
             // There's no attribute for deleted fields, so the score is just propagated.
             { new SentinelModel { Name = "Jon", LastUpdate = new Timestamp(99, 99), Score = 10 },
                 new Dictionary<string, Value> { { "name", new Value { StringValue = "Jon" } }, { "lastUpdate", SentinelValue.ServerTimestamp.ToProtoValue() }, { "score", new Value { IntegerValue = 10L } } } },
+            
+            // Custom conversion
+            { new SerializationTestData.CustomUser { Name = "test", Email = new SerializationTestData.Email("test@example.com"), HighScore = 10 },
+                new Dictionary<string, Value> { { "Name", new Value { StringValue = "test" } }, { "Email", new Value { StringValue = "test@example.com" } }, { "HighScore", new Value { IntegerValue = 10L } } } },
+            // Non-null values for both non-nullable and nullable
+            {
+                new SerializationTestData.GuidPair { Name = "test1", Guid = Guid.Parse("a7dc91a0-ef9b-4fc7-9f03-1763d9688dfa"), GuidOrNull = Guid.Parse("5e124acc-c53e-4d47-bec8-a6618cf0b2d9") },
+                new Dictionary<string, Value>
+                {
+                    { "Name", new Value { StringValue = "test1" } },
+                    { "Guid", new Value { StringValue = "a7dc91a0ef9b4fc79f031763d9688dfa" } },
+                    { "GuidOrNull", new Value { StringValue = "5e124accc53e4d47bec8a6618cf0b2d9" } }
+                }
+            },
+            // Null value for the nullable property
+            {
+                new SerializationTestData.GuidPair { Name = "test2", Guid = Guid.Parse("a7dc91a0-ef9b-4fc7-9f03-1763d9688dfa"), GuidOrNull = null },
+                new Dictionary<string, Value>
+                {
+                    { "Name", new Value { StringValue = "test2" } },
+                    { "Guid", new Value { StringValue = "a7dc91a0ef9b4fc79f031763d9688dfa" } },
+                    { "GuidOrNull", new Value { NullValue = wkt::NullValue.NullValue } }
+                }
+            }
         };
 
         [Theory]
@@ -99,6 +125,15 @@ namespace Google.Cloud.Firestore.Tests
         {
             var actual = ValueSerializer.SerializeMap(input);
             Assert.Equal(expectedOutput, actual);
+        }
+
+        [Theory]
+        [MemberData(nameof(SerializeMapTestData))]
+        public void SerializeValue_SameAsMap(object input, Dictionary<string, Value> expectedMap)
+        {
+            var actual = ValueSerializer.Serialize(input);
+            var expectedValue = new Value { MapValue = new MapValue { Fields = { expectedMap } } };
+            Assert.Equal(expectedValue, actual);
         }
 
         [Fact]
