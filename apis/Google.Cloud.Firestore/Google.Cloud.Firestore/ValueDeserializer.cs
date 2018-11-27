@@ -51,6 +51,10 @@ namespace Google.Cloud.Firestore
             {
                 return value.Clone();
             }
+            if (targetType == typeof(object))
+            {
+                targetType = GetTargetType(value);
+            }
 
             BclType underlyingType = Nullable.GetUnderlyingType(targetType);
             if (value.ValueTypeCase == Value.ValueTypeOneofCase.NullValue)
@@ -68,7 +72,44 @@ namespace Google.Cloud.Firestore
 
         internal static object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
         {
+            if (targetType == typeof(object))
+            {
+                targetType = typeof(Dictionary<string, object>);
+            }
             return ConverterCache.GetConverter(targetType).DeserializeMap(db, values);
+        }
+
+        private static BclType GetTargetType(Value value)
+        {
+            // TODO: Use an array instead?
+            switch (value.ValueTypeCase)
+            {
+                case Value.ValueTypeOneofCase.NullValue:
+                    // Any nullable type is fine here; we'll return null anyway.
+                    return typeof(string);
+                case Value.ValueTypeOneofCase.ArrayValue:
+                    return typeof(List<object>);
+                case Value.ValueTypeOneofCase.BooleanValue:
+                    return typeof(bool);
+                case Value.ValueTypeOneofCase.BytesValue:
+                    return typeof(Blob);
+                case Value.ValueTypeOneofCase.DoubleValue:
+                    return typeof(double);
+                case Value.ValueTypeOneofCase.GeoPointValue:
+                    return typeof(GeoPoint);
+                case Value.ValueTypeOneofCase.IntegerValue:
+                    return typeof(long);
+                case Value.ValueTypeOneofCase.MapValue:
+                    return typeof(Dictionary<string, object>);
+                case Value.ValueTypeOneofCase.ReferenceValue:
+                    return typeof(DocumentReference);
+                case Value.ValueTypeOneofCase.StringValue:
+                    return typeof(string);
+                case Value.ValueTypeOneofCase.TimestampValue:
+                    return typeof(Timestamp);
+                default:
+                    throw new ArgumentException($"Unable to convert value type {value.ValueTypeCase} to System.Object");
+            }
         }
     }
 }

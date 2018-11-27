@@ -36,7 +36,6 @@ namespace Google.Cloud.Firestore.Converters
         private static readonly ConcurrentDictionary<BclType, IFirestoreInternalConverter> s_converters =
             new ConcurrentDictionary<BclType, IFirestoreInternalConverter>
             {
-                [typeof(object)] = new ObjectConverter(),
                 [typeof(byte)] = new ByteConverter(),
                 [typeof(sbyte)] = new SByteConverter(),
                 [typeof(short)] = new Int16Converter(),
