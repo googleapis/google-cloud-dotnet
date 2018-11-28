@@ -186,14 +186,29 @@ namespace Google.Cloud.Firestore
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documents"/>.</returns>
         public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, CancellationToken cancellationToken = default) =>
-            GetAllSnapshotsAsync(documents, null, cancellationToken);
+            GetAllSnapshotsAsync(documents, null, null, cancellationToken);
 
-        internal async Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, CancellationToken cancellationToken)
+        /// <summary>
+        /// Fetches document snapshots from the server, potentially limiting the fields returned.
+        /// </summary>
+        /// <remarks>
+        /// Any documents which are missing are represented in the returned list by a <see cref="DocumentSnapshot"/>
+        /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
+        /// </remarks>
+        /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
+        /// <param name="fieldMask">The field mask to use to restrict which fields are retrieved. May be null, in which
+        /// case no field mask is applied, and the complete documents are retrieved.</param>
+        /// <param name="cancellationToken">A cancellation token for the operation.</param>
+        /// <returns>The document snapshots, in the same order as <paramref name="documents"/>.</returns>
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, FieldMask fieldMask, CancellationToken cancellationToken = default) =>
+            GetAllSnapshotsAsync(documents, null, fieldMask, cancellationToken);
+
+        internal async Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, FieldMask fieldMask, CancellationToken cancellationToken)
         {
             // Check for null here, but let the underlying method check for null elements.
             // We're just trying to make sure we don't evaluate it differently later.
             var list = GaxPreconditions.CheckNotNull(documents, nameof(documents)).ToList();
-            var unordered = await GetDocumentSnapshotsAsync(list, transactionId, cancellationToken).ConfigureAwait(false);
+            var unordered = await GetDocumentSnapshotsAsync(list, transactionId, fieldMask, cancellationToken).ConfigureAwait(false);
             var map = unordered.ToDictionary(snapshot => snapshot.Reference);
             return list.Select(docRef =>
             {
@@ -210,12 +225,19 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <param name="documents">The document references to fetch. Must not be null, or contain null references.</param>
         /// <param name="transactionId">A transaction ID, or null to not include any transaction ID.</param>
+        /// <param name="fieldMask">The field mask to use to restrict which fields are retrieved. May be null, in which
+        /// case no field mask is applied, and the complete documents are retrieved.</param>
         /// <param name="cancellationToken">A cancellation token for the operation.</param>
         /// <returns>The document snapshots, in the order they are provided in the response. (This may not be the order of <paramref name="documents"/>.)</returns>
-        internal async Task<IList<DocumentSnapshot>> GetDocumentSnapshotsAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, CancellationToken cancellationToken)
+        internal async Task<IList<DocumentSnapshot>> GetDocumentSnapshotsAsync(IEnumerable<DocumentReference> documents, ByteString transactionId, FieldMask fieldMask, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(documents, nameof(documents));
-            var request = new BatchGetDocumentsRequest { Database = RootPath, Documents = { documents.Select(ExtractPath) } };
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = RootPath,
+                Documents = { documents.Select(ExtractPath) },
+                Mask = fieldMask?.ToProto()
+            };
             if (transactionId != null)
             {
                 request.Transaction = transactionId;

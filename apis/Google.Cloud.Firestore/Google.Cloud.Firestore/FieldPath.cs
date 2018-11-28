@@ -23,7 +23,12 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// An immutable path of field names, used to identify parts of a document.
     /// </summary>
-    public sealed class FieldPath : IEquatable<FieldPath>
+    /// <remarks>
+    /// Ordering between field paths is primarily to provide canonical orderings for sets of
+    /// paths, for example in a <see cref="FieldMask"/>. This ordering is performed segment-wise,
+    /// using ordinal string comparisons.
+    /// </remarks>
+    public sealed class FieldPath : IEquatable<FieldPath>, IComparable<FieldPath>
     {
         private static readonly char[] s_dotSplit = { '.' };
 
@@ -165,6 +170,28 @@ namespace Google.Cloud.Firestore
         /// <inheritdoc />
         public bool Equals(FieldPath other) => EncodedPath == other?.EncodedPath;
 
+        /// <inheritdoc />
+        public int CompareTo(FieldPath other)
+        {
+            // Every non-null value is greater than null.
+            if (other is null)
+            {
+                return 1;
+            }
+            int segmentsToCompare = Math.Min(Segments.Length, other.Segments.Length);
+            for (int i = 0; i < segmentsToCompare; i++)
+            {
+                int segmentComparison = string.Compare(Segments[i], other.Segments[i], StringComparison.Ordinal);
+                if (segmentComparison != 0)
+                {
+                    return segmentComparison;
+                }
+            }
+            // Either the paths are equal, or one is a prefix of the other. Use the number of segments to
+            // determine which situation we're in, with a shorter path being deemed "less than" a longer one.
+            return Segments.Length - other.Segments.Length;
+        }
+        
         /// <summary>
         /// Conversion from FieldPath to FieldReference.
         /// </summary>

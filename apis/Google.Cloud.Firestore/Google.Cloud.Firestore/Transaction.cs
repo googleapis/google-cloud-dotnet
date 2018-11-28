@@ -91,11 +91,28 @@ namespace Google.Cloud.Firestore
         /// <param name="documentReferences">The document references to fetch. Must not be null, or contain null references.</param>
         /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
         /// <returns>The document snapshots, in the same order as <paramref name="documentReferences"/>.</returns>
-        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, CancellationToken cancellationToken = default)
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, CancellationToken cancellationToken = default) =>
+            GetAllSnapshotsAsync(documentReferences, fieldMask: null, cancellationToken);
+
+        /// <summary>
+        /// Fetch snapshots of all the documents specified by <paramref name="documentReferences"/>, with respect to this transaction,
+        /// potentially limiting the fields returned.
+        /// This method cannot be called after any write operations have been created.
+        /// </summary>
+        /// <remarks>
+        /// Any documents which are missing are represented in the returned list by a <see cref="DocumentSnapshot"/>
+        /// with <see cref="DocumentSnapshot.Exists"/> value of <c>false</c>.
+        /// </remarks>
+        /// <param name="documentReferences">The document references to fetch. Must not be null, or contain null references.</param>
+        /// <param name="fieldMask">The field mask to use to restrict which fields are retrieved. May be null, in which
+        /// case no field mask is applied, and the complete documents are retrieved.</param>
+        /// <param name="cancellationToken">A cancellation token to monitor for the asynchronous operation.</param>
+        /// <returns>The document snapshots, in the same order as <paramref name="documentReferences"/>.</returns>
+        public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, FieldMask fieldMask, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
             CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
-            return Database.GetAllSnapshotsAsync(documentReferences, TransactionId, effectiveToken);
+            return Database.GetAllSnapshotsAsync(documentReferences, TransactionId, fieldMask, effectiveToken);
         }
 
         /// <summary>

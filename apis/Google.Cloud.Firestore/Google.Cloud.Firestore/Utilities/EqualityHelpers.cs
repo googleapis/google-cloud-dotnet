@@ -73,6 +73,26 @@ namespace Google.Cloud.Firestore
             }
         }
 
+        /// <summary>
+        /// Computes an ordering-sensitive hash code for a sequence.
+        /// </summary>
+        internal static int GetEnumerableHashCode<T>(IEnumerable<T> sequence) where T : IEquatable<T>
+        {
+            if (sequence == null)
+            {
+                return 0;
+            }
+            unchecked
+            {
+                int hash = HashInitialValue;
+                foreach (var item in sequence)
+                {
+                    hash = (hash << 5) + hash + item.GetHashCode();
+                }
+                return hash;
+            }
+        }
+
         // Hash code convenience methods using DJB2 constants.
         // Alternatives would be generic methods that call GetHashCode directly.
         // Only necessary overloads are present; more can be added.

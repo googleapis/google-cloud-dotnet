@@ -195,7 +195,7 @@ namespace Google.Cloud.Firestore
         /// <returns>A snapshot of the document. The snapshot may represent a missing document.</returns>
         internal async Task<DocumentSnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
-            var multiple = await Database.GetDocumentSnapshotsAsync(new[] { this }, transactionId, cancellationToken).ConfigureAwait(false);
+            var multiple = await Database.GetDocumentSnapshotsAsync(new[] { this }, transactionId, fieldMask: null, cancellationToken).ConfigureAwait(false);
             return multiple.Single();
         }
 
