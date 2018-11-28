@@ -22,8 +22,10 @@ namespace Google.Cloud.Firestore.Tests
         internal static void AssertComparison<T>(T smaller, T larger, IComparer<T> comparer = null)
         {
             comparer = comparer ?? Comparer<T>.Default;
-            Assert.InRange(comparer.Compare(smaller, larger), int.MinValue, -1);
-            Assert.InRange(comparer.Compare(larger, smaller), 1, int.MaxValue);
+            Assert.True(comparer.Compare(smaller, larger) < 0,
+                $"Compare({smaller}, {larger}) should be < 0");
+            Assert.True(comparer.Compare(larger, smaller) > 0,
+                $"Compare({larger}, {smaller}) should be > 0.");
             Assert.Equal(0, comparer.Compare(smaller, smaller));
             Assert.Equal(0, comparer.Compare(larger, larger));
         }

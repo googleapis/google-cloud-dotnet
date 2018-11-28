@@ -108,5 +108,29 @@ namespace Google.Cloud.Firestore.Tests
             var fp2 = FieldPath.FromDotSeparatedString(path2);
             Assert.Equal(expected, fp1.IsPrefixOf(fp2));
         }
+
+        [Fact]
+        public void Ordering()
+        {
+            var paths = new[]
+            {
+                FieldPath.Empty,
+                new FieldPath("a"),
+                new FieldPath("a", "b"),
+                new FieldPath("a", "b", "b"),
+                new FieldPath("a", "b", "ba"),
+                new FieldPath("a", "b", "c"),
+                new FieldPath("b", "a"),
+            };
+
+            for (int i = 0; i < paths.Length; i++)
+            {
+                for (int j = i + 1; j < paths.Length; j++)
+                {
+                    // This will also compare field paths with themselves
+                    ComparisonTester.AssertComparison(paths[i], paths[j]);
+                }
+            }
+        }
     }
 }

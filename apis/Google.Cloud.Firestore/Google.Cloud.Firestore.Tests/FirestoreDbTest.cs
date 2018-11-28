@@ -167,7 +167,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var docRef1 = db.Document("col1/doc1");
             var docRef2 = db.Document("col2/doc2");
-            var results = await db.GetAllSnapshotsAsync(new[] { docRef1, docRef2, docRef2 }, transaction, default);
+            var results = await db.GetAllSnapshotsAsync(new[] { docRef1, docRef2, docRef2 }, transaction, fieldMask: null, default);
 
             Assert.Equal(3, results.Count);
             // Note that this is the first result from the request, not the first from the response -
@@ -245,7 +245,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var docRef1 = db.Document("col1/doc1");
             var docRef2 = db.Document("col2/doc2");
-            var results = await db.GetDocumentSnapshotsAsync(new[] { docRef1, docRef2 }, null, default);
+            var results = await db.GetDocumentSnapshotsAsync(new[] { docRef1, docRef2 }, transactionId: null, fieldMask: null, default);
             Assert.Equal(2, results.Count);
             // Note that this is the second result, not the first - we get them back in response order, not request order.
             // (If we need to ensure request order, that can be done as a separate method layered on this one.)
@@ -283,7 +283,29 @@ namespace Google.Cloud.Firestore.Tests
             };
             mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
             var db = FirestoreDb.Create("proj", "db", mock.Object);
-            var results = await db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, transactionId, default);
+            var results = await db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, transactionId, fieldMask: null, default);
+            mock.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetDocumentSnapshotsAsync_WithFieldMask()
+        {
+            string docName = "projects/proj/databases/db/documents/col1/doc1";
+            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var request = new BatchGetDocumentsRequest
+            {
+                Database = "projects/proj/databases/db",
+                Documents = { docName },
+                Mask = new DocumentMask { FieldPaths = { "a", "b" } }
+            };
+            var responses = new[]
+            {
+                new BatchGetDocumentsResponse { Missing = docName, ReadTime = CreateProtoTimestamp(1, 2) },
+            };
+            mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var fieldMask = new FieldMask("a", "b");
+            var results = await db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, transactionId: null, fieldMask, default);
             mock.VerifyAll();
         }
 
@@ -300,7 +322,7 @@ namespace Google.Cloud.Firestore.Tests
             var responses = new[] { new BatchGetDocumentsResponse { ReadTime = CreateProtoTimestamp(1, 2) } };
             mock.Setup(c => c.BatchGetDocuments(request, It.IsAny<CallSettings>())).Returns(new FakeDocumentStream(responses));
             var db = FirestoreDb.Create("proj", "db", mock.Object);
-            await Assert.ThrowsAsync<InvalidOperationException>(() => db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, null, default));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => db.GetDocumentSnapshotsAsync(new[] { db.Document("col1/doc1") }, transactionId: null, fieldMask: null, default));
             mock.VerifyAll();
         }
 
