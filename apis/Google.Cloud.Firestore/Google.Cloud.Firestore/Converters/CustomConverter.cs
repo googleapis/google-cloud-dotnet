@@ -28,6 +28,7 @@ namespace Google.Cloud.Firestore.Converters
 
         // TODO: More validation, e.g. converter must be a concrete type, and the target type should not declare any
         // properties with FirestorePropertyAttribute (although its base type might).
+        // TODO: Check that targetType isn't a nullable value type? We currently advise that, but we could enforce it.
 
         // TODO: Caching? We only do this once per property or type that's decorated with an attribute
         // with a Converter property. Caching adds significant complexity.

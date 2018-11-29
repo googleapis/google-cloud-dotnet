@@ -79,7 +79,7 @@ type that a value will be deserialized as, when no other information is availabl
   	</tr>
   	<tr>
       <td>Integer</td>
-      <td>Any integer type (<code>byte</code>, <code>short</code>, <code>ushort</code>, <code>int</code>, <code>long</code> etc)</td>
+      <td>Any integer type (<code>byte</code>, <code>short</code>, <code>ushort</code>, <code>int</code>, <code>long</code> etc) or enum type</td>
       <td><code>long</code></td>
       <td>Signed 64-bit integer. When deserializing from server data, if the value is outside the range of the target type,
       	<code>OverflowException</code> is thrown. Similarly, an <code>OverflowException</code> will
@@ -147,14 +147,99 @@ document data to a dictionary representation.
 
 The equivalent city code using dictionaries would look like this:
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.DataModel.txt#DictionaryUsage)]
+{{sample:DataModel.DictionaryUsage}}
 
 ## Mapping with anonymous types
 
 Anonymous types can be used for serialization, but not deserialization. They are particularly useful to specify partial updates, or
 to populate data which isn't then read within the same codebase.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.DataModel.txt#AnonymousTypeUsage)]
+{{sample:DataModel.AnonymousTypeUsage}}
+
+## Custom converters
+
+If the built-in conversions aren't flexible enough for your needs,
+you can create a custom converter implementing
+`IFirestoreConverter<T>`:
+
+```csharp
+public interface IFirestoreConverter<T>
+{
+    object ToFirestore(T value);
+    T FromFirestore(object value);
+}
+```
+
+The `ToFirestore` method should convert the `T` value into a
+suitable format to be stored. This can use any of the conversions
+described above. For example, if the method returns an `int`, the
+value will be stored as a 64-bit integer in the same way as an `int`
+property in an attributed type, or an `int` value within a dictionary.
+
+The `FromFirestore` method receives the deserialized value using the
+default mapping, as shown in the earlier table.
+
+### Applying a converter to a type
+
+Once you've created a converter, you can either apply it to a type
+or an individual attributed property. In each case, the
+`ConverterType` property is specified in the attribute.
+
+For example, suppose you wish to create several ID classes or
+structs, each containing a string of the underlying ID. This is a
+technique sometimes used to effectively make type-safe identifiers.
+You could create a converter for each class, and apply the
+`[FirestoreData]` attribute to each class, specifying the
+corresponding converter. This would allow each ID to be stored as
+just the string, rather than as a map containing a single element with
+a string value. The following example demonstrates this with a
+`PlayerId` class. If another attributed class (e.g. a `Game`) had a
+`PlayerId` property, the converter would be used automatically.
+
+{{sample:DataModel.CustomConverterType}}
+
+### Applying a converter to a property
+
+Sometimes you may want to perform custom conversions for types that
+you can't apply attributes to, or you may want different conversions
+in different situations. In that case, you can implement the
+converter in the same way, but apply it selectively using the
+`ConverterType` property on the `[FirestoreProperty]` attribute
+instead.
+
+As an example, you may want to use the .NET `Guid` struct within
+your data model. You could store each `Guid` property as a string,
+using the following sample code.
+
+{{sample:DataModel.CustomConverterProperty}}
+
+### Document converters
+
+If you wish a .NET type to be stored as a complete document after
+custom conversion, the converter must return a value which would be
+serialized as a map. This could be a dictionary, an anonymous type,
+or even a separate attributed type. When deserializing, the
+converter will receive an `IDictionary<string, object>` which it
+should use to extract the original data.
+
+{{sample:DataModel.ComplexConverter}}
+
+### Null values and custom converters
+
+Note that the conversion methods never receive null references, nor should
+they return null values. While it would be possible to deserialize
+null values to non-null .NET values, the conversion used in
+serialization is usually determined based on the actual type of the
+value being serialized. The approach used for null values ensures
+consistency.
+
+As a side-effect of this decision, it is advisable for the type
+argument of `IFirestoreConverter` to be a class or a non-nullable
+value type. For example, implement `IFirestoreConverter<Guid>`
+rather than `IFirestoreConverter<Guid?>`. If a converter is supplied
+for a non-nullable value type, the converter will automatically be
+used for the corresponding nullable value type too, with null values
+being handled transparently.
 
 # Sentinel values
 
@@ -168,13 +253,13 @@ according to the Firestore server.
 For attributed classes, you can specify `SentinelValue = SentinelValue.ServerTimestamp` in the attribute declaration. Usually
 this will be on a property of type `Timestamp` (or `DateTime` or `DateTimeOffset`) so that you can retrieve the timestamp later.
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.DataModel.txt#SentinelAttribute)]
+{{sample:DataModel.SentinelAttribute}}
 
 For dictionaries and anonymous types, you can use `SentinelValue.ServerTimestamp` as the value itself. For example,
 to update just the `Score` and `Timestamp` fields of a `HighScore` document, you could use an anonymous type instead of
 the attributed model
 
-[!code-cs[](obj/snippets/Google.Cloud.Firestore.DataModel.txt#AnonymousTypeSentinel)]
+{{sample:DataModel.AnonymousTypeSentinel}}
 
 Note that each document automatically keeps track of when it was last updated anyway, but you may wish to be more fine-grained;
 if a document may change in several ways, you may want a timestamp for when a specific field was last modified.
