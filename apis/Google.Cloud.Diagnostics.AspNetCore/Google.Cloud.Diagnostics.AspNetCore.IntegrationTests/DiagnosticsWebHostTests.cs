@@ -22,8 +22,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -96,6 +98,43 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await TestErrorReporting(testId, client);
             }
         }
+
+#if NETCOREAPP2_0
+        [Fact]
+        public async Task UseGoogleDiagnostics_ConfiguresComponentsFromHostBuilderContext()
+        {
+            var testId = IdGenerator.FromDateTime();
+            var startTime = DateTime.UtcNow;
+            var configurationData = new Dictionary<string, string>
+            {
+                { "project_id", TestEnvironment.GetTestProjectId() },
+                { "module_id", EntryData.Service },
+                { "version_id", EntryData.Version }
+            };
+
+            var configuration = new ConfigurationBuilder()
+                .AddInMemoryCollection(configurationData)
+                .Build();
+
+            var webHostBuilder = new WebHostBuilder()
+                .UseConfiguration(configuration)
+                .ConfigureServices(services => services.AddMvcCore())
+                .Configure(app => app.UseMvcWithDefaultRoute())
+                .UseGoogleDiagnostics(
+                    ctx => ctx.Configuration["project_id"],
+                    ctx => ctx.Configuration["module_id"],
+                    ctx => ctx.Configuration["version_id"]
+                );
+
+            using (var server = new TestServer(webHostBuilder))
+            using (var client = server.CreateClient())
+            {
+                await TestTrace(testId, startTime, client);
+                await TestLogging(testId, startTime, client);
+                await TestErrorReporting(testId, client);
+            }
+        }
+#endif
 
         private static async Task TestLogging(string testId, DateTime startTime, HttpClient client)
         {
