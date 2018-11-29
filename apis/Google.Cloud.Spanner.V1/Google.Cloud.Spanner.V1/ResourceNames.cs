@@ -180,6 +180,19 @@ namespace Google.Cloud.Spanner.V1
 
     }
 
+    public partial class ExecuteBatchDmlRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Spanner.V1.SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Spanner.V1.SessionName SessionAsSessionName
+        {
+            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
+            set { Session = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class ExecuteSqlRequest
     {
         /// <summary>

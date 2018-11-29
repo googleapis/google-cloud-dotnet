@@ -431,6 +431,41 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ExecuteBatchDmlAsync</summary>
+        public async Task ExecuteBatchDmlAsync_RequestObject()
+        {
+            // Snippet: ExecuteBatchDmlAsync(ExecuteBatchDmlRequest,CallSettings)
+            // Additional: ExecuteBatchDmlAsync(ExecuteBatchDmlRequest,CancellationToken)
+            // Create client
+            SpannerClient spannerClient = await SpannerClient.CreateAsync();
+            // Initialize request argument(s)
+            ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Statements = { },
+            };
+            // Make the request
+            ExecuteBatchDmlResponse response = await spannerClient.ExecuteBatchDmlAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExecuteBatchDml</summary>
+        public void ExecuteBatchDml_RequestObject()
+        {
+            // Snippet: ExecuteBatchDml(ExecuteBatchDmlRequest,CallSettings)
+            // Create client
+            SpannerClient spannerClient = SpannerClient.Create();
+            // Initialize request argument(s)
+            ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Statements = { },
+            };
+            // Make the request
+            ExecuteBatchDmlResponse response = spannerClient.ExecuteBatchDml(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ExecuteStreamingSql</summary>
         public async Task ExecuteStreamingSql()
         {

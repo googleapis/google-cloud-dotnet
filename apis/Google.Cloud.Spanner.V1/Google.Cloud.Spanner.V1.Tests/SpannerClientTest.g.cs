@@ -302,6 +302,42 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact]
+        public void ExecuteBatchDml()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Statements = { },
+            };
+            ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse();
+            mockGrpcClient.Setup(x => x.ExecuteBatchDml(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            ExecuteBatchDmlResponse response = client.ExecuteBatchDml(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ExecuteBatchDmlAsync()
+        {
+            Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
+            ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
+            {
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Statements = { },
+            };
+            ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse();
+            mockGrpcClient.Setup(x => x.ExecuteBatchDmlAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ExecuteBatchDmlResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            SpannerClient client = new SpannerClientImpl(mockGrpcClient.Object, null);
+            ExecuteBatchDmlResponse response = await client.ExecuteBatchDmlAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void Read()
         {
             Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);

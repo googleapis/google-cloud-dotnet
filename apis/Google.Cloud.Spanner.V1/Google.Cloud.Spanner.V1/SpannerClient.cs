@@ -55,6 +55,7 @@ namespace Google.Cloud.Spanner.V1
             ListSessionsSettings = existing.ListSessionsSettings;
             DeleteSessionSettings = existing.DeleteSessionSettings;
             ExecuteSqlSettings = existing.ExecuteSqlSettings;
+            ExecuteBatchDmlSettings = existing.ExecuteBatchDmlSettings;
             ExecuteStreamingSqlSettings = existing.ExecuteStreamingSqlSettings;
             ReadSettings = existing.ReadSettings;
             StreamingReadSettings = existing.StreamingReadSettings;
@@ -376,6 +377,36 @@ namespace Google.Cloud.Spanner.V1
             )));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpannerClient.ExecuteBatchDml</c> and <c>SpannerClient.ExecuteBatchDmlAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>SpannerClient.ExecuteBatchDml</c> and
+        /// <c>SpannerClient.ExecuteBatchDmlAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ExecuteBatchDmlSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>SpannerClient.ExecuteStreamingSql</c>.
         /// </summary>
         /// <remarks>
@@ -596,11 +627,13 @@ namespace Google.Cloud.Spanner.V1
         /// The default Spanner scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/spanner.admin"</description></item>
         /// <item><description>"https://www.googleapis.com/auth/spanner.data"</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/spanner.admin",
             "https://www.googleapis.com/auth/spanner.data",
         });
 
@@ -1309,12 +1342,10 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
-        /// instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1340,12 +1371,10 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
-        /// instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1370,12 +1399,10 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
-        /// instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1394,11 +1421,121 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the
-        /// result set as a stream. Unlike
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there is no limit on
-        /// the size of the returned result set. However, no individual row in the
-        /// result set can exceed 100 MiB, and no column value can exceed 10 MiB.
+        /// Executes a batch of SQL DML statements. This method allows many statements
+        /// to be run with lower latency than submitting them sequentially with
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+        ///
+        /// Statements are executed in order, sequentially.
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+        /// statement fails, its error status will be returned as part of the
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+        /// stop at the first failed statement; the remaining statements will not run.
+        ///
+        /// ExecuteBatchDml is expected to return an OK status with a response even if
+        /// there was an error while processing one of the DML statements. Clients must
+        /// inspect response.status to determine if there were any errors while
+        /// processing the request.
+        ///
+        /// See more details in
+        /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(
+            ExecuteBatchDmlRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes a batch of SQL DML statements. This method allows many statements
+        /// to be run with lower latency than submitting them sequentially with
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+        ///
+        /// Statements are executed in order, sequentially.
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+        /// statement fails, its error status will be returned as part of the
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+        /// stop at the first failed statement; the remaining statements will not run.
+        ///
+        /// ExecuteBatchDml is expected to return an OK status with a response even if
+        /// there was an error while processing one of the DML statements. Clients must
+        /// inspect response.status to determine if there were any errors while
+        /// processing the request.
+        ///
+        /// See more details in
+        /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(
+            ExecuteBatchDmlRequest request,
+            st::CancellationToken cancellationToken) => ExecuteBatchDmlAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a batch of SQL DML statements. This method allows many statements
+        /// to be run with lower latency than submitting them sequentially with
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+        ///
+        /// Statements are executed in order, sequentially.
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+        /// statement fails, its error status will be returned as part of the
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+        /// stop at the first failed statement; the remaining statements will not run.
+        ///
+        /// ExecuteBatchDml is expected to return an OK status with a response even if
+        /// there was an error while processing one of the DML statements. Clients must
+        /// inspect response.status to determine if there were any errors while
+        /// processing the request.
+        ///
+        /// See more details in
+        /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ExecuteBatchDmlResponse ExecuteBatchDml(
+            ExecuteBatchDmlRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+        /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+        /// is no limit on the size of the returned result set. However, no
+        /// individual row in the result set can exceed 100 MiB, and no
+        /// column value can exceed 10 MiB.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1426,15 +1563,14 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
-        /// used to return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         ///
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -1458,15 +1594,14 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
-        /// used to return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         ///
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -1489,15 +1624,14 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
-        /// used to return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         ///
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -1519,9 +1653,9 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set
-        /// as a stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no
-        /// limit on the size of the returned result set. However, no individual row in
+        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+        /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+        /// size of the returned result set. However, no individual row in
         /// the result set can exceed 100 MiB, and no column value can exceed
         /// 10 MiB.
         /// </summary>
@@ -1550,8 +1684,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1580,8 +1713,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1607,8 +1739,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1637,8 +1768,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1660,8 +1790,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1682,8 +1811,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -2041,9 +2169,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2075,9 +2202,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2106,9 +2232,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2137,9 +2262,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2164,9 +2288,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2190,9 +2313,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2214,11 +2336,10 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
-        /// specify a subset of the query result to read.  The same session and
-        /// read-only transaction must be used by the PartitionQueryRequest used to
-        /// create the partition tokens and the ExecuteSqlRequests that use the
-        /// partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2244,11 +2365,10 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
-        /// specify a subset of the query result to read.  The same session and
-        /// read-only transaction must be used by the PartitionQueryRequest used to
-        /// create the partition tokens and the ExecuteSqlRequests that use the
-        /// partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2273,11 +2393,10 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
-        /// specify a subset of the query result to read.  The same session and
-        /// read-only transaction must be used by the PartitionQueryRequest used to
-        /// create the partition tokens and the ExecuteSqlRequests that use the
-        /// partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2303,13 +2422,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
-        /// subset of the read result to read.  The same session and read-only
-        /// transaction must be used by the PartitionReadRequest used to create the
-        /// partition tokens and the ReadRequests that use the partition tokens.  There
-        /// are no ordering guarantees on rows returned among the returned partition
-        /// tokens, or even within each individual StreamingRead call issued with a
-        /// partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.  There are no ordering
+        /// guarantees on rows returned among the returned partition tokens, or even
+        /// within each individual StreamingRead call issued with a partition_token.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2335,13 +2453,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
-        /// subset of the read result to read.  The same session and read-only
-        /// transaction must be used by the PartitionReadRequest used to create the
-        /// partition tokens and the ReadRequests that use the partition tokens.  There
-        /// are no ordering guarantees on rows returned among the returned partition
-        /// tokens, or even within each individual StreamingRead call issued with a
-        /// partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.  There are no ordering
+        /// guarantees on rows returned among the returned partition tokens, or even
+        /// within each individual StreamingRead call issued with a partition_token.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2366,13 +2483,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
-        /// subset of the read result to read.  The same session and read-only
-        /// transaction must be used by the PartitionReadRequest used to create the
-        /// partition tokens and the ReadRequests that use the partition tokens.  There
-        /// are no ordering guarantees on rows returned among the returned partition
-        /// tokens, or even within each individual StreamingRead call issued with a
-        /// partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.  There are no ordering
+        /// guarantees on rows returned among the returned partition tokens, or even
+        /// within each individual StreamingRead call issued with a partition_token.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2407,6 +2523,7 @@ namespace Google.Cloud.Spanner.V1
         private readonly gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> _callListSessions;
         private readonly gaxgrpc::ApiCall<DeleteSessionRequest, pbwkt::Empty> _callDeleteSession;
         private readonly gaxgrpc::ApiCall<ExecuteSqlRequest, ResultSet> _callExecuteSql;
+        private readonly gaxgrpc::ApiCall<ExecuteBatchDmlRequest, ExecuteBatchDmlResponse> _callExecuteBatchDml;
         private readonly gaxgrpc::ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> _callExecuteStreamingSql;
         private readonly gaxgrpc::ApiCall<ReadRequest, ResultSet> _callRead;
         private readonly gaxgrpc::ApiServerStreamingCall<ReadRequest, PartialResultSet> _callStreamingRead;
@@ -2436,6 +2553,8 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.DeleteSessionAsync, GrpcClient.DeleteSession, effectiveSettings.DeleteSessionSettings);
             _callExecuteSql = clientHelper.BuildApiCall<ExecuteSqlRequest, ResultSet>(
                 GrpcClient.ExecuteSqlAsync, GrpcClient.ExecuteSql, effectiveSettings.ExecuteSqlSettings);
+            _callExecuteBatchDml = clientHelper.BuildApiCall<ExecuteBatchDmlRequest, ExecuteBatchDmlResponse>(
+                GrpcClient.ExecuteBatchDmlAsync, GrpcClient.ExecuteBatchDml, effectiveSettings.ExecuteBatchDmlSettings);
             _callExecuteStreamingSql = clientHelper.BuildApiCall<ExecuteSqlRequest, PartialResultSet>(
                 GrpcClient.ExecuteStreamingSql, effectiveSettings.ExecuteStreamingSqlSettings);
             _callRead = clientHelper.BuildApiCall<ReadRequest, ResultSet>(
@@ -2462,6 +2581,8 @@ namespace Google.Cloud.Spanner.V1
             Modify_DeleteSessionApiCall(ref _callDeleteSession);
             Modify_ApiCall(ref _callExecuteSql);
             Modify_ExecuteSqlApiCall(ref _callExecuteSql);
+            Modify_ApiCall(ref _callExecuteBatchDml);
+            Modify_ExecuteBatchDmlApiCall(ref _callExecuteBatchDml);
             Modify_ApiCall(ref _callExecuteStreamingSql);
             Modify_ExecuteStreamingSqlApiCall(ref _callExecuteStreamingSql);
             Modify_ApiCall(ref _callRead);
@@ -2499,6 +2620,7 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_ListSessionsApiCall(ref gaxgrpc::ApiCall<ListSessionsRequest, ListSessionsResponse> call);
         partial void Modify_DeleteSessionApiCall(ref gaxgrpc::ApiCall<DeleteSessionRequest, pbwkt::Empty> call);
         partial void Modify_ExecuteSqlApiCall(ref gaxgrpc::ApiCall<ExecuteSqlRequest, ResultSet> call);
+        partial void Modify_ExecuteBatchDmlApiCall(ref gaxgrpc::ApiCall<ExecuteBatchDmlRequest, ExecuteBatchDmlResponse> call);
         partial void Modify_ExecuteStreamingSqlApiCall(ref gaxgrpc::ApiServerStreamingCall<ExecuteSqlRequest, PartialResultSet> call);
         partial void Modify_ReadApiCall(ref gaxgrpc::ApiCall<ReadRequest, ResultSet> call);
         partial void Modify_StreamingReadApiCall(ref gaxgrpc::ApiServerStreamingCall<ReadRequest, PartialResultSet> call);
@@ -2522,6 +2644,7 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ExecuteBatchDmlRequest(ref ExecuteBatchDmlRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ReadRequest(ref ReadRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CommitRequest(ref CommitRequest request, ref gaxgrpc::CallSettings settings);
@@ -2734,12 +2857,10 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
-        /// instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2766,12 +2887,10 @@ namespace Google.Cloud.Spanner.V1
         ///
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
-        /// instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2791,11 +2910,87 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the
-        /// result set as a stream. Unlike
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there is no limit on
-        /// the size of the returned result set. However, no individual row in the
-        /// result set can exceed 100 MiB, and no column value can exceed 10 MiB.
+        /// Executes a batch of SQL DML statements. This method allows many statements
+        /// to be run with lower latency than submitting them sequentially with
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+        ///
+        /// Statements are executed in order, sequentially.
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+        /// statement fails, its error status will be returned as part of the
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+        /// stop at the first failed statement; the remaining statements will not run.
+        ///
+        /// ExecuteBatchDml is expected to return an OK status with a response even if
+        /// there was an error while processing one of the DML statements. Clients must
+        /// inspect response.status to determine if there were any errors while
+        /// processing the request.
+        ///
+        /// See more details in
+        /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(
+            ExecuteBatchDmlRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteBatchDmlRequest(ref request, ref callSettings);
+            return _callExecuteBatchDml.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Executes a batch of SQL DML statements. This method allows many statements
+        /// to be run with lower latency than submitting them sequentially with
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+        ///
+        /// Statements are executed in order, sequentially.
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+        /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+        /// statement fails, its error status will be returned as part of the
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+        /// stop at the first failed statement; the remaining statements will not run.
+        ///
+        /// ExecuteBatchDml is expected to return an OK status with a response even if
+        /// there was an error while processing one of the DML statements. Clients must
+        /// inspect response.status to determine if there were any errors while
+        /// processing the request.
+        ///
+        /// See more details in
+        /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+        /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ExecuteBatchDmlResponse ExecuteBatchDml(
+            ExecuteBatchDmlRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExecuteBatchDmlRequest(ref request, ref callSettings);
+            return _callExecuteBatchDml.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+        /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+        /// is no limit on the size of the returned result set. However, no
+        /// individual row in the result set can exceed 100 MiB, and no
+        /// column value can exceed 10 MiB.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2835,15 +3030,14 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
-        /// used to return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         ///
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -2868,15 +3062,14 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
-        /// used to return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         ///
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
-        /// details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
         ///
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -2899,9 +3092,9 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set
-        /// as a stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no
-        /// limit on the size of the returned result set. However, no individual row in
+        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+        /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+        /// size of the returned result set. However, no individual row in
         /// the result set can exceed 100 MiB, and no column value can exceed
         /// 10 MiB.
         /// </summary>
@@ -2942,8 +3135,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -2966,8 +3158,7 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read],
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -3045,9 +3236,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -3073,9 +3263,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
-        /// decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+        /// ultimately decides not to commit.
         ///
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -3098,11 +3287,10 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
-        /// specify a subset of the query result to read.  The same session and
-        /// read-only transaction must be used by the PartitionQueryRequest used to
-        /// create the partition tokens and the ExecuteSqlRequests that use the
-        /// partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -3129,11 +3317,10 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
-        /// specify a subset of the query result to read.  The same session and
-        /// read-only transaction must be used by the PartitionQueryRequest used to
-        /// create the partition tokens and the ExecuteSqlRequests that use the
-        /// partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
+        /// of the query result to read.  The same session and read-only transaction
+        /// must be used by the PartitionQueryRequest used to create the
+        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -3160,13 +3347,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
-        /// subset of the read result to read.  The same session and read-only
-        /// transaction must be used by the PartitionReadRequest used to create the
-        /// partition tokens and the ReadRequests that use the partition tokens.  There
-        /// are no ordering guarantees on rows returned among the returned partition
-        /// tokens, or even within each individual StreamingRead call issued with a
-        /// partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.  There are no ordering
+        /// guarantees on rows returned among the returned partition tokens, or even
+        /// within each individual StreamingRead call issued with a partition_token.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -3193,13 +3379,12 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
-        /// subset of the read result to read.  The same session and read-only
-        /// transaction must be used by the PartitionReadRequest used to create the
-        /// partition tokens and the ReadRequests that use the partition tokens.  There
-        /// are no ordering guarantees on rows returned among the returned partition
-        /// tokens, or even within each individual StreamingRead call issued with a
-        /// partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
+        /// result to read.  The same session and read-only transaction must be used by
+        /// the PartitionReadRequest used to create the partition tokens and the
+        /// ReadRequests that use the partition tokens.  There are no ordering
+        /// guarantees on rows returned among the returned partition tokens, or even
+        /// within each individual StreamingRead call issued with a partition_token.
         ///
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too

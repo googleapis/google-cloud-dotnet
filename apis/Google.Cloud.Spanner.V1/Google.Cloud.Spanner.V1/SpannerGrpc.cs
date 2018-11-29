@@ -3,7 +3,7 @@
 //     source: google/spanner/v1/spanner.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC
+// Copyright 2018 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 1591
 #region Designer generated code
@@ -43,6 +44,8 @@ namespace Google.Cloud.Spanner.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest> __Marshaller_ExecuteSqlRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ResultSet> __Marshaller_ResultSet = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ResultSet.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartialResultSet> __Marshaller_PartialResultSet = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest> __Marshaller_ExecuteBatchDmlRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> __Marshaller_ExecuteBatchDmlResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ReadRequest> __Marshaller_ReadRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.ReadRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BeginTransactionRequest> __Marshaller_BeginTransactionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.BeginTransactionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Transaction> __Marshaller_Transaction = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.V1.Transaction.Parser.ParseFrom);
@@ -94,6 +97,13 @@ namespace Google.Cloud.Spanner.V1 {
         "ExecuteStreamingSql",
         __Marshaller_ExecuteSqlRequest,
         __Marshaller_PartialResultSet);
+
+    static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> __Method_ExecuteBatchDml = new grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExecuteBatchDml",
+        __Marshaller_ExecuteBatchDmlRequest,
+        __Marshaller_ExecuteBatchDmlResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ReadRequest, global::Google.Cloud.Spanner.V1.ResultSet> __Method_Read = new grpc::Method<global::Google.Cloud.Spanner.V1.ReadRequest, global::Google.Cloud.Spanner.V1.ResultSet>(
         grpc::MethodType.Unary,
@@ -252,6 +262,35 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
       public virtual global::System.Threading.Tasks.Task ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Spanner.V1.PartialResultSet> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Executes a batch of SQL DML statements. This method allows many statements
+      /// to be run with lower latency than submitting them sequentially with
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+      ///
+      /// Statements are executed in order, sequentially.
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+      /// statement fails, its error status will be returned as part of the
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+      /// stop at the first failed statement; the remaining statements will not run.
+      ///
+      /// ExecuteBatchDml is expected to return an OK status with a response even if
+      /// there was an error while processing one of the DML statements. Clients must
+      /// inspect response.status to determine if there were any errors while
+      /// processing the request.
+      ///
+      /// See more details in
+      /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> ExecuteBatchDml(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -798,6 +837,122 @@ namespace Google.Cloud.Spanner.V1 {
         return CallInvoker.AsyncServerStreamingCall(__Method_ExecuteStreamingSql, null, options, request);
       }
       /// <summary>
+      /// Executes a batch of SQL DML statements. This method allows many statements
+      /// to be run with lower latency than submitting them sequentially with
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+      ///
+      /// Statements are executed in order, sequentially.
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+      /// statement fails, its error status will be returned as part of the
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+      /// stop at the first failed statement; the remaining statements will not run.
+      ///
+      /// ExecuteBatchDml is expected to return an OK status with a response even if
+      /// there was an error while processing one of the DML statements. Clients must
+      /// inspect response.status to determine if there were any errors while
+      /// processing the request.
+      ///
+      /// See more details in
+      /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse ExecuteBatchDml(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteBatchDml(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes a batch of SQL DML statements. This method allows many statements
+      /// to be run with lower latency than submitting them sequentially with
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+      ///
+      /// Statements are executed in order, sequentially.
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+      /// statement fails, its error status will be returned as part of the
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+      /// stop at the first failed statement; the remaining statements will not run.
+      ///
+      /// ExecuteBatchDml is expected to return an OK status with a response even if
+      /// there was an error while processing one of the DML statements. Clients must
+      /// inspect response.status to determine if there were any errors while
+      /// processing the request.
+      ///
+      /// See more details in
+      /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse ExecuteBatchDml(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExecuteBatchDml, null, options, request);
+      }
+      /// <summary>
+      /// Executes a batch of SQL DML statements. This method allows many statements
+      /// to be run with lower latency than submitting them sequentially with
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+      ///
+      /// Statements are executed in order, sequentially.
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+      /// statement fails, its error status will be returned as part of the
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+      /// stop at the first failed statement; the remaining statements will not run.
+      ///
+      /// ExecuteBatchDml is expected to return an OK status with a response even if
+      /// there was an error while processing one of the DML statements. Clients must
+      /// inspect response.status to determine if there were any errors while
+      /// processing the request.
+      ///
+      /// See more details in
+      /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExecuteBatchDmlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Executes a batch of SQL DML statements. This method allows many statements
+      /// to be run with lower latency than submitting them sequentially with
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+      ///
+      /// Statements are executed in order, sequentially.
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse] will contain a
+      /// [ResultSet][google.spanner.v1.ResultSet] for each DML statement that has successfully executed. If a
+      /// statement fails, its error status will be returned as part of the
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse]. Execution will
+      /// stop at the first failed statement; the remaining statements will not run.
+      ///
+      /// ExecuteBatchDml is expected to return an OK status with a response even if
+      /// there was an error while processing one of the DML statements. Clients must
+      /// inspect response.status to determine if there were any errors while
+      /// processing the request.
+      ///
+      /// See more details in
+      /// [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest] and
+      /// [ExecuteBatchDmlResponse][Spanner.ExecuteBatchDmlResponse].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExecuteBatchDml, null, options, request);
+      }
+      /// <summary>
       /// Reads rows from the database using key lookups and scans, as a
       /// simple key/value style alternative to
       /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
@@ -1333,6 +1488,7 @@ namespace Google.Cloud.Spanner.V1 {
           .AddMethod(__Method_DeleteSession, serviceImpl.DeleteSession)
           .AddMethod(__Method_ExecuteSql, serviceImpl.ExecuteSql)
           .AddMethod(__Method_ExecuteStreamingSql, serviceImpl.ExecuteStreamingSql)
+          .AddMethod(__Method_ExecuteBatchDml, serviceImpl.ExecuteBatchDml)
           .AddMethod(__Method_Read, serviceImpl.Read)
           .AddMethod(__Method_StreamingRead, serviceImpl.StreamingRead)
           .AddMethod(__Method_BeginTransaction, serviceImpl.BeginTransaction)

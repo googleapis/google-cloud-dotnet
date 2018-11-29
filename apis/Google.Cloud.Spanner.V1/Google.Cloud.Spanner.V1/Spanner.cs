@@ -27,123 +27,140 @@ namespace Google.Cloud.Spanner.V1 {
             "Ch9nb29nbGUvc3Bhbm5lci92MS9zcGFubmVyLnByb3RvEhFnb29nbGUuc3Bh",
             "bm5lci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xl",
             "L3Byb3RvYnVmL2VtcHR5LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29n",
-            "bGUvc3Bhbm5lci92MS9rZXlzLnByb3RvGiBnb29nbGUvc3Bhbm5lci92MS9t",
-            "dXRhdGlvbi5wcm90bxoiZ29vZ2xlL3NwYW5uZXIvdjEvcmVzdWx0X3NldC5w",
-            "cm90bxojZ29vZ2xlL3NwYW5uZXIvdjEvdHJhbnNhY3Rpb24ucHJvdG8aHGdv",
-            "b2dsZS9zcGFubmVyL3YxL3R5cGUucHJvdG8iVQoUQ3JlYXRlU2Vzc2lvblJl",
-            "cXVlc3QSEAoIZGF0YWJhc2UYASABKAkSKwoHc2Vzc2lvbhgCIAEoCzIaLmdv",
-            "b2dsZS5zcGFubmVyLnYxLlNlc3Npb24i7gEKB1Nlc3Npb24SDAoEbmFtZRgB",
-            "IAEoCRI2CgZsYWJlbHMYAiADKAsyJi5nb29nbGUuc3Bhbm5lci52MS5TZXNz",
-            "aW9uLkxhYmVsc0VudHJ5Ei8KC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBI9ChlhcHByb3hpbWF0ZV9sYXN0X3VzZV90",
-            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBotCgtMYWJl",
-            "bHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIiEKEUdl",
-            "dFNlc3Npb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiXgoTTGlzdFNlc3Npb25z",
-            "UmVxdWVzdBIQCghkYXRhYmFzZRgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUS",
-            "EgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkiXQoUTGlzdFNl",
-            "c3Npb25zUmVzcG9uc2USLAoIc2Vzc2lvbnMYASADKAsyGi5nb29nbGUuc3Bh",
-            "bm5lci52MS5TZXNzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIkChRE",
-            "ZWxldGVTZXNzaW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJIuADChFFeGVjdXRl",
-            "U3FsUmVxdWVzdBIPCgdzZXNzaW9uGAEgASgJEjsKC3RyYW5zYWN0aW9uGAIg",
-            "ASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25TZWxlY3RvchIL",
-            "CgNzcWwYAyABKAkSJwoGcGFyYW1zGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVm",
-            "LlN0cnVjdBJJCgtwYXJhbV90eXBlcxgFIAMoCzI0Lmdvb2dsZS5zcGFubmVy",
-            "LnYxLkV4ZWN1dGVTcWxSZXF1ZXN0LlBhcmFtVHlwZXNFbnRyeRIUCgxyZXN1",
-            "bWVfdG9rZW4YBiABKAwSQgoKcXVlcnlfbW9kZRgHIAEoDjIuLmdvb2dsZS5z",
-            "cGFubmVyLnYxLkV4ZWN1dGVTcWxSZXF1ZXN0LlF1ZXJ5TW9kZRIXCg9wYXJ0",
-            "aXRpb25fdG9rZW4YCCABKAwSDQoFc2Vxbm8YCSABKAMaSgoPUGFyYW1UeXBl",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRImCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5z",
-            "cGFubmVyLnYxLlR5cGU6AjgBIi4KCVF1ZXJ5TW9kZRIKCgZOT1JNQUwQABII",
-            "CgRQTEFOEAESCwoHUFJPRklMRRACIkgKEFBhcnRpdGlvbk9wdGlvbnMSHAoU",
-            "cGFydGl0aW9uX3NpemVfYnl0ZXMYASABKAMSFgoObWF4X3BhcnRpdGlvbnMY",
-            "AiABKAMi9gIKFVBhcnRpdGlvblF1ZXJ5UmVxdWVzdBIPCgdzZXNzaW9uGAEg",
-            "ASgJEjsKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEu",
-            "VHJhbnNhY3Rpb25TZWxlY3RvchILCgNzcWwYAyABKAkSJwoGcGFyYW1zGAQg",
-            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBJNCgtwYXJhbV90eXBlcxgF",
-            "IAMoCzI4Lmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpdGlvblF1ZXJ5UmVxdWVz",
-            "dC5QYXJhbVR5cGVzRW50cnkSPgoRcGFydGl0aW9uX29wdGlvbnMYBiABKAsy",
-            "Iy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aXRpb25PcHRpb25zGkoKD1BhcmFt",
-            "VHlwZXNFbnRyeRILCgNrZXkYASABKAkSJgoFdmFsdWUYAiABKAsyFy5nb29n",
-            "bGUuc3Bhbm5lci52MS5UeXBlOgI4ASL/AQoUUGFydGl0aW9uUmVhZFJlcXVl",
-            "c3QSDwoHc2Vzc2lvbhgBIAEoCRI7Cgt0cmFuc2FjdGlvbhgCIAEoCzImLmdv",
-            "b2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uU2VsZWN0b3ISDQoFdGFibGUY",
-            "AyABKAkSDQoFaW5kZXgYBCABKAkSDwoHY29sdW1ucxgFIAMoCRIqCgdrZXlf",
-            "c2V0GAYgASgLMhkuZ29vZ2xlLnNwYW5uZXIudjEuS2V5U2V0Ej4KEXBhcnRp",
-            "dGlvbl9vcHRpb25zGAkgASgLMiMuZ29vZ2xlLnNwYW5uZXIudjEuUGFydGl0",
-            "aW9uT3B0aW9ucyIkCglQYXJ0aXRpb24SFwoPcGFydGl0aW9uX3Rva2VuGAEg",
-            "ASgMInoKEVBhcnRpdGlvblJlc3BvbnNlEjAKCnBhcnRpdGlvbnMYASADKAsy",
-            "HC5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aXRpb24SMwoLdHJhbnNhY3Rpb24Y",
-            "AiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbiL0AQoLUmVh",
-            "ZFJlcXVlc3QSDwoHc2Vzc2lvbhgBIAEoCRI7Cgt0cmFuc2FjdGlvbhgCIAEo",
-            "CzImLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uU2VsZWN0b3ISDQoF",
-            "dGFibGUYAyABKAkSDQoFaW5kZXgYBCABKAkSDwoHY29sdW1ucxgFIAMoCRIq",
-            "CgdrZXlfc2V0GAYgASgLMhkuZ29vZ2xlLnNwYW5uZXIudjEuS2V5U2V0Eg0K",
-            "BWxpbWl0GAggASgDEhQKDHJlc3VtZV90b2tlbhgJIAEoDBIXCg9wYXJ0aXRp",
-            "b25fdG9rZW4YCiABKAwiYgoXQmVnaW5UcmFuc2FjdGlvblJlcXVlc3QSDwoH",
-            "c2Vzc2lvbhgBIAEoCRI2CgdvcHRpb25zGAIgASgLMiUuZ29vZ2xlLnNwYW5u",
-            "ZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zIsIBCg1Db21taXRSZXF1ZXN0Eg8K",
-            "B3Nlc3Npb24YASABKAkSGAoOdHJhbnNhY3Rpb25faWQYAiABKAxIABJHChZz",
-            "aW5nbGVfdXNlX3RyYW5zYWN0aW9uGAMgASgLMiUuZ29vZ2xlLnNwYW5uZXIu",
-            "djEuVHJhbnNhY3Rpb25PcHRpb25zSAASLgoJbXV0YXRpb25zGAQgAygLMhsu",
-            "Z29vZ2xlLnNwYW5uZXIudjEuTXV0YXRpb25CDQoLdHJhbnNhY3Rpb24iRgoO",
-            "Q29tbWl0UmVzcG9uc2USNAoQY29tbWl0X3RpbWVzdGFtcBgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiOgoPUm9sbGJhY2tSZXF1ZXN0Eg8K",
-            "B3Nlc3Npb24YASABKAkSFgoOdHJhbnNhY3Rpb25faWQYAiABKAwygxEKB1Nw",
-            "YW5uZXISmwEKDUNyZWF0ZVNlc3Npb24SJy5nb29nbGUuc3Bhbm5lci52MS5D",
-            "cmVhdGVTZXNzaW9uUmVxdWVzdBoaLmdvb2dsZS5zcGFubmVyLnYxLlNlc3Np",
-            "b24iRYLT5JMCPyI6L3YxL3tkYXRhYmFzZT1wcm9qZWN0cy8qL2luc3RhbmNl",
-            "cy8qL2RhdGFiYXNlcy8qfS9zZXNzaW9uczoBKhKQAQoKR2V0U2Vzc2lvbhIk",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLkdldFNlc3Npb25SZXF1ZXN0GhouZ29vZ2xl",
-            "LnNwYW5uZXIudjEuU2Vzc2lvbiJAgtPkkwI6EjgvdjEve25hbWU9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfRKjAQoM",
-            "TGlzdFNlc3Npb25zEiYuZ29vZ2xlLnNwYW5uZXIudjEuTGlzdFNlc3Npb25z",
-            "UmVxdWVzdBonLmdvb2dsZS5zcGFubmVyLnYxLkxpc3RTZXNzaW9uc1Jlc3Bv",
-            "bnNlIkKC0+STAjwSOi92MS97ZGF0YWJhc2U9cHJvamVjdHMvKi9pbnN0YW5j",
-            "ZXMvKi9kYXRhYmFzZXMvKn0vc2Vzc2lvbnMSkgEKDURlbGV0ZVNlc3Npb24S",
-            "Jy5nb29nbGUuc3Bhbm5lci52MS5EZWxldGVTZXNzaW9uUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSJAgtPkkwI6KjgvdjEve25hbWU9cHJvamVj",
-            "dHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfRKjAQoK",
-            "RXhlY3V0ZVNxbBIkLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVTcWxSZXF1",
-            "ZXN0GhwuZ29vZ2xlLnNwYW5uZXIudjEuUmVzdWx0U2V0IlGC0+STAksiRi92",
-            "MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8q",
-            "L3Nlc3Npb25zLyp9OmV4ZWN1dGVTcWw6ASoSvgEKE0V4ZWN1dGVTdHJlYW1p",
-            "bmdTcWwSJC5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3FsUmVxdWVzdBoj",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlBhcnRpYWxSZXN1bHRTZXQiWoLT5JMCVCJP",
-            "L3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2Vz",
-            "Lyovc2Vzc2lvbnMvKn06ZXhlY3V0ZVN0cmVhbWluZ1NxbDoBKjABEpEBCgRS",
-            "ZWFkEh4uZ29vZ2xlLnNwYW5uZXIudjEuUmVhZFJlcXVlc3QaHC5nb29nbGUu",
-            "c3Bhbm5lci52MS5SZXN1bHRTZXQiS4LT5JMCRSJAL3YxL3tzZXNzaW9uPXBy",
-            "b2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06",
-            "cmVhZDoBKhKsAQoNU3RyZWFtaW5nUmVhZBIeLmdvb2dsZS5zcGFubmVyLnYx",
-            "LlJlYWRSZXF1ZXN0GiMuZ29vZ2xlLnNwYW5uZXIudjEuUGFydGlhbFJlc3Vs",
-            "dFNldCJUgtPkkwJOIkkvdjEve3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5j",
-            "ZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpzdHJlYW1pbmdSZWFkOgEq",
-            "MAEStwEKEEJlZ2luVHJhbnNhY3Rpb24SKi5nb29nbGUuc3Bhbm5lci52MS5C",
-            "ZWdpblRyYW5zYWN0aW9uUmVxdWVzdBoeLmdvb2dsZS5zcGFubmVyLnYxLlRy",
-            "YW5zYWN0aW9uIleC0+STAlEiTC92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2lu",
-            "c3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OmJlZ2luVHJhbnNh",
-            "Y3Rpb246ASoSnAEKBkNvbW1pdBIgLmdvb2dsZS5zcGFubmVyLnYxLkNvbW1p",
-            "dFJlcXVlc3QaIS5nb29nbGUuc3Bhbm5lci52MS5Db21taXRSZXNwb25zZSJN",
-            "gtPkkwJHIkIvdjEve3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9k",
-            "YXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpjb21taXQ6ASoSlwEKCFJvbGxiYWNr",
-            "EiIuZ29vZ2xlLnNwYW5uZXIudjEuUm9sbGJhY2tSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5Ik+C0+STAkkiRC92MS97c2Vzc2lvbj1wcm9qZWN0",
-            "cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OnJvbGxi",
-            "YWNrOgEqErcBCg5QYXJ0aXRpb25RdWVyeRIoLmdvb2dsZS5zcGFubmVyLnYx",
-            "LlBhcnRpdGlvblF1ZXJ5UmVxdWVzdBokLmdvb2dsZS5zcGFubmVyLnYxLlBh",
-            "cnRpdGlvblJlc3BvbnNlIlWC0+STAk8iSi92MS97c2Vzc2lvbj1wcm9qZWN0",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29n",
+            "bGUvcnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL3NwYW5uZXIvdjEva2V5cy5w",
+            "cm90bxogZ29vZ2xlL3NwYW5uZXIvdjEvbXV0YXRpb24ucHJvdG8aImdvb2ds",
+            "ZS9zcGFubmVyL3YxL3Jlc3VsdF9zZXQucHJvdG8aI2dvb2dsZS9zcGFubmVy",
+            "L3YxL3RyYW5zYWN0aW9uLnByb3RvGhxnb29nbGUvc3Bhbm5lci92MS90eXBl",
+            "LnByb3RvIlUKFENyZWF0ZVNlc3Npb25SZXF1ZXN0EhAKCGRhdGFiYXNlGAEg",
+            "ASgJEisKB3Nlc3Npb24YAiABKAsyGi5nb29nbGUuc3Bhbm5lci52MS5TZXNz",
+            "aW9uIu4BCgdTZXNzaW9uEgwKBG5hbWUYASABKAkSNgoGbGFiZWxzGAIgAygL",
+            "MiYuZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lvbi5MYWJlbHNFbnRyeRIvCgtj",
+            "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "PQoZYXBwcm94aW1hdGVfbGFzdF91c2VfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXAaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASIhChFHZXRTZXNzaW9uUmVxdWVzdBIMCgRu",
+            "YW1lGAEgASgJIl4KE0xpc3RTZXNzaW9uc1JlcXVlc3QSEAoIZGF0YWJhc2UY",
+            "ASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkS",
+            "DgoGZmlsdGVyGAQgASgJIl0KFExpc3RTZXNzaW9uc1Jlc3BvbnNlEiwKCHNl",
+            "c3Npb25zGAEgAygLMhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lvbhIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiJAoURGVsZXRlU2Vzc2lvblJlcXVlc3QS",
+            "DAoEbmFtZRgBIAEoCSLgAwoRRXhlY3V0ZVNxbFJlcXVlc3QSDwoHc2Vzc2lv",
+            "bhgBIAEoCRI7Cgt0cmFuc2FjdGlvbhgCIAEoCzImLmdvb2dsZS5zcGFubmVy",
+            "LnYxLlRyYW5zYWN0aW9uU2VsZWN0b3ISCwoDc3FsGAMgASgJEicKBnBhcmFt",
+            "cxgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSSQoLcGFyYW1fdHlw",
+            "ZXMYBSADKAsyNC5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3FsUmVxdWVz",
+            "dC5QYXJhbVR5cGVzRW50cnkSFAoMcmVzdW1lX3Rva2VuGAYgASgMEkIKCnF1",
+            "ZXJ5X21vZGUYByABKA4yLi5nb29nbGUuc3Bhbm5lci52MS5FeGVjdXRlU3Fs",
+            "UmVxdWVzdC5RdWVyeU1vZGUSFwoPcGFydGl0aW9uX3Rva2VuGAggASgMEg0K",
+            "BXNlcW5vGAkgASgDGkoKD1BhcmFtVHlwZXNFbnRyeRILCgNrZXkYASABKAkS",
+            "JgoFdmFsdWUYAiABKAsyFy5nb29nbGUuc3Bhbm5lci52MS5UeXBlOgI4ASIu",
+            "CglRdWVyeU1vZGUSCgoGTk9STUFMEAASCAoEUExBThABEgsKB1BST0ZJTEUQ",
+            "AiKoAwoWRXhlY3V0ZUJhdGNoRG1sUmVxdWVzdBIPCgdzZXNzaW9uGAEgASgJ",
+            "EjsKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJh",
+            "bnNhY3Rpb25TZWxlY3RvchJHCgpzdGF0ZW1lbnRzGAMgAygLMjMuZ29vZ2xl",
+            "LnNwYW5uZXIudjEuRXhlY3V0ZUJhdGNoRG1sUmVxdWVzdC5TdGF0ZW1lbnQS",
+            "DQoFc2Vxbm8YBCABKAMa5wEKCVN0YXRlbWVudBILCgNzcWwYASABKAkSJwoG",
+            "cGFyYW1zGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBJYCgtwYXJh",
+            "bV90eXBlcxgDIAMoCzJDLmdvb2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVCYXRj",
+            "aERtbFJlcXVlc3QuU3RhdGVtZW50LlBhcmFtVHlwZXNFbnRyeRpKCg9QYXJh",
+            "bVR5cGVzRW50cnkSCwoDa2V5GAEgASgJEiYKBXZhbHVlGAIgASgLMhcuZ29v",
+            "Z2xlLnNwYW5uZXIudjEuVHlwZToCOAEicAoXRXhlY3V0ZUJhdGNoRG1sUmVz",
+            "cG9uc2USMQoLcmVzdWx0X3NldHMYASADKAsyHC5nb29nbGUuc3Bhbm5lci52",
+            "MS5SZXN1bHRTZXQSIgoGc3RhdHVzGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
+            "dXMiSAoQUGFydGl0aW9uT3B0aW9ucxIcChRwYXJ0aXRpb25fc2l6ZV9ieXRl",
+            "cxgBIAEoAxIWCg5tYXhfcGFydGl0aW9ucxgCIAEoAyL2AgoVUGFydGl0aW9u",
+            "UXVlcnlSZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkSOwoLdHJhbnNhY3Rpb24Y",
+            "AiABKAsyJi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvblNlbGVjdG9y",
+            "EgsKA3NxbBgDIAEoCRInCgZwYXJhbXMYBCABKAsyFy5nb29nbGUucHJvdG9i",
+            "dWYuU3RydWN0Ek0KC3BhcmFtX3R5cGVzGAUgAygLMjguZ29vZ2xlLnNwYW5u",
+            "ZXIudjEuUGFydGl0aW9uUXVlcnlSZXF1ZXN0LlBhcmFtVHlwZXNFbnRyeRI+",
+            "ChFwYXJ0aXRpb25fb3B0aW9ucxgGIAEoCzIjLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlBhcnRpdGlvbk9wdGlvbnMaSgoPUGFyYW1UeXBlc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRImCgV2YWx1ZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYxLlR5cGU6",
+            "AjgBIv8BChRQYXJ0aXRpb25SZWFkUmVxdWVzdBIPCgdzZXNzaW9uGAEgASgJ",
+            "EjsKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIudjEuVHJh",
+            "bnNhY3Rpb25TZWxlY3RvchINCgV0YWJsZRgDIAEoCRINCgVpbmRleBgEIAEo",
+            "CRIPCgdjb2x1bW5zGAUgAygJEioKB2tleV9zZXQYBiABKAsyGS5nb29nbGUu",
+            "c3Bhbm5lci52MS5LZXlTZXQSPgoRcGFydGl0aW9uX29wdGlvbnMYCSABKAsy",
+            "Iy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aXRpb25PcHRpb25zIiQKCVBhcnRp",
+            "dGlvbhIXCg9wYXJ0aXRpb25fdG9rZW4YASABKAwiegoRUGFydGl0aW9uUmVz",
+            "cG9uc2USMAoKcGFydGl0aW9ucxgBIAMoCzIcLmdvb2dsZS5zcGFubmVyLnYx",
+            "LlBhcnRpdGlvbhIzCgt0cmFuc2FjdGlvbhgCIAEoCzIeLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlRyYW5zYWN0aW9uIvQBCgtSZWFkUmVxdWVzdBIPCgdzZXNzaW9u",
+            "GAEgASgJEjsKC3RyYW5zYWN0aW9uGAIgASgLMiYuZ29vZ2xlLnNwYW5uZXIu",
+            "djEuVHJhbnNhY3Rpb25TZWxlY3RvchINCgV0YWJsZRgDIAEoCRINCgVpbmRl",
+            "eBgEIAEoCRIPCgdjb2x1bW5zGAUgAygJEioKB2tleV9zZXQYBiABKAsyGS5n",
+            "b29nbGUuc3Bhbm5lci52MS5LZXlTZXQSDQoFbGltaXQYCCABKAMSFAoMcmVz",
+            "dW1lX3Rva2VuGAkgASgMEhcKD3BhcnRpdGlvbl90b2tlbhgKIAEoDCJiChdC",
+            "ZWdpblRyYW5zYWN0aW9uUmVxdWVzdBIPCgdzZXNzaW9uGAEgASgJEjYKB29w",
+            "dGlvbnMYAiABKAsyJS5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9w",
+            "dGlvbnMiwgEKDUNvbW1pdFJlcXVlc3QSDwoHc2Vzc2lvbhgBIAEoCRIYCg50",
+            "cmFuc2FjdGlvbl9pZBgCIAEoDEgAEkcKFnNpbmdsZV91c2VfdHJhbnNhY3Rp",
+            "b24YAyABKAsyJS5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlv",
+            "bnNIABIuCgltdXRhdGlvbnMYBCADKAsyGy5nb29nbGUuc3Bhbm5lci52MS5N",
+            "dXRhdGlvbkINCgt0cmFuc2FjdGlvbiJGCg5Db21taXRSZXNwb25zZRI0ChBj",
+            "b21taXRfdGltZXN0YW1wGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcCI6Cg9Sb2xsYmFja1JlcXVlc3QSDwoHc2Vzc2lvbhgBIAEoCRIWCg50",
+            "cmFuc2FjdGlvbl9pZBgCIAEoDDLGEgoHU3Bhbm5lchKbAQoNQ3JlYXRlU2Vz",
+            "c2lvbhInLmdvb2dsZS5zcGFubmVyLnYxLkNyZWF0ZVNlc3Npb25SZXF1ZXN0",
+            "GhouZ29vZ2xlLnNwYW5uZXIudjEuU2Vzc2lvbiJFgtPkkwI/IjovdjEve2Rh",
+            "dGFiYXNlPXByb2plY3RzLyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyp9L3Nl",
+            "c3Npb25zOgEqEpABCgpHZXRTZXNzaW9uEiQuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "R2V0U2Vzc2lvblJlcXVlc3QaGi5nb29nbGUuc3Bhbm5lci52MS5TZXNzaW9u",
+            "IkCC0+STAjoSOC92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Rh",
+            "dGFiYXNlcy8qL3Nlc3Npb25zLyp9EqMBCgxMaXN0U2Vzc2lvbnMSJi5nb29n",
+            "bGUuc3Bhbm5lci52MS5MaXN0U2Vzc2lvbnNSZXF1ZXN0GicuZ29vZ2xlLnNw",
+            "YW5uZXIudjEuTGlzdFNlc3Npb25zUmVzcG9uc2UiQoLT5JMCPBI6L3YxL3tk",
+            "YXRhYmFzZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qfS9z",
+            "ZXNzaW9ucxKSAQoNRGVsZXRlU2Vzc2lvbhInLmdvb2dsZS5zcGFubmVyLnYx",
+            "LkRlbGV0ZVNlc3Npb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IkCC0+STAjoqOC92MS97bmFtZT1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2Rh",
+            "dGFiYXNlcy8qL3Nlc3Npb25zLyp9EqMBCgpFeGVjdXRlU3FsEiQuZ29vZ2xl",
+            "LnNwYW5uZXIudjEuRXhlY3V0ZVNxbFJlcXVlc3QaHC5nb29nbGUuc3Bhbm5l",
+            "ci52MS5SZXN1bHRTZXQiUYLT5JMCSyJGL3YxL3tzZXNzaW9uPXByb2plY3Rz",
+            "LyovaW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06ZXhlY3V0",
+            "ZVNxbDoBKhK+AQoTRXhlY3V0ZVN0cmVhbWluZ1NxbBIkLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLkV4ZWN1dGVTcWxSZXF1ZXN0GiMuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "UGFydGlhbFJlc3VsdFNldCJagtPkkwJUIk8vdjEve3Nlc3Npb249cHJvamVj",
+            "dHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpleGVj",
+            "dXRlU3RyZWFtaW5nU3FsOgEqMAESwAEKD0V4ZWN1dGVCYXRjaERtbBIpLmdv",
+            "b2dsZS5zcGFubmVyLnYxLkV4ZWN1dGVCYXRjaERtbFJlcXVlc3QaKi5nb29n",
+            "bGUuc3Bhbm5lci52MS5FeGVjdXRlQmF0Y2hEbWxSZXNwb25zZSJWgtPkkwJQ",
+            "IksvdjEve3Nlc3Npb249cHJvamVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFz",
+            "ZXMvKi9zZXNzaW9ucy8qfTpleGVjdXRlQmF0Y2hEbWw6ASoSkQEKBFJlYWQS",
+            "Hi5nb29nbGUuc3Bhbm5lci52MS5SZWFkUmVxdWVzdBocLmdvb2dsZS5zcGFu",
+            "bmVyLnYxLlJlc3VsdFNldCJLgtPkkwJFIkAvdjEve3Nlc3Npb249cHJvamVj",
+            "dHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpyZWFk",
+            "OgEqEqwBCg1TdHJlYW1pbmdSZWFkEh4uZ29vZ2xlLnNwYW5uZXIudjEuUmVh",
+            "ZFJlcXVlc3QaIy5nb29nbGUuc3Bhbm5lci52MS5QYXJ0aWFsUmVzdWx0U2V0",
+            "IlSC0+STAk4iSS92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8q",
+            "L2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OnN0cmVhbWluZ1JlYWQ6ASowARK3",
+            "AQoQQmVnaW5UcmFuc2FjdGlvbhIqLmdvb2dsZS5zcGFubmVyLnYxLkJlZ2lu",
+            "VHJhbnNhY3Rpb25SZXF1ZXN0Gh4uZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNh",
+            "Y3Rpb24iV4LT5JMCUSJML3YxL3tzZXNzaW9uPXByb2plY3RzLyovaW5zdGFu",
+            "Y2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06YmVnaW5UcmFuc2FjdGlv",
+            "bjoBKhKcAQoGQ29tbWl0EiAuZ29vZ2xlLnNwYW5uZXIudjEuQ29tbWl0UmVx",
+            "dWVzdBohLmdvb2dsZS5zcGFubmVyLnYxLkNvbW1pdFJlc3BvbnNlIk2C0+ST",
+            "AkciQi92MS97c2Vzc2lvbj1wcm9qZWN0cy8qL2luc3RhbmNlcy8qL2RhdGFi",
+            "YXNlcy8qL3Nlc3Npb25zLyp9OmNvbW1pdDoBKhKXAQoIUm9sbGJhY2sSIi5n",
+            "b29nbGUuc3Bhbm5lci52MS5Sb2xsYmFja1JlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiT4LT5JMCSSJEL3YxL3tzZXNzaW9uPXByb2plY3RzLyov",
+            "aW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cm9sbGJhY2s6",
+            "ASoStwEKDlBhcnRpdGlvblF1ZXJ5EiguZ29vZ2xlLnNwYW5uZXIudjEuUGFy",
+            "dGl0aW9uUXVlcnlSZXF1ZXN0GiQuZ29vZ2xlLnNwYW5uZXIudjEuUGFydGl0",
+            "aW9uUmVzcG9uc2UiVYLT5JMCTyJKL3YxL3tzZXNzaW9uPXByb2plY3RzLyov",
+            "aW5zdGFuY2VzLyovZGF0YWJhc2VzLyovc2Vzc2lvbnMvKn06cGFydGl0aW9u",
+            "UXVlcnk6ASoStAEKDVBhcnRpdGlvblJlYWQSJy5nb29nbGUuc3Bhbm5lci52",
+            "MS5QYXJ0aXRpb25SZWFkUmVxdWVzdBokLmdvb2dsZS5zcGFubmVyLnYxLlBh",
+            "cnRpdGlvblJlc3BvbnNlIlSC0+STAk4iSS92MS97c2Vzc2lvbj1wcm9qZWN0",
             "cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qL3Nlc3Npb25zLyp9OnBhcnRp",
-            "dGlvblF1ZXJ5OgEqErQBCg1QYXJ0aXRpb25SZWFkEicuZ29vZ2xlLnNwYW5u",
-            "ZXIudjEuUGFydGl0aW9uUmVhZFJlcXVlc3QaJC5nb29nbGUuc3Bhbm5lci52",
-            "MS5QYXJ0aXRpb25SZXNwb25zZSJUgtPkkwJOIkkvdjEve3Nlc3Npb249cHJv",
-            "amVjdHMvKi9pbnN0YW5jZXMvKi9kYXRhYmFzZXMvKi9zZXNzaW9ucy8qfTpw",
-            "YXJ0aXRpb25SZWFkOgEqQpUBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCDFNw",
-            "YW5uZXJQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL3NwYW5uZXIvdjE7c3Bhbm5lcqoCF0dvb2dsZS5DbG91ZC5TcGFu",
-            "bmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjFiBnByb3RvMw=="));
+            "dGlvblJlYWQ6ASpClQEKFWNvbS5nb29nbGUuc3Bhbm5lci52MUIMU3Bhbm5l",
+            "clByb3RvUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvc3Bhbm5lci92MTtzcGFubmVyqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIu",
+            "VjHKAhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor, global::Google.Cloud.Spanner.V1.ResultSetReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor, global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor, global::Google.Cloud.Spanner.V1.ResultSetReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CreateSessionRequest), global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser, new[]{ "Database", "Session" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Session), global::Google.Cloud.Spanner.V1.Session.Parser, new[]{ "Name", "Labels", "CreateTime", "ApproximateLastUseTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -152,6 +169,8 @@ namespace Google.Cloud.Spanner.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ListSessionsResponse), global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser, new[]{ "Sessions", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.DeleteSessionRequest), global::Google.Cloud.Spanner.V1.DeleteSessionRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest), global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser, new[]{ "Session", "Transaction", "Sql", "Params", "ParamTypes", "ResumeToken", "QueryMode", "PartitionToken", "Seqno" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Parser, new[]{ "Session", "Transaction", "Statements", "Seqno" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement.Parser, new[]{ "Sql", "Params", "ParamTypes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse), global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse.Parser, new[]{ "ResultSets", "Status" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartitionOptions), global::Google.Cloud.Spanner.V1.PartitionOptions.Parser, new[]{ "PartitionSizeBytes", "MaxPartitions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartitionQueryRequest), global::Google.Cloud.Spanner.V1.PartitionQueryRequest.Parser, new[]{ "Session", "Transaction", "Sql", "Params", "ParamTypes", "PartitionOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartitionReadRequest), global::Google.Cloud.Spanner.V1.PartitionReadRequest.Parser, new[]{ "Session", "Transaction", "Table", "Index", "Columns", "KeySet", "PartitionOptions" }, null, null, null),
@@ -1724,6 +1743,653 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
+  /// The request for [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]
+  /// </summary>
+  public sealed partial class ExecuteBatchDmlRequest : pb::IMessage<ExecuteBatchDmlRequest> {
+    private static readonly pb::MessageParser<ExecuteBatchDmlRequest> _parser = new pb::MessageParser<ExecuteBatchDmlRequest>(() => new ExecuteBatchDmlRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExecuteBatchDmlRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecuteBatchDmlRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecuteBatchDmlRequest(ExecuteBatchDmlRequest other) : this() {
+      session_ = other.session_;
+      transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
+      statements_ = other.statements_.Clone();
+      seqno_ = other.seqno_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecuteBatchDmlRequest Clone() {
+      return new ExecuteBatchDmlRequest(this);
+    }
+
+    /// <summary>Field number for the "session" field.</summary>
+    public const int SessionFieldNumber = 1;
+    private string session_ = "";
+    /// <summary>
+    /// Required. The session in which the DML statements should be performed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Session {
+      get { return session_; }
+      set {
+        session_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "transaction" field.</summary>
+    public const int TransactionFieldNumber = 2;
+    private global::Google.Cloud.Spanner.V1.TransactionSelector transaction_;
+    /// <summary>
+    /// The transaction to use. A ReadWrite transaction is required. Single-use
+    /// transactions are not supported (to avoid replay).  The caller must either
+    /// supply an existing transaction ID or begin a new transaction.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
+      get { return transaction_; }
+      set {
+        transaction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "statements" field.</summary>
+    public const int StatementsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement> _repeated_statements_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement> statements_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement>();
+    /// <summary>
+    /// The list of statements to execute in this batch. Statements are executed
+    /// serially, such that the effects of statement i are visible to statement
+    /// i+1. Each statement must be a DML statement. Execution will stop at the
+    /// first failed statement; the remaining statements will not run.
+    ///
+    /// REQUIRES: statements_size() > 0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement> Statements {
+      get { return statements_; }
+    }
+
+    /// <summary>Field number for the "seqno" field.</summary>
+    public const int SeqnoFieldNumber = 4;
+    private long seqno_;
+    /// <summary>
+    /// A per-transaction sequence number used to identify this request. This is
+    /// used in the same space as the seqno in
+    /// [ExecuteSqlRequest][Spanner.ExecuteSqlRequest]. See more details
+    /// in [ExecuteSqlRequest][Spanner.ExecuteSqlRequest].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Seqno {
+      get { return seqno_; }
+      set {
+        seqno_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExecuteBatchDmlRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExecuteBatchDmlRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Session != other.Session) return false;
+      if (!object.Equals(Transaction, other.Transaction)) return false;
+      if(!statements_.Equals(other.statements_)) return false;
+      if (Seqno != other.Seqno) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Session.Length != 0) hash ^= Session.GetHashCode();
+      if (transaction_ != null) hash ^= Transaction.GetHashCode();
+      hash ^= statements_.GetHashCode();
+      if (Seqno != 0L) hash ^= Seqno.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Session.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Session);
+      }
+      if (transaction_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Transaction);
+      }
+      statements_.WriteTo(output, _repeated_statements_codec);
+      if (Seqno != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Seqno);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Session.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Session);
+      }
+      if (transaction_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Transaction);
+      }
+      size += statements_.CalculateSize(_repeated_statements_codec);
+      if (Seqno != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Seqno);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExecuteBatchDmlRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Session.Length != 0) {
+        Session = other.Session;
+      }
+      if (other.transaction_ != null) {
+        if (transaction_ == null) {
+          transaction_ = new global::Google.Cloud.Spanner.V1.TransactionSelector();
+        }
+        Transaction.MergeFrom(other.Transaction);
+      }
+      statements_.Add(other.statements_);
+      if (other.Seqno != 0L) {
+        Seqno = other.Seqno;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Session = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (transaction_ == null) {
+              transaction_ = new global::Google.Cloud.Spanner.V1.TransactionSelector();
+            }
+            input.ReadMessage(transaction_);
+            break;
+          }
+          case 26: {
+            statements_.AddEntriesFrom(input, _repeated_statements_codec);
+            break;
+          }
+          case 32: {
+            Seqno = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExecuteBatchDmlRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A single DML statement.
+      /// </summary>
+      public sealed partial class Statement : pb::IMessage<Statement> {
+        private static readonly pb::MessageParser<Statement> _parser = new pb::MessageParser<Statement>(() => new Statement());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Statement> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Statement() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Statement(Statement other) : this() {
+          sql_ = other.sql_;
+          params_ = other.params_ != null ? other.params_.Clone() : null;
+          paramTypes_ = other.paramTypes_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Statement Clone() {
+          return new Statement(this);
+        }
+
+        /// <summary>Field number for the "sql" field.</summary>
+        public const int SqlFieldNumber = 1;
+        private string sql_ = "";
+        /// <summary>
+        /// Required. The DML string.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Sql {
+          get { return sql_; }
+          set {
+            sql_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "params" field.</summary>
+        public const int ParamsFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Struct params_;
+        /// <summary>
+        /// The DML string can contain parameter placeholders. A parameter
+        /// placeholder consists of `'@'` followed by the parameter
+        /// name. Parameter names consist of any combination of letters,
+        /// numbers, and underscores.
+        ///
+        /// Parameters can appear anywhere that a literal value is expected.  The
+        /// same parameter name can be used more than once, for example:
+        ///   `"WHERE id > @msg_id AND id &lt; @msg_id + 100"`
+        ///
+        /// It is an error to execute an SQL statement with unbound parameters.
+        ///
+        /// Parameter values are specified using `params`, which is a JSON
+        /// object whose keys are parameter names, and whose values are the
+        /// corresponding parameter values.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Protobuf.WellKnownTypes.Struct Params {
+          get { return params_; }
+          set {
+            params_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "param_types" field.</summary>
+        public const int ParamTypesFieldNumber = 3;
+        private static readonly pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>.Codec _map_paramTypes_codec
+            = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.Type.Parser), 26);
+        private readonly pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> paramTypes_ = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>();
+        /// <summary>
+        /// It is not always possible for Cloud Spanner to infer the right SQL type
+        /// from a JSON value.  For example, values of type `BYTES` and values
+        /// of type `STRING` both appear in [params][google.spanner.v1.ExecuteBatchDmlRequest.Statement.params] as JSON strings.
+        ///
+        /// In these cases, `param_types` can be used to specify the exact
+        /// SQL type for some or all of the SQL statement parameters. See the
+        /// definition of [Type][google.spanner.v1.Type] for more information
+        /// about SQL types.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> ParamTypes {
+          get { return paramTypes_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Statement);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Statement other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Sql != other.Sql) return false;
+          if (!object.Equals(Params, other.Params)) return false;
+          if (!ParamTypes.Equals(other.ParamTypes)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Sql.Length != 0) hash ^= Sql.GetHashCode();
+          if (params_ != null) hash ^= Params.GetHashCode();
+          hash ^= ParamTypes.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Sql.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Sql);
+          }
+          if (params_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Params);
+          }
+          paramTypes_.WriteTo(output, _map_paramTypes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Sql.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Sql);
+          }
+          if (params_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Params);
+          }
+          size += paramTypes_.CalculateSize(_map_paramTypes_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Statement other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Sql.Length != 0) {
+            Sql = other.Sql;
+          }
+          if (other.params_ != null) {
+            if (params_ == null) {
+              params_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            Params.MergeFrom(other.Params);
+          }
+          paramTypes_.Add(other.paramTypes_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Sql = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (params_ == null) {
+                  params_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+                }
+                input.ReadMessage(params_);
+                break;
+              }
+              case 26: {
+                paramTypes_.AddEntriesFrom(input, _map_paramTypes_codec);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The response for [ExecuteBatchDml][google.spanner.v1.Spanner.ExecuteBatchDml]. Contains a list
+  /// of [ResultSet][google.spanner.v1.ResultSet], one for each DML statement that has successfully executed.
+  /// If a statement fails, the error is returned as part of the response payload.
+  /// Clients can determine whether all DML statements have run successfully, or if
+  /// a statement failed, using one of the following approaches:
+  ///
+  ///   1. Check if 'status' field is OkStatus.
+  ///   2. Check if result_sets_size() equals the number of statements in
+  ///      [ExecuteBatchDmlRequest][Spanner.ExecuteBatchDmlRequest].
+  ///
+  /// Example 1: A request with 5 DML statements, all executed successfully.
+  /// Result: A response with 5 ResultSets, one for each statement in the same
+  /// order, and an OK status.
+  ///
+  /// Example 2: A request with 5 DML statements. The 3rd statement has a syntax
+  /// error.
+  /// Result: A response with 2 ResultSets, for the first 2 statements that
+  /// run successfully, and a syntax error (INVALID_ARGUMENT) status. From
+  /// result_set_size() client can determine that the 3rd statement has failed.
+  /// </summary>
+  public sealed partial class ExecuteBatchDmlResponse : pb::IMessage<ExecuteBatchDmlResponse> {
+    private static readonly pb::MessageParser<ExecuteBatchDmlResponse> _parser = new pb::MessageParser<ExecuteBatchDmlResponse>(() => new ExecuteBatchDmlResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExecuteBatchDmlResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecuteBatchDmlResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecuteBatchDmlResponse(ExecuteBatchDmlResponse other) : this() {
+      resultSets_ = other.resultSets_.Clone();
+      status_ = other.status_ != null ? other.status_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecuteBatchDmlResponse Clone() {
+      return new ExecuteBatchDmlResponse(this);
+    }
+
+    /// <summary>Field number for the "result_sets" field.</summary>
+    public const int ResultSetsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Spanner.V1.ResultSet> _repeated_resultSets_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.ResultSet.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet> resultSets_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet>();
+    /// <summary>
+    /// ResultSets, one for each statement in the request that ran successfully, in
+    /// the same order as the statements in the request. Each [ResultSet][google.spanner.v1.ResultSet] will
+    /// not contain any rows. The [ResultSetStats][google.spanner.v1.ResultSetStats] in each [ResultSet][google.spanner.v1.ResultSet] will
+    /// contain the number of rows modified by the statement.
+    ///
+    /// Only the first ResultSet in the response contains a valid
+    /// [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet> ResultSets {
+      get { return resultSets_; }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 2;
+    private global::Google.Rpc.Status status_;
+    /// <summary>
+    /// If all DML statements are executed successfully, status will be OK.
+    /// Otherwise, the error status of the first failed statement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Rpc.Status Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExecuteBatchDmlResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExecuteBatchDmlResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!resultSets_.Equals(other.resultSets_)) return false;
+      if (!object.Equals(Status, other.Status)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= resultSets_.GetHashCode();
+      if (status_ != null) hash ^= Status.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      resultSets_.WriteTo(output, _repeated_resultSets_codec);
+      if (status_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += resultSets_.CalculateSize(_repeated_resultSets_codec);
+      if (status_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExecuteBatchDmlResponse other) {
+      if (other == null) {
+        return;
+      }
+      resultSets_.Add(other.resultSets_);
+      if (other.status_ != null) {
+        if (status_ == null) {
+          status_ = new global::Google.Rpc.Status();
+        }
+        Status.MergeFrom(other.Status);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            resultSets_.AddEntriesFrom(input, _repeated_resultSets_codec);
+            break;
+          }
+          case 18: {
+            if (status_ == null) {
+              status_ = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(status_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Options for a PartitionQueryRequest and
   /// PartitionReadRequest.
   /// </summary>
@@ -1735,7 +2401,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1913,7 +2579,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2245,7 +2911,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2593,7 +3259,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2731,7 +3397,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2896,7 +3562,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3316,7 +3982,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3488,7 +4154,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3757,7 +4423,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3898,7 +4564,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
