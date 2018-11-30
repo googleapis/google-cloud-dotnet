@@ -12,17 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Google.Cloud.Storage.V1
 {
+    // Note: this enum is currently internal as V4 support is not ready, but we want to be able to
+    // merge the restructuring of URL signing for the sake of other work. This enum should not be made
+    // public until the V4 implementation is complete and well-tested. Until that time, we'll keep using
+    // V2 and there's no change in behavior for clients.
+
     /// <summary>
     /// The algorithm version to use in <see cref="UrlSigner"/>. See
     /// <see cref="UrlSigner.WithSigningVersion(SigningVersion)" /> for usage.
     /// </summary>
-    public enum SigningVersion
+    internal enum SigningVersion
     {
         /// <summary>
         /// The default signing version, where the version to use is chosen by the client library implementation.
