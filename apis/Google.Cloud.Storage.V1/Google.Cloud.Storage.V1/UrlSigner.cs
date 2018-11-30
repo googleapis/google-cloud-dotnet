@@ -127,7 +127,7 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <param name="signingVersion">The algorithm version to use when signing URLs.</param>
         /// <returns>A new instance using the specified version.</returns>
-        public UrlSigner WithSigningVersion(SigningVersion signingVersion)
+        internal UrlSigner WithSigningVersion(SigningVersion signingVersion)
         {
             GaxPreconditions.CheckEnumValue(signingVersion, nameof(signingVersion));
             return new UrlSigner(_blobSigner, signingVersion, _clock);
