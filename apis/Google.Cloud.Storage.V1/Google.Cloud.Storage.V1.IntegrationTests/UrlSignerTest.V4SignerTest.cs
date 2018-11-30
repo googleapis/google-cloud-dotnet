@@ -58,17 +58,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             private void GetWithCustomerSuppliedEncryptionKeysTest_InitDelayTest() => GetWithCustomerSuppliedEncryptionKeysTest_Common(_fixture, Signer);
 
             [Fact]
-            public async Task GetNoExpirationTest()
-            {
-                var url = Signer.Sign(_fixture.ReadBucket, _fixture.SmallObject, expiration: null);
-
-                // Verify that the URL works.
-                var response = await _fixture.HttpClient.GetAsync(url);
-                var result = await response.Content.ReadAsByteArrayAsync();
-                AssertContentEqual(_fixture.SmallContent, result);
-            }
-
-            [Fact]
             public async Task GetWithCustomHeadersTest() => await _fixture.FinishDelayTest(GetTestName());
             private void GetWithCustomHeadersTest_InitDelayTest() => GetWithCustomHeadersTest_Common(_fixture, Signer);
 

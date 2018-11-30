@@ -74,6 +74,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Throws<ArgumentNullException>(() => signer.Sign(null, "objectName", DateTimeOffset.UtcNow, HttpMethod.Get, emptyHeaders, emptyHeaders));
             Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", DateTimeOffset.UtcNow, HttpMethod.Get, emptyHeaders, emptyHeaders));
 
+#pragma warning disable CS0618 // Type or member is obsolete
             // Make sure exceptions are not thrown for things which may be null or uppercase.
             signer.Sign("bucketname", null, TimeSpan.FromDays(1), null);
             signer.Sign("bucketname", null, null, null, null, null);
@@ -82,6 +83,7 @@ namespace Google.Cloud.Storage.V1.Tests
             signer.SignAsync("bucketname", null, TimeSpan.FromDays(1), request: null).Wait();
             signer.SignAsync("bucketname", null, null, null, null, null).Wait();
             signer.SignAsync("bucketname", "OBJECTNAME", null, null, null, null).Wait();
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         private class FakeBlobSigner : UrlSigner.IBlobSigner
