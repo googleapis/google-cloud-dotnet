@@ -70,6 +70,30 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
+        // [START spanner_test_write_read_bool]
+        // [END spanner_test_write_read_bool]
+        // [START spanner_test_write_read_int64]
+        // [END spanner_test_write_read_int64]
+        // [START spanner_test_write_read_float64]
+        // [END spanner_test_write_read_float64]
+        // [START spanner_test_write_read_string]
+        // [END spanner_test_write_read_string]
+        // [START spanner_test_write_read_timestamp]
+        // [END spanner_test_write_read_timestamp]
+        // [START spanner_test_write_read_date]
+        // [END spanner_test_write_read_date]
+        // [START spanner_test_write_read_bool_array]
+        // [END spanner_test_write_read_bool_array]
+        // [START spanner_test_write_read_int64_array]
+        // [END spanner_test_write_read_int64_array]
+        // [START spanner_test_write_read_float64_array]
+        // [END spanner_test_write_read_float64_array]
+        // [START spanner_test_write_read_string_array]
+        // [END spanner_test_write_read_string_array]
+        // [START spanner_test_write_read_timestamp_array]
+        // [END spanner_test_write_read_timestamp_array]
+        // [START spanner_test_write_read_date_array]
+        // [END spanner_test_write_read_date_array]
         [Fact]
         public async Task WriteValues()
         {
@@ -126,6 +150,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
+        // [START spanner_test_write_invalid_column_name]
         [Fact]
         public async Task BadColumnName()
         {
@@ -139,7 +164,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.False(e.IsTransientSpannerFault());
             }
         }
+        // [END spanner_test_write_invalid_column_name]
 
+        // [START spanner_test_write_incorrect_type]
         [Fact]
         public async Task BadColumnType()
         {
@@ -153,7 +180,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.False(e.IsTransientSpannerFault());
             }
         }
+        // [END spanner_test_write_incorrect_type]
 
+        // [START spanner_test_write_invalid_table_name]
         [Fact]
         public async Task BadTableName()
         {
@@ -167,7 +196,20 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.False(e.IsTransientSpannerFault());
             }
         }
+        // [END spanner_test_write_invalid_table_name]
 
+        // [START spanner_test_write_read_empty_bool_array]
+        // [END spanner_test_write_read_empty_bool_array]
+        // [START spanner_test_write_read_empty_int64_array]
+        // [END spanner_test_write_read_empty_int64_array]
+        // [START spanner_test_write_read_empty_float64_array]
+        // [END spanner_test_write_read_empty_float64_array]
+        // [START spanner_test_write_read_empty_string_array]
+        // [END spanner_test_write_read_empty_string_array]
+        // [START spanner_test_write_read_empty_timestamp_array]
+        // [END spanner_test_write_read_empty_timestamp_array]
+        // [START spanner_test_write_read_empty_date_array]
+        // [END spanner_test_write_read_empty_date_array]
         [Fact]
         public async Task WriteEmpties()
         {
@@ -217,6 +259,30 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             await WithLastRowAsync(reader => Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value"))));
         }
 
+        // [START spanner_test_write_read_null_bool]
+        // [END spanner_test_write_read_null_bool]
+        // [START spanner_test_write_read_null_int64]
+        // [END spanner_test_write_read_null_int64]
+        // [START spanner_test_write_read_null_float64]
+        // [END spanner_test_write_read_null_float64]
+        // [START spanner_test_write_read_null_string]
+        // [END spanner_test_write_read_null_string]
+        // [START spanner_test_write_read_null_timestamp]
+        // [END spanner_test_write_read_null_timestamp]
+        // [START spanner_test_write_read_null_date]
+        // [END spanner_test_write_read_null_date]
+        // [START spanner_test_write_read_null_bool_array]
+        // [END spanner_test_write_read_null_bool_array]
+        // [START spanner_test_write_read_null_int64_array]
+        // [END spanner_test_write_read_null_int64_array]
+        // [START spanner_test_write_read_null_float64_array]
+        // [END spanner_test_write_read_null_float64_array]
+        // [START spanner_test_write_read_null_string_array]
+        // [END spanner_test_write_read_null_string_array]
+        // [START spanner_test_write_read_null_timestamp_array]
+        // [END spanner_test_write_read_null_timestamp_array]
+        // [START spanner_test_write_read_null_date_array]
+        // [END spanner_test_write_read_null_date_array]
         [Fact]
         public async Task WriteNulls()
         {
@@ -226,6 +292,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Int64Value", SpannerDbType.Int64, null },
                 { "Float64Value", SpannerDbType.Float64, null },
                 { "StringValue", SpannerDbType.String, null },
+                { "BytesValue", SpannerDbType.Bytes, null },
                 { "TimestampValue", SpannerDbType.Timestamp, null },
                 { "DateValue", SpannerDbType.Date, null },
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null },
@@ -244,6 +311,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolArrayValue")));
@@ -256,6 +324,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
+        // [START spanner_test_write_read_random_bytes]
         [Fact]
         public async Task WriteRandomBytes()
         {
@@ -297,6 +366,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(0, recordedValues.Count);
             }
         }
+        // [END spanner_test_write_read_random_bytes]
 
         [Fact]
         public async Task CommandTimeout()
