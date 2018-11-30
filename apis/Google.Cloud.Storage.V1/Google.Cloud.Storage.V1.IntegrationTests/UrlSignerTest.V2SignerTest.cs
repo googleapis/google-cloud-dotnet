@@ -59,7 +59,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             [Fact]
             public async Task GetNoExpirationTest()
             {
+#pragma warning disable CS0618 // Type or member is obsolete
                 var url = Signer.Sign(_fixture.ReadBucket, _fixture.SmallObject, expiration: null);
+#pragma warning restore CS0618 // Type or member is obsolete
 
                 // Verify that the URL works.
                 var response = await _fixture.HttpClient.GetAsync(url);

@@ -37,6 +37,9 @@ namespace Google.Cloud.Storage.V1
     /// </remarks>
     public sealed partial class UrlSigner
     {
+        private const string InfiniteExpiryObsoleteMessage =
+            "This overload is obsolete, as non-expiring signed URLs are a bug in the service that can cause security issues and should no longer be used. Please use the overload accepting a DateTimeOffset instead.";
+
         private static readonly ISigner s_v2Signer = new V2Signer();
         private static readonly ISigner s_v4Signer = new V4Signer();
 
@@ -230,7 +233,61 @@ namespace Google.Cloud.Storage.V1
         /// <returns>
         /// The signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
+        [Obsolete(InfiniteExpiryObsoleteMessage)]
         public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request) =>
+            Sign(
+                bucket,
+                objectName,
+                expiration,
+                request?.Method,
+                request?.Headers?.ToDictionary(h => h.Key, h => h.Value),
+                request?.Content?.Headers?.ToDictionary(h => h.Key, h => h.Value));
+
+        /// <summary>
+        /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+        /// in possession of the URL, regardless of whether they have a Google account.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// When a <see cref="UrlSigner"/> is created with a service account credential, the signing can be performed
+        /// with no network access. When it is created with an implementation of <see cref="IBlobSigner"/>, that may require
+        /// network access or other IO. In that case, one of the asynchronous methods should be used when the caller is
+        /// in a context that should not block.
+        /// </para>
+        /// <para>
+        /// When the <paramref name="request"/> is specified, some of its headers will be included in the signed URL's
+        /// signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
+        /// Content-Type content headers as well as any content or request header with a name starting with "x-goog-".
+        /// </para>
+        /// <para>
+        /// If <paramref name="request"/> is null, no headers are included in the signed URL's signature, so any requests
+        /// made with the created URL must not contain Content-MD5, Content-Type, or any header starting with "x-goog-".
+        /// </para>
+        /// <para>
+        /// Note that if the entity is encrypted with customer-supplied encryption keys (see
+        /// https://cloud.google.com/storage/docs/encryption for more information), the <b>x-goog-encryption-algorithm</b>,
+        /// <b>x-goog-encryption-key</b>, and <b>x-goog-encryption-key-sha256</b> headers will be required when making the
+        /// request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
+        /// So the sample <paramref name="request"/> specified only needs to have the x-goog-encryption-algorithm request
+        /// header. The other headers can be included, but will be ignored.
+        /// </para>
+        /// <para>
+        /// Note that when GET is specified as the <paramref name="request"/>, both GET and HEAD requests can be made with
+        /// the created signed URL.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
+        /// </para>
+        /// </remarks>
+        /// <param name="bucket">The name of the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
+        /// will refer to the bucket instead of an object.</param>
+        /// <param name="expiration">The point in time after which the signed URL will be invalid.</param>
+        /// <param name="request">A sample request for which the signed URL might be used. May be null.</param>
+        /// <returns>
+        /// The signed URL which can be used to provide access to a bucket or object for a limited amount of time.
+        /// </returns>
+        public string Sign(string bucket, string objectName, DateTimeOffset expiration, HttpRequestMessage request) =>
             Sign(
                 bucket,
                 objectName,
@@ -353,10 +410,69 @@ namespace Google.Cloud.Storage.V1
         /// <returns>
         /// The signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
+        [Obsolete(InfiniteExpiryObsoleteMessage)]
         public string Sign(
             string bucket,
             string objectName,
             DateTimeOffset? expiration,
+            HttpMethod requestMethod = null,
+            Dictionary<string, IEnumerable<string>> requestHeaders = null,
+            Dictionary<string, IEnumerable<string>> contentHeaders = null) =>
+            GetEffectiveSigner().Sign(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner, _clock);
+
+        /// <summary>
+        /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+        /// in possession of the URL, regardless of whether they have a Google account.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// When a <see cref="UrlSigner"/> is created with a service account credential, the signing can be performed
+        /// with no network access. When it is created with an implementation of <see cref="IBlobSigner"/>, that may require
+        /// network access or other IO. In that case, one of the asynchronous methods should be used when the caller is
+        /// in a context that should not block.
+        /// </para>
+        /// <para>
+        /// When either of the headers collections are specified, there are certain headers which will be included in the
+        /// signed URL's signature, and therefore must be included in requests made with the created URL. These are the
+        /// Content-MD5 and Content-Type content headers as well as any content or request header with a name starting
+        /// with "x-goog-".
+        /// </para>
+        /// <para>
+        /// If the headers collections are null or empty, no headers are included in the signed URL's signature, so any
+        /// requests made with the created URL must not contain Content-MD5, Content-Type, or any header starting with "x-goog-".
+        /// </para>
+        /// <para>
+        /// Note that if the entity is encrypted with customer-supplied encryption keys (see
+        /// https://cloud.google.com/storage/docs/encryption for more information), the <b>x-goog-encryption-algorithm</b>,
+        /// <b>x-goog-encryption-key</b>, and <b>x-goog-encryption-key-sha256</b> headers will be required when making the
+        /// request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
+        /// So the <paramref name="requestHeaders"/> specified only need to have the x-goog-encryption-algorithm header.
+        /// The other headers can be included, but will be ignored.
+        /// </para>
+        /// <para>
+        /// Note that when GET is specified as the <paramref name="requestMethod"/> (or it is null, in which case GET is
+        /// used), both GET and HEAD requests can be made with the created signed URL.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
+        /// </para>
+        /// </remarks>
+        /// <param name="bucket">The name of the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
+        /// will refer to the bucket instead of an object.</param>
+        /// <param name="expiration">The point in time after which the signed URL will be invalid.</param>
+        /// <param name="requestMethod">The HTTP request method for which the signed URL is allowed to be used. May be null,
+        /// in which case GET will be used.</param>
+        /// <param name="requestHeaders">The headers which will be included with the request. May be null.</param>
+        /// <param name="contentHeaders">The headers for the content which will be included with the request.
+        /// May be null.</param>
+        /// <returns>
+        /// The signed URL which can be used to provide access to a bucket or object for a limited amount of time.
+        /// </returns>
+        public string Sign(
+            string bucket,
+            string objectName,
+            DateTimeOffset expiration,
             HttpMethod requestMethod = null,
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null) =>
@@ -458,7 +574,64 @@ namespace Google.Cloud.Storage.V1
         /// A task representing the asynchronous operation, with a result returning the
         /// signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
+        [Obsolete(InfiniteExpiryObsoleteMessage)]
         public Task<string> SignAsync(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request, CancellationToken cancellationToken = default) =>
+            SignAsync(
+                bucket,
+                objectName,
+                expiration,
+                request?.Method,
+                request?.Headers?.ToDictionary(h => h.Key, h => h.Value),
+                request?.Content?.Headers?.ToDictionary(h => h.Key, h => h.Value),
+                cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+        /// in possession of the URL, regardless of whether they have a Google account.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// When a <see cref="UrlSigner"/> is created with a service account credential, the signing can be performed
+        /// with no network access. When it is created with an implementation of <see cref="IBlobSigner"/>, that may require
+        /// network access or other IO. In that case, one of the asynchronous methods should be used when the caller is
+        /// in a context that should not block.
+        /// </para>
+        /// <para>
+        /// When the <paramref name="request"/> is specified, some of its headers will be included in the signed URL's
+        /// signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
+        /// Content-Type content headers as well as any content or request header with a name starting with "x-goog-".
+        /// </para>
+        /// <para>
+        /// If <paramref name="request"/> is null, no headers are included in the signed URL's signature, so any requests
+        /// made with the created URL must not contain Content-MD5, Content-Type, or any header starting with "x-goog-".
+        /// </para>
+        /// <para>
+        /// Note that if the entity is encrypted with customer-supplied encryption keys (see
+        /// https://cloud.google.com/storage/docs/encryption for more information), the <b>x-goog-encryption-algorithm</b>,
+        /// <b>x-goog-encryption-key</b>, and <b>x-goog-encryption-key-sha256</b> headers will be required when making the
+        /// request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
+        /// So the sample <paramref name="request"/> specified only needs to have the x-goog-encryption-algorithm request
+        /// header. The other headers can be included, but will be ignored.
+        /// </para>
+        /// <para>
+        /// Note that when GET is specified as the <paramref name="request"/>, both GET and HEAD requests can be made with
+        /// the created signed URL.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
+        /// </para>
+        /// </remarks>
+        /// <param name="bucket">The name of the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
+        /// will refer to the bucket instead of an object.</param>
+        /// <param name="expiration">The point in time after which the signed URL will be invalid.</param>
+        /// <param name="request">A sample request for which the signed URL might be used. May be null.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>
+        /// A task representing the asynchronous operation, with a result returning the
+        /// signed URL which can be used to provide access to a bucket or object for a limited amount of time.
+        /// </returns>
+        public Task<string> SignAsync(string bucket, string objectName, DateTimeOffset expiration, HttpRequestMessage request, CancellationToken cancellationToken = default) =>
             SignAsync(
                 bucket,
                 objectName,
@@ -588,10 +761,72 @@ namespace Google.Cloud.Storage.V1
         /// A task representing the asynchronous operation, with a result returning the
         /// signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
+        [Obsolete(InfiniteExpiryObsoleteMessage)]
         public Task<string> SignAsync(
             string bucket,
             string objectName,
             DateTimeOffset? expiration,
+            HttpMethod requestMethod = null,
+            Dictionary<string, IEnumerable<string>> requestHeaders = null,
+            Dictionary<string, IEnumerable<string>> contentHeaders = null,
+            CancellationToken cancellationToken = default) =>
+            GetEffectiveSigner().SignAsync(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner, _clock, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
+        /// in possession of the URL, regardless of whether they have a Google account.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// When a <see cref="UrlSigner"/> is created with a service account credential, the signing can be performed
+        /// with no network access. When it is created with an implementation of <see cref="IBlobSigner"/>, that may require
+        /// network access or other IO. In that case, one of the asynchronous methods should be used when the caller is
+        /// in a context that should not block.
+        /// </para>
+        /// <para>
+        /// When either of the headers collections are specified, there are certain headers which will be included in the
+        /// signed URL's signature, and therefore must be included in requests made with the created URL. These are the
+        /// Content-MD5 and Content-Type content headers as well as any content or request header with a name starting
+        /// with "x-goog-".
+        /// </para>
+        /// <para>
+        /// If the headers collections are null or empty, no headers are included in the signed URL's signature, so any
+        /// requests made with the created URL must not contain Content-MD5, Content-Type, or any header starting with "x-goog-".
+        /// </para>
+        /// <para>
+        /// Note that if the entity is encrypted with customer-supplied encryption keys (see
+        /// https://cloud.google.com/storage/docs/encryption for more information), the <b>x-goog-encryption-algorithm</b>,
+        /// <b>x-goog-encryption-key</b>, and <b>x-goog-encryption-key-sha256</b> headers will be required when making the
+        /// request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
+        /// So the <paramref name="requestHeaders"/> specified only need to have the x-goog-encryption-algorithm header.
+        /// The other headers can be included, but will be ignored.
+        /// </para>
+        /// <para>
+        /// Note that when GET is specified as the <paramref name="requestMethod"/> (or it is null, in which case GET is
+        /// used), both GET and HEAD requests can be made with the created signed URL.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
+        /// </para>
+        /// </remarks>
+        /// <param name="bucket">The name of the bucket. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
+        /// will refer to the bucket instead of an object.</param>
+        /// <param name="expiration">The point in time after which the signed URL will be invalid.</param>
+        /// <param name="requestMethod">The HTTP request method for which the signed URL is allowed to be used. May be null,
+        /// in which case GET will be used.</param>
+        /// <param name="requestHeaders">The headers which will be included with the request. May be null.</param>
+        /// <param name="contentHeaders">The headers for the content which will be included with the request.
+        /// May be null.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>
+        /// A task representing the asynchronous operation, with a result returning the
+        /// signed URL which can be used to provide access to a bucket or object for a limited amount of time.
+        /// </returns>
+        public Task<string> SignAsync(
+            string bucket,
+            string objectName,
+            DateTimeOffset expiration,
             HttpMethod requestMethod = null,
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null,
