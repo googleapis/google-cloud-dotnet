@@ -149,6 +149,15 @@ namespace Google.Cloud.Spanner.Data
             SpannerParameterCollection parameters = null)
             : this(SpannerCommandTextBuilder.FromCommandText(commandText), connection, transaction, parameters) { }
 
+        internal SpannerCommand(string commandText, SpannerParameterCollection parameters = null)
+        {
+            SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(commandText);
+            if(parameters != null)
+            {
+                Parameters = parameters;
+            }
+        }
+
         /// <inheritdoc />
         public override string CommandText
         {

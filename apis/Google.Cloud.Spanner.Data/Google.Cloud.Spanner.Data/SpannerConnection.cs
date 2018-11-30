@@ -431,6 +431,17 @@ namespace Google.Cloud.Spanner.Data
         public SpannerCommand CreateDmlCommand(string dmlStatement, SpannerParameterCollection dmlParameters = null) =>
             new SpannerCommand(SpannerCommandTextBuilder.CreateDmlTextBuilder(dmlStatement), this, null, dmlParameters);
 
+        /// <summary>
+        /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements.
+        /// You can add commands to the batch by using <see cref="SpannerBatchCommand.Add(SpannerCommand)"/>,
+        /// <see cref="SpannerBatchCommand.Add(SpannerCommandTextBuilder, SpannerParameterCollection)"/>
+        /// and <see cref="SpannerBatchCommand.Add(string, SpannerParameterCollection)"/>.
+        /// </summary>
+        public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand
+        {
+            Connection = this
+        };
+
         /// <inheritdoc />
         public override void Open()
         {
@@ -616,6 +627,19 @@ namespace Google.Cloud.Spanner.Data
             if (!IsOpen)
             {
                 throw new InvalidOperationException("The connection must be open. Failed to " + message);
+            }
+        }
+
+        internal async Task EnsureIsOpenAsync(CancellationToken cancellationToken)
+        {
+            if (!IsOpen)
+            {
+                await OpenAsync(cancellationToken).ConfigureAwait(false);
+            }
+
+            if (!IsOpen)
+            {
+                throw new InvalidOperationException("Unable to open the Spanner connection to the database.");
             }
         }
 

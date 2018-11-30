@@ -178,8 +178,10 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Verify();
         }
 
+        // TODO: Revisit the names of the following 4 tests.
+
         [Fact]
-        public async Task ExecuteSqlAsync_RequestTransactionIsPopulatedWhenPresent()
+        public async Task ExecuteSqlAsync_RequestTransactionIsPopulatedWhenNotPresent()
         {
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
@@ -202,7 +204,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         }
 
         [Fact]
-        public async Task ExecuteSqlAsync_RequestTransactionIsLeftAlonePopulatedWhenPresent()
+        public async Task ExecuteSqlAsync_RequestTransactionIsLeftAloneWhenPresent()
         {
             var pool = new FakeSessionPool();
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
@@ -213,6 +215,50 @@ namespace Google.Cloud.Spanner.V1.Tests
                 .ReturnsAsync(new ResultSet())
                 .Verifiable();
             await pooledSession.ExecuteSqlAsync(request, null);
+
+            // The call modifies the request's session, but not transaction.
+            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
+            Assert.Equal(TransactionSelector.SelectorOneofCase.Begin, request.Transaction.SelectorCase);
+            Assert.Equal(new TransactionOptions.Types.ReadOnly(), request.Transaction.Begin.ReadOnly);
+
+            pool.Mock.Verify();
+        }
+
+        [Fact]
+        public async Task ExecuteBatchDmlAsync_RequestTransactionIsPopulatedWhenNotPresent()
+        {
+            var pool = new FakeSessionPool();
+            var transactionId = ByteString.CopyFromUtf8("transaction");
+            var mode = TransactionOptions.ModeOneofCase.ReadWrite;
+            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, mode);
+
+            // Make a successful request
+            var request = new ExecuteBatchDmlRequest();
+            pool.Mock.Setup(client => client.ExecuteBatchDmlAsync(request, It.IsAny<CallSettings>()))
+                .ReturnsAsync(new ExecuteBatchDmlResponse())
+                .Verifiable();
+            await sessionWithTransaction.ExecuteBatchDmlAsync(request, 5, CancellationToken.None);
+
+            // The call modifies the request. (We can't easily check that it was modified before the RPC)
+            Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
+            Assert.Equal(transactionId, request.Transaction.Id);
+
+            pool.Mock.Verify();
+        }
+
+        [Fact]
+        public async Task ExecuteBatchDmlAsync_RequestTransactionIsLeftAloneWhenPresent()
+        {
+            var pool = new FakeSessionPool();
+            var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
+
+            // Make a successful request
+            var request = new ExecuteBatchDmlRequest { Transaction = new TransactionSelector { Begin = new TransactionOptions { ReadOnly = new TransactionOptions.Types.ReadOnly() } } };
+            pool.Mock.Setup(client => client.ExecuteBatchDmlAsync(request, It.IsAny<CallSettings>()))
+                .ReturnsAsync(new ExecuteBatchDmlResponse())
+                .Verifiable();
+            await pooledSession.ExecuteBatchDmlAsync(request, 5, CancellationToken.None);
 
             // The call modifies the request's session, but not transaction.
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);

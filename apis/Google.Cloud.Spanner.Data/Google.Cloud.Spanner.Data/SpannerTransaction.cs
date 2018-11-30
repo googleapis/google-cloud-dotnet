@@ -35,7 +35,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerTransaction : DbTransaction, ISpannerTransaction
     {
-        private readonly SpannerConnection _connection;
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
         private bool _disposed = false;
@@ -109,7 +108,12 @@ namespace Google.Cloud.Spanner.Data
         public TimestampBound TimestampBound { get; }
 
         /// <inheritdoc />
-        protected override DbConnection DbConnection => _connection;
+        protected override DbConnection DbConnection => SpannerConnection;
+
+        /// <summary>
+        /// <see cref="SpannerConnection"/> associated with this transaction.
+        /// </summary>
+        internal SpannerConnection SpannerConnection { get; private set; }
 
         internal bool HasMutations
         {
@@ -128,8 +132,8 @@ namespace Google.Cloud.Spanner.Data
             PooledSession session,
             TimestampBound timestampBound)
         {
-            _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            CommitTimeout = _connection.Builder.Timeout;
+            SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
+            CommitTimeout = SpannerConnection.Builder.Timeout;
             Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             TimestampBound = timestampBound;
@@ -193,7 +197,7 @@ namespace Google.Cloud.Spanner.Data
                     var response = await _session.PartitionQueryAsync(partitionRequest, callSettings).ConfigureAwait(false);
                     return response.Partitions.Select(x => x.PartitionToken);
                 },
-                "SpannerTransaction.GetPartitionTokensAsync", _connection.Logger);
+                "SpannerTransaction.GetPartitionTokensAsync", SpannerConnection.Logger);
         }
 
         Task<int> ISpannerTransaction.ExecuteMutationsAsync(
@@ -212,7 +216,7 @@ namespace Google.Cloud.Spanner.Data
                 }
                 taskCompletionSource.SetResult(mutations.Count);
                 return taskCompletionSource.Task;
-            }, "SpannerTransaction.ExecuteMutations", _connection.Logger);
+            }, "SpannerTransaction.ExecuteMutations", SpannerConnection.Logger);
         }
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(
@@ -260,7 +264,27 @@ namespace Google.Cloud.Spanner.Data
                             throw new SpannerException(ErrorCode.Internal, $"Unknown row count type: {stats.RowCountCase}");
                     }
                 }
-            }, "SpannerTransaction.ExecuteDml", _connection.Logger);
+            }, "SpannerTransaction.ExecuteDml", SpannerConnection.Logger);
+        }
+
+        Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            CheckCompatibleMode(TransactionMode.ReadWrite);
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
+            {
+                ExecuteBatchDmlResponse response = await _session.ExecuteBatchDmlAsync(request, timeoutSeconds, cancellationToken).ConfigureAwait(false);
+                IEnumerable<long> result = response.ResultSets.Select(rs => rs.Stats.RowCountExact);
+                if (response.Status.Code == (int) Rpc.Code.Ok)
+                {
+                    return result;
+                }
+                else
+                {
+                    throw new SpannerBatchNonQueryException(response.Status, result);
+                }
+            }, "SpannerTransaction.ExecuteBatchDml", SpannerConnection.Logger);
         }
 
         /// <inheritdoc />
@@ -292,7 +316,7 @@ namespace Google.Cloud.Spanner.Data
                 }
                 return response.CommitTimestamp.ToDateTime();
             },
-            "SpannerTransaction.Commit", _connection.Logger);
+            "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
 
         /// <inheritdoc />
@@ -308,14 +332,14 @@ namespace Google.Cloud.Spanner.Data
             var callSettings = _connection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _session.RollbackAsync(new RollbackRequest(), callSettings),
-                "SpannerTransaction.Rollback", _connection.Logger);
+                "SpannerTransaction.Rollback", SpannerConnection.Logger);
         }
 
         /// <summary>
         /// Identifying information about this transaction.
         /// </summary>
         public TransactionId TransactionId => new TransactionId(
-            _connection.ConnectionString,
+            SpannerConnection.ConnectionString,
             _session.SessionName.ToString(),
             _session.TransactionId.ToBase64(),
             TimestampBound);

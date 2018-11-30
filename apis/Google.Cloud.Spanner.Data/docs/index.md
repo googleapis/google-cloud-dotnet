@@ -65,6 +65,21 @@ the update can be applied more than once to a row in some cases, and so is best 
 Not all DML statements can be partitioned. Please read the Cloud Spanner user documentation for details on
 the restrictions.
 
+### Batch DML
+
+Batch DML allows you to execute multiple DML commands in one batched operation.
+
+{{sample:SpannerConnection.BatchDml}}
+
+Statements are executed sequentally in the same order they are provided. Changes made by one statement are
+visible to all subsequent statements in the batch.
+
+When one of the statemens in the batch fails, execution is halted and all subsequent statements are not
+executed. A `SpannerBatchNonQueryException` will be thrown that contains both information about the error
+and the number of rows affected by each of the statements that executed before the failed one. If you are executing
+the batch DML command inside a transaction you can simply commit the transaction when `SpannerBatchNonQueryException`
+is thrown if partial success is acceptable in your application.
+
 ### Direct row modifications
 
 The following operations are supported for direct row modification:

@@ -20,13 +20,14 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Status = Google.Rpc.Status;
 
 namespace Google.Cloud.Spanner.Data
 {
     /// <summary>
     /// Represents an error communicating with the Spanner database.
     /// </summary>
-    public sealed class SpannerException : Exception
+    public class SpannerException : Exception
     {
         private static readonly Dictionary<ErrorCode, string> s_errorMessageTable =
             new Dictionary<ErrorCode, string>
@@ -84,6 +85,15 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Creates a new instance of <see cref="SpannerException"/>.
+        /// </summary>
+        /// <param name="status">The value from which to create the exception from.</param>
+        protected internal SpannerException(Status status)
+            : this(s_apiCodeToErrorCodes.TryGetValue(status?.Code ?? -1, out ErrorCode errorCode) ? errorCode : ErrorCode.Unknown,
+                  status?.Message ?? "An unknown Rpc error occurred.")
+        { }
+
+        /// <summary>
         /// This class is a thin conversion around a grpc exception, with the additional
         /// information of whether the operation is retryable based on the resulting error.
         /// </summary>
@@ -105,7 +115,10 @@ namespace Google.Cloud.Spanner.Data
             ErrorCode = code;
         }
 
-        //These values should be the same, but we create a map to be safe.
+        /// <summary>
+        /// Map from int values representing <see cref="Code"/> to <see cref="ErrorCode"/>.
+        /// These values should be the same, but we create a map to be safe.
+        /// </summary>
         private static readonly Dictionary<int, ErrorCode> s_apiCodeToErrorCodes
             = new Dictionary<int, ErrorCode>
             {
