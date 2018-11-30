@@ -40,13 +40,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             public async Task DeleteTest() => await _fixture.FinishDelayTest(GetTestName());
             private void DeleteTest_InitDelayTest() => DeleteTest_Common(_fixture, Signer);
 
+            
             [Fact]
             public async Task GetTest() => await _fixture.FinishDelayTest(GetTestName());
             private void GetTest_InitDelayTest() => GetTest_Common(_fixture, Signer);
 
-            [Fact]
+            [Fact(Skip = "Bucket content listing not supported in V4 right now")]
             public async Task GetBucketTest() => await _fixture.FinishDelayTest(GetTestName());
-            private void GetBucketTest_InitDelayTest() => GetBucketTest_Common(_fixture, Signer);
+            //private void GetBucketTest_InitDelayTest() => GetBucketTest_Common(_fixture, Signer);
 
             [Fact]
             public async Task GetObjectWithSpacesTest() => await _fixture.FinishDelayTest(GetTestName());
