@@ -58,7 +58,7 @@ namespace Google.Cloud.Spanner.Data
         public string CommandText { get; }
 
         /// <summary>
-        /// Gets the type of Spanner command (Select, Update, Delete, InsertOrUpdate, Insert, Ddl).
+        /// Gets the type of Spanner command (Select, Update, Delete, InsertOrUpdate, Insert, Ddl, Dml).
         /// </summary>
         public SpannerCommandType SpannerCommandType { get; }
 

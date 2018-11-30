@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data
                     throw new InvalidOperationException("ExecuteReader functionality is only available for queries.");
                 }
 
-                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
                 // Three transaction options:
                 // - A single-use transaction. This doesn't go through a BeginTransaction request; instead, the transaction options are in the request.
@@ -137,7 +137,7 @@ namespace Google.Cloud.Spanner.Data
                 GaxPreconditions.CheckState(Transaction?.Mode == TransactionMode.ReadOnly,
                     "GetReaderPartitions can only be executed within an explicitly created read-only transaction.");
 
-                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
 
                 ExecuteSqlRequest executeSqlRequest = GetExecuteSqlRequest();
                 var tokens = await Transaction.GetPartitionTokensAsync(executeSqlRequest, partitionSizeBytes, maxPartitions, cancellationToken, CommandTimeout).ConfigureAwait(false);
@@ -174,7 +174,7 @@ namespace Google.Cloud.Spanner.Data
                 ValidateConnectionAndCommandTextBuilder();
                 GaxPreconditions.CheckState(Transaction is null && Connection.AmbientTransaction is null, "Partitioned updates cannot be executed within another transaction");
                 GaxPreconditions.CheckState(CommandTextBuilder.SpannerCommandType == SpannerCommandType.Dml, "Only general DML commands can be executed in as partitioned updates");
-                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
 
                 var transaction = new EphemeralTransaction(Connection, s_partitionedDmlTransactionOptions);
@@ -188,22 +188,9 @@ namespace Google.Cloud.Spanner.Data
                 GaxPreconditions.CheckState(CommandTextBuilder != null, "SpannerCommand can only be executed when command text is assigned.");
             }
 
-            private async Task EnsureConnectionIsOpenAsync(CancellationToken cancellationToken)
-            {
-                if (!Connection.IsOpen)
-                {
-                    await Connection.OpenAsync(cancellationToken).ConfigureAwait(false);
-                }
-
-                if (!Connection.IsOpen)
-                {
-                    throw new InvalidOperationException("Unable to open the Spanner connection to the database.");
-                }
-            }
-
             private async Task<int> ExecuteDmlAsync(CancellationToken cancellationToken)
             {
-                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
@@ -284,7 +271,7 @@ namespace Google.Cloud.Spanner.Data
 
             private async Task<int> ExecuteMutationsAsync(CancellationToken cancellationToken)
             {
-                await EnsureConnectionIsOpenAsync(cancellationToken).ConfigureAwait(false);
+                await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var mutations = GetMutations();
                 var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions);
                 // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
@@ -351,13 +338,10 @@ namespace Google.Cloud.Spanner.Data
                     Sql = CommandTextBuilder.ToString()
                 };
 
-                if (Parameters?.Count > 0)
-                {
-                    request.Params = new Struct();
-                    // See comment at the start of GetMutations.
-                    SpannerConversionOptions options = null;
-                    Parameters.FillSpannerInternalValues(request.Params.Fields, request.ParamTypes, options);
-                }
+                // See comment at the start of GetMutations.
+                SpannerConversionOptions options = null;
+                Parameters.FillSpannerCommandParams(out var parameters, request.ParamTypes, options);
+                request.Params = parameters;
 
                 return request;
             }

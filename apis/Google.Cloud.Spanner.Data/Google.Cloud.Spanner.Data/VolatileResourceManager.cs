@@ -191,6 +191,12 @@ namespace Google.Cloud.Spanner.Data
             return await transaction.ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
+        public async Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            ISpannerTransaction transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await transaction.ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+        }
+
         private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken, int timeoutSeconds)
         {
             // Note that we delay transaction creation (and thereby session allocation) until the first operation

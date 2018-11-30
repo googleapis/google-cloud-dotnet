@@ -220,6 +220,19 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        internal void FillSpannerCommandParams(out Struct parameters, MapField<string, V1.Type> paramTypes, SpannerConversionOptions options)
+        {
+            if (Count == 0)
+            {
+                parameters = null;
+            }
+            else
+            {
+                parameters = new Struct();
+                FillSpannerInternalValues(parameters.Fields, paramTypes, options);
+            }
+        }
+
         internal void FillSpannerInternalValues(
             MapField<string, Value> valueDictionary,
             MapField<string, V1.Type> requestParamTypes,

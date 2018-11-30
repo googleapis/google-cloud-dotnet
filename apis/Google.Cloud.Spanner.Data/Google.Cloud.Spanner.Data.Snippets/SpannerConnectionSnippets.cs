@@ -13,14 +13,15 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1;
+using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
 using Xunit;
-using Google.Cloud.Spanner.Data.CommonTesting;
-using Google.Cloud.Spanner.V1;
 
 #if !NETCOREAPP1_0
 using System.Transactions;
@@ -166,6 +167,36 @@ namespace Google.Cloud.Spanner.Data.Snippets
                     cmd.Parameters.Add("value", SpannerDbType.Int64, 9);
                     long rowsAffected = await cmd.ExecutePartitionedUpdateAsync();
                     Console.WriteLine($"{rowsAffected} rows updated...");
+                }
+                // End sample
+            });
+        }
+
+        [Fact]
+        public async Task BatchDml()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            {
+                // Sample: BatchDml
+                using (SpannerConnection connection = new SpannerConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+
+                    SpannerBatchCommand cmd = connection.CreateBatchDmlCommand();
+
+                    cmd.Add(
+                        "UPDATE TestTable SET StringValue='Updated' WHERE Int64Value=@value",
+                        new SpannerParameterCollection { { "value", SpannerDbType.Int64, 5 } });
+
+                    cmd.Add(
+                        "DELETE FROM TestTable WHERE Int64Value=@value",
+                        new SpannerParameterCollection { { "value", SpannerDbType.Int64, 250 } });
+
+                    IEnumerable<long> rowsAffected = await cmd.ExecuteNonQueryAsync();
+                    Console.WriteLine($"{rowsAffected.ElementAt(0)} rows updated...");
+                    Console.WriteLine($"{rowsAffected.ElementAt(1)} rows deleted...");
                 }
                 // End sample
             });

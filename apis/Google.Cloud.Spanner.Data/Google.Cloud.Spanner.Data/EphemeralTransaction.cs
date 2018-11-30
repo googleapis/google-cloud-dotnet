@@ -60,6 +60,29 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        public Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteBatchDmlAsync", _connection.Logger);
+
+            async Task<IEnumerable<long>> Impl()
+            {
+                using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
+                {
+                    transaction.CommitTimeout = timeoutSeconds;
+
+                    IEnumerable<long> result;
+
+                    result = await ((ISpannerTransaction)transaction)
+                        .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
+                        .ConfigureAwait(false);
+
+                    await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
+
+                    return result;
+                }
+            }
+        }
+
         /// <summary>
         /// Acquires a read/write transaction from Spannerconnection and releases the transaction back into the pool
         /// after the operation is complete.
