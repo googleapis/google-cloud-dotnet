@@ -92,7 +92,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             }
         }
 
-        [Fact]
+        // This test has been known to hang...
+        [Fact(Timeout = 20000)]
         public async Task Cancellation()
         {
             var cts = new CancellationTokenSource();
