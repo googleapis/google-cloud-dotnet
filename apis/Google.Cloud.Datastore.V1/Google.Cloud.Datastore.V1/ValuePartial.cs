@@ -42,6 +42,10 @@ namespace Google.Cloud.Datastore.V1
     // Additional helper members.
     public partial class Value
     {
+        private static readonly DateTime s_unixEpochDateTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+        private static readonly DateTimeOffset s_unixEpochDateTimeOffset = s_unixEpochDateTime; // Use the implicit conversion
+        private const int TicksPerMicrosecond = 10;
+
         // TODO:
         // - Cloning?
 
@@ -670,5 +674,47 @@ namespace Google.Cloud.Datastore.V1
         /// <exception cref="InvalidOperationException">The value does not represent an array.</exception>
         /// <returns>The converted array, or <c>null</c> if <paramref name="value"/> is <c>null</c>.</returns>
         public static explicit operator Value[] (Value value) => (Value[])(ArrayValue)value;
+
+        /// <summary>
+        /// Converts this value to a DateTime, if it's either a timestamp value or a 64-bit integer value.
+        /// This method is intended to be used if the value may have been returned from a projection, where timestamps
+        /// are converted into integers in the form of a number of microseconds since the Unix epoch.
+        /// </summary>
+        /// <returns>The converted value.</returns>
+        public DateTime ToDateTimeFromProjection()
+        {
+            switch (ValueTypeCase)
+            {
+                case ValueTypeOneofCase.IntegerValue:
+                    long microseconds = IntegerValue;
+                    long ticks = microseconds * TicksPerMicrosecond;
+                    return s_unixEpochDateTime.AddTicks(ticks);
+                case ValueTypeOneofCase.TimestampValue:
+                    return (DateTime) this;
+                default:
+                    throw new InvalidOperationException($"Cannot convert value of type {ValueTypeCase} to DateTime");
+            }
+        }
+
+        /// <summary>
+        /// Converts this value to a DateTimeOffset, if it's either a timestamp value or a 64-bit integer value.
+        /// This method is intended to be used if the value may have been returned from a projection, where timestamps
+        /// are converted into integers in the form of a number of microseconds since the Unix epoch.
+        /// </summary>
+        /// <returns>The converted value.</returns>
+        public DateTimeOffset ToDateTimeOffsetFromProjection()
+        {
+            switch (ValueTypeCase)
+            {
+                case ValueTypeOneofCase.IntegerValue:
+                    long microseconds = IntegerValue;
+                    long ticks = microseconds * TicksPerMicrosecond;
+                    return s_unixEpochDateTimeOffset.AddTicks(ticks);
+                case ValueTypeOneofCase.TimestampValue:
+                    return (DateTimeOffset) this;
+                default:
+                    throw new InvalidOperationException($"Cannot convert value of type {ValueTypeCase} to DateTimeOffset");
+            }
+        }
     }
 }
