@@ -303,5 +303,77 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
+
+        // [START spanner_test_query_select_struct_fails]
+        [Fact]
+        public async Task SelectStructFails()
+        {
+            var structParam = new SpannerStruct
+            {
+                { "x", SpannerDbType.Int64, 1 },
+                { "y", SpannerDbType.String, "bob" }
+            };
+            using (var connection = _fixture.GetConnection())
+            {
+                using (var cmd = connection.CreateSelectCommand("SELECT @p"))
+                {
+                    cmd.Parameters.Add("p", structParam.GetSpannerDbType(), structParam);
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                    }
+                }
+            }
+        }
+        // [END spanner_test_query_select_struct_fails]
+
+        // [START spanner_test_query_select_array_struct_fails]
+        [Fact]
+        public async Task SelectStructArrayFails()
+        {
+            var structParam = new SpannerStruct
+            {
+                { "x", SpannerDbType.Int64, 1 },
+                { "y", SpannerDbType.String, "bob" }
+            };
+            using (var connection = _fixture.GetConnection())
+            {
+                using (var cmd = connection.CreateSelectCommand("SELECT @p"))
+                {
+                    cmd.Parameters.Add("p",
+                        SpannerDbType.ArrayOf(structParam.GetSpannerDbType()),
+                        new[] { structParam });
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                    }
+                }
+            }
+        }
+        // [END spanner_test_query_select_array_struct_fails]
+
+        // [START spanner_test_query_select_ambiguous_field_fails]
+        [Fact]
+        public async Task SelectAmbiguousFieldFails()
+        {
+            var structParam = new SpannerStruct
+            {
+                { "x", SpannerDbType.Int64, 1 },
+                { "x", SpannerDbType.String, "bob" }
+            };
+            using (var connection = _fixture.GetConnection())
+            {
+                using (var cmd = connection.CreateSelectCommand("SELECT @p.x"))
+                {
+                    cmd.Parameters.Add("p", structParam.GetSpannerDbType(), structParam);
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                    }
+                }
+            }
+        }
+        // [END spanner_test_query_select_ambiguous_field_fails]
     }
 }

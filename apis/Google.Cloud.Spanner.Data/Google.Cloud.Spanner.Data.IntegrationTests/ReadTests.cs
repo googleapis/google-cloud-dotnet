@@ -444,5 +444,46 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
         // [END spanner_test_deadline_exceeded_fails]
+
+        // [START spanner_test_query_bind_very_large_text_fails]
+        [Fact]
+        public async Task LargeRegexFailure()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                using (var cmd = connection.CreateSelectCommand("SELECT REGEXP_CONTAINS(@value, @regexp)"))
+                {
+                    cmd.Parameters.Add("regexp", SpannerDbType.String, "(" + new string('x', 8000));
+                    cmd.Parameters.Add("value", SpannerDbType.String, "");
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        var exception = await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        Assert.Equal(ErrorCode.OutOfRange, exception.ErrorCode);
+                        Assert.Contains("Cannot parse regular expression", exception.InnerException.Message);
+                    }
+                }
+            }
+        }
+        // [END spanner_test_query_bind_very_large_text_fails]
+
+        // [START spanner_test_query_select_unbound_param_fails]
+        [Fact]
+        public async Task UnboundParameter()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                using (var cmd = connection.CreateSelectCommand("SELECT @p"))
+                {
+                    cmd.Parameters.Add("other", SpannerDbType.String, "hello");
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        var exception = await Assert.ThrowsAsync<SpannerException>(async () => await reader.ReadAsync());
+                        Assert.Equal(ErrorCode.InvalidArgument, exception.ErrorCode);
+
+                    }
+                }
+            }
+        }
+        // [END spanner_test_query_select_unbound_param_fails]
     }
 }
