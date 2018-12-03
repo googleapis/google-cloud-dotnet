@@ -30,7 +30,10 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <remarks>
         /// This method fetches the objects lazily, making requests to the underlying service
-        /// for a page of results at a time, as required.
+        /// for a page of results at a time, as required. No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
         /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
@@ -51,7 +54,10 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         /// <remarks>
         /// This method fetches the objects lazily, making requests to the underlying service
-        /// for a page of results at a time, as required.
+        /// for a page of results at a time, as required. No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
         /// </remarks>
         /// <param name="bucket">The bucket to list the objects from. Must not be null.</param>
         /// <param name="prefix">The prefix to match. Only objects with names that start with this string will be returned.
