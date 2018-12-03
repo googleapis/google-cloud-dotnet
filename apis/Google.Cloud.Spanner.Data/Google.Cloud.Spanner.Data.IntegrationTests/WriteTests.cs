@@ -78,6 +78,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_float64]
         // [START spanner_test_write_read_string]
         // [END spanner_test_write_read_string]
+        // [START spanner_test_write_read_bytes]
+        // [END spanner_test_write_read_bytes]
         // [START spanner_test_write_read_timestamp]
         // [END spanner_test_write_read_timestamp]
         // [START spanner_test_write_read_date]
@@ -90,6 +92,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_float64_array]
         // [START spanner_test_write_read_string_array]
         // [END spanner_test_write_read_string_array]
+        // [START spanner_test_write_read_bytes_array]
+        // [END spanner_test_write_read_bytes_array]
         // [START spanner_test_write_read_timestamp_array]
         // [END spanner_test_write_read_timestamp_array]
         // [START spanner_test_write_read_date_array]
@@ -118,6 +122,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Int64Value", SpannerDbType.Int64, 1 },
                 { "Float64Value", SpannerDbType.Float64, 2.0 },
                 { "StringValue", SpannerDbType.String, "abc" },
+                { "BytesValue", SpannerDbType.Bytes, new byte[] { 4, 5, 6 } },
                 { "TimestampValue", SpannerDbType.Timestamp, testTimestamp },
                 { "DateValue", SpannerDbType.Date, testDate },
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), bArray },
@@ -138,6 +143,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Math.Abs(2.0 - reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")))
                     < double.Epsilon);
                 Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                Assert.Equal(new byte[] { 4, 5, 6 }, reader.GetFieldValue<byte[]>(reader.GetOrdinal("BytesValue")));
                 Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
                 Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(bArray, reader.GetFieldValue<bool?[]>(reader.GetOrdinal("BoolArrayValue")));
@@ -206,6 +212,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_empty_float64_array]
         // [START spanner_test_write_read_empty_string_array]
         // [END spanner_test_write_read_empty_string_array]
+        // [START spanner_test_write_read_empty_bytes_array]
+        // [END spanner_test_write_read_empty_bytes_array]
         // [START spanner_test_write_read_empty_timestamp_array]
         // [END spanner_test_write_read_empty_timestamp_array]
         // [START spanner_test_write_read_empty_date_array]
@@ -238,6 +246,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             });
         }
 
+        // [START spanner_test_write_read_inf_nan_float64]
         [Fact]
         public async Task WriteInfinity()
         {
@@ -258,6 +267,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(1, await InsertAsync("Float64Value", SpannerDbType.Float64, double.NegativeInfinity));
             await WithLastRowAsync(reader => Assert.True(double.IsNegativeInfinity(reader.GetFieldValue<double>("Float64Value"))));
         }
+        // [END spanner_test_write_read_inf_nan_float64]
 
         // [START spanner_test_write_read_null_bool]
         // [END spanner_test_write_read_null_bool]
@@ -267,6 +277,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_null_float64]
         // [START spanner_test_write_read_null_string]
         // [END spanner_test_write_read_null_string]
+        // [START spanner_test_write_read_null_bytes]
+        // [END spanner_test_write_read_null_bytes]
         // [START spanner_test_write_read_null_timestamp]
         // [END spanner_test_write_read_null_timestamp]
         // [START spanner_test_write_read_null_date]
@@ -279,6 +291,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_null_float64_array]
         // [START spanner_test_write_read_null_string_array]
         // [END spanner_test_write_read_null_string_array]
+        // [START spanner_test_write_read_null_bytes_array]
+        // [END spanner_test_write_read_null_bytes_array]
         // [START spanner_test_write_read_null_timestamp_array]
         // [END spanner_test_write_read_null_timestamp_array]
         // [START spanner_test_write_read_null_date_array]

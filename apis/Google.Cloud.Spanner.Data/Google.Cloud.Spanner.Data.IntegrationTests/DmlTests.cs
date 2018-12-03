@@ -305,6 +305,45 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
+        // [START spanner_test_dml_duplicate_update]
+        [Fact]
+        public void InsertAndUpdateWithQuery()
+        {
+            string key = CreateTestRows();
+            using (var connection = _fixture.GetConnection())
+            {
+                RetryHelpers.ExecuteWithRetry(() =>
+                {
+                    string dml1 = $"INSERT INTO {_fixture.TableName} (Key, OriginalValue, Value) SELECT Key, OriginalValue + 10, Value FROM {_fixture.TableName} WHERE CopyMe AND KEY=@Key";
+                    using (var command = connection.CreateDmlCommand(dml1))
+                    {
+                        command.Parameters.Add("key", SpannerDbType.String, key);
+                        Assert.Equal(2, command.ExecuteNonQuery());
+                    }
+                    
+                    string dml2 = $"UPDATE {_fixture.TableName} SET Value = Value * 2 WHERE KEY=@Key AND OriginalValue > 10";
+                    using (var command = connection.CreateDmlCommand(dml2))
+                    {
+                        command.Parameters.Add("key", SpannerDbType.String, key);
+                        Assert.Equal(2, command.ExecuteNonQuery());
+                    }
+                });
+            }
+            var actual = FetchValues(key);
+            var expected = new Dictionary<int, int>
+            {
+                { 0, 0 },
+                { 1, 1 },
+                { 2, 2 },
+                { 3, 3 },
+                { 4, 4 },
+                { 13, 6 }, // Inserted then updated
+                { 14, 8 } // Inserted then updated
+            };
+            Assert.Equal(expected, actual);
+        }
+        // [END spanner_test_dml_duplicate_update]
+
         [Fact]
         public void DmlResultsVisibleWithinTransaction()
         {
