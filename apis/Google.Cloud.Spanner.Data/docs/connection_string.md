@@ -2,7 +2,7 @@
 
 Spanner connection strings support the following options:
 
-# Data Source
+## Data Source
 
 The project, instance and optionally database to use. The format is
 `projects/{project}/instances/{instance}/databases/{database}`, with
@@ -13,7 +13,7 @@ Examples:
 - Data Source=projects/my_project/instances/my_instance
 - Data Source=projects/my_project/instances/my_instance/databases/my_database
 
-# CredentialFile
+## CredentialFile
 
 A path to a JSON service account credential file to use. If this is
 not specified, the application default credentials will be used.
@@ -25,7 +25,7 @@ Example:
 
 - CredentialFile=/path/to/credentials.json
 
-# EnableGetSchemaTable
+## EnableGetSchemaTable
 
 When set to true (and when targeting .NET 4.5 or .NET Standard 2.0;
 the method doesn't exist in .NET Standard 1.x),
@@ -38,7 +38,7 @@ Example:
 
 - EnableGetSchemaTable=true
 
-# UseClrDefaultForNull
+## UseClrDefaultForNull
 
 By default, null values returned by Spanner are handled in the
 following manner:
@@ -66,7 +66,7 @@ Example:
 
 - UseClrDefaultForNull=true
 
-# Timeout
+## Timeout
 
 The default timeout used for `SpannerCommand.CommandTimeout`,
 `SpannerTransaction.CommitTimeout`, and other Spanner network
@@ -76,7 +76,7 @@ Example:
 
 - Timeout=30
 
-# AllowImmediateTimeouts
+## AllowImmediateTimeouts
 
 When set to False, a timeout of 0 means an indefinite timeout.
 When set to True, a timeout of 0 means an immediate timeout.
@@ -86,7 +86,7 @@ Example:
 
 - AllowImmediateTimeouts=true
 
-# MaximumGrpcChannels
+## MaximumGrpcChannels
 
 The maximum number of gRPC channels to use per connection using the
 same settings. Defaults to 4. This setting rarely needs to be
@@ -96,7 +96,7 @@ Example:
 
 - MaximumGrpcChannels=8
 
-# MaxConcurrentStreamsLowWatermark
+## MaxConcurrentStreamsLowWatermark
 
 The maximum number of concurrent streams per gRPC channel before
 using a new channel. Defaults to 20. This setting rarely needs to be
@@ -106,7 +106,7 @@ Example:
 
 - MaxConcurrentStreamsLowWatermark=30
 
-# Host and Port
+## Host and Port
 
 These control the Spanner service to connect to. These are primarily
 available for testing purposes.
