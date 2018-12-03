@@ -26,6 +26,14 @@ resources asynchronously return a
 These are equivalent other than their asynchrony, so
 this document focuses on the synchronous version for simplicity.
 
+Note that these methods don't immediately make any RPCs at all. They
+return immediately: the first request is only made when the calling
+code starts to iterate over the resource sequence. This has the
+side-effect that if there is a problem in the request, an exception
+will only be thrown at the point of iteration. In addition to
+failures due to invalid requests, network or service failures can
+cause exceptions even after the first results have been returned.
+
 ## `PagedEnumerable<TResponse, TResource>`
 
 Let's look at the generic type parameters first. The `TResponse` is
