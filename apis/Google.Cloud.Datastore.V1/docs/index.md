@@ -50,6 +50,12 @@ due to forgetting to set an environment variable.
 
 {{sample:DatastoreDb.QueryOverview}}
 
+When a query contains a projection, any timestamp fields will be
+returned using integer values. Use the
+`Value.ToDateTimeFromProjection` and
+`Value.ToDateTimeOffsetFromProjection` methods to convert
+either integer or timestamp values to `DateTime` or `DateTimeOffset`.
+
 Lots more samples:
 [github.com/googleapis/dotnet-docs-samples](https://github.com/googleapis/dotnet-docs-samples/tree/master/datastore/api)
 

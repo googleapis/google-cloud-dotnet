@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Grpc.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -370,6 +371,31 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.NotNull(await db.LookupAsync(insertedKey));
             await db.DeleteAsync(insertedKey);
             Assert.Null(await db.LookupAsync(insertedKey));
+        }
+
+        [Fact]
+        public void TimestampFromProjection()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            string kind = "projection_test";
+            var keyFactory = db.CreateKeyFactory(kind);
+
+            DateTime sampleTimestamp = new DateTime(2018, 12, 3, 15, 8, 32, 123, DateTimeKind.Utc);
+
+            using (var transaction = db.BeginTransaction())
+            {
+                transaction.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["ts"] = sampleTimestamp, ["ignore"] = "ignore me" });
+                transaction.Commit();
+            }
+
+            var query = new Query(kind)
+            {
+                Projection = { "ts" }
+            };
+            var results = db.RunQuery(query).Entities;
+            Assert.Equal(1, results.Count);
+            Assert.Equal(sampleTimestamp, results[0]["ts"].ToDateTimeFromProjection());
+            Assert.Equal((DateTimeOffset) sampleTimestamp, results[0]["ts"].ToDateTimeOffsetFromProjection());
         }
     }
 }
