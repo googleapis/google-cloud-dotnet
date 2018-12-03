@@ -1,4 +1,4 @@
-Connection string options
+# Connection string options
 
 Spanner connection strings support the following options:
 
