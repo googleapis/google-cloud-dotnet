@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1
             public string Sign(
                 string bucket,
                 string objectName,
-                DateTimeOffset? expiration,
+                DateTimeOffset expiration,
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
@@ -47,7 +47,7 @@ namespace Google.Cloud.Storage.V1
             public async Task<string> SignAsync(
                 string bucket,
                 string objectName,
-                DateTimeOffset? expiration,
+                DateTimeOffset expiration,
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
@@ -73,7 +73,7 @@ namespace Google.Cloud.Storage.V1
                 internal SigningState(
                     string bucket,
                     string objectName,
-                    DateTimeOffset? expiration,
+                    DateTimeOffset expiration,
                     HttpMethod requestMethod,
                     Dictionary<string, IEnumerable<string>> requestHeaders,
                     Dictionary<string, IEnumerable<string>> contentHeaders,
@@ -92,7 +92,7 @@ namespace Google.Cloud.Storage.V1
                         requestMethod = HttpMethod.Post;
                     }
 
-                    string expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
+                    string expiryUnixSeconds = ((int) (expiration - UnixEpoch).TotalSeconds).ToString(CultureInfo.InvariantCulture);
                     resourcePath = $"/{bucket}";
                     if (objectName != null)
                     {

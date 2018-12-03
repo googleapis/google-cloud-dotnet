@@ -57,11 +57,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             private void GetWithCustomerSuppliedEncryptionKeysTest_InitDelayTest() => GetWithCustomerSuppliedEncryptionKeysTest_Common(_fixture, Signer);
 
             [Fact]
-            public async Task GetNoExpirationTest()
+            public async Task GetNoExpirationSpecifiedTest()
             {
 #pragma warning disable CS0618 // Type or member is obsolete
                 var url = Signer.Sign(_fixture.ReadBucket, _fixture.SmallObject, expiration: null);
 #pragma warning restore CS0618 // Type or member is obsolete
+
+                // We use int.MaxValue seconds, i.e. the January 3rd 2038, as a value "as close to infinite as we can represent"
+                Assert.Contains("Expires=2147483647", url);
 
                 // Verify that the URL works.
                 var response = await _fixture.HttpClient.GetAsync(url);
