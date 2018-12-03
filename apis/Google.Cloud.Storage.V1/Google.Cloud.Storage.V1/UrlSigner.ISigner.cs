@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1
             string Sign(
                 string bucket,
                 string objectName,
-                DateTimeOffset? expiration,
+                DateTimeOffset expiration,
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
@@ -42,7 +42,7 @@ namespace Google.Cloud.Storage.V1
             Task<string> SignAsync(
                 string bucket,
                 string objectName,
-                DateTimeOffset? expiration,
+                DateTimeOffset expiration,
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,

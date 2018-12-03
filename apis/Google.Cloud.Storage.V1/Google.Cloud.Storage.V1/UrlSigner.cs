@@ -58,6 +58,7 @@ namespace Google.Cloud.Storage.V1
         public static HttpMethod ResumableHttpMethod { get; } = new HttpMethod("RESUMABLE");
 
         private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
+        private static readonly DateTimeOffset MaxExpiration = UnixEpoch.AddSeconds(int.MaxValue);
 
         private readonly IBlobSigner _blobSigner;
         private readonly SigningVersion _signingVersion;
@@ -223,25 +224,25 @@ namespace Google.Cloud.Storage.V1
         /// <para>
         /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
         /// </para>
+        /// <para>
+        /// Note that if a null value is passed for <paramref name="expiration"/>, an expiry date of 2038 is used.
+        /// This is the maximum date that can be represented as an expiry date.
+        /// This behavior maintains as much compatibility as possible with previous versions of this library, but ensures that
+        /// an expiry date is always provided, in-keeping with server-side requirements.
+        /// </para>
         /// </remarks>
         /// <param name="bucket">The name of the bucket. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
         /// will refer to the bucket instead of an object.</param>
         /// <param name="expiration">The point in time after which the signed URL will be invalid. May be null, in which
-        /// case the signed URL never expires.</param>
+        /// case the signed URL expires in 2038.</param>
         /// <param name="request">A sample request for which the signed URL might be used. May be null.</param>
         /// <returns>
         /// The signed URL which can be used to provide access to a bucket or object for a limited amount of time.
         /// </returns>
         [Obsolete(InfiniteExpiryObsoleteMessage)]
         public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request) =>
-            Sign(
-                bucket,
-                objectName,
-                expiration,
-                request?.Method,
-                request?.Headers?.ToDictionary(h => h.Key, h => h.Value),
-                request?.Content?.Headers?.ToDictionary(h => h.Key, h => h.Value));
+            Sign(bucket, objectName, expiration ?? MaxExpiration, request);
 
         /// <summary>
         /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -396,12 +397,18 @@ namespace Google.Cloud.Storage.V1
         /// <para>
         /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
         /// </para>
+        /// <para>
+        /// Note that if a null value is passed for <paramref name="expiration"/>, an expiry date of 2038 is used.
+        /// This is the maximum date that can be represented as an expiry date.
+        /// This behavior maintains as much compatibility as possible with previous versions of this library, but ensures that
+        /// an expiry date is always provided, in-keeping with server-side requirements.
+        /// </para>
         /// </remarks>
         /// <param name="bucket">The name of the bucket. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
         /// will refer to the bucket instead of an object.</param>
         /// <param name="expiration">The point in time after which the signed URL will be invalid. May be null, in which
-        /// case the signed URL never expires.</param>
+        /// case the signed URL expires in 2038.</param>
         /// <param name="requestMethod">The HTTP request method for which the signed URL is allowed to be used. May be null,
         /// in which case GET will be used.</param>
         /// <param name="requestHeaders">The headers which will be included with the request. May be null.</param>
@@ -418,7 +425,7 @@ namespace Google.Cloud.Storage.V1
             HttpMethod requestMethod = null,
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null) =>
-            GetEffectiveSigner().Sign(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner, _clock);
+            Sign(bucket, objectName, expiration ?? MaxExpiration, requestMethod, requestHeaders, contentHeaders);
 
         /// <summary>
         /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -562,12 +569,18 @@ namespace Google.Cloud.Storage.V1
         /// <para>
         /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
         /// </para>
+        /// <para>
+        /// Note that if a null value is passed for <paramref name="expiration"/>, an expiry date of 2038 is used.
+        /// This is the maximum date that can be represented as an expiry date.
+        /// This behavior maintains as much compatibility as possible with previous versions of this library, but ensures that
+        /// an expiry date is always provided, in-keeping with server-side requirements.
+        /// </para>
         /// </remarks>
         /// <param name="bucket">The name of the bucket. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
         /// will refer to the bucket instead of an object.</param>
         /// <param name="expiration">The point in time after which the signed URL will be invalid. May be null, in which
-        /// case the signed URL never expires.</param>
+        /// case the signed URL expires in 2038.</param>
         /// <param name="request">A sample request for which the signed URL might be used. May be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>
@@ -576,14 +589,7 @@ namespace Google.Cloud.Storage.V1
         /// </returns>
         [Obsolete(InfiniteExpiryObsoleteMessage)]
         public Task<string> SignAsync(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request, CancellationToken cancellationToken = default) =>
-            SignAsync(
-                bucket,
-                objectName,
-                expiration,
-                request?.Method,
-                request?.Headers?.ToDictionary(h => h.Key, h => h.Value),
-                request?.Content?.Headers?.ToDictionary(h => h.Key, h => h.Value),
-                cancellationToken);
+            SignAsync(bucket, objectName, expiration ?? MaxExpiration, request, cancellationToken);
 
         /// <summary>
         /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
@@ -745,12 +751,18 @@ namespace Google.Cloud.Storage.V1
         /// <para>
         /// See https://cloud.google.com/storage/docs/access-control/signed-urls for more information on signed URLs.
         /// </para>
+        /// <para>
+        /// Note that if a null value is passed for <paramref name="expiration"/>, an expiry date of 2038 is used.
+        /// This is the maximum date that can be represented as an expiry date.
+        /// This behavior maintains as much compatibility as possible with previous versions of this library, but ensures that
+        /// an expiry date is always provided, in-keeping with server-side requirements.
+        /// </para>
         /// </remarks>
         /// <param name="bucket">The name of the bucket. Must not be null.</param>
         /// <param name="objectName">The name of the object within the bucket. May be null, in which case the signed URL
         /// will refer to the bucket instead of an object.</param>
         /// <param name="expiration">The point in time after which the signed URL will be invalid. May be null, in which
-        /// case the signed URL never expires.</param>
+        /// case the signed URL expires in 2038.</param>
         /// <param name="requestMethod">The HTTP request method for which the signed URL is allowed to be used. May be null,
         /// in which case GET will be used.</param>
         /// <param name="requestHeaders">The headers which will be included with the request. May be null.</param>
@@ -770,7 +782,7 @@ namespace Google.Cloud.Storage.V1
             Dictionary<string, IEnumerable<string>> requestHeaders = null,
             Dictionary<string, IEnumerable<string>> contentHeaders = null,
             CancellationToken cancellationToken = default) =>
-            GetEffectiveSigner().SignAsync(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, _blobSigner, _clock, cancellationToken);
+            SignAsync(bucket, objectName, expiration ?? MaxExpiration, requestMethod, requestHeaders, contentHeaders, cancellationToken);
 
         /// <summary>
         /// Asynchronously creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone

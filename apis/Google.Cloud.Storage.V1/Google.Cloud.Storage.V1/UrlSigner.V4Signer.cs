@@ -36,7 +36,7 @@ namespace Google.Cloud.Storage.V1
             public string Sign(
                 string bucket,
                 string objectName,
-                DateTimeOffset? expiration,
+                DateTimeOffset expiration,
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
@@ -53,7 +53,7 @@ namespace Google.Cloud.Storage.V1
             public async Task<string> SignAsync(
                 string bucket,
                 string objectName,
-                DateTimeOffset? expiration,
+                DateTimeOffset expiration,
                 HttpMethod requestMethod,
                 Dictionary<string, IEnumerable<string>> requestHeaders,
                 Dictionary<string, IEnumerable<string>> contentHeaders,
@@ -81,7 +81,7 @@ namespace Google.Cloud.Storage.V1
                 internal SigningState(
                     string bucket,
                     string objectName,
-                    DateTimeOffset? expiration,
+                    DateTimeOffset expiration,
                     HttpMethod requestMethod,
                     Dictionary<string, IEnumerable<string>> requestHeaders,
                     Dictionary<string, IEnumerable<string>> contentHeaders,
@@ -104,8 +104,9 @@ namespace Google.Cloud.Storage.V1
                     var now = clock.GetCurrentDateTimeUtc();
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
-                    // FIXME: Default expiry?
-                    string expirySeconds = ((int?)(expiration - now)?.TotalSeconds)?.ToString(CultureInfo.InvariantCulture) ?? "3600";
+                    // TODO: Validate again maximum expirary duration
+                    int expirySeconds = (int) (expiration - now).TotalSeconds;
+                    string expiryText = expirySeconds.ToString(CultureInfo.InvariantCulture);
 
                     string clientEmail = blobSigner.Id;
                     string credentialScope = $"{datestamp}/auto/gcs/goog4_request";
