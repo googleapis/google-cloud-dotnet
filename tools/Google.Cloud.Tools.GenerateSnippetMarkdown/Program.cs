@@ -75,8 +75,12 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         private const string EndSnippet = "// End snippet";
         private const string EndSample = "// End sample";
         private const string EndSeeAlso = "// End see-also";
+
+        // We skip lines containing these comments when generating snippets, so that the DevRel system can work with this.
+        private const string DevRelSnippetStart = "// [START";
+        private const string DevRelSnippetEnd = "// [END";
+
         // All these characters need to be converted to _ when creating a link
-        private static readonly Regex DocfxUidCharactersToEscape = new Regex(@"[\(\),\.\[\]\{\}<>]");
         private static readonly Regex DocfxSnippetPattern = new Regex(@"^[\w\.]+$", RegexOptions.Compiled);
         private static readonly Regex NullablePattern = new Regex(@"^System.Nullable\{([\w\.]*)\}$", RegexOptions.Compiled);
         private static readonly Regex GenericMemberPattern = new Regex(@"^([\w\.]+)\{([\w\.,]*)\}$", RegexOptions.Compiled);
@@ -294,6 +298,12 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             foreach (var line in File.ReadLines(file))
             {
                 lineNumber++;
+                // By skipping these lines, we can write snippets that the DevRel system can include too.
+                if (line.Contains(DevRelSnippetStart) || line.Contains(DevRelSnippetEnd))
+                {
+                    continue;
+                }
+
                 // 5 kinds of line to consider:
                 // StartSnippet / StartSample: only valid when not in a snippet
                 // EndSnippet / EndSample: only valid when in a snippet
