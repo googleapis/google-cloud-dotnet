@@ -142,6 +142,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.ListRows(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
         public PagedEnumerable<TableDataList, BigQueryRow> ListRows(ListRowsOptions options = null) => _client.ListRows(Reference, Schema, options);
@@ -335,6 +341,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.ListRowsAsync(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the rows within the table.</returns>
         public PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(ListRowsOptions options = null) => _client.ListRowsAsync(Reference, Schema, options);
