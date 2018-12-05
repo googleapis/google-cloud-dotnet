@@ -123,7 +123,13 @@ namespace Google.Cloud.Storage.V1
         /// </remarks>
         public UploadValidationMode? UploadValidationMode { get; set; }
 
-        internal void ModifyMediaUpload(InsertMediaUpload upload)
+        /// <summary>
+        /// If set, an Origin header is included when initiating the resumable upload. This allows for Cross-Origin
+        /// Resource Sharing, as documented at https://cloud.google.com/storage/docs/cross-origin.
+        /// </summary>
+        public string Origin { get; set; }
+
+        internal void ModifyMediaUpload(CustomMediaUpload upload)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid
             // options being passed to a public method.
@@ -174,6 +180,10 @@ namespace Google.Cloud.Storage.V1
             if (KmsKeyName != null)
             {
                 upload.KmsKeyName = KmsKeyName;
+            }
+            if (Origin != null)
+            {
+                upload.Options.ModifySessionInitiationRequest += message => message.Headers.Add("Origin", Origin);
             }
         }
     }
