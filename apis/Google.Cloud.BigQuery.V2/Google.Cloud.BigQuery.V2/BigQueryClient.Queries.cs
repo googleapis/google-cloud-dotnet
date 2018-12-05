@@ -198,6 +198,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRows(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
@@ -212,6 +218,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the rows within a table within this client's project specified by dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRows(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
@@ -224,6 +236,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Lists the rows within a table, similar to a <c>SELECT * FROM ...</c> query.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
         /// the table first.</param>
@@ -238,6 +256,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the rows within a table specified by project ID, dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRowsAsync(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="projectId">The project ID. Must not be null.</param>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
@@ -252,6 +276,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the rows within a table within this client's project specified by dataset ID and table ID, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="ListRowsAsync(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="datasetId">The dataset ID. Must not be null.</param>
         /// <param name="tableId">The table ID. Must not be null.</param>
         /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
@@ -264,6 +294,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Lists the rows within a table, similar to a <c>SELECT * FROM ...</c> query.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
         /// <param name="schema">The schema to use when interpreting results. This may be null, in which case it will be fetched from
         /// the table first.</param>

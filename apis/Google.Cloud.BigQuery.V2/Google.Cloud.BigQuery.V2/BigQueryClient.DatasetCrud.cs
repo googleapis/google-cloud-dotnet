@@ -95,6 +95,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the datasets within this client's project.
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of datasets within this project.</returns>
         public virtual PagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(ListDatasetsOptions options = null) =>
@@ -104,6 +110,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the datasets within the specified project.
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasets(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="projectId">The project to list the datasets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of datasets within the specified project.</returns>
@@ -113,6 +125,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Lists the datasets within the specified project.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of datasets within the specified project.</returns>
@@ -125,6 +143,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously lists the datasets within this client's project.
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasetsAsync(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of datasets within this project.</returns>
         public virtual PagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ListDatasetsOptions options = null) =>
@@ -134,6 +158,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously lists the datasets within the specified project.
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListDatasetsAsync(ProjectReference, ListDatasetsOptions)"/>.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="projectId">The project to list the datasets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of datasets within the specified project.</returns>
@@ -143,6 +173,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Asynchronously lists the datasets within the specified project.
         /// </summary>
+        /// <remarks>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </remarks>
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of datasets within the specified project.</returns>

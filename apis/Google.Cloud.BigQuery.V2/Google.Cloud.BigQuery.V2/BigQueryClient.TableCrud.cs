@@ -104,6 +104,12 @@ namespace Google.Cloud.BigQuery.V2
         /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
         /// call for each table you need the details of.
         /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// </remarks>
         /// <param name="projectId">The ID of the project containing the dataset. Must not be null.</param>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
@@ -121,6 +127,12 @@ namespace Google.Cloud.BigQuery.V2
         /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
         /// call for each table you need the details of.
         /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// </remarks>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -135,6 +147,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <para>
         /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
         /// call for each table you need the details of.
+        /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
         /// </para>
         /// </remarks>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
@@ -154,6 +172,12 @@ namespace Google.Cloud.BigQuery.V2
         /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
         /// call for each table you need the details of.
         /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// </remarks>
         /// <param name="projectId">The ID of the project containing the dataset. Must not be null.</param>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
@@ -171,6 +195,12 @@ namespace Google.Cloud.BigQuery.V2
         /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
         /// call for each table you need the details of.
         /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// </remarks>
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
@@ -185,6 +215,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <para>
         /// The returned tables will not have all the properties in the resource populated. For complete information, make a GetTable
         /// call for each table you need the details of.
+        /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
         /// </para>
         /// </remarks>
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>

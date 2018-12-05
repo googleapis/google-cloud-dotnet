@@ -158,6 +158,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the tables within this dataset.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.ListTables(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within this dataset.</returns>
         public PagedEnumerable<TableList, BigQueryTable> ListTables(ListTablesOptions options = null) => _client.ListTables(Reference, options);
@@ -339,6 +345,12 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously lists the tables within this dataset.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.ListTablesAsync(DatasetReference, ListTablesOptions)"/>.
         /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of tables within this dataset.</returns>
         public PagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(ListTablesOptions options = null) => _client.ListTablesAsync(Reference, options);

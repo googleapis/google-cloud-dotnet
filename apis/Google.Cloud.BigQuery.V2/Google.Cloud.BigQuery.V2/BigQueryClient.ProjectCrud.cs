@@ -25,7 +25,15 @@ namespace Google.Cloud.BigQuery.V2
         /// Lists the cloud projects available using the current credentials.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// The project associated with this client is irrelevant for this operation.
+        /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of projects the user has access to.</returns>
@@ -38,7 +46,15 @@ namespace Google.Cloud.BigQuery.V2
         /// Asynchronously lists the cloud projects available using the current credentials.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// The project associated with this client is irrelevant for this operation.
+        /// </para>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
         /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of projects the user has access to.</returns>
