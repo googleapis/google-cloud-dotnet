@@ -54,7 +54,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void ModifyMediaUpload_DefaultOptions()
         {
-            var upload = new InsertMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
+            var upload = new CustomMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
             var options = new UploadObjectOptions();
             options.ModifyMediaUpload(upload);
             Assert.Equal(ResumableUpload<InsertMediaUpload>.DefaultChunkSize, upload.ChunkSize);
@@ -71,7 +71,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void ModifyMediaUpload_AllOptions_PositiveMatch()
         {
-            var upload = new InsertMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
+            var upload = new CustomMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
             var options = new UploadObjectOptions
             {
                 ChunkSize = UploadObjectOptions.MinimumChunkSize * 3,
@@ -96,7 +96,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void ModifyMediaUpload_AllOptions_NegativeMatch()
         {
-            var upload = new InsertMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
+            var upload = new CustomMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
             var options = new UploadObjectOptions
             {
                 ChunkSize = UploadObjectOptions.MinimumChunkSize * 3,
@@ -117,7 +117,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void ModifyMediaUpload_MatchNotMatchConflicts()
         {
-            var upload = new InsertMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
+            var upload = new CustomMediaUpload(new DummyService(), null, "bucket", new MemoryStream(), null);
             Assert.Throws<ArgumentException>(() =>
             {
                 var options = new UploadObjectOptions { IfGenerationMatch = 1L, IfGenerationNotMatch = 2L };

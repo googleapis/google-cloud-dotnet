@@ -53,6 +53,20 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
+        public void CorsUpload()
+        {
+            var name = IdGenerator.FromGuid();
+            var contentType = "application/octet-stream";
+            var source = GenerateData(100);
+            var options = new UploadObjectOptions { Origin = "http://nodatime.org" };
+            var result = _fixture.Client.UploadObject(_fixture.MultiVersionBucket, name, contentType, source, options);
+            Assert.Equal(_fixture.MultiVersionBucket, result.Bucket);
+            Assert.Equal(name, result.Name);
+            Assert.Equal(contentType, result.ContentType);
+            ValidateData(_fixture.MultiVersionBucket, name, source);
+        }
+
+        [Fact]
         public void UploadWithObject()
         {
             var destination = new Object
