@@ -178,6 +178,79 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for UpdateClusterAsync</summary>
+        public async Task UpdateClusterAsync()
+        {
+            // Snippet: UpdateClusterAsync(string,string,string,Cluster,FieldMask,CallSettings)
+            // Additional: UpdateClusterAsync(string,string,string,Cluster,FieldMask,CancellationToken)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string clusterName = "";
+            Cluster cluster = new Cluster();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Cluster, ClusterOperationMetadata> response =
+                await clusterControllerClient.UpdateClusterAsync(projectId, region, clusterName, cluster, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, ClusterOperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
+                await clusterControllerClient.PollOnceUpdateClusterAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCluster</summary>
+        public void UpdateCluster()
+        {
+            // Snippet: UpdateCluster(string,string,string,Cluster,FieldMask,CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string clusterName = "";
+            Cluster cluster = new Cluster();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Cluster, ClusterOperationMetadata> response =
+                clusterControllerClient.UpdateCluster(projectId, region, clusterName, cluster, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Cluster, ClusterOperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Cluster result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Cluster, ClusterOperationMetadata> retrievedResponse =
+                clusterControllerClient.PollOnceUpdateCluster(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Cluster retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateClusterAsync</summary>
         public async Task UpdateClusterAsync_RequestObject()
         {
             // Snippet: UpdateClusterAsync(UpdateClusterRequest,CallSettings)
@@ -459,7 +532,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListClustersAsync</summary>
-        public async Task ListClustersAsync()
+        public async Task ListClustersAsync1()
         {
             // Snippet: ListClustersAsync(string,string,string,int?,CallSettings)
             // Create client
@@ -504,7 +577,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListClusters</summary>
-        public void ListClusters()
+        public void ListClusters1()
         {
             // Snippet: ListClusters(string,string,string,int?,CallSettings)
             // Create client
@@ -515,6 +588,98 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Make the request
             PagedEnumerable<ListClustersResponse, Cluster> response =
                 clusterControllerClient.ListClusters(projectId, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Cluster item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListClustersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Cluster item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Cluster> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Cluster item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClustersAsync</summary>
+        public async Task ListClustersAsync2()
+        {
+            // Snippet: ListClustersAsync(string,string,string,string,int?,CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = await ClusterControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<ListClustersResponse, Cluster> response =
+                clusterControllerClient.ListClustersAsync(projectId: projectId, region: region, filter: filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Cluster item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListClustersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Cluster item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Cluster> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Cluster item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListClusters</summary>
+        public void ListClusters2()
+        {
+            // Snippet: ListClusters(string,string,string,string,int?,CallSettings)
+            // Create client
+            ClusterControllerClient clusterControllerClient = ClusterControllerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string filter = "";
+            // Make the request
+            PagedEnumerable<ListClustersResponse, Cluster> response =
+                clusterControllerClient.ListClusters(projectId: projectId, region: region, filter: filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Cluster item in response)

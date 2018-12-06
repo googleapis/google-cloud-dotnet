@@ -68,21 +68,25 @@ namespace Google.Cloud.Dataproc.V1
         /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="JobControllerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes();
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="JobControllerClient"/> RPC methods.
@@ -141,7 +145,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 900000 milliseconds.
         /// </remarks>
@@ -171,6 +175,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 900000 milliseconds.
@@ -201,6 +206,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 900000 milliseconds.
@@ -230,7 +236,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 900000 milliseconds.
         /// </remarks>
@@ -259,7 +265,9 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 900000 milliseconds.
         /// </remarks>
@@ -268,7 +276,7 @@ namespace Google.Cloud.Dataproc.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(900000)),
-                retryFilter: NonIdempotentRetryFilter
+                retryFilter: IdempotentRetryFilter
             )));
 
         /// <summary>
@@ -288,7 +296,6 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 900000 milliseconds.
@@ -298,7 +305,7 @@ namespace Google.Cloud.Dataproc.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(900000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -833,6 +840,120 @@ namespace Google.Cloud.Dataproc.V1
                 {
                     ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists regions/{region}/jobs in a project.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud Platform project that the job
+        /// belongs to.
+        /// </param>
+        /// <param name="region">
+        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter constraining the jobs to list. Filters are
+        /// case-sensitive and have the following syntax:
+        ///
+        /// [field = value] AND [field [= value]] ...
+        ///
+        /// where **field** is `status.state` or `labels.[KEY]`, and `[KEY]` is a label
+        /// key. **value** can be `*` to match all values.
+        /// `status.state` can be either `ACTIVE` or `NON_ACTIVE`.
+        /// Only the logical `AND` operator is supported; space-separated items are
+        /// treated as having an implicit `AND` operator.
+        ///
+        /// Example filter:
+        ///
+        /// status.state = ACTIVE AND labels.env = staging AND labels.starred = *
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Job"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
+            string projectId,
+            string region,
+            string filter,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListJobsAsync(
+                new ListJobsRequest
+                {
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    Filter = filter ?? "", // Optional
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists regions/{region}/jobs in a project.
+        /// </summary>
+        /// <param name="projectId">
+        /// Required. The ID of the Google Cloud Platform project that the job
+        /// belongs to.
+        /// </param>
+        /// <param name="region">
+        /// Required. The Cloud Dataproc region in which to handle the request.
+        /// </param>
+        /// <param name="filter">
+        /// Optional. A filter constraining the jobs to list. Filters are
+        /// case-sensitive and have the following syntax:
+        ///
+        /// [field = value] AND [field [= value]] ...
+        ///
+        /// where **field** is `status.state` or `labels.[KEY]`, and `[KEY]` is a label
+        /// key. **value** can be `*` to match all values.
+        /// `status.state` can be either `ACTIVE` or `NON_ACTIVE`.
+        /// Only the logical `AND` operator is supported; space-separated items are
+        /// treated as having an implicit `AND` operator.
+        ///
+        /// Example filter:
+        ///
+        /// status.state = ACTIVE AND labels.env = staging AND labels.starred = *
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Job"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
+            string projectId,
+            string region,
+            string filter,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListJobs(
+                new ListJobsRequest
+                {
+                    ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                    Filter = filter ?? "", // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

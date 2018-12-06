@@ -170,7 +170,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListJobsAsync</summary>
-        public async Task ListJobsAsync()
+        public async Task ListJobsAsync1()
         {
             // Snippet: ListJobsAsync(string,string,string,int?,CallSettings)
             // Create client
@@ -215,7 +215,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         }
 
         /// <summary>Snippet for ListJobs</summary>
-        public void ListJobs()
+        public void ListJobs1()
         {
             // Snippet: ListJobs(string,string,string,int?,CallSettings)
             // Create client
@@ -226,6 +226,98 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Make the request
             PagedEnumerable<ListJobsResponse, Job> response =
                 jobControllerClient.ListJobs(projectId, region);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Job item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Job item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Job> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Job item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobsAsync</summary>
+        public async Task ListJobsAsync2()
+        {
+            // Snippet: ListJobsAsync(string,string,string,string,int?,CallSettings)
+            // Create client
+            JobControllerClient jobControllerClient = await JobControllerClient.CreateAsync();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string filter = "";
+            // Make the request
+            PagedAsyncEnumerable<ListJobsResponse, Job> response =
+                jobControllerClient.ListJobsAsync(projectId: projectId, region: region, filter: filter);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Job item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Job item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Job> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Job item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobs</summary>
+        public void ListJobs2()
+        {
+            // Snippet: ListJobs(string,string,string,string,int?,CallSettings)
+            // Create client
+            JobControllerClient jobControllerClient = JobControllerClient.Create();
+            // Initialize request argument(s)
+            string projectId = "";
+            string region = "";
+            string filter = "";
+            // Make the request
+            PagedEnumerable<ListJobsResponse, Job> response =
+                jobControllerClient.ListJobs(projectId: projectId, region: region, filter: filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Job item in response)

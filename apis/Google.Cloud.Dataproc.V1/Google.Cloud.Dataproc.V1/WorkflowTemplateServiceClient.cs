@@ -72,21 +72,25 @@ namespace Google.Cloud.Dataproc.V1
         /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="WorkflowTemplateServiceClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes();
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="WorkflowTemplateServiceClient"/> RPC methods.
@@ -145,7 +149,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -175,6 +179,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -204,7 +209,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -254,7 +259,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -304,7 +309,6 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -314,7 +318,7 @@ namespace Google.Cloud.Dataproc.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -335,6 +339,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Retry will be attempted on the following response status codes:
         /// <list>
         /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -364,7 +369,6 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -374,7 +378,7 @@ namespace Google.Cloud.Dataproc.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -556,12 +560,12 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(
-            RegionName parent,
+            string parent,
             WorkflowTemplate template,
             gaxgrpc::CallSettings callSettings = null) => CreateWorkflowTemplateAsync(
                 new CreateWorkflowTemplateRequest
                 {
-                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
                 },
                 callSettings);
@@ -584,7 +588,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(
-            RegionName parent,
+            string parent,
             WorkflowTemplate template,
             st::CancellationToken cancellationToken) => CreateWorkflowTemplateAsync(
                 parent,
@@ -609,12 +613,12 @@ namespace Google.Cloud.Dataproc.V1
         /// The RPC response.
         /// </returns>
         public virtual WorkflowTemplate CreateWorkflowTemplate(
-            RegionName parent,
+            string parent,
             WorkflowTemplate template,
             gaxgrpc::CallSettings callSettings = null) => CreateWorkflowTemplate(
                 new CreateWorkflowTemplateRequest
                 {
-                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
                 },
                 callSettings);
@@ -693,11 +697,11 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> GetWorkflowTemplateAsync(
-            WorkflowTemplateName name,
+            string name,
             gaxgrpc::CallSettings callSettings = null) => GetWorkflowTemplateAsync(
                 new GetWorkflowTemplateRequest
                 {
-                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -719,7 +723,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> GetWorkflowTemplateAsync(
-            WorkflowTemplateName name,
+            string name,
             st::CancellationToken cancellationToken) => GetWorkflowTemplateAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -742,11 +746,11 @@ namespace Google.Cloud.Dataproc.V1
         /// The RPC response.
         /// </returns>
         public virtual WorkflowTemplate GetWorkflowTemplate(
-            WorkflowTemplateName name,
+            string name,
             gaxgrpc::CallSettings callSettings = null) => GetWorkflowTemplate(
                 new GetWorkflowTemplateRequest
                 {
-                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -840,17 +844,6 @@ namespace Google.Cloud.Dataproc.V1
         /// in https://cloud.google.com/apis/design/resource_names of the form
         /// `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}`
         /// </param>
-        /// <param name="requestId">
-        /// Optional. A tag that prevents multiple concurrent workflow
-        /// instances with the same tag from running. This mitigates risk of
-        /// concurrent instances started due to retries.
-        ///
-        /// It is recommended to always set this value to a
-        /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-        ///
-        /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
-        /// underscores (_), and hyphens (-). The maximum length is 40 characters.
-        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -858,13 +851,11 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
-            WorkflowTemplateName name,
-            string requestId,
+            string name,
             gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplateAsync(
                 new InstantiateWorkflowTemplateRequest
                 {
-                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    RequestId = requestId ?? "", // Optional
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -893,17 +884,6 @@ namespace Google.Cloud.Dataproc.V1
         /// in https://cloud.google.com/apis/design/resource_names of the form
         /// `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}`
         /// </param>
-        /// <param name="requestId">
-        /// Optional. A tag that prevents multiple concurrent workflow
-        /// instances with the same tag from running. This mitigates risk of
-        /// concurrent instances started due to retries.
-        ///
-        /// It is recommended to always set this value to a
-        /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-        ///
-        /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
-        /// underscores (_), and hyphens (-). The maximum length is 40 characters.
-        /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
@@ -911,11 +891,9 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
-            WorkflowTemplateName name,
-            string requestId,
+            string name,
             st::CancellationToken cancellationToken) => InstantiateWorkflowTemplateAsync(
                 name,
-                requestId,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -943,16 +921,138 @@ namespace Google.Cloud.Dataproc.V1
         /// in https://cloud.google.com/apis/design/resource_names of the form
         /// `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}`
         /// </param>
-        /// <param name="requestId">
-        /// Optional. A tag that prevents multiple concurrent workflow
-        /// instances with the same tag from running. This mitigates risk of
-        /// concurrent instances started due to retries.
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, WorkflowMetadata> InstantiateWorkflowTemplate(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplate(
+                new InstantiateWorkflowTemplateRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
         ///
-        /// It is recommended to always set this value to a
-        /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
         ///
-        /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
-        /// underscores (_), and hyphens (-). The maximum length is 40 characters.
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        ///
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata][google.cloud.dataproc.v1.WorkflowMetadata].
+        ///
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the workflow template, as described
+        /// in https://cloud.google.com/apis/design/resource_names of the form
+        /// `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}`
+        /// </param>
+        /// <param name="parameters">
+        /// Optional. Map from parameter names to values that should be used for those
+        /// parameters. Values may not exceed 100 characters.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
+            string name,
+            scg::IDictionary<string, string> parameters,
+            gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplateAsync(
+                new InstantiateWorkflowTemplateRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Parameters = { parameters ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        ///
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        ///
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        ///
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata][google.cloud.dataproc.v1.WorkflowMetadata].
+        ///
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the workflow template, as described
+        /// in https://cloud.google.com/apis/design/resource_names of the form
+        /// `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}`
+        /// </param>
+        /// <param name="parameters">
+        /// Optional. Map from parameter names to values that should be used for those
+        /// parameters. Values may not exceed 100 characters.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
+            string name,
+            scg::IDictionary<string, string> parameters,
+            st::CancellationToken cancellationToken) => InstantiateWorkflowTemplateAsync(
+                name,
+                parameters,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        ///
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        ///
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        ///
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata][google.cloud.dataproc.v1.WorkflowMetadata].
+        ///
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="name">
+        /// Required. The "resource name" of the workflow template, as described
+        /// in https://cloud.google.com/apis/design/resource_names of the form
+        /// `projects/{project_id}/regions/{region}/workflowTemplates/{template_id}`
+        /// </param>
+        /// <param name="parameters">
+        /// Optional. Map from parameter names to values that should be used for those
+        /// parameters. Values may not exceed 100 characters.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -961,13 +1061,13 @@ namespace Google.Cloud.Dataproc.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<pbwkt::Empty, WorkflowMetadata> InstantiateWorkflowTemplate(
-            WorkflowTemplateName name,
-            string requestId,
+            string name,
+            scg::IDictionary<string, string> parameters,
             gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplate(
                 new InstantiateWorkflowTemplateRequest
                 {
-                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                    RequestId = requestId ?? "", // Optional
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Parameters = { parameters ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
                 },
                 callSettings);
 
@@ -1109,17 +1209,6 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="template">
         /// Required. The workflow template to instantiate.
         /// </param>
-        /// <param name="requestId">
-        /// Optional. A tag that prevents multiple concurrent workflow
-        /// instances with the same tag from running. This mitigates risk of
-        /// concurrent instances started due to retries.
-        ///
-        /// It is recommended to always set this value to a
-        /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-        ///
-        /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
-        /// underscores (_), and hyphens (-). The maximum length is 40 characters.
-        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1129,13 +1218,11 @@ namespace Google.Cloud.Dataproc.V1
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(
             string parent,
             WorkflowTemplate template,
-            string requestId,
             gaxgrpc::CallSettings callSettings = null) => InstantiateInlineWorkflowTemplateAsync(
                 new InstantiateInlineWorkflowTemplateRequest
                 {
                     Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
-                    RequestId = requestId ?? "", // Optional
                 },
                 callSettings);
 
@@ -1171,17 +1258,6 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="template">
         /// Required. The workflow template to instantiate.
         /// </param>
-        /// <param name="requestId">
-        /// Optional. A tag that prevents multiple concurrent workflow
-        /// instances with the same tag from running. This mitigates risk of
-        /// concurrent instances started due to retries.
-        ///
-        /// It is recommended to always set this value to a
-        /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-        ///
-        /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
-        /// underscores (_), and hyphens (-). The maximum length is 40 characters.
-        /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
         /// </param>
@@ -1191,11 +1267,9 @@ namespace Google.Cloud.Dataproc.V1
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(
             string parent,
             WorkflowTemplate template,
-            string requestId,
             st::CancellationToken cancellationToken) => InstantiateInlineWorkflowTemplateAsync(
                 parent,
                 template,
-                requestId,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1230,17 +1304,6 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="template">
         /// Required. The workflow template to instantiate.
         /// </param>
-        /// <param name="requestId">
-        /// Optional. A tag that prevents multiple concurrent workflow
-        /// instances with the same tag from running. This mitigates risk of
-        /// concurrent instances started due to retries.
-        ///
-        /// It is recommended to always set this value to a
-        /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
-        ///
-        /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
-        /// underscores (_), and hyphens (-). The maximum length is 40 characters.
-        /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
@@ -1250,13 +1313,11 @@ namespace Google.Cloud.Dataproc.V1
         public virtual lro::Operation<pbwkt::Empty, WorkflowMetadata> InstantiateInlineWorkflowTemplate(
             string parent,
             WorkflowTemplate template,
-            string requestId,
             gaxgrpc::CallSettings callSettings = null) => InstantiateInlineWorkflowTemplate(
                 new InstantiateInlineWorkflowTemplateRequest
                 {
                     Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
-                    RequestId = requestId ?? "", // Optional
                 },
                 callSettings);
 
@@ -1525,13 +1586,13 @@ namespace Google.Cloud.Dataproc.V1
         /// A pageable asynchronous sequence of <see cref="WorkflowTemplate"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(
-            RegionName parent,
+            string parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListWorkflowTemplatesAsync(
                 new ListWorkflowTemplatesRequest
                 {
-                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1560,13 +1621,13 @@ namespace Google.Cloud.Dataproc.V1
         /// A pageable sequence of <see cref="WorkflowTemplate"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(
-            RegionName parent,
+            string parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListWorkflowTemplates(
                 new ListWorkflowTemplatesRequest
                 {
-                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1625,11 +1686,11 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteWorkflowTemplateAsync(
-            WorkflowTemplateName name,
+            string name,
             gaxgrpc::CallSettings callSettings = null) => DeleteWorkflowTemplateAsync(
                 new DeleteWorkflowTemplateRequest
                 {
-                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1648,7 +1709,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteWorkflowTemplateAsync(
-            WorkflowTemplateName name,
+            string name,
             st::CancellationToken cancellationToken) => DeleteWorkflowTemplateAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1665,11 +1726,11 @@ namespace Google.Cloud.Dataproc.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteWorkflowTemplate(
-            WorkflowTemplateName name,
+            string name,
             gaxgrpc::CallSettings callSettings = null) => DeleteWorkflowTemplate(
                 new DeleteWorkflowTemplateRequest
                 {
-                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
