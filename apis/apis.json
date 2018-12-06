@@ -569,6 +569,16 @@
   },
 
   {
+    "id": "Google.Cloud.Scheduler.V1Beta1",
+    "productName": "Google Cloud Scheduler",
+    "productUrl": "https://cloud.google.com/scheduler/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Scheduler API, which creates and manages jobs run on a regular recurring schedule.",
+    "tags": [ "scheduler", "cron" ]
+  },
+
+  {
     "id": "Google.Cloud.Redis.V1Beta1",
     "productName": "Google Cloud Memorystore for Redis",
     "productUrl": "https://cloud.google.com/memorystore/",
