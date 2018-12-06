@@ -38,9 +38,9 @@ namespace Google.Api.Gax.Grpc
         public ChannelCredentials ChannelCredentials { get; private set; }
 
         /// <summary>
-        /// The credential file to use, or null if credentials are being provided in a different way.
+        /// The path to the credentials file to use, or null if credentials are being provided in a different way.
         /// </summary>
-        public string CredentialsFile { get; private set; }
+        public string CredentialsPath { get; private set; }
 
         /// <summary>
         /// The credentials to use as JSON, or null if credentials are being provided in a different way.
@@ -71,12 +71,12 @@ namespace Google.Api.Gax.Grpc
         protected ClientBuilder(TBuilder builder)
         {
             Endpoint = builder.Endpoint;
-            ChannelCredentials = builder.ChannelCredentials;
             Scopes = builder.Scopes;
-            CredentialsFile = builder.CredentialsFile;
+            ChannelCredentials = builder.ChannelCredentials;
+            CredentialsPath = builder.CredentialsPath;
             JsonCredentials = builder.JsonCredentials;
-            CallInvoker = CallInvoker;
-            ChannelCredentials = null;
+            TokenAccessMethod = builder.TokenAccessMethod;
+            CallInvoker = builder.CallInvoker;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Google.Api.Gax.Grpc
         /// </summary>
         protected virtual void ClearCredentials()
         {
-            CredentialsFile = null;
+            CredentialsPath = null;
             JsonCredentials = null;
             TokenAccessMethod = null;
             CallInvoker = null;
@@ -139,14 +139,14 @@ namespace Google.Api.Gax.Grpc
         /// <remarks>
         /// This method overrides any credentials specified with previous calls.
         /// </remarks>
-        /// <param name="file">The credential file to use, or null to use the default credentials.</param>
-        /// <returns>A builder with the specified credential file.</returns>
-        public TBuilder WithCredentialsFile(string file)
+        /// <param name="path">The path to the credentials file to use, or null to use the default credentials.</param>
+        /// <returns>A builder with the specified credentials path.</returns>
+        public TBuilder WithCredentialsPath(string path)
         {
             // Note: don't load this until we build, so that any scope changes will be effective.
             var clone = Clone();
             clone.ClearCredentials();
-            clone.CredentialsFile = file;
+            clone.CredentialsPath = path;
             return clone;
         }
 
@@ -196,7 +196,7 @@ namespace Google.Api.Gax.Grpc
         /// Creates a new builder based on this one, but with the specified gRPC call invoker.
         /// </summary>
         /// <para>
-        /// This method removes any credentials specified with previous calls.
+        /// This method removes any credentials and scopes specified with previous calls.
         /// </para>
         /// <param name="callInvoker">The gRPC call invoker to use, or null to use the default call invoker.</param>
         /// <returns>A builder with the specified call invoker.</returns>
@@ -205,6 +205,7 @@ namespace Google.Api.Gax.Grpc
             var clone = Clone();
             clone.ClearCredentials();
             clone.CallInvoker = callInvoker;
+            clone.Scopes = null;
             return clone;
         }
 
@@ -251,9 +252,9 @@ namespace Google.Api.Gax.Grpc
                 return ChannelCredentials;
             }
             GoogleCredential unscoped;
-            if (CredentialsFile != null)
+            if (CredentialsPath != null)
             {
-                unscoped = GoogleCredential.FromFile(CredentialsFile);
+                unscoped = GoogleCredential.FromFile(CredentialsPath);
             }
             else if (JsonCredentials != null)
             {
@@ -277,10 +278,10 @@ namespace Google.Api.Gax.Grpc
                 return ChannelCredentials;
             }
             GoogleCredential unscoped;
-            if (CredentialsFile != null)
+            if (CredentialsPath != null)
             {
                 // TODO: Use an async overload when one is available
-                unscoped = GoogleCredential.FromFile(CredentialsFile);
+                unscoped = GoogleCredential.FromFile(CredentialsPath);
             }
             else if (JsonCredentials != null)
             {
