@@ -42,7 +42,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest expectedRequest = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
+                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -54,9 +54,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplate(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            RegionName parent = new RegionName("[PROJECT]", "[REGION]");
+            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
             WorkflowTemplate template = new WorkflowTemplate();
-            WorkflowTemplate response = client.CreateWorkflowTemplate(parent, template);
+            WorkflowTemplate response = client.CreateWorkflowTemplate(formattedParent, template);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -69,7 +69,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest expectedRequest = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
+                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -81,9 +81,9 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.CreateWorkflowTemplateAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            RegionName parent = new RegionName("[PROJECT]", "[REGION]");
+            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
             WorkflowTemplate template = new WorkflowTemplate();
-            WorkflowTemplate response = await client.CreateWorkflowTemplateAsync(parent, template);
+            WorkflowTemplate response = await client.CreateWorkflowTemplateAsync(formattedParent, template);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -96,7 +96,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
+                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -121,7 +121,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateWorkflowTemplateRequest request = new CreateWorkflowTemplateRequest
             {
-                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
+                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
                 Template = new WorkflowTemplate(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
@@ -146,7 +146,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetWorkflowTemplateRequest expectedRequest = new GetWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
@@ -157,8 +157,8 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.GetWorkflowTemplate(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            WorkflowTemplate response = client.GetWorkflowTemplate(name);
+            string formattedName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString();
+            WorkflowTemplate response = client.GetWorkflowTemplate(formattedName);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -171,7 +171,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetWorkflowTemplateRequest expectedRequest = new GetWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
@@ -182,8 +182,8 @@ namespace Google.Cloud.Dataproc.V1.Tests
             mockGrpcClient.Setup(x => x.GetWorkflowTemplateAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<WorkflowTemplate>(Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            WorkflowTemplate response = await client.GetWorkflowTemplateAsync(name);
+            string formattedName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString();
+            WorkflowTemplate response = await client.GetWorkflowTemplateAsync(formattedName);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -196,7 +196,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
@@ -220,7 +220,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetWorkflowTemplateRequest request = new GetWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             WorkflowTemplate expectedResponse = new WorkflowTemplate
             {
@@ -342,14 +342,14 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteWorkflowTemplateRequest expectedRequest = new DeleteWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            client.DeleteWorkflowTemplate(name);
+            string formattedName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString();
+            client.DeleteWorkflowTemplate(formattedName);
             mockGrpcClient.VerifyAll();
         }
 
@@ -361,14 +361,14 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteWorkflowTemplateRequest expectedRequest = new DeleteWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             WorkflowTemplateServiceClient client = new WorkflowTemplateServiceClientImpl(mockGrpcClient.Object, null);
-            WorkflowTemplateName name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]");
-            await client.DeleteWorkflowTemplateAsync(name);
+            string formattedName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString();
+            await client.DeleteWorkflowTemplateAsync(formattedName);
             mockGrpcClient.VerifyAll();
         }
 
@@ -380,7 +380,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplate(request, It.IsAny<CallOptions>()))
@@ -398,7 +398,7 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteWorkflowTemplateRequest request = new DeleteWorkflowTemplateRequest
             {
-                WorkflowTemplateName = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]"),
+                Name = new WorkflowTemplateName("[PROJECT]", "[REGION]", "[WORKFLOW_TEMPLATE]").ToString(),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteWorkflowTemplateAsync(request, It.IsAny<CallOptions>()))
