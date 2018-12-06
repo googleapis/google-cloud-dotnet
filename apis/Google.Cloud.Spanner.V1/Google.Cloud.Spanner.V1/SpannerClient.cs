@@ -146,6 +146,46 @@ namespace Google.Cloud.Spanner.V1
         );
 
         /// <summary>
+        /// "Streaming" retry backoff for <see cref="SpannerClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "Streaming" retry backoff for <see cref="SpannerClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "Streaming" retry backoff for <see cref="SpannerClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 1000 milliseconds</description></item>
+        /// <item><description>Maximum delay: 32000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.3</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetStreamingRetryBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(1000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(32000),
+            delayMultiplier: 1.3
+        );
+
+        /// <summary>
+        /// "Streaming" timeout backoff for <see cref="SpannerClient"/> RPC methods.
+        /// </summary>
+        /// <returns>
+        /// The "Streaming" timeout backoff for <see cref="SpannerClient"/> RPC methods.
+        /// </returns>
+        /// <remarks>
+        /// The "Streaming" timeout backoff for <see cref="SpannerClient"/> RPC methods is defined as:
+        /// <list type="bullet">
+        /// <item><description>Initial timeout: 120000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Maximum timeout: 120000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public static gaxgrpc::BackoffSettings GetStreamingTimeoutBackoff() => new gaxgrpc::BackoffSettings(
+            delay: sys::TimeSpan.FromMilliseconds(120000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(120000),
+            delayMultiplier: 1.0
+        );
+
+        /// <summary>
         /// "LongRunning" retry backoff for <see cref="SpannerClient"/> RPC methods.
         /// </summary>
         /// <returns>
@@ -339,10 +379,10 @@ namespace Google.Cloud.Spanner.V1
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>SpannerClient.ExecuteStreamingSql</c>.
         /// </summary>
         /// <remarks>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 1200000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings ExecuteStreamingSqlSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -378,10 +418,10 @@ namespace Google.Cloud.Spanner.V1
         /// <see cref="gaxgrpc::CallSettings"/> for calls to <c>SpannerClient.StreamingRead</c>.
         /// </summary>
         /// <remarks>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// Default RPC expiration is 1200000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings StreamingReadSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+            gaxgrpc::CallTiming.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
