@@ -62,14 +62,28 @@ generate_api() {
   do
     cp $i $API_TMP_DIR/gapic.yaml
   done
-  
+
+  # Generate the descriptor set for this API. We always explicitly
+  # include IAM so that gRPC rerouting works; it doesn't have any negative
+  # impact for non-IAM APIs.
+  $PROTOC \
+    -I googleapis \
+    -I $CORE_PROTOS_ROOT \
+    --include_source_info \
+    --include_imports \
+    -o $API_TMP_DIR/protos.desc \
+    $API_SRC_DIR/*.proto \
+    googleapis/google/iam/v1/*.proto \
+    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
+
+
   jvm_args=()
   jvm_args+=(--add-opens=java.base/java.nio=ALL-UNNAMED)
   jvm_args+=(--add-opens=java.base/java.lang=ALL-UNNAMED)
   jvm_args+=(-cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar)
   
   args=()
-  args+=(--descriptor_set=$OUTDIR/protos.desc)
+  args+=(--descriptor_set=$API_TMP_DIR/protos.desc)
   args+=(--service_yaml=$API_YAML)
   args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
   args+=(--output=$API_TMP_DIR)
@@ -115,17 +129,6 @@ GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
-
-# Generate a single descriptor file for all protos we may care about.
-# We can then reuse that for all APIs.
-$PROTOC \
-  -I googleapis \
-  -I $CORE_PROTOS_ROOT \
-  --include_source_info \
-  -o $OUTDIR/protos.desc \
-  $CORE_PROTOS_ROOT/google/protobuf/*.proto \
-  `find googleapis/google -name '*.proto'` \
-  2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
 # Generate LongRunning, after changing the license text (because we use
 # Apache for LRO where other languages use BSD)
