@@ -21,54 +21,63 @@ namespace Google.Cloud.Datastore.V1
 {
     // Note: this file would be generated.
 
-    /// <summary>
-    /// Builder class for <see cref="DatastoreClient"/> to provide simple configuration of credentials, endpoint etc.
-    /// </summary>
-    public sealed partial class DatastoreClientBuilder : ClientBuilder<DatastoreClientBuilder, DatastoreClient>
+    public partial class DatastoreClient
     {
-        private DatastoreSettings _settings;
+        /// <summary>
+        /// Creates a new <see cref="Builder"/> instance. This method is primarily present for discoverability.
+        /// </summary>
+        /// <returns>A new <see cref="Builder"/> instance.</returns>
+        public Builder CreateBuilder() => new Builder();
 
         /// <summary>
-        /// Creates a new builder with default options.
+        /// Builder class for <see cref="DatastoreClient"/> to provide simple configuration of credentials, endpoint etc.
         /// </summary>
-        public DatastoreClientBuilder() : base()
+        public sealed partial class Builder : ClientBuilder<Builder, DatastoreClient>
         {
+            private DatastoreSettings _settings;
+
+            /// <summary>
+            /// Creates a new builder with default options.
+            /// </summary>
+            public Builder() : base()
+            {
+            }
+
+            /// <summary>
+            /// Returns a clone of the settings in this builder, or null if no settings have been set. Changes to the
+            /// returned object do not affect the settings in this builder.
+            /// </summary>
+            /// <returns>A clone of the settings in this builder, or null.</returns>
+            public DatastoreSettings GetClonedSettings() => _settings?.Clone();
+
+            private Builder(Builder builder) : base(builder)
+            {
+                _settings = builder._settings;
+            }
+
+            /// <inheritdoc />
+            protected override DatastoreClient BuildImpl() => DatastoreClient.Create(CreateCallInvoker(), _settings);
+
+            /// <inheritdoc />
+            protected override async Task<DatastoreClient> BuildImplAsync(CancellationToken cancellationToken = default) =>
+                DatastoreClient.Create(await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false), _settings);
+
+            /// <inheritdoc />
+            public Builder WithSettings(DatastoreSettings settings)
+            {
+                var clone = Clone();
+                clone._settings = settings?.Clone();
+                return clone;
+            }
+
+            /// <inheritdoc />
+            protected override Builder Clone() => new Builder(this);
+
+            /// <inheritdoc />
+            protected override ServiceEndpoint GetDefaultEndpoint() => DatastoreClient.DefaultEndpoint;
+
+            /// <inheritdoc />
+            protected override IReadOnlyList<string> GetDefaultScopes() => DatastoreClient.DefaultScopes;
         }
-
-        /// <summary>
-        /// Returns a clone of the settings in this builder, or null if no settings have been set. Changes to the
-        /// returned object do not affect the settings in this builder.
-        /// </summary>
-        /// <returns>A clone of the settings in this builder, or null.</returns>
-        public DatastoreSettings CloneSettings() => _settings?.Clone();
-
-        private DatastoreClientBuilder(DatastoreClientBuilder builder) : base(builder)
-        {
-            _settings = builder._settings;
-        }
-
-        /// <inheritdoc />
-        public override DatastoreClient Build() => DatastoreClient.Create(CreateCallInvoker(), _settings);
-        
-        /// <inheritdoc />
-        public override async Task<DatastoreClient> BuildAsync(CancellationToken cancellationToken = default) =>
-            DatastoreClient.Create(await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false), _settings);
-
-        /// <inheritdoc />
-        public DatastoreClientBuilder WithSettings(DatastoreSettings settings)
-        {
-            var clone = Clone();
-            clone._settings = settings?.Clone();
-            return clone;
-        }
-
-        /// <inheritdoc />
-        protected override DatastoreClientBuilder Clone() => new DatastoreClientBuilder(this);
-        
-        /// <inheritdoc />
-        protected override ServiceEndpoint GetDefaultEndpoint() => DatastoreClient.DefaultEndpoint;
-        
-        /// <inheritdoc />
-        protected override IReadOnlyList<string> GetDefaultScopes() => DatastoreClient.DefaultScopes;
     }
 }

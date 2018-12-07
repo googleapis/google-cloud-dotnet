@@ -1,9 +1,19 @@
-﻿/*
- * Copyright 2018 Google LLC
- * Use of this source code is governed by a BSD-style
- * license that can be found in the LICENSE file or at
- * https://developers.google.com/open-source/licenses/bsd
- */
+﻿// Copyright 2018 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Note: this will be in GAX, with the right copyright notice.
+
 using Google.Apis.Auth.OAuth2;
 using Grpc.Auth;
 using Grpc.Core;
@@ -79,24 +89,12 @@ namespace Google.Api.Gax.Grpc
             CallInvoker = builder.CallInvoker;
         }
 
-        /// <summary>
-        /// This method should be called by all "With" methods that change the credentials.
-        /// If a subclass supports additional forms of credentials, it should override this method
-        /// to clear them and call this implementation.
-        /// </summary>
-        protected virtual void ClearCredentials()
-        {
-            CredentialsPath = null;
-            JsonCredentials = null;
-            TokenAccessMethod = null;
-            CallInvoker = null;
-            ChannelCredentials = null;
-        }
+        // TODO: WithEndpoint(string) and WithEndpoint(string, int)?
 
         /// <summary>
         /// Creates a new builder based on this one, but with the specified endpoint.
         /// </summary>
-        /// <param name="endpoint">The endpoint to connect to, or null to use the default endpoint.</param>
+        /// <param name="endpoint">The endpoint to connect to. May be null.</param>
         /// <returns>A builder with the specified endpoint.</returns>
         public TBuilder WithEndpoint(ServiceEndpoint endpoint)
         {
@@ -108,7 +106,7 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Creates a new builder based on this one, but with the specified credential scopes.
         /// </summary>
-        /// <param name="scopes">The scopes to use when creating credentials, or null to use the default set of scopes.</param>
+        /// <param name="scopes">The scopes to use when creating credentials. May be null.</param>
         /// <returns>A builder with the specified scopes.</returns>
         public TBuilder WithScopes(IEnumerable<string> scopes)
         {
@@ -120,15 +118,11 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Creates a new builder based on this one, but with the specified channel credentials.
         /// </summary>
-        /// <remarks>
-        /// This method overrides any credentials specified with previous calls.
-        /// </remarks>
-        /// <param name="channelCredentials">The channel credentials to use, or null to use the default credentials.</param>
+        /// <param name="channelCredentials">The channel credentials to use. May be null.</param>
         /// <returns>A builder with the specified channel credentials.</returns>
         public TBuilder WithChannelCredentials(ChannelCredentials channelCredentials)
         {
             var clone = Clone();
-            clone.ClearCredentials();
             clone.ChannelCredentials = channelCredentials;
             return clone;
         }
@@ -136,16 +130,12 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Creates a new builder based on this one, but with the specified credential file.
         /// </summary>
-        /// <remarks>
-        /// This method overrides any credentials specified with previous calls.
-        /// </remarks>
-        /// <param name="path">The path to the credentials file to use, or null to use the default credentials.</param>
+        /// <param name="path">The path to the credentials file to use. May be null.</param>
         /// <returns>A builder with the specified credentials path.</returns>
         public TBuilder WithCredentialsPath(string path)
         {
             // Note: don't load this until we build, so that any scope changes will be effective.
             var clone = Clone();
-            clone.ClearCredentials();
             clone.CredentialsPath = path;
             return clone;
         }
@@ -153,15 +143,11 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Creates a new builder based on this one, but with the specified JSON credentials.
         /// </summary>
-        /// <remarks>
-        /// This method overrides any credentials specified with previous calls.
-        /// </remarks>
-        /// <param name="json">The JSON credentials to use, or null to use the default credentials.</param>
+        /// <param name="json">The JSON credentials to use. May be null.</param>
         /// <returns>A builder with the specified JSON credentials.</returns>
         public TBuilder WithJsonCredentials(string json)
         {
             var clone = Clone();
-            clone.ClearCredentials();
             clone.JsonCredentials = json;
             return clone;
         }
@@ -178,16 +164,12 @@ namespace Google.Api.Gax.Grpc
         /// To use a GoogleCredential for credentials, call this method using a method group conversion, e.g.
         /// <c>builder = builder.WithTokenAccessMethod(credential.GetAccessTokenForRequestAsync);</c>
         /// </para>
-        /// <para>
-        /// This method overrides any credentials specified with previous calls.
-        /// </para>
         /// </remarks>
-        /// <param name="tokenAccessMethod">The token access method to use, or null to use the default credentials.</param>
+        /// <param name="tokenAccessMethod">The token access method to use. May be null.</param>
         /// <returns>A builder with the specified token access method.</returns>
         public TBuilder WithTokenAccessMethod(Func<string, CancellationToken, Task<string>> tokenAccessMethod)
         {
             var clone = Clone();
-            clone.ClearCredentials();
             clone.TokenAccessMethod = tokenAccessMethod;
             return clone;
         }
@@ -195,18 +177,51 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Creates a new builder based on this one, but with the specified gRPC call invoker.
         /// </summary>
-        /// <para>
-        /// This method removes any credentials and scopes specified with previous calls.
-        /// </para>
-        /// <param name="callInvoker">The gRPC call invoker to use, or null to use the default call invoker.</param>
+        /// <param name="callInvoker">The gRPC call invoker to use. May be null.</param>
         /// <returns>A builder with the specified call invoker.</returns>
         public TBuilder WithCallInvoker(CallInvoker callInvoker)
         {
             var clone = Clone();
-            clone.ClearCredentials();
             clone.CallInvoker = callInvoker;
-            clone.Scopes = null;
             return clone;
+        }
+
+        /// <summary>
+        /// Validates that the builder is in a consistent state for building. For example, it's invalid to call
+        /// <see cref="Build"/> on an instance which has both JSON credentials and a credentials path specified.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">The builder is in an invalid state.</exception>
+        protected virtual void Validate()
+        {
+            // If there's a call invoker, we shouldn't have any credentials-related information or an endpoint.
+            ValidateOptionExcludesOthers("CallInvoker cannot be specified with credentials settings or an endpoint", CallInvoker,
+                ChannelCredentials, CredentialsPath, JsonCredentials, Scopes, Endpoint, TokenAccessMethod);
+
+            ValidateAtMostOneNotNull("Only one source of credentials can be specified",
+                ChannelCredentials, CredentialsPath, JsonCredentials, TokenAccessMethod);
+
+            ValidateOptionExcludesOthers("Scopes are not relevant when a token access method or channel credentials are supplied", Scopes,
+                TokenAccessMethod, ChannelCredentials);            
+        }
+
+        /// <summary>
+        /// Validates that at most one of the given values is not null.
+        /// </summary>
+        /// <param name="message">The message if the condition is violated.</param>
+        /// <param name="values">The values to check for nullity.</param>
+        /// <exception cref="InvalidOperationException">More than one value is null.</exception>
+        protected void ValidateAtMostOneNotNull(string message, params object[] values)
+        {
+            int notNull = values.Count(v => v == null);
+            GaxPreconditions.CheckState(notNull < 2, message);
+        }
+
+        /// <summary>
+        /// Validates that if <paramref name="controlling"/> is not null, then no value in <paramref name="values"/> is null.
+        /// </summary>
+        protected void ValidateOptionExcludesOthers(string message, object controlling, params object[] values)
+        {
+            GaxPreconditions.CheckState(controlling == null || !values.Contains(null), message);
         }
 
         /// <summary>
@@ -313,11 +328,30 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Builds the resulting client.
         /// </summary>
-        public abstract TClient Build();
+        public TClient Build()
+        {
+            Validate();
+            return BuildImpl();
+        }
 
         /// <summary>
         /// Builds the resulting client asynchronously.
         /// </summary>
-        public abstract Task<TClient> BuildAsync(CancellationToken cancellationToken = default);
+        public Task<TClient> BuildAsync(CancellationToken cancellationToken = default)
+        {
+            Validate();
+            return BuildImplAsync();
+        }
+
+        /// <summary>
+        /// Builds the resulting client. Validation will 
+        /// </summary>
+        protected abstract TClient BuildImpl();
+
+        /// <summary>
+        /// Builds the resulting client asynchronously. Validation will already have been performed by the time this is called.
+        /// </summary>
+        protected abstract Task<TClient> BuildImplAsync(CancellationToken cancellationToken = default);
+
     }
 }
