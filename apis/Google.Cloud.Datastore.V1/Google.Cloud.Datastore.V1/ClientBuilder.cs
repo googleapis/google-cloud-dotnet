@@ -217,8 +217,11 @@ namespace Google.Api.Gax.Grpc
         }
 
         /// <summary>
-        /// Validates that if <paramref name="controlling"/> is not null, then no value in <paramref name="values"/> is null.
+        /// Validates that if <paramref name="controlling"/> is not null, then every value in <paramref name="values"/> is null.
         /// </summary>
+        /// <param name="message">The message if the condition is violated.</param>
+        /// <param name="controlling">The value controlling whether or not any other value can be non-null.</param>
+        /// <param name="values">The values checked for non-nullity if <paramref name="controlling"/> is non-null.</param>
         protected void ValidateOptionExcludesOthers(string message, object controlling, params object[] values)
         {
             GaxPreconditions.CheckState(controlling == null || !values.Contains(null), message);
@@ -344,7 +347,7 @@ namespace Google.Api.Gax.Grpc
         }
 
         /// <summary>
-        /// Builds the resulting client. Validation will 
+        /// Builds the resulting client. Validation will already have been performed by the time this is called.
         /// </summary>
         protected abstract TClient BuildImpl();
 

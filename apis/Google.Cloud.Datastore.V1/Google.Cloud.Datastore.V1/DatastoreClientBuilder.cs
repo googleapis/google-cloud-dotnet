@@ -43,17 +43,17 @@ namespace Google.Cloud.Datastore.V1
             {
             }
 
+            private Builder(Builder builder) : base(builder)
+            {
+                _settings = builder._settings;
+            }
+
             /// <summary>
             /// Returns a clone of the settings in this builder, or null if no settings have been set. Changes to the
             /// returned object do not affect the settings in this builder.
             /// </summary>
             /// <returns>A clone of the settings in this builder, or null.</returns>
             public DatastoreSettings GetClonedSettings() => _settings?.Clone();
-
-            private Builder(Builder builder) : base(builder)
-            {
-                _settings = builder._settings;
-            }
 
             /// <inheritdoc />
             protected override DatastoreClient BuildImpl() => DatastoreClient.Create(CreateCallInvoker(), _settings);
