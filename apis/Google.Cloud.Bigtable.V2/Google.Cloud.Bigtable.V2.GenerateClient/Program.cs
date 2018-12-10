@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
+using Microsoft.Build.Locator;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -109,6 +110,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
             var apiClientName = args[1];
             var userClientName = args[2];
 
+            MSBuildLocator.RegisterDefaults();
             var workspace = MSBuildWorkspace.Create(new Dictionary<string, string> { ["TargetFramework"] = "net45" });
 
             Project project;
