@@ -560,12 +560,12 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(
-            string parent,
+            RegionName parent,
             WorkflowTemplate template,
             gaxgrpc::CallSettings callSettings = null) => CreateWorkflowTemplateAsync(
                 new CreateWorkflowTemplateRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
                 },
                 callSettings);
@@ -588,7 +588,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> CreateWorkflowTemplateAsync(
-            string parent,
+            RegionName parent,
             WorkflowTemplate template,
             st::CancellationToken cancellationToken) => CreateWorkflowTemplateAsync(
                 parent,
@@ -613,12 +613,12 @@ namespace Google.Cloud.Dataproc.V1
         /// The RPC response.
         /// </returns>
         public virtual WorkflowTemplate CreateWorkflowTemplate(
-            string parent,
+            RegionName parent,
             WorkflowTemplate template,
             gaxgrpc::CallSettings callSettings = null) => CreateWorkflowTemplate(
                 new CreateWorkflowTemplateRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
                 },
                 callSettings);
@@ -697,11 +697,11 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> GetWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             gaxgrpc::CallSettings callSettings = null) => GetWorkflowTemplateAsync(
                 new GetWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -723,7 +723,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<WorkflowTemplate> GetWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             st::CancellationToken cancellationToken) => GetWorkflowTemplateAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -746,11 +746,11 @@ namespace Google.Cloud.Dataproc.V1
         /// The RPC response.
         /// </returns>
         public virtual WorkflowTemplate GetWorkflowTemplate(
-            string name,
+            WorkflowTemplateName name,
             gaxgrpc::CallSettings callSettings = null) => GetWorkflowTemplate(
                 new GetWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -851,11 +851,11 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplateAsync(
                 new InstantiateWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -891,7 +891,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             st::CancellationToken cancellationToken) => InstantiateWorkflowTemplateAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -928,11 +928,11 @@ namespace Google.Cloud.Dataproc.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<pbwkt::Empty, WorkflowMetadata> InstantiateWorkflowTemplate(
-            string name,
+            WorkflowTemplateName name,
             gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplate(
                 new InstantiateWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -972,12 +972,12 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             scg::IDictionary<string, string> parameters,
             gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplateAsync(
                 new InstantiateWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     Parameters = { parameters ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
                 },
                 callSettings);
@@ -1018,7 +1018,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             scg::IDictionary<string, string> parameters,
             st::CancellationToken cancellationToken) => InstantiateWorkflowTemplateAsync(
                 name,
@@ -1061,12 +1061,12 @@ namespace Google.Cloud.Dataproc.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<pbwkt::Empty, WorkflowMetadata> InstantiateWorkflowTemplate(
-            string name,
+            WorkflowTemplateName name,
             scg::IDictionary<string, string> parameters,
             gaxgrpc::CallSettings callSettings = null) => InstantiateWorkflowTemplate(
                 new InstantiateWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     Parameters = { parameters ?? gax::EmptyDictionary<string, string>.Instance }, // Optional
                 },
                 callSettings);
@@ -1586,13 +1586,13 @@ namespace Google.Cloud.Dataproc.V1
         /// A pageable asynchronous sequence of <see cref="WorkflowTemplate"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplatesAsync(
-            string parent,
+            RegionName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListWorkflowTemplatesAsync(
                 new ListWorkflowTemplatesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1621,13 +1621,13 @@ namespace Google.Cloud.Dataproc.V1
         /// A pageable sequence of <see cref="WorkflowTemplate"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListWorkflowTemplatesResponse, WorkflowTemplate> ListWorkflowTemplates(
-            string parent,
+            RegionName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListWorkflowTemplates(
                 new ListWorkflowTemplatesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1686,11 +1686,11 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteWorkflowTemplateAsync(
                 new DeleteWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1709,7 +1709,7 @@ namespace Google.Cloud.Dataproc.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteWorkflowTemplateAsync(
-            string name,
+            WorkflowTemplateName name,
             st::CancellationToken cancellationToken) => DeleteWorkflowTemplateAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1726,11 +1726,11 @@ namespace Google.Cloud.Dataproc.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteWorkflowTemplate(
-            string name,
+            WorkflowTemplateName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteWorkflowTemplate(
                 new DeleteWorkflowTemplateRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    WorkflowTemplateName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
