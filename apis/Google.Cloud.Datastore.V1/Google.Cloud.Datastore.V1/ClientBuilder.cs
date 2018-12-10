@@ -343,7 +343,7 @@ namespace Google.Api.Gax.Grpc
         public Task<TClient> BuildAsync(CancellationToken cancellationToken = default)
         {
             Validate();
-            return BuildImplAsync();
+            return BuildImplAsync(cancellationToken);
         }
 
         /// <summary>
