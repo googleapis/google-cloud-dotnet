@@ -354,7 +354,7 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Builds the resulting client asynchronously. Validation will already have been performed by the time this is called.
         /// </summary>
-        protected abstract Task<TClient> BuildImplAsync(CancellationToken cancellationToken = default);
+        protected abstract Task<TClient> BuildImplAsync(CancellationToken cancellationToken);
 
     }
 }
