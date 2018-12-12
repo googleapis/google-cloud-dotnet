@@ -20,6 +20,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -31,6 +33,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     public class ErrorReportingTest : IDisposable
     {
         private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
+        private static readonly LogEntryPolling s_logPolling = new LogEntryPolling(s_polling.Timeout);
+
+        private static readonly IDictionary<string, string> expectedExceptionData = new Dictionary<string, string>
+        {
+            {"flavour", "vanilla" },
+            {"count", "15" }
+        };
 
         private readonly string _testId;
 
@@ -69,6 +78,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
+        public async Task ManualLog_WithExceptionData()
+        {
+            var startTime = DateTime.UtcNow;
+
+            var response = await _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchLog_WithData)}/{_testId}");
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            ErrorEventEntryVerifiers.VerifySingleExceptionData(s_logPolling, startTime, _testId, expectedExceptionData);
+        }
+
+        [Fact]
         public async Task LogsException()
         {
             await Assert.ThrowsAsync<Exception>(() =>
@@ -76,6 +97,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
+        }
+
+        [Fact]
+        public async Task Logs_WithExceptionData()
+        {
+            var startTime = DateTime.UtcNow;
+
+            await Assert.ThrowsAsync<Exception>(() =>
+                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException_WithData)}/{_testId}"));
+
+            ErrorEventEntryVerifiers.VerifySingleExceptionData(s_logPolling, startTime, _testId, expectedExceptionData);
         }
 
         [Fact]
@@ -144,6 +176,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class ErrorReportingController : Controller
     {
+        private static readonly IDictionary exceptionData = new Hashtable
+        {
+            {"flavour", "vanilla" },
+            {"count", 15 }
+        };
+
         private readonly IExceptionLogger _exceptionLogger;
         public ErrorReportingController(IExceptionLogger exceptionLogger)
         {
@@ -172,6 +210,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             throw new Exception(message);
         }
 
+        /// <summary>Throws an <see cref="Exception"/>.</summary>
+        public string ThrowsException_WithData(string id)
+        {
+            string message = EntryData.GetMessage(nameof(ThrowsException), id);
+            var e = new Exception(message);
+            EntryData.AddExceptionData(e, exceptionData);
+
+            throw e;
+        }
+
         /// <summary>Throws an <see cref="ArgumentException"/>.</summary>
         public string ThrowsArgumentException(string id)
         {
@@ -182,13 +230,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <summary>Catches and logs a thrown <see cref="Exception"/>.</summary>
         public string ThrowCatchLog(string id)
         {
-            var message = EntryData.GetMessage(nameof(Index), id);
+            var message = EntryData.GetMessage(nameof(ThrowCatchLog), id);
             try
             {
                 throw new Exception(message);
             }
             catch (Exception e)
             {
+                _exceptionLogger.Log(e);
+            }
+            return message;
+        }
+
+        /// <summary>Catches and logs a thrown <see cref="Exception"/>.</summary>
+        public string ThrowCatchLog_WithData(string id)
+        {
+            var message = EntryData.GetMessage(nameof(ThrowCatchLog_WithData), id);
+            try
+            {
+                throw new Exception(message);
+            }
+            catch (Exception e)
+            {
+                EntryData.AddExceptionData(e, exceptionData);
                 _exceptionLogger.Log(e);
             }
             return message;

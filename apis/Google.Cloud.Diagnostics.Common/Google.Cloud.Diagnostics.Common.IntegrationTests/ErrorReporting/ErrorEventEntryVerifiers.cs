@@ -14,6 +14,8 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Cloud.Logging.Type;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -88,6 +90,18 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
             // Verify that we are not storing any HTTP StatusCode
             Assert.Equal(0, errorEvent.Context.HttpRequest.ResponseStatusCode);
+        }
+
+        public static void VerifySingleExceptionData(LogEntryPolling polling, DateTime startTime, string testId, IDictionary<string, string> exceptionData)
+        {
+            // Label data is only stored on the LogEntry entity not on the ErrorEvent entity.
+            var logEntry = polling.GetEntries(startTime, testId, 1, LogSeverity.Error, "stackdriver-error-reporting").Single();
+
+            foreach(var pair in exceptionData)
+            {
+                Assert.Contains(pair.Key, logEntry.Labels.Keys);
+                Assert.Equal(pair.Value, logEntry.Labels[pair.Key]);
+            }
         }
     }
 }

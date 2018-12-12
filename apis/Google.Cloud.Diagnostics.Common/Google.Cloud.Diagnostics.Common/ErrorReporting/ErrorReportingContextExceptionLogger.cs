@@ -169,7 +169,7 @@ namespace Google.Cloud.Diagnostics.Common
                 }
             };
 
-            return new LogEntry
+            LogEntry entry = new LogEntry
             {
                 Resource = _options.EventTarget.MonitoredResource,
                 LogName = _logName,
@@ -177,6 +177,16 @@ namespace Google.Cloud.Diagnostics.Common
                 Timestamp = timestamp,
                 JsonPayload = errorEvent
             };
+
+            if(exception?.Data?.Count > 0)
+            {
+                foreach(var key in exception.Data.Keys)
+                {
+                    entry.Labels.Add(key.ToString(), exception.Data[key]?.ToString());
+                }
+            }
+
+            return entry;
         }
     }
 }

@@ -59,7 +59,22 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         ///     If minEntries is zero this method will wait the full timeout before checking for the
         ///     entries.</param>
         /// <param name="minSeverity">The minimum severity a log can be.</param>
-        public IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries, LogSeverity minSeverity)
+        public IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries, LogSeverity minSeverity) =>
+            GetEntries(startTime, testId, minEntries, minSeverity, "aspnetcore");
+
+
+        /// <summary>
+        /// Gets log entries that contain the passed in testId in the log message.  Will poll
+        /// and wait for the entries to appear.
+        /// </summary>
+        /// <param name="startTime">The earliest log entry time that will be looked at.</param>
+        /// <param name="testId">The test id to filter log entries on.</param>
+        /// <param name="minEntries">The minimum number of logs entries that should be waited for.
+        ///     If minEntries is zero this method will wait the full timeout before checking for the
+        ///     entries.</param>
+        /// <param name="minSeverity">The minimum severity a log can be.</param>
+        /// <param name="logName">The name of the log where the entries are to be looked for.</param>
+        public IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries, LogSeverity minSeverity, string logName)
         {
             return GetEntries(minEntries, () =>
             {
@@ -68,7 +83,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 var request = new ListLogEntriesRequest
                 {
                     ResourceNames = { $"projects/{_projectId}" },
-                    Filter = $"timestamp >= \"{time}\" AND jsonPayload.message:\"{testId}\" AND severity >= {minSeverity} AND logName=\"projects/{_projectId}/logs/aspnetcore\"",
+                    Filter = $"timestamp >= \"{time}\" AND jsonPayload.message:\"{testId}\" AND severity >= {minSeverity} AND logName=\"projects/{_projectId}/logs/{logName}\"",
                     PageSize = 1000,
                 };
                 return _client.ListLogEntries(request);

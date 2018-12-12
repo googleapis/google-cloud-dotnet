@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Collections;
+
 namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
     /// <summary>
@@ -27,5 +30,17 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// Returns a formatted message based on the two parametes.
         /// </summary>
         public static string GetMessage(string message, string id) => $"{message} - {id}";
+
+        /// <summary>
+        /// Adss the data in <paramref name="data"/> to the <see cref="Exception.Data"/> of
+        /// <paramref name="e"/>.
+        /// </summary>
+        public static void AddExceptionData(Exception e, IDictionary data)
+        {
+            foreach(var key in data.Keys)
+            {
+                e.Data.Add(key, data[key]);
+            }
+        }
     }
 }

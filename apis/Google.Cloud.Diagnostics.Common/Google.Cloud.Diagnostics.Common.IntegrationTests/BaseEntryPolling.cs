@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private static readonly TimeSpan _defaultSleepInterval = TimeSpan.FromSeconds(5);
 
         /// <summary>Total time to spend sleeping when looking for entries.</summary>
-        private readonly TimeSpan _timeout;
+        internal TimeSpan Timeout { get; }
 
         /// <summary>Time to sleep between checks for entries.</summary>
         private readonly TimeSpan _sleepInterval;
@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         ///     Defaults to <see cref="_defaultSleepInterval"/></param>
         protected BaseEntryPolling(TimeSpan timeout = default, TimeSpan sleepInterval = default)
         {
-            _timeout = timeout == default ? _defaultTimeout : timeout;
+            Timeout = timeout == default ? _defaultTimeout : timeout;
             _sleepInterval = sleepInterval == default ?  _defaultSleepInterval : sleepInterval;
         }
 
@@ -56,9 +56,9 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         protected IEnumerable<T> GetEntries(int minEntries, Func<IEnumerable<T>> getEntries)
         {
             TimeSpan totalSleepTime = TimeSpan.Zero;
-            while (totalSleepTime < _timeout)
+            while (totalSleepTime < Timeout)
             {
-                TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : _timeout;
+                TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : Timeout;
                 totalSleepTime += sleepTime;
                 Thread.Sleep(sleepTime);
 
