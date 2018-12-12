@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Requests;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +51,24 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// The total number of rows in the results.
         /// </summary>
+        /// <remarks>
+        /// In certain cases, the query results do not provide a row count. In these cases, accessing this property
+        /// will throw an <see cref="InvalidOperationException"/>. The <see cref="SafeTotalRows"/> property provides
+        /// a way of accessing the same value, but with a nullable value which will be null if the query results do not
+        /// provide a row count.
+        /// </remarks>
+        /// <exception cref="InvalidOperationException">The query results do not provide a row count.</exception>
         public ulong TotalRows => _response.TotalRows.Value;
+
+        /// <summary>
+        /// The total number of rows in the results, or <c>null</c> if the query results do not provide a row count.
+        /// </summary>
+        public ulong? SafeTotalRows => _response.TotalRows;
+
+        /// <summary>
+        /// The total number of rows affected by a DML statement, or <c>null</c> for non-DML results.
+        /// </summary>
+        public long? NumDmlAffectedRows => _response.NumDmlAffectedRows;
 
         /// <summary>
         /// Returns an asynchronous sequence of rows from this set of results.
