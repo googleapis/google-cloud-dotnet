@@ -622,6 +622,27 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Empty(job.GetQueryResults());
         }
 
+        [Fact]
+        public void DmlQuery()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var table = dataset.GetTable(_fixture.HighScoreTableId);
+
+            var parameters = new[]
+            {
+                new BigQueryParameter("player", BigQueryDbType.String, "karen"),
+                new BigQueryParameter("gameStarted", BigQueryDbType.Timestamp, new DateTime(2005, 1, 1, 0, 0, 0, DateTimeKind.Utc)),
+                new BigQueryParameter("score", BigQueryDbType.Int64, 300)
+            };
+            var results = client.ExecuteQuery(
+                $"INSERT INTO {table} (player, gameStarted, score) VALUES (@player, @gameStarted, @score)",
+                parameters)
+                .ThrowOnAnyError();
+            Assert.Null(results.SafeTotalRows);
+            Assert.Equal(1, results.NumDmlAffectedRows);
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];
