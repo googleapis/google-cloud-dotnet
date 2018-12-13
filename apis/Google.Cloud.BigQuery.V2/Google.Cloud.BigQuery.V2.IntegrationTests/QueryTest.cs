@@ -641,6 +641,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 .ThrowOnAnyError();
             Assert.Null(results.SafeTotalRows);
             Assert.Equal(1, results.NumDmlAffectedRows);
+
+            // Check our understanding that DML queries return the table they operate on.
+            var rows = results.ToList();
+            var allRows = table.ListRows().ToList();
+
+            Assert.Equal(allRows.Count, rows.Count);
         }
 
         private class TitleComparer : IEqualityComparer<BigQueryRow>
