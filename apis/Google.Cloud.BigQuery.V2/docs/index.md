@@ -59,6 +59,27 @@ below.
 
 {{sample:BigQueryClient.InsertOverview}}
 
+## DML
+
+BigQuery supports
+[DML](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language).
+
+Suppose we have a high score table, and we realize that on one day
+we accidentally recorded incorrect scores: each player was only
+awarded half the score they actually earned. We can update the data
+afterwards using DML:
+
+{{sample:BigQueryClient.DmlSample}}
+
+### Important note on the result returned by DML operations
+
+Iterating over the results of a `BigQueryResults` object returned
+from a DML operation will iterate over the entire table modified by
+that operation. This is a side-effect of the way the underlying API
+is called, but it's rarely useful to iterate over the results. The
+`NumDmlAffectedRows` property of the results object is useful,
+however, in determining how many rows were modified.
+
 ## Creating a table partitioned by time
 
 {{sample:BigQueryClient.CreatePartitionedTable}}
