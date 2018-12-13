@@ -53,5 +53,8 @@ namespace Google.Cloud.Datastore.V1
 
         /// <inheritdoc />
         protected override IReadOnlyList<string> GetDefaultScopes() => DatastoreClient.DefaultScopes;
+
+        // Provide validation access for DatastoreDbBuilder.
+        internal void ValidateInternal() => Validate();
     }
 }

@@ -39,7 +39,7 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// The scopes to use, or null to use the default scopes.
         /// </summary>
-        public IEnumerable<string> Scopes { get; set; }
+        public IReadOnlyList<string> Scopes { get; set; }
 
         /// <summary>
         /// The channel credentials to use, or null if credentials are being provided in a different way.
@@ -61,14 +61,14 @@ namespace Google.Api.Gax.Grpc
         /// </summary>
         /// <remarks>
         /// <para>
-        /// To use a GoogleCredential for credentials, set this property using a method group conversion, e.g.
-        /// <c>TokenAccessMethod = credential.GetAccessTokenForRequestAsync</c>
+        /// To use a GoogleCredential for credentials, call this method using a method group conversion, e.g.
+        /// <c>builder = builder.WithTokenAccessMethod(credential.GetAccessTokenForRequestAsync);</c>
         /// </para>
         /// </remarks>
         public Func<string, CancellationToken, Task<string>> TokenAccessMethod { get; set; }
 
         /// <summary>
-        /// The call invoker to use, or null to create the call invoker from other properties when the client is built.
+        /// The call invoker to use, or null to create the call invoker when the client is built.
         /// </summary>
         public CallInvoker CallInvoker { get; set; }
 
@@ -175,7 +175,7 @@ namespace Google.Api.Gax.Grpc
             {
                 unscoped = GoogleCredential.GetApplicationDefault();
             }
-            return unscoped.CreateScoped(Scopes?.ToList() ?? GetDefaultScopes()).ToChannelCredentials();
+            return unscoped.CreateScoped(Scopes ?? GetDefaultScopes()).ToChannelCredentials();
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace Google.Api.Gax.Grpc
                 // TODO: Use cancellationToken when an overload accepting one is available
                 unscoped = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
             }
-            return unscoped.CreateScoped(Scopes?.ToList() ?? GetDefaultScopes()).ToChannelCredentials();
+            return unscoped.CreateScoped(Scopes ?? GetDefaultScopes()).ToChannelCredentials();
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Builds the resulting client.
         /// </summary>
-        public TClient Build()
+        public virtual TClient Build()
         {
             Validate();
             return BuildImpl();
@@ -228,7 +228,7 @@ namespace Google.Api.Gax.Grpc
         /// <summary>
         /// Builds the resulting client asynchronously.
         /// </summary>
-        public Task<TClient> BuildAsync(CancellationToken cancellationToken = default)
+        public virtual Task<TClient> BuildAsync(CancellationToken cancellationToken = default)
         {
             Validate();
             return BuildImplAsync(cancellationToken);

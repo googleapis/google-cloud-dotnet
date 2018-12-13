@@ -54,7 +54,7 @@ namespace Google.Cloud.Datastore.V1
     /// to construct instances; alternatively, you can construct a <see cref="DatastoreClient"/> directly.
     /// </para>
     /// </remarks>
-    public abstract class DatastoreDb
+    public abstract partial class DatastoreDb
     {
         /// <summary>
         /// The <see cref="DatastoreClient"/> used for all remote operations.
