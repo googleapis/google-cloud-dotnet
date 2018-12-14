@@ -180,11 +180,19 @@ namespace Google.Cloud.Firestore
             {
                 if (underlyingStream != null)
                 {
-                    var completeTask = underlyingStream.TryWriteCompleteAsync();
-                    // TODO: Handle exceptions from this?
-                    if (completeTask != null)
+                    try
                     {
-                        await completeTask.ConfigureAwait(false);
+                        var completeTask = underlyingStream.TryWriteCompleteAsync();
+                        if (completeTask != null)
+                        {
+                            await completeTask.ConfigureAwait(false);
+                        }
+                    }
+                    catch (RpcException)
+                    {
+                        // Swallow gRPC errors when trying to "complete" the stream. This may be in response to the network connection
+                        // being dropped, at which point completing the stream will fail; we don't want the listener to stop at that
+                        // point. Instead, it will reconnect.
                     }
                     underlyingStream.GrpcCall.Dispose();
                 }
