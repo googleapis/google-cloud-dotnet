@@ -17,6 +17,8 @@ using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Microsoft.Owin.Testing;
 using Owin;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -31,6 +33,13 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
     public class ErrorReportingTest : IDisposable
     {
         private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
+        private static readonly LogEntryPolling s_logPolling = new LogEntryPolling(s_polling.Timeout);
+
+        private static readonly IDictionary<string, string> expectedExceptionData = new Dictionary<string, string>
+        {
+            {"flavour", "vanilla" },
+            {"count", "15" }
+        };
 
         private readonly string _testId;
 
@@ -128,6 +137,18 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact]
+        public async Task ManualLog_GoogleLogger_WithExceptionData()
+        {
+            var startTime = DateTime.UtcNow;
+
+            var response = await _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleLogger_WithData)}/{_testId}");
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            ErrorEventEntryVerifiers.VerifySingleExceptionData(s_logPolling, startTime, _testId, expectedExceptionData);
+        }
+
+        [Fact]
         public async Task ManualLog_GoogleWebApiLogger()
         {
             var response = await _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger)}/{_testId}");
@@ -136,6 +157,18 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             var errorEvent = ErrorEventEntryVerifiers.VerifySingle(s_polling, _testId);
             ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger));
+        }
+
+        [Fact]
+        public async Task ManualLog_GoogleWebApiLogger_WithExceptionData()
+        {
+            var startTime = DateTime.UtcNow;
+
+            var response = await _client.GetAsync($"api/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchWithGoogleWebApiLogger_WithData)}/{_testId}");
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            ErrorEventEntryVerifiers.VerifySingleExceptionData(s_logPolling, startTime, _testId, expectedExceptionData);
         }
 
         public void Dispose()
@@ -200,6 +233,12 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
     /// </summary>
     public class ErrorReportingController : ApiController
     {
+        private static readonly IDictionary exceptionData = new Hashtable
+        {
+            {"flavour", "vanilla" },
+            {"count", 15 }
+        };
+
         /// <summary>Throws and catches exception.</summary>
         [HttpGet]
         public string Index(string id)
@@ -251,6 +290,26 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         /// <summary>Throws, catches and logs an <see cref="Exception"/> using the
+        /// general purpose <see cref="GoogleExceptionLogger">. Will add extra data
+        /// to the exception.</summary>
+        [HttpGet]
+        public string ThrowCatchWithGoogleLogger_WithData(string id)
+        {
+            var exceptionLogger = GoogleExceptionLogger.Create(TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version);
+            var message = EntryData.GetMessage(nameof(ThrowCatchWithGoogleLogger_WithData), id);
+            try
+            {
+                throw new Exception(message);
+            }
+            catch (Exception e)
+            {
+                EntryData.AddExceptionData(e, exceptionData);
+                exceptionLogger.Log(e);
+            }
+            return message;
+        }
+
+        /// <summary>Throws, catches and logs an <see cref="Exception"/> using the
         /// Web Api specific <see cref="GoogleWebApiExceptionLogger"></summary>
         [HttpGet]
         public string ThrowCatchWithGoogleWebApiLogger(string id)
@@ -263,6 +322,26 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             }
             catch (Exception e)
             {
+                exceptionLogger.Log(e, ActionContext);
+            }
+            return message;
+        }
+
+        /// <summary>Throws, catches and logs an <see cref="Exception"/> using the
+        /// Web Api specific <see cref="GoogleWebApiExceptionLogger">. Will add extra data
+        /// to the exception.</summary>
+        [HttpGet]
+        public string ThrowCatchWithGoogleWebApiLogger_WithData(string id)
+        {
+            var exceptionLogger = GoogleWebApiExceptionLogger.Create(TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version);
+            var message = EntryData.GetMessage(nameof(ThrowCatchWithGoogleWebApiLogger_WithData), id);
+            try
+            {
+                throw new Exception(message);
+            }
+            catch (Exception e)
+            {
+                EntryData.AddExceptionData(e, exceptionData);
                 exceptionLogger.Log(e, ActionContext);
             }
             return message;
