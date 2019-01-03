@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
 using Microsoft.AspNetCore.Builder;
@@ -30,38 +31,16 @@ using Xunit;
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
     [SnippetOutputCollector]
-    public class LoggingSnippetsTests : IDisposable
+    public class LoggingSnippetsTests
     {
-        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
         private static readonly LogEntryPolling s_polling = new LogEntryPolling();
 
         private readonly string _testId;
-
-        private readonly TestServer _server;
-        private readonly HttpClient _client;
-
         private readonly DateTime _startTime;
 
         public LoggingSnippetsTests()
         {
             _testId = IdGenerator.FromDateTime();
-            IWebHostBuilder builder;
-#if NETCOREAPP2_0
-            // Sample: RegisterGoogleLogger2
-            builder = new WebHostBuilder()
-                .ConfigureServices(services =>
-                {
-                    // Replace ProjectId with your Google Cloud Project ID.
-                    services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, ProjectId));
-                })
-                .UseStartup<Startup>();
-            // End sample
-#else
-            builder = new WebHostBuilder().UseStartup<LoggingTestApplication>();
-#endif
-            _server = new TestServer(builder);
-            _client = _server.CreateClient();
-
             _startTime = DateTime.UtcNow;
         }
 
@@ -73,9 +52,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Logs_Information()
         {
-            await _client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
+            using (TestServer server = new TestServer(GetSimpleHostBuilder()))
+            using (HttpClient client = server.CreateClient())
+            {
+                await client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
+            }
 
             PollAndVerifyLog(_startTime, _testId);
+        }
+
+        /// <summary>
+        /// Test for RegisterGoogleLoggerPropagateExceptions and RegisterGoogleLoggerPropagateExceptions2 snippets.
+        /// These snippets are configuration snippets so the best way to test them is by checking if 
+        /// exceptions are propagated properly.
+        /// </summary>
+        [Fact]
+        public async Task Logs_PropagateExceptions()
+        {
+            using (TestServer server = new TestServer(GetExceptionPropagatingHostBuilder()))
+            using (HttpClient client = server.CreateClient())
+            {
+                await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/LoggingSamples/LogInformation/{_testId}"));
+            }
         }
 
         internal static void PollAndVerifyLog(DateTime startTime, string testId)
@@ -91,10 +89,47 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.Contains(testId, logEntry.JsonPayload?.Fields["message"]?.StringValue);
         }
 
-        public void Dispose()
+        private IWebHostBuilder GetSimpleHostBuilder()
         {
-            _client.Dispose();
-            _server.Dispose();
+#if NETCOREAPP2_0
+            string projectId = TestEnvironment.GetTestProjectId();
+            // Sample: RegisterGoogleLogger2
+            return new WebHostBuilder()
+                .ConfigureServices(services =>
+                {
+                    // Replace projectId with your Google Cloud Project ID.
+                    services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, projectId));
+                })
+                .UseStartup<Startup>();
+            // End sample
+#else
+            return new WebHostBuilder().UseStartup<LoggingTestApplication>();
+#endif
+        }
+
+        private IWebHostBuilder GetExceptionPropagatingHostBuilder()
+        {
+#if NETCOREAPP2_0
+            string projectId = LoggingTestApplicationPropagateExceptions.ProjectId;
+            // Sample: RegisterGoogleLoggerPropagateExceptions2
+            return new WebHostBuilder()
+                .ConfigureServices(services =>
+                {
+                    // Explicitly create logger options that will propagate any exceptions thrown
+                    // during logging.
+                    RetryOptions retryOptions = RetryOptions.NoRetry(ExceptionHandling.Propagate);
+                    // Also set the no buffer option so that writing the logs is attempted inmediately.
+                    BufferOptions bufferOptions = BufferOptions.NoBuffer();
+                    LoggerOptions loggerOptions = LoggerOptions.Create(bufferOptions: bufferOptions, retryOptions: retryOptions);
+
+                    // Replace projectId with your Google Cloud Project ID.
+                    services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, projectId, options: loggerOptions));
+                })
+                .UseStartup<Startup>();
+            // End sample
+#else
+            return new WebHostBuilder().UseStartup<LoggingTestApplicationPropagateExceptions>();
+#endif
         }
     }
 
@@ -116,6 +151,46 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             // Replace ProjectId with your Google Cloud Project ID.
             loggerFactory.AddGoogle(app.ApplicationServices, ProjectId);
+
+            // ...any other configuration your application requires.
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
+        // End sample
+    }
+
+    /// <summary>
+    /// A simple web application to test the <see cref="GoogleLogger"/>
+    /// and associated classes.
+    /// </summary>
+    internal class LoggingTestApplicationPropagateExceptions
+    {
+        // Set this value to a dummy project ID so we can test that logging exceptions
+        // are propagated.
+        internal static readonly string ProjectId = "non-existent-project-id";
+
+        // Sample: RegisterGoogleLoggerPropagateExceptions
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc();
+        }
+
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            // Explicitly create logger options that will propagate any exceptions thrown
+            // during logging.
+            RetryOptions retryOptions = RetryOptions.NoRetry(ExceptionHandling.Propagate);
+            // Also set the no buffer option so that writing the logs is attempted inmediately.
+            BufferOptions bufferOptions = BufferOptions.NoBuffer();
+            LoggerOptions loggerOptions = LoggerOptions.Create(retryOptions: retryOptions, bufferOptions: bufferOptions);
+
+            // Replace ProjectId with your Google Cloud Project ID.
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, options: loggerOptions);
 
             // ...any other configuration your application requires.
 

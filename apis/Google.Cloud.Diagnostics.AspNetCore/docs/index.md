@@ -44,6 +44,8 @@ You can still initialize the separate components using the extension methods bel
 if you only need to use some of the components or, for instance, if you need to access the `Configuration`
 property on the `Startup` class to obtain values for `ProjectID`, `Service` or `Version`.
 
+# Error Reporting
+
 ## Registering Error Reporting
 
 {{sample:ErrorReporting.ReportUnhandledExceptions}}
@@ -51,6 +53,8 @@ property on the `Startup` class to obtain values for `ProjectID`, `Service` or `
 ## Log Exceptions
 
 {{sample:ErrorReporting.LogExceptions}}
+
+# Logging
 
 ## Initializing Logging
 
@@ -63,6 +67,29 @@ property on the `Startup` class to obtain values for `ProjectID`, `Service` or `
 ## Log
 
 {{sample:Logging.UseGoogleLogger}}
+
+## Troubleshooting Logging
+
+Sometimes it is neccessary to diagnose log operations. It might be that logging is failing or that
+we simply cannot find where the logs are being stored in GCP. What follows are a couple of code samples
+that can be useful to find out what might be wrong with logging operations.
+
+### Propagating Exceptions
+
+By default the Google Logger won't propagate any exceptions thrown during logging. This is to protect the
+application from crashing if logging is not possible. But logging is an important aspect of most applications
+so at times we need to know if it's failing and why. The following examples show how to configure Google Logger
+so that it propagates exceptions thrown during logging.
+
+#### Propagating Exceptions
+
+{{sample:Logging.RegisterGoogleLoggerPropagateExceptions}}
+
+#### Propagating Exceptions (ASP.NET Core 2.0+)
+
+{{sample:Logging.RegisterGoogleLoggerPropagateExceptions2}}
+
+# Tracing
 
 ## Initializing Tracing
 
