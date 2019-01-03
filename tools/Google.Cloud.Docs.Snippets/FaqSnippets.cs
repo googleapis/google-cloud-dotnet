@@ -27,6 +27,7 @@ namespace Google.Cloud.Tools.Snippets
         public void Emulator()
         {
             // Sample: Emulator
+            // [START pubsub_use_emulator]
             // For example, "localhost:8615"
             string emulatorHostAndPort = Environment.GetEnvironmentVariable("PUBSUB_EMULATOR_HOST");
 
@@ -37,6 +38,7 @@ namespace Google.Cloud.Tools.Snippets
             {
                 Console.WriteLine(topic.Name);
             }
+            // [END pubsub_use_emulator]
             // End sample
         }
         
