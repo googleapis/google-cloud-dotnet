@@ -98,9 +98,10 @@ namespace Google.Cloud.Spanner.V1
                 _request.ResumeToken = _resumeToken;
             }
 
-            _currentCall = _spannerClient.ExecuteSqlStream(_request,
-                _spannerClient.Settings.ExecuteSqlStreamSettings.WithExpiration(
+            var sqlStream = _spannerClient.ExecuteStreamingSql(_request,
+                _spannerClient.Settings.ExecuteStreamingSqlSettings.WithExpiration(
                     _spannerClient.Settings.ConvertTimeoutToExpiration(_timeoutSeconds)));
+            _currentCall = sqlStream.GrpcCall;
             return WithTiming(_currentCall.ResponseHeadersAsync.WithSessionExpiryChecking(_session), "ResponseHeaders");
         }
 
