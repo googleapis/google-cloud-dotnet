@@ -84,6 +84,14 @@ instances are acquired from the session pool (and must be released
 appropriately). These are automatically refreshed (and eventually
 evicted) by the session pool.
 
+The `ExecuteSqlStream` and `GetSqlStreamReader` methods on
+`SpannerClient` have been removed, along with
+`SpannerClientSettings.ExecuteSqlStreamSettings`. The
+`SpannerClient.ExecuteStreamingSql` method is responsible for
+executing SQL and returning the results in a stream;
+the `PooledSession.ExecuteSqlStreamReader` method returns a
+`ReliableStreamReader`.
+
 ## Changes in Google.Cloud.Spanner.V1.Internal
 
 The Google.Cloud.Spanner.V1 package exposes some types in the
