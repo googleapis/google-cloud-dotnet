@@ -94,9 +94,10 @@ namespace Google.Cloud.Spanner.V1
             Logger.LogPerformanceCounter("StreamReader.ConnectCount", x => x + 1);
             if (_resumeToken != null)
             {
-                Logger.Debug($"Resuming at location:{_resumeToken}");
+                Logger.Debug($"Resuming read using a resume token");
                 _request.ResumeToken = _resumeToken;
             }
+            // TODO: Clear the resume token in the request if we don't have one?
 
             var sqlStream = _spannerClient.ExecuteStreamingSql(_request,
                 _spannerClient.Settings.ExecuteStreamingSqlSettings.WithExpiration(
@@ -127,28 +128,42 @@ namespace Google.Cloud.Spanner.V1
             if (_currentCall == null)
             {
                 await WithTiming(ConnectAsync(), "ConnectAsync").ConfigureAwait(false);
-                Debug.Assert(_currentCall != null, "_currentCall != null");
+                GaxPreconditions.CheckState(_currentCall != null, "Failed to connect");
 
-                for (int i = 0; i <= _resumeSkipCount; i++)
+                bool success = false;
+                try
                 {
-                    ThrowIfCancellationRequested(cancellationToken);
+                    for (int i = 0; i <= _resumeSkipCount; i++)
+                    {
+                        ThrowIfCancellationRequested(cancellationToken);
 
-                    _isReading = await WithTiming(
-                            _currentCall.ResponseStream.MoveNext(cancellationToken)
-                                .WithSessionExpiryChecking(_session),
-                            "ResponseStream.MoveNext")
-                        .ConfigureAwait(false);
-                    if (!_isReading || _currentCall.ResponseStream.Current == null)
-                    {
-                        return false;
+                        _isReading = await WithTiming(
+                                _currentCall.ResponseStream.MoveNext(cancellationToken)
+                                    .WithSessionExpiryChecking(_session),
+                                "ResponseStream.MoveNext")
+                            .ConfigureAwait(false);
+                        if (!_isReading || _currentCall.ResponseStream.Current == null)
+                        {
+                            return false;
+                        }
+                        if (_metadata == null)
+                        {
+                            _metadata = _currentCall.ResponseStream.Current.Metadata;
+                        }
                     }
-                    if (_metadata == null)
+                    RecordResumeToken();
+                    RecordStatistics();
+                    success = true;
+                }
+                finally
+                {
+                    // If we failed at any point, dispose the call and forget it.
+                    if (!success)
                     {
-                        _metadata = _currentCall.ResponseStream.Current.Metadata;
+                        _currentCall?.Dispose();
+                        _currentCall = null;
                     }
                 }
-                RecordResumeToken();
-                RecordStatistics();
             }
 
             return _isReading;
@@ -201,31 +216,9 @@ namespace Google.Cloud.Spanner.V1
 
             Logger.Warn("An error occurred attemping to iterate through the sql query. Attempting to recover.", exception);
 
-            //when we reconnect, we purposely do not do a *reliable*movenext.  If we fail to fast forward on the reconnect
-            //we bail out completely and surface the error.
+            // Reconnect, which will automatically skip as far as we need to using the resume token.
+            // We don't need to call MoveNext again; we'll already be resuming *after* the result set that provided the resume token.
             _isReading = await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
-            if (_isReading)
-            {
-                // we try one more time to advance. Note that we should have done an exponential backoff retry
-                // on the initial connect -- but MoveNext is not idempotent, so all we can do if it fails is start
-                // from scratch.  But in case something is going horribly awry, we don't want to spin indefinitely,
-                // so we bail if the recovery isn't successful in moving to the next item.
-                try
-                {
-                    _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
-                        .WithSessionExpiryChecking(_session).ConfigureAwait(false);
-                    _resumeSkipCount++;
-                }
-                catch (Exception e)
-                {
-                    Logger.Warn("An error occurred while attemping to recover.", e);
-                    //At this point, we give up, rethrowing and setting state such that it will
-                    //need to reconnect if the user calls MoveNext again.
-                    _currentCall?.Dispose();
-                    _currentCall = null;
-                    throw;
-                }
-            }
         }
 
         private void RecordResumeToken()
