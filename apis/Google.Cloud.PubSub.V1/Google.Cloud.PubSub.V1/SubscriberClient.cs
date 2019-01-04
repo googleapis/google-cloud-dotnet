@@ -651,10 +651,16 @@ namespace Google.Cloud.PubSub.V1
             // Thread-safe.
             public void Enqueue(T item)
             {
+                TaskCompletionSource<int> tcs;
                 lock (_lock)
                 {
                     _queue.Enqueue(item);
-                    _tcs?.SetResult(0);
+                    tcs = _tcs;
+                }
+                if (tcs != null)
+                {
+                    // Don't run in lock, as it may execute continuations synchonously.
+                    tcs.TrySetResult(0);
                 }
             }
 
@@ -668,7 +674,7 @@ namespace Google.Cloud.PubSub.V1
                     {
                         return _queue.Dequeue();
                     }
-                    _tcs = new TaskCompletionSource<int>(TaskCreationOptions.RunContinuationsAsynchronously);
+                    _tcs = new TaskCompletionSource<int>();
                 }
                 await _taskHelper.ConfigureAwait(_tcs.Task);
                 lock (_lock)
