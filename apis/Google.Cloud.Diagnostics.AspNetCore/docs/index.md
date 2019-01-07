@@ -89,6 +89,30 @@ so that it propagates exceptions thrown during logging.
 
 {{sample:Logging.RegisterGoogleLoggerPropagateExceptions2}}
 
+### Finding out the URL where logs are written
+
+Depending on where your code is running and the options you provided for creating a Google Logger,
+it might be hard to find your logs in the GCP Console. We have provided a way for you to obtain the URL
+where your logs can be found.
+
+As the following code samples show, you only need to pass a `System.IO.TextWriter` as part of the options
+when creating a Google Logger. Whenever a Google Logger is created, the URL where its logs can be found
+will be written to the given text writer.
+
+Please note that since this is a Google Logger diagnostics feature, we don't respect settings for exception
+handling, i.e. we propogate any exception thrown while writing the URL to the given text writer so you know
+what might be happening. This feature should only be activated as a one off, if you are having trouble trying
+to find your logs in the GCP Console, and not as a permanent feature in production code. To deactivate this feature
+simply stop passing a `System.IO.TextWriter` as part of the options when creating a Google Logger.
+
+#### Finding out the UR: where logs are written
+
+{{sample:Logging.RegisterGoogleLoggerWriteUrl}}
+
+#### Finding out the UR: where logs are written (ASP.NET Core 2.0+)
+
+{{sample:Logging.RegisterGoogleLoggerWriteUrl2}}
+
 # Tracing
 
 ## Initializing Tracing

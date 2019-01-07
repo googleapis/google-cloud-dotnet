@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
@@ -24,6 +25,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -34,6 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     [SnippetOutputCollector]
     public class LoggingSnippetsTests
     {
+        private const string _expectedGcpLogBaseUrl = "https://console.cloud.google.com/logs/viewer";
         private static readonly LogEntryPolling s_polling = new LogEntryPolling();
 
         private readonly string _testId;
@@ -43,6 +46,33 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             _testId = IdGenerator.FromDateTime();
             _startTime = DateTime.UtcNow;
+        }
+
+        /// <summary>
+        /// Test for the GcpStackdriverLoggingConsoleUrl snippet.
+        /// </summary>
+        [Fact]
+        public void GetsLogViewingUrl()
+        {
+            // No need to make an actual call to the controller. Just starting up the server
+            // creates several loggers.
+            using (TestServer server = new TestServer(GetUrlWriterHostBuilder())) { }
+
+            string expectedProject = TestEnvironment.GetTestProjectId();
+            string writtenInfo = LoggingTestApplicationWriteUrl.textWriter.ToString();
+
+            int urlStart = writtenInfo.LastIndexOf("http", StringComparison.OrdinalIgnoreCase);
+            Assert.NotInRange(urlStart, -1, -1);
+
+            // We know the URL is the last to be written.
+            string url = writtenInfo.Substring(urlStart);
+
+            Assert.StartsWith(_expectedGcpLogBaseUrl, url);
+            Assert.Contains($"resource={MonitoredResourceBuilder.FromPlatform().Type}", url);
+            Assert.Contains($"project={expectedProject}", url);
+            Assert.Contains("minLogLevel=200", url);
+            Assert.Contains($"logName=projects/{expectedProject}/logs/aspnetcore", url);
+            Assert.DoesNotContain("organizationId=", url);
         }
 
         /// <summary>
@@ -138,6 +168,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             return new WebHostBuilder().UseStartup<LoggingTestApplicationPropagateExceptions>();
 #endif
         }
+
+        private IWebHostBuilder GetUrlWriterHostBuilder()
+        {
+#if NETCOREAPP2_0
+            string projectId = TestEnvironment.GetTestProjectId();
+            TextWriter textWriter = LoggingTestApplicationWriteUrl.textWriter;
+            // Sample: RegisterGoogleLoggerWriteUrl2
+            return new WebHostBuilder()
+                .ConfigureServices(services =>
+                {
+                    // Once created, the GoogleLogger will write the URL where logs can be found
+                    // to the given textWriter.
+                    LoggerOptions loggerOptions = LoggerOptions.Create(loggerDiagnosticsOutput: textWriter);
+
+                    // Replace projectId with your Google Cloud Project ID.
+                    services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, projectId, loggerOptions));
+                })
+                .UseStartup<Startup>();
+            // End sample
+#else
+            return new WebHostBuilder().UseStartup<LoggingTestApplicationWriteUrl>();
+#endif
+        }
     }
 
     /// <summary>
@@ -198,6 +251,43 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             // Replace ProjectId with your Google Cloud Project ID.
             loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, options: loggerOptions);
+
+            // ...any other configuration your application requires.
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
+        // End sample
+    }
+
+    /// <summary>
+    /// A simple web application to test the <see cref="GoogleLogger"/>
+    /// and associated classes. Configure <see cref="GoogleLogger"/> to
+    /// write the URL where logs can be found.
+    /// </summary>
+    internal class LoggingTestApplicationWriteUrl
+    {
+        private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
+        internal static readonly TextWriter textWriter = new StringWriter();
+
+        // Sample: RegisterGoogleLoggerWriteUrl
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddMvc();
+        }
+
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            // Once created, the GoogleLogger will write the URL where logs can be found to the given
+            // textWriter.
+            LoggerOptions loggerOptions = LoggerOptions.Create(loggerDiagnosticsOutput: textWriter);
+
+            // Replace ProjectId with your Google Cloud Project ID.
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
 
             // ...any other configuration your application requires.
 
