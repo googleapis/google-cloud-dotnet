@@ -48,6 +48,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <seealso cref="GoogleLoggerFactoryExtensions"/>
     public sealed class GoogleLogger : ILogger
     {
+        private const string GcpConsoleLogsBaseUrl = "https://console.cloud.google.com/logs/viewer";
+
         /// <summary>The log name given when creating the logger.</summary>
         private readonly string _logName;
 
@@ -56,6 +58,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <summary>The trace target or null if non exists.</summary>
         private readonly TraceTarget _traceTarget;
+
+        /// <summary>
+        /// The log target, indicating mainly if the target is a project or an organization.
+        /// </summary>
+        private readonly LogTarget _logTarget;
 
         /// <summary>The logger options.</summary>
         private readonly LoggerOptions _loggerOptions;
@@ -72,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,
             string logName, IClock clock = null, IServiceProvider serviceProvider = null)
         {
-            GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
+            _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
                 TraceTarget.ForProject(logTarget.ProjectId) : null;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
@@ -230,5 +237,27 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal IEnumerable<ILogEntryLabelProvider> GetLabelProviders() =>
             _serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>();
+
+        /// <summary>
+        /// For diagnostic purposes. Builds and returns the URL where the entries logged by
+        /// this <see cref="GoogleLogger"/> can be seen on the GCP Stackdriver Logging Console.
+        /// </summary>
+        public Uri GetGcpConsoleLogsUrl()
+        {
+            IList<string> parameters = new List<string>
+            {
+                $"resource={_loggerOptions.MonitoredResource.Type}",
+                $"minLogLevel={(int)_loggerOptions.LogLevel.ToLogSeverity()}",
+                $"logName={_fullLogName}",
+                _logTarget.Kind == LogTargetKind.Project ? $"project={_logTarget.ProjectId}" :
+                _logTarget.Kind == LogTargetKind.Organization ? $"organizationId={_logTarget.OrganizationId}" :
+                throw new InvalidOperationException($"Unrecognized LogTargetKind: {_logTarget.Kind}")
+            };
+
+            return new UriBuilder(GcpConsoleLogsBaseUrl)
+            {
+                Query = string.Join("&", parameters)
+            }.Uri;
+        }
     }
 }
