@@ -16,6 +16,7 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
+using Grpc.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -69,11 +70,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Logs_PropagateExceptions()
         {
-            using (TestServer server = new TestServer(GetExceptionPropagatingHostBuilder()))
-            using (HttpClient client = server.CreateClient())
+            var aggregateEx = await Assert.ThrowsAsync<AggregateException>(async () =>
             {
-                await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/LoggingSamples/LogInformation/{_testId}"));
-            }
+                using (TestServer server = new TestServer(GetExceptionPropagatingHostBuilder()))
+                using (HttpClient client = server.CreateClient())
+                {
+                    await client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
+                }
+            });
+
+            var rpcException = (RpcException) aggregateEx.InnerException;
+            Assert.Equal(StatusCode.NotFound, rpcException.StatusCode);
         }
 
         internal static void PollAndVerifyLog(DateTime startTime, string testId)
