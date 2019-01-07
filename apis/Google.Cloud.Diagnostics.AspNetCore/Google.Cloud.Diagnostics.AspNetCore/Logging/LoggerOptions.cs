@@ -18,6 +18,7 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -51,13 +52,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// on the value of <see cref="RetryOptions.ExceptionHandling"/>.</remarks>
         public Dictionary<string, string> Labels { get; }
 
+        /// <summary>
+        /// A <see cref="TextWriter"/> to write diagnostics info about loggers created
+        /// with these <see cref="LoggerOptions"/>.
+        /// Currently the only diagnostics info we provide is the URL where the logs written
+        /// with these options can be found.
+        /// </summary>
+        public TextWriter LoggerDiagnosticsOutput { get; }
+
         private LoggerOptions(
             LogLevel logLevel,
             string logName,
             Dictionary<string, string> labels,
             MonitoredResource monitoredResource, 
             BufferOptions bufferOptions,
-            RetryOptions retryOptions)
+            RetryOptions retryOptions,
+            TextWriter loggerDiagnosticsOutput)
         {
             LogName = logName;
             LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
@@ -65,6 +75,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             MonitoredResource = monitoredResource;
             BufferOptions = bufferOptions;
             RetryOptions = retryOptions;
+            LoggerDiagnosticsOutput = loggerDiagnosticsOutput;
         }
 
         /// <summary>
@@ -82,20 +93,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         /// <param name="retryOptions">Optional, the retry options.  Defaults to a <see cref="RetryType.None"/></param>
+        /// <param name="loggerDiagnosticsOutput">Optional. If set some logger diagnostics info will be written
+        /// to the given <see cref="TextWriter"/>. Currently the only diagnostics info we provide is the URL where
+        /// the logs written with these options can be found.</param>
         public static LoggerOptions Create(
             LogLevel logLevel = LogLevel.Information,
             string logName = null,
             Dictionary<string, string> labels = null,
             MonitoredResource monitoredResource = null,
             BufferOptions bufferOptions = null,
-            RetryOptions retryOptions = null)
+            RetryOptions retryOptions = null,
+            TextWriter loggerDiagnosticsOutput = null)
         {
             logName = logName ?? _baseLogName;
             labels = labels ?? new Dictionary<string, string>();
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
             retryOptions = retryOptions ?? RetryOptions.NoRetry();
-            return new LoggerOptions(logLevel, logName, labels, monitoredResource, bufferOptions, retryOptions);
+            return new LoggerOptions(logLevel, logName, labels, monitoredResource, bufferOptions, retryOptions, loggerDiagnosticsOutput);
         }
     }
 }

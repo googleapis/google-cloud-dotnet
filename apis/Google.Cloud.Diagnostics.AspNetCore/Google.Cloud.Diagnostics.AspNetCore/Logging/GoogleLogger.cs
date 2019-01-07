@@ -88,6 +88,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _fullLogName = logTarget.GetFullLogName(_loggerOptions.LogName);
             _serviceProvider = serviceProvider;
             _clock = clock ?? SystemClock.Instance;
+
+            WriteCreationDiagnostics();
         }
 
         /// <inheritdoc />
@@ -258,6 +260,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             {
                 Query = string.Join("&", parameters)
             }.Uri;
+        }
+
+        private void WriteCreationDiagnostics()
+        {
+            // Explicitly not catching exceptions.
+            // This should only be activated for diagnostics purposes so in that case
+            // we shouldn't throw exceptions.
+            if (_loggerOptions.LoggerDiagnosticsOutput != null)
+            {
+                _loggerOptions.LoggerDiagnosticsOutput.WriteLine($"{DateTime.UtcNow} - GoogleLogger created. Logs written at: {GetGcpConsoleLogsUrl()}");
+                _loggerOptions.LoggerDiagnosticsOutput.Flush();
+            }
         }
     }
 }
