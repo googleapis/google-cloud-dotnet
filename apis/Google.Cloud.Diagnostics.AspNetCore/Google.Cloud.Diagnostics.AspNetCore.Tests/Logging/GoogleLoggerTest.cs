@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
@@ -24,6 +22,9 @@ using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Moq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
@@ -34,10 +35,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         private const string _logName = "log-name";
         private const string _baseLogName = "aspnetcore";
         private const string _projectId = "pid";
+        private const string _expectedGcpLogBaseUrl = "https://console.cloud.google.com/logs/viewer";
         private static readonly DateTime s_dateTime = DateTime.UtcNow;
         private static readonly Exception s_exception = new Exception("some message");
         private static readonly IClock s_clock = new FakeClock(s_dateTime);
-        private static readonly LogTarget s_logTarget = LogTarget.ForProject(_projectId);
+        private static readonly LogTarget s_defaultLogTarget = LogTarget.ForProject(_projectId);
 
         /// <summary>
         /// Function to format a string and exception.  Used to test logging.
@@ -46,13 +48,66 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             => ex == null ? message : $"{message} - {ex.Message}";
 
         private GoogleLogger GetLogger(
-            IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information,
+            IConsumer<LogEntry> consumer = null, LogLevel logLevel = LogLevel.Information,
             Dictionary<string, string> labels = null, IServiceProvider serviceProvider = null,
             string logName = null,
+            MonitoredResource monitoredResource = null, LogTarget logTarget = null,
             RetryOptions retryOptions = null)
         {
-            LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, MonitoredResourceBuilder.GlobalResource, retryOptions: retryOptions);
-            return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock, serviceProvider);
+            consumer = consumer ?? new Mock<IConsumer<LogEntry>>(MockBehavior.Strict).Object;
+            monitoredResource = monitoredResource ?? MonitoredResourceBuilder.GlobalResource;
+            logTarget = logTarget ?? s_defaultLogTarget;
+            LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, monitoredResource, retryOptions: retryOptions);
+            return new GoogleLogger(consumer, logTarget, options, _logName, s_clock, serviceProvider);
+        }
+
+        [Fact]
+        public void GetsGcpConsoleLogsUrl()
+        {
+            GoogleLogger logger = GetLogger();
+            Uri actualUrl = logger.GetGcpConsoleLogsUrl();
+            string query = actualUrl.Query;
+
+            Assert.StartsWith(_expectedGcpLogBaseUrl, actualUrl.ToString());
+            Assert.Contains("resource=global", query);
+            Assert.Contains("project=pid", query);
+            Assert.Contains("minLogLevel=200", query);
+            Assert.Contains("logName=projects/pid/logs/aspnetcore", query);
+            Assert.DoesNotContain("organizationId=", query);
+        }
+
+        [Fact]
+        public void GetsGcpConsoleLogsUrl_NonDefault()
+        {
+            GoogleLogger logger = GetLogger(logLevel: LogLevel.Error, monitoredResource: new MonitoredResource() { Type = "dummy-type"}, logName: "custom-name");
+            Uri actualUrl = logger.GetGcpConsoleLogsUrl();
+            string query = actualUrl.Query;
+
+            Assert.StartsWith(_expectedGcpLogBaseUrl, actualUrl.ToString());
+            Assert.Contains("resource=dummy-type", query);
+            Assert.Contains("project=pid", query);
+            Assert.Contains("minLogLevel=500", query);
+            Assert.Contains("logName=projects/pid/logs/custom-name", query);
+            Assert.DoesNotContain("organizationId=", query);
+        }
+
+        [Fact]
+        public void GetsGcpConsoleLogsUrl_Organization()
+        {
+            GoogleLogger logger = GetLogger(logTarget: LogTarget.ForOrganization("12345"));
+            string query = logger.GetGcpConsoleLogsUrl().Query;
+
+            Assert.Contains("organizationId=12345", query);
+            Assert.DoesNotContain("project=", query);
+        }
+
+        [Fact]
+        public void GetsGcpConsoleLogsUrl_MonitoredResourceFromPlatform()
+        {
+            GoogleLogger logger = GetLogger(monitoredResource: MonitoredResourceBuilder.FromPlatform());
+            string query = logger.GetGcpConsoleLogsUrl().Query;
+
+            Assert.Contains($"resource={MonitoredResourceBuilder.FromPlatform().Type}", query);
         }
 
         [Fact]
