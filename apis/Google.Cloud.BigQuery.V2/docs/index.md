@@ -55,6 +55,15 @@ below.
 
 {{sample:BigQueryClient.LegacySql}}
 
+## Wildcard queries
+
+[Wildcard queries](https://cloud.google.com/bigquery/docs/querying-wildcard-tables) can be used
+to query multiple tables at the same time.
+Wildcard table names only work in queries written using Standard SQL, so make sure to use the
+standard format for the table name as shown below.
+
+{{sample:BigQueryClient.WildcardQuery}}
+
 ## Data insertion
 
 {{sample:BigQueryClient.InsertOverview}}

@@ -61,6 +61,25 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         }
 
         [Fact]
+        public void WildcardQuery()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Sample: WildcardQuery
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            string sql = $"SELECT year, mo, da, temp, min, max FROM `bigquery-public-data.noaa_gsod.gsod*` where `max` > 120 and `max` < 121 LIMIT 10";
+            BigQueryParameter[] parameters = null;
+            BigQueryResults results = client.ExecuteQuery(sql, parameters);
+
+            foreach (BigQueryRow row in results)
+            {
+                Console.WriteLine($"On {row["year"]}-{row["mo"]}-{row["da"]} the mean temperature was {row["temp"]} with min temperature at {row["min"]} and max temperature at {row["max"]}.");
+            }
+            // End sample
+        }
+
+        [Fact]
         public void DmlSample()
         {
             string projectId = _fixture.ProjectId;
