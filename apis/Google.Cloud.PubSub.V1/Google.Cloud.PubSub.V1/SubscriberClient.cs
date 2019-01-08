@@ -659,8 +659,9 @@ namespace Google.Cloud.PubSub.V1
                 }
                 if (tcs != null)
                 {
-                    // Don't run in lock, as it may execute continuations synchonously.
-                    tcs.SetResult(0);
+                    // Don't run in lock, as it may execute continuations synchronously.
+                    // Use TrySetResult as this can be called multiple times on the same tcs instance
+                    tcs.TrySetResult(0);
                 }
             }
 
