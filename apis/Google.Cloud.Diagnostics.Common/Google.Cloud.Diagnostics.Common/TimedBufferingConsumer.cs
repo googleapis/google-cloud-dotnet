@@ -13,11 +13,10 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using System.Collections.Generic;
 using System;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Threading;
-using Grpc.Core;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -68,8 +67,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <inheritdoc />
         public override void Dispose()
         {
-            Flush();
             _timer.Dispose();
+            Flush();
         }
 
         /// <inheritdoc />
