@@ -540,7 +540,7 @@
     "id": "Google.Cloud.PubSub.V1",
     "productName": "Cloud Pub/Sub",
     "productUrl": "https://cloud.google.com/pubsub/",
-    "version": "1.0.0",
+    "version": "1.1.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
     "dependencies": {
