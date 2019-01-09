@@ -546,7 +546,7 @@
     "dependencies": {
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Api.Gax.Grpc": "2.5.0",
-      "Grpc.Core": "1.13.1"
+      "Grpc.Core": "1.17.1"
     },
     "testDependencies": {
       "System.ValueTuple": "4.4.0"
