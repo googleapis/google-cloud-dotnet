@@ -197,17 +197,16 @@ namespace Google.Cloud.PubSub.V1
             var endpoint = clientCreationSettings?.ServiceEndpoint ?? PublisherServiceApiClient.DefaultEndpoint;
             var clients = new PublisherServiceApiClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
-            // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
-            var channelOptions = new[]
-            {
-                new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
-                new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
-
-                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-                new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
-            };
             for (int i = 0; i < clientCount; i++)
             {
+                var channelOptions = new[]
+                {
+                    // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
+                    new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
+                    new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
+                    // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
+                    new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
+                };
                 var channel = new Channel(endpoint.Host, endpoint.Port, channelCredentials, channelOptions);
                 clients[i] = PublisherServiceApiClient.Create(channel, clientCreationSettings?.PublisherServiceApiSettings);
                 shutdowns[i] = channel.ShutdownAsync;
