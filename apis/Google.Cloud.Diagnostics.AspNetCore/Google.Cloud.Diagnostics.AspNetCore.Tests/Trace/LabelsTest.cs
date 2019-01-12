@@ -41,10 +41,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             request.Method = "PUT";
 
             var labels = Labels.FromDefaultHttpRequest(request);
-            Assert.Equal(3, labels.Count);
+            Assert.Equal(4, labels.Count);
             Assert.Equal("123", labels[LabelsCommon.HttpRequestSize]);
             Assert.Equal("google.com", labels[LabelsCommon.HttpHost]);
             Assert.Equal("PUT", labels[LabelsCommon.HttpMethod]);
+            Assert.NotEmpty(labels["aspnetcore/trace_identifier"]);
         }
 
         [Fact]

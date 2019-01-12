@@ -51,7 +51,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             {
                 { LabelsCommon.HttpRequestSize, request.ContentLength.ToString() },
                 { LabelsCommon.HttpHost, request.Host.ToString() },
-                { LabelsCommon.HttpMethod, request.Method }
+                { LabelsCommon.HttpMethod, request.Method },
+                { "aspnetcore/trace_identifier", request.HttpContext.TraceIdentifier }
             };
         }
 
