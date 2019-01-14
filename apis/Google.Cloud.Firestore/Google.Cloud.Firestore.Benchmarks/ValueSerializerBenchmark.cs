@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using BenchmarkDotNet.Attributes;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using System.Collections.Generic;
 
 namespace Google.Cloud.Firestore.Benchmarks

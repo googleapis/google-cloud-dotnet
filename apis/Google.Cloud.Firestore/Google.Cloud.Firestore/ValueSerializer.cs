@@ -14,7 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Firestore.Converters;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using System.Collections.Generic;
 using wkt = Google.Protobuf.WellKnownTypes;
 

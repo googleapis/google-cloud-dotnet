@@ -15,13 +15,13 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Firestore.V1Beta1.TransactionOptions.Types;
+using static Google.Cloud.Firestore.V1.TransactionOptions.Types;
 
 namespace Google.Cloud.Firestore
 {
@@ -59,7 +59,7 @@ namespace Google.Cloud.Firestore
             var request = new BeginTransactionRequest
             {
                 Database = db.RootPath,
-                Options = previousTransactionId == null ? null : new V1Beta1.TransactionOptions { ReadWrite = new ReadWrite { RetryTransaction = previousTransactionId } }
+                Options = previousTransactionId == null ? null : new V1.TransactionOptions { ReadWrite = new ReadWrite { RetryTransaction = previousTransactionId } }
             };
             var response = await db.Client.BeginTransactionAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
             return new Transaction(db, response.Transaction, cancellationToken);

@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -36,7 +36,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var expectedWrite = new Write
             {
-                CurrentDocument = new V1Beta1.Precondition { Exists = false },
+                CurrentDocument = new V1.Precondition { Exists = false },
                 Update = new Document
                 {
                     Name = doc.Path,
@@ -73,7 +73,7 @@ namespace Google.Cloud.Firestore.Tests
             var expectedWrite = new Write
             {
                 Delete = doc.Path,
-                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) }
+                CurrentDocument = new V1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) }
             };
             AssertWrites(batch, (expectedWrite, true));
         }
@@ -94,7 +94,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var expectedWrite = new Write
             {
-                CurrentDocument = new V1Beta1.Precondition { Exists = true },
+                CurrentDocument = new V1.Precondition { Exists = true },
                 Update = new Document
                 {
                     Name = doc.Path,
@@ -124,7 +124,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var expectedWrite = new Write
             {
-                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
+                CurrentDocument = new V1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
                 Update = new Document
                 {
                     Name = doc.Path,
@@ -175,7 +175,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var expectedWrite = new Write
             {
-                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
+                CurrentDocument = new V1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
                 Update = new Document
                 {
                     Name = doc.Path,
@@ -196,7 +196,7 @@ namespace Google.Cloud.Firestore.Tests
 
             var expectedWrite = new Write
             {
-                CurrentDocument = new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
+                CurrentDocument = new V1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) },
                 Update = new Document
                 {
                     Name = doc.Path,
@@ -307,15 +307,15 @@ namespace Google.Cloud.Firestore.Tests
                 CommitTime = CreateProtoTimestamp(10, 500),
                 WriteResults =
                 {
-                    new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(10, 0) },
+                    new V1.WriteResult { UpdateTime = CreateProtoTimestamp(10, 0) },
                     // Deliberately no UpdateTime; result should default to CommitTime
-                    new V1Beta1.WriteResult {  },
+                    new V1.WriteResult {  },
                     // Returned even though it's a transform (added with addResultIndex = true)
-                    new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(100, 0) },
+                    new V1.WriteResult { UpdateTime = CreateProtoTimestamp(100, 0) },
                     // Not returned (added with addResultIndex = false)
-                    new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(125, 0) },
+                    new V1.WriteResult { UpdateTime = CreateProtoTimestamp(125, 0) },
                     // Returned as the fourth result
-                    new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(150, 0) },
+                    new V1.WriteResult { UpdateTime = CreateProtoTimestamp(150, 0) },
                 }
             };
 

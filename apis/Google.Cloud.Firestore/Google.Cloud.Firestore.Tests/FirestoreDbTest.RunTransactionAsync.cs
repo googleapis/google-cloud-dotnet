@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
@@ -153,7 +153,7 @@ namespace Google.Cloud.Firestore.Tests
                         // Create
                         new Write
                         {
-                            CurrentDocument = new V1Beta1.Precondition { Exists = false },
+                            CurrentDocument = new V1.Precondition { Exists = false },
                             Update = new Document
                             {
                                 Name = "projects/proj/databases/db/documents/col/doc1",

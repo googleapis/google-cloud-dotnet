@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
@@ -445,7 +445,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
                 var response = new CommitResponse
                 {
                     CommitTime = new wkt::Timestamp(),
-                    WriteResults = { request.Writes.Select(_ => new V1Beta1.WriteResult()) }
+                    WriteResults = { request.Writes.Select(_ => new V1.WriteResult()) }
                 };
                 return Task.FromResult(response);
             }

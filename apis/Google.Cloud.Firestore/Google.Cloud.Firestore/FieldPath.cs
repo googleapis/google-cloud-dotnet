@@ -16,7 +16,7 @@ using Google.Api.Gax;
 using System;
 using System.Linq;
 using System.Text;
-using static Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types;
+using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
 
 namespace Google.Cloud.Firestore
 {

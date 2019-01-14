@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using System.Collections.Generic;
 using System.Linq;
-using static Google.Cloud.Firestore.V1Beta1.FirestoreClient;
+using static Google.Cloud.Firestore.V1.FirestoreClient;
 
 namespace Google.Cloud.Firestore.Tests
 {

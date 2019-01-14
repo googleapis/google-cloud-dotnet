@@ -14,7 +14,7 @@
 
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using Moq;
 using System;
@@ -24,7 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
-using static Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types;
+using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
 
 namespace Google.Cloud.Firestore.Tests
 {

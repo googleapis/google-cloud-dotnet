@@ -13,13 +13,13 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Firestore.V1Beta1.TargetChange.Types.TargetChangeType;
+using static Google.Cloud.Firestore.V1.TargetChange.Types.TargetChangeType;
 
 namespace Google.Cloud.Firestore
 {

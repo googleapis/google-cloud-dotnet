@@ -14,15 +14,15 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types;
-using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types.FieldTransform.Types;
+using static Google.Cloud.Firestore.V1.DocumentTransform.Types;
+using static Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types;
 
 namespace Google.Cloud.Firestore
 {

@@ -23,7 +23,7 @@ namespace Google.Cloud.Firestore.Tests
         public void FromProto_TimestampInProto()
         {
             var commitTime = CreateProtoTimestamp(20, 30);
-            var proto = new V1Beta1.WriteResult { UpdateTime = CreateProtoTimestamp(10, 20) };
+            var proto = new V1.WriteResult { UpdateTime = CreateProtoTimestamp(10, 20) };
             var result = WriteResult.FromProto(proto, commitTime);
             Assert.Equal(new Timestamp(10, 20), result.UpdateTime);
         }
@@ -32,7 +32,7 @@ namespace Google.Cloud.Firestore.Tests
         public void FromProto_TimestampNotInProto()
         {
             var commitTime = CreateProtoTimestamp(20, 30);
-            var proto = new V1Beta1.WriteResult();
+            var proto = new V1.WriteResult();
             var result = WriteResult.FromProto(proto, commitTime);
             Assert.Equal(new Timestamp(20, 30), result.UpdateTime);
         }

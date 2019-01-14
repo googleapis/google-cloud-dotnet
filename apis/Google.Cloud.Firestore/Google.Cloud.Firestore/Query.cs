@@ -14,16 +14,16 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using static Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types;
-using FieldOp = Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types.FieldFilter.Types.Operator;
-using UnaryOp = Google.Cloud.Firestore.V1Beta1.StructuredQuery.Types.UnaryFilter.Types.Operator;
+using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
+using FieldOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator;
+using UnaryOp = Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator;
 
 namespace Google.Cloud.Firestore
 {
