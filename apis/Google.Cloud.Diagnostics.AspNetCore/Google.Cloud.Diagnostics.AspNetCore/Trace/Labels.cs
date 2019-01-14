@@ -27,6 +27,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </summary>
     internal static class Labels
     {
+        ///<summary>The label to denote the ASP.NET Core request trace identifier.</summary> 
+        public const string CoreTraceId = "/aspnetcore/trace_identifier";
+
         /// <summary>
         /// Gets a map with the label for the agent which contains the agent's name and version.
         /// </summary>
@@ -56,7 +59,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             if (!string.IsNullOrEmpty(request.HttpContext.TraceIdentifier))
             {
-                labels[LabelsCommon.CoreTraceId] = request.HttpContext.TraceIdentifier;
+                labels[CoreTraceId] = request.HttpContext.TraceIdentifier;
             }
 
             return labels;
