@@ -1,10 +1,9 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore", "Google.Cloud.Firestore\Google.Cloud.Firestore.csproj", "{0CE6F762-3B85-47A5-8450-19725847E635}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1Beta1", "..\Google.Cloud.Firestore.V1Beta1\Google.Cloud.Firestore.V1Beta1\Google.Cloud.Firestore.V1Beta1.csproj", "{4928ADA8-0904-4BD7-A226-1300E7A18A23}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.IntegrationTests", "Google.Cloud.Firestore.IntegrationTests\Google.Cloud.Firestore.IntegrationTests.csproj", "{4BFA184A-515D-4935-B14D-06F56798A46E}"
 EndProject
@@ -14,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Snip
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Tests", "Google.Cloud.Firestore.Tests\Google.Cloud.Firestore.Tests.csproj", "{FAE094B6-13E3-4A4F-B9B5-164B4CC4A21D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.Benchmarks", "Google.Cloud.Firestore.Benchmarks\Google.Cloud.Firestore.Benchmarks.csproj", "{AA8DDA67-32F0-459F-B82B-E4F12273D0D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Benchmarks", "Google.Cloud.Firestore.Benchmarks\Google.Cloud.Firestore.Benchmarks.csproj", "{AA8DDA67-32F0-459F-B82B-E4F12273D0D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1", "..\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1.csproj", "{CB33B137-E474-4F53-8545-E7597BAC1C58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,18 +39,6 @@ Global
 		{0CE6F762-3B85-47A5-8450-19725847E635}.Release|x64.Build.0 = Release|Any CPU
 		{0CE6F762-3B85-47A5-8450-19725847E635}.Release|x86.ActiveCfg = Release|Any CPU
 		{0CE6F762-3B85-47A5-8450-19725847E635}.Release|x86.Build.0 = Release|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Debug|x64.Build.0 = Debug|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Debug|x86.Build.0 = Debug|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Release|x64.ActiveCfg = Release|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Release|x64.Build.0 = Release|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Release|x86.ActiveCfg = Release|Any CPU
-		{4928ADA8-0904-4BD7-A226-1300E7A18A23}.Release|x86.Build.0 = Release|Any CPU
 		{4BFA184A-515D-4935-B14D-06F56798A46E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4BFA184A-515D-4935-B14D-06F56798A46E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BFA184A-515D-4935-B14D-06F56798A46E}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -110,6 +99,18 @@ Global
 		{AA8DDA67-32F0-459F-B82B-E4F12273D0D2}.Release|x64.Build.0 = Release|Any CPU
 		{AA8DDA67-32F0-459F-B82B-E4F12273D0D2}.Release|x86.ActiveCfg = Release|Any CPU
 		{AA8DDA67-32F0-459F-B82B-E4F12273D0D2}.Release|x86.Build.0 = Release|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Debug|x64.Build.0 = Debug|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Debug|x86.Build.0 = Debug|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|x64.ActiveCfg = Release|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|x64.Build.0 = Release|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|x86.ActiveCfg = Release|Any CPU
+		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

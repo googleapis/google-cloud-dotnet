@@ -8,7 +8,7 @@
         <ModuleMask>Google.Cloud.Firestore</ModuleMask>
       </FilterEntry>
       <FilterEntry>
-        <ModuleMask>Google.Cloud.Firestore.V1Beta1</ModuleMask>
+        <ModuleMask>Google.Cloud.Firestore.V1</ModuleMask>
       </FilterEntry>
     </IncludeFilters>
   </Filters>
