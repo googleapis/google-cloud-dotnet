@@ -286,7 +286,7 @@ namespace Google.Cloud.Firestore
         public IAsyncEnumerable<CollectionReference> ListRootCollectionsAsync() => ListCollectionsAsync(null);
 
         internal IAsyncEnumerable<CollectionReference> ListCollectionsAsync(DocumentReference parent) =>
-            Client.ListCollectionIdsAsync(parent?.Path ?? RootPath)
+            Client.ListCollectionIdsAsync(parent?.Path ?? DocumentsPath)
                 .Select(id => new CollectionReference(this, parent, id));
 
         // TODO: Is it appropriate to use ConfigureAwait(false) here? Should the caller be able to specify the context for executing their callback?
