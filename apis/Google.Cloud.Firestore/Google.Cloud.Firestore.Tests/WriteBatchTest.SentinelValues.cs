@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
-using static Google.Cloud.Firestore.V1Beta1.DocumentTransform.Types;
+using static Google.Cloud.Firestore.V1.DocumentTransform.Types;
 
 namespace Google.Cloud.Firestore.Tests
 {

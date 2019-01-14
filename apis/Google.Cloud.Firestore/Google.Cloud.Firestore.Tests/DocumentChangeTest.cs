@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Document = Google.Cloud.Firestore.V1Beta1.Document;
+using Document = Google.Cloud.Firestore.V1.Document;
 using Xunit;
 
 namespace Google.Cloud.Firestore.Tests

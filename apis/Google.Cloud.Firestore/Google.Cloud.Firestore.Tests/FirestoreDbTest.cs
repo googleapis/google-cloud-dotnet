@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using Moq;
 using System;

@@ -34,7 +34,7 @@ namespace Google.Cloud.Firestore.Tests
             var precondition = Precondition.MustExist;
             Assert.True(precondition.Exists);
             Assert.Null(precondition.LastUpdateTime);
-            Assert.Equal(new V1Beta1.Precondition { Exists = true }, precondition.Proto);
+            Assert.Equal(new V1.Precondition { Exists = true }, precondition.Proto);
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace Google.Cloud.Firestore.Tests
             var precondition = Precondition.MustNotExist;
             Assert.False(precondition.Exists);
             Assert.Null(precondition.LastUpdateTime);
-            Assert.Equal(new V1Beta1.Precondition { Exists = false }, precondition.Proto);
+            Assert.Equal(new V1.Precondition { Exists = false }, precondition.Proto);
         }
 
         [Fact]
@@ -53,7 +53,7 @@ namespace Google.Cloud.Firestore.Tests
             var precondition = Precondition.LastUpdated(timestamp);
             Assert.Null(precondition.Exists);
             Assert.Equal(timestamp, precondition.LastUpdateTime);
-            Assert.Equal(new V1Beta1.Precondition { UpdateTime = CreateProtoTimestamp(1, 5) }, precondition.Proto);
+            Assert.Equal(new V1.Precondition { UpdateTime = CreateProtoTimestamp(1, 5) }, precondition.Proto);
         }        
     }
 }

@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using System;
-using Case = Google.Cloud.Firestore.V1Beta1.Precondition.ConditionTypeOneofCase;
+using Case = Google.Cloud.Firestore.V1.Precondition.ConditionTypeOneofCase;
 
 namespace Google.Cloud.Firestore
 {
@@ -30,19 +30,19 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Precondition that the document must exist, but with any last update time.
         /// </summary>
-        public static Precondition MustExist { get; } = new Precondition(new V1Beta1.Precondition { Exists = true });
+        public static Precondition MustExist { get; } = new Precondition(new V1.Precondition { Exists = true });
 
         /// <summary>
         /// Precondition that the document must not exist. (This is internal for now; we don't believe there's
         /// a reason for clients to specify this anywhere.)
         /// </summary>
-        internal static Precondition MustNotExist { get; } = new Precondition(new V1Beta1.Precondition { Exists = false });
+        internal static Precondition MustNotExist { get; } = new Precondition(new V1.Precondition { Exists = false });
 
         /// <summary>
         /// Creates a precondition that the document has the specified last update time.
         /// </summary>
         public static Precondition LastUpdated(Timestamp timestamp) =>
-            new Precondition(new V1Beta1.Precondition { UpdateTime = timestamp.ToProto()});
+            new Precondition(new V1.Precondition { UpdateTime = timestamp.ToProto()});
 
         /// <summary>
         /// Condition that the document was last updated at the specified timestamp, if specified.
@@ -60,11 +60,11 @@ namespace Google.Cloud.Firestore
         /// The proto representation of the precondition. Must not be mutated or exposed publicly.
         /// Will be null for <see cref="None"/>.
         /// </summary>
-        internal V1Beta1.Precondition Proto { get; }
+        internal V1.Precondition Proto { get; }
 
-        private Precondition(V1Beta1.Precondition proto) => Proto = proto;
+        private Precondition(V1.Precondition proto) => Proto = proto;
 
         // Only used by tests
-        internal static Precondition FromProto(V1Beta1.Precondition proto) => proto == null ? null : new Precondition(proto);
+        internal static Precondition FromProto(V1.Precondition proto) => proto == null ? null : new Precondition(proto);
     }
 }

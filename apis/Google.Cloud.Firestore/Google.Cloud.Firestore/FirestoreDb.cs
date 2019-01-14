@@ -14,7 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using Grpc.Core;
 using System;

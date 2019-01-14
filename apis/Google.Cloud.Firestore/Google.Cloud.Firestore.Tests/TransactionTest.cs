@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Firestore.V1Beta1;
+using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
@@ -109,7 +109,7 @@ namespace Google.Cloud.Firestore.Tests
                     // Create
                     new Write
                     {
-                        CurrentDocument = new V1Beta1.Precondition { Exists = false },
+                        CurrentDocument = new V1.Precondition { Exists = false },
                         Update = new Document
                         {
                             Name = doc.Path,
@@ -119,7 +119,7 @@ namespace Google.Cloud.Firestore.Tests
                     // Update
                     new Write
                     {
-                        CurrentDocument = new V1Beta1.Precondition { Exists = true },
+                        CurrentDocument = new V1.Precondition { Exists = true },
                         Update = new Document
                         {
                             Name = doc.Path,

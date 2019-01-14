@@ -33,7 +33,7 @@ namespace Google.Cloud.Firestore
             UpdateTime = updateTime;
         }
 
-        internal static WriteResult FromProto(V1Beta1.WriteResult result, wkt::Timestamp commitTime)
+        internal static WriteResult FromProto(V1.WriteResult result, wkt::Timestamp commitTime)
         {
             GaxPreconditions.CheckNotNull(result, nameof(result));
             GaxPreconditions.CheckNotNull(commitTime, nameof(commitTime));

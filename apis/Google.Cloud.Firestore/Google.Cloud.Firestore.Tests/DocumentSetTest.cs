@@ -17,7 +17,7 @@ using Xunit;
 
 namespace Google.Cloud.Firestore.Tests
 {
-    using Google.Cloud.Firestore.V1Beta1;
+    using Google.Cloud.Firestore.V1;
     using System.Linq;
     using static ProtoHelpers;
 
