@@ -47,13 +47,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal static Dictionary<string, string> FromDefaultHttpRequest(DefaultHttpRequest request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            return new Dictionary<string, string>
+            var labels = new Dictionary<string, string>
             {
                 { LabelsCommon.HttpRequestSize, request.ContentLength.ToString() },
                 { LabelsCommon.HttpHost, request.Host.ToString() },
-                { LabelsCommon.HttpMethod, request.Method },
-                { "aspnetcore/trace_identifier", request.HttpContext.TraceIdentifier }
+                { LabelsCommon.HttpMethod, request.Method }
             };
+
+            if (!string.IsNullOrEmpty(request.HttpContext.TraceIdentifier))
+            {
+                labels[LabelsCommon.CoreTraceId] = request.HttpContext.TraceIdentifier;
+            }
+
+            return labels;
         }
 
         internal static Dictionary<string, string> FromDefaultHttpResponse(DefaultHttpResponse response)

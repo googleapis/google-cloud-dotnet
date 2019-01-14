@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void FromDefaultHttpRequest()
         {
-            var request = new DefaultHttpRequest(new DefaultHttpContext());
+            var request = new DefaultHttpRequest(new DefaultHttpContext { TraceIdentifier = "trace-id" });
             request.ContentLength = 123;
             request.Host = new HostString("google.com");
             request.Method = "PUT";
@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal("123", labels[LabelsCommon.HttpRequestSize]);
             Assert.Equal("google.com", labels[LabelsCommon.HttpHost]);
             Assert.Equal("PUT", labels[LabelsCommon.HttpMethod]);
-            Assert.NotEmpty(labels["aspnetcore/trace_identifier"]);
+            Assert.Equal("trace-id", labels[LabelsCommon.CoreTraceId]);
         }
 
         [Fact]
