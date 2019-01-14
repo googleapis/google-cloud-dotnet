@@ -339,7 +339,7 @@
     "description": "Recommended Google client library to access the Firestore API.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
-      "Google.Cloud.Firestore.V1Beta1": "project",
+      "Google.Cloud.Firestore.V1": "project",
       "Grpc.Core": "default"
     },
     "testDependencies": {
