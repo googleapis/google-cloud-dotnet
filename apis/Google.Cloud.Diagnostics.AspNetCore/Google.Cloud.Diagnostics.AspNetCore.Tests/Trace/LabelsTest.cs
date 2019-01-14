@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal("123", labels[LabelsCommon.HttpRequestSize]);
             Assert.Equal("google.com", labels[LabelsCommon.HttpHost]);
             Assert.Equal("PUT", labels[LabelsCommon.HttpMethod]);
-            Assert.Equal("trace-id", labels[LabelsCommon.CoreTraceId]);
+            Assert.Equal("trace-id", labels[Labels.CoreTraceId]);
         }
 
         [Fact]

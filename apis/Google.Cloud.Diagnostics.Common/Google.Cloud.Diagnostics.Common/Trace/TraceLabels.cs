@@ -44,9 +44,6 @@ namespace Google.Cloud.Diagnostics.Common
         ///<summary>The label to denote an agent.</summary> 
         public const string Agent = "/agent";
 
-        ///<summary>The label to denote the ASP.NET Core request trace identifier.</summary> 
-        public const string CoreTraceId = "/aspnetcore/trace_identifier";
-
         /// <summary>
         /// Creates a a map of labels to represent a <see cref="StackTrace"/> for a span.
         /// </summary>
