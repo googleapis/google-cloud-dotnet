@@ -24,15 +24,15 @@ namespace Google.Cloud.Firestore {
     static SentinelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5zZW50aW5lbC5wcm90bxonZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGExL2Rv",
-            "Y3VtZW50LnByb3RvImMKDkF1Z21lbnRlZFZhbHVlEhsKBGtpbmQYCyABKA4y",
-            "DS5TZW50aW5lbEtpbmQSNAoFYXJyYXkYkE4gASgLMiQuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MWJldGExLkFycmF5VmFsdWUqawoMU2VudGluZWxLaW5kEhYKElNF",
-            "TlRJTkVMX0tJTkRfTk9ORRAAEhQKEFNFUlZFUl9USU1FU1RBTVAQARIKCgZE",
-            "RUxFVEUQAhIPCgtBUlJBWV9VTklPThADEhAKDEFSUkFZX1JFTU9WRRAEQhmq",
-            "AhZHb29nbGUuQ2xvdWQuRmlyZXN0b3JlYgZwcm90bzM="));
+            "Cg5zZW50aW5lbC5wcm90bxoiZ29vZ2xlL2ZpcmVzdG9yZS92MS9kb2N1bWVu",
+            "dC5wcm90byJeCg5BdWdtZW50ZWRWYWx1ZRIbCgRraW5kGAsgASgOMg0uU2Vu",
+            "dGluZWxLaW5kEi8KBWFycmF5GJBOIAEoCzIfLmdvb2dsZS5maXJlc3RvcmUu",
+            "djEuQXJyYXlWYWx1ZSprCgxTZW50aW5lbEtpbmQSFgoSU0VOVElORUxfS0lO",
+            "RF9OT05FEAASFAoQU0VSVkVSX1RJTUVTVEFNUBABEgoKBkRFTEVURRACEg8K",
+            "C0FSUkFZX1VOSU9OEAMSEAoMQVJSQVlfUkVNT1ZFEARCGaoCFkdvb2dsZS5D",
+            "bG91ZC5GaXJlc3RvcmViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1Beta1.DocumentReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.SentinelKind), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.AugmentedValue), global::Google.Cloud.Firestore.AugmentedValue.Parser, new[]{ "Kind", "Array" }, null, null, null)
           }));
@@ -53,7 +53,7 @@ namespace Google.Cloud.Firestore {
 
   #region Messages
   /// <summary>
-  /// This is like google.firestore.v1beta1.Value, but with
+  /// This is like google.firestore.v1.Value, but with
   /// extra "hidden" fields. We can convert between Value and AugmentedValue
   /// via serialization without losing information, which lets us "hide"
   /// information related to sentinel values (delete, server
@@ -101,7 +101,7 @@ namespace Google.Cloud.Firestore {
     public const int KindFieldNumber = 11;
     private global::Google.Cloud.Firestore.SentinelKind kind_ = 0;
     /// <summary>
-    /// This must be field 11 to match null_value in google.firestore.v1beta1.Value
+    /// This must be field 11 to match null_value in google.firestore.v1.Value
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Firestore.SentinelKind Kind {
@@ -113,13 +113,13 @@ namespace Google.Cloud.Firestore {
 
     /// <summary>Field number for the "array" field.</summary>
     public const int ArrayFieldNumber = 10000;
-    private global::Google.Cloud.Firestore.V1Beta1.ArrayValue array_;
+    private global::Google.Cloud.Firestore.V1.ArrayValue array_;
     /// <summary>
     /// These fields are populated or not according to the kind.
-    /// They must not collide with the fields in google.firestore.v1beta1.Value
+    /// They must not collide with the fields in google.firestore.v1.Value
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.ArrayValue Array {
+    public global::Google.Cloud.Firestore.V1.ArrayValue Array {
       get { return array_; }
       set {
         array_ = value;
@@ -200,7 +200,7 @@ namespace Google.Cloud.Firestore {
       }
       if (other.array_ != null) {
         if (array_ == null) {
-          array_ = new global::Google.Cloud.Firestore.V1Beta1.ArrayValue();
+          array_ = new global::Google.Cloud.Firestore.V1.ArrayValue();
         }
         Array.MergeFrom(other.Array);
       }
@@ -221,7 +221,7 @@ namespace Google.Cloud.Firestore {
           }
           case 80002: {
             if (array_ == null) {
-              array_ = new global::Google.Cloud.Firestore.V1Beta1.ArrayValue();
+              array_ = new global::Google.Cloud.Firestore.V1.ArrayValue();
             }
             input.ReadMessage(array_);
             break;
