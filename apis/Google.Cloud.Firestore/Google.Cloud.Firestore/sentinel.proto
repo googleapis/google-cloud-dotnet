@@ -1,4 +1,4 @@
-// Copyright 2018, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@ syntax = "proto3";
 
 option csharp_namespace = "Google.Cloud.Firestore";
 
-import "google/firestore/v1beta1/document.proto";
+import "google/firestore/v1/document.proto";
 
-// This is like google.firestore.v1beta1.Value, but with
+// This is like google.firestore.v1.Value, but with
 // extra "hidden" fields. We can convert between Value and AugmentedValue
 // via serialization without losing information, which lets us "hide"
 // information related to sentinel values (delete, server
@@ -28,12 +28,12 @@ import "google/firestore/v1beta1/document.proto";
 // flow through a Value-oriented interface.
 message AugmentedValue {
 
-  // This must be field 11 to match null_value in google.firestore.v1beta1.Value
+  // This must be field 11 to match null_value in google.firestore.v1.Value
   SentinelKind kind = 11;
   
   // These fields are populated or not according to the kind.
-  // They must not collide with the fields in google.firestore.v1beta1.Value
-  google.firestore.v1beta1.ArrayValue array = 10000;
+  // They must not collide with the fields in google.firestore.v1.Value
+  google.firestore.v1.ArrayValue array = 10000;
 }
 
 enum SentinelKind {

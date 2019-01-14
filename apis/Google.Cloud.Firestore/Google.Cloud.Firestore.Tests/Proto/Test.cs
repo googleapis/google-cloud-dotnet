@@ -24,76 +24,74 @@ namespace Google.Cloud.Firestore.Tests.Proto {
     static TestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgp0ZXN0LnByb3RvEgV0ZXN0cxolZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGEx",
-            "L2NvbW1vbi5wcm90bxonZ29vZ2xlL2ZpcmVzdG9yZS92MWJldGExL2RvY3Vt",
-            "ZW50LnByb3RvGihnb29nbGUvZmlyZXN0b3JlL3YxYmV0YTEvZmlyZXN0b3Jl",
-            "LnByb3RvGiRnb29nbGUvZmlyZXN0b3JlL3YxYmV0YTEvcXVlcnkucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iJwoJVGVzdFN1aXRl",
-            "EhoKBXRlc3RzGAEgAygLMgsudGVzdHMuVGVzdCLIAgoEVGVzdBITCgtkZXNj",
-            "cmlwdGlvbhgBIAEoCRIdCgNnZXQYAiABKAsyDi50ZXN0cy5HZXRUZXN0SAAS",
-            "IwoGY3JlYXRlGAMgASgLMhEudGVzdHMuQ3JlYXRlVGVzdEgAEh0KA3NldBgE",
-            "IAEoCzIOLnRlc3RzLlNldFRlc3RIABIjCgZ1cGRhdGUYBSABKAsyES50ZXN0",
-            "cy5VcGRhdGVUZXN0SAASLgoMdXBkYXRlX3BhdGhzGAYgASgLMhYudGVzdHMu",
-            "VXBkYXRlUGF0aHNUZXN0SAASIwoGZGVsZXRlGAcgASgLMhEudGVzdHMuRGVs",
-            "ZXRlVGVzdEgAEiEKBXF1ZXJ5GAggASgLMhAudGVzdHMuUXVlcnlUZXN0SAAS",
-            "IwoGbGlzdGVuGAkgASgLMhEudGVzdHMuTGlzdGVuVGVzdEgAQgYKBHRlc3Qi",
-            "XgoHR2V0VGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSPQoHcmVxdWVzdBgC",
-            "IAEoCzIsLmdvb2dsZS5maXJlc3RvcmUudjFiZXRhMS5HZXREb2N1bWVudFJl",
-            "cXVlc3QigQEKCkNyZWF0ZVRlc3QSFAoMZG9jX3JlZl9wYXRoGAEgASgJEhEK",
-            "CWpzb25fZGF0YRgCIAEoCRI4CgdyZXF1ZXN0GAMgASgLMicuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoIaXNfZXJyb3IYBCAB",
-            "KAgioAEKB1NldFRlc3QSFAoMZG9jX3JlZl9wYXRoGAEgASgJEiAKBm9wdGlv",
-            "bhgCIAEoCzIQLnRlc3RzLlNldE9wdGlvbhIRCglqc29uX2RhdGEYAyABKAkS",
-            "OAoHcmVxdWVzdBgEIAEoCzInLmdvb2dsZS5maXJlc3RvcmUudjFiZXRhMS5D",
-            "b21taXRSZXF1ZXN0EhAKCGlzX2Vycm9yGAUgASgIIr8BCgpVcGRhdGVUZXN0",
-            "EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI8CgxwcmVjb25kaXRpb24YAiABKAsy",
-            "Ji5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuUHJlY29uZGl0aW9uEhEKCWpz",
-            "b25fZGF0YRgDIAEoCRI4CgdyZXF1ZXN0GAQgASgLMicuZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoIaXNfZXJyb3IYBSABKAgi",
-            "7QEKD1VwZGF0ZVBhdGhzVGVzdBIUCgxkb2NfcmVmX3BhdGgYASABKAkSPAoM",
-            "cHJlY29uZGl0aW9uGAIgASgLMiYuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGEx",
-            "LlByZWNvbmRpdGlvbhIlCgtmaWVsZF9wYXRocxgDIAMoCzIQLnRlc3RzLkZp",
-            "ZWxkUGF0aBITCgtqc29uX3ZhbHVlcxgEIAMoCRI4CgdyZXF1ZXN0GAUgASgL",
-            "MicuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkNvbW1pdFJlcXVlc3QSEAoI",
-            "aXNfZXJyb3IYBiABKAgirAEKCkRlbGV0ZVRlc3QSFAoMZG9jX3JlZl9wYXRo",
-            "GAEgASgJEjwKDHByZWNvbmRpdGlvbhgCIAEoCzImLmdvb2dsZS5maXJlc3Rv",
-            "cmUudjFiZXRhMS5QcmVjb25kaXRpb24SOAoHcmVxdWVzdBgDIAEoCzInLmdv",
-            "b2dsZS5maXJlc3RvcmUudjFiZXRhMS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vy",
-            "cm9yGAQgASgIIjoKCVNldE9wdGlvbhILCgNhbGwYASABKAgSIAoGZmllbGRz",
-            "GAIgAygLMhAudGVzdHMuRmllbGRQYXRoIooBCglRdWVyeVRlc3QSEQoJY29s",
-            "bF9wYXRoGAEgASgJEh4KB2NsYXVzZXMYAiADKAsyDS50ZXN0cy5DbGF1c2US",
-            "OAoFcXVlcnkYAyABKAsyKS5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuU3Ry",
-            "dWN0dXJlZFF1ZXJ5EhAKCGlzX2Vycm9yGAQgASgIIqgCCgZDbGF1c2USHwoG",
-            "c2VsZWN0GAEgASgLMg0udGVzdHMuU2VsZWN0SAASHQoFd2hlcmUYAiABKAsy",
-            "DC50ZXN0cy5XaGVyZUgAEiIKCG9yZGVyX2J5GAMgASgLMg4udGVzdHMuT3Jk",
-            "ZXJCeUgAEhAKBm9mZnNldBgEIAEoBUgAEg8KBWxpbWl0GAUgASgFSAASIQoI",
-            "c3RhcnRfYXQYBiABKAsyDS50ZXN0cy5DdXJzb3JIABIkCgtzdGFydF9hZnRl",
-            "chgHIAEoCzINLnRlc3RzLkN1cnNvckgAEh8KBmVuZF9hdBgIIAEoCzINLnRl",
-            "c3RzLkN1cnNvckgAEiMKCmVuZF9iZWZvcmUYCSABKAsyDS50ZXN0cy5DdXJz",
-            "b3JIAEIICgZjbGF1c2UiKgoGU2VsZWN0EiAKBmZpZWxkcxgBIAMoCzIQLnRl",
-            "c3RzLkZpZWxkUGF0aCJHCgVXaGVyZRIeCgRwYXRoGAEgASgLMhAudGVzdHMu",
-            "RmllbGRQYXRoEgoKAm9wGAIgASgJEhIKCmpzb25fdmFsdWUYAyABKAkiPAoH",
-            "T3JkZXJCeRIeCgRwYXRoGAEgASgLMhAudGVzdHMuRmllbGRQYXRoEhEKCWRp",
-            "cmVjdGlvbhgCIAEoCSJHCgZDdXJzb3ISKAoMZG9jX3NuYXBzaG90GAEgASgL",
-            "MhIudGVzdHMuRG9jU25hcHNob3QSEwoLanNvbl92YWx1ZXMYAiADKAkiLgoL",
-            "RG9jU25hcHNob3QSDAoEcGF0aBgBIAEoCRIRCglqc29uX2RhdGEYAiABKAki",
-            "GgoJRmllbGRQYXRoEg0KBWZpZWxkGAEgAygJIn8KCkxpc3RlblRlc3QSOwoJ",
-            "cmVzcG9uc2VzGAEgAygLMiguZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkxp",
-            "c3RlblJlc3BvbnNlEiIKCXNuYXBzaG90cxgCIAMoCzIPLnRlc3RzLlNuYXBz",
-            "aG90EhAKCGlzX2Vycm9yGAMgASgIIo4BCghTbmFwc2hvdBIwCgRkb2NzGAEg",
-            "AygLMiIuZ29vZ2xlLmZpcmVzdG9yZS52MWJldGExLkRvY3VtZW50EiEKB2No",
-            "YW5nZXMYAiADKAsyEC50ZXN0cy5Eb2NDaGFuZ2USLQoJcmVhZF90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLLAQoJRG9jQ2hhbmdl",
-            "EiMKBGtpbmQYASABKA4yFS50ZXN0cy5Eb2NDaGFuZ2UuS2luZBIvCgNkb2MY",
-            "AiABKAsyIi5nb29nbGUuZmlyZXN0b3JlLnYxYmV0YTEuRG9jdW1lbnQSEQoJ",
-            "b2xkX2luZGV4GAMgASgFEhEKCW5ld19pbmRleBgEIAEoBSJCCgRLaW5kEhQK",
-            "EEtJTkRfVU5TUEVDSUZJRUQQABIJCgVBRERFRBABEgsKB1JFTU9WRUQQAhIM",
-            "CghNT0RJRklFRBADQngKJmNvbS5nb29nbGUuY2xvdWQuZmlyZXN0b3JlLmNv",
-            "bmZvcm1hbmNlqgIiR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5UZXN0cy5Qcm90",
-            "b8oCKEdvb2dsZVxDbG91ZFxGaXJlc3RvcmVcVGVzdHNcQ29uZm9ybWFuY2Vi",
-            "BnByb3RvMw=="));
+            "Cgp0ZXN0LnByb3RvEgV0ZXN0cxogZ29vZ2xlL2ZpcmVzdG9yZS92MS9jb21t",
+            "b24ucHJvdG8aImdvb2dsZS9maXJlc3RvcmUvdjEvZG9jdW1lbnQucHJvdG8a",
+            "I2dvb2dsZS9maXJlc3RvcmUvdjEvZmlyZXN0b3JlLnByb3RvGh9nb29nbGUv",
+            "ZmlyZXN0b3JlL3YxL3F1ZXJ5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvIicKCVRlc3RTdWl0ZRIaCgV0ZXN0cxgBIAMoCzILLnRl",
+            "c3RzLlRlc3QiyAIKBFRlc3QSEwoLZGVzY3JpcHRpb24YASABKAkSHQoDZ2V0",
+            "GAIgASgLMg4udGVzdHMuR2V0VGVzdEgAEiMKBmNyZWF0ZRgDIAEoCzIRLnRl",
+            "c3RzLkNyZWF0ZVRlc3RIABIdCgNzZXQYBCABKAsyDi50ZXN0cy5TZXRUZXN0",
+            "SAASIwoGdXBkYXRlGAUgASgLMhEudGVzdHMuVXBkYXRlVGVzdEgAEi4KDHVw",
+            "ZGF0ZV9wYXRocxgGIAEoCzIWLnRlc3RzLlVwZGF0ZVBhdGhzVGVzdEgAEiMK",
+            "BmRlbGV0ZRgHIAEoCzIRLnRlc3RzLkRlbGV0ZVRlc3RIABIhCgVxdWVyeRgI",
+            "IAEoCzIQLnRlc3RzLlF1ZXJ5VGVzdEgAEiMKBmxpc3RlbhgJIAEoCzIRLnRl",
+            "c3RzLkxpc3RlblRlc3RIAEIGCgR0ZXN0IlkKB0dldFRlc3QSFAoMZG9jX3Jl",
+            "Zl9wYXRoGAEgASgJEjgKB3JlcXVlc3QYAiABKAsyJy5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLkdldERvY3VtZW50UmVxdWVzdCJ8CgpDcmVhdGVUZXN0EhQKDGRv",
+            "Y19yZWZfcGF0aBgBIAEoCRIRCglqc29uX2RhdGEYAiABKAkSMwoHcmVxdWVz",
+            "dBgDIAEoCzIiLmdvb2dsZS5maXJlc3RvcmUudjEuQ29tbWl0UmVxdWVzdBIQ",
+            "Cghpc19lcnJvchgEIAEoCCKbAQoHU2V0VGVzdBIUCgxkb2NfcmVmX3BhdGgY",
+            "ASABKAkSIAoGb3B0aW9uGAIgASgLMhAudGVzdHMuU2V0T3B0aW9uEhEKCWpz",
+            "b25fZGF0YRgDIAEoCRIzCgdyZXF1ZXN0GAQgASgLMiIuZ29vZ2xlLmZpcmVz",
+            "dG9yZS52MS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vycm9yGAUgASgIIrUBCgpV",
+            "cGRhdGVUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI3CgxwcmVjb25kaXRp",
+            "b24YAiABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLlByZWNvbmRpdGlvbhIR",
+            "Cglqc29uX2RhdGEYAyABKAkSMwoHcmVxdWVzdBgEIAEoCzIiLmdvb2dsZS5m",
+            "aXJlc3RvcmUudjEuQ29tbWl0UmVxdWVzdBIQCghpc19lcnJvchgFIAEoCCLj",
+            "AQoPVXBkYXRlUGF0aHNUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI3Cgxw",
+            "cmVjb25kaXRpb24YAiABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLlByZWNv",
+            "bmRpdGlvbhIlCgtmaWVsZF9wYXRocxgDIAMoCzIQLnRlc3RzLkZpZWxkUGF0",
+            "aBITCgtqc29uX3ZhbHVlcxgEIAMoCRIzCgdyZXF1ZXN0GAUgASgLMiIuZ29v",
+            "Z2xlLmZpcmVzdG9yZS52MS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vycm9yGAYg",
+            "ASgIIqIBCgpEZWxldGVUZXN0EhQKDGRvY19yZWZfcGF0aBgBIAEoCRI3Cgxw",
+            "cmVjb25kaXRpb24YAiABKAsyIS5nb29nbGUuZmlyZXN0b3JlLnYxLlByZWNv",
+            "bmRpdGlvbhIzCgdyZXF1ZXN0GAMgASgLMiIuZ29vZ2xlLmZpcmVzdG9yZS52",
+            "MS5Db21taXRSZXF1ZXN0EhAKCGlzX2Vycm9yGAQgASgIIjoKCVNldE9wdGlv",
+            "bhILCgNhbGwYASABKAgSIAoGZmllbGRzGAIgAygLMhAudGVzdHMuRmllbGRQ",
+            "YXRoIoUBCglRdWVyeVRlc3QSEQoJY29sbF9wYXRoGAEgASgJEh4KB2NsYXVz",
+            "ZXMYAiADKAsyDS50ZXN0cy5DbGF1c2USMwoFcXVlcnkYAyABKAsyJC5nb29n",
+            "bGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeRIQCghpc19lcnJvchgE",
+            "IAEoCCKoAgoGQ2xhdXNlEh8KBnNlbGVjdBgBIAEoCzINLnRlc3RzLlNlbGVj",
+            "dEgAEh0KBXdoZXJlGAIgASgLMgwudGVzdHMuV2hlcmVIABIiCghvcmRlcl9i",
+            "eRgDIAEoCzIOLnRlc3RzLk9yZGVyQnlIABIQCgZvZmZzZXQYBCABKAVIABIP",
+            "CgVsaW1pdBgFIAEoBUgAEiEKCHN0YXJ0X2F0GAYgASgLMg0udGVzdHMuQ3Vy",
+            "c29ySAASJAoLc3RhcnRfYWZ0ZXIYByABKAsyDS50ZXN0cy5DdXJzb3JIABIf",
+            "CgZlbmRfYXQYCCABKAsyDS50ZXN0cy5DdXJzb3JIABIjCgplbmRfYmVmb3Jl",
+            "GAkgASgLMg0udGVzdHMuQ3Vyc29ySABCCAoGY2xhdXNlIioKBlNlbGVjdBIg",
+            "CgZmaWVsZHMYASADKAsyEC50ZXN0cy5GaWVsZFBhdGgiRwoFV2hlcmUSHgoE",
+            "cGF0aBgBIAEoCzIQLnRlc3RzLkZpZWxkUGF0aBIKCgJvcBgCIAEoCRISCgpq",
+            "c29uX3ZhbHVlGAMgASgJIjwKB09yZGVyQnkSHgoEcGF0aBgBIAEoCzIQLnRl",
+            "c3RzLkZpZWxkUGF0aBIRCglkaXJlY3Rpb24YAiABKAkiRwoGQ3Vyc29yEigK",
+            "DGRvY19zbmFwc2hvdBgBIAEoCzISLnRlc3RzLkRvY1NuYXBzaG90EhMKC2pz",
+            "b25fdmFsdWVzGAIgAygJIi4KC0RvY1NuYXBzaG90EgwKBHBhdGgYASABKAkS",
+            "EQoJanNvbl9kYXRhGAIgASgJIhoKCUZpZWxkUGF0aBINCgVmaWVsZBgBIAMo",
+            "CSJ6CgpMaXN0ZW5UZXN0EjYKCXJlc3BvbnNlcxgBIAMoCzIjLmdvb2dsZS5m",
+            "aXJlc3RvcmUudjEuTGlzdGVuUmVzcG9uc2USIgoJc25hcHNob3RzGAIgAygL",
+            "Mg8udGVzdHMuU25hcHNob3QSEAoIaXNfZXJyb3IYAyABKAgiiQEKCFNuYXBz",
+            "aG90EisKBGRvY3MYASADKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3Vt",
+            "ZW50EiEKB2NoYW5nZXMYAiADKAsyEC50ZXN0cy5Eb2NDaGFuZ2USLQoJcmVh",
+            "ZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLGAQoJ",
+            "RG9jQ2hhbmdlEiMKBGtpbmQYASABKA4yFS50ZXN0cy5Eb2NDaGFuZ2UuS2lu",
+            "ZBIqCgNkb2MYAiABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLkRvY3VtZW50",
+            "EhEKCW9sZF9pbmRleBgDIAEoBRIRCgluZXdfaW5kZXgYBCABKAUiQgoES2lu",
+            "ZBIUChBLSU5EX1VOU1BFQ0lGSUVEEAASCQoFQURERUQQARILCgdSRU1PVkVE",
+            "EAISDAoITU9ESUZJRUQQA0J4CiZjb20uZ29vZ2xlLmNsb3VkLmZpcmVzdG9y",
+            "ZS5jb25mb3JtYW5jZaoCIkdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVGVzdHMu",
+            "UHJvdG/KAihHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFRlc3RzXENvbmZvcm1h",
+            "bmNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1Beta1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.FirestoreReflection.Descriptor, global::Google.Cloud.Firestore.V1Beta1.QueryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1.FirestoreReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.TestSuite), global::Google.Cloud.Firestore.Tests.Proto.TestSuite.Parser, new[]{ "Tests" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Tests.Proto.Test), global::Google.Cloud.Firestore.Tests.Proto.Test.Parser, new[]{ "Description", "Get", "Create", "Set", "Update", "UpdatePaths", "Delete", "Query", "Listen" }, new[]{ "Test" }, null, null),
@@ -771,12 +769,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "request" field.</summary>
     public const int RequestFieldNumber = 2;
-    private global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest request_;
+    private global::Google.Cloud.Firestore.V1.GetDocumentRequest request_;
     /// <summary>
     /// The request that the call should send to the Firestore service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest Request {
+    public global::Google.Cloud.Firestore.V1.GetDocumentRequest Request {
       get { return request_; }
       set {
         request_ = value;
@@ -857,7 +855,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest();
+          request_ = new global::Google.Cloud.Firestore.V1.GetDocumentRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -878,7 +876,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1Beta1.GetDocumentRequest();
+              request_ = new global::Google.Cloud.Firestore.V1.GetDocumentRequest();
             }
             input.ReadMessage(request_);
             break;
@@ -961,12 +959,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "request" field.</summary>
     public const int RequestFieldNumber = 3;
-    private global::Google.Cloud.Firestore.V1Beta1.CommitRequest request_;
+    private global::Google.Cloud.Firestore.V1.CommitRequest request_;
     /// <summary>
     /// The request that the call should generate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.CommitRequest Request {
+    public global::Google.Cloud.Firestore.V1.CommitRequest Request {
       get { return request_; }
       set {
         request_ = value;
@@ -1083,7 +1081,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1111,7 +1109,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 26: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
             input.ReadMessage(request_);
             break;
@@ -1211,12 +1209,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "request" field.</summary>
     public const int RequestFieldNumber = 4;
-    private global::Google.Cloud.Firestore.V1Beta1.CommitRequest request_;
+    private global::Google.Cloud.Firestore.V1.CommitRequest request_;
     /// <summary>
     /// expected request
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.CommitRequest Request {
+    public global::Google.Cloud.Firestore.V1.CommitRequest Request {
       get { return request_; }
       set {
         request_ = value;
@@ -1347,7 +1345,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1382,7 +1380,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 34: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
             input.ReadMessage(request_);
             break;
@@ -1455,12 +1453,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "precondition" field.</summary>
     public const int PreconditionFieldNumber = 2;
-    private global::Google.Cloud.Firestore.V1Beta1.Precondition precondition_;
+    private global::Google.Cloud.Firestore.V1.Precondition precondition_;
     /// <summary>
     /// precondition in call, if any
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.Precondition Precondition {
+    public global::Google.Cloud.Firestore.V1.Precondition Precondition {
       get { return precondition_; }
       set {
         precondition_ = value;
@@ -1483,12 +1481,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "request" field.</summary>
     public const int RequestFieldNumber = 4;
-    private global::Google.Cloud.Firestore.V1Beta1.CommitRequest request_;
+    private global::Google.Cloud.Firestore.V1.CommitRequest request_;
     /// <summary>
     /// expected request
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.CommitRequest Request {
+    public global::Google.Cloud.Firestore.V1.CommitRequest Request {
       get { return request_; }
       set {
         request_ = value;
@@ -1610,7 +1608,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.precondition_ != null) {
         if (precondition_ == null) {
-          precondition_ = new global::Google.Cloud.Firestore.V1Beta1.Precondition();
+          precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         Precondition.MergeFrom(other.Precondition);
       }
@@ -1619,7 +1617,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1643,7 +1641,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (precondition_ == null) {
-              precondition_ = new global::Google.Cloud.Firestore.V1Beta1.Precondition();
+              precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
             }
             input.ReadMessage(precondition_);
             break;
@@ -1654,7 +1652,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 34: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
             input.ReadMessage(request_);
             break;
@@ -1728,12 +1726,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "precondition" field.</summary>
     public const int PreconditionFieldNumber = 2;
-    private global::Google.Cloud.Firestore.V1Beta1.Precondition precondition_;
+    private global::Google.Cloud.Firestore.V1.Precondition precondition_;
     /// <summary>
     /// precondition in call, if any
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.Precondition Precondition {
+    public global::Google.Cloud.Firestore.V1.Precondition Precondition {
       get { return precondition_; }
       set {
         precondition_ = value;
@@ -1768,12 +1766,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "request" field.</summary>
     public const int RequestFieldNumber = 5;
-    private global::Google.Cloud.Firestore.V1Beta1.CommitRequest request_;
+    private global::Google.Cloud.Firestore.V1.CommitRequest request_;
     /// <summary>
     /// expected rquest
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.CommitRequest Request {
+    public global::Google.Cloud.Firestore.V1.CommitRequest Request {
       get { return request_; }
       set {
         request_ = value;
@@ -1894,7 +1892,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.precondition_ != null) {
         if (precondition_ == null) {
-          precondition_ = new global::Google.Cloud.Firestore.V1Beta1.Precondition();
+          precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         Precondition.MergeFrom(other.Precondition);
       }
@@ -1902,7 +1900,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       jsonValues_.Add(other.jsonValues_);
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -1926,7 +1924,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (precondition_ == null) {
-              precondition_ = new global::Google.Cloud.Firestore.V1Beta1.Precondition();
+              precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
             }
             input.ReadMessage(precondition_);
             break;
@@ -1941,7 +1939,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 42: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
             input.ReadMessage(request_);
             break;
@@ -2012,9 +2010,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "precondition" field.</summary>
     public const int PreconditionFieldNumber = 2;
-    private global::Google.Cloud.Firestore.V1Beta1.Precondition precondition_;
+    private global::Google.Cloud.Firestore.V1.Precondition precondition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.Precondition Precondition {
+    public global::Google.Cloud.Firestore.V1.Precondition Precondition {
       get { return precondition_; }
       set {
         precondition_ = value;
@@ -2023,12 +2021,12 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "request" field.</summary>
     public const int RequestFieldNumber = 3;
-    private global::Google.Cloud.Firestore.V1Beta1.CommitRequest request_;
+    private global::Google.Cloud.Firestore.V1.CommitRequest request_;
     /// <summary>
     /// expected rquest
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.CommitRequest Request {
+    public global::Google.Cloud.Firestore.V1.CommitRequest Request {
       get { return request_; }
       set {
         request_ = value;
@@ -2141,13 +2139,13 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.precondition_ != null) {
         if (precondition_ == null) {
-          precondition_ = new global::Google.Cloud.Firestore.V1Beta1.Precondition();
+          precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
         }
         Precondition.MergeFrom(other.Precondition);
       }
       if (other.request_ != null) {
         if (request_ == null) {
-          request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+          request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
         }
         Request.MergeFrom(other.Request);
       }
@@ -2171,14 +2169,14 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (precondition_ == null) {
-              precondition_ = new global::Google.Cloud.Firestore.V1Beta1.Precondition();
+              precondition_ = new global::Google.Cloud.Firestore.V1.Precondition();
             }
             input.ReadMessage(precondition_);
             break;
           }
           case 26: {
             if (request_ == null) {
-              request_ = new global::Google.Cloud.Firestore.V1Beta1.CommitRequest();
+              request_ = new global::Google.Cloud.Firestore.V1.CommitRequest();
             }
             input.ReadMessage(request_);
             break;
@@ -2414,9 +2412,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "query" field.</summary>
     public const int QueryFieldNumber = 3;
-    private global::Google.Cloud.Firestore.V1Beta1.StructuredQuery query_;
+    private global::Google.Cloud.Firestore.V1.StructuredQuery query_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.StructuredQuery Query {
+    public global::Google.Cloud.Firestore.V1.StructuredQuery Query {
       get { return query_; }
       set {
         query_ = value;
@@ -2522,7 +2520,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       clauses_.Add(other.clauses_);
       if (other.query_ != null) {
         if (query_ == null) {
-          query_ = new global::Google.Cloud.Firestore.V1Beta1.StructuredQuery();
+          query_ = new global::Google.Cloud.Firestore.V1.StructuredQuery();
         }
         Query.MergeFrom(other.Query);
       }
@@ -2550,7 +2548,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 26: {
             if (query_ == null) {
-              query_ = new global::Google.Cloud.Firestore.V1Beta1.StructuredQuery();
+              query_ = new global::Google.Cloud.Firestore.V1.StructuredQuery();
             }
             input.ReadMessage(query_);
             break;
@@ -3991,11 +3989,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "responses" field.</summary>
     public const int ResponsesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1Beta1.ListenResponse> _repeated_responses_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.V1Beta1.ListenResponse.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1Beta1.ListenResponse> responses_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1Beta1.ListenResponse>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.ListenResponse> _repeated_responses_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.V1.ListenResponse.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.ListenResponse> responses_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.ListenResponse>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1Beta1.ListenResponse> Responses {
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.ListenResponse> Responses {
       get { return responses_; }
     }
 
@@ -4160,11 +4158,11 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "docs" field.</summary>
     public const int DocsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1Beta1.Document> _repeated_docs_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.V1Beta1.Document.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1Beta1.Document> docs_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1Beta1.Document>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.Document> _repeated_docs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Firestore.V1.Document.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Document> docs_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Document>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1Beta1.Document> Docs {
+    public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Document> Docs {
       get { return docs_; }
     }
 
@@ -4347,9 +4345,9 @@ namespace Google.Cloud.Firestore.Tests.Proto {
 
     /// <summary>Field number for the "doc" field.</summary>
     public const int DocFieldNumber = 2;
-    private global::Google.Cloud.Firestore.V1Beta1.Document doc_;
+    private global::Google.Cloud.Firestore.V1.Document doc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Firestore.V1Beta1.Document Doc {
+    public global::Google.Cloud.Firestore.V1.Document Doc {
       get { return doc_; }
       set {
         doc_ = value;
@@ -4470,7 +4468,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
       }
       if (other.doc_ != null) {
         if (doc_ == null) {
-          doc_ = new global::Google.Cloud.Firestore.V1Beta1.Document();
+          doc_ = new global::Google.Cloud.Firestore.V1.Document();
         }
         Doc.MergeFrom(other.Doc);
       }
@@ -4497,7 +4495,7 @@ namespace Google.Cloud.Firestore.Tests.Proto {
           }
           case 18: {
             if (doc_ == null) {
-              doc_ = new global::Google.Cloud.Firestore.V1Beta1.Document();
+              doc_ = new global::Google.Cloud.Firestore.V1.Document();
             }
             input.ReadMessage(doc_);
             break;
