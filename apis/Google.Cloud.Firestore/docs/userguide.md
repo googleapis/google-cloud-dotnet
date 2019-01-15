@@ -27,9 +27,10 @@ Once created, a document can be modified in multiple ways.
 
 ### Updating specific fields
 
-Specific fields in the document can be modified using `DocumentReference.UpdateAsync`. Currently this
-requires a `Dictionary<FieldMask, object>` to be passed in, but we intend to improve this experience.
-See [further work items](furtherwork.md) for more discussion over improving this.
+Specific fields in the document can be modified using
+`DocumentReference.UpdateAsync`. Single fields can be updated by
+passing in the field name and the new value; to update multiple
+fields, pass in a dictionary mapping each field name to its new value.
 
 A precondition may be specified for the update.
 
