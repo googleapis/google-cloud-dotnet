@@ -489,7 +489,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     ///
     /// In addition, some App Engine headers, which contain
     /// job-specific information, are also be sent to the job handler; see
-    /// [request headers](https://cloud.google.comappengine/docs/standard/python/config/cron#securing_urls_for_cron).
+    /// [request headers](https://cloud.google.com/appengine/docs/standard/python/config/cron#securing_urls_for_cron).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Headers {
