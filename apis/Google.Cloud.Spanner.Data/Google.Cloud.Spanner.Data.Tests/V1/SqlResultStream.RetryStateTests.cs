@@ -1,0 +1,175 @@
+﻿// Copyright 2019 Google LLC
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     https://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
+using Moq;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
+using static Google.Cloud.Spanner.V1.SqlResultStream;
+
+namespace Google.Cloud.Spanner.V1.Tests
+{
+    public class RetryStateTests
+    {
+        [Theory]
+        [InlineData(StatusCode.PermissionDenied, false)]
+        [InlineData(StatusCode.Aborted, false)]
+        [InlineData(StatusCode.Internal, true)]
+        [InlineData(StatusCode.Unavailable, true)]
+        [InlineData(StatusCode.DeadlineExceeded, true)]
+        public void CanRetry_SimpleStatusCodes(StatusCode code, bool expectedRetriable)
+        {
+            var exception = new RpcException(new Status(code, "Bang"));
+            RetryState state = CreateSimpleRetryState();
+            Assert.Equal(expectedRetriable, state.CanRetry(exception));
+        }
+
+        [Fact]
+        public void CanRetry_ResourceExhausted_NoRetryInfo()
+        {
+            Metadata trailers = new Metadata
+            {
+                { "otherinfo", "value" }
+            };
+            var exception = new RpcException(new Status(StatusCode.ResourceExhausted, "Bang"), trailers);
+            RetryState state = CreateSimpleRetryState();
+            Assert.False(state.CanRetry(exception));
+        }
+
+        [Fact]
+        public void CanRetry_ResourceExhausted_WithRetryInfo()
+        {
+            var retryInfo = new Rpc.RetryInfo { RetryDelay = Duration.FromTimeSpan(TimeSpan.FromSeconds(2)) };
+            Metadata trailers = new Metadata
+            {
+                { RetryState.RetryInfoKey, retryInfo.ToByteArray() }
+            };
+            var exception = new RpcException(new Status(StatusCode.ResourceExhausted, "Bang"), trailers);
+            RetryState state = CreateSimpleRetryState();
+            Assert.True(state.CanRetry(exception));
+        }
+
+        [Fact]
+        public async Task CanRetry_MaxConsecutiveRetries_NoReset()
+        {
+            var state = new RetryState(
+                new NoOpScheduler(),
+                new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0),
+                RetrySettings.NoJitter,
+                maxConsecutiveErrors: 2);
+            var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
+
+            Assert.True(state.CanRetry(exception));
+            await state.RecordErrorAndWaitAsync(exception, default);
+
+            Assert.True(state.CanRetry(exception));
+            await state.RecordErrorAndWaitAsync(exception, default);
+
+            Assert.False(state.CanRetry(exception));
+        }
+
+        [Fact]
+        public async Task CanRetry_MaxConsecutiveRetries_WithReset()
+        {
+            var state = new RetryState(
+                new NoOpScheduler(),
+                new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0),
+                RetrySettings.NoJitter,
+                maxConsecutiveErrors: 2);
+            var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
+
+            Assert.True(state.CanRetry(exception));
+            await state.RecordErrorAndWaitAsync(exception, default);
+
+            Assert.True(state.CanRetry(exception));
+            await state.RecordErrorAndWaitAsync(exception, default);
+
+            state.Reset();
+
+            Assert.True(state.CanRetry(exception));
+            await state.RecordErrorAndWaitAsync(exception, default);
+
+            Assert.True(state.CanRetry(exception));
+        }
+
+        [Fact]
+        public async Task RecordErrorAndWait_BackoffSettingsObeyed()
+        {
+            var settings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), 2.0);
+            var mock = new Mock<IScheduler>(MockBehavior.Strict);
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(1), default)).Returns(Task.FromResult(0));
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(2), default)).Returns(Task.FromResult(0));
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(4), default)).Returns(Task.FromResult(0));
+            // Retry maxes out at 5 seconds
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(5), default)).Returns(Task.FromResult(0));
+            // After reset
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(1), default)).Returns(Task.FromResult(0));
+
+            var exception = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
+
+            var state = new RetryState(mock.Object, settings, RetrySettings.NoJitter, maxConsecutiveErrors: 5);
+
+            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.RecordErrorAndWaitAsync(exception, default);
+            await state.RecordErrorAndWaitAsync(exception, default);
+            state.Reset();
+            await state.RecordErrorAndWaitAsync(exception, default);
+        }
+
+        [Fact]
+        public async Task RecordErrorAndWait_RetryInfo()
+        {
+            var settings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), 2.0);
+            var mock = new Mock<IScheduler>(MockBehavior.Strict);
+            // Delay taken from retry info
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(3), default)).Returns(Task.FromResult(0));
+            // Delay taken from backoff settings (which have still doubled, even when the first value wasn't used)
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(2), default)).Returns(Task.FromResult(0));
+
+            // The first exception contains retry info, so we don't use the backoff settings
+            var retryInfo = new Rpc.RetryInfo { RetryDelay = Duration.FromTimeSpan(TimeSpan.FromSeconds(3)) };
+            Metadata trailers = new Metadata
+            {
+                { RetryState.RetryInfoKey, retryInfo.ToByteArray() }
+            };
+            var exception1 = new RpcException(new Status(StatusCode.Unavailable, "Bang"), trailers);
+            var exception2 = new RpcException(new Status(StatusCode.Unavailable, "Bang"));
+
+            RetryState state = new RetryState(mock.Object, settings, RetrySettings.NoJitter, maxConsecutiveErrors: 5);
+
+            Assert.True(state.CanRetry(exception1));
+            await state.RecordErrorAndWaitAsync(exception1, default);
+
+            Assert.True(state.CanRetry(exception2));
+            await state.RecordErrorAndWaitAsync(exception2, default);
+        }
+
+        private sealed class NoOpScheduler : IScheduler
+        {
+            public Task Delay(TimeSpan delay, CancellationToken cancellationToken) => Task.FromResult(0);
+        }
+
+        private static RetryState CreateSimpleRetryState() => new RetryState(
+            new Mock<IScheduler>(MockBehavior.Strict).Object,
+            new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0),
+            RetrySettings.NoJitter);
+    }
+}
