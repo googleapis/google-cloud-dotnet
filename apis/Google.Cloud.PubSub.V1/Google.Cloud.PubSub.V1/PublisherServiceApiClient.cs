@@ -657,7 +657,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -684,7 +685,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -708,7 +710,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="name">
         /// The name of the topic. It must have the format
@@ -735,7 +738,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -755,7 +759,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -774,7 +779,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2018,7 +2024,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2039,7 +2046,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Creates the given topic with the given name. See the
-        /// &lt;a href="/pubsub/docs/admin#resource_names"&gt; resource name rules&lt;/a&gt;.
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

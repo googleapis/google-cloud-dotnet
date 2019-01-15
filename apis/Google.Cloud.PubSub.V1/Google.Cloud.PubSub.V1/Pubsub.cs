@@ -191,11 +191,11 @@ namespace Google.Cloud.PubSub.V1 {
             "YXBzaG90PXByb2plY3RzLyovc25hcHNob3RzLyp9EoQBCgRTZWVrEh0uZ29v",
             "Z2xlLnB1YnN1Yi52MS5TZWVrUmVxdWVzdBoeLmdvb2dsZS5wdWJzdWIudjEu",
             "U2Vla1Jlc3BvbnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0aW9uPXByb2pl",
-            "Y3RzLyovc3Vic2NyaXB0aW9ucy8qfTpzZWVrOgEqQpIBChRjb20uZ29vZ2xl",
+            "Y3RzLyovc3Vic2NyaXB0aW9ucy8qfTpzZWVrOgEqQq4BChRjb20uZ29vZ2xl",
             "LnB1YnN1Yi52MUILUHVic3ViUHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcv",
             "Z2VucHJvdG8vZ29vZ2xlYXBpcy9wdWJzdWIvdjE7cHVic3Vi+AEBqgIWR29v",
-            "Z2xlLkNsb3VkLlB1YlN1Yi5WMcoCFkdvb2dsZVxDbG91ZFxQdWJTdWJcVjFi",
-            "BnByb3RvMw=="));
+            "Z2xlLkNsb3VkLlB1YlN1Yi5WMcoCFkdvb2dsZVxDbG91ZFxQdWJTdWJcVjHq",
+            "AhlHb29nbGU6OkNsb3VkOjpQdWJTdWI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -284,8 +284,8 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> allowedPersistenceRegions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The list of GCP regions where messages that are published to the topic may
-    /// be persisted in storage. Messages published by publishers running in
+    /// The list of GCP region IDs where messages that are published to the topic
+    /// may be persisted in storage. Messages published by publishers running in
     /// non-allowed GCP regions (or running outside of GCP altogether) will be
     /// routed for storage in one of the allowed regions. An empty list indicates a
     /// misconfiguration at the project or organization level, which will result in
@@ -437,7 +437,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="/pubsub/docs/labels"> Creating and managing labels&lt;/a>.
+    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
+    /// managing labels&lt;/a>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -581,8 +582,12 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// A message that is published by publishers and consumed by subscribers. The
   /// message must contain either a non-empty data field or at least one attribute.
-  /// See &lt;a href="/pubsub/quotas">Quotas and limits&lt;/a> for more information about
-  /// message limits.
+  /// Note that client libraries represent this object differently
+  /// depending on the language. See the corresponding
+  /// &lt;a href="https://cloud.google.com/pubsub/docs/reference/libraries">client
+  /// library documentation&lt;/a> for more information. See
+  /// &lt;a href="https://cloud.google.com/pubsub/quotas">Quotas and limits&lt;/a>
+  /// for more information about message limits.
   /// </summary>
   public sealed partial class PubsubMessage : pb::IMessage<PubsubMessage> {
     private static readonly pb::MessageParser<PubsubMessage> _parser = new pb::MessageParser<PubsubMessage>(() => new PubsubMessage());
@@ -2139,8 +2144,8 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Request for the `ListTopicSnapshots` method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// Request for the `ListTopicSnapshots` method. &lt;br>&lt;br>
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -2343,7 +2348,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Response for the `ListTopicSnapshots` method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -2740,11 +2745,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int AckDeadlineSecondsFieldNumber = 5;
     private int ackDeadlineSeconds_;
     /// <summary>
-    /// This value is the maximum time after a subscriber receives a message
-    /// before the subscriber should acknowledge the message. After message
-    /// delivery but before the ack deadline expires and before the message is
-    /// acknowledged, it is an outstanding message and will not be delivered
-    /// again during that time (on a best-effort basis).
+    /// The approximate amount of time (on a best-effort basis) Pub/Sub waits for
+    /// the subscriber to acknowledge receipt before resending the message. In the
+    /// interval after the message is delivered and before it is acknowledged, it
+    /// is considered to be &lt;i>outstanding&lt;/i>. During that time period, the
+    /// message will not be redelivered (on a best-effort basis).
     ///
     /// For pull subscriptions, this value is used as the initial value for the ack
     /// deadline. To override this value for a given message, call
@@ -2776,8 +2781,11 @@ namespace Google.Cloud.PubSub.V1 {
     /// Indicates whether to retain acknowledged messages. If true, then
     /// messages are not expunged from the subscription's backlog, even if they are
     /// acknowledged, until they fall out of the `message_retention_duration`
-    /// window.&lt;br>&lt;br>
-    /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+    /// window. This must be true if you would like to
+    /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time">
+    /// Seek to a timestamp&lt;/a>.
+    /// &lt;br>&lt;br>
+    /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
     /// changed in backward-incompatible ways and is not recommended for production
     /// use. It is not subject to any SLA or deprecation policy.
     /// </summary>
@@ -2799,7 +2807,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// of acknowledged messages, and thus configures how far back in time a `Seek`
     /// can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10
     /// minutes.&lt;br>&lt;br>
-    /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+    /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
     /// changed in backward-incompatible ways and is not recommended for production
     /// use. It is not subject to any SLA or deprecation policy.
     /// </summary>
@@ -2817,7 +2825,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 74);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="/pubsub/docs/labels"> Creating and managing labels&lt;/a>.
+    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
+    /// managing labels&lt;/a>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -4946,8 +4955,9 @@ namespace Google.Cloud.PubSub.V1 {
     /// The new ack deadline with respect to the time this request was sent to
     /// the Pub/Sub system. For example, if the value is 10, the new
     /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-    /// was made. Specifying zero may immediately make the message available for
-    /// another pull request.
+    /// was made. Specifying zero might immediately make the message available for
+    /// delivery to another subscriber client. This typically results in an
+    /// increase in the rate of message redeliveries (that is, duplicates).
     /// The minimum deadline you can specify is 0 seconds.
     /// The maximum deadline you can specify is 600 seconds (10 minutes).
     /// </summary>
@@ -5620,7 +5630,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Request for the `CreateSnapshot` method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be changed in
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be changed in
   /// backward-incompatible ways and is not recommended for production use.
   /// It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -5668,7 +5678,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// If the name is not provided in the request, the server will assign a random
     /// name for this snapshot on the same project as the subscription.
     /// Note that for REST API requests, you must specify a name.  See the
-    /// &lt;a href="/pubsub/docs/admin#resource_names">resource name rules&lt;/a>.
+    /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names">
+    /// resource name rules&lt;/a>.
     /// Format is `projects/{project}/snapshots/{snap}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5707,7 +5718,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="/pubsub/docs/labels"> Creating and managing labels&lt;/a>.
+    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
+    /// managing labels&lt;/a>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -5825,7 +5837,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Request for the UpdateSnapshot method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -6006,8 +6018,13 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// A snapshot resource.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// A snapshot resource. Snapshots are used in
+  /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview">Seek&lt;/a>
+  /// operations, which allow
+  /// you to manage message acknowledgments in bulk. That is, you can set the
+  /// acknowledgment state of messages in an existing subscription to the state
+  /// captured by a snapshot.&lt;br>&lt;br>
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -6105,7 +6122,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="/pubsub/docs/labels"> Creating and managing labels&lt;/a>.
+    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
+    /// managing labels&lt;/a>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -6245,7 +6263,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Request for the GetSnapshot method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -6384,7 +6402,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Request for the `ListSnapshots` method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -6587,7 +6605,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Response for the `ListSnapshots` method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -6749,7 +6767,7 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// Request for the `DeleteSnapshot` method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
@@ -6887,8 +6905,8 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  /// Request for the `Seek` method.&lt;br>&lt;br>
-  /// &lt;b>ALPHA:&lt;/b> This feature is part of an alpha release. This API might be
+  /// Request for the `Seek` method. &lt;br>&lt;br>
+  /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
   /// changed in backward-incompatible ways and is not recommended for production
   /// use. It is not subject to any SLA or deprecation policy.
   /// </summary>
