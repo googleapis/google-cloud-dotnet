@@ -39,11 +39,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             GetJobRequest expectedRequest = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -51,8 +51,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.GetJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = client.GetJob(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = client.GetJob(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -63,11 +63,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             GetJobRequest expectedRequest = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -75,8 +75,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.GetJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = await client.GetJobAsync(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = await client.GetJobAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -87,11 +87,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -110,11 +110,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -133,12 +133,12 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             CreateJobRequest expectedRequest = new CreateJobRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -146,9 +146,9 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Job job = new Job();
-            Job response = client.CreateJob(formattedParent, job);
+            Job response = client.CreateJob(parent, job);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -159,12 +159,12 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             CreateJobRequest expectedRequest = new CreateJobRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -172,9 +172,9 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Job job = new Job();
-            Job response = await client.CreateJobAsync(formattedParent, job);
+            Job response = await client.CreateJobAsync(parent, job);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -185,12 +185,12 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -209,12 +209,12 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -238,7 +238,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -264,7 +264,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -289,7 +289,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -312,7 +312,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -331,14 +331,14 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             DeleteJobRequest expectedRequest = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            client.DeleteJob(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            client.DeleteJob(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -348,14 +348,14 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             DeleteJobRequest expectedRequest = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            await client.DeleteJobAsync(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            await client.DeleteJobAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -365,7 +365,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJob(request, It.IsAny<CallOptions>()))
@@ -381,7 +381,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, It.IsAny<CallOptions>()))
@@ -397,11 +397,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             PauseJobRequest expectedRequest = new PauseJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -409,8 +409,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.PauseJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = client.PauseJob(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = client.PauseJob(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -421,11 +421,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             PauseJobRequest expectedRequest = new PauseJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -433,8 +433,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.PauseJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = await client.PauseJobAsync(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = await client.PauseJobAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -445,11 +445,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             PauseJobRequest request = new PauseJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -468,11 +468,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             PauseJobRequest request = new PauseJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -491,11 +491,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             ResumeJobRequest expectedRequest = new ResumeJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -503,8 +503,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.ResumeJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = client.ResumeJob(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = client.ResumeJob(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -515,11 +515,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             ResumeJobRequest expectedRequest = new ResumeJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -527,8 +527,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.ResumeJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = await client.ResumeJobAsync(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = await client.ResumeJobAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -539,11 +539,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             ResumeJobRequest request = new ResumeJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -562,11 +562,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             ResumeJobRequest request = new ResumeJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -585,11 +585,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             RunJobRequest expectedRequest = new RunJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -597,8 +597,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.RunJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = client.RunJob(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = client.RunJob(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -609,11 +609,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             RunJobRequest expectedRequest = new RunJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -621,8 +621,8 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.RunJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
             CloudSchedulerClient client = new CloudSchedulerClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
-            Job response = await client.RunJobAsync(formattedName);
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
+            Job response = await client.RunJobAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -633,11 +633,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             RunJobRequest request = new RunJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",
@@ -656,11 +656,11 @@ namespace Google.Cloud.Scheduler.V1Beta1.Tests
             Mock<CloudScheduler.CloudSchedulerClient> mockGrpcClient = new Mock<CloudScheduler.CloudSchedulerClient>(MockBehavior.Strict);
             RunJobRequest request = new RunJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
                 Description = "description-1724546052",
                 Schedule = "schedule-697920873",
                 TimeZone = "timeZone36848094",

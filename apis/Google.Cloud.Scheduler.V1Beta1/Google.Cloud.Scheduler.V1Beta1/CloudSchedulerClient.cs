@@ -548,13 +548,13 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A pageable asynchronous sequence of <see cref="Job"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListJobsAsync(
                 new ListJobsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -584,13 +584,13 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A pageable sequence of <see cref="Job"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
-            string parent,
+            LocationName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListJobs(
                 new ListJobsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -650,11 +650,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> GetJobAsync(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => GetJobAsync(
                 new GetJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -674,7 +674,7 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> GetJobAsync(
-            string name,
+            JobName name,
             st::CancellationToken cancellationToken) => GetJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -695,11 +695,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job GetJob(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => GetJob(
                 new GetJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -784,12 +784,12 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> CreateJobAsync(
-            string parent,
+            LocationName parent,
             Job job,
             gaxgrpc::CallSettings callSettings = null) => CreateJobAsync(
                 new CreateJobRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
@@ -819,7 +819,7 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> CreateJobAsync(
-            string parent,
+            LocationName parent,
             Job job,
             st::CancellationToken cancellationToken) => CreateJobAsync(
                 parent,
@@ -851,12 +851,12 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job CreateJob(
-            string parent,
+            LocationName parent,
             Job job,
             gaxgrpc::CallSettings callSettings = null) => CreateJob(
                 new CreateJobRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
@@ -1127,11 +1127,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteJobAsync(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteJobAsync(
                 new DeleteJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1151,7 +1151,7 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteJobAsync(
-            string name,
+            JobName name,
             st::CancellationToken cancellationToken) => DeleteJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1169,11 +1169,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteJob(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteJob(
                 new DeleteJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1252,11 +1252,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> PauseJobAsync(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => PauseJobAsync(
                 new PauseJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1282,7 +1282,7 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> PauseJobAsync(
-            string name,
+            JobName name,
             st::CancellationToken cancellationToken) => PauseJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1309,11 +1309,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job PauseJob(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => PauseJob(
                 new PauseJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1412,11 +1412,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> ResumeJobAsync(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => ResumeJobAsync(
                 new ResumeJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1441,7 +1441,7 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> ResumeJobAsync(
-            string name,
+            JobName name,
             st::CancellationToken cancellationToken) => ResumeJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1467,11 +1467,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job ResumeJob(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => ResumeJob(
                 new ResumeJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1565,11 +1565,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> RunJobAsync(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => RunJobAsync(
                 new RunJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1592,7 +1592,7 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> RunJobAsync(
-            string name,
+            JobName name,
             st::CancellationToken cancellationToken) => RunJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1616,11 +1616,11 @@ namespace Google.Cloud.Scheduler.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job RunJob(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => RunJob(
                 new RunJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 

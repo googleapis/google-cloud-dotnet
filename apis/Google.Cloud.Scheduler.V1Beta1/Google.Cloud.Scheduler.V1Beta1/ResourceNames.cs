@@ -212,5 +212,108 @@ namespace Google.Cloud.Scheduler.V1Beta1
     }
 
 
+    public partial class CreateJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Scheduler.V1Beta1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Scheduler.V1Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Scheduler.V1Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Job
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Scheduler.V1Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListJobsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.LocationName ParentAsLocationName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Scheduler.V1Beta1.LocationName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class PauseJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Scheduler.V1Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ResumeJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Scheduler.V1Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class RunJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Scheduler.V1Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Scheduler.V1Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Scheduler.V1Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

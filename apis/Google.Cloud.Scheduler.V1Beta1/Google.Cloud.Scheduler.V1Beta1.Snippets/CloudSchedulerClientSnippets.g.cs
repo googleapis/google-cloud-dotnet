@@ -36,14 +36,14 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsAsync()
         {
-            // Snippet: ListJobsAsync(string,string,int?,CallSettings)
+            // Snippet: ListJobsAsync(LocationName,string,int?,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = await CloudSchedulerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListJobsResponse, Job> response =
-                cloudSchedulerClient.ListJobsAsync(formattedParent);
+                cloudSchedulerClient.ListJobsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Job item) =>
@@ -80,14 +80,14 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for ListJobs</summary>
         public void ListJobs()
         {
-            // Snippet: ListJobs(string,string,int?,CallSettings)
+            // Snippet: ListJobs(LocationName,string,int?,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = CloudSchedulerClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedEnumerable<ListJobsResponse, Job> response =
-                cloudSchedulerClient.ListJobs(formattedParent);
+                cloudSchedulerClient.ListJobs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Job item in response)
@@ -130,7 +130,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             ListJobsRequest request = new ListJobsRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListJobsResponse, Job> response =
@@ -177,7 +177,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             ListJobsRequest request = new ListJobsRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
             PagedEnumerable<ListJobsResponse, Job> response =
@@ -218,27 +218,27 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for GetJobAsync</summary>
         public async Task GetJobAsync()
         {
-            // Snippet: GetJobAsync(string,CallSettings)
-            // Additional: GetJobAsync(string,CancellationToken)
+            // Snippet: GetJobAsync(JobName,CallSettings)
+            // Additional: GetJobAsync(JobName,CancellationToken)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = await CloudSchedulerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = await cloudSchedulerClient.GetJobAsync(formattedName);
+            Job response = await cloudSchedulerClient.GetJobAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetJob</summary>
         public void GetJob()
         {
-            // Snippet: GetJob(string,CallSettings)
+            // Snippet: GetJob(JobName,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = CloudSchedulerClient.Create();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = cloudSchedulerClient.GetJob(formattedName);
+            Job response = cloudSchedulerClient.GetJob(name);
             // End snippet
         }
 
@@ -252,7 +252,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = await cloudSchedulerClient.GetJobAsync(request);
@@ -268,7 +268,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = cloudSchedulerClient.GetJob(request);
@@ -278,29 +278,29 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for CreateJobAsync</summary>
         public async Task CreateJobAsync()
         {
-            // Snippet: CreateJobAsync(string,Job,CallSettings)
-            // Additional: CreateJobAsync(string,Job,CancellationToken)
+            // Snippet: CreateJobAsync(LocationName,Job,CallSettings)
+            // Additional: CreateJobAsync(LocationName,Job,CancellationToken)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = await CloudSchedulerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Job job = new Job();
             // Make the request
-            Job response = await cloudSchedulerClient.CreateJobAsync(formattedParent, job);
+            Job response = await cloudSchedulerClient.CreateJobAsync(parent, job);
             // End snippet
         }
 
         /// <summary>Snippet for CreateJob</summary>
         public void CreateJob()
         {
-            // Snippet: CreateJob(string,Job,CallSettings)
+            // Snippet: CreateJob(LocationName,Job,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = CloudSchedulerClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new LocationName("[PROJECT]", "[LOCATION]").ToString();
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
             Job job = new Job();
             // Make the request
-            Job response = cloudSchedulerClient.CreateJob(formattedParent, job);
+            Job response = cloudSchedulerClient.CreateJob(parent, job);
             // End snippet
         }
 
@@ -314,7 +314,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
             };
             // Make the request
@@ -331,7 +331,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new LocationName("[PROJECT]", "[LOCATION]").ToString(),
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 Job = new Job(),
             };
             // Make the request
@@ -404,27 +404,27 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for DeleteJobAsync</summary>
         public async Task DeleteJobAsync()
         {
-            // Snippet: DeleteJobAsync(string,CallSettings)
-            // Additional: DeleteJobAsync(string,CancellationToken)
+            // Snippet: DeleteJobAsync(JobName,CallSettings)
+            // Additional: DeleteJobAsync(JobName,CancellationToken)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = await CloudSchedulerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            await cloudSchedulerClient.DeleteJobAsync(formattedName);
+            await cloudSchedulerClient.DeleteJobAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteJob</summary>
         public void DeleteJob()
         {
-            // Snippet: DeleteJob(string,CallSettings)
+            // Snippet: DeleteJob(JobName,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = CloudSchedulerClient.Create();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            cloudSchedulerClient.DeleteJob(formattedName);
+            cloudSchedulerClient.DeleteJob(name);
             // End snippet
         }
 
@@ -438,7 +438,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             await cloudSchedulerClient.DeleteJobAsync(request);
@@ -454,7 +454,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             cloudSchedulerClient.DeleteJob(request);
@@ -464,27 +464,27 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for PauseJobAsync</summary>
         public async Task PauseJobAsync()
         {
-            // Snippet: PauseJobAsync(string,CallSettings)
-            // Additional: PauseJobAsync(string,CancellationToken)
+            // Snippet: PauseJobAsync(JobName,CallSettings)
+            // Additional: PauseJobAsync(JobName,CancellationToken)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = await CloudSchedulerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = await cloudSchedulerClient.PauseJobAsync(formattedName);
+            Job response = await cloudSchedulerClient.PauseJobAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for PauseJob</summary>
         public void PauseJob()
         {
-            // Snippet: PauseJob(string,CallSettings)
+            // Snippet: PauseJob(JobName,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = CloudSchedulerClient.Create();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = cloudSchedulerClient.PauseJob(formattedName);
+            Job response = cloudSchedulerClient.PauseJob(name);
             // End snippet
         }
 
@@ -498,7 +498,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             PauseJobRequest request = new PauseJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = await cloudSchedulerClient.PauseJobAsync(request);
@@ -514,7 +514,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             PauseJobRequest request = new PauseJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = cloudSchedulerClient.PauseJob(request);
@@ -524,27 +524,27 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for ResumeJobAsync</summary>
         public async Task ResumeJobAsync()
         {
-            // Snippet: ResumeJobAsync(string,CallSettings)
-            // Additional: ResumeJobAsync(string,CancellationToken)
+            // Snippet: ResumeJobAsync(JobName,CallSettings)
+            // Additional: ResumeJobAsync(JobName,CancellationToken)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = await CloudSchedulerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = await cloudSchedulerClient.ResumeJobAsync(formattedName);
+            Job response = await cloudSchedulerClient.ResumeJobAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for ResumeJob</summary>
         public void ResumeJob()
         {
-            // Snippet: ResumeJob(string,CallSettings)
+            // Snippet: ResumeJob(JobName,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = CloudSchedulerClient.Create();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = cloudSchedulerClient.ResumeJob(formattedName);
+            Job response = cloudSchedulerClient.ResumeJob(name);
             // End snippet
         }
 
@@ -558,7 +558,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             ResumeJobRequest request = new ResumeJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = await cloudSchedulerClient.ResumeJobAsync(request);
@@ -574,7 +574,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             ResumeJobRequest request = new ResumeJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = cloudSchedulerClient.ResumeJob(request);
@@ -584,27 +584,27 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
         /// <summary>Snippet for RunJobAsync</summary>
         public async Task RunJobAsync()
         {
-            // Snippet: RunJobAsync(string,CallSettings)
-            // Additional: RunJobAsync(string,CancellationToken)
+            // Snippet: RunJobAsync(JobName,CallSettings)
+            // Additional: RunJobAsync(JobName,CancellationToken)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = await CloudSchedulerClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = await cloudSchedulerClient.RunJobAsync(formattedName);
+            Job response = await cloudSchedulerClient.RunJobAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for RunJob</summary>
         public void RunJob()
         {
-            // Snippet: RunJob(string,CallSettings)
+            // Snippet: RunJob(JobName,CallSettings)
             // Create client
             CloudSchedulerClient cloudSchedulerClient = CloudSchedulerClient.Create();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]");
             // Make the request
-            Job response = cloudSchedulerClient.RunJob(formattedName);
+            Job response = cloudSchedulerClient.RunJob(name);
             // End snippet
         }
 
@@ -618,7 +618,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             RunJobRequest request = new RunJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = await cloudSchedulerClient.RunJobAsync(request);
@@ -634,7 +634,7 @@ namespace Google.Cloud.Scheduler.V1Beta1.Snippets
             // Initialize request argument(s)
             RunJobRequest request = new RunJobRequest
             {
-                Name = new JobName("[PROJECT]", "[LOCATION]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[LOCATION]", "[JOB]"),
             };
             // Make the request
             Job response = cloudSchedulerClient.RunJob(request);
