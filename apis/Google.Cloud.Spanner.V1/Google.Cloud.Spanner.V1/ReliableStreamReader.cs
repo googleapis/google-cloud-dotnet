@@ -12,19 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.WellKnownTypes;
 using System;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Google.Api.Gax;
-using Google.Cloud.Spanner.V1.Internal;
-using Google.Cloud.Spanner.V1.Internal.Logging;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using Google.Api.Gax.Grpc;
-using System.Linq;
-using System.IO;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -34,47 +30,24 @@ namespace Google.Cloud.Spanner.V1
     /// </summary>
     public sealed class ReliableStreamReader : IDisposable
     {
-        private AsyncServerStreamingCall<PartialResultSet> _currentCall;
-        private readonly SpannerClient _spannerClient;
-        private readonly IClock _clock;
-        private readonly ExecuteSqlRequest _request;
-        private readonly IScheduler _scheduler;
-        private readonly Session _session;
-        private readonly int _timeoutSeconds;
+        private readonly IAsyncEnumerator<PartialResultSet> _resultStream;
 
-        private int _nextIndex;
-        private bool _isReading = true;
+        private bool _initialized = false;
+        private PartialResultSet _currentResultSet;
         private ResultSetMetadata _metadata;
-        private int _resumeSkipCount;
-        private ByteString _resumeToken;
+        private int _nextIndex;
+        private Logger _logger;
 
-        internal ReliableStreamReader(
-            SpannerClient spannerClient,
-            ExecuteSqlRequest request,
-            Session session,
-            int timeoutSeconds)
+        internal ReliableStreamReader(IAsyncEnumerator<PartialResultSet> resultStream, Logger logger)
         {
-            _spannerClient = GaxPreconditions.CheckNotNull(spannerClient, nameof(SpannerClient));
-            _request = GaxPreconditions.CheckNotNull(request, nameof(request));
-            _session = GaxPreconditions.CheckNotNull(session, nameof(session));
-            _timeoutSeconds = timeoutSeconds;
-            _clock = SpannerSettings.GetDefault().Clock ?? SystemClock.Instance;
-            _scheduler = SpannerSettings.GetDefault().Scheduler ?? SystemScheduler.Instance;
-
-            _request.SessionAsSessionName = _session.SessionName;
+            _resultStream = GaxPreconditions.CheckNotNull(resultStream, nameof(resultStream));
+            _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }
-
-        private Logger Logger => _spannerClient.Settings.Logger;
 
         /// <summary>
         /// Indicates whether the reader is closed or not.
         /// </summary>
         public bool IsClosed { get; private set; }
-
-        /// <summary>
-        /// Returns the session associated with this reader.
-        /// </summary>
-        public Session Session => _session;
 
         /// <summary>
         /// The statistics for the results, if present. These are only present on the last RPC
@@ -89,177 +62,6 @@ namespace Google.Cloud.Spanner.V1
             GC.SuppressFinalize(this);
         }
 
-        private Task<Metadata> ConnectAsync()
-        {
-            Logger.LogPerformanceCounter("StreamReader.ConnectCount", x => x + 1);
-            if (_resumeToken != null)
-            {
-                Logger.Debug($"Resuming read using a resume token");
-                _request.ResumeToken = _resumeToken;
-            }
-            // TODO: Clear the resume token in the request if we don't have one?
-
-            var sqlStream = _spannerClient.ExecuteStreamingSql(_request,
-                _spannerClient.Settings.ExecuteStreamingSqlSettings.WithExpiration(
-                    _spannerClient.Settings.ConvertTimeoutToExpiration(_timeoutSeconds)));
-            _currentCall = sqlStream.GrpcCall;
-            return WithTiming(_currentCall.ResponseHeadersAsync.WithSessionExpiryChecking(_session), "ResponseHeaders");
-        }
-
-        /// <summary>
-        /// This helper ensures we invalidate the _currentCall state if we want to throw canceled.
-        /// </summary>
-        private void ThrowIfCancellationRequested(CancellationToken cancellationToken)
-        {
-            if (cancellationToken.IsCancellationRequested)
-            {
-                _currentCall?.Dispose();
-                _currentCall = null;
-                cancellationToken.ThrowIfCancellationRequested();
-            }
-        }
-
-        /// <summary>
-        /// Connects or reconnects to Spanner, fast forwarding to where we left off based on
-        /// our _resumeToken and _resumeSkipCount.
-        /// </summary>
-        private async Task<bool> ReliableConnectAsync(CancellationToken cancellationToken)
-        {
-            if (_currentCall == null)
-            {
-                await WithTiming(ConnectAsync(), "ConnectAsync").ConfigureAwait(false);
-                GaxPreconditions.CheckState(_currentCall != null, "Failed to connect");
-
-                bool success = false;
-                try
-                {
-                    for (int i = 0; i <= _resumeSkipCount; i++)
-                    {
-                        ThrowIfCancellationRequested(cancellationToken);
-
-                        _isReading = await WithTiming(
-                                _currentCall.ResponseStream.MoveNext(cancellationToken)
-                                    .WithSessionExpiryChecking(_session),
-                                "ResponseStream.MoveNext")
-                            .ConfigureAwait(false);
-                        if (!_isReading || _currentCall.ResponseStream.Current == null)
-                        {
-                            return false;
-                        }
-                        if (_metadata == null)
-                        {
-                            _metadata = _currentCall.ResponseStream.Current.Metadata;
-                        }
-                    }
-                    RecordResumeToken();
-                    RecordStatistics();
-                    success = true;
-                }
-                finally
-                {
-                    // If we failed at any point, dispose the call and forget it.
-                    if (!success)
-                    {
-                        _currentCall?.Dispose();
-                        _currentCall = null;
-                    }
-                }
-            }
-
-            return _isReading;
-        }
-
-        private async Task<T> WithTiming<T>(Task<T> task, string name)
-        {
-            Stopwatch sw = null;
-            if (Logger.LogPerformanceTraces)
-            {
-                sw = Stopwatch.StartNew();
-            }
-
-            var result = await task.ConfigureAwait(false);
-            if (sw != null)
-            {
-                Logger.LogPerformanceCounter($"{name}.Duration", sw.ElapsedMilliseconds);
-            }
-            return result;
-        }
-
-        private async Task<bool> ReliableMoveNextAsync(CancellationToken cancellationToken)
-        {
-            try
-            {
-                Logger.LogPerformanceCounter("StreamReader.MoveNextCount", x => x + 1);
-                _isReading = await _currentCall.ResponseStream.MoveNext(cancellationToken)
-                    .WithSessionExpiryChecking(_session).ConfigureAwait(false);
-
-                //we only increment our skip count after we know the MoveNext has succeeded
-                _resumeSkipCount++;
-            }
-            catch (Exception e)
-            {
-                // execution here means the movenext failed and _resumeSkipCount has not yet been increased.
-                await TryRecoverOnFailureAsync(cancellationToken, e).ConfigureAwait(false);
-            }
-            RecordResumeToken();
-            RecordStatistics();
-            return _isReading;
-        }
-
-        private async Task TryRecoverOnFailureAsync(CancellationToken cancellationToken, Exception exception)
-        {
-            _currentCall?.Dispose();
-            _currentCall = null;
-
-            //reconnect on failure which will call reliableconnect and respect resumetoken and resumeskip
-            cancellationToken.ThrowIfCancellationRequested();
-
-            Logger.Warn("An error occurred attemping to iterate through the sql query. Attempting to recover.", exception);
-
-            // Reconnect, which will automatically skip as far as we need to using the resume token.
-            // We don't need to call MoveNext again; we'll already be resuming *after* the result set that provided the resume token.
-            _isReading = await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
-        }
-
-        private void RecordResumeToken()
-        {
-            if (_isReading)
-            {
-                // Record a resume token if it's present in the current response.
-                var token = _currentCall?.ResponseStream.Current.ResumeToken;
-                if (token != null)
-                {
-                    _resumeToken = token;
-                    _resumeSkipCount = 0;
-                }
-            }
-        }
-
-        private void RecordStatistics()
-        {
-            if (_isReading)
-            {
-                // We only expect to see a single set of stats, but if we reconnect we might
-                // see two non-null values.
-                var stats = _currentCall?.ResponseStream.Current.Stats;
-                if (stats != null)
-                {
-                    Stats = stats;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Asynchronously retrieves the metadata associated with this stream.
-        /// </summary>
-        /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
-        /// <returns>A task which, when completed, will contain the metadata for the stream.</returns>
-        public async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken)
-        {
-            await ReliableConnectAsync(cancellationToken).ConfigureAwait(false);
-            return _metadata;
-        }
-
         /// <summary>
         /// Closes the stream reader.
         /// </summary>
@@ -270,8 +72,26 @@ namespace Google.Cloud.Spanner.V1
                 return;
             }
             IsClosed = true;
-            _currentCall?.Dispose();
+            _resultStream.Dispose();
             StreamClosed?.Invoke(this, new StreamClosedEventArgs());
+        }
+
+        /// <inheritdoc />
+        ~ReliableStreamReader()
+        {
+            // If our finalizer runs, it means we were not disposed properly.
+            _logger.Warn("ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
+        }
+
+        /// <summary>
+        /// Asynchronously retrieves the metadata associated with this stream.
+        /// </summary>
+        /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
+        /// <returns>A task which, when completed, will contain the metadata for the stream.</returns>
+        public async Task<ResultSetMetadata> GetMetadataAsync(CancellationToken cancellationToken)
+        {
+            await EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
+            return _metadata;
         }
 
         /// <summary>
@@ -279,12 +99,19 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public event EventHandler<StreamClosedEventArgs> StreamClosed;
 
+        // TODO: Handle a case where the query returns no values. Currently HasDataAsync will return true, but it shouldn't (I guess?)
+        // It's not clear what we want to do in that case, to be honest.
+
         /// <summary>
         /// Determines whether this stream has data or not.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
         /// <returns>A task which, when completed, will indicate whether the stream contains data.</returns>
-        public Task<bool> HasDataAsync(CancellationToken cancellationToken) => ReliableConnectAsync(cancellationToken);
+        public async Task<bool> HasDataAsync(CancellationToken cancellationToken)
+        {
+            await EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
+            return _currentResultSet != null;
+        }
 
         /// <summary>
         /// Asynchronously reads the next value from the stream.
@@ -293,47 +120,60 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>A task which, when completed, will provide the next value read from the stream.</returns>
         public async Task<Value> NextAsync(CancellationToken cancellationToken)
         {
+            await EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
+
             Value result = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
             // If we have a chunk, and it's the last value within the current response, and it's marked as a chunked
             // value, we need to merge it with the first value in the next response. We may need to do this multiple
             // times, if a single value is split across multiple responses.
             while (result != null &&
-                   _nextIndex >= _currentCall.ResponseStream.Current.Values.Count &&
-                   _currentCall.ResponseStream.Current.ChunkedValue)
+                   _nextIndex >= _currentResultSet.Values.Count &&
+                   _currentResultSet.ChunkedValue)
             {
-                MergeChunk(result, await NextChunkAsync(cancellationToken).ConfigureAwait(false));
-            }
-            return result;
-        }
-
-        private async Task<Value> NextChunkAsync(CancellationToken cancellationToken)
-        {
-            if (!await HasDataAsync(cancellationToken).ConfigureAwait(false))
-            {
-                return null;
-            }
-            // This needs to be a while loop to handle chunked streams with no results (e.g. for partitioned DML)
-            while (_nextIndex >= _currentCall.ResponseStream.Current.Values.Count)
-            {
-                // We've exhausted this response; move to the next one.
-                _isReading = await ReliableMoveNextAsync(cancellationToken).ConfigureAwait(false);
-                _nextIndex = 0;
-                if (!_isReading)
+                Value nextChunk = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
+                if (nextChunk == null)
                 {
-                    return null;
+                    throw new IOException("Reached end of stream when expecting to merge another chunk");
                 }
+                MergeChunk(result, nextChunk);
             }
-            var result = _currentCall.ResponseStream.Current.Values[_nextIndex];
-
-            _nextIndex++;
             return result;
+
+            async Task<Value> NextChunkAsync(CancellationToken innerCancellationToken)
+            {                
+                // This needs to be a while loop to handle chunked streams with no results (e.g. for partitioned DML)
+                while (_currentResultSet != null && _nextIndex >= _currentResultSet.Values.Count)
+                {
+                    await MoveNextAsync(innerCancellationToken).ConfigureAwait(false);
+                    // Logger.Warn($"Merging chunk after {_valueCount} values. We need to read again.");
+                    // We've exhausted this response; move to the next one.
+                }
+                return _currentResultSet == null ? null : _currentResultSet.Values[_nextIndex++];
+            }
         }
 
-        /// <inheritdoc />
-        ~ReliableStreamReader()
+        // Note: internal infrastructure will optimize this to return a singleton completed task when
+        // we're already initialized.
+        private async Task EnsureInitializedAsync(CancellationToken cancellationToken)
         {
-            // If our finalizer runs, it means we were not disposed properly.
-            Logger.Warn("ReliableStreamReader was not disposed of properly.  A Session may have been leaked.");
+            if (_initialized)
+            {
+                return;
+            }
+            await MoveNextAsync(cancellationToken).ConfigureAwait(false);
+            _metadata = _currentResultSet?.Metadata;
+            _initialized = true;
+        }
+
+        private async Task MoveNextAsync(CancellationToken cancellationToken)
+        {
+            bool result = await _resultStream.MoveNext(cancellationToken).ConfigureAwait(false);
+            _currentResultSet = result ? _resultStream.Current : null;
+            _nextIndex = 0;
+            if (Stats == null)
+            {
+                Stats = _currentResultSet?.Stats;
+            }
         }
 
         /// <summary>

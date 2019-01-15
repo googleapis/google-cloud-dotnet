@@ -238,7 +238,14 @@ namespace Google.Cloud.Spanner.V1
             {
                 request.Transaction = new TransactionSelector { Id = TransactionId };
             }
-            return new ReliableStreamReader(Client, request, _session, timeoutSeconds);
+            request.SessionAsSessionName = SessionName;
+
+            // Not using CreateSettings as we don't have a cancellation token.
+            var settings = Client.Settings.ExecuteStreamingSqlSettings.WithExpiration(
+                Client.Settings.ConvertTimeoutToExpiration(timeoutSeconds));
+
+            SqlResultStream stream = new SqlResultStream(Client, request, _session, settings);
+            return new ReliableStreamReader(stream, Client.Settings.Logger);
         }
 
         /// <summary>
