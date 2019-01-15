@@ -26,7 +26,7 @@ namespace Google.Cloud.Firestore.Tests
     public partial class FirestoreDbTest
     {
         [Fact]
-        public void Create()
+        public void Create_WithDatabase()
         {
             var client = new FakeFirestoreClient();
             var db = FirestoreDb.Create("proj", "db", client);
@@ -36,12 +36,22 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void Create_PublicMethodUsesDefaultDatabase()
+        {
+            var client = new FakeFirestoreClient();
+            var db = FirestoreDb.Create("proj", client);
+            Assert.Equal("projects/proj/databases/(default)", db.RootPath);
+            Assert.Equal("projects/proj/databases/(default)/documents", db.DocumentsPath);
+            Assert.Same(client, db.Client);
+        }
+
+        [Fact]
         public async Task CreateAsync()
         {
             var client = new FakeFirestoreClient();
-            var db = await FirestoreDb.CreateAsync("proj", "db", client);
-            Assert.Equal("projects/proj/databases/db", db.RootPath);
-            Assert.Equal("projects/proj/databases/db/documents", db.DocumentsPath);
+            var db = await FirestoreDb.CreateAsync("proj", client);
+            Assert.Equal("projects/proj/databases/(default)", db.RootPath);
+            Assert.Equal("projects/proj/databases/(default)/documents", db.DocumentsPath);
             Assert.Same(client, db.Client);
         }
 
