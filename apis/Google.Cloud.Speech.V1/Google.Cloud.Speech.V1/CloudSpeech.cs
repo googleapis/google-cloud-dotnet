@@ -43,58 +43,60 @@ namespace Google.Cloud.Speech.V1 {
             "dCKKAQoaU3RyZWFtaW5nUmVjb2duaXRpb25Db25maWcSOQoGY29uZmlnGAEg",
             "ASgLMikuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pdGlvbkNvbmZp",
             "ZxIYChBzaW5nbGVfdXR0ZXJhbmNlGAIgASgIEhcKD2ludGVyaW1fcmVzdWx0",
-            "cxgDIAEoCCL/AwoRUmVjb2duaXRpb25Db25maWcSSQoIZW5jb2RpbmcYASAB",
+            "cxgDIAEoCCKwBAoRUmVjb2duaXRpb25Db25maWcSSQoIZW5jb2RpbmcYASAB",
             "KA4yNy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlJlY29nbml0aW9uQ29uZmln",
-            "LkF1ZGlvRW5jb2RpbmcSGQoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAUSFQoN",
-            "bGFuZ3VhZ2VfY29kZRgDIAEoCRIYChBtYXhfYWx0ZXJuYXRpdmVzGAQgASgF",
-            "EhgKEHByb2Zhbml0eV9maWx0ZXIYBSABKAgSPgoPc3BlZWNoX2NvbnRleHRz",
-            "GAYgAygLMiUuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hDb250ZXh0",
-            "EiAKGGVuYWJsZV93b3JkX3RpbWVfb2Zmc2V0cxgIIAEoCBIkChxlbmFibGVf",
-            "YXV0b21hdGljX3B1bmN0dWF0aW9uGAsgASgIEg0KBW1vZGVsGA0gASgJEhQK",
-            "DHVzZV9lbmhhbmNlZBgOIAEoCCKLAQoNQXVkaW9FbmNvZGluZxIYChRFTkNP",
-            "RElOR19VTlNQRUNJRklFRBAAEgwKCExJTkVBUjE2EAESCAoERkxBQxACEgkK",
-            "BU1VTEFXEAMSBwoDQU1SEAQSCgoGQU1SX1dCEAUSDAoIT0dHX09QVVMQBhIa",
-            "ChZTUEVFWF9XSVRIX0hFQURFUl9CWVRFEAciIAoNU3BlZWNoQ29udGV4dBIP",
-            "CgdwaHJhc2VzGAEgAygJIkQKEFJlY29nbml0aW9uQXVkaW8SEQoHY29udGVu",
-            "dBgBIAEoDEgAEg0KA3VyaRgCIAEoCUgAQg4KDGF1ZGlvX3NvdXJjZSJVChFS",
-            "ZWNvZ25pemVSZXNwb25zZRJACgdyZXN1bHRzGAIgAygLMi8uZ29vZ2xlLmNs",
-            "b3VkLnNwZWVjaC52MS5TcGVlY2hSZWNvZ25pdGlvblJlc3VsdCJgChxMb25n",
-            "UnVubmluZ1JlY29nbml6ZVJlc3BvbnNlEkAKB3Jlc3VsdHMYAiADKAsyLy5n",
-            "b29nbGUuY2xvdWQuc3BlZWNoLnYxLlNwZWVjaFJlY29nbml0aW9uUmVzdWx0",
-            "Ip4BChxMb25nUnVubmluZ1JlY29nbml6ZU1ldGFkYXRhEhgKEHByb2dyZXNz",
-            "X3BlcmNlbnQYASABKAUSLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASNAoQbGFzdF91cGRhdGVfdGltZRgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAisQIKGlN0cmVhbWluZ1JlY29n",
-            "bml6ZVJlc3BvbnNlEiEKBWVycm9yGAEgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
-            "dXMSQwoHcmVzdWx0cxgCIAMoCzIyLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEu",
-            "U3RyZWFtaW5nUmVjb2duaXRpb25SZXN1bHQSXQoRc3BlZWNoX2V2ZW50X3R5",
-            "cGUYBCABKA4yQi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlN0cmVhbWluZ1Jl",
-            "Y29nbml6ZVJlc3BvbnNlLlNwZWVjaEV2ZW50VHlwZSJMCg9TcGVlY2hFdmVu",
-            "dFR5cGUSHAoYU1BFRUNIX0VWRU5UX1VOU1BFQ0lGSUVEEAASGwoXRU5EX09G",
-            "X1NJTkdMRV9VVFRFUkFOQ0UQASKNAQoaU3RyZWFtaW5nUmVjb2duaXRpb25S",
-            "ZXN1bHQSSgoMYWx0ZXJuYXRpdmVzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLnNw",
-            "ZWVjaC52MS5TcGVlY2hSZWNvZ25pdGlvbkFsdGVybmF0aXZlEhAKCGlzX2Zp",
-            "bmFsGAIgASgIEhEKCXN0YWJpbGl0eRgDIAEoAiJlChdTcGVlY2hSZWNvZ25p",
-            "dGlvblJlc3VsdBJKCgxhbHRlcm5hdGl2ZXMYASADKAsyNC5nb29nbGUuY2xv",
-            "dWQuc3BlZWNoLnYxLlNwZWVjaFJlY29nbml0aW9uQWx0ZXJuYXRpdmUidwoc",
-            "U3BlZWNoUmVjb2duaXRpb25BbHRlcm5hdGl2ZRISCgp0cmFuc2NyaXB0GAEg",
-            "ASgJEhIKCmNvbmZpZGVuY2UYAiABKAISLwoFd29yZHMYAyADKAsyIC5nb29n",
-            "bGUuY2xvdWQuc3BlZWNoLnYxLldvcmRJbmZvInQKCFdvcmRJbmZvEi0KCnN0",
-            "YXJ0X3RpbWUYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SKwoI",
-            "ZW5kX3RpbWUYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SDAoE",
-            "d29yZBgDIAEoCTKpAwoGU3BlZWNoEoEBCglSZWNvZ25pemUSKC5nb29nbGUu",
-            "Y2xvdWQuc3BlZWNoLnYxLlJlY29nbml6ZVJlcXVlc3QaKS5nb29nbGUuY2xv",
-            "dWQuc3BlZWNoLnYxLlJlY29nbml6ZVJlc3BvbnNlIh+C0+STAhkiFC92MS9z",
-            "cGVlY2g6cmVjb2duaXplOgEqEpYBChRMb25nUnVubmluZ1JlY29nbml6ZRIz",
-            "Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuTG9uZ1J1bm5pbmdSZWNvZ25pemVS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiIqgtPkkwIk",
-            "Ih8vdjEvc3BlZWNoOmxvbmdydW5uaW5ncmVjb2duaXplOgEqEoEBChJTdHJl",
-            "YW1pbmdSZWNvZ25pemUSMS5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLlN0cmVh",
-            "bWluZ1JlY29nbml6ZVJlcXVlc3QaMi5nb29nbGUuY2xvdWQuc3BlZWNoLnYx",
-            "LlN0cmVhbWluZ1JlY29nbml6ZVJlc3BvbnNlIgAoATABQmwKGmNvbS5nb29n",
-            "bGUuY2xvdWQuc3BlZWNoLnYxQgtTcGVlY2hQcm90b1ABWjxnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NwZWVjaC92MTtz",
-            "cGVlY2j4AQFiBnByb3RvMw=="));
+            "LkF1ZGlvRW5jb2RpbmcSGQoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAUSLwon",
+            "ZW5hYmxlX3NlcGFyYXRlX3JlY29nbml0aW9uX3Blcl9jaGFubmVsGAwgASgI",
+            "EhUKDWxhbmd1YWdlX2NvZGUYAyABKAkSGAoQbWF4X2FsdGVybmF0aXZlcxgE",
+            "IAEoBRIYChBwcm9mYW5pdHlfZmlsdGVyGAUgASgIEj4KD3NwZWVjaF9jb250",
+            "ZXh0cxgGIAMoCzIlLmdvb2dsZS5jbG91ZC5zcGVlY2gudjEuU3BlZWNoQ29u",
+            "dGV4dBIgChhlbmFibGVfd29yZF90aW1lX29mZnNldHMYCCABKAgSJAocZW5h",
+            "YmxlX2F1dG9tYXRpY19wdW5jdHVhdGlvbhgLIAEoCBINCgVtb2RlbBgNIAEo",
+            "CRIUCgx1c2VfZW5oYW5jZWQYDiABKAgiiwEKDUF1ZGlvRW5jb2RpbmcSGAoU",
+            "RU5DT0RJTkdfVU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhABEggKBEZMQUMQ",
+            "AhIJCgVNVUxBVxADEgcKA0FNUhAEEgoKBkFNUl9XQhAFEgwKCE9HR19PUFVT",
+            "EAYSGgoWU1BFRVhfV0lUSF9IRUFERVJfQllURRAHIiAKDVNwZWVjaENvbnRl",
+            "eHQSDwoHcGhyYXNlcxgBIAMoCSJEChBSZWNvZ25pdGlvbkF1ZGlvEhEKB2Nv",
+            "bnRlbnQYASABKAxIABINCgN1cmkYAiABKAlIAEIOCgxhdWRpb19zb3VyY2Ui",
+            "VQoRUmVjb2duaXplUmVzcG9uc2USQAoHcmVzdWx0cxgCIAMoCzIvLmdvb2ds",
+            "ZS5jbG91ZC5zcGVlY2gudjEuU3BlZWNoUmVjb2duaXRpb25SZXN1bHQiYAoc",
+            "TG9uZ1J1bm5pbmdSZWNvZ25pemVSZXNwb25zZRJACgdyZXN1bHRzGAIgAygL",
+            "Mi8uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hSZWNvZ25pdGlvblJl",
+            "c3VsdCKeAQocTG9uZ1J1bm5pbmdSZWNvZ25pemVNZXRhZGF0YRIYChBwcm9n",
+            "cmVzc19wZXJjZW50GAEgASgFEi4KCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEjQKEGxhc3RfdXBkYXRlX3RpbWUYAyAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIrECChpTdHJlYW1pbmdS",
+            "ZWNvZ25pemVSZXNwb25zZRIhCgVlcnJvchgBIAEoCzISLmdvb2dsZS5ycGMu",
+            "U3RhdHVzEkMKB3Jlc3VsdHMYAiADKAsyMi5nb29nbGUuY2xvdWQuc3BlZWNo",
+            "LnYxLlN0cmVhbWluZ1JlY29nbml0aW9uUmVzdWx0El0KEXNwZWVjaF9ldmVu",
+            "dF90eXBlGAQgASgOMkIuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TdHJlYW1p",
+            "bmdSZWNvZ25pemVSZXNwb25zZS5TcGVlY2hFdmVudFR5cGUiTAoPU3BlZWNo",
+            "RXZlbnRUeXBlEhwKGFNQRUVDSF9FVkVOVF9VTlNQRUNJRklFRBAAEhsKF0VO",
+            "RF9PRl9TSU5HTEVfVVRURVJBTkNFEAEiogEKGlN0cmVhbWluZ1JlY29nbml0",
+            "aW9uUmVzdWx0EkoKDGFsdGVybmF0aXZlcxgBIAMoCzI0Lmdvb2dsZS5jbG91",
+            "ZC5zcGVlY2gudjEuU3BlZWNoUmVjb2duaXRpb25BbHRlcm5hdGl2ZRIQCghp",
+            "c19maW5hbBgCIAEoCBIRCglzdGFiaWxpdHkYAyABKAISEwoLY2hhbm5lbF90",
+            "YWcYBSABKAUiegoXU3BlZWNoUmVjb2duaXRpb25SZXN1bHQSSgoMYWx0ZXJu",
+            "YXRpdmVzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TcGVlY2hS",
+            "ZWNvZ25pdGlvbkFsdGVybmF0aXZlEhMKC2NoYW5uZWxfdGFnGAIgASgFIncK",
+            "HFNwZWVjaFJlY29nbml0aW9uQWx0ZXJuYXRpdmUSEgoKdHJhbnNjcmlwdBgB",
+            "IAEoCRISCgpjb25maWRlbmNlGAIgASgCEi8KBXdvcmRzGAMgAygLMiAuZ29v",
+            "Z2xlLmNsb3VkLnNwZWVjaC52MS5Xb3JkSW5mbyJ0CghXb3JkSW5mbxItCgpz",
+            "dGFydF90aW1lGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEisK",
+            "CGVuZF90aW1lGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEgwK",
+            "BHdvcmQYAyABKAkyqQMKBlNwZWVjaBKBAQoJUmVjb2duaXplEiguZ29vZ2xl",
+            "LmNsb3VkLnNwZWVjaC52MS5SZWNvZ25pemVSZXF1ZXN0GikuZ29vZ2xlLmNs",
+            "b3VkLnNwZWVjaC52MS5SZWNvZ25pemVSZXNwb25zZSIfgtPkkwIZIhQvdjEv",
+            "c3BlZWNoOnJlY29nbml6ZToBKhKWAQoUTG9uZ1J1bm5pbmdSZWNvZ25pemUS",
+            "My5nb29nbGUuY2xvdWQuc3BlZWNoLnYxLkxvbmdSdW5uaW5nUmVjb2duaXpl",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iKoLT5JMC",
+            "JCIfL3YxL3NwZWVjaDpsb25ncnVubmluZ3JlY29nbml6ZToBKhKBAQoSU3Ry",
+            "ZWFtaW5nUmVjb2duaXplEjEuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MS5TdHJl",
+            "YW1pbmdSZWNvZ25pemVSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLnNwZWVjaC52",
+            "MS5TdHJlYW1pbmdSZWNvZ25pemVSZXNwb25zZSIAKAEwAUJsChpjb20uZ29v",
+            "Z2xlLmNsb3VkLnNwZWVjaC52MUILU3BlZWNoUHJvdG9QAVo8Z29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zcGVlY2gvdjE7",
+            "c3BlZWNo+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -102,15 +104,15 @@ namespace Google.Cloud.Speech.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest), global::Google.Cloud.Speech.V1.LongRunningRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeRequest), global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser, new[]{ "StreamingConfig", "AudioContent" }, new[]{ "StreamingRequest" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionConfig), global::Google.Cloud.Speech.V1.StreamingRecognitionConfig.Parser, new[]{ "Config", "SingleUtterance", "InterimResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionConfig), global::Google.Cloud.Speech.V1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRateHertz", "LanguageCode", "MaxAlternatives", "ProfanityFilter", "SpeechContexts", "EnableWordTimeOffsets", "EnableAutomaticPunctuation", "Model", "UseEnhanced" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionConfig), global::Google.Cloud.Speech.V1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRateHertz", "EnableSeparateRecognitionPerChannel", "LanguageCode", "MaxAlternatives", "ProfanityFilter", "SpeechContexts", "EnableWordTimeOffsets", "EnableAutomaticPunctuation", "Model", "UseEnhanced" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechContext), global::Google.Cloud.Speech.V1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionAudio), global::Google.Cloud.Speech.V1.RecognitionAudio.Parser, new[]{ "Content", "Uri" }, new[]{ "AudioSource" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognizeResponse), global::Google.Cloud.Speech.V1.RecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse), global::Google.Cloud.Speech.V1.LongRunningRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata), global::Google.Cloud.Speech.V1.LongRunningRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "SpeechEventType" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.SpeechEventType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser, new[]{ "Alternatives" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability", "ChannelTag" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser, new[]{ "Alternatives", "ChannelTag" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative), global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence", "Words" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.WordInfo), global::Google.Cloud.Speech.V1.WordInfo.Parser, new[]{ "StartTime", "EndTime", "Word" }, null, null, null)
           }));
@@ -945,6 +947,7 @@ namespace Google.Cloud.Speech.V1 {
     public RecognitionConfig(RecognitionConfig other) : this() {
       encoding_ = other.encoding_;
       sampleRateHertz_ = other.sampleRateHertz_;
+      enableSeparateRecognitionPerChannel_ = other.enableSeparateRecognitionPerChannel_;
       languageCode_ = other.languageCode_;
       maxAlternatives_ = other.maxAlternatives_;
       profanityFilter_ = other.profanityFilter_;
@@ -994,6 +997,25 @@ namespace Google.Cloud.Speech.V1 {
       get { return sampleRateHertz_; }
       set {
         sampleRateHertz_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enable_separate_recognition_per_channel" field.</summary>
+    public const int EnableSeparateRecognitionPerChannelFieldNumber = 12;
+    private bool enableSeparateRecognitionPerChannel_;
+    /// <summary>
+    /// This needs to be set to `true` explicitly and `audio_channel_count` > 1
+    /// to get each channel recognized separately. The recognition result will
+    /// contain a `channel_tag` field to state which channel that result belongs
+    /// to. If this is not true, we will only recognize the first channel. The
+    /// request is billed cumulatively for all channels recognized:
+    /// `audio_channel_count` multiplied by the length of the audio.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableSeparateRecognitionPerChannel {
+      get { return enableSeparateRecognitionPerChannel_; }
+      set {
+        enableSeparateRecognitionPerChannel_ = value;
       }
     }
 
@@ -1153,16 +1175,20 @@ namespace Google.Cloud.Speech.V1 {
     private bool useEnhanced_;
     /// <summary>
     /// *Optional* Set to true to use an enhanced model for speech recognition.
-    /// You must also set the `model` field to a valid, enhanced model. If
-    /// `use_enhanced` is set to true and the `model` field is not set, then
-    /// `use_enhanced` is ignored. If `use_enhanced` is true and an enhanced
-    /// version of the specified model does not exist, then the speech is
-    /// recognized using the standard version of the specified model.
+    /// If `use_enhanced` is set to true and the `model` field is not set, then
+    /// an appropriate enhanced model is chosen if:
+    /// 1. project is eligible for requesting enhanced models
+    /// 2. an enhanced model exists for the audio
+    ///
+    /// If `use_enhanced` is true and an enhanced version of the specified model
+    /// does not exist, then the speech is recognized using the standard version
+    /// of the specified model.
     ///
     /// Enhanced speech models require that you opt-in to data logging using
-    /// instructions in the [documentation](/speech-to-text/enable-data-logging).
-    /// If you set `use_enhanced` to true and you have not enabled audio logging,
-    /// then you will receive an error.
+    /// instructions in the
+    /// [documentation](/speech-to-text/docs/enable-data-logging). If you set
+    /// `use_enhanced` to true and you have not enabled audio logging, then you
+    /// will receive an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool UseEnhanced {
@@ -1187,6 +1213,7 @@ namespace Google.Cloud.Speech.V1 {
       }
       if (Encoding != other.Encoding) return false;
       if (SampleRateHertz != other.SampleRateHertz) return false;
+      if (EnableSeparateRecognitionPerChannel != other.EnableSeparateRecognitionPerChannel) return false;
       if (LanguageCode != other.LanguageCode) return false;
       if (MaxAlternatives != other.MaxAlternatives) return false;
       if (ProfanityFilter != other.ProfanityFilter) return false;
@@ -1203,6 +1230,7 @@ namespace Google.Cloud.Speech.V1 {
       int hash = 1;
       if (Encoding != 0) hash ^= Encoding.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
+      if (EnableSeparateRecognitionPerChannel != false) hash ^= EnableSeparateRecognitionPerChannel.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
       if (MaxAlternatives != 0) hash ^= MaxAlternatives.GetHashCode();
       if (ProfanityFilter != false) hash ^= ProfanityFilter.GetHashCode();
@@ -1253,6 +1281,10 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(88);
         output.WriteBool(EnableAutomaticPunctuation);
       }
+      if (EnableSeparateRecognitionPerChannel != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(EnableSeparateRecognitionPerChannel);
+      }
       if (Model.Length != 0) {
         output.WriteRawTag(106);
         output.WriteString(Model);
@@ -1274,6 +1306,9 @@ namespace Google.Cloud.Speech.V1 {
       }
       if (SampleRateHertz != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHertz);
+      }
+      if (EnableSeparateRecognitionPerChannel != false) {
+        size += 1 + 1;
       }
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
@@ -1313,6 +1348,9 @@ namespace Google.Cloud.Speech.V1 {
       }
       if (other.SampleRateHertz != 0) {
         SampleRateHertz = other.SampleRateHertz;
+      }
+      if (other.EnableSeparateRecognitionPerChannel != false) {
+        EnableSeparateRecognitionPerChannel = other.EnableSeparateRecognitionPerChannel;
       }
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
@@ -1377,6 +1415,10 @@ namespace Google.Cloud.Speech.V1 {
           }
           case 88: {
             EnableAutomaticPunctuation = input.ReadBool();
+            break;
+          }
+          case 96: {
+            EnableSeparateRecognitionPerChannel = input.ReadBool();
             break;
           }
           case 106: {
@@ -2597,6 +2639,7 @@ namespace Google.Cloud.Speech.V1 {
       alternatives_ = other.alternatives_.Clone();
       isFinal_ = other.isFinal_;
       stability_ = other.stability_;
+      channelTag_ = other.channelTag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2657,6 +2700,22 @@ namespace Google.Cloud.Speech.V1 {
       }
     }
 
+    /// <summary>Field number for the "channel_tag" field.</summary>
+    public const int ChannelTagFieldNumber = 5;
+    private int channelTag_;
+    /// <summary>
+    /// For multi-channel audio, this is the channel number corresponding to the
+    /// recognized result for the audio from that channel.
+    /// For audio_channel_count = N, its output values can range from '1' to 'N'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ChannelTag {
+      get { return channelTag_; }
+      set {
+        channelTag_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as StreamingRecognitionResult);
@@ -2673,6 +2732,7 @@ namespace Google.Cloud.Speech.V1 {
       if(!alternatives_.Equals(other.alternatives_)) return false;
       if (IsFinal != other.IsFinal) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Stability, other.Stability)) return false;
+      if (ChannelTag != other.ChannelTag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2682,6 +2742,7 @@ namespace Google.Cloud.Speech.V1 {
       hash ^= alternatives_.GetHashCode();
       if (IsFinal != false) hash ^= IsFinal.GetHashCode();
       if (Stability != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Stability);
+      if (ChannelTag != 0) hash ^= ChannelTag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2704,6 +2765,10 @@ namespace Google.Cloud.Speech.V1 {
         output.WriteRawTag(29);
         output.WriteFloat(Stability);
       }
+      if (ChannelTag != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ChannelTag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2718,6 +2783,9 @@ namespace Google.Cloud.Speech.V1 {
       }
       if (Stability != 0F) {
         size += 1 + 4;
+      }
+      if (ChannelTag != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ChannelTag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2736,6 +2804,9 @@ namespace Google.Cloud.Speech.V1 {
       }
       if (other.Stability != 0F) {
         Stability = other.Stability;
+      }
+      if (other.ChannelTag != 0) {
+        ChannelTag = other.ChannelTag;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2758,6 +2829,10 @@ namespace Google.Cloud.Speech.V1 {
           }
           case 29: {
             Stability = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            ChannelTag = input.ReadInt32();
             break;
           }
         }
@@ -2795,6 +2870,7 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SpeechRecognitionResult(SpeechRecognitionResult other) : this() {
       alternatives_ = other.alternatives_.Clone();
+      channelTag_ = other.channelTag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2819,6 +2895,22 @@ namespace Google.Cloud.Speech.V1 {
       get { return alternatives_; }
     }
 
+    /// <summary>Field number for the "channel_tag" field.</summary>
+    public const int ChannelTagFieldNumber = 2;
+    private int channelTag_;
+    /// <summary>
+    /// For multi-channel audio, this is the channel number corresponding to the
+    /// recognized result for the audio from that channel.
+    /// For audio_channel_count = N, its output values can range from '1' to 'N'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ChannelTag {
+      get { return channelTag_; }
+      set {
+        channelTag_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SpeechRecognitionResult);
@@ -2833,6 +2925,7 @@ namespace Google.Cloud.Speech.V1 {
         return true;
       }
       if(!alternatives_.Equals(other.alternatives_)) return false;
+      if (ChannelTag != other.ChannelTag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2840,6 +2933,7 @@ namespace Google.Cloud.Speech.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= alternatives_.GetHashCode();
+      if (ChannelTag != 0) hash ^= ChannelTag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2854,6 +2948,10 @@ namespace Google.Cloud.Speech.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       alternatives_.WriteTo(output, _repeated_alternatives_codec);
+      if (ChannelTag != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ChannelTag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2863,6 +2961,9 @@ namespace Google.Cloud.Speech.V1 {
     public int CalculateSize() {
       int size = 0;
       size += alternatives_.CalculateSize(_repeated_alternatives_codec);
+      if (ChannelTag != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ChannelTag);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2875,6 +2976,9 @@ namespace Google.Cloud.Speech.V1 {
         return;
       }
       alternatives_.Add(other.alternatives_);
+      if (other.ChannelTag != 0) {
+        ChannelTag = other.ChannelTag;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2888,6 +2992,10 @@ namespace Google.Cloud.Speech.V1 {
             break;
           case 10: {
             alternatives_.AddEntriesFrom(input, _repeated_alternatives_codec);
+            break;
+          }
+          case 16: {
+            ChannelTag = input.ReadInt32();
             break;
           }
         }
@@ -2976,6 +3084,8 @@ namespace Google.Cloud.Speech.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1.WordInfo> words_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1.WordInfo>();
     /// <summary>
     /// Output only. A list of word-specific information for each recognized word.
+    /// Note: When `enable_speaker_diarization` is true, you will see all the words
+    /// from the beginning of the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1.WordInfo> Words {
