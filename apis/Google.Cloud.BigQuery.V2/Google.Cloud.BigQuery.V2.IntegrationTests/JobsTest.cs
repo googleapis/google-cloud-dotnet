@@ -31,7 +31,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 // on job creation. This means not to set the label because this is copying
                 // the behaviour of labels for other resources like DataSets and Table.
                 // Testing for it anyways because the api allows is.
-                { "one_label", null },
+                // { "one_label", null }, See https://github.com/googleapis/google-cloud-dotnet/issues/2812
                 { "another-label-2", "label_value_2" },
                 { "yet_another_label", "" }
             };
