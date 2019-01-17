@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -79,8 +80,10 @@ namespace Google.Cloud.Firestore
                             break;
                         case Remove:
                             GaxPreconditions.CheckState(!noTargetIds && WatchStream.WatchTargetId == change.TargetIds[0], "Target ID must be 0x{0:x}", WatchStream.WatchTargetId);
-                            // This may not be the right kind of exception to throw, but whatever we throw should be a permanent error. This is a reasonable starting point.
-                            throw new InvalidOperationException("Server removed watch target");
+                            // The server has effectively aborted this watch in a permanent way. Surface this as an RpcException based on the cause.
+                            var cause = change.Cause ?? new Rpc.Status { Code = (int) Rpc.Code.Unknown, Message = "Unknown cause" };
+                            var status = new Status((StatusCode)cause.Code, cause.Message);
+                            throw new RpcException(status, $"Server removed target. Code: {status.StatusCode} Message: {status.Detail}");
                         case Current:
                             _current = true;
                             break;

@@ -108,7 +108,7 @@ namespace Google.Cloud.Firestore.Tests
             sequence.ProvideResponse(WatchResponseResult.StreamHealthy, token1);
             sequence.ProvideResponse(WatchResponseResult.StreamHealthy, token2);
             sequence.RpcException(new RpcException(new Status(StatusCode.DeadlineExceeded, "This exception is transient")));
-            // The server throw a retriable exception. Reinitialize.
+            // The server threw a retriable exception. Reinitialize.
             sequence.ExpectConnect(token2, StreamInitializationCause.RpcError);
             sequence.ProvideResponse(WatchResponseResult.Continue);
             sequence.WaitForCancellation();
