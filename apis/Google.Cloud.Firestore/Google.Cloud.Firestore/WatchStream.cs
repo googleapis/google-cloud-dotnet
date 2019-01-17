@@ -28,6 +28,7 @@ namespace Google.Cloud.Firestore
     {
         private static readonly HashSet<StatusCode> s_transientErrorStatusCodes = new HashSet<StatusCode>
         {
+            StatusCode.Aborted,
             StatusCode.Cancelled,
             StatusCode.Unknown,
             StatusCode.DeadlineExceeded,
