@@ -56,7 +56,7 @@ Beta:
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - Google Cloud Firestore:
   - [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html): High-level client library for Google Cloud Firestore (recommended)
-  - [Google.Cloud.Firestore.V1Beta](Google.Cloud.Firestore.V1Beta1/index.html): Low-level access to Firestore API
+  - [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html): Low-level access to Firestore API
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate NLog integration package is available](Google.Cloud.Logging.NLog/index.html)
 - [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html)

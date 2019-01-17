@@ -51,7 +51,7 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
 * [Google Cloud Firestore](https://cloud.google.com/firestore/): two packages are available, both beta:
   * [Google.Cloud.Firestore](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore/): High-level client library for Google Cloud Firestore (recommended)
-  * [Google.Cloud.Firestore.V1Beta1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1Beta1/): Low-level access to Firestore API
+  * [Google.Cloud.Firestore.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1/): Low-level access to Firestore API
 * [Google Stackdriver Logging](https://cloud.google.com/logging/)
   * Integration with NLog is provided via [Google.Cloud.Logging.NLog](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.NLog/) (beta)
 * [Google Cloud Key Management Service](https://cloud.google.com/kms/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Kms.V1/) (beta)
