@@ -363,19 +363,6 @@
   },
 
   {
-    "id": "Google.Cloud.Firestore.V1Beta1",
-    "productName": "Firestore",
-    "productUrl": "https://firebase.google.com",
-    "version": "1.0.0-beta15",
-    "type": "grpc",
-    "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
-    "tags": [ "firestore", "firebase" ],
-    "dependencies": {
-      "Google.LongRunning": "1.0.0"
-    }
-  },
-
-  {
     "id": "Google.Cloud.Iam.V1",
     "version": "1.2.0-beta01",
     "type": "grpc",
