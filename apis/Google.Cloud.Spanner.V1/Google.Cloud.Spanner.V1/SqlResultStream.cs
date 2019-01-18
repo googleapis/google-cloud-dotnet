@@ -110,9 +110,6 @@ namespace Google.Cloud.Spanner.V1
 
             while (true)
             {
-                // TODO: This shouldn't be required. We should be able to rely on the MoveNext call.
-                cancellationToken.ThrowIfCancellationRequested();
-
                 // If we've successfully read to the end of the stream and emptied the buffer, we've read all the responses.
                 if (_finished && _buffer.Count == 0)
                 {
@@ -132,8 +129,6 @@ namespace Google.Cloud.Spanner.V1
                     if (_grpcCall == null)
                     {
                         _grpcCall = _client.ExecuteStreamingSql(_request, _callSettings).GrpcCall;
-                        // TODO: How do we use the cancellation token?
-                        await _grpcCall.ResponseHeadersAsync.WithSessionExpiryChecking(_session).ConfigureAwait(false);
                     }
                     bool hasNext = await _grpcCall.ResponseStream
                         .MoveNext(cancellationToken)
@@ -171,6 +166,11 @@ namespace Google.Cloud.Spanner.V1
                         _finished = true;
                         // Let the next iteration of the loop return 0 or buffered data.
                     }
+                }
+                catch (RpcException e) when (e.StatusCode == StatusCode.Cancelled && cancellationToken.IsCancellationRequested)
+                {
+                    // gRPC throws RpcException, but it's more idiomatic to see an OperationCanceledException
+                    cancellationToken.ThrowIfCancellationRequested();
                 }
                 catch (RpcException e) when (_safeToRetry && retryState.CanRetry(e))
                 {
