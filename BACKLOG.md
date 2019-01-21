@@ -76,3 +76,8 @@ the request and want to put work into it.
 
 - Issue: [#2164](https://github.com/googleapis/google-cloud-dotnet/issues/2164)
 - Status: This might not be a good idea, especially with OpenCensus integration coming up.
+
+## Including information stored in System.Exception.Data in the Stackdriver Error Reporting entry.
+
+- Issue: [#2738](https://github.com/googleapis/google-cloud-dotnet/issues/2738)
+- Status: The original requester never confirmed whether our approach solved their use case or not.
