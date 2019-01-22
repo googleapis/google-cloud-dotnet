@@ -33,6 +33,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 TimePartitioning = TimePartition.CreateDailyPartitioning(TimeSpan.FromDays(10)),
                 ExternalDataConfiguration = new ExternalDataConfiguration(),
                 EncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
+                Clustering = new Clustering { Fields = new[] { "x", "y", "z" } }
             };
             Table table = new Table();
             InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
@@ -44,6 +45,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(10 * 24 * 60 * 60 * 1000L, table.TimePartitioning.ExpirationMs);
             Assert.Same(options.ExternalDataConfiguration, table.ExternalDataConfiguration);
             Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", table.EncryptionConfiguration.KmsKeyName);
+            Assert.Same(options.Clustering, table.Clustering);
         }
 
         [Fact]
