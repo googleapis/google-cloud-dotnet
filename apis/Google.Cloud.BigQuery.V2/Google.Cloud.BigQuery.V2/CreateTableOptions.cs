@@ -63,6 +63,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public EncryptionConfiguration EncryptionConfiguration { get; set; }
 
+        /// <summary>
+        /// The clustering to apply to the created table, if any.
+        /// </summary>
+        public Clustering Clustering { get; set; }
+
         internal void ModifyRequest(Table table, InsertRequest request)
         {
             if (Description != null)
@@ -98,6 +103,10 @@ namespace Google.Cloud.BigQuery.V2
             if (EncryptionConfiguration != null)
             {
                 table.EncryptionConfiguration = EncryptionConfiguration;
+            }
+            if (Clustering != null)
+            {
+                table.Clustering = Clustering;
             }
         }
     }
