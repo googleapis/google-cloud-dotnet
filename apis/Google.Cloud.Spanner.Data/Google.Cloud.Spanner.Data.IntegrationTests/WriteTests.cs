@@ -391,7 +391,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {"K", SpannerDbType.String, _lastKey = IdGenerator.FromGuid()}
             };
 
-            using (var connection = new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
+            using (var connection = new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerConnectionStringBuilder.AllowImmediateTimeouts)}=true"))
             {
                 var cmd = connection.CreateInsertCommand(_fixture.TableName, values);
                 cmd.CommandTimeout = 0;

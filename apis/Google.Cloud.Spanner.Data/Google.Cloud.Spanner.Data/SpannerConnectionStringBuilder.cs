@@ -239,9 +239,9 @@ namespace Google.Cloud.Spanner.Data
         public bool AllowImmediateTimeouts
         {
             // Allow both a bool value and a text value of "true", case-insensitively.
-            get => TryGetValue(nameof(SpannerSettings.AllowImmediateTimeouts), out var value) &&
+            get => TryGetValue(nameof(AllowImmediateTimeouts), out var value) &&
                 (value is true || (value is string textValue && textValue.Equals("true", StringComparison.OrdinalIgnoreCase)));
-            set => this[nameof(SpannerSettings.AllowImmediateTimeouts)] = value;
+            set => this[nameof(AllowImmediateTimeouts)] = value;
         }
 
         /// <summary>

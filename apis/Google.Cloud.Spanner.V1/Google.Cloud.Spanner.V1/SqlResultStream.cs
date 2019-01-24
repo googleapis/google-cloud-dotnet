@@ -56,7 +56,7 @@ namespace Google.Cloud.Spanner.V1
         private AsyncServerStreamingCall<PartialResultSet> _grpcCall;
 
         /// <summary>
-        /// Constructor for normal 
+        /// Constructor for normal usage, with default buffer size, backoff settings and jitter.
         /// </summary>
         internal SqlResultStream(SpannerClient client, ExecuteSqlRequest request, Session session, CallSettings callSettings)
             : this(client, request, session, callSettings, DefaultMaxBufferSize, s_defaultBackoffSettings, RetrySettings.RandomJitter)
@@ -128,7 +128,8 @@ namespace Google.Cloud.Spanner.V1
                 {
                     if (_grpcCall == null)
                     {
-                        _grpcCall = _client.ExecuteStreamingSql(_request, _callSettings).GrpcCall;
+                        // TODO: Handle the case where the original call settings have a cancellation token too.
+                        _grpcCall = _client.ExecuteStreamingSql(_request, _callSettings.WithCancellationToken(cancellationToken)).GrpcCall;
                     }
                     bool hasNext = await _grpcCall.ResponseStream
                         .MoveNext(cancellationToken)

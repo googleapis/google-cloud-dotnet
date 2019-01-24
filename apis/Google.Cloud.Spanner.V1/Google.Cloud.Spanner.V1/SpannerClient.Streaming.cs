@@ -37,7 +37,6 @@ namespace Google.Cloud.Spanner.V1
     {
         partial void OnCopy(SpannerSettings existing)
         {
-            AllowImmediateTimeouts = existing.AllowImmediateTimeouts;
             Logger = existing.Logger;
         }
 
@@ -51,28 +50,6 @@ namespace Google.Cloud.Spanner.V1
             get => _logger;
             set => _logger = GaxPreconditions.CheckNotNull(value, nameof(value));
         }
-
-        /// <summary>
-        /// If true, then timeouts of '0' converted with <see cref="ConvertTimeoutToExpiration(int)"/>
-        /// will result in an <see cref="Expiration"/> with an immediate timeout. Otherwise, 0 means an infinite
-        /// timeout.
-        /// </summary>
-        public bool AllowImmediateTimeouts { get; set; } = false;
-
-        /// <summary>
-        /// Returns Timeout expressed as an <see cref="Expiration"/> and also accounts for
-        /// <see cref="AllowImmediateTimeouts"/>
-        /// </summary>
-        public Expiration ConvertTimeoutToExpiration(int timeoutSeconds) =>
-            ConvertTimeoutToExpiration(timeoutSeconds, AllowImmediateTimeouts);
-
-        /// <summary>
-        /// Returns Timeout expressed as an <see cref="Expiration"/> and also accounts for
-        /// <see cref="AllowImmediateTimeouts"/>
-        /// </summary>
-        public static Expiration ConvertTimeoutToExpiration(int timeoutSeconds, bool allowImmediateTimeouts) =>
-            timeoutSeconds == 0 && !allowImmediateTimeouts ?  Expiration.None :
-                Expiration.FromTimeout(TimeSpan.FromSeconds(timeoutSeconds));
     }
 
     public partial class SpannerClientImpl

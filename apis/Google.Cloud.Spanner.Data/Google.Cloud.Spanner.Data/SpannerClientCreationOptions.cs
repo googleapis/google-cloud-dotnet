@@ -45,11 +45,6 @@ namespace Google.Cloud.Spanner.Data
         internal ServiceEndpoint Endpoint { get; }
 
         /// <summary>
-        /// Whether to allow immediate timeouts in the SpannerSettings.
-        /// </summary>
-        internal bool AllowImmediateTimeouts { get; }
-
-        /// <summary>
         /// The number of gRPC channels to use (passed to Grpc.Gcp)
         /// </summary>
         internal int MaximumGrpcChannels { get; }
@@ -73,7 +68,6 @@ namespace Google.Cloud.Spanner.Data
             Endpoint = builder.EndPoint;
             _credentialsFile = builder.CredentialFile;
             _credentialsOverride = builder.CredentialOverride;
-            AllowImmediateTimeouts = builder.AllowImmediateTimeouts;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
         }
@@ -85,7 +79,6 @@ namespace Google.Cloud.Spanner.Data
             Endpoint.Equals(other.Endpoint) &&
             Equals(_credentialsFile, other._credentialsFile) &&
             Equals(_credentialsOverride, other._credentialsOverride) &&
-            AllowImmediateTimeouts == other.AllowImmediateTimeouts &&
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
             MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark;
 
@@ -97,7 +90,6 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + Endpoint.GetHashCode();
                 hash = hash * 23 + (_credentialsFile?.GetHashCode() ?? 0);
                 hash = hash * 23 + (_credentialsOverride?.GetHashCode() ?? 0);
-                hash = hash * 23 + AllowImmediateTimeouts.GetHashCode();
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
                 return hash;
@@ -118,10 +110,6 @@ namespace Google.Cloud.Spanner.Data
             if (_credentialsOverride != null)
             {
                 builder.Append($"; CredentialsOverride: True");
-            }
-            if (AllowImmediateTimeouts)
-            {
-                builder.Append($"; AllowImmediateTimeouts: True");
             }
             return builder.ToString();
         }

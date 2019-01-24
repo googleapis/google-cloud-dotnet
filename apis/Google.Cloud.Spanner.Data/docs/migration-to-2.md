@@ -92,6 +92,9 @@ executing SQL and returning the results in a stream;
 the `PooledSession.ExecuteSqlStreamReader` method returns a
 `ReliableStreamReader`.
 
+`SpannerSettings.AllowImmediateTimeouts` has been removed; this is
+now solely in the ADO.NET provider.
+
 ## Changes in Google.Cloud.Spanner.V1.Internal
 
 The Google.Cloud.Spanner.V1 package exposes some types in the

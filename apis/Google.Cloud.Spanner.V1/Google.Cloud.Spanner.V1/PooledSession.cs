@@ -168,10 +168,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="request">The commit request. Must not be null. The request will be modified with session and transaction details
         /// from this object.</param>
-        /// <param name="timeoutSeconds">The timeout for this RPC, in seconds.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<CommitResponse> CommitAsync(CommitRequest request, int timeoutSeconds, CancellationToken cancellationToken)
+        public Task<CommitResponse> CommitAsync(CommitRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -179,8 +178,7 @@ namespace Google.Cloud.Spanner.V1
             request.SessionAsSessionName = SessionName;
             request.TransactionId = TransactionId;
 
-            var settings = CreateSettings(Client.Settings.CommitSettings, timeoutSeconds, cancellationToken);
-            return RecordSuccessAndExpiredSessions(Client.CommitAsync(request, settings));
+            return RecordSuccessAndExpiredSessions(Client.CommitAsync(request, callSettings));
         }
 
         /// <summary>
@@ -188,10 +186,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="request">The rollback request. Must not be null. The request will be modified with session and transaction details
         /// from this object.</param>
-        /// <param name="timeoutSeconds">The timeout for this RPC, in seconds.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task RollbackAsync(RollbackRequest request, int timeoutSeconds, CancellationToken cancellationToken)
+        public Task RollbackAsync(RollbackRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -199,8 +196,7 @@ namespace Google.Cloud.Spanner.V1
             request.SessionAsSessionName = SessionName;
             request.TransactionId = TransactionId;
 
-            var settings = CreateSettings(Client.Settings.RollbackSettings, timeoutSeconds, cancellationToken);
-            return RecordSuccessAndExpiredSessions(Client.RollbackAsync(request, settings));
+            return RecordSuccessAndExpiredSessions(Client.RollbackAsync(request, callSettings));
         }
 
         /// <summary>
@@ -208,10 +204,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="request">The partitioning request. Must not be null. The request will be modified with session details
         /// from this object.</param>
-        /// <param name="timeoutSeconds">The timeout for this RPC, in seconds.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<PartitionResponse> PartitionQueryAsync(PartitionQueryRequest request, int timeoutSeconds, CancellationToken cancellationToken)
+        public Task<PartitionResponse> PartitionQueryAsync(PartitionQueryRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -219,8 +214,7 @@ namespace Google.Cloud.Spanner.V1
             request.SessionAsSessionName = SessionName;
             request.Transaction = new TransactionSelector { Id = TransactionId };
 
-            var settings = CreateSettings(Client.Settings.PartitionQuerySettings, timeoutSeconds, cancellationToken);
-            return RecordSuccessAndExpiredSessions(Client.PartitionQueryAsync(request, settings));
+            return RecordSuccessAndExpiredSessions(Client.PartitionQueryAsync(request, callSettings));
         }
 
         /// <summary>
@@ -228,9 +222,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="request">The query request. Must not be null. The request will be modified with session and transaction details
         /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
-        /// <param name="timeoutSeconds">The timeout for this RPC, in seconds.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for the streaming SQL request.</returns>
-        public ReliableStreamReader ExecuteSqlStreamReader(ExecuteSqlRequest request, int timeoutSeconds)
+        public ReliableStreamReader ExecuteSqlStreamReader(ExecuteSqlRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -240,11 +234,7 @@ namespace Google.Cloud.Spanner.V1
             }
             request.SessionAsSessionName = SessionName;
 
-            // Not using CreateSettings as we don't have a cancellation token.
-            var settings = Client.Settings.ExecuteStreamingSqlSettings.WithExpiration(
-                Client.Settings.ConvertTimeoutToExpiration(timeoutSeconds));
-
-            SqlResultStream stream = new SqlResultStream(Client, request, _session, settings);
+            SqlResultStream stream = new SqlResultStream(Client, request, _session, callSettings);
             return new ReliableStreamReader(stream, Client.Settings.Logger);
         }
 
@@ -253,10 +243,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="request">The query request. Must not be null. The request will be modified with session and transaction details
         /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
-        /// <param name="timeoutSeconds">The timeout for this RPC, in seconds.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, int timeoutSeconds, CancellationToken cancellationToken)
+        public Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -265,8 +254,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 request.Transaction = new TransactionSelector { Id = TransactionId };
             }
-            var settings = CreateSettings(Client.Settings.ExecuteSqlSettings, timeoutSeconds, cancellationToken);
-            return RecordSuccessAndExpiredSessions(Client.ExecuteSqlAsync(request, settings));
+            return RecordSuccessAndExpiredSessions(Client.ExecuteSqlAsync(request, callSettings));
         }
 
         /// <summary>
@@ -278,16 +266,14 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         /// <param name="request">The begin-transaction request. Must not be null. The request will be modified with session details
         /// from this object.</param>
-        /// <param name="timeoutSeconds">The timeout for this RPC, in seconds.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        internal Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, int timeoutSeconds, CancellationToken cancellationToken)
+        internal Task<Transaction> BeginTransactionAsync(BeginTransactionRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
             request.SessionAsSessionName = SessionName;
-            var settings = CreateSettings(Client.Settings.BeginTransactionSettings, timeoutSeconds, cancellationToken);
-            return RecordSuccessAndExpiredSessions(Client.BeginTransactionAsync(request, settings));
+            return RecordSuccessAndExpiredSessions(Client.BeginTransactionAsync(request, callSettings));
         }
 
         private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task, [CallerMemberName] string caller = null)
@@ -302,11 +288,6 @@ namespace Google.Cloud.Spanner.V1
             await task.WithSessionExpiryChecking(_session).ConfigureAwait(false);
             UpdateRefreshTime();
         }
-
-        private CallSettings CreateSettings(CallSettings originalSettings, int timeoutSeconds, CancellationToken cancellationToken) =>
-            originalSettings
-                .WithExpiration(Client.Settings.ConvertTimeoutToExpiration(timeoutSeconds))
-                .WithCancellationToken(cancellationToken);
 
         /// <summary>
         /// Updates the refresh time for the session based on the current time. This should

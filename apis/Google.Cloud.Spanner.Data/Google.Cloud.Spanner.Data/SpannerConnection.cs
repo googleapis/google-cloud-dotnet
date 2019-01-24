@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
@@ -602,7 +603,14 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new InvalidOperationException("The connection must be open. Failed to " + message);
             }
-        }        
+        }
+
+        internal CallSettings CreateCallSettings(Func<SpannerSettings, CallSettings> settingsProvider, int timeoutSeconds, CancellationToken cancellationToken)
+        {
+            var originalSettings = settingsProvider(Builder.SessionPoolManager.SpannerSettings);
+            var expiration = timeoutSeconds == 0 && !Builder.AllowImmediateTimeouts ? Expiration.None : Expiration.FromTimeout(TimeSpan.FromSeconds(timeoutSeconds));
+            return originalSettings.WithExpiration(expiration).WithCancellationToken(cancellationToken);
+        }
 
         internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, CancellationToken cancellationToken)
         {

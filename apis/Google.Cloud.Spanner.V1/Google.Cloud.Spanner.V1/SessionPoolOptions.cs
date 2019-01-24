@@ -33,7 +33,7 @@ namespace Google.Cloud.Spanner.V1
         private TimeSpan _poolEvictionDelay = TimeSpan.FromDays(7);
         private ResourcesExhaustedBehavior _waitOnResourcesExhausted = ResourcesExhaustedBehavior.Block;
         private double _writeSessionsFraction = 0.2;
-        private int _timeout = 60;
+        private TimeSpan _timeout = TimeSpan.FromSeconds(60);
         private TimeSpan _maintenanceLoopDelay = TimeSpan.FromSeconds(30);
         private int _maximumConcurrentSessionCreates = 10;
         private RetrySettings.IJitter _sessionRefreshJitter = new ProportionalRandomJitter(0.1);
@@ -148,19 +148,18 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// The total time in seconds allowed for a network call to the Cloud Spanner server, including retries. This setting
+        /// The total time allowed for a network call to the Cloud Spanner server, including retries. This setting
         /// is applied to calls to create, refresh and delete sessions, as well as beginning transactions.
         /// </summary>
         /// <remarks>
         /// <para>
-        /// This value cannot be negative, but it can be 0. The behavior of a 0 value depends on <see cref="SpannerSettings.AllowImmediateTimeouts"/>.
-        /// The default value is 60.
+        /// This value must be positive. The default value is one minute.
         /// </para>
         /// </remarks>
-        public int Timeout
+        public TimeSpan Timeout
         {
             get => _timeout;
-            set => _timeout = GaxPreconditions.CheckNonNegative(value, nameof(value));
+            set => _timeout = CheckPositiveTimeSpan(value);
         }
 
         /// <summary>

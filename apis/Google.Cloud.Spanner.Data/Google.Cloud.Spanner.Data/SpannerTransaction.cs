@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -188,7 +189,8 @@ namespace Google.Cloud.Spanner.Data
             }
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
                 {
-                    var response = await _session.PartitionQueryAsync(partitionRequest, timeoutSeconds, cancellationToken).ConfigureAwait(false);
+                    var callSettings = _connection.CreateCallSettings(settings => settings.PartitionQuerySettings, timeoutSeconds, cancellationToken);
+                    var response = await _session.PartitionQueryAsync(partitionRequest, callSettings).ConfigureAwait(false);
                     return response.Partitions.Select(x => x.PartitionToken);
                 },
                 "SpannerTransaction.GetPartitionTokensAsync", _connection.Logger);
@@ -221,7 +223,8 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
             // We're not making any Spanner requests here, so we don't need profiling or error translation.
-            return Task.FromResult(_session.ExecuteSqlStreamReader(request, timeoutSeconds));
+            var callSettings = _connection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
+            return Task.FromResult(_session.ExecuteSqlStreamReader(request, callSettings));
         }
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -233,7 +236,8 @@ namespace Google.Cloud.Spanner.Data
             {
                 // Note: ExecuteSql would work, but by using a streaming call we enable potential future scenarios
                 // where the server returns interim resume tokens to avoid timeouts.
-                using (var reader = _session.ExecuteSqlStreamReader(request, timeoutSeconds))
+                var callSettings = _connection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
+                using (var reader = _session.ExecuteSqlStreamReader(request, callSettings))
                 {
                     Value value = await reader.NextAsync(cancellationToken).ConfigureAwait(false);
                     if (value != null)
@@ -280,7 +284,8 @@ namespace Google.Cloud.Spanner.Data
             var request = new CommitRequest { Mutations = { _mutations } };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
-                var response = await _session.CommitAsync(request, CommitTimeout, cancellationToken).ConfigureAwait(false);
+                var callSettings = _connection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
+                var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
                 if (response.CommitTimestamp == null)
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
@@ -300,8 +305,9 @@ namespace Google.Cloud.Spanner.Data
         public Task RollbackAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
+            var callSettings = _connection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
             return ExecuteHelper.WithErrorTranslationAndProfiling(
-                () => _session.RollbackAsync(new RollbackRequest(), CommitTimeout, cancellationToken),
+                () => _session.RollbackAsync(new RollbackRequest(), callSettings),
                 "SpannerTransaction.Rollback", _connection.Logger);
         }
 
@@ -362,6 +368,6 @@ namespace Google.Cloud.Spanner.Data
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
             }
-        }        
+        }
     }
 }
