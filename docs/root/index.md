@@ -20,6 +20,7 @@ GA:
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
 - [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
 - [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
+- [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html)
 - [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate Log4Net integration package is available](Google.Cloud.Logging.Log4Net/index.html)
@@ -59,7 +60,6 @@ Beta:
   - [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html): Low-level access to Firestore API
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
   - Additionally, a [separate NLog integration package is available](Google.Cloud.Logging.NLog/index.html)
-- [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html)
 - [Google.Cloud.OsLogin.V1](Google.Cloud.OsLogin.V1/index.html)
 - [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)

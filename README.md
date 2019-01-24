@@ -14,6 +14,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Datastore.V1/) (GA)
 * Google Cloud Diagnostics for ASP.NET - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNet/) (GA)
 * Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (GA)
+* [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Kms.V1/) (GA)
 * [Google Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/) (GA)
   * Integration with Log4Net is provided via [Google.Cloud.Logging.Log4Net](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.Log4Net/) (GA)
 * [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (GA)
@@ -54,7 +55,6 @@ The following libraries are available at a [beta](#versioning) quality level:
   * [Google.Cloud.Firestore.V1](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Firestore.V1/): Low-level access to Firestore API
 * [Google Stackdriver Logging](https://cloud.google.com/logging/)
   * Integration with NLog is provided via [Google.Cloud.Logging.NLog](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.NLog/) (beta)
-* [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Kms.V1/) (beta)
 * [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (beta)
 * [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1/) (beta)
   * The [V1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) is also available (beta)
