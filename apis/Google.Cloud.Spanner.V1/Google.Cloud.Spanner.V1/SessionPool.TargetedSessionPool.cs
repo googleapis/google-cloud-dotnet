@@ -364,7 +364,8 @@ namespace Google.Cloud.Spanner.V1
                 Interlocked.Increment(ref _inFlightSessionCreationCount);
                 try
                 {
-                    await session.ExecuteSqlAsync(new ExecuteSqlRequest { Sql = "SELECT 1" }, Options.Timeout, CancellationToken.None).ConfigureAwait(false);
+                    var callSettings = Client.Settings.ExecuteSqlSettings.WithExpiration(Expiration.FromTimeout(Options.Timeout));
+                    await session.ExecuteSqlAsync(new ExecuteSqlRequest { Sql = "SELECT 1" }, callSettings).ConfigureAwait(false);
                 }
                 catch (RpcException e)
                 {
@@ -403,7 +404,10 @@ namespace Google.Cloud.Spanner.V1
                 var request = new BeginTransactionRequest { Options = options };
                 try
                 {
-                    var transaction = await session.BeginTransactionAsync(request, Options.Timeout, cancellationToken).ConfigureAwait(false);
+                    var callSettings = Client.Settings.BeginTransactionSettings
+                        .WithExpiration(Expiration.FromTimeout(Options.Timeout))
+                        .WithCancellationToken(cancellationToken);
+                    var transaction = await session.BeginTransactionAsync(request, callSettings).ConfigureAwait(false);
                     return session.WithTransaction(transaction.Id, options.ModeCase);
                 }
                 finally
@@ -583,7 +587,7 @@ namespace Google.Cloud.Spanner.V1
                 try
                 {
                     var callSettings = Client.Settings.CreateSessionSettings
-                        .WithExpiration(Client.Settings.ConvertTimeoutToExpiration(Options.Timeout))
+                        .WithExpiration(Expiration.FromTimeout(Options.Timeout))
                         .WithCancellationToken(cancellationToken);
                     Session sessionProto;
 

@@ -98,7 +98,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.BeginTransactionAsync(request, It.IsAny<CallSettings>()))
                 .ReturnsAsync(response)
                 .Verifiable();
-            await pooledSession.BeginTransactionAsync(request, 5, CancellationToken.None);
+            await pooledSession.BeginTransactionAsync(request, null);
 
             // The request will have extended the refresh time.
             Assert.Equal(clock.GetCurrentDateTimeUtc() + options.IdleSessionRefreshDelay, pooledSession.RefreshTimeForTest);
@@ -117,7 +117,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.BeginTransactionAsync(request, It.IsAny<CallSettings>()))
                 .ThrowsAsync(new RpcException(new Status(StatusCode.NotFound, "Session not found")))
                 .Verifiable();
-            await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, 5, CancellationToken.None));
+            await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, null));
             Assert.True(pooledSession.ServerExpired);
 
             pool.Mock.Verify();
@@ -134,7 +134,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.BeginTransactionAsync(request, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new Transaction())
                 .Verifiable();
-            await pooledSession.BeginTransactionAsync(request, 5, CancellationToken.None);
+            await pooledSession.BeginTransactionAsync(request, null);
             
             // The call modifies the request. (We can't easily check that it was modified before the RPC)
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
@@ -169,7 +169,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.CommitAsync(request, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new CommitResponse())
                 .Verifiable();
-            await sessionWithTransaction.CommitAsync(request, 5, CancellationToken.None);
+            await sessionWithTransaction.CommitAsync(request, null);
 
             // The call modifies the request. (We can't easily check that it was modified before the RPC)
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
@@ -192,7 +192,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.ExecuteSqlAsync(request, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new ResultSet())
                 .Verifiable();
-            await sessionWithTransaction.ExecuteSqlAsync(request, 5, CancellationToken.None);
+            await sessionWithTransaction.ExecuteSqlAsync(request, null);
 
             // The call modifies the request. (We can't easily check that it was modified before the RPC)
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
@@ -212,7 +212,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.ExecuteSqlAsync(request, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new ResultSet())
                 .Verifiable();
-            await pooledSession.ExecuteSqlAsync(request, 5, CancellationToken.None);
+            await pooledSession.ExecuteSqlAsync(request, null);
 
             // The call modifies the request's session, but not transaction.
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
@@ -251,7 +251,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.BeginTransactionAsync(request, It.IsAny<CallSettings>()))
                 .ThrowsAsync(new RpcException(new Status(StatusCode.NotFound, "Session not found")))
                 .Verifiable();
-            await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, 5, CancellationToken.None));
+            await Assert.ThrowsAsync<RpcException>(() => pooledSession.BeginTransactionAsync(request, null));
 
             // When we release the session, the pool should delete it even if we didn't ask it to.
             pooledSession.ReleaseToPool(false);
@@ -286,7 +286,7 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // We now can't make RPCs
             await Assert.ThrowsAsync<ObjectDisposedException>(
-                () => pooledSession.BeginTransactionAsync(new BeginTransactionRequest(), 5, CancellationToken.None));
+                () => pooledSession.BeginTransactionAsync(new BeginTransactionRequest(), null));
         }
 
         private class FakeSessionPool : SessionPool.ISessionPool

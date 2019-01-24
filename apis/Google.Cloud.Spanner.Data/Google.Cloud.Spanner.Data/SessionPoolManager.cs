@@ -51,7 +51,7 @@ namespace Google.Cloud.Spanner.Data
         public static SessionPoolManager Default { get; } =
             new SessionPoolManager(new SessionPoolOptions(), Logger.DefaultLogger, CreateClientAsync);
 
-        private readonly Func<SpannerClientCreationOptions, Logger, Task<SpannerClient>> _clientFactory;
+        private readonly Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> _clientFactory;
 
         private readonly ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool> _targetedPools =
             new ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool>();
@@ -69,6 +69,12 @@ namespace Google.Cloud.Spanner.Data
         internal Logger Logger { get; }
 
         /// <summary>
+        /// The SpannerSettings used by this SessionPoolManager. These are expected to remain unaltered for the lifetime of the manager.
+        /// Currently the default settings are used in all cases.
+        /// </summary>
+        internal SpannerSettings SpannerSettings { get; } = SpannerSettings.GetDefault();
+
+        /// <summary>
         /// Constructor for test purposes, allowing the SpannerClient creation to be customized (e.g. for
         /// fake clients).
         /// </summary>
@@ -78,7 +84,7 @@ namespace Google.Cloud.Spanner.Data
         internal SessionPoolManager(
             SessionPoolOptions options,
             Logger logger,
-            Func<SpannerClientCreationOptions, Logger, Task<SpannerClient>> clientFactory)
+            Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> clientFactory)
         {
             SessionPoolOptions = GaxPreconditions.CheckNotNull(options, nameof(options));
             Logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
@@ -148,7 +154,7 @@ namespace Google.Cloud.Spanner.Data
 
                 async Task<SessionPool> CreateSessionPoolAsync()
                 {
-                    var client = await parent._clientFactory.Invoke(channelOptions, parent.Logger).ConfigureAwait(false);
+                    var client = await parent._clientFactory.Invoke(channelOptions, parent.SpannerSettings, parent.Logger).ConfigureAwait(false);
                     var pool = new SessionPool(client, parent.SessionPoolOptions);
                     parent._poolReverseLookup.TryAdd(pool, this);
                     return pool;
@@ -256,7 +262,7 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <inheritdoc />
-        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, Logger logger)
+        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, SpannerSettings spannerSettings, Logger logger)
         {
             var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
             var channel = new Channel(channelOptions.Endpoint.Host, channelOptions.Endpoint.Port, credentials);
@@ -281,10 +287,7 @@ namespace Google.Cloud.Spanner.Data
             var endpoint = channelOptions.Endpoint;
             var callInvoker = new GcpCallInvoker(endpoint.Host, endpoint.Port, credentials, grpcOptions);
 
-            // We don't need to modify the default timeouts themselves, because we always go through a PooledSession call that accepts
-            // a per-call timeout.
-            var settings = new SpannerSettings { AllowImmediateTimeouts = channelOptions.AllowImmediateTimeouts };
-            return SpannerClient.Create(callInvoker, settings);
+            return SpannerClient.Create(callInvoker, spannerSettings);
         }
     }
 }

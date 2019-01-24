@@ -416,7 +416,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task CommandTimeout()
         {
             using (var connection =
-                new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerSettings.AllowImmediateTimeouts)}=true"))
+                new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerConnectionStringBuilder.AllowImmediateTimeouts)}=true"))
             {
                 var cmd = connection.CreateSelectCommand("SELECT 1");
                 cmd.CommandTimeout = 0;

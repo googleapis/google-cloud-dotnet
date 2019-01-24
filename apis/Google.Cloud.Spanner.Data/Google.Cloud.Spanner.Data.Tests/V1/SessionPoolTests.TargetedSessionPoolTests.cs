@@ -64,7 +64,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                      MaximumActiveSessions = 100,
                      MaximumConcurrentSessionCreates = 20,
                      MinimumPooledSessions = 10,
-                     Timeout = 60,
+                     Timeout = TimeSpan.FromSeconds(60),
                      WaitOnResourcesExhausted = ResourcesExhaustedBehavior.Block,
                      WriteSessionsFraction = 0.2
                 };
@@ -126,7 +126,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     await client.Scheduler.Delay(TimeSpan.FromMinutes(10)); // Not long enough to require a refresh
 
                     var timeBeforeSqlCall = client.Clock.GetCurrentDateTimeUtc();
-                    await firstSession.ExecuteSqlAsync(new ExecuteSqlRequest { Sql = "Client SQL" }, 5, default);
+                    await firstSession.ExecuteSqlAsync(new ExecuteSqlRequest { Sql = "Client SQL" }, null);
 
                     firstSession.ReleaseToPool(false);
 

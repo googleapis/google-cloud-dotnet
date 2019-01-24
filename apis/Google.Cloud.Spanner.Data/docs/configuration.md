@@ -135,11 +135,11 @@ when the application is heavily loaded.
 
 **Timeout**
 
-Default value: 60
+Default value: 60 seconds
 
-The total time in seconds allowed for a network call to the Cloud
-Spanner server, including retries. This setting is applied to calls
-to create, refresh and delete sessions, as well as beginning
+The total time allowed for a network call to the Cloud Spanner
+server, including retries. This setting is applied to calls to
+create, refresh and delete sessions, as well as beginning
 transactions.
 
 Applications rarely need to change this setting
