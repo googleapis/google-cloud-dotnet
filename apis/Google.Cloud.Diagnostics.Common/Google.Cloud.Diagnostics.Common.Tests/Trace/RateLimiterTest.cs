@@ -12,13 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -99,6 +95,41 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             // the check in the while loop and the increment leading to an over-count, and it would have
             // to take half a second to start the threads to lead to an under-count.)
             Assert.Equal(3, canTraceCounter);
+        }
+
+        [Fact]
+        public void CanTrace_Always_StressTest()
+        {
+            // Create a rate limiter that allows 1_000_000 QPS, which effectively means can trace always.
+            var rateLimiter = new RateLimiter(1_000_000, StopwatchTimer.Create());
+            int canTraceCounter = 0;
+            int canTraceQuestions = 0;
+            DateTime start = DateTime.UtcNow;
+            DateTime end = start.AddSeconds(5.5);
+            // Create 10 threads to run for a little over two seconds.
+            var threads = Enumerable.Range(0, 10)
+                .Select(_ => new Thread(() =>
+                {
+                    while (DateTime.UtcNow < end)
+                    {
+                        // Avoid completely tight-looping, so that we can actually start enough threads.
+                        // (Note that Thread.Yield isn't available on .NET Core.)
+                        Thread.Sleep(1);
+                        Interlocked.Increment(ref canTraceQuestions);
+                        if (rateLimiter.CanTrace())
+                        {
+                            Interlocked.Increment(ref canTraceCounter);
+                        }
+                    }
+                }))
+                .ToList();
+
+            // Start the threads and wait for them all to finish
+            threads.ForEach(t => t.Start());
+            threads.ForEach(t => t.Join());
+
+            // Since everything is to be traced, we should have as many traces as we attempted.
+            Assert.Equal(canTraceQuestions, canTraceCounter);
         }
     }
 }
