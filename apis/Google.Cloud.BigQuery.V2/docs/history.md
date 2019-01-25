@@ -1,9 +1,11 @@
 # Version history
 
-# 1.3.0-beta05, 2018-09-17
+# 1.3.0-beta07, 2019-01-25
 
 New features since 1.2.0:
 
+- Support for table clustering in `CreateTableOptions`
+- Nullable row count properties (`SafeTotalRows` and `NumDmlAffectedRows`) in `BigQueryResults`
 - Support for the `NUMERIC` type via `BigQueryNumeric`
 - Support for a projection to be specified when listing jobs
 - Support for time-based partitioning in load and query jobs
