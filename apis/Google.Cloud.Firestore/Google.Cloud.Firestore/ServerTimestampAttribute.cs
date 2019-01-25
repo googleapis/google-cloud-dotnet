@@ -17,9 +17,9 @@ using System;
 namespace Google.Cloud.Firestore
 {
     /// <summary>
-    /// Attribute indicating that a property value should be ignored on
-    /// creation and modification operations, using the server time for
-    /// the commit that modifies the document.
+    /// Attribute indicating that the value of the property within the .NET object should be ignored
+    /// when creating or modifying a document. Instead, the server time of the commit that creates
+    /// or modifies the document is automatically used to populate the value in the Firestore document.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public sealed class ServerTimestampAttribute  : Attribute
