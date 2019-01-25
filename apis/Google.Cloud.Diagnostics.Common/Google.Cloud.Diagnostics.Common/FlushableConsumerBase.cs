@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,33 +29,30 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>A semaphore to protect the buffer.</summary>
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1);
 
+        // TODO: Consider adding a semaphore to protect the consumer.
+        /// <summary>The consumer to flush to.</summary>
+        private readonly IConsumer<T> _consumer;
+
+        protected FlushableConsumerBase(IConsumer<T> consumer)
+        {
+            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
+        }
+
+        // TODO: Consider adding an async version of this method if and when it's needed.
         /// <summary>
         /// Accepts an enumerable of items while the semaphore is held.
         /// </summary>
         /// <param name="items">The items to receive. Must not be null.</param>
-        protected abstract void ReceiveWithSemaphoreHeld(IEnumerable<T> items);
+        /// <returns><code>true</code> if <see cref="Flush()"/> should be triggered after receiving.
+        /// <code>false</code> otherwise.</returns>
+        protected abstract bool ReceiveWithSemaphoreHeld(IEnumerable<T> items);
 
+        // TODO: Consider adding an async version of this method if and when it's needed.
         /// <summary>
-        /// Accepts an enumerable of items asynchronously while the semaphore is held.
+        /// Shallow copies the list of items currently in the consumer and resets it.
         /// </summary>
-        /// <param name="items">The items to receive. Must not be null.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        protected abstract Task ReceiveAsyncWithSemaphoreHeldAsync(
-            IEnumerable<T> items, CancellationToken cancellationToken);
-
-        /// <summary>
-        /// Flushes the consumer while the semaphore is held.
-        /// </summary>
-        protected abstract void FlushWithSemaphoreHeld();
-
-        /// <summary>
-        /// Flushes the consumer asynchronously while the semaphore is held.
-        /// </summary>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        protected abstract Task FlushAsyncWithSemaphoreHeldAsync(CancellationToken cancellationToken);
-
+        /// <returns>The shallow copy of items.</returns>
+        protected abstract IEnumerable<T> GetAndResetItemsWithSemaphoreHeld();
 
         /// <inheritdoc />
         public abstract void Dispose();
@@ -61,57 +60,105 @@ namespace Google.Cloud.Diagnostics.Common
         /// <inheritdoc />
         public void Receive(IEnumerable<T> items)
         {
+            IEnumerable<T> flushableItems = null;
             _semaphore.Wait();
             try
             {
-                ReceiveWithSemaphoreHeld(items);
+                if (ReceiveWithSemaphoreHeld(items))
+                {
+                    flushableItems = GetAndResetItemsWithSemaphoreHeld();
+                }
             }
             finally
             {
                 _semaphore.Release();
             }
+
+            Flush(flushableItems);
         }
 
         /// <inheritdoc />
         public async Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken)
         {
+            IEnumerable<T> flushableItems = null;
             await _semaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
             try
             {
-                await ReceiveAsyncWithSemaphoreHeldAsync(items, cancellationToken).ConfigureAwait(false);
+                if (ReceiveWithSemaphoreHeld(items))
+                {
+                    flushableItems = GetAndResetItemsWithSemaphoreHeld();
+                }
             }
             finally
             {
                 _semaphore.Release();
             }
+
+            await FlushAsync(flushableItems, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
         public void Flush()
         {
+            IEnumerable<T> flushableItems = null;
             _semaphore.Wait();
             try
             {
-                FlushWithSemaphoreHeld();
+                flushableItems = GetAndResetItemsWithSemaphoreHeld();
             }
             finally
             {
                 _semaphore.Release();
             }
+
+            Flush(flushableItems);
         }
 
         /// <inheritdoc />
         public async Task FlushAsync(CancellationToken cancellationToken = default)
         {
+            IEnumerable<T> flushableItems = null;
             await _semaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
             try
             {
-                await FlushAsyncWithSemaphoreHeldAsync(cancellationToken).ConfigureAwait(false);
+                flushableItems = GetAndResetItemsWithSemaphoreHeld();
             }
             finally
             {
                 _semaphore.Release();
             }
+
+            await FlushAsync(flushableItems, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Flushes an enumerable of items.
+        /// </summary>
+        /// <param name="items">The items to flush.</param>
+        private void Flush(IEnumerable<T> items)
+        {
+            if (items == null || !items.Any())
+            {
+                return;
+            }
+
+            _consumer.Receive(items);
+        }
+
+        /// <summary>
+        /// Flushes an enumerable of items asynchronously.
+        /// </summary>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <param name="items">The items to flush.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        private Task FlushAsync(IEnumerable<T> items, CancellationToken cancellationToken = default)
+        {
+            if (items == null || !items.Any())
+            {
+                return CommonUtils.CompletedTask;
+            }
+
+            return _consumer.ReceiveAsync(items, cancellationToken);
         }
     }
 }

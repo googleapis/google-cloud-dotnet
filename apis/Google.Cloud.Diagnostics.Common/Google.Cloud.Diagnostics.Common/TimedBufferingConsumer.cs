@@ -15,8 +15,7 @@
 using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -26,9 +25,6 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class TimedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>The consumer to flush to.</summary>
-        private readonly IConsumer<T> _consumer;
-
         /// <summary>
         /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
         /// </summary>
@@ -38,8 +34,8 @@ namespace Google.Cloud.Diagnostics.Common
         private IThreadingTimer _timer;
 
         internal TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IThreadingTimer timer)
+            : base(consumer)
         {
-            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _timer = GaxPreconditions.CheckNotNull(timer, nameof(timer));
             // Initialize the timer to flush ever wait time interval.
             _timer.Initialize((e) => {
@@ -49,8 +45,8 @@ namespace Google.Cloud.Diagnostics.Common
                 }
                 catch (Exception)
                 {
-                    // TODO(talarico): This is a short term solution to ensure 
-                    // we do not kill a process. See issue #2182 to track the long solution.
+                    // TODO(atarafamas): This is a short term solution to ensure 
+                    // we do not kill a process. See issue #2182 (currently in backlog) to track the long solution.
                 }
             }, waitTime);
         }
@@ -72,44 +68,19 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
+        protected override bool ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             _items.AddRange(items);
+            return false;
         }
 
         /// <inheritdoc />
-        protected override Task ReceiveAsyncWithSemaphoreHeldAsync(
-            IEnumerable<T> items, CancellationToken cancellationToken = default)
+        protected override IEnumerable<T> GetAndResetItemsWithSemaphoreHeld()
         {
-            GaxPreconditions.CheckNotNull(items, nameof(items));
-            _items.AddRange(items);
-            return CommonUtils.CompletedTask;
-        }
-
-        /// <inheritdoc />
-        protected override void FlushWithSemaphoreHeld()
-        {
-            if (_items.Count == 0)
-            {
-                return;
-            }
-
-            _consumer.Receive(_items);
-            _items = new List<T>();
-        }
-
-        /// <inheritdoc />
-        protected override Task FlushAsyncWithSemaphoreHeldAsync(CancellationToken cancellationToken)
-        {
-            if (_items.Count == 0)
-            {
-                return CommonUtils.CompletedTask;
-            }
-
             IList<T> old = _items;
             _items = new List<T>();
-            return _consumer.ReceiveAsync(old, cancellationToken);
+            return old;
         }
     }
 }

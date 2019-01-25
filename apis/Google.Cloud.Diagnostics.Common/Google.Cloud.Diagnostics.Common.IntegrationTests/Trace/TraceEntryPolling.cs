@@ -16,6 +16,7 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
@@ -40,9 +41,21 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// </summary>
         /// <param name="expectTrace">True if the trace is expected to exist.  This is used
         ///     to minimize RPC calls.</param>
-        public TraceProto GetTrace(string spanName, Timestamp startTime, bool expectTrace = true)
+        public TraceProto GetTrace(string spanName, Timestamp startTime, bool expectTrace = true) =>
+            GetTraces(spanName, startTime, expectTrace ? 1 : 0).FirstOrDefault();
+
+        /// <summary>
+        /// Gets traces containing the giving <paramref name="spanName"/>.
+        /// </summary>
+        /// <param name="spanName"> The name for the traces to get.</param>
+        /// <param name="startTime"> The start time of traces to get.</param>
+        /// <param name="minEntries"> Optional. The minimum number of entries to expect.
+        /// Default value is 1.</param>
+        /// <param name="pageSize"> Optional. The page size to use when making RPC calls.
+        /// Default value is 250.</param>
+        /// <returns></returns>
+        public IEnumerable<TraceProto> GetTraces(string spanName, Timestamp startTime, int minEntries = 1, int pageSize = 250)
         {
-            var minEntries = expectTrace ? 1 : 0;
             var traceList = GetEntries(minEntries, () =>
             {
                 ListTracesRequest request = new ListTracesRequest
@@ -51,11 +64,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                     StartTime = startTime,
                     View = ListTracesRequest.Types.ViewType.Complete,
                     Filter = $"span:\"{spanName}\"",
-                    PageSize = 250
+                    PageSize = pageSize
                 };
                 return _client.ListTraces(request);
             });
-            return traceList.FirstOrDefault();
+            return traceList;
         }
     }
 }

@@ -15,8 +15,6 @@
 using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -26,9 +24,6 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class SizedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>The consumer to flush to.</summary>
-        private readonly IConsumer<T> _consumer;
-
         /// <summary>A function to obtain the size of an item in bytes.</summary>
         private readonly Func<T, int> _sizer;
 
@@ -44,11 +39,11 @@ namespace Google.Cloud.Diagnostics.Common
         private int _size;
 
         private SizedBufferingConsumer(IConsumer<T> consumer, Func<T, int> sizer, int bufferSize)
+            : base(consumer)
         {
             GaxPreconditions.CheckArgument(
                 bufferSize > 0, nameof(bufferSize), "bufferSize must be greater than 0");
 
-            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _sizer = GaxPreconditions.CheckNotNull(sizer, nameof(sizer));
             _bufferSize = bufferSize;
 
@@ -69,61 +64,25 @@ namespace Google.Cloud.Diagnostics.Common
         public override void Dispose() => Flush();
 
         /// <inheritdoc />
-        protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
+        protected override bool ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             foreach (T item in items)
             {
                 _size += _sizer(item);
                 _items.Add(item);
-                if (_size >= _bufferSize)
-                {
-                    FlushWithSemaphoreHeld();
-                }
             }
+
+            return _size >= _bufferSize;
         }
 
-        /// <inheritdoc />
-        protected override async Task ReceiveAsyncWithSemaphoreHeldAsync(
-            IEnumerable<T> items, CancellationToken cancellationToken = default)
+        protected override IEnumerable<T> GetAndResetItemsWithSemaphoreHeld()
         {
-            GaxPreconditions.CheckNotNull(items, nameof(items));
-            foreach (T item in items)
-            {
-                _size += _sizer(item);
-                _items.Add(item);
-                if (_size >= _bufferSize)
-                {
-                    await FlushAsyncWithSemaphoreHeldAsync(cancellationToken).ConfigureAwait(false);
-                }
-            }
-        }
-
-        /// <inheritdoc />
-        protected override void FlushWithSemaphoreHeld()
-        {
-            if (_items.Count == 0)
-            {
-                return;
-            }
-            _consumer.Receive(_items);
-            _size = 0;
-            _items = new List<T>();
-        }
-
-        /// <inheritdoc />
-        protected override Task FlushAsyncWithSemaphoreHeldAsync(
-            CancellationToken cancellationToken = default)
-        {
-            if (_items.Count == 0)
-            {
-                return CommonUtils.CompletedTask;
-            }
-
             IList<T> old = _items;
             _items = new List<T>();
             _size = 0;
-            return _consumer.ReceiveAsync(old, cancellationToken);
+
+            return old;
         }
     }
 }
