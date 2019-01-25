@@ -16,6 +16,7 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -267,7 +268,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var traceUri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
             var traceStackTraceUri = $"/Trace/{nameof(TraceController.TraceStackTrace)}/{_testId}";
 
-            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestBufferHighQpsApplication>()))
+            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestTinyBufferHighQpsApplication>()))
             using (var client = server.CreateClient())
             {
                 // Make a trace with a small span that will not cause the buffer to flush.
@@ -315,16 +316,129 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Null(trace);
             }
         }
+
+        [Fact]
+        public async Task Trace_TimedBuffer_Stress()
+        {
+            var uri = $"/Trace/{_testId}";
+            // Not the best ever stress test but we are limited by read quotas anyway.
+            var requests = 300;
+            IList<Task<HttpResponseMessage>> responseTasks = new List<Task<HttpResponseMessage>>(300);
+            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestTimedBufferHighQpsApplication>()))
+            using (var client = server.CreateClient())
+            {
+                for (int i = 0; i < requests; i++)
+                {
+                    responseTasks.Add(client.GetAsync(uri));
+                }
+
+                await Task.WhenAll(responseTasks);
+            }
+
+            var traces = _polling.GetTraces(uri, _startTime, minEntries: requests);
+            Assert.Equal(requests, traces.Count());
+        }
+
+        [Fact]
+        public async Task Trace_SizedBufferMedium_Stress()
+        {
+            var uri = $"/Trace/{_testId}";
+            // Not the best ever stress test but we are limited by read quotas anyway.
+            var requests = 300;
+            IList<Task<HttpResponseMessage>> responseTasks = new List<Task<HttpResponseMessage>>(300);
+            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestMediumBufferHighQpsApplication>()))
+            using (var client = server.CreateClient())
+            {
+                for (int i = 0; i < requests; i++)
+                {
+                    responseTasks.Add(client.GetAsync(uri));
+                }
+
+                await Task.WhenAll(responseTasks);
+            }
+
+            // We expect only around 85% of traces to have been sent to the backend because of the
+            // size of the buffer, i.e. the last buffer won't flush because it won't reach the
+            // maximum buffer size during this test. That's entirely expected.
+            var minTraces = (int)((8.5 / 10) * requests);
+            var traces = _polling.GetTraces(uri, _startTime, minEntries: minTraces);
+            Assert.InRange(traces.Count(), minTraces, requests);
+        }
+
+        [Fact]
+        public async Task Trace_SizedBufferTinyPropagate_Stress()
+        {
+            var uri = $"/Trace/{_testId}";
+            // Not the best ever stress test but we are limited by read quotas anyway.
+            var requests = 300;
+            IList<Task<HttpResponseMessage>> responseTasks = new List<Task<HttpResponseMessage>>(300);
+            Task<HttpResponseMessage[]> whenAllTask = null;
+            // Using a Web Application that propagates tracing exceptions.
+            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestTinyBufferHighQpsPropagateApplication>()))
+            using (var client = server.CreateClient())
+            {
+                for (int i = 0; i < requests; i++)
+                {
+                    responseTasks.Add(client.GetAsync(uri));
+                }
+
+                // With such a tiny buffer (it fills with at most two traces), we have a lot of concurrent calls to the
+                // backend trying to send traces. Some of these will timeout, some of these will be successful.
+                // By default we don't propagate the exception but we are doing so for the purpose of this test.
+                // In the end the client code should configure the tracer with a properly sized buffer, qps value,
+                // exception handling etc. so that tracing works properly with their request volume. With our default values
+                // we guarantee that no exception occurred during tracing will propagate to the calling code. The side
+                // effect is that some traces might be missing that were intended to be traced.
+                whenAllTask = Task.WhenAll(responseTasks);
+                await Assert.ThrowsAsync<RpcException>(() => whenAllTask);
+            }
+
+            // Checking that all faulted requests are because of timeouts.
+            Assert.True(whenAllTask.Exception.InnerExceptions.All(e =>
+            {
+                var rpcException = e as RpcException;
+                return rpcException != null && 
+                (rpcException.StatusCode == StatusCode.DeadlineExceeded || rpcException.StatusCode == StatusCode.Unavailable) &&
+                rpcException.Status.Detail == "Deadline Exceeded";
+            }));
+
+            // We know how many requests failed, and those failed because 
+            // they couldn't flush at most 2 traces (the buffer fills with at most two traces).
+            // So we know the minimum number of traces to expect.
+            // Minus one because of the last buffer potentially not having filled.
+            var minTraces = requests - 2 * whenAllTask.Exception.InnerExceptions.Count - 1;
+            // We also know the maximum nuber of traces to expect, since for every failing request
+            // at least one trace was not flushed, supposing that that trace was bigger in size and filled
+            // the buffer by itself.
+            var maxTraces = requests - whenAllTask.Exception.InnerExceptions.Count;
+            var traces = _polling.GetTraces(uri, _startTime, minEntries: minTraces);
+            Assert.InRange(traces.Count(), minTraces, maxTraces);
+        }
     }
 
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
-    /// This app uses a size buffer (500 bytes) and will sample 1000000 QPS.
+    /// This app uses a size buffer (500 bytes) and will sample 1,000,000 QPS.
     /// </summary>
-    public class TraceTestBufferHighQpsApplication : AbstractTraceTestApplication
+    public class TraceTestTinyBufferHighQpsApplication : AbstractTraceTestApplication
     {
-        public override double GetSampleRate() => 1000000;
+        public override double GetSampleRate() => 1_000_000;
         public override BufferOptions GetBufferOptions() => BufferOptions.SizedBuffer(500);
+    }
+
+    public class TraceTestTinyBufferHighQpsPropagateApplication : TraceTestTinyBufferHighQpsApplication
+    {
+        public override RetryOptions GetRetryOptions() => RetryOptions.NoRetry(ExceptionHandling.Propagate);
+    }
+
+    /// <summary>
+    /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
+    /// This app uses a size buffer (default size / 4) and will sample 1,000,000 QPS.
+    /// </summary>
+    public class TraceTestMediumBufferHighQpsApplication : AbstractTraceTestApplication
+    {
+        public override double GetSampleRate() => 1_000_000;
+        public override BufferOptions GetBufferOptions() => BufferOptions.SizedBuffer(BufferOptions.DefaultBufferSize / 4);
     }
 
     /// <summary>
@@ -344,7 +458,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class TraceTestNoBufferHighQpsApplication : AbstractTraceTestApplication
     {
-        public override double GetSampleRate() => 1000000;
+        public override double GetSampleRate() => 1_000_000;
         public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
     }
 
@@ -361,6 +475,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
+    /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
+    /// This app uses a timed buffer and will sample 1,000,000 QPS.
+    /// This will allow all calls to be traced.
+    /// </summary>
+    public class TraceTestTimedBufferHighQpsApplication : AbstractTraceTestApplication
+    {
+        public override BufferOptions GetBufferOptions() => BufferOptions.TimedBuffer(TimeSpan.FromMilliseconds(500));
+
+        public override double GetSampleRate() => 1_000_000;
+    }
+
+    /// <summary>
     /// A base web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
     /// </summary>
     public abstract class AbstractTraceTestApplication
@@ -369,9 +495,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public abstract BufferOptions GetBufferOptions();
 
+        public virtual RetryOptions GetRetryOptions() => null;
+
         public void ConfigureServices(IServiceCollection services)
         {
-            var traceOptions = Common.TraceOptions.Create(GetSampleRate(), GetBufferOptions());
+            var traceOptions = Common.TraceOptions.Create(GetSampleRate(), GetBufferOptions(), GetRetryOptions());
             services.AddGoogleTrace(options =>
             {
                 options.ProjectId = TestEnvironment.GetTestProjectId();
