@@ -33,12 +33,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 () => new UserLogEntryLabelProvider(httpContextAccessor: null));
         }
 
-        [Fact]
-        public void AddsUserAuthenticatedLabel()
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void AddsUserAuthenticatedLabel(bool authenticated)
         {
             // Arrange
             var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User.Identity.IsAuthenticated).Returns(false);
+            mockHttpContext.Setup(x => x.User.Identity.IsAuthenticated).Returns(authenticated);
 
             var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
             mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
@@ -53,32 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Single(labels);
             var label = labels.Single();
             Assert.Equal("user_authenticated", label.Key);
-            Assert.Equal(false.ToString(), label.Value);
-        }
-
-        [Fact]
-        public void AddsUserNameLabelWithEmptyUserName()
-        {
-            // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User.Identity.IsAuthenticated).Returns(true);
-
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
-
-            var instance = new UserLogEntryLabelProvider(mockHttpContextAccessor.Object);
-            var labels = new Dictionary<string, string>();
-
-            // Act
-            instance.Invoke(labels);
-
-            // Assert
-            var expected = new Dictionary<string, string>
-            {
-                { "user_authenticated", true.ToString() },
-                { "user_name", null }
-            };
-            Assert.Equal(expected, labels);
+            Assert.Equal(authenticated.ToString(), label.Value);
         }
 
         [Fact]

@@ -50,5 +50,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal("aspnetcore_environment", label.Key);
             Assert.Equal(EnvironmentName.Production, label.Value);
         }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        public void SkipsNullOrEmptyEnvironmentName(string label)
+        {
+            // Arrange
+            var hostingEnvironmentMock = new Mock<IHostingEnvironment>();
+            hostingEnvironmentMock.Setup(x => x.EnvironmentName).Returns(label);
+
+            var instance = new EnvironmentNameLogEntryLabelProvider(hostingEnvironmentMock.Object);
+            var labels = new Dictionary<string, string>();
+
+            // Act
+            instance.Invoke(labels);
+
+            // Assert
+            Assert.Empty(labels);
+        }
     }
 }
