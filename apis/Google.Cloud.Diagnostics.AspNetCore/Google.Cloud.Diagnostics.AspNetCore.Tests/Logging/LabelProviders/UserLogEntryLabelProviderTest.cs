@@ -57,31 +57,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void AddsUserNameLabelWithEmptyUserName()
-        {
-            // Arrange
-            var mockHttpContext = new Mock<HttpContext>();
-            mockHttpContext.Setup(x => x.User.Identity.IsAuthenticated).Returns(true);
-
-            var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
-            mockHttpContextAccessor.Setup(x => x.HttpContext).Returns(mockHttpContext.Object);
-
-            var instance = new UserLogEntryLabelProvider(mockHttpContextAccessor.Object);
-            var labels = new Dictionary<string, string>();
-
-            // Act
-            instance.Invoke(labels);
-
-            // Assert
-            var expected = new Dictionary<string, string>
-            {
-                { "user_authenticated", true.ToString() },
-                { "user_name", null }
-            };
-            Assert.Equal(expected, labels);
-        }
-
-        [Fact]
         public void AddsUserNameLabelWithUserName()
         {
             // Arrange
