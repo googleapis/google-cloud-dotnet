@@ -194,7 +194,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 JsonPayload = jsonStruct,
-                Labels = { labels },
+                Labels = { labels.Where(kvp => !string.IsNullOrEmpty(kvp.Value)).ToDictionary(kvp => kvp.Key, kvp => kvp.Value) },
                 Trace = GetTraceName() ?? "",
             };
 

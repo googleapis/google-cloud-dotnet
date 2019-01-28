@@ -360,6 +360,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
+        public void Log_SkipsNullLabels()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                return !entry.Labels.Any();
+            };
+
+            var mockServiceProvider = new Mock<IServiceProvider>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
+            logger.LogInformation(_logMessage);
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void Log_Labels_DefaultLabelsFirst()
         {
             var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
@@ -406,6 +426,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Invoke(Dictionary<string, string> labels)
         {
             labels["Bar"] = "World";
+        }
+    }
+
+    internal class EmptyLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            labels["Null"] = null;
+            labels["Empty"] = string.Empty;
         }
     }
 }
