@@ -38,7 +38,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <inheritdoc/>
         public void Invoke(Dictionary<string, string> labels)
         {
-            labels["aspnetcore_environment"] = _hostingEnvironment.EnvironmentName;
+            labels["aspnetcore_environment"] = _hostingEnvironment.EnvironmentName ?? "N/A";
         }
     }
 }
