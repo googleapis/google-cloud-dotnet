@@ -92,113 +92,117 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <inheritdoc />
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            GaxPreconditions.CheckNotNull(formatter, nameof(formatter));
-
-            if (!IsEnabled(logLevel))
+            try
             {
-                return;
-            }
+                GaxPreconditions.CheckNotNull(formatter, nameof(formatter));
 
-            string message = formatter(state, exception);
-            if (string.IsNullOrEmpty(message))
-            {
-                return;
-            }
-
-            var jsonStruct = new Struct();
-            jsonStruct.Fields.Add("message", Value.ForString(message));
-            jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
-
-            if (eventId.Id != 0 || eventId.Name != null)
-            {
-                var eventStruct = new Struct();
-                if (eventId.Id != 0)
+                if (!IsEnabled(logLevel))
                 {
-                    eventStruct.Fields.Add("id", Value.ForNumber(eventId.Id));
-                }
-                if (!string.IsNullOrWhiteSpace(eventId.Name))
-                {
-                    eventStruct.Fields.Add("name", Value.ForString(eventId.Name));
-                }
-                jsonStruct.Fields.Add("event_id", Value.ForStruct(eventStruct));
-            }
-
-            // If we have format params and its more than just the original message add them.
-            if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
-                !(formatParams.Count() == 1 && formatParams.Single().Key.Equals("{OriginalFormat}")))
-            {
-                var paramStruct = new Struct();
-                foreach (var pair in formatParams)
-                {
-                    // Consider adding formatting support for values that are IFormattable.
-                    paramStruct.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
+                    return;
                 }
 
-                if (paramStruct.Fields.Count > 0)
+                string message = formatter(state, exception);
+                if (string.IsNullOrEmpty(message))
                 {
-                    jsonStruct.Fields.Add("format_parameters", Value.ForStruct(paramStruct));
+                    return;
                 }
-            }
 
-            var currentLogScope = GoogleLoggerScope.Current;
-            if (currentLogScope != null)
-            {
-                jsonStruct.Fields.Add("scope", Value.ForString(currentLogScope.ToString()));
-            }
+                var jsonStruct = new Struct();
+                jsonStruct.Fields.Add("message", Value.ForString(message));
+                jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
 
-            // Create a map of format parameters of all the parent scopes,
-            // starting from the most inner scope to the top-level scope.
-            var scopeParamsList = new List<Value>();
-            while (currentLogScope != null)
-            {
-                // Determine if the state of the scope are format params
-                if (currentLogScope.State is FormattedLogValues scopeFormatParams)
+                if (eventId.Id != 0 || eventId.Name != null)
                 {
-                    var scopeParams = new Struct();
-                    foreach (var pair in scopeFormatParams)
+                    var eventStruct = new Struct();
+                    if (eventId.Id != 0)
                     {
-                        scopeParams.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
+                        eventStruct.Fields.Add("id", Value.ForNumber(eventId.Id));
+                    }
+                    if (!string.IsNullOrWhiteSpace(eventId.Name))
+                    {
+                        eventStruct.Fields.Add("name", Value.ForString(eventId.Name));
+                    }
+                    jsonStruct.Fields.Add("event_id", Value.ForStruct(eventStruct));
+                }
+
+                // If we have format params and its more than just the original message add them.
+                if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
+                    !(formatParams.Count() == 1 && formatParams.Single().Key.Equals("{OriginalFormat}")))
+                {
+                    var paramStruct = new Struct();
+                    foreach (var pair in formatParams)
+                    {
+                        // Consider adding formatting support for values that are IFormattable.
+                        paramStruct.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
                     }
 
-                    scopeParamsList.Add(Value.ForStruct(scopeParams));
+                    if (paramStruct.Fields.Count > 0)
+                    {
+                        jsonStruct.Fields.Add("format_parameters", Value.ForStruct(paramStruct));
+                    }
                 }
 
-                currentLogScope = currentLogScope.Parent;
-            }
-
-            if (scopeParamsList.Count > 0)
-            {
-                jsonStruct.Fields.Add("parent_scopes", Value.ForList(scopeParamsList.ToArray()));
-            }
-
-            Dictionary<string, string> labels;
-            var labelProviders = GetLabelProviders()?.ToArray();
-            if (labelProviders?.Length > 0)
-            {
-                // Create a copy of the labels from the options and invoke each provider
-                labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-                foreach (var provider in labelProviders)
+                var currentLogScope = GoogleLoggerScope.Current;
+                if (currentLogScope != null)
                 {
-                    provider.Invoke(labels);
+                    jsonStruct.Fields.Add("scope", Value.ForString(currentLogScope.ToString()));
                 }
-            }
-            else
-            {
-                labels = _loggerOptions.Labels;
-            }
 
-            LogEntry entry = new LogEntry
-            {
-                Resource = _loggerOptions.MonitoredResource,
-                LogName = _fullLogName,
-                Severity = logLevel.ToLogSeverity(),
-                Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
-                JsonPayload = jsonStruct,
-                Labels = { labels },
-                Trace = GetTraceName() ?? "",
-            };
+                // Create a map of format parameters of all the parent scopes,
+                // starting from the most inner scope to the top-level scope.
+                var scopeParamsList = new List<Value>();
+                while (currentLogScope != null)
+                {
+                    // Determine if the state of the scope are format params
+                    if (currentLogScope.State is FormattedLogValues scopeFormatParams)
+                    {
+                        var scopeParams = new Struct();
+                        foreach (var pair in scopeFormatParams)
+                        {
+                            scopeParams.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
+                        }
 
-            _consumer.Receive(new[] { entry });
+                        scopeParamsList.Add(Value.ForStruct(scopeParams));
+                    }
+
+                    currentLogScope = currentLogScope.Parent;
+                }
+
+                if (scopeParamsList.Count > 0)
+                {
+                    jsonStruct.Fields.Add("parent_scopes", Value.ForList(scopeParamsList.ToArray()));
+                }
+
+                Dictionary<string, string> labels;
+                var labelProviders = GetLabelProviders()?.ToArray();
+                if (labelProviders?.Length > 0)
+                {
+                    // Create a copy of the labels from the options and invoke each provider
+                    labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                    foreach (var provider in labelProviders)
+                    {
+                        provider.Invoke(labels);
+                    }
+                }
+                else
+                {
+                    labels = _loggerOptions.Labels;
+                }
+
+                LogEntry entry = new LogEntry
+                {
+                    Resource = _loggerOptions.MonitoredResource,
+                    LogName = _fullLogName,
+                    Severity = logLevel.ToLogSeverity(),
+                    Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
+                    JsonPayload = jsonStruct,
+                    Labels = { labels },
+                    Trace = GetTraceName() ?? "",
+                };
+
+                _consumer.Receive(new[] { entry });
+            }
+            catch (Exception) when (_loggerOptions.RetryOptions.ExceptionHandling == ExceptionHandling.Ignore) { }
         }
 
         /// <summary>

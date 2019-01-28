@@ -38,9 +38,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             if (httpContext.User?.Identity != null)
             {
                 labels["user_authenticated"] = httpContext.User.Identity.IsAuthenticated.ToString();
-                if (httpContext.User.Identity.IsAuthenticated)
+                var userName = GetUserName(httpContext.User.Identity);
+                if (httpContext.User.Identity.IsAuthenticated && !string.IsNullOrEmpty(userName))
                 {
-                    labels["user_name"] = GetUserName(httpContext.User.Identity);
+                    labels["user_name"] = userName;
                 }
             }
         }

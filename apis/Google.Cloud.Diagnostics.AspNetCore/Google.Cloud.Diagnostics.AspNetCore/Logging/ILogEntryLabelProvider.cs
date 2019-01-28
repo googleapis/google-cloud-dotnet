@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -24,7 +25,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Invokes the provider to augment log entry labels.
         /// </summary>
-        /// <param name="labels">A dictionary of log entry labels.</param>
+        /// <param name="labels">A dictionary of log entry labels.
+        /// Keys and values added to <paramref name="labels"/> should not be null.
+        /// If they are, an exception will be throw when attempting to log an entry.
+        /// The entry won't be logged and the exception will be propagated depending
+        /// on the value of <see cref="RetryOptions.ExceptionHandling"/>.</param>
         void Invoke(Dictionary<string, string> labels);
     }
 }

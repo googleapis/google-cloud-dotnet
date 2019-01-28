@@ -202,9 +202,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void Log_NullFormatter()
         {
-            var logger = GetLogger(new Mock<IConsumer<LogEntry>>().Object);
-            Assert.Throws<ArgumentNullException>(
-                () => logger.Log(LogLevel.Information, 0, _logMessage, s_exception, null));
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            var logger = GetLogger(mockConsumer.Object);
+            logger.Log(LogLevel.Information, 0, _logMessage, s_exception, null);
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never());
         }
 
         [Fact]
@@ -360,6 +361,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
+        public void Log_DoesNotLogIfNullLabels()
+        {
+            var mockServiceProvider = new Mock<IServiceProvider>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
+            logger.LogInformation(_logMessage);
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never);
+        }
+
+        [Fact]
         public void Log_Labels_DefaultLabelsFirst()
         {
             var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
@@ -406,6 +420,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Invoke(Dictionary<string, string> labels)
         {
             labels["Bar"] = "World";
+        }
+    }
+
+    internal class EmptyLogEntryLabelProvider : ILogEntryLabelProvider
+    {
+        public void Invoke(Dictionary<string, string> labels)
+        {
+            labels["Null"] = null;
+            labels["Empty"] = string.Empty;
         }
     }
 }

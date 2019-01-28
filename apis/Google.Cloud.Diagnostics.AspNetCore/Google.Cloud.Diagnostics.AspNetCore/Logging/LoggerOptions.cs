@@ -45,6 +45,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public RetryOptions RetryOptions { get; }
 
         /// <summary>Custom labels for log entries.</summary>
+        /// <remarks>Keys and values added to <see cref="Labels"/> should not be null.
+        /// If they are, an exception will be throw when attempting to log an entry.
+        /// The entry won't be logged and the exception will be propagated depending
+        /// on the value of <see cref="RetryOptions.ExceptionHandling"/>.</remarks>
         public Dictionary<string, string> Labels { get; }
 
         private LoggerOptions(
@@ -68,10 +72,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="logLevel">Optional, the minimum log level.  Defaults to <see cref="LogLevel.Information"/></param>
         /// <param name="logName">Optional, the name of the log.  Defaults to 'aspnetcore'.</param>
-        /// <param name="labels">Optional, custom labels to be added to log entries.</param>
+        /// <param name="labels">Optional, custom labels to be added to log entries.
+        /// Keys and values added to <paramref name="labels"/> should not be null.
+        /// If they are, an exception will be throw when attempting to log an entry.
+        /// The entry won't be logged and the exception will be propagated depending
+        /// on the value of <see cref="RetryOptions.ExceptionHandling"/>.</param>
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
-        ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
-        ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
+        /// be automatically detected if it is not set and will default to the global resource if the detection fails.
+        /// See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         /// <param name="retryOptions">Optional, the retry options.  Defaults to a <see cref="RetryType.None"/></param>
         public static LoggerOptions Create(
