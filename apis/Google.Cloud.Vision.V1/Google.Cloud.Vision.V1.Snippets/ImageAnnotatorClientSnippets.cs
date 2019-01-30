@@ -276,7 +276,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             }
             // End snippet
             Assert.Equal(1, logos.Count);
-            Assert.Equal("Google Chrome", logos[0].Description);
+            Assert.Contains("chrome", logos[0].Description, StringComparison.OrdinalIgnoreCase);
         }
 
         // See-also: DetectLogos(*, *, *, *)
