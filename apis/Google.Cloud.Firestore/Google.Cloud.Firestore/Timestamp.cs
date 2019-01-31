@@ -151,7 +151,7 @@ namespace Google.Cloud.Firestore
         {
             // Note: assumes normalized form.
             int secondsComparison = _seconds.CompareTo(other._seconds);
-            return secondsComparison != 0 ? secondsComparison : _nanoseconds.CompareTo(_nanoseconds);
+            return secondsComparison != 0 ? secondsComparison : _nanoseconds.CompareTo(other._nanoseconds);
         }
 
         /// <inheritdoc />

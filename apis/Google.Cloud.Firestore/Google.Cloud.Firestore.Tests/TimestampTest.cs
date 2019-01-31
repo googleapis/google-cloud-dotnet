@@ -49,6 +49,7 @@ namespace Google.Cloud.Firestore.Tests
             AssertComparisonAndReverse(t1, t2, 0);
             AssertComparisonAndReverse(t1, t3, -1);
             AssertComparisonAndReverse(t1, t4, -1);
+            AssertComparisonAndReverse(t3, t4, -1);
 
             void AssertComparisonAndReverse(Timestamp x, Timestamp y, int expectedSign)
             {
