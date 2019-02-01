@@ -92,11 +92,11 @@ namespace Google.Cloud.Firestore
         /// </summary>
         /// <typeparam name="T">The type to deserialize the document data as.</typeparam>
         /// <returns>The deserialized data, or null if this object represents a missing document.</returns>
-        public T ConvertTo<T>() where T : class
+        public T ConvertTo<T>() 
         {
             if (!Exists)
             {
-                return null;
+                return default(T);
             }
             return (T) ValueDeserializer.DeserializeMap(Database, Document.Fields, typeof(T));
         }
