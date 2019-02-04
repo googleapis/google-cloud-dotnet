@@ -375,6 +375,19 @@
   },
 
   {
+    "id": "Google.Cloud.Irm.V1Alpha2",
+    "productName": "Stackdriver Incident Response and Management (IRM)",
+    "productUrl": "https://cloud.google.com/incident-response/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "gRPC services for the Stackdriver Incident Response & Management API.",
+    "tags": [ "IRM", "Incident Response", "Incident Management", "Stackdriver" ],
+    "dependencies": {
+      "Google.Cloud.Monitoring.V3": "1.0.0",
+    }
+  },
+
+  {
     "id": "Google.Cloud.Kms.V1",
     "productName": "Google Cloud Key Management Service",
     "productUrl": "https://cloud.google.com/kms/",
