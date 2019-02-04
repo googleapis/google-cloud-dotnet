@@ -45,25 +45,26 @@ namespace Google.Cloud.Asset.V1Beta1 {
             "dG9yeVJlc3BvbnNlEjkKBmFzc2V0cxgBIAMoCzIpLmdvb2dsZS5jbG91ZC5h",
             "c3NldC52MWJldGExLlRlbXBvcmFsQXNzZXQiZAoMT3V0cHV0Q29uZmlnEkUK",
             "D2djc19kZXN0aW5hdGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MWJldGExLkdjc0Rlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24iHQoOR2Nz",
-            "RGVzdGluYXRpb24SCwoDdXJpGAEgASgJKkkKC0NvbnRlbnRUeXBlEhwKGENP",
-            "TlRFTlRfVFlQRV9VTlNQRUNJRklFRBAAEgwKCFJFU09VUkNFEAESDgoKSUFN",
-            "X1BPTElDWRACMuADCgxBc3NldFNlcnZpY2USyQEKDEV4cG9ydEFzc2V0cxIv",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MWJldGExLkV4cG9ydEFzc2V0c1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAmMiKS92",
-            "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn06ZXhwb3J0QXNzZXRzOgEqWjMi",
-            "Li92MWJldGExL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfTpleHBvcnRBc3Nl",
-            "dHM6ASoSgwIKFUJhdGNoR2V0QXNzZXRzSGlzdG9yeRI4Lmdvb2dsZS5jbG91",
-            "ZC5hc3NldC52MWJldGExLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3Qa",
-            "OS5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5CYXRjaEdldEFzc2V0c0hp",
-            "c3RvcnlSZXNwb25zZSJ1gtPkkwJvEjIvdjFiZXRhMS97cGFyZW50PXByb2pl",
-            "Y3RzLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeVo5EjcvdjFiZXRhMS97cGFy",
-            "ZW50PW9yZ2FuaXphdGlvbnMvKn06YmF0Y2hHZXRBc3NldHNIaXN0b3J5QrAB",
-            "Ch5jb20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTFCEUFzc2V0U2Vydmlj",
-            "ZVByb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvYXNzZXQvdjFiZXRhMTthc3NldKoCGkdvb2dsZS5DbG91ZC5B",
-            "c3NldC5WMUJldGExygIaR29vZ2xlXENsb3VkXEFzc2V0XFYxYmV0YTFiBnBy",
-            "b3RvMw=="));
+            "MWJldGExLkdjc0Rlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24iLQoOR2Nz",
+            "RGVzdGluYXRpb24SDQoDdXJpGAEgASgJSABCDAoKb2JqZWN0X3VyaSpJCgtD",
+            "b250ZW50VHlwZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghS",
+            "RVNPVVJDRRABEg4KCklBTV9QT0xJQ1kQAjKRBAoMQXNzZXRTZXJ2aWNlEvoB",
+            "CgxFeHBvcnRBc3NldHMSLy5nb29nbGUuY2xvdWQuYXNzZXQudjFiZXRhMS5F",
+            "eHBvcnRBc3NldHNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiKZAYLT5JMCkgEiKS92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn06",
+            "ZXhwb3J0QXNzZXRzOgEqWi0iKC92MWJldGExL3twYXJlbnQ9Zm9sZGVycy8q",
+            "fTpleHBvcnRBc3NldHM6ASpaMyIuL3YxYmV0YTEve3BhcmVudD1vcmdhbml6",
+            "YXRpb25zLyp9OmV4cG9ydEFzc2V0czoBKhKDAgoVQmF0Y2hHZXRBc3NldHNI",
+            "aXN0b3J5EjguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxYmV0YTEuQmF0Y2hHZXRB",
+            "c3NldHNIaXN0b3J5UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5hc3NldC52MWJl",
+            "dGExLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlc3BvbnNlInWC0+STAm8SMi92",
+            "MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn06YmF0Y2hHZXRBc3NldHNIaXN0",
+            "b3J5WjkSNy92MWJldGExL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qfTpiYXRj",
+            "aEdldEFzc2V0c0hpc3RvcnlCsAEKHmNvbS5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djFiZXRhMUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hc3NldC92MWJldGExO2Fz",
+            "c2V0qgIaR29vZ2xlLkNsb3VkLkFzc2V0LlYxQmV0YTHKAhpHb29nbGVcQ2xv",
+            "dWRcQXNzZXRcVjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Asset.V1Beta1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1Beta1.ContentType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -72,7 +73,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1Beta1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.OutputConfig), global::Google.Cloud.Asset.V1Beta1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.GcsDestination), global::Google.Cloud.Asset.V1Beta1.GcsDestination.Parser, new[]{ "Uri" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1Beta1.GcsDestination), global::Google.Cloud.Asset.V1Beta1.GcsDestination.Parser, new[]{ "Uri" }, new[]{ "ObjectUri" }, null, null)
           }));
     }
     #endregion
@@ -145,9 +146,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The relative name of the root asset. This can only be an organization
-    /// number (such as "organizations/123"), a project ID (such as
-    /// "projects/my-project-id"), or a project number (such as "projects/12345").
+    /// Required. The relative name of the root asset. This can only be an
+    /// organization number (such as "organizations/123"), a project ID (such as
+    /// "projects/my-project-id"), a project number (such as "projects/12345"), or
+    /// a folder number (such as "folders/123").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -161,11 +163,11 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ReadTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp readTime_;
     /// <summary>
-    /// Timestamp to take an asset snapshot. This can only be set to a timestamp in
-    /// the past or of the current time. If not specified, the current time will be
-    /// used. Due to delays in resource data collection and indexing, there is a
-    /// volatile window during which running the same query may get different
-    /// results.
+    /// Timestamp to take an asset snapshot. This can only be set to a timestamp
+    /// between 2018-10-02 UTC (inclusive) and the current time. If not specified,
+    /// the current time will be used. Due to delays in resource data collection
+    /// and indexing, there is a volatile window during which running the same
+    /// query may get different results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
@@ -182,7 +184,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// A list of asset types of which to take a snapshot for. For example:
-    /// "google.compute.disk". If specified, only matching assets will be returned.
+    /// "google.compute.Disk". If specified, only matching assets will be returned.
+    /// See [Introduction to Cloud Asset
+    /// Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
+    /// for all supported asset types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> AssetTypes {
@@ -646,9 +651,12 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int ReadTimeWindowFieldNumber = 4;
     private global::Google.Cloud.Asset.V1Beta1.TimeWindow readTimeWindow_;
     /// <summary>
-    /// Required. The time window for the asset history. The start time is
-    /// required. The returned results contain all temporal assets whose time
-    /// window overlap with read_time_window.
+    /// Optional. The time window for the asset history. Both start_time and
+    /// end_time are optional and if set, it must be after 2018-10-02 UTC. If
+    /// end_time is not set, it is default to current timestamp. If start_time is
+    /// not set, the snapshot of the assets at end_time will be returned. The
+    /// returned results contain all temporal assets whose time window overlap with
+    /// read_time_window.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1Beta1.TimeWindow ReadTimeWindow {
@@ -1115,7 +1123,12 @@ namespace Google.Cloud.Asset.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GcsDestination(GcsDestination other) : this() {
-      uri_ = other.uri_;
+      switch (other.ObjectUriCase) {
+        case ObjectUriOneofCase.Uri:
+          Uri = other.Uri;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1126,18 +1139,38 @@ namespace Google.Cloud.Asset.V1Beta1 {
 
     /// <summary>Field number for the "uri" field.</summary>
     public const int UriFieldNumber = 1;
-    private string uri_ = "";
     /// <summary>
-    /// The path of the Cloud Storage objects. It's the same path that is used by
-    ///  gsutil. For example: "gs://bucket_name/object_path". See [Viewing and Editing Object Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
+    /// The uri of the Cloud Storage object. It's the same uri that is used by
+    /// gsutil. For example: "gs://bucket_name/object_name". See [Viewing and
+    /// Editing Object
+    /// Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
     /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
-      get { return uri_; }
+      get { return objectUriCase_ == ObjectUriOneofCase.Uri ? (string) objectUri_ : ""; }
       set {
-        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        objectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        objectUriCase_ = ObjectUriOneofCase.Uri;
       }
+    }
+
+    private object objectUri_;
+    /// <summary>Enum of possible cases for the "object_uri" oneof.</summary>
+    public enum ObjectUriOneofCase {
+      None = 0,
+      Uri = 1,
+    }
+    private ObjectUriOneofCase objectUriCase_ = ObjectUriOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ObjectUriOneofCase ObjectUriCase {
+      get { return objectUriCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearObjectUri() {
+      objectUriCase_ = ObjectUriOneofCase.None;
+      objectUri_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1154,13 +1187,15 @@ namespace Google.Cloud.Asset.V1Beta1 {
         return true;
       }
       if (Uri != other.Uri) return false;
+      if (ObjectUriCase != other.ObjectUriCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (objectUriCase_ == ObjectUriOneofCase.Uri) hash ^= Uri.GetHashCode();
+      hash ^= (int) objectUriCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1174,7 +1209,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Uri.Length != 0) {
+      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
@@ -1186,7 +1221,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Uri.Length != 0) {
+      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (_unknownFields != null) {
@@ -1200,9 +1235,12 @@ namespace Google.Cloud.Asset.V1Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Uri.Length != 0) {
-        Uri = other.Uri;
+      switch (other.ObjectUriCase) {
+        case ObjectUriOneofCase.Uri:
+          Uri = other.Uri;
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

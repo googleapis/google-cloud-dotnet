@@ -270,7 +270,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
   }
 
   /// <summary>
-  /// A time window of [start_time, end_time).
+  /// A time window of (start_time, end_time].
   /// </summary>
   public sealed partial class TimeWindow : pb::IMessage<TimeWindow> {
     private static readonly pb::MessageParser<TimeWindow> _parser = new pb::MessageParser<TimeWindow>(() => new TimeWindow());
@@ -311,7 +311,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int StartTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Start time of the time window (inclusive).
+    /// Start time of the time window (exclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -325,7 +325,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// End time of the time window (exclusive).
+    /// End time of the time window (inclusive).
     /// Current timestamp if not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -509,7 +509,7 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int AssetTypeFieldNumber = 2;
     private string assetType_ = "";
     /// <summary>
-    /// Type of the asset. Example: "google.compute.disk".
+    /// Type of the asset. Example: "google.compute.Disk".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AssetType {
