@@ -22,7 +22,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
-    using SearchSimilarIncidentsResponse.Types;
+    using static SearchSimilarIncidentsResponse.Types;
     using System;
     using System.Collections;
     using System.Collections.Generic;

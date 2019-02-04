@@ -19,7 +19,6 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using st = SearchSimilarIncidentsResponse.Types;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
