@@ -45,11 +45,11 @@ namespace Google.Cloud.Storage.V1.Tests
                 var uriString = signer.Sign(bucket, obj, expiry, HttpMethod.Get);
                 var parameters = ExtractQueryParameters(uriString);
 
-                Assert.Equal("GOOG4-RSA-SHA256", parameters["X-Goog-Algorithm"]);
-                Assert.Equal("test-account%40spec-test-ruby-samples.iam.gserviceaccount.com%2F20181119%2Fauto%2Fgcs%2Fgoog4_request", parameters["X-Goog-Credential"]);
-                Assert.Equal("20181119T055654Z", parameters["X-Goog-Date"]);
-                Assert.Equal("3600", parameters["X-Goog-Expires"]);
-                Assert.Equal("host", parameters["X-Goog-SignedHeaders"]);
+                Assert.Equal("GOOG4-RSA-SHA256", parameters["x-goog-algorithm"]);
+                Assert.Equal("test-account%40spec-test-ruby-samples.iam.gserviceaccount.com%2F20181119%2Fauto%2Fgcs%2Fgoog4_request", parameters["x-goog-credential"]);
+                Assert.Equal("20181119T055654Z", parameters["x-goog-date"]);
+                Assert.Equal("3600", parameters["x-goog-expires"]);
+                Assert.Equal("host", parameters["x-goog-signedheaders"]);
                 
                 // No check for the exact signature.
             }
