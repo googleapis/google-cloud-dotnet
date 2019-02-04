@@ -342,8 +342,7 @@ namespace Google.Cloud.TextToSpeech.V1
         }
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="languageCode">
         /// Optional (but recommended)
@@ -371,8 +370,7 @@ namespace Google.Cloud.TextToSpeech.V1
                 callSettings);
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="languageCode">
         /// Optional (but recommended)
@@ -397,8 +395,7 @@ namespace Google.Cloud.TextToSpeech.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="languageCode">
         /// Optional (but recommended)
@@ -426,8 +423,7 @@ namespace Google.Cloud.TextToSpeech.V1
                 callSettings);
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -446,8 +442,7 @@ namespace Google.Cloud.TextToSpeech.V1
         }
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -465,8 +460,7 @@ namespace Google.Cloud.TextToSpeech.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -693,8 +687,7 @@ namespace Google.Cloud.TextToSpeech.V1
         partial void Modify_SynthesizeSpeechRequest(ref SynthesizeSpeechRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -714,8 +707,7 @@ namespace Google.Cloud.TextToSpeech.V1
         }
 
         /// <summary>
-        /// Returns a list of [Voice][google.cloud.texttospeech.v1.Voice]
-        /// supported for synthesis.
+        /// Returns a list of Voice supported for synthesis.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
