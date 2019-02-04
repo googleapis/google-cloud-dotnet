@@ -19,7 +19,6 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using st = SearchJobsResponse.Types;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -2031,18 +2030,4 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
-
-    public partial class SearchJobsRequest : gaxgrpc::IPageRequest { }
-    public partial class SearchJobsResponse : gaxgrpc::IPageResponse<SearchJobsResponse.Types.MatchingJob>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public scg::IEnumerator<SearchJobsResponse.Types.MatchingJob> GetEnumerator() => MatchingJobs.GetEnumerator();
-
-        /// <inheritdoc/>
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-
 }
