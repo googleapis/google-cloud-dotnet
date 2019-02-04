@@ -143,9 +143,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>Field number for the "app_engine_http_queue" field.</summary>
     public const int AppEngineHttpQueueFieldNumber = 3;
     /// <summary>
-    /// App Engine HTTP queue.
-    ///
-    /// An App Engine queue is a queue that has an [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] type.
+    /// [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] settings apply only to
+    /// [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpQueue AppEngineHttpQueue {
@@ -162,10 +161,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Rate limits for task dispatches.
     ///
-    /// [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and
-    /// [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are related because they both
-    /// control task attempts however they control how tasks are
-    /// attempted in different ways:
+    /// [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] and [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] are
+    /// related because they both control task attempts. However they control task
+    /// attempts in different ways:
     ///
     /// * [rate_limits][google.cloud.tasks.v2beta3.Queue.rate_limits] controls the total rate of
     ///   dispatches from a queue (i.e. all traffic dispatched from the
@@ -175,6 +173,16 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///   particular a task after its first attempt fails. That is,
     ///   [retry_config][google.cloud.tasks.v2beta3.Queue.retry_config] controls task retries (the
     ///   second attempt, third attempt, etc).
+    ///
+    /// The queue's actual dispatch rate is the result of:
+    ///
+    /// * Number of tasks in the queue
+    /// * User-specified throttling: [rate limits][Queue.RateLimits]
+    ///   [retry configuration][Queue.RetryConfig], and the
+    ///   [queue's state][google.cloud.tasks.v2beta3.Queue.state].
+    /// * System throttling due to `429` (Too Many Requests) or `503` (Service
+    ///   Unavailable) responses from the worker, high error rates, or to smooth
+    ///   sudden large traffic spikes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.RateLimits RateLimits {
@@ -493,9 +501,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         /// The queue is disabled.
         ///
         /// A queue becomes `DISABLED` when
-        /// [queue.yaml](https://cloud.google.com/appengine/docs/python/config/queueref) or
-        /// [queue.xml](https://cloud.google.com/appengine/docs/standard/java/config/queueref) is uploaded
-        /// which does not contain the queue. You cannot directly disable a queue.
+        /// [queue.yaml](https://cloud.google.com/appengine/docs/python/config/queueref)
+        /// or
+        /// [queue.xml](https://cloud.google.com/appengine/docs/standard/java/config/queueref)
+        /// is uploaded which does not contain the queue. You cannot directly disable
+        /// a queue.
         ///
         /// When a queue is disabled, tasks can still be added to a queue
         /// but the tasks are not dispatched.
