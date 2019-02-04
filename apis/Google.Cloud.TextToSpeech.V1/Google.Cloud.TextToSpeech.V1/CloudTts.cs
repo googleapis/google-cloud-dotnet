@@ -41,28 +41,28 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "ABIOCgRzc21sGAIgASgJSABCDgoMaW5wdXRfc291cmNlIn8KFFZvaWNlU2Vs",
             "ZWN0aW9uUGFyYW1zEhUKDWxhbmd1YWdlX2NvZGUYASABKAkSDAoEbmFtZRgC",
             "IAEoCRJCCgtzc21sX2dlbmRlchgDIAEoDjItLmdvb2dsZS5jbG91ZC50ZXh0",
-            "dG9zcGVlY2gudjEuU3NtbFZvaWNlR2VuZGVyIqsBCgtBdWRpb0NvbmZpZxJD",
+            "dG9zcGVlY2gudjEuU3NtbFZvaWNlR2VuZGVyIscBCgtBdWRpb0NvbmZpZxJD",
             "Cg5hdWRpb19lbmNvZGluZxgBIAEoDjIrLmdvb2dsZS5jbG91ZC50ZXh0dG9z",
             "cGVlY2gudjEuQXVkaW9FbmNvZGluZxIVCg1zcGVha2luZ19yYXRlGAIgASgB",
             "Eg0KBXBpdGNoGAMgASgBEhYKDnZvbHVtZV9nYWluX2RiGAQgASgBEhkKEXNh",
-            "bXBsZV9yYXRlX2hlcnR6GAUgASgFIjEKGFN5bnRoZXNpemVTcGVlY2hSZXNw",
-            "b25zZRIVCg1hdWRpb19jb250ZW50GAEgASgMKlcKD1NzbWxWb2ljZUdlbmRl",
-            "chIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEggKBE1BTEUQ",
-            "ARIKCgZGRU1BTEUQAhILCgdORVVUUkFMEAMqVAoNQXVkaW9FbmNvZGluZxIe",
-            "ChpBVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEgwKCExJTkVBUjE2EAES",
-            "BwoDTVAzEAISDAoIT0dHX09QVVMQAzK4AgoMVGV4dFRvU3BlZWNoEoMBCgpM",
-            "aXN0Vm9pY2VzEi8uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5MaXN0",
-            "Vm9pY2VzUmVxdWVzdBowLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEu",
-            "TGlzdFZvaWNlc1Jlc3BvbnNlIhKC0+STAgwSCi92MS92b2ljZXMSoQEKEFN5",
-            "bnRoZXNpemVTcGVlY2gSNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
-            "LlN5bnRoZXNpemVTcGVlY2hSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLnRleHR0",
-            "b3NwZWVjaC52MS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiHoLT5JMCGCIT",
-            "L3YxL3RleHQ6c3ludGhlc2l6ZToBKkLCAQogY29tLmdvb2dsZS5jbG91ZC50",
-            "ZXh0dG9zcGVlY2gudjFCEVRleHRUb1NwZWVjaFByb3RvUAFaSGdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGV4dHRvc3Bl",
-            "ZWNoL3YxO3RleHR0b3NwZWVjaPgBAaoCHEdvb2dsZS5DbG91ZC5UZXh0VG9T",
-            "cGVlY2guVjHKAhxHb29nbGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYxYgZwcm90",
-            "bzM="));
+            "bXBsZV9yYXRlX2hlcnR6GAUgASgFEhoKEmVmZmVjdHNfcHJvZmlsZV9pZBgG",
+            "IAMoCSIxChhTeW50aGVzaXplU3BlZWNoUmVzcG9uc2USFQoNYXVkaW9fY29u",
+            "dGVudBgBIAEoDCpXCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9H",
+            "RU5ERVJfVU5TUEVDSUZJRUQQABIICgRNQUxFEAESCgoGRkVNQUxFEAISCwoH",
+            "TkVVVFJBTBADKlQKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdf",
+            "VU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhABEgcKA01QMxACEgwKCE9HR19P",
+            "UFVTEAMyuAIKDFRleHRUb1NwZWVjaBKDAQoKTGlzdFZvaWNlcxIvLmdvb2ds",
+            "ZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuTGlzdFZvaWNlc1JlcXVlc3QaMC5n",
+            "b29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXNwb25z",
+            "ZSISgtPkkwIMEgovdjEvdm9pY2VzEqEBChBTeW50aGVzaXplU3BlZWNoEjUu",
+            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5TeW50aGVzaXplU3BlZWNo",
+            "UmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhl",
+            "c2l6ZVNwZWVjaFJlc3BvbnNlIh6C0+STAhgiEy92MS90ZXh0OnN5bnRoZXNp",
+            "emU6ASpCwgEKIGNvbS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxQhFU",
+            "ZXh0VG9TcGVlY2hQcm90b1ABWkhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3RleHR0b3NwZWVjaC92MTt0ZXh0dG9zcGVl",
+            "Y2j4AQGqAhxHb29nbGUuQ2xvdWQuVGV4dFRvU3BlZWNoLlYxygIcR29vZ2xl",
+            "XENsb3VkXFRleHRUb1NwZWVjaFxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
@@ -72,7 +72,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest.Parser, new[]{ "Input", "Voice", "AudioConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesisInput), global::Google.Cloud.TextToSpeech.V1.SynthesisInput.Parser, new[]{ "Text", "Ssml" }, new[]{ "InputSource" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams), global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams.Parser, new[]{ "LanguageCode", "Name", "SsmlGender" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.AudioConfig), global::Google.Cloud.TextToSpeech.V1.AudioConfig.Parser, new[]{ "AudioEncoding", "SpeakingRate", "Pitch", "VolumeGainDb", "SampleRateHertz" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.AudioConfig), global::Google.Cloud.TextToSpeech.V1.AudioConfig.Parser, new[]{ "AudioEncoding", "SpeakingRate", "Pitch", "VolumeGainDb", "SampleRateHertz", "EffectsProfileId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse.Parser, new[]{ "AudioContent" }, null, null, null)
           }));
     }
@@ -1291,6 +1291,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       pitch_ = other.pitch_;
       volumeGainDb_ = other.volumeGainDb_;
       sampleRateHertz_ = other.sampleRateHertz_;
+      effectsProfileId_ = other.effectsProfileId_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1386,6 +1387,26 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
     }
 
+    /// <summary>Field number for the "effects_profile_id" field.</summary>
+    public const int EffectsProfileIdFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_effectsProfileId_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> effectsProfileId_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// An identifier which selects 'audio effects' profiles that are applied on
+    /// (post synthesized) text to speech.
+    /// Effects are applied on top of each other in the order they are given.
+    /// See
+    ///
+    /// [audio-profiles](https:
+    /// //cloud.google.com/text-to-speech/docs/audio-profiles)
+    /// for current supported profile ids.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> EffectsProfileId {
+      get { return effectsProfileId_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AudioConfig);
@@ -1404,6 +1425,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Pitch, other.Pitch)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(VolumeGainDb, other.VolumeGainDb)) return false;
       if (SampleRateHertz != other.SampleRateHertz) return false;
+      if(!effectsProfileId_.Equals(other.effectsProfileId_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1415,6 +1437,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (Pitch != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Pitch);
       if (VolumeGainDb != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(VolumeGainDb);
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
+      hash ^= effectsProfileId_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1448,6 +1471,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(SampleRateHertz);
       }
+      effectsProfileId_.WriteTo(output, _repeated_effectsProfileId_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1471,6 +1495,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (SampleRateHertz != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHertz);
       }
+      size += effectsProfileId_.CalculateSize(_repeated_effectsProfileId_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1497,6 +1522,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       if (other.SampleRateHertz != 0) {
         SampleRateHertz = other.SampleRateHertz;
       }
+      effectsProfileId_.Add(other.effectsProfileId_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1526,6 +1552,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
           }
           case 40: {
             SampleRateHertz = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            effectsProfileId_.AddEntriesFrom(input, _repeated_effectsProfileId_codec);
             break;
           }
         }
