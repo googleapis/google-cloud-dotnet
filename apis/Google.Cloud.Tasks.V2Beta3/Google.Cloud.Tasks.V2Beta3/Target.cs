@@ -37,12 +37,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "ZXN0LkhlYWRlcnNFbnRyeRIMCgRib2R5GAUgASgMGi4KDEhlYWRlcnNFbnRy",
             "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlQKEEFwcEVuZ2lu",
             "ZVJvdXRpbmcSDwoHc2VydmljZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgJEhAK",
-            "CGluc3RhbmNlGAMgASgJEgwKBGhvc3QYBCABKAkqWwoKSHR0cE1ldGhvZBIb",
+            "CGluc3RhbmNlGAMgASgJEgwKBGhvc3QYBCABKAkqcwoKSHR0cE1ldGhvZBIb",
             "ChdIVFRQX01FVEhPRF9VTlNQRUNJRklFRBAAEggKBFBPU1QQARIHCgNHRVQQ",
-            "AhIICgRIRUFEEAMSBwoDUFVUEAQSCgoGREVMRVRFEAVCcAoeY29tLmdvb2ds",
-            "ZS5jbG91ZC50YXNrcy52MmJldGEzQgtUYXJnZXRQcm90b1ABWj9nb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Rhc2tzL3Yy",
-            "YmV0YTM7dGFza3NiBnByb3RvMw=="));
+            "AhIICgRIRUFEEAMSBwoDUFVUEAQSCgoGREVMRVRFEAUSCQoFUEFUQ0gQBhIL",
+            "CgdPUFRJT05TEAdCcAoeY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEz",
+            "QgtUYXJnZXRQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Nsb3VkL3Rhc2tzL3YyYmV0YTM7dGFza3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tasks.V2Beta3.HttpMethod), }, new pbr::GeneratedClrTypeInfo[] {
@@ -83,6 +83,14 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// HTTP DELETE
     /// </summary>
     [pbr::OriginalName("DELETE")] Delete = 5,
+    /// <summary>
+    /// HTTP PATCH
+    /// </summary>
+    [pbr::OriginalName("PATCH")] Patch = 6,
+    /// <summary>
+    /// HTTP OPTIONS
+    /// </summary>
+    [pbr::OriginalName("OPTIONS")] Options = 7,
   }
 
   #endregion
@@ -267,6 +275,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed)
   /// and how routing is affected by
   /// [dispatch files](https://cloud.google.com/appengine/docs/python/config/dispatchref).
+  /// Traffic is encrypted during transport and never leaves Google datacenters.
+  /// Because this traffic is carried over a communication mechanism internal to
+  /// Google, you cannot explicitly set the protocol (for example, HTTP or HTTPS).
+  /// The request to the handler, however, will appear to have used the HTTP
+  /// protocol.
   ///
   /// The [AppEngineRouting][google.cloud.tasks.v2beta3.AppEngineRouting] used to construct the URL that the task is
   /// delivered to can be set at the queue-level or task-level:
@@ -281,6 +294,14 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   ///
   /// * `url =` [host][google.cloud.tasks.v2beta3.AppEngineRouting.host] `+`
   ///   [relative_uri][google.cloud.tasks.v2beta3.AppEngineHttpRequest.relative_uri]
+  ///
+  /// Tasks can be dispatched to secure app handlers, unsecure app handlers, and
+  /// URIs restricted with
+  /// [`login: admin`](https://cloud.google.com/appengine/docs/standard/python/config/appref).
+  /// Because tasks are not run as any user, they cannot be dispatched to URIs
+  /// restricted with
+  /// [`login: required`](https://cloud.google.com/appengine/docs/standard/python/config/appref)
+  /// Task dispatches also do not follow redirects.
   ///
   /// The task attempt has succeeded if the app's request handler returns
   /// an HTTP response code in the range [`200` - `299`]. `503` is
@@ -608,14 +629,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// <summary>
   /// App Engine Routing.
   ///
-  /// Specifies the target URI. Since this target type dispatches tasks to secure
-  /// app handlers, unsecure app handlers, and URIs restricted with
-  /// [`login: admin`](https://cloud.google.com/appengine/docs/standard/python/config/appref)
-  /// the protocol (for example, HTTP or HTTPS) cannot be explictly specified.
-  /// Task dispatches do not follow redirects and cannot target URI paths
-  /// restricted with
-  /// [`login: required`](https://cloud.google.com/appengine/docs/standard/python/config/appref)
-  /// because tasks are not run as any user.
+  /// Defines routing characteristics specific to App Engine - service, version,
+  /// and instance.
   ///
   /// For more information about services, versions, and instances see
   /// [An Overview of App Engine](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine),

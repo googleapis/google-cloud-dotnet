@@ -27,30 +27,32 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "CiVnb29nbGUvY2xvdWQvdGFza3MvdjJiZXRhMy90YXNrLnByb3RvEhpnb29n",
             "bGUuY2xvdWQudGFza3MudjJiZXRhMxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
             "cy5wcm90bxonZ29vZ2xlL2Nsb3VkL3Rhc2tzL3YyYmV0YTMvdGFyZ2V0LnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUv",
-            "cnBjL3N0YXR1cy5wcm90byLsAwoEVGFzaxIMCgRuYW1lGAEgASgJElMKF2Fw",
-            "cF9lbmdpbmVfaHR0cF9yZXF1ZXN0GAMgASgLMjAuZ29vZ2xlLmNsb3VkLnRh",
-            "c2tzLnYyYmV0YTMuQXBwRW5naW5lSHR0cFJlcXVlc3RIABIxCg1zY2hlZHVs",
-            "ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtj",
-            "cmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "FgoOZGlzcGF0Y2hfY291bnQYBiABKAUSFgoOcmVzcG9uc2VfY291bnQYByAB",
-            "KAUSOgoNZmlyc3RfYXR0ZW1wdBgIIAEoCzIjLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52MmJldGEzLkF0dGVtcHQSOQoMbGFzdF9hdHRlbXB0GAkgASgLMiMuZ29v",
-            "Z2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuQXR0ZW1wdBIzCgR2aWV3GAogASgO",
-            "MiUuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuVGFzay5WaWV3IjEKBFZp",
-            "ZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVMTBAC",
-            "Qg4KDHBheWxvYWRfdHlwZSLPAQoHQXR0ZW1wdBIxCg1zY2hlZHVsZV90aW1l",
-            "GAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1kaXNwYXRj",
-            "aF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1y",
-            "ZXNwb25zZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBIrCg9yZXNwb25zZV9zdGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0YXR1",
-            "c0JuCh5jb20uZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTNCCVRhc2tQcm90",
-            "b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
-            "b3VkL3Rhc2tzL3YyYmV0YTM7dGFza3NiBnByb3RvMw=="));
+            "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnBy",
+            "b3RvIqIECgRUYXNrEgwKBG5hbWUYASABKAkSUwoXYXBwX2VuZ2luZV9odHRw",
+            "X3JlcXVlc3QYAyABKAsyMC5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5B",
+            "cHBFbmdpbmVIdHRwUmVxdWVzdEgAEjEKDXNjaGVkdWxlX3RpbWUYBCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2NyZWF0ZV90aW1lGAUg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChFkaXNwYXRjaF9k",
+            "ZWFkbGluZRgMIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIWCg5k",
+            "aXNwYXRjaF9jb3VudBgGIAEoBRIWCg5yZXNwb25zZV9jb3VudBgHIAEoBRI6",
+            "Cg1maXJzdF9hdHRlbXB0GAggASgLMiMuZ29vZ2xlLmNsb3VkLnRhc2tzLnYy",
+            "YmV0YTMuQXR0ZW1wdBI5CgxsYXN0X2F0dGVtcHQYCSABKAsyIy5nb29nbGUu",
+            "Y2xvdWQudGFza3MudjJiZXRhMy5BdHRlbXB0EjMKBHZpZXcYCiABKA4yJS5n",
+            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5UYXNrLlZpZXciMQoEVmlldxIU",
+            "ChBWSUVXX1VOU1BFQ0lGSUVEEAASCQoFQkFTSUMQARIICgRGVUxMEAJCDgoM",
+            "cGF5bG9hZF90eXBlIs8BCgdBdHRlbXB0EjEKDXNjaGVkdWxlX3RpbWUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKDWRpc3BhdGNoX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKDXJlc3Bv",
+            "bnNlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisK",
+            "D3Jlc3BvbnNlX3N0YXR1cxgEIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQm4K",
+            "HmNvbS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhM0IJVGFza1Byb3RvUAFa",
+            "P2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "dGFza3MvdjJiZXRhMzt0YXNrc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Task), global::Google.Cloud.Tasks.V2Beta3.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "ScheduleTime", "CreateTime", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "PayloadType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Task), global::Google.Cloud.Tasks.V2Beta3.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "PayloadType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Attempt), global::Google.Cloud.Tasks.V2Beta3.Attempt.Parser, new[]{ "ScheduleTime", "DispatchTime", "ResponseTime", "ResponseStatus" }, null, null, null)
           }));
     }
@@ -89,6 +91,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       name_ = other.name_;
       scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      dispatchDeadline_ = other.dispatchDeadline_ != null ? other.dispatchDeadline_.Clone() : null;
       dispatchCount_ = other.dispatchCount_;
       responseCount_ = other.responseCount_;
       firstAttempt_ = other.firstAttempt_ != null ? other.firstAttempt_.Clone() : null;
@@ -143,10 +146,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>Field number for the "app_engine_http_request" field.</summary>
     public const int AppEngineHttpRequestFieldNumber = 3;
     /// <summary>
-    /// App Engine HTTP request that is sent to the task's target. Can
-    /// be set only if
-    /// [app_engine_http_queue][google.cloud.tasks.v2beta3.Queue.app_engine_http_queue] is set
-    /// on the queue.
+    /// HTTP request that is sent to the App Engine app handler.
     ///
     /// An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest] set.
     /// </summary>
@@ -190,6 +190,46 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       get { return createTime_; }
       set {
         createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dispatch_deadline" field.</summary>
+    public const int DispatchDeadlineFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Duration dispatchDeadline_;
+    /// <summary>
+    /// The deadline for requests sent to the worker. If the worker does not
+    /// respond by this deadline then the request is cancelled and the attempt
+    /// is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the
+    /// task according to the [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig].
+    ///
+    /// Note that when the request is cancelled, Cloud Tasks will stop listing for
+    /// the response, but whether the worker stops processing depends on the
+    /// worker. For example, if the worker is stuck, it may not react to cancelled
+    /// requests.
+    ///
+    /// The default and maximum values depend on the type of request:
+    ///
+    /// * For [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest], 0 indicates that the
+    ///   request has the default deadline. The default deadline depends on the
+    ///   [scaling type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling)
+    ///   of the service: 10 minutes for standard apps with automatic scaling, 24
+    ///   hours for standard apps with manual and basic scaling, and 60 minutes for
+    ///   flex apps. If the request deadline is set, it must be in the interval [15
+    ///   seconds, 24 hours 15 seconds]. Regardless of the task's
+    ///   `dispatch_deadline`, the app handler will not run for longer than than
+    ///   the service's timeout. We recommend setting the `dispatch_deadline` to
+    ///   at most a few seconds more than the app handler's timeout. For more
+    ///   information see
+    ///   [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts).
+    ///
+    /// `dispatch_deadline` will be truncated to the nearest millisecond. The
+    /// deadline is an approximate deadline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration DispatchDeadline {
+      get { return dispatchDeadline_; }
+      set {
+        dispatchDeadline_ = value;
       }
     }
 
@@ -305,6 +345,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (!object.Equals(AppEngineHttpRequest, other.AppEngineHttpRequest)) return false;
       if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(DispatchDeadline, other.DispatchDeadline)) return false;
       if (DispatchCount != other.DispatchCount) return false;
       if (ResponseCount != other.ResponseCount) return false;
       if (!object.Equals(FirstAttempt, other.FirstAttempt)) return false;
@@ -321,6 +362,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (payloadTypeCase_ == PayloadTypeOneofCase.AppEngineHttpRequest) hash ^= AppEngineHttpRequest.GetHashCode();
       if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (dispatchDeadline_ != null) hash ^= DispatchDeadline.GetHashCode();
       if (DispatchCount != 0) hash ^= DispatchCount.GetHashCode();
       if (ResponseCount != 0) hash ^= ResponseCount.GetHashCode();
       if (firstAttempt_ != null) hash ^= FirstAttempt.GetHashCode();
@@ -376,6 +418,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(80);
         output.WriteEnum((int) View);
       }
+      if (dispatchDeadline_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(DispatchDeadline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -395,6 +441,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (dispatchDeadline_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DispatchDeadline);
       }
       if (DispatchCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DispatchCount);
@@ -436,6 +485,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           createTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.dispatchDeadline_ != null) {
+        if (dispatchDeadline_ == null) {
+          dispatchDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        DispatchDeadline.MergeFrom(other.DispatchDeadline);
       }
       if (other.DispatchCount != 0) {
         DispatchCount = other.DispatchCount;
@@ -529,6 +584,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           case 80: {
             view_ = (global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (dispatchDeadline_ == null) {
+              dispatchDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(dispatchDeadline_);
             break;
           }
         }
@@ -671,7 +733,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ResponseStatusFieldNumber = 4;
     private global::Google.Rpc.Status responseStatus_;
     /// <summary>
-    /// Output only. The response from the target for this attempt.
+    /// Output only. The response from the worker for this attempt.
     ///
     /// If `response_time` is unset, then the task has not been attempted or is
     /// currently running and the `response_status` field is meaningless.
