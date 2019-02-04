@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using System;
-using System.Threading;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -75,10 +74,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// <returns>True if tracing is allowed.</returns>
         public bool CanTrace()
         {
+            if(_fixedDelayMillis == 0)
+            {
+                return true;
+            }
+
             lock (_lastCallMutex)
             {
                 var nowMillis = _timer.GetElapsedMilliseconds();
-                if(nowMillis - _lastCallMillis >= _fixedDelayMillis)
+                if (nowMillis - _lastCallMillis >= _fixedDelayMillis)
                 {
                     _lastCallMillis = nowMillis;
                     return true;
