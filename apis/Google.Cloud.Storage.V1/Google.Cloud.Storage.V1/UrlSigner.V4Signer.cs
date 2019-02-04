@@ -127,11 +127,11 @@ namespace Google.Cloud.Storage.V1
 
                     queryParameters = new List<string>
                     {
-                        "X-Goog-Algorithm=GOOG4-RSA-SHA256",
-                        $"X-Goog-Credential={credential}",
-                        $"X-Goog-Date={timestamp}",
-                        $"X-Goog-Expires={expirySeconds}",
-                        $"X-Goog-SignedHeaders={signedHeaders}"
+                        "x-goog-algorithm=GOOG4-RSA-SHA256",
+                        $"x-goog-credential={credential}",
+                        $"x-goog-date={timestamp}",
+                        $"x-goog-expires={expirySeconds}",
+                        $"x-goog-signedheaders={signedHeaders}"
                     };
                     if (isResumableUpload)
                     {

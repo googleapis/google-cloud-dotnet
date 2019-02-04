@@ -116,6 +116,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     // Verify that the URL works initially.
                     var response = await fixture.HttpClient.GetAsync(url);
                     var result = await response.Content.ReadAsStringAsync();
+                    Assert.True(response.IsSuccessStatusCode, result.ToString());
                     var document = XDocument.Parse(result);
                     var ns = document.Root.GetDefaultNamespace();
                     var keys = document.Root.Elements(ns + "Contents").Select(contents => contents.Element(ns + "Key").Value).ToList();
