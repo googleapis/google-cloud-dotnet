@@ -30,8 +30,9 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Returns the mode of a field as a <see cref="BigQueryFieldMode"/>.
+        /// If the mode isn't specified, it defaults to Nullable.
         /// </summary>
         internal static BigQueryFieldMode GetFieldMode(this TableFieldSchema field) =>
-            EnumMap<BigQueryFieldMode>.ToValue(field.Mode);
+            field.Mode == null ? BigQueryFieldMode.Nullable : EnumMap<BigQueryFieldMode>.ToValue(field.Mode);
     }
 }

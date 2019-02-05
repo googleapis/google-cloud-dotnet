@@ -32,5 +32,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var field = new TableFieldSchema { Mode = "REPEATED" };
             Assert.Equal(BigQueryFieldMode.Repeated, field.GetFieldMode());
         }
+
+        [Fact]
+        public void GetFieldMode_Null()
+        {
+            var field = new TableFieldSchema { Mode = null };
+            Assert.Equal(BigQueryFieldMode.Nullable, field.GetFieldMode());
+        }
     }
 }
