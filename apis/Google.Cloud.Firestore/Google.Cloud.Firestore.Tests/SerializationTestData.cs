@@ -92,6 +92,8 @@ namespace Google.Cloud.Firestore.Tests
             // We don't cover the whole range of ulong
             { UInt64Enum.MinValue, new Value { IntegerValue = 0 } },
             { UInt64Enum.MaxRepresentableValue, new Value { IntegerValue = long.MaxValue } },
+            { CustomConversionEnum.Foo, new Value { StringValue = "Foo" } },
+            { CustomConversionEnum.Bar, new Value { StringValue = "Bar" } },
             
             // Timestamps
             { new Timestamp(1, 500),
@@ -153,6 +155,15 @@ namespace Google.Cloud.Firestore.Tests
             // Attributed value type serialized and deserialized by CustomValueTypeConverter
             { new CustomValueType("xyz", 10),
                 new Value { MapValue = new MapValue { Fields = { { "Name", new Value { StringValue = "xyz" } }, { "Value", new Value { IntegerValue = 10L } } } } } },
+
+            // Attributed type with enums (name and number)
+            { new ModelWithEnums { EnumDefaultByName = CustomConversionEnum.Foo, EnumAttributedByName = Int32Enum.MinValue, EnumByNumber = Int32Enum.MaxValue },
+                new Value { MapValue = new MapValue {
+                    Fields = {
+                        { "EnumDefaultByName", new Value { StringValue = "Foo" } },
+                        { "EnumAttributedByName", new Value { StringValue = "MinValue" } },
+                        { "EnumByNumber", new Value { IntegerValue = int.MaxValue } }
+                    } } } },
 
             // Nullable type handling
             { new NullableContainer { NullableValue = null },
@@ -296,6 +307,33 @@ namespace Google.Cloud.Firestore.Tests
         {
             MinValue = ulong.MinValue,
             MaxRepresentableValue = long.MaxValue
+        }
+
+        [FirestoreData(ConverterType = typeof(FirestoreEnumNameConverter<CustomConversionEnum>))]
+        internal enum CustomConversionEnum
+        {
+            Foo = 1,
+            Bar = 2
+        }
+
+        [FirestoreData]
+        public sealed class ModelWithEnums
+        {
+            [FirestoreProperty]
+            public CustomConversionEnum EnumDefaultByName { get; set; }
+
+            [FirestoreProperty(ConverterType = typeof(FirestoreEnumNameConverter<Int32Enum>))]
+            public Int32Enum EnumAttributedByName { get; set; }
+
+            [FirestoreProperty]
+            public Int32Enum EnumByNumber { get; set; }
+
+            public override bool Equals(object obj) => obj is ModelWithEnums other &&
+                EnumDefaultByName == other.EnumDefaultByName &&
+                EnumAttributedByName == other.EnumAttributedByName &&
+                EnumByNumber == other.EnumByNumber;
+
+            public override int GetHashCode() => 0;
         }
 
         [FirestoreData]
