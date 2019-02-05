@@ -19,7 +19,7 @@ namespace Google.Cloud.Firestore
     /// <summary>
     /// Attribute indicating that a type is intended to be used with Firestore.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Delegate | AttributeTargets.Interface)]
     public sealed class FirestoreDataAttribute : Attribute
     {
         /// <summary>

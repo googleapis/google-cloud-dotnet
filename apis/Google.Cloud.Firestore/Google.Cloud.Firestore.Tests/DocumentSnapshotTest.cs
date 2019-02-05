@@ -57,7 +57,7 @@ namespace Google.Cloud.Firestore.Tests
             {
                 CreateTime = CreateProtoTimestamp(1, 10),
                 UpdateTime = CreateProtoTimestamp(2, 20),
-                Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2"                
+                Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2"
             };
             var document = DocumentSnapshot.ForDocument(db, proto, readTime);
             Assert.Equal(db.Document("col1/doc1/col2/doc2"), document.Reference);
@@ -250,6 +250,43 @@ namespace Google.Cloud.Firestore.Tests
             var unequal2 = DocumentSnapshot.ForDocument(db, doc, new Timestamp(1, 2));
 
             EqualityTester.AssertEqual(control, new[] { equal }, new[] { unequal1, unequal2 });
+        }
+
+        [Fact]
+        public void ConvertTo_ValueType()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var readTime = new Timestamp(10, 2);
+            var proto = new Document
+            {
+                CreateTime = CreateProtoTimestamp(1, 10),
+                UpdateTime = CreateProtoTimestamp(2, 20),
+                Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2",
+                Fields =
+                {
+                    ["Name"] = ProtoHelpers.CreateValue("text"),
+                    ["Value"] = ProtoHelpers.CreateValue(100)
+                }
+            };
+            var document = DocumentSnapshot.ForDocument(db, proto, readTime);
+            var value = document.ConvertTo<SerializationTestData.CustomValueType>();
+            Assert.Equal("text", value.Name);
+            Assert.Equal(100, value.Value);
+        }
+
+        [Fact]
+        public void ConvertTo_Missing()
+        {
+            var sample = GetSampleSnapshot();
+            var document = DocumentSnapshot.ForMissingDocument(sample.Database, sample.Document.Name, new Timestamp(1, 2));
+
+            // Deserializing ends up with the default value of the value type. That's slightly annoying, but
+            // users can always use the Exists property instead.
+            Assert.Equal(0, document.ConvertTo<int>());
+
+            var custom = document.ConvertTo<SerializationTestData.CustomValueType>();
+            Assert.Null(custom.Name);
+            Assert.Equal(0, custom.Value);
         }
 
         private static DocumentSnapshot GetSampleSnapshot()
