@@ -150,6 +150,10 @@ namespace Google.Cloud.Firestore.Tests
             { new CustomPlayer { Name = "Amanda", Score = 15 },
                 new Value { MapValue = new MapValue { Fields = { { "PlayerName", new Value { StringValue = "Amanda" } }, { "PlayerScore", new Value { IntegerValue = 15L } } } } } },
 
+            // Attributed value type serialized and deserialized by CustomValueTypeConverter
+            { new CustomValueType("xyz", 10),
+                new Value { MapValue = new MapValue { Fields = { { "Name", new Value { StringValue = "xyz" } }, { "Value", new Value { IntegerValue = 10L } } } } } },
+
             // Nullable type handling
             { new NullableContainer { NullableValue = null },
                 new Value { MapValue = new MapValue { Fields = { { "NullableValue", new Value { NullValue = wkt::NullValue.NullValue } } } } } },
@@ -383,6 +387,38 @@ namespace Google.Cloud.Firestore.Tests
                 {
                     ["PlayerName"] = value.Name,
                     ["PlayerScore"] = value.Score
+                };
+        }
+
+        [FirestoreData(ConverterType = typeof(CustomValueTypeConverter))]
+        internal struct CustomValueType
+        {
+            public string Name { get; }
+            public int Value { get; }
+
+            public CustomValueType(string name, int value)
+            {
+                Name = name;
+                Value = value;
+            }
+        }
+
+        internal class CustomValueTypeConverter : IFirestoreConverter<CustomValueType>
+        {
+            public CustomValueType FromFirestore(object value)
+            {
+                var dictionary = (IDictionary<string, object>)value;
+                return new CustomValueType(
+                    (string)dictionary["Name"],
+                    (int)(long)dictionary["Value"]
+                );
+            }
+
+            public object ToFirestore(CustomValueType value) =>
+                new Dictionary<string, object>
+                {
+                    ["Name"] = value.Name,
+                    ["Value"] = value.Value
                 };
         }
     }

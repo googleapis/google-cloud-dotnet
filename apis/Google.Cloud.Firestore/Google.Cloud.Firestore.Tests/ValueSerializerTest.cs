@@ -18,7 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using Xunit;
-
+using static Google.Cloud.Firestore.Tests.SerializationTestData;
 using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Tests
@@ -166,7 +166,6 @@ namespace Google.Cloud.Firestore.Tests
             var badArray = new[] { new int[10] };
             Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(badArray));
         }
-        
 
         [FirestoreData]
         private class SentinelModel
