@@ -131,7 +131,7 @@
     "id": "Google.Cloud.Dataproc.V1",
     "productName": "Google Cloud Dataproc",
     "productUrl": "https://cloud.google.com/dataproc/docs/concepts/overview",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0-beta03",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Dataproc API, which manages Hadoop-based clusters and jobs on Google Cloud Platform.",
     "tags": [ "Dataproc", "Hadoop" ],
