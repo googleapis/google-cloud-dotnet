@@ -31,15 +31,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class GoogleLoggerTest
     {
-        private const string _logMessage = "a log message";
-        private const string _logName = "log-name";
-        private const string _baseLogName = "aspnetcore";
-        private const string _projectId = "pid";
-        private const string _expectedGcpLogBaseUrl = "https://console.cloud.google.com/logs/viewer";
+        private const string LogMessage = "a log message";
+        private const string LogName = "log-name";
+        private const string BaseLogName = "aspnetcore";
+        private const string ProjectId = "pid";
+        private const string ExpectedGcpLogBaseUrl = "https://console.cloud.google.com/logs/viewer";
         private static readonly DateTime s_dateTime = DateTime.UtcNow;
         private static readonly Exception s_exception = new Exception("some message");
         private static readonly IClock s_clock = new FakeClock(s_dateTime);
-        private static readonly LogTarget s_defaultLogTarget = LogTarget.ForProject(_projectId);
+        private static readonly LogTarget s_defaultLogTarget = LogTarget.ForProject(ProjectId);
 
         /// <summary>
         /// Function to format a string and exception.  Used to test logging.
@@ -62,13 +62,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void GetsGcpConsoleLogsUrl()
+        public void GetGcpConsoleLogsUrl()
         {
             GoogleLogger logger = GetLogger();
             Uri actualUrl = logger.GetGcpConsoleLogsUrl();
             string query = actualUrl.Query;
 
-            Assert.StartsWith(_expectedGcpLogBaseUrl, actualUrl.ToString());
+            Assert.StartsWith(ExpectedGcpLogBaseUrl, actualUrl.ToString());
             Assert.Contains("resource=global", query);
             Assert.Contains("project=pid", query);
             Assert.Contains("minLogLevel=200", query);
@@ -77,13 +77,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void GetsGcpConsoleLogsUrl_NonDefault()
+        public void GetGcpConsoleLogsUrl_NonDefault()
         {
             GoogleLogger logger = GetLogger(logLevel: LogLevel.Error, monitoredResource: new MonitoredResource() { Type = "dummy-type"}, logName: "custom-name");
             Uri actualUrl = logger.GetGcpConsoleLogsUrl();
             string query = actualUrl.Query;
 
-            Assert.StartsWith(_expectedGcpLogBaseUrl, actualUrl.ToString());
+            Assert.StartsWith(ExpectedGcpLogBaseUrl, actualUrl.ToString());
             Assert.Contains("resource=dummy-type", query);
             Assert.Contains("project=pid", query);
             Assert.Contains("minLogLevel=500", query);
@@ -92,7 +92,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void GetsGcpConsoleLogsUrl_Organization()
+        public void GetGcpConsoleLogsUrl_Organization()
         {
             GoogleLogger logger = GetLogger(logTarget: LogTarget.ForOrganization("12345"));
             string query = logger.GetGcpConsoleLogsUrl().Query;
@@ -102,7 +102,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
-        public void GetsGcpConsoleLogsUrl_MonitoredResourceFromPlatform()
+        public void GetGcpConsoleLogsUrl_MonitoredResourceFromPlatform()
         {
             GoogleLogger logger = GetLogger(monitoredResource: MonitoredResourceBuilder.FromPlatform());
             string query = logger.GetGcpConsoleLogsUrl().Query;
@@ -114,14 +114,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void BeginScope()
         {
             Predicate<IEnumerable<LogEntry>> matcher = (l) =>
-                l.Single().JsonPayload.Fields["message"].StringValue == _logMessage &&
+                l.Single().JsonPayload.Fields["message"].StringValue == LogMessage &&
                 l.Single().JsonPayload.Fields["scope"].StringValue == "scope => ";
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
             var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
             using (logger.BeginScope("scope"))
             {
-                logger.Log(LogLevel.Error, 0, _logMessage, null, Formatter);
+                logger.Log(LogLevel.Error, 0, LogMessage, null, Formatter);
             }
             mockConsumer.VerifyAll();
         }
@@ -134,7 +134,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var json = l.Single().JsonPayload.Fields;
                 var parentScopes = json["parent_scopes"].ListValue.Values;
                 var parentScope0 = parentScopes[0].StructValue.Fields;
-                return json["message"].StringValue == _logMessage &&
+                return json["message"].StringValue == LogMessage &&
                        json["scope"].StringValue == "scope 42, Baz => " &&
                        parentScopes.Count == 1 &&
                        parentScope0.Count == 3 &&
@@ -148,7 +148,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
             using (logger.BeginScope("scope {Foo}, {Bar}", 42, "Baz"))
             {
-                logger.LogError(_logMessage);
+                logger.LogError(LogMessage);
             }
 
             mockConsumer.VerifyAll();
@@ -164,7 +164,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var scope0 = parentScopes[0].StructValue.Fields;
                 var scope1 = parentScopes[1].StructValue.Fields;
 
-                return json["message"].StringValue == _logMessage &&
+                return json["message"].StringValue == LogMessage &&
                        json["scope"].StringValue == "first 42 => second Baz => " &&
                        parentScopes.Count == 2 &&
                        scope0.Count == 2 &&
@@ -182,7 +182,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             {
                 using (logger.BeginScope("second {Bar}", "Baz"))
                 {
-                    logger.LogError(_logMessage);
+                    logger.LogError(LogMessage);
                 }
             }
 
@@ -227,7 +227,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void BeginScope_Nested()
         {
             Predicate<IEnumerable<LogEntry>> matcher = (l) =>
-                l.Single().JsonPayload.Fields["message"].StringValue == _logMessage &&
+                l.Single().JsonPayload.Fields["message"].StringValue == LogMessage &&
                 l.Single().JsonPayload.Fields["scope"].StringValue == "parent => child => ";
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -236,7 +236,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             {
                 using (logger.BeginScope("child"))
                 {
-                    logger.Log(LogLevel.Error, 0, _logMessage, null, Formatter);
+                    logger.Log(LogLevel.Error, 0, LogMessage, null, Formatter);
                 }
             }
             mockConsumer.VerifyAll();
@@ -260,7 +260,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             var logger = GetLogger(mockConsumer.Object);
-            logger.Log(LogLevel.Information, 0, _logMessage, s_exception, null);
+            logger.Log(LogLevel.Information, 0, LogMessage, s_exception, null);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never());
         }
 
@@ -269,7 +269,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             var logger = GetLogger(mockConsumer.Object);
-            logger.Log(LogLevel.Debug, 0, _logMessage, s_exception, Formatter);
+            logger.Log(LogLevel.Debug, 0, LogMessage, s_exception, Formatter);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never());
         }
 
@@ -294,12 +294,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 LogEntry entry = logEntries.Single();
                 KeyValuePair<string, string> label = entry.Labels.Single();
                 var json = entry.JsonPayload.Fields;
-                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     string.IsNullOrWhiteSpace(entry.Trace) &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     json["message"].StringValue == "a log message with stuff" &&
-                    json["log_name"].StringValue == _logName &&
+                    json["log_name"].StringValue == LogName &&
                     json["event_id"].StructValue.Fields["id"].NumberValue == 28 &&
                     json["format_parameters"].StructValue.Fields.Count == 2 &&
                     json["format_parameters"].StructValue.Fields["things"].StringValue == logStr &&
@@ -311,7 +311,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels, null, _baseLogName);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels, null, BaseLogName);
             logger.LogError(28, s_exception, message, logStr);
             mockConsumer.VerifyAll();
         }
@@ -323,17 +323,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             {
                 LogEntry entry = logEntries.Single();
                 var json = entry.JsonPayload.Fields;
-                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
-                    json["message"].StringValue == _logMessage &&
+                return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
+                    json["message"].StringValue == LogMessage &&
                     json["event_id"].StructValue.Fields["id"].NumberValue == 11 &&
                     json["event_id"].StructValue.Fields["name"].StringValue == "some-event";
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, null, null, _baseLogName);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, null, null, BaseLogName);
             var eventId = new EventId(11, "some-event");
-            logger.LogError(eventId, s_exception, _logMessage);
+            logger.LogError(eventId, s_exception, LogMessage);
             mockConsumer.VerifyAll();
         }
 
@@ -344,15 +344,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             {
                 LogEntry entry = logEntries.Single();
                 var json = entry.JsonPayload.Fields;
-                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
-                    json["message"].StringValue == _logMessage &&
+                return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
+                    json["message"].StringValue == LogMessage &&
                     !json.ContainsKey("format_parameters");
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, null, null, _baseLogName);
-            logger.LogError(_logMessage);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, null, null, BaseLogName);
+            logger.LogError(LogMessage);
             mockConsumer.VerifyAll();
         }
 
@@ -360,12 +360,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log_Trace()
         {
             string traceId = "105445aa7843bc8bf206b12000100f00";
-            string fullTraceName = TraceTarget.ForProject(_projectId).GetFullTraceName(traceId);
+            string fullTraceName = TraceTarget.ForProject(ProjectId).GetFullTraceName(traceId);
 
             Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
             {
                 LogEntry entry = logEntries.Single();
-                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
                     entry.Trace == fullTraceName;
             };
 
@@ -384,8 +384,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
-            logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName);
+            logger.Log(LogLevel.Error, 0, LogMessage, s_exception, Formatter);
             mockConsumer.VerifyAll();
         }
 
@@ -398,7 +398,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var labelFoo = entry.Labels.First();
                 var labelBar = entry.Labels.Skip(1).Single();
 
-                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
                     labelFoo.Key == "Foo" &&
                     labelFoo.Value == "Hello" &&
                     labelBar.Key == "Bar" &&
@@ -411,8 +411,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
-            logger.LogInformation(_logMessage);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName);
+            logger.LogInformation(LogMessage);
             mockConsumer.VerifyAll();
         }
 
@@ -455,7 +455,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 var labelFoo = entry.Labels.Skip(1).First();
                 var labelBar = entry.Labels.Skip(2).Single();
 
-                return entry.LogName == new LogName(_projectId, _baseLogName).ToString() &&
+                return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
                     defaultLabel.Key == "some-key" &&
                     defaultLabel.Value == "some-value" &&
                     labelFoo.Key == "Foo" &&
@@ -470,8 +470,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels: labels, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
-            logger.LogInformation(_logMessage);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels: labels, serviceProvider: mockServiceProvider.Object, logName: BaseLogName);
+            logger.LogInformation(LogMessage);
             mockConsumer.VerifyAll();
         }
     }

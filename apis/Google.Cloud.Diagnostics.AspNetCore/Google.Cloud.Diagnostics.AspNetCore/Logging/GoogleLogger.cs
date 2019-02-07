@@ -22,6 +22,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Internal;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -246,14 +247,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         public Uri GetGcpConsoleLogsUrl()
         {
+            string target =
+                _logTarget.Kind == LogTargetKind.Project ? $"project={_logTarget.ProjectId}" :
+                _logTarget.Kind == LogTargetKind.Organization ? $"organizationId={_logTarget.OrganizationId}" :
+                throw new InvalidOperationException($"Unrecognized LogTargetKind: {_logTarget.Kind}");
+
             IList<string> parameters = new List<string>
             {
                 $"resource={_loggerOptions.MonitoredResource.Type}",
                 $"minLogLevel={(int)_loggerOptions.LogLevel.ToLogSeverity()}",
                 $"logName={_fullLogName}",
-                _logTarget.Kind == LogTargetKind.Project ? $"project={_logTarget.ProjectId}" :
-                _logTarget.Kind == LogTargetKind.Organization ? $"organizationId={_logTarget.OrganizationId}" :
-                throw new InvalidOperationException($"Unrecognized LogTargetKind: {_logTarget.Kind}")
+                target
             };
 
             return new UriBuilder(GcpConsoleLogsBaseUrl)
@@ -267,11 +271,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             // Explicitly not catching exceptions.
             // This should only be activated for diagnostics purposes so in that case
             // we shouldn't throw exceptions.
-            if (_loggerOptions.LoggerDiagnosticsOutput != null)
-            {
-                _loggerOptions.LoggerDiagnosticsOutput.WriteLine($"{DateTime.UtcNow} - GoogleLogger created. Logs written at: {GetGcpConsoleLogsUrl()}");
-                _loggerOptions.LoggerDiagnosticsOutput.Flush();
-            }
+
+            _loggerOptions.LoggerDiagnosticsOutput?.WriteLine(string.Format(CultureInfo.InvariantCulture, "{0:yyyy-MM-dd'T'HH:mm:ss} - GoogleLogger created. Logs written to: {1}", DateTime.UtcNow, GetGcpConsoleLogsUrl()));
+            _loggerOptions.LoggerDiagnosticsOutput?.Flush();
         }
     }
 }
