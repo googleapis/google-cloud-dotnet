@@ -59,6 +59,7 @@ namespace Google.Cloud.Firestore.Tests
         /// </summary>
         public TransactionTestingClient(int failures, Exception exception)
         {
+            Settings = FirestoreSettings.GetDefault();
             _failures = failures;
             _exception = exception;
         }
