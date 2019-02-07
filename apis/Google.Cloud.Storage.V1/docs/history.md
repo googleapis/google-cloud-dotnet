@@ -1,10 +1,13 @@
 # Version history
 
-# 2.3.0-beta01, 2018-09-17
+# 2.3.0-beta05, 2019-02-07
 
 New features since 2.2.0:
 
 - Support for supplying page tokens when listing buckets or objects
+- Support for retention policy locking
+- Deprecate URL signing without an expiry; the default is now in 2038 (the end of "Unix time in seconds")
+- Allow an Origin header to be specified in UploadObjectOptions for CORS scenarios
 
 # 2.2.0, 2018-08-28
 
