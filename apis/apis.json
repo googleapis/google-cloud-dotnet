@@ -721,12 +721,12 @@
     "id": "Google.Cloud.Storage.V1",
     "productName": "Google Cloud Storage",
     "productUrl": "https://cloud.google.com/storage/",
-    "version": "2.3.0-beta04",
+    "version": "2.3.0-beta05",
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
       "Google.Api.Gax.Rest": "2.5.0",
-      "Google.Apis.Storage.v1": "1.37.0.1446"
+      "Google.Apis.Storage.v1": "1.38.0.1470"
     },
     "testDependencies": {
       "Google.Cloud.Iam.V1": "1.0.0",
