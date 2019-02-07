@@ -13,13 +13,14 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.V1;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Google.Cloud.Firestore.Tests
 {
     internal class FakeFirestoreClient : FirestoreClient
     {
+        internal FakeFirestoreClient()
+        {
+            Settings = FirestoreSettings.GetDefault();
+        }
     }
 }

@@ -62,6 +62,8 @@ namespace Google.Cloud.Firestore
 
         private Action<string> WarningLogger { get; }
 
+        private readonly CallSettings _batchGetCallSettings;
+
         private FirestoreDb(string projectId, string databaseId, FirestoreClient client, Action<string> warningLogger)
         {
             ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
@@ -71,6 +73,13 @@ namespace Google.Cloud.Firestore
             RootPath = $"projects/{ProjectId}/databases/{DatabaseId}";
             DocumentsPath = $"{RootPath}/documents";
             WarningLogger = warningLogger;
+
+            // TODO: Validate these settings, and potentially make them configurable
+            _batchGetCallSettings = CallSettings.FromCallTiming(CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: new BackoffSettings(TimeSpan.FromMilliseconds(500), TimeSpan.FromSeconds(5), 2.0),
+                timeoutBackoff: new BackoffSettings(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(3), 2.0),
+                Expiration.FromTimeout(TimeSpan.FromMinutes(10)),
+                RetrySettings.FilterForStatusCodes(StatusCode.Unavailable))));
         }
 
         // Internally, we support non-default databases. The public Create and CreateAsync methods only support the default database,
@@ -255,31 +264,46 @@ namespace Google.Cloud.Firestore
             {
                 request.Transaction = transactionId;
             }
-            var stream = Client.BatchGetDocuments(request, CallSettings.FromCancellationToken(cancellationToken));
-            using (var responseStream = stream.ResponseStream)
-            {
-                List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
 
-                // Note: no need to worry about passing the cancellation token in here, as we've passed it into the overall call.
-                // If the token is cancelled, the call will be aborted.
-                while (await responseStream.MoveNext().ConfigureAwait(false))
+            var clock = Client.Settings.Clock ?? SystemClock.Instance;
+            var scheduler = Client.Settings.Scheduler ?? SystemScheduler.Instance;
+            var callSettings = _batchGetCallSettings.WithCancellationToken(cancellationToken);
+
+            // This is the function that we'll retry. We can't use the built-in retry functionality, because it's not a unary gRPC call.
+            // (We could potentially simulate a unary call, but it would be a little odd to do so.)
+            // Note that we perform a "whole request" retry. In theory we could collect some documents, then see an error, and only
+            // request the remaining documents. Given how rarely we retry anyway in practice, that's probably not worth doing.
+            Func<BatchGetDocumentsRequest, CallSettings, Task<List<DocumentSnapshot>>> function = async (req, settings) =>
+            {
+                var stream = Client.BatchGetDocuments(req, settings);
+                using (var responseStream = stream.ResponseStream)
                 {
-                    var response = responseStream.Current;
-                    var readTime = Timestamp.FromProto(response.ReadTime);
-                    switch (response.ResultCase)
+                    List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
+
+                    // Note: no need to worry about passing the cancellation token in here, as we've passed it into the overall call.
+                    // If the token is cancelled, the call will be aborted.
+                    while (await responseStream.MoveNext().ConfigureAwait(false))
                     {
-                        case BatchGetDocumentsResponse.ResultOneofCase.Found:
-                            snapshots.Add(DocumentSnapshot.ForDocument(this, response.Found, readTime));
-                            break;
-                        case BatchGetDocumentsResponse.ResultOneofCase.Missing:
-                            snapshots.Add(DocumentSnapshot.ForMissingDocument(this, response.Missing, readTime));
-                            break;
-                        default:
-                            throw new InvalidOperationException($"Unknown response type: {response.ResultCase}");
+                        var response = responseStream.Current;
+                        var readTime = Timestamp.FromProto(response.ReadTime);
+                        switch (response.ResultCase)
+                        {
+                            case BatchGetDocumentsResponse.ResultOneofCase.Found:
+                                snapshots.Add(DocumentSnapshot.ForDocument(this, response.Found, readTime));
+                                break;
+                            case BatchGetDocumentsResponse.ResultOneofCase.Missing:
+                                snapshots.Add(DocumentSnapshot.ForMissingDocument(this, response.Missing, readTime));
+                                break;
+                            default:
+                                throw new InvalidOperationException($"Unknown response type: {response.ResultCase}");
+                        }
                     }
+                    return snapshots;
                 }
-                return snapshots;
-            }
+            };
+
+            var retryingTask = RetryHelper.Retry(function, request, callSettings, clock, scheduler);
+            return await retryingTask.ConfigureAwait(false);            
 
             string ExtractPath(DocumentReference documentReference)
             {

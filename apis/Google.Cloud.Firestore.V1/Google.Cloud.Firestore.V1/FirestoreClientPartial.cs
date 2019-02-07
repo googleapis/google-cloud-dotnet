@@ -17,6 +17,26 @@ using System;
 
 namespace Google.Cloud.Firestore.V1
 {
+    // Partial classes to expose FirestoreSettings
+    public partial class FirestoreClient
+    {
+        /// <summary>
+        /// Returns the effective <see cref="CallSettings"/> used for each API call.
+        /// This can be used to create a modified instance of <see cref="CallSettings"/> to pass
+        /// for a single API request.
+        /// </summary>
+        public virtual FirestoreSettings Settings { get; protected set; }
+    }
+
+    public partial class FirestoreClientImpl
+    {
+        partial void OnConstruction(Firestore.FirestoreClient grpcClient, FirestoreSettings effectiveSettings, ClientHelper clientHelper)
+        {
+            Settings = effectiveSettings;
+        }
+    }
+
+    // Partial class to set up resource-based routing.
     public partial class FirestoreClientImpl
     {
         /// <summary>
