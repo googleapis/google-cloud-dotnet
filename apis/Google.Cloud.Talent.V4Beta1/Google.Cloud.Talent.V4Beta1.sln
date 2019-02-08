@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1", "Google.Cloud.Talent.V4Beta1\Google.Cloud.Talent.V4Beta1.csproj", "{78651D76-F2F2-4C38-A571-1CDB98173E46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Talent.V4Beta1", "Google.Cloud.Talent.V4Beta1\Google.Cloud.Talent.V4Beta1.csproj", "{78651D76-F2F2-4C38-A571-1CDB98173E46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1.Snippets", "Google.Cloud.Talent.V4Beta1.Snippets\Google.Cloud.Talent.V4Beta1.Snippets.csproj", "{8A582D0D-4994-43EC-9E0B-23DEC77861D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Talent.V4Beta1.Snippets", "Google.Cloud.Talent.V4Beta1.Snippets\Google.Cloud.Talent.V4Beta1.Snippets.csproj", "{8A582D0D-4994-43EC-9E0B-23DEC77861D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{37B06DA0-46CC-4B99-9416-F8701DA37F16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{37B06DA0-46CC-4B99-9416-F8701DA37F16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1.Tests", "Google.Cloud.Talent.V4Beta1.Tests\Google.Cloud.Talent.V4Beta1.Tests.csproj", "{89B3861A-66C1-4909-8DCC-23E4EDB319B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Talent.V4Beta1.Tests", "Google.Cloud.Talent.V4Beta1.Tests\Google.Cloud.Talent.V4Beta1.Tests.csproj", "{89B3861A-66C1-4909-8DCC-23E4EDB319B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1.SmokeTests", "Google.Cloud.Talent.V4Beta1.SmokeTests\Google.Cloud.Talent.V4Beta1.SmokeTests.csproj", "{A7AA5DB0-329F-412B-92F8-41998C3C24B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Talent.V4Beta1.SmokeTests", "Google.Cloud.Talent.V4Beta1.SmokeTests\Google.Cloud.Talent.V4Beta1.SmokeTests.csproj", "{A7AA5DB0-329F-412B-92F8-41998C3C24B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Talent.V4Beta1.CleanTestData", "Google.Cloud.Talent.V4Beta1.CleanTestData\Google.Cloud.Talent.V4Beta1.CleanTestData.csproj", "{121C5FE0-BD2C-47A8-A922-C06AFC834D24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{78651D76-F2F2-4C38-A571-1CDB98173E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +85,23 @@ Global
 		{A7AA5DB0-329F-412B-92F8-41998C3C24B3}.Release|x64.Build.0 = Release|Any CPU
 		{A7AA5DB0-329F-412B-92F8-41998C3C24B3}.Release|x86.ActiveCfg = Release|Any CPU
 		{A7AA5DB0-329F-412B-92F8-41998C3C24B3}.Release|x86.Build.0 = Release|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Debug|x64.Build.0 = Debug|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Debug|x86.Build.0 = Debug|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Release|x64.ActiveCfg = Release|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Release|x64.Build.0 = Release|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Release|x86.ActiveCfg = Release|Any CPU
+		{121C5FE0-BD2C-47A8-A922-C06AFC834D24}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A48A9AC-E560-40FD-BBCE-921D29402EF8}
 	EndGlobalSection
 EndGlobal
