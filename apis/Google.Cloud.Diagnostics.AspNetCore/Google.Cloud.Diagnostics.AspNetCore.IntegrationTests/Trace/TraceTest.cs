@@ -364,56 +364,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var traces = _polling.GetTraces(uri, _startTime, minEntries: minTraces);
             Assert.InRange(traces.Count(), minTraces, requests);
         }
-
-        [Fact]
-        public async Task Trace_SizedBufferTinyPropagate_Stress()
-        {
-            var uri = $"/Trace/{_testId}";
-            // Not the best ever stress test but we are limited by read quotas anyway.
-            var requests = 300;
-            IList<Task<HttpResponseMessage>> responseTasks = new List<Task<HttpResponseMessage>>(300);
-            Task<HttpResponseMessage[]> whenAllTask = null;
-            // Using a Web Application that propagates tracing exceptions.
-            using (var server = new TestServer(new WebHostBuilder().UseStartup<TraceTestTinyBufferHighQpsPropagateApplication>()))
-            using (var client = server.CreateClient())
-            {
-                for (int i = 0; i < requests; i++)
-                {
-                    responseTasks.Add(client.GetAsync(uri));
-                }
-
-                // With such a tiny buffer (it fills with at most two traces), we have a lot of concurrent calls to the
-                // backend trying to send traces. Some of these will timeout, some of these will be successful.
-                // By default we don't propagate the exception but we are doing so for the purpose of this test.
-                // In the end the client code should configure the tracer with a properly sized buffer, qps value,
-                // exception handling etc. so that tracing works properly with their request volume. With our default values
-                // we guarantee that no exception occurred during tracing will propagate to the calling code. The side
-                // effect is that some traces might be missing that were intended to be traced.
-                whenAllTask = Task.WhenAll(responseTasks);
-                await Assert.ThrowsAsync<RpcException>(() => whenAllTask);
-            }
-
-            // Checking that all faulted requests are because of timeouts.
-            Assert.True(whenAllTask.Exception.InnerExceptions.All(e =>
-            {
-                var rpcException = e as RpcException;
-                return rpcException != null && 
-                (rpcException.StatusCode == StatusCode.DeadlineExceeded || rpcException.StatusCode == StatusCode.Unavailable) &&
-                rpcException.Status.Detail == "Deadline Exceeded";
-            }));
-
-            // We know how many requests failed, and those failed because 
-            // they couldn't flush at most 2 traces (the buffer fills with at most two traces).
-            // So we know the minimum number of traces to expect.
-            // Minus one because of the last buffer potentially not having filled.
-            var minTraces = requests - 2 * whenAllTask.Exception.InnerExceptions.Count - 1;
-            // We also know the maximum nuber of traces to expect, since for every failing request
-            // at least one trace was not flushed, supposing that that trace was bigger in size and filled
-            // the buffer by itself.
-            var maxTraces = requests - whenAllTask.Exception.InnerExceptions.Count;
-            var traces = _polling.GetTraces(uri, _startTime, minEntries: minTraces);
-            Assert.InRange(traces.Count(), minTraces, maxTraces);
-        }
     }
 
     /// <summary>
