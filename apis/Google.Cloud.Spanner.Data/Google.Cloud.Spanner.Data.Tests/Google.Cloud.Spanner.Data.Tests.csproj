@@ -12,7 +12,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CoreCompat.EnterpriseLibrary.TransientFaultHandling" Version="6.0.1304-r3" />
-    <PackageReference Include="Google.Api.Gax.Testing" Version="2.6.0-beta02" />
+    <PackageReference Include="Google.Api.Gax.Testing" Version="2.6.0" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />

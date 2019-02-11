@@ -23,11 +23,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.6.0-beta02" />
-    <PackageReference Include="Google.Api.Gax.Grpc.Gcp" Version="2.6.0-beta02" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="2.6.0" />
+    <PackageReference Include="Google.Api.Gax.Grpc.Gcp" Version="2.6.0" />
     <ProjectReference Include="..\..\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2.csproj" />
-    <PackageReference Include="Grpc.Core" Version="1.16.0" PrivateAssets="None" />
-    <PackageReference Include="Grpc.Gcp" Version="1.1.1" />
+    <PackageReference Include="Grpc.Core" Version="1.18.0" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
