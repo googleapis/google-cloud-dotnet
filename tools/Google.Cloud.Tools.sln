@@ -42,7 +42,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Generate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.AnalyzersTesting", "Google.Cloud.AnalyzersTesting\Google.Cloud.AnalyzersTesting.csproj", "{5608BDB2-A160-49C0-A545-C08787534B18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.ProcessBuildTimingLog", "Google.Cloud.Tools.ProcessBuildTimingLog\Google.Cloud.Tools.ProcessBuildTimingLog.csproj", "{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ProcessBuildTimingLog", "Google.Cloud.Tools.ProcessBuildTimingLog\Google.Cloud.Tools.ProcessBuildTimingLog.csproj", "{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.GeneratePublicApi", "Google.Cloud.Tools.GeneratePublicApi\Google.Cloud.Tools.GeneratePublicApi.csproj", "{6C268EFF-E10A-458E-8CDB-060F5381238A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -306,6 +308,18 @@ Global
 		{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}.Release|x64.Build.0 = Release|Any CPU
 		{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}.Release|x86.ActiveCfg = Release|Any CPU
 		{E47C244F-96BC-4753-BFE1-7A54A3C3AA3E}.Release|x86.Build.0 = Release|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Debug|x64.Build.0 = Debug|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Debug|x86.Build.0 = Debug|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Release|x64.ActiveCfg = Release|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Release|x64.Build.0 = Release|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Release|x86.ActiveCfg = Release|Any CPU
+		{6C268EFF-E10A-458E-8CDB-060F5381238A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
