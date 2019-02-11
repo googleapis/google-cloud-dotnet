@@ -225,10 +225,10 @@ namespace Google.Cloud.Tools.ProjectGenerator
             string beforeHash = GetFileHash(fullFile);
             if (!File.Exists(fullFile))
             {
-                RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
+                Processes.RunDotnet(apiRoot, "new", "sln", "-n", api.Id);
             }
             // It's much faster to run a single process than to run it once per project.
-            RunDotnet(apiRoot, new[] { "sln", solutionFileName, "add" }.Concat(projects).ToArray());
+            Processes.RunDotnet(apiRoot, new[] { "sln", solutionFileName, "add" }.Concat(projects).ToArray());
 
             string afterHash = GetFileHash(fullFile);
             if (beforeHash != afterHash)
@@ -263,30 +263,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 Console.WriteLine($"Generated documentation stub for {api.Id}");
             }
         }
-
-        private static void RunDotnet(string root, params string[] args)
-        {
-            string joinedArguments = string.Join(" ", args);
-            var psi = new ProcessStartInfo
-            {
-                FileName = "dotnet",
-                Arguments = joinedArguments,
-                WorkingDirectory = root,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true
-            };
-            var process = Process.Start(psi);
-            // We assume there isn't so much output that this will block. Otherwise we'd have to read it in a different thread etc.
-            // 10s limit stops us from hanging forever...
-            process.WaitForExit(10000);
-            if (process.ExitCode != 0)
-            {
-                var output = process.StandardOutput.ReadToEnd();
-                var error = process.StandardError.ReadToEnd();
-                throw new Exception($"dotnet exit code {process.ExitCode}. Directory: {root}. Args: {joinedArguments}. Output: {output}. Error: {error}");
-            }
-        }
-
+        
         private static void GenerateMainProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
             if (api.Version == null)

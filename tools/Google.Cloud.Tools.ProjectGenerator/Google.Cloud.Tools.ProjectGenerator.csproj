@@ -3,11 +3,8 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <Description>Console app to generate project files based on API descriptions</Description>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-    <AssemblyName>Google.Cloud.Tools.ProjectGenerator</AssemblyName>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <PackageId>Google.Cloud.Tools.ProjectGenerator</PackageId>
-    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>

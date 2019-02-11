@@ -2,11 +2,8 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-    <AssemblyName>Google.Cloud.Tools.CheckGapicConfigs</AssemblyName>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <PackageId>Google.Cloud.Tools.CheckGapicConfigs</PackageId>
-    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
