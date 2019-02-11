@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Testing;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -160,11 +161,6 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             Assert.True(state.CanRetry(exception2));
             await state.RecordErrorAndWaitAsync(exception2, default);
-        }
-
-        private sealed class NoOpScheduler : IScheduler
-        {
-            public Task Delay(TimeSpan delay, CancellationToken cancellationToken) => Task.FromResult(0);
         }
 
         private static RetryState CreateSimpleRetryState() => new RetryState(

@@ -390,11 +390,6 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("Message", result);
         }
 
-        private sealed class NoOpScheduler : IScheduler
-        {
-            public Task Delay(TimeSpan delay, CancellationToken cancellationToken) => Task.FromResult(0);
-        }
-
         private static Mock<FirestoreClient> CreateMockClient()
         {
             var mock = new Mock<FirestoreClient> { CallBase = true };

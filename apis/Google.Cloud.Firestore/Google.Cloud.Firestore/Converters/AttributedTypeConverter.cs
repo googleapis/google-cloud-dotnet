@@ -163,23 +163,20 @@ namespace Google.Cloud.Firestore.Converters
                     _converter = CustomConverter.ForConverterType(attribute.ConverterType, property.PropertyType);
                 }
 
-                // Note that the error messages in here don't use nameof, as we don't have an overload of CheckState accepting three
-                // format arguments.
-                // TODO: Put that in GAX and use nameof.
                 string typeName = property.DeclaringType.FullName;
                 GaxPreconditions.CheckState(property.GetIndexParameters().Length == 0,
-                    "{0}.{1} is an indexer, and should not be decorated with FirestorePropertyAttribute.",
-                    typeName, property.Name);
+                    "{0}.{1} is an indexer, and should not be decorated with {2}.",
+                    typeName, property.Name, nameof(FirestorePropertyAttribute));
 
                 // Annoyingly, we can't easily check whether the property is static - we have to check the individual methods.
                 var getMethod = property.GetGetMethod(nonPublic: true);
                 var setMethod = property.GetSetMethod(nonPublic: true);
                 GaxPreconditions.CheckState(getMethod == null || !getMethod.IsStatic,
-                    "{0}.{1} is static, and should not be decorated with FirestorePropertyAttribute.",
-                    typeName, property.Name);
+                    "{0}.{1} is static, and should not be decorated with {2}.",
+                    typeName, property.Name, nameof(FirestorePropertyAttribute));
                 GaxPreconditions.CheckState(setMethod == null || !setMethod.IsStatic,
-                    "{0}.{1} is static, and should not be decorated with FirestorePropertyAttribute.",
-                    typeName, property.Name);
+                    "{0}.{1} is static, and should not be decorated with {2}.",
+                    typeName, property.Name, nameof(FirestorePropertyAttribute));
             }
 
             // TODO: Consider creating delegates for the property get/set methods.
