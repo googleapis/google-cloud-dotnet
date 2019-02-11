@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Testing;
+using Google.Api.Gax.Testing;
 using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -236,11 +238,6 @@ namespace Google.Cloud.Spanner.V1.Tests
                     Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
                 return new ExecuteStreamingSqlStreamImpl(call);
             }
-        }
-
-        private sealed class NoOpScheduler : IScheduler
-        {
-            public Task Delay(TimeSpan delay, CancellationToken cancellationToken) => Task.FromResult(0);
         }
     }
 }
