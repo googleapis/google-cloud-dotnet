@@ -549,7 +549,7 @@ namespace Google.Cloud.Firestore.Tests
                 _responses = responses;
                 // We only use the gRPC call for disposal. This is a bit unpleasant (rather than providing a reader/writer etc) but
                 // it's simple and enough for what we need.
-                _grpcCall = TestCalls.AsyncDuplexStreamingCall<ListenResponse, ListenRequest>(null, null, null, null, null, () => Disposed = true);
+                _grpcCall = TestCalls.AsyncDuplexStreamingCall<ListenRequest, ListenResponse>(null, null, null, null, null, () => Disposed = true);
             }
 
             public override AsyncDuplexStreamingCall<ListenRequest, ListenResponse> GrpcCall => _grpcCall;
