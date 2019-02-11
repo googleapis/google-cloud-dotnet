@@ -19,7 +19,7 @@
     <DebugType Condition="'$(TargetFramework)' == 'netcoreapp2.0'">portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Api.Gax.Testing" Version="2.5.0" />
+    <PackageReference Include="Google.Api.Gax.Testing" Version="2.6.0" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.AspNetCore\Google.Cloud.Diagnostics.AspNetCore.csproj" />
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" />
