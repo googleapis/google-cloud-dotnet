@@ -2,12 +2,8 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-    <AssemblyName>Google.Cloud.Tools.GenerateDocfxSources</AssemblyName>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <PackageId>Google.Cloud.Tools.GenerateDocfxSources</PackageId>
-    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
@@ -16,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="YamlDotNet.Signed" Version="3.9.0" />
+    <PackageReference Include="YamlDotNet.Signed" Version="5.3.0" />
   </ItemGroup>
 
 </Project>

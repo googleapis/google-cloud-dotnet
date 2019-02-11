@@ -258,7 +258,6 @@ specifying an end-point or channel and settings.";
 
         private static void CreateToc(string api, string outputDirectory)
         {
-            // TODO: Use YamlDotNet?
             // TODO: Don't create it if it exists already?
 
             var tocEntries = new List<TocEntry>
@@ -278,13 +277,11 @@ specifying an end-point or channel and settings.";
                 tocEntries.Add(new TocEntry { Name = title, Href = Path.GetFileName(file) });
             }
 
-            // Ugly hack to get the TOC right for Google.Cloud.Language.V1.Experimental for now.
-            string apiNamespace = api == "Google.Cloud.Language.V1.Experimental" ? "Google.Cloud.Language.V1" : api;
-            tocEntries.Add(new TocEntry { Name = "API Reference", Href = $"obj/api/{apiNamespace}.yml" });
+            tocEntries.Add(new TocEntry { Name = "API Reference", Href = $"obj/api/{api}.yml" });
 
             using (var writer = File.CreateText(Path.Combine(outputDirectory, "toc.yml")))
             {
-                var serializer = new Serializer(namingConvention: new CamelCaseNamingConvention());
+                var serializer = new SerializerBuilder().WithNamingConvention(new CamelCaseNamingConvention()).Build();
                 serializer.Serialize(writer, tocEntries);
             }
         }

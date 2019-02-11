@@ -912,7 +912,11 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             {
                 using (var input = File.OpenText(file))
                 {
-                    var model = new Deserializer(namingConvention: new CamelCaseNamingConvention(), ignoreUnmatched: true).Deserialize<CodeModel>(input);
+                    var model = new DeserializerBuilder()
+                        .WithNamingConvention(new CamelCaseNamingConvention())
+                        .IgnoreUnmatchedProperties()
+                        .Build()
+                        .Deserialize<CodeModel>(input);
                     // Assume we only want classes and structs at the moment...
                     var type = model.Items.FirstOrDefault(x => x.Type == "Class" || x.Type == "Struct");
                     if (type == null)

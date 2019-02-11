@@ -3,24 +3,14 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <Description>Console app to generate Markdown files for docfx with snippet references</Description>
-    <TargetFramework>net451</TargetFramework>
-    <AssemblyName>Google.Cloud.Tools.GenerateSnippetMarkdown</AssemblyName>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <PackageId>Google.Cloud.Tools.GenerateSnippetMarkdown</PackageId>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="YamlDotNet.Signed" Version="3.9.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
+    <PackageReference Include="YamlDotNet.Signed" Version="5.3.0" />
   </ItemGroup>
 
 </Project>
