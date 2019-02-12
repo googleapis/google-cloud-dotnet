@@ -41,7 +41,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             Company company = new Company();
             // Make the request
             Company response = await companyServiceClient.CreateCompanyAsync(formattedParent, company);
@@ -55,7 +55,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             Company company = new Company();
             // Make the request
             Company response = companyServiceClient.CreateCompany(formattedParent, company);
@@ -72,7 +72,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 Company = new Company(),
             };
             // Make the request
@@ -89,7 +89,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 Company = new Company(),
             };
             // Make the request
@@ -284,7 +284,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             // Make the request
             PagedAsyncEnumerable<ListCompaniesResponse, Company> response =
                 companyServiceClient.ListCompaniesAsync(formattedParent);
@@ -328,7 +328,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             // Make the request
             PagedEnumerable<ListCompaniesResponse, Company> response =
                 companyServiceClient.ListCompanies(formattedParent);
@@ -374,7 +374,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListCompaniesRequest request = new ListCompaniesRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
             };
             // Make the request
             PagedAsyncEnumerable<ListCompaniesResponse, Company> response =
@@ -421,7 +421,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListCompaniesRequest request = new ListCompaniesRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
             };
             // Make the request
             PagedEnumerable<ListCompaniesResponse, Company> response =
