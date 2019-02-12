@@ -41,7 +41,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             ResumeServiceClient resumeServiceClient = await ResumeServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             ByteString resume = ByteString.Empty;
             // Make the request
             ParseResumeResponse response = await resumeServiceClient.ParseResumeAsync(formattedParent, resume);
@@ -55,7 +55,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             ResumeServiceClient resumeServiceClient = ResumeServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
             ByteString resume = ByteString.Empty;
             // Make the request
             ParseResumeResponse response = resumeServiceClient.ParseResume(formattedParent, resume);
@@ -72,7 +72,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ParseResumeRequest request = new ParseResumeRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 Resume = ByteString.Empty,
             };
             // Make the request
@@ -89,7 +89,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ParseResumeRequest request = new ParseResumeRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
                 Resume = ByteString.Empty,
             };
             // Make the request
