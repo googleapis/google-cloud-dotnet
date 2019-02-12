@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
 using System;
 
 namespace Google.Cloud.Talent.V4Beta1.SmokeTests
