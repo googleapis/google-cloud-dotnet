@@ -14,7 +14,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType Condition="'$(TargetFramework)' == 'netcoreapp1.0'">pdbonly</DebugType>
     <DebugType Condition="'$(TargetFramework)' == 'net46'">pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp2.0'">portable</DebugType>
+    <DebugType Condition="'$(TargetFramework)' == 'netcoreapp2.1'">portable</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Testing" Version="2.6.0" />
@@ -41,7 +41,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="1.0.2" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.0.0" />

@@ -98,7 +98,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         private IWebHostBuilder GetSimpleHostBuilder()
         {
-#if NETCOREAPP2_0
+#if NETCOREAPP2_1
             string projectId = TestEnvironment.GetTestProjectId();
             // Sample: RegisterGoogleLogger2
             return new WebHostBuilder()
@@ -116,7 +116,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         private IWebHostBuilder GetExceptionPropagatingHostBuilder()
         {
-#if NETCOREAPP2_0
+#if NETCOREAPP2_1
             string projectId = LoggingTestApplicationPropagateExceptions.ProjectId;
             // Sample: RegisterGoogleLoggerPropagateExceptions2
             return new WebHostBuilder()

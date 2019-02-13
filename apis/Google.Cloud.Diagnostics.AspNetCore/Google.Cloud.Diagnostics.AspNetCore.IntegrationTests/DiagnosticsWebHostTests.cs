@@ -99,7 +99,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
         }
 
-#if NETCOREAPP2_0
+#if NETCOREAPP2_1
         [Fact]
         public async Task UseGoogleDiagnostics_ConfiguresComponentsFromHostBuilderContext()
         {
