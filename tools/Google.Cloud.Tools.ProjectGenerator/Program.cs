@@ -41,7 +41,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private const string DefaultRestTargetFrameworks = "netstandard1.3;net45";
         private const string DefaultGrpcTargetFrameworks = "netstandard1.5;net45";
-        private const string DefaultTestTargetFrameworks = "netcoreapp1.0;net452";
+        private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net452";
 
         private const string AnalyzersTargetFramework = "netstandard1.3";
         private const string AnalyzersTestTargetFramework = "netcoreapp2.0";
@@ -387,7 +387,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
             var propertyGroup =
                 new XElement("PropertyGroup",
-                    new XElement("TargetFramework", "netcoreapp1.0"),
+                    new XElement("TargetFramework", "netcoreapp2.1"),
                     new XElement("OutputType", "Exe"),
                     new XElement("LangVersion", "latest"),
                     new XElement("IsPackable", false));

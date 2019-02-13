@@ -201,7 +201,7 @@
     "version": "3.0.0-beta07",
     "type": "other",
     "targetFrameworks": "netstandard2.0;netstandard1.5;net46",
-    "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net46",
+    "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.1;net46",
     "description": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
@@ -239,7 +239,7 @@
     "version": "3.0.0-beta07",
     "type": "other",
     "targetFrameworks": "netstandard2.0;netstandard1.5;net45",
-    "testTargetFrameworks": "netcoreapp2.0;netcoreapp1.0;net452",
+    "testTargetFrameworks": "netcoreapp2.1;netcoreapp1.0;net452",
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
@@ -321,7 +321,7 @@
     "version": "1.0.0-beta19",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
-    "testTargetFrameworks": "netcoreapp1.0;net452",
+    "testTargetFrameworks": "netcoreapp2.1;net452",
     "description": "Recommended Google client library to access the Firestore API.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
@@ -403,7 +403,7 @@
     "version": "2.3.0-beta02",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
-    "testTargetFrameworks": "netcoreapp1.0;net452",
+    "testTargetFrameworks": "netcoreapp2.1;net452",
     "description": "Log4Net client library for the Google Stackdriver Logging API.",
     "tags": [ "Log4Net", "Logging", "Stackdriver" ],
     "dependencies": {
@@ -423,7 +423,7 @@
     "version": "2.0.0-beta05",
     "type": "other",
     "targetFrameworks": "netstandard1.5;net45",
-    "testTargetFrameworks": "netcoreapp1.0;net452",
+    "testTargetFrameworks": "netcoreapp2.1;net452",
     "description": "NLog target for the Google Stackdriver Logging API.",
     "tags": [ "NLog", "Logging", "Stackdriver" ],
     "dependencies": {
@@ -612,7 +612,7 @@
     "version": "2.0.0-beta07",
     "type": "other",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
-    "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.0;net452",
+    "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.1;net452",
     "description": "Google ADO.NET Provider for Google Cloud Spanner.",
     "tags": [ "Spanner", "ADO" ],
     "dependencies": {
