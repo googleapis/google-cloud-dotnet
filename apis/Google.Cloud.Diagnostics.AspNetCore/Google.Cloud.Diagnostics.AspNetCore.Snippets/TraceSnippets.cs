@@ -128,7 +128,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-#if NETCOREAPP2_0
+#if NETCOREAPP2_1
         [Fact]
         public async Task Traces_OutgoingClientFactory()
         {
@@ -197,7 +197,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         // End sample
     }
 
-#if NETCOREAPP2_0
+#if NETCOREAPP2_1
     internal class TraceClientFactoryTestApplication
     {
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
@@ -299,7 +299,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         }
         // End sample
 
-#if NETCOREAPP2_0
+#if NETCOREAPP2_1
         // Sample: TraceOutgoingClientFactory
         /// <summary>
         /// Use the <see cref="IHttpClientFactory"/> to create an HttpClient that will guarantee
