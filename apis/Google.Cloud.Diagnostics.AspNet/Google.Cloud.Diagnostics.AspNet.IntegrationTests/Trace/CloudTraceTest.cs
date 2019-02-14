@@ -17,8 +17,11 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Protobuf.WellKnownTypes;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
 using Xunit;
 
@@ -93,6 +96,43 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             var trace = _polling.GetTrace($"/{_testId}", _startTime);
             Assert.NotNull(trace);
             Assert.Equal(2, trace.Spans.Count);
+        }
+
+        [Fact(Skip = "Until we have CI infrastructure to deploy Google.Cloud.Diagnostics.AspNet.ClientApp")]
+        public async Task Trace_CurrentTracer_AsyncLocal()
+        {
+            string clientAppUri = "http://localhost:58755/api/Home/";
+            IList<string> spanIds = new List<string>();
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(clientAppUri);
+
+                IList<Task> tasks = new List<Task>();
+                for(int i = 0; i < 10; i++)
+                {
+                    string spanId = IdGenerator.FromGuid();
+                    spanIds.Add(spanId);
+                    tasks.Add(httpClient.GetStringAsync(spanId));
+                }
+
+                await Task.WhenAll(tasks);
+            }
+
+            // We are testing here that each request hast its own IManagedTracer.
+            // The tracer holds the span stack, and the api method we are using is creating
+            // spans as follows:
+            // $"/api/Home/{spanId}"
+            //  --$"parent-{spanId}"
+            //  ----$"child-{spanId}"
+            // If the tracer is changed during a request, then the span stack will change as well
+            // and there's no way that our 10 traces have all the correct span structure maintaining
+            // the spanId throughout, since each request has its own spanId.
+            // This cannot be tested on CI yet, but passed in local.
+            foreach (string spanId in spanIds)
+            {
+                var trace = _polling.GetTrace($"/api/Home/{spanId}", _startTime);
+                TraceEntryVerifiers.AssertParentChildSpan(trace, $"/api/Home/{spanId}", $"parent-{spanId}", $"child-{spanId}");
+            }
         }
     }
 }
