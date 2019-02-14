@@ -86,7 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// This <see cref="IManagedTracer"/> is a singleton.
         /// </summary>
         public static readonly IManagedTracer Tracer = ManagedTracer.CreateDelegatingTracer(
-            () => ContextInstanceManager.Get<IManagedTracer>() ?? NullManagedTracer.Instance);
+            () => ContextTracerManager.GetCurrentTracer());
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/> to propagate trace headers
@@ -175,7 +175,7 @@ namespace Google.Cloud.Diagnostics.AspNet
                 return;
             }
 
-            ContextInstanceManager.Set(tracer);
+            ContextTracerManager.SetCurrentTracer(tracer);
 
             if (headerContext.TraceId != null)
             {
