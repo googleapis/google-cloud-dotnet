@@ -22,10 +22,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-#if NETCOREAPP1_0
-using RsaKey = System.Security.Cryptography.RSA;
-#else
+#if NET452
 using RsaKey = System.Security.Cryptography.RSACryptoServiceProvider;
+#else
+using RsaKey = System.Security.Cryptography.RSA;
 #endif
 
 namespace Google.Cloud.Storage.V1.Tests
@@ -102,7 +102,7 @@ namespace Google.Cloud.Storage.V1.Tests
         private static ServiceAccountCredential CreateFakeServiceAccountCredential(string id = "test") =>
             new ServiceAccountCredential(new ServiceAccountCredential.Initializer(id)
             {
-                Key = (RsaKey)RSA.Create()
+                Key = (RsaKey) RSA.Create()
             });
     }
 }
