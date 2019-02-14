@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Google.Cloud.Diagnostics.Common;
 using System.IO;
 using System.Web;
 using Xunit;
@@ -26,11 +25,11 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         {
             HttpContext.Current = CreateHttpContext();
 
-            Assert.Null(ContextInstanceManager.Get<IManagedTracer>());
-            ContextInstanceManager.Set<IManagedTracer>(NullManagedTracer.Instance);
-            Assert.Equal(NullManagedTracer.Instance, ContextInstanceManager.Get<IManagedTracer>());
-            ContextInstanceManager.Set<IManagedTracer>(null);
-            Assert.Null(ContextInstanceManager.Get<IManagedTracer>());
+            Assert.Null(ContextInstanceManager.Get<string>());
+            ContextInstanceManager.Set("123");
+            Assert.Equal("123", ContextInstanceManager.Get<string>());
+            ContextInstanceManager.Set<string>(null);
+            Assert.Null(ContextInstanceManager.Get<string>());
         }
 
         [Fact]
