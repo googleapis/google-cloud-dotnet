@@ -85,8 +85,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// for creating spans for a trace as well as adding meta data to them.
         /// This <see cref="IManagedTracer"/> is a singleton.
         /// </summary>
-        public static readonly IManagedTracer Tracer = ManagedTracer.CreateDelegatingTracer(
-            () => ContextTracerManager.GetCurrentTracer());
+        public static readonly IManagedTracer Tracer = ManagedTracer.CreateDelegatingTracer(() => ContextTracerManager.GetCurrentTracer());
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/> to propagate trace headers
