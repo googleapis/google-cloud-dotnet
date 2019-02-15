@@ -204,17 +204,19 @@ namespace Google.Cloud.Spanner.V1
                     break;
                 case Value.KindOneofCase.ListValue:
                     // When merging a ListValue, we examine the last item in the list.
-                    // If that item is mergeable, we then merge that item with the first item in the other list.
+                    // If that item is mergeable and if the other list is non-empty, we then merge that item with the first item in the other list.
+                    // An empty list at this point is used as a way of stopping an overly-recursive merge.
                     var childItemValue = currentValue.ListValue.Values.LastOrDefault();
                     int iterator = 0;
-                    if (IsMergeable(childItemValue))
+                    var nextList = nextValue.ListValue.Values;
+                    if (IsMergeable(childItemValue) && nextList.Count > 0)
                     {
-                        MergeChunk(childItemValue, nextValue.ListValue.Values.First());
+                        MergeChunk(childItemValue, nextList[0]);
                         iterator++;
                     }
-                    for (; iterator < nextValue.ListValue.Values.Count; iterator++)
+                    for (; iterator < nextList.Count; iterator++)
                     {
-                        currentValue.ListValue.Values.Add(nextValue.ListValue.Values[iterator]);
+                        currentValue.ListValue.Values.Add(nextList[iterator]);
                     }
                     break;
                 default:
