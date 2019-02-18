@@ -1,6 +1,6 @@
 # Version history
 
-# 3.0.0-beta07, 2018-11-12
+# 3.0.0-beta08, 2019-02-18
 
 New features since 2.0.0:
 

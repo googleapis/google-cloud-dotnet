@@ -1,9 +1,11 @@
 # Version history
 
-# 3.0.0-beta07, 2018-11-12
+# 3.0.0-beta08, 2019-02-18
 
 New features since 2.0.0:
 
+- Add the ASP.NET trace identifier to trace labels.
+- Extension method for IWebHostBuilder for reading monitored resource data from host builder context.
 - When logging exceptions, we have stopped logging HTTP Status Code information since we were storing inconsistent values.
 - Supporting the .NET Standard 2.0 `System.Net.Http.IHttpClientFactory` for creating `System.Net.Http.HttpClient` instances when tracing outgoing requests.
 - Adds format parameters from all parent log scopes in a log entry.
