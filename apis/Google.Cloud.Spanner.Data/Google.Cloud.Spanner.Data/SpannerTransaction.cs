@@ -193,7 +193,7 @@ namespace Google.Cloud.Spanner.Data
             }
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
                 {
-                    var callSettings = _connection.CreateCallSettings(settings => settings.PartitionQuerySettings, timeoutSeconds, cancellationToken);
+                    var callSettings = SpannerConnection.CreateCallSettings(settings => settings.PartitionQuerySettings, timeoutSeconds, cancellationToken);
                     var response = await _session.PartitionQueryAsync(partitionRequest, callSettings).ConfigureAwait(false);
                     return response.Partitions.Select(x => x.PartitionToken);
                 },
@@ -227,7 +227,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
             // We're not making any Spanner requests here, so we don't need profiling or error translation.
-            var callSettings = _connection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
+            var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
             return Task.FromResult(_session.ExecuteSqlStreamReader(request, callSettings));
         }
 
@@ -240,7 +240,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 // Note: ExecuteSql would work, but by using a streaming call we enable potential future scenarios
                 // where the server returns interim resume tokens to avoid timeouts.
-                var callSettings = _connection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
+                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
                 using (var reader = _session.ExecuteSqlStreamReader(request, callSettings))
                 {
                     Value value = await reader.NextAsync(cancellationToken).ConfigureAwait(false);
@@ -274,7 +274,8 @@ namespace Google.Cloud.Spanner.Data
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
-                ExecuteBatchDmlResponse response = await _session.ExecuteBatchDmlAsync(request, timeoutSeconds, cancellationToken).ConfigureAwait(false);
+                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteBatchDmlSettings, timeoutSeconds, cancellationToken);
+                ExecuteBatchDmlResponse response = await _session.ExecuteBatchDmlAsync(request, callSettings).ConfigureAwait(false);
                 IEnumerable<long> result = response.ResultSets.Select(rs => rs.Stats.RowCountExact);
                 if (response.Status.Code == (int) Rpc.Code.Ok)
                 {
@@ -308,7 +309,7 @@ namespace Google.Cloud.Spanner.Data
             var request = new CommitRequest { Mutations = { _mutations } };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
-                var callSettings = _connection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
+                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
                 var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
                 if (response.CommitTimestamp == null)
                 {
@@ -329,7 +330,7 @@ namespace Google.Cloud.Spanner.Data
         public Task RollbackAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
-            var callSettings = _connection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
+            var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _session.RollbackAsync(new RollbackRequest(), callSettings),
                 "SpannerTransaction.Rollback", SpannerConnection.Logger);

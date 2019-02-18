@@ -273,7 +273,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public void InsertAndUpdateWithQuery()
         {
-            string key = CreateTestRows();
+            string key = _fixture.CreateTestRows();
             using (var connection = _fixture.GetConnection())
             {
                 RetryHelpers.ExecuteWithRetry(() =>
@@ -293,7 +293,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     }
                 });
             }
-            var actual = FetchValues(key);
+            var actual = _fixture.FetchValues(key);
             var expected = new Dictionary<int, int>
             {
                 { 0, 0 },

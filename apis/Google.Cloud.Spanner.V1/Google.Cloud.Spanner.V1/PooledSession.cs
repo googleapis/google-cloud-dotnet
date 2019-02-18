@@ -262,10 +262,9 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         /// <param name="request">The query request. Must not be null. The request will be modified with session and transaction details
         /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
-        /// <param name="timeoutSeconds">The timeout for this RPC, in seconds.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, int timeoutSeconds, CancellationToken cancellationToken)
+        public Task<ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -274,8 +273,7 @@ namespace Google.Cloud.Spanner.V1
             {
                 request.Transaction = new TransactionSelector { Id = TransactionId };
             }
-            var settings = CreateSettings(Client.Settings.ExecuteBatchDmlSettings, timeoutSeconds, cancellationToken);
-            return RecordSuccessAndExpiredSessions(Client.ExecuteBatchDmlAsync(request, settings));
+            return RecordSuccessAndExpiredSessions(Client.ExecuteBatchDmlAsync(request, callSettings));
         }
 
         /// <summary>

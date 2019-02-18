@@ -238,7 +238,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.ExecuteBatchDmlAsync(request, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new ExecuteBatchDmlResponse())
                 .Verifiable();
-            await sessionWithTransaction.ExecuteBatchDmlAsync(request, 5, CancellationToken.None);
+            await sessionWithTransaction.ExecuteBatchDmlAsync(request, null);
 
             // The call modifies the request. (We can't easily check that it was modified before the RPC)
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
@@ -258,7 +258,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             pool.Mock.Setup(client => client.ExecuteBatchDmlAsync(request, It.IsAny<CallSettings>()))
                 .ReturnsAsync(new ExecuteBatchDmlResponse())
                 .Verifiable();
-            await pooledSession.ExecuteBatchDmlAsync(request, 5, CancellationToken.None);
+            await pooledSession.ExecuteBatchDmlAsync(request, null);
 
             // The call modifies the request's session, but not transaction.
             Assert.Equal(s_sampleSessionName, request.SessionAsSessionName);
