@@ -13,3 +13,9 @@
 {{client-classes}}
 
 {{client-construction}}
+
+# Sample code
+
+## Redact information in plain text
+
+{{sample:DlpServiceClient.Intro}}
