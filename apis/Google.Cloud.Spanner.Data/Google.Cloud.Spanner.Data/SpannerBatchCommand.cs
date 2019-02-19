@@ -38,17 +38,17 @@ namespace Google.Cloud.Spanner.Data
     public sealed partial class SpannerBatchCommand
     {
         private int _commandTimeout;
-        private SpannerConnection _connection;
-        private SpannerTransaction _transaction;
         private SpannerBatchCommandType _commandType;
 
-        /// <summary>
-        /// Initializes a new instance of <see cref="SpannerBatchCommand"/>, using a default command timeout.
-        /// </summary>
-        public SpannerBatchCommand()
+        internal SpannerBatchCommand(SpannerConnection connection)
         {
-            _commandTimeout = SpannerConnectionStringBuilder.DefaultTimeout;
-            _commandType = SpannerBatchCommandType.None;
+            Connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
+        }
+
+        internal SpannerBatchCommand(SpannerTransaction transaction)
+        {
+            Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
+            Connection = transaction.SpannerConnection; // Never null
         }
 
         // Visible for testing
@@ -69,53 +69,15 @@ namespace Google.Cloud.Spanner.Data
             set => _commandTimeout = GaxPreconditions.CheckArgumentRange(value, nameof(value), 0, int.MaxValue);
         }
 
-        //TODO(atarafamas): Revisit the mutability and orthogonality of Connection and Transaction.
+        /// <summary>
+        /// The connection to the data source. This is never null.
+        /// </summary>
+        public SpannerConnection Connection { get; }
 
         /// <summary>
-        /// The connection to the data source.
+        /// The transaction to use when executing this command. If this is null, the command will be executed without a transaction.
         /// </summary>
-        /// <remarks>When setting this property:
-        /// <list type="bullet">
-        /// <item>If the new value is <code>null</code> then both <see cref="Connection"/> and <see cref="Transaction"/> will be set to <code>null</code>.</item>
-        /// <item>If the <see cref="Transaction"/> associated with this instance is set and has a different <see cref="SpannerTransaction.SpannerConnection"/>
-        /// than the new value for this property, then the attempt to set this new value will throw an <see cref="ArgumentException"/>.</item>
-        /// <item>Otherwise the attempt to set the new value will succeed.</item>
-        /// </list></remarks>
-        public SpannerConnection Connection
-        {
-            get => _connection;
-            set
-            {
-                GaxPreconditions.CheckArgument(value == null || _transaction == null || _transaction.SpannerConnection == value, nameof(value), "A transaction associated to a different connection is set in this command.");
-
-                _connection = value;
-                if (value == null)
-                {
-                    _transaction = null;
-                }
-            }
-        }
-
-        /// <summary>
-        /// The transaction to use when executing this command.
-        /// </summary>
-        /// <remarks>When setting this property:
-        /// <list type="bullet">
-        /// <item>If the new value is <code>null</code> then <see cref="Transaction"/> will be set to <code>null</code>.</item>
-        /// <item>Otherwise <see cref="Transaction"/> will be set to the new value and <see cref="Connection"/> will be set to <see cref="SpannerTransaction.SpannerConnection"/>.</item>
-        /// </list></remarks>
-        public SpannerTransaction Transaction
-        {
-            get => _transaction;
-            set
-            {
-                _transaction = value;
-                if (value != null)
-                {
-                    _connection = value.SpannerConnection;
-                }
-            }
-        }
+        public SpannerTransaction Transaction { get; }
 
         /// <summary>
         /// The type of this batch command. If initialy set to <see cref="SpannerBatchCommandType.None"/>, this value will be

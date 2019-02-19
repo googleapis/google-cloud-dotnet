@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +27,30 @@ namespace Google.Cloud.Spanner.Data.Tests
     public class SpannerBatchCommandTests
     {
         [Fact]
-        public void DefaultConstructor()
+        public void ConnectionConstructor()
         {
-            var command = new SpannerBatchCommand();
+            var connection = new SpannerConnection();
+            var command = new SpannerBatchCommand(connection);
 
             Assert.Empty(command.Commands);
-            Assert.Null(command.Connection);
+            Assert.Same(connection, command.Connection);
             Assert.Null(command.Transaction);
+            Assert.Equal(SpannerBatchCommandType.None, command.CommandType);
+        }
+
+        [Fact]
+        public void TransactionConstructor()
+        {
+            var connection = new SpannerConnection();
+            var pool = new FakeSessionPool();
+            var session = PooledSession.FromSessionName(pool, new SessionName("project", "instance", "database", "session"));
+
+            var transaction = new SpannerTransaction(connection, TransactionMode.ReadWrite, session: session, timestampBound: null);
+            var command = new SpannerBatchCommand(transaction);
+
+            Assert.Empty(command.Commands);
+            Assert.Same(connection, command.Connection);
+            Assert.Same(transaction, command.Transaction);
             Assert.Equal(SpannerBatchCommandType.None, command.CommandType);
         }
 
@@ -69,18 +89,19 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         [Theory]
         [MemberData(nameof(ValidCommands))]
-        public void AddValidCommands(Action<SpannerBatchCommand> addCommandAction, string expetedCommandText, int expectedParametersCount)
+        public void AddValidCommands(Action<SpannerBatchCommand> addCommandAction, string expectedCommandText, int expectedParametersCount)
         {
-            var command = new SpannerBatchCommand();
+            var connection = new SpannerConnection();
+            var command = new SpannerBatchCommand(connection);
 
             addCommandAction(command);
 
             Assert.Equal(1, command.Commands.Count);
-            Assert.Equal(expetedCommandText, command.Commands[0].CommandText, ignoreCase: true);
+            Assert.Equal(expectedCommandText, command.Commands[0].CommandText, ignoreCase: true);
 
             Assert.Equal(expectedParametersCount, command.Commands[0].Parameters.Count);
 
-            Assert.Null(command.Connection);
+            Assert.Same(connection, command.Connection);
             Assert.Null(command.Transaction);
             Assert.Equal(SpannerBatchCommandType.BatchDml, command.CommandType);
         }
@@ -88,7 +109,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void AddSeveralCommands()
         {
-            var command = new SpannerBatchCommand();
+            var connection = new SpannerConnection();
+            var command = new SpannerBatchCommand(connection);
 
             var expectedCommandsInOrder = new List<string>();
             foreach (var testCase in ValidCommands)
@@ -99,7 +121,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             Assert.Equal(expectedCommandsInOrder, command.Commands.Select(c => c.CommandText), StringComparer.OrdinalIgnoreCase);
 
-            Assert.Null(command.Connection);
+            Assert.Same(connection, command.Connection);
             Assert.Null(command.Transaction);
             Assert.Equal(SpannerBatchCommandType.BatchDml, command.CommandType);
         }
@@ -107,20 +129,30 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void AddNonDmlCommand_FromEmpty()
         {
-            var command = new SpannerBatchCommand();
+            var connection = new SpannerConnection();
+            var command = new SpannerBatchCommand(connection);
             Assert.Throws<InvalidOperationException>(() => command.Add("drop database myDatabase"));
         }
 
         [Fact]
         public void AddNonDmlCommand_FromValid()
         {
-            var command = new SpannerBatchCommand();
+            var connection = new SpannerConnection();
+            var command = new SpannerBatchCommand(connection);
 
             command.Add(
                 "DELETE FROM myTable WHERE Key=@key",
                 new SpannerParameterCollection { { "key", SpannerDbType.Int64, 5 } });
 
             Assert.Throws<InvalidOperationException>(() => command.Add("drop database myDatabase"));
+        }
+
+        private class FakeSessionPool : SessionPool.ISessionPool
+        {
+            public SpannerClient Client => throw new NotImplementedException();
+            public IClock Clock => SystemClock.Instance;
+            public SessionPoolOptions Options { get; } = new SessionPoolOptions();
+            public void Release(PooledSession session, bool deleteSession) =>  throw new NotImplementedException();
         }
     }
 }
