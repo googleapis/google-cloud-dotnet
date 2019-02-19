@@ -13,10 +13,15 @@
 // limitations under the License.
 
 using Google.Api.Gax.Testing;
+using Google.Apis.Auth.OAuth2;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.Tests
@@ -28,6 +33,13 @@ namespace Google.Cloud.Storage.V1.Tests
         /// </summary>
         public class V4SignerTest
         {
+            private static readonly GoogleCredential s_testCredential = GoogleCredential.FromJson(ReadTextResource("UrlSignerV4TestAccount.json"));
+            private static readonly Dictionary<string, HttpMethod> s_methods = new Dictionary<string, HttpMethod>
+            {
+                { "GET", HttpMethod.Get },
+                { "POST", HttpMethod.Post }
+            };
+
             // The data in this test is from an example in the Ruby implementation.
             [Fact]
             public void SampleRequest()
@@ -45,12 +57,12 @@ namespace Google.Cloud.Storage.V1.Tests
                 var uriString = signer.Sign(bucket, obj, expiry, HttpMethod.Get);
                 var parameters = ExtractQueryParameters(uriString);
 
-                Assert.Equal("GOOG4-RSA-SHA256", parameters["x-goog-algorithm"]);
-                Assert.Equal("test-account%40spec-test-ruby-samples.iam.gserviceaccount.com%2F20181119%2Fauto%2Fgcs%2Fgoog4_request", parameters["x-goog-credential"]);
-                Assert.Equal("20181119T055654Z", parameters["x-goog-date"]);
-                Assert.Equal("3600", parameters["x-goog-expires"]);
-                Assert.Equal("host", parameters["x-goog-signedheaders"]);
-                
+                Assert.Equal("GOOG4-RSA-SHA256", parameters["X-Goog-Algorithm"]);
+                Assert.Equal("test-account%40spec-test-ruby-samples.iam.gserviceaccount.com%2F20181119%2Fauto%2Fstorage%2Fgoog4_request", parameters["X-Goog-Credential"]);
+                Assert.Equal("20181119T055654Z", parameters["X-Goog-Date"]);
+                Assert.Equal("3600", parameters["X-Goog-Expires"]);
+                Assert.Equal("host", parameters["X-Goog-SignedHeaders"]);
+
                 // No check for the exact signature.
             }
 
@@ -64,6 +76,70 @@ namespace Google.Cloud.Storage.V1.Tests
                     .Select(kvp => kvp.Split(new[] { '=' }, 2))
                     .ToDictionary(bits => bits[0], bits => bits[1]);
             }
+
+            public static IEnumerable<object[]> JsonTestData = JsonConvert.DeserializeObject<List<JsonTest>>(ReadTextResource("UrlSignerV4TestData.json"))
+                .Select(test => new object[] { test })
+                .ToList();
+
+            [Theory, MemberData(nameof(JsonTestData))]
+            public void JsonSourceTest(JsonTest test)
+            {
+                var timestamp = DateTime.ParseExact(
+                    test.Timestamp,
+                    "yyyyMMdd'T'HHmmss'Z'",
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
+                var clock = new FakeClock(timestamp);
+                var signer = UrlSigner.FromServiceAccountCredential((ServiceAccountCredential) s_testCredential.UnderlyingCredential)
+                    .WithSigningVersion(SigningVersion.V4)
+                    .WithClock(clock);
+
+                var actualUrl = signer.Sign(test.Bucket, test.Object,
+                    duration: TimeSpan.FromSeconds(test.Expiration),
+                    requestMethod: s_methods[test.Method],
+                    requestHeaders: test.Headers?.ToDictionary(kvp => kvp.Key, kvp => (IEnumerable<string>) kvp.Value),
+                    contentHeaders: null);
+                Assert.Equal(test.ExpectedUrl, actualUrl);
+            }
+
+            private static string ReadTextResource(string name)
+            {
+                var typeInfo = typeof(UrlSignerTest).GetTypeInfo();
+
+                using (var reader = new StreamReader(typeInfo.Assembly.GetManifestResourceStream($"{typeInfo.Namespace}.{name}")))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
+        }
+
+        public class JsonTest
+        {
+            [JsonProperty("description")]
+            public string Description { get; set; }
+
+            [JsonProperty("bucket")]
+            public string Bucket { get; set; }
+
+            [JsonProperty("object")]
+            public string Object { get; set; }
+
+            [JsonProperty("method")]
+            public string Method { get; set; }
+
+            [JsonProperty("expiration")]
+            public int Expiration { get; set; }
+
+            [JsonProperty("headers")]
+            public Dictionary<string, string[]> Headers { get; set; }
+
+            [JsonProperty("timestamp")]
+            public string Timestamp { get; set; }
+
+            [JsonProperty("expectedUrl")]
+            public string ExpectedUrl { get; set; }
+
+            public override string ToString() => Description;
         }
     }
 }
