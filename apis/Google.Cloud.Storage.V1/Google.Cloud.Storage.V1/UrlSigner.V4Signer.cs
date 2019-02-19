@@ -30,6 +30,11 @@ namespace Google.Cloud.Storage.V1
     {
         private sealed class V4Signer : ISigner
         {
+            private const string ScopeSuffix = "storage/goog4_request";
+            private const string DefaultRegion = "auto";
+            private const string HostHeaderValue = "storage.googleapis.com";
+            private const string Algorithm = "GOOG4-RSA-SHA256";
+
             // Note: It's irritating to have to convert from base64 to bytes and then to hex, but we can't change the IBlobSigner implementation
             // and ServiceAccountCredential.CreateSignature returns base64 anyway.
 
@@ -104,17 +109,17 @@ namespace Google.Cloud.Storage.V1
                     var now = clock.GetCurrentDateTimeUtc();
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
-                    // TODO: Validate again maximum expirary duration
+                    // TODO: Validate against maximum expiry duration
                     int expirySeconds = (int) (expiration - now).TotalSeconds;
                     string expiryText = expirySeconds.ToString(CultureInfo.InvariantCulture);
 
                     string clientEmail = blobSigner.Id;
-                    string credentialScope = $"{datestamp}/auto/gcs/goog4_request";
+                    string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
                     string credential = WebUtility.UrlEncode($"{blobSigner.Id}/{credentialScope}");
 
                     // FIXME: Use requestHeaders and contentHeaders
                     var headers = new SortedDictionary<string, string>();
-                    headers["host"] = "storage.googleapis.com";
+                    headers["host"] = HostHeaderValue;
 
                     var canonicalHeaderBuilder = new StringBuilder();
                     foreach (var pair in headers)
@@ -127,11 +132,11 @@ namespace Google.Cloud.Storage.V1
 
                     queryParameters = new List<string>
                     {
-                        "x-goog-algorithm=GOOG4-RSA-SHA256",
-                        $"x-goog-credential={credential}",
-                        $"x-goog-date={timestamp}",
-                        $"x-goog-expires={expirySeconds}",
-                        $"x-goog-signedheaders={signedHeaders}"
+                        $"X-Goog-Algorithm={Algorithm}",
+                        $"X-Goog-Credential={credential}",
+                        $"X-Goog-Date={timestamp}",
+                        $"X-Goog-Expires={expirySeconds}",
+                        $"X-Goog-SignedHeaders={signedHeaders}"
                     };
                     if (isResumableUpload)
                     {
@@ -152,12 +157,12 @@ namespace Google.Cloud.Storage.V1
                         hashHex = FormatHex(sha256.ComputeHash(Encoding.UTF8.GetBytes(canonicalRequest)));
                     }
 
-                    blobToSign = Encoding.UTF8.GetBytes($"GOOG4-RSA-SHA256\n{timestamp}\n{credentialScope}\n{hashHex}");
+                    blobToSign = Encoding.UTF8.GetBytes($"{Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
                 }
 
                 internal string GetResult(string signature)
                 {
-                    queryParameters.Add($"x-goog-signature={WebUtility.UrlEncode(signature)}");
+                    queryParameters.Add($"X-Goog-Signature={WebUtility.UrlEncode(signature)}");
                     return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
                 }
             }

@@ -27,6 +27,8 @@
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UrlSignerV4TestData.json" />
+    <EmbeddedResource Include="UrlSignerV4TestAccount.json" />
     <Compile Update="UrlSignerTest.*.cs">
       <DependentUpon>UrlSignerTest.cs</DependentUpon>
     </Compile>
