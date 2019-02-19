@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{67DF0D72-E135-44EA-BE7F-2BF3C20B522A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Redis.V1Beta1.Tests", "Google.Cloud.Redis.V1Beta1.Tests\Google.Cloud.Redis.V1Beta1.Tests.csproj", "{C88575CD-C872-4602-94D6-F28EE4BE868A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Redis.V1Beta1.SmokeTests", "Google.Cloud.Redis.V1Beta1.SmokeTests\Google.Cloud.Redis.V1Beta1.SmokeTests.csproj", "{5B18E1D4-F76B-46A5-9A9D-858950ED1816}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,5 +74,17 @@ Global
 		{C88575CD-C872-4602-94D6-F28EE4BE868A}.Release|x64.Build.0 = Release|x64
 		{C88575CD-C872-4602-94D6-F28EE4BE868A}.Release|x86.ActiveCfg = Release|x86
 		{C88575CD-C872-4602-94D6-F28EE4BE868A}.Release|x86.Build.0 = Release|x86
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Debug|x64.Build.0 = Debug|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Debug|x86.Build.0 = Debug|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Release|x64.ActiveCfg = Release|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Release|x64.Build.0 = Release|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B18E1D4-F76B-46A5-9A9D-858950ED1816}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
