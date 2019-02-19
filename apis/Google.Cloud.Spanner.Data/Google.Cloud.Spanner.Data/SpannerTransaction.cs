@@ -113,7 +113,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// <see cref="SpannerConnection"/> associated with this transaction.
         /// </summary>
-        internal SpannerConnection SpannerConnection { get; private set; }
+        internal SpannerConnection SpannerConnection { get; }
 
         internal bool HasMutations
         {
@@ -160,6 +160,14 @@ namespace Google.Cloud.Spanner.Data
             get => _disposeBehavior;
             set => _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
         }
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements within this transaction.
+        /// You can add commands to the batch by using <see cref="SpannerBatchCommand.Add(SpannerCommand)"/>,
+        /// <see cref="SpannerBatchCommand.Add(SpannerCommandTextBuilder, SpannerParameterCollection)"/>
+        /// and <see cref="SpannerBatchCommand.Add(string, SpannerParameterCollection)"/>.
+        /// </summary>
+        public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand(this);
 
         internal Task<IEnumerable<ByteString>> GetPartitionTokensAsync(
             ExecuteSqlRequest request,

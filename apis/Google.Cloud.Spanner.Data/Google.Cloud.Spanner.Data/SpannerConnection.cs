@@ -432,15 +432,12 @@ namespace Google.Cloud.Spanner.Data
             new SpannerCommand(SpannerCommandTextBuilder.CreateDmlTextBuilder(dmlStatement), this, null, dmlParameters);
 
         /// <summary>
-        /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements.
+        /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements with this connection, without using a transaction.
         /// You can add commands to the batch by using <see cref="SpannerBatchCommand.Add(SpannerCommand)"/>,
         /// <see cref="SpannerBatchCommand.Add(SpannerCommandTextBuilder, SpannerParameterCollection)"/>
         /// and <see cref="SpannerBatchCommand.Add(string, SpannerParameterCollection)"/>.
         /// </summary>
-        public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand
-        {
-            Connection = this
-        };
+        public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand(this);
 
         /// <inheritdoc />
         public override void Open()

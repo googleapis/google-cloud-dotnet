@@ -85,8 +85,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     RetryHelpers.ExecuteWithRetry(() =>
                     {
-                        var batchCommand = connection.CreateBatchDmlCommand();
-                        batchCommand.Transaction = transaction;
+                        var batchCommand = transaction.CreateBatchDmlCommand();
 
                         batchCommand.Add(
                             $"INSERT INTO {_fixture.TableName} (Key, OriginalValue, Value, UpdateMe, DeleteMe, CopyMe) SELECT Key, OriginalValue + 10, Value, UpdateMe, DeleteMe, CopyMe FROM {_fixture.TableName} WHERE CopyMe AND KEY=@Key",
@@ -215,8 +214,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 using (var transaction = connection.BeginTransaction())
                 {
-                    var command = connection.CreateBatchDmlCommand();
-                    command.Transaction = transaction;
+                    var command = transaction.CreateBatchDmlCommand();
 
                     command.Add(
                         $"UPDATE {_fixture.TableName} SET Value = OriginalValue + 1 WHERE UpdateMe AND Key=@key",
