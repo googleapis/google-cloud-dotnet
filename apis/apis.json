@@ -817,12 +817,16 @@
 
   {
     "id": "Google.LongRunning",
-    "version": "1.1.0-beta01",
+    "version": "1.1.0",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
     "tags": [ "LongRunning" ],
+    "dependencies": {
+      "Google.Api.Gax.Grpc": "2.6.0",
+      "Grpc.Core": "1.18.0"
+    },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "default"
+      "Google.Api.Gax.Testing": "2.6.0"
     }
   }
 ]
