@@ -90,21 +90,40 @@ nothing else, for clarity. Include both the `apis.json` change and
 the project file changes that occur when the project generator has
 been run, in the same commit.
 
+### Dependencies
+
 Dependencies in the API catalog are specified as properties where
 the property name is the package name and the value is the version
 number.
 
 If the version number is set to "project", then a project reference
-is used.
+is used. If project X has a production dependency on project Y, then
+both X and Y *must* be released together, to avoid misaligned
+versions. The tagging tool enforces this.
 
 If the version number is set to "default", then the version number
 is determined by the project generator, to keep these dependencies
-in sync for all appropriate packages. This is not permitted for GA
-releases (i.e. ones with no alpha or beta suffix), as we need a
-clear record of the dependencies in that case. For example, if the
-most recent release is 2.3.1 against gRPC 1.7.0, it's fine to make
-2.3.2 depend on 1.7.1, but depending on gRPC 1.8.0 would require a
-new minor version (2.4.0).
+in sync for all appropriate packages.
+
+Two project types gain dependencies automatically if they're not
+specified:
+
+- "grpc" projects always have dependencies on Google.Api.Gax.Grpc
+  and Grpc.Core
+- "rest" projects always have a dependency on Google.Api.Gax.Rest
+
+The best dependency version to specify depends on the version of the
+project itself:
+
+- For GA versions, every version must be explicitly specified. This
+  prevents us from accidentally upgrading a dependency minor version
+  when creating a patch version of the project itself.
+- For alpha/beta versions, specify as little as possible: allow
+  the "grpc"/"rest" dependencies above to be added automatically,
+  and use the "default" version number where possible. Explicit
+  versions should only be used either for dependencies without
+  default versions, or when the desired version is ahead of the
+  default version, for example to use a GAX prerelease.
 
 ## Releasing
 
