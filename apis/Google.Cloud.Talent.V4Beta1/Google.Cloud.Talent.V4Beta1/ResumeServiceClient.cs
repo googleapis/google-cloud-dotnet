@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -363,12 +364,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ParseResumeResponse> ParseResumeAsync(
-            string parent,
+            gaxres::ProjectName parent,
             pb::ByteString resume,
             gaxgrpc::CallSettings callSettings = null) => ParseResumeAsync(
                 new ParseResumeRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Resume = gax::GaxPreconditions.CheckNotNull(resume, nameof(resume)),
                 },
                 callSettings);
@@ -425,7 +426,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ParseResumeResponse> ParseResumeAsync(
-            string parent,
+            gaxres::ProjectName parent,
             pb::ByteString resume,
             st::CancellationToken cancellationToken) => ParseResumeAsync(
                 parent,
@@ -484,12 +485,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual ParseResumeResponse ParseResume(
-            string parent,
+            gaxres::ProjectName parent,
             pb::ByteString resume,
             gaxgrpc::CallSettings callSettings = null) => ParseResume(
                 new ParseResumeRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Resume = gax::GaxPreconditions.CheckNotNull(resume, nameof(resume)),
                 },
                 callSettings);

@@ -18,6 +18,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -36,29 +37,29 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ParseResumeAsync</summary>
         public async Task ParseResumeAsync()
         {
-            // Snippet: ParseResumeAsync(string,ByteString,CallSettings)
-            // Additional: ParseResumeAsync(string,ByteString,CancellationToken)
+            // Snippet: ParseResumeAsync(ProjectName,ByteString,CallSettings)
+            // Additional: ParseResumeAsync(ProjectName,ByteString,CancellationToken)
             // Create client
             ResumeServiceClient resumeServiceClient = await ResumeServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             ByteString resume = ByteString.Empty;
             // Make the request
-            ParseResumeResponse response = await resumeServiceClient.ParseResumeAsync(formattedParent, resume);
+            ParseResumeResponse response = await resumeServiceClient.ParseResumeAsync(parent, resume);
             // End snippet
         }
 
         /// <summary>Snippet for ParseResume</summary>
         public void ParseResume()
         {
-            // Snippet: ParseResume(string,ByteString,CallSettings)
+            // Snippet: ParseResume(ProjectName,ByteString,CallSettings)
             // Create client
             ResumeServiceClient resumeServiceClient = ResumeServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             ByteString resume = ByteString.Empty;
             // Make the request
-            ParseResumeResponse response = resumeServiceClient.ParseResume(formattedParent, resume);
+            ParseResumeResponse response = resumeServiceClient.ParseResume(parent, resume);
             // End snippet
         }
 
@@ -72,7 +73,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ParseResumeRequest request = new ParseResumeRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Resume = ByteString.Empty,
             };
             // Make the request
@@ -89,7 +90,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ParseResumeRequest request = new ParseResumeRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Resume = ByteString.Empty,
             };
             // Make the request

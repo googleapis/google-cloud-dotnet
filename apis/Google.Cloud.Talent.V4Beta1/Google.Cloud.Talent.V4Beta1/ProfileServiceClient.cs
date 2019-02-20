@@ -490,13 +490,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable asynchronous sequence of <see cref="Profile"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListProfilesResponse, Profile> ListProfilesAsync(
-            string parent,
+            CompanyName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProfilesAsync(
                 new ListProfilesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -528,13 +528,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable sequence of <see cref="Profile"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListProfilesResponse, Profile> ListProfiles(
-            string parent,
+            CompanyName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProfiles(
                 new ListProfilesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -601,12 +601,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Profile> CreateProfileAsync(
-            string parent,
+            CompanyName parent,
             Profile profile,
             gaxgrpc::CallSettings callSettings = null) => CreateProfileAsync(
                 new CreateProfileRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Profile = gax::GaxPreconditions.CheckNotNull(profile, nameof(profile)),
                 },
                 callSettings);
@@ -634,7 +634,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Profile> CreateProfileAsync(
-            string parent,
+            CompanyName parent,
             Profile profile,
             st::CancellationToken cancellationToken) => CreateProfileAsync(
                 parent,
@@ -664,12 +664,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Profile CreateProfile(
-            string parent,
+            CompanyName parent,
             Profile profile,
             gaxgrpc::CallSettings callSettings = null) => CreateProfile(
                 new CreateProfileRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Profile = gax::GaxPreconditions.CheckNotNull(profile, nameof(profile)),
                 },
                 callSettings);
@@ -749,11 +749,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Profile> GetProfileAsync(
-            string name,
+            ProfileName name,
             gaxgrpc::CallSettings callSettings = null) => GetProfileAsync(
                 new GetProfileRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -776,7 +776,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Profile> GetProfileAsync(
-            string name,
+            ProfileName name,
             st::CancellationToken cancellationToken) => GetProfileAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -800,11 +800,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Profile GetProfile(
-            string name,
+            ProfileName name,
             gaxgrpc::CallSettings callSettings = null) => GetProfile(
                 new GetProfileRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1005,11 +1005,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteProfileAsync(
-            string name,
+            ProfileName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteProfileAsync(
                 new DeleteProfileRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1032,7 +1032,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteProfileAsync(
-            string name,
+            ProfileName name,
             st::CancellationToken cancellationToken) => DeleteProfileAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1053,11 +1053,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteProfile(
-            string name,
+            ProfileName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteProfile(
                 new DeleteProfileRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 

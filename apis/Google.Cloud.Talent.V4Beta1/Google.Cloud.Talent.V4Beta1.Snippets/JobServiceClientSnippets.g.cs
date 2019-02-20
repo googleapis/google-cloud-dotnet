@@ -18,11 +18,12 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
-    using static SearchJobsResponse.Types;
+    using SearchJobsResponse.Types;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -37,29 +38,29 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for CreateJobAsync</summary>
         public async Task CreateJobAsync()
         {
-            // Snippet: CreateJobAsync(string,Job,CallSettings)
-            // Additional: CreateJobAsync(string,Job,CancellationToken)
+            // Snippet: CreateJobAsync(ProjectName,Job,CallSettings)
+            // Additional: CreateJobAsync(ProjectName,Job,CancellationToken)
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Job job = new Job();
             // Make the request
-            Job response = await jobServiceClient.CreateJobAsync(formattedParent, job);
+            Job response = await jobServiceClient.CreateJobAsync(parent, job);
             // End snippet
         }
 
         /// <summary>Snippet for CreateJob</summary>
         public void CreateJob()
         {
-            // Snippet: CreateJob(string,Job,CallSettings)
+            // Snippet: CreateJob(ProjectName,Job,CallSettings)
             // Create client
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Job job = new Job();
             // Make the request
-            Job response = jobServiceClient.CreateJob(formattedParent, job);
+            Job response = jobServiceClient.CreateJob(parent, job);
             // End snippet
         }
 
@@ -73,7 +74,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Job = new Job(),
             };
             // Make the request
@@ -90,7 +91,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Job = new Job(),
             };
             // Make the request
@@ -101,27 +102,27 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for GetJobAsync</summary>
         public async Task GetJobAsync()
         {
-            // Snippet: GetJobAsync(string,CallSettings)
-            // Additional: GetJobAsync(string,CancellationToken)
+            // Snippet: GetJobAsync(JobName,CallSettings)
+            // Additional: GetJobAsync(JobName,CancellationToken)
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
             // Make the request
-            Job response = await jobServiceClient.GetJobAsync(formattedName);
+            Job response = await jobServiceClient.GetJobAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetJob</summary>
         public void GetJob()
         {
-            // Snippet: GetJob(string,CallSettings)
+            // Snippet: GetJob(JobName,CallSettings)
             // Create client
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
             // Make the request
-            Job response = jobServiceClient.GetJob(formattedName);
+            Job response = jobServiceClient.GetJob(name);
             // End snippet
         }
 
@@ -135,7 +136,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             // Make the request
             Job response = await jobServiceClient.GetJobAsync(request);
@@ -151,7 +152,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             // Make the request
             Job response = jobServiceClient.GetJob(request);
@@ -221,27 +222,27 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for DeleteJobAsync</summary>
         public async Task DeleteJobAsync()
         {
-            // Snippet: DeleteJobAsync(string,CallSettings)
-            // Additional: DeleteJobAsync(string,CancellationToken)
+            // Snippet: DeleteJobAsync(JobName,CallSettings)
+            // Additional: DeleteJobAsync(JobName,CancellationToken)
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
             // Make the request
-            await jobServiceClient.DeleteJobAsync(formattedName);
+            await jobServiceClient.DeleteJobAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteJob</summary>
         public void DeleteJob()
         {
-            // Snippet: DeleteJob(string,CallSettings)
+            // Snippet: DeleteJob(JobName,CallSettings)
             // Create client
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
             // Make the request
-            jobServiceClient.DeleteJob(formattedName);
+            jobServiceClient.DeleteJob(name);
             // End snippet
         }
 
@@ -255,7 +256,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             // Make the request
             await jobServiceClient.DeleteJobAsync(request);
@@ -271,7 +272,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             // Make the request
             jobServiceClient.DeleteJob(request);
@@ -281,15 +282,15 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ListJobsAsync</summary>
         public async Task ListJobsAsync()
         {
-            // Snippet: ListJobsAsync(string,string,string,int?,CallSettings)
+            // Snippet: ListJobsAsync(ProjectName,string,string,int?,CallSettings)
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
             // Make the request
             PagedAsyncEnumerable<ListJobsResponse, Job> response =
-                jobServiceClient.ListJobsAsync(formattedParent, filter);
+                jobServiceClient.ListJobsAsync(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Job item) =>
@@ -326,15 +327,15 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ListJobs</summary>
         public void ListJobs()
         {
-            // Snippet: ListJobs(string,string,string,int?,CallSettings)
+            // Snippet: ListJobs(ProjectName,string,string,int?,CallSettings)
             // Create client
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
             // Make the request
             PagedEnumerable<ListJobsResponse, Job> response =
-                jobServiceClient.ListJobs(formattedParent, filter);
+                jobServiceClient.ListJobs(parent, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Job item in response)
@@ -377,7 +378,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListJobsRequest request = new ListJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "",
             };
             // Make the request
@@ -425,7 +426,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListJobsRequest request = new ListJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "",
             };
             // Make the request
@@ -467,29 +468,29 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for BatchDeleteJobsAsync</summary>
         public async Task BatchDeleteJobsAsync()
         {
-            // Snippet: BatchDeleteJobsAsync(string,string,CallSettings)
-            // Additional: BatchDeleteJobsAsync(string,string,CancellationToken)
+            // Snippet: BatchDeleteJobsAsync(ProjectName,string,CallSettings)
+            // Additional: BatchDeleteJobsAsync(ProjectName,string,CancellationToken)
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
             // Make the request
-            await jobServiceClient.BatchDeleteJobsAsync(formattedParent, filter);
+            await jobServiceClient.BatchDeleteJobsAsync(parent, filter);
             // End snippet
         }
 
         /// <summary>Snippet for BatchDeleteJobs</summary>
         public void BatchDeleteJobs()
         {
-            // Snippet: BatchDeleteJobs(string,string,CallSettings)
+            // Snippet: BatchDeleteJobs(ProjectName,string,CallSettings)
             // Create client
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
             // Make the request
-            jobServiceClient.BatchDeleteJobs(formattedParent, filter);
+            jobServiceClient.BatchDeleteJobs(parent, filter);
             // End snippet
         }
 
@@ -503,7 +504,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "",
             };
             // Make the request
@@ -520,7 +521,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "",
             };
             // Make the request
@@ -537,7 +538,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             SearchJobsRequest request = new SearchJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request
@@ -585,7 +586,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             SearchJobsRequest request = new SearchJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request
@@ -633,7 +634,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             SearchJobsRequest request = new SearchJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request
@@ -681,7 +682,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             SearchJobsRequest request = new SearchJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request

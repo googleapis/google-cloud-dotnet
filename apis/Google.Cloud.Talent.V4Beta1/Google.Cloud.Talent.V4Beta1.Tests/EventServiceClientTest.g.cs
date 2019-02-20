@@ -18,6 +18,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -39,7 +40,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest expectedRequest = new CreateClientEventRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -51,9 +52,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateClientEvent(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             ClientEvent clientEvent = new ClientEvent();
-            ClientEvent response = client.CreateClientEvent(formattedParent, clientEvent);
+            ClientEvent response = client.CreateClientEvent(parent, clientEvent);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -64,7 +65,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest expectedRequest = new CreateClientEventRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -76,9 +77,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ClientEvent>(Task.FromResult(expectedResponse), null, null, null, null));
             EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             ClientEvent clientEvent = new ClientEvent();
-            ClientEvent response = await client.CreateClientEventAsync(formattedParent, clientEvent);
+            ClientEvent response = await client.CreateClientEventAsync(parent, clientEvent);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -89,7 +90,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
@@ -112,7 +113,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent

@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -457,12 +458,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Company> CreateCompanyAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Company company,
             gaxgrpc::CallSettings callSettings = null) => CreateCompanyAsync(
                 new CreateCompanyRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
                 },
                 callSettings);
@@ -490,7 +491,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Company> CreateCompanyAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Company company,
             st::CancellationToken cancellationToken) => CreateCompanyAsync(
                 parent,
@@ -520,12 +521,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Company CreateCompany(
-            string parent,
+            gaxres::ProjectName parent,
             Company company,
             gaxgrpc::CallSettings callSettings = null) => CreateCompany(
                 new CreateCompanyRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
                 },
                 callSettings);
@@ -604,11 +605,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Company> GetCompanyAsync(
-            string name,
+            CompanyName name,
             gaxgrpc::CallSettings callSettings = null) => GetCompanyAsync(
                 new GetCompanyRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    CompanyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -630,7 +631,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Company> GetCompanyAsync(
-            string name,
+            CompanyName name,
             st::CancellationToken cancellationToken) => GetCompanyAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -653,11 +654,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Company GetCompany(
-            string name,
+            CompanyName name,
             gaxgrpc::CallSettings callSettings = null) => GetCompany(
                 new GetCompanyRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    CompanyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -870,11 +871,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteCompanyAsync(
-            string name,
+            CompanyName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteCompanyAsync(
                 new DeleteCompanyRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    CompanyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -897,7 +898,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteCompanyAsync(
-            string name,
+            CompanyName name,
             st::CancellationToken cancellationToken) => DeleteCompanyAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -918,11 +919,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteCompany(
-            string name,
+            CompanyName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteCompany(
                 new DeleteCompanyRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    CompanyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1008,13 +1009,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable asynchronous sequence of <see cref="Company"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(
-            string parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListCompaniesAsync(
                 new ListCompaniesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1046,13 +1047,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable sequence of <see cref="Company"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(
-            string parent,
+            gaxres::ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListCompanies(
                 new ListCompaniesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

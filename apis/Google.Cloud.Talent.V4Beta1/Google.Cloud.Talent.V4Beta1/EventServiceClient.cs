@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -336,12 +337,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ClientEvent> CreateClientEventAsync(
-            string parent,
+            gaxres::ProjectName parent,
             ClientEvent clientEvent,
             gaxgrpc::CallSettings callSettings = null) => CreateClientEventAsync(
                 new CreateClientEventRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ClientEvent = gax::GaxPreconditions.CheckNotNull(clientEvent, nameof(clientEvent)),
                 },
                 callSettings);
@@ -371,7 +372,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ClientEvent> CreateClientEventAsync(
-            string parent,
+            gaxres::ProjectName parent,
             ClientEvent clientEvent,
             st::CancellationToken cancellationToken) => CreateClientEventAsync(
                 parent,
@@ -403,12 +404,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual ClientEvent CreateClientEvent(
-            string parent,
+            gaxres::ProjectName parent,
             ClientEvent clientEvent,
             gaxgrpc::CallSettings callSettings = null) => CreateClientEvent(
                 new CreateClientEventRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ClientEvent = gax::GaxPreconditions.CheckNotNull(clientEvent, nameof(clientEvent)),
                 },
                 callSettings);

@@ -18,6 +18,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -40,7 +41,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ResumeService.ResumeServiceClient> mockGrpcClient = new Mock<ResumeService.ResumeServiceClient>(MockBehavior.Strict);
             ParseResumeRequest expectedRequest = new ParseResumeRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Resume = ByteString.CopyFromUtf8("45"),
             };
             ParseResumeResponse expectedResponse = new ParseResumeResponse
@@ -50,9 +51,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.ParseResume(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ResumeServiceClient client = new ResumeServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             ByteString resume = ByteString.CopyFromUtf8("45");
-            ParseResumeResponse response = client.ParseResume(formattedParent, resume);
+            ParseResumeResponse response = client.ParseResume(parent, resume);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -63,7 +64,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ResumeService.ResumeServiceClient> mockGrpcClient = new Mock<ResumeService.ResumeServiceClient>(MockBehavior.Strict);
             ParseResumeRequest expectedRequest = new ParseResumeRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Resume = ByteString.CopyFromUtf8("45"),
             };
             ParseResumeResponse expectedResponse = new ParseResumeResponse
@@ -73,9 +74,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.ParseResumeAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ParseResumeResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             ResumeServiceClient client = new ResumeServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             ByteString resume = ByteString.CopyFromUtf8("45");
-            ParseResumeResponse response = await client.ParseResumeAsync(formattedParent, resume);
+            ParseResumeResponse response = await client.ParseResumeAsync(parent, resume);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -86,7 +87,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ResumeService.ResumeServiceClient> mockGrpcClient = new Mock<ResumeService.ResumeServiceClient>(MockBehavior.Strict);
             ParseResumeRequest request = new ParseResumeRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Resume = ByteString.CopyFromUtf8("45"),
             };
             ParseResumeResponse expectedResponse = new ParseResumeResponse
@@ -107,7 +108,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ResumeService.ResumeServiceClient> mockGrpcClient = new Mock<ResumeService.ResumeServiceClient>(MockBehavior.Strict);
             ParseResumeRequest request = new ParseResumeRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Resume = ByteString.CopyFromUtf8("45"),
             };
             ParseResumeResponse expectedResponse = new ParseResumeResponse

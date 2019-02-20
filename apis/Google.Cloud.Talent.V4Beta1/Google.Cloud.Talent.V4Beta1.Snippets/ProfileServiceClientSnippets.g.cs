@@ -36,14 +36,14 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ListProfilesAsync</summary>
         public async Task ListProfilesAsync()
         {
-            // Snippet: ListProfilesAsync(string,string,int?,CallSettings)
+            // Snippet: ListProfilesAsync(CompanyName,string,int?,CallSettings)
             // Create client
             ProfileServiceClient profileServiceClient = await ProfileServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new CompanyName("[PROJECT]", "[COMPANY]").ToString();
+            CompanyName parent = new CompanyName("[PROJECT]", "[COMPANY]");
             // Make the request
             PagedAsyncEnumerable<ListProfilesResponse, Profile> response =
-                profileServiceClient.ListProfilesAsync(formattedParent);
+                profileServiceClient.ListProfilesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Profile item) =>
@@ -80,14 +80,14 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ListProfiles</summary>
         public void ListProfiles()
         {
-            // Snippet: ListProfiles(string,string,int?,CallSettings)
+            // Snippet: ListProfiles(CompanyName,string,int?,CallSettings)
             // Create client
             ProfileServiceClient profileServiceClient = ProfileServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new CompanyName("[PROJECT]", "[COMPANY]").ToString();
+            CompanyName parent = new CompanyName("[PROJECT]", "[COMPANY]");
             // Make the request
             PagedEnumerable<ListProfilesResponse, Profile> response =
-                profileServiceClient.ListProfiles(formattedParent);
+                profileServiceClient.ListProfiles(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Profile item in response)
@@ -130,7 +130,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListProfilesRequest request = new ListProfilesRequest
             {
-                Parent = new CompanyName("[PROJECT]", "[COMPANY]").ToString(),
+                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListProfilesResponse, Profile> response =
@@ -177,7 +177,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListProfilesRequest request = new ListProfilesRequest
             {
-                Parent = new CompanyName("[PROJECT]", "[COMPANY]").ToString(),
+                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
             };
             // Make the request
             PagedEnumerable<ListProfilesResponse, Profile> response =
@@ -218,29 +218,29 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for CreateProfileAsync</summary>
         public async Task CreateProfileAsync()
         {
-            // Snippet: CreateProfileAsync(string,Profile,CallSettings)
-            // Additional: CreateProfileAsync(string,Profile,CancellationToken)
+            // Snippet: CreateProfileAsync(CompanyName,Profile,CallSettings)
+            // Additional: CreateProfileAsync(CompanyName,Profile,CancellationToken)
             // Create client
             ProfileServiceClient profileServiceClient = await ProfileServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new CompanyName("[PROJECT]", "[COMPANY]").ToString();
+            CompanyName parent = new CompanyName("[PROJECT]", "[COMPANY]");
             Profile profile = new Profile();
             // Make the request
-            Profile response = await profileServiceClient.CreateProfileAsync(formattedParent, profile);
+            Profile response = await profileServiceClient.CreateProfileAsync(parent, profile);
             // End snippet
         }
 
         /// <summary>Snippet for CreateProfile</summary>
         public void CreateProfile()
         {
-            // Snippet: CreateProfile(string,Profile,CallSettings)
+            // Snippet: CreateProfile(CompanyName,Profile,CallSettings)
             // Create client
             ProfileServiceClient profileServiceClient = ProfileServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new CompanyName("[PROJECT]", "[COMPANY]").ToString();
+            CompanyName parent = new CompanyName("[PROJECT]", "[COMPANY]");
             Profile profile = new Profile();
             // Make the request
-            Profile response = profileServiceClient.CreateProfile(formattedParent, profile);
+            Profile response = profileServiceClient.CreateProfile(parent, profile);
             // End snippet
         }
 
@@ -254,7 +254,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateProfileRequest request = new CreateProfileRequest
             {
-                Parent = new CompanyName("[PROJECT]", "[COMPANY]").ToString(),
+                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
                 Profile = new Profile(),
             };
             // Make the request
@@ -271,7 +271,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateProfileRequest request = new CreateProfileRequest
             {
-                Parent = new CompanyName("[PROJECT]", "[COMPANY]").ToString(),
+                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
                 Profile = new Profile(),
             };
             // Make the request
@@ -282,27 +282,27 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for GetProfileAsync</summary>
         public async Task GetProfileAsync()
         {
-            // Snippet: GetProfileAsync(string,CallSettings)
-            // Additional: GetProfileAsync(string,CancellationToken)
+            // Snippet: GetProfileAsync(ProfileName,CallSettings)
+            // Additional: GetProfileAsync(ProfileName,CancellationToken)
             // Create client
             ProfileServiceClient profileServiceClient = await ProfileServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString();
+            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
             // Make the request
-            Profile response = await profileServiceClient.GetProfileAsync(formattedName);
+            Profile response = await profileServiceClient.GetProfileAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetProfile</summary>
         public void GetProfile()
         {
-            // Snippet: GetProfile(string,CallSettings)
+            // Snippet: GetProfile(ProfileName,CallSettings)
             // Create client
             ProfileServiceClient profileServiceClient = ProfileServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString();
+            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
             // Make the request
-            Profile response = profileServiceClient.GetProfile(formattedName);
+            Profile response = profileServiceClient.GetProfile(name);
             // End snippet
         }
 
@@ -316,7 +316,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetProfileRequest request = new GetProfileRequest
             {
-                Name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString(),
+                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
             };
             // Make the request
             Profile response = await profileServiceClient.GetProfileAsync(request);
@@ -332,7 +332,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetProfileRequest request = new GetProfileRequest
             {
-                Name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString(),
+                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
             };
             // Make the request
             Profile response = profileServiceClient.GetProfile(request);
@@ -402,27 +402,27 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for DeleteProfileAsync</summary>
         public async Task DeleteProfileAsync()
         {
-            // Snippet: DeleteProfileAsync(string,CallSettings)
-            // Additional: DeleteProfileAsync(string,CancellationToken)
+            // Snippet: DeleteProfileAsync(ProfileName,CallSettings)
+            // Additional: DeleteProfileAsync(ProfileName,CancellationToken)
             // Create client
             ProfileServiceClient profileServiceClient = await ProfileServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString();
+            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
             // Make the request
-            await profileServiceClient.DeleteProfileAsync(formattedName);
+            await profileServiceClient.DeleteProfileAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteProfile</summary>
         public void DeleteProfile()
         {
-            // Snippet: DeleteProfile(string,CallSettings)
+            // Snippet: DeleteProfile(ProfileName,CallSettings)
             // Create client
             ProfileServiceClient profileServiceClient = ProfileServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString();
+            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
             // Make the request
-            profileServiceClient.DeleteProfile(formattedName);
+            profileServiceClient.DeleteProfile(name);
             // End snippet
         }
 
@@ -436,7 +436,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteProfileRequest request = new DeleteProfileRequest
             {
-                Name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString(),
+                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
             };
             // Make the request
             await profileServiceClient.DeleteProfileAsync(request);
@@ -452,7 +452,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteProfileRequest request = new DeleteProfileRequest
             {
-                Name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]").ToString(),
+                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
             };
             // Make the request
             profileServiceClient.DeleteProfile(request);
@@ -468,7 +468,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             SearchProfilesRequest request = new SearchProfilesRequest
             {
-                Parent = new CompanyName("[PROJECT]", "[COMPANY]").ToString(),
+                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request
@@ -516,7 +516,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             SearchProfilesRequest request = new SearchProfilesRequest
             {
-                Parent = new CompanyName("[PROJECT]", "[COMPANY]").ToString(),
+                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request

@@ -18,6 +18,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -39,7 +40,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<Completion.CompletionClient> mockGrpcClient = new Mock<Completion.CompletionClient>(MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                Name = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
                 Query = "query107944136",
                 PageSize = 883849137,
             };
@@ -58,7 +59,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<Completion.CompletionClient> mockGrpcClient = new Mock<Completion.CompletionClient>(MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                Name = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
                 Query = "query107944136",
                 PageSize = 883849137,
             };
