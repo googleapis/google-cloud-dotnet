@@ -18,6 +18,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Irm.V1Alpha2;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -37,29 +38,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for CreateIncidentAsync</summary>
         public async Task CreateIncidentAsync()
         {
-            // Snippet: CreateIncidentAsync(Incident,string,CallSettings)
-            // Additional: CreateIncidentAsync(Incident,string,CancellationToken)
+            // Snippet: CreateIncidentAsync(Incident,ProjectName,CallSettings)
+            // Additional: CreateIncidentAsync(Incident,ProjectName,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
             Incident incident = new Incident();
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            Incident response = await incidentServiceClient.CreateIncidentAsync(incident, formattedParent);
+            Incident response = await incidentServiceClient.CreateIncidentAsync(incident, parent);
             // End snippet
         }
 
         /// <summary>Snippet for CreateIncident</summary>
         public void CreateIncident()
         {
-            // Snippet: CreateIncident(Incident,string,CallSettings)
+            // Snippet: CreateIncident(Incident,ProjectName,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
             Incident incident = new Incident();
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
-            Incident response = incidentServiceClient.CreateIncident(incident, formattedParent);
+            Incident response = incidentServiceClient.CreateIncident(incident, parent);
             // End snippet
         }
 
@@ -74,7 +75,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             CreateIncidentRequest request = new CreateIncidentRequest
             {
                 Incident = new Incident(),
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             Incident response = await incidentServiceClient.CreateIncidentAsync(request);
@@ -91,7 +92,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             CreateIncidentRequest request = new CreateIncidentRequest
             {
                 Incident = new Incident(),
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             Incident response = incidentServiceClient.CreateIncident(request);
@@ -101,27 +102,27 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for GetIncidentAsync</summary>
         public async Task GetIncidentAsync()
         {
-            // Snippet: GetIncidentAsync(string,CallSettings)
-            // Additional: GetIncidentAsync(string,CancellationToken)
+            // Snippet: GetIncidentAsync(IncidentName,CallSettings)
+            // Additional: GetIncidentAsync(IncidentName,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName name = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
-            Incident response = await incidentServiceClient.GetIncidentAsync(formattedName);
+            Incident response = await incidentServiceClient.GetIncidentAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetIncident</summary>
         public void GetIncident()
         {
-            // Snippet: GetIncident(string,CallSettings)
+            // Snippet: GetIncident(IncidentName,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName name = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
-            Incident response = incidentServiceClient.GetIncident(formattedName);
+            Incident response = incidentServiceClient.GetIncident(name);
             // End snippet
         }
 
@@ -135,7 +136,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             GetIncidentRequest request = new GetIncidentRequest
             {
-                Name = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             Incident response = await incidentServiceClient.GetIncidentAsync(request);
@@ -151,7 +152,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             GetIncidentRequest request = new GetIncidentRequest
             {
-                Name = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             Incident response = incidentServiceClient.GetIncident(request);
@@ -161,16 +162,16 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for SearchIncidentsAsync</summary>
         public async Task SearchIncidentsAsync()
         {
-            // Snippet: SearchIncidentsAsync(string,string,string,string,int?,CallSettings)
+            // Snippet: SearchIncidentsAsync(ProjectName,string,string,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string query = "";
             string timeZone = "";
             // Make the request
             PagedAsyncEnumerable<SearchIncidentsResponse, Incident> response =
-                incidentServiceClient.SearchIncidentsAsync(formattedParent, query, timeZone);
+                incidentServiceClient.SearchIncidentsAsync(parent, query, timeZone);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Incident item) =>
@@ -207,16 +208,16 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for SearchIncidents</summary>
         public void SearchIncidents()
         {
-            // Snippet: SearchIncidents(string,string,string,string,int?,CallSettings)
+            // Snippet: SearchIncidents(ProjectName,string,string,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string query = "";
             string timeZone = "";
             // Make the request
             PagedEnumerable<SearchIncidentsResponse, Incident> response =
-                incidentServiceClient.SearchIncidents(formattedParent, query, timeZone);
+                incidentServiceClient.SearchIncidents(parent, query, timeZone);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Incident item in response)
@@ -259,7 +260,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             SearchIncidentsRequest request = new SearchIncidentsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<SearchIncidentsResponse, Incident> response =
@@ -306,7 +307,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             SearchIncidentsRequest request = new SearchIncidentsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<SearchIncidentsResponse, Incident> response =
@@ -591,29 +592,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for CreateAnnotationAsync</summary>
         public async Task CreateAnnotationAsync()
         {
-            // Snippet: CreateAnnotationAsync(string,Annotation,CallSettings)
-            // Additional: CreateAnnotationAsync(string,Annotation,CancellationToken)
+            // Snippet: CreateAnnotationAsync(IncidentName,Annotation,CallSettings)
+            // Additional: CreateAnnotationAsync(IncidentName,Annotation,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Annotation annotation = new Annotation();
             // Make the request
-            Annotation response = await incidentServiceClient.CreateAnnotationAsync(formattedParent, annotation);
+            Annotation response = await incidentServiceClient.CreateAnnotationAsync(parent, annotation);
             // End snippet
         }
 
         /// <summary>Snippet for CreateAnnotation</summary>
         public void CreateAnnotation()
         {
-            // Snippet: CreateAnnotation(string,Annotation,CallSettings)
+            // Snippet: CreateAnnotation(IncidentName,Annotation,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Annotation annotation = new Annotation();
             // Make the request
-            Annotation response = incidentServiceClient.CreateAnnotation(formattedParent, annotation);
+            Annotation response = incidentServiceClient.CreateAnnotation(parent, annotation);
             // End snippet
         }
 
@@ -627,7 +628,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateAnnotationRequest request = new CreateAnnotationRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Annotation = new Annotation(),
             };
             // Make the request
@@ -644,7 +645,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateAnnotationRequest request = new CreateAnnotationRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Annotation = new Annotation(),
             };
             // Make the request
@@ -655,14 +656,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListAnnotationsAsync</summary>
         public async Task ListAnnotationsAsync()
         {
-            // Snippet: ListAnnotationsAsync(string,string,int?,CallSettings)
+            // Snippet: ListAnnotationsAsync(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedAsyncEnumerable<ListAnnotationsResponse, Annotation> response =
-                incidentServiceClient.ListAnnotationsAsync(formattedParent);
+                incidentServiceClient.ListAnnotationsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Annotation item) =>
@@ -699,14 +700,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListAnnotations</summary>
         public void ListAnnotations()
         {
-            // Snippet: ListAnnotations(string,string,int?,CallSettings)
+            // Snippet: ListAnnotations(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedEnumerable<ListAnnotationsResponse, Annotation> response =
-                incidentServiceClient.ListAnnotations(formattedParent);
+                incidentServiceClient.ListAnnotations(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Annotation item in response)
@@ -749,7 +750,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListAnnotationsRequest request = new ListAnnotationsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListAnnotationsResponse, Annotation> response =
@@ -796,7 +797,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListAnnotationsRequest request = new ListAnnotationsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedEnumerable<ListAnnotationsResponse, Annotation> response =
@@ -834,94 +835,32 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for UpdateAnnotationAsync</summary>
-        public async Task UpdateAnnotationAsync()
-        {
-            // Snippet: UpdateAnnotationAsync(Annotation,FieldMask,CallSettings)
-            // Additional: UpdateAnnotationAsync(Annotation,FieldMask,CancellationToken)
-            // Create client
-            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            Annotation annotation = new Annotation();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            Annotation response = await incidentServiceClient.UpdateAnnotationAsync(annotation, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAnnotation</summary>
-        public void UpdateAnnotation()
-        {
-            // Snippet: UpdateAnnotation(Annotation,FieldMask,CallSettings)
-            // Create client
-            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
-            // Initialize request argument(s)
-            Annotation annotation = new Annotation();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            Annotation response = incidentServiceClient.UpdateAnnotation(annotation, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAnnotationAsync</summary>
-        public async Task UpdateAnnotationAsync_RequestObject()
-        {
-            // Snippet: UpdateAnnotationAsync(UpdateAnnotationRequest,CallSettings)
-            // Additional: UpdateAnnotationAsync(UpdateAnnotationRequest,CancellationToken)
-            // Create client
-            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateAnnotationRequest request = new UpdateAnnotationRequest
-            {
-                Annotation = new Annotation(),
-            };
-            // Make the request
-            Annotation response = await incidentServiceClient.UpdateAnnotationAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateAnnotation</summary>
-        public void UpdateAnnotation_RequestObject()
-        {
-            // Snippet: UpdateAnnotation(UpdateAnnotationRequest,CallSettings)
-            // Create client
-            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
-            // Initialize request argument(s)
-            UpdateAnnotationRequest request = new UpdateAnnotationRequest
-            {
-                Annotation = new Annotation(),
-            };
-            // Make the request
-            Annotation response = incidentServiceClient.UpdateAnnotation(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for CreateTagAsync</summary>
         public async Task CreateTagAsync()
         {
-            // Snippet: CreateTagAsync(string,Tag,CallSettings)
-            // Additional: CreateTagAsync(string,Tag,CancellationToken)
+            // Snippet: CreateTagAsync(IncidentName,Tag,CallSettings)
+            // Additional: CreateTagAsync(IncidentName,Tag,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Tag tag = new Tag();
             // Make the request
-            Tag response = await incidentServiceClient.CreateTagAsync(formattedParent, tag);
+            Tag response = await incidentServiceClient.CreateTagAsync(parent, tag);
             // End snippet
         }
 
         /// <summary>Snippet for CreateTag</summary>
         public void CreateTag()
         {
-            // Snippet: CreateTag(string,Tag,CallSettings)
+            // Snippet: CreateTag(IncidentName,Tag,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Tag tag = new Tag();
             // Make the request
-            Tag response = incidentServiceClient.CreateTag(formattedParent, tag);
+            Tag response = incidentServiceClient.CreateTag(parent, tag);
             // End snippet
         }
 
@@ -935,7 +874,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateTagRequest request = new CreateTagRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Tag = new Tag(),
             };
             // Make the request
@@ -952,7 +891,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateTagRequest request = new CreateTagRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Tag = new Tag(),
             };
             // Make the request
@@ -963,27 +902,27 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for DeleteTagAsync</summary>
         public async Task DeleteTagAsync()
         {
-            // Snippet: DeleteTagAsync(string,CallSettings)
-            // Additional: DeleteTagAsync(string,CancellationToken)
+            // Snippet: DeleteTagAsync(TagName,CallSettings)
+            // Additional: DeleteTagAsync(TagName,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString();
+            TagName name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]");
             // Make the request
-            await incidentServiceClient.DeleteTagAsync(formattedName);
+            await incidentServiceClient.DeleteTagAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteTag</summary>
         public void DeleteTag()
         {
-            // Snippet: DeleteTag(string,CallSettings)
+            // Snippet: DeleteTag(TagName,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString();
+            TagName name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]");
             // Make the request
-            incidentServiceClient.DeleteTag(formattedName);
+            incidentServiceClient.DeleteTag(name);
             // End snippet
         }
 
@@ -997,7 +936,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteTagRequest request = new DeleteTagRequest
             {
-                Name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString(),
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
             };
             // Make the request
             await incidentServiceClient.DeleteTagAsync(request);
@@ -1013,7 +952,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteTagRequest request = new DeleteTagRequest
             {
-                Name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString(),
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
             };
             // Make the request
             incidentServiceClient.DeleteTag(request);
@@ -1023,14 +962,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListTagsAsync</summary>
         public async Task ListTagsAsync()
         {
-            // Snippet: ListTagsAsync(string,string,int?,CallSettings)
+            // Snippet: ListTagsAsync(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedAsyncEnumerable<ListTagsResponse, Tag> response =
-                incidentServiceClient.ListTagsAsync(formattedParent);
+                incidentServiceClient.ListTagsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Tag item) =>
@@ -1067,14 +1006,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListTags</summary>
         public void ListTags()
         {
-            // Snippet: ListTags(string,string,int?,CallSettings)
+            // Snippet: ListTags(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedEnumerable<ListTagsResponse, Tag> response =
-                incidentServiceClient.ListTags(formattedParent);
+                incidentServiceClient.ListTags(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Tag item in response)
@@ -1117,7 +1056,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListTagsRequest request = new ListTagsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListTagsResponse, Tag> response =
@@ -1164,7 +1103,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListTagsRequest request = new ListTagsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedEnumerable<ListTagsResponse, Tag> response =
@@ -1205,29 +1144,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for CreateSignalAsync</summary>
         public async Task CreateSignalAsync()
         {
-            // Snippet: CreateSignalAsync(string,Signal,CallSettings)
-            // Additional: CreateSignalAsync(string,Signal,CancellationToken)
+            // Snippet: CreateSignalAsync(ProjectName,Signal,CallSettings)
+            // Additional: CreateSignalAsync(ProjectName,Signal,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Signal signal = new Signal();
             // Make the request
-            Signal response = await incidentServiceClient.CreateSignalAsync(formattedParent, signal);
+            Signal response = await incidentServiceClient.CreateSignalAsync(parent, signal);
             // End snippet
         }
 
         /// <summary>Snippet for CreateSignal</summary>
         public void CreateSignal()
         {
-            // Snippet: CreateSignal(string,Signal,CallSettings)
+            // Snippet: CreateSignal(ProjectName,Signal,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Signal signal = new Signal();
             // Make the request
-            Signal response = incidentServiceClient.CreateSignal(formattedParent, signal);
+            Signal response = incidentServiceClient.CreateSignal(parent, signal);
             // End snippet
         }
 
@@ -1241,7 +1180,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateSignalRequest request = new CreateSignalRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Signal = new Signal(),
             };
             // Make the request
@@ -1258,7 +1197,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateSignalRequest request = new CreateSignalRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Signal = new Signal(),
             };
             // Make the request
@@ -1266,18 +1205,18 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSignalsAsync</summary>
-        public async Task ListSignalsAsync()
+        /// <summary>Snippet for SearchSignalsAsync</summary>
+        public async Task SearchSignalsAsync()
         {
-            // Snippet: ListSignalsAsync(string,string,string,int?,CallSettings)
+            // Snippet: SearchSignalsAsync(ProjectName,string,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            string filter = "";
+            ProjectName parent = new ProjectName("[PROJECT]");
+            string query = "";
             // Make the request
-            PagedAsyncEnumerable<ListSignalsResponse, Signal> response =
-                incidentServiceClient.ListSignalsAsync(formattedParent, filter);
+            PagedAsyncEnumerable<SearchSignalsResponse, Signal> response =
+                incidentServiceClient.SearchSignalsAsync(parent, query);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Signal item) =>
@@ -1287,7 +1226,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSignalsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((SearchSignalsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1311,18 +1250,18 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSignals</summary>
-        public void ListSignals()
+        /// <summary>Snippet for SearchSignals</summary>
+        public void SearchSignals()
         {
-            // Snippet: ListSignals(string,string,string,int?,CallSettings)
+            // Snippet: SearchSignals(ProjectName,string,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            string filter = "";
+            ProjectName parent = new ProjectName("[PROJECT]");
+            string query = "";
             // Make the request
-            PagedEnumerable<ListSignalsResponse, Signal> response =
-                incidentServiceClient.ListSignals(formattedParent, filter);
+            PagedEnumerable<SearchSignalsResponse, Signal> response =
+                incidentServiceClient.SearchSignals(parent, query);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Signal item in response)
@@ -1332,7 +1271,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSignalsResponse page in response.AsRawResponses())
+            foreach (SearchSignalsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1356,20 +1295,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSignalsAsync</summary>
-        public async Task ListSignalsAsync_RequestObject()
+        /// <summary>Snippet for SearchSignalsAsync</summary>
+        public async Task SearchSignalsAsync_RequestObject()
         {
-            // Snippet: ListSignalsAsync(ListSignalsRequest,CallSettings)
+            // Snippet: SearchSignalsAsync(SearchSignalsRequest,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ListSignalsRequest request = new ListSignalsRequest
+            SearchSignalsRequest request = new SearchSignalsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListSignalsResponse, Signal> response =
-                incidentServiceClient.ListSignalsAsync(request);
+            PagedAsyncEnumerable<SearchSignalsResponse, Signal> response =
+                incidentServiceClient.SearchSignalsAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Signal item) =>
@@ -1379,7 +1318,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListSignalsResponse page) =>
+            await response.AsRawResponses().ForEachAsync((SearchSignalsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1403,20 +1342,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSignals</summary>
-        public void ListSignals_RequestObject()
+        /// <summary>Snippet for SearchSignals</summary>
+        public void SearchSignals_RequestObject()
         {
-            // Snippet: ListSignals(ListSignalsRequest,CallSettings)
+            // Snippet: SearchSignals(SearchSignalsRequest,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            ListSignalsRequest request = new ListSignalsRequest
+            SearchSignalsRequest request = new SearchSignalsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
-            PagedEnumerable<ListSignalsResponse, Signal> response =
-                incidentServiceClient.ListSignals(request);
+            PagedEnumerable<SearchSignalsResponse, Signal> response =
+                incidentServiceClient.SearchSignals(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Signal item in response)
@@ -1426,7 +1365,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListSignalsResponse page in response.AsRawResponses())
+            foreach (SearchSignalsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -1453,27 +1392,27 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for GetSignalAsync</summary>
         public async Task GetSignalAsync()
         {
-            // Snippet: GetSignalAsync(string,CallSettings)
-            // Additional: GetSignalAsync(string,CancellationToken)
+            // Snippet: GetSignalAsync(SignalName,CallSettings)
+            // Additional: GetSignalAsync(SignalName,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
+            SignalName name = new SignalName("[PROJECT]", "[SIGNAL]");
             // Make the request
-            Signal response = await incidentServiceClient.GetSignalAsync(formattedName);
+            Signal response = await incidentServiceClient.GetSignalAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetSignal</summary>
         public void GetSignal()
         {
-            // Snippet: GetSignal(string,CallSettings)
+            // Snippet: GetSignal(SignalName,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
+            SignalName name = new SignalName("[PROJECT]", "[SIGNAL]");
             // Make the request
-            Signal response = incidentServiceClient.GetSignal(formattedName);
+            Signal response = incidentServiceClient.GetSignal(name);
             // End snippet
         }
 
@@ -1487,7 +1426,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             GetSignalRequest request = new GetSignalRequest
             {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
             };
             // Make the request
             Signal response = await incidentServiceClient.GetSignalAsync(request);
@@ -1503,7 +1442,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             GetSignalRequest request = new GetSignalRequest
             {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
             };
             // Make the request
             Signal response = incidentServiceClient.GetSignal(request);
@@ -1572,66 +1511,6 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for AcknowledgeSignalAsync</summary>
-        public async Task AcknowledgeSignalAsync()
-        {
-            // Snippet: AcknowledgeSignalAsync(string,CallSettings)
-            // Additional: AcknowledgeSignalAsync(string,CancellationToken)
-            // Create client
-            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
-            // Make the request
-            AcknowledgeSignalResponse response = await incidentServiceClient.AcknowledgeSignalAsync(formattedName);
-            // End snippet
-        }
-
-        /// <summary>Snippet for AcknowledgeSignal</summary>
-        public void AcknowledgeSignal()
-        {
-            // Snippet: AcknowledgeSignal(string,CallSettings)
-            // Create client
-            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
-            // Initialize request argument(s)
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
-            // Make the request
-            AcknowledgeSignalResponse response = incidentServiceClient.AcknowledgeSignal(formattedName);
-            // End snippet
-        }
-
-        /// <summary>Snippet for AcknowledgeSignalAsync</summary>
-        public async Task AcknowledgeSignalAsync_RequestObject()
-        {
-            // Snippet: AcknowledgeSignalAsync(AcknowledgeSignalRequest,CallSettings)
-            // Additional: AcknowledgeSignalAsync(AcknowledgeSignalRequest,CancellationToken)
-            // Create client
-            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            AcknowledgeSignalRequest request = new AcknowledgeSignalRequest
-            {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
-            };
-            // Make the request
-            AcknowledgeSignalResponse response = await incidentServiceClient.AcknowledgeSignalAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for AcknowledgeSignal</summary>
-        public void AcknowledgeSignal_RequestObject()
-        {
-            // Snippet: AcknowledgeSignal(AcknowledgeSignalRequest,CallSettings)
-            // Create client
-            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
-            // Initialize request argument(s)
-            AcknowledgeSignalRequest request = new AcknowledgeSignalRequest
-            {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
-            };
-            // Make the request
-            AcknowledgeSignalResponse response = incidentServiceClient.AcknowledgeSignal(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for EscalateIncidentAsync</summary>
         public async Task EscalateIncidentAsync_RequestObject()
         {
@@ -1668,29 +1547,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for CreateArtifactAsync</summary>
         public async Task CreateArtifactAsync()
         {
-            // Snippet: CreateArtifactAsync(string,Artifact,CallSettings)
-            // Additional: CreateArtifactAsync(string,Artifact,CancellationToken)
+            // Snippet: CreateArtifactAsync(IncidentName,Artifact,CallSettings)
+            // Additional: CreateArtifactAsync(IncidentName,Artifact,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Artifact artifact = new Artifact();
             // Make the request
-            Artifact response = await incidentServiceClient.CreateArtifactAsync(formattedParent, artifact);
+            Artifact response = await incidentServiceClient.CreateArtifactAsync(parent, artifact);
             // End snippet
         }
 
         /// <summary>Snippet for CreateArtifact</summary>
         public void CreateArtifact()
         {
-            // Snippet: CreateArtifact(string,Artifact,CallSettings)
+            // Snippet: CreateArtifact(IncidentName,Artifact,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Artifact artifact = new Artifact();
             // Make the request
-            Artifact response = incidentServiceClient.CreateArtifact(formattedParent, artifact);
+            Artifact response = incidentServiceClient.CreateArtifact(parent, artifact);
             // End snippet
         }
 
@@ -1704,7 +1583,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateArtifactRequest request = new CreateArtifactRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Artifact = new Artifact(),
             };
             // Make the request
@@ -1721,7 +1600,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateArtifactRequest request = new CreateArtifactRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Artifact = new Artifact(),
             };
             // Make the request
@@ -1732,14 +1611,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListArtifactsAsync</summary>
         public async Task ListArtifactsAsync()
         {
-            // Snippet: ListArtifactsAsync(string,string,int?,CallSettings)
+            // Snippet: ListArtifactsAsync(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response =
-                incidentServiceClient.ListArtifactsAsync(formattedParent);
+                incidentServiceClient.ListArtifactsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Artifact item) =>
@@ -1776,14 +1655,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListArtifacts</summary>
         public void ListArtifacts()
         {
-            // Snippet: ListArtifacts(string,string,int?,CallSettings)
+            // Snippet: ListArtifacts(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedEnumerable<ListArtifactsResponse, Artifact> response =
-                incidentServiceClient.ListArtifacts(formattedParent);
+                incidentServiceClient.ListArtifacts(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Artifact item in response)
@@ -1826,7 +1705,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListArtifactsRequest request = new ListArtifactsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListArtifactsResponse, Artifact> response =
@@ -1873,7 +1752,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListArtifactsRequest request = new ListArtifactsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedEnumerable<ListArtifactsResponse, Artifact> response =
@@ -1976,27 +1855,27 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for DeleteArtifactAsync</summary>
         public async Task DeleteArtifactAsync()
         {
-            // Snippet: DeleteArtifactAsync(string,CallSettings)
-            // Additional: DeleteArtifactAsync(string,CancellationToken)
+            // Snippet: DeleteArtifactAsync(ArtifactName,CallSettings)
+            // Additional: DeleteArtifactAsync(ArtifactName,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString();
+            ArtifactName name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]");
             // Make the request
-            await incidentServiceClient.DeleteArtifactAsync(formattedName);
+            await incidentServiceClient.DeleteArtifactAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteArtifact</summary>
         public void DeleteArtifact()
         {
-            // Snippet: DeleteArtifact(string,CallSettings)
+            // Snippet: DeleteArtifact(ArtifactName,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString();
+            ArtifactName name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]");
             // Make the request
-            incidentServiceClient.DeleteArtifact(formattedName);
+            incidentServiceClient.DeleteArtifact(name);
             // End snippet
         }
 
@@ -2010,7 +1889,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteArtifactRequest request = new DeleteArtifactRequest
             {
-                Name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString(),
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
             };
             // Make the request
             await incidentServiceClient.DeleteArtifactAsync(request);
@@ -2026,70 +1905,10 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteArtifactRequest request = new DeleteArtifactRequest
             {
-                Name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString(),
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
             };
             // Make the request
             incidentServiceClient.DeleteArtifact(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetShiftHandoffPresetsAsync</summary>
-        public async Task GetShiftHandoffPresetsAsync()
-        {
-            // Snippet: GetShiftHandoffPresetsAsync(string,CallSettings)
-            // Additional: GetShiftHandoffPresetsAsync(string,CancellationToken)
-            // Create client
-            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            // Make the request
-            ShiftHandoffPresets response = await incidentServiceClient.GetShiftHandoffPresetsAsync(formattedParent);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetShiftHandoffPresets</summary>
-        public void GetShiftHandoffPresets()
-        {
-            // Snippet: GetShiftHandoffPresets(string,CallSettings)
-            // Create client
-            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
-            // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            // Make the request
-            ShiftHandoffPresets response = incidentServiceClient.GetShiftHandoffPresets(formattedParent);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetShiftHandoffPresetsAsync</summary>
-        public async Task GetShiftHandoffPresetsAsync_RequestObject()
-        {
-            // Snippet: GetShiftHandoffPresetsAsync(GetShiftHandoffPresetsRequest,CallSettings)
-            // Additional: GetShiftHandoffPresetsAsync(GetShiftHandoffPresetsRequest,CancellationToken)
-            // Create client
-            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            GetShiftHandoffPresetsRequest request = new GetShiftHandoffPresetsRequest
-            {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
-            };
-            // Make the request
-            ShiftHandoffPresets response = await incidentServiceClient.GetShiftHandoffPresetsAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetShiftHandoffPresets</summary>
-        public void GetShiftHandoffPresets_RequestObject()
-        {
-            // Snippet: GetShiftHandoffPresets(GetShiftHandoffPresetsRequest,CallSettings)
-            // Create client
-            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
-            // Initialize request argument(s)
-            GetShiftHandoffPresetsRequest request = new GetShiftHandoffPresetsRequest
-            {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
-            };
-            // Make the request
-            ShiftHandoffPresets response = incidentServiceClient.GetShiftHandoffPresets(request);
             // End snippet
         }
 
@@ -2103,7 +1922,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             SendShiftHandoffRequest request = new SendShiftHandoffRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Recipients = { },
                 Subject = "",
             };
@@ -2121,7 +1940,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             SendShiftHandoffRequest request = new SendShiftHandoffRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Recipients = { },
                 Subject = "",
             };
@@ -2133,29 +1952,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for CreateSubscriptionAsync</summary>
         public async Task CreateSubscriptionAsync()
         {
-            // Snippet: CreateSubscriptionAsync(string,Subscription,CallSettings)
-            // Additional: CreateSubscriptionAsync(string,Subscription,CancellationToken)
+            // Snippet: CreateSubscriptionAsync(IncidentName,Subscription,CallSettings)
+            // Additional: CreateSubscriptionAsync(IncidentName,Subscription,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Subscription subscription = new Subscription();
             // Make the request
-            Subscription response = await incidentServiceClient.CreateSubscriptionAsync(formattedParent, subscription);
+            Subscription response = await incidentServiceClient.CreateSubscriptionAsync(parent, subscription);
             // End snippet
         }
 
         /// <summary>Snippet for CreateSubscription</summary>
         public void CreateSubscription()
         {
-            // Snippet: CreateSubscription(string,Subscription,CallSettings)
+            // Snippet: CreateSubscription(IncidentName,Subscription,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Subscription subscription = new Subscription();
             // Make the request
-            Subscription response = incidentServiceClient.CreateSubscription(formattedParent, subscription);
+            Subscription response = incidentServiceClient.CreateSubscription(parent, subscription);
             // End snippet
         }
 
@@ -2169,7 +1988,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateSubscriptionRequest request = new CreateSubscriptionRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Subscription = new Subscription(),
             };
             // Make the request
@@ -2186,7 +2005,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateSubscriptionRequest request = new CreateSubscriptionRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Subscription = new Subscription(),
             };
             // Make the request
@@ -2194,17 +2013,79 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for ListSubscriptionsAsync</summary>
-        public async Task ListSubscriptionsAsync()
+        /// <summary>Snippet for UpdateSubscriptionAsync</summary>
+        public async Task UpdateSubscriptionAsync()
         {
-            // Snippet: ListSubscriptionsAsync(string,string,int?,CallSettings)
+            // Snippet: UpdateSubscriptionAsync(Subscription,FieldMask,CallSettings)
+            // Additional: UpdateSubscriptionAsync(Subscription,FieldMask,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            Subscription subscription = new Subscription();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Subscription response = await incidentServiceClient.UpdateSubscriptionAsync(subscription, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscription</summary>
+        public void UpdateSubscription()
+        {
+            // Snippet: UpdateSubscription(Subscription,FieldMask,CallSettings)
+            // Create client
+            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
+            // Initialize request argument(s)
+            Subscription subscription = new Subscription();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Subscription response = incidentServiceClient.UpdateSubscription(subscription, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscriptionAsync</summary>
+        public async Task UpdateSubscriptionAsync_RequestObject()
+        {
+            // Snippet: UpdateSubscriptionAsync(UpdateSubscriptionRequest,CallSettings)
+            // Additional: UpdateSubscriptionAsync(UpdateSubscriptionRequest,CancellationToken)
+            // Create client
+            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+            };
+            // Make the request
+            Subscription response = await incidentServiceClient.UpdateSubscriptionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscription</summary>
+        public void UpdateSubscription_RequestObject()
+        {
+            // Snippet: UpdateSubscription(UpdateSubscriptionRequest,CallSettings)
+            // Create client
+            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+            };
+            // Make the request
+            Subscription response = incidentServiceClient.UpdateSubscription(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscriptionsAsync</summary>
+        public async Task ListSubscriptionsAsync()
+        {
+            // Snippet: ListSubscriptionsAsync(IncidentName,string,int?,CallSettings)
+            // Create client
+            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> response =
-                incidentServiceClient.ListSubscriptionsAsync(formattedParent);
+                incidentServiceClient.ListSubscriptionsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Subscription item) =>
@@ -2241,14 +2122,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListSubscriptions</summary>
         public void ListSubscriptions()
         {
-            // Snippet: ListSubscriptions(string,string,int?,CallSettings)
+            // Snippet: ListSubscriptions(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedEnumerable<ListSubscriptionsResponse, Subscription> response =
-                incidentServiceClient.ListSubscriptions(formattedParent);
+                incidentServiceClient.ListSubscriptions(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Subscription item in response)
@@ -2291,7 +2172,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> response =
@@ -2338,7 +2219,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedEnumerable<ListSubscriptionsResponse, Subscription> response =
@@ -2379,27 +2260,27 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for DeleteSubscriptionAsync</summary>
         public async Task DeleteSubscriptionAsync()
         {
-            // Snippet: DeleteSubscriptionAsync(string,CallSettings)
-            // Additional: DeleteSubscriptionAsync(string,CancellationToken)
+            // Snippet: DeleteSubscriptionAsync(SubscriptionName,CallSettings)
+            // Additional: DeleteSubscriptionAsync(SubscriptionName,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString();
+            SubscriptionName name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]");
             // Make the request
-            await incidentServiceClient.DeleteSubscriptionAsync(formattedName);
+            await incidentServiceClient.DeleteSubscriptionAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteSubscription</summary>
         public void DeleteSubscription()
         {
-            // Snippet: DeleteSubscription(string,CallSettings)
+            // Snippet: DeleteSubscription(SubscriptionName,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString();
+            SubscriptionName name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]");
             // Make the request
-            incidentServiceClient.DeleteSubscription(formattedName);
+            incidentServiceClient.DeleteSubscription(name);
             // End snippet
         }
 
@@ -2413,7 +2294,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
-                Name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             await incidentServiceClient.DeleteSubscriptionAsync(request);
@@ -2429,7 +2310,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
-                Name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             incidentServiceClient.DeleteSubscription(request);
@@ -2439,29 +2320,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for CreateIncidentRoleAssignmentAsync</summary>
         public async Task CreateIncidentRoleAssignmentAsync()
         {
-            // Snippet: CreateIncidentRoleAssignmentAsync(string,IncidentRoleAssignment,CallSettings)
-            // Additional: CreateIncidentRoleAssignmentAsync(string,IncidentRoleAssignment,CancellationToken)
+            // Snippet: CreateIncidentRoleAssignmentAsync(IncidentName,IncidentRoleAssignment,CallSettings)
+            // Additional: CreateIncidentRoleAssignmentAsync(IncidentName,IncidentRoleAssignment,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             IncidentRoleAssignment incidentRoleAssignment = new IncidentRoleAssignment();
             // Make the request
-            IncidentRoleAssignment response = await incidentServiceClient.CreateIncidentRoleAssignmentAsync(formattedParent, incidentRoleAssignment);
+            IncidentRoleAssignment response = await incidentServiceClient.CreateIncidentRoleAssignmentAsync(parent, incidentRoleAssignment);
             // End snippet
         }
 
         /// <summary>Snippet for CreateIncidentRoleAssignment</summary>
         public void CreateIncidentRoleAssignment()
         {
-            // Snippet: CreateIncidentRoleAssignment(string,IncidentRoleAssignment,CallSettings)
+            // Snippet: CreateIncidentRoleAssignment(IncidentName,IncidentRoleAssignment,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             IncidentRoleAssignment incidentRoleAssignment = new IncidentRoleAssignment();
             // Make the request
-            IncidentRoleAssignment response = incidentServiceClient.CreateIncidentRoleAssignment(formattedParent, incidentRoleAssignment);
+            IncidentRoleAssignment response = incidentServiceClient.CreateIncidentRoleAssignment(parent, incidentRoleAssignment);
             // End snippet
         }
 
@@ -2475,7 +2356,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateIncidentRoleAssignmentRequest request = new CreateIncidentRoleAssignmentRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 IncidentRoleAssignment = new IncidentRoleAssignment(),
             };
             // Make the request
@@ -2492,7 +2373,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CreateIncidentRoleAssignmentRequest request = new CreateIncidentRoleAssignmentRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 IncidentRoleAssignment = new IncidentRoleAssignment(),
             };
             // Make the request
@@ -2503,27 +2384,27 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for DeleteIncidentRoleAssignmentAsync</summary>
         public async Task DeleteIncidentRoleAssignmentAsync()
         {
-            // Snippet: DeleteIncidentRoleAssignmentAsync(string,CallSettings)
-            // Additional: DeleteIncidentRoleAssignmentAsync(string,CancellationToken)
+            // Snippet: DeleteIncidentRoleAssignmentAsync(RoleAssignmentName,CallSettings)
+            // Additional: DeleteIncidentRoleAssignmentAsync(RoleAssignmentName,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             // Make the request
-            await incidentServiceClient.DeleteIncidentRoleAssignmentAsync(formattedName);
+            await incidentServiceClient.DeleteIncidentRoleAssignmentAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteIncidentRoleAssignment</summary>
         public void DeleteIncidentRoleAssignment()
         {
-            // Snippet: DeleteIncidentRoleAssignment(string,CallSettings)
+            // Snippet: DeleteIncidentRoleAssignment(RoleAssignmentName,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             // Make the request
-            incidentServiceClient.DeleteIncidentRoleAssignment(formattedName);
+            incidentServiceClient.DeleteIncidentRoleAssignment(name);
             // End snippet
         }
 
@@ -2537,7 +2418,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteIncidentRoleAssignmentRequest request = new DeleteIncidentRoleAssignmentRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
             };
             // Make the request
             await incidentServiceClient.DeleteIncidentRoleAssignmentAsync(request);
@@ -2553,7 +2434,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             DeleteIncidentRoleAssignmentRequest request = new DeleteIncidentRoleAssignmentRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
             };
             // Make the request
             incidentServiceClient.DeleteIncidentRoleAssignment(request);
@@ -2563,14 +2444,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListIncidentRoleAssignmentsAsync</summary>
         public async Task ListIncidentRoleAssignmentsAsync()
         {
-            // Snippet: ListIncidentRoleAssignmentsAsync(string,string,int?,CallSettings)
+            // Snippet: ListIncidentRoleAssignmentsAsync(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedAsyncEnumerable<ListIncidentRoleAssignmentsResponse, IncidentRoleAssignment> response =
-                incidentServiceClient.ListIncidentRoleAssignmentsAsync(formattedParent);
+                incidentServiceClient.ListIncidentRoleAssignmentsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((IncidentRoleAssignment item) =>
@@ -2607,14 +2488,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ListIncidentRoleAssignments</summary>
         public void ListIncidentRoleAssignments()
         {
-            // Snippet: ListIncidentRoleAssignments(string,string,int?,CallSettings)
+            // Snippet: ListIncidentRoleAssignments(IncidentName,string,int?,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             // Make the request
             PagedEnumerable<ListIncidentRoleAssignmentsResponse, IncidentRoleAssignment> response =
-                incidentServiceClient.ListIncidentRoleAssignments(formattedParent);
+                incidentServiceClient.ListIncidentRoleAssignments(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (IncidentRoleAssignment item in response)
@@ -2657,7 +2538,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListIncidentRoleAssignmentsRequest request = new ListIncidentRoleAssignmentsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListIncidentRoleAssignmentsResponse, IncidentRoleAssignment> response =
@@ -2704,7 +2585,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ListIncidentRoleAssignmentsRequest request = new ListIncidentRoleAssignmentsRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             // Make the request
             PagedEnumerable<ListIncidentRoleAssignmentsResponse, IncidentRoleAssignment> response =
@@ -2745,29 +2626,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for RequestIncidentRoleHandoverAsync</summary>
         public async Task RequestIncidentRoleHandoverAsync()
         {
-            // Snippet: RequestIncidentRoleHandoverAsync(string,User,CallSettings)
-            // Additional: RequestIncidentRoleHandoverAsync(string,User,CancellationToken)
+            // Snippet: RequestIncidentRoleHandoverAsync(RoleAssignmentName,User,CallSettings)
+            // Additional: RequestIncidentRoleHandoverAsync(RoleAssignmentName,User,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = await incidentServiceClient.RequestIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await incidentServiceClient.RequestIncidentRoleHandoverAsync(name, newAssignee);
             // End snippet
         }
 
         /// <summary>Snippet for RequestIncidentRoleHandover</summary>
         public void RequestIncidentRoleHandover()
         {
-            // Snippet: RequestIncidentRoleHandover(string,User,CallSettings)
+            // Snippet: RequestIncidentRoleHandover(RoleAssignmentName,User,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = incidentServiceClient.RequestIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = incidentServiceClient.RequestIncidentRoleHandover(name, newAssignee);
             // End snippet
         }
 
@@ -2781,7 +2662,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             RequestIncidentRoleHandoverRequest request = new RequestIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request
@@ -2798,7 +2679,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             RequestIncidentRoleHandoverRequest request = new RequestIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request
@@ -2809,29 +2690,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ConfirmIncidentRoleHandoverAsync</summary>
         public async Task ConfirmIncidentRoleHandoverAsync()
         {
-            // Snippet: ConfirmIncidentRoleHandoverAsync(string,User,CallSettings)
-            // Additional: ConfirmIncidentRoleHandoverAsync(string,User,CancellationToken)
+            // Snippet: ConfirmIncidentRoleHandoverAsync(RoleAssignmentName,User,CallSettings)
+            // Additional: ConfirmIncidentRoleHandoverAsync(RoleAssignmentName,User,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = await incidentServiceClient.ConfirmIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await incidentServiceClient.ConfirmIncidentRoleHandoverAsync(name, newAssignee);
             // End snippet
         }
 
         /// <summary>Snippet for ConfirmIncidentRoleHandover</summary>
         public void ConfirmIncidentRoleHandover()
         {
-            // Snippet: ConfirmIncidentRoleHandover(string,User,CallSettings)
+            // Snippet: ConfirmIncidentRoleHandover(RoleAssignmentName,User,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = incidentServiceClient.ConfirmIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = incidentServiceClient.ConfirmIncidentRoleHandover(name, newAssignee);
             // End snippet
         }
 
@@ -2845,7 +2726,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ConfirmIncidentRoleHandoverRequest request = new ConfirmIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request
@@ -2862,7 +2743,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ConfirmIncidentRoleHandoverRequest request = new ConfirmIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request
@@ -2873,29 +2754,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for ForceIncidentRoleHandoverAsync</summary>
         public async Task ForceIncidentRoleHandoverAsync()
         {
-            // Snippet: ForceIncidentRoleHandoverAsync(string,User,CallSettings)
-            // Additional: ForceIncidentRoleHandoverAsync(string,User,CancellationToken)
+            // Snippet: ForceIncidentRoleHandoverAsync(RoleAssignmentName,User,CallSettings)
+            // Additional: ForceIncidentRoleHandoverAsync(RoleAssignmentName,User,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = await incidentServiceClient.ForceIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await incidentServiceClient.ForceIncidentRoleHandoverAsync(name, newAssignee);
             // End snippet
         }
 
         /// <summary>Snippet for ForceIncidentRoleHandover</summary>
         public void ForceIncidentRoleHandover()
         {
-            // Snippet: ForceIncidentRoleHandover(string,User,CallSettings)
+            // Snippet: ForceIncidentRoleHandover(RoleAssignmentName,User,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = incidentServiceClient.ForceIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = incidentServiceClient.ForceIncidentRoleHandover(name, newAssignee);
             // End snippet
         }
 
@@ -2909,7 +2790,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ForceIncidentRoleHandoverRequest request = new ForceIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request
@@ -2926,7 +2807,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             ForceIncidentRoleHandoverRequest request = new ForceIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request
@@ -2937,29 +2818,29 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
         /// <summary>Snippet for CancelIncidentRoleHandoverAsync</summary>
         public async Task CancelIncidentRoleHandoverAsync()
         {
-            // Snippet: CancelIncidentRoleHandoverAsync(string,User,CallSettings)
-            // Additional: CancelIncidentRoleHandoverAsync(string,User,CancellationToken)
+            // Snippet: CancelIncidentRoleHandoverAsync(RoleAssignmentName,User,CallSettings)
+            // Additional: CancelIncidentRoleHandoverAsync(RoleAssignmentName,User,CancellationToken)
             // Create client
             IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = await incidentServiceClient.CancelIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await incidentServiceClient.CancelIncidentRoleHandoverAsync(name, newAssignee);
             // End snippet
         }
 
         /// <summary>Snippet for CancelIncidentRoleHandover</summary>
         public void CancelIncidentRoleHandover()
         {
-            // Snippet: CancelIncidentRoleHandover(string,User,CallSettings)
+            // Snippet: CancelIncidentRoleHandover(RoleAssignmentName,User,CallSettings)
             // Create client
             IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
             // Make the request
-            IncidentRoleAssignment response = incidentServiceClient.CancelIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = incidentServiceClient.CancelIncidentRoleHandover(name, newAssignee);
             // End snippet
         }
 
@@ -2973,7 +2854,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CancelIncidentRoleHandoverRequest request = new CancelIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request
@@ -2990,7 +2871,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // Initialize request argument(s)
             CancelIncidentRoleHandoverRequest request = new CancelIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             // Make the request

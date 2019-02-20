@@ -27,85 +27,98 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             "Cilnb29nbGUvY2xvdWQvaXJtL3YxYWxwaGEyL2luY2lkZW50cy5wcm90bxIZ",
             "Z29vZ2xlLmNsb3VkLmlybS52MWFscGhhMhocZ29vZ2xlL2FwaS9hbm5vdGF0",
             "aW9ucy5wcm90bxopZ29vZ2xlL21vbml0b3JpbmcvdjMvbWV0cmljX3NlcnZp",
-            "Y2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iMgoE",
-            "VXNlchIRCgd1c2VyX2lkGAEgASgJSAASDwoFZW1haWwYAiABKAlIAEIGCgR1",
-            "c2VyItACCgZTaWduYWwSDAoEbmFtZRgBIAEoCRIMCgRldGFnGAIgASgJEhAK",
-            "CGluY2lkZW50GAMgASgJEi8KC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIwCgdjcmVhdG9yGAUgASgLMh8uZ29vZ2xl",
-            "LmNsb3VkLmlybS52MWFscGhhMi5Vc2VyEg0KBXRpdGxlGAYgASgJEhQKDGNv",
-            "bnRlbnRfdHlwZRgHIAEoCRIPCgdjb250ZW50GAggASgJEj0KDHNpZ25hbF9z",
-            "dGF0ZRgJIAEoDjInLmdvb2dsZS5jbG91ZC5pcm0udjFhbHBoYTIuU2lnbmFs",
-            "LlN0YXRlIkAKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDgoKU1RB",
-            "VEVfT1BFThABEhAKDFNUQVRFX0NMT1NFRBACIo0BCgpBbm5vdGF0aW9uEgwK",
-            "BG5hbWUYASABKAkSLwoGYXV0aG9yGAIgASgLMh8uZ29vZ2xlLmNsb3VkLmly",
-            "bS52MWFscGhhMi5Vc2VyEi8KC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIPCgdjb250ZW50GAQgASgJIjYKA1RhZxIM",
-            "CgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRILCgN1cmwYAyAB",
-            "KAkikwEKCFN5bm9wc2lzEhQKDGNvbnRlbnRfdHlwZRgBIAEoCRIPCgdjb250",
-            "ZW50GAIgASgJEi8KC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIvCgZhdXRob3IYBCABKAsyHy5nb29nbGUuY2xvdWQu",
-            "aXJtLnYxYWxwaGEyLlVzZXIi1AUKCEluY2lkZW50EgwKBG5hbWUYASABKAkS",
-            "DQoFdGl0bGUYAiABKAkSTQoQZXNjYWxhdGlvbl9sZXZlbBgDIAEoDjIzLmdv",
-            "b2dsZS5jbG91ZC5pcm0udjFhbHBoYTIuSW5jaWRlbnQuRXNjYWxhdGlvbkxl",
-            "dmVsEgwKBGV0YWcYBCABKAkSPgoIc2V2ZXJpdHkYBSABKA4yLC5nb29nbGUu",
-            "Y2xvdWQuaXJtLnYxYWxwaGEyLkluY2lkZW50LlNldmVyaXR5EjgKBXN0YWdl",
-            "GAYgASgOMikuZ29vZ2xlLmNsb3VkLmlybS52MWFscGhhMi5JbmNpZGVudC5T",
-            "dGFnZRIuCgpzdGFydF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBI1CghzeW5vcHNpcxgIIAEoCzIjLmdvb2dsZS5jbG91ZC5pcm0u",
-            "djFhbHBoYTIuU3lub3BzaXMiVgoPRXNjYWxhdGlvbkxldmVsEiAKHEVTQ0FM",
-            "QVRJT05fTEVWRUxfVU5TUEVDSUZJRUQQABIhCh1FU0NBTEFUSU9OX0xFVkVM",
-            "X09SR0FOSVpBVElPThABIo0BCghTZXZlcml0eRIYChRTRVZFUklUWV9VTlNQ",
-            "RUNJRklFRBAAEhEKDVNFVkVSSVRZX0hVR0UQARISCg5TRVZFUklUWV9NQUpP",
-            "UhACEhMKD1NFVkVSSVRZX01FRElVTRADEhIKDlNFVkVSSVRZX01JTk9SEAQS",
-            "FwoTU0VWRVJJVFlfTkVHTElHSUJMRRAFIoQBCgVTdGFnZRIVChFTVEFHRV9V",
-            "TlNQRUNJRklFRBAAEhIKDlNUQUdFX0RFVEVDVEVEEAQSEQoNU1RBR0VfVFJJ",
-            "QUdFRBABEhMKD1NUQUdFX01JVElHQVRFRBACEhIKDlNUQUdFX1JFU09MVkVE",
-            "EAMSFAoQU1RBR0VfRE9DVU1FTlRFRBAFItYCCgxJbmNpZGVudFJvbGUSOgoE",
-            "dHlwZRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5pcm0udjFhbHBoYTIuSW5jaWRl",
-            "bnRSb2xlLlR5cGUSDQoFdGl0bGUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyAB",
-            "KAki5QEKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEhsKF1RZUEVfSU5D",
-            "SURFTlRfQ09NTUFOREVSEAESHAoYVFlQRV9DT01NVU5JQ0FUSU9OU19MRUFE",
-            "EAISGAoUVFlQRV9PUEVSQVRJT05TX0xFQUQQAxIuCipUWVBFX0VYVEVSTkFM",
-            "X0NVU1RPTUVSX0NPTU1VTklDQVRJT05TX0xFQUQQBBIXChNUWVBFX1BSSU1B",
-            "UllfT05DQUxMEAUSGQoVVFlQRV9TRUNPTkRBUllfT05DQUxMEAYSDgoKVFlQ",
-            "RV9PVEhFUhAHItoBChZJbmNpZGVudFJvbGVBc3NpZ25tZW50EgwKBG5hbWUY",
-            "ASABKAkSDAoEZXRhZxgCIAEoCRI1CgRyb2xlGAMgASgLMicuZ29vZ2xlLmNs",
-            "b3VkLmlybS52MWFscGhhMi5JbmNpZGVudFJvbGUSMQoIYXNzaWduZWUYBCAB",
-            "KAsyHy5nb29nbGUuY2xvdWQuaXJtLnYxYWxwaGEyLlVzZXISOgoRcHJvcG9z",
-            "ZWRfYXNzaWduZWUYBSABKAsyHy5nb29nbGUuY2xvdWQuaXJtLnYxYWxwaGEy",
-            "LlVzZXIi8gEKCEFydGlmYWN0EgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9u",
-            "YW1lGAIgASgJEgwKBGV0YWcYAyABKAkSCwoDdXJsGAQgASgJEjYKBHR5cGUY",
-            "BSABKA4yKC5nb29nbGUuY2xvdWQuaXJtLnYxYWxwaGEyLkFydGlmYWN0LlR5",
-            "cGUibwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDAoIVFlQRV9VUkwQ",
-            "ARIOCgpUWVBFX0lTU1VFEAISHgoaVFlQRV9TT1VSQ0VfQ09OVFJPTF9DSEFO",
-            "R0UQAxITCg9UWVBFX0pJUkFfSVNTVUUQBCKOAgoUQ29tbXVuaWNhdGlvbkNo",
-            "YW5uZWwSRgoFZW1haWwYASABKAsyNS5nb29nbGUuY2xvdWQuaXJtLnYxYWxw",
-            "aGEyLkNvbW11bmljYXRpb25DaGFubmVsLkVtYWlsSAASYwoUbm90aWZpY2F0",
-            "aW9uX2NoYW5uZWwYAiABKAsyQy5nb29nbGUuY2xvdWQuaXJtLnYxYWxwaGEy",
-            "LkNvbW11bmljYXRpb25DaGFubmVsLk5vdGlmaWNhdGlvbkNoYW5uZWxIABoY",
-            "CgVFbWFpbBIPCgdhZGRyZXNzGAEgASgJGiMKE05vdGlmaWNhdGlvbkNoYW5u",
-            "ZWwSDAoEbmFtZRgBIAEoCUIKCghlbmRwb2ludCKmAwoMU3Vic2NyaXB0aW9u",
-            "EgwKBG5hbWUYASABKAkSDAoEZXRhZxgCIAEoCRJNChRzdWJzY3JpcHRpb25f",
-            "Y2hhbm5lbBgDIAEoCzIvLmdvb2dsZS5jbG91ZC5pcm0udjFhbHBoYTIuQ29t",
-            "bXVuaWNhdGlvbkNoYW5uZWwSRgoLZXZlbnRfdHlwZXMYBCADKA4yMS5nb29n",
-            "bGUuY2xvdWQuaXJtLnYxYWxwaGEyLlN1YnNjcmlwdGlvbi5FdmVudFR5cGUi",
-            "4gEKCUV2ZW50VHlwZRIaChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASGwoX",
-            "RVZFTlRfVFlQRV9USVRMRV9DSEFOR0UQARIeChpFVkVOVF9UWVBFX1NZTk9Q",
-            "U0lTX0NIQU5HRRACEhsKF0VWRU5UX1RZUEVfU1RBR0VfQ0hBTkdFEAMSHgoa",
-            "RVZFTlRfVFlQRV9TRVZFUklUWV9DSEFOR0UQBBIdChlFVkVOVF9UWVBFX0FO",
-            "Tk9UQVRJT05fQUREEAUSIAocRVZFTlRfVFlQRV9BTk5PVEFUSU9OX0NIQU5H",
-            "RRAGQmgKI2NvbS5nb29nbGUuaXJtLnNlcnZpY2UudjFhbHBoYTIuYXBpUAFa",
-            "PGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "aXJtL3YxYWxwaGEyO2lybfgBAWIGcHJvdG8z"));
+            "Y2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIyCgRVc2VyEhEKB3VzZXJf",
+            "aWQYASABKAlIABIPCgVlbWFpbBgCIAEoCUgAQgYKBHVzZXIiwgQKBlNpZ25h",
+            "bBIMCgRuYW1lGAEgASgJEgwKBGV0YWcYAiABKAkSEAoIaW5jaWRlbnQYAyAB",
+            "KAkSLwoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEi4KCmNsb3NlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEi8KC2RldGVjdF90aW1lGA8gASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIwCgdjcmVhdG9yGAUgASgLMh8uZ29vZ2xlLmNsb3Vk",
+            "LmlybS52MWFscGhhMi5Vc2VyEg0KBXRpdGxlGAYgASgJEhQKDGNvbnRlbnRf",
+            "dHlwZRgHIAEoCRIPCgdjb250ZW50GAggASgJEj0KDHNpZ25hbF9zdGF0ZRgJ",
+            "IAEoDjInLmdvb2dsZS5jbG91ZC5pcm0udjFhbHBoYTIuU2lnbmFsLlN0YXRl",
+            "EkoKEHNpZ25hbF9hcnRpZmFjdHMYECADKAsyMC5nb29nbGUuY2xvdWQuaXJt",
+            "LnYxYWxwaGEyLlNpZ25hbC5TaWduYWxBcnRpZmFjdBpDCg5TaWduYWxBcnRp",
+            "ZmFjdBITCgl1c2VyX3R5cGUYAiABKAlIABILCgN1cmkYAyABKAlCDwoNYXJ0",
+            "aWZhY3RfdHlwZSJACgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg4K",
+            "ClNUQVRFX09QRU4QARIQCgxTVEFURV9DTE9TRUQQAiKNAQoKQW5ub3RhdGlv",
+            "bhIMCgRuYW1lGAEgASgJEi8KBmF1dGhvchgCIAEoCzIfLmdvb2dsZS5jbG91",
+            "ZC5pcm0udjFhbHBoYTIuVXNlchIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDwoHY29udGVudBgEIAEoCSIpCgNU",
+            "YWcSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkikwEKCFN5",
+            "bm9wc2lzEhQKDGNvbnRlbnRfdHlwZRgBIAEoCRIPCgdjb250ZW50GAIgASgJ",
+            "Ei8KC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIvCgZhdXRob3IYBCABKAsyHy5nb29nbGUuY2xvdWQuaXJtLnYxYWxw",
+            "aGEyLlVzZXIiyQgKCEluY2lkZW50EgwKBG5hbWUYASABKAkSDQoFdGl0bGUY",
+            "AiABKAkSTQoQZXNjYWxhdGlvbl9sZXZlbBgDIAEoDjIzLmdvb2dsZS5jbG91",
+            "ZC5pcm0udjFhbHBoYTIuSW5jaWRlbnQuRXNjYWxhdGlvbkxldmVsEgwKBGV0",
+            "YWcYBCABKAkSPgoIc2V2ZXJpdHkYBSABKA4yLC5nb29nbGUuY2xvdWQuaXJt",
+            "LnYxYWxwaGEyLkluY2lkZW50LlNldmVyaXR5EjgKBXN0YWdlGAYgASgOMiku",
+            "Z29vZ2xlLmNsb3VkLmlybS52MWFscGhhMi5JbmNpZGVudC5TdGFnZRIaChJk",
+            "dXBsaWNhdGVfaW5jaWRlbnQYCSABKAkSLgoKc3RhcnRfdGltZRgHIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNQoIc3lub3BzaXMYCCABKAsy",
+            "Iy5nb29nbGUuY2xvdWQuaXJtLnYxYWxwaGEyLlN5bm9wc2lzElMKE2NvbW11",
+            "bmljYXRpb25fdmVudWUYCiABKAsyNi5nb29nbGUuY2xvdWQuaXJtLnYxYWxw",
+            "aGEyLkluY2lkZW50LkNvbW11bmljYXRpb25WZW51ZRrsAQoSQ29tbXVuaWNh",
+            "dGlvblZlbnVlEgsKA3VyaRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkS",
+            "WAoMY2hhbm5lbF90eXBlGAMgASgOMkIuZ29vZ2xlLmNsb3VkLmlybS52MWFs",
+            "cGhhMi5JbmNpZGVudC5Db21tdW5pY2F0aW9uVmVudWUuQ2hhbm5lbFR5cGUi",
+            "WQoLQ2hhbm5lbFR5cGUSHAoYQ0hBTk5FTF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "FAoQQ0hBTk5FTF9UWVBFX1VSSRABEhYKEkNIQU5ORUxfVFlQRV9TTEFDSxAF",
+            "IlYKD0VzY2FsYXRpb25MZXZlbBIgChxFU0NBTEFUSU9OX0xFVkVMX1VOU1BF",
+            "Q0lGSUVEEAASIQodRVNDQUxBVElPTl9MRVZFTF9PUkdBTklaQVRJT04QASKN",
+            "AQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIRCg1TRVZF",
+            "UklUWV9IVUdFEAESEgoOU0VWRVJJVFlfTUFKT1IQAhITCg9TRVZFUklUWV9N",
+            "RURJVU0QAxISCg5TRVZFUklUWV9NSU5PUhAEEhcKE1NFVkVSSVRZX05FR0xJ",
+            "R0lCTEUQBSKZAQoFU3RhZ2USFQoRU1RBR0VfVU5TUEVDSUZJRUQQABISCg5T",
+            "VEFHRV9ERVRFQ1RFRBAEEhEKDVNUQUdFX1RSSUFHRUQQARITCg9TVEFHRV9N",
+            "SVRJR0FURUQQAhISCg5TVEFHRV9SRVNPTFZFRBADEhQKEFNUQUdFX0RPQ1VN",
+            "RU5URUQQBRITCg9TVEFHRV9EVVBMSUNBVEUQBiLWAgoMSW5jaWRlbnRSb2xl",
+            "EjoKBHR5cGUYASABKA4yLC5nb29nbGUuY2xvdWQuaXJtLnYxYWxwaGEyLklu",
+            "Y2lkZW50Um9sZS5UeXBlEg0KBXRpdGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9u",
+            "GAMgASgJIuUBCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIbChdUWVBF",
+            "X0lOQ0lERU5UX0NPTU1BTkRFUhABEhwKGFRZUEVfQ09NTVVOSUNBVElPTlNf",
+            "TEVBRBACEhgKFFRZUEVfT1BFUkFUSU9OU19MRUFEEAMSLgoqVFlQRV9FWFRF",
+            "Uk5BTF9DVVNUT01FUl9DT01NVU5JQ0FUSU9OU19MRUFEEAQSFwoTVFlQRV9Q",
+            "UklNQVJZX09OQ0FMTBAFEhkKFVRZUEVfU0VDT05EQVJZX09OQ0FMTBAGEg4K",
+            "ClRZUEVfT1RIRVIQByLaAQoWSW5jaWRlbnRSb2xlQXNzaWdubWVudBIMCgRu",
+            "YW1lGAEgASgJEgwKBGV0YWcYAiABKAkSNQoEcm9sZRgDIAEoCzInLmdvb2ds",
+            "ZS5jbG91ZC5pcm0udjFhbHBoYTIuSW5jaWRlbnRSb2xlEjEKCGFzc2lnbmVl",
+            "GAQgASgLMh8uZ29vZ2xlLmNsb3VkLmlybS52MWFscGhhMi5Vc2VyEjoKEXBy",
+            "b3Bvc2VkX2Fzc2lnbmVlGAUgASgLMh8uZ29vZ2xlLmNsb3VkLmlybS52MWFs",
+            "cGhhMi5Vc2VyIsIBCghBcnRpZmFjdBIMCgRuYW1lGAEgASgJEhQKDGRpc3Bs",
+            "YXlfbmFtZRgCIAEoCRIMCgRldGFnGAMgASgJEgsKA3VybBgEIAEoCRI2CgR0",
+            "eXBlGAUgASgOMiguZ29vZ2xlLmNsb3VkLmlybS52MWFscGhhMi5BcnRpZmFj",
+            "dC5UeXBlIj8KBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgwKCFRZUEVf",
+            "VVJMEAESEwoPVFlQRV9KSVJBX0lTU1VFEAQijgIKFENvbW11bmljYXRpb25D",
+            "aGFubmVsEkYKBWVtYWlsGAEgASgLMjUuZ29vZ2xlLmNsb3VkLmlybS52MWFs",
+            "cGhhMi5Db21tdW5pY2F0aW9uQ2hhbm5lbC5FbWFpbEgAEmMKFG5vdGlmaWNh",
+            "dGlvbl9jaGFubmVsGAIgASgLMkMuZ29vZ2xlLmNsb3VkLmlybS52MWFscGhh",
+            "Mi5Db21tdW5pY2F0aW9uQ2hhbm5lbC5Ob3RpZmljYXRpb25DaGFubmVsSAAa",
+            "GAoFRW1haWwSDwoHYWRkcmVzcxgBIAEoCRojChNOb3RpZmljYXRpb25DaGFu",
+            "bmVsEgwKBG5hbWUYASABKAlCCgoIZW5kcG9pbnQipgMKDFN1YnNjcmlwdGlv",
+            "bhIMCgRuYW1lGAEgASgJEgwKBGV0YWcYAiABKAkSTQoUc3Vic2NyaXB0aW9u",
+            "X2NoYW5uZWwYAyABKAsyLy5nb29nbGUuY2xvdWQuaXJtLnYxYWxwaGEyLkNv",
+            "bW11bmljYXRpb25DaGFubmVsEkYKC2V2ZW50X3R5cGVzGAQgAygOMjEuZ29v",
+            "Z2xlLmNsb3VkLmlybS52MWFscGhhMi5TdWJzY3JpcHRpb24uRXZlbnRUeXBl",
+            "IuIBCglFdmVudFR5cGUSGgoWRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEhsK",
+            "F0VWRU5UX1RZUEVfVElUTEVfQ0hBTkdFEAESHgoaRVZFTlRfVFlQRV9TWU5P",
+            "UFNJU19DSEFOR0UQAhIbChdFVkVOVF9UWVBFX1NUQUdFX0NIQU5HRRADEh4K",
+            "GkVWRU5UX1RZUEVfU0VWRVJJVFlfQ0hBTkdFEAQSHQoZRVZFTlRfVFlQRV9B",
+            "Tk5PVEFUSU9OX0FERBAFEiAKHEVWRU5UX1RZUEVfQU5OT1RBVElPTl9DSEFO",
+            "R0UQBkJoCiNjb20uZ29vZ2xlLmlybS5zZXJ2aWNlLnYxYWxwaGEyLmFwaVAB",
+            "Wjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2lybS92MWFscGhhMjtpcm34AQFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.User), global::Google.Cloud.Irm.V1Alpha2.User.Parser, new[]{ "UserId", "Email" }, new[]{ "User" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Signal), global::Google.Cloud.Irm.V1Alpha2.Signal.Parser, new[]{ "Name", "Etag", "Incident", "CreateTime", "Creator", "Title", "ContentType", "Content", "SignalState" }, null, new[]{ typeof(global::Google.Cloud.Irm.V1Alpha2.Signal.Types.State) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Signal), global::Google.Cloud.Irm.V1Alpha2.Signal.Parser, new[]{ "Name", "Etag", "Incident", "CreateTime", "CloseTime", "DetectTime", "Creator", "Title", "ContentType", "Content", "SignalState", "SignalArtifacts" }, null, new[]{ typeof(global::Google.Cloud.Irm.V1Alpha2.Signal.Types.State) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Signal.Types.SignalArtifact), global::Google.Cloud.Irm.V1Alpha2.Signal.Types.SignalArtifact.Parser, new[]{ "UserType", "Uri" }, new[]{ "ArtifactType" }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Annotation), global::Google.Cloud.Irm.V1Alpha2.Annotation.Parser, new[]{ "Name", "Author", "CreateTime", "Content" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Tag), global::Google.Cloud.Irm.V1Alpha2.Tag.Parser, new[]{ "Name", "DisplayName", "Url" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Tag), global::Google.Cloud.Irm.V1Alpha2.Tag.Parser, new[]{ "Name", "DisplayName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Synopsis), global::Google.Cloud.Irm.V1Alpha2.Synopsis.Parser, new[]{ "ContentType", "Content", "UpdateTime", "Author" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Incident), global::Google.Cloud.Irm.V1Alpha2.Incident.Parser, new[]{ "Name", "Title", "EscalationLevel", "Etag", "Severity", "Stage", "StartTime", "Synopsis" }, null, new[]{ typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.EscalationLevel), typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Severity), typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Stage) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Incident), global::Google.Cloud.Irm.V1Alpha2.Incident.Parser, new[]{ "Name", "Title", "EscalationLevel", "Etag", "Severity", "Stage", "DuplicateIncident", "StartTime", "Synopsis", "CommunicationVenue" }, null, new[]{ typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.EscalationLevel), typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Severity), typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.Stage) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue), global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue.Parser, new[]{ "Uri", "DisplayName", "ChannelType" }, null, new[]{ typeof(global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue.Types.ChannelType) }, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.IncidentRole), global::Google.Cloud.Irm.V1Alpha2.IncidentRole.Parser, new[]{ "Type", "Title", "Description" }, null, new[]{ typeof(global::Google.Cloud.Irm.V1Alpha2.IncidentRole.Types.Type) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment), global::Google.Cloud.Irm.V1Alpha2.IncidentRoleAssignment.Parser, new[]{ "Name", "Etag", "Role", "Assignee", "ProposedAssignee" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Irm.V1Alpha2.Artifact), global::Google.Cloud.Irm.V1Alpha2.Artifact.Parser, new[]{ "Name", "DisplayName", "Etag", "Url", "Type" }, null, new[]{ typeof(global::Google.Cloud.Irm.V1Alpha2.Artifact.Types.Type) }, null),
@@ -168,7 +181,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     /// <summary>
     /// Output only. User id that will allow to get additional information from
     /// People API. This field will be populated implicitly if the caller creates
-    /// or edits a resource (e.g. posts an annotation).
+    /// or edits a resource (for example, posts an annotation).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserId {
@@ -323,7 +336,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
   /// <summary>
   /// A signal is a message calling attention to a (potential) incident. An example
   /// is a page based on a Stackdriver Alerting policy.
-  /// go/irm-glossary#signal
   /// </summary>
   public sealed partial class Signal : pb::IMessage<Signal> {
     private static readonly pb::MessageParser<Signal> _parser = new pb::MessageParser<Signal>(() => new Signal());
@@ -354,11 +366,14 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       etag_ = other.etag_;
       incident_ = other.incident_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      closeTime_ = other.closeTime_ != null ? other.closeTime_.Clone() : null;
+      detectTime_ = other.detectTime_ != null ? other.detectTime_.Clone() : null;
       creator_ = other.creator_ != null ? other.creator_.Clone() : null;
       title_ = other.title_;
       contentType_ = other.contentType_;
       content_ = other.content_;
       signalState_ = other.signalState_;
+      signalArtifacts_ = other.signalArtifacts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -371,7 +386,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the signal, e.g.
+    /// Resource name of the signal, for example,
     /// "projects/{project_id}/signals/{signal_id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -426,13 +441,43 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
     }
 
+    /// <summary>Field number for the "close_time" field.</summary>
+    public const int CloseTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp closeTime_;
+    /// <summary>
+    /// Output only. Time this signal was closed. This field is not populated
+    /// while the signal is still firing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CloseTime {
+      get { return closeTime_; }
+      set {
+        closeTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "detect_time" field.</summary>
+    public const int DetectTimeFieldNumber = 15;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp detectTime_;
+    /// <summary>
+    /// The time this Signal was first detected. This is identical to create_time
+    /// for Signals created by Stackdriver Alerting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DetectTime {
+      get { return detectTime_; }
+      set {
+        detectTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "creator" field.</summary>
     public const int CreatorFieldNumber = 5;
     private global::Google.Cloud.Irm.V1Alpha2.User creator_;
     /// <summary>
     /// Output only. The user that created this signal for manually created
-    /// signals. Empty if this signal was generated by a system (e.g. an
-    /// alerting system).
+    /// signals. Empty if this signal was generated by a system (for example,
+    /// Stackdriver Alerting).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Irm.V1Alpha2.User Creator {
@@ -461,7 +506,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int ContentTypeFieldNumber = 7;
     private string contentType_ = "";
     /// <summary>
-    /// Content type string, e.g. 'text/plain' or'text/html'.
+    /// Content type string, for example, 'text/plain' or'text/html'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ContentType {
@@ -476,7 +521,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     private string content_ = "";
     /// <summary>
     /// Full message of the signal.
-    /// Immutable.
+    /// Immutable for Signals created by Stackdriver Alerting.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Content {
@@ -490,7 +535,8 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int SignalStateFieldNumber = 9;
     private global::Google.Cloud.Irm.V1Alpha2.Signal.Types.State signalState_ = 0;
     /// <summary>
-    /// Output only. The state of this signal.
+    /// The state of this signal.
+    /// For Signals created by Stackdriver Alerting this field is output only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Irm.V1Alpha2.Signal.Types.State SignalState {
@@ -498,6 +544,21 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       set {
         signalState_ = value;
       }
+    }
+
+    /// <summary>Field number for the "signal_artifacts" field.</summary>
+    public const int SignalArtifactsFieldNumber = 16;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Irm.V1Alpha2.Signal.Types.SignalArtifact> _repeated_signalArtifacts_codec
+        = pb::FieldCodec.ForMessage(130, global::Google.Cloud.Irm.V1Alpha2.Signal.Types.SignalArtifact.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Irm.V1Alpha2.Signal.Types.SignalArtifact> signalArtifacts_ = new pbc::RepeatedField<global::Google.Cloud.Irm.V1Alpha2.Signal.Types.SignalArtifact>();
+    /// <summary>
+    /// A set of artifacts to additional resources for this Signal. For example, a
+    /// link to Stackdriver logging for the Signal.
+    /// Immutable for Signals created by Stackdriver Alerting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Irm.V1Alpha2.Signal.Types.SignalArtifact> SignalArtifacts {
+      get { return signalArtifacts_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -517,11 +578,14 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (Etag != other.Etag) return false;
       if (Incident != other.Incident) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(CloseTime, other.CloseTime)) return false;
+      if (!object.Equals(DetectTime, other.DetectTime)) return false;
       if (!object.Equals(Creator, other.Creator)) return false;
       if (Title != other.Title) return false;
       if (ContentType != other.ContentType) return false;
       if (Content != other.Content) return false;
       if (SignalState != other.SignalState) return false;
+      if(!signalArtifacts_.Equals(other.signalArtifacts_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -532,11 +596,14 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (Incident.Length != 0) hash ^= Incident.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (closeTime_ != null) hash ^= CloseTime.GetHashCode();
+      if (detectTime_ != null) hash ^= DetectTime.GetHashCode();
       if (creator_ != null) hash ^= Creator.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (ContentType.Length != 0) hash ^= ContentType.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (SignalState != 0) hash ^= SignalState.GetHashCode();
+      hash ^= signalArtifacts_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -586,6 +653,15 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         output.WriteRawTag(72);
         output.WriteEnum((int) SignalState);
       }
+      if (closeTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CloseTime);
+      }
+      if (detectTime_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(DetectTime);
+      }
+      signalArtifacts_.WriteTo(output, _repeated_signalArtifacts_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -606,6 +682,12 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
+      if (closeTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloseTime);
+      }
+      if (detectTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetectTime);
+      }
       if (creator_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Creator);
       }
@@ -621,6 +703,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (SignalState != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SignalState);
       }
+      size += signalArtifacts_.CalculateSize(_repeated_signalArtifacts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -647,6 +730,18 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
+      if (other.closeTime_ != null) {
+        if (closeTime_ == null) {
+          closeTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CloseTime.MergeFrom(other.CloseTime);
+      }
+      if (other.detectTime_ != null) {
+        if (detectTime_ == null) {
+          detectTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DetectTime.MergeFrom(other.DetectTime);
+      }
       if (other.creator_ != null) {
         if (creator_ == null) {
           creator_ = new global::Google.Cloud.Irm.V1Alpha2.User();
@@ -665,6 +760,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (other.SignalState != 0) {
         SignalState = other.SignalState;
       }
+      signalArtifacts_.Add(other.signalArtifacts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -718,6 +814,24 @@ namespace Google.Cloud.Irm.V1Alpha2 {
             signalState_ = (global::Google.Cloud.Irm.V1Alpha2.Signal.Types.State) input.ReadEnum();
             break;
           }
+          case 82: {
+            if (closeTime_ == null) {
+              closeTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(closeTime_);
+            break;
+          }
+          case 122: {
+            if (detectTime_ == null) {
+              detectTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(detectTime_);
+            break;
+          }
+          case 130: {
+            signalArtifacts_.AddEntriesFrom(input, _repeated_signalArtifacts_codec);
+            break;
+          }
         }
       }
     }
@@ -742,6 +856,200 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         /// Non-firing
         /// </summary>
         [pbr::OriginalName("STATE_CLOSED")] Closed = 2,
+      }
+
+      /// <summary>
+      /// An artifact associated with the Signal.
+      /// </summary>
+      public sealed partial class SignalArtifact : pb::IMessage<SignalArtifact> {
+        private static readonly pb::MessageParser<SignalArtifact> _parser = new pb::MessageParser<SignalArtifact>(() => new SignalArtifact());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<SignalArtifact> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Irm.V1Alpha2.Signal.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SignalArtifact() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SignalArtifact(SignalArtifact other) : this() {
+          uri_ = other.uri_;
+          switch (other.ArtifactTypeCase) {
+            case ArtifactTypeOneofCase.UserType:
+              UserType = other.UserType;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SignalArtifact Clone() {
+          return new SignalArtifact(this);
+        }
+
+        /// <summary>Field number for the "user_type" field.</summary>
+        public const int UserTypeFieldNumber = 2;
+        /// <summary>
+        /// A custom user type
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string UserType {
+          get { return artifactTypeCase_ == ArtifactTypeOneofCase.UserType ? (string) artifactType_ : ""; }
+          set {
+            artifactType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            artifactTypeCase_ = ArtifactTypeOneofCase.UserType;
+          }
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 3;
+        private string uri_ = "";
+        /// <summary>
+        /// The URI for the artifact.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        private object artifactType_;
+        /// <summary>Enum of possible cases for the "artifact_type" oneof.</summary>
+        public enum ArtifactTypeOneofCase {
+          None = 0,
+          UserType = 2,
+        }
+        private ArtifactTypeOneofCase artifactTypeCase_ = ArtifactTypeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ArtifactTypeOneofCase ArtifactTypeCase {
+          get { return artifactTypeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void ClearArtifactType() {
+          artifactTypeCase_ = ArtifactTypeOneofCase.None;
+          artifactType_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as SignalArtifact);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(SignalArtifact other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (UserType != other.UserType) return false;
+          if (Uri != other.Uri) return false;
+          if (ArtifactTypeCase != other.ArtifactTypeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (artifactTypeCase_ == ArtifactTypeOneofCase.UserType) hash ^= UserType.GetHashCode();
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          hash ^= (int) artifactTypeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (artifactTypeCase_ == ArtifactTypeOneofCase.UserType) {
+            output.WriteRawTag(18);
+            output.WriteString(UserType);
+          }
+          if (Uri.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (artifactTypeCase_ == ArtifactTypeOneofCase.UserType) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(UserType);
+          }
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(SignalArtifact other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          switch (other.ArtifactTypeCase) {
+            case ArtifactTypeOneofCase.UserType:
+              UserType = other.UserType;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                UserType = input.ReadString();
+                break;
+              }
+              case 26: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
       }
 
     }
@@ -793,7 +1101,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the annotation, e.g.
+    /// Resource name of the annotation, for example,
     /// "projects/{project_id}/incidents/{incident_id}/annotations/{annotation_id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1020,7 +1328,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public Tag(Tag other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
-      url_ = other.url_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1033,7 +1340,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of a tag, e.g.,
+    /// Resource name of a tag, for example,
     /// "projects/{project_id}/incidents/{incident_id}/tags/{tag_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1048,28 +1355,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Display name of the resource (e.g., "cause:rollout"). Immutable.
+    /// Display name of the resource (for example, "cause:rollout"). Immutable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
       get { return displayName_; }
       set {
         displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "url" field.</summary>
-    public const int UrlFieldNumber = 3;
-    private string url_ = "";
-    /// <summary>
-    /// Output only. For some tags (e.g., "bug:123"), provide a link to the
-    /// underlying resource. Optional.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Url {
-      get { return url_; }
-      set {
-        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1088,7 +1380,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
-      if (Url != other.Url) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1097,7 +1388,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (Url.Length != 0) hash ^= Url.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1119,10 +1409,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (Url.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Url);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1136,9 +1422,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
-      if (Url.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1157,9 +1440,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      if (other.Url.Length != 0) {
-        Url = other.Url;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1177,10 +1457,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           }
           case 18: {
             DisplayName = input.ReadString();
-            break;
-          }
-          case 26: {
-            Url = input.ReadString();
             break;
           }
         }
@@ -1234,7 +1510,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int ContentTypeFieldNumber = 1;
     private string contentType_ = "";
     /// <summary>
-    /// Content type string, e.g. 'text/plain' or 'text/html'.
+    /// Content type string, for example, 'text/plain' or 'text/html'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ContentType {
@@ -1465,8 +1741,10 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       etag_ = other.etag_;
       severity_ = other.severity_;
       stage_ = other.stage_;
+      duplicateIncident_ = other.duplicateIncident_;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       synopsis_ = other.synopsis_ != null ? other.synopsis_.Clone() : null;
+      communicationVenue_ = other.communicationVenue_ != null ? other.communicationVenue_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1479,7 +1757,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of the incident, e.g.
+    /// Output only. Resource name of the incident, for example,
     /// "projects/{project_id}/incidents/{incident_id}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1561,6 +1839,25 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
     }
 
+    /// <summary>Field number for the "duplicate_incident" field.</summary>
+    public const int DuplicateIncidentFieldNumber = 9;
+    private string duplicateIncident_ = "";
+    /// <summary>
+    /// Resource name of the incident this incident is a duplicate of. Empty if
+    /// this incident is not a duplicate.
+    /// An incident can only be a duplicate of an incident that is not marked as a
+    /// duplicate already. Setting this to a non-empty value must also set the
+    /// stage to `STAGE_DUPLICATE`. Unsetting this value value must also update
+    /// `stage` to a value other than `STAGE_DUPLICATE`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DuplicateIncident {
+      get { return duplicateIncident_; }
+      set {
+        duplicateIncident_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
@@ -1591,6 +1888,21 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
     }
 
+    /// <summary>Field number for the "communication_venue" field.</summary>
+    public const int CommunicationVenueFieldNumber = 10;
+    private global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue communicationVenue_;
+    /// <summary>
+    /// Location of communications for this incident. This is informational
+    /// only; IRM does not use this to send messages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue CommunicationVenue {
+      get { return communicationVenue_; }
+      set {
+        communicationVenue_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Incident);
@@ -1610,8 +1922,10 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (Etag != other.Etag) return false;
       if (Severity != other.Severity) return false;
       if (Stage != other.Stage) return false;
+      if (DuplicateIncident != other.DuplicateIncident) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(Synopsis, other.Synopsis)) return false;
+      if (!object.Equals(CommunicationVenue, other.CommunicationVenue)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1624,8 +1938,10 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (Severity != 0) hash ^= Severity.GetHashCode();
       if (Stage != 0) hash ^= Stage.GetHashCode();
+      if (DuplicateIncident.Length != 0) hash ^= DuplicateIncident.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (synopsis_ != null) hash ^= Synopsis.GetHashCode();
+      if (communicationVenue_ != null) hash ^= CommunicationVenue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1671,6 +1987,14 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         output.WriteRawTag(66);
         output.WriteMessage(Synopsis);
       }
+      if (DuplicateIncident.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DuplicateIncident);
+      }
+      if (communicationVenue_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CommunicationVenue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1697,11 +2021,17 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (Stage != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Stage);
       }
+      if (DuplicateIncident.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DuplicateIncident);
+      }
       if (startTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
       }
       if (synopsis_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Synopsis);
+      }
+      if (communicationVenue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommunicationVenue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1732,6 +2062,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       if (other.Stage != 0) {
         Stage = other.Stage;
       }
+      if (other.DuplicateIncident.Length != 0) {
+        DuplicateIncident = other.DuplicateIncident;
+      }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
           startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -1743,6 +2076,12 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           synopsis_ = new global::Google.Cloud.Irm.V1Alpha2.Synopsis();
         }
         Synopsis.MergeFrom(other.Synopsis);
+      }
+      if (other.communicationVenue_ != null) {
+        if (communicationVenue_ == null) {
+          communicationVenue_ = new global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue();
+        }
+        CommunicationVenue.MergeFrom(other.CommunicationVenue);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1791,6 +2130,17 @@ namespace Google.Cloud.Irm.V1Alpha2 {
               synopsis_ = new global::Google.Cloud.Irm.V1Alpha2.Synopsis();
             }
             input.ReadMessage(synopsis_);
+            break;
+          }
+          case 74: {
+            DuplicateIncident = input.ReadString();
+            break;
+          }
+          case 82: {
+            if (communicationVenue_ == null) {
+              communicationVenue_ = new global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue();
+            }
+            input.ReadMessage(communicationVenue_);
             break;
           }
         }
@@ -1880,6 +2230,235 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         /// Postmortem for the incident was written.
         /// </summary>
         [pbr::OriginalName("STAGE_DOCUMENTED")] Documented = 5,
+        /// <summary>
+        /// Stage for an incident with `duplicate_incident`. This incident is not
+        /// authoritative anymore and the `duplicate_incident` should be used to
+        /// determine the stage.
+        /// </summary>
+        [pbr::OriginalName("STAGE_DUPLICATE")] Duplicate = 6,
+      }
+
+      /// <summary>
+      /// CommunicationVenue is a record of where conversations about an incident
+      /// are happening.
+      /// </summary>
+      public sealed partial class CommunicationVenue : pb::IMessage<CommunicationVenue> {
+        private static readonly pb::MessageParser<CommunicationVenue> _parser = new pb::MessageParser<CommunicationVenue>(() => new CommunicationVenue());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<CommunicationVenue> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Irm.V1Alpha2.Incident.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CommunicationVenue() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CommunicationVenue(CommunicationVenue other) : this() {
+          uri_ = other.uri_;
+          displayName_ = other.displayName_;
+          channelType_ = other.channelType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public CommunicationVenue Clone() {
+          return new CommunicationVenue(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private string uri_ = "";
+        /// <summary>
+        /// A URI to the web interface of the channel.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 2;
+        private string displayName_ = "";
+        /// <summary>
+        /// A name representing the channel in IRM UI.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "channel_type" field.</summary>
+        public const int ChannelTypeFieldNumber = 3;
+        private global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue.Types.ChannelType channelType_ = 0;
+        /// <summary>
+        /// The type of channel/venue for incident communications.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue.Types.ChannelType ChannelType {
+          get { return channelType_; }
+          set {
+            channelType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as CommunicationVenue);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(CommunicationVenue other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          if (DisplayName != other.DisplayName) return false;
+          if (ChannelType != other.ChannelType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (ChannelType != 0) hash ^= ChannelType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayName);
+          }
+          if (ChannelType != 0) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) ChannelType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (ChannelType != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChannelType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(CommunicationVenue other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          if (other.ChannelType != 0) {
+            ChannelType = other.ChannelType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 24: {
+                channelType_ = (global::Google.Cloud.Irm.V1Alpha2.Incident.Types.CommunicationVenue.Types.ChannelType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the CommunicationVenue message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// The type of channel/venue for incident communications.
+          /// </summary>
+          public enum ChannelType {
+            /// <summary>
+            /// An unspecified communication channel.
+            /// </summary>
+            [pbr::OriginalName("CHANNEL_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// A communication channel that is represented by a generic URI.
+            /// </summary>
+            [pbr::OriginalName("CHANNEL_TYPE_URI")] Uri = 1,
+            /// <summary>
+            /// A communication channel that represents a Slack channel.
+            /// </summary>
+            [pbr::OriginalName("CHANNEL_TYPE_SLACK")] Slack = 5,
+          }
+
+        }
+        #endregion
+
       }
 
     }
@@ -2256,8 +2835,8 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     /// If she cancels, then the RoleAssignment is deleted.
     /// Let's say Alice has the role. Then the fields are:
     ///   `assignee`: Alice, `proposed_assignee`: nil
-    /// If Alice is hit by a bus and Bob requests Carol to take over, then the
-    /// fields are:
+    /// If Alice becomes incapacitated and Bob requests Carol to take over, then
+    /// the fields are:
     ///   `assignee`: Alice, `proposed_assignee`: Carol
     /// After Carol accepts the handover, the fields are:
     ///   `assignee`: Carol, `proposed_assignee`: nil
@@ -2715,14 +3294,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         /// </summary>
         [pbr::OriginalName("TYPE_URL")] Url = 1,
         /// <summary>
-        /// An issue.
-        /// </summary>
-        [pbr::OriginalName("TYPE_ISSUE")] Issue = 2,
-        /// <summary>
-        /// A source control change.
-        /// </summary>
-        [pbr::OriginalName("TYPE_SOURCE_CONTROL_CHANGE")] SourceControlChange = 3,
-        /// <summary>
         /// A JIRA issue.
         /// </summary>
         [pbr::OriginalName("TYPE_JIRA_ISSUE")] JiraIssue = 4,
@@ -2990,7 +3561,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         public const int AddressFieldNumber = 1;
         private string address_ = "";
         /// <summary>
-        /// The email address, e.g. "user@example.com".
+        /// The email address, for example, "user@example.com".
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Address {

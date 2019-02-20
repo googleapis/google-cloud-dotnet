@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gaxres = Google.Api.Gax.ResourceNames;
 using sys = System;
 using linq = System.Linq;
 
@@ -700,5 +701,420 @@ namespace Google.Cloud.Irm.V1Alpha2
     }
 
 
+    public partial class Annotation
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.AnnotationName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.AnnotationName AnnotationName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.AnnotationName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Artifact
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.ArtifactName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.ArtifactName ArtifactName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.ArtifactName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CancelIncidentRoleHandoverRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.RoleAssignmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.RoleAssignmentName RoleAssignmentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.RoleAssignmentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ConfirmIncidentRoleHandoverRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.RoleAssignmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.RoleAssignmentName RoleAssignmentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.RoleAssignmentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateAnnotationRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateArtifactRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateIncidentRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateIncidentRoleAssignmentRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateSignalRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateSubscriptionRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateTagRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteArtifactRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.ArtifactName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.ArtifactName ArtifactName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.ArtifactName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteIncidentRoleAssignmentRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.RoleAssignmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.RoleAssignmentName RoleAssignmentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.RoleAssignmentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteSubscriptionRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.SubscriptionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.SubscriptionName SubscriptionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.SubscriptionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteTagRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.TagName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.TagName TagName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.TagName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ForceIncidentRoleHandoverRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.RoleAssignmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.RoleAssignmentName RoleAssignmentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.RoleAssignmentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetIncidentRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName IncidentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetSignalRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.SignalName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.SignalName SignalName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.SignalName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Incident
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName IncidentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class IncidentRoleAssignment
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.RoleAssignmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.RoleAssignmentName RoleAssignmentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.RoleAssignmentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListAnnotationsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListArtifactsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListIncidentRoleAssignmentsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListSubscriptionsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListTagsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.IncidentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.IncidentName ParentAsIncidentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Irm.V1Alpha2.IncidentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class RequestIncidentRoleHandoverRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.RoleAssignmentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.RoleAssignmentName RoleAssignmentName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.RoleAssignmentName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class SearchIncidentsRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class SearchSignalsRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class SendShiftHandoffRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Signal
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.SignalName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.SignalName SignalName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.SignalName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Subscription
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.SubscriptionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.SubscriptionName SubscriptionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.SubscriptionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Tag
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Irm.V1Alpha2.TagName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Irm.V1Alpha2.TagName TagName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Irm.V1Alpha2.TagName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

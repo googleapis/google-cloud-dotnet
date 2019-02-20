@@ -43,7 +43,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Annotation> __Marshaller_Annotation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Annotation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest> __Marshaller_ListAnnotationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse> __Marshaller_ListAnnotationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListAnnotationsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest> __Marshaller_UpdateAnnotationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest> __Marshaller_CreateTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Tag> __Marshaller_Tag = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Tag.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest> __Marshaller_DeleteTagRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteTagRequest.Parser.ParseFrom);
@@ -52,12 +51,10 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse> __Marshaller_ListTagsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListTagsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest> __Marshaller_CreateSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateSignalRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Signal> __Marshaller_Signal = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Signal.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest> __Marshaller_ListSignalsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse> __Marshaller_ListSignalsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest> __Marshaller_SearchSignalsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> __Marshaller_SearchSignalsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest> __Marshaller_GetSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest> __Marshaller_UpdateSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest> __Marshaller_AcknowledgeSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse> __Marshaller_AcknowledgeSignalResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest> __Marshaller_EscalateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse> __Marshaller_EscalateIncidentResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest> __Marshaller_CreateArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateArtifactRequest.Parser.ParseFrom);
@@ -66,12 +63,11 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse> __Marshaller_ListArtifactsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListArtifactsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest> __Marshaller_UpdateArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateArtifactRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest> __Marshaller_DeleteArtifactRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteArtifactRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest> __Marshaller_GetShiftHandoffPresetsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets> __Marshaller_ShiftHandoffPresets = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest> __Marshaller_SendShiftHandoffRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse> __Marshaller_SendShiftHandoffResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest> __Marshaller_CreateSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Subscription> __Marshaller_Subscription = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Subscription.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest> __Marshaller_UpdateSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest> __Marshaller_ListSubscriptionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse> __Marshaller_ListSubscriptionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest> __Marshaller_DeleteSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.DeleteSubscriptionRequest.Parser.ParseFrom);
@@ -134,13 +130,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         __Marshaller_ListAnnotationsRequest,
         __Marshaller_ListAnnotationsResponse);
 
-    static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest, global::Google.Cloud.Irm.V1Alpha2.Annotation> __Method_UpdateAnnotation = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest, global::Google.Cloud.Irm.V1Alpha2.Annotation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "UpdateAnnotation",
-        __Marshaller_UpdateAnnotationRequest,
-        __Marshaller_Annotation);
-
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest, global::Google.Cloud.Irm.V1Alpha2.Tag> __Method_CreateTag = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.CreateTagRequest, global::Google.Cloud.Irm.V1Alpha2.Tag>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,12 +158,12 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         __Marshaller_CreateSignalRequest,
         __Marshaller_Signal);
 
-    static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest, global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse> __Method_ListSignals = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest, global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse>(
+    static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> __Method_SearchSignals = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest, global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "ListSignals",
-        __Marshaller_ListSignalsRequest,
-        __Marshaller_ListSignalsResponse);
+        "SearchSignals",
+        __Marshaller_SearchSignalsRequest,
+        __Marshaller_SearchSignalsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal> __Method_GetSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(
         grpc::MethodType.Unary,
@@ -189,13 +178,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         "UpdateSignal",
         __Marshaller_UpdateSignalRequest,
         __Marshaller_Signal);
-
-    static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest, global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse> __Method_AcknowledgeSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest, global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "AcknowledgeSignal",
-        __Marshaller_AcknowledgeSignalRequest,
-        __Marshaller_AcknowledgeSignalResponse);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse> __Method_EscalateIncident = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest, global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentResponse>(
         grpc::MethodType.Unary,
@@ -232,13 +214,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         __Marshaller_DeleteArtifactRequest,
         __Marshaller_Empty);
 
-    static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest, global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets> __Method_GetShiftHandoffPresets = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest, global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetShiftHandoffPresets",
-        __Marshaller_GetShiftHandoffPresetsRequest,
-        __Marshaller_ShiftHandoffPresets);
-
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest, global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse> __Method_SendShiftHandoff = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffRequest, global::Google.Cloud.Irm.V1Alpha2.SendShiftHandoffResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -251,6 +226,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         __ServiceName,
         "CreateSubscription",
         __Marshaller_CreateSubscriptionRequest,
+        __Marshaller_Subscription);
+
+    static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription> __Method_UpdateSubscription = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest, global::Google.Cloud.Irm.V1Alpha2.Subscription>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSubscription",
+        __Marshaller_UpdateSubscriptionRequest,
         __Marshaller_Subscription);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest, global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse> __Method_ListSubscriptions = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsRequest, global::Google.Cloud.Irm.V1Alpha2.ListSubscriptionsResponse>(
@@ -408,17 +390,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
 
       /// <summary>
-      /// Updates an annotation on an existing incident.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.Annotation> UpdateAnnotation(global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Creates a tag on an existing incident.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -469,7 +440,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse> ListSignals(global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> SearchSignals(global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -486,25 +457,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
 
       /// <summary>
-      /// Updates an existing signal (e.g. to assign/unassign it to an
+      /// Updates an existing signal (for example, to assign/unassign it to an
       /// incident).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.Signal> UpdateSignal(global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Acks a signal. This acknowledges the signal in the underlying system,
-      /// indicating that the caller takes responsibility for looking into this.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse> AcknowledgeSignal(global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -565,18 +524,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       }
 
       /// <summary>
-      /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-      /// default values for handoff message fields.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets> GetShiftHandoffPresets(global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Sends a summary of the shift for oncall handoff.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -597,6 +544,17 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.Subscription> CreateSubscription(global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a subscription.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.Subscription> UpdateSubscription(global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1068,50 +1026,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListAnnotations, null, options, request);
       }
       /// <summary>
-      /// Updates an annotation on an existing incident.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.Annotation UpdateAnnotation(global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateAnnotation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates an annotation on an existing incident.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.Annotation UpdateAnnotation(global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateAnnotation, null, options, request);
-      }
-      /// <summary>
-      /// Updates an annotation on an existing incident.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Annotation> UpdateAnnotationAsync(global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateAnnotationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates an annotation on an existing incident.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Annotation> UpdateAnnotationAsync(global::Google.Cloud.Irm.V1Alpha2.UpdateAnnotationRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateAnnotation, null, options, request);
-      }
-      /// <summary>
       /// Creates a tag on an existing incident.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1296,9 +1210,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse ListSignals(global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse SearchSignals(global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return ListSignals(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SearchSignals(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists signals that are part of an incident.
@@ -1307,9 +1221,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse ListSignals(global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse SearchSignals(global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_ListSignals, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_SearchSignals, null, options, request);
       }
       /// <summary>
       /// Lists signals that are part of an incident.
@@ -1320,9 +1234,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse> ListSignalsAsync(global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> SearchSignalsAsync(global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return ListSignalsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return SearchSignalsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists signals that are part of an incident.
@@ -1331,9 +1245,9 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.ListSignalsResponse> ListSignalsAsync(global::Google.Cloud.Irm.V1Alpha2.ListSignalsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> SearchSignalsAsync(global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_ListSignals, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_SearchSignals, null, options, request);
       }
       /// <summary>
       /// Returns a signal by name.
@@ -1380,7 +1294,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSignal, null, options, request);
       }
       /// <summary>
-      /// Updates an existing signal (e.g. to assign/unassign it to an
+      /// Updates an existing signal (for example, to assign/unassign it to an
       /// incident).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1393,7 +1307,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         return UpdateSignal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing signal (e.g. to assign/unassign it to an
+      /// Updates an existing signal (for example, to assign/unassign it to an
       /// incident).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1404,7 +1318,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSignal, null, options, request);
       }
       /// <summary>
-      /// Updates an existing signal (e.g. to assign/unassign it to an
+      /// Updates an existing signal (for example, to assign/unassign it to an
       /// incident).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1417,7 +1331,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         return UpdateSignalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates an existing signal (e.g. to assign/unassign it to an
+      /// Updates an existing signal (for example, to assign/unassign it to an
       /// incident).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1426,54 +1340,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Signal> UpdateSignalAsync(global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSignal, null, options, request);
-      }
-      /// <summary>
-      /// Acks a signal. This acknowledges the signal in the underlying system,
-      /// indicating that the caller takes responsibility for looking into this.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse AcknowledgeSignal(global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return AcknowledgeSignal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Acks a signal. This acknowledges the signal in the underlying system,
-      /// indicating that the caller takes responsibility for looking into this.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse AcknowledgeSignal(global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_AcknowledgeSignal, null, options, request);
-      }
-      /// <summary>
-      /// Acks a signal. This acknowledges the signal in the underlying system,
-      /// indicating that the caller takes responsibility for looking into this.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse> AcknowledgeSignalAsync(global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return AcknowledgeSignalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Acks a signal. This acknowledges the signal in the underlying system,
-      /// indicating that the caller takes responsibility for looking into this.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalResponse> AcknowledgeSignalAsync(global::Google.Cloud.Irm.V1Alpha2.AcknowledgeSignalRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_AcknowledgeSignal, null, options, request);
       }
       /// <summary>
       /// Escalates an incident.
@@ -1696,54 +1562,6 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteArtifact, null, options, request);
       }
       /// <summary>
-      /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-      /// default values for handoff message fields.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets GetShiftHandoffPresets(global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetShiftHandoffPresets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-      /// default values for handoff message fields.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets GetShiftHandoffPresets(global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetShiftHandoffPresets, null, options, request);
-      }
-      /// <summary>
-      /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-      /// default values for handoff message fields.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets> GetShiftHandoffPresetsAsync(global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetShiftHandoffPresetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-      /// default values for handoff message fields.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.ShiftHandoffPresets> GetShiftHandoffPresetsAsync(global::Google.Cloud.Irm.V1Alpha2.GetShiftHandoffPresetsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetShiftHandoffPresets, null, options, request);
-      }
-      /// <summary>
       /// Sends a summary of the shift for oncall handoff.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1842,6 +1660,50 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Subscription> CreateSubscriptionAsync(global::Google.Cloud.Irm.V1Alpha2.CreateSubscriptionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Updates a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Irm.V1Alpha2.Subscription UpdateSubscription(global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Irm.V1Alpha2.Subscription UpdateSubscription(global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Updates a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Subscription> UpdateSubscriptionAsync(global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Subscription> UpdateSubscriptionAsync(global::Google.Cloud.Irm.V1Alpha2.UpdateSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSubscription, null, options, request);
       }
       /// <summary>
       /// Returns a list of subscriptions for an incident.
@@ -2314,23 +2176,21 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           .AddMethod(__Method_SearchSimilarIncidents, serviceImpl.SearchSimilarIncidents)
           .AddMethod(__Method_CreateAnnotation, serviceImpl.CreateAnnotation)
           .AddMethod(__Method_ListAnnotations, serviceImpl.ListAnnotations)
-          .AddMethod(__Method_UpdateAnnotation, serviceImpl.UpdateAnnotation)
           .AddMethod(__Method_CreateTag, serviceImpl.CreateTag)
           .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag)
           .AddMethod(__Method_ListTags, serviceImpl.ListTags)
           .AddMethod(__Method_CreateSignal, serviceImpl.CreateSignal)
-          .AddMethod(__Method_ListSignals, serviceImpl.ListSignals)
+          .AddMethod(__Method_SearchSignals, serviceImpl.SearchSignals)
           .AddMethod(__Method_GetSignal, serviceImpl.GetSignal)
           .AddMethod(__Method_UpdateSignal, serviceImpl.UpdateSignal)
-          .AddMethod(__Method_AcknowledgeSignal, serviceImpl.AcknowledgeSignal)
           .AddMethod(__Method_EscalateIncident, serviceImpl.EscalateIncident)
           .AddMethod(__Method_CreateArtifact, serviceImpl.CreateArtifact)
           .AddMethod(__Method_ListArtifacts, serviceImpl.ListArtifacts)
           .AddMethod(__Method_UpdateArtifact, serviceImpl.UpdateArtifact)
           .AddMethod(__Method_DeleteArtifact, serviceImpl.DeleteArtifact)
-          .AddMethod(__Method_GetShiftHandoffPresets, serviceImpl.GetShiftHandoffPresets)
           .AddMethod(__Method_SendShiftHandoff, serviceImpl.SendShiftHandoff)
           .AddMethod(__Method_CreateSubscription, serviceImpl.CreateSubscription)
+          .AddMethod(__Method_UpdateSubscription, serviceImpl.UpdateSubscription)
           .AddMethod(__Method_ListSubscriptions, serviceImpl.ListSubscriptions)
           .AddMethod(__Method_DeleteSubscription, serviceImpl.DeleteSubscription)
           .AddMethod(__Method_CreateIncidentRoleAssignment, serviceImpl.CreateIncidentRoleAssignment)
