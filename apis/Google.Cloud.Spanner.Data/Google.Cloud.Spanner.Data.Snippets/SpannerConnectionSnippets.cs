@@ -394,6 +394,34 @@ namespace Google.Cloud.Spanner.Data.Snippets
             // End sample
         }
 
+        [Fact]
+        public void GetSessionPoolDatabaseStatistics()
+        {
+            string connectionString = _fixture.ConnectionString;
+
+            // Sample: GetSessionPoolDatabaseStatistics
+            // Additional: GetSessionPoolDatabaseStatistics
+            using (SpannerConnection connection = new SpannerConnection(connectionString))
+            {
+                SessionPool.DatabaseStatistics stats = connection.GetSessionPoolDatabaseStatistics();
+                if (stats is null)
+                {
+                    Console.WriteLine("No session pool for this connection string yet");
+                }
+                else
+                {
+                    // Access individual properties...
+                    Console.WriteLine($"Database name: {stats.DatabaseName}");
+                    Console.WriteLine($"Active sessions: {stats.ActiveSessionCount}");
+                    Console.WriteLine($"Pooled read-only sessions: {stats.ReadPoolCount}");
+                    Console.WriteLine($"Pooled read-write sessions: {stats.ReadWritePoolCount}");
+                    // ... or just use the overridden ToString method to log all the statistics in one go:
+                    Console.WriteLine(stats);
+                }
+            }
+            // End sample
+        }
+
 #if !NETCOREAPP1_0
         [Fact]
         public async Task TransactionScopeAsync()

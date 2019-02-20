@@ -23,6 +23,7 @@ using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -491,6 +492,19 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckState(databaseName != null, $"{nameof(ShutdownSessionPoolAsync)} cannot be used without a database.");
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             await _sessionPool.ShutdownPoolAsync(databaseName, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Retrieves the database-specific statistics for the session pool associated with the connection string. The connection string must
+        /// include a database name.
+        /// </summary>
+        /// <returns>The session pool statistics, or <c>null</c> if there is no current session pool
+        /// for the database specified in the connection string.</returns>
+        public SessionPool.DatabaseStatistics GetSessionPoolDatabaseStatistics()
+        {
+            DatabaseName databaseName = Builder.DatabaseName;
+            GaxPreconditions.CheckState(databaseName != null, $"{nameof(GetSessionPoolDatabaseStatistics)} cannot be used without a database.");
+            return Builder.SessionPoolManager.GetDatabaseStatistics(new SpannerClientCreationOptions(Builder), databaseName);
         }
 
         /// <summary>
