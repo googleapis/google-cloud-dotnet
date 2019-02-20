@@ -32,21 +32,21 @@ namespace Google.Cloud.Talent.V4Beta1.CleanTestData
             var companyClient = CompanyServiceClient.Create();
             var jobClient = JobServiceClient.Create();
 
-            var testCompanies = companyClient.ListCompanies(projectName.ToString())
+            var testCompanies = companyClient.ListCompanies(projectName)
                 .Where(cn => cn.ExternalId.StartsWith("test-"))
-                .Select(c => CompanyName.Parse(c.Name))
+                .Select(c => c.CompanyName)
                 .ToList();
             Console.WriteLine($"Companies to delete: {testCompanies.Count}");
 
             foreach (var companyName in testCompanies)
             {
-                var jobs = jobClient.ListJobs(projectName.ToString(), $"companyName=\"{companyName}\"").ToList();
+                var jobs = jobClient.ListJobs(projectName, $"companyName=\"{companyName}\"").ToList();
                 Console.WriteLine($"Jobs for company {companyName.CompanyId}: {jobs.Count}");
                 foreach (var job in jobs)
                 {
                     try
                     {
-                        jobClient.DeleteJob(job.Name);
+                        jobClient.DeleteJob(job.JobName);
                     }
                     catch (RpcException e)
                     {
@@ -56,7 +56,7 @@ namespace Google.Cloud.Talent.V4Beta1.CleanTestData
 
                 try
                 {
-                    companyClient.DeleteCompany(companyName.ToString());
+                    companyClient.DeleteCompany(companyName);
                 }
                 catch (RpcException e)
                 {
