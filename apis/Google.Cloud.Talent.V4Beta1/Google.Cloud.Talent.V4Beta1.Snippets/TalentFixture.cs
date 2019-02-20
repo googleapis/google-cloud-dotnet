@@ -43,7 +43,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 ExternalId = GenerateCompanyExternalId(),
                 Size = CompanySize.Giant
             };
-            Company created = client.CreateCompany(ProjectName.ToString(), company);
+            Company created = client.CreateCompany(ProjectName, company);
             return CompanyName.Parse(created.Name);
         }
 

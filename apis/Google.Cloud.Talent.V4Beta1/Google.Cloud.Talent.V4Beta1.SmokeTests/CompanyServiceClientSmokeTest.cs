@@ -42,7 +42,7 @@ namespace Google.Cloud.Talent.V4Beta1.SmokeTests
             ProjectName projectName = new ProjectName(projectId);
 
             // Call API method
-            PagedEnumerable<ListCompaniesResponse, Company> pagedResponse = client.ListCompanies(projectName.ToString());
+            PagedEnumerable<ListCompaniesResponse, Company> pagedResponse = client.ListCompanies(projectName);
             // Show the result
             foreach (var item in pagedResponse)
             {
