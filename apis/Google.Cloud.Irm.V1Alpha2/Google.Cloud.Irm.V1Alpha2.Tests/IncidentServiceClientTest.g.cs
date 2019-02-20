@@ -18,6 +18,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Irm.V1Alpha2;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -40,20 +41,21 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             CreateIncidentRequest expectedRequest = new CreateIncidentRequest
             {
                 Incident = new Incident(),
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.CreateIncident(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
             Incident incident = new Incident();
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            Incident response = client.CreateIncident(incident, formattedParent);
+            ProjectName parent = new ProjectName("[PROJECT]");
+            Incident response = client.CreateIncident(incident, parent);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -65,20 +67,21 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             CreateIncidentRequest expectedRequest = new CreateIncidentRequest
             {
                 Incident = new Incident(),
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.CreateIncidentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Incident>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
             Incident incident = new Incident();
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            Incident response = await client.CreateIncidentAsync(incident, formattedParent);
+            ProjectName parent = new ProjectName("[PROJECT]");
+            Incident response = await client.CreateIncidentAsync(incident, parent);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -90,13 +93,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             CreateIncidentRequest request = new CreateIncidentRequest
             {
                 Incident = new Incident(),
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.CreateIncident(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -113,13 +117,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             CreateIncidentRequest request = new CreateIncidentRequest
             {
                 Incident = new Incident(),
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.CreateIncidentAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Incident>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -135,19 +140,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetIncidentRequest expectedRequest = new GetIncidentRequest
             {
-                Name = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name2-1052831874",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.GetIncident(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
-            Incident response = client.GetIncident(formattedName);
+            IncidentName name = new IncidentName("[PROJECT]", "[INCIDENT]");
+            Incident response = client.GetIncident(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -158,19 +164,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetIncidentRequest expectedRequest = new GetIncidentRequest
             {
-                Name = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name2-1052831874",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.GetIncidentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Incident>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
-            Incident response = await client.GetIncidentAsync(formattedName);
+            IncidentName name = new IncidentName("[PROJECT]", "[INCIDENT]");
+            Incident response = await client.GetIncidentAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -181,13 +188,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetIncidentRequest request = new GetIncidentRequest
             {
-                Name = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name2-1052831874",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.GetIncident(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -203,13 +211,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetIncidentRequest request = new GetIncidentRequest
             {
-                Name = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name2-1052831874",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.GetIncidentAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Incident>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -230,9 +239,10 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.UpdateIncident(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -255,9 +265,10 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.UpdateIncidentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Incident>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -279,9 +290,10 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.UpdateIncident(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -301,9 +313,10 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Incident expectedResponse = new Incident
             {
-                Name = "name3373707",
+                IncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Title = "title110371416",
                 Etag = "etag3123477",
+                DuplicateIncident = "duplicateIncident-316496506",
             };
             mockGrpcClient.Setup(x => x.UpdateIncidentAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Incident>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -319,20 +332,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateAnnotationRequest expectedRequest = new CreateAnnotationRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Annotation = new Annotation(),
             };
             Annotation expectedResponse = new Annotation
             {
-                Name = "name3373707",
+                AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotation(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Annotation annotation = new Annotation();
-            Annotation response = client.CreateAnnotation(formattedParent, annotation);
+            Annotation response = client.CreateAnnotation(parent, annotation);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -343,20 +356,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateAnnotationRequest expectedRequest = new CreateAnnotationRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Annotation = new Annotation(),
             };
             Annotation expectedResponse = new Annotation
             {
-                Name = "name3373707",
+                AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Annotation>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Annotation annotation = new Annotation();
-            Annotation response = await client.CreateAnnotationAsync(formattedParent, annotation);
+            Annotation response = await client.CreateAnnotationAsync(parent, annotation);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -367,12 +380,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateAnnotationRequest request = new CreateAnnotationRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Annotation = new Annotation(),
             };
             Annotation expectedResponse = new Annotation
             {
-                Name = "name3373707",
+                AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotation(request, It.IsAny<CallOptions>()))
@@ -389,12 +402,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateAnnotationRequest request = new CreateAnnotationRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Annotation = new Annotation(),
             };
             Annotation expectedResponse = new Annotation
             {
-                Name = "name3373707",
+                AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationAsync(request, It.IsAny<CallOptions>()))
@@ -406,116 +419,25 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
         }
 
         [Fact]
-        public void UpdateAnnotation()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            UpdateAnnotationRequest expectedRequest = new UpdateAnnotationRequest
-            {
-                Annotation = new Annotation(),
-                UpdateMask = new FieldMask(),
-            };
-            Annotation expectedResponse = new Annotation
-            {
-                Name = "name3373707",
-                Content = "content951530617",
-            };
-            mockGrpcClient.Setup(x => x.UpdateAnnotation(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            Annotation annotation = new Annotation();
-            FieldMask updateMask = new FieldMask();
-            Annotation response = client.UpdateAnnotation(annotation, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateAnnotationAsync()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            UpdateAnnotationRequest expectedRequest = new UpdateAnnotationRequest
-            {
-                Annotation = new Annotation(),
-                UpdateMask = new FieldMask(),
-            };
-            Annotation expectedResponse = new Annotation
-            {
-                Name = "name3373707",
-                Content = "content951530617",
-            };
-            mockGrpcClient.Setup(x => x.UpdateAnnotationAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Annotation>(Task.FromResult(expectedResponse), null, null, null, null));
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            Annotation annotation = new Annotation();
-            FieldMask updateMask = new FieldMask();
-            Annotation response = await client.UpdateAnnotationAsync(annotation, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateAnnotation2()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            UpdateAnnotationRequest request = new UpdateAnnotationRequest
-            {
-                Annotation = new Annotation(),
-            };
-            Annotation expectedResponse = new Annotation
-            {
-                Name = "name3373707",
-                Content = "content951530617",
-            };
-            mockGrpcClient.Setup(x => x.UpdateAnnotation(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            Annotation response = client.UpdateAnnotation(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateAnnotationAsync2()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            UpdateAnnotationRequest request = new UpdateAnnotationRequest
-            {
-                Annotation = new Annotation(),
-            };
-            Annotation expectedResponse = new Annotation
-            {
-                Name = "name3373707",
-                Content = "content951530617",
-            };
-            mockGrpcClient.Setup(x => x.UpdateAnnotationAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Annotation>(Task.FromResult(expectedResponse), null, null, null, null));
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            Annotation response = await client.UpdateAnnotationAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
         public void CreateTag()
         {
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateTagRequest expectedRequest = new CreateTagRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
             {
-                Name = "name3373707",
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
                 DisplayName = "displayName1615086568",
-                Url = "url116079",
             };
             mockGrpcClient.Setup(x => x.CreateTag(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Tag tag = new Tag();
-            Tag response = client.CreateTag(formattedParent, tag);
+            Tag response = client.CreateTag(parent, tag);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -526,21 +448,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateTagRequest expectedRequest = new CreateTagRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
             {
-                Name = "name3373707",
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
                 DisplayName = "displayName1615086568",
-                Url = "url116079",
             };
             mockGrpcClient.Setup(x => x.CreateTagAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Tag>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Tag tag = new Tag();
-            Tag response = await client.CreateTagAsync(formattedParent, tag);
+            Tag response = await client.CreateTagAsync(parent, tag);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -551,14 +472,13 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
             {
-                Name = "name3373707",
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
                 DisplayName = "displayName1615086568",
-                Url = "url116079",
             };
             mockGrpcClient.Setup(x => x.CreateTag(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -574,14 +494,13 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateTagRequest request = new CreateTagRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Tag = new Tag(),
             };
             Tag expectedResponse = new Tag
             {
-                Name = "name3373707",
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
                 DisplayName = "displayName1615086568",
-                Url = "url116079",
             };
             mockGrpcClient.Setup(x => x.CreateTagAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Tag>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -597,14 +516,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteTagRequest expectedRequest = new DeleteTagRequest
             {
-                Name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString(),
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTag(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString();
-            client.DeleteTag(formattedName);
+            TagName name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]");
+            client.DeleteTag(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -614,14 +533,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteTagRequest expectedRequest = new DeleteTagRequest
             {
-                Name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString(),
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTagAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString();
-            await client.DeleteTagAsync(formattedName);
+            TagName name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]");
+            await client.DeleteTagAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -631,7 +550,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteTagRequest request = new DeleteTagRequest
             {
-                Name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString(),
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTag(request, It.IsAny<CallOptions>()))
@@ -647,7 +566,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteTagRequest request = new DeleteTagRequest
             {
-                Name = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]").ToString(),
+                TagName = new TagName("[PROJECT]", "[INCIDENT]", "[TAG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteTagAsync(request, It.IsAny<CallOptions>()))
@@ -663,12 +582,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSignalRequest expectedRequest = new CreateSignalRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Signal = new Signal(),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -678,9 +597,9 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             mockGrpcClient.Setup(x => x.CreateSignal(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Signal signal = new Signal();
-            Signal response = client.CreateSignal(formattedParent, signal);
+            Signal response = client.CreateSignal(parent, signal);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -691,12 +610,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSignalRequest expectedRequest = new CreateSignalRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Signal = new Signal(),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -706,9 +625,9 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             mockGrpcClient.Setup(x => x.CreateSignalAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Signal>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Signal signal = new Signal();
-            Signal response = await client.CreateSignalAsync(formattedParent, signal);
+            Signal response = await client.CreateSignalAsync(parent, signal);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -719,12 +638,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSignalRequest request = new CreateSignalRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Signal = new Signal(),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -745,12 +664,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSignalRequest request = new CreateSignalRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Signal = new Signal(),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -771,11 +690,11 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetSignalRequest expectedRequest = new GetSignalRequest
             {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name2-1052831874",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -785,8 +704,8 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             mockGrpcClient.Setup(x => x.GetSignal(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
-            Signal response = client.GetSignal(formattedName);
+            SignalName name = new SignalName("[PROJECT]", "[SIGNAL]");
+            Signal response = client.GetSignal(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -797,11 +716,11 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetSignalRequest expectedRequest = new GetSignalRequest
             {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name2-1052831874",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -811,8 +730,8 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             mockGrpcClient.Setup(x => x.GetSignalAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Signal>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
-            Signal response = await client.GetSignalAsync(formattedName);
+            SignalName name = new SignalName("[PROJECT]", "[SIGNAL]");
+            Signal response = await client.GetSignalAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -823,11 +742,11 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetSignalRequest request = new GetSignalRequest
             {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name2-1052831874",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -848,11 +767,11 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             GetSignalRequest request = new GetSignalRequest
             {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name2-1052831874",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -878,7 +797,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -906,7 +825,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -933,7 +852,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -958,7 +877,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Signal expectedResponse = new Signal
             {
-                Name = "name3373707",
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
                 Etag = "etag3123477",
                 Incident = "incident86983890",
                 Title = "title110371416",
@@ -969,76 +888,6 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Signal>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
             Signal response = await client.UpdateSignalAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void AcknowledgeSignal()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            AcknowledgeSignalRequest expectedRequest = new AcknowledgeSignalRequest
-            {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
-            };
-            AcknowledgeSignalResponse expectedResponse = new AcknowledgeSignalResponse();
-            mockGrpcClient.Setup(x => x.AcknowledgeSignal(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
-            AcknowledgeSignalResponse response = client.AcknowledgeSignal(formattedName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task AcknowledgeSignalAsync()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            AcknowledgeSignalRequest expectedRequest = new AcknowledgeSignalRequest
-            {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
-            };
-            AcknowledgeSignalResponse expectedResponse = new AcknowledgeSignalResponse();
-            mockGrpcClient.Setup(x => x.AcknowledgeSignalAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AcknowledgeSignalResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new SignalName("[PROJECT]", "[SIGNAL]").ToString();
-            AcknowledgeSignalResponse response = await client.AcknowledgeSignalAsync(formattedName);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void AcknowledgeSignal2()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            AcknowledgeSignalRequest request = new AcknowledgeSignalRequest
-            {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
-            };
-            AcknowledgeSignalResponse expectedResponse = new AcknowledgeSignalResponse();
-            mockGrpcClient.Setup(x => x.AcknowledgeSignal(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            AcknowledgeSignalResponse response = client.AcknowledgeSignal(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task AcknowledgeSignalAsync2()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            AcknowledgeSignalRequest request = new AcknowledgeSignalRequest
-            {
-                Name = new SignalName("[PROJECT]", "[SIGNAL]").ToString(),
-            };
-            AcknowledgeSignalResponse expectedResponse = new AcknowledgeSignalResponse();
-            mockGrpcClient.Setup(x => x.AcknowledgeSignalAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<AcknowledgeSignalResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            AcknowledgeSignalResponse response = await client.AcknowledgeSignalAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1083,12 +932,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateArtifactRequest expectedRequest = new CreateArtifactRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Artifact = new Artifact(),
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1096,9 +945,9 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             mockGrpcClient.Setup(x => x.CreateArtifact(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Artifact artifact = new Artifact();
-            Artifact response = client.CreateArtifact(formattedParent, artifact);
+            Artifact response = client.CreateArtifact(parent, artifact);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1109,12 +958,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateArtifactRequest expectedRequest = new CreateArtifactRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Artifact = new Artifact(),
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1122,9 +971,9 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             mockGrpcClient.Setup(x => x.CreateArtifactAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Artifact>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Artifact artifact = new Artifact();
-            Artifact response = await client.CreateArtifactAsync(formattedParent, artifact);
+            Artifact response = await client.CreateArtifactAsync(parent, artifact);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1135,12 +984,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Artifact = new Artifact(),
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1159,12 +1008,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateArtifactRequest request = new CreateArtifactRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Artifact = new Artifact(),
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1188,7 +1037,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1214,7 +1063,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1239,7 +1088,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1262,7 +1111,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             };
             Artifact expectedResponse = new Artifact
             {
-                Name = "name3373707",
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
                 DisplayName = "displayName1615086568",
                 Etag = "etag3123477",
                 Url = "url116079",
@@ -1281,14 +1130,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteArtifactRequest expectedRequest = new DeleteArtifactRequest
             {
-                Name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString(),
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteArtifact(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString();
-            client.DeleteArtifact(formattedName);
+            ArtifactName name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]");
+            client.DeleteArtifact(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1298,14 +1147,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteArtifactRequest expectedRequest = new DeleteArtifactRequest
             {
-                Name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString(),
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteArtifactAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString();
-            await client.DeleteArtifactAsync(formattedName);
+            ArtifactName name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]");
+            await client.DeleteArtifactAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1315,7 +1164,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteArtifactRequest request = new DeleteArtifactRequest
             {
-                Name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString(),
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteArtifact(request, It.IsAny<CallOptions>()))
@@ -1331,7 +1180,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteArtifactRequest request = new DeleteArtifactRequest
             {
-                Name = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]").ToString(),
+                ArtifactName = new ArtifactName("[PROJECT]", "[INCIDENT]", "[ARTIFACT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteArtifactAsync(request, It.IsAny<CallOptions>()))
@@ -1342,94 +1191,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
         }
 
         [Fact]
-        public void GetShiftHandoffPresets()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            GetShiftHandoffPresetsRequest expectedRequest = new GetShiftHandoffPresetsRequest
-            {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
-            };
-            ShiftHandoffPresets expectedResponse = new ShiftHandoffPresets
-            {
-                Subject = "subject-1867885268",
-            };
-            mockGrpcClient.Setup(x => x.GetShiftHandoffPresets(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            ShiftHandoffPresets response = client.GetShiftHandoffPresets(formattedParent);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetShiftHandoffPresetsAsync()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            GetShiftHandoffPresetsRequest expectedRequest = new GetShiftHandoffPresetsRequest
-            {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
-            };
-            ShiftHandoffPresets expectedResponse = new ShiftHandoffPresets
-            {
-                Subject = "subject-1867885268",
-            };
-            mockGrpcClient.Setup(x => x.GetShiftHandoffPresetsAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ShiftHandoffPresets>(Task.FromResult(expectedResponse), null, null, null, null));
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
-            ShiftHandoffPresets response = await client.GetShiftHandoffPresetsAsync(formattedParent);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetShiftHandoffPresets2()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            GetShiftHandoffPresetsRequest request = new GetShiftHandoffPresetsRequest
-            {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
-            };
-            ShiftHandoffPresets expectedResponse = new ShiftHandoffPresets
-            {
-                Subject = "subject-1867885268",
-            };
-            mockGrpcClient.Setup(x => x.GetShiftHandoffPresets(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            ShiftHandoffPresets response = client.GetShiftHandoffPresets(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetShiftHandoffPresetsAsync2()
-        {
-            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
-            GetShiftHandoffPresetsRequest request = new GetShiftHandoffPresetsRequest
-            {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
-            };
-            ShiftHandoffPresets expectedResponse = new ShiftHandoffPresets
-            {
-                Subject = "subject-1867885268",
-            };
-            mockGrpcClient.Setup(x => x.GetShiftHandoffPresetsAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ShiftHandoffPresets>(Task.FromResult(expectedResponse), null, null, null, null));
-            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            ShiftHandoffPresets response = await client.GetShiftHandoffPresetsAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
         public void SendShiftHandoff()
         {
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             SendShiftHandoffRequest request = new SendShiftHandoffRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Recipients = { },
                 Subject = "subject-1867885268",
             };
@@ -1452,7 +1219,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             SendShiftHandoffRequest request = new SendShiftHandoffRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Recipients = { },
                 Subject = "subject-1867885268",
             };
@@ -1475,20 +1242,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSubscriptionRequest expectedRequest = new CreateSubscriptionRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Subscription = new Subscription(),
             };
             Subscription expectedResponse = new Subscription
             {
-                Name = "name3373707",
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Subscription subscription = new Subscription();
-            Subscription response = client.CreateSubscription(formattedParent, subscription);
+            Subscription response = client.CreateSubscription(parent, subscription);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1499,20 +1266,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSubscriptionRequest expectedRequest = new CreateSubscriptionRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Subscription = new Subscription(),
             };
             Subscription expectedResponse = new Subscription
             {
-                Name = "name3373707",
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Subscription>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             Subscription subscription = new Subscription();
-            Subscription response = await client.CreateSubscriptionAsync(formattedParent, subscription);
+            Subscription response = await client.CreateSubscriptionAsync(parent, subscription);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1523,12 +1290,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSubscriptionRequest request = new CreateSubscriptionRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Subscription = new Subscription(),
             };
             Subscription expectedResponse = new Subscription
             {
-                Name = "name3373707",
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, It.IsAny<CallOptions>()))
@@ -1545,12 +1312,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateSubscriptionRequest request = new CreateSubscriptionRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 Subscription = new Subscription(),
             };
             Subscription expectedResponse = new Subscription
             {
-                Name = "name3373707",
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, It.IsAny<CallOptions>()))
@@ -1562,19 +1329,109 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
         }
 
         [Fact]
+        public void UpdateSubscription()
+        {
+            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
+            UpdateSubscriptionRequest expectedRequest = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+                UpdateMask = new FieldMask(),
+            };
+            Subscription expectedResponse = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
+                Etag = "etag3123477",
+            };
+            mockGrpcClient.Setup(x => x.UpdateSubscription(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
+            Subscription subscription = new Subscription();
+            FieldMask updateMask = new FieldMask();
+            Subscription response = client.UpdateSubscription(subscription, updateMask);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateSubscriptionAsync()
+        {
+            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
+            UpdateSubscriptionRequest expectedRequest = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+                UpdateMask = new FieldMask(),
+            };
+            Subscription expectedResponse = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
+                Etag = "etag3123477",
+            };
+            mockGrpcClient.Setup(x => x.UpdateSubscriptionAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Subscription>(Task.FromResult(expectedResponse), null, null, null, null));
+            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
+            Subscription subscription = new Subscription();
+            FieldMask updateMask = new FieldMask();
+            Subscription response = await client.UpdateSubscriptionAsync(subscription, updateMask);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateSubscription2()
+        {
+            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+            };
+            Subscription expectedResponse = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
+                Etag = "etag3123477",
+            };
+            mockGrpcClient.Setup(x => x.UpdateSubscription(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
+            Subscription response = client.UpdateSubscription(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateSubscriptionAsync2()
+        {
+            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+            };
+            Subscription expectedResponse = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
+                Etag = "etag3123477",
+            };
+            mockGrpcClient.Setup(x => x.UpdateSubscriptionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Subscription>(Task.FromResult(expectedResponse), null, null, null, null));
+            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
+            Subscription response = await client.UpdateSubscriptionAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void DeleteSubscription()
         {
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteSubscriptionRequest expectedRequest = new DeleteSubscriptionRequest
             {
-                Name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSubscription(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString();
-            client.DeleteSubscription(formattedName);
+            SubscriptionName name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]");
+            client.DeleteSubscription(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1584,14 +1441,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteSubscriptionRequest expectedRequest = new DeleteSubscriptionRequest
             {
-                Name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSubscriptionAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString();
-            await client.DeleteSubscriptionAsync(formattedName);
+            SubscriptionName name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]");
+            await client.DeleteSubscriptionAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1601,7 +1458,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
-                Name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSubscription(request, It.IsAny<CallOptions>()))
@@ -1617,7 +1474,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
-                Name = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[INCIDENT]", "[SUBSCRIPTION]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteSubscriptionAsync(request, It.IsAny<CallOptions>()))
@@ -1633,20 +1490,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateIncidentRoleAssignmentRequest expectedRequest = new CreateIncidentRoleAssignmentRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 IncidentRoleAssignment = new IncidentRoleAssignment(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name3373707",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateIncidentRoleAssignment(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             IncidentRoleAssignment incidentRoleAssignment = new IncidentRoleAssignment();
-            IncidentRoleAssignment response = client.CreateIncidentRoleAssignment(formattedParent, incidentRoleAssignment);
+            IncidentRoleAssignment response = client.CreateIncidentRoleAssignment(parent, incidentRoleAssignment);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1657,20 +1514,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateIncidentRoleAssignmentRequest expectedRequest = new CreateIncidentRoleAssignmentRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 IncidentRoleAssignment = new IncidentRoleAssignment(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name3373707",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateIncidentRoleAssignmentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<IncidentRoleAssignment>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString();
+            IncidentName parent = new IncidentName("[PROJECT]", "[INCIDENT]");
             IncidentRoleAssignment incidentRoleAssignment = new IncidentRoleAssignment();
-            IncidentRoleAssignment response = await client.CreateIncidentRoleAssignmentAsync(formattedParent, incidentRoleAssignment);
+            IncidentRoleAssignment response = await client.CreateIncidentRoleAssignmentAsync(parent, incidentRoleAssignment);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1681,12 +1538,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateIncidentRoleAssignmentRequest request = new CreateIncidentRoleAssignmentRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 IncidentRoleAssignment = new IncidentRoleAssignment(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name3373707",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateIncidentRoleAssignment(request, It.IsAny<CallOptions>()))
@@ -1703,12 +1560,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CreateIncidentRoleAssignmentRequest request = new CreateIncidentRoleAssignmentRequest
             {
-                Parent = new IncidentName("[PROJECT]", "[INCIDENT]").ToString(),
+                ParentAsIncidentName = new IncidentName("[PROJECT]", "[INCIDENT]"),
                 IncidentRoleAssignment = new IncidentRoleAssignment(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name3373707",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CreateIncidentRoleAssignmentAsync(request, It.IsAny<CallOptions>()))
@@ -1725,14 +1582,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteIncidentRoleAssignmentRequest expectedRequest = new DeleteIncidentRoleAssignmentRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteIncidentRoleAssignment(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
-            client.DeleteIncidentRoleAssignment(formattedName);
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
+            client.DeleteIncidentRoleAssignment(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1742,14 +1599,14 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteIncidentRoleAssignmentRequest expectedRequest = new DeleteIncidentRoleAssignmentRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteIncidentRoleAssignmentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
-            await client.DeleteIncidentRoleAssignmentAsync(formattedName);
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
+            await client.DeleteIncidentRoleAssignmentAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -1759,7 +1616,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteIncidentRoleAssignmentRequest request = new DeleteIncidentRoleAssignmentRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteIncidentRoleAssignment(request, It.IsAny<CallOptions>()))
@@ -1775,7 +1632,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             DeleteIncidentRoleAssignmentRequest request = new DeleteIncidentRoleAssignmentRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteIncidentRoleAssignmentAsync(request, It.IsAny<CallOptions>()))
@@ -1791,20 +1648,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             RequestIncidentRoleHandoverRequest expectedRequest = new RequestIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.RequestIncidentRoleHandover(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = client.RequestIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = client.RequestIncidentRoleHandover(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1815,20 +1672,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             RequestIncidentRoleHandoverRequest expectedRequest = new RequestIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.RequestIncidentRoleHandoverAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<IncidentRoleAssignment>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = await client.RequestIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await client.RequestIncidentRoleHandoverAsync(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1839,12 +1696,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             RequestIncidentRoleHandoverRequest request = new RequestIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.RequestIncidentRoleHandover(request, It.IsAny<CallOptions>()))
@@ -1861,12 +1718,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             RequestIncidentRoleHandoverRequest request = new RequestIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.RequestIncidentRoleHandoverAsync(request, It.IsAny<CallOptions>()))
@@ -1883,20 +1740,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ConfirmIncidentRoleHandoverRequest expectedRequest = new ConfirmIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ConfirmIncidentRoleHandover(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = client.ConfirmIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = client.ConfirmIncidentRoleHandover(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1907,20 +1764,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ConfirmIncidentRoleHandoverRequest expectedRequest = new ConfirmIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ConfirmIncidentRoleHandoverAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<IncidentRoleAssignment>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = await client.ConfirmIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await client.ConfirmIncidentRoleHandoverAsync(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1931,12 +1788,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ConfirmIncidentRoleHandoverRequest request = new ConfirmIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ConfirmIncidentRoleHandover(request, It.IsAny<CallOptions>()))
@@ -1953,12 +1810,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ConfirmIncidentRoleHandoverRequest request = new ConfirmIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ConfirmIncidentRoleHandoverAsync(request, It.IsAny<CallOptions>()))
@@ -1975,20 +1832,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ForceIncidentRoleHandoverRequest expectedRequest = new ForceIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ForceIncidentRoleHandover(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = client.ForceIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = client.ForceIncidentRoleHandover(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -1999,20 +1856,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ForceIncidentRoleHandoverRequest expectedRequest = new ForceIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ForceIncidentRoleHandoverAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<IncidentRoleAssignment>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = await client.ForceIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await client.ForceIncidentRoleHandoverAsync(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2023,12 +1880,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ForceIncidentRoleHandoverRequest request = new ForceIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ForceIncidentRoleHandover(request, It.IsAny<CallOptions>()))
@@ -2045,12 +1902,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             ForceIncidentRoleHandoverRequest request = new ForceIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.ForceIncidentRoleHandoverAsync(request, It.IsAny<CallOptions>()))
@@ -2067,20 +1924,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CancelIncidentRoleHandoverRequest expectedRequest = new CancelIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CancelIncidentRoleHandover(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = client.CancelIncidentRoleHandover(formattedName, newAssignee);
+            IncidentRoleAssignment response = client.CancelIncidentRoleHandover(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2091,20 +1948,20 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CancelIncidentRoleHandoverRequest expectedRequest = new CancelIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CancelIncidentRoleHandoverAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<IncidentRoleAssignment>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString();
+            RoleAssignmentName name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]");
             User newAssignee = new User();
-            IncidentRoleAssignment response = await client.CancelIncidentRoleHandoverAsync(formattedName, newAssignee);
+            IncidentRoleAssignment response = await client.CancelIncidentRoleHandoverAsync(name, newAssignee);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -2115,12 +1972,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CancelIncidentRoleHandoverRequest request = new CancelIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CancelIncidentRoleHandover(request, It.IsAny<CallOptions>()))
@@ -2137,12 +1994,12 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
             CancelIncidentRoleHandoverRequest request = new CancelIncidentRoleHandoverRequest
             {
-                Name = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]").ToString(),
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 NewAssignee = new User(),
             };
             IncidentRoleAssignment expectedResponse = new IncidentRoleAssignment
             {
-                Name = "name2-1052831874",
+                RoleAssignmentName = new RoleAssignmentName("[PROJECT]", "[INCIDENT]", "[ROLE_ASSIGNMENT]"),
                 Etag = "etag3123477",
             };
             mockGrpcClient.Setup(x => x.CancelIncidentRoleHandoverAsync(request, It.IsAny<CallOptions>()))

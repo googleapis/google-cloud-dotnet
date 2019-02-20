@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -56,23 +57,21 @@ namespace Google.Cloud.Irm.V1Alpha2
             SearchSimilarIncidentsSettings = existing.SearchSimilarIncidentsSettings;
             CreateAnnotationSettings = existing.CreateAnnotationSettings;
             ListAnnotationsSettings = existing.ListAnnotationsSettings;
-            UpdateAnnotationSettings = existing.UpdateAnnotationSettings;
             CreateTagSettings = existing.CreateTagSettings;
             DeleteTagSettings = existing.DeleteTagSettings;
             ListTagsSettings = existing.ListTagsSettings;
             CreateSignalSettings = existing.CreateSignalSettings;
-            ListSignalsSettings = existing.ListSignalsSettings;
+            SearchSignalsSettings = existing.SearchSignalsSettings;
             GetSignalSettings = existing.GetSignalSettings;
             UpdateSignalSettings = existing.UpdateSignalSettings;
-            AcknowledgeSignalSettings = existing.AcknowledgeSignalSettings;
             EscalateIncidentSettings = existing.EscalateIncidentSettings;
             CreateArtifactSettings = existing.CreateArtifactSettings;
             ListArtifactsSettings = existing.ListArtifactsSettings;
             UpdateArtifactSettings = existing.UpdateArtifactSettings;
             DeleteArtifactSettings = existing.DeleteArtifactSettings;
-            GetShiftHandoffPresetsSettings = existing.GetShiftHandoffPresetsSettings;
             SendShiftHandoffSettings = existing.SendShiftHandoffSettings;
             CreateSubscriptionSettings = existing.CreateSubscriptionSettings;
+            UpdateSubscriptionSettings = existing.UpdateSubscriptionSettings;
             ListSubscriptionsSettings = existing.ListSubscriptionsSettings;
             DeleteSubscriptionSettings = existing.DeleteSubscriptionSettings;
             CreateIncidentRoleAssignmentSettings = existing.CreateIncidentRoleAssignmentSettings;
@@ -360,35 +359,6 @@ namespace Google.Cloud.Irm.V1Alpha2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>IncidentServiceClient.UpdateAnnotation</c> and <c>IncidentServiceClient.UpdateAnnotationAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>IncidentServiceClient.UpdateAnnotation</c> and
-        /// <c>IncidentServiceClient.UpdateAnnotationAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateAnnotationSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>IncidentServiceClient.CreateTag</c> and <c>IncidentServiceClient.CreateTagAsync</c>.
         /// </summary>
         /// <remarks>
@@ -507,11 +477,11 @@ namespace Google.Cloud.Irm.V1Alpha2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>IncidentServiceClient.ListSignals</c> and <c>IncidentServiceClient.ListSignalsAsync</c>.
+        /// <c>IncidentServiceClient.SearchSignals</c> and <c>IncidentServiceClient.SearchSignalsAsync</c>.
         /// </summary>
         /// <remarks>
-        /// The default <c>IncidentServiceClient.ListSignals</c> and
-        /// <c>IncidentServiceClient.ListSignalsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// The default <c>IncidentServiceClient.SearchSignals</c> and
+        /// <c>IncidentServiceClient.SearchSignalsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
@@ -527,7 +497,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
-        public gaxgrpc::CallSettings ListSignalsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+        public gaxgrpc::CallSettings SearchSignalsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -587,35 +557,6 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings UpdateSignalSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>IncidentServiceClient.AcknowledgeSignal</c> and <c>IncidentServiceClient.AcknowledgeSignalAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>IncidentServiceClient.AcknowledgeSignal</c> and
-        /// <c>IncidentServiceClient.AcknowledgeSignalAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings AcknowledgeSignalSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -772,36 +713,6 @@ namespace Google.Cloud.Irm.V1Alpha2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>IncidentServiceClient.GetShiftHandoffPresets</c> and <c>IncidentServiceClient.GetShiftHandoffPresetsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>IncidentServiceClient.GetShiftHandoffPresets</c> and
-        /// <c>IncidentServiceClient.GetShiftHandoffPresetsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings GetShiftHandoffPresetsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>IncidentServiceClient.SendShiftHandoff</c> and <c>IncidentServiceClient.SendShiftHandoffAsync</c>.
         /// </summary>
         /// <remarks>
@@ -851,6 +762,35 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings CreateSubscriptionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IncidentServiceClient.UpdateSubscription</c> and <c>IncidentServiceClient.UpdateSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>IncidentServiceClient.UpdateSubscription</c> and
+        /// <c>IncidentServiceClient.UpdateSubscriptionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSubscriptionSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -1304,12 +1244,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </returns>
         public virtual stt::Task<Incident> CreateIncidentAsync(
             Incident incident,
-            string parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => CreateIncidentAsync(
                 new CreateIncidentRequest
                 {
                     Incident = gax::GaxPreconditions.CheckNotNull(incident, nameof(incident)),
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1333,7 +1273,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </returns>
         public virtual stt::Task<Incident> CreateIncidentAsync(
             Incident incident,
-            string parent,
+            gaxres::ProjectName parent,
             st::CancellationToken cancellationToken) => CreateIncidentAsync(
                 incident,
                 parent,
@@ -1359,12 +1299,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </returns>
         public virtual Incident CreateIncident(
             Incident incident,
-            string parent,
+            gaxres::ProjectName parent,
             gaxgrpc::CallSettings callSettings = null) => CreateIncident(
                 new CreateIncidentRequest
                 {
                     Incident = gax::GaxPreconditions.CheckNotNull(incident, nameof(incident)),
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1428,7 +1368,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns an incident by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="callSettings">
@@ -1438,11 +1378,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Incident> GetIncidentAsync(
-            string name,
+            IncidentName name,
             gaxgrpc::CallSettings callSettings = null) => GetIncidentAsync(
                 new GetIncidentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    IncidentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1450,7 +1390,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns an incident by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="cancellationToken">
@@ -1460,7 +1400,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Incident> GetIncidentAsync(
-            string name,
+            IncidentName name,
             st::CancellationToken cancellationToken) => GetIncidentAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1469,7 +1409,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns an incident by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="callSettings">
@@ -1479,11 +1419,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual Incident GetIncident(
-            string name,
+            IncidentName name,
             gaxgrpc::CallSettings callSettings = null) => GetIncident(
                 new GetIncidentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    IncidentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1564,20 +1504,22 @@ namespace Google.Cloud.Irm.V1Alpha2
         ///   Incident.Stage enum). These are ordered, so `stage&lt;resolved` is
         ///   equivalent to `stage:detected OR stage:triaged OR stage:mitigated`.
         /// * `severity` - (Incident.Severity) The severity of the incident.
-        ///    + Supports matching on a specific severity (e.g., `severity:major`) or
-        ///      on a range (e.g., `severity&gt;medium`, `severity&lt;=minor`, etc.).
+        ///    + Supports matching on a specific severity (for example,
+        ///    `severity:major`) or on a range (for example, `severity&gt;medium`,
+        ///    `severity&lt;=minor`, etc.).
         ///
         /// Timestamp formats:
         /// * yyyy-MM-dd - an absolute date, treated as a calendar-day-wide window.
         ///   In other words, the "&lt;" operator will match dates before that date, the
         ///   "&gt;" operator will match dates after that date, and the ":" or "="
         ///   operators will match the entire day.
-        /// * Nd (e.g. 7d) - a relative number of days ago, treated as a moment in time
-        ///   (as opposed to a day-wide span) a multiple of 24 hours ago (as opposed to
-        ///   calendar days).  In the case of daylight savings time, it will apply the
-        ///   current timezone to both ends of the range.  Note that exact matching
-        ///   (e.g. `start:7d`) is unlikely to be useful because that would only match
-        ///   incidents created precisely at a particular instant in time.
+        /// * Nd (for example, 7d) - a relative number of days ago, treated as a moment
+        ///   in time (as opposed to a day-wide span). A multiple of 24 hours ago (as
+        ///   opposed to calendar days).  In the case of daylight savings time, it will
+        ///   apply the current timezone to both ends of the range.  Note that exact
+        ///   matching (for example, `start:7d`) is unlikely to be useful because that
+        ///   would only match incidents created precisely at a particular instant in
+        ///   time.
         ///
         /// Examples:
         ///
@@ -1623,7 +1565,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable asynchronous sequence of <see cref="Incident"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<SearchIncidentsResponse, Incident> SearchIncidentsAsync(
-            string parent,
+            gaxres::ProjectName parent,
             string query,
             string timeZone,
             string pageToken = null,
@@ -1631,7 +1573,7 @@ namespace Google.Cloud.Irm.V1Alpha2
             gaxgrpc::CallSettings callSettings = null) => SearchIncidentsAsync(
                 new SearchIncidentsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Query = query ?? "", // Optional
                     TimeZone = timeZone ?? "", // Optional
                     PageToken = pageToken ?? "",
@@ -1660,20 +1602,22 @@ namespace Google.Cloud.Irm.V1Alpha2
         ///   Incident.Stage enum). These are ordered, so `stage&lt;resolved` is
         ///   equivalent to `stage:detected OR stage:triaged OR stage:mitigated`.
         /// * `severity` - (Incident.Severity) The severity of the incident.
-        ///    + Supports matching on a specific severity (e.g., `severity:major`) or
-        ///      on a range (e.g., `severity&gt;medium`, `severity&lt;=minor`, etc.).
+        ///    + Supports matching on a specific severity (for example,
+        ///    `severity:major`) or on a range (for example, `severity&gt;medium`,
+        ///    `severity&lt;=minor`, etc.).
         ///
         /// Timestamp formats:
         /// * yyyy-MM-dd - an absolute date, treated as a calendar-day-wide window.
         ///   In other words, the "&lt;" operator will match dates before that date, the
         ///   "&gt;" operator will match dates after that date, and the ":" or "="
         ///   operators will match the entire day.
-        /// * Nd (e.g. 7d) - a relative number of days ago, treated as a moment in time
-        ///   (as opposed to a day-wide span) a multiple of 24 hours ago (as opposed to
-        ///   calendar days).  In the case of daylight savings time, it will apply the
-        ///   current timezone to both ends of the range.  Note that exact matching
-        ///   (e.g. `start:7d`) is unlikely to be useful because that would only match
-        ///   incidents created precisely at a particular instant in time.
+        /// * Nd (for example, 7d) - a relative number of days ago, treated as a moment
+        ///   in time (as opposed to a day-wide span). A multiple of 24 hours ago (as
+        ///   opposed to calendar days).  In the case of daylight savings time, it will
+        ///   apply the current timezone to both ends of the range.  Note that exact
+        ///   matching (for example, `start:7d`) is unlikely to be useful because that
+        ///   would only match incidents created precisely at a particular instant in
+        ///   time.
         ///
         /// Examples:
         ///
@@ -1719,7 +1663,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable sequence of <see cref="Incident"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<SearchIncidentsResponse, Incident> SearchIncidents(
-            string parent,
+            gaxres::ProjectName parent,
             string query,
             string timeZone,
             string pageToken = null,
@@ -1727,7 +1671,7 @@ namespace Google.Cloud.Irm.V1Alpha2
             gaxgrpc::CallSettings callSettings = null) => SearchIncidents(
                 new SearchIncidentsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Query = query ?? "", // Optional
                     TimeZone = timeZone ?? "", // Optional
                     PageToken = pageToken ?? "",
@@ -1912,7 +1856,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// definition of "similar" is subject to change.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the incident or signal, e.g.
+        /// Resource name of the incident or signal, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -1948,7 +1892,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// definition of "similar" is subject to change.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the incident or signal, e.g.
+        /// Resource name of the incident or signal, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -2025,7 +1969,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// 'text/markdown' annotations can be created via this method.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="annotation">
@@ -2038,12 +1982,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Annotation> CreateAnnotationAsync(
-            string parent,
+            IncidentName parent,
             Annotation annotation,
             gaxgrpc::CallSettings callSettings = null) => CreateAnnotationAsync(
                 new CreateAnnotationRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Annotation = gax::GaxPreconditions.CheckNotNull(annotation, nameof(annotation)),
                 },
                 callSettings);
@@ -2053,7 +1997,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// 'text/markdown' annotations can be created via this method.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="annotation">
@@ -2066,7 +2010,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Annotation> CreateAnnotationAsync(
-            string parent,
+            IncidentName parent,
             Annotation annotation,
             st::CancellationToken cancellationToken) => CreateAnnotationAsync(
                 parent,
@@ -2078,7 +2022,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// 'text/markdown' annotations can be created via this method.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="annotation">
@@ -2091,12 +2035,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual Annotation CreateAnnotation(
-            string parent,
+            IncidentName parent,
             Annotation annotation,
             gaxgrpc::CallSettings callSettings = null) => CreateAnnotation(
                 new CreateAnnotationRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Annotation = gax::GaxPreconditions.CheckNotNull(annotation, nameof(annotation)),
                 },
                 callSettings);
@@ -2165,7 +2109,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// made on the content-type of the annotation returned.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -2183,13 +2127,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable asynchronous sequence of <see cref="Annotation"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListAnnotationsResponse, Annotation> ListAnnotationsAsync(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListAnnotationsAsync(
                 new ListAnnotationsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2200,7 +2144,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// made on the content-type of the annotation returned.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -2218,13 +2162,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable sequence of <see cref="Annotation"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListAnnotationsResponse, Annotation> ListAnnotations(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListAnnotations(
                 new ListAnnotationsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2265,137 +2209,6 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </returns>
         public virtual gax::PagedEnumerable<ListAnnotationsResponse, Annotation> ListAnnotations(
             ListAnnotationsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="annotation">
-        /// The annotation to update with the new values.
-        /// </param>
-        /// <param name="updateMask">
-        /// List of fields that should be updated.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Annotation> UpdateAnnotationAsync(
-            Annotation annotation,
-            pbwkt::FieldMask updateMask,
-            gaxgrpc::CallSettings callSettings = null) => UpdateAnnotationAsync(
-                new UpdateAnnotationRequest
-                {
-                    Annotation = gax::GaxPreconditions.CheckNotNull(annotation, nameof(annotation)),
-                    UpdateMask = updateMask, // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="annotation">
-        /// The annotation to update with the new values.
-        /// </param>
-        /// <param name="updateMask">
-        /// List of fields that should be updated.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Annotation> UpdateAnnotationAsync(
-            Annotation annotation,
-            pbwkt::FieldMask updateMask,
-            st::CancellationToken cancellationToken) => UpdateAnnotationAsync(
-                annotation,
-                updateMask,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="annotation">
-        /// The annotation to update with the new values.
-        /// </param>
-        /// <param name="updateMask">
-        /// List of fields that should be updated.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Annotation UpdateAnnotation(
-            Annotation annotation,
-            pbwkt::FieldMask updateMask,
-            gaxgrpc::CallSettings callSettings = null) => UpdateAnnotation(
-                new UpdateAnnotationRequest
-                {
-                    Annotation = gax::GaxPreconditions.CheckNotNull(annotation, nameof(annotation)),
-                    UpdateMask = updateMask, // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Annotation> UpdateAnnotationAsync(
-            UpdateAnnotationRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Annotation> UpdateAnnotationAsync(
-            UpdateAnnotationRequest request,
-            st::CancellationToken cancellationToken) => UpdateAnnotationAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Annotation UpdateAnnotation(
-            UpdateAnnotationRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -2405,7 +2218,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Creates a tag on an existing incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="tag">
@@ -2418,12 +2231,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Tag> CreateTagAsync(
-            string parent,
+            IncidentName parent,
             Tag tag,
             gaxgrpc::CallSettings callSettings = null) => CreateTagAsync(
                 new CreateTagRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Tag = gax::GaxPreconditions.CheckNotNull(tag, nameof(tag)),
                 },
                 callSettings);
@@ -2432,7 +2245,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Creates a tag on an existing incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="tag">
@@ -2445,7 +2258,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Tag> CreateTagAsync(
-            string parent,
+            IncidentName parent,
             Tag tag,
             st::CancellationToken cancellationToken) => CreateTagAsync(
                 parent,
@@ -2456,7 +2269,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Creates a tag on an existing incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="tag">
@@ -2469,12 +2282,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual Tag CreateTag(
-            string parent,
+            IncidentName parent,
             Tag tag,
             gaxgrpc::CallSettings callSettings = null) => CreateTag(
                 new CreateTagRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Tag = gax::GaxPreconditions.CheckNotNull(tag, nameof(tag)),
                 },
                 callSettings);
@@ -2548,11 +2361,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteTagAsync(
-            string name,
+            TagName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteTagAsync(
                 new DeleteTagRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TagName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2569,7 +2382,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteTagAsync(
-            string name,
+            TagName name,
             st::CancellationToken cancellationToken) => DeleteTagAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -2584,11 +2397,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteTag(
-            string name,
+            TagName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteTag(
                 new DeleteTagRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    TagName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2649,7 +2462,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Lists tags that are part of an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -2667,13 +2480,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable asynchronous sequence of <see cref="Tag"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListTagsAsync(
                 new ListTagsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2683,7 +2496,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Lists tags that are part of an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -2701,13 +2514,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable sequence of <see cref="Tag"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListTags(
                 new ListTagsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2768,12 +2581,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Signal> CreateSignalAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Signal signal,
             gaxgrpc::CallSettings callSettings = null) => CreateSignalAsync(
                 new CreateSignalRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Signal = gax::GaxPreconditions.CheckNotNull(signal, nameof(signal)),
                 },
                 callSettings);
@@ -2795,7 +2608,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Signal> CreateSignalAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Signal signal,
             st::CancellationToken cancellationToken) => CreateSignalAsync(
                 parent,
@@ -2819,12 +2632,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual Signal CreateSignal(
-            string parent,
+            gaxres::ProjectName parent,
             Signal signal,
             gaxgrpc::CallSettings callSettings = null) => CreateSignal(
                 new CreateSignalRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Signal = gax::GaxPreconditions.CheckNotNull(signal, nameof(signal)),
                 },
                 callSettings);
@@ -2893,8 +2706,8 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The resource name of the hosting Stackdriver project which requested
         /// incidents belong to.
         /// </param>
-        /// <param name="filter">
-        /// Filter to specify which signals should be returned.
+        /// <param name="query">
+        /// Query to specify which signals should be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2910,16 +2723,16 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Signal"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListSignalsResponse, Signal> ListSignalsAsync(
-            string parent,
-            string filter,
+        public virtual gax::PagedAsyncEnumerable<SearchSignalsResponse, Signal> SearchSignalsAsync(
+            gaxres::ProjectName parent,
+            string query,
             string pageToken = null,
             int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListSignalsAsync(
-                new ListSignalsRequest
+            gaxgrpc::CallSettings callSettings = null) => SearchSignalsAsync(
+                new SearchSignalsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    Filter = filter ?? "", // Optional
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Query = query ?? "", // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2933,8 +2746,8 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The resource name of the hosting Stackdriver project which requested
         /// incidents belong to.
         /// </param>
-        /// <param name="filter">
-        /// Filter to specify which signals should be returned.
+        /// <param name="query">
+        /// Query to specify which signals should be returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -2950,16 +2763,16 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// <returns>
         /// A pageable sequence of <see cref="Signal"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListSignalsResponse, Signal> ListSignals(
-            string parent,
-            string filter,
+        public virtual gax::PagedEnumerable<SearchSignalsResponse, Signal> SearchSignals(
+            gaxres::ProjectName parent,
+            string query,
             string pageToken = null,
             int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListSignals(
-                new ListSignalsRequest
+            gaxgrpc::CallSettings callSettings = null) => SearchSignals(
+                new SearchSignalsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                    Filter = filter ?? "", // Optional
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Query = query ?? "", // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2978,8 +2791,8 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Signal"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListSignalsResponse, Signal> ListSignalsAsync(
-            ListSignalsRequest request,
+        public virtual gax::PagedAsyncEnumerable<SearchSignalsResponse, Signal> SearchSignalsAsync(
+            SearchSignalsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -2998,8 +2811,8 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// <returns>
         /// A pageable sequence of <see cref="Signal"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<ListSignalsResponse, Signal> ListSignals(
-            ListSignalsRequest request,
+        public virtual gax::PagedEnumerable<SearchSignalsResponse, Signal> SearchSignals(
+            SearchSignalsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -3009,7 +2822,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns a signal by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Signal resource, e.g.
+        /// Resource name of the Signal resource, for example,
         /// "projects/{project_id}/signals/{signal_id}".
         /// </param>
         /// <param name="callSettings">
@@ -3019,11 +2832,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Signal> GetSignalAsync(
-            string name,
+            SignalName name,
             gaxgrpc::CallSettings callSettings = null) => GetSignalAsync(
                 new GetSignalRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    SignalName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3031,7 +2844,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns a signal by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Signal resource, e.g.
+        /// Resource name of the Signal resource, for example,
         /// "projects/{project_id}/signals/{signal_id}".
         /// </param>
         /// <param name="cancellationToken">
@@ -3041,7 +2854,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Signal> GetSignalAsync(
-            string name,
+            SignalName name,
             st::CancellationToken cancellationToken) => GetSignalAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -3050,7 +2863,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns a signal by name.
         /// </summary>
         /// <param name="name">
-        /// Resource name of the Signal resource, e.g.
+        /// Resource name of the Signal resource, for example,
         /// "projects/{project_id}/signals/{signal_id}".
         /// </param>
         /// <param name="callSettings">
@@ -3060,11 +2873,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual Signal GetSignal(
-            string name,
+            SignalName name,
             gaxgrpc::CallSettings callSettings = null) => GetSignal(
                 new GetSignalRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    SignalName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3125,7 +2938,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         }
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="signal">
@@ -3152,7 +2965,7 @@ namespace Google.Cloud.Irm.V1Alpha2
                 callSettings);
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="signal">
@@ -3176,7 +2989,7 @@ namespace Google.Cloud.Irm.V1Alpha2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="signal">
@@ -3203,7 +3016,7 @@ namespace Google.Cloud.Irm.V1Alpha2
                 callSettings);
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="request">
@@ -3223,7 +3036,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         }
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="request">
@@ -3242,7 +3055,7 @@ namespace Google.Cloud.Irm.V1Alpha2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="request">
@@ -3256,131 +3069,6 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </returns>
         public virtual Signal UpdateSignal(
             UpdateSignalRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the Signal resource, e.g.
-        /// "projects/{project_id}/signals/{signal_id}".
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<AcknowledgeSignalResponse> AcknowledgeSignalAsync(
-            string name,
-            gaxgrpc::CallSettings callSettings = null) => AcknowledgeSignalAsync(
-                new AcknowledgeSignalRequest
-                {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the Signal resource, e.g.
-        /// "projects/{project_id}/signals/{signal_id}".
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<AcknowledgeSignalResponse> AcknowledgeSignalAsync(
-            string name,
-            st::CancellationToken cancellationToken) => AcknowledgeSignalAsync(
-                name,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the Signal resource, e.g.
-        /// "projects/{project_id}/signals/{signal_id}".
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual AcknowledgeSignalResponse AcknowledgeSignal(
-            string name,
-            gaxgrpc::CallSettings callSettings = null) => AcknowledgeSignal(
-                new AcknowledgeSignalRequest
-                {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<AcknowledgeSignalResponse> AcknowledgeSignalAsync(
-            AcknowledgeSignalRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<AcknowledgeSignalResponse> AcknowledgeSignalAsync(
-            AcknowledgeSignalRequest request,
-            st::CancellationToken cancellationToken) => AcknowledgeSignalAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual AcknowledgeSignalResponse AcknowledgeSignal(
-            AcknowledgeSignalRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -3446,7 +3134,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Creates a new artifact.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="artifact">
@@ -3459,12 +3147,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Artifact> CreateArtifactAsync(
-            string parent,
+            IncidentName parent,
             Artifact artifact,
             gaxgrpc::CallSettings callSettings = null) => CreateArtifactAsync(
                 new CreateArtifactRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Artifact = gax::GaxPreconditions.CheckNotNull(artifact, nameof(artifact)),
                 },
                 callSettings);
@@ -3473,7 +3161,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Creates a new artifact.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="artifact">
@@ -3486,7 +3174,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Artifact> CreateArtifactAsync(
-            string parent,
+            IncidentName parent,
             Artifact artifact,
             st::CancellationToken cancellationToken) => CreateArtifactAsync(
                 parent,
@@ -3497,7 +3185,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Creates a new artifact.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="artifact">
@@ -3510,12 +3198,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual Artifact CreateArtifact(
-            string parent,
+            IncidentName parent,
             Artifact artifact,
             gaxgrpc::CallSettings callSettings = null) => CreateArtifact(
                 new CreateArtifactRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Artifact = gax::GaxPreconditions.CheckNotNull(artifact, nameof(artifact)),
                 },
                 callSettings);
@@ -3580,7 +3268,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns a list of artifacts for an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -3598,13 +3286,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable asynchronous sequence of <see cref="Artifact"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListArtifactsResponse, Artifact> ListArtifactsAsync(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListArtifactsAsync(
                 new ListArtifactsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -3614,7 +3302,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns a list of artifacts for an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -3632,13 +3320,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable sequence of <see cref="Artifact"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListArtifactsResponse, Artifact> ListArtifacts(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListArtifacts(
                 new ListArtifactsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -3826,11 +3514,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteArtifactAsync(
-            string name,
+            ArtifactName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteArtifactAsync(
                 new DeleteArtifactRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ArtifactName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3847,7 +3535,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteArtifactAsync(
-            string name,
+            ArtifactName name,
             st::CancellationToken cancellationToken) => DeleteArtifactAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -3862,11 +3550,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteArtifact(
-            string name,
+            ArtifactName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteArtifact(
                 new DeleteArtifactRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ArtifactName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3918,131 +3606,6 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </param>
         public virtual void DeleteArtifact(
             DeleteArtifactRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="parent">
-        /// Resource name of the Stackdriver project that the presets belong to. e.g.
-        /// `projects/{project_id}`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ShiftHandoffPresets> GetShiftHandoffPresetsAsync(
-            string parent,
-            gaxgrpc::CallSettings callSettings = null) => GetShiftHandoffPresetsAsync(
-                new GetShiftHandoffPresetsRequest
-                {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="parent">
-        /// Resource name of the Stackdriver project that the presets belong to. e.g.
-        /// `projects/{project_id}`
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ShiftHandoffPresets> GetShiftHandoffPresetsAsync(
-            string parent,
-            st::CancellationToken cancellationToken) => GetShiftHandoffPresetsAsync(
-                parent,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="parent">
-        /// Resource name of the Stackdriver project that the presets belong to. e.g.
-        /// `projects/{project_id}`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ShiftHandoffPresets GetShiftHandoffPresets(
-            string parent,
-            gaxgrpc::CallSettings callSettings = null) => GetShiftHandoffPresets(
-                new GetShiftHandoffPresetsRequest
-                {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ShiftHandoffPresets> GetShiftHandoffPresetsAsync(
-            GetShiftHandoffPresetsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ShiftHandoffPresets> GetShiftHandoffPresetsAsync(
-            GetShiftHandoffPresetsRequest request,
-            st::CancellationToken cancellationToken) => GetShiftHandoffPresetsAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ShiftHandoffPresets GetShiftHandoffPresets(
-            GetShiftHandoffPresetsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -4111,7 +3674,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         ///    b. a subscription using the given channel already exists
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="subscription">
@@ -4124,12 +3687,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Subscription> CreateSubscriptionAsync(
-            string parent,
+            IncidentName parent,
             Subscription subscription,
             gaxgrpc::CallSettings callSettings = null) => CreateSubscriptionAsync(
                 new CreateSubscriptionRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
                 },
                 callSettings);
@@ -4141,7 +3704,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         ///    b. a subscription using the given channel already exists
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="subscription">
@@ -4154,7 +3717,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Subscription> CreateSubscriptionAsync(
-            string parent,
+            IncidentName parent,
             Subscription subscription,
             st::CancellationToken cancellationToken) => CreateSubscriptionAsync(
                 parent,
@@ -4168,7 +3731,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         ///    b. a subscription using the given channel already exists
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="subscription">
@@ -4181,12 +3744,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual Subscription CreateSubscription(
-            string parent,
+            IncidentName parent,
             Subscription subscription,
             gaxgrpc::CallSettings callSettings = null) => CreateSubscription(
                 new CreateSubscriptionRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
                 },
                 callSettings);
@@ -4257,10 +3820,141 @@ namespace Google.Cloud.Irm.V1Alpha2
         }
 
         /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// The subscription to update, with new values.
+        /// </param>
+        /// <param name="updateMask">
+        /// List of fields that should be updated.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(
+            Subscription subscription,
+            pbwkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateSubscriptionAsync(
+                new UpdateSubscriptionRequest
+                {
+                    Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                    UpdateMask = updateMask, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// The subscription to update, with new values.
+        /// </param>
+        /// <param name="updateMask">
+        /// List of fields that should be updated.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(
+            Subscription subscription,
+            pbwkt::FieldMask updateMask,
+            st::CancellationToken cancellationToken) => UpdateSubscriptionAsync(
+                subscription,
+                updateMask,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// The subscription to update, with new values.
+        /// </param>
+        /// <param name="updateMask">
+        /// List of fields that should be updated.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Subscription UpdateSubscription(
+            Subscription subscription,
+            pbwkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateSubscription(
+                new UpdateSubscriptionRequest
+                {
+                    Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                    UpdateMask = updateMask, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(
+            UpdateSubscriptionRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(
+            UpdateSubscriptionRequest request,
+            st::CancellationToken cancellationToken) => UpdateSubscriptionAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Subscription UpdateSubscription(
+            UpdateSubscriptionRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
         /// Returns a list of subscriptions for an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -4278,13 +3972,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable asynchronous sequence of <see cref="Subscription"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListSubscriptionsAsync(
                 new ListSubscriptionsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -4294,7 +3988,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Returns a list of subscriptions for an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -4312,13 +4006,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable sequence of <see cref="Subscription"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListSubscriptions(
                 new ListSubscriptionsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -4375,11 +4069,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteSubscriptionAsync(
-            string name,
+            SubscriptionName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteSubscriptionAsync(
                 new DeleteSubscriptionRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -4396,7 +4090,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteSubscriptionAsync(
-            string name,
+            SubscriptionName name,
             st::CancellationToken cancellationToken) => DeleteSubscriptionAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -4411,11 +4105,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteSubscription(
-            string name,
+            SubscriptionName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteSubscription(
                 new DeleteSubscriptionRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -4480,7 +4174,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// force-assigning the role to the user.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="incidentRoleAssignment">
@@ -4493,12 +4187,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> CreateIncidentRoleAssignmentAsync(
-            string parent,
+            IncidentName parent,
             IncidentRoleAssignment incidentRoleAssignment,
             gaxgrpc::CallSettings callSettings = null) => CreateIncidentRoleAssignmentAsync(
                 new CreateIncidentRoleAssignmentRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     IncidentRoleAssignment = gax::GaxPreconditions.CheckNotNull(incidentRoleAssignment, nameof(incidentRoleAssignment)),
                 },
                 callSettings);
@@ -4511,7 +4205,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// force-assigning the role to the user.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="incidentRoleAssignment">
@@ -4524,7 +4218,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> CreateIncidentRoleAssignmentAsync(
-            string parent,
+            IncidentName parent,
             IncidentRoleAssignment incidentRoleAssignment,
             st::CancellationToken cancellationToken) => CreateIncidentRoleAssignmentAsync(
                 parent,
@@ -4539,7 +4233,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// force-assigning the role to the user.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="incidentRoleAssignment">
@@ -4552,12 +4246,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual IncidentRoleAssignment CreateIncidentRoleAssignment(
-            string parent,
+            IncidentName parent,
             IncidentRoleAssignment incidentRoleAssignment,
             gaxgrpc::CallSettings callSettings = null) => CreateIncidentRoleAssignment(
                 new CreateIncidentRoleAssignmentRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     IncidentRoleAssignment = gax::GaxPreconditions.CheckNotNull(incidentRoleAssignment, nameof(incidentRoleAssignment)),
                 },
                 callSettings);
@@ -4643,11 +4337,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteIncidentRoleAssignmentAsync(
-            string name,
+            RoleAssignmentName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteIncidentRoleAssignmentAsync(
                 new DeleteIncidentRoleAssignmentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -4664,7 +4358,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteIncidentRoleAssignmentAsync(
-            string name,
+            RoleAssignmentName name,
             st::CancellationToken cancellationToken) => DeleteIncidentRoleAssignmentAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -4679,11 +4373,11 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteIncidentRoleAssignment(
-            string name,
+            RoleAssignmentName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteIncidentRoleAssignment(
                 new DeleteIncidentRoleAssignmentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -4744,7 +4438,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Lists role assignments that are part of an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -4762,13 +4456,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable asynchronous sequence of <see cref="IncidentRoleAssignment"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListIncidentRoleAssignmentsResponse, IncidentRoleAssignment> ListIncidentRoleAssignmentsAsync(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListIncidentRoleAssignmentsAsync(
                 new ListIncidentRoleAssignmentsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -4778,7 +4472,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Lists role assignments that are part of an incident.
         /// </summary>
         /// <param name="parent">
-        /// Resource name of the incident, e.g.
+        /// Resource name of the incident, for example,
         /// "projects/{project_id}/incidents/{incident_id}".
         /// </param>
         /// <param name="pageToken">
@@ -4796,13 +4490,13 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A pageable sequence of <see cref="IncidentRoleAssignment"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListIncidentRoleAssignmentsResponse, IncidentRoleAssignment> ListIncidentRoleAssignments(
-            string parent,
+            IncidentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListIncidentRoleAssignments(
                 new ListIncidentRoleAssignmentsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsIncidentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -4864,12 +4558,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> RequestIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => RequestIncidentRoleHandoverAsync(
                 new RequestIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -4892,7 +4586,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> RequestIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             st::CancellationToken cancellationToken) => RequestIncidentRoleHandoverAsync(
                 name,
@@ -4917,12 +4611,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual IncidentRoleAssignment RequestIncidentRoleHandover(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => RequestIncidentRoleHandover(
                 new RequestIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -5009,12 +4703,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> ConfirmIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => ConfirmIncidentRoleHandoverAsync(
                 new ConfirmIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -5039,7 +4733,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> ConfirmIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             st::CancellationToken cancellationToken) => ConfirmIncidentRoleHandoverAsync(
                 name,
@@ -5066,12 +4760,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual IncidentRoleAssignment ConfirmIncidentRoleHandover(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => ConfirmIncidentRoleHandover(
                 new ConfirmIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -5161,12 +4855,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> ForceIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => ForceIncidentRoleHandoverAsync(
                 new ForceIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -5191,7 +4885,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> ForceIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             st::CancellationToken cancellationToken) => ForceIncidentRoleHandoverAsync(
                 name,
@@ -5218,12 +4912,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual IncidentRoleAssignment ForceIncidentRoleHandover(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => ForceIncidentRoleHandover(
                 new ForceIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -5313,12 +5007,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> CancelIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => CancelIncidentRoleHandoverAsync(
                 new CancelIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -5343,7 +5037,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<IncidentRoleAssignment> CancelIncidentRoleHandoverAsync(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             st::CancellationToken cancellationToken) => CancelIncidentRoleHandoverAsync(
                 name,
@@ -5370,12 +5064,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// The RPC response.
         /// </returns>
         public virtual IncidentRoleAssignment CancelIncidentRoleHandover(
-            string name,
+            RoleAssignmentName name,
             User newAssignee,
             gaxgrpc::CallSettings callSettings = null) => CancelIncidentRoleHandover(
                 new CancelIncidentRoleHandoverRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    RoleAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     NewAssignee = gax::GaxPreconditions.CheckNotNull(newAssignee, nameof(newAssignee)),
                 },
                 callSettings);
@@ -5456,23 +5150,21 @@ namespace Google.Cloud.Irm.V1Alpha2
         private readonly gaxgrpc::ApiCall<SearchSimilarIncidentsRequest, SearchSimilarIncidentsResponse> _callSearchSimilarIncidents;
         private readonly gaxgrpc::ApiCall<CreateAnnotationRequest, Annotation> _callCreateAnnotation;
         private readonly gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> _callListAnnotations;
-        private readonly gaxgrpc::ApiCall<UpdateAnnotationRequest, Annotation> _callUpdateAnnotation;
         private readonly gaxgrpc::ApiCall<CreateTagRequest, Tag> _callCreateTag;
         private readonly gaxgrpc::ApiCall<DeleteTagRequest, pbwkt::Empty> _callDeleteTag;
         private readonly gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> _callListTags;
         private readonly gaxgrpc::ApiCall<CreateSignalRequest, Signal> _callCreateSignal;
-        private readonly gaxgrpc::ApiCall<ListSignalsRequest, ListSignalsResponse> _callListSignals;
+        private readonly gaxgrpc::ApiCall<SearchSignalsRequest, SearchSignalsResponse> _callSearchSignals;
         private readonly gaxgrpc::ApiCall<GetSignalRequest, Signal> _callGetSignal;
         private readonly gaxgrpc::ApiCall<UpdateSignalRequest, Signal> _callUpdateSignal;
-        private readonly gaxgrpc::ApiCall<AcknowledgeSignalRequest, AcknowledgeSignalResponse> _callAcknowledgeSignal;
         private readonly gaxgrpc::ApiCall<EscalateIncidentRequest, EscalateIncidentResponse> _callEscalateIncident;
         private readonly gaxgrpc::ApiCall<CreateArtifactRequest, Artifact> _callCreateArtifact;
         private readonly gaxgrpc::ApiCall<ListArtifactsRequest, ListArtifactsResponse> _callListArtifacts;
         private readonly gaxgrpc::ApiCall<UpdateArtifactRequest, Artifact> _callUpdateArtifact;
         private readonly gaxgrpc::ApiCall<DeleteArtifactRequest, pbwkt::Empty> _callDeleteArtifact;
-        private readonly gaxgrpc::ApiCall<GetShiftHandoffPresetsRequest, ShiftHandoffPresets> _callGetShiftHandoffPresets;
         private readonly gaxgrpc::ApiCall<SendShiftHandoffRequest, SendShiftHandoffResponse> _callSendShiftHandoff;
         private readonly gaxgrpc::ApiCall<CreateSubscriptionRequest, Subscription> _callCreateSubscription;
+        private readonly gaxgrpc::ApiCall<UpdateSubscriptionRequest, Subscription> _callUpdateSubscription;
         private readonly gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _callListSubscriptions;
         private readonly gaxgrpc::ApiCall<DeleteSubscriptionRequest, pbwkt::Empty> _callDeleteSubscription;
         private readonly gaxgrpc::ApiCall<CreateIncidentRoleAssignmentRequest, IncidentRoleAssignment> _callCreateIncidentRoleAssignment;
@@ -5507,8 +5199,6 @@ namespace Google.Cloud.Irm.V1Alpha2
                 GrpcClient.CreateAnnotationAsync, GrpcClient.CreateAnnotation, effectiveSettings.CreateAnnotationSettings);
             _callListAnnotations = clientHelper.BuildApiCall<ListAnnotationsRequest, ListAnnotationsResponse>(
                 GrpcClient.ListAnnotationsAsync, GrpcClient.ListAnnotations, effectiveSettings.ListAnnotationsSettings);
-            _callUpdateAnnotation = clientHelper.BuildApiCall<UpdateAnnotationRequest, Annotation>(
-                GrpcClient.UpdateAnnotationAsync, GrpcClient.UpdateAnnotation, effectiveSettings.UpdateAnnotationSettings);
             _callCreateTag = clientHelper.BuildApiCall<CreateTagRequest, Tag>(
                 GrpcClient.CreateTagAsync, GrpcClient.CreateTag, effectiveSettings.CreateTagSettings);
             _callDeleteTag = clientHelper.BuildApiCall<DeleteTagRequest, pbwkt::Empty>(
@@ -5517,14 +5207,12 @@ namespace Google.Cloud.Irm.V1Alpha2
                 GrpcClient.ListTagsAsync, GrpcClient.ListTags, effectiveSettings.ListTagsSettings);
             _callCreateSignal = clientHelper.BuildApiCall<CreateSignalRequest, Signal>(
                 GrpcClient.CreateSignalAsync, GrpcClient.CreateSignal, effectiveSettings.CreateSignalSettings);
-            _callListSignals = clientHelper.BuildApiCall<ListSignalsRequest, ListSignalsResponse>(
-                GrpcClient.ListSignalsAsync, GrpcClient.ListSignals, effectiveSettings.ListSignalsSettings);
+            _callSearchSignals = clientHelper.BuildApiCall<SearchSignalsRequest, SearchSignalsResponse>(
+                GrpcClient.SearchSignalsAsync, GrpcClient.SearchSignals, effectiveSettings.SearchSignalsSettings);
             _callGetSignal = clientHelper.BuildApiCall<GetSignalRequest, Signal>(
                 GrpcClient.GetSignalAsync, GrpcClient.GetSignal, effectiveSettings.GetSignalSettings);
             _callUpdateSignal = clientHelper.BuildApiCall<UpdateSignalRequest, Signal>(
                 GrpcClient.UpdateSignalAsync, GrpcClient.UpdateSignal, effectiveSettings.UpdateSignalSettings);
-            _callAcknowledgeSignal = clientHelper.BuildApiCall<AcknowledgeSignalRequest, AcknowledgeSignalResponse>(
-                GrpcClient.AcknowledgeSignalAsync, GrpcClient.AcknowledgeSignal, effectiveSettings.AcknowledgeSignalSettings);
             _callEscalateIncident = clientHelper.BuildApiCall<EscalateIncidentRequest, EscalateIncidentResponse>(
                 GrpcClient.EscalateIncidentAsync, GrpcClient.EscalateIncident, effectiveSettings.EscalateIncidentSettings);
             _callCreateArtifact = clientHelper.BuildApiCall<CreateArtifactRequest, Artifact>(
@@ -5535,12 +5223,12 @@ namespace Google.Cloud.Irm.V1Alpha2
                 GrpcClient.UpdateArtifactAsync, GrpcClient.UpdateArtifact, effectiveSettings.UpdateArtifactSettings);
             _callDeleteArtifact = clientHelper.BuildApiCall<DeleteArtifactRequest, pbwkt::Empty>(
                 GrpcClient.DeleteArtifactAsync, GrpcClient.DeleteArtifact, effectiveSettings.DeleteArtifactSettings);
-            _callGetShiftHandoffPresets = clientHelper.BuildApiCall<GetShiftHandoffPresetsRequest, ShiftHandoffPresets>(
-                GrpcClient.GetShiftHandoffPresetsAsync, GrpcClient.GetShiftHandoffPresets, effectiveSettings.GetShiftHandoffPresetsSettings);
             _callSendShiftHandoff = clientHelper.BuildApiCall<SendShiftHandoffRequest, SendShiftHandoffResponse>(
                 GrpcClient.SendShiftHandoffAsync, GrpcClient.SendShiftHandoff, effectiveSettings.SendShiftHandoffSettings);
             _callCreateSubscription = clientHelper.BuildApiCall<CreateSubscriptionRequest, Subscription>(
                 GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings);
+            _callUpdateSubscription = clientHelper.BuildApiCall<UpdateSubscriptionRequest, Subscription>(
+                GrpcClient.UpdateSubscriptionAsync, GrpcClient.UpdateSubscription, effectiveSettings.UpdateSubscriptionSettings);
             _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(
                 GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings);
             _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, pbwkt::Empty>(
@@ -5573,8 +5261,6 @@ namespace Google.Cloud.Irm.V1Alpha2
             Modify_CreateAnnotationApiCall(ref _callCreateAnnotation);
             Modify_ApiCall(ref _callListAnnotations);
             Modify_ListAnnotationsApiCall(ref _callListAnnotations);
-            Modify_ApiCall(ref _callUpdateAnnotation);
-            Modify_UpdateAnnotationApiCall(ref _callUpdateAnnotation);
             Modify_ApiCall(ref _callCreateTag);
             Modify_CreateTagApiCall(ref _callCreateTag);
             Modify_ApiCall(ref _callDeleteTag);
@@ -5583,14 +5269,12 @@ namespace Google.Cloud.Irm.V1Alpha2
             Modify_ListTagsApiCall(ref _callListTags);
             Modify_ApiCall(ref _callCreateSignal);
             Modify_CreateSignalApiCall(ref _callCreateSignal);
-            Modify_ApiCall(ref _callListSignals);
-            Modify_ListSignalsApiCall(ref _callListSignals);
+            Modify_ApiCall(ref _callSearchSignals);
+            Modify_SearchSignalsApiCall(ref _callSearchSignals);
             Modify_ApiCall(ref _callGetSignal);
             Modify_GetSignalApiCall(ref _callGetSignal);
             Modify_ApiCall(ref _callUpdateSignal);
             Modify_UpdateSignalApiCall(ref _callUpdateSignal);
-            Modify_ApiCall(ref _callAcknowledgeSignal);
-            Modify_AcknowledgeSignalApiCall(ref _callAcknowledgeSignal);
             Modify_ApiCall(ref _callEscalateIncident);
             Modify_EscalateIncidentApiCall(ref _callEscalateIncident);
             Modify_ApiCall(ref _callCreateArtifact);
@@ -5601,12 +5285,12 @@ namespace Google.Cloud.Irm.V1Alpha2
             Modify_UpdateArtifactApiCall(ref _callUpdateArtifact);
             Modify_ApiCall(ref _callDeleteArtifact);
             Modify_DeleteArtifactApiCall(ref _callDeleteArtifact);
-            Modify_ApiCall(ref _callGetShiftHandoffPresets);
-            Modify_GetShiftHandoffPresetsApiCall(ref _callGetShiftHandoffPresets);
             Modify_ApiCall(ref _callSendShiftHandoff);
             Modify_SendShiftHandoffApiCall(ref _callSendShiftHandoff);
             Modify_ApiCall(ref _callCreateSubscription);
             Modify_CreateSubscriptionApiCall(ref _callCreateSubscription);
+            Modify_ApiCall(ref _callUpdateSubscription);
+            Modify_UpdateSubscriptionApiCall(ref _callUpdateSubscription);
             Modify_ApiCall(ref _callListSubscriptions);
             Modify_ListSubscriptionsApiCall(ref _callListSubscriptions);
             Modify_ApiCall(ref _callDeleteSubscription);
@@ -5645,23 +5329,21 @@ namespace Google.Cloud.Irm.V1Alpha2
         partial void Modify_SearchSimilarIncidentsApiCall(ref gaxgrpc::ApiCall<SearchSimilarIncidentsRequest, SearchSimilarIncidentsResponse> call);
         partial void Modify_CreateAnnotationApiCall(ref gaxgrpc::ApiCall<CreateAnnotationRequest, Annotation> call);
         partial void Modify_ListAnnotationsApiCall(ref gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> call);
-        partial void Modify_UpdateAnnotationApiCall(ref gaxgrpc::ApiCall<UpdateAnnotationRequest, Annotation> call);
         partial void Modify_CreateTagApiCall(ref gaxgrpc::ApiCall<CreateTagRequest, Tag> call);
         partial void Modify_DeleteTagApiCall(ref gaxgrpc::ApiCall<DeleteTagRequest, pbwkt::Empty> call);
         partial void Modify_ListTagsApiCall(ref gaxgrpc::ApiCall<ListTagsRequest, ListTagsResponse> call);
         partial void Modify_CreateSignalApiCall(ref gaxgrpc::ApiCall<CreateSignalRequest, Signal> call);
-        partial void Modify_ListSignalsApiCall(ref gaxgrpc::ApiCall<ListSignalsRequest, ListSignalsResponse> call);
+        partial void Modify_SearchSignalsApiCall(ref gaxgrpc::ApiCall<SearchSignalsRequest, SearchSignalsResponse> call);
         partial void Modify_GetSignalApiCall(ref gaxgrpc::ApiCall<GetSignalRequest, Signal> call);
         partial void Modify_UpdateSignalApiCall(ref gaxgrpc::ApiCall<UpdateSignalRequest, Signal> call);
-        partial void Modify_AcknowledgeSignalApiCall(ref gaxgrpc::ApiCall<AcknowledgeSignalRequest, AcknowledgeSignalResponse> call);
         partial void Modify_EscalateIncidentApiCall(ref gaxgrpc::ApiCall<EscalateIncidentRequest, EscalateIncidentResponse> call);
         partial void Modify_CreateArtifactApiCall(ref gaxgrpc::ApiCall<CreateArtifactRequest, Artifact> call);
         partial void Modify_ListArtifactsApiCall(ref gaxgrpc::ApiCall<ListArtifactsRequest, ListArtifactsResponse> call);
         partial void Modify_UpdateArtifactApiCall(ref gaxgrpc::ApiCall<UpdateArtifactRequest, Artifact> call);
         partial void Modify_DeleteArtifactApiCall(ref gaxgrpc::ApiCall<DeleteArtifactRequest, pbwkt::Empty> call);
-        partial void Modify_GetShiftHandoffPresetsApiCall(ref gaxgrpc::ApiCall<GetShiftHandoffPresetsRequest, ShiftHandoffPresets> call);
         partial void Modify_SendShiftHandoffApiCall(ref gaxgrpc::ApiCall<SendShiftHandoffRequest, SendShiftHandoffResponse> call);
         partial void Modify_CreateSubscriptionApiCall(ref gaxgrpc::ApiCall<CreateSubscriptionRequest, Subscription> call);
+        partial void Modify_UpdateSubscriptionApiCall(ref gaxgrpc::ApiCall<UpdateSubscriptionRequest, Subscription> call);
         partial void Modify_ListSubscriptionsApiCall(ref gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> call);
         partial void Modify_DeleteSubscriptionApiCall(ref gaxgrpc::ApiCall<DeleteSubscriptionRequest, pbwkt::Empty> call);
         partial void Modify_CreateIncidentRoleAssignmentApiCall(ref gaxgrpc::ApiCall<CreateIncidentRoleAssignmentRequest, IncidentRoleAssignment> call);
@@ -5688,23 +5370,21 @@ namespace Google.Cloud.Irm.V1Alpha2
         partial void Modify_SearchSimilarIncidentsRequest(ref SearchSimilarIncidentsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateAnnotationRequest(ref CreateAnnotationRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListAnnotationsRequest(ref ListAnnotationsRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_UpdateAnnotationRequest(ref UpdateAnnotationRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateTagRequest(ref CreateTagRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteTagRequest(ref DeleteTagRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListTagsRequest(ref ListTagsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateSignalRequest(ref CreateSignalRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_ListSignalsRequest(ref ListSignalsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_SearchSignalsRequest(ref SearchSignalsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetSignalRequest(ref GetSignalRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateSignalRequest(ref UpdateSignalRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_AcknowledgeSignalRequest(ref AcknowledgeSignalRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_EscalateIncidentRequest(ref EscalateIncidentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateArtifactRequest(ref CreateArtifactRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListArtifactsRequest(ref ListArtifactsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateArtifactRequest(ref UpdateArtifactRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteArtifactRequest(ref DeleteArtifactRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_GetShiftHandoffPresetsRequest(ref GetShiftHandoffPresetsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SendShiftHandoffRequest(ref SendShiftHandoffRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateSubscriptionRequest(ref CreateSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateSubscriptionRequest(ref UpdateSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListSubscriptionsRequest(ref ListSubscriptionsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteSubscriptionRequest(ref DeleteSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateIncidentRoleAssignmentRequest(ref CreateIncidentRoleAssignmentRequest request, ref gaxgrpc::CallSettings settings);
@@ -6006,46 +5686,6 @@ namespace Google.Cloud.Irm.V1Alpha2
         }
 
         /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<Annotation> UpdateAnnotationAsync(
-            UpdateAnnotationRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateAnnotationRequest(ref request, ref callSettings);
-            return _callUpdateAnnotation.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Updates an annotation on an existing incident.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Annotation UpdateAnnotation(
-            UpdateAnnotationRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateAnnotationRequest(ref request, ref callSettings);
-            return _callUpdateAnnotation.Sync(request, callSettings);
-        }
-
-        /// <summary>
         /// Creates a tag on an existing incident.
         /// </summary>
         /// <param name="request">
@@ -6215,12 +5855,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Signal"/> resources.
         /// </returns>
-        public override gax::PagedAsyncEnumerable<ListSignalsResponse, Signal> ListSignalsAsync(
-            ListSignalsRequest request,
+        public override gax::PagedAsyncEnumerable<SearchSignalsResponse, Signal> SearchSignalsAsync(
+            SearchSignalsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_ListSignalsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSignalsRequest, ListSignalsResponse, Signal>(_callListSignals, request, callSettings);
+            Modify_SearchSignalsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchSignalsRequest, SearchSignalsResponse, Signal>(_callSearchSignals, request, callSettings);
         }
 
         /// <summary>
@@ -6236,12 +5876,12 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// <returns>
         /// A pageable sequence of <see cref="Signal"/> resources.
         /// </returns>
-        public override gax::PagedEnumerable<ListSignalsResponse, Signal> ListSignals(
-            ListSignalsRequest request,
+        public override gax::PagedEnumerable<SearchSignalsResponse, Signal> SearchSignals(
+            SearchSignalsRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
-            Modify_ListSignalsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListSignalsRequest, ListSignalsResponse, Signal>(_callListSignals, request, callSettings);
+            Modify_SearchSignalsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchSignalsRequest, SearchSignalsResponse, Signal>(_callSearchSignals, request, callSettings);
         }
 
         /// <summary>
@@ -6285,7 +5925,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         }
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="request">
@@ -6306,7 +5946,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         }
 
         /// <summary>
-        /// Updates an existing signal (e.g. to assign/unassign it to an
+        /// Updates an existing signal (for example, to assign/unassign it to an
         /// incident).
         /// </summary>
         /// <param name="request">
@@ -6324,48 +5964,6 @@ namespace Google.Cloud.Irm.V1Alpha2
         {
             Modify_UpdateSignalRequest(ref request, ref callSettings);
             return _callUpdateSignal.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<AcknowledgeSignalResponse> AcknowledgeSignalAsync(
-            AcknowledgeSignalRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_AcknowledgeSignalRequest(ref request, ref callSettings);
-            return _callAcknowledgeSignal.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Acks a signal. This acknowledges the signal in the underlying system,
-        /// indicating that the caller takes responsibility for looking into this.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override AcknowledgeSignalResponse AcknowledgeSignal(
-            AcknowledgeSignalRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_AcknowledgeSignalRequest(ref request, ref callSettings);
-            return _callAcknowledgeSignal.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -6566,48 +6164,6 @@ namespace Google.Cloud.Irm.V1Alpha2
         }
 
         /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<ShiftHandoffPresets> GetShiftHandoffPresetsAsync(
-            GetShiftHandoffPresetsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetShiftHandoffPresetsRequest(ref request, ref callSettings);
-            return _callGetShiftHandoffPresets.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns "presets" specific to shift handoff (see SendShiftHandoff), e.g.
-        /// default values for handoff message fields.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override ShiftHandoffPresets GetShiftHandoffPresets(
-            GetShiftHandoffPresetsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetShiftHandoffPresetsRequest(ref request, ref callSettings);
-            return _callGetShiftHandoffPresets.Sync(request, callSettings);
-        }
-
-        /// <summary>
         /// Sends a summary of the shift for oncall handoff.
         /// </summary>
         /// <param name="request">
@@ -6691,6 +6247,46 @@ namespace Google.Cloud.Irm.V1Alpha2
         {
             Modify_CreateSubscriptionRequest(ref request, ref callSettings);
             return _callCreateSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Subscription> UpdateSubscriptionAsync(
+            UpdateSubscriptionRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubscriptionRequest(ref request, ref callSettings);
+            return _callUpdateSubscription.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Subscription UpdateSubscription(
+            UpdateSubscriptionRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubscriptionRequest(ref request, ref callSettings);
+            return _callUpdateSubscription.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -7127,8 +6723,8 @@ namespace Google.Cloud.Irm.V1Alpha2
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class ListSignalsRequest : gaxgrpc::IPageRequest { }
-    public partial class ListSignalsResponse : gaxgrpc::IPageResponse<Signal>
+    public partial class SearchSignalsRequest : gaxgrpc::IPageRequest { }
+    public partial class SearchSignalsResponse : gaxgrpc::IPageResponse<Signal>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
