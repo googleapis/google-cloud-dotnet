@@ -15,12 +15,15 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.Common
 {
     public class ApiMetadata
     {
+        private static readonly Regex PrereleaseApiPattern = new Regex(@"^V[1-9]\d*[^\d]+.*$");
+
         private static readonly Regex ReleaseVersion = new Regex(@"^[1-9]\d*\.\d+\.\d+$");
 
         public string Version { get; set; }
@@ -47,6 +50,21 @@ namespace Google.Cloud.Tools.Common
         public List<string> MetaApis { get; set; } // TODO: enum?
 
         public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
+
+        // TODO: Optimize to do this lazily if it's ever an issue
+        public bool CanHaveGaRelease
+        {
+            get
+            {
+                string[] parts = Id.Split('.');
+                // Three possibilities:
+                // - GA API, e.g. Google.Cloud.Spanner.V1
+                // - Prerelease API, e.g. Google.Cloud.Spanner.V1Beta1 or Google.Cloud.Spanner.V1P1Beta1
+                // - Non-API, e.g. Google.Cloud.Spanner.Data
+                // We can create GA packages for the first and the last.
+                return !PrereleaseApiPattern.IsMatch(parts.Last());
+            }
+        }
 
         public static List<ApiMetadata> LoadApis()
         {
