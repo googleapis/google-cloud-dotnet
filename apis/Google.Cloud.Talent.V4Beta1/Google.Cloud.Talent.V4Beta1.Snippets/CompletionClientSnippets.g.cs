@@ -43,7 +43,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                Name = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
                 Query = "",
                 PageSize = 0,
             };
@@ -61,7 +61,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                Name = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
                 Query = "",
                 PageSize = 0,
             };

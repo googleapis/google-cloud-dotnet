@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gaxres = Google.Api.Gax.ResourceNames;
 using sys = System;
 using linq = System.Linq;
 
@@ -117,7 +118,7 @@ namespace Google.Cloud.Talent.V4Beta1
     /// </summary>
     public sealed partial class JobName : gax::IResourceName, sys::IEquatable<JobName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobs/{job}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobs/{jobs}");
 
         /// <summary>
         /// Parses the given job resource name in string form into a new
@@ -165,11 +166,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="jobId">The job ID. Must not be <c>null</c>.</param>
-        public JobName(string projectId, string jobId)
+        /// <param name="jobsId">The jobs ID. Must not be <c>null</c>.</param>
+        public JobName(string projectId, string jobsId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            JobId = gax::GaxPreconditions.CheckNotNull(jobId, nameof(jobId));
+            JobsId = gax::GaxPreconditions.CheckNotNull(jobsId, nameof(jobsId));
         }
 
         /// <summary>
@@ -178,15 +179,15 @@ namespace Google.Cloud.Talent.V4Beta1
         public string ProjectId { get; }
 
         /// <summary>
-        /// The job ID. Never <c>null</c>.
+        /// The jobs ID. Never <c>null</c>.
         /// </summary>
-        public string JobId { get; }
+        public string JobsId { get; }
 
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, JobId);
+        public override string ToString() => s_template.Expand(ProjectId, JobsId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
@@ -304,5 +305,277 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
 
+    public partial class BatchDeleteJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Company
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyName CompanyName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CompleteQueryRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ProjectName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : gaxres::ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateClientEventRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateCompanyRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateJobRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateProfileRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyName ParentAsCompanyName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteCompanyRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyName CompanyName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteProfileRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.ProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.ProfileName ProfileName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.ProfileName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetCompanyRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyName CompanyName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetProfileRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.ProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.ProfileName ProfileName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.ProfileName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Job
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.JobName JobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.JobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListCompaniesRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListProfilesRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyName ParentAsCompanyName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ParseResumeRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Profile
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.ProfileName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.ProfileName ProfileName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.ProfileName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class SearchJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class SearchProfilesRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyName ParentAsCompanyName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

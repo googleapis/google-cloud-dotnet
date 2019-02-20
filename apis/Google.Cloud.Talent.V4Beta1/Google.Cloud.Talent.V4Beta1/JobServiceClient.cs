@@ -16,9 +16,11 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
+using st = SearchJobsResponse.Types;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -550,12 +552,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> CreateJobAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Job job,
             gaxgrpc::CallSettings callSettings = null) => CreateJobAsync(
                 new CreateJobRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
@@ -586,7 +588,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> CreateJobAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Job job,
             st::CancellationToken cancellationToken) => CreateJobAsync(
                 parent,
@@ -619,12 +621,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job CreateJob(
-            string parent,
+            gaxres::ProjectName parent,
             Job job,
             gaxgrpc::CallSettings callSettings = null) => CreateJob(
                 new CreateJobRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
@@ -713,11 +715,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> GetJobAsync(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => GetJobAsync(
                 new GetJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -740,7 +742,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> GetJobAsync(
-            string name,
+            JobName name,
             st::CancellationToken cancellationToken) => GetJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -764,11 +766,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job GetJob(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => GetJob(
                 new GetJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -992,11 +994,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteJobAsync(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteJobAsync(
                 new DeleteJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1021,7 +1023,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteJobAsync(
-            string name,
+            JobName name,
             st::CancellationToken cancellationToken) => DeleteJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1044,11 +1046,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteJob(
-            string name,
+            JobName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteJob(
                 new DeleteJobRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1158,14 +1160,14 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable asynchronous sequence of <see cref="Job"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
-            string parent,
+            gaxres::ProjectName parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListJobsAsync(
                 new ListJobsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1216,14 +1218,14 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable sequence of <see cref="Job"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
-            string parent,
+            gaxres::ProjectName parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListJobs(
                 new ListJobsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1301,12 +1303,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task BatchDeleteJobsAsync(
-            string parent,
+            gaxres::ProjectName parent,
             string filter,
             gaxgrpc::CallSettings callSettings = null) => BatchDeleteJobsAsync(
                 new BatchDeleteJobsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 },
                 callSettings);
@@ -1344,7 +1346,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task BatchDeleteJobsAsync(
-            string parent,
+            gaxres::ProjectName parent,
             string filter,
             st::CancellationToken cancellationToken) => BatchDeleteJobsAsync(
                 parent,
@@ -1381,12 +1383,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void BatchDeleteJobs(
-            string parent,
+            gaxres::ProjectName parent,
             string filter,
             gaxgrpc::CallSettings callSettings = null) => BatchDeleteJobs(
                 new BatchDeleteJobsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 },
                 callSettings);
@@ -2030,4 +2032,18 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
+    public partial class SearchJobsRequest : gaxgrpc::IPageRequest { }
+    public partial class SearchJobsResponse : gaxgrpc::IPageResponse<SearchJobsResponse.Types.MatchingJob>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public scg::IEnumerator<SearchJobsResponse.Types.MatchingJob> GetEnumerator() => MatchingJobs.GetEnumerator();
+
+        /// <inheritdoc/>
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+
 }

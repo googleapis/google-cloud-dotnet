@@ -18,6 +18,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -39,12 +40,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             CreateJobRequest expectedRequest = new CreateJobRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -60,9 +61,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Job job = new Job();
-            Job response = client.CreateJob(formattedParent, job);
+            Job response = client.CreateJob(parent, job);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -73,12 +74,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             CreateJobRequest expectedRequest = new CreateJobRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -94,9 +95,9 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Job job = new Job();
-            Job response = await client.CreateJobAsync(formattedParent, job);
+            Job response = await client.CreateJobAsync(parent, job);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -107,12 +108,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -139,12 +140,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             CreateJobRequest request = new CreateJobRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Job = new Job(),
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -171,11 +172,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             GetJobRequest expectedRequest = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -191,8 +192,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.GetJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
-            Job response = client.GetJob(formattedName);
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
+            Job response = client.GetJob(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -203,11 +204,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             GetJobRequest expectedRequest = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -223,8 +224,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.GetJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Job>(Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
-            Job response = await client.GetJobAsync(formattedName);
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
+            Job response = await client.GetJobAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -235,11 +236,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -266,11 +267,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             GetJobRequest request = new GetJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Job expectedResponse = new Job
             {
-                Name = "name2-1052831874",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -301,7 +302,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -333,7 +334,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -365,7 +366,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -396,7 +397,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Job expectedResponse = new Job
             {
-                Name = "name3373707",
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
                 CompanyName = "companyName1429880077",
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
@@ -423,14 +424,14 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             DeleteJobRequest expectedRequest = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJob(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
-            client.DeleteJob(formattedName);
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
+            client.DeleteJob(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -440,14 +441,14 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             DeleteJobRequest expectedRequest = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJobAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new JobName("[PROJECT]", "[JOB]").ToString();
-            await client.DeleteJobAsync(formattedName);
+            JobName name = new JobName("[PROJECT]", "[JOBS]");
+            await client.DeleteJobAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -457,7 +458,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJob(request, It.IsAny<CallOptions>()))
@@ -473,7 +474,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             DeleteJobRequest request = new DeleteJobRequest
             {
-                Name = new JobName("[PROJECT]", "[JOB]").ToString(),
+                JobName = new JobName("[PROJECT]", "[JOBS]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, It.IsAny<CallOptions>()))
@@ -489,16 +490,16 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             BatchDeleteJobsRequest expectedRequest = new BatchDeleteJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "filter-1274492040",
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.BatchDeleteJobs(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "filter-1274492040";
-            client.BatchDeleteJobs(formattedParent, filter);
+            client.BatchDeleteJobs(parent, filter);
             mockGrpcClient.VerifyAll();
         }
 
@@ -508,16 +509,16 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             BatchDeleteJobsRequest expectedRequest = new BatchDeleteJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "filter-1274492040",
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.BatchDeleteJobsAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             JobServiceClient client = new JobServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "filter-1274492040";
-            await client.BatchDeleteJobsAsync(formattedParent, filter);
+            await client.BatchDeleteJobsAsync(parent, filter);
             mockGrpcClient.VerifyAll();
         }
 
@@ -527,7 +528,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "filter-1274492040",
             };
             Empty expectedResponse = new Empty();
@@ -544,7 +545,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Filter = "filter-1274492040",
             };
             Empty expectedResponse = new Empty();
