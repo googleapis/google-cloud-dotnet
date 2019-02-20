@@ -43,24 +43,19 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             ProjectName parent = new ProjectName(projectId);
 
             // Create the initial incident
-            incident = client.CreateIncident(incident, parent.ToString());
+            incident = client.CreateIncident(incident, parent);
             Console.WriteLine($"Created incident {incident.Name}");
 
-            // TODO: Simplify this:
-            // - (Config issue) We should be able to use IncidentName everywhere.
-            string incidentId = IncidentName.Parse(incident.Name).IncidentId;
-            string fullIncidentName = new IncidentName(projectId, incidentId).ToString();
-
-            // Resolve it
+            // Resolve the inciedent
             Incident patch = new Incident
             {
-                Name = incident.Name,
+                IncidentName = incident.IncidentName,
                 Stage = Stage.Resolved
             };
             client.UpdateIncident(patch, new FieldMask { Paths = { "stage" } });
 
             // Fetch and display
-            Incident fetched = client.GetIncident(fullIncidentName);
+            Incident fetched = client.GetIncident(incident.IncidentName);
             Console.WriteLine($"Updated incident:");
             Console.WriteLine(fetched);
         }
