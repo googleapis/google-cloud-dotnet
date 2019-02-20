@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Grpc.Core;
@@ -131,7 +132,15 @@ namespace Google.Cloud.Spanner.Data
 
         internal IReadOnlyList<Statistics> GetStatistics() =>
             _targetedPools.ToArray().Select(tp => tp.Value.GetStatisticsSnapshot()).ToList().AsReadOnly();
-        
+
+        internal SessionPool.DatabaseStatistics GetDatabaseStatistics(SpannerClientCreationOptions options, DatabaseName databaseName)
+        {
+            GaxPreconditions.CheckNotNull(options, nameof(options));
+            GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            _targetedPools.TryGetValue(options, out var targetedPool);
+            return targetedPool?.SessionPoolOrNull?.GetStatisticsSnapshot(databaseName);
+        }
+
         // TODO: We *may* want a method to get the session pool statistics for a specific database,
         // e.g. GetStatistics(SessionPoolOptions, DatabaseName) but we don't currently have a need for it.
         // It would only be for convenience.
