@@ -29,7 +29,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Asset Inventory API.",
     "dependencies": {
-      "Google.LongRunning": "1.1.0-beta01",
+      "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0-beta01"
     },
     "tags": [ "asset", "inventory", "assets" ]
@@ -71,7 +71,7 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0",
+      "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Cloud.Bigtable.Common.V2": "project"
     },
@@ -130,7 +130,7 @@
     "description": "Recommended Google client library to access the Google Cloud Dataproc API, which manages Hadoop-based clusters and jobs on Google Cloud Platform.",
     "tags": [ "Dataproc", "Hadoop" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0"
+      "Google.LongRunning": "1.1.0"
     }
   },
 
@@ -262,7 +262,7 @@
     "description": "Recommended Google client library to access the Google Dialogflow API.",
     "tags": [ "dialogflow", "iot" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0"
+      "Google.LongRunning": "1.1.0"
     },
     "testDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.4"
@@ -344,7 +344,7 @@
     "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0"
+      "Google.LongRunning": "1.1.0"
     }
   },
 
@@ -549,7 +549,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
-      "Google.LongRunning": "1.0.0"
+      "Google.LongRunning": "1.1.0"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -572,7 +572,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
     "dependencies": {
-      "Google.LongRunning": "1.0.0"
+      "Google.LongRunning": "1.1.0"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -586,7 +586,7 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0",
+      "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
@@ -601,7 +601,7 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0",
+      "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.0.0",
       "Google.Cloud.Spanner.Common.V1": "project"
     }
@@ -680,7 +680,7 @@
     "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
     "tags": [ "Speech" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0",
+      "Google.LongRunning": "1.1.0",
     }
   },
 
@@ -713,7 +713,7 @@
     "description": "Recommended Google client library to access the Google Cloud Talent solution API which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
     "tags": [ "Talent", "Jobs" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0"
+      "Google.LongRunning": "1.1.0"
     }
   },
 
@@ -796,7 +796,7 @@
     "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
-      "Google.LongRunning": "1.0.0",
+      "Google.LongRunning": "1.1.0",
     }
   },
 
