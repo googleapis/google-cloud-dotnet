@@ -277,7 +277,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2898")]
         public void DownloadGzippedFile()
         {
             // The file has a Content-Encoding of gzip, and it's stored compressed.
