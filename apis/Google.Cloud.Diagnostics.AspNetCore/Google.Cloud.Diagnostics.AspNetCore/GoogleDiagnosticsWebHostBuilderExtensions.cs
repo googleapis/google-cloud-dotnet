@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api;
+using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -56,22 +57,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="builder">The <see cref="IWebHostBuilder"/> instance.</param>
         /// <param name="projectIdGetter">
         /// A function that takes a <see cref="WebHostBuilderContext"/> and retrieves the Google Cloud Platform project ID.
-        /// If unspecified and running on GAE/GCE/GKE the project ID will be detected from the platform.
+        /// Cannot be null but can return a null value for the project ID, in such a case
+        /// and if running on GAE/GCE/GKE the project ID will be detected from the platform.
         /// </param>
         /// <param name="serviceNameGetter">
         /// A function that takes a <see cref="WebHostBuilderContext"/> and retrieves the identifier of the service used for exception logging, such as the name of the executable or job.
-        /// If unspecified and running on GAE the service name will be detected from the platform.
+        /// Cannot be null but can return a null value for the service name, in such a case
+        /// and if running on GAE the service name will be detected from the platform.
         /// </param>
         /// <param name="serviceVersionGetter">
         /// A function that takes a <see cref="WebHostBuilderContext"/> and retrieves the version of the service or the source code used for exception logging.
-        /// If unspecified and running on GAE the service version will be detected from the platform.
+        /// Cannot be null but can return a null value for the service version, in such a case
+        /// and if running on GAE the service version will be detected from the platform.
         /// </param>
         /// <returns>The <see cref="IWebHostBuilder"/> instance.</returns>
-        public static IWebHostBuilder UseGoogleDiagnostics(this IWebHostBuilder builder, Func<WebHostBuilderContext, string> projectIdGetter = null, Func<WebHostBuilderContext, string> serviceNameGetter = null, Func<WebHostBuilderContext, string> serviceVersionGetter = null)
+        public static IWebHostBuilder UseGoogleDiagnostics(this IWebHostBuilder builder, Func<WebHostBuilderContext, string> projectIdGetter, Func<WebHostBuilderContext, string> serviceNameGetter, Func<WebHostBuilderContext, string> serviceVersionGetter)
         {
+            GaxPreconditions.CheckNotNull(projectIdGetter, nameof(projectIdGetter));
+            GaxPreconditions.CheckNotNull(serviceNameGetter, nameof(serviceNameGetter));
+            GaxPreconditions.CheckNotNull(serviceVersionGetter, nameof(serviceVersionGetter));
+
             builder.ConfigureServices((context, services) =>
             {
-                ConfigureGoogleDiagnosticsServices(services, projectIdGetter?.Invoke(context), serviceNameGetter?.Invoke(context), serviceVersionGetter?.Invoke(context), null);
+                ConfigureGoogleDiagnosticsServices(services, projectIdGetter(context), serviceNameGetter(context), serviceVersionGetter(context), null);
             });
 
             return builder;
