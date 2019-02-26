@@ -57,7 +57,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// &lt;a href="https://support.google.com/cloud/answer/6158862">API key&lt;/a>
       /// for authentication. To use an API key, append it to the URL as the value of
       /// a `key` parameter. For example:
-      /// &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
+      /// &lt;pre>POST
+      /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -100,7 +101,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// &lt;a href="https://support.google.com/cloud/answer/6158862">API key&lt;/a>
       /// for authentication. To use an API key, append it to the URL as the value of
       /// a `key` parameter. For example:
-      /// &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
+      /// &lt;pre>POST
+      /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -119,7 +121,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// &lt;a href="https://support.google.com/cloud/answer/6158862">API key&lt;/a>
       /// for authentication. To use an API key, append it to the URL as the value of
       /// a `key` parameter. For example:
-      /// &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
+      /// &lt;pre>POST
+      /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -136,7 +139,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// &lt;a href="https://support.google.com/cloud/answer/6158862">API key&lt;/a>
       /// for authentication. To use an API key, append it to the URL as the value of
       /// a `key` parameter. For example:
-      /// &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
+      /// &lt;pre>POST
+      /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -155,7 +159,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// &lt;a href="https://support.google.com/cloud/answer/6158862">API key&lt;/a>
       /// for authentication. To use an API key, append it to the URL as the value of
       /// a `key` parameter. For example:
-      /// &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
+      /// &lt;pre>POST
+      /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
