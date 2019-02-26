@@ -57,7 +57,8 @@ namespace Google.Cloud.Spanner.V1 {
   ///
   /// Keys are represented by lists, where the ith value in the list
   /// corresponds to the ith component of the table or index primary key.
-  /// Individual values are encoded as described [here][google.spanner.v1.TypeCode].
+  /// Individual values are encoded as described
+  /// [here][google.spanner.v1.TypeCode].
   ///
   /// For example, consider the following table definition:
   ///
@@ -528,8 +529,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.KeyRange.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange> ranges_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange>();
     /// <summary>
-    /// A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more information about
-    /// key range specifications.
+    /// A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more
+    /// information about key range specifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange> Ranges {

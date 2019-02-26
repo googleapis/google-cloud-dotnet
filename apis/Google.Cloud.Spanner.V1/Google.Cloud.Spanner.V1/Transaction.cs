@@ -221,7 +221,8 @@ namespace Google.Cloud.Spanner.V1 {
   /// reads should be executed within a transaction or at an exact read
   /// timestamp.
   ///
-  /// See [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].
+  /// See
+  /// [TransactionOptions.ReadOnly.strong][google.spanner.v1.TransactionOptions.ReadOnly.strong].
   ///
   /// ### Exact Staleness
   ///
@@ -242,7 +243,9 @@ namespace Google.Cloud.Spanner.V1 {
   /// equivalent boundedly stale concurrency modes. On the other hand,
   /// boundedly stale reads usually return fresher results.
   ///
-  /// See [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp] and
+  /// See
+  /// [TransactionOptions.ReadOnly.read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.read_timestamp]
+  /// and
   /// [TransactionOptions.ReadOnly.exact_staleness][google.spanner.v1.TransactionOptions.ReadOnly.exact_staleness].
   ///
   /// ### Bounded Staleness
@@ -272,7 +275,9 @@ namespace Google.Cloud.Spanner.V1 {
   /// which rows will be read, it can only be used with single-use
   /// read-only transactions.
   ///
-  /// See [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness] and
+  /// See
+  /// [TransactionOptions.ReadOnly.max_staleness][google.spanner.v1.TransactionOptions.ReadOnly.max_staleness]
+  /// and
   /// [TransactionOptions.ReadOnly.min_read_timestamp][google.spanner.v1.TransactionOptions.ReadOnly.min_read_timestamp].
   ///
   /// ### Old Read Timestamps and Garbage Collection
@@ -990,7 +995,8 @@ namespace Google.Cloud.Spanner.V1 {
         private bool returnReadTimestamp_;
         /// <summary>
         /// If true, the Cloud Spanner-selected read timestamp is included in
-        /// the [Transaction][google.spanner.v1.Transaction] message that describes the transaction.
+        /// the [Transaction][google.spanner.v1.Transaction] message that describes
+        /// the transaction.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ReturnReadTimestamp {
@@ -1417,7 +1423,8 @@ namespace Google.Cloud.Spanner.V1 {
   /// [Read][google.spanner.v1.Spanner.Read] or
   /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] call runs.
   ///
-  /// See [TransactionOptions][google.spanner.v1.TransactionOptions] for more information about transactions.
+  /// See [TransactionOptions][google.spanner.v1.TransactionOptions] for more
+  /// information about transactions.
   /// </summary>
   public sealed partial class TransactionSelector : pb::IMessage<TransactionSelector> {
     private static readonly pb::MessageParser<TransactionSelector> _parser = new pb::MessageParser<TransactionSelector>(() => new TransactionSelector());
@@ -1499,7 +1506,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Begin a new transaction and execute this read or SQL query in
     /// it. The transaction ID of the new transaction is returned in
-    /// [ResultSetMetadata.transaction][google.spanner.v1.ResultSetMetadata.transaction], which is a [Transaction][google.spanner.v1.Transaction].
+    /// [ResultSetMetadata.transaction][google.spanner.v1.ResultSetMetadata.transaction],
+    /// which is a [Transaction][google.spanner.v1.Transaction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.TransactionOptions Begin {

@@ -399,7 +399,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     /// Required. The number of nodes allocated to this instance. This may be zero
     /// in API responses for instances that are not yet in state `READY`.
     ///
-    /// See [the documentation](https://cloud.google.com/spanner/docs/instances#node_count)
+    /// See [the
+    /// documentation](https://cloud.google.com/spanner/docs/instances#node_count)
     /// for more information about nodes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -415,10 +416,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State state_ = 0;
     /// <summary>
     /// Output only. The current instance state. For
-    /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance], the state must be
-    /// either omitted or set to `CREATING`. For
-    /// [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance], the state must be
-    /// either omitted or set to `READY`.
+    /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance],
+    /// the state must be either omitted or set to `CREATING`. For
+    /// [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance],
+    /// the state must be either omitted or set to `READY`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Types.State State {
@@ -647,7 +648,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The request for [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs].
+  /// The request for
+  /// [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs].
   /// </summary>
   public sealed partial class ListInstanceConfigsRequest : pb::IMessage<ListInstanceConfigsRequest> {
     private static readonly pb::MessageParser<ListInstanceConfigsRequest> _parser = new pb::MessageParser<ListInstanceConfigsRequest>(() => new ListInstanceConfigsRequest());
@@ -722,7 +724,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     /// <summary>
     /// If non-empty, `page_token` should contain a
     /// [next_page_token][google.spanner.admin.instance.v1.ListInstanceConfigsResponse.next_page_token]
-    /// from a previous [ListInstanceConfigsResponse][google.spanner.admin.instance.v1.ListInstanceConfigsResponse].
+    /// from a previous
+    /// [ListInstanceConfigsResponse][google.spanner.admin.instance.v1.ListInstanceConfigsResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -849,7 +852,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The response for [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs].
+  /// The response for
+  /// [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs].
   /// </summary>
   public sealed partial class ListInstanceConfigsResponse : pb::IMessage<ListInstanceConfigsResponse> {
     private static readonly pb::MessageParser<ListInstanceConfigsResponse> _parser = new pb::MessageParser<ListInstanceConfigsResponse>(() => new ListInstanceConfigsResponse());
@@ -904,8 +908,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// `next_page_token` can be sent in a subsequent
-    /// [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs] call to
-    /// fetch more of the matching instance configurations.
+    /// [ListInstanceConfigs][google.spanner.admin.instance.v1.InstanceAdmin.ListInstanceConfigs]
+    /// call to fetch more of the matching instance configurations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1146,7 +1150,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The request for [GetInstance][google.spanner.admin.instance.v1.InstanceAdmin.GetInstance].
+  /// The request for
+  /// [GetInstance][google.spanner.admin.instance.v1.InstanceAdmin.GetInstance].
   /// </summary>
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest> {
     private static readonly pb::MessageParser<GetInstanceRequest> _parser = new pb::MessageParser<GetInstanceRequest>(() => new GetInstanceRequest());
@@ -1282,7 +1287,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The request for [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance].
+  /// The request for
+  /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance].
   /// </summary>
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest> {
     private static readonly pb::MessageParser<CreateInstanceRequest> _parser = new pb::MessageParser<CreateInstanceRequest>(() => new CreateInstanceRequest());
@@ -1489,7 +1495,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The request for [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances].
+  /// The request for
+  /// [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances].
   /// </summary>
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest> {
     private static readonly pb::MessageParser<ListInstancesRequest> _parser = new pb::MessageParser<ListInstancesRequest>(() => new ListInstancesRequest());
@@ -1563,8 +1570,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// If non-empty, `page_token` should contain a
-    /// [next_page_token][google.spanner.admin.instance.v1.ListInstancesResponse.next_page_token] from a
-    /// previous [ListInstancesResponse][google.spanner.admin.instance.v1.ListInstancesResponse].
+    /// [next_page_token][google.spanner.admin.instance.v1.ListInstancesResponse.next_page_token]
+    /// from a previous
+    /// [ListInstancesResponse][google.spanner.admin.instance.v1.ListInstancesResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1739,7 +1747,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The response for [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances].
+  /// The response for
+  /// [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances].
   /// </summary>
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse> {
     private static readonly pb::MessageParser<ListInstancesResponse> _parser = new pb::MessageParser<ListInstancesResponse>(() => new ListInstancesResponse());
@@ -1794,8 +1803,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// `next_page_token` can be sent in a subsequent
-    /// [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances] call to fetch more
-    /// of the matching instances.
+    /// [ListInstances][google.spanner.admin.instance.v1.InstanceAdmin.ListInstances]
+    /// call to fetch more of the matching instances.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1899,7 +1908,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The request for [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance].
+  /// The request for
+  /// [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance].
   /// </summary>
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest> {
     private static readonly pb::MessageParser<UpdateInstanceRequest> _parser = new pb::MessageParser<UpdateInstanceRequest>(() => new UpdateInstanceRequest());
@@ -1941,7 +1951,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private global::Google.Cloud.Spanner.Admin.Instance.V1.Instance instance_;
     /// <summary>
     /// Required. The instance to update, which must always include the instance
-    /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+    /// name.  Otherwise, only fields mentioned in
+    /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
+    /// be included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.Admin.Instance.V1.Instance Instance {
@@ -1955,10 +1967,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int FieldMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
     /// <summary>
-    /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
-    /// The field mask must always be specified; this prevents any future fields in
-    /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
-    /// about them.
+    /// Required. A mask specifying which fields in
+    /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should
+    /// be updated. The field mask must always be specified; this prevents any
+    /// future fields in
+    /// [][google.spanner.admin.instance.v1.Instance] from being erased
+    /// accidentally by clients that do not know about them.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
@@ -2081,7 +2095,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   }
 
   /// <summary>
-  /// The request for [DeleteInstance][google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstance].
+  /// The request for
+  /// [DeleteInstance][google.spanner.admin.instance.v1.InstanceAdmin.DeleteInstance].
   /// </summary>
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest> {
     private static readonly pb::MessageParser<DeleteInstanceRequest> _parser = new pb::MessageParser<DeleteInstanceRequest>(() => new DeleteInstanceRequest());
@@ -2276,8 +2291,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
     /// The time at which the
-    /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance] request was
-    /// received.
+    /// [CreateInstance][google.spanner.admin.instance.v1.InstanceAdmin.CreateInstance]
+    /// request was received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -2532,7 +2547,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public const int StartTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// The time at which [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance]
+    /// The time at which
+    /// [UpdateInstance][google.spanner.admin.instance.v1.InstanceAdmin.UpdateInstance]
     /// request was received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

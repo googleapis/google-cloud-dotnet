@@ -59,7 +59,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
   #region Messages
   /// <summary>
-  /// Node information for nodes appearing in a [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].
+  /// Node information for nodes appearing in a
+  /// [QueryPlan.plan_nodes][google.spanner.v1.QueryPlan.plan_nodes].
   /// </summary>
   public sealed partial class PlanNode : pb::IMessage<PlanNode> {
     private static readonly pb::MessageParser<PlanNode> _parser = new pb::MessageParser<PlanNode>(() => new PlanNode());
@@ -105,7 +106,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int IndexFieldNumber = 1;
     private int index_;
     /// <summary>
-    /// The `PlanNode`'s index in [node list][google.spanner.v1.QueryPlan.plan_nodes].
+    /// The `PlanNode`'s index in [node
+    /// list][google.spanner.v1.QueryPlan.plan_nodes].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Index {
@@ -121,9 +123,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Used to determine the type of node. May be needed for visualizing
     /// different kinds of nodes differently. For example, If the node is a
-    /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] node, it will have a condensed representation
-    /// which can be used to directly embed a description of the node in its
-    /// parent.
+    /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] node, it will have a
+    /// condensed representation which can be used to directly embed a description
+    /// of the node in its parent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind Kind {
@@ -164,7 +166,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ShortRepresentationFieldNumber = 5;
     private global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation shortRepresentation_;
     /// <summary>
-    /// Condensed representation for [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] nodes.
+    /// Condensed representation for
+    /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] nodes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation ShortRepresentation {
@@ -406,8 +409,8 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// The kind of [PlanNode][google.spanner.v1.PlanNode]. Distinguishes between the two different kinds of
-      /// nodes that can appear in a query plan.
+      /// The kind of [PlanNode][google.spanner.v1.PlanNode]. Distinguishes between
+      /// the two different kinds of nodes that can appear in a query plan.
       /// </summary>
       public enum Kind {
         /// <summary>
@@ -504,14 +507,14 @@ namespace Google.Cloud.Spanner.V1 {
         public const int VariableFieldNumber = 3;
         private string variable_ = "";
         /// <summary>
-        /// Only present if the child node is [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] and corresponds
-        /// to an output variable of the parent node. The field carries the name of
-        /// the output variable.
-        /// For example, a `TableScan` operator that reads rows from a table will
-        /// have child links to the `SCALAR` nodes representing the output variables
-        /// created for each column that is read by the operator. The corresponding
-        /// `variable` fields will be set to the variable names assigned to the
-        /// columns.
+        /// Only present if the child node is
+        /// [SCALAR][google.spanner.v1.PlanNode.Kind.SCALAR] and corresponds to an
+        /// output variable of the parent node. The field carries the name of the
+        /// output variable. For example, a `TableScan` operator that reads rows from
+        /// a table will have child links to the `SCALAR` nodes representing the
+        /// output variables created for each column that is read by the operator.
+        /// The corresponding `variable` fields will be set to the variable names
+        /// assigned to the columns.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Variable {
@@ -849,8 +852,8 @@ namespace Google.Cloud.Spanner.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.PlanNode> planNodes_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.PlanNode>();
     /// <summary>
     /// The nodes in the query plan. Plan nodes are returned in pre-order starting
-    /// with the plan root. Each [PlanNode][google.spanner.v1.PlanNode]'s `id` corresponds to its index in
-    /// `plan_nodes`.
+    /// with the plan root. Each [PlanNode][google.spanner.v1.PlanNode]'s `id`
+    /// corresponds to its index in `plan_nodes`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.PlanNode> PlanNodes {

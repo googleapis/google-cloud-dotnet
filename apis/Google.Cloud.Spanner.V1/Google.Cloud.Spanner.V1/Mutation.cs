@@ -141,9 +141,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "insert_or_update" field.</summary>
     public const int InsertOrUpdateFieldNumber = 3;
     /// <summary>
-    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row already exists, then
-    /// its column values are overwritten with the ones provided. Any
-    /// column values not explicitly written are preserved.
+    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row
+    /// already exists, then its column values are overwritten with the ones
+    /// provided. Any column values not explicitly written are preserved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write InsertOrUpdate {
@@ -157,10 +157,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "replace" field.</summary>
     public const int ReplaceFieldNumber = 4;
     /// <summary>
-    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row already exists, it is
-    /// deleted, and the column values provided are inserted
-    /// instead. Unlike [insert_or_update][google.spanner.v1.Mutation.insert_or_update], this means any values not
-    /// explicitly written become `NULL`.
+    /// Like [insert][google.spanner.v1.Mutation.insert], except that if the row
+    /// already exists, it is deleted, and the column values provided are
+    /// inserted instead. Unlike
+    /// [insert_or_update][google.spanner.v1.Mutation.insert_or_update], this
+    /// means any values not explicitly written become `NULL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write Replace {
@@ -404,7 +405,9 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Arguments to [insert][google.spanner.v1.Mutation.insert], [update][google.spanner.v1.Mutation.update], [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
+      /// Arguments to [insert][google.spanner.v1.Mutation.insert],
+      /// [update][google.spanner.v1.Mutation.update],
+      /// [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
       /// [replace][google.spanner.v1.Mutation.replace] operations.
       /// </summary>
       public sealed partial class Write : pb::IMessage<Write> {
@@ -463,7 +466,8 @@ namespace Google.Cloud.Spanner.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// The names of the columns in [table][google.spanner.v1.Mutation.Write.table] to be written.
+        /// The names of the columns in
+        /// [table][google.spanner.v1.Mutation.Write.table] to be written.
         ///
         /// The list of columns must contain enough columns to allow
         /// Cloud Spanner to derive values for all primary key columns in the
@@ -483,11 +487,13 @@ namespace Google.Cloud.Spanner.V1 {
         /// The values to be written. `values` can contain more than one
         /// list of values. If it does, then multiple rows are written, one
         /// for each entry in `values`. Each list in `values` must have
-        /// exactly as many entries as there are entries in [columns][google.spanner.v1.Mutation.Write.columns]
-        /// above. Sending multiple lists is equivalent to sending multiple
-        /// `Mutation`s, each containing one `values` entry and repeating
-        /// [table][google.spanner.v1.Mutation.Write.table] and [columns][google.spanner.v1.Mutation.Write.columns]. Individual values in each list are
-        /// encoded as described [here][google.spanner.v1.TypeCode].
+        /// exactly as many entries as there are entries in
+        /// [columns][google.spanner.v1.Mutation.Write.columns] above. Sending
+        /// multiple lists is equivalent to sending multiple `Mutation`s, each
+        /// containing one `values` entry and repeating
+        /// [table][google.spanner.v1.Mutation.Write.table] and
+        /// [columns][google.spanner.v1.Mutation.Write.columns]. Individual values in
+        /// each list are encoded as described [here][google.spanner.v1.TypeCode].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> Values {
@@ -652,9 +658,10 @@ namespace Google.Cloud.Spanner.V1 {
         public const int KeySetFieldNumber = 2;
         private global::Google.Cloud.Spanner.V1.KeySet keySet_;
         /// <summary>
-        /// Required. The primary keys of the rows within [table][google.spanner.v1.Mutation.Delete.table] to delete.
-        /// Delete is idempotent. The transaction will succeed even if some or all
-        /// rows do not exist.
+        /// Required. The primary keys of the rows within
+        /// [table][google.spanner.v1.Mutation.Delete.table] to delete. Delete is
+        /// idempotent. The transaction will succeed even if some or all rows do not
+        /// exist.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Spanner.V1.KeySet KeySet {

@@ -1441,9 +1441,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-        ///     restoring resources to their pre-request values. The operation
-        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
+        ///     and begins restoring resources to their pre-request values. The
+        ///     operation is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -1470,13 +1470,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// name.  Otherwise, only fields mentioned in
+        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
+        /// be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
-        /// The field mask must always be specified; this prevents any future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
-        /// about them.
+        /// Required. A mask specifying which fields in
+        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should
+        /// be updated. The field mask must always be specified; this prevents any
+        /// future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased
+        /// accidentally by clients that do not know about them.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1510,9 +1514,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-        ///     restoring resources to their pre-request values. The operation
-        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
+        ///     and begins restoring resources to their pre-request values. The
+        ///     operation is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -1539,13 +1543,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// name.  Otherwise, only fields mentioned in
+        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
+        /// be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
-        /// The field mask must always be specified; this prevents any future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
-        /// about them.
+        /// Required. A mask specifying which fields in
+        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should
+        /// be updated. The field mask must always be specified; this prevents any
+        /// future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased
+        /// accidentally by clients that do not know about them.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1576,9 +1584,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-        ///     restoring resources to their pre-request values. The operation
-        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
+        ///     and begins restoring resources to their pre-request values. The
+        ///     operation is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -1605,13 +1613,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="instance">
         /// Required. The instance to update, which must always include the instance
-        /// name.  Otherwise, only fields mentioned in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need be included.
+        /// name.  Otherwise, only fields mentioned in
+        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.field_mask] need
+        /// be included.
         /// </param>
         /// <param name="fieldMask">
-        /// Required. A mask specifying which fields in [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should be updated.
-        /// The field mask must always be specified; this prevents any future fields in
-        /// [][google.spanner.admin.instance.v1.Instance] from being erased accidentally by clients that do not know
-        /// about them.
+        /// Required. A mask specifying which fields in
+        /// [][google.spanner.admin.instance.v1.UpdateInstanceRequest.instance] should
+        /// be updated. The field mask must always be specified; this prevents any
+        /// future fields in
+        /// [][google.spanner.admin.instance.v1.Instance] from being erased
+        /// accidentally by clients that do not know about them.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1645,9 +1657,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-        ///     restoring resources to their pre-request values. The operation
-        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
+        ///     and begins restoring resources to their pre-request values. The
+        ///     operation is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -1716,9 +1728,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-        ///     restoring resources to their pre-request values. The operation
-        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
+        ///     and begins restoring resources to their pre-request values. The
+        ///     operation is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -2849,9 +2861,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-        ///     restoring resources to their pre-request values. The operation
-        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
+        ///     and begins restoring resources to their pre-request values. The
+        ///     operation is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request
@@ -2909,9 +2921,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// Until completion of the returned operation:
         ///
         ///   * Cancelling the operation sets its metadata's
-        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-        ///     restoring resources to their pre-request values. The operation
-        ///     is guaranteed to succeed at undoing all resource changes,
+        ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time],
+        ///     and begins restoring resources to their pre-request values. The
+        ///     operation is guaranteed to succeed at undoing all resource changes,
         ///     after which point it terminates with a `CANCELLED` status.
         ///   * All other attempts to modify the instance are rejected.
         ///   * Reading the instance via the API continues to give the pre-request

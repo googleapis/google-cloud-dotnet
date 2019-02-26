@@ -716,8 +716,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -754,8 +754,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -789,8 +789,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -827,8 +827,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -866,8 +866,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -1033,7 +1033,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1065,7 +1066,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1094,7 +1096,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1126,7 +1129,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1164,7 +1168,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2088,8 +2093,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -2116,8 +2121,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">
@@ -2190,7 +2195,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2217,7 +2223,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
