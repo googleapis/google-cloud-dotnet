@@ -47,17 +47,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
-        public async Task NoExceptions()
-        {
-            var response = await _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.Index)}/{_testId}");
-
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-
-            var errorEvents = s_polling.GetEvents(_testId, 0);
-            Assert.Empty(errorEvents);
-        }
-
-        [Fact]
         public async Task ManualLog()
         {
             var response = await _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchLog)}/{_testId}");
