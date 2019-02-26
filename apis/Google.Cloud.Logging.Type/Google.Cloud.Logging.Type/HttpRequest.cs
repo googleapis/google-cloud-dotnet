@@ -182,7 +182,8 @@ namespace Google.Cloud.Logging.Type {
     private string userAgent_ = "";
     /// <summary>
     /// The user agent sent by the client. Example:
-    /// `"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461; .NET CLR 1.0.3705)"`.
+    /// `"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461; .NET
+    /// CLR 1.0.3705)"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserAgent {
@@ -227,7 +228,8 @@ namespace Google.Cloud.Logging.Type {
     private string referer_ = "";
     /// <summary>
     /// The referer URL of the request, as defined in
-    /// [HTTP/1.1 Header Field Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+    /// [HTTP/1.1 Header Field
+    /// Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Referer {

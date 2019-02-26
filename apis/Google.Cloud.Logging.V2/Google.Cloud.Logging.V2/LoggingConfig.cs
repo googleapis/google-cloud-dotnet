@@ -1199,7 +1199,8 @@ namespace Google.Cloud.Logging.V2 {
     /// If this field is set to true, or if the sink is owned by a non-project
     /// resource such as an organization, then the value of `writer_identity` will
     /// be a unique service account used only for exports from the new sink.  For
-    /// more information, see `writer_identity` in [LogSink][google.logging.v2.LogSink].
+    /// more information, see `writer_identity` in
+    /// [LogSink][google.logging.v2.LogSink].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool UniqueWriterIdentity {
@@ -2763,8 +2764,9 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>
     /// Required. A nonempty list of fields to change in the existing exclusion.
     /// New values for the fields are taken from the corresponding fields in the
-    /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
-    /// `update_mask` are not changed and are ignored in the request.
+    /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
+    /// Fields not mentioned in `update_mask` are not changed and are ignored in
+    /// the request.
     ///
     /// For example, to change the filter and description of an exclusion,
     /// specify an `update_mask` of `"filter,description"`.
