@@ -3,7 +3,7 @@
 //     source: google/cloud/talent/v4beta1/profile_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -150,12 +150,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
 
       /// <summary>
-      /// Searches for profiles within a company.
+      /// Searches for profiles within a tenant.
       ///
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -411,12 +413,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteProfile, null, options, request);
       }
       /// <summary>
-      /// Searches for profiles within a company.
+      /// Searches for profiles within a tenant.
       ///
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -428,12 +432,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return SearchProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for profiles within a company.
+      /// Searches for profiles within a tenant.
       ///
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -443,12 +449,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchProfiles, null, options, request);
       }
       /// <summary>
-      /// Searches for profiles within a company.
+      /// Searches for profiles within a tenant.
       ///
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -460,12 +468,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return SearchProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for profiles within a company.
+      /// Searches for profiles within a tenant.
       ///
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

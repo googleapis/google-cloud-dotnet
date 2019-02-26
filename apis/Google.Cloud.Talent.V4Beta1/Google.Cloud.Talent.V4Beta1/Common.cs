@@ -130,13 +130,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "UEVSU09OQUwQARIICgRXT1JLEAISCgoGU0NIT09MEAMqcQoQSHRtbFNhbml0",
             "aXphdGlvbhIhCh1IVE1MX1NBTklUSVpBVElPTl9VTlNQRUNJRklFRBAAEh4K",
             "GkhUTUxfU0FOSVRJWkFUSU9OX0RJU0FCTEVEEAESGgoWU0lNUExFX0ZPUk1B",
-            "VFRJTkdfT05MWRACQnkKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
-            "YTFCC0NvbW1vblByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RT",
-            "YgZwcm90bzM="));
+            "VFRJTkdfT05MWRACKnsKDUNvbW11dGVNZXRob2QSHgoaQ09NTVVURV9NRVRI",
+            "T0RfVU5TUEVDSUZJRUQQABILCgdEUklWSU5HEAESCwoHVFJBTlNJVBACEgsK",
+            "B1dBTEtJTkcQAxILCgdDWUNMSU5HEAQSFgoSVFJBTlNJVF9BQ0NFU1NJQkxF",
+            "EAVCeQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUILQ29tbW9u",
+            "UHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimestampRange), global::Google.Cloud.Talent.V4Beta1.TimestampRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Location), global::Google.Cloud.Talent.V4Beta1.Location.Parser, new[]{ "LocationType", "PostalAddress", "LatLng", "RadiusMiles" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.RequestMetadata), global::Google.Cloud.Talent.V4Beta1.RequestMetadata.Parser, new[]{ "Domain", "SessionId", "UserId", "AllowMissingIds", "DeviceInfo" }, null, null, null),
@@ -344,7 +346,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The job is offered as a contracted position with the understanding
     /// that it's converted into a full-time position at the end of the
     /// contract. Jobs of this type are also returned by a search for
-    /// [EmploymentType.CONTRACTOR][google.cloud.talent.v4beta1.EmploymentType.CONTRACTOR] jobs.
+    /// [EmploymentType.CONTRACTOR][google.cloud.talent.v4beta1.EmploymentType.CONTRACTOR]
+    /// jobs.
     /// </summary>
     [pbr::OriginalName("CONTRACT_TO_HIRE")] ContractToHire = 4,
     /// <summary>
@@ -558,10 +561,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [pbr::OriginalName("POSTING_REGION_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// In addition to exact location matching, job posting is returned when the
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in the search query is in the same administrative area
-    /// as the returned job posting. For example, if a `ADMINISTRATIVE_AREA` job
-    /// is posted in "CA, USA", it's returned if [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] has
-    /// "Mountain View".
+    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in the search
+    /// query is in the same administrative area as the returned job posting. For
+    /// example, if a `ADMINISTRATIVE_AREA` job is posted in "CA, USA", it's
+    /// returned if [LocationFilter][google.cloud.talent.v4beta1.LocationFilter]
+    /// has "Mountain View".
     ///
     /// Administrative area refers to top-level administrative subdivision of this
     /// country. For example, US state, IT region, UK constituent nation and
@@ -570,9 +574,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [pbr::OriginalName("ADMINISTRATIVE_AREA")] AdministrativeArea = 1,
     /// <summary>
     /// In addition to exact location matching, job is returned when
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in search query is in the same country as this job.
-    /// For example, if a `NATION_WIDE` job is posted in "USA", it's
-    /// returned if [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] has 'Mountain View'.
+    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in search
+    /// query is in the same country as this job. For example, if a `NATION_WIDE`
+    /// job is posted in "USA", it's returned if
+    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] has 'Mountain
+    /// View'.
     /// </summary>
     [pbr::OriginalName("NATION")] Nation = 2,
     /// <summary>
@@ -650,6 +656,38 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// unordered list markup tags.
     /// </summary>
     [pbr::OriginalName("SIMPLE_FORMATTING_ONLY")] SimpleFormattingOnly = 2,
+  }
+
+  /// <summary>
+  /// Method for commute.
+  /// </summary>
+  public enum CommuteMethod {
+    /// <summary>
+    /// Commute method isn't specified.
+    /// </summary>
+    [pbr::OriginalName("COMMUTE_METHOD_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Commute time is calculated based on driving time.
+    /// </summary>
+    [pbr::OriginalName("DRIVING")] Driving = 1,
+    /// <summary>
+    /// Commute time is calculated based on public transit including bus, metro,
+    /// subway, etc.
+    /// </summary>
+    [pbr::OriginalName("TRANSIT")] Transit = 2,
+    /// <summary>
+    /// Commute time is calculated based on walking time.
+    /// </summary>
+    [pbr::OriginalName("WALKING")] Walking = 3,
+    /// <summary>
+    /// Commute time is calculated based on biking time.
+    /// </summary>
+    [pbr::OriginalName("CYCLING")] Cycling = 4,
+    /// <summary>
+    /// Commute time is calculated based on public transit that is wheelchair
+    /// accessible.
+    /// </summary>
+    [pbr::OriginalName("TRANSIT_ACCESSIBLE")] TransitAccessible = 5,
   }
 
   #endregion
@@ -1195,7 +1233,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DomainFieldNumber = 1;
     private string domain_ = "";
     /// <summary>
-    /// Required if [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids] is unset or `false`.
+    /// Required if
+    /// [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids]
+    /// is unset or `false`.
     ///
     /// The client-defined scope or source of the service call, which typically
     /// is the domain on
@@ -1223,7 +1263,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SessionIdFieldNumber = 2;
     private string sessionId_ = "";
     /// <summary>
-    /// Required if [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids] is unset or `false`.
+    /// Required if
+    /// [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids]
+    /// is unset or `false`.
     ///
     /// A unique session identification string. A session is defined as the
     /// duration of an end user's interaction with the service over a certain
@@ -1248,7 +1290,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UserIdFieldNumber = 3;
     private string userId_ = "";
     /// <summary>
-    /// Required if [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids] is unset or `false`.
+    /// Required if
+    /// [allow_missing_ids][google.cloud.talent.v4beta1.RequestMetadata.allow_missing_ids]
+    /// is unset or `false`.
     ///
     /// A unique user identification string, as determined by the client.
     /// To have the strongest positive impact on search quality
@@ -1275,10 +1319,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// If set to `true`, [domain][google.cloud.talent.v4beta1.RequestMetadata.domain], [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] are optional.
-    /// Only set when any of these fields isn't available for some reason. It
-    /// is highly recommended not to set this field and provide accurate
-    /// [domain][google.cloud.talent.v4beta1.RequestMetadata.domain], [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] for the best service experience.
+    /// If set to `true`,
+    /// [domain][google.cloud.talent.v4beta1.RequestMetadata.domain],
+    /// [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and
+    /// [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] are
+    /// optional. Only set when any of these fields isn't available for some
+    /// reason. It is highly recommended not to set this field and provide accurate
+    /// [domain][google.cloud.talent.v4beta1.RequestMetadata.domain],
+    /// [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and
+    /// [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] for the best
+    /// service experience.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowMissingIds {
@@ -1859,8 +1909,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> stringValues_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional but exactly one of [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values] or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] must
-    /// be specified.
+    /// Optional but exactly one of
+    /// [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values]
+    /// or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values]
+    /// must be specified.
     ///
     /// This field is used to perform a string match (`CASE_SENSITIVE_MATCH` or
     /// `CASE_INSENSITIVE_MATCH`) search.
@@ -1882,13 +1934,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForInt64(18);
     private readonly pbc::RepeatedField<long> longValues_ = new pbc::RepeatedField<long>();
     /// <summary>
-    /// Optional but exactly one of [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values] or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] must
-    /// be specified.
+    /// Optional but exactly one of
+    /// [string_values][google.cloud.talent.v4beta1.CustomAttribute.string_values]
+    /// or [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values]
+    /// must be specified.
     ///
     /// This field is used to perform number range search.
     /// (`EQ`, `GT`, `GE`, `LE`, `LT`) over filterable `long_value`.
     ///
-    /// Currently at most 1 [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] is supported.
+    /// Currently at most 1
+    /// [long_values][google.cloud.talent.v4beta1.CustomAttribute.long_values] is
+    /// supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<long> LongValues {
@@ -2272,8 +2328,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Job compensation information.
     ///
     /// At most one entry can be of type
-    /// [CompensationInfo.CompensationType.BASE][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.BASE], which is
-    /// referred as ** base compensation entry ** for the job.
+    /// [CompensationInfo.CompensationType.BASE][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.BASE],
+    /// which is referred as ** base compensation entry ** for the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry> Entries {
@@ -2288,7 +2344,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// base compensation entry's [CompensationEntry.compensation][] times
     /// [CompensationEntry.expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year].
     ///
-    /// See [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for explanation on compensation annualization.
+    /// See
+    /// [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
+    /// for explanation on compensation annualization.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange AnnualizedBaseCompensationRange {
@@ -2306,7 +2364,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// all compensation entries' [CompensationEntry.compensation][] times
     /// [CompensationEntry.expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year].
     ///
-    /// See [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for explanation on compensation annualization.
+    /// See
+    /// [CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
+    /// for explanation on compensation annualization.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange AnnualizedTotalCompensationRange {
@@ -2443,19 +2503,30 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// The type of compensation.
       ///
       /// For compensation amounts specified in non-monetary amounts,
-      /// describe the compensation scheme in the [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description].
+      /// describe the compensation scheme in the
+      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description].
       ///
       /// For example, tipping format is described in
-      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description] (for example, “expect 15-20% tips based
-      /// on customer bill.”) and an estimate of the tips provided in
-      /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range] ($10 per hour).
+      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
+      /// (for example, "expect 15-20% tips based on customer bill.") and an estimate
+      /// of the tips provided in
+      /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
+      /// or
+      /// [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range]
+      /// ($10 per hour).
       ///
-      /// For example, equity is described in [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
-      /// (for example, “1% - 2% equity vesting over 4 years, 1 year cliff”) and
-      /// value estimated in [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or
-      /// [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range]. If no value estimate is possible, units are
-      /// [CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED] and then further
-      /// clarified in [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description] field.
+      /// For example, equity is described in
+      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
+      /// (for example, "1% - 2% equity vesting over 4 years, 1 year cliff") and
+      /// value estimated in
+      /// [CompensationEntry.amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
+      /// or
+      /// [CompensationEntry.range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range].
+      /// If no value estimate is possible, units are
+      /// [CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED]
+      /// and then further clarified in
+      /// [CompensationEntry.description][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.description]
+      /// field.
       /// </summary>
       public enum CompensationType {
         /// <summary>
@@ -2542,9 +2613,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// as base pay, bonus, or other compensation type.
       ///
       /// Annualization: One compensation entry can be annualized if
-      /// - it contains valid [amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range].
-      /// - and its [expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year] is set or can be derived.
-      /// Its annualized range is determined as ([amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount] or [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range]) times
+      /// - it contains valid
+      /// [amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
+      /// or
+      /// [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range].
+      /// - and its
+      /// [expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year]
+      /// is set or can be derived. Its annualized range is determined as
+      /// ([amount][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.amount]
+      /// or
+      /// [range][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.range])
+      /// times
       /// [expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year].
       /// </summary>
       public sealed partial class CompensationEntry : pb::IMessage<CompensationEntry> {
@@ -2619,7 +2698,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         ///
         /// Frequency of the specified amount.
         ///
-        /// Default is [CompensationUnit.OTHER_COMPENSATION_UNIT][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.OTHER_COMPENSATION_UNIT].
+        /// Default is
+        /// [CompensationUnit.OTHER_COMPENSATION_UNIT][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.OTHER_COMPENSATION_UNIT].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit Unit {
@@ -2687,8 +2767,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// Optional.
         ///
         /// Expected number of units paid each year. If not specified, when
-        /// [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types] is FULLTIME, a default value is inferred
-        /// based on [unit][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.unit]. Default values:
+        /// [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types]
+        /// is FULLTIME, a default value is inferred based on
+        /// [unit][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.unit].
+        /// Default values:
         /// - HOURLY: 2080
         /// - DAILY: 260
         /// - WEEKLY: 52

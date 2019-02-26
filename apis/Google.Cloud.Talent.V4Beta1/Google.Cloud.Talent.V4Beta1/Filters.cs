@@ -88,54 +88,51 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "dGlvbl9yYW5nZRgEIAEoCCKGAQoKRmlsdGVyVHlwZRIbChdGSUxURVJfVFlQ",
             "RV9VTlNQRUNJRklFRBAAEg0KCVVOSVRfT05MWRABEhMKD1VOSVRfQU5EX0FN",
             "T1VOVBACEhoKFkFOTlVBTElaRURfQkFTRV9BTU9VTlQQAxIbChdBTk5VQUxJ",
-            "WkVEX1RPVEFMX0FNT1VOVBAEIskECg1Db21tdXRlRmlsdGVyElAKDmNvbW11",
-            "dGVfbWV0aG9kGAEgASgOMjguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LkNvbW11dGVGaWx0ZXIuQ29tbXV0ZU1ldGhvZBIuChFzdGFydF9jb29yZGlu",
-            "YXRlcxgCIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxIyCg90cmF2ZWxfZHVy",
-            "YXRpb24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SIQoZYWxs",
-            "b3dfaW1wcmVjaXNlX2FkZHJlc3NlcxgEIAEoCBJOCgxyb2FkX3RyYWZmaWMY",
-            "BSABKA4yNi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tbXV0ZUZp",
-            "bHRlci5Sb2FkVHJhZmZpY0gAEjAKDmRlcGFydHVyZV90aW1lGAYgASgLMhYu",
-            "Z29vZ2xlLnR5cGUuVGltZU9mRGF5SAAifQoNQ29tbXV0ZU1ldGhvZBIeChpD",
-            "T01NVVRFX01FVEhPRF9VTlNQRUNJRklFRBAAEgsKB0RSSVZJTkcQARILCgdU",
-            "UkFOU0lUEAISCwoHV0FMS0lORxADEg0KCUJJQ1lDTElORxAEEhYKElRSQU5T",
-            "SVRfQUNDRVNTSUJMRRAFIkwKC1JvYWRUcmFmZmljEhwKGFJPQURfVFJBRkZJ",
-            "Q19VTlNQRUNJRklFRBAAEhAKDFRSQUZGSUNfRlJFRRABEg0KCUJVU1lfSE9V",
-            "UhACQhAKDnRyYWZmaWNfb3B0aW9uIjQKDkpvYlRpdGxlRmlsdGVyEhEKCWpv",
-            "Yl90aXRsZRgBIAEoCRIPCgduZWdhdGVkGAIgASgIIi0KC1NraWxsRmlsdGVy",
-            "Eg0KBXNraWxsGAEgASgJEg8KB25lZ2F0ZWQYAiABKAgioQIKDkVtcGxveWVy",
-            "RmlsdGVyEhAKCGVtcGxveWVyGAEgASgJEkwKBG1vZGUYAiABKA4yPi5nb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRW1wbG95ZXJGaWx0ZXIuRW1wbG95",
-            "ZXJGaWx0ZXJNb2RlEg8KB25lZ2F0ZWQYAyABKAginQEKEkVtcGxveWVyRmls",
-            "dGVyTW9kZRIkCiBFTVBMT1lFUl9GSUxURVJfTU9ERV9VTlNQRUNJRklFRBAA",
-            "EhoKFkFMTF9FTVBMT1lNRU5UX1JFQ09SRFMQARIjCh9DVVJSRU5UX0VNUExP",
-            "WU1FTlRfUkVDT1JEU19PTkxZEAISIAocUEFTVF9FTVBMT1lNRU5UX1JFQ09S",
-            "RFNfT05MWRADIogBCg9FZHVjYXRpb25GaWx0ZXISDgoGc2Nob29sGAEgASgJ",
-            "EhYKDmZpZWxkX29mX3N0dWR5GAIgASgJEjwKC2RlZ3JlZV90eXBlGAMgASgO",
-            "MicuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlZ3JlZVR5cGUSDwoH",
-            "bmVnYXRlZBgGIAEoCCJ8ChRXb3JrRXhwZXJpZW5jZUZpbHRlchIxCg5taW5f",
-            "ZXhwZXJpZW5jZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIx",
-            "Cg5tYXhfZXhwZXJpZW5jZRgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbiJjChVBcHBsaWNhdGlvbkRhdGVGaWx0ZXISJQoKc3RhcnRfZGF0ZRgB",
-            "IAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSIwoIZW5kX2RhdGUYAiABKAsyES5n",
-            "b29nbGUudHlwZS5EYXRlIkkKHkFwcGxpY2F0aW9uT3V0Y29tZVJlYXNvbkZp",
-            "bHRlchIWCg5vdXRjb21lX3JlYXNvbhgBIAEoCRIPCgduZWdhdGVkGAIgASgI",
-            "IkEKGkFwcGxpY2F0aW9uTGFzdFN0YWdlRmlsdGVyEhIKCmxhc3Rfc3RhZ2UY",
-            "ASABKAkSDwoHbmVnYXRlZBgCIAEoCCJoChRBcHBsaWNhdGlvbkpvYkZpbHRl",
-            "chIQCghqb2JfbmFtZRgBIAEoCRIaChJqb2JfcmVxdWlzaXRpb25faWQYAiAB",
-            "KAkSEQoJam9iX3RpdGxlGAMgASgJEg8KB25lZ2F0ZWQYBCABKAgihQEKF0Fw",
-            "cGxpY2F0aW9uU3RhdHVzRmlsdGVyElkKEmFwcGxpY2F0aW9uX3N0YXR1cxgB",
-            "IAEoDjI9Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2JBcHBsaWNh",
-            "dGlvbi5BcHBsaWNhdGlvblN0YXR1cxIPCgduZWdhdGVkGAIgASgIIvwBCgpU",
-            "aW1lRmlsdGVyEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBJFCgp0aW1lX2ZpZWxkGAMgASgOMjEuZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLlRpbWVGaWx0ZXIuVGltZUZpZWxkIkkKCVRp",
-            "bWVGaWVsZBIaChZUSU1FX0ZJRUxEX1VOU1BFQ0lGSUVEEAASDwoLQ1JFQVRF",
-            "X1RJTUUQARIPCgtVUERBVEVfVElNRRACQnoKH2NvbS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTFCDEZpbHRlcnNQcm90b1ABWkFnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGEx",
-            "O3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "WkVEX1RPVEFMX0FNT1VOVBAEIrwDCg1Db21tdXRlRmlsdGVyEkIKDmNvbW11",
+            "dGVfbWV0aG9kGAEgASgOMiouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkNvbW11dGVNZXRob2QSLgoRc3RhcnRfY29vcmRpbmF0ZXMYAiABKAsyEy5n",
+            "b29nbGUudHlwZS5MYXRMbmcSMgoPdHJhdmVsX2R1cmF0aW9uGAMgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiEKGWFsbG93X2ltcHJlY2lzZV9h",
+            "ZGRyZXNzZXMYBCABKAgSTgoMcm9hZF90cmFmZmljGAUgASgOMjYuZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLkNvbW11dGVGaWx0ZXIuUm9hZFRyYWZm",
+            "aWNIABIwCg5kZXBhcnR1cmVfdGltZRgGIAEoCzIWLmdvb2dsZS50eXBlLlRp",
+            "bWVPZkRheUgAIkwKC1JvYWRUcmFmZmljEhwKGFJPQURfVFJBRkZJQ19VTlNQ",
+            "RUNJRklFRBAAEhAKDFRSQUZGSUNfRlJFRRABEg0KCUJVU1lfSE9VUhACQhAK",
+            "DnRyYWZmaWNfb3B0aW9uIjQKDkpvYlRpdGxlRmlsdGVyEhEKCWpvYl90aXRs",
+            "ZRgBIAEoCRIPCgduZWdhdGVkGAIgASgIIi0KC1NraWxsRmlsdGVyEg0KBXNr",
+            "aWxsGAEgASgJEg8KB25lZ2F0ZWQYAiABKAgioQIKDkVtcGxveWVyRmlsdGVy",
+            "EhAKCGVtcGxveWVyGAEgASgJEkwKBG1vZGUYAiABKA4yPi5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuRW1wbG95ZXJGaWx0ZXIuRW1wbG95ZXJGaWx0",
+            "ZXJNb2RlEg8KB25lZ2F0ZWQYAyABKAginQEKEkVtcGxveWVyRmlsdGVyTW9k",
+            "ZRIkCiBFTVBMT1lFUl9GSUxURVJfTU9ERV9VTlNQRUNJRklFRBAAEhoKFkFM",
+            "TF9FTVBMT1lNRU5UX1JFQ09SRFMQARIjCh9DVVJSRU5UX0VNUExPWU1FTlRf",
+            "UkVDT1JEU19PTkxZEAISIAocUEFTVF9FTVBMT1lNRU5UX1JFQ09SRFNfT05M",
+            "WRADIogBCg9FZHVjYXRpb25GaWx0ZXISDgoGc2Nob29sGAEgASgJEhYKDmZp",
+            "ZWxkX29mX3N0dWR5GAIgASgJEjwKC2RlZ3JlZV90eXBlGAMgASgOMicuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlZ3JlZVR5cGUSDwoHbmVnYXRl",
+            "ZBgGIAEoCCJ8ChRXb3JrRXhwZXJpZW5jZUZpbHRlchIxCg5taW5fZXhwZXJp",
+            "ZW5jZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5tYXhf",
+            "ZXhwZXJpZW5jZRgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJj",
+            "ChVBcHBsaWNhdGlvbkRhdGVGaWx0ZXISJQoKc3RhcnRfZGF0ZRgBIAEoCzIR",
+            "Lmdvb2dsZS50eXBlLkRhdGUSIwoIZW5kX2RhdGUYAiABKAsyES5nb29nbGUu",
+            "dHlwZS5EYXRlIkkKHkFwcGxpY2F0aW9uT3V0Y29tZVJlYXNvbkZpbHRlchIW",
+            "Cg5vdXRjb21lX3JlYXNvbhgBIAEoCRIPCgduZWdhdGVkGAIgASgIIkEKGkFw",
+            "cGxpY2F0aW9uTGFzdFN0YWdlRmlsdGVyEhIKCmxhc3Rfc3RhZ2UYASABKAkS",
+            "DwoHbmVnYXRlZBgCIAEoCCJoChRBcHBsaWNhdGlvbkpvYkZpbHRlchIQCghq",
+            "b2JfbmFtZRgBIAEoCRIaChJqb2JfcmVxdWlzaXRpb25faWQYAiABKAkSEQoJ",
+            "am9iX3RpdGxlGAMgASgJEg8KB25lZ2F0ZWQYBCABKAgihQEKF0FwcGxpY2F0",
+            "aW9uU3RhdHVzRmlsdGVyElkKEmFwcGxpY2F0aW9uX3N0YXR1cxgBIAEoDjI9",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2JBcHBsaWNhdGlvbi5B",
+            "cHBsaWNhdGlvblN0YXR1cxIPCgduZWdhdGVkGAIgASgIIvwBCgpUaW1lRmls",
+            "dGVyEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBJFCgp0aW1lX2ZpZWxkGAMgASgOMjEuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLlRpbWVGaWx0ZXIuVGltZUZpZWxkIkkKCVRpbWVGaWVs",
+            "ZBIaChZUSU1FX0ZJRUxEX1VOU1BFQ0lGSUVEEAASDwoLQ1JFQVRFX1RJTUUQ",
+            "ARIPCgtVUERBVEVfVElNRRACQnoKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTFCDEZpbHRlcnNQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVu",
+            "dKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -143,7 +140,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeReasonFilters", "ApplicationLastStageFilters", "ApplicationJobFilters", "ApplicationStatusFilters", "CustomFieldFilter" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter), global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser, new[]{ "Address", "RegionCode", "LatLng", "DistanceInMiles", "TelecommutePreference", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter), global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Parser, new[]{ "Type", "Units", "Range", "IncludeJobsWithUnspecifiedCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter), global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Parser, new[]{ "CommuteMethod", "StartCoordinates", "TravelDuration", "AllowImpreciseAddresses", "RoadTraffic", "DepartureTime" }, new[]{ "TrafficOption" }, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter), global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Parser, new[]{ "CommuteMethod", "StartCoordinates", "TravelDuration", "AllowImpreciseAddresses", "RoadTraffic", "DepartureTime" }, new[]{ "TrafficOption" }, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobTitleFilter), global::Google.Cloud.Talent.V4Beta1.JobTitleFilter.Parser, new[]{ "JobTitle", "Negated" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SkillFilter), global::Google.Cloud.Talent.V4Beta1.SkillFilter.Parser, new[]{ "Skill", "Negated" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EmployerFilter), global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Parser, new[]{ "Employer", "Mode", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode) }, null),
@@ -266,15 +263,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// The location filter specifies geo-regions containing the jobs to
-    /// search against. See [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] for more information.
+    /// search against. See
+    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] for more
+    /// information.
     ///
     /// If a location value isn't specified, jobs fitting the other search
     /// criteria are retrieved regardless of where they're located.
     ///
     /// If multiple values are specified, jobs are retrieved from any of the
     /// specified locations. If different values are specified for the
-    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles] parameter, the maximum provided
-    /// distance is used for all locations.
+    /// [LocationFilter.distance_in_miles][google.cloud.talent.v4beta1.LocationFilter.distance_in_miles]
+    /// parameter, the maximum provided distance is used for all locations.
     ///
     /// At most 5 location filters are allowed.
     /// </summary>
@@ -356,10 +355,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// This search filter is applied only to
-    /// [Job.compensation_info][google.cloud.talent.v4beta1.Job.compensation_info]. For example, if the filter is specified
-    /// as "Hourly job with per-hour compensation > $15", only jobs meeting
-    /// these criteria are searched. If a filter isn't defined, all open jobs
-    /// are searched.
+    /// [Job.compensation_info][google.cloud.talent.v4beta1.Job.compensation_info].
+    /// For example, if the filter is specified as "Hourly job with per-hour
+    /// compensation > $15", only jobs meeting these criteria are searched. If a
+    /// filter isn't defined, all open jobs are searched.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationFilter CompensationFilter {
@@ -376,7 +375,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// This filter specifies a structured syntax to match against the
-    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes] marked as `filterable`.
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
+    /// marked as `filterable`.
     ///
     /// The syntax for this expression is a subset of SQL syntax.
     ///
@@ -435,7 +435,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// The employment type filter specifies the employment type of jobs to
-    /// search against, such as [EmploymentType.FULL_TIME][google.cloud.talent.v4beta1.EmploymentType.FULL_TIME].
+    /// search against, such as
+    /// [EmploymentType.FULL_TIME][google.cloud.talent.v4beta1.EmploymentType.FULL_TIME].
     ///
     /// If a value isn't specified, jobs in the search results includes any
     /// employment type.
@@ -837,8 +838,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If a location filter isn't specified, profiles fitting the other search
     /// criteria are retrieved regardless of where they're located.
     ///
-    /// If [LocationFilter.negated][google.cloud.talent.v4beta1.LocationFilter.negated] is specified, the result doesn't contain
-    /// profiles from that location.
+    /// If
+    /// [LocationFilter.negated][google.cloud.talent.v4beta1.LocationFilter.negated]
+    /// is specified, the result doesn't contain profiles from that location.
     ///
     /// For example, search for profiles with addresses in "New York City".
     /// </summary>
@@ -862,8 +864,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple values are specified, profiles are retrieved with any of the
     /// specified job titles.
     ///
-    /// If [JobTitleFilter.negated][google.cloud.talent.v4beta1.JobTitleFilter.negated] is specified, the result won't contain
-    /// profiles with the job titles.
+    /// If
+    /// [JobTitleFilter.negated][google.cloud.talent.v4beta1.JobTitleFilter.negated]
+    /// is specified, the result won't contain profiles with the job titles.
     ///
     /// For example, search for profiles with a job title "Product Manager".
     /// </summary>
@@ -888,8 +891,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple employer filters are specified, profiles with any matching
     /// employers are retrieved.
     ///
-    /// If [EmployerFilter.negated][google.cloud.talent.v4beta1.EmployerFilter.negated] is specified, the result won't contain
-    /// profiles that match the employers.
+    /// If
+    /// [EmployerFilter.negated][google.cloud.talent.v4beta1.EmployerFilter.negated]
+    /// is specified, the result won't contain profiles that match the employers.
     ///
     /// For example, search for profiles that have working experience at "Google
     /// LLC".
@@ -915,8 +919,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple education filters are specified, profiles that match any
     /// education filters are retrieved.
     ///
-    /// If [EducationFilter.negated][google.cloud.talent.v4beta1.EducationFilter.negated] is specified, the result won't contain
-    /// profiles that match the educations.
+    /// If
+    /// [EducationFilter.negated][google.cloud.talent.v4beta1.EducationFilter.negated]
+    /// is specified, the result won't contain profiles that match the educations.
     ///
     /// For example, search for profiles with a master degree.
     /// </summary>
@@ -940,8 +945,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// If multiple skill filters are specified, profiles that match any skill
     /// filters are retrieved.
     ///
-    /// If [SkillFilter.negated][google.cloud.talent.v4beta1.SkillFilter.negated] is specified, the result won't contain profiles
-    /// that match the skills.
+    /// If [SkillFilter.negated][google.cloud.talent.v4beta1.SkillFilter.negated]
+    /// is specified, the result won't contain profiles that match the skills.
     ///
     /// For example, search for profiles that have "Java" and "Python" in skill
     /// list.
@@ -1094,7 +1099,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// This filter specifies a structured syntax to match against the
-    /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes] that are marked as `filterable`.
+    /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes]
+    /// that are marked as `filterable`.
     ///
     /// The syntax for this expression is a subset of Google SQL syntax.
     ///
@@ -1479,12 +1485,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Allows the client to return jobs without a
     /// set location, specifically, telecommuting jobs (telecomuting is considered
     /// by the service as a special location.
-    /// [Job.posting_region][google.cloud.talent.v4beta1.Job.posting_region] indicates if a job permits telecommuting.
-    /// If this field is set to [TelecommutePreference.TELECOMMUTE_ALLOWED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_ALLOWED],
-    /// telecommuting jobs are searched, and [address][google.cloud.talent.v4beta1.LocationFilter.address] and [lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] are
-    /// ignored. If not set or set to
-    /// [TelecommutePreference.TELECOMMUTE_EXCLUDED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_EXCLUDED], telecommute job are not
-    /// searched.
+    /// [Job.posting_region][google.cloud.talent.v4beta1.Job.posting_region]
+    /// indicates if a job permits telecommuting. If this field is set to
+    /// [TelecommutePreference.TELECOMMUTE_ALLOWED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_ALLOWED],
+    /// telecommuting jobs are searched, and
+    /// [address][google.cloud.talent.v4beta1.LocationFilter.address] and
+    /// [lat_lng][google.cloud.talent.v4beta1.LocationFilter.lat_lng] are ignored.
+    /// If not set or set to
+    /// [TelecommutePreference.TELECOMMUTE_EXCLUDED][google.cloud.talent.v4beta1.LocationFilter.TelecommutePreference.TELECOMMUTE_EXCLUDED],
+    /// telecommute job are not searched.
     ///
     /// This filter can be used by itself to search exclusively for telecommuting
     /// jobs, or it can be combined with another location
@@ -1966,11 +1975,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>
         /// Filter by `base compensation entry's` unit. A job is a match if and
         /// only if the job contains a base CompensationEntry and the base
-        /// CompensationEntry's unit matches provided [units][google.cloud.talent.v4beta1.CompensationFilter.units].
-        /// Populate one or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// CompensationEntry's unit matches provided
+        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units]. Populate
+        /// one or more
+        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         ///
-        /// See [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for definition of
-        /// base compensation entry.
+        /// See
+        /// [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
+        /// for definition of base compensation entry.
         /// </summary>
         [pbr::OriginalName("UNIT_ONLY")] UnitOnly = 1,
         /// <summary>
@@ -1979,20 +1991,27 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// the base entry's unit matches provided [compensation_units][] and amount
         /// or range overlaps with provided [compensation_range][].
         ///
-        /// See [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry] for definition of
-        /// base compensation entry.
+        /// See
+        /// [CompensationInfo.CompensationEntry][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry]
+        /// for definition of base compensation entry.
         ///
-        /// Set exactly one [units][google.cloud.talent.v4beta1.CompensationFilter.units] and populate [range][google.cloud.talent.v4beta1.CompensationFilter.range].
+        /// Set exactly one
+        /// [units][google.cloud.talent.v4beta1.CompensationFilter.units] and
+        /// populate [range][google.cloud.talent.v4beta1.CompensationFilter.range].
         /// </summary>
         [pbr::OriginalName("UNIT_AND_AMOUNT")] UnitAndAmount = 2,
         /// <summary>
         /// Filter by annualized base compensation amount and `base compensation
-        /// entry's` unit. Populate [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// entry's` unit. Populate
+        /// [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or
+        /// more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         /// </summary>
         [pbr::OriginalName("ANNUALIZED_BASE_AMOUNT")] AnnualizedBaseAmount = 3,
         /// <summary>
         /// Filter by annualized total compensation amount and `base compensation
-        /// entry's` unit . Populate [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
+        /// entry's` unit . Populate
+        /// [range][google.cloud.talent.v4beta1.CompensationFilter.range] and zero or
+        /// more [units][google.cloud.talent.v4beta1.CompensationFilter.units].
         /// </summary>
         [pbr::OriginalName("ANNUALIZED_TOTAL_AMOUNT")] AnnualizedTotalAmount = 4,
       }
@@ -2055,14 +2074,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Field number for the "commute_method" field.</summary>
     public const int CommuteMethodFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.CommuteMethod commuteMethod_ = 0;
+    private global::Google.Cloud.Talent.V4Beta1.CommuteMethod commuteMethod_ = 0;
     /// <summary>
     /// Required.
     ///
     /// The method of transportation for which to calculate the commute time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.CommuteMethod CommuteMethod {
+    public global::Google.Cloud.Talent.V4Beta1.CommuteMethod CommuteMethod {
       get { return commuteMethod_; }
       set {
         commuteMethod_ = value;
@@ -2325,7 +2344,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            commuteMethod_ = (global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.CommuteMethod) input.ReadEnum();
+            commuteMethod_ = (global::Google.Cloud.Talent.V4Beta1.CommuteMethod) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2368,38 +2387,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Container for nested types declared in the CommuteFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      /// <summary>
-      /// Method for commute.
-      /// </summary>
-      public enum CommuteMethod {
-        /// <summary>
-        /// Commute method isn't specified.
-        /// </summary>
-        [pbr::OriginalName("COMMUTE_METHOD_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// Commute time is calculated based on driving time.
-        /// </summary>
-        [pbr::OriginalName("DRIVING")] Driving = 1,
-        /// <summary>
-        /// Commute time is calculated based on public transit including bus, metro,
-        /// subway, etc.
-        /// </summary>
-        [pbr::OriginalName("TRANSIT")] Transit = 2,
-        /// <summary>
-        /// Commute time is calculated based on walking time.
-        /// </summary>
-        [pbr::OriginalName("WALKING")] Walking = 3,
-        /// <summary>
-        /// Commute time is calculated based on biking time.
-        /// </summary>
-        [pbr::OriginalName("BICYCLING")] Bicycling = 4,
-        /// <summary>
-        /// Commute time is calculated based on public transit that is wheelchair
-        /// accessible.
-        /// </summary>
-        [pbr::OriginalName("TRANSIT_ACCESSIBLE")] TransitAccessible = 5,
-      }
-
       /// <summary>
       /// The traffic density to use when calculating commute time.
       /// </summary>
@@ -2832,9 +2819,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// Define set of [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord]s to search against.
+    /// Define set of
+    /// [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord]s to search
+    /// against.
     ///
-    /// Defaults to [EmployerFilterMode.ALL_EMPLOYMENT_RECORDS][google.cloud.talent.v4beta1.EmployerFilter.EmployerFilterMode.ALL_EMPLOYMENT_RECORDS].
+    /// Defaults to
+    /// [EmployerFilterMode.ALL_EMPLOYMENT_RECORDS][google.cloud.talent.v4beta1.EmployerFilter.EmployerFilterMode.ALL_EMPLOYMENT_RECORDS].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode Mode {
@@ -2980,8 +2970,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Enum indicating which set of [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records] to search
-      /// against.
+      /// Enum indicating which set of
+      /// [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records]
+      /// to search against.
       /// </summary>
       public enum EmployerFilterMode {
         /// <summary>
@@ -2989,11 +2980,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// </summary>
         [pbr::OriginalName("EMPLOYER_FILTER_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Apply to all employers in [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
+        /// Apply to all employers in
+        /// [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
         /// </summary>
         [pbr::OriginalName("ALL_EMPLOYMENT_RECORDS")] AllEmploymentRecords = 1,
         /// <summary>
-        /// Apply only to current employer in [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
+        /// Apply only to current employer in
+        /// [Profile.employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
         /// </summary>
         [pbr::OriginalName("CURRENT_EMPLOYMENT_RECORDS_ONLY")] CurrentEmploymentRecordsOnly = 2,
         /// <summary>
@@ -3257,7 +3250,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// Work experience filter.
   ///
   /// This filter is used to search for profiles with working experience length
-  /// between [min_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.min_experience] and [max_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.max_experience].
+  /// between
+  /// [min_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.min_experience]
+  /// and
+  /// [max_experience][google.cloud.talent.v4beta1.WorkExperienceFilter.max_experience].
   /// </summary>
   public sealed partial class WorkExperienceFilter : pb::IMessage<WorkExperienceFilter> {
     private static readonly pb::MessageParser<WorkExperienceFilter> _parser = new pb::MessageParser<WorkExperienceFilter>(() => new WorkExperienceFilter());
@@ -3443,9 +3439,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
   ///
   /// Application Date Range Filter.
   ///
-  /// The API matches profiles with [JobApplication.application_date][google.cloud.talent.v4beta1.JobApplication.application_date] between
-  /// start date and end date (both boundaries are inclusive). The filter is
-  /// ignored if both [start_date][google.cloud.talent.v4beta1.ApplicationDateFilter.start_date] and [end_date][google.cloud.talent.v4beta1.ApplicationDateFilter.end_date] are missing.
+  /// The API matches profiles with
+  /// [JobApplication.application_date][google.cloud.talent.v4beta1.JobApplication.application_date]
+  /// between start date and end date (both boundaries are inclusive). The filter
+  /// is ignored if both
+  /// [start_date][google.cloud.talent.v4beta1.ApplicationDateFilter.start_date]
+  /// and [end_date][google.cloud.talent.v4beta1.ApplicationDateFilter.end_date]
+  /// are missing.
   /// </summary>
   public sealed partial class ApplicationDateFilter : pb::IMessage<ApplicationDateFilter> {
     private static readonly pb::MessageParser<ApplicationDateFilter> _parser = new pb::MessageParser<ApplicationDateFilter>(() => new ApplicationDateFilter());
@@ -3675,7 +3675,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Required.
     ///
     /// User entered or selected outcome reason. The API does an exact match on the
-    /// [JobApplication.outcome_reason][google.cloud.talent.v4beta1.JobApplication.outcome_reason] in profiles.
+    /// [JobApplication.outcome_reason][google.cloud.talent.v4beta1.JobApplication.outcome_reason]
+    /// in profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OutcomeReason {
@@ -3692,8 +3693,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// If true, The API excludes all candidates with any
-    /// [JobApplication.outcome_reason][google.cloud.talent.v4beta1.JobApplication.outcome_reason] matching the outcome reason specified in
-    /// the filter.
+    /// [JobApplication.outcome_reason][google.cloud.talent.v4beta1.JobApplication.outcome_reason]
+    /// matching the outcome reason specified in the filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -3851,7 +3852,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// User entered or selected last stage the candidate reached in the
     /// application. The API does an exact match on the
-    /// [JobApplication.last_stage][google.cloud.talent.v4beta1.JobApplication.last_stage] in profiles.
+    /// [JobApplication.last_stage][google.cloud.talent.v4beta1.JobApplication.last_stage]
+    /// in profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LastStage {
@@ -3867,8 +3869,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     /// If true, The API excludes all candidates with any
-    /// [JobApplication.last_stage][google.cloud.talent.v4beta1.JobApplication.last_stage] matching the last stage specified in the
-    /// filter.
+    /// [JobApplication.last_stage][google.cloud.talent.v4beta1.JobApplication.last_stage]
+    /// matching the last stage specified in the filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -4027,7 +4029,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// The job resource name in the application. The API does an exact match on
-    /// the [Job.name][google.cloud.talent.v4beta1.Job.name] of [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job] in profiles.
+    /// the [Job.name][google.cloud.talent.v4beta1.Job.name] of
+    /// [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job] in
+    /// profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobName {
@@ -4044,7 +4048,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// The job requisition id in the application. The API does an exact match on
-    /// the [Job.requisistion_id][] of [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job] in profiles.
+    /// the [Job.requisistion_id][] of
+    /// [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job] in
+    /// profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobRequisitionId {
@@ -4061,7 +4067,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// The job title in the application. The API does an exact match on the
-    /// [Job.title][google.cloud.talent.v4beta1.Job.title] of [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job] in profiles.
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title] of
+    /// [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job] in
+    /// profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobTitle {
@@ -4077,7 +4085,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// If true, the API excludes all profiles with any [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job]
+    /// If true, the API excludes all profiles with any
+    /// [JobApplication.job][google.cloud.talent.v4beta1.JobApplication.job]
     /// matching the filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4480,7 +4489,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// Specifies which time field to filter profiles.
     ///
-    /// Defaults to [TimeField.CREATE_TIME][google.cloud.talent.v4beta1.TimeFilter.TimeField.CREATE_TIME].
+    /// Defaults to
+    /// [TimeField.CREATE_TIME][google.cloud.talent.v4beta1.TimeFilter.TimeField.CREATE_TIME].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField TimeField {

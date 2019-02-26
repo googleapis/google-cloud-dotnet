@@ -27,22 +27,27 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "CjBnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvcmVzdW1lX3NlcnZpY2Uu",
             "cHJvdG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2Fw",
             "aS9hbm5vdGF0aW9ucy5wcm90bxopZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJl",
-            "dGExL3Byb2ZpbGUucHJvdG8iYAoSUGFyc2VSZXN1bWVSZXF1ZXN0Eg4KBnBh",
-            "cmVudBgBIAEoCRIOCgZyZXN1bWUYAiABKAwSEwoLcmVnaW9uX2NvZGUYAyAB",
-            "KAkSFQoNbGFuZ3VhZ2VfY29kZRgEIAEoCSJeChNQYXJzZVJlc3VtZVJlc3Bv",
-            "bnNlEjUKB3Byb2ZpbGUYASABKAsyJC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuUHJvZmlsZRIQCghyYXdfdGV4dBgCIAEoCTK5AQoNUmVzdW1lU2Vy",
-            "dmljZRKnAQoLUGFyc2VSZXN1bWUSLy5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuUGFyc2VSZXN1bWVSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLlBhcnNlUmVzdW1lUmVzcG9uc2UiNYLT5JMCLyIqL3Y0YmV0",
-            "YTEve3BhcmVudD1wcm9qZWN0cy8qfS9yZXN1bWVzOnBhcnNlOgEqQoABCh9j",
-            "b20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhJSZXN1bWVTZXJ2aWNl",
-            "UHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
+            "dGExL3Byb2ZpbGUucHJvdG8iogEKElBhcnNlUmVzdW1lUmVxdWVzdBIOCgZw",
+            "YXJlbnQYASABKAkSDgoGcmVzdW1lGAIgASgMEhMKC3JlZ2lvbl9jb2RlGAMg",
+            "ASgJEhUKDWxhbmd1YWdlX2NvZGUYBCABKAkSQAoHb3B0aW9ucxgFIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5QYXJzZVJlc3VtZU9wdGlv",
+            "bnMiTQoSUGFyc2VSZXN1bWVPcHRpb25zEhIKCmVuYWJsZV9vY3IYASABKAgS",
+            "IwobZW5hYmxlX2Z1bGxfc2tpbGxfZGV0ZWN0aW9uGAIgASgIIl4KE1BhcnNl",
+            "UmVzdW1lUmVzcG9uc2USNQoHcHJvZmlsZRgBIAEoCzIkLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlEhAKCHJhd190ZXh0GAIgASgJMrkB",
+            "Cg1SZXN1bWVTZXJ2aWNlEqcBCgtQYXJzZVJlc3VtZRIvLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5QYXJzZVJlc3VtZVJlcXVlc3QaMC5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0YmV0YTEuUGFyc2VSZXN1bWVSZXNwb25zZSI1gtPk",
+            "kwIvIiovdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L3Jlc3VtZXM6cGFy",
+            "c2U6ASpCgAEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCElJl",
+            "c3VtZVNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NU",
+            "U2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ParseResumeRequest), global::Google.Cloud.Talent.V4Beta1.ParseResumeRequest.Parser, new[]{ "Parent", "Resume", "RegionCode", "LanguageCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ParseResumeRequest), global::Google.Cloud.Talent.V4Beta1.ParseResumeRequest.Parser, new[]{ "Parent", "Resume", "RegionCode", "LanguageCode", "Options" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ParseResumeOptions), global::Google.Cloud.Talent.V4Beta1.ParseResumeOptions.Parser, new[]{ "EnableOcr", "EnableFullSkillDetection" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ParseResumeResponse), global::Google.Cloud.Talent.V4Beta1.ParseResumeResponse.Parser, new[]{ "Profile", "RawText" }, null, null, null)
           }));
     }
@@ -82,6 +87,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       resume_ = other.resume_;
       regionCode_ = other.regionCode_;
       languageCode_ = other.languageCode_;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -115,9 +121,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The bytes of the resume file in common format. Currently the API supports
-    /// the following formats:
-    /// PDF, TXT, DOC, RTF and DOCX.
+    /// The bytes of the resume file in common format, for example, PDF, TXT.
+    /// UTF-8 encoding is required if the resume is text-based, otherwise an error
+    /// is thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Resume {
@@ -170,6 +176,22 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 5;
+    private global::Google.Cloud.Talent.V4Beta1.ParseResumeOptions options_;
+    /// <summary>
+    /// Optional.
+    ///
+    /// Options that change how the resume parse is performed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.ParseResumeOptions Options {
+      get { return options_; }
+      set {
+        options_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ParseResumeRequest);
@@ -187,6 +209,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Resume != other.Resume) return false;
       if (RegionCode != other.RegionCode) return false;
       if (LanguageCode != other.LanguageCode) return false;
+      if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -197,6 +220,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Resume.Length != 0) hash ^= Resume.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -226,6 +250,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(34);
         output.WriteString(LanguageCode);
       }
+      if (options_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Options);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -245,6 +273,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (LanguageCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (options_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -268,6 +299,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.LanguageCode.Length != 0) {
         LanguageCode = other.LanguageCode;
+      }
+      if (other.options_ != null) {
+        if (options_ == null) {
+          options_ = new global::Google.Cloud.Talent.V4Beta1.ParseResumeOptions();
+        }
+        Options.MergeFrom(other.Options);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -296,6 +333,193 @@ namespace Google.Cloud.Talent.V4Beta1 {
             LanguageCode = input.ReadString();
             break;
           }
+          case 42: {
+            if (options_ == null) {
+              options_ = new global::Google.Cloud.Talent.V4Beta1.ParseResumeOptions();
+            }
+            input.ReadMessage(options_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Options that change how the resume parse is performed.
+  /// </summary>
+  public sealed partial class ParseResumeOptions : pb::IMessage<ParseResumeOptions> {
+    private static readonly pb::MessageParser<ParseResumeOptions> _parser = new pb::MessageParser<ParseResumeOptions>(() => new ParseResumeOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ParseResumeOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.ResumeServiceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ParseResumeOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ParseResumeOptions(ParseResumeOptions other) : this() {
+      enableOcr_ = other.enableOcr_;
+      enableFullSkillDetection_ = other.enableFullSkillDetection_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ParseResumeOptions Clone() {
+      return new ParseResumeOptions(this);
+    }
+
+    /// <summary>Field number for the "enable_ocr" field.</summary>
+    public const int EnableOcrFieldNumber = 1;
+    private bool enableOcr_;
+    /// <summary>
+    /// Optional.
+    ///
+    /// Controls whether Optical Character Recognition (OCR) is enabled.
+    ///
+    /// OCR is used to decipher pictorial resumes, or resumes that have some
+    /// element of pictorial detail (for example, contact information placed within
+    /// an image in a pdf). Note that the API call has a higher latency if OCR is
+    /// enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableOcr {
+      get { return enableOcr_; }
+      set {
+        enableOcr_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enable_full_skill_detection" field.</summary>
+    public const int EnableFullSkillDetectionFieldNumber = 2;
+    private bool enableFullSkillDetection_;
+    /// <summary>
+    /// Optional.
+    ///
+    /// Controls whether detected skills are included in the parsed profile from
+    /// sections of the resume other than just skills sections.
+    ///
+    /// Normally, returned skills are limited to those taken from a resume section
+    /// intended to list skills. When enabled, this feature causes detected
+    /// skills in other sections to also be included in the returned profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableFullSkillDetection {
+      get { return enableFullSkillDetection_; }
+      set {
+        enableFullSkillDetection_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ParseResumeOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ParseResumeOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnableOcr != other.EnableOcr) return false;
+      if (EnableFullSkillDetection != other.EnableFullSkillDetection) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnableOcr != false) hash ^= EnableOcr.GetHashCode();
+      if (EnableFullSkillDetection != false) hash ^= EnableFullSkillDetection.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (EnableOcr != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableOcr);
+      }
+      if (EnableFullSkillDetection != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnableFullSkillDetection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnableOcr != false) {
+        size += 1 + 1;
+      }
+      if (EnableFullSkillDetection != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ParseResumeOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnableOcr != false) {
+        EnableOcr = other.EnableOcr;
+      }
+      if (other.EnableFullSkillDetection != false) {
+        EnableFullSkillDetection = other.EnableFullSkillDetection;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EnableOcr = input.ReadBool();
+            break;
+          }
+          case 16: {
+            EnableFullSkillDetection = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -313,7 +537,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ResumeServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ResumeServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

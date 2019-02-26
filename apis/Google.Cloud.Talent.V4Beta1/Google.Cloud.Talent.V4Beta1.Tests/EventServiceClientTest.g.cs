@@ -47,7 +47,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
-                ParentEventId = "parentEventId-436467499",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -72,7 +71,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
-                ParentEventId = "parentEventId-436467499",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ClientEvent>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -97,7 +95,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
-                ParentEventId = "parentEventId-436467499",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -120,7 +117,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
-                ParentEventId = "parentEventId-436467499",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ClientEvent>(Task.FromResult(expectedResponse), null, null, null, null));

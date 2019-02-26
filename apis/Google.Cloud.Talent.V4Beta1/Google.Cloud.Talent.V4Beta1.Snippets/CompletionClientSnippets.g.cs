@@ -29,7 +29,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
-    using Google.Api.Gax.ResourceNames;
 
     /// <summary>Generated snippets</summary>
     public class GeneratedCompletionClientSnippets
