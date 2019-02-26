@@ -160,7 +160,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// The filter used to determine which monitored resources belong to this group.
+    /// The filter used to determine which monitored resources belong to this
+    /// group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {

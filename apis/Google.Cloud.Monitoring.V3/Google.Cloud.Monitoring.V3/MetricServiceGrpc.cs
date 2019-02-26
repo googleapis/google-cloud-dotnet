@@ -113,7 +113,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public abstract partial class MetricServiceBase
     {
       /// <summary>
-      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does
+      /// not require a Stackdriver account.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -124,7 +125,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -135,7 +137,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require
+      /// a Stackdriver account.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -146,7 +149,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver
+      /// account.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -182,7 +186,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -232,7 +237,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does
+      /// not require a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -244,7 +250,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListMonitoredResourceDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does
+      /// not require a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -254,7 +261,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does
+      /// not require a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -266,7 +274,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListMonitoredResourceDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does
+      /// not require a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -276,7 +285,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -288,7 +298,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return GetMonitoredResourceDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -298,7 +309,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
       }
       /// <summary>
-      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -310,7 +322,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return GetMonitoredResourceDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -320,7 +333,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
       }
       /// <summary>
-      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require
+      /// a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -332,7 +346,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListMetricDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require
+      /// a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -342,7 +357,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListMetricDescriptors, null, options, request);
       }
       /// <summary>
-      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require
+      /// a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -354,7 +370,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListMetricDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require
+      /// a Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +381,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_ListMetricDescriptors, null, options, request);
       }
       /// <summary>
-      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver
+      /// account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -376,7 +394,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return GetMetricDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver
+      /// account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -386,7 +405,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_GetMetricDescriptor, null, options, request);
       }
       /// <summary>
-      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver
+      /// account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -398,7 +418,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return GetMetricDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver
+      /// account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -508,7 +529,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMetricDescriptor, null, options, request);
       }
       /// <summary>
-      /// Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -520,7 +542,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -530,7 +553,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTimeSeries, null, options, request);
       }
       /// <summary>
-      /// Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -542,7 +566,8 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a
+      /// Stackdriver account.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
