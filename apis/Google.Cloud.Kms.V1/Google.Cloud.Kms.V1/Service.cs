@@ -205,7 +205,8 @@ namespace Google.Cloud.Kms.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
+  /// Request message for
+  /// [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
   /// </summary>
   public sealed partial class ListKeyRingsRequest : pb::IMessage<ListKeyRingsRequest> {
     private static readonly pb::MessageParser<ListKeyRingsRequest> _parser = new pb::MessageParser<ListKeyRingsRequest>(() => new ListKeyRingsRequest());
@@ -248,7 +249,8 @@ namespace Google.Cloud.Kms.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format `projects/*/locations/*`.
+    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -262,10 +264,12 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [KeyRings][google.cloud.kms.v1.KeyRing] to include in the
-    /// response.  Further [KeyRings][google.cloud.kms.v1.KeyRing] can subsequently be obtained by
-    /// including the [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token] in a subsequent
-    /// request.  If unspecified, the server will pick an appropriate default.
+    /// Optional limit on the number of [KeyRings][google.cloud.kms.v1.KeyRing] to
+    /// include in the response.  Further [KeyRings][google.cloud.kms.v1.KeyRing]
+    /// can subsequently be obtained by including the
+    /// [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token]
+    /// in a subsequent request.  If unspecified, the server will pick an
+    /// appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -407,7 +411,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
+  /// Request message for
+  /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
   /// </summary>
   public sealed partial class ListCryptoKeysRequest : pb::IMessage<ListCryptoKeysRequest> {
     private static readonly pb::MessageParser<ListCryptoKeysRequest> _parser = new pb::MessageParser<ListCryptoKeysRequest>(() => new ListCryptoKeysRequest());
@@ -450,8 +455,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing] to list, in the format
-    /// `projects/*/locations/*/keyRings/*`.
+    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing]
+    /// to list, in the format `projects/*/locations/*/keyRings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -465,10 +470,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] to include in the
-    /// response.  Further [CryptoKeys][google.cloud.kms.v1.CryptoKey] can subsequently be obtained by
-    /// including the [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token] in a subsequent
-    /// request.  If unspecified, the server will pick an appropriate default.
+    /// Optional limit on the number of [CryptoKeys][google.cloud.kms.v1.CryptoKey]
+    /// to include in the response.  Further
+    /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] can subsequently be obtained by
+    /// including the
+    /// [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token]
+    /// in a subsequent request.  If unspecified, the server will pick an
+    /// appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -640,7 +648,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
+  /// Request message for
+  /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
   /// </summary>
   public sealed partial class ListCryptoKeyVersionsRequest : pb::IMessage<ListCryptoKeyVersionsRequest> {
     private static readonly pb::MessageParser<ListCryptoKeyVersionsRequest> _parser = new pb::MessageParser<ListCryptoKeyVersionsRequest>(() => new ListCryptoKeyVersionsRequest());
@@ -683,7 +692,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to list, in the format
+    /// Required. The resource name of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to list, in the format
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -698,11 +708,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to
-    /// include in the response. Further [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] can
-    /// subsequently be obtained by including the
-    /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token] in a subsequent request.
-    /// If unspecified, the server will pick an appropriate default.
+    /// Optional limit on the number of
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to include in the
+    /// response. Further [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion]
+    /// can subsequently be obtained by including the
+    /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token]
+    /// in a subsequent request. If unspecified, the server will pick an
+    /// appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -874,7 +886,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
+  /// Response message for
+  /// [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
   /// </summary>
   public sealed partial class ListKeyRingsResponse : pb::IMessage<ListKeyRingsResponse> {
     private static readonly pb::MessageParser<ListKeyRingsResponse> _parser = new pb::MessageParser<ListKeyRingsResponse>(() => new ListKeyRingsResponse());
@@ -930,7 +943,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListKeyRingsRequest.page_token][google.cloud.kms.v1.ListKeyRingsRequest.page_token] to retrieve the next page of results.
+    /// [ListKeyRingsRequest.page_token][google.cloud.kms.v1.ListKeyRingsRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -944,7 +958,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [KeyRings][google.cloud.kms.v1.KeyRing] that matched the query.
+    /// The total number of [KeyRings][google.cloud.kms.v1.KeyRing] that matched
+    /// the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TotalSize {
@@ -1064,7 +1079,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
+  /// Response message for
+  /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
   /// </summary>
   public sealed partial class ListCryptoKeysResponse : pb::IMessage<ListCryptoKeysResponse> {
     private static readonly pb::MessageParser<ListCryptoKeysResponse> _parser = new pb::MessageParser<ListCryptoKeysResponse>(() => new ListCryptoKeysResponse());
@@ -1120,7 +1136,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListCryptoKeysRequest.page_token][google.cloud.kms.v1.ListCryptoKeysRequest.page_token] to retrieve the next page of results.
+    /// [ListCryptoKeysRequest.page_token][google.cloud.kms.v1.ListCryptoKeysRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1134,7 +1151,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] that matched the query.
+    /// The total number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] that
+    /// matched the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TotalSize {
@@ -1254,7 +1272,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
+  /// Response message for
+  /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
   /// </summary>
   public sealed partial class ListCryptoKeyVersionsResponse : pb::IMessage<ListCryptoKeyVersionsResponse> {
     private static readonly pb::MessageParser<ListCryptoKeyVersionsResponse> _parser = new pb::MessageParser<ListCryptoKeyVersionsResponse>(() => new ListCryptoKeyVersionsResponse());
@@ -1310,8 +1329,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListCryptoKeyVersionsRequest.page_token][google.cloud.kms.v1.ListCryptoKeyVersionsRequest.page_token] to retrieve the next page of
-    /// results.
+    /// [ListCryptoKeyVersionsRequest.page_token][google.cloud.kms.v1.ListCryptoKeyVersionsRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1325,7 +1344,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] that matched the
+    /// The total number of
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] that matched the
     /// query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1446,7 +1466,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetKeyRing][google.cloud.kms.v1.KeyManagementService.GetKeyRing].
+  /// Request message for
+  /// [KeyManagementService.GetKeyRing][google.cloud.kms.v1.KeyManagementService.GetKeyRing].
   /// </summary>
   public sealed partial class GetKeyRingRequest : pb::IMessage<GetKeyRingRequest> {
     private static readonly pb::MessageParser<GetKeyRingRequest> _parser = new pb::MessageParser<GetKeyRingRequest>(() => new GetKeyRingRequest());
@@ -1486,7 +1507,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.KeyRing.name] of the [KeyRing][google.cloud.kms.v1.KeyRing] to get.
+    /// The [name][google.cloud.kms.v1.KeyRing.name] of the
+    /// [KeyRing][google.cloud.kms.v1.KeyRing] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1581,7 +1603,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetCryptoKey][google.cloud.kms.v1.KeyManagementService.GetCryptoKey].
+  /// Request message for
+  /// [KeyManagementService.GetCryptoKey][google.cloud.kms.v1.KeyManagementService.GetCryptoKey].
   /// </summary>
   public sealed partial class GetCryptoKeyRequest : pb::IMessage<GetCryptoKeyRequest> {
     private static readonly pb::MessageParser<GetCryptoKeyRequest> _parser = new pb::MessageParser<GetCryptoKeyRequest>(() => new GetCryptoKeyRequest());
@@ -1621,7 +1644,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+    /// The [name][google.cloud.kms.v1.CryptoKey.name] of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1716,7 +1740,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.GetCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.GetCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.GetCryptoKeyVersion].
   /// </summary>
   public sealed partial class GetCryptoKeyVersionRequest : pb::IMessage<GetCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<GetCryptoKeyVersionRequest> _parser = new pb::MessageParser<GetCryptoKeyVersionRequest>(() => new GetCryptoKeyVersionRequest());
@@ -1756,7 +1781,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1851,7 +1877,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+  /// Request message for
+  /// [KeyManagementService.GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
   /// </summary>
   public sealed partial class GetPublicKeyRequest : pb::IMessage<GetPublicKeyRequest> {
     private static readonly pb::MessageParser<GetPublicKeyRequest> _parser = new pb::MessageParser<GetPublicKeyRequest>(() => new GetPublicKeyRequest());
@@ -1891,8 +1918,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
-    /// get.
+    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1987,7 +2014,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateKeyRing][google.cloud.kms.v1.KeyManagementService.CreateKeyRing].
+  /// Request message for
+  /// [KeyManagementService.CreateKeyRing][google.cloud.kms.v1.KeyManagementService.CreateKeyRing].
   /// </summary>
   public sealed partial class CreateKeyRingRequest : pb::IMessage<CreateKeyRingRequest> {
     private static readonly pb::MessageParser<CreateKeyRingRequest> _parser = new pb::MessageParser<CreateKeyRingRequest>(() => new CreateKeyRingRequest());
@@ -2030,7 +2058,8 @@ namespace Google.Cloud.Kms.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format `projects/*/locations/*`.
+    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2192,7 +2221,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateCryptoKey][google.cloud.kms.v1.KeyManagementService.CreateCryptoKey].
+  /// Request message for
+  /// [KeyManagementService.CreateCryptoKey][google.cloud.kms.v1.KeyManagementService.CreateCryptoKey].
   /// </summary>
   public sealed partial class CreateCryptoKeyRequest : pb::IMessage<CreateCryptoKeyRequest> {
     private static readonly pb::MessageParser<CreateCryptoKeyRequest> _parser = new pb::MessageParser<CreateCryptoKeyRequest>(() => new CreateCryptoKeyRequest());
@@ -2234,8 +2264,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing associated with the
-    /// [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing
+    /// associated with the [CryptoKeys][google.cloud.kms.v1.CryptoKey].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2397,7 +2427,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion].
   /// </summary>
   public sealed partial class CreateCryptoKeyVersionRequest : pb::IMessage<CreateCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<CreateCryptoKeyVersionRequest> _parser = new pb::MessageParser<CreateCryptoKeyVersionRequest>(() => new CreateCryptoKeyVersionRequest());
@@ -2438,8 +2469,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with
-    /// the [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
+    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with the
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2453,7 +2485,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 2;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with initial field values.
+    /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with initial
+    /// field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion CryptoKeyVersion {
@@ -2570,7 +2603,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.UpdateCryptoKey][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKey].
+  /// Request message for
+  /// [KeyManagementService.UpdateCryptoKey][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKey].
   /// </summary>
   public sealed partial class UpdateCryptoKeyRequest : pb::IMessage<UpdateCryptoKeyRequest> {
     private static readonly pb::MessageParser<UpdateCryptoKeyRequest> _parser = new pb::MessageParser<UpdateCryptoKeyRequest>(() => new UpdateCryptoKeyRequest());
@@ -2748,7 +2782,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.UpdateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.UpdateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyVersion].
   /// </summary>
   public sealed partial class UpdateCryptoKeyVersionRequest : pb::IMessage<UpdateCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<UpdateCryptoKeyVersionRequest> _parser = new pb::MessageParser<UpdateCryptoKeyVersionRequest>(() => new UpdateCryptoKeyVersionRequest());
@@ -2789,7 +2824,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 1;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with updated values.
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with updated
+    /// values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion CryptoKeyVersion {
@@ -2926,7 +2962,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+  /// Request message for
+  /// [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
   /// </summary>
   public sealed partial class EncryptRequest : pb::IMessage<EncryptRequest> {
     private static readonly pb::MessageParser<EncryptRequest> _parser = new pb::MessageParser<EncryptRequest>(() => new EncryptRequest());
@@ -2968,11 +3005,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] or [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
-    /// to use for encryption.
+    /// Required. The resource name of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] or
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// encryption.
     ///
-    /// If a [CryptoKey][google.cloud.kms.v1.CryptoKey] is specified, the server will use its
-    /// [primary version][google.cloud.kms.v1.CryptoKey.primary].
+    /// If a [CryptoKey][google.cloud.kms.v1.CryptoKey] is specified, the server
+    /// will use its [primary version][google.cloud.kms.v1.CryptoKey.primary].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2989,11 +3028,12 @@ namespace Google.Cloud.Kms.V1 {
     /// Required. The data to encrypt. Must be no larger than 64KiB.
     ///
     /// The maximum size depends on the key version's
-    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
-    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the plaintext must be no larger
-    /// than 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
-    /// plaintext and additional_authenticated_data fields must be no larger than
-    /// 8KiB.
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
+    /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+    /// plaintext must be no larger than 64KiB. For
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
+    /// the plaintext and additional_authenticated_data fields must be no larger
+    /// than 8KiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Plaintext {
@@ -3008,14 +3048,16 @@ namespace Google.Cloud.Kms.V1 {
     private pb::ByteString additionalAuthenticatedData_ = pb::ByteString.Empty;
     /// <summary>
     /// Optional data that, if specified, must also be provided during decryption
-    /// through [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
+    /// through
+    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
     ///
     /// The maximum size depends on the key version's
-    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
-    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the AAD must be no larger than
-    /// 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
-    /// plaintext and additional_authenticated_data fields must be no larger than
-    /// 8KiB.
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
+    /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the AAD
+    /// must be no larger than 64KiB. For
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
+    /// the plaintext and additional_authenticated_data fields must be no larger
+    /// than 8KiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AdditionalAuthenticatedData {
@@ -3142,7 +3184,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+  /// Request message for
+  /// [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
   /// </summary>
   public sealed partial class DecryptRequest : pb::IMessage<DecryptRequest> {
     private static readonly pb::MessageParser<DecryptRequest> _parser = new pb::MessageParser<DecryptRequest>(() => new DecryptRequest());
@@ -3184,8 +3227,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption.
-    /// The server will choose the appropriate version.
+    /// Required. The resource name of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption. The
+    /// server will choose the appropriate version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3342,7 +3386,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
+  /// Request message for
+  /// [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
   /// </summary>
   public sealed partial class AsymmetricSignRequest : pb::IMessage<AsymmetricSignRequest> {
     private static readonly pb::MessageParser<AsymmetricSignRequest> _parser = new pb::MessageParser<AsymmetricSignRequest>(() => new AsymmetricSignRequest());
@@ -3383,7 +3428,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3516,7 +3563,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
+  /// Request message for
+  /// [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
   /// </summary>
   public sealed partial class AsymmetricDecryptRequest : pb::IMessage<AsymmetricDecryptRequest> {
     private static readonly pb::MessageParser<AsymmetricDecryptRequest> _parser = new pb::MessageParser<AsymmetricDecryptRequest>(() => new AsymmetricDecryptRequest());
@@ -3557,7 +3605,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
     /// decryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3572,8 +3621,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int CiphertextFieldNumber = 3;
     private pb::ByteString ciphertext_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The data encrypted with the named [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public
-    /// key using OAEP.
+    /// Required. The data encrypted with the named
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public key using
+    /// OAEP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Ciphertext {
@@ -3684,7 +3734,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+  /// Response message for
+  /// [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
   /// </summary>
   public sealed partial class DecryptResponse : pb::IMessage<DecryptResponse> {
     private static readonly pb::MessageParser<DecryptResponse> _parser = new pb::MessageParser<DecryptResponse>(() => new DecryptResponse());
@@ -3724,7 +3775,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int PlaintextFieldNumber = 1;
     private pb::ByteString plaintext_ = pb::ByteString.Empty;
     /// <summary>
-    /// The decrypted data originally supplied in [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext].
+    /// The decrypted data originally supplied in
+    /// [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Plaintext {
@@ -3819,7 +3871,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+  /// Response message for
+  /// [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
   /// </summary>
   public sealed partial class EncryptResponse : pb::IMessage<EncryptResponse> {
     private static readonly pb::MessageParser<EncryptResponse> _parser = new pb::MessageParser<EncryptResponse>(() => new EncryptResponse());
@@ -3860,7 +3913,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in encryption.
+    /// The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in
+    /// encryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3985,7 +4040,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
+  /// Response message for
+  /// [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
   /// </summary>
   public sealed partial class AsymmetricSignResponse : pb::IMessage<AsymmetricSignResponse> {
     private static readonly pb::MessageParser<AsymmetricSignResponse> _parser = new pb::MessageParser<AsymmetricSignResponse>(() => new AsymmetricSignResponse());
@@ -4120,7 +4176,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
+  /// Response message for
+  /// [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
   /// </summary>
   public sealed partial class AsymmetricDecryptResponse : pb::IMessage<AsymmetricDecryptResponse> {
     private static readonly pb::MessageParser<AsymmetricDecryptResponse> _parser = new pb::MessageParser<AsymmetricDecryptResponse>(() => new AsymmetricDecryptResponse());
@@ -4255,7 +4312,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
+  /// Request message for
+  /// [KeyManagementService.UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
   /// </summary>
   public sealed partial class UpdateCryptoKeyPrimaryVersionRequest : pb::IMessage<UpdateCryptoKeyPrimaryVersionRequest> {
     private static readonly pb::MessageParser<UpdateCryptoKeyPrimaryVersionRequest> _parser = new pb::MessageParser<UpdateCryptoKeyPrimaryVersionRequest>(() => new UpdateCryptoKeyPrimaryVersionRequest());
@@ -4296,7 +4354,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+    /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to
+    /// update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4310,7 +4369,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionIdFieldNumber = 2;
     private string cryptoKeyVersionId_ = "";
     /// <summary>
-    /// The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+    /// The id of the child
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CryptoKeyVersionId {
@@ -4421,7 +4481,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.DestroyCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DestroyCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.DestroyCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DestroyCryptoKeyVersion].
   /// </summary>
   public sealed partial class DestroyCryptoKeyVersionRequest : pb::IMessage<DestroyCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<DestroyCryptoKeyVersionRequest> _parser = new pb::MessageParser<DestroyCryptoKeyVersionRequest>(() => new DestroyCryptoKeyVersionRequest());
@@ -4461,7 +4522,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+    /// The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4556,7 +4618,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion].
   /// </summary>
   public sealed partial class RestoreCryptoKeyVersionRequest : pb::IMessage<RestoreCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<RestoreCryptoKeyVersionRequest> _parser = new pb::MessageParser<RestoreCryptoKeyVersionRequest>(() => new RestoreCryptoKeyVersionRequest());
@@ -4596,7 +4659,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+    /// The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4922,7 +4986,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Cloud KMS metadata for the given [google.cloud.location.Location][google.cloud.location.Location].
+  /// Cloud KMS metadata for the given
+  /// [google.cloud.location.Location][google.cloud.location.Location].
   /// </summary>
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata> {
     private static readonly pb::MessageParser<LocationMetadata> _parser = new pb::MessageParser<LocationMetadata>(() => new LocationMetadata());
@@ -4964,7 +5029,8 @@ namespace Google.Cloud.Kms.V1 {
     /// <summary>
     /// Indicates whether [CryptoKeys][google.cloud.kms.v1.CryptoKey] with
     /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]
-    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] can be created in this location.
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] can be created in this
+    /// location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool HsmAvailable {

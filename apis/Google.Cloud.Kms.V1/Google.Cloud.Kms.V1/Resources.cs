@@ -47,46 +47,46 @@ namespace Google.Cloud.Kms.V1 {
             "b25fbGV2ZWwYASABKA4yJC5nb29nbGUuY2xvdWQua21zLnYxLlByb3RlY3Rp",
             "b25MZXZlbBJSCglhbGdvcml0aG0YAyABKA4yPy5nb29nbGUuY2xvdWQua21z",
             "LnYxLkNyeXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvbkFsZ29yaXRo",
-            "bSLNAQoXS2V5T3BlcmF0aW9uQXR0ZXN0YXRpb24STgoGZm9ybWF0GAQgASgO",
+            "bSLnAQoXS2V5T3BlcmF0aW9uQXR0ZXN0YXRpb24STgoGZm9ybWF0GAQgASgO",
             "Mj4uZ29vZ2xlLmNsb3VkLmttcy52MS5LZXlPcGVyYXRpb25BdHRlc3RhdGlv",
-            "bi5BdHRlc3RhdGlvbkZvcm1hdBIPCgdjb250ZW50GAUgASgMIlEKEUF0dGVz",
+            "bi5BdHRlc3RhdGlvbkZvcm1hdBIPCgdjb250ZW50GAUgASgMImsKEUF0dGVz",
             "dGF0aW9uRm9ybWF0EiIKHkFUVEVTVEFUSU9OX0ZPUk1BVF9VTlNQRUNJRklF",
-            "RBAAEhgKFENBVklVTV9WMV9DT01QUkVTU0VEEAMiuAkKEENyeXB0b0tleVZl",
-            "cnNpb24SDAoEbmFtZRgBIAEoCRJKCgVzdGF0ZRgDIAEoDjI7Lmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9u",
-            "U3RhdGUSPgoQcHJvdGVjdGlvbl9sZXZlbBgHIAEoDjIkLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuUHJvdGVjdGlvbkxldmVsElIKCWFsZ29yaXRobRgKIAEoDjI/",
-            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9L",
-            "ZXlWZXJzaW9uQWxnb3JpdGhtEkEKC2F0dGVzdGF0aW9uGAggASgLMiwuZ29v",
-            "Z2xlLmNsb3VkLmttcy52MS5LZXlPcGVyYXRpb25BdHRlc3RhdGlvbhIvCgtj",
-            "cmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "MQoNZ2VuZXJhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASMAoMZGVzdHJveV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBI2ChJkZXN0cm95X2V2ZW50X3RpbWUYBiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wIrwDChlDcnlwdG9LZXlWZXJzaW9uQWxn",
-            "b3JpdGhtEiwKKENSWVBUT19LRVlfVkVSU0lPTl9BTEdPUklUSE1fVU5TUEVD",
-            "SUZJRUQQABIfChtHT09HTEVfU1lNTUVUUklDX0VOQ1JZUFRJT04QARIcChhS",
-            "U0FfU0lHTl9QU1NfMjA0OF9TSEEyNTYQAhIcChhSU0FfU0lHTl9QU1NfMzA3",
-            "Ml9TSEEyNTYQAxIcChhSU0FfU0lHTl9QU1NfNDA5Nl9TSEEyNTYQBBIeChpS",
-            "U0FfU0lHTl9QS0NTMV8yMDQ4X1NIQTI1NhAFEh4KGlJTQV9TSUdOX1BLQ1Mx",
-            "XzMwNzJfU0hBMjU2EAYSHgoaUlNBX1NJR05fUEtDUzFfNDA5Nl9TSEEyNTYQ",
-            "BxIgChxSU0FfREVDUllQVF9PQUVQXzIwNDhfU0hBMjU2EAgSIAocUlNBX0RF",
-            "Q1JZUFRfT0FFUF8zMDcyX1NIQTI1NhAJEiAKHFJTQV9ERUNSWVBUX09BRVBf",
-            "NDA5Nl9TSEEyNTYQChIXChNFQ19TSUdOX1AyNTZfU0hBMjU2EAwSFwoTRUNf",
-            "U0lHTl9QMzg0X1NIQTM4NBANIpoBChVDcnlwdG9LZXlWZXJzaW9uU3RhdGUS",
-            "KAokQ1JZUFRPX0tFWV9WRVJTSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASFgoS",
-            "UEVORElOR19HRU5FUkFUSU9OEAUSCwoHRU5BQkxFRBABEgwKCERJU0FCTEVE",
-            "EAISDQoJREVTVFJPWUVEEAMSFQoRREVTVFJPWV9TQ0hFRFVMRUQQBCJJChRD",
-            "cnlwdG9LZXlWZXJzaW9uVmlldxInCiNDUllQVE9fS0VZX1ZFUlNJT05fVklF",
-            "V19VTlNQRUNJRklFRBAAEggKBEZVTEwQASJsCglQdWJsaWNLZXkSCwoDcGVt",
-            "GAEgASgJElIKCWFsZ29yaXRobRgCIAEoDjI/Lmdvb2dsZS5jbG91ZC5rbXMu",
-            "djEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uQWxnb3JpdGht",
-            "KkoKD1Byb3RlY3Rpb25MZXZlbBIgChxQUk9URUNUSU9OX0xFVkVMX1VOU1BF",
-            "Q0lGSUVEEAASDAoIU09GVFdBUkUQARIHCgNIU00QAkKVAQoXY29tLmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjFCEUttc1Jlc291cmNlc1Byb3RvUAFaNmdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQva21zL3YxO2tt",
-            "c/gBAaoCE0dvb2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVcQ2xvdWRcS21z",
-            "XFYxYgZwcm90bzM="));
+            "RBAAEhgKFENBVklVTV9WMV9DT01QUkVTU0VEEAMSGAoUQ0FWSVVNX1YyX0NP",
+            "TVBSRVNTRUQQBCK4CQoQQ3J5cHRvS2V5VmVyc2lvbhIMCgRuYW1lGAEgASgJ",
+            "EkoKBXN0YXRlGAMgASgOMjsuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9L",
+            "ZXlWZXJzaW9uLkNyeXB0b0tleVZlcnNpb25TdGF0ZRI+ChBwcm90ZWN0aW9u",
+            "X2xldmVsGAcgASgOMiQuZ29vZ2xlLmNsb3VkLmttcy52MS5Qcm90ZWN0aW9u",
+            "TGV2ZWwSUgoJYWxnb3JpdGhtGAogASgOMj8uZ29vZ2xlLmNsb3VkLmttcy52",
+            "MS5DcnlwdG9LZXlWZXJzaW9uLkNyeXB0b0tleVZlcnNpb25BbGdvcml0aG0S",
+            "QQoLYXR0ZXN0YXRpb24YCCABKAsyLC5nb29nbGUuY2xvdWQua21zLnYxLktl",
+            "eU9wZXJhdGlvbkF0dGVzdGF0aW9uEi8KC2NyZWF0ZV90aW1lGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1nZW5lcmF0ZV90aW1lGAsg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxkZXN0cm95X3Rp",
+            "bWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjYKEmRlc3Ry",
+            "b3lfZXZlbnRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXAivAMKGUNyeXB0b0tleVZlcnNpb25BbGdvcml0aG0SLAooQ1JZUFRPX0tF",
+            "WV9WRVJTSU9OX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEh8KG0dPT0dMRV9T",
+            "WU1NRVRSSUNfRU5DUllQVElPThABEhwKGFJTQV9TSUdOX1BTU18yMDQ4X1NI",
+            "QTI1NhACEhwKGFJTQV9TSUdOX1BTU18zMDcyX1NIQTI1NhADEhwKGFJTQV9T",
+            "SUdOX1BTU180MDk2X1NIQTI1NhAEEh4KGlJTQV9TSUdOX1BLQ1MxXzIwNDhf",
+            "U0hBMjU2EAUSHgoaUlNBX1NJR05fUEtDUzFfMzA3Ml9TSEEyNTYQBhIeChpS",
+            "U0FfU0lHTl9QS0NTMV80MDk2X1NIQTI1NhAHEiAKHFJTQV9ERUNSWVBUX09B",
+            "RVBfMjA0OF9TSEEyNTYQCBIgChxSU0FfREVDUllQVF9PQUVQXzMwNzJfU0hB",
+            "MjU2EAkSIAocUlNBX0RFQ1JZUFRfT0FFUF80MDk2X1NIQTI1NhAKEhcKE0VD",
+            "X1NJR05fUDI1Nl9TSEEyNTYQDBIXChNFQ19TSUdOX1AzODRfU0hBMzg0EA0i",
+            "mgEKFUNyeXB0b0tleVZlcnNpb25TdGF0ZRIoCiRDUllQVE9fS0VZX1ZFUlNJ",
+            "T05fU1RBVEVfVU5TUEVDSUZJRUQQABIWChJQRU5ESU5HX0dFTkVSQVRJT04Q",
+            "BRILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQAhINCglERVNUUk9ZRUQQAxIV",
+            "ChFERVNUUk9ZX1NDSEVEVUxFRBAEIkkKFENyeXB0b0tleVZlcnNpb25WaWV3",
+            "EicKI0NSWVBUT19LRVlfVkVSU0lPTl9WSUVXX1VOU1BFQ0lGSUVEEAASCAoE",
+            "RlVMTBABImwKCVB1YmxpY0tleRILCgNwZW0YASABKAkSUgoJYWxnb3JpdGht",
+            "GAIgASgOMj8uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9u",
+            "LkNyeXB0b0tleVZlcnNpb25BbGdvcml0aG0qSgoPUHJvdGVjdGlvbkxldmVs",
+            "EiAKHFBST1RFQ1RJT05fTEVWRUxfVU5TUEVDSUZJRUQQABIMCghTT0ZUV0FS",
+            "RRABEgcKA0hTTRACQpUBChdjb20uZ29vZ2xlLmNsb3VkLmttcy52MUIRS21z",
+            "UmVzb3VyY2VzUHJvdG9QAVo2Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC9rbXMvdjE7a21z+AEBqgITR29vZ2xlLkNsb3Vk",
+            "Lkttcy5WMcoCE0dvb2dsZVxDbG91ZFxLbXNcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Kms.V1.ProtectionLevel), }, new pbr::GeneratedClrTypeInfo[] {
@@ -103,7 +103,8 @@ namespace Google.Cloud.Kms.V1 {
   }
   #region Enums
   /// <summary>
-  /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] specifies how cryptographic operations are performed.
+  /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] specifies how
+  /// cryptographic operations are performed.
   /// </summary>
   public enum ProtectionLevel {
     /// <summary>
@@ -124,7 +125,8 @@ namespace Google.Cloud.Kms.V1 {
 
   #region Messages
   /// <summary>
-  /// A [KeyRing][google.cloud.kms.v1.KeyRing] is a toplevel logical grouping of [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+  /// A [KeyRing][google.cloud.kms.v1.KeyRing] is a toplevel logical grouping of
+  /// [CryptoKeys][google.cloud.kms.v1.CryptoKey].
   /// </summary>
   public sealed partial class KeyRing : pb::IMessage<KeyRing> {
     private static readonly pb::MessageParser<KeyRing> _parser = new pb::MessageParser<KeyRing>(() => new KeyRing());
@@ -165,7 +167,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for the [KeyRing][google.cloud.kms.v1.KeyRing] in the format
+    /// Output only. The resource name for the
+    /// [KeyRing][google.cloud.kms.v1.KeyRing] in the format
     /// `projects/*/locations/*/keyRings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -180,7 +183,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CreateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which this [KeyRing][google.cloud.kms.v1.KeyRing] was created.
+    /// Output only. The time at which this [KeyRing][google.cloud.kms.v1.KeyRing]
+    /// was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -297,11 +301,12 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// A [CryptoKey][google.cloud.kms.v1.CryptoKey] represents a logical key that can be used for cryptographic
-  /// operations.
+  /// A [CryptoKey][google.cloud.kms.v1.CryptoKey] represents a logical key that
+  /// can be used for cryptographic operations.
   ///
-  /// A [CryptoKey][google.cloud.kms.v1.CryptoKey] is made up of one or more [versions][google.cloud.kms.v1.CryptoKeyVersion], which
-  /// represent the actual key material used in cryptographic operations.
+  /// A [CryptoKey][google.cloud.kms.v1.CryptoKey] is made up of one or more
+  /// [versions][google.cloud.kms.v1.CryptoKeyVersion], which represent the actual
+  /// key material used in cryptographic operations.
   /// </summary>
   public sealed partial class CryptoKey : pb::IMessage<CryptoKey> {
     private static readonly pb::MessageParser<CryptoKey> _parser = new pb::MessageParser<CryptoKey>(() => new CryptoKey());
@@ -353,7 +358,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this [CryptoKey][google.cloud.kms.v1.CryptoKey] in the format
+    /// Output only. The resource name for this
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] in the format
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -368,16 +374,19 @@ namespace Google.Cloud.Kms.V1 {
     public const int PrimaryFieldNumber = 2;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion primary_;
     /// <summary>
-    /// Output only. A copy of the "primary" [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] that will be used
-    /// by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] when this [CryptoKey][google.cloud.kms.v1.CryptoKey] is given
-    /// in [EncryptRequest.name][google.cloud.kms.v1.EncryptRequest.name].
+    /// Output only. A copy of the "primary"
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] that will be used
+    /// by [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] when this
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] is given in
+    /// [EncryptRequest.name][google.cloud.kms.v1.EncryptRequest.name].
     ///
-    /// The [CryptoKey][google.cloud.kms.v1.CryptoKey]'s primary version can be updated via
+    /// The [CryptoKey][google.cloud.kms.v1.CryptoKey]'s primary version can be
+    /// updated via
     /// [UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
     ///
     /// All keys with [purpose][google.cloud.kms.v1.CryptoKey.purpose]
-    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT] have a
-    /// primary. For other keys, this field will be omitted.
+    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT]
+    /// have a primary. For other keys, this field will be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion Primary {
@@ -405,7 +414,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CreateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which this [CryptoKey][google.cloud.kms.v1.CryptoKey] was created.
+    /// Output only. The time at which this
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -419,19 +429,22 @@ namespace Google.Cloud.Kms.V1 {
     public const int NextRotationTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp nextRotationTime_;
     /// <summary>
-    /// At [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time], the Key Management Service will automatically:
+    /// At [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time],
+    /// the Key Management Service will automatically:
     ///
     /// 1. Create a new version of this [CryptoKey][google.cloud.kms.v1.CryptoKey].
     /// 2. Mark the new version as primary.
     ///
     /// Key rotations performed manually via
-    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] and
+    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion]
+    /// and
     /// [UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion]
-    /// do not affect [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time].
+    /// do not affect
+    /// [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time].
     ///
     /// Keys with [purpose][google.cloud.kms.v1.CryptoKey.purpose]
-    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT] support
-    /// automatic rotation. For other keys, this field must be omitted.
+    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT]
+    /// support automatic rotation. For other keys, this field must be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp NextRotationTime {
@@ -444,14 +457,18 @@ namespace Google.Cloud.Kms.V1 {
     /// <summary>Field number for the "rotation_period" field.</summary>
     public const int RotationPeriodFieldNumber = 8;
     /// <summary>
-    /// [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time] will be advanced by this period when the service
-    /// automatically rotates a key. Must be at least one day.
+    /// [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time]
+    /// will be advanced by this period when the service automatically rotates a
+    /// key. Must be at least one day.
     ///
-    /// If [rotation_period][google.cloud.kms.v1.CryptoKey.rotation_period] is set, [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time] must also be set.
+    /// If [rotation_period][google.cloud.kms.v1.CryptoKey.rotation_period] is
+    /// set,
+    /// [next_rotation_time][google.cloud.kms.v1.CryptoKey.next_rotation_time]
+    /// must also be set.
     ///
     /// Keys with [purpose][google.cloud.kms.v1.CryptoKey.purpose]
-    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT] support
-    /// automatic rotation. For other keys, this field must be omitted.
+    /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT]
+    /// support automatic rotation. For other keys, this field must be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration RotationPeriod {
@@ -466,10 +483,12 @@ namespace Google.Cloud.Kms.V1 {
     public const int VersionTemplateFieldNumber = 11;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate versionTemplate_;
     /// <summary>
-    /// A template describing settings for new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] instances.
-    /// The properties of new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] instances created by either
-    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] or
-    /// auto-rotation are controlled by this template.
+    /// A template describing settings for new
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] instances. The
+    /// properties of new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+    /// instances created by either
+    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion]
+    /// or auto-rotation are controlled by this template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate VersionTemplate {
@@ -740,9 +759,10 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// [CryptoKeyPurpose][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose] describes the cryptographic capabilities of a
-      /// [CryptoKey][google.cloud.kms.v1.CryptoKey]. A given key can only be used for the operations allowed by
-      /// its purpose.
+      /// [CryptoKeyPurpose][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose]
+      /// describes the cryptographic capabilities of a
+      /// [CryptoKey][google.cloud.kms.v1.CryptoKey]. A given key can only be used
+      /// for the operations allowed by its purpose.
       /// </summary>
       public enum CryptoKeyPurpose {
         /// <summary>
@@ -750,20 +770,24 @@ namespace Google.Cloud.Kms.V1 {
         /// </summary>
         [pbr::OriginalName("CRYPTO_KEY_PURPOSE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used with
-        /// [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
+        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used
+        /// with [Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt] and
         /// [Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
         /// </summary>
         [pbr::OriginalName("ENCRYPT_DECRYPT")] EncryptDecrypt = 1,
         /// <summary>
-        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used with
-        /// [AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign] and
+        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used
+        /// with
+        /// [AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign]
+        /// and
         /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
         /// </summary>
         [pbr::OriginalName("ASYMMETRIC_SIGN")] AsymmetricSign = 5,
         /// <summary>
-        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used with
-        /// [AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt] and
+        /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] with this purpose may be used
+        /// with
+        /// [AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt]
+        /// and
         /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
         /// </summary>
         [pbr::OriginalName("ASYMMETRIC_DECRYPT")] AsymmetricDecrypt = 6,
@@ -775,10 +799,12 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// A [CryptoKeyVersionTemplate][google.cloud.kms.v1.CryptoKeyVersionTemplate] specifies the properties to use when creating
-  /// a new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], either manually with
-  /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] or
-  /// automatically as a result of auto-rotation.
+  /// A [CryptoKeyVersionTemplate][google.cloud.kms.v1.CryptoKeyVersionTemplate]
+  /// specifies the properties to use when creating a new
+  /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], either manually
+  /// with
+  /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion]
+  /// or automatically as a result of auto-rotation.
   /// </summary>
   public sealed partial class CryptoKeyVersionTemplate : pb::IMessage<CryptoKeyVersionTemplate> {
     private static readonly pb::MessageParser<CryptoKeyVersionTemplate> _parser = new pb::MessageParser<CryptoKeyVersionTemplate>(() => new CryptoKeyVersionTemplate());
@@ -819,8 +845,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 1;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = 0;
     /// <summary>
-    /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when creating a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] based on
-    /// this template. Immutable. Defaults to [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
+    /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when creating
+    /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] based on this
+    /// template. Immutable. Defaults to
+    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
@@ -834,11 +862,15 @@ namespace Google.Cloud.Kms.V1 {
     public const int AlgorithmFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
     /// <summary>
-    /// Required. [Algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] to use
-    /// when creating a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] based on this template.
+    /// Required.
+    /// [Algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm]
+    /// to use when creating a
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] based on this
+    /// template.
     ///
     /// For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both
-    /// this field is omitted and [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is
+    /// this field is omitted and
+    /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose] is
     /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1128,6 +1160,11 @@ namespace Google.Cloud.Kms.V1 {
         /// defined by Cavium and subject to change at any time.
         /// </summary>
         [pbr::OriginalName("CAVIUM_V1_COMPRESSED")] CaviumV1Compressed = 3,
+        /// <summary>
+        /// Cavium HSM attestation V2 compressed with gzip. This is a new format
+        /// Introduced in Cavium's version 3.2-08
+        /// </summary>
+        [pbr::OriginalName("CAVIUM_V2_COMPRESSED")] CaviumV2Compressed = 4,
       }
 
     }
@@ -1136,16 +1173,17 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] represents an individual cryptographic key, and the
-  /// associated key material.
+  /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] represents an
+  /// individual cryptographic key, and the associated key material.
   ///
-  /// An [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED] version can be
-  /// used for cryptographic operations.
+  /// An
+  /// [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED]
+  /// version can be used for cryptographic operations.
   ///
   /// For security reasons, the raw cryptographic key material represented by a
-  /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] can never be viewed or exported. It can only be used to
-  /// encrypt, decrypt, or sign data when an authorized user or application invokes
-  /// Cloud KMS.
+  /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] can never be viewed
+  /// or exported. It can only be used to encrypt, decrypt, or sign data when an
+  /// authorized user or application invokes Cloud KMS.
   /// </summary>
   public sealed partial class CryptoKeyVersion : pb::IMessage<CryptoKeyVersion> {
     private static readonly pb::MessageParser<CryptoKeyVersion> _parser = new pb::MessageParser<CryptoKeyVersion>(() => new CryptoKeyVersion());
@@ -1193,7 +1231,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The resource name for this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the format
+    /// Output only. The resource name for this
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] in the format
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1208,7 +1247,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int StateFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState state_ = 0;
     /// <summary>
-    /// The current state of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+    /// The current state of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState State {
@@ -1222,8 +1262,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 7;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = 0;
     /// <summary>
-    /// Output only. The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] describing how crypto operations are
-    /// performed with this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
+    /// Output only. The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel]
+    /// describing how crypto operations are performed with this
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
@@ -1237,8 +1278,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int AlgorithmFieldNumber = 10;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
     /// <summary>
-    /// Output only. The [CryptoKeyVersionAlgorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] that this
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] supports.
+    /// Output only. The
+    /// [CryptoKeyVersionAlgorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm]
+    /// that this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+    /// supports.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
@@ -1255,7 +1298,8 @@ namespace Google.Cloud.Kms.V1 {
     /// Output only. Statement that was generated and signed by the HSM at key
     /// creation time. Use this statement to verify attributes of the key as stored
     /// on the HSM, independently of Google. Only provided for key versions with
-    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersion.protection_level] [HSM][google.cloud.kms.v1.ProtectionLevel.HSM].
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersion.protection_level]
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.KeyOperationAttestation Attestation {
@@ -1269,7 +1313,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CreateTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The time at which this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] was created.
+    /// Output only. The time at which this
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -1283,7 +1328,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int GenerateTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp generateTime_;
     /// <summary>
-    /// Output only. The time this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s key material was
+    /// Output only. The time this
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s key material was
     /// generated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1298,8 +1344,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int DestroyTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp destroyTime_;
     /// <summary>
-    /// Output only. The time this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s key material is scheduled
-    /// for destruction. Only present if [state][google.cloud.kms.v1.CryptoKeyVersion.state] is
+    /// Output only. The time this
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s key material is
+    /// scheduled for destruction. Only present if
+    /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is
     /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1315,7 +1363,8 @@ namespace Google.Cloud.Kms.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp destroyEventTime_;
     /// <summary>
     /// Output only. The time this CryptoKeyVersion's key material was
-    /// destroyed. Only present if [state][google.cloud.kms.v1.CryptoKeyVersion.state] is
+    /// destroyed. Only present if
+    /// [state][google.cloud.kms.v1.CryptoKeyVersion.state] is
     /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1571,15 +1620,18 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// The algorithm of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], indicating what
+      /// The algorithm of the
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], indicating what
       /// parameters must be used for each cryptographic operation.
       ///
       /// The
       /// [GOOGLE_SYMMETRIC_ENCRYPTION][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.GOOGLE_SYMMETRIC_ENCRYPTION]
-      /// algorithm is usable with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// algorithm is usable with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
       /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
       ///
-      /// Algorithms beginning with "RSA_SIGN_" are usable with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// Algorithms beginning with "RSA_SIGN_" are usable with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
       /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN].
       ///
       /// The fields in the name after "RSA_SIGN_" correspond to the following
@@ -1597,7 +1649,8 @@ namespace Google.Cloud.Kms.V1 {
       /// The fields in the name after "RSA_DECRYPT_" correspond to the following
       /// parameters: padding algorithm, modulus bit length, and digest algorithm.
       ///
-      /// Algorithms beginning with "EC_SIGN_" are usable with [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
+      /// Algorithms beginning with "EC_SIGN_" are usable with
+      /// [CryptoKey.purpose][google.cloud.kms.v1.CryptoKey.purpose]
       /// [ASYMMETRIC_SIGN][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ASYMMETRIC_SIGN].
       ///
       /// The fields in the name after "EC_SIGN_" correspond to the following
@@ -1659,7 +1712,8 @@ namespace Google.Cloud.Kms.V1 {
       }
 
       /// <summary>
-      /// The state of a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], indicating if it can be used.
+      /// The state of a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion],
+      /// indicating if it can be used.
       /// </summary>
       public enum CryptoKeyVersionState {
         /// <summary>
@@ -1669,7 +1723,9 @@ namespace Google.Cloud.Kms.V1 {
         /// <summary>
         /// This version is still being generated. It may not be used, enabled,
         /// disabled, or destroyed yet. Cloud KMS will automatically mark this
-        /// version [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED] as soon as the version is ready.
+        /// version
+        /// [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED]
+        /// as soon as the version is ready.
         /// </summary>
         [pbr::OriginalName("PENDING_GENERATION")] PendingGeneration = 5,
         /// <summary>
@@ -1678,7 +1734,9 @@ namespace Google.Cloud.Kms.V1 {
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
         /// This version may not be used, but the key material is still available,
-        /// and the version can be placed back into the [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED] state.
+        /// and the version can be placed back into the
+        /// [ENABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.ENABLED]
+        /// state.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
         /// <summary>
@@ -1690,25 +1748,32 @@ namespace Google.Cloud.Kms.V1 {
         /// This version is scheduled for destruction, and will be destroyed soon.
         /// Call
         /// [RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion]
-        /// to put it back into the [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED] state.
+        /// to put it back into the
+        /// [DISABLED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DISABLED]
+        /// state.
         /// </summary>
         [pbr::OriginalName("DESTROY_SCHEDULED")] DestroyScheduled = 4,
       }
 
       /// <summary>
-      /// A view for [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]s. Controls the level of detail returned
-      /// for [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] in
-      /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions] and
+      /// A view for [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]s.
+      /// Controls the level of detail returned for
+      /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] in
+      /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions]
+      /// and
       /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
       /// </summary>
       public enum CryptoKeyVersionView {
         /// <summary>
-        /// Default view for each [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Does not include
-        /// the [attestation][google.cloud.kms.v1.CryptoKeyVersion.attestation] field.
+        /// Default view for each
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Does not
+        /// include the
+        /// [attestation][google.cloud.kms.v1.CryptoKeyVersion.attestation] field.
         /// </summary>
         [pbr::OriginalName("CRYPTO_KEY_VERSION_VIEW_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Provides all fields in each [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], including the
+        /// Provides all fields in each
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], including the
         /// [attestation][google.cloud.kms.v1.CryptoKeyVersion.attestation].
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 1,
@@ -1720,7 +1785,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// The public key for a given [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Obtained via
+  /// The public key for a given
+  /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. Obtained via
   /// [GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
   /// </summary>
   public sealed partial class PublicKey : pb::IMessage<PublicKey> {
@@ -1780,8 +1846,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int AlgorithmFieldNumber = 2;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
     /// <summary>
-    /// The [Algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] associated
-    /// with this key.
+    /// The
+    /// [Algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm]
+    /// associated with this key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
