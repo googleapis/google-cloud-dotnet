@@ -831,7 +831,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
+  /// The response for
+  /// [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
   public sealed partial class RunQueryResponse : pb::IMessage<RunQueryResponse> {
     private static readonly pb::MessageParser<RunQueryResponse> _parser = new pb::MessageParser<RunQueryResponse>(() => new RunQueryResponse());
@@ -1009,7 +1010,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The request for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+  /// The request for
+  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
@@ -1181,7 +1183,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+  /// The response for
+  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionResponse : pb::IMessage<BeginTransactionResponse> {
     private static readonly pb::MessageParser<BeginTransactionResponse> _parser = new pb::MessageParser<BeginTransactionResponse>(() => new BeginTransactionResponse());
@@ -1483,8 +1486,9 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
-  /// (an empty message).
+  /// The response for
+  /// [Datastore.Rollback][google.datastore.v1.Datastore.Rollback]. (an empty
+  /// message).
   /// </summary>
   public sealed partial class RollbackResponse : pb::IMessage<RollbackResponse> {
     private static readonly pb::MessageParser<RollbackResponse> _parser = new pb::MessageParser<RollbackResponse>(() => new RollbackResponse());
@@ -1861,7 +1865,8 @@ namespace Google.Cloud.Datastore.V1 {
         [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Transactional: The mutations are either all applied, or none are applied.
-        /// Learn about transactions [here](https://cloud.google.com/datastore/docs/concepts/transactions).
+        /// Learn about transactions
+        /// [here](https://cloud.google.com/datastore/docs/concepts/transactions).
         /// </summary>
         [pbr::OriginalName("TRANSACTIONAL")] Transactional = 1,
         /// <summary>
@@ -2036,7 +2041,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The request for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+  /// The request for
+  /// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
   public sealed partial class AllocateIdsRequest : pb::IMessage<AllocateIdsRequest> {
     private static readonly pb::MessageParser<AllocateIdsRequest> _parser = new pb::MessageParser<AllocateIdsRequest>(() => new AllocateIdsRequest());
@@ -2195,7 +2201,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+  /// The response for
+  /// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
   public sealed partial class AllocateIdsResponse : pb::IMessage<AllocateIdsResponse> {
     private static readonly pb::MessageParser<AllocateIdsResponse> _parser = new pb::MessageParser<AllocateIdsResponse>(() => new AllocateIdsResponse());
@@ -2323,7 +2330,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The request for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
+  /// The request for
+  /// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
   /// </summary>
   public sealed partial class ReserveIdsRequest : pb::IMessage<ReserveIdsRequest> {
     private static readonly pb::MessageParser<ReserveIdsRequest> _parser = new pb::MessageParser<ReserveIdsRequest>(() => new ReserveIdsRequest());
@@ -2513,7 +2521,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// The response for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
+  /// The response for
+  /// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
   /// </summary>
   public sealed partial class ReserveIdsResponse : pb::IMessage<ReserveIdsResponse> {
     private static readonly pb::MessageParser<ReserveIdsResponse> _parser = new pb::MessageParser<ReserveIdsResponse>(() => new ReserveIdsResponse());
@@ -3416,8 +3425,10 @@ namespace Google.Cloud.Datastore.V1 {
   /// Options for beginning a new transaction.
   ///
   /// Transactions can be created explicitly with calls to
-  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction] or implicitly by setting
-  /// [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction] in read requests.
+  /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction]
+  /// or implicitly by setting
+  /// [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction]
+  /// in read requests.
   /// </summary>
   public sealed partial class TransactionOptions : pb::IMessage<TransactionOptions> {
     private static readonly pb::MessageParser<TransactionOptions> _parser = new pb::MessageParser<TransactionOptions>(() => new TransactionOptions());

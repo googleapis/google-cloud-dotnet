@@ -167,12 +167,12 @@ namespace Google.Cloud.Datastore.V1 {
     /// The version of the entity, a strictly positive number that monotonically
     /// increases with changes to the entity.
     ///
-    /// This field is set for [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity
-    /// results.
+    /// This field is set for
+    /// [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity results.
     ///
-    /// For [missing][google.datastore.v1.LookupResponse.missing] entities in `LookupResponse`, this
-    /// is the version of the snapshot that was used to look up the entity, and it
-    /// is always set except for eventually consistent reads.
+    /// For [missing][google.datastore.v1.LookupResponse.missing] entities in
+    /// `LookupResponse`, this is the version of the snapshot that was used to look
+    /// up the entity, and it is always set except for eventually consistent reads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Version {
@@ -472,7 +472,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>
     /// A starting point for the query results. Query cursors are
     /// returned in query result batches and
-    /// [can only be used to continue the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
+    /// [can only be used to continue the same
+    /// query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString StartCursor {
@@ -488,7 +489,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>
     /// An ending point for the query results. Query cursors are
     /// returned in query result batches and
-    /// [can only be used to limit the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
+    /// [can only be used to limit the same
+    /// query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString EndCursor {
@@ -1978,7 +1980,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  /// A [GQL query](https://cloud.google.com/datastore/docs/apis/gql/gql_reference).
+  /// A [GQL
+  /// query](https://cloud.google.com/datastore/docs/apis/gql/gql_reference).
   /// </summary>
   public sealed partial class GqlQuery : pb::IMessage<GqlQuery> {
     private static readonly pb::MessageParser<GqlQuery> _parser = new pb::MessageParser<GqlQuery>(() => new GqlQuery());

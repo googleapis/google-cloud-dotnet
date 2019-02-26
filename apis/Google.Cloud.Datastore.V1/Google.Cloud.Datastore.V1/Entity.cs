@@ -87,7 +87,8 @@ namespace Google.Cloud.Datastore.V1 {
   ///
   /// Foreign partition IDs (in which the project ID does
   /// not match the context project ID ) are discouraged.
-  /// Reads and writes of foreign partition IDs may fail if the project is not in an active state.
+  /// Reads and writes of foreign partition IDs may fail if the project is not in
+  /// an active state.
   /// </summary>
   public sealed partial class PartitionId : pb::IMessage<PartitionId> {
     private static readonly pb::MessageParser<PartitionId> _parser = new pb::MessageParser<PartitionId>(() => new PartitionId());
@@ -976,8 +977,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int StringValueFieldNumber = 17;
     /// <summary>
     /// A UTF-8 encoded string value.
-    /// When `exclude_from_indexes` is false (it is indexed) , may have at most 1500 bytes.
-    /// Otherwise, may be set to at least 1,000,000 bytes.
+    /// When `exclude_from_indexes` is false (it is indexed) , may have at most
+    /// 1500 bytes. Otherwise, may be set to at least 1,000,000 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StringValue {
