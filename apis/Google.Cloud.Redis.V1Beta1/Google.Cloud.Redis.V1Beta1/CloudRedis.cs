@@ -820,7 +820,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
+  /// Request for
+  /// [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
   /// </summary>
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest> {
     private static readonly pb::MessageParser<ListInstancesRequest> _parser = new pb::MessageParser<ListInstancesRequest>(() => new ListInstancesRequest());
@@ -1026,7 +1027,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Response for [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
+  /// Response for
+  /// [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
   /// </summary>
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse> {
     private static readonly pb::MessageParser<ListInstancesResponse> _parser = new pb::MessageParser<ListInstancesResponse>(() => new ListInstancesResponse());
@@ -1331,7 +1333,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [CreateInstance][google.cloud.redis.v1beta1.CloudRedis.CreateInstance].
+  /// Request for
+  /// [CreateInstance][google.cloud.redis.v1beta1.CloudRedis.CreateInstance].
   /// </summary>
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest> {
     private static readonly pb::MessageParser<CreateInstanceRequest> _parser = new pb::MessageParser<CreateInstanceRequest>(() => new CreateInstanceRequest());
@@ -1543,7 +1546,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [UpdateInstance][google.cloud.redis.v1beta1.CloudRedis.UpdateInstance].
+  /// Request for
+  /// [UpdateInstance][google.cloud.redis.v1beta1.CloudRedis.UpdateInstance].
   /// </summary>
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest> {
     private static readonly pb::MessageParser<UpdateInstanceRequest> _parser = new pb::MessageParser<UpdateInstanceRequest>(() => new UpdateInstanceRequest());
@@ -1728,7 +1732,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [DeleteInstance][google.cloud.redis.v1beta1.CloudRedis.DeleteInstance].
+  /// Request for
+  /// [DeleteInstance][google.cloud.redis.v1beta1.CloudRedis.DeleteInstance].
   /// </summary>
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest> {
     private static readonly pb::MessageParser<DeleteInstanceRequest> _parser = new pb::MessageParser<DeleteInstanceRequest>(() => new DeleteInstanceRequest());
