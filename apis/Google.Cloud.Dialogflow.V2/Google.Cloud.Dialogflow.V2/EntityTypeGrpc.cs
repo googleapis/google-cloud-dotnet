@@ -47,7 +47,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// *   **User** - entities that are built for an individual user such as
   ///     favorites, preferences, playlists, and so on. A user entity is
-  ///     represented by the [SessionEntityType][google.cloud.dialogflow.v2.SessionEntityType] type.
+  ///     represented by the
+  ///     [SessionEntityType][google.cloud.dialogflow.v2.SessionEntityType] type.
   ///
   /// For more information about entity types, see the
   /// [Dialogflow documentation](https://dialogflow.com/docs/entities).
@@ -208,7 +209,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+      /// Operation &lt;response:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
       ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -524,7 +526,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+      /// Operation &lt;response:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
       ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -539,7 +542,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+      /// Operation &lt;response:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
       ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -552,7 +556,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+      /// Operation &lt;response:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
       ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -567,7 +572,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+      /// Operation &lt;response:
+      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
       ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

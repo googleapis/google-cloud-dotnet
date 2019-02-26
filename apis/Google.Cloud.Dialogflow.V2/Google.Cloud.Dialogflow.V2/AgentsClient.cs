@@ -956,7 +956,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
+        /// Operation &lt;response:
+        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="parent">
@@ -981,7 +982,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
+        /// Operation &lt;response:
+        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="parent">
@@ -1003,7 +1005,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
+        /// Operation &lt;response:
+        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="parent">
@@ -1028,7 +1031,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
+        /// Operation &lt;response:
+        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">
@@ -1063,7 +1067,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
+        /// Operation &lt;response:
+        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">
@@ -1513,7 +1518,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
+        /// Operation &lt;response:
+        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">
@@ -1537,7 +1543,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
+        /// Operation &lt;response:
+        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">

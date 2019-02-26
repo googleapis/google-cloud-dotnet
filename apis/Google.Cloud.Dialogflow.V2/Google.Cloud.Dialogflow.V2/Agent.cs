@@ -542,7 +542,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Agents.GetAgent][google.cloud.dialogflow.v2.Agents.GetAgent].
+  /// The request message for
+  /// [Agents.GetAgent][google.cloud.dialogflow.v2.Agents.GetAgent].
   /// </summary>
   public sealed partial class GetAgentRequest : pb::IMessage<GetAgentRequest> {
     private static readonly pb::MessageParser<GetAgentRequest> _parser = new pb::MessageParser<GetAgentRequest>(() => new GetAgentRequest());
@@ -678,7 +679,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
+  /// The request message for
+  /// [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
   /// </summary>
   public sealed partial class SearchAgentsRequest : pb::IMessage<SearchAgentsRequest> {
     private static readonly pb::MessageParser<SearchAgentsRequest> _parser = new pb::MessageParser<SearchAgentsRequest>(() => new SearchAgentsRequest());
@@ -877,7 +879,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
+  /// The response message for
+  /// [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
   /// </summary>
   public sealed partial class SearchAgentsResponse : pb::IMessage<SearchAgentsResponse> {
     private static readonly pb::MessageParser<SearchAgentsResponse> _parser = new pb::MessageParser<SearchAgentsResponse>(() => new SearchAgentsResponse());
@@ -1037,7 +1040,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Agents.TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent].
+  /// The request message for
+  /// [Agents.TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent].
   /// </summary>
   public sealed partial class TrainAgentRequest : pb::IMessage<TrainAgentRequest> {
     private static readonly pb::MessageParser<TrainAgentRequest> _parser = new pb::MessageParser<TrainAgentRequest>(() => new TrainAgentRequest());
@@ -1173,7 +1177,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
+  /// The request message for
+  /// [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentRequest : pb::IMessage<ExportAgentRequest> {
     private static readonly pb::MessageParser<ExportAgentRequest> _parser = new pb::MessageParser<ExportAgentRequest>(() => new ExportAgentRequest());
@@ -1342,7 +1347,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
+  /// The response message for
+  /// [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentResponse : pb::IMessage<ExportAgentResponse> {
     private static readonly pb::MessageParser<ExportAgentResponse> _parser = new pb::MessageParser<ExportAgentResponse>(() => new ExportAgentResponse());
@@ -1553,7 +1559,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Agents.ImportAgent][google.cloud.dialogflow.v2.Agents.ImportAgent].
+  /// The request message for
+  /// [Agents.ImportAgent][google.cloud.dialogflow.v2.Agents.ImportAgent].
   /// </summary>
   public sealed partial class ImportAgentRequest : pb::IMessage<ImportAgentRequest> {
     private static readonly pb::MessageParser<ImportAgentRequest> _parser = new pb::MessageParser<ImportAgentRequest>(() => new ImportAgentRequest());
@@ -1796,7 +1803,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Agents.RestoreAgent][google.cloud.dialogflow.v2.Agents.RestoreAgent].
+  /// The request message for
+  /// [Agents.RestoreAgent][google.cloud.dialogflow.v2.Agents.RestoreAgent].
   /// </summary>
   public sealed partial class RestoreAgentRequest : pb::IMessage<RestoreAgentRequest> {
     private static readonly pb::MessageParser<RestoreAgentRequest> _parser = new pb::MessageParser<RestoreAgentRequest>(() => new RestoreAgentRequest());
