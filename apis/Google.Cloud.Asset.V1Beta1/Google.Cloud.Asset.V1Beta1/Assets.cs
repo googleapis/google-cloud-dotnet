@@ -493,8 +493,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The full name of the asset. For example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-    /// See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+    /// The full name of the asset. For example:
+    /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
+    /// See [Resource
+    /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
     /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -537,8 +539,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
     public const int IamPolicyFieldNumber = 4;
     private global::Google.Cloud.Iam.V1.Policy iamPolicy_;
     /// <summary>
-    /// Representation of the actual Cloud IAM policy set on a cloud resource. For each
-    /// resource, there must be at most one Cloud IAM policy set on it.
+    /// Representation of the actual Cloud IAM policy set on a cloud resource. For
+    /// each resource, there must be at most one Cloud IAM policy set on it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Iam.V1.Policy IamPolicy {
@@ -805,12 +807,14 @@ namespace Google.Cloud.Asset.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// The full name of the immediate parent of this resource. See
-    /// [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+    /// [Resource
+    /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
     /// for more information.
     ///
     /// For GCP assets, it is the parent resource defined in the [Cloud IAM policy
     /// hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy).
-    /// For example: `"//cloudresourcemanager.googleapis.com/projects/my_project_123"`.
+    /// For example:
+    /// `"//cloudresourcemanager.googleapis.com/projects/my_project_123"`.
     ///
     /// For third-party assets, it is up to the users to define.
     /// </summary>

@@ -379,8 +379,10 @@ namespace Google.Cloud.Asset.V1Beta1 {
 
   /// <summary>
   /// The export asset response. This message is returned by the
-  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] method in the returned
-  /// [google.longrunning.Operation.response][google.longrunning.Operation.response] field.
+  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
+  /// method in the returned
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// field.
   /// </summary>
   public sealed partial class ExportAssetsResponse : pb::IMessage<ExportAssetsResponse> {
     private static readonly pb::MessageParser<ExportAssetsResponse> _parser = new pb::MessageParser<ExportAssetsResponse>(() => new ExportAssetsResponse());
@@ -622,7 +624,8 @@ namespace Google.Cloud.Asset.V1Beta1 {
     /// <summary>
     /// A list of the full names of the assets. For example:
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-    /// See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+    /// See [Resource
+    /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
     /// for more info.
     ///
     /// The request becomes a no-op if the asset name list is empty, and the max
