@@ -180,7 +180,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 ResourceNames = { $"projects/{_projectId}" },
                 Filter = $"timestamp >= \"{time}\" AND logName=\"projects/{_projectId}/logs/aspnetcore\"",
-                PageSize = 1000                
+                PageSize = 1000
             };
         }
     }

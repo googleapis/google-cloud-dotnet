@@ -40,38 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public LoggingTest(LogValidatingFixture fixture) => _fixture = fixture;
 
         [Fact]
-        public async Task Logging_SizedBuffer()
-        {
-            var quickPolling = new LogEntryPolling(TimeSpan.FromSeconds(10));
-            string testId = IdGenerator.FromGuid();
-            DateTime startTime = DateTime.UtcNow;
-
-            var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
-            using (TestServer server = new TestServer(builder))
-            using (var client = server.CreateClient())
-            {
-                await client.GetAsync($"/Main/Warning/{testId}");
-                await client.GetAsync($"/Main/Error/{testId}");
-                await client.GetAsync($"/Main/Critical/{testId}");
-
-                // This doesn't really *prove* that we haven't sent any log entries. It's just a good
-                // starting point.
-                var noResults = quickPolling.GetEntries(startTime, testId, 0, LogSeverity.Warning);
-                Assert.Empty(noResults);
-            }
-
-            // While we normally should not have entries we disposed of the server
-            // which should flush the buffer.
-            _fixture.AddValidator(testId, results =>
-            {
-                Assert.Equal(2, results.Count());
-                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
-                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
-            });
-        }
-
-        [Fact]
-        public async Task Logging_NoBuffer()
+        public async Task Logging_WarningPlus()
         {
             string testId = IdGenerator.FromGuid();
 
@@ -97,11 +66,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
-        public async Task Logging_SizedBuffer_ManyEntries()
+        public async Task Logging_ManyEntries()
         {
             string testId = IdGenerator.FromGuid();
 
-            var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
             using (var client = server.CreateClient())
             {
@@ -117,46 +86,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
             _fixture.AddValidator(testId, results =>
             {
-                Assert.Equal(750, results.Count);
+                Assert.Equal(1000, results.Count);
                 Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Debug);
                 Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Info);
-                Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Warning);
+                Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Warning));
                 Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Error));
                 Assert.Equal(500, results.Count(l => l.Severity == LogSeverity.Critical)); // Exception and Critical
-            });
-        }
-
-
-        [Fact]
-        public async Task Logging_TimedBuffer()
-        {
-            // To ensure this test does not take too long and to not wait for the buffer to
-            // flush itself we use custom polling to check for the initial check that no
-            // entries exist.
-            var quickPolling = new LogEntryPolling(TimeSpan.FromSeconds(10));
-            string testId = IdGenerator.FromGuid();
-            DateTime startTime = DateTime.UtcNow;
-
-            var builder = new WebHostBuilder().UseStartup<TimedBufferWarningLoggerTestApplication>();
-            using (TestServer server = new TestServer(builder))
-            using (var client = server.CreateClient())
-            {
-                await client.GetAsync($"/Main/Warning/{testId}");
-                await client.GetAsync($"/Main/Error/{testId}");
-
-                var noResults = quickPolling.GetEntries(startTime, testId, 0, LogSeverity.Warning);
-                Assert.Empty(noResults);
-
-                await client.GetAsync($"/Main/Error/{testId}");
-                await client.GetAsync($"/Main/Critical/{testId}");
-            }
-
-            _fixture.AddValidator(testId, results =>
-            {
-                Assert.Equal(4, results.Count());
-                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
-                Assert.Equal(2, results.Count(l => l.Severity == LogSeverity.Error));
-                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
             });
         }
 
@@ -190,7 +125,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (var server = new TestServer(builder))
             using (var client = server.CreateClient())
             {
@@ -199,7 +134,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             _fixture.AddValidator(testId, results =>
             {
-                var message = MainController.GetMessage(nameof(MainController.Scope), testId);
+                var message = EntryData.GetMessage(nameof(MainController.Scope), testId);
                 Assert.Equal(message, results.Single().JsonPayload.Fields["message"].StringValue);
                 Assert.Contains("Scope => ", results.Single().JsonPayload.Fields["scope"].StringValue);
             });
@@ -211,7 +146,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (var server = new TestServer(builder))
             using (var client = server.CreateClient())
             {
@@ -219,7 +154,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
             _fixture.AddValidator(testId, results =>
             {
-                var message = MainController.GetMessage(nameof(MainController.FormatParameters), testId);
+                var message = EntryData.GetMessage(nameof(MainController.FormatParameters), testId);
                 var json = results.Single().JsonPayload.Fields;
                 Assert.Equal(message, json["message"].StringValue);
                 var formatParams = json["format_parameters"]?.StructValue?.Fields;
@@ -237,7 +172,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (var server = new TestServer(builder))
             using (var client = server.CreateClient())
             {
@@ -246,7 +181,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             _fixture.AddValidator(testId, results =>
             {
-                var message = MainController.GetMessage(nameof(MainController.ScopeFormatParameters), testId);
+                var message = EntryData.GetMessage(nameof(MainController.ScopeFormatParameters), testId);
                 var json = results.Single().JsonPayload.Fields;
                 Assert.Equal(message, json["message"].StringValue);
 
@@ -384,38 +319,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
-    /// An application that has a <see cref="GoogleLogger"/> with a <see cref="BufferType.Sized"/>
-    /// buffer that will accept all logs of level error or above.
-    /// </summary>
-    public class SizedBufferErrorLoggerTestApplication : LoggerTestApplication
-    {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(
-                LogLevel.Error, null, null, null, BufferOptions.SizedBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
-        }
-    }
-
-    /// <summary>
-    /// An application that has a <see cref="GoogleLogger"/> with a <see cref="BufferType.Timed"/>
-    /// buffer, that will be able to flush after one minute that will accept all logs of level
-    /// warning or above.
-    /// </summary>
-    public class TimedBufferWarningLoggerTestApplication : LoggerTestApplication
-    {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(20));
-            LoggerOptions loggerOptions = LoggerOptions.Create(
-                LogLevel.Warning, null, null, null, options);
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
-        }
-    }
-
-    /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> and a <see cref="ILogEntryLabelProvider"/>,
     /// that accept all logs of level warning or above.
     /// </summary>
@@ -450,39 +353,37 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _logger = loggerFactory.CreateLogger(nameof(_logger));
         }
 
-        public string Index(string id) => GetMessage(nameof(Index), id);
-
         public string Debug(string id)
         {
-            string message = GetMessage(nameof(Debug), id);
+            string message = EntryData.GetMessage(nameof(Debug), id);
             _logger.LogDebug(message);
             return message;
         }
 
         public string Info(string id)
         {
-            string message = GetMessage(nameof(Info), id);
+            string message = EntryData.GetMessage(nameof(Info), id);
             _logger.LogInformation(message);
             return message;
         }
 
         public string Warning(string id)
         {
-            string message = GetMessage(nameof(Warning), id);
+            string message = EntryData.GetMessage(nameof(Warning), id);
             _logger.LogWarning(message);
             return message;
         }
 
         public string Error(string id)
         {
-            string message = GetMessage(nameof(Error), id);
+            string message = EntryData.GetMessage(nameof(Error), id);
             _logger.LogError(message);
             return message;
         }
 
         public string Critical(string id)
         {
-            string message = GetMessage(nameof(Critical), id);
+            string message = EntryData.GetMessage(nameof(Critical), id);
             _logger.LogCritical(message);
             return message;
         }
@@ -491,7 +392,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             using (_logger.BeginScope(nameof(Scope)))
             {
-                string message = GetMessage(nameof(Scope), id);
+                string message = EntryData.GetMessage(nameof(Scope), id);
                 _logger.LogCritical(message);
                 return message;
             }
@@ -508,7 +409,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             using (_logger.BeginScope(nameof(ScopeFormatParameters) + " - {id}", id))
             {
-                string message = GetMessage(nameof(ScopeFormatParameters), id);
+                string message = EntryData.GetMessage(nameof(ScopeFormatParameters), id);
                 _logger.LogCritical(message);
                 return message;
             }
@@ -516,7 +417,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public string Exception(string id)
         {
-            string message = GetMessage(nameof(Exception), id);
+            string message = EntryData.GetMessage(nameof(Exception), id);
             try
             {
                 throw new Exception("Exception to throw.");
@@ -527,8 +428,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
             return message;
         }
-
-        public static string GetMessage(string message, string id) => $"{message} - {id}";
     }
 
     internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
