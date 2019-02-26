@@ -1014,7 +1014,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// <summary>
     /// Encoding of audio data sent in all `RecognitionAudio` messages.
     /// This field is optional for `FLAC` and `WAV` audio files and required
-    /// for all other audio formats. For details, see [AudioEncoding][google.cloud.speech.v1p1beta1.RecognitionConfig.AudioEncoding].
+    /// for all other audio formats. For details, see
+    /// [AudioEncoding][google.cloud.speech.v1p1beta1.RecognitionConfig.AudioEncoding].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding Encoding {
@@ -1034,7 +1035,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// source to 16000 Hz. If that's not possible, use the native sample rate of
     /// the audio source (instead of re-sampling).
     /// This field is optional for `FLAC` and `WAV` audio files and required
-    /// for all other audio formats. For details, see [AudioEncoding][google.cloud.speech.v1p1beta1.RecognitionConfig.AudioEncoding].
+    /// for all other audio formats. For details, see
+    /// [AudioEncoding][google.cloud.speech.v1p1beta1.RecognitionConfig.AudioEncoding].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SampleRateHertz {
@@ -1169,9 +1171,10 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Speech.V1P1Beta1.SpeechContext.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.SpeechContext> speechContexts_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.SpeechContext>();
     /// <summary>
-    /// *Optional* array of [SpeechContext][google.cloud.speech.v1p1beta1.SpeechContext].
-    /// A means to provide context to assist the speech recognition. For more
-    /// information, see [Phrase Hints](/speech-to-text/docs/basics#phrase-hints).
+    /// *Optional* array of
+    /// [SpeechContext][google.cloud.speech.v1p1beta1.SpeechContext]. A means to
+    /// provide context to assist the speech recognition. For more information, see
+    /// [Phrase Hints](/speech-to-text/docs/basics#phrase-hints).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.SpeechContext> SpeechContexts {
@@ -1711,7 +1714,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// an `AudioEncoding` when you send  send `FLAC` or `WAV` audio, the
       /// encoding configuration must match the encoding described in the audio
       /// header; otherwise the request returns an
-      /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error code.
+      /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error
+      /// code.
       /// </summary>
       public enum AudioEncoding {
         /// <summary>
@@ -2434,8 +2438,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Contains audio data in the encoding specified in the `RecognitionConfig`.
   /// Either `content` or `uri` must be supplied. Supplying both or neither
-  /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
-  /// [content limits](/speech-to-text/quotas#content).
+  /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+  /// See [content limits](/speech-to-text/quotas#content).
   /// </summary>
   public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio> {
     private static readonly pb::MessageParser<RecognitionAudio> _parser = new pb::MessageParser<RecognitionAudio>(() => new RecognitionAudio());
@@ -2503,8 +2507,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Currently, only Google Cloud Storage URIs are
     /// supported, which must be specified in the following format:
     /// `gs://bucket_name/object_name` (other URI formats return
-    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-    /// [Request URIs](https://cloud.google.com/storage/docs/reference-uris).
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]).
+    /// For more information, see [Request
+    /// URIs](https://cloud.google.com/storage/docs/reference-uris).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
@@ -3204,8 +3209,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public const int ErrorFieldNumber = 1;
     private global::Google.Rpc.Status error_;
     /// <summary>
-    /// Output only. If set, returns a [google.rpc.Status][google.rpc.Status] message that
-    /// specifies the error for the operation.
+    /// Output only. If set, returns a [google.rpc.Status][google.rpc.Status]
+    /// message that specifies the error for the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Error {
