@@ -28,7 +28,7 @@ namespace Google.Cloud.Redis.V1 {
             "b2dsZS5jbG91ZC5yZWRpcy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
             "cm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aIGdv",
             "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvItAGCghJbnN0YW5jZRIMCgRuYW1lGAEgASgJ",
+            "dWYvdGltZXN0YW1wLnByb3RvIpQHCghJbnN0YW5jZRIMCgRuYW1lGAEgASgJ",
             "EhQKDGRpc3BsYXlfbmFtZRgCIAEoCRI7CgZsYWJlbHMYAyADKAsyKy5nb29n",
             "bGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UuTGFiZWxzRW50cnkSEwoLbG9j",
             "YXRpb25faWQYBCABKAkSHwoXYWx0ZXJuYXRpdmVfbG9jYXRpb25faWQYBSAB",
@@ -41,64 +41,99 @@ namespace Google.Cloud.Redis.V1 {
             "bG91ZC5yZWRpcy52MS5JbnN0YW5jZS5SZWRpc0NvbmZpZ3NFbnRyeRIyCgR0",
             "aWVyGBEgASgOMiQuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlLlRp",
             "ZXISFgoObWVtb3J5X3NpemVfZ2IYEiABKAUSGgoSYXV0aG9yaXplZF9uZXR3",
-            "b3JrGBQgASgJGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEaMwoRUmVkaXNDb25maWdzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASJzCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
-            "RklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghVUERBVElORxAD",
-            "EgwKCERFTEVUSU5HEAQSDQoJUkVQQUlSSU5HEAUSDwoLTUFJTlRFTkFOQ0UQ",
-            "BiI4CgRUaWVyEhQKEFRJRVJfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEg8K",
-            "C1NUQU5EQVJEX0hBEAMiTQoUTGlzdEluc3RhbmNlc1JlcXVlc3QSDgoGcGFy",
-            "ZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMg",
-            "ASgJImQKFUxpc3RJbnN0YW5jZXNSZXNwb25zZRIyCglpbnN0YW5jZXMYASAD",
-            "KAsyHy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2USFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJIiIKEkdldEluc3RhbmNlUmVxdWVzdBIMCgRuYW1l",
-            "GAEgASgJIm8KFUNyZWF0ZUluc3RhbmNlUmVxdWVzdBIOCgZwYXJlbnQYASAB",
-            "KAkSEwoLaW5zdGFuY2VfaWQYAiABKAkSMQoIaW5zdGFuY2UYAyABKAsyHy5n",
-            "b29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UiewoVVXBkYXRlSW5zdGFu",
-            "Y2VSZXF1ZXN0Ei8KC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLkZpZWxkTWFzaxIxCghpbnN0YW5jZRgCIAEoCzIfLmdvb2dsZS5jbG91",
-            "ZC5yZWRpcy52MS5JbnN0YW5jZSIlChVEZWxldGVJbnN0YW5jZVJlcXVlc3QS",
-            "DAoEbmFtZRgBIAEoCSLWAQoRT3BlcmF0aW9uTWV0YWRhdGESLwoLY3JlYXRl",
-            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVu",
-            "ZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZ0",
-            "YXJnZXQYAyABKAkSDAoEdmVyYhgEIAEoCRIVCg1zdGF0dXNfZGV0YWlsGAUg",
-            "ASgJEhgKEGNhbmNlbF9yZXF1ZXN0ZWQYBiABKAgSEwoLYXBpX3ZlcnNpb24Y",
-            "ByABKAkixAEKEExvY2F0aW9uTWV0YWRhdGESVAoPYXZhaWxhYmxlX3pvbmVz",
-            "GAEgAygLMjsuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkxvY2F0aW9uTWV0YWRh",
-            "dGEuQXZhaWxhYmxlWm9uZXNFbnRyeRpaChNBdmFpbGFibGVab25lc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRIyCgV2YWx1ZRgCIAEoCzIjLmdvb2dsZS5jbG91ZC5y",
-            "ZWRpcy52MS5ab25lTWV0YWRhdGE6AjgBIg4KDFpvbmVNZXRhZGF0YTKlBgoK",
-            "Q2xvdWRSZWRpcxKhAQoNTGlzdEluc3RhbmNlcxIrLmdvb2dsZS5jbG91ZC5y",
-            "ZWRpcy52MS5MaXN0SW5zdGFuY2VzUmVxdWVzdBosLmdvb2dsZS5jbG91ZC5y",
-            "ZWRpcy52MS5MaXN0SW5zdGFuY2VzUmVzcG9uc2UiNYLT5JMCLxItL3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFuY2VzEpABCgtH",
-            "ZXRJbnN0YW5jZRIpLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5HZXRJbnN0YW5j",
-            "ZVJlcXVlc3QaHy5nb29nbGUuY2xvdWQucmVkaXMudjEuSW5zdGFuY2UiNYLT",
-            "5JMCLxItL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFu",
-            "Y2VzLyp9Ep4BCg5DcmVhdGVJbnN0YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRp",
-            "cy52MS5DcmVhdGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIj+C0+STAjkiLS92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyp9L2luc3RhbmNlczoIaW5zdGFuY2USpwEKDlVwZGF0ZUlu",
-            "c3RhbmNlEiwuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLlVwZGF0ZUluc3RhbmNl",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iSILT5JMC",
-            "QjI2L3YxL3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "aW5zdGFuY2VzLyp9OghpbnN0YW5jZRKUAQoORGVsZXRlSW5zdGFuY2USLC5n",
-            "b29nbGUuY2xvdWQucmVkaXMudjEuRGVsZXRlSW5zdGFuY2VSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiI1gtPkkwIvKi0vdjEve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn1CcwoZY29t",
-            "Lmdvb2dsZS5jbG91ZC5yZWRpcy52MUIYQ2xvdWRSZWRpc1NlcnZpY2VWMVBy",
-            "b3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvcmVkaXMvdjE7cmVkaXNiBnByb3RvMw=="));
+            "b3JrGBQgASgJEiAKGHBlcnNpc3RlbmNlX2lhbV9pZGVudGl0eRgVIAEoCRot",
+            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "GjMKEVJlZGlzQ29uZmlnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEilAEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
+            "Q1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJ",
+            "TkcQBBINCglSRVBBSVJJTkcQBRIPCgtNQUlOVEVOQU5DRRAGEg0KCUlNUE9S",
+            "VElORxAIEhAKDEZBSUxJTkdfT1ZFUhAJIjgKBFRpZXISFAoQVElFUl9VTlNQ",
+            "RUNJRklFRBAAEgkKBUJBU0lDEAESDwoLU1RBTkRBUkRfSEEQAyJNChRMaXN0",
+            "SW5zdGFuY2VzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXpl",
+            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkieQoVTGlzdEluc3RhbmNlc1Jl",
+            "c3BvbnNlEjIKCWluc3RhbmNlcxgBIAMoCzIfLmdvb2dsZS5jbG91ZC5yZWRp",
+            "cy52MS5JbnN0YW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5y",
+            "ZWFjaGFibGUYAyADKAkiIgoSR2V0SW5zdGFuY2VSZXF1ZXN0EgwKBG5hbWUY",
+            "ASABKAkibwoVQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0Eg4KBnBhcmVudBgBIAEo",
+            "CRITCgtpbnN0YW5jZV9pZBgCIAEoCRIxCghpbnN0YW5jZRgDIAEoCzIfLmdv",
+            "b2dsZS5jbG91ZC5yZWRpcy52MS5JbnN0YW5jZSJ7ChVVcGRhdGVJbnN0YW5j",
+            "ZVJlcXVlc3QSLwoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuRmllbGRNYXNrEjEKCGluc3RhbmNlGAIgASgLMh8uZ29vZ2xlLmNsb3Vk",
+            "LnJlZGlzLnYxLkluc3RhbmNlIiUKFURlbGV0ZUluc3RhbmNlUmVxdWVzdBIM",
+            "CgRuYW1lGAEgASgJIhgKCUdjc1NvdXJjZRILCgN1cmkYASABKAkiTwoLSW5w",
+            "dXRDb25maWcSNgoKZ2NzX3NvdXJjZRgBIAEoCzIgLmdvb2dsZS5jbG91ZC5y",
+            "ZWRpcy52MS5HY3NTb3VyY2VIAEIICgZzb3VyY2UiXwoVSW1wb3J0SW5zdGFu",
+            "Y2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSOAoMaW5wdXRfY29uZmlnGAMgASgL",
+            "MiIuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLklucHV0Q29uZmlnIh0KDkdjc0Rl",
+            "c3RpbmF0aW9uEgsKA3VyaRgBIAEoCSJfCgxPdXRwdXRDb25maWcSQAoPZ2Nz",
+            "X2Rlc3RpbmF0aW9uGAEgASgLMiUuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkdj",
+            "c0Rlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24iYQoVRXhwb3J0SW5zdGFu",
+            "Y2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSOgoNb3V0cHV0X2NvbmZpZxgDIAEo",
+            "CzIjLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5PdXRwdXRDb25maWci8AEKF0Zh",
+            "aWxvdmVySW5zdGFuY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSXwoUZGF0YV9w",
+            "cm90ZWN0aW9uX21vZGUYAiABKA4yQS5nb29nbGUuY2xvdWQucmVkaXMudjEu",
+            "RmFpbG92ZXJJbnN0YW5jZVJlcXVlc3QuRGF0YVByb3RlY3Rpb25Nb2RlImYK",
+            "EkRhdGFQcm90ZWN0aW9uTW9kZRIkCiBEQVRBX1BST1RFQ1RJT05fTU9ERV9V",
+            "TlNQRUNJRklFRBAAEhUKEUxJTUlURURfREFUQV9MT1NTEAESEwoPRk9SQ0Vf",
+            "REFUQV9MT1NTEAIi1gEKEU9wZXJhdGlvbk1ldGFkYXRhEi8KC2NyZWF0ZV90",
+            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDgoGdGFy",
+            "Z2V0GAMgASgJEgwKBHZlcmIYBCABKAkSFQoNc3RhdHVzX2RldGFpbBgFIAEo",
+            "CRIYChBjYW5jZWxfcmVxdWVzdGVkGAYgASgIEhMKC2FwaV92ZXJzaW9uGAcg",
+            "ASgJIsQBChBMb2NhdGlvbk1ldGFkYXRhElQKD2F2YWlsYWJsZV96b25lcxgB",
+            "IAMoCzI7Lmdvb2dsZS5jbG91ZC5yZWRpcy52MS5Mb2NhdGlvbk1ldGFkYXRh",
+            "LkF2YWlsYWJsZVpvbmVzRW50cnkaWgoTQXZhaWxhYmxlWm9uZXNFbnRyeRIL",
+            "CgNrZXkYASABKAkSMgoFdmFsdWUYAiABKAsyIy5nb29nbGUuY2xvdWQucmVk",
+            "aXMudjEuWm9uZU1ldGFkYXRhOgI4ASIOCgxab25lTWV0YWRhdGEyjgoKCkNs",
+            "b3VkUmVkaXMSoQEKDUxpc3RJbnN0YW5jZXMSKy5nb29nbGUuY2xvdWQucmVk",
+            "aXMudjEuTGlzdEluc3RhbmNlc1JlcXVlc3QaLC5nb29nbGUuY2xvdWQucmVk",
+            "aXMudjEuTGlzdEluc3RhbmNlc1Jlc3BvbnNlIjWC0+STAi8SLS92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2luc3RhbmNlcxKQAQoLR2V0",
+            "SW5zdGFuY2USKS5nb29nbGUuY2xvdWQucmVkaXMudjEuR2V0SW5zdGFuY2VS",
+            "ZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkluc3RhbmNlIjWC0+ST",
+            "Ai8SLS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNl",
+            "cy8qfRKeAQoOQ3JlYXRlSW5zdGFuY2USLC5nb29nbGUuY2xvdWQucmVkaXMu",
+            "djEuQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiI/gtPkkwI5Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9pbnN0YW5jZXM6CGluc3RhbmNlEqcBCg5VcGRhdGVJbnN0",
+            "YW5jZRIsLmdvb2dsZS5jbG91ZC5yZWRpcy52MS5VcGRhdGVJbnN0YW5jZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIkiC0+STAkIy",
+            "Ni92MS97aW5zdGFuY2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2lu",
+            "c3RhbmNlcy8qfToIaW5zdGFuY2USngEKDkltcG9ydEluc3RhbmNlEiwuZ29v",
+            "Z2xlLmNsb3VkLnJlZGlzLnYxLkltcG9ydEluc3RhbmNlUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iP4LT5JMCOSI0L3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OmltcG9ydDoB",
+            "KhKeAQoORXhwb3J0SW5zdGFuY2USLC5nb29nbGUuY2xvdWQucmVkaXMudjEu",
+            "RXhwb3J0SW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiI/gtPkkwI5IjQvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9pbnN0YW5jZXMvKn06ZXhwb3J0OgEqEqQBChBGYWlsb3Zlckluc3Rh",
+            "bmNlEi4uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxLkZhaWxvdmVySW5zdGFuY2VS",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJBgtPkkwI7",
+            "IjYvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMv",
+            "Kn06ZmFpbG92ZXI6ASoSlAEKDkRlbGV0ZUluc3RhbmNlEiwuZ29vZ2xlLmNs",
+            "b3VkLnJlZGlzLnYxLkRlbGV0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24iNYLT5JMCLyotL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9QnMKGWNvbS5nb29nbGUu",
+            "Y2xvdWQucmVkaXMudjFCGENsb3VkUmVkaXNTZXJ2aWNlVjFQcm90b1ABWjpn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Jl",
+            "ZGlzL3YxO3JlZGlzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.Instance), global::Google.Cloud.Redis.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1.Instance.Types.Tier) }, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.Instance), global::Google.Cloud.Redis.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1.Instance.Types.Tier) }, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ListInstancesRequest), global::Google.Cloud.Redis.V1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ListInstancesResponse), global::Google.Cloud.Redis.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ListInstancesResponse), global::Google.Cloud.Redis.V1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.GetInstanceRequest), global::Google.Cloud.Redis.V1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.CreateInstanceRequest), global::Google.Cloud.Redis.V1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.UpdateInstanceRequest), global::Google.Cloud.Redis.V1.UpdateInstanceRequest.Parser, new[]{ "UpdateMask", "Instance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.DeleteInstanceRequest), global::Google.Cloud.Redis.V1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.GcsSource), global::Google.Cloud.Redis.V1.GcsSource.Parser, new[]{ "Uri" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.InputConfig), global::Google.Cloud.Redis.V1.InputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ImportInstanceRequest), global::Google.Cloud.Redis.V1.ImportInstanceRequest.Parser, new[]{ "Name", "InputConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.GcsDestination), global::Google.Cloud.Redis.V1.GcsDestination.Parser, new[]{ "Uri" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.OutputConfig), global::Google.Cloud.Redis.V1.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ExportInstanceRequest), global::Google.Cloud.Redis.V1.ExportInstanceRequest.Parser, new[]{ "Name", "OutputConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.FailoverInstanceRequest), global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Parser, new[]{ "Name", "DataProtectionMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Types.DataProtectionMode) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.OperationMetadata), global::Google.Cloud.Redis.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusDetail", "CancelRequested", "ApiVersion" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.LocationMetadata), global::Google.Cloud.Redis.V1.LocationMetadata.Parser, new[]{ "AvailableZones" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1.ZoneMetadata), global::Google.Cloud.Redis.V1.ZoneMetadata.Parser, null, null, null, null)
@@ -153,6 +188,7 @@ namespace Google.Cloud.Redis.V1 {
       tier_ = other.tier_;
       memorySizeGb_ = other.memorySizeGb_;
       authorizedNetwork_ = other.authorizedNetwork_;
+      persistenceIamIdentity_ = other.persistenceIamIdentity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -251,7 +287,9 @@ namespace Google.Cloud.Redis.V1 {
     /// Optional. The version of Redis software.
     /// If not provided, latest supported version will be used. Updating the
     /// version will perform an upgrade/downgrade to the new version. Currently,
-    /// the supported values are `REDIS_3_2` for Redis 3.2.
+    /// the supported values are:
+    ///  * `REDIS_4_0` for Redis 4.0 compatibility
+    ///  * `REDIS_3_2` for Redis 3.2 compatibility
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RedisVersion {
@@ -378,8 +416,14 @@ namespace Google.Cloud.Redis.V1 {
     /// http://redis.io/topics/config. Currently, the only supported parameters
     /// are:
     ///
-    ///  *   maxmemory-policy
-    ///  *   notify-keyspace-events
+    ///  Redis 3.2 and above:
+    ///  * maxmemory-policy
+    ///  * notify-keyspace-events
+    ///
+    ///  Redis 4.0 and above:
+    ///  * activedefrag
+    ///  * lfu-log-factor
+    ///  * lfu-decay-time
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> RedisConfigs {
@@ -431,6 +475,24 @@ namespace Google.Cloud.Redis.V1 {
       }
     }
 
+    /// <summary>Field number for the "persistence_iam_identity" field.</summary>
+    public const int PersistenceIamIdentityFieldNumber = 21;
+    private string persistenceIamIdentity_ = "";
+    /// <summary>
+    /// Output only. Cloud IAM identity used by import / export operations to
+    /// transfer data to/from Cloud Storage. Format is
+    /// "serviceAccount:&lt;service_account_email>". The value may change over time
+    /// for a given instance so should be checked before each import/export
+    /// operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PersistenceIamIdentity {
+      get { return persistenceIamIdentity_; }
+      set {
+        persistenceIamIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Instance);
@@ -461,6 +523,7 @@ namespace Google.Cloud.Redis.V1 {
       if (Tier != other.Tier) return false;
       if (MemorySizeGb != other.MemorySizeGb) return false;
       if (AuthorizedNetwork != other.AuthorizedNetwork) return false;
+      if (PersistenceIamIdentity != other.PersistenceIamIdentity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -484,6 +547,7 @@ namespace Google.Cloud.Redis.V1 {
       if (Tier != 0) hash ^= Tier.GetHashCode();
       if (MemorySizeGb != 0) hash ^= MemorySizeGb.GetHashCode();
       if (AuthorizedNetwork.Length != 0) hash ^= AuthorizedNetwork.GetHashCode();
+      if (PersistenceIamIdentity.Length != 0) hash ^= PersistenceIamIdentity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -559,6 +623,10 @@ namespace Google.Cloud.Redis.V1 {
         output.WriteRawTag(162, 1);
         output.WriteString(AuthorizedNetwork);
       }
+      if (PersistenceIamIdentity.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(PersistenceIamIdentity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -613,6 +681,9 @@ namespace Google.Cloud.Redis.V1 {
       }
       if (AuthorizedNetwork.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(AuthorizedNetwork);
+      }
+      if (PersistenceIamIdentity.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PersistenceIamIdentity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -674,6 +745,9 @@ namespace Google.Cloud.Redis.V1 {
       }
       if (other.AuthorizedNetwork.Length != 0) {
         AuthorizedNetwork = other.AuthorizedNetwork;
+      }
+      if (other.PersistenceIamIdentity.Length != 0) {
+        PersistenceIamIdentity = other.PersistenceIamIdentity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -757,6 +831,10 @@ namespace Google.Cloud.Redis.V1 {
             AuthorizedNetwork = input.ReadString();
             break;
           }
+          case 170: {
+            PersistenceIamIdentity = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -792,14 +870,21 @@ namespace Google.Cloud.Redis.V1 {
         /// </summary>
         [pbr::OriginalName("DELETING")] Deleting = 4,
         /// <summary>
-        /// Redis instance is being repaired and may be unusable. Details can be
-        /// found in the `status_message` field.
+        /// Redis instance is being repaired and may be unusable.
         /// </summary>
         [pbr::OriginalName("REPAIRING")] Repairing = 5,
         /// <summary>
         /// Maintenance is being performed on this Redis instance.
         /// </summary>
         [pbr::OriginalName("MAINTENANCE")] Maintenance = 6,
+        /// <summary>
+        /// Redis instance is importing data (availability may be affected).
+        /// </summary>
+        [pbr::OriginalName("IMPORTING")] Importing = 8,
+        /// <summary>
+        /// Redis instance is failing over (availability may be affected).
+        /// </summary>
+        [pbr::OriginalName("FAILING_OVER")] FailingOver = 9,
       }
 
       /// <summary>
@@ -1061,6 +1146,7 @@ namespace Google.Cloud.Redis.V1 {
     public ListInstancesResponse(ListInstancesResponse other) : this() {
       instances_ = other.instances_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1106,6 +1192,19 @@ namespace Google.Cloud.Redis.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that could not be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListInstancesResponse);
@@ -1121,6 +1220,7 @@ namespace Google.Cloud.Redis.V1 {
       }
       if(!instances_.Equals(other.instances_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1129,6 +1229,7 @@ namespace Google.Cloud.Redis.V1 {
       int hash = 1;
       hash ^= instances_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1147,6 +1248,7 @@ namespace Google.Cloud.Redis.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1159,6 +1261,7 @@ namespace Google.Cloud.Redis.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1174,6 +1277,7 @@ namespace Google.Cloud.Redis.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1191,6 +1295,10 @@ namespace Google.Cloud.Redis.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
             break;
           }
         }
@@ -1337,7 +1445,8 @@ namespace Google.Cloud.Redis.V1 {
   }
 
   /// <summary>
-  /// Request for [CreateInstance][google.cloud.redis.v1.CloudRedis.CreateInstance].
+  /// Request for
+  /// [CreateInstance][google.cloud.redis.v1.CloudRedis.CreateInstance].
   /// </summary>
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest> {
     private static readonly pb::MessageParser<CreateInstanceRequest> _parser = new pb::MessageParser<CreateInstanceRequest>(() => new CreateInstanceRequest());
@@ -1549,7 +1658,8 @@ namespace Google.Cloud.Redis.V1 {
   }
 
   /// <summary>
-  /// Request for [UpdateInstance][google.cloud.redis.v1.CloudRedis.UpdateInstance].
+  /// Request for
+  /// [UpdateInstance][google.cloud.redis.v1.CloudRedis.UpdateInstance].
   /// </summary>
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest> {
     private static readonly pb::MessageParser<UpdateInstanceRequest> _parser = new pb::MessageParser<UpdateInstanceRequest>(() => new UpdateInstanceRequest());
@@ -1735,7 +1845,8 @@ namespace Google.Cloud.Redis.V1 {
   }
 
   /// <summary>
-  /// Request for [DeleteInstance][google.cloud.redis.v1.CloudRedis.DeleteInstance].
+  /// Request for
+  /// [DeleteInstance][google.cloud.redis.v1.CloudRedis.DeleteInstance].
   /// </summary>
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest> {
     private static readonly pb::MessageParser<DeleteInstanceRequest> _parser = new pb::MessageParser<DeleteInstanceRequest>(() => new DeleteInstanceRequest());
@@ -1872,6 +1983,1158 @@ namespace Google.Cloud.Redis.V1 {
   }
 
   /// <summary>
+  /// The GCS location for the input content
+  /// </summary>
+  public sealed partial class GcsSource : pb::IMessage<GcsSource> {
+    private static readonly pb::MessageParser<GcsSource> _parser = new pb::MessageParser<GcsSource>(() => new GcsSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GcsSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsSource(GcsSource other) : this() {
+      uri_ = other.uri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsSource Clone() {
+      return new GcsSource(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// Required. Source data URI. (e.g. 'gs://my_bucket/my_object').
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GcsSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GcsSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GcsSource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The input content
+  /// </summary>
+  public sealed partial class InputConfig : pb::IMessage<InputConfig> {
+    private static readonly pb::MessageParser<InputConfig> _parser = new pb::MessageParser<InputConfig>(() => new InputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InputConfig(InputConfig other) : this() {
+      switch (other.SourceCase) {
+        case SourceOneofCase.GcsSource:
+          GcsSource = other.GcsSource.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InputConfig Clone() {
+      return new InputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_source" field.</summary>
+    public const int GcsSourceFieldNumber = 1;
+    /// <summary>
+    /// Google Cloud Storage location where input content is located.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Redis.V1.GcsSource GcsSource {
+      get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.Redis.V1.GcsSource) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.GcsSource;
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      GcsSource = 1,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsSource, other.GcsSource)) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.GcsSource:
+          if (GcsSource == null) {
+            GcsSource = new global::Google.Cloud.Redis.V1.GcsSource();
+          }
+          GcsSource.MergeFrom(other.GcsSource);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Redis.V1.GcsSource subBuilder = new global::Google.Cloud.Redis.V1.GcsSource();
+            if (sourceCase_ == SourceOneofCase.GcsSource) {
+              subBuilder.MergeFrom(GcsSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsSource = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request for [Import][google.cloud.redis.v1.CloudRedis.ImportInstance].
+  /// </summary>
+  public sealed partial class ImportInstanceRequest : pb::IMessage<ImportInstanceRequest> {
+    private static readonly pb::MessageParser<ImportInstanceRequest> _parser = new pb::MessageParser<ImportInstanceRequest>(() => new ImportInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImportInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportInstanceRequest(ImportInstanceRequest other) : this() {
+      name_ = other.name_;
+      inputConfig_ = other.inputConfig_ != null ? other.inputConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportInstanceRequest Clone() {
+      return new ImportInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Redis instance resource name using the form:
+    ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+    /// where `location_id` refers to a GCP region
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "input_config" field.</summary>
+    public const int InputConfigFieldNumber = 3;
+    private global::Google.Cloud.Redis.V1.InputConfig inputConfig_;
+    /// <summary>
+    /// Required. Specify data to be imported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Redis.V1.InputConfig InputConfig {
+      get { return inputConfig_; }
+      set {
+        inputConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImportInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImportInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(InputConfig, other.InputConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (inputConfig_ != null) hash ^= InputConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (inputConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InputConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (inputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImportInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.inputConfig_ != null) {
+        if (inputConfig_ == null) {
+          inputConfig_ = new global::Google.Cloud.Redis.V1.InputConfig();
+        }
+        InputConfig.MergeFrom(other.InputConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (inputConfig_ == null) {
+              inputConfig_ = new global::Google.Cloud.Redis.V1.InputConfig();
+            }
+            input.ReadMessage(inputConfig_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The GCS location for the output content
+  /// </summary>
+  public sealed partial class GcsDestination : pb::IMessage<GcsDestination> {
+    private static readonly pb::MessageParser<GcsDestination> _parser = new pb::MessageParser<GcsDestination>(() => new GcsDestination());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GcsDestination> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsDestination() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsDestination(GcsDestination other) : this() {
+      uri_ = other.uri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsDestination Clone() {
+      return new GcsDestination(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// Required. Data destination URI (e.g.
+    /// 'gs://my_bucket/my_object'). Existing files will be overwritten.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GcsDestination);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GcsDestination other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GcsDestination other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The output content
+  /// </summary>
+  public sealed partial class OutputConfig : pb::IMessage<OutputConfig> {
+    private static readonly pb::MessageParser<OutputConfig> _parser = new pb::MessageParser<OutputConfig>(() => new OutputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OutputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OutputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OutputConfig(OutputConfig other) : this() {
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          GcsDestination = other.GcsDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OutputConfig Clone() {
+      return new OutputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_destination" field.</summary>
+    public const int GcsDestinationFieldNumber = 1;
+    /// <summary>
+    /// Google Cloud Storage destination for output content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Redis.V1.GcsDestination GcsDestination {
+      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.Redis.V1.GcsDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.GcsDestination;
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      GcsDestination = 1,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OutputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OutputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OutputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          if (GcsDestination == null) {
+            GcsDestination = new global::Google.Cloud.Redis.V1.GcsDestination();
+          }
+          GcsDestination.MergeFrom(other.GcsDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Redis.V1.GcsDestination subBuilder = new global::Google.Cloud.Redis.V1.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request for [Export][google.cloud.redis.v1.CloudRedis.ExportInstance].
+  /// </summary>
+  public sealed partial class ExportInstanceRequest : pb::IMessage<ExportInstanceRequest> {
+    private static readonly pb::MessageParser<ExportInstanceRequest> _parser = new pb::MessageParser<ExportInstanceRequest>(() => new ExportInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExportInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportInstanceRequest(ExportInstanceRequest other) : this() {
+      name_ = other.name_;
+      outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExportInstanceRequest Clone() {
+      return new ExportInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Redis instance resource name using the form:
+    ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+    /// where `location_id` refers to a GCP region
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "output_config" field.</summary>
+    public const int OutputConfigFieldNumber = 3;
+    private global::Google.Cloud.Redis.V1.OutputConfig outputConfig_;
+    /// <summary>
+    /// Required. Specify data to be exported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Redis.V1.OutputConfig OutputConfig {
+      get { return outputConfig_; }
+      set {
+        outputConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExportInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExportInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (outputConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OutputConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (outputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExportInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.outputConfig_ != null) {
+        if (outputConfig_ == null) {
+          outputConfig_ = new global::Google.Cloud.Redis.V1.OutputConfig();
+        }
+        OutputConfig.MergeFrom(other.OutputConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (outputConfig_ == null) {
+              outputConfig_ = new global::Google.Cloud.Redis.V1.OutputConfig();
+            }
+            input.ReadMessage(outputConfig_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request for [Failover][google.cloud.redis.v1.CloudRedis.FailoverInstance].
+  /// </summary>
+  public sealed partial class FailoverInstanceRequest : pb::IMessage<FailoverInstanceRequest> {
+    private static readonly pb::MessageParser<FailoverInstanceRequest> _parser = new pb::MessageParser<FailoverInstanceRequest>(() => new FailoverInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FailoverInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FailoverInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FailoverInstanceRequest(FailoverInstanceRequest other) : this() {
+      name_ = other.name_;
+      dataProtectionMode_ = other.dataProtectionMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FailoverInstanceRequest Clone() {
+      return new FailoverInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Redis instance resource name using the form:
+    ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+    /// where `location_id` refers to a GCP region
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_protection_mode" field.</summary>
+    public const int DataProtectionModeFieldNumber = 2;
+    private global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode_ = 0;
+    /// <summary>
+    /// Optional. Available data protection modes that the user can choose. If it's
+    /// unspecified, data protection mode will be LIMITED_DATA_LOSS by default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Types.DataProtectionMode DataProtectionMode {
+      get { return dataProtectionMode_; }
+      set {
+        dataProtectionMode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FailoverInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FailoverInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DataProtectionMode != other.DataProtectionMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DataProtectionMode != 0) hash ^= DataProtectionMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DataProtectionMode != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DataProtectionMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DataProtectionMode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataProtectionMode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FailoverInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DataProtectionMode != 0) {
+        DataProtectionMode = other.DataProtectionMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            dataProtectionMode_ = (global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Types.DataProtectionMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FailoverInstanceRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum DataProtectionMode {
+        [pbr::OriginalName("DATA_PROTECTION_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Instance failover will be protected with data loss control. More
+        /// specifically, the failover will only be performed if the current
+        /// replication offset diff between master and replica is under a certain
+        /// threshold.
+        /// </summary>
+        [pbr::OriginalName("LIMITED_DATA_LOSS")] LimitedDataLoss = 1,
+        /// <summary>
+        /// Instance failover will be performed without data loss control.
+        /// </summary>
+        [pbr::OriginalName("FORCE_DATA_LOSS")] ForceDataLoss = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Represents the v1 metadata of the long-running operation.
   /// </summary>
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata> {
@@ -1882,7 +3145,7 @@ namespace Google.Cloud.Redis.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2218,7 +3481,7 @@ namespace Google.Cloud.Redis.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2349,7 +3612,7 @@ namespace Google.Cloud.Redis.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Redis.V1.CloudRedisReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
