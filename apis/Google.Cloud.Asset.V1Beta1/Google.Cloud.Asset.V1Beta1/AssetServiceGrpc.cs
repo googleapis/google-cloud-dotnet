@@ -62,8 +62,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location. The output format is newline-delimited JSON.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-      /// to keep track of the export.
+      /// This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+      /// you to keep track of the export.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -116,8 +117,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location. The output format is newline-delimited JSON.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-      /// to keep track of the export.
+      /// This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+      /// you to keep track of the export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -131,8 +133,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location. The output format is newline-delimited JSON.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-      /// to keep track of the export.
+      /// This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+      /// you to keep track of the export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -144,8 +147,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location. The output format is newline-delimited JSON.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-      /// to keep track of the export.
+      /// This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+      /// you to keep track of the export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -159,8 +163,9 @@ namespace Google.Cloud.Asset.V1Beta1 {
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
       /// location. The output format is newline-delimited JSON.
-      /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-      /// to keep track of the export.
+      /// This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+      /// you to keep track of the export.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
