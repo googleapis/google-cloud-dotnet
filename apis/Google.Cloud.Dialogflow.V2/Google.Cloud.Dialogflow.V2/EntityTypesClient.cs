@@ -1660,7 +1660,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple entity types in the specified agent.
         ///
-        /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+        /// Operation &lt;response:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">
@@ -1695,7 +1696,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple entity types in the specified agent.
         ///
-        /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+        /// Operation &lt;response:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">
@@ -3082,7 +3084,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple entity types in the specified agent.
         ///
-        /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+        /// Operation &lt;response:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">
@@ -3106,7 +3109,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple entity types in the specified agent.
         ///
-        /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
+        /// Operation &lt;response:
+        /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
         ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
         /// </summary>
         /// <param name="request">

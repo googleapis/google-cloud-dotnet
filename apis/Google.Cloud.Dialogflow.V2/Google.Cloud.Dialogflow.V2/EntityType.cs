@@ -607,7 +607,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
+  /// The request message for
+  /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesRequest : pb::IMessage<ListEntityTypesRequest> {
     private static readonly pb::MessageParser<ListEntityTypesRequest> _parser = new pb::MessageParser<ListEntityTypesRequest>(() => new ListEntityTypesRequest());
@@ -841,7 +842,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
+  /// The response message for
+  /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesResponse : pb::IMessage<ListEntityTypesResponse> {
     private static readonly pb::MessageParser<ListEntityTypesResponse> _parser = new pb::MessageParser<ListEntityTypesResponse>(() => new ListEntityTypesResponse());
@@ -1001,7 +1003,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.GetEntityType][google.cloud.dialogflow.v2.EntityTypes.GetEntityType].
+  /// The request message for
+  /// [EntityTypes.GetEntityType][google.cloud.dialogflow.v2.EntityTypes.GetEntityType].
   /// </summary>
   public sealed partial class GetEntityTypeRequest : pb::IMessage<GetEntityTypeRequest> {
     private static readonly pb::MessageParser<GetEntityTypeRequest> _parser = new pb::MessageParser<GetEntityTypeRequest>(() => new GetEntityTypeRequest());
@@ -1172,7 +1175,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.CreateEntityType][google.cloud.dialogflow.v2.EntityTypes.CreateEntityType].
+  /// The request message for
+  /// [EntityTypes.CreateEntityType][google.cloud.dialogflow.v2.EntityTypes.CreateEntityType].
   /// </summary>
   public sealed partial class CreateEntityTypeRequest : pb::IMessage<CreateEntityTypeRequest> {
     private static readonly pb::MessageParser<CreateEntityTypeRequest> _parser = new pb::MessageParser<CreateEntityTypeRequest>(() => new CreateEntityTypeRequest());
@@ -1380,7 +1384,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType].
+  /// The request message for
+  /// [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType].
   /// </summary>
   public sealed partial class UpdateEntityTypeRequest : pb::IMessage<UpdateEntityTypeRequest> {
     private static readonly pb::MessageParser<UpdateEntityTypeRequest> _parser = new pb::MessageParser<UpdateEntityTypeRequest>(() => new UpdateEntityTypeRequest());
@@ -1594,7 +1599,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.DeleteEntityType][google.cloud.dialogflow.v2.EntityTypes.DeleteEntityType].
+  /// The request message for
+  /// [EntityTypes.DeleteEntityType][google.cloud.dialogflow.v2.EntityTypes.DeleteEntityType].
   /// </summary>
   public sealed partial class DeleteEntityTypeRequest : pb::IMessage<DeleteEntityTypeRequest> {
     private static readonly pb::MessageParser<DeleteEntityTypeRequest> _parser = new pb::MessageParser<DeleteEntityTypeRequest>(() => new DeleteEntityTypeRequest());
@@ -1730,7 +1736,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
+  /// The request message for
+  /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
   /// </summary>
   public sealed partial class BatchUpdateEntityTypesRequest : pb::IMessage<BatchUpdateEntityTypesRequest> {
     private static readonly pb::MessageParser<BatchUpdateEntityTypesRequest> _parser = new pb::MessageParser<BatchUpdateEntityTypesRequest>(() => new BatchUpdateEntityTypesRequest());
@@ -2042,7 +2049,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
+  /// The response message for
+  /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
   /// </summary>
   public sealed partial class BatchUpdateEntityTypesResponse : pb::IMessage<BatchUpdateEntityTypesResponse> {
     private static readonly pb::MessageParser<BatchUpdateEntityTypesResponse> _parser = new pb::MessageParser<BatchUpdateEntityTypesResponse>(() => new BatchUpdateEntityTypesResponse());
@@ -2169,7 +2177,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.BatchDeleteEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntityTypes].
+  /// The request message for
+  /// [EntityTypes.BatchDeleteEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntityTypes].
   /// </summary>
   public sealed partial class BatchDeleteEntityTypesRequest : pb::IMessage<BatchDeleteEntityTypesRequest> {
     private static readonly pb::MessageParser<BatchDeleteEntityTypesRequest> _parser = new pb::MessageParser<BatchDeleteEntityTypesRequest>(() => new BatchDeleteEntityTypesRequest());
@@ -2329,7 +2338,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
+  /// The request message for
+  /// [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
   /// </summary>
   public sealed partial class BatchCreateEntitiesRequest : pb::IMessage<BatchCreateEntitiesRequest> {
     private static readonly pb::MessageParser<BatchCreateEntitiesRequest> _parser = new pb::MessageParser<BatchCreateEntitiesRequest>(() => new BatchCreateEntitiesRequest());
@@ -2523,7 +2533,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
+  /// The response message for
+  /// [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
   /// </summary>
   public sealed partial class BatchUpdateEntitiesRequest : pb::IMessage<BatchUpdateEntitiesRequest> {
     private static readonly pb::MessageParser<BatchUpdateEntitiesRequest> _parser = new pb::MessageParser<BatchUpdateEntitiesRequest>(() => new BatchUpdateEntitiesRequest());
@@ -2754,7 +2765,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [EntityTypes.BatchDeleteEntities][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntities].
+  /// The request message for
+  /// [EntityTypes.BatchDeleteEntities][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntities].
   /// </summary>
   public sealed partial class BatchDeleteEntitiesRequest : pb::IMessage<BatchDeleteEntitiesRequest> {
     private static readonly pb::MessageParser<BatchDeleteEntitiesRequest> _parser = new pb::MessageParser<BatchDeleteEntitiesRequest>(() => new BatchDeleteEntitiesRequest());

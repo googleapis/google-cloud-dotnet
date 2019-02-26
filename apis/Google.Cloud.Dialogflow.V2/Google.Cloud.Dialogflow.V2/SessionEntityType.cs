@@ -324,7 +324,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
+  /// The request message for
+  /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
   public sealed partial class ListSessionEntityTypesRequest : pb::IMessage<ListSessionEntityTypesRequest> {
     private static readonly pb::MessageParser<ListSessionEntityTypesRequest> _parser = new pb::MessageParser<ListSessionEntityTypesRequest>(() => new ListSessionEntityTypesRequest());
@@ -523,7 +524,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
+  /// The response message for
+  /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
   public sealed partial class ListSessionEntityTypesResponse : pb::IMessage<ListSessionEntityTypesResponse> {
     private static readonly pb::MessageParser<ListSessionEntityTypesResponse> _parser = new pb::MessageParser<ListSessionEntityTypesResponse>(() => new ListSessionEntityTypesResponse());
@@ -683,7 +685,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.GetSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.GetSessionEntityType].
   /// </summary>
   public sealed partial class GetSessionEntityTypeRequest : pb::IMessage<GetSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<GetSessionEntityTypeRequest> _parser = new pb::MessageParser<GetSessionEntityTypeRequest>(() => new GetSessionEntityTypeRequest());
@@ -820,7 +823,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.CreateSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.CreateSessionEntityType].
   /// </summary>
   public sealed partial class CreateSessionEntityTypeRequest : pb::IMessage<CreateSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<CreateSessionEntityTypeRequest> _parser = new pb::MessageParser<CreateSessionEntityTypeRequest>(() => new CreateSessionEntityTypeRequest());
@@ -993,7 +997,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.UpdateSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.UpdateSessionEntityType].
   /// </summary>
   public sealed partial class UpdateSessionEntityTypeRequest : pb::IMessage<UpdateSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<UpdateSessionEntityTypeRequest> _parser = new pb::MessageParser<UpdateSessionEntityTypeRequest>(() => new UpdateSessionEntityTypeRequest());
@@ -1173,7 +1178,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.DeleteSessionEntityType].
+  /// The request message for
+  /// [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.DeleteSessionEntityType].
   /// </summary>
   public sealed partial class DeleteSessionEntityTypeRequest : pb::IMessage<DeleteSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<DeleteSessionEntityTypeRequest> _parser = new pb::MessageParser<DeleteSessionEntityTypeRequest>(() => new DeleteSessionEntityTypeRequest());

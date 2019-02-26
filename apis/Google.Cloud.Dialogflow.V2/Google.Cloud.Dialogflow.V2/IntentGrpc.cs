@@ -27,10 +27,10 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// An intent represents a mapping between input from a user and an action to
   /// be taken by your application. When you pass user input to the
   /// [DetectIntent][google.cloud.dialogflow.v2.Sessions.DetectIntent] (or
-  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent]) method, the
-  /// Dialogflow API analyzes the input and searches
-  /// for a matching intent. If no match is found, the Dialogflow API returns a
-  /// fallback intent (`is_fallback` = true).
+  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent])
+  /// method, the Dialogflow API analyzes the input and searches for a matching
+  /// intent. If no match is found, the Dialogflow API returns a fallback intent
+  /// (`is_fallback` = true).
   ///
   /// You can provide additional information for the Dialogflow API to use to
   /// match user input to an intent by adding the following to your intent.
@@ -188,7 +188,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response:
+      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -459,7 +460,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response:
+      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -473,7 +475,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response:
+      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -485,7 +488,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response:
+      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -499,7 +503,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response:
+      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

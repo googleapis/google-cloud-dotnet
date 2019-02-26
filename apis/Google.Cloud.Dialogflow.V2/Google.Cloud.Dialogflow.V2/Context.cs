@@ -296,7 +296,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
+  /// The request message for
+  /// [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
   /// </summary>
   public sealed partial class ListContextsRequest : pb::IMessage<ListContextsRequest> {
     private static readonly pb::MessageParser<ListContextsRequest> _parser = new pb::MessageParser<ListContextsRequest>(() => new ListContextsRequest());
@@ -495,7 +496,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
+  /// The response message for
+  /// [Contexts.ListContexts][google.cloud.dialogflow.v2.Contexts.ListContexts].
   /// </summary>
   public sealed partial class ListContextsResponse : pb::IMessage<ListContextsResponse> {
     private static readonly pb::MessageParser<ListContextsResponse> _parser = new pb::MessageParser<ListContextsResponse>(() => new ListContextsResponse());
@@ -655,7 +657,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.GetContext][google.cloud.dialogflow.v2.Contexts.GetContext].
+  /// The request message for
+  /// [Contexts.GetContext][google.cloud.dialogflow.v2.Contexts.GetContext].
   /// </summary>
   public sealed partial class GetContextRequest : pb::IMessage<GetContextRequest> {
     private static readonly pb::MessageParser<GetContextRequest> _parser = new pb::MessageParser<GetContextRequest>(() => new GetContextRequest());
@@ -791,7 +794,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.CreateContext][google.cloud.dialogflow.v2.Contexts.CreateContext].
+  /// The request message for
+  /// [Contexts.CreateContext][google.cloud.dialogflow.v2.Contexts.CreateContext].
   /// </summary>
   public sealed partial class CreateContextRequest : pb::IMessage<CreateContextRequest> {
     private static readonly pb::MessageParser<CreateContextRequest> _parser = new pb::MessageParser<CreateContextRequest>(() => new CreateContextRequest());
@@ -964,7 +968,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.UpdateContext][google.cloud.dialogflow.v2.Contexts.UpdateContext].
+  /// The request message for
+  /// [Contexts.UpdateContext][google.cloud.dialogflow.v2.Contexts.UpdateContext].
   /// </summary>
   public sealed partial class UpdateContextRequest : pb::IMessage<UpdateContextRequest> {
     private static readonly pb::MessageParser<UpdateContextRequest> _parser = new pb::MessageParser<UpdateContextRequest>(() => new UpdateContextRequest());
@@ -1142,7 +1147,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.DeleteContext][google.cloud.dialogflow.v2.Contexts.DeleteContext].
+  /// The request message for
+  /// [Contexts.DeleteContext][google.cloud.dialogflow.v2.Contexts.DeleteContext].
   /// </summary>
   public sealed partial class DeleteContextRequest : pb::IMessage<DeleteContextRequest> {
     private static readonly pb::MessageParser<DeleteContextRequest> _parser = new pb::MessageParser<DeleteContextRequest>(() => new DeleteContextRequest());
@@ -1278,7 +1284,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Contexts.DeleteAllContexts][google.cloud.dialogflow.v2.Contexts.DeleteAllContexts].
+  /// The request message for
+  /// [Contexts.DeleteAllContexts][google.cloud.dialogflow.v2.Contexts.DeleteAllContexts].
   /// </summary>
   public sealed partial class DeleteAllContextsRequest : pb::IMessage<DeleteAllContextsRequest> {
     private static readonly pb::MessageParser<DeleteAllContextsRequest> _parser = new pb::MessageParser<DeleteAllContextsRequest>(() => new DeleteAllContextsRequest());

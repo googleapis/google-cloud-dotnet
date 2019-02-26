@@ -25,9 +25,10 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// A session represents an interaction with a user. You retrieve user input
-  /// and pass it to the [DetectIntent][google.cloud.dialogflow.v2.Sessions.DetectIntent] (or
-  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent]) method to determine
-  /// user intent and respond.
+  /// and pass it to the
+  /// [DetectIntent][google.cloud.dialogflow.v2.Sessions.DetectIntent] (or
+  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent])
+  /// method to determine user intent and respond.
   /// </summary>
   public static partial class Sessions
   {

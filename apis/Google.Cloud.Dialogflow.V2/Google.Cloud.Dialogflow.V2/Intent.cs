@@ -5759,7 +5759,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
+  /// The request message for
+  /// [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsRequest : pb::IMessage<ListIntentsRequest> {
     private static readonly pb::MessageParser<ListIntentsRequest> _parser = new pb::MessageParser<ListIntentsRequest>(() => new ListIntentsRequest());
@@ -6024,7 +6025,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
+  /// The response message for
+  /// [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsResponse : pb::IMessage<ListIntentsResponse> {
     private static readonly pb::MessageParser<ListIntentsResponse> _parser = new pb::MessageParser<ListIntentsResponse>(() => new ListIntentsResponse());
@@ -6184,7 +6186,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Intents.GetIntent][google.cloud.dialogflow.v2.Intents.GetIntent].
+  /// The request message for
+  /// [Intents.GetIntent][google.cloud.dialogflow.v2.Intents.GetIntent].
   /// </summary>
   public sealed partial class GetIntentRequest : pb::IMessage<GetIntentRequest> {
     private static readonly pb::MessageParser<GetIntentRequest> _parser = new pb::MessageParser<GetIntentRequest>(() => new GetIntentRequest());
@@ -6386,7 +6389,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Intents.CreateIntent][google.cloud.dialogflow.v2.Intents.CreateIntent].
+  /// The request message for
+  /// [Intents.CreateIntent][google.cloud.dialogflow.v2.Intents.CreateIntent].
   /// </summary>
   public sealed partial class CreateIntentRequest : pb::IMessage<CreateIntentRequest> {
     private static readonly pb::MessageParser<CreateIntentRequest> _parser = new pb::MessageParser<CreateIntentRequest>(() => new CreateIntentRequest());
@@ -6625,7 +6629,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Intents.UpdateIntent][google.cloud.dialogflow.v2.Intents.UpdateIntent].
+  /// The request message for
+  /// [Intents.UpdateIntent][google.cloud.dialogflow.v2.Intents.UpdateIntent].
   /// </summary>
   public sealed partial class UpdateIntentRequest : pb::IMessage<UpdateIntentRequest> {
     private static readonly pb::MessageParser<UpdateIntentRequest> _parser = new pb::MessageParser<UpdateIntentRequest>(() => new UpdateIntentRequest());
@@ -6870,7 +6875,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Intents.DeleteIntent][google.cloud.dialogflow.v2.Intents.DeleteIntent].
+  /// The request message for
+  /// [Intents.DeleteIntent][google.cloud.dialogflow.v2.Intents.DeleteIntent].
   /// </summary>
   public sealed partial class DeleteIntentRequest : pb::IMessage<DeleteIntentRequest> {
     private static readonly pb::MessageParser<DeleteIntentRequest> _parser = new pb::MessageParser<DeleteIntentRequest>(() => new DeleteIntentRequest());
@@ -7006,7 +7012,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
+  /// The request message for
+  /// [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
   /// </summary>
   public sealed partial class BatchUpdateIntentsRequest : pb::IMessage<BatchUpdateIntentsRequest> {
     private static readonly pb::MessageParser<BatchUpdateIntentsRequest> _parser = new pb::MessageParser<BatchUpdateIntentsRequest>(() => new BatchUpdateIntentsRequest());
@@ -7348,7 +7355,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
+  /// The response message for
+  /// [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
   /// </summary>
   public sealed partial class BatchUpdateIntentsResponse : pb::IMessage<BatchUpdateIntentsResponse> {
     private static readonly pb::MessageParser<BatchUpdateIntentsResponse> _parser = new pb::MessageParser<BatchUpdateIntentsResponse>(() => new BatchUpdateIntentsResponse());
@@ -7475,7 +7483,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for [Intents.BatchDeleteIntents][google.cloud.dialogflow.v2.Intents.BatchDeleteIntents].
+  /// The request message for
+  /// [Intents.BatchDeleteIntents][google.cloud.dialogflow.v2.Intents.BatchDeleteIntents].
   /// </summary>
   public sealed partial class BatchDeleteIntentsRequest : pb::IMessage<BatchDeleteIntentsRequest> {
     private static readonly pb::MessageParser<BatchDeleteIntentsRequest> _parser = new pb::MessageParser<BatchDeleteIntentsRequest>(() => new BatchDeleteIntentsRequest());
