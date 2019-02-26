@@ -1331,8 +1331,10 @@ namespace Google.Cloud.Monitoring.V3 {
             /// are applied in the order specified.
             ///
             /// This field is similar to the one in the
-            /// [`MetricService.ListTimeSeries` request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list).
-            /// It is advisable to use the `ListTimeSeries` method when debugging this field.
+            /// [`MetricService.ListTimeSeries`
+            /// request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It
+            /// is advisable to use the `ListTimeSeries` method when debugging this
+            /// field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Aggregation> Aggregations {
@@ -1743,8 +1745,10 @@ namespace Google.Cloud.Monitoring.V3 {
             /// are applied in the order specified.
             ///
             /// This field is similar to the
-            /// one in the [`MetricService.ListTimeSeries` request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list).
-            /// It is advisable to use the `ListTimeSeries` method when debugging this field.
+            /// one in the [`MetricService.ListTimeSeries`
+            /// request](/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It
+            /// is advisable to use the `ListTimeSeries` method when debugging this
+            /// field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Aggregation> Aggregations {

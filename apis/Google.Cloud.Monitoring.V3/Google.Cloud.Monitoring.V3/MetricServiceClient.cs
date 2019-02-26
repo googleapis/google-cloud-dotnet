@@ -533,7 +533,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists monitored resource descriptors that match a filter. This method does
+        /// not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is
@@ -567,7 +568,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists monitored resource descriptors that match a filter. This method does
+        /// not require a Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is
@@ -601,7 +603,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists monitored resource descriptors that match a filter. This method does
+        /// not require a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -620,7 +623,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists monitored resource descriptors that match a filter. This method does
+        /// not require a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -639,7 +643,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The monitored resource descriptor to get.  The format is
@@ -663,7 +668,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The monitored resource descriptor to get.  The format is
@@ -684,7 +690,8 @@ namespace Google.Cloud.Monitoring.V3
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The monitored resource descriptor to get.  The format is
@@ -708,7 +715,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -727,7 +735,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -745,7 +754,8 @@ namespace Google.Cloud.Monitoring.V3
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -764,7 +774,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists metric descriptors that match a filter. This method does not require
+        /// a Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is
@@ -798,7 +809,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists metric descriptors that match a filter. This method does not require
+        /// a Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is
@@ -832,7 +844,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists metric descriptors that match a filter. This method does not require
+        /// a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -851,7 +864,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists metric descriptors that match a filter. This method does not require
+        /// a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -870,7 +884,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="name">
         /// The metric descriptor on which to execute the request. The format is
@@ -894,7 +909,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="name">
         /// The metric descriptor on which to execute the request. The format is
@@ -915,7 +931,8 @@ namespace Google.Cloud.Monitoring.V3
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="name">
         /// The metric descriptor on which to execute the request. The format is
@@ -939,7 +956,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -958,7 +976,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -976,7 +995,8 @@ namespace Google.Cloud.Monitoring.V3
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1269,7 +1289,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// Lists time series that match a filter. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is
@@ -1326,7 +1347,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// Lists time series that match a filter. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="name">
         /// The project on which to execute the request. The format is
@@ -1383,7 +1405,8 @@ namespace Google.Cloud.Monitoring.V3
                 callSettings);
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// Lists time series that match a filter. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1402,7 +1425,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// Lists time series that match a filter. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1677,7 +1701,8 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_CreateTimeSeriesRequest(ref CreateTimeSeriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists monitored resource descriptors that match a filter. This method does
+        /// not require a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1697,7 +1722,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists monitored resource descriptors that match a filter. This method does
+        /// not require a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1717,7 +1743,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1737,7 +1764,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// Gets a single monitored resource descriptor. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1757,7 +1785,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists metric descriptors that match a filter. This method does not require
+        /// a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1777,7 +1806,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// Lists metric descriptors that match a filter. This method does not require
+        /// a Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1797,7 +1827,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1817,7 +1848,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// Gets a single metric descriptor. This method does not require a Stackdriver
+        /// account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1920,7 +1952,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// Lists time series that match a filter. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1940,7 +1973,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// Lists time series that match a filter. This method does not require a
+        /// Stackdriver account.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

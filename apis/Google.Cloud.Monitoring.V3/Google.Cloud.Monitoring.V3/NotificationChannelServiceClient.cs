@@ -758,7 +758,8 @@ namespace Google.Cloud.Monitoring.V3
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
-        /// [`GetNotificationChannel`][google.monitoring.v3.NotificationChannelService.GetNotificationChannel] operation.
+        /// [`GetNotificationChannel`][google.monitoring.v3.NotificationChannelService.GetNotificationChannel]
+        /// operation.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -796,7 +797,8 @@ namespace Google.Cloud.Monitoring.V3
         /// in which to look for the notification channels; it does not name a
         /// specific channel. To query a specific channel by REST resource name, use
         /// the
-        /// [`GetNotificationChannel`][google.monitoring.v3.NotificationChannelService.GetNotificationChannel] operation.
+        /// [`GetNotificationChannel`][google.monitoring.v3.NotificationChannelService.GetNotificationChannel]
+        /// operation.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
