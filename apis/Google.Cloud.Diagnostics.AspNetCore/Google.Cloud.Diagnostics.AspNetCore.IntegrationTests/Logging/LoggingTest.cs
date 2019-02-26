@@ -28,20 +28,22 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
-    public class LoggingTest
+    public class LoggingTest : IClassFixture<LogValidatingFixture>
     {
-        private readonly LogEntryPolling _polling = new LogEntryPolling();
+        private readonly LogValidatingFixture _fixture;
+
+        public LoggingTest(LogValidatingFixture fixture) => _fixture = fixture;
 
         [Fact]
-        public async Task Logging_SizedBufferNoLogs()
+        public async Task Logging_SizedBuffer()
         {
-            string testId = IdGenerator.FromDateTime();
+            var quickPolling = new LogEntryPolling(TimeSpan.FromSeconds(10));
+            string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
@@ -52,40 +54,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
 
-                // No entries should be found as not enough entries were created to
-                // flush the buffer.
-                Assert.Empty(_polling.GetEntries(startTime, testId, 0, LogSeverity.Default));
-            }
-        }
-
-        [Fact]
-        public async Task Logging_DisposeFlush()
-        {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
-
-            var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
-            using (TestServer server = new TestServer(builder))
-            using (var client = server.CreateClient())
-            {
-                await client.GetAsync($"/Main/Warning/{testId}");
-                await client.GetAsync($"/Main/Error/{testId}");
-                await client.GetAsync($"/Main/Critical/{testId}");
+                // This doesn't really *prove* that we haven't sent any log entries. It's just a good
+                // starting point.
+                var noResults = quickPolling.GetEntries(startTime, testId, 0, LogSeverity.Warning);
+                Assert.Empty(noResults);
             }
 
             // While we normally should not have entries we disposed of the server
             // which should flush the buffer.
-            var results = _polling.GetEntries(startTime, testId, 2, LogSeverity.Error);
-            Assert.Equal(2, results.Count());
-            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
-            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
+            _fixture.AddValidator(testId, results =>
+            {
+                Assert.Equal(2, results.Count());
+                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
+                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
+            });
         }
 
         [Fact]
         public async Task Logging_NoBuffer()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            string testId = IdGenerator.FromGuid();
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
@@ -96,21 +84,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
+            }
 
-                // NoBufferLoggerTestApplication does not support debug or info logs.
-                var results = _polling.GetEntries(startTime, testId, 3, LogSeverity.Warning);
+            // NoBufferLoggerTestApplication does not support debug or info logs.
+            _fixture.AddValidator(testId, results =>
+            {
                 Assert.Equal(3, results.Count());
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
-            }
+            });
         }
 
         [Fact]
-        public async Task Logging_SizedBuffer()
+        public async Task Logging_SizedBuffer_ManyEntries()
         {
-            string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
+            string testId = IdGenerator.FromGuid();
 
             var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
@@ -125,17 +114,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     await client.GetAsync($"/Main/Critical/{testId}");
                     await client.GetAsync($"/Main/Exception/{testId}");
                 }
-
-                // Just check that a large portion of logs entires were pushed.  Not all
-                // will be pushed as some may be in the buffer.
-                var results = _polling.GetEntries(startTime, testId, 500, LogSeverity.Default);
-                Assert.True(results.Count() >= 500);
-                Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Debug));
-                Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Info));
-                Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
-                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
-                Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
             }
+            _fixture.AddValidator(testId, results =>
+            {
+                Assert.Equal(750, results.Count);
+                Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Debug);
+                Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Info);
+                Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Warning);
+                Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Error));
+                Assert.Equal(500, results.Count(l => l.Severity == LogSeverity.Critical)); // Exception and Critical
+            });
         }
 
 
@@ -146,7 +134,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // flush itself we use custom polling to check for the initial check that no
             // entries exist.
             var quickPolling = new LogEntryPolling(TimeSpan.FromSeconds(10));
-            string testId = IdGenerator.FromDateTime();
+            string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<TimedBufferWarningLoggerTestApplication>();
@@ -161,21 +149,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
-                Thread.Sleep(TimeSpan.FromSeconds(20));
+            }
 
-                var results = _polling.GetEntries(startTime, testId, 4, LogSeverity.Warning);
+            _fixture.AddValidator(testId, results =>
+            {
                 Assert.Equal(4, results.Count());
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
                 Assert.Equal(2, results.Count(l => l.Severity == LogSeverity.Error));
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
-            }
+            });
         }
 
         [Fact]
         public async Task Logging_MonitoredResource()
         {
             string testId = IdGenerator.FromDateTime();
-            DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
@@ -185,18 +173,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
 
-                var results = _polling.GetEntries(startTime, testId, 3, LogSeverity.Warning);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
                 Assert.Equal(3, results.Count());
                 var resourceType = NoBufferResourceLoggerTestApplication.Resource.Type;
                 var buildResources = results.Where(e => e.Resource.Type.Equals(resourceType));
                 Assert.Equal(3, buildResources.Count());
-            }
+            });
         }
 
         [Fact]
         public async Task Logging_Scope()
         {
-            string testId = IdGenerator.FromDateTime();
+            string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
@@ -204,17 +195,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Scope/{testId}");
-                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
                 var message = MainController.GetMessage(nameof(MainController.Scope), testId);
                 Assert.Equal(message, results.Single().JsonPayload.Fields["message"].StringValue);
                 Assert.Contains("Scope => ", results.Single().JsonPayload.Fields["scope"].StringValue);
-            }
+            });
         }
 
         [Fact]
         public async Task Logging_FormatParameter()
         {
-            string testId = IdGenerator.FromDateTime();
+            string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
@@ -222,7 +216,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/FormatParameters/{testId}");
-                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
+            }
+            _fixture.AddValidator(testId, results =>
+            {
                 var message = MainController.GetMessage(nameof(MainController.FormatParameters), testId);
                 var json = results.Single().JsonPayload.Fields;
                 Assert.Equal(message, json["message"].StringValue);
@@ -232,13 +228,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(nameof(MainController.FormatParameters), formatParams["message"].StringValue);
                 Assert.Equal(testId, formatParams["id"].StringValue);
                 Assert.Equal("{message} - {id}", formatParams["{OriginalFormat}"].StringValue);
-            }
+            });
         }
 
         [Fact]
         public async Task Logging_ScopeFormatParameter()
         {
-            string testId = IdGenerator.FromDateTime();
+            string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
@@ -246,7 +242,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/ScopeFormatParameters/{testId}");
-                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
                 var message = MainController.GetMessage(nameof(MainController.ScopeFormatParameters), testId);
                 var json = results.Single().JsonPayload.Fields;
                 Assert.Equal(message, json["message"].StringValue);
@@ -258,14 +257,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var scope0 = parentScopes[0].StructValue.Fields;
                 Assert.Equal(testId, scope0["id"].StringValue);
                 Assert.Equal(nameof(MainController.ScopeFormatParameters) + " - {id}", scope0["{OriginalFormat}"].StringValue);
-            }
+            });
         }
 
         [Fact]
         public async Task Logging_Trace()
         {
             string traceId = "105445aa7843bc8bf206b12000100f00";
-            string testId = IdGenerator.FromDateTime();
+            string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
@@ -275,16 +274,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
                     TraceHeaderContext.Create(traceId, 81237123, null).ToString());
                 await client.GetAsync($"/Main/Critical/{testId}");
-                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Critical);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
                 Assert.Contains(TestEnvironment.GetTestProjectId(), results.Single().Trace);
                 Assert.Contains(traceId, results.Single().Trace);
-            }
+            });
         }
 
         [Fact]
         public async Task Logging_Labels()
         {
-            string testId = IdGenerator.FromDateTime();
+            string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
             var builder = new WebHostBuilder().UseStartup<WarningWithLabelsLoggerTestApplication>();
@@ -292,13 +294,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Warning/{testId}");
-                var results = _polling.GetEntries(startTime, testId, 1, LogSeverity.Warning);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
                 var entry = results.Single();
                 Assert.Equal(3, entry.Labels.Count);
                 Assert.Equal("some-value", entry.Labels["some-key"]);
                 Assert.Equal("Hello, World!", entry.Labels["Foo"]);
                 Assert.NotEmpty(entry.Labels["trace_identifier"]);
-            }
+            });
         }
     }
 
