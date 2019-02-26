@@ -62,13 +62,16 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 totalSleepTime += sleepTime;
                 Thread.Sleep(sleepTime);
 
-                IEnumerable<T> entries = getEntries();
-                if (minEntries == 0 || entries.Count() >= minEntries)
+                List<T> entries = getEntries().ToList();
+                if (entries.Count >= minEntries)
                 {
                     return entries;
                 }
             }
-            return new List<T>();
+            // We don't throw an exception here, as even if we've been asked for some entries, it may be that
+            // we're in a situation of expecting at least one of a few polls to succeed, and we just wanted to
+            // try hard to find it.
+            return Enumerable.Empty<T>();
         }
     }
 }
