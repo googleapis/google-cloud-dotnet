@@ -3,7 +3,7 @@
 //     source: google/cloud/talent/v4beta1/company_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
-  /// A service handles company management, including CRUD and job enumeration.
+  /// A service that handles company management, including CRUD and enumeration.
   /// </summary>
   public static partial class CompanyService
   {
@@ -107,9 +107,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
 
       /// <summary>
-      /// Updates specified company. Company names can't be updated. To update a
-      /// company name, delete the company and all jobs associated with it, and only
-      /// then re-create them.
+      /// Updates specified company.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -132,7 +130,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
 
       /// <summary>
-      /// Lists all companies associated with the service account.
+      /// Lists all companies associated with the project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -256,9 +254,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCompany, null, options, request);
       }
       /// <summary>
-      /// Updates specified company. Company names can't be updated. To update a
-      /// company name, delete the company and all jobs associated with it, and only
-      /// then re-create them.
+      /// Updates specified company.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -270,9 +266,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return UpdateCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates specified company. Company names can't be updated. To update a
-      /// company name, delete the company and all jobs associated with it, and only
-      /// then re-create them.
+      /// Updates specified company.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -282,9 +276,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCompany, null, options, request);
       }
       /// <summary>
-      /// Updates specified company. Company names can't be updated. To update a
-      /// company name, delete the company and all jobs associated with it, and only
-      /// then re-create them.
+      /// Updates specified company.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -296,9 +288,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return UpdateCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates specified company. Company names can't be updated. To update a
-      /// company name, delete the company and all jobs associated with it, and only
-      /// then re-create them.
+      /// Updates specified company.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -356,7 +346,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCompany, null, options, request);
       }
       /// <summary>
-      /// Lists all companies associated with the service account.
+      /// Lists all companies associated with the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -368,7 +358,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return ListCompanies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all companies associated with the service account.
+      /// Lists all companies associated with the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -378,7 +368,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCompanies, null, options, request);
       }
       /// <summary>
-      /// Lists all companies associated with the service account.
+      /// Lists all companies associated with the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -390,7 +380,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return ListCompaniesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all companies associated with the service account.
+      /// Lists all companies associated with the project.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

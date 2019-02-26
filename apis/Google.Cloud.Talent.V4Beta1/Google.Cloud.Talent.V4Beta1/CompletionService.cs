@@ -159,16 +159,25 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// For more information, see
     /// [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
     ///
-    /// For [CompletionType.JOB_TITLE][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.JOB_TITLE] type, only open jobs with the same
-    /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are returned.
+    /// For
+    /// [CompletionType.JOB_TITLE][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.JOB_TITLE]
+    /// type, only open jobs with the same
+    /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+    /// are returned.
     ///
-    /// For [CompletionType.COMPANY_NAME][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMPANY_NAME] type,
-    /// only companies having open jobs with the same [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are
-    /// returned.
+    /// For
+    /// [CompletionType.COMPANY_NAME][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMPANY_NAME]
+    /// type, only companies having open jobs with the same
+    /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+    /// are returned.
     ///
-    /// For [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED] type, only open jobs with the same
-    /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] or companies having open jobs with the same
-    /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes] are returned.
+    /// For
+    /// [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED]
+    /// type, only open jobs with the same
+    /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+    /// or companies having open jobs with the same
+    /// [language_codes][google.cloud.talent.v4beta1.CompleteQueryRequest.language_codes]
+    /// are returned.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -220,7 +229,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// The scope of the completion. The defaults is [CompletionScope.PUBLIC][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionScope.PUBLIC].
+    /// The scope of the completion. The defaults is
+    /// [CompletionScope.PUBLIC][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionScope.PUBLIC].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope Scope {
@@ -236,7 +246,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// The completion topic. The default is [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED].
+    /// The completion topic. The default is
+    /// [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType Type {

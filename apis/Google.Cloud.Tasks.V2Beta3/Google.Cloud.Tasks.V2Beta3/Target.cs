@@ -26,26 +26,32 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvdGFza3MvdjJiZXRhMy90YXJnZXQucHJvdG8SGmdv",
             "b2dsZS5jbG91ZC50YXNrcy52MmJldGEzGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvImcKEkFwcEVuZ2luZUh0dHBRdWV1ZRJRChthcHBfZW5naW5l",
-            "X3JvdXRpbmdfb3ZlcnJpZGUYASABKAsyLC5nb29nbGUuY2xvdWQudGFza3Mu",
-            "djJiZXRhMy5BcHBFbmdpbmVSb3V0aW5nIsECChRBcHBFbmdpbmVIdHRwUmVx",
-            "dWVzdBI7CgtodHRwX21ldGhvZBgBIAEoDjImLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52MmJldGEzLkh0dHBNZXRob2QSSAoSYXBwX2VuZ2luZV9yb3V0aW5nGAIg",
-            "ASgLMiwuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuQXBwRW5naW5lUm91",
-            "dGluZxIUCgxyZWxhdGl2ZV91cmkYAyABKAkSTgoHaGVhZGVycxgEIAMoCzI9",
-            "Lmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkFwcEVuZ2luZUh0dHBSZXF1",
-            "ZXN0LkhlYWRlcnNFbnRyeRIMCgRib2R5GAUgASgMGi4KDEhlYWRlcnNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlQKEEFwcEVuZ2lu",
-            "ZVJvdXRpbmcSDwoHc2VydmljZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgJEhAK",
-            "CGluc3RhbmNlGAMgASgJEgwKBGhvc3QYBCABKAkqcwoKSHR0cE1ldGhvZBIb",
-            "ChdIVFRQX01FVEhPRF9VTlNQRUNJRklFRBAAEggKBFBPU1QQARIHCgNHRVQQ",
-            "AhIICgRIRUFEEAMSBwoDUFVUEAQSCgoGREVMRVRFEAUSCQoFUEFUQ0gQBhIL",
-            "CgdPUFRJT05TEAdCcAoeY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEz",
-            "QgtUYXJnZXRQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL3Rhc2tzL3YyYmV0YTM7dGFza3NiBnByb3RvMw=="));
+            "b25zLnByb3RvItwBCgtIdHRwUmVxdWVzdBILCgN1cmwYASABKAkSOwoLaHR0",
+            "cF9tZXRob2QYAiABKA4yJi5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5I",
+            "dHRwTWV0aG9kEkUKB2hlYWRlcnMYAyADKAsyNC5nb29nbGUuY2xvdWQudGFz",
+            "a3MudjJiZXRhMy5IdHRwUmVxdWVzdC5IZWFkZXJzRW50cnkSDAoEYm9keRgE",
+            "IAEoDBouCgxIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ASJnChJBcHBFbmdpbmVIdHRwUXVldWUSUQobYXBwX2VuZ2luZV9y",
+            "b3V0aW5nX292ZXJyaWRlGAEgASgLMiwuZ29vZ2xlLmNsb3VkLnRhc2tzLnYy",
+            "YmV0YTMuQXBwRW5naW5lUm91dGluZyLBAgoUQXBwRW5naW5lSHR0cFJlcXVl",
+            "c3QSOwoLaHR0cF9tZXRob2QYASABKA4yJi5nb29nbGUuY2xvdWQudGFza3Mu",
+            "djJiZXRhMy5IdHRwTWV0aG9kEkgKEmFwcF9lbmdpbmVfcm91dGluZxgCIAEo",
+            "CzIsLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkFwcEVuZ2luZVJvdXRp",
+            "bmcSFAoMcmVsYXRpdmVfdXJpGAMgASgJEk4KB2hlYWRlcnMYBCADKAsyPS5n",
+            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5BcHBFbmdpbmVIdHRwUmVxdWVz",
+            "dC5IZWFkZXJzRW50cnkSDAoEYm9keRgFIAEoDBouCgxIZWFkZXJzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJUChBBcHBFbmdpbmVS",
+            "b3V0aW5nEg8KB3NlcnZpY2UYASABKAkSDwoHdmVyc2lvbhgCIAEoCRIQCghp",
+            "bnN0YW5jZRgDIAEoCRIMCgRob3N0GAQgASgJKnMKCkh0dHBNZXRob2QSGwoX",
+            "SFRUUF9NRVRIT0RfVU5TUEVDSUZJRUQQABIICgRQT1NUEAESBwoDR0VUEAIS",
+            "CAoESEVBRBADEgcKA1BVVBAEEgoKBkRFTEVURRAFEgkKBVBBVENIEAYSCwoH",
+            "T1BUSU9OUxAHQnAKHmNvbS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhM0IL",
+            "VGFyZ2V0UHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC90YXNrcy92MmJldGEzO3Rhc2tzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tasks.V2Beta3.HttpMethod), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.HttpRequest), global::Google.Cloud.Tasks.V2Beta3.HttpRequest.Parser, new[]{ "Url", "HttpMethod", "Headers", "Body" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpQueue), global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpQueue.Parser, new[]{ "AppEngineRoutingOverride" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpRequest), global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpRequest.Parser, new[]{ "HttpMethod", "AppEngineRouting", "RelativeUri", "Headers", "Body" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting), global::Google.Cloud.Tasks.V2Beta3.AppEngineRouting.Parser, new[]{ "Service", "Version", "Instance", "Host" }, null, null, null)
@@ -97,6 +103,296 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
   #region Messages
   /// <summary>
+  /// HTTP request.
+  ///
+  /// Warning: This is an [alpha](https://cloud.google.com/terms/launch-stages)
+  /// feature. If you haven't already joined, you can [use this form to sign
+  /// up](https://docs.google.com/forms/d/e/1FAIpQLSfc4uEy9CBHKYUSdnY1hdhKDCX7julVZHy3imOiR-XrU7bUNQ/viewform?usp=sf_link).
+  ///
+  /// The task will be pushed to the worker as an HTTP request. If the worker
+  /// or the redirected worker acknowledges the task by returning a successful HTTP
+  /// response code ([`200` - `299`]), the task will removed from the queue. If
+  /// any other HTTP response code is returned or no response is received, the
+  /// task will be retried according to the following:
+  ///
+  /// * User-specified throttling: [retry configuration][Queue.RetryConfig],
+  ///   [rate limits][Queue.RateLimits], and the [queue's state][google.cloud.tasks.v2beta3.Queue.state].
+  ///
+  /// * System throttling: To prevent the worker from overloading, Cloud Tasks may
+  ///   temporarily reduce the queue's effective rate. User-specified settings
+  ///   will not be changed.
+  ///
+  ///  System throttling happens because:
+  ///
+  ///   * Cloud Tasks backoffs on all errors. Normally the backoff specified in
+  ///     [rate limits][Queue.RateLimits] will be used. But if the worker returns
+  ///     `429` (Too Many Requests), `503` (Service Unavailable), or the rate of
+  ///     errors is high, Cloud Tasks will use a higher backoff rate. The retry
+  ///     specified in the `Retry-After` HTTP response header is considered.
+  ///
+  ///   * To prevent traffic spikes and to smooth sudden large traffic spikes,
+  ///     dispatches ramp up slowly when the queue is newly created or idle and
+  ///     if large numbers of tasks suddenly become available to dispatch (due to
+  ///     spikes in create task rates, the queue being unpaused, or many tasks
+  ///     that are scheduled at the same time).
+  /// </summary>
+  public sealed partial class HttpRequest : pb::IMessage<HttpRequest> {
+    private static readonly pb::MessageParser<HttpRequest> _parser = new pb::MessageParser<HttpRequest>(() => new HttpRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<HttpRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HttpRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HttpRequest(HttpRequest other) : this() {
+      url_ = other.url_;
+      httpMethod_ = other.httpMethod_;
+      headers_ = other.headers_.Clone();
+      body_ = other.body_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HttpRequest Clone() {
+      return new HttpRequest(this);
+    }
+
+    /// <summary>Field number for the "url" field.</summary>
+    public const int UrlFieldNumber = 1;
+    private string url_ = "";
+    /// <summary>
+    /// Required. The full url path that the request will be sent to.
+    ///
+    /// This string must begin with either "http://" or "https://". Some examples
+    /// are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Tasks will
+    /// encode some characters for safety and compatibility. The maximum allowed
+    /// URL length is 2083 characters after encoding.
+    ///
+    /// The `Location` header response from a redirect response [`300` - `399`]
+    /// may be followed. The redirect is not counted as a separate attempt.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Url {
+      get { return url_; }
+      set {
+        url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "http_method" field.</summary>
+    public const int HttpMethodFieldNumber = 2;
+    private global::Google.Cloud.Tasks.V2Beta3.HttpMethod httpMethod_ = 0;
+    /// <summary>
+    /// The HTTP method to use for the request. The default is POST.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Tasks.V2Beta3.HttpMethod HttpMethod {
+      get { return httpMethod_; }
+      set {
+        httpMethod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "headers" field.</summary>
+    public const int HeadersFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_headers_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+    private readonly pbc::MapField<string, string> headers_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// HTTP request headers.
+    ///
+    /// This map contains the header field names and values.
+    /// Headers can be set when the
+    /// [task is created][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
+    ///
+    /// These headers represent a subset of the headers that will accompany the
+    /// task's HTTP request. Some HTTP request headers will be ignored or replaced.
+    ///
+    /// A partial list of headers that will be ignored or replaced is:
+    ///
+    /// * Host: This will be computed by Cloud Tasks and derived from
+    ///   [HttpRequest.url][google.cloud.tasks.v2beta3.HttpRequest.url].
+    /// * Content-Length: This will be computed by Cloud Tasks.
+    /// * User-Agent: This will be set to `"Google-Cloud-Tasks"`.
+    /// * X-Google-*: Google use only.
+    /// * X-AppEngine-*: Google use only.
+    ///
+    /// `Content-Type` won't be set by Cloud Tasks. You can explicitly set
+    /// `Content-Type` to a media type when the
+    ///  [task is created][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
+    ///  For example, `Content-Type` can be set to `"application/octet-stream"` or
+    ///  `"application/json"`.
+    ///
+    /// Headers which can have multiple values (according to RFC2616) can be
+    /// specified using comma-separated values.
+    ///
+    /// The size of the headers must be less than 80KB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Headers {
+      get { return headers_; }
+    }
+
+    /// <summary>Field number for the "body" field.</summary>
+    public const int BodyFieldNumber = 4;
+    private pb::ByteString body_ = pb::ByteString.Empty;
+    /// <summary>
+    /// HTTP request body.
+    ///
+    /// A request body is allowed only if the
+    /// [HTTP method][google.cloud.tasks.v2beta3.HttpRequest.http_method] is POST, PUT, or PATCH. It is an
+    /// error to set body on a task with an incompatible [HttpMethod][google.cloud.tasks.v2beta3.HttpMethod].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Body {
+      get { return body_; }
+      set {
+        body_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as HttpRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(HttpRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Url != other.Url) return false;
+      if (HttpMethod != other.HttpMethod) return false;
+      if (!Headers.Equals(other.Headers)) return false;
+      if (Body != other.Body) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Url.Length != 0) hash ^= Url.GetHashCode();
+      if (HttpMethod != 0) hash ^= HttpMethod.GetHashCode();
+      hash ^= Headers.GetHashCode();
+      if (Body.Length != 0) hash ^= Body.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Url.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Url);
+      }
+      if (HttpMethod != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) HttpMethod);
+      }
+      headers_.WriteTo(output, _map_headers_codec);
+      if (Body.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Body);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Url.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Url);
+      }
+      if (HttpMethod != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HttpMethod);
+      }
+      size += headers_.CalculateSize(_map_headers_codec);
+      if (Body.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Body);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(HttpRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Url.Length != 0) {
+        Url = other.Url;
+      }
+      if (other.HttpMethod != 0) {
+        HttpMethod = other.HttpMethod;
+      }
+      headers_.Add(other.headers_);
+      if (other.Body.Length != 0) {
+        Body = other.Body;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Url = input.ReadString();
+            break;
+          }
+          case 16: {
+            httpMethod_ = (global::Google.Cloud.Tasks.V2Beta3.HttpMethod) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            headers_.AddEntriesFrom(input, _map_headers_codec);
+            break;
+          }
+          case 34: {
+            Body = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// App Engine HTTP queue.
   ///
   /// The task will be delivered to the App Engine application hostname
@@ -119,7 +415,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -319,7 +615,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -646,7 +942,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

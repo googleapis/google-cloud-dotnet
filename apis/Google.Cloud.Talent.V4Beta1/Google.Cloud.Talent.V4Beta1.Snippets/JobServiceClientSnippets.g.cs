@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
-    using static SearchJobsResponse.Types;
+    using SearchJobsResponse.Types;
     using System;
     using System.Collections;
     using System.Collections.Generic;

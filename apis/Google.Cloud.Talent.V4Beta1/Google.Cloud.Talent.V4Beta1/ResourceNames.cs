@@ -210,7 +210,7 @@ namespace Google.Cloud.Talent.V4Beta1
     /// </summary>
     public sealed partial class ProfileName : gax::IResourceName, sys::IEquatable<ProfileName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/companies/{company}/profiles/{profile}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/tenants/{tenant}/profiles/{profile}");
 
         /// <summary>
         /// Parses the given profile resource name in string form into a new
@@ -258,12 +258,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="companyId">The company ID. Must not be <c>null</c>.</param>
+        /// <param name="tenantId">The tenant ID. Must not be <c>null</c>.</param>
         /// <param name="profileId">The profile ID. Must not be <c>null</c>.</param>
-        public ProfileName(string projectId, string companyId, string profileId)
+        public ProfileName(string projectId, string tenantId, string profileId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            CompanyId = gax::GaxPreconditions.CheckNotNull(companyId, nameof(companyId));
+            TenantId = gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId));
             ProfileId = gax::GaxPreconditions.CheckNotNull(profileId, nameof(profileId));
         }
 
@@ -273,9 +273,9 @@ namespace Google.Cloud.Talent.V4Beta1
         public string ProjectId { get; }
 
         /// <summary>
-        /// The company ID. Never <c>null</c>.
+        /// The tenant ID. Never <c>null</c>.
         /// </summary>
-        public string CompanyId { get; }
+        public string TenantId { get; }
 
         /// <summary>
         /// The profile ID. Never <c>null</c>.
@@ -286,7 +286,7 @@ namespace Google.Cloud.Talent.V4Beta1
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
 
         /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, CompanyId, ProfileId);
+        public override string ToString() => s_template.Expand(ProjectId, TenantId, ProfileId);
 
         /// <inheritdoc />
         public override int GetHashCode() => ToString().GetHashCode();
@@ -302,6 +302,98 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <inheritdoc />
         public static bool operator !=(ProfileName a, ProfileName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'tenant' resource.
+    /// </summary>
+    public sealed partial class TenantName : gax::IResourceName, sys::IEquatable<TenantName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/tenants/{tenant}");
+
+        /// <summary>
+        /// Parses the given tenant resource name in string form into a new
+        /// <see cref="TenantName"/> instance.
+        /// </summary>
+        /// <param name="tenantName">The tenant resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TenantName"/> if successful.</returns>
+        public static TenantName Parse(string tenantName)
+        {
+            gax::GaxPreconditions.CheckNotNull(tenantName, nameof(tenantName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(tenantName);
+            return new TenantName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given tenant resource name in string form into a new
+        /// <see cref="TenantName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="tenantName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="tenantName">The tenant resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="TenantName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string tenantName, out TenantName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(tenantName, nameof(tenantName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(tenantName, out resourceName))
+            {
+                result = new TenantName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="TenantName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="tenantId">The tenant ID. Must not be <c>null</c>.</param>
+        public TenantName(string projectId, string tenantId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            TenantId = gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The tenant ID. Never <c>null</c>.
+        /// </summary>
+        public string TenantId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, TenantId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as TenantName);
+
+        /// <inheritdoc />
+        public bool Equals(TenantName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(TenantName a, TenantName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(TenantName a, TenantName b) => !(a == b);
     }
 
 
@@ -386,11 +478,24 @@ namespace Google.Cloud.Talent.V4Beta1
     public partial class CreateProfileRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Talent.V4Beta1.TenantName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Talent.V4Beta1.CompanyName ParentAsCompanyName
+        public Google.Cloud.Talent.V4Beta1.TenantName ParentAsTenantName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.TenantName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateTenantRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -435,6 +540,19 @@ namespace Google.Cloud.Talent.V4Beta1
 
     }
 
+    public partial class DeleteTenantRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.TenantName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.TenantName TenantName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.TenantName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetCompanyRequest
     {
         /// <summary>
@@ -469,6 +587,19 @@ namespace Google.Cloud.Talent.V4Beta1
         public Google.Cloud.Talent.V4Beta1.ProfileName ProfileName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.ProfileName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetTenantRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.TenantName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.TenantName TenantName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.TenantName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -516,11 +647,24 @@ namespace Google.Cloud.Talent.V4Beta1
     public partial class ListProfilesRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Talent.V4Beta1.TenantName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Talent.V4Beta1.CompanyName ParentAsCompanyName
+        public Google.Cloud.Talent.V4Beta1.TenantName ParentAsTenantName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.TenantName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListTenantsRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
@@ -568,12 +712,25 @@ namespace Google.Cloud.Talent.V4Beta1
     public partial class SearchProfilesRequest
     {
         /// <summary>
-        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="Google.Cloud.Talent.V4Beta1.TenantName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public Google.Cloud.Talent.V4Beta1.CompanyName ParentAsCompanyName
+        public Google.Cloud.Talent.V4Beta1.TenantName ParentAsTenantName
         {
-            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.CompanyName.Parse(Parent); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Talent.V4Beta1.TenantName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Tenant
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.TenantName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.TenantName TenantName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.TenantName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }

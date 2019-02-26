@@ -470,10 +470,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the company under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/companies/{company_id}", for example,
-        /// "projects/api-test-project/companies/foo".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -490,13 +490,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable asynchronous sequence of <see cref="Profile"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListProfilesResponse, Profile> ListProfilesAsync(
-            CompanyName parent,
+            TenantName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProfilesAsync(
                 new ListProfilesRequest
                 {
-                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -508,10 +508,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the company under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}/companies/{company_id}", for example,
-        /// "projects/api-test-project/companies/foo".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -528,13 +528,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable sequence of <see cref="Profile"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListProfilesResponse, Profile> ListProfiles(
-            CompanyName parent,
+            TenantName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListProfiles(
                 new ListProfilesRequest
                 {
-                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -584,10 +584,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The name of the company this profile belongs to.
+        /// The name of the tenant this profile belongs to.
         ///
-        /// The format is "projects/{project_id}/companies/{company_id}", for example,
-        /// "projects/api-test-project/companies/foo".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
         /// Required.
@@ -601,12 +601,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Profile> CreateProfileAsync(
-            CompanyName parent,
+            TenantName parent,
             Profile profile,
             gaxgrpc::CallSettings callSettings = null) => CreateProfileAsync(
                 new CreateProfileRequest
                 {
-                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Profile = gax::GaxPreconditions.CheckNotNull(profile, nameof(profile)),
                 },
                 callSettings);
@@ -617,10 +617,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The name of the company this profile belongs to.
+        /// The name of the tenant this profile belongs to.
         ///
-        /// The format is "projects/{project_id}/companies/{company_id}", for example,
-        /// "projects/api-test-project/companies/foo".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
         /// Required.
@@ -634,7 +634,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Profile> CreateProfileAsync(
-            CompanyName parent,
+            TenantName parent,
             Profile profile,
             st::CancellationToken cancellationToken) => CreateProfileAsync(
                 parent,
@@ -647,10 +647,10 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The name of the company this profile belongs to.
+        /// The name of the tenant this profile belongs to.
         ///
-        /// The format is "projects/{project_id}/companies/{company_id}", for example,
-        /// "projects/api-test-project/companies/foo".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
         /// Required.
@@ -664,12 +664,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Profile CreateProfile(
-            CompanyName parent,
+            TenantName parent,
             Profile profile,
             gaxgrpc::CallSettings callSettings = null) => CreateProfile(
                 new CreateProfileRequest
                 {
-                    ParentAsCompanyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Profile = gax::GaxPreconditions.CheckNotNull(profile, nameof(profile)),
                 },
                 callSettings);
@@ -739,8 +739,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Resource name of the profile to get.
         ///
         /// The format is
-        /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-        /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -766,8 +766,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Resource name of the profile to get.
         ///
         /// The format is
-        /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-        /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -790,8 +790,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Resource name of the profile to get.
         ///
         /// The format is
-        /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-        /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -995,8 +995,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Resource name of the profile to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-        /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1022,8 +1022,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Resource name of the profile to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-        /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1046,8 +1046,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Resource name of the profile to be deleted.
         ///
         /// The format is
-        /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-        /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1115,12 +1115,14 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for profiles within a company.
+        /// Searches for profiles within a tenant.
         ///
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1139,12 +1141,14 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for profiles within a company.
+        /// Searches for profiles within a tenant.
         ///
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1444,12 +1448,14 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for profiles within a company.
+        /// Searches for profiles within a tenant.
         ///
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1469,12 +1475,14 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for profiles within a company.
+        /// Searches for profiles within a tenant.
         ///
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

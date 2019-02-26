@@ -27,7 +27,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Cilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGFueS5wcm90bxIb",
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBpL2Fubm90",
             "YXRpb25zLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29t",
-            "bW9uLnByb3RvIogFCgdDb21wYW55EgwKBG5hbWUYASABKAkSFAoMZGlzcGxh",
+            "bW9uLnByb3RvIuQDCgdDb21wYW55EgwKBG5hbWUYASABKAkSFAoMZGlzcGxh",
             "eV9uYW1lGAIgASgJEhMKC2V4dGVybmFsX2lkGAMgASgJEjYKBHNpemUYBCAB",
             "KA4yKC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGFueVNpemUS",
             "HAoUaGVhZHF1YXJ0ZXJzX2FkZHJlc3MYBSABKAkSFQoNaGlyaW5nX2FnZW5j",
@@ -36,19 +36,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "EjAKKGtleXdvcmRfc2VhcmNoYWJsZV9qb2JfY3VzdG9tX2F0dHJpYnV0ZXMY",
             "CyADKAkSRgoMZGVyaXZlZF9pbmZvGAwgASgLMjAuZ29vZ2xlLmNsb3VkLnRh",
             "bGVudC52NGJldGExLkNvbXBhbnkuRGVyaXZlZEluZm8SEQoJc3VzcGVuZGVk",
-            "GA0gASgIEkwKDWxlYXJuaW5nX3R5cGUYDiABKA4yNS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuQ29tcGFueS5EYXRhTGVhcm5pbmdUeXBlGlMKC0Rl",
-            "cml2ZWRJbmZvEkQKFWhlYWRxdWFydGVyc19sb2NhdGlvbhgBIAEoCzIlLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Mb2NhdGlvbiJUChBEYXRhTGVh",
-            "cm5pbmdUeXBlEiIKHkRBVEFfTEVBUk5JTkdfVFlQRV9VTlNQRUNJRklFRBAA",
-            "Eg4KCkFHR1JFR0FURUQQARIMCghJU09MQVRFRBACQoIBCh9jb20uZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExQhRDb21wYW55UmVzb3VyY2VQcm90b1AB",
-            "WkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "GA0gASgIGlMKC0Rlcml2ZWRJbmZvEkQKFWhlYWRxdWFydGVyc19sb2NhdGlv",
+            "bhgBIAEoCzIlLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Mb2NhdGlv",
+            "bkKCAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIUQ29tcGFu",
+            "eVJlc291cmNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company), global::Google.Cloud.Talent.V4Beta1.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended", "LearningType" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DataLearningType) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company), global::Google.Cloud.Talent.V4Beta1.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null)})
           }));
     }
     #endregion
@@ -98,7 +95,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       keywordSearchableJobCustomAttributes_ = other.keywordSearchableJobCustomAttributes_.Clone();
       derivedInfo_ = other.derivedInfo_ != null ? other.derivedInfo_.Clone() : null;
       suspended_ = other.suspended_;
-      learningType_ = other.learningType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -187,7 +183,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The street address of the company's main headquarters, which may be
     /// different from the job location. The service attempts
     /// to geolocate the provided address, and populates a more specific
-    /// location wherever possible in [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
+    /// location wherever possible in
+    /// [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string HeadquartersAddress {
@@ -296,8 +293,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// A list of keys of filterable [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes], whose
-    /// corresponding `string_values` are used in keyword search. Jobs with
+    /// A list of keys of filterable
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes],
+    /// whose corresponding `string_values` are used in keyword search. Jobs with
     /// `string_values` under these specified field keys are returned if any
     /// of the values matches the search keyword. Custom field values with
     /// parenthesis, brackets and special symbols won't be properly searchable,
@@ -338,25 +336,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "learning_type" field.</summary>
-    public const int LearningTypeFieldNumber = 14;
-    private global::Google.Cloud.Talent.V4Beta1.Company.Types.DataLearningType learningType_ = 0;
-    /// <summary>
-    /// Optional.
-    ///
-    /// Indicates whether data owned by this company may be used to provide product
-    /// improvements across other companies.
-    ///
-    /// Defaults behavior is [DataLearningType.ISOLATED][google.cloud.talent.v4beta1.Company.DataLearningType.ISOLATED] if it's unset.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Talent.V4Beta1.Company.Types.DataLearningType LearningType {
-      get { return learningType_; }
-      set {
-        learningType_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Company);
@@ -383,7 +362,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if(!keywordSearchableJobCustomAttributes_.Equals(other.keywordSearchableJobCustomAttributes_)) return false;
       if (!object.Equals(DerivedInfo, other.DerivedInfo)) return false;
       if (Suspended != other.Suspended) return false;
-      if (LearningType != other.LearningType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -403,7 +381,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= keywordSearchableJobCustomAttributes_.GetHashCode();
       if (derivedInfo_ != null) hash ^= DerivedInfo.GetHashCode();
       if (Suspended != false) hash ^= Suspended.GetHashCode();
-      if (LearningType != 0) hash ^= LearningType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -466,10 +443,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(104);
         output.WriteBool(Suspended);
       }
-      if (LearningType != 0) {
-        output.WriteRawTag(112);
-        output.WriteEnum((int) LearningType);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -514,9 +487,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (Suspended != false) {
         size += 1 + 1;
-      }
-      if (LearningType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LearningType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -568,9 +538,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (other.Suspended != false) {
         Suspended = other.Suspended;
-      }
-      if (other.LearningType != 0) {
-        LearningType = other.LearningType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -638,10 +605,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
             Suspended = input.ReadBool();
             break;
           }
-          case 112: {
-            learningType_ = (global::Google.Cloud.Talent.V4Beta1.Company.Types.DataLearningType) input.ReadEnum();
-            break;
-          }
         }
       }
     }
@@ -650,26 +613,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Container for nested types declared in the Company message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      /// <summary>
-      /// Enum that represents how user data owned by the company is used.
-      /// </summary>
-      public enum DataLearningType {
-        /// <summary>
-        /// Default value.
-        /// </summary>
-        [pbr::OriginalName("DATA_LEARNING_TYPE_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// Data owned by this company is used to improve search/recommendation
-        /// quality across companies.
-        /// </summary>
-        [pbr::OriginalName("AGGREGATED")] Aggregated = 1,
-        /// <summary>
-        /// Data owned by this company is used to improve search/recommendation
-        /// quality for this company only.
-        /// </summary>
-        [pbr::OriginalName("ISOLATED")] Isolated = 2,
-      }
-
       /// <summary>
       /// Derived details about the company.
       /// </summary>

@@ -20,6 +20,7 @@ using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
+using st = SearchJobsResponse.Types;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -1137,12 +1138,16 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// * `companyName` (Required)
         /// * `requisitionId` (Optional)
+        /// * `status` (Optional) Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// OPEN if no value is specified.
         ///
         /// Sample Query:
         ///
         /// * companyName = "projects/api-test-project/companies/123"
         /// * companyName = "projects/api-test-project/companies/123" AND requisitionId
         /// = "req-1"
+        /// * companyName = "projects/api-test-project/companies/123" AND status =
+        /// "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1195,12 +1200,16 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// * `companyName` (Required)
         /// * `requisitionId` (Optional)
+        /// * `status` (Optional) Available values: OPEN, EXPIRED, ALL. Defaults to
+        /// OPEN if no value is specified.
         ///
         /// Sample Query:
         ///
         /// * companyName = "projects/api-test-project/companies/123"
         /// * companyName = "projects/api-test-project/companies/123" AND requisitionId
         /// = "req-1"
+        /// * companyName = "projects/api-test-project/companies/123" AND status =
+        /// "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1446,11 +1455,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1469,11 +1480,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1492,16 +1505,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1520,16 +1535,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1899,11 +1916,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1923,11 +1942,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1947,16 +1968,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1976,16 +1999,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2031,4 +2056,18 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
+    public partial class SearchJobsRequest : gaxgrpc::IPageRequest { }
+    public partial class SearchJobsResponse : gaxgrpc::IPageResponse<SearchJobsResponse.Types.MatchingJob>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public scg::IEnumerator<SearchJobsResponse.Types.MatchingJob> GetEnumerator() => MatchingJobs.GetEnumerator();
+
+        /// <inheritdoc/>
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+
 }

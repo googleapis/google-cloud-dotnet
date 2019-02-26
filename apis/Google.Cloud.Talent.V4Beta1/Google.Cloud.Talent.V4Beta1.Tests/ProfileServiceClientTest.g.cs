@@ -39,12 +39,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             CreateProfileRequest expectedRequest = new CreateProfileRequest
             {
-                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
                 Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -56,7 +56,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateProfile(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyName parent = new CompanyName("[PROJECT]", "[COMPANY]");
+            TenantName parent = new TenantName("[PROJECT]", "[TENANT]");
             Profile profile = new Profile();
             Profile response = client.CreateProfile(parent, profile);
             Assert.Same(expectedResponse, response);
@@ -69,12 +69,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             CreateProfileRequest expectedRequest = new CreateProfileRequest
             {
-                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
                 Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -86,7 +86,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyName parent = new CompanyName("[PROJECT]", "[COMPANY]");
+            TenantName parent = new TenantName("[PROJECT]", "[TENANT]");
             Profile profile = new Profile();
             Profile response = await client.CreateProfileAsync(parent, profile);
             Assert.Same(expectedResponse, response);
@@ -99,12 +99,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
             {
-                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
                 Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -127,12 +127,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             CreateProfileRequest request = new CreateProfileRequest
             {
-                ParentAsCompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                ParentAsTenantName = new TenantName("[PROJECT]", "[TENANT]"),
                 Profile = new Profile(),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -155,11 +155,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             GetProfileRequest expectedRequest = new GetProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -171,7 +171,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.GetProfile(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
+            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
             Profile response = client.GetProfile(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -183,11 +183,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             GetProfileRequest expectedRequest = new GetProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -199,7 +199,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.GetProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Profile>(Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
+            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
             Profile response = await client.GetProfileAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -211,11 +211,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             GetProfileRequest request = new GetProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -238,11 +238,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             GetProfileRequest request = new GetProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -269,7 +269,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -297,7 +297,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -325,7 +325,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -352,7 +352,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Profile expectedResponse = new Profile
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
                 ExternalId = "externalId-1153075697",
                 Source = "source-896505829",
                 Uri = "uri116076",
@@ -375,13 +375,13 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             DeleteProfileRequest expectedRequest = new DeleteProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProfile(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
+            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
             client.DeleteProfile(name);
             mockGrpcClient.VerifyAll();
         }
@@ -392,13 +392,13 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             DeleteProfileRequest expectedRequest = new DeleteProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProfileAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProfileServiceClient client = new ProfileServiceClientImpl(mockGrpcClient.Object, null);
-            ProfileName name = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]");
+            ProfileName name = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]");
             await client.DeleteProfileAsync(name);
             mockGrpcClient.VerifyAll();
         }
@@ -409,7 +409,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             DeleteProfileRequest request = new DeleteProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProfile(request, It.IsAny<CallOptions>()))
@@ -425,7 +425,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<ProfileService.ProfileServiceClient> mockGrpcClient = new Mock<ProfileService.ProfileServiceClient>(MockBehavior.Strict);
             DeleteProfileRequest request = new DeleteProfileRequest
             {
-                ProfileName = new ProfileName("[PROJECT]", "[COMPANY]", "[PROFILE]"),
+                ProfileName = new ProfileName("[PROJECT]", "[TENANT]", "[PROFILE]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteProfileAsync(request, It.IsAny<CallOptions>()))

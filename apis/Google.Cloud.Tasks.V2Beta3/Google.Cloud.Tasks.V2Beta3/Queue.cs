@@ -145,6 +145,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// [AppEngineHttpQueue][google.cloud.tasks.v2beta3.AppEngineHttpQueue] settings apply only to
     /// [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest] in this queue.
+    /// [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by this proto.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpQueue AppEngineHttpQueue {

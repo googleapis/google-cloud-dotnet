@@ -63,33 +63,33 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "MS5TdW1tYXJpemVkUHJvZmlsZSKCAQoRU3VtbWFyaXplZFByb2ZpbGUSNgoI",
             "cHJvZmlsZXMYASADKAsyJC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
             "UHJvZmlsZRI1CgdzdW1tYXJ5GAIgASgLMiQuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLlByb2ZpbGUyiwgKDlByb2ZpbGVTZXJ2aWNlEq4BCgxMaXN0",
+            "dC52NGJldGExLlByb2ZpbGUy/wcKDlByb2ZpbGVTZXJ2aWNlEqwBCgxMaXN0",
             "UHJvZmlsZXMSMC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdFBy",
             "b2ZpbGVzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5M",
-            "aXN0UHJvZmlsZXNSZXNwb25zZSI5gtPkkwIzEjEvdjRiZXRhMS97cGFyZW50",
-            "PXByb2plY3RzLyovY29tcGFuaWVzLyp9L3Byb2ZpbGVzEqYBCg1DcmVhdGVQ",
-            "cm9maWxlEjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNyZWF0ZVBy",
-            "b2ZpbGVSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBy",
-            "b2ZpbGUiPILT5JMCNiIxL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2Nv",
-            "bXBhbmllcy8qfS9wcm9maWxlczoBKhKdAQoKR2V0UHJvZmlsZRIuLmdvb2ds",
-            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5HZXRQcm9maWxlUmVxdWVzdBokLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlIjmC0+STAjMSMS92",
-            "NGJldGExL3tuYW1lPXByb2plY3RzLyovY29tcGFuaWVzLyovcHJvZmlsZXMv",
-            "Kn0SrgEKDVVwZGF0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuVXBkYXRlUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuUHJvZmlsZSJEgtPkkwI+MjkvdjRiZXRhMS97cHJvZmls",
-            "ZS5uYW1lPXByb2plY3RzLyovY29tcGFuaWVzLyovcHJvZmlsZXMvKn06ASoS",
-            "lQEKDURlbGV0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
-            "YTEuRGVsZXRlUHJvZmlsZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiOYLT5JMCMyoxL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi9jb21wYW5p",
-            "ZXMvKi9wcm9maWxlcy8qfRK1AQoOU2VhcmNoUHJvZmlsZXMSMi5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoUHJvZmlsZXNSZXF1ZXN0GjMu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNlYXJjaFByb2ZpbGVzUmVz",
-            "cG9uc2UiOoLT5JMCNCIvL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2Nv",
-            "bXBhbmllcy8qfTpzZWFyY2g6ASpCgQEKH2NvbS5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTFCE1Byb2ZpbGVTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRi",
-            "ZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
+            "aXN0UHJvZmlsZXNSZXNwb25zZSI3gtPkkwIxEi8vdjRiZXRhMS97cGFyZW50",
+            "PXByb2plY3RzLyovdGVuYW50cy8qfS9wcm9maWxlcxKkAQoNQ3JlYXRlUHJv",
+            "ZmlsZRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DcmVhdGVQcm9m",
+            "aWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9m",
+            "aWxlIjqC0+STAjQiLy92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5h",
+            "bnRzLyp9L3Byb2ZpbGVzOgEqEpsBCgpHZXRQcm9maWxlEi4uZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLkdldFByb2ZpbGVSZXF1ZXN0GiQuZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiN4LT5JMCMRIvL3Y0YmV0",
+            "YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovcHJvZmlsZXMvKn0SrAEK",
+            "DVVwZGF0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "VXBkYXRlUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuUHJvZmlsZSJCgtPkkwI8MjcvdjRiZXRhMS97cHJvZmlsZS5uYW1l",
+            "PXByb2plY3RzLyovdGVuYW50cy8qL3Byb2ZpbGVzLyp9OgEqEpMBCg1EZWxl",
+            "dGVQcm9maWxlEjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlbGV0",
+            "ZVByb2ZpbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjeC0+ST",
+            "AjEqLy92NGJldGExL3tuYW1lPXByb2plY3RzLyovdGVuYW50cy8qL3Byb2Zp",
+            "bGVzLyp9ErMBCg5TZWFyY2hQcm9maWxlcxIyLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5TZWFyY2hQcm9maWxlc1JlcXVlc3QaMy5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuU2VhcmNoUHJvZmlsZXNSZXNwb25zZSI4gtPk",
+            "kwIyIi0vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfTpz",
+            "ZWFyY2g6ASpCgQEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFC",
+            "E1Byb2ZpbGVTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSi",
+            "AgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,10 +154,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The resource name of the company under which the job is created.
+    /// The resource name of the tenant under which the job is created.
     ///
-    /// The format is "projects/{project_id}/companies/{company_id}", for example,
-    /// "projects/api-test-project/companies/foo".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenants/foo".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -175,8 +175,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The token that specifies the current offset (that is, starting result).
     ///
-    /// Please set the value to [ListProfilesResponse.next_page_token][google.cloud.talent.v4beta1.ListProfilesResponse.next_page_token] to
-    /// continue the list.
+    /// Please set the value to
+    /// [ListProfilesResponse.next_page_token][google.cloud.talent.v4beta1.ListProfilesResponse.next_page_token]
+    /// to continue the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -407,7 +408,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Talent.V4Beta1.Profile.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Profile> profiles_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Profile>();
     /// <summary>
-    /// Profiles for the specific company.
+    /// Profiles for the specific tenant.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Profile> Profiles {
@@ -566,10 +567,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The name of the company this profile belongs to.
+    /// The name of the tenant this profile belongs to.
     ///
-    /// The format is "projects/{project_id}/companies/{company_id}", for example,
-    /// "projects/api-test-project/companies/foo".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenants/foo".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -747,8 +748,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Resource name of the profile to get.
     ///
     /// The format is
-    /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-    /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1098,8 +1099,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Resource name of the profile to be deleted.
     ///
     /// The format is
-    /// "projects/{project_id}/companies/{company_id}/profiles/{profile_id}",
-    /// for example, "projects/api-test-project/companies/foo/profiles/bar".
+    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1245,10 +1246,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The resource name of the company to search within.
+    /// The resource name of the tenant to search within.
     ///
-    /// The format is "projects/{project_id}/companies/{company_id}", for example,
-    /// "projects/api-test-project/companies/foo".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenants/foo".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1282,7 +1283,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// Search query to execute. See [ProfileQuery][google.cloud.talent.v4beta1.ProfileQuery] for more details.
+    /// Search query to execute. See
+    /// [ProfileQuery][google.cloud.talent.v4beta1.ProfileQuery] for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ProfileQuery ProfileQuery {
@@ -1320,10 +1322,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The pageToken, similar to offset enables users of the API to paginate
     /// through the search results. To retrieve the first page of results, set the
     /// pageToken to empty. The search response includes a
-    /// [nextPageToken][google.cloud.talent.v4beta1.SearchProfilesResponse.next_page_token] field that can be
-    /// used to populate the pageToken field for the next page of results. Using
-    /// pageToken instead of offset increases the performance of the API,
-    /// especially compared to larger offset values.
+    /// [nextPageToken][google.cloud.talent.v4beta1.SearchProfilesResponse.next_page_token]
+    /// field that can be used to populate the pageToken field for the next page of
+    /// results. Using pageToken instead of offset increases the performance of the
+    /// API, especially compared to larger offset values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1340,7 +1342,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// An integer that specifies the current offset (that is, starting result) in
-    /// search results. This field is only considered if [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token] is unset.
+    /// search results. This field is only considered if
+    /// [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token]
+    /// is unset.
     ///
     /// The maximum allowed value is 5000. Otherwise an error is thrown.
     ///
@@ -1436,7 +1440,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// A list of expressions specifies histogram requests against matching
-    /// profiles for [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
+    /// profiles for
+    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
     ///
     /// The expression syntax looks like a function definition with optional
     /// parameters.
@@ -1489,19 +1494,29 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * experience_in_months: experience in months. 0 means 0 month to 1 month
     /// (exclusive).
     /// * application_date: The application date specifies application start dates.
-    /// See [ApplicationDateFilter][google.cloud.talent.v4beta1.ApplicationDateFilter] for more details.
+    /// See
+    /// [ApplicationDateFilter][google.cloud.talent.v4beta1.ApplicationDateFilter]
+    /// for more details.
     /// * application_outcome_reason: The application outcome reason specifies the
     /// outcome reasons of job application.
-    /// See [ApplicationOutcomeReasonFilter][google.cloud.talent.v4beta1.ApplicationOutcomeReasonFilter] for more details.
+    /// See
+    /// [ApplicationOutcomeReasonFilter][google.cloud.talent.v4beta1.ApplicationOutcomeReasonFilter]
+    /// for more details.
     /// * application_last_stage: The application last stage specifies the last
     /// stage of job application.
-    /// See [ApplicationLastStageFilter][google.cloud.talent.v4beta1.ApplicationLastStageFilter] for more details.
+    /// See
+    /// [ApplicationLastStageFilter][google.cloud.talent.v4beta1.ApplicationLastStageFilter]
+    /// for more details.
     /// * application_job_title: The application job title specifies the job
     /// applied for in the application.
-    /// See [ApplicationJobFilter][google.cloud.talent.v4beta1.ApplicationJobFilter] for more details.
+    /// See
+    /// [ApplicationJobFilter][google.cloud.talent.v4beta1.ApplicationJobFilter]
+    /// for more details.
     /// * application_status: The application status specifies the status of job
     /// application.
-    /// See [ApplicationStatusFilter][google.cloud.talent.v4beta1.ApplicationStatusFilter] for more details.
+    /// See
+    /// [ApplicationStatusFilter][google.cloud.talent.v4beta1.ApplicationStatusFilter]
+    /// for more details.
     /// * hirable_status: Hirable status specifies the profile's hirable status.
     /// * string_custom_attribute: String custom attributes. Values can be accessed
     /// via square bracket notation like string_custom_attribute["key1"].
@@ -1877,7 +1892,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Talent.V4Beta1.SummarizedProfile.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile> summarizedProfiles_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile>();
     /// <summary>
-    /// The profile entities that match the specified [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
+    /// The profile entities that match the specified
+    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile> SummarizedProfiles {
@@ -2049,7 +2065,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Output only.
   ///
-  /// Profile entry with metadata inside [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse].
+  /// Profile entry with metadata inside
+  /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse].
   /// </summary>
   public sealed partial class SummarizedProfile : pb::IMessage<SummarizedProfile> {
     private static readonly pb::MessageParser<SummarizedProfile> _parser = new pb::MessageParser<SummarizedProfile>(() => new SummarizedProfile());

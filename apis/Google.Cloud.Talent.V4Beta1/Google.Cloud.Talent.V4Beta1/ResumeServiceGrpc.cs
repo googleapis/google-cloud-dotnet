@@ -3,7 +3,7 @@
 //     source: google/cloud/talent/v4beta1/resume_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,8 +51,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public abstract partial class ResumeServiceBase
     {
       /// <summary>
-      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The API attempts to fill out the
-      /// following profile fields if present within the resume:
+      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The
+      /// API attempts to fill out the following profile fields if present within the
+      /// resume:
       ///
       /// * personNames
       /// * addresses
@@ -70,15 +71,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// resume, clients need to call the CreateProfile method again with the
       /// profile returned.
       ///
-      /// This API supports the following list of formats:
+      /// The following list of formats are supported:
       ///
       /// * PDF
       /// * TXT
       /// * DOC
       /// * RTF
       /// * DOCX
-      ///
-      /// An error is thrown if the input format is not supported.
+      /// * PNG (only when [ParseResumeRequest.enable_ocr][] is set to `true`,
+      /// otherwise an error is thrown)
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -114,8 +115,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
 
       /// <summary>
-      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The API attempts to fill out the
-      /// following profile fields if present within the resume:
+      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The
+      /// API attempts to fill out the following profile fields if present within the
+      /// resume:
       ///
       /// * personNames
       /// * addresses
@@ -133,15 +135,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// resume, clients need to call the CreateProfile method again with the
       /// profile returned.
       ///
-      /// This API supports the following list of formats:
+      /// The following list of formats are supported:
       ///
       /// * PDF
       /// * TXT
       /// * DOC
       /// * RTF
       /// * DOCX
-      ///
-      /// An error is thrown if the input format is not supported.
+      /// * PNG (only when [ParseResumeRequest.enable_ocr][] is set to `true`,
+      /// otherwise an error is thrown)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -153,8 +155,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return ParseResume(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The API attempts to fill out the
-      /// following profile fields if present within the resume:
+      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The
+      /// API attempts to fill out the following profile fields if present within the
+      /// resume:
       ///
       /// * personNames
       /// * addresses
@@ -172,15 +175,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// resume, clients need to call the CreateProfile method again with the
       /// profile returned.
       ///
-      /// This API supports the following list of formats:
+      /// The following list of formats are supported:
       ///
       /// * PDF
       /// * TXT
       /// * DOC
       /// * RTF
       /// * DOCX
-      ///
-      /// An error is thrown if the input format is not supported.
+      /// * PNG (only when [ParseResumeRequest.enable_ocr][] is set to `true`,
+      /// otherwise an error is thrown)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -190,8 +193,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ParseResume, null, options, request);
       }
       /// <summary>
-      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The API attempts to fill out the
-      /// following profile fields if present within the resume:
+      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The
+      /// API attempts to fill out the following profile fields if present within the
+      /// resume:
       ///
       /// * personNames
       /// * addresses
@@ -209,15 +213,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// resume, clients need to call the CreateProfile method again with the
       /// profile returned.
       ///
-      /// This API supports the following list of formats:
+      /// The following list of formats are supported:
       ///
       /// * PDF
       /// * TXT
       /// * DOC
       /// * RTF
       /// * DOCX
-      ///
-      /// An error is thrown if the input format is not supported.
+      /// * PNG (only when [ParseResumeRequest.enable_ocr][] is set to `true`,
+      /// otherwise an error is thrown)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -229,8 +233,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return ParseResumeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The API attempts to fill out the
-      /// following profile fields if present within the resume:
+      /// Parses a resume into a [Profile][google.cloud.talent.v4beta1.Profile]. The
+      /// API attempts to fill out the following profile fields if present within the
+      /// resume:
       ///
       /// * personNames
       /// * addresses
@@ -248,15 +253,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// resume, clients need to call the CreateProfile method again with the
       /// profile returned.
       ///
-      /// This API supports the following list of formats:
+      /// The following list of formats are supported:
       ///
       /// * PDF
       /// * TXT
       /// * DOC
       /// * RTF
       /// * DOCX
-      ///
-      /// An error is thrown if the input format is not supported.
+      /// * PNG (only when [ParseResumeRequest.enable_ocr][] is set to `true`,
+      /// otherwise an error is thrown)
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
