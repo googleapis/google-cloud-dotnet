@@ -71,8 +71,9 @@ namespace Google.Cloud.Dlp.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest> __Marshaller_ListJobTriggersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> __Marshaller_ListJobTriggersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListJobTriggersResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest> __Marshaller_DeleteJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest> __Marshaller_CreateDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest> __Marshaller_ActivateJobTriggerRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DlpJob> __Marshaller_DlpJob = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.DlpJob.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest> __Marshaller_CreateDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest> __Marshaller_ListDlpJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDlpJobsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> __Marshaller_ListDlpJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.ListDlpJobsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDlpJobRequest> __Marshaller_GetDlpJobRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dlp.V2.GetDlpJobRequest.Parser.ParseFrom);
@@ -225,6 +226,13 @@ namespace Google.Cloud.Dlp.V2 {
         "DeleteJobTrigger",
         __Marshaller_DeleteJobTriggerRequest,
         __Marshaller_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_ActivateJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ActivateJobTrigger",
+        __Marshaller_ActivateJobTriggerRequest,
+        __Marshaller_DlpJob);
 
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_CreateDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
         grpc::MethodType.Unary,
@@ -571,6 +579,18 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTrigger(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Activate a job trigger. Causes the immediate execute of a trigger
+      /// instead of waiting on the trigger event to occur.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DlpJob> ActivateJobTrigger(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1820,6 +1840,54 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteJobTrigger, null, options, request);
       }
       /// <summary>
+      /// Activate a job trigger. Causes the immediate execute of a trigger
+      /// instead of waiting on the trigger event to occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.DlpJob ActivateJobTrigger(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ActivateJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activate a job trigger. Causes the immediate execute of a trigger
+      /// instead of waiting on the trigger event to occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dlp.V2.DlpJob ActivateJobTrigger(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ActivateJobTrigger, null, options, request);
+      }
+      /// <summary>
+      /// Activate a job trigger. Causes the immediate execute of a trigger
+      /// instead of waiting on the trigger event to occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> ActivateJobTriggerAsync(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ActivateJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Activate a job trigger. Causes the immediate execute of a trigger
+      /// instead of waiting on the trigger event to occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> ActivateJobTriggerAsync(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ActivateJobTrigger, null, options, request);
+      }
+      /// <summary>
       /// Creates a new job to inspect storage or calculate risk metrics.
       /// See https://cloud.google.com/dlp/docs/inspecting-storage and
       /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -2407,6 +2475,7 @@ namespace Google.Cloud.Dlp.V2 {
           .AddMethod(__Method_GetJobTrigger, serviceImpl.GetJobTrigger)
           .AddMethod(__Method_ListJobTriggers, serviceImpl.ListJobTriggers)
           .AddMethod(__Method_DeleteJobTrigger, serviceImpl.DeleteJobTrigger)
+          .AddMethod(__Method_ActivateJobTrigger, serviceImpl.ActivateJobTrigger)
           .AddMethod(__Method_CreateDlpJob, serviceImpl.CreateDlpJob)
           .AddMethod(__Method_ListDlpJobs, serviceImpl.ListDlpJobs)
           .AddMethod(__Method_GetDlpJob, serviceImpl.GetDlpJob)
