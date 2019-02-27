@@ -35,7 +35,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             CreateBucket();
             EnableBpo();
-            UploadObjectSucceeds_DownloadObjectFails();
             DisableBpo();
 
             // Individual steps of the test as local methods
@@ -57,14 +56,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                 var expectedLockedTime = DateTime.UtcNow.AddDays(90);
                 Assert.InRange(lockedTime.Value.ToUniversalTime(), expectedLockedTime.AddMinutes(-10), expectedLockedTime.AddMinutes(10));
-            }
-
-            void UploadObjectSucceeds_DownloadObjectFails()
-            {
-                string objectName = IdGenerator.FromGuid();
-                var objectData = TestHelpers.GenerateData(512);
-                client.UploadObject(bucketName, objectName, "", objectData);
-                Assert.Throws<GoogleApiException>(() => client.DownloadObject(bucketName, objectName, new MemoryStream()));
             }
 
             void DisableBpo()
