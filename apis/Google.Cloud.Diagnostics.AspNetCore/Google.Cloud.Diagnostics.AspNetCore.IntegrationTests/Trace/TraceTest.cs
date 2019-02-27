@@ -255,8 +255,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var traceLabelsTask = client.GetAsync(traceLabelUri);
                 Task.WaitAll(traceTask, traceLabelsTask);
 
-                var trace = _polling.GetTrace(traceUri, _startTime);
-                var traceLabel = _polling.GetTrace(traceLabelUri, _startTime);
+                // We expect exactly one of the two following traces to have been sent to the backend,
+                // but we don't know which. By polling but not expecting a trace in both cases we force
+                // the poller to wait for the max configured wait time, poll and return one trace if it
+                // found one or null if it didn't.
+                // In test pollers, minEntries and expectTrace should be understood as a minimum requirement
+                // and not as an exact requirement.
+                var trace = _polling.GetTrace(traceUri, _startTime, expectTrace: false);
+                var traceLabel = _polling.GetTrace(traceLabelUri, _startTime, expectTrace: false);
 
                 Assert.True((trace == null && traceLabel != null) || (trace != null && traceLabel == null));
             }
