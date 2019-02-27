@@ -27,7 +27,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     [FileLoggerBeforeAfterTest]
     public class NormalizationTest
     {
-        [Theory]
+        [SkippableTheory]
         // Normalization Form C: a single character for e-acute.
         // URL should end with Caf%C3%A9
         [InlineData("Caf\u00e9", "Normalization Form C")]
@@ -36,6 +36,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [InlineData("Cafe\u0301", "Normalization Form D")]
         public void FetchObjectAndCheckContent(string name, string expectedContent)
         {
+            TestEnvironment.SkipIfVpcSc();
             var client = StorageClient.Create();
             var obj = client.GetObject(StorageFixture.CrossLanguageTestBucket, name);
             Assert.Equal(name, obj.Name);
