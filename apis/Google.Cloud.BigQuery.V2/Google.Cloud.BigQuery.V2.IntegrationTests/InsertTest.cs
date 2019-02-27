@@ -223,9 +223,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "gameStarted", gameStarted }
             };
 
-        [Fact]
+        [SkippableFact]
         public void CreateLoadJob_Parquet()
         {
+            TestEnvironment.SkipIfVpcSc();
             string sourceUri = "gs://cloud-samples-data/bigquery/us-states/us-states.parquet";
 
             var client = BigQueryClient.Create(_fixture.ProjectId);

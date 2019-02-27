@@ -14,6 +14,7 @@
 
 using System;
 using System.Runtime.InteropServices;
+using Xunit;
 
 namespace Google.Cloud.ClientTesting
 {
@@ -53,6 +54,18 @@ namespace Google.Cloud.ClientTesting
             return RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 #endif
 
+        }
+
+        /// <summary>
+        /// Throws a <see cref="SkipException"/> if the tests are running in a VPC-SC constrained environment.
+        /// Note that tests can be skipped in this situation even if the MUST_NOT_SKIP_TESTS environment variable is set.
+        /// </summary>
+        public static void SkipIfVpcSc()
+        {
+            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("GOOGLE_CLOUD_TESTS_IN_VPCSC")))
+            {
+                throw new SkipException("Test skipped in VPCSC environment");
+            }
         }
     }
 }

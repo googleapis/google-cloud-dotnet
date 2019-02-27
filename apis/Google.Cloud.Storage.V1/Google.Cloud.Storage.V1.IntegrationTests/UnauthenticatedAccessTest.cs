@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System.IO;
 using System.Linq;
 using Xunit;
@@ -31,18 +32,20 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         public UnauthenticatedAccessTest(StorageFixture fixture) => _fixture = fixture;
 
-        [Fact]
+        [SkippableFact]
         public void DownloadPublicData()
         {
+            TestEnvironment.SkipIfVpcSc();
             var client = StorageClient.CreateUnauthenticated();
             MemoryStream stream = new MemoryStream();
             client.DownloadObject(LandsatBucket, LandsatObject, stream);
             Assert.Equal(7903, stream.Length);
         }
 
-        [Fact]
+        [SkippableFact]
         public void ListPublicData()
         {
+            TestEnvironment.SkipIfVpcSc();
             var client = StorageClient.CreateUnauthenticated();
             var objects = client.ListObjects(LandsatBucket, LandsatPrefix).ToList();
             Assert.Equal(13, objects.Count);
