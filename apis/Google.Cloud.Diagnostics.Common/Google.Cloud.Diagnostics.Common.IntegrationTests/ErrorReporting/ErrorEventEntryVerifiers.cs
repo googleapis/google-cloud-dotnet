@@ -41,8 +41,8 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// </summary>
         public static IEnumerable<ErrorEvent> VerifyMany(ErrorEventEntryPolling polling, string contextInfo, int expected)
         {
-            var events = polling.GetEvents(contextInfo, expected).ToList();
-            Assert.True(expected == events.Count, $"Should have found {expected} entries for contest {contextInfo} but found {events.Count}");
+            var events = polling.GetEvents(contextInfo, expected);
+            Assert.True(expected == events.Count(), $"Should have found {expected} entries for contest {contextInfo} but found {events.Count()}");
             return events;
         }
 

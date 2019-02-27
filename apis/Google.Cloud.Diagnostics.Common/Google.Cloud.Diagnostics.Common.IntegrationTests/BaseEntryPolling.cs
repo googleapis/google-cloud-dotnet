@@ -56,22 +56,21 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         protected IEnumerable<T> GetEntries(int minEntries, Func<IEnumerable<T>> getEntries)
         {
             TimeSpan totalSleepTime = TimeSpan.Zero;
+            List<T> lastFoundEntries = new List<T>();
             while (totalSleepTime < _timeout)
             {
                 TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : _timeout;
                 totalSleepTime += sleepTime;
                 Thread.Sleep(sleepTime);
 
-                List<T> entries = getEntries().ToList();
-                if (entries.Count >= minEntries)
+                lastFoundEntries = getEntries().ToList();
+                if (lastFoundEntries.Count >= minEntries)
                 {
-                    return entries;
+                    return lastFoundEntries;
                 }
             }
-            // We don't throw an exception here, as even if we've been asked for some entries, it may be that
-            // we're in a situation of expecting at least one of a few polls to succeed, and we just wanted to
-            // try hard to find it.
-            return Enumerable.Empty<T>();
+
+            throw new Exception($"Expected to find at least {minEntries} entries. Found {lastFoundEntries.Count} entries.");
         }
     }
 }

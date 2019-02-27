@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <param name="expectTrace">True if the trace is expected to exist.  This is used
         ///     to minimize RPC calls.</param>
         public TraceProto GetTrace(string spanName, Timestamp startTime, bool expectTrace = true) =>
-            GetTraces(spanName, startTime, expectTrace ? 1 : 0).FirstOrDefault();
+            GetTraces(spanName, startTime, expectTrace ? 1 : 0).SingleOrDefault();
 
         /// <summary>
         /// Gets traces containing the giving <paramref name="spanName"/>.
