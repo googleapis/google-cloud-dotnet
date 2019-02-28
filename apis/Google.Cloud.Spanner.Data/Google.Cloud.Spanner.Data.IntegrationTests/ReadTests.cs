@@ -112,7 +112,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     var cancellationTokenSource = new CancellationTokenSource();
                     var task = reader.ReadAsync(cancellationTokenSource.Token);
                     cancellationTokenSource.Cancel();
-                    var e = await Assert.ThrowsAsync<OperationCanceledException>(() => task);
+                    var e = await Assert.ThrowsAnyAsync<OperationCanceledException>(() => task);
                     Assert.False(e.IsTransientSpannerFault());
                 }
             }
