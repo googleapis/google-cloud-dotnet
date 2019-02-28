@@ -57,6 +57,7 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (beta)
 * [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1/) (beta)
   * The [V1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) is also available (beta)
+* [Google Cloud Scheduler](https://cloud.google.com/scheduler/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Scheduler.V1Beta1) (beta)
 * [Google Cloud Tasks](https://cloud.google.com/cloud-tasks/) (available for V2Beta2 and V2Beta3 API versions)
   * [V2Beta2 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2Beta2/) (beta)
   * [V2Beta3 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2Beta3/) (beta)
