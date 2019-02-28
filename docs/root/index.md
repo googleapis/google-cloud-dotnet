@@ -62,6 +62,7 @@ Beta:
 - [Google.Cloud.OsLogin.V1](Google.Cloud.OsLogin.V1/index.html)
 - [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html)
 - [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html)
+- [Google.Cloud.Scheduler.V1Beta1](Google.Cloud.Scheduler.V1Beta1/index.html)
 - [Google.Cloud.Tasks.V2Beta2](Google.Cloud.Tasks.V2Beta2/index.html)
 - [Google.Cloud.Tasks.V2Beta3](Google.Cloud.Tasks.V2Beta3/index.html)
 - [Google.Cloud.TextToSpeech.V1](Google.Cloud.TextToSpeech.V1/index.html)
