@@ -93,28 +93,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             }
         }
 
-        // This test has been known to hang...
-        [Fact(Timeout = 20000)]
-        public async Task Cancellation()
-        {
-            var cts = new CancellationTokenSource();
-            var progress = new Progress<IDownloadProgress>(p =>
-            {
-                if (p.BytesDownloaded > 5000)
-                {
-                    cts.Cancel();
-                }
-            });
-            using (var stream = new MemoryStream())
-            {
-                await Assert.ThrowsAnyAsync<OperationCanceledException>(() => _fixture.Client.DownloadObjectAsync(
-                    _fixture.ReadBucket, _fixture.LargeObject, stream,
-                    new DownloadObjectOptions { ChunkSize = 2 * 1024 },
-                    cts.Token,
-                    progress));
-            }
-        }
-
         [Fact]
         public void DownloadObjectFromInvalidBucket()
         {
