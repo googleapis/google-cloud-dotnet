@@ -436,9 +436,15 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Console.WriteLine("pub+sub completed.");
         }
 
-        [Fact]
+        [SkippableFact]
         public async Task SeparateSubchannels()
         {
+            // This test fails on some Linux platforms.
+            // The failures are due to changes made to the GRPC_VERBOSITY and GRPC_TRACE
+            // environment variables in GrpcInfo.cs not being picked up by the gRPC logging code.
+            // TODO: Determine why this fails and fix.
+            TestEnvironment.SkipIfVpcSc();
+
             var topicId = _fixture.CreateTopicId();
             var subscriptionId = _fixture.CreateSubscriptionId();
             var topicName = new TopicName(_fixture.ProjectId, topicId);
