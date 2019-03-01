@@ -83,7 +83,7 @@ namespace Google.Cloud.ClientTesting
                         tracers += tracerSeparator;
                     }
                     tracers += subchannelTracer;
-                    Environment.SetEnvironmentVariable(traceVar, subchannelTracer);
+                    Environment.SetEnvironmentVariable(traceVar, tracers);
                 }
 
                 GrpcEnvironment.SetLogger(this);
