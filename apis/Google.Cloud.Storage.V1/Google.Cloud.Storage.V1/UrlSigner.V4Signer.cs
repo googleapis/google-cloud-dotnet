@@ -49,7 +49,7 @@ namespace Google.Cloud.Storage.V1
                 IClock clock)
             {
                 var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner, clock);
-                var base64Signature = blobSigner.CreateSignature(state.blobToSign);
+                var base64Signature = blobSigner.CreateSignature(state._blobToSign);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
                 return state.GetResult(hexSignature);
@@ -67,7 +67,7 @@ namespace Google.Cloud.Storage.V1
                 CancellationToken cancellationToken)
             {
                 var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner, clock);
-                var base64Signature = await blobSigner.CreateSignatureAsync(state.blobToSign, cancellationToken).ConfigureAwait(false);
+                var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
                 return state.GetResult(hexSignature);
@@ -79,9 +79,9 @@ namespace Google.Cloud.Storage.V1
             /// </summary>
             private struct SigningState
             {
-                private string resourcePath;
-                private List<string> queryParameters;
-                internal byte[] blobToSign;
+                private string _resourcePath;
+                private string _canonicalQueryString;
+                internal byte[] _blobToSign;
 
                 internal SigningState(
                     string bucket,
@@ -95,17 +95,6 @@ namespace Google.Cloud.Storage.V1
                 {
                     StorageClientImpl.ValidateBucketName(bucket);
 
-                    bool isResumableUpload = false;
-                    if (requestMethod == null)
-                    {
-                        requestMethod = HttpMethod.Get;
-                    }
-                    else if (requestMethod == ResumableHttpMethod)
-                    {
-                        isResumableUpload = true;
-                        requestMethod = HttpMethod.Post;
-                    }
-
                     var now = clock.GetCurrentDateTimeUtc();
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
@@ -113,58 +102,80 @@ namespace Google.Cloud.Storage.V1
                     int expirySeconds = (int) (expiration - now).TotalSeconds;
                     string expiryText = expirySeconds.ToString(CultureInfo.InvariantCulture);
 
-                    string clientEmail = blobSigner.Id;
                     string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
-                    string credential = WebUtility.UrlEncode($"{blobSigner.Id}/{credentialScope}");
 
-                    // FIXME: Use requestHeaders and contentHeaders
-                    var headers = new SortedDictionary<string, string>();
+                    var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
                     headers["host"] = HostHeaderValue;
-
-                    var canonicalHeaderBuilder = new StringBuilder();
-                    foreach (var pair in headers)
-                    {
-                        canonicalHeaderBuilder.Append($"{pair.Key}:{pair.Value}\n");
-                    }
-
-                    var canonicalHeaders = canonicalHeaderBuilder.ToString().ToLowerInvariant();
+                    AddHeaders(headers, requestHeaders);
+                    AddHeaders(headers, contentHeaders);
+                    var canonicalHeaders = string.Join("", headers.Select(pair => $"{pair.Key}:{pair.Value}\n"));
                     var signedHeaders = string.Join(";", headers.Keys.Select(k => k.ToLowerInvariant()));
 
-                    queryParameters = new List<string>
+                    var queryParameters = new SortedDictionary<string, string>(StringComparer.Ordinal)
                     {
-                        $"X-Goog-Algorithm={Algorithm}",
-                        $"X-Goog-Credential={credential}",
-                        $"X-Goog-Date={timestamp}",
-                        $"X-Goog-Expires={expirySeconds}",
-                        $"X-Goog-SignedHeaders={signedHeaders}"
+                        { "X-Goog-Algorithm", Algorithm },
+                        { "X-Goog-Credential", $"{blobSigner.Id}/{credentialScope}" },
+                        { "X-Goog-Date", timestamp },
+                        { "X-Goog-Expires", expirySeconds.ToString(CultureInfo.InvariantCulture) },
+                        { "X-Goog-SignedHeaders", signedHeaders }
                     };
-                    if (isResumableUpload)
+
+                    if (requestMethod == null)
                     {
-                        queryParameters.Insert(4, "X-Goog-Resumable=Start");
+                        requestMethod = HttpMethod.Get;
+                    }
+                    else if (requestMethod == ResumableHttpMethod)
+                    {
+                        requestMethod = HttpMethod.Post;
+                        queryParameters["X-Goog-Resumable"] ="Start";
                     }
 
-                    var canonicalQueryString = string.Join("&", queryParameters);
-                    resourcePath = $"/{bucket}";
+                    _canonicalQueryString = string.Join("&", queryParameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
+                    _resourcePath = $"/{bucket}";
                     if (objectName != null)
                     {
-                        resourcePath += $"/{Uri.EscapeDataString(objectName)}";
+                        _resourcePath += $"/{Uri.EscapeDataString(objectName)}";
                     }
 
-                    var canonicalRequest = $"{requestMethod}\n{resourcePath}\n{canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\nUNSIGNED-PAYLOAD";
+                    var canonicalRequest = $"{requestMethod}\n{_resourcePath}\n{_canonicalQueryString}\n{canonicalHeaders}\n{signedHeaders}\nUNSIGNED-PAYLOAD";
+
                     string hashHex;
                     using (var sha256 = SHA256.Create())
                     {
                         hashHex = FormatHex(sha256.ComputeHash(Encoding.UTF8.GetBytes(canonicalRequest)));
                     }
 
-                    blobToSign = Encoding.UTF8.GetBytes($"{Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
+                    _blobToSign = Encoding.UTF8.GetBytes($"{Algorithm}\n{timestamp}\n{credentialScope}\n{hashHex}");
+
+                    void AddHeaders(SortedDictionary<string, string> canonicalized, IDictionary<string, IEnumerable<string>> headersToAdd)
+                    {
+                        if (headersToAdd == null)
+                        {
+                            return;
+                        }
+                        foreach (var pair in headersToAdd)
+                        {
+                            if (pair.Value == null)
+                            {
+                                continue;
+                            }
+                            var headerName = pair.Key.ToLowerInvariant();
+                            if (headerName == EncryptionKey.KeyHeader || headerName == EncryptionKey.KeyHashHeader || headerName == EncryptionKey.AlgorithmHeader)
+                            {
+                                continue;
+                            }
+                            var value = string.Join(", ", pair.Value.Select(PrepareHeaderValue)).Trim();
+                            if (canonicalized.TryGetValue(headerName, out var existingValue))
+                            {
+                                value = $"{existingValue}, {value}";
+                            }
+                            canonicalized[headerName] = value;
+                        }
+                    }
                 }
 
-                internal string GetResult(string signature)
-                {
-                    queryParameters.Add($"X-Goog-Signature={WebUtility.UrlEncode(signature)}");
-                    return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
-                }
+                internal string GetResult(string signature) =>
+                    $"{StorageHost}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
             }
 
             private const string HexCharacters = "0123456789abcdef";

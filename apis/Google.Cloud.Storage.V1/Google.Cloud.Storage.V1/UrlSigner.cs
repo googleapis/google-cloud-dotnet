@@ -16,12 +16,9 @@ using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -861,92 +858,25 @@ namespace Google.Cloud.Storage.V1
             }
         }
 
-        private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(
-            Dictionary<string, IEnumerable<string>> requestHeaders,
-            Dictionary<string, IEnumerable<string>> contentHeaders)
-        {
-            // These docs indicate how to include extension headers in the signature, but they're not exactly
-            // correct (values must be trimmed, newlines are replaced with empty strings, not whitespace, and
-            // values are concatenated with ", " instead of ",", but not when joining request and content headers).
-            // https://cloud.google.com/storage/docs/access-control/signed-urls#about-canonical-extension-headers
-            var extensionHeaders = new SortedDictionary<string, StringBuilder>();
-
-            if (requestHeaders != null)
-            {
-                PopulateExtensionHeaders(requestHeaders, extensionHeaders);
-            }
-
-            if (contentHeaders != null)
-            {
-                PopulateExtensionHeaders(
-                    contentHeaders,
-                    extensionHeaders,
-                    keysToExcludeSpaceInNextValueSeparator: new HashSet<string>(extensionHeaders.Keys));
-            }
-
-            return extensionHeaders;
-        }
-
         private static readonly Regex s_newlineRegex = new Regex(@"\r?\n", RegexOptions.Compiled);
         private static readonly Regex s_whitespaceRegex = new Regex(@"\s+", RegexOptions.Compiled);
 
-        private static void PopulateExtensionHeaders(
-            Dictionary<string, IEnumerable<string>> headers,
-            SortedDictionary<string, StringBuilder> extensionHeaders,
-            HashSet<string> keysToExcludeSpaceInNextValueSeparator = null)
+        /// <summary>
+        /// Prepares a header value for signing, trimming both ends and collapsing internal whitespace.
+        /// </summary>
+        private static string PrepareHeaderValue(string value)
         {
-            foreach (var header in headers)
-            {
-                var key = header.Key.ToLowerInvariant();
-                if (!key.StartsWith(GoogHeaderPrefix) ||
-                    key == EncryptionKey.KeyHeader ||
-                    key == EncryptionKey.KeyHashHeader)
-                {
-                    continue;
-                }
+            // Remove leading/trailing whitespace
+            value = value.Trim();
 
-                StringBuilder values;
-                if (!extensionHeaders.TryGetValue(key, out values))
-                {
-                    values = new StringBuilder();
-                    extensionHeaders.Add(key, values);
-                }
-                else
-                {
-                    if (keysToExcludeSpaceInNextValueSeparator == null ||
-                        !keysToExcludeSpaceInNextValueSeparator.Remove(key))
-                    {
-                        values.Append(' ');
-                    }
-                    values.Append(',');
-                }
+            // Collapse whitespace runs: only keep the last character
+            value = s_whitespaceRegex.Replace(value, match => match.Value[match.Value.Length - 1].ToString());
 
-                values.Append(string.Join(", ", header.Value.Select(PrepareHeaderValue)));
-            }
+            // Remove newlines
+            value = s_newlineRegex.Replace(value, "");
 
-            string PrepareHeaderValue(string value)
-            {
-                // Remove leading/trailing whitespace
-                value = value.Trim();
-
-                // Collapse whitespace runs: only keep the last character
-                value = s_whitespaceRegex.Replace(value, match => match.Value[match.Value.Length - 1].ToString());
-
-                // Remove newlines
-                value = s_newlineRegex.Replace(value, "");
-
-                return value;
-            }
+            return value;
         }
 
-        private static string GetFirstHeaderValue(Dictionary<string, IEnumerable<string>> contentHeaders, string name)
-        {
-            IEnumerable<string> values;
-            if (contentHeaders != null && contentHeaders.TryGetValue(name, out values))
-            {
-                return values.FirstOrDefault();
-            }
-            return null;
-        }
     }
 }
