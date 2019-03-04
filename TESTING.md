@@ -23,6 +23,7 @@ The test types other than unit tests require:
 - A Google Cloud Platform project
 - Billing enabled
 - The APIs you're testing enabled
+- A service account with appropriate access
 - Common environment variables set as described below
 - Per-API configuration as shown later, in some cases
 
@@ -64,6 +65,13 @@ environment variables:
   skipped. (Tests that require more elaborate configuration default to
   being skipped to avoid placing an unnecessary burden on developers,
   but we want to run them in CI.)
+
+Service account access requirements
+===================================
+
+Almost all tests can be executed using a service account with the
+"Editor" role in the project. Additionally, some Storage and PubSub
+tests require the "Pub/Sub Admin" role.
 
 Per API configuration
 =====================
