@@ -60,6 +60,77 @@ namespace Google.Cloud.Storage.V1
                 return state.GetResult(signature);
             }
 
+            private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(
+    Dictionary<string, IEnumerable<string>> requestHeaders,
+    Dictionary<string, IEnumerable<string>> contentHeaders)
+            {
+                // These docs indicate how to include extension headers in the signature, but they're not exactly
+                // correct (values must be trimmed, newlines are replaced with empty strings, not whitespace, and
+                // values are concatenated with ", " instead of ",", but not when joining request and content headers).
+                // https://cloud.google.com/storage/docs/access-control/signed-urls#about-canonical-extension-headers
+                var extensionHeaders = new SortedDictionary<string, StringBuilder>();
+
+                if (requestHeaders != null)
+                {
+                    PopulateExtensionHeaders(requestHeaders, extensionHeaders);
+                }
+
+                if (contentHeaders != null)
+                {
+                    PopulateExtensionHeaders(
+                        contentHeaders,
+                        extensionHeaders,
+                        keysToExcludeSpaceInNextValueSeparator: new HashSet<string>(extensionHeaders.Keys));
+                }
+
+                return extensionHeaders;
+            }
+
+            private static void PopulateExtensionHeaders(
+                Dictionary<string, IEnumerable<string>> headers,
+                SortedDictionary<string, StringBuilder> extensionHeaders,
+                HashSet<string> keysToExcludeSpaceInNextValueSeparator = null)
+            {
+                foreach (var header in headers)
+                {
+                    var key = header.Key.ToLowerInvariant();
+                    if (!key.StartsWith(GoogHeaderPrefix) ||
+                        key == EncryptionKey.KeyHeader ||
+                        key == EncryptionKey.KeyHashHeader)
+                    {
+                        continue;
+                    }
+
+                    StringBuilder values;
+                    if (!extensionHeaders.TryGetValue(key, out values))
+                    {
+                        values = new StringBuilder();
+                        extensionHeaders.Add(key, values);
+                    }
+                    else
+                    {
+                        if (keysToExcludeSpaceInNextValueSeparator == null ||
+                            !keysToExcludeSpaceInNextValueSeparator.Remove(key))
+                        {
+                            values.Append(' ');
+                        }
+                        values.Append(',');
+                    }
+
+                    values.Append(string.Join(", ", header.Value.Select(PrepareHeaderValue)));
+                }
+            }
+
+            private static string GetFirstHeaderValue(Dictionary<string, IEnumerable<string>> contentHeaders, string name)
+            {
+                IEnumerable<string> values;
+                if (contentHeaders != null && contentHeaders.TryGetValue(name, out values))
+                {
+                    return values.FirstOrDefault();
+                }
+                return null;
+            }
+
             /// <summary>
             /// State which needs to be carried between the "pre-signing" stage and "post-signing" stages
             /// of the implementation.
