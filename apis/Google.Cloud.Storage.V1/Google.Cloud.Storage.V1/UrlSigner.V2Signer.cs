@@ -40,7 +40,7 @@ namespace Google.Cloud.Storage.V1
                 IClock clock)
             {
                 var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner);
-                var signature = blobSigner.CreateSignature(state.blobToSign);
+                var signature = blobSigner.CreateSignature(state._blobToSign);
                 return state.GetResult(signature);
             }
 
@@ -56,7 +56,7 @@ namespace Google.Cloud.Storage.V1
                 CancellationToken cancellationToken)
             {
                 var state = new SigningState(bucket, objectName, expiration, requestMethod, requestHeaders, contentHeaders, blobSigner);
-                var signature = await blobSigner.CreateSignatureAsync(state.blobToSign, cancellationToken).ConfigureAwait(false);
+                var signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
                 return state.GetResult(signature);
             }
 
@@ -66,9 +66,9 @@ namespace Google.Cloud.Storage.V1
             /// </summary>
             private struct SigningState
             {
-                private string resourcePath;
-                private List<string> queryParameters;
-                internal byte[] blobToSign;
+                private string _resourcePath;
+                private List<string> _queryParameters;
+                internal byte[] _blobToSign;
 
                 internal SigningState(
                     string bucket,
@@ -93,10 +93,10 @@ namespace Google.Cloud.Storage.V1
                     }
 
                     string expiryUnixSeconds = ((int) (expiration - UnixEpoch).TotalSeconds).ToString(CultureInfo.InvariantCulture);
-                    resourcePath = $"/{bucket}";
+                    _resourcePath = $"/{bucket}";
                     if (objectName != null)
                     {
-                        resourcePath += $"/{Uri.EscapeDataString(objectName)}";
+                        _resourcePath += $"/{Uri.EscapeDataString(objectName)}";
                     }
                     var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
                     if (isResumableUpload)
@@ -116,19 +116,19 @@ namespace Google.Cloud.Storage.V1
                     };
                     signatureLines.AddRange(extensionHeaders.Select(
                         header => $"{header.Key}:{string.Join(", ", header.Value)}"));
-                    signatureLines.Add(resourcePath);
-                    blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
-                    queryParameters = new List<string> { $"GoogleAccessId={blobSigner.Id}" };
+                    signatureLines.Add(_resourcePath);
+                    _blobToSign = Encoding.UTF8.GetBytes(string.Join("\n", signatureLines));
+                    _queryParameters = new List<string> { $"GoogleAccessId={blobSigner.Id}" };
                     if (expiryUnixSeconds != null)
                     {
-                        queryParameters.Add($"Expires={expiryUnixSeconds}");
+                        _queryParameters.Add($"Expires={expiryUnixSeconds}");
                     }
                 }
 
                 internal string GetResult(string signature)
                 {
-                    queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
-                    return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
+                    _queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
+                    return $"{StorageHost}{_resourcePath}?{string.Join("&", _queryParameters)}";
                 }
             }
         }
