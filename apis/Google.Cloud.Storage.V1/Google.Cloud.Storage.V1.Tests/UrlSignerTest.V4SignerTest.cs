@@ -33,11 +33,13 @@ namespace Google.Cloud.Storage.V1.Tests
         /// </summary>
         public class V4SignerTest
         {
-            private static readonly GoogleCredential s_testCredential = GoogleCredential.FromJson(ReadTextResource("UrlSignerV4TestAccount.json"));
+            private static readonly ServiceAccountCredential s_testCredential =
+                (ServiceAccountCredential) GoogleCredential.FromJson(ReadTextResource("UrlSignerV4TestAccount.json")).UnderlyingCredential;
             private static readonly Dictionary<string, HttpMethod> s_methods = new Dictionary<string, HttpMethod>
             {
                 { "GET", HttpMethod.Get },
-                { "POST", HttpMethod.Post }
+                { "POST", HttpMethod.Post },
+                { "PUT", HttpMethod.Put }
             };
 
             // The data in this test is from an example in the Ruby implementation.
@@ -90,7 +92,8 @@ namespace Google.Cloud.Storage.V1.Tests
                     CultureInfo.InvariantCulture,
                     DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
                 var clock = new FakeClock(timestamp);
-                var signer = UrlSigner.FromServiceAccountCredential((ServiceAccountCredential) s_testCredential.UnderlyingCredential)
+                var signer = UrlSigner
+                    .FromServiceAccountCredential(s_testCredential)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(clock);
 
