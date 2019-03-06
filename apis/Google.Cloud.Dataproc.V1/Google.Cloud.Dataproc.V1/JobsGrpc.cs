@@ -139,7 +139,8 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <summary>
       /// Starts a job cancellation request. To access the job resource
       /// after cancellation, call
-      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list)
+      /// or
       /// [regions/{region}/jobs.get](/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -366,7 +367,8 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <summary>
       /// Starts a job cancellation request. To access the job resource
       /// after cancellation, call
-      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list)
+      /// or
       /// [regions/{region}/jobs.get](/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -381,7 +383,8 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <summary>
       /// Starts a job cancellation request. To access the job resource
       /// after cancellation, call
-      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list)
+      /// or
       /// [regions/{region}/jobs.get](/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -394,7 +397,8 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <summary>
       /// Starts a job cancellation request. To access the job resource
       /// after cancellation, call
-      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list)
+      /// or
       /// [regions/{region}/jobs.get](/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -409,7 +413,8 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <summary>
       /// Starts a job cancellation request. To access the job resource
       /// after cancellation, call
-      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or
+      /// [regions/{region}/jobs.list](/dataproc/docs/reference/rest/v1/projects.regions.jobs/list)
+      /// or
       /// [regions/{region}/jobs.get](/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

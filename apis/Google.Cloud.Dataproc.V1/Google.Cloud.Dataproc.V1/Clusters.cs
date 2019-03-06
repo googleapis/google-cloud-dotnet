@@ -270,8 +270,9 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Label **keys** must contain 1 to 63 characters, and must conform to
     /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
     /// Label **values** may be empty, but, if present, must contain 1 to 63
-    /// characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
-    /// No more than 32 labels can be associated with a cluster.
+    /// characters, and must conform to [RFC
+    /// 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+    /// associated with a cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -326,8 +327,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Contains cluster daemon metrics such as HDFS and YARN stats.
     ///
-    /// **Beta Feature**: This report is available for testing purposes only. It may
-    /// be changed before final release.
+    /// **Beta Feature**: This report is available for testing purposes only. It
+    /// may be changed before final release.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dataproc.V1.ClusterMetrics Metrics {
@@ -683,9 +684,11 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Commands to execute on each node after config is
     /// completed. By default, executables are run on master and all worker nodes.
     /// You can test a node's `role` metadata to run an executable on
-    /// a master or worker node, as shown below using `curl` (you can also use `wget`):
+    /// a master or worker node, as shown below using `curl` (you can also use
+    /// `wget`):
     ///
-    ///     ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role)
+    ///     ROLE=$(curl -H Metadata-Flavor:Google
+    ///     http://metadata/computeMetadata/v1/instance/attributes/dataproc-role)
     ///     if [[ "${ROLE}" == 'Master' ]]; then
     ///       ... master specific actions ...
     ///     else
@@ -1191,11 +1194,11 @@ namespace Google.Cloud.Dataproc.V1 {
     private bool internalIpOnly_;
     /// <summary>
     /// Optional. If true, all instances in the cluster will only have internal IP
-    /// addresses. By default, clusters are not restricted to internal IP addresses,
-    /// and will have ephemeral external IP addresses assigned to each instance.
-    /// This `internal_ip_only` restriction can only be enabled for subnetwork
-    /// enabled networks, and all off-cluster dependencies must be configured to be
-    /// accessible without external IP addresses.
+    /// addresses. By default, clusters are not restricted to internal IP
+    /// addresses, and will have ephemeral external IP addresses assigned to each
+    /// instance. This `internal_ip_only` restriction can only be enabled for
+    /// subnetwork enabled networks, and all off-cluster dependencies must be
+    /// configured to be accessible without external IP addresses.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool InternalIpOnly {
@@ -1216,7 +1219,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// * roles/logging.logWriter
     /// * roles/storage.objectAdmin
     ///
-    /// (see https://cloud.google.com/compute/docs/access/service-accounts#custom_service_accounts
+    /// (see
+    /// https://cloud.google.com/compute/docs/access/service-accounts#custom_service_accounts
     /// for more information).
     /// Example: `[account_id]@[project_id].iam.gserviceaccount.com`
     /// </summary>
@@ -1275,7 +1279,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The Compute Engine metadata entries to add to all instances (see
-    /// [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+    /// [Project and instance
+    /// metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Metadata {
@@ -1560,7 +1565,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// * `n1-standard-2`
     ///
     /// **Auto Zone Exception**: If you are using the Cloud Dataproc
-    /// [Auto Zone Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// [Auto Zone
+    /// Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
     /// feature, you must use the short name of the machine type
     /// resource, for example, `n1-standard-2`.
     /// </summary>
@@ -1590,7 +1596,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int IsPreemptibleFieldNumber = 6;
     private bool isPreemptible_;
     /// <summary>
-    /// Optional. Specifies that this instance group contains preemptible instances.
+    /// Optional. Specifies that this instance group contains preemptible
+    /// instances.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsPreemptible {
@@ -2039,7 +2046,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Full URL, partial URI, or short name of the accelerator type resource to
     /// expose to this instance. See
-    /// [Compute Engine AcceleratorTypes](/compute/docs/reference/beta/acceleratorTypes).
+    /// [Compute Engine
+    /// AcceleratorTypes](/compute/docs/reference/beta/acceleratorTypes).
     ///
     /// Examples:
     ///
@@ -2048,7 +2056,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// * `nvidia-tesla-k80`
     ///
     /// **Auto Zone Exception**: If you are using the Cloud Dataproc
-    /// [Auto Zone Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// [Auto Zone
+    /// Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
     /// feature, you must use the short name of the accelerator type
     /// resource, for example, `nvidia-tesla-k80`.
     /// </summary>
@@ -2893,10 +2902,12 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ImageVersionFieldNumber = 1;
     private string imageVersion_ = "";
     /// <summary>
-    /// Optional. The version of software inside the cluster. It must be one of the supported
-    /// [Cloud Dataproc Versions](/dataproc/docs/concepts/versioning/dataproc-versions#supported_cloud_dataproc_versions),
+    /// Optional. The version of software inside the cluster. It must be one of the
+    /// supported [Cloud Dataproc
+    /// Versions](/dataproc/docs/concepts/versioning/dataproc-versions#supported_cloud_dataproc_versions),
     /// such as "1.2" (including a subminor version, such as "1.2.29"), or the
-    /// ["preview" version](/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
+    /// ["preview"
+    /// version](/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
     /// If unspecified, it defaults to the latest version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3271,10 +3282,11 @@ namespace Google.Cloud.Dataproc.V1 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. A unique id used to identify the request. If the server
-    /// receives two [CreateClusterRequest][google.cloud.dataproc.v1.CreateClusterRequest] requests  with the same
-    /// id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the backend
-    /// is returned.
+    /// receives two
+    /// [CreateClusterRequest][google.cloud.dataproc.v1.CreateClusterRequest]
+    /// requests  with the same id, then the second request will be ignored and the
+    /// first [google.longrunning.Operation][google.longrunning.Operation] created
+    /// and stored in the backend is returned.
     ///
     /// It is recommended to always set this value to a
     /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
@@ -3614,10 +3626,11 @@ namespace Google.Cloud.Dataproc.V1 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. A unique id used to identify the request. If the server
-    /// receives two [UpdateClusterRequest][google.cloud.dataproc.v1.UpdateClusterRequest] requests  with the same
-    /// id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
-    /// backend is returned.
+    /// receives two
+    /// [UpdateClusterRequest][google.cloud.dataproc.v1.UpdateClusterRequest]
+    /// requests  with the same id, then the second request will be ignored and the
+    /// first [google.longrunning.Operation][google.longrunning.Operation] created
+    /// and stored in the backend is returned.
     ///
     /// It is recommended to always set this value to a
     /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
@@ -3935,10 +3948,11 @@ namespace Google.Cloud.Dataproc.V1 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. A unique id used to identify the request. If the server
-    /// receives two [DeleteClusterRequest][google.cloud.dataproc.v1.DeleteClusterRequest] requests  with the same
-    /// id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
-    /// backend is returned.
+    /// receives two
+    /// [DeleteClusterRequest][google.cloud.dataproc.v1.DeleteClusterRequest]
+    /// requests  with the same id, then the second request will be ignored and the
+    /// first [google.longrunning.Operation][google.longrunning.Operation] created
+    /// and stored in the backend is returned.
     ///
     /// It is recommended to always set this value to a
     /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
