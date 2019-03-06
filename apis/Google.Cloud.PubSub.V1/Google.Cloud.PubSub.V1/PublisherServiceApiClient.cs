@@ -73,29 +73,43 @@ namespace Google.Cloud.PubSub.V1
         /// <remarks>
         /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unknown"/></description></item>
         /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable);
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
         /// for "NonIdempotent" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> NonIdempotentRetryFilter { get; } =
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable);
+
+        /// <summary>
+        /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
+        /// for "None" <see cref="PublisherServiceApiClient"/> RPC methods.
+        /// </summary>
+        /// <remarks>
+        /// There are no RPC <see cref="grpccore::StatusCode"/>s eligible for retry for "None" RPC methods.
+        /// </remarks>
+        public static sys::Predicate<grpccore::RpcException> NoneRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes();
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
-        /// for "OnePlusDelivery" <see cref="PublisherServiceApiClient"/> RPC methods.
+        /// for "Publish" <see cref="PublisherServiceApiClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "OnePlusDelivery" RPC methods are:
+        /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Publish" RPC methods are:
         /// <list type="bullet">
         /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Cancelled"/></description></item>
@@ -106,7 +120,7 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description><see cref="grpccore::StatusCode.Unknown"/></description></item>
         /// </list>
         /// </remarks>
-        public static sys::Predicate<grpccore::RpcException> OnePlusDeliveryRetryFilter { get; } =
+        public static sys::Predicate<grpccore::RpcException> PublishRetryFilter { get; } =
             gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown);
 
         /// <summary>
@@ -206,7 +220,6 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -216,7 +229,7 @@ namespace Google.Cloud.PubSub.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -236,7 +249,6 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -246,7 +258,7 @@ namespace Google.Cloud.PubSub.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -281,7 +293,7 @@ namespace Google.Cloud.PubSub.V1
                 retryBackoff: GetMessagingRetryBackoff(),
                 timeoutBackoff: GetMessagingTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: OnePlusDeliveryRetryFilter
+                retryFilter: PublishRetryFilter
             )));
 
         /// <summary>
@@ -301,8 +313,9 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unknown"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -331,8 +344,9 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unknown"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -361,8 +375,9 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unknown"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -391,7 +406,6 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -401,7 +415,7 @@ namespace Google.Cloud.PubSub.V1
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -421,7 +435,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -450,8 +464,9 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unknown"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -480,7 +495,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
