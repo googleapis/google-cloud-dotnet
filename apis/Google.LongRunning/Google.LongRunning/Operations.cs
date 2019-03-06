@@ -397,7 +397,8 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+  /// The request message for
+  /// [Operations.GetOperation][google.longrunning.Operations.GetOperation].
   /// </summary>
   public sealed partial class GetOperationRequest : pb::IMessage<GetOperationRequest> {
     private static readonly pb::MessageParser<GetOperationRequest> _parser = new pb::MessageParser<GetOperationRequest>(() => new GetOperationRequest());
@@ -532,7 +533,8 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The request message for
+  /// [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
   public sealed partial class ListOperationsRequest : pb::IMessage<ListOperationsRequest> {
     private static readonly pb::MessageParser<ListOperationsRequest> _parser = new pb::MessageParser<ListOperationsRequest>(() => new ListOperationsRequest());
@@ -760,7 +762,8 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The response message for
+  /// [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
   public sealed partial class ListOperationsResponse : pb::IMessage<ListOperationsResponse> {
     private static readonly pb::MessageParser<ListOperationsResponse> _parser = new pb::MessageParser<ListOperationsResponse>(() => new ListOperationsResponse());
@@ -918,7 +921,8 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+  /// The request message for
+  /// [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
   /// </summary>
   public sealed partial class CancelOperationRequest : pb::IMessage<CancelOperationRequest> {
     private static readonly pb::MessageParser<CancelOperationRequest> _parser = new pb::MessageParser<CancelOperationRequest>(() => new CancelOperationRequest());
@@ -1053,7 +1057,8 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+  /// The request message for
+  /// [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
   /// </summary>
   public sealed partial class DeleteOperationRequest : pb::IMessage<DeleteOperationRequest> {
     private static readonly pb::MessageParser<DeleteOperationRequest> _parser = new pb::MessageParser<DeleteOperationRequest>(() => new DeleteOperationRequest());
