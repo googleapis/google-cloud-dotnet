@@ -134,7 +134,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
     ///    hyphens (-), colons (:), or periods (.).
     ///    For more information, see
-    ///    [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects)
+    ///    [Identifying
+    ///    projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects)
     /// * `LOCATION_ID` is the canonical ID for the job's location.
     ///    The list of available locations can be obtained by calling
     ///    [ListLocations][google.cloud.location.Locations.ListLocations].
@@ -224,15 +225,17 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// A scheduled start time will be delayed if the previous
     /// execution has not ended when its scheduled time occurs.
     ///
-    /// If [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] > 0 and a job attempt fails,
-    /// the job will be tried a total of [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
+    /// If [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] >
+    /// 0 and a job attempt fails, the job will be tried a total of
+    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
     /// times, with exponential backoff, until the next scheduled start
     /// time.
     ///
     /// The schedule can be either of the following types:
     ///
     /// * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview)
-    /// * English-like [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
+    /// * English-like
+    /// [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Schedule {
@@ -247,8 +250,9 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     private string timeZone_ = "";
     /// <summary>
     /// Specifies the time zone to be used in interpreting
-    /// [schedule][google.cloud.scheduler.v1beta1.Job.schedule]. The value of this field must be a time
-    /// zone name from the [tz database](http://en.wikipedia.org/wiki/Tz_database).
+    /// [schedule][google.cloud.scheduler.v1beta1.Job.schedule]. The value of this
+    /// field must be a time zone name from the [tz
+    /// database](http://en.wikipedia.org/wiki/Tz_database).
     ///
     /// Note that some time zones include a provision for
     /// daylight savings time. The rules for daylight saving time are
@@ -731,9 +735,11 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 3,
         /// <summary>
-        /// The job state resulting from a failed [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob]
+        /// The job state resulting from a failed
+        /// [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob]
         /// operation. To recover a job from this state, retry
-        /// [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob] until a successful response is received.
+        /// [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob]
+        /// until a successful response is received.
         /// </summary>
         [pbr::OriginalName("UPDATE_FAILED")] UpdateFailed = 4,
       }
@@ -748,7 +754,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   ///
   /// By default, if a job does not complete successfully (meaning that
   /// an acknowledgement is not received from the handler, then it will be retried
-  /// with exponential backoff according to the settings in [RetryConfig][google.cloud.scheduler.v1beta1.RetryConfig].
+  /// with exponential backoff according to the settings in
+  /// [RetryConfig][google.cloud.scheduler.v1beta1.RetryConfig].
   /// </summary>
   public sealed partial class RetryConfig : pb::IMessage<RetryConfig> {
     private static readonly pb::MessageParser<RetryConfig> _parser = new pb::MessageParser<RetryConfig>(() => new RetryConfig());
@@ -823,8 +830,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// <summary>
     /// The time limit for retrying a failed job, measured from time when an
     /// execution was first attempted. If specified with
-    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count], the job will be retried until both limits are
-    /// reached.
+    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count], the
+    /// job will be retried until both limits are reached.
     ///
     /// The default value for max_retry_duration is zero, which means retry
     /// duration is unlimited.
@@ -878,20 +885,25 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// The time between retries will double `max_doublings` times.
     ///
     /// A job's retry interval starts at
-    /// [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration], then doubles
-    /// `max_doublings` times, then increases linearly, and finally
+    /// [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration],
+    /// then doubles `max_doublings` times, then increases linearly, and finally
     /// retries retries at intervals of
-    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration] up to
-    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] times.
+    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration]
+    /// up to [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
+    /// times.
     ///
-    /// For example, if [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration] is
-    /// 10s, [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration] is 300s, and
-    /// `max_doublings` is 3, then the a job will first be retried in 10s. The
-    /// retry interval will double three times, and then increase linearly by
-    /// 2^3 * 10s.  Finally, the job will retry at intervals of
-    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration] until the job has
-    /// been attempted [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] times. Thus, the
-    /// requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s, 300s, ....
+    /// For example, if
+    /// [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration]
+    /// is 10s,
+    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration]
+    /// is 300s, and `max_doublings` is 3, then the a job will first be retried in
+    /// 10s. The retry interval will double three times, and then increase linearly
+    /// by 2^3 * 10s.  Finally, the job will retry at intervals of
+    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration]
+    /// until the job has been attempted
+    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
+    /// times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s,
+    /// 300s, 300s, ....
     ///
     /// The default value of this field is 5.
     /// </summary>
