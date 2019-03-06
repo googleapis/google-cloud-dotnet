@@ -668,8 +668,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// The name of the operation resource to be cancelled.
@@ -698,8 +699,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// The name of the operation resource to be cancelled.
@@ -725,8 +727,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="name">
         /// The name of the operation resource to be cancelled.
@@ -752,8 +755,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -780,8 +784,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -807,8 +812,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1122,8 +1128,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1151,8 +1158,9 @@ namespace Google.LongRunning
         /// other methods to check whether the cancellation succeeded or whether the
         /// operation completed despite cancellation. On successful cancellation,
         /// the operation is not deleted; instead, it becomes an operation with
-        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-        /// corresponding to `Code.CANCELLED`.
+        /// an [Operation.error][google.longrunning.Operation.error] value with a
+        /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
+        /// `Code.CANCELLED`.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
