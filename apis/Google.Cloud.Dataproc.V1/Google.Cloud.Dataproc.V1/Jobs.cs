@@ -386,8 +386,10 @@ namespace Google.Cloud.Dataproc.V1 {
 
   /// <summary>
   /// A Cloud Dataproc job for running
-  /// [Apache Hadoop MapReduce](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
-  /// jobs on [Apache Hadoop YARN](https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
+  /// [Apache Hadoop
+  /// MapReduce](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
+  /// jobs on [Apache Hadoop
+  /// YARN](https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
   /// </summary>
   public sealed partial class HadoopJob : pb::IMessage<HadoopJob> {
     private static readonly pb::MessageParser<HadoopJob> _parser = new pb::MessageParser<HadoopJob>(() => new HadoopJob());
@@ -477,8 +479,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private readonly pbc::RepeatedField<string> args_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. The arguments to pass to the driver. Do not
-    /// include arguments, such as `-libjars` or `-Dfoo=bar`, that can be set as job
-    /// properties, since a collision may occur that causes an incorrect job
+    /// include arguments, such as `-libjars` or `-Dfoo=bar`, that can be set as
+    /// job properties, since a collision may occur that causes an incorrect job
     /// submission.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1113,7 +1115,8 @@ namespace Google.Cloud.Dataproc.V1 {
 
   /// <summary>
   /// A Cloud Dataproc job for running
-  /// [Apache PySpark](https://spark.apache.org/docs/0.9.0/python-programming-guide.html)
+  /// [Apache
+  /// PySpark](https://spark.apache.org/docs/0.9.0/python-programming-guide.html)
   /// applications on YARN.
   /// </summary>
   public sealed partial class PySparkJob : pb::IMessage<PySparkJob> {
@@ -1656,8 +1659,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private bool continueOnFailure_;
     /// <summary>
     /// Optional. Whether to continue executing queries if a query fails.
-    /// The default value is `false`. Setting to `true` can be useful when executing
-    /// independent parallel queries.
+    /// The default value is `false`. Setting to `true` can be useful when
+    /// executing independent parallel queries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ContinueOnFailure {
@@ -1888,8 +1891,8 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// A Cloud Dataproc job for running [Apache Spark SQL](http://spark.apache.org/sql/)
-  /// queries.
+  /// A Cloud Dataproc job for running [Apache Spark
+  /// SQL](http://spark.apache.org/sql/) queries.
   /// </summary>
   public sealed partial class SparkSqlJob : pb::IMessage<SparkSqlJob> {
     private static readonly pb::MessageParser<SparkSqlJob> _parser = new pb::MessageParser<SparkSqlJob>(() => new SparkSqlJob());
@@ -2286,8 +2289,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private bool continueOnFailure_;
     /// <summary>
     /// Optional. Whether to continue executing queries if a query fails.
-    /// The default value is `false`. Setting to `true` can be useful when executing
-    /// independent parallel queries.
+    /// The default value is `false`. Setting to `true` can be useful when
+    /// executing independent parallel queries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ContinueOnFailure {
@@ -3721,8 +3724,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Output only. The collection of YARN applications spun up by this job.
     ///
-    /// **Beta** Feature: This report is available for testing purposes only. It may
-    /// be changed before final release.
+    /// **Beta** Feature: This report is available for testing purposes only. It
+    /// may be changed before final release.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.YarnApplication> YarnApplications {
@@ -3770,8 +3773,9 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Label **keys** must contain 1 to 63 characters, and must conform to
     /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
     /// Label **values** may be empty, but, if present, must contain 1 to 63
-    /// characters, and must conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
-    /// No more than 32 labels can be associated with a job.
+    /// characters, and must conform to [RFC
+    /// 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+    /// associated with a job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -4441,8 +4445,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. A unique id used to identify the request. If the server
-    /// receives two [SubmitJobRequest][google.cloud.dataproc.v1.SubmitJobRequest] requests  with the same
-    /// id, then the second request will be ignored and the
+    /// receives two [SubmitJobRequest][google.cloud.dataproc.v1.SubmitJobRequest]
+    /// requests  with the same id, then the second request will be ignored and the
     /// first [Job][google.cloud.dataproc.v1.Job] created and stored in the backend
     /// is returned.
     ///
