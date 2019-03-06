@@ -237,14 +237,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Creates a queue.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -261,14 +262,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// the queue if it does exist.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -289,8 +291,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -321,9 +324,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// If a queue is paused then the system will stop dispatching tasks
       /// until the queue is resumed via
-      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can still be added
-      /// when the queue is paused. A queue is paused if its
-      /// [state][google.cloud.tasks.v2beta2.Queue.state] is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can
+      /// still be added when the queue is paused. A queue is paused if its
+      /// [state][google.cloud.tasks.v2beta2.Queue.state] is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -338,14 +342,17 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method resumes a queue after it has been
       /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED] or
-      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a queue is stored
-      /// in the queue's [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method it
-      /// will be set to [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
+      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a
+      /// queue is stored in the queue's
+      /// [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method
+      /// it will be set to
+      /// [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
       ///
       /// WARNING: Resuming many high-QPS queues at the same time can
       /// lead to target overloading. If you are resuming high-QPS
       /// queues, follow the 500/50/5 pattern described in
-      /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+      /// [Managing Cloud Tasks Scaling
+      /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -356,9 +363,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       }
 
       /// <summary>
-      /// Gets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// Returns an empty policy if the resource exists and does not have a policy
-      /// set.
+      /// Gets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Returns an empty policy if the
+      /// resource exists and does not have a policy set.
       ///
       /// Authorization requires the following
       /// [Google IAM](https://cloud.google.com/iam) permission on the specified
@@ -375,8 +382,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       }
 
       /// <summary>
-      /// Sets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing
-      /// policy.
+      /// Sets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing policy.
       ///
       /// Note: The Cloud Console does not check queue-level IAM permissions yet.
       /// Project-level permissions are required to use the Cloud Console.
@@ -396,9 +403,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       }
 
       /// <summary>
-      /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+      /// Returns permissions that a caller has on a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. If the resource does not exist,
+      /// this will return an empty set of permissions, not a
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -415,10 +423,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Lists the tasks in a queue.
       ///
-      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC] view is retrieved
-      /// due to performance considerations;
-      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view] controls the
-      /// subset of information which is returned.
+      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC]
+      /// view is retrieved due to performance considerations;
+      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view]
+      /// controls the subset of information which is returned.
       ///
       /// The tasks may be returned in any order. The ordering may change at any
       /// time.
@@ -447,9 +455,11 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
-      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum task size is
+      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+      /// the maximum task size is
       ///   100KB.
-      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum task size is 1MB.
+      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum
+      /// task size is 1MB.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -480,18 +490,19 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method is invoked by the worker to obtain a lease. The
       /// worker must acknowledge the task via
-      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask] after they have
-      /// performed the work associated with the task.
+      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask]
+      /// after they have performed the work associated with the task.
       ///
-      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended to store data that
-      /// the worker needs to perform the work associated with the task. To
-      /// return the payloads in the [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
-      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view] to
-      /// [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
+      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended
+      /// to store data that the worker needs to perform the work associated with the
+      /// task. To return the payloads in the
+      /// [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
+      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view]
+      /// to [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
       ///
-      /// A maximum of 10 qps of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks]
-      /// requests are allowed per
-      /// queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
+      /// A maximum of 10 qps of
+      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are
+      /// allowed per queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is returned when this limit is
       /// exceeded. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is also returned when
@@ -510,12 +521,13 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Acknowledges a pull task.
       ///
       /// The worker, that is, the entity that
-      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must call this method
-      /// to indicate that the work associated with the task has finished.
+      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must
+      /// call this method to indicate that the work associated with the task has
+      /// finished.
       ///
       /// The worker must acknowledge a task within the
-      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration] or the lease
-      /// will expire and the task will become available to be leased
+      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration]
+      /// or the lease will expire and the task will become available to be leased
       /// again. After the task is acknowledged, it will not be returned
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
@@ -534,7 +546,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// The worker can use this method to extend the lease by a new
       /// duration, starting from now. The new task lease will be
-      /// returned in the task's [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
+      /// returned in the task's
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -548,9 +561,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Cancel a pull task's lease.
       ///
       /// The worker can use this method to cancel a task's lease by
-      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] to now. This will
-      /// make the task available to be leased to the next caller of
-      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
+      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time]
+      /// to now. This will make the task available to be leased to the next caller
+      /// of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -564,30 +577,33 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Forces a task to run now.
       ///
       /// When this method is called, Cloud Tasks will dispatch the task, even if
-      /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or
-      /// is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// the task is already running, the queue has reached its
+      /// [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       ///
       /// This command is meant to be used for manual debugging. For
-      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be used to retry a failed
-      /// task after a fix has been made or to manually force a task to be
-      /// dispatched now.
+      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be
+      /// used to retry a failed task after a fix has been made or to manually force
+      /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the
+      /// task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
-      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be reset to the time that
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus the retry delay specified
-      /// in the queue's [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be
+      /// reset to the time that
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus
+      /// the retry delay specified in the queue's
+      /// [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
       ///
       /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] returns
       /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
       /// task that has already succeeded or permanently failed.
       ///
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called on a
-      /// [pull task][google.cloud.tasks.v2beta2.PullMessage].
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called
+      /// on a [pull task][google.cloud.tasks.v2beta2.PullMessage].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -722,14 +738,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Creates a queue.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -744,14 +761,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Creates a queue.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -764,14 +782,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Creates a queue.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -786,14 +805,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Creates a queue.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -809,14 +829,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// the queue if it does exist.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -834,14 +855,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// the queue if it does exist.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -857,14 +879,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// the queue if it does exist.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -882,14 +905,15 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// the queue if it does exist.
       ///
       /// Queues created with this method allow tasks to live for a maximum of 31
-      /// days. After a task is 31 days old, the task will be deleted regardless of whether
-      /// it was dispatched or not.
+      /// days. After a task is 31 days old, the task will be deleted regardless of
+      /// whether it was dispatched or not.
       ///
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -909,8 +933,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -932,8 +957,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -953,8 +979,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -976,8 +1003,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// WARNING: Using this method may have unintended side effects if you are
       /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
       /// Read
-      /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-      /// before using this method.
+      /// [Overview of Queue Management and
+      /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+      /// this method.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1055,9 +1083,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// If a queue is paused then the system will stop dispatching tasks
       /// until the queue is resumed via
-      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can still be added
-      /// when the queue is paused. A queue is paused if its
-      /// [state][google.cloud.tasks.v2beta2.Queue.state] is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can
+      /// still be added when the queue is paused. A queue is paused if its
+      /// [state][google.cloud.tasks.v2beta2.Queue.state] is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1073,9 +1102,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// If a queue is paused then the system will stop dispatching tasks
       /// until the queue is resumed via
-      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can still be added
-      /// when the queue is paused. A queue is paused if its
-      /// [state][google.cloud.tasks.v2beta2.Queue.state] is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can
+      /// still be added when the queue is paused. A queue is paused if its
+      /// [state][google.cloud.tasks.v2beta2.Queue.state] is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1089,9 +1119,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// If a queue is paused then the system will stop dispatching tasks
       /// until the queue is resumed via
-      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can still be added
-      /// when the queue is paused. A queue is paused if its
-      /// [state][google.cloud.tasks.v2beta2.Queue.state] is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can
+      /// still be added when the queue is paused. A queue is paused if its
+      /// [state][google.cloud.tasks.v2beta2.Queue.state] is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1107,9 +1138,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// If a queue is paused then the system will stop dispatching tasks
       /// until the queue is resumed via
-      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can still be added
-      /// when the queue is paused. A queue is paused if its
-      /// [state][google.cloud.tasks.v2beta2.Queue.state] is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// [ResumeQueue][google.cloud.tasks.v2beta2.CloudTasks.ResumeQueue]. Tasks can
+      /// still be added when the queue is paused. A queue is paused if its
+      /// [state][google.cloud.tasks.v2beta2.Queue.state] is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1123,14 +1155,17 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method resumes a queue after it has been
       /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED] or
-      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a queue is stored
-      /// in the queue's [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method it
-      /// will be set to [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
+      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a
+      /// queue is stored in the queue's
+      /// [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method
+      /// it will be set to
+      /// [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
       ///
       /// WARNING: Resuming many high-QPS queues at the same time can
       /// lead to target overloading. If you are resuming high-QPS
       /// queues, follow the 500/50/5 pattern described in
-      /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+      /// [Managing Cloud Tasks Scaling
+      /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1146,14 +1181,17 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method resumes a queue after it has been
       /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED] or
-      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a queue is stored
-      /// in the queue's [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method it
-      /// will be set to [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
+      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a
+      /// queue is stored in the queue's
+      /// [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method
+      /// it will be set to
+      /// [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
       ///
       /// WARNING: Resuming many high-QPS queues at the same time can
       /// lead to target overloading. If you are resuming high-QPS
       /// queues, follow the 500/50/5 pattern described in
-      /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+      /// [Managing Cloud Tasks Scaling
+      /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1167,14 +1205,17 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method resumes a queue after it has been
       /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED] or
-      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a queue is stored
-      /// in the queue's [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method it
-      /// will be set to [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
+      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a
+      /// queue is stored in the queue's
+      /// [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method
+      /// it will be set to
+      /// [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
       ///
       /// WARNING: Resuming many high-QPS queues at the same time can
       /// lead to target overloading. If you are resuming high-QPS
       /// queues, follow the 500/50/5 pattern described in
-      /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+      /// [Managing Cloud Tasks Scaling
+      /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1190,14 +1231,17 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method resumes a queue after it has been
       /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED] or
-      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a queue is stored
-      /// in the queue's [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method it
-      /// will be set to [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
+      /// [DISABLED][google.cloud.tasks.v2beta2.Queue.State.DISABLED]. The state of a
+      /// queue is stored in the queue's
+      /// [state][google.cloud.tasks.v2beta2.Queue.state]; after calling this method
+      /// it will be set to
+      /// [RUNNING][google.cloud.tasks.v2beta2.Queue.State.RUNNING].
       ///
       /// WARNING: Resuming many high-QPS queues at the same time can
       /// lead to target overloading. If you are resuming high-QPS
       /// queues, follow the 500/50/5 pattern described in
-      /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+      /// [Managing Cloud Tasks Scaling
+      /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1207,9 +1251,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return CallInvoker.AsyncUnaryCall(__Method_ResumeQueue, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// Returns an empty policy if the resource exists and does not have a policy
-      /// set.
+      /// Gets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Returns an empty policy if the
+      /// resource exists and does not have a policy set.
       ///
       /// Authorization requires the following
       /// [Google IAM](https://cloud.google.com/iam) permission on the specified
@@ -1227,9 +1271,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// Returns an empty policy if the resource exists and does not have a policy
-      /// set.
+      /// Gets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Returns an empty policy if the
+      /// resource exists and does not have a policy set.
       ///
       /// Authorization requires the following
       /// [Google IAM](https://cloud.google.com/iam) permission on the specified
@@ -1245,9 +1289,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// Returns an empty policy if the resource exists and does not have a policy
-      /// set.
+      /// Gets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Returns an empty policy if the
+      /// resource exists and does not have a policy set.
       ///
       /// Authorization requires the following
       /// [Google IAM](https://cloud.google.com/iam) permission on the specified
@@ -1265,9 +1309,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// Returns an empty policy if the resource exists and does not have a policy
-      /// set.
+      /// Gets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Returns an empty policy if the
+      /// resource exists and does not have a policy set.
       ///
       /// Authorization requires the following
       /// [Google IAM](https://cloud.google.com/iam) permission on the specified
@@ -1283,8 +1327,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing
-      /// policy.
+      /// Sets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing policy.
       ///
       /// Note: The Cloud Console does not check queue-level IAM permissions yet.
       /// Project-level permissions are required to use the Cloud Console.
@@ -1305,8 +1349,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing
-      /// policy.
+      /// Sets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing policy.
       ///
       /// Note: The Cloud Console does not check queue-level IAM permissions yet.
       /// Project-level permissions are required to use the Cloud Console.
@@ -1325,8 +1369,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Sets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing
-      /// policy.
+      /// Sets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing policy.
       ///
       /// Note: The Cloud Console does not check queue-level IAM permissions yet.
       /// Project-level permissions are required to use the Cloud Console.
@@ -1347,8 +1391,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Sets the access control policy for a [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing
-      /// policy.
+      /// Sets the access control policy for a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. Replaces any existing policy.
       ///
       /// Note: The Cloud Console does not check queue-level IAM permissions yet.
       /// Project-level permissions are required to use the Cloud Console.
@@ -1367,9 +1411,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+      /// Returns permissions that a caller has on a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. If the resource does not exist,
+      /// this will return an empty set of permissions, not a
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -1385,9 +1430,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+      /// Returns permissions that a caller has on a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. If the resource does not exist,
+      /// this will return an empty set of permissions, not a
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -1401,9 +1447,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+      /// Returns permissions that a caller has on a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. If the resource does not exist,
+      /// this will return an empty set of permissions, not a
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -1419,9 +1466,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2beta2.Queue].
-      /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+      /// Returns permissions that a caller has on a
+      /// [Queue][google.cloud.tasks.v2beta2.Queue]. If the resource does not exist,
+      /// this will return an empty set of permissions, not a
+      /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -1437,10 +1485,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Lists the tasks in a queue.
       ///
-      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC] view is retrieved
-      /// due to performance considerations;
-      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view] controls the
-      /// subset of information which is returned.
+      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC]
+      /// view is retrieved due to performance considerations;
+      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view]
+      /// controls the subset of information which is returned.
       ///
       /// The tasks may be returned in any order. The ordering may change at any
       /// time.
@@ -1457,10 +1505,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Lists the tasks in a queue.
       ///
-      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC] view is retrieved
-      /// due to performance considerations;
-      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view] controls the
-      /// subset of information which is returned.
+      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC]
+      /// view is retrieved due to performance considerations;
+      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view]
+      /// controls the subset of information which is returned.
       ///
       /// The tasks may be returned in any order. The ordering may change at any
       /// time.
@@ -1475,10 +1523,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Lists the tasks in a queue.
       ///
-      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC] view is retrieved
-      /// due to performance considerations;
-      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view] controls the
-      /// subset of information which is returned.
+      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC]
+      /// view is retrieved due to performance considerations;
+      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view]
+      /// controls the subset of information which is returned.
       ///
       /// The tasks may be returned in any order. The ordering may change at any
       /// time.
@@ -1495,10 +1543,10 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// <summary>
       /// Lists the tasks in a queue.
       ///
-      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC] view is retrieved
-      /// due to performance considerations;
-      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view] controls the
-      /// subset of information which is returned.
+      /// By default, only the [BASIC][google.cloud.tasks.v2beta2.Task.View.BASIC]
+      /// view is retrieved due to performance considerations;
+      /// [response_view][google.cloud.tasks.v2beta2.ListTasksRequest.response_view]
+      /// controls the subset of information which is returned.
       ///
       /// The tasks may be returned in any order. The ordering may change at any
       /// time.
@@ -1559,9 +1607,11 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
-      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum task size is
+      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+      /// the maximum task size is
       ///   100KB.
-      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum task size is 1MB.
+      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum
+      /// task size is 1MB.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1577,9 +1627,11 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
-      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum task size is
+      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+      /// the maximum task size is
       ///   100KB.
-      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum task size is 1MB.
+      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum
+      /// task size is 1MB.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1593,9 +1645,11 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
-      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum task size is
+      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+      /// the maximum task size is
       ///   100KB.
-      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum task size is 1MB.
+      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum
+      /// task size is 1MB.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1611,9 +1665,11 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// Tasks cannot be updated after creation; there is no UpdateTask command.
       ///
-      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget], the maximum task size is
+      /// * For [App Engine queues][google.cloud.tasks.v2beta2.AppEngineHttpTarget],
+      /// the maximum task size is
       ///   100KB.
-      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum task size is 1MB.
+      /// * For [pull queues][google.cloud.tasks.v2beta2.PullTarget], the maximum
+      /// task size is 1MB.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1688,18 +1744,19 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method is invoked by the worker to obtain a lease. The
       /// worker must acknowledge the task via
-      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask] after they have
-      /// performed the work associated with the task.
+      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask]
+      /// after they have performed the work associated with the task.
       ///
-      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended to store data that
-      /// the worker needs to perform the work associated with the task. To
-      /// return the payloads in the [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
-      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view] to
-      /// [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
+      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended
+      /// to store data that the worker needs to perform the work associated with the
+      /// task. To return the payloads in the
+      /// [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
+      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view]
+      /// to [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
       ///
-      /// A maximum of 10 qps of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks]
-      /// requests are allowed per
-      /// queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
+      /// A maximum of 10 qps of
+      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are
+      /// allowed per queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is returned when this limit is
       /// exceeded. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is also returned when
@@ -1721,18 +1778,19 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method is invoked by the worker to obtain a lease. The
       /// worker must acknowledge the task via
-      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask] after they have
-      /// performed the work associated with the task.
+      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask]
+      /// after they have performed the work associated with the task.
       ///
-      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended to store data that
-      /// the worker needs to perform the work associated with the task. To
-      /// return the payloads in the [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
-      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view] to
-      /// [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
+      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended
+      /// to store data that the worker needs to perform the work associated with the
+      /// task. To return the payloads in the
+      /// [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
+      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view]
+      /// to [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
       ///
-      /// A maximum of 10 qps of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks]
-      /// requests are allowed per
-      /// queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
+      /// A maximum of 10 qps of
+      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are
+      /// allowed per queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is returned when this limit is
       /// exceeded. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is also returned when
@@ -1752,18 +1810,19 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method is invoked by the worker to obtain a lease. The
       /// worker must acknowledge the task via
-      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask] after they have
-      /// performed the work associated with the task.
+      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask]
+      /// after they have performed the work associated with the task.
       ///
-      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended to store data that
-      /// the worker needs to perform the work associated with the task. To
-      /// return the payloads in the [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
-      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view] to
-      /// [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
+      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended
+      /// to store data that the worker needs to perform the work associated with the
+      /// task. To return the payloads in the
+      /// [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
+      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view]
+      /// to [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
       ///
-      /// A maximum of 10 qps of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks]
-      /// requests are allowed per
-      /// queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
+      /// A maximum of 10 qps of
+      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are
+      /// allowed per queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is returned when this limit is
       /// exceeded. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is also returned when
@@ -1785,18 +1844,19 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// This method is invoked by the worker to obtain a lease. The
       /// worker must acknowledge the task via
-      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask] after they have
-      /// performed the work associated with the task.
+      /// [AcknowledgeTask][google.cloud.tasks.v2beta2.CloudTasks.AcknowledgeTask]
+      /// after they have performed the work associated with the task.
       ///
-      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended to store data that
-      /// the worker needs to perform the work associated with the task. To
-      /// return the payloads in the [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
-      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view] to
-      /// [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
+      /// The [payload][google.cloud.tasks.v2beta2.PullMessage.payload] is intended
+      /// to store data that the worker needs to perform the work associated with the
+      /// task. To return the payloads in the
+      /// [response][google.cloud.tasks.v2beta2.LeaseTasksResponse], set
+      /// [response_view][google.cloud.tasks.v2beta2.LeaseTasksRequest.response_view]
+      /// to [FULL][google.cloud.tasks.v2beta2.Task.View.FULL].
       ///
-      /// A maximum of 10 qps of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks]
-      /// requests are allowed per
-      /// queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
+      /// A maximum of 10 qps of
+      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] requests are
+      /// allowed per queue. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is returned when this limit is
       /// exceeded. [RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED]
       /// is also returned when
@@ -1814,12 +1874,13 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Acknowledges a pull task.
       ///
       /// The worker, that is, the entity that
-      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must call this method
-      /// to indicate that the work associated with the task has finished.
+      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must
+      /// call this method to indicate that the work associated with the task has
+      /// finished.
       ///
       /// The worker must acknowledge a task within the
-      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration] or the lease
-      /// will expire and the task will become available to be leased
+      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration]
+      /// or the lease will expire and the task will become available to be leased
       /// again. After the task is acknowledged, it will not be returned
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
@@ -1838,12 +1899,13 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Acknowledges a pull task.
       ///
       /// The worker, that is, the entity that
-      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must call this method
-      /// to indicate that the work associated with the task has finished.
+      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must
+      /// call this method to indicate that the work associated with the task has
+      /// finished.
       ///
       /// The worker must acknowledge a task within the
-      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration] or the lease
-      /// will expire and the task will become available to be leased
+      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration]
+      /// or the lease will expire and the task will become available to be leased
       /// again. After the task is acknowledged, it will not be returned
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
@@ -1860,12 +1922,13 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Acknowledges a pull task.
       ///
       /// The worker, that is, the entity that
-      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must call this method
-      /// to indicate that the work associated with the task has finished.
+      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must
+      /// call this method to indicate that the work associated with the task has
+      /// finished.
       ///
       /// The worker must acknowledge a task within the
-      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration] or the lease
-      /// will expire and the task will become available to be leased
+      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration]
+      /// or the lease will expire and the task will become available to be leased
       /// again. After the task is acknowledged, it will not be returned
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
@@ -1884,12 +1947,13 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Acknowledges a pull task.
       ///
       /// The worker, that is, the entity that
-      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must call this method
-      /// to indicate that the work associated with the task has finished.
+      /// [leased][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] this task must
+      /// call this method to indicate that the work associated with the task has
+      /// finished.
       ///
       /// The worker must acknowledge a task within the
-      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration] or the lease
-      /// will expire and the task will become available to be leased
+      /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration]
+      /// or the lease will expire and the task will become available to be leased
       /// again. After the task is acknowledged, it will not be returned
       /// by a later [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks],
       /// [GetTask][google.cloud.tasks.v2beta2.CloudTasks.GetTask], or
@@ -1907,7 +1971,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// The worker can use this method to extend the lease by a new
       /// duration, starting from now. The new task lease will be
-      /// returned in the task's [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
+      /// returned in the task's
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1923,7 +1988,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// The worker can use this method to extend the lease by a new
       /// duration, starting from now. The new task lease will be
-      /// returned in the task's [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
+      /// returned in the task's
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1937,7 +2003,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// The worker can use this method to extend the lease by a new
       /// duration, starting from now. The new task lease will be
-      /// returned in the task's [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
+      /// returned in the task's
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1953,7 +2020,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       ///
       /// The worker can use this method to extend the lease by a new
       /// duration, starting from now. The new task lease will be
-      /// returned in the task's [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
+      /// returned in the task's
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1966,9 +2034,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Cancel a pull task's lease.
       ///
       /// The worker can use this method to cancel a task's lease by
-      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] to now. This will
-      /// make the task available to be leased to the next caller of
-      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
+      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time]
+      /// to now. This will make the task available to be leased to the next caller
+      /// of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1983,9 +2051,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Cancel a pull task's lease.
       ///
       /// The worker can use this method to cancel a task's lease by
-      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] to now. This will
-      /// make the task available to be leased to the next caller of
-      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
+      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time]
+      /// to now. This will make the task available to be leased to the next caller
+      /// of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1998,9 +2066,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Cancel a pull task's lease.
       ///
       /// The worker can use this method to cancel a task's lease by
-      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] to now. This will
-      /// make the task available to be leased to the next caller of
-      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
+      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time]
+      /// to now. This will make the task available to be leased to the next caller
+      /// of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2015,9 +2083,9 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Cancel a pull task's lease.
       ///
       /// The worker can use this method to cancel a task's lease by
-      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] to now. This will
-      /// make the task available to be leased to the next caller of
-      /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
+      /// setting its [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time]
+      /// to now. This will make the task available to be leased to the next caller
+      /// of [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2030,30 +2098,33 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Forces a task to run now.
       ///
       /// When this method is called, Cloud Tasks will dispatch the task, even if
-      /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or
-      /// is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// the task is already running, the queue has reached its
+      /// [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       ///
       /// This command is meant to be used for manual debugging. For
-      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be used to retry a failed
-      /// task after a fix has been made or to manually force a task to be
-      /// dispatched now.
+      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be
+      /// used to retry a failed task after a fix has been made or to manually force
+      /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the
+      /// task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
-      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be reset to the time that
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus the retry delay specified
-      /// in the queue's [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be
+      /// reset to the time that
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus
+      /// the retry delay specified in the queue's
+      /// [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
       ///
       /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] returns
       /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
       /// task that has already succeeded or permanently failed.
       ///
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called on a
-      /// [pull task][google.cloud.tasks.v2beta2.PullMessage].
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called
+      /// on a [pull task][google.cloud.tasks.v2beta2.PullMessage].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2068,30 +2139,33 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Forces a task to run now.
       ///
       /// When this method is called, Cloud Tasks will dispatch the task, even if
-      /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or
-      /// is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// the task is already running, the queue has reached its
+      /// [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       ///
       /// This command is meant to be used for manual debugging. For
-      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be used to retry a failed
-      /// task after a fix has been made or to manually force a task to be
-      /// dispatched now.
+      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be
+      /// used to retry a failed task after a fix has been made or to manually force
+      /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the
+      /// task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
-      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be reset to the time that
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus the retry delay specified
-      /// in the queue's [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be
+      /// reset to the time that
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus
+      /// the retry delay specified in the queue's
+      /// [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
       ///
       /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] returns
       /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
       /// task that has already succeeded or permanently failed.
       ///
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called on a
-      /// [pull task][google.cloud.tasks.v2beta2.PullMessage].
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called
+      /// on a [pull task][google.cloud.tasks.v2beta2.PullMessage].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2104,30 +2178,33 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Forces a task to run now.
       ///
       /// When this method is called, Cloud Tasks will dispatch the task, even if
-      /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or
-      /// is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// the task is already running, the queue has reached its
+      /// [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       ///
       /// This command is meant to be used for manual debugging. For
-      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be used to retry a failed
-      /// task after a fix has been made or to manually force a task to be
-      /// dispatched now.
+      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be
+      /// used to retry a failed task after a fix has been made or to manually force
+      /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the
+      /// task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
-      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be reset to the time that
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus the retry delay specified
-      /// in the queue's [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be
+      /// reset to the time that
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus
+      /// the retry delay specified in the queue's
+      /// [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
       ///
       /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] returns
       /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
       /// task that has already succeeded or permanently failed.
       ///
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called on a
-      /// [pull task][google.cloud.tasks.v2beta2.PullMessage].
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called
+      /// on a [pull task][google.cloud.tasks.v2beta2.PullMessage].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2142,30 +2219,33 @@ namespace Google.Cloud.Tasks.V2Beta2 {
       /// Forces a task to run now.
       ///
       /// When this method is called, Cloud Tasks will dispatch the task, even if
-      /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or
-      /// is [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
+      /// the task is already running, the queue has reached its
+      /// [RateLimits][google.cloud.tasks.v2beta2.RateLimits] or is
+      /// [PAUSED][google.cloud.tasks.v2beta2.Queue.State.PAUSED].
       ///
       /// This command is meant to be used for manual debugging. For
-      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be used to retry a failed
-      /// task after a fix has been made or to manually force a task to be
-      /// dispatched now.
+      /// example, [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] can be
+      /// used to retry a failed task after a fix has been made or to manually force
+      /// a task to be dispatched now.
       ///
       /// The dispatched task is returned. That is, the task that is returned
-      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the task is dispatched but
-      /// before the task is received by its target.
+      /// contains the [status][google.cloud.tasks.v2beta2.Task.status] after the
+      /// task is dispatched but before the task is received by its target.
       ///
       /// If Cloud Tasks receives a successful response from the task's
       /// target, then the task will be deleted; otherwise the task's
-      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be reset to the time that
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus the retry delay specified
-      /// in the queue's [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
+      /// [schedule_time][google.cloud.tasks.v2beta2.Task.schedule_time] will be
+      /// reset to the time that
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] was called plus
+      /// the retry delay specified in the queue's
+      /// [RetryConfig][google.cloud.tasks.v2beta2.RetryConfig].
       ///
       /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] returns
       /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
       /// task that has already succeeded or permanently failed.
       ///
-      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called on a
-      /// [pull task][google.cloud.tasks.v2beta2.PullMessage].
+      /// [RunTask][google.cloud.tasks.v2beta2.CloudTasks.RunTask] cannot be called
+      /// on a [pull task][google.cloud.tasks.v2beta2.PullMessage].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
