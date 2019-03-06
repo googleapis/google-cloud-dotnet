@@ -92,7 +92,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for listing jobs using [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
+  /// Request message for listing jobs using
+  /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
   /// </summary>
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest> {
     private static readonly pb::MessageParser<ListJobsRequest> _parser = new pb::MessageParser<ListJobsRequest>(() => new ListJobsRequest());
@@ -173,10 +174,13 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// A token identifying a page of results the server will return. To
     /// request the first page results, page_token must be empty. To
     /// request the next page of results, page_token must be the value of
-    /// [next_page_token][google.cloud.scheduler.v1beta1.ListJobsResponse.next_page_token] returned from
-    /// the previous call to [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs]. It is an error to
-    /// switch the value of [filter][google.cloud.scheduler.v1beta1.ListJobsRequest.filter] or
-    /// [order_by][google.cloud.scheduler.v1beta1.ListJobsRequest.order_by] while iterating through pages.
+    /// [next_page_token][google.cloud.scheduler.v1beta1.ListJobsResponse.next_page_token]
+    /// returned from the previous call to
+    /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs]. It is
+    /// an error to switch the value of
+    /// [filter][google.cloud.scheduler.v1beta1.ListJobsRequest.filter] or
+    /// [order_by][google.cloud.scheduler.v1beta1.ListJobsRequest.order_by] while
+    /// iterating through pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -303,7 +307,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Response message for listing jobs using [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
+  /// Response message for listing jobs using
+  /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
   /// </summary>
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse> {
     private static readonly pb::MessageParser<ListJobsResponse> _parser = new pb::MessageParser<ListJobsResponse>(() => new ListJobsResponse());
@@ -358,10 +363,11 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in the
-    /// [page_token][google.cloud.scheduler.v1beta1.ListJobsRequest.page_token] field in the subsequent call to
-    /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs] to retrieve the next page of results.
-    /// If this is empty it indicates that there are no more results
-    /// through which to paginate.
+    /// [page_token][google.cloud.scheduler.v1beta1.ListJobsRequest.page_token]
+    /// field in the subsequent call to
+    /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs] to
+    /// retrieve the next page of results. If this is empty it indicates that there
+    /// are no more results through which to paginate.
     ///
     /// The page token is valid for only 2 hours.
     /// </summary>
@@ -467,7 +473,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for [GetJob][google.cloud.scheduler.v1beta1.CloudScheduler.GetJob].
+  /// Request message for
+  /// [GetJob][google.cloud.scheduler.v1beta1.CloudScheduler.GetJob].
   /// </summary>
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest> {
     private static readonly pb::MessageParser<GetJobRequest> _parser = new pb::MessageParser<GetJobRequest>(() => new GetJobRequest());
@@ -605,7 +612,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for [CreateJob][google.cloud.scheduler.v1beta1.CloudScheduler.CreateJob].
+  /// Request message for
+  /// [CreateJob][google.cloud.scheduler.v1beta1.CloudScheduler.CreateJob].
   /// </summary>
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest> {
     private static readonly pb::MessageParser<CreateJobRequest> _parser = new pb::MessageParser<CreateJobRequest>(() => new CreateJobRequest());
@@ -666,7 +674,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// Required.
     ///
     /// The job to add. The user can optionally specify a name for the
-    /// job in [name][google.cloud.scheduler.v1beta1.Job.name]. [name][google.cloud.scheduler.v1beta1.Job.name] cannot be the same as an
+    /// job in [name][google.cloud.scheduler.v1beta1.Job.name].
+    /// [name][google.cloud.scheduler.v1beta1.Job.name] cannot be the same as an
     /// existing job. If a name is not specified then the system will
     /// generate a random unique name that will be returned
     /// ([name][google.cloud.scheduler.v1beta1.Job.name]) in the response.
@@ -786,7 +795,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for [UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob].
+  /// Request message for
+  /// [UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob].
   /// </summary>
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest> {
     private static readonly pb::MessageParser<UpdateJobRequest> _parser = new pb::MessageParser<UpdateJobRequest>(() => new UpdateJobRequest());
@@ -829,7 +839,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The new job properties. [name][google.cloud.scheduler.v1beta1.Job.name] must be specified.
+    /// The new job properties. [name][google.cloud.scheduler.v1beta1.Job.name]
+    /// must be specified.
     ///
     /// Output only fields cannot be modified using UpdateJob.
     /// Any value specified for an output only field will be ignored.
@@ -1108,7 +1119,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for [PauseJob][google.cloud.scheduler.v1beta1.CloudScheduler.PauseJob].
+  /// Request message for
+  /// [PauseJob][google.cloud.scheduler.v1beta1.CloudScheduler.PauseJob].
   /// </summary>
   public sealed partial class PauseJobRequest : pb::IMessage<PauseJobRequest> {
     private static readonly pb::MessageParser<PauseJobRequest> _parser = new pb::MessageParser<PauseJobRequest>(() => new PauseJobRequest());
@@ -1246,7 +1258,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for [ResumeJob][google.cloud.scheduler.v1beta1.CloudScheduler.ResumeJob].
+  /// Request message for
+  /// [ResumeJob][google.cloud.scheduler.v1beta1.CloudScheduler.ResumeJob].
   /// </summary>
   public sealed partial class ResumeJobRequest : pb::IMessage<ResumeJobRequest> {
     private static readonly pb::MessageParser<ResumeJobRequest> _parser = new pb::MessageParser<ResumeJobRequest>(() => new ResumeJobRequest());
