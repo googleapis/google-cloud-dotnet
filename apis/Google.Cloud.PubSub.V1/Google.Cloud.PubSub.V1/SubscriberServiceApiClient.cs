@@ -934,9 +934,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -1010,9 +1011,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -1083,9 +1085,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -1159,9 +1162,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1189,9 +1193,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1218,9 +1223,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2549,9 +2555,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Optional user-provided name for this snapshot.
@@ -2609,9 +2616,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Optional user-provided name for this snapshot.
@@ -2666,9 +2674,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// Optional user-provided name for this snapshot.
@@ -2726,9 +2735,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2765,9 +2775,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2803,9 +2814,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3804,9 +3816,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3835,9 +3848,10 @@ namespace Google.Cloud.PubSub.V1
         /// If the name is not provided in the request, the server will assign a random
         /// name for this subscription on the same project as the topic, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Subscription object.
-        /// Note that for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Subscription object. Note that
+        /// for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4376,9 +4390,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4416,9 +4431,10 @@ namespace Google.Cloud.PubSub.V1
         /// the request, the server will assign a random
         /// name for this snapshot on the same project as the subscription, conforming
         /// to the
-        /// [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names).
-        /// The generated name is populated in the returned Snapshot object. Note that
-        /// for REST API requests, you must specify a name in the request.
+        /// [resource name
+        /// format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
+        /// generated name is populated in the returned Snapshot object. Note that for
+        /// REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
