@@ -48,9 +48,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         private GoogleLogger GetLogger(
             IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information,
             Dictionary<string, string> labels = null, IServiceProvider serviceProvider = null,
-            string logName = null)
+            string logName = null,
+            RetryOptions retryOptions = null)
         {
-            LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, MonitoredResourceBuilder.GlobalResource);
+            LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, MonitoredResourceBuilder.GlobalResource, retryOptions: retryOptions);
             return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock, serviceProvider);
         }
 
@@ -370,6 +371,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
             logger.LogInformation(_logMessage);
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never);
+        }
+
+        [Fact]
+        public void Log_ThrowsIfNullLabels_RetryOptionsPropagateExceptions()
+        {
+            var mockServiceProvider = new Mock<IServiceProvider>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName, retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate));
+            Assert.Throws<ArgumentNullException>(() => logger.LogInformation(_logMessage));
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never);
         }
 
