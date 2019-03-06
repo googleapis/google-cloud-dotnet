@@ -217,7 +217,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
 
       /// <summary>
-      /// Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it. This will
+      /// asynchronously trigger cancellation of any operations that are running with
+      /// this session.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -671,7 +673,9 @@ namespace Google.Cloud.Spanner.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSessions, null, options, request);
       }
       /// <summary>
-      /// Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it. This will
+      /// asynchronously trigger cancellation of any operations that are running with
+      /// this session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -683,7 +687,9 @@ namespace Google.Cloud.Spanner.V1 {
         return DeleteSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it. This will
+      /// asynchronously trigger cancellation of any operations that are running with
+      /// this session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -693,7 +699,9 @@ namespace Google.Cloud.Spanner.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSession, null, options, request);
       }
       /// <summary>
-      /// Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it. This will
+      /// asynchronously trigger cancellation of any operations that are running with
+      /// this session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -705,7 +713,9 @@ namespace Google.Cloud.Spanner.V1 {
         return DeleteSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it. This will
+      /// asynchronously trigger cancellation of any operations that are running with
+      /// this session.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -308,7 +308,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new TransactionSelector(),
                 Statements = { },
+                Seqno = 109325920L,
             };
             ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse();
             mockGrpcClient.Setup(x => x.ExecuteBatchDml(request, It.IsAny<CallOptions>()))
@@ -326,7 +328,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             ExecuteBatchDmlRequest request = new ExecuteBatchDmlRequest
             {
                 SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
+                Transaction = new TransactionSelector(),
                 Statements = { },
+                Seqno = 109325920L,
             };
             ExecuteBatchDmlResponse expectedResponse = new ExecuteBatchDmlResponse();
             mockGrpcClient.Setup(x => x.ExecuteBatchDmlAsync(request, It.IsAny<CallOptions>()))
