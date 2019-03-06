@@ -117,7 +117,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optionally caller-specified in [CreateTask][google.cloud.tasks.v2beta2.CloudTasks.CreateTask].
+    /// Optionally caller-specified in
+    /// [CreateTask][google.cloud.tasks.v2beta2.CloudTasks.CreateTask].
     ///
     /// The task name.
     ///
@@ -127,7 +128,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),
     ///    hyphens (-), colons (:), or periods (.).
     ///    For more information, see
-    ///    [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects)
+    ///    [Identifying
+    ///    projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects)
     /// * `LOCATION_ID` is the canonical ID for the task's location.
     ///    The list of available locations can be obtained by calling
     ///    [ListLocations][google.cloud.location.Locations.ListLocations].
@@ -150,10 +152,12 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// <summary>
     /// App Engine HTTP request that is sent to the task's target. Can
     /// be set only if
-    /// [app_engine_http_target][google.cloud.tasks.v2beta2.Queue.app_engine_http_target] is set
-    /// on the queue.
+    /// [app_engine_http_target][google.cloud.tasks.v2beta2.Queue.app_engine_http_target]
+    /// is set on the queue.
     ///
-    /// An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2beta2.AppEngineHttpRequest] set.
+    /// An App Engine task is a task that has
+    /// [AppEngineHttpRequest][google.cloud.tasks.v2beta2.AppEngineHttpRequest]
+    /// set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta2.AppEngineHttpRequest AppEngineHttpRequest {
@@ -167,10 +171,13 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// <summary>Field number for the "pull_message" field.</summary>
     public const int PullMessageFieldNumber = 4;
     /// <summary>
-    /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] to process the task. Can be
-    /// set only if [pull_target][google.cloud.tasks.v2beta2.Queue.pull_target] is set on the queue.
+    /// [LeaseTasks][google.cloud.tasks.v2beta2.CloudTasks.LeaseTasks] to process
+    /// the task. Can be set only if
+    /// [pull_target][google.cloud.tasks.v2beta2.Queue.pull_target] is set on the
+    /// queue.
     ///
-    /// A pull task is a task that has [PullMessage][google.cloud.tasks.v2beta2.PullMessage] set.
+    /// A pull task is a task that has
+    /// [PullMessage][google.cloud.tasks.v2beta2.PullMessage] set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta2.PullMessage PullMessage {
@@ -192,7 +199,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// For pull queues, this is the time when the task is available to
     /// be leased; if a task is currently leased, this is the time when
     /// the current lease expires, that is, the time that the task was
-    /// leased plus the [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration].
+    /// leased plus the
+    /// [lease_duration][google.cloud.tasks.v2beta2.LeaseTasksRequest.lease_duration].
     ///
     /// `schedule_time` will be truncated to the nearest microsecond.
     /// </summary>
@@ -238,8 +246,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     public const int ViewFieldNumber = 8;
     private global::Google.Cloud.Tasks.V2Beta2.Task.Types.View view_ = 0;
     /// <summary>
-    /// Output only. The view specifies which subset of the [Task][google.cloud.tasks.v2beta2.Task] has
-    /// been returned.
+    /// Output only. The view specifies which subset of the
+    /// [Task][google.cloud.tasks.v2beta2.Task] has been returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta2.Task.Types.View View {
@@ -490,7 +498,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// The view specifies a subset of [Task][google.cloud.tasks.v2beta2.Task] data.
+      /// The view specifies a subset of [Task][google.cloud.tasks.v2beta2.Task]
+      /// data.
       ///
       /// When a task is returned in a response, not all
       /// information is retrieved by default because some data, such as
@@ -508,19 +517,22 @@ namespace Google.Cloud.Tasks.V2Beta2 {
         /// sensitive data.
         ///
         /// This view does not include the
-        /// ([payload in AppEngineHttpRequest][google.cloud.tasks.v2beta2.AppEngineHttpRequest] and
-        /// [payload in PullMessage][google.cloud.tasks.v2beta2.PullMessage.payload]). These payloads are
-        /// desirable to return only when needed, because they can be large
-        /// and because of the sensitivity of the data that you choose to
-        /// store in it.
+        /// ([payload in
+        /// AppEngineHttpRequest][google.cloud.tasks.v2beta2.AppEngineHttpRequest]
+        /// and [payload in
+        /// PullMessage][google.cloud.tasks.v2beta2.PullMessage.payload]). These
+        /// payloads are desirable to return only when needed, because they can be
+        /// large and because of the sensitivity of the data that you choose to store
+        /// in it.
         /// </summary>
         [pbr::OriginalName("BASIC")] Basic = 1,
         /// <summary>
         /// All information is returned.
         ///
-        /// Authorization for [FULL][google.cloud.tasks.v2beta2.Task.View.FULL] requires
-        /// `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
-        /// permission on the [Queue][google.cloud.tasks.v2beta2.Queue] resource.
+        /// Authorization for [FULL][google.cloud.tasks.v2beta2.Task.View.FULL]
+        /// requires `cloudtasks.tasks.fullView` [Google
+        /// IAM](https://cloud.google.com/iam/) permission on the
+        /// [Queue][google.cloud.tasks.v2beta2.Queue] resource.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 2,
       }
@@ -593,7 +605,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// <summary>
     /// Output only. The number of attempts which have received a response.
     ///
-    /// This field is not calculated for [pull tasks][google.cloud.tasks.v2beta2.PullMessage].
+    /// This field is not calculated for [pull
+    /// tasks][google.cloud.tasks.v2beta2.PullMessage].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AttemptResponseCount {
@@ -609,10 +622,14 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// <summary>
     /// Output only. The status of the task's first attempt.
     ///
-    /// Only [dispatch_time][google.cloud.tasks.v2beta2.AttemptStatus.dispatch_time] will be set.
-    /// The other [AttemptStatus][google.cloud.tasks.v2beta2.AttemptStatus] information is not retained by Cloud Tasks.
+    /// Only
+    /// [dispatch_time][google.cloud.tasks.v2beta2.AttemptStatus.dispatch_time]
+    /// will be set. The other
+    /// [AttemptStatus][google.cloud.tasks.v2beta2.AttemptStatus] information is
+    /// not retained by Cloud Tasks.
     ///
-    /// This field is not calculated for [pull tasks][google.cloud.tasks.v2beta2.PullMessage].
+    /// This field is not calculated for [pull
+    /// tasks][google.cloud.tasks.v2beta2.PullMessage].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta2.AttemptStatus FirstAttemptStatus {
@@ -628,7 +645,8 @@ namespace Google.Cloud.Tasks.V2Beta2 {
     /// <summary>
     /// Output only. The status of the task's last attempt.
     ///
-    /// This field is not calculated for [pull tasks][google.cloud.tasks.v2beta2.PullMessage].
+    /// This field is not calculated for [pull
+    /// tasks][google.cloud.tasks.v2beta2.PullMessage].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta2.AttemptStatus LastAttemptStatus {
