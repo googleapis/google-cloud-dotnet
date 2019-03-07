@@ -24,8 +24,8 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
-    using ListAssetsResponse.Types;
-    using ListFindingsResponse.Types;
+    using static ListAssetsResponse.Types;
+    using static ListFindingsResponse.Types;
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -206,7 +206,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
             };
             // Make the request
             Policy response = await securityCenterClient.GetIamPolicyAsync(request);
@@ -222,7 +222,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
             };
             // Make the request
             Policy response = securityCenterClient.GetIamPolicy(request);
@@ -1235,7 +1235,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -1252,7 +1252,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Policy = new Policy(),
             };
             // Make the request
@@ -1299,7 +1299,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Permissions = { },
             };
             // Make the request
@@ -1316,7 +1316,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Permissions = { },
             };
             // Make the request
