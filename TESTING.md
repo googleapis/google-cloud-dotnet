@@ -60,6 +60,9 @@ environment variables:
 - `TEST_PROJECT`: The name of the Google Cloud Project to test against
 - `GOOGLE_APPLICATION_CREDENTIALS`: The absolute path to a JSON file
   containing service credentials for the test project.
+- `TEST_PROJECT_LOCATION`: For APIs that require an App Engine
+  project, this is the location ID of the App Engine project, such as
+  "us-central1".
 - `MUST_NOT_SKIP_TESTS`: If this is set to any non-empty value, tests
   that require other environment variables will fail rather than being
   skipped. (Tests that require more elaborate configuration default to

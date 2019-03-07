@@ -25,6 +25,7 @@ namespace Google.Cloud.ClientTesting
     public static class TestEnvironment
     {
         public const string TestProjectEnvironmentVariable = "TEST_PROJECT";
+        public const string ProjectLocationEnvironmentVariable = "TEST_PROJECT_LOCATION";
 
         /// <summary>
         /// Returns the project ID to use for testing.
@@ -40,6 +41,21 @@ namespace Google.Cloud.ClientTesting
                     $"Please set the {testProjectEnvironmentVariable} environment variable to your test project ID before running tests");
             }
             return projectId;
+        }
+
+        /// <summary>
+        /// Returns the location ID of the test project.
+        /// </summary>
+        /// <returns>The project ID, which is validated to be non-null and non-empty.</returns>
+        public static string GetProjectLocationId()
+        {
+            string locationId = Environment.GetEnvironmentVariable(ProjectLocationEnvironmentVariable);
+            if (string.IsNullOrEmpty(locationId))
+            {
+                throw new InvalidOperationException(
+                    $"Please set the {ProjectLocationEnvironmentVariable} environment variable to your test project location ID before running tests");
+            }
+            return locationId;
         }
 
         /// <summary>
