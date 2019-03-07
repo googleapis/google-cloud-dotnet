@@ -22,12 +22,26 @@
   // productUrl: Product home page URL to include when using doc templates
 
   {
+    "id": "Google.Cloud.Asset.V1",
+    "productName": "Google Cloud Asset Inventory",
+    "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
+    "dependencies": {
+      "Google.LongRunning": "1.1.0",
+      "Google.Cloud.Iam.V1": "1.2.0"
+    },
+    "tags": [ "asset", "inventory", "assets" ]
+  },
+
+  {
     "id": "Google.Cloud.Asset.V1Beta1",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
     "version": "1.0.0-beta01",
     "type": "grpc",
-    "description": "Recommended Google client library to access the Google Cloud Asset Inventory API.",
+    "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1beta1).",
     "dependencies": {
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0"
