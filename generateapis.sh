@@ -183,6 +183,7 @@ generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
 generate_api Google.Cloud.Redis.V1 google/cloud/redis/v1 redis_v1.yaml
 generate_api Google.Cloud.Redis.V1Beta1 google/cloud/redis/v1beta1 redis_v1beta1.yaml
 generate_api Google.Cloud.Scheduler.V1Beta1 google/cloud/scheduler/v1beta1 cloudscheduler_v1beta1.yaml
+generate_api Google.Cloud.SecurityCenter.V1 google/cloud/securitycenter/v1 securitycenter_v1.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
 generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
 generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
