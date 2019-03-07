@@ -1,6 +1,6 @@
 # Version history
 
-# 2.0.0 (in progress; latest release 2.0.0-beta05 on 2018-12-03)
+# 2.0.0 (in progress; latest release 2.0.0-beta08 on 2019-03-07)
 
 New features:
 
@@ -8,6 +8,7 @@ New features:
 - Connection string option to enable `SpannerDataReader.GetSchemaTable()`
   to return schema information
 - DML and PDML support
+- Batch DML support
   
 Breaking changes:
 
