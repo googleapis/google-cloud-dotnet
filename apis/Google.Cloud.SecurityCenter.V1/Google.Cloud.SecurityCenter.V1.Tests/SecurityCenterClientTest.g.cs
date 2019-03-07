@@ -266,7 +266,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -290,7 +290,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest expectedRequest = new GetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -314,7 +314,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -337,7 +337,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
             };
             Policy expectedResponse = new Policy
             {
@@ -670,7 +670,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -696,7 +696,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest expectedRequest = new SetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -722,7 +722,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -746,7 +746,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Policy = new Policy(),
             };
             Policy expectedResponse = new Policy
@@ -770,7 +770,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
@@ -792,7 +792,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest expectedRequest = new TestIamPermissionsRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
@@ -814,7 +814,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();
@@ -834,7 +834,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 .Returns(new Mock<Operations.OperationsClient>().Object);
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
-                ResourceAsSourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
+                ResourceAsResourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 Permissions = { },
             };
             TestIamPermissionsResponse expectedResponse = new TestIamPermissionsResponse();

@@ -21,8 +21,6 @@ using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
-using lt = ListAssetsResponse.Types;
-using lt = ListFindingsResponse.Types;
 using sys = System;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
@@ -1174,7 +1172,7 @@ namespace Google.Cloud.SecurityCenter.V1
             gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
                 new iam::GetIamPolicyRequest
                 {
-                    ResourceAsSourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -1217,7 +1215,7 @@ namespace Google.Cloud.SecurityCenter.V1
             gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
                 new iam::GetIamPolicyRequest
                 {
-                    ResourceAsSourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2240,7 +2238,7 @@ namespace Google.Cloud.SecurityCenter.V1
             gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
                 new iam::SetIamPolicyRequest
                 {
-                    ResourceAsSourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2299,7 +2297,7 @@ namespace Google.Cloud.SecurityCenter.V1
             gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
                 new iam::SetIamPolicyRequest
                 {
-                    ResourceAsSourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
@@ -2386,7 +2384,7 @@ namespace Google.Cloud.SecurityCenter.V1
             gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new iam::TestIamPermissionsRequest
                 {
-                    ResourceAsSourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
@@ -2445,7 +2443,7 @@ namespace Google.Cloud.SecurityCenter.V1
             gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
                 new iam::TestIamPermissionsRequest
                 {
-                    ResourceAsSourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
                     Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
