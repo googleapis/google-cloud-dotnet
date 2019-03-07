@@ -160,6 +160,7 @@ $PROTOC \
   googleapis/google/cloud/oslogin/common/*.proto
 
 # Now the per-API codegen
+generate_api Google.Cloud.Asset.V1 google/cloud/asset/v1 asset_v1.yaml
 generate_api Google.Cloud.Asset.V1Beta1 google/cloud/asset/v1beta1 asset_v1beta1.yaml
 generate_api Google.Cloud.BigQuery.DataTransfer.V1 google/cloud/bigquery/datatransfer/v1 datatransfer.yaml
 generate_api Google.Cloud.Bigtable.Admin.V2 google/bigtable/admin/v2 bigtableadmin.yaml
