@@ -178,7 +178,7 @@ namespace Google.Cloud.Asset.V1 {
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// A list of asset types of which to take a snapshot for. For example:
-    /// "google.compute.disk". If specified, only matching assets will be returned.
+    /// "compute.googleapis.com/Disk". If specified, only matching assets will be returned.
     /// See [Introduction to Cloud Asset
     /// Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
     /// for all supported asset types.
@@ -618,6 +618,7 @@ namespace Google.Cloud.Asset.V1 {
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
     /// See [Resource
     /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
+    /// and [Resource Name Format](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/resource-name-format)
     /// for more info.
     ///
     /// The request becomes a no-op if the asset name list is empty, and the max
