@@ -18,6 +18,7 @@ namespace Google.Cloud.Asset.V1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Asset.V1;
     using Google.LongRunning;
     using Google.Protobuf;
@@ -43,7 +44,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                Parent = "",
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 OutputConfig = new OutputConfig(),
             };
             // Make the request
@@ -79,7 +80,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             ExportAssetsRequest request = new ExportAssetsRequest
             {
-                Parent = "",
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 OutputConfig = new OutputConfig(),
             };
             // Make the request
@@ -116,7 +117,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = "",
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
             };
@@ -134,7 +135,7 @@ namespace Google.Cloud.Asset.V1.Snippets
             // Initialize request argument(s)
             BatchGetAssetsHistoryRequest request = new BatchGetAssetsHistoryRequest
             {
-                Parent = "",
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 ContentType = ContentType.Unspecified,
                 ReadTimeWindow = new TimeWindow(),
             };
