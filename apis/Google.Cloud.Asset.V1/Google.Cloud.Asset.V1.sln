@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Asset.V1", "Google.Cloud.Asset.V1\Google.Cloud.Asset.V1.csproj", "{1F5E996C-D741-4D19-9AD3-954C6180EBC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Asset.V1", "Google.Cloud.Asset.V1\Google.Cloud.Asset.V1.csproj", "{1F5E996C-D741-4D19-9AD3-954C6180EBC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Asset.V1.Snippets", "Google.Cloud.Asset.V1.Snippets\Google.Cloud.Asset.V1.Snippets.csproj", "{C3706F1D-AE7E-4689-9875-7975ACA2B1E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Asset.V1.Snippets", "Google.Cloud.Asset.V1.Snippets\Google.Cloud.Asset.V1.Snippets.csproj", "{C3706F1D-AE7E-4689-9875-7975ACA2B1E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{568BC587-0477-45AE-8AAE-7E7EF21D5314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{568BC587-0477-45AE-8AAE-7E7EF21D5314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Asset.V1.Tests", "Google.Cloud.Asset.V1.Tests\Google.Cloud.Asset.V1.Tests.csproj", "{2A30DFA1-6DFA-4F10-B9D4-5916E33AEDB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Asset.V1.Tests", "Google.Cloud.Asset.V1.Tests\Google.Cloud.Asset.V1.Tests.csproj", "{2A30DFA1-6DFA-4F10-B9D4-5916E33AEDB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Asset.V1.SmokeTests", "Google.Cloud.Asset.V1.SmokeTests\Google.Cloud.Asset.V1.SmokeTests.csproj", "{E6762F43-104D-48C2-A497-FF0613EB0C5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1F5E996C-D741-4D19-9AD3-954C6180EBC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{2A30DFA1-6DFA-4F10-B9D4-5916E33AEDB6}.Release|x64.Build.0 = Release|Any CPU
 		{2A30DFA1-6DFA-4F10-B9D4-5916E33AEDB6}.Release|x86.ActiveCfg = Release|Any CPU
 		{2A30DFA1-6DFA-4F10-B9D4-5916E33AEDB6}.Release|x86.Build.0 = Release|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Debug|x64.Build.0 = Debug|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Debug|x86.Build.0 = Debug|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Release|x64.ActiveCfg = Release|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Release|x64.Build.0 = Release|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Release|x86.ActiveCfg = Release|Any CPU
+		{E6762F43-104D-48C2-A497-FF0613EB0C5E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {143956F4-4398-4E50-80F5-873793FCAA08}
 	EndGlobalSection
 EndGlobal
