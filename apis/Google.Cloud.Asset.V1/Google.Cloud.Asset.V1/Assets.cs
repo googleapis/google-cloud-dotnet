@@ -510,7 +510,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetTypeFieldNumber = 2;
     private string assetType_ = "";
     /// <summary>
-    /// Type of the asset. Example: "google.compute.disk".
+    /// Type of the asset. Example: "compute.googleapis.com/Disk".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AssetType {
