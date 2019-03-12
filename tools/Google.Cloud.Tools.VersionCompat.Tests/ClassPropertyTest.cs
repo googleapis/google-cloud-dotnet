@@ -14,7 +14,7 @@
 
 using Xunit;
 
-namespace ClassProperty
+namespace Google.Cloud.Tools.VersionCompat.Tests.ClassProperty
 {
     namespace PropertyAdded.A { public class C { } }
     namespace PropertyAdded.B { public class C { public int P { get; } } }
@@ -36,10 +36,7 @@ namespace ClassProperty
 
     namespace PropertyFromStatic.A { public class C { public static int P { get; } } }
     namespace PropertyFromStatic.B { public class C { public int P { get; } } }
-}
 
-namespace Google.Cloud.Tools.VersionCompat.Tests
-{
     public class ClassPropertyTest : TestBase
     {
         [Fact] public void PropertyAdded() => TestMinor(Cause.PropertyAdded);

@@ -15,7 +15,7 @@
 using System.Collections.Generic;
 using Xunit;
 
-namespace Class
+namespace Google.Cloud.Tools.VersionCompat.Tests.Class
 {
     namespace NoChange.A { public class C { } }
     namespace NoChange.B { public class C { } }
@@ -100,10 +100,7 @@ namespace Class
 
     namespace GenericConstraintRemoved4.A { public class C<A> where A : IList<A> { } }
     namespace GenericConstraintRemoved4.B { public class C<A> { } }
-}
 
-namespace Google.Cloud.Tools.VersionCompat.Tests
-{
     public class ClassTest : TestBase
     {
         [Fact] public void NoChange() => TestNone();

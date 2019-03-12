@@ -39,11 +39,6 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
             // original or new version of the code.
             var typeName = GetType().Name;
             var testNamespace = $"{typeof(TestBase).Namespace}.{typeName.Substring(0, typeName.Length - "Test".Length)}.{callerMemberName}";
-            // TODO: Remove this if all tests move to the partial interleaved style.
-            if (!older.MainModule.Types.Any(x => x.Namespace.StartsWith(testNamespace)))
-            {
-                testNamespace = $"{typeName.Substring(0, typeName.Length - "Test".Length)}.{callerMemberName}";
-            }
             // Run version compatibility checker.
             return Program.Check(older, newer, testNamespace);
         }
