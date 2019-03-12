@@ -21,6 +21,19 @@
         "timestamp": "20190201T090000Z",
         "expectedUrl": "https://storage.googleapis.com/test-bucket/test-object?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=host&X-Goog-Signature=8adff1d4285739e31aa68e73767a46bc5511fde377497dbe08481bf5ceb34e29cc9a59921748d8ec3dd4085b7e9b7772a952afedfcdaecb3ae8352275b8b7c867f204e3db85076220a3127a8a9589302fc1181eae13b9b7fe41109ec8cdc93c1e8bac2d7a0cc32a109ca02d06957211326563ab3d3e678a0ba296e298b5fc5e14593c99d444c94724cc4be97015dbff1dca377b508fa0cb7169195de98d0e4ac96c42b918d28c8d92d33e1bd125ce0fb3cd7ad2c45dae65c22628378f6584971b8bf3945b26f2611eb651e9b6a8648970c1ecf386bb71327b082e7296c4e1ee2fc0bdd8983da80af375c817fb1ad491d0bc22c0f51dba0d66e2cffbc90803e47"
     },
+     
+    {
+        "description": "POST for resumable uploads",
+        "bucket": "test-bucket",
+        "object": "test-object",
+        "method": "POST",
+        "expiration": 10,
+        "headers": {
+            "x-goog-resumable": [ "start" ]
+        },
+        "timestamp": "20190201T090000Z",
+        "expectedUrl": "https://storage.googleapis.com/test-bucket/test-object?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=host%3Bx-goog-resumable&x-goog-signature=7e9049ca7fcef224d92ab315e06bd54981577dcb7ff7eb67d1dddbe97ed07eb43bdd878534a5a56fccde24a9f63c0dbb822a5993b98b89c1519cb939f5edeb98711c826c0ea34cf17512c9dd0e1e2b8a793dd6840c9dbe272328a0b2f62b394a6253ed620f70ea46fd29be071bf9fa85a66d0c233d608b2f362a3322a57ae36fbf7d1f700001a933f315e4a653127a8c5ab48ab6146c2e6ed03c01f940161ce341eadcc88e88142428f88a085f938330083da6f1ed4af4c85d27a2bd213512662d5d04adfa89bef2e10e875789c9a1167bd296952d280afa2a9514bf92271a0f614f3f0cccb81925075db1195542642d5f9530c5560041e0c48d07e05ab42de0"
+    },
 
     {
         "description": "Vary expiration and timestamp",
