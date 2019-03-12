@@ -38,7 +38,9 @@ The following libraries are available at a [GA](#versioning) quality level:
 
 The following libraries are available at a [beta](#versioning) quality level:
 
-* [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1Beta1/) (beta)
+* [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview)
+  * [V1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1) (beta)
+  * [V1Beta1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1Beta1/) (beta)
 * [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (beta)
 * [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.V2/) (beta)
   * Also the Bigtable admin API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.Admin.V2/) (beta)
@@ -57,7 +59,10 @@ The following libraries are available at a [beta](#versioning) quality level:
 * [Google OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.OsLogin.V1/) (beta)
 * [Google Cloud Memorystore for Redis](https://cloud.google.com/memorystore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1/) (beta)
   * The [V1Beta1 API package](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Redis.V1Beta1/) is also available (beta)
-* [Google Cloud Scheduler](https://cloud.google.com/scheduler/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Scheduler.V1Beta1) (beta)
+* [Google Cloud Scheduler](https://cloud.google.com/scheduler/)
+  * [V1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Scheduler.V1) (beta)
+  * [V1Beta1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Scheduler.V1Beta1) (beta)
+* [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.SecurityCenter.V1) (beta)
 * [Google Cloud Tasks](https://cloud.google.com/cloud-tasks/) (available for V2Beta2 and V2Beta3 API versions)
   * [V2Beta2 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2Beta2/) (beta)
   * [V2Beta3 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2Beta3/) (beta)
