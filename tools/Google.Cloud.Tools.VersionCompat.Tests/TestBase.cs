@@ -33,9 +33,12 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
             var older = AssemblyDefinition.ReadAssembly(s);
             s.Position = 0;
             var newer = AssemblyDefinition.ReadAssembly(s);
-            // Use this convention for test namespaces.
+            // Use this convention for test namespaces:
+            // Test namespace is the name of the test type (e.g. `ClassMethodTest`) without the `Test` suffix,
+            // followed by the name of the test method (e.g. `MethodAdded`), followed by `A` or `B` for the
+            // original or new version of the code.
             var typeName = GetType().Name;
-            var testNamespace = $"{typeName.Substring(0, typeName.Length - 4)}.{callerMemberName}";
+            var testNamespace = $"{typeName.Substring(0, typeName.Length - "Test".Length)}.{callerMemberName}";
             // Run version compatibility checker.
             return Program.Check(older, newer, testNamespace);
         }

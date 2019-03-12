@@ -38,6 +38,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
 
         private Class(TypeDefinition o, TypeDefinition n) => (_o, _n) = (o, n);
 
+        // _o is the original definition; _n is the new definition.
         private readonly TypeDefinition _o;
         private readonly TypeDefinition _n;
 
@@ -45,7 +46,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         {
             var oInstantiable = _o.Ctors().Any(ctor => ctor.IsPublic);
             var oDerivable = _o.Ctors().Any(ctor => ctor.IsExported());
-            var toStatic = !_o.IsStatic() && oDerivable && _n.IsStatic();
+            var toStatic = !_o.IsStatic() && _n.IsStatic();
             var toAbstract = !_o.IsAbstractOnly() && oInstantiable && _n.IsAbstractOnly();
             var toSealed = !_o.IsSealedOnly() && oDerivable && _n.IsSealedOnly();
             if (toStatic || toAbstract || toSealed)

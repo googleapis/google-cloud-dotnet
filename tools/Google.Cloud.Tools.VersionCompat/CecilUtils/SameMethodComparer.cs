@@ -19,6 +19,16 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 {
+    /// <summary>
+    /// MethodDefinition comparer that compares methods in the same way that the C#
+    /// compiler considers methods to be the same. I.e. if the C# compiler allows two
+    /// methods to be defined in the same class, then this comparer will consider them
+    /// separate methods; conversly if the C# compiler considers them the same, so it's
+    /// an error to define them both in the same class, then this comparer will consider
+    /// the two methods the same.
+    /// E.g. `void A(long)` and `void A(int)` are different;
+    /// but `void A(ref int)` and `void A(out int) are the same.
+    /// </summary>
     internal class SameMethodComparer : IEqualityComparer<MethodDefinition>
     {
         public static SameMethodComparer Instance { get; } = new SameMethodComparer();
@@ -48,6 +58,7 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
                     return false;
                 }
             }
+            // Don't compare default values, in/out/ref, etc... as these do not change the method signature.
             return true;
         }
         public int GetHashCode(MethodDefinition obj) => obj?.Name.GetHashCode() ?? 0;

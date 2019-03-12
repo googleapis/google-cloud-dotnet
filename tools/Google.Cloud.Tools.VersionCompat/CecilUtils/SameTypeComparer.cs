@@ -14,9 +14,18 @@
 
 using Mono.Cecil;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 {
+    /// <summary>
+    /// TypeReference comparer that compares types in the same way that the C#
+    /// compiler considers types to be the same. I.e. if the C# compiler allows two
+    /// types to be defined in the same namespace, then this comparer will consider them
+    /// separate types; conversly if the C# compiler considers them the same, so it's
+    /// an error to define them both in the same namespace, then this comparer will consider
+    /// the two types the same.
+    /// </summary>
     internal class SameTypeComparer : IEqualityComparer<TypeReference>
     {
         public static SameTypeComparer Instance { get; } = new SameTypeComparer();
@@ -37,12 +46,9 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             }
             // If names are the same, then they will have the same number of generic parameters
             // because the generic parameter count is encoded in the name. E.g. List`1 for a List<AnyType>
-            for (int i =0; i<x.GenericParameters.Count;i++)
+            if (!x.GenericParameters.SequenceEqual(y.GenericParameters, this))
             {
-                if (!Equals(x.GenericParameters[i], y.GenericParameters[i]))
-                {
-                    return false;
-                }
+                return false;
             }
             return true;
         }

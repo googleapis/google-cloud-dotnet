@@ -25,6 +25,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
     {
         public ClassAndInterface(TypeDefinition o, TypeDefinition n) => (_o, _n) = (o, n);
 
+        // _o is the original definition; _n is the new definition.
         private readonly TypeDefinition _o;
         private readonly TypeDefinition _n;
 

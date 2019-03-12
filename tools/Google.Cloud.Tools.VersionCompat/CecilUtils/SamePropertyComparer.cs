@@ -18,6 +18,14 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 {
+    /// <summary>
+    /// PropertyDefinition comparer that compares properties in the same way that the C#
+    /// compiler considers properties to be the same. I.e. if the C# compiler allows two
+    /// properties to be defined in the same class, then this comparer will consider them
+    /// separate properties; conversly if the C# compiler considers them the same, so it's
+    /// an error to define them both in the same class, then this comparer will consider
+    /// the two properties the same.
+    /// </summary>
     internal class SamePropertyComparer: IEqualityComparer<PropertyDefinition>
     {
         public static IEqualityComparer<PropertyDefinition> Instance { get; } = new SamePropertyComparer();
