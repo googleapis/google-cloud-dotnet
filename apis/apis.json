@@ -25,7 +25,7 @@
     "id": "Google.Cloud.Asset.V1",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
-    "version": "1.0.0-beta00",
+    "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
     "dependencies": {
@@ -589,7 +589,7 @@
     "id": "Google.Cloud.Scheduler.V1",
     "productName": "Google Cloud Scheduler",
     "productUrl": "https://cloud.google.com/scheduler/",
-    "version": "1.0.0-beta00",
+    "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Scheduler API (v1), which creates and manages jobs run on a regular recurring schedule.",
     "tags": [ "scheduler", "cron" ]
@@ -609,7 +609,7 @@
     "id": "Google.Cloud.SecurityCenter.V1",
     "productName": "Google Cloud Security Command Center",
     "productUrl": "https://cloud.google.com/security-command-center/",
-    "version": "1.0.0-beta00",
+    "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
     "dependencies": {
@@ -776,7 +776,7 @@
     "id": "Google.Cloud.Tasks.V2Beta3",
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Tasks API (v2beta3), which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
