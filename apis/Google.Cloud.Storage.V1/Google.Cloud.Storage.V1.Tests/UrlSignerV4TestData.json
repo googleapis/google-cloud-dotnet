@@ -129,5 +129,16 @@
         "expiration": 10,
         "timestamp": "20190201T090000Z",
         "expectedUrl": "https://storage.googleapis.com/test-bucket/test-object?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=host&X-Goog-Signature=95e6a13d43a1d1962e667f17397f2b80ac9bdd1669210d5e08e0135df9dff4e56113485dbe429ca2266487b9d1796ebdee2d7cf682a6ef3bb9fbb4c351686fba90d7b621cf1c4eb1fdf126460dd25fa0837dfdde0a9fd98662ce60844c458448fb2b352c203d9969cb74efa4bdb742287744a4f2308afa4af0e0773f55e32e92973619249214b97283b2daa14195244444e33f938138d1e5f561088ce8011f4986dda33a556412594db7c12fc40e1ff3f1bedeb7a42f5bcda0b9567f17f65855f65071fabb88ea12371877f3f77f10e1466fff6ff6973b74a933322ff0949ce357e20abe96c3dd5cfab42c9c83e740a4d32b9e11e146f0eb3404d2e975896f74"
-    }
+    },
+    
+    {
+        "description": "List Objects",
+        "bucket": "test-bucket",
+        "object": "",
+        "method": "GET",
+        "expiration": 10,
+        "timestamp": "20190201T090000Z",
+        "expectedUrl": "https://storage.googleapis.com/test-bucket/?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=host&X-Goog-Signature=2a1d342f11ddf0c90c669b9ba89ab5099f94049a86351cacbc85845fd5a8b31e1f9c8d484926c19fbd6930da6c8d3049ca8ebcfeefb7b02e53137755d36f97baab479414528b2802f10d94541facb888edf886d91ba124e60cb3801464f61aadc575fc921c99cf8c52e281f7bc0d3e740f529201c469c8e52775b6433687e0c0dca1c6b874614c3c3d09599be1e192c40ad6827416e387bf6e88a5f501f1d8225bce498d134599d0dfe30c9c833c244d3f90cf9595b9f8175658b788ee5c4a90b575fde5e83c645772250c7098373ca754b39d0fc1ebca2f50261a015931541c9827920eba67a1c41613853a1bd23299a1f9f5d583c0feb05ea2f792ba390d27"
+    },
+
 ]
