@@ -14,64 +14,98 @@
 
 using Xunit;
 
-namespace TopLevel
+namespace Google.Cloud.Tools.VersionCompat.Tests.TopLevel
 {
+    public partial class TopLevelTest : TestBase { }
+
     namespace ClassUnchanged.A { public class C { } }
     namespace ClassUnchanged.B { public class C { } }
+    partial class TopLevelTest
+    {
+        [Fact] public void ClassUnchanged() => TestNone();
+    }
 
     namespace ClassRemoved.A { public class C { } internal class D { } }
     namespace ClassRemoved.B { internal class D { } }
+    partial class TopLevelTest
+    {
+        [Fact] public void ClassRemoved() => TestMajor(Cause.TypeRemoved);
+    }
 
     namespace ClassAdded.A { internal class D { } }
     namespace ClassAdded.B { public class C { } internal class D { } }
+    partial class TopLevelTest
+    {
+        [Fact] public void ClassAdded() => TestMinor(Cause.TypeAdded);
+    }
 
     namespace ClassMadeNotExported.A { public class C { } }
     namespace ClassMadeNotExported.B { internal class C { } }
+    partial class TopLevelTest
+    {
+        [Fact] public void ClassMadeNotExported() => TestMajor(Cause.TypeMadeNotExported);
+    }
 
     namespace NestedClassMadeNotExported1.A { public class C { public class N { } } }
     namespace NestedClassMadeNotExported1.B { internal class C { public class N { } } }
+    partial class TopLevelTest
+    {
+        [Fact] public void NestedClassMadeNotExported1() => TestMajor(Cause.TypeMadeNotExported, "C.N");
+    }
 
     namespace NestedClassMadeNotExported2.A { public class C { public class N { } } }
     namespace NestedClassMadeNotExported2.B { public class C { private class N { } } }
+    partial class TopLevelTest
+    {
+        [Fact] public void NestedClassMadeNotExported2() => TestMajor(Cause.TypeMadeNotExported, "C.N");
+    }
 
     namespace ClassMadeExported.A { internal class C { } }
     namespace ClassMadeExported.B { public class C { } }
+    partial class TopLevelTest
+    {
+        [Fact] public void ClassMadeExported() => TestMinor(Cause.TypeMadeExported);
+    }
 
     namespace NestedClassMadeExported1.A { internal class C { public class N { } } }
     namespace NestedClassMadeExported1.B { public class C { public class N { } } }
+    partial class TopLevelTest
+    {
+        [Fact] public void NestedClassMadeExported1() => TestMinor(Cause.TypeMadeExported, "C.N");
+    }
 
     namespace NestedClassMadeExported2.A { public class C { private class N { } } }
     namespace NestedClassMadeExported2.B { public class C { public class N { } } }
+    partial class TopLevelTest
+    {
+        [Fact] public void NestedClassMadeExported2() => TestMinor(Cause.TypeMadeExported, "C.N");
+    }
 
     namespace TypeChange1.A { public class C { } }
     namespace TypeChange1.B { public interface C { } }
+    partial class TopLevelTest
+    {
+        [Fact] public void TypeChange1() => TestMajor(Cause.TypeTypeChanged);
+    }
 
     namespace TypeChange2.A { public class C { } }
     namespace TypeChange2.B { public delegate void C(); }
+    partial class TopLevelTest
+    {
+        [Fact] public void TypeChange2() => TestMajor(Cause.TypeTypeChanged);
+    }
 
     namespace TypeChange3.A { public class C { } }
     namespace TypeChange3.B { public struct C { } }
+    partial class TopLevelTest
+    {
+        [Fact] public void TypeChange3() => TestMajor(Cause.TypeTypeChanged);
+    }
 
     namespace TypeChange4.A { public class C { } }
     namespace TypeChange4.B { public enum C { } }
-}
-
-namespace Google.Cloud.Tools.VersionCompat.Tests
-{
-    public class TopLevelTest : TestBase
+    partial class TopLevelTest
     {
-        [Fact] public void ClassUnchanged() => TestNone();
-        [Fact] public void ClassRemoved() => TestMajor(Cause.TypeRemoved);
-        [Fact] public void ClassAdded() => TestMinor(Cause.TypeAdded);
-        [Fact] public void ClassMadeNotExported() => TestMajor(Cause.TypeMadeNotExported);
-        [Fact] public void NestedClassMadeNotExported1() => TestMajor(Cause.TypeMadeNotExported, "C.N");
-        [Fact] public void NestedClassMadeNotExported2() => TestMajor(Cause.TypeMadeNotExported, "C.N");
-        [Fact] public void ClassMadeExported() => TestMinor(Cause.TypeMadeExported);
-        [Fact] public void NestedClassMadeExported1() => TestMinor(Cause.TypeMadeExported, "C.N");
-        [Fact] public void NestedClassMadeExported2() => TestMinor(Cause.TypeMadeExported, "C.N");
-        [Fact] public void TypeChange1() => TestMajor(Cause.TypeTypeChanged);
-        [Fact] public void TypeChange2() => TestMajor(Cause.TypeTypeChanged);
-        [Fact] public void TypeChange3() => TestMajor(Cause.TypeTypeChanged);
         [Fact] public void TypeChange4() => TestMajor(Cause.TypeTypeChanged);
     }
 }
