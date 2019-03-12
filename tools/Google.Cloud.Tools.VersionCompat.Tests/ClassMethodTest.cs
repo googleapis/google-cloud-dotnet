@@ -14,7 +14,7 @@
 
 using Xunit;
 
-namespace ClassMethod
+namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
 {
     namespace MethodAdded.A { public class C { } }
     namespace MethodAdded.B { public class C { public void A() { } } }
@@ -45,10 +45,7 @@ namespace ClassMethod
 
     namespace FromStatic.A { public class C { public static void A() { } } }
     namespace FromStatic.B { public class C { public void A() { } } }
-}
 
-namespace Google.Cloud.Tools.VersionCompat.Tests
-{
     public class ClassMethodTest : TestBase
     {
         [Fact] public void MethodAdded() => TestMinor(Cause.MethodAdded);

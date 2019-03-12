@@ -14,7 +14,7 @@
 
 using Xunit;
 
-namespace TopLevel
+namespace Google.Cloud.Tools.VersionCompat.Tests.TopLevel
 {
     namespace ClassUnchanged.A { public class C { } }
     namespace ClassUnchanged.B { public class C { } }
@@ -54,10 +54,7 @@ namespace TopLevel
 
     namespace TypeChange4.A { public class C { } }
     namespace TypeChange4.B { public enum C { } }
-}
 
-namespace Google.Cloud.Tools.VersionCompat.Tests
-{
     public class TopLevelTest : TestBase
     {
         [Fact] public void ClassUnchanged() => TestNone();
