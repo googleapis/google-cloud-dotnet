@@ -21,14 +21,11 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 {
     internal static class ShowExtensions
     {
-        private static string Show(this IList<GenericParameter> ps)
-        {
-            if (ps.Any())
-            {
-                return $"<{string.Join(", ", ps.Select(Show))}>";
-            }
-            return "";
-        }
+        private static string Show(this IList<GenericParameter> ps) =>
+            ps.Any() ? $"<{string.Join(", ", ps.Select(Show))}>" : "";
+
+        private static string ShowGenArgs(this IList<TypeReference> types) =>
+            types.Any() ? $"<{string.Join(", ", types.Select(Show))}>" : "";
 
         private static string Show(this IList<ParameterDefinition> ps, char open, char close, bool openCloseIfEmpty) =>
             ps.Any() ? $"{open}{string.Join(", ", ps.Select(Show))}{close}" : openCloseIfEmpty ? $"{open}{close}" : "";
@@ -43,13 +40,26 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             if (p.IsOptional)
             {
                 sb.Append(" = ");
-                sb.Append(p.Constant ?? "null"); // TODO: I suspect `Constant` is not thw right way to do this.
+                sb.Append(p.Constant ?? "null"); // TODO: I suspect `Constant` is not the right way to do this.
             }
             return sb.ToString();
         }
 
-        public static string Show(this TypeReference type) =>
-            type.FullName == "System.Void" ? "void" : $"{type.FullName.Split('`')[0].Replace('/', '.')}{type.GenericParameters.Show()}";
+        public static string Show(this TypeReference type)
+        {
+            if (type.FullName == "System.Void")
+            {
+                return "void";
+            }
+            var prefix = type.DeclaringType != null ? Show(type.DeclaringType) : type.Namespace;
+            switch (type)
+            {
+                case GenericInstanceType generic:
+                    return $"{prefix}.{type.Name.Split('`')[0]}{generic.GenericArguments.ShowGenArgs()}";
+                default:
+                    return $"{prefix}.{type.Name}";
+            }
+        }
 
         public static string ShowSas(this TypeDefinition type) =>
             type.IsStatic() ? "static" :

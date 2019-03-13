@@ -40,15 +40,18 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             {
                 return false;
             }
-            if (x.FullName != y.FullName)
+            if (x.Namespace != y.Namespace || x.Name != y.Name || !Equals(x.DeclaringType, y.DeclaringType))
             {
                 return false;
             }
-            // If names are the same, then they will have the same number of generic parameters
-            // because the generic parameter count is encoded in the name. E.g. List`1 for a List<AnyType>
-            if (!x.GenericParameters.SequenceEqual(y.GenericParameters, this))
+            if (x is GenericInstanceType xg && y is GenericInstanceType yg)
             {
-                return false;
+                // If names are the same, then they will have the same number of generic parameters
+                // because the generic parameter count is encoded in the name. E.g. List`1 for a List<AnyType>
+                if (!xg.GenericArguments.SequenceEqual(yg.GenericArguments, this))
+                {
+                    return false;
+                }
             }
             return true;
         }
