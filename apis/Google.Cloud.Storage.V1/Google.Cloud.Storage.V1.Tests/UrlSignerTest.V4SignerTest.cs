@@ -83,15 +83,18 @@ namespace Google.Cloud.Storage.V1.Tests
                 .Select(test => new object[] { test })
                 .ToList();
 
-            [Fact]
-            public void ExpiryValidation_Negative()
+            [Theory]
+            [InlineData(-1)]
+            [InlineData(0)]
+            [InlineData(7 * 24 * 60 * 60 + 1 /* One week + 1 second */)]
+            public void ExpiryValidation_Invalid(int seconds)
             {
                 var signer = UrlSigner
                     .FromServiceAccountCredential(s_testCredential)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
 
-                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign("bucket", "object", TimeSpan.FromSeconds(-1), HttpMethod.Get));
+                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign("bucket", "object", TimeSpan.FromSeconds(seconds), HttpMethod.Get));
             }
 
             [Fact]
@@ -104,17 +107,6 @@ namespace Google.Cloud.Storage.V1.Tests
 
                 // Just testing that no exception is thrown.
                 signer.Sign("bucket", "object", TimeSpan.FromDays(7), HttpMethod.Get);
-            }
-
-            [Fact]
-            public void ExpiryValidation_Beyond1Week()
-            {
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(s_testCredential)
-                    .WithSigningVersion(SigningVersion.V4)
-                    .WithClock(new FakeClock());
-
-                Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign("bucket", "object", TimeSpan.FromDays(7) + TimeSpan.FromSeconds(1), HttpMethod.Get));
             }
 
             [Theory, MemberData(nameof(JsonTestData))]
