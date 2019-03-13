@@ -35,6 +35,8 @@ namespace Google.Cloud.Storage.V1
             private const string HostHeaderValue = "storage.googleapis.com";
             private const string Algorithm = "GOOG4-RSA-SHA256";
 
+            private static readonly int MaxExpirySecondsInclusive = (int) TimeSpan.FromDays(7).TotalSeconds;
+
             // Note: It's irritating to have to convert from base64 to bytes and then to hex, but we can't change the IBlobSigner implementation
             // and ServiceAccountCredential.CreateSignature returns base64 anyway.
 
@@ -98,8 +100,16 @@ namespace Google.Cloud.Storage.V1
                     var now = clock.GetCurrentDateTimeUtc();
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
-                    // TODO: Validate against maximum expiry duration
                     int expirySeconds = (int) (expiration - now).TotalSeconds;
+                    if (expirySeconds < 0)
+                    {
+                        throw new ArgumentOutOfRangeException(nameof(expiration), "Expiration must not be negative");
+                    }
+                    if (expirySeconds > MaxExpirySecondsInclusive)
+                    {
+                        throw new ArgumentOutOfRangeException(nameof(expiration), "Expiration must not be greater than 7 days.");
+                    }
+
                     string expiryText = expirySeconds.ToString(CultureInfo.InvariantCulture);
 
                     string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
