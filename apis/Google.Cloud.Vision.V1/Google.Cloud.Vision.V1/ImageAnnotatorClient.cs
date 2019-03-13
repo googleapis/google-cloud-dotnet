@@ -370,6 +370,66 @@ namespace Google.Cloud.Vision.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata>> PollOnceAsyncBatchAnnotateFilesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AsyncBatchAnnotateFilesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of generic
+        /// files, such as PDF files, which may contain multiple pages and multiple
+        /// images per page. Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+        /// </summary>
+        /// <param name="requests">
+        /// Individual async file annotation requests for this batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> AsyncBatchAnnotateFiles(scg::IEnumerable<AsyncAnnotateFileRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            AsyncBatchAnnotateFiles(new AsyncBatchAnnotateFilesRequest
+            {
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of generic
+        /// files, such as PDF files, which may contain multiple pages and multiple
+        /// images per page. Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+        /// </summary>
+        /// <param name="requests">
+        /// Individual async file annotation requests for this batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata>> AsyncBatchAnnotateFilesAsync(scg::IEnumerable<AsyncAnnotateFileRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            AsyncBatchAnnotateFilesAsync(new AsyncBatchAnnotateFilesRequest
+            {
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of generic
+        /// files, such as PDF files, which may contain multiple pages and multiple
+        /// images per page. Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+        /// </summary>
+        /// <param name="requests">
+        /// Individual async file annotation requests for this batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata>> AsyncBatchAnnotateFilesAsync(scg::IEnumerable<AsyncAnnotateFileRequest> requests, st::CancellationToken cancellationToken) =>
+            AsyncBatchAnnotateFilesAsync(requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ImageAnnotator client wrapper implementation, for convenient use.</summary>
