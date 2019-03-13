@@ -60,13 +60,14 @@ namespace Google.Cloud.BigQuery.V2
 
         private static readonly Func<string, string> StringConverter = v => v;
         private static readonly Func<string, long> Int64Converter = v => long.Parse(v, CultureInfo.InvariantCulture);
+        private static readonly Func<string, decimal> DecimalConverter = v => decimal.Parse(v, CultureInfo.InvariantCulture);
         private static readonly Func<string, double> DoubleConverter = v => double.Parse(v, CultureInfo.InvariantCulture);
         // AddSeconds rounds to the nearest millisecond, for some reason.
         // Instead, we work out the number of ticks and add that.
         private static readonly Func<string, DateTime> TimestampConverter = v =>
         {
-            double seconds = DoubleConverter(v);
-            long microseconds = (long) (seconds * 1e6);
+            decimal seconds = DecimalConverter(v);
+            long microseconds = (long)(seconds * 1000000M);
             long ticks = microseconds * 10;
             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddTicks(ticks);
         };

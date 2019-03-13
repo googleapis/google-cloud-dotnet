@@ -49,7 +49,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = "AQI=" }, // 1, 2
                     new TableCell { V = "2.5" },
                     new TableCell { V = "text" },
-                    new TableCell { V = "1477566580.5" }, // 2016-10-27T11:09:40.500Z
+                    new TableCell { V = "95617584000.059" }, // 5000-01-01T00:00:00.059Z
                     new TableCell { V = "2017-08-09" },
                     new TableCell { V = "2017-08-09T12:34:56.123" },
                     new TableCell { V = "12:34:56.123" },
@@ -63,7 +63,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(new byte[] { 1, 2 }, (byte[])row["bytes"]);
             Assert.Equal(2.5d, (double)row["float"]);
             Assert.Equal("text", (string)row["string"]);
-            Assert.Equal(new DateTime(2016, 10, 27, 11, 9, 40, 500, DateTimeKind.Utc), (DateTime)row["timestamp"]);
+            Assert.Equal(new DateTime(5000, 1, 1, 0, 0, 0, 59, DateTimeKind.Utc), (DateTime)row["timestamp"]);
             Assert.Equal(new DateTime(2017, 8, 9, 0, 0, 0, DateTimeKind.Utc), (DateTime)row["date"]);
             Assert.Equal(new DateTime(2017, 8, 9, 12, 34, 56, 123, DateTimeKind.Utc), (DateTime)row["dateTime"]);
             Assert.Equal(new TimeSpan(0, 12, 34, 56, 123), (TimeSpan)row["time"]);
