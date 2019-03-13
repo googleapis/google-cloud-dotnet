@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
 using Xunit;
 
 namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
@@ -28,8 +29,11 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
     namespace MethodMadeNotExported.A { public class C { protected internal void A() { } } }
     namespace MethodMadeNotExported.B { public class C { private void A() { } } }
 
-    namespace ReturnTypeChanged.A { public class C { public void A() { } } }
-    namespace ReturnTypeChanged.B { public class C { public int A() => 0; } }
+    namespace ReturnTypeChanged1.A { public class C { public void A() { } } }
+    namespace ReturnTypeChanged1.B { public class C { public int A() => 0; } }
+
+    namespace ReturnTypeChanged2.A { public class C { public IEnumerable<int> A() => null; } }
+    namespace ReturnTypeChanged2.B { public class C { public IEnumerable<long> A() => null; } }
 
     namespace ParamNameChanged.A { public class C { public void A(int i) { } } }
     namespace ParamNameChanged.B { public class C { public void A(int j) { } } }
@@ -52,7 +56,8 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
         [Fact] public void MethodRemoved() => TestMajor(Cause.MethodRemoved);
         [Fact] public void MethodMadeExported() => TestMinor(Cause.MethodMadeExported);
         [Fact] public void MethodMadeNotExported() => TestMajor(Cause.MethodMadeNotExported);
-        [Fact] public void ReturnTypeChanged() => TestMajor(Cause.MethodReturnTypeChanged);
+        [Fact] public void ReturnTypeChanged1() => TestMajor(Cause.MethodReturnTypeChanged);
+        [Fact] public void ReturnTypeChanged2() => TestMajor(Cause.MethodReturnTypeChanged);
         [Fact] public void ParamNameChanged() => TestMajor(Cause.MethodParameterNameChanged);
         [Fact] public void ParamInOutChanged1() => TestMajor(Cause.MethodParameterInOutChanged);
         [Fact] public void ParamInOutChanged2() => TestMajor(Cause.MethodParameterInOutChanged);
