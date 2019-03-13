@@ -29,7 +29,7 @@ namespace Google.Cloud.Vision.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             BatchAnnotateImagesSettings = existing.BatchAnnotateImagesSettings;
             AsyncBatchAnnotateFilesSettings = existing.AsyncBatchAnnotateFilesSettings;
-            AsyncBatchAnnotateFilesOperationsSettings = existing.AsyncBatchAnnotateFilesOperationsSettings;
+            AsyncBatchAnnotateFilesOperationsSettings = existing.AsyncBatchAnnotateFilesOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -168,7 +168,7 @@ namespace Google.Cloud.Vision.V1
         /// ImageAnnotatorClient client = ImageAnnotatorClient.Create(channel);
         /// ...
         /// // Shutdown the channel when it is no longer required.
-        /// await channel.ShutdownAsync();
+        /// channel.ShutdownAsync().Wait();
         /// </code>
         /// </example>
         /// <param name="endpoint">Optional <see cref="gaxgrpc::ServiceEndpoint"/>.</param>
@@ -189,7 +189,7 @@ namespace Google.Cloud.Vision.V1
         public static ImageAnnotatorClient Create(grpccore::Channel channel, ImageAnnotatorSettings settings = null)
         {
             gax::GaxPreconditions.CheckNotNull(channel, nameof(channel));
-            return Create(new grpccore::DefaultCallInvoker(channel));
+            return Create(new grpccore::DefaultCallInvoker(channel), settings);
         }
 
         /// <summary>
