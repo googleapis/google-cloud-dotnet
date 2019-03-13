@@ -27,10 +27,15 @@ namespace Google.Cloud.Storage.V1
         // Something more complex? It's unclear how common this is.
 
         /// <summary>
-        /// Used to list in "directory mode". Only objects whose names (aside from the prefix) do not contain delimiter
+        /// Used to list in "directory mode". Only objects whose names (aside from the prefix) do not contain the delimiter
         /// will be returned.
         /// </summary>
         public string Delimiter { get; set; }
+
+        /// <summary>
+        /// If true, objects that end in exactly one instance of delimiter will have their metadata included in the returned.
+        /// </summary>
+        public bool? IncludeTrailingDelimiter { get; set; }
 
         /// <summary>
         /// The number of results to return per page. (This modifies the per-request page size;
@@ -77,6 +82,10 @@ namespace Google.Cloud.Storage.V1
             if (Delimiter != null)
             {
                 request.Delimiter = Delimiter;
+            }
+            if (IncludeTrailingDelimiter != null)
+            {
+                request.IncludeTrailingDelimiter = IncludeTrailingDelimiter;
             }
             if (Versions != null)
             {
