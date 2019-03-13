@@ -21,26 +21,11 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 {
     internal static class ShowExtensions
     {
-        private static string Show(this IList<GenericParameter> ps)
-        {
-            if (ps.Any())
-            {
-                return $"<{string.Join(", ", ps.Select(Show))}>";
-            }
-            return "";
-        }
+        private static string Show(this IList<GenericParameter> ps) =>
+            ps.Any() ? $"<{string.Join(", ", ps.Select(Show))}>" : "";
 
-        private static string ShowGenArgs(this IList<TypeReference> types)
-        {
-            if (types.Any())
-            {
-                return $"<{string.Join(", ", types.Select(Show))}>";
-            }
-            else
-            {
-                return "";
-            }
-        }
+        private static string ShowGenArgs(this IList<TypeReference> types) =>
+            types.Any() ? $"<{string.Join(", ", types.Select(Show))}>" : "";
 
         private static string Show(this IList<ParameterDefinition> ps, char open, char close, bool openCloseIfEmpty) =>
             ps.Any() ? $"{open}{string.Join(", ", ps.Select(Show))}{close}" : openCloseIfEmpty ? $"{open}{close}" : "";
