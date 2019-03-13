@@ -101,9 +101,9 @@ namespace Google.Cloud.Storage.V1
                     var timestamp = now.ToString("yyyyMMdd'T'HHmmss'Z'", CultureInfo.InvariantCulture);
                     var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
                     int expirySeconds = (int) (expiration - now).TotalSeconds;
-                    if (expirySeconds < 0)
+                    if (expirySeconds <= 0)
                     {
-                        throw new ArgumentOutOfRangeException(nameof(expiration), "Expiration must not be negative");
+                        throw new ArgumentOutOfRangeException(nameof(expiration), "Expiration must be at least 1 second");
                     }
                     if (expirySeconds > MaxExpirySecondsInclusive)
                     {
