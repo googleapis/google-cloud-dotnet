@@ -27,6 +27,7 @@ namespace Google.Cloud.Storage.V1.Tests
             var options = new ListObjectsOptions();
             options.ModifyRequest(request);
             Assert.Null(request.Delimiter);
+            Assert.Null(request.IncludeTrailingDelimiter);
             Assert.Null(request.Projection);
             Assert.Null(request.MaxResults);
             Assert.Null(request.Versions);
@@ -42,14 +43,16 @@ namespace Google.Cloud.Storage.V1.Tests
             {
                 PageSize = 10,
                 Delimiter = "/",
+                IncludeTrailingDelimiter = true,
                 Projection = Projection.Full,
                 Versions = true,
                 UserProject = "proj",
-                PageToken = "nextpage"
+                PageToken = "nextpage",
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
             Assert.Equal("/", request.Delimiter);
+            Assert.True(request.IncludeTrailingDelimiter);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.True(request.Versions);
             Assert.Equal("proj", request.UserProject);
