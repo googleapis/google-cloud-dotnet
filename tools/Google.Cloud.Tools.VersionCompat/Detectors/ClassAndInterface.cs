@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.VersionCompat.CecilUtils;
 using Google.Cloud.Tools.VersionCompat.Utils;
 using Mono.Cecil;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -73,6 +74,72 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 if ((!o.IsCovariant && n.IsCovariant) || (o.IsContravariant && !n.IsContravariant))
                 {
                     yield return Diff.Minor(Cause.TypeGenericVarianceChanged, $"{_n.TypeType().Show()} '{_n.Show()}' changed variance on generic parameter '{n.Show()}'");
+                }
+            }
+        }
+
+        public IEnumerable<Diff> Methods(TypeType typeType)
+        {
+            var oMethods = _o.Methods.Where(x => !x.IsGetter && !x.IsSetter).ToImmutableHashSet(SameMethodComparer.Instance);
+            var nMethods = _n.Methods.Where(x => !x.IsGetter && !x.IsSetter).ToImmutableHashSet(SameMethodComparer.Instance);
+            foreach (var method in oMethods.Union(nMethods).OrderBy(x => x.FullName).ThenBy(x => x.Parameters.Count))
+            {
+                var inO = oMethods.TryGetValue(method, out var o);
+                var inN = nMethods.TryGetValue(method, out var n);
+                string ShowPrefix() => $"{_o.TypeType().Show()} '{_o.Show()}'; method '{o.Show()}'";
+                if (inO && inN && o.IsExported() && n.IsExported())
+                {
+                    if (typeType == TypeType.Class)
+                    {
+                        // Method present and exported in both types.
+                        if (o.IsStatic && !n.IsStatic)
+                        {
+                            yield return Diff.Major(Cause.MethodMadeNonStatic, $"{ShowPrefix()} made non-static.");
+                        }
+                        else if (!o.IsStatic && n.IsStatic)
+                        {
+                            yield return Diff.Major(Cause.MethodMadeStatic, $"{ShowPrefix()} made static.");
+                        }
+                        else
+                        {
+                            // TODO: Abstract/virtual/sealed
+                        }
+                    }
+                    if (!SameTypeComparer.Instance.Equals(o.ReturnType, n.ReturnType))
+                    {
+                        yield return Diff.Major(Cause.MethodReturnTypeChanged, $"{ShowPrefix()} return type changed to '{n.ReturnType.Show()}'.");
+                    }
+                    foreach (var (oParam, nParam) in o.Parameters.Zip(n.Parameters))
+                    {
+                        if (oParam.Name != nParam.Name)
+                        {
+                            yield return Diff.Major(Cause.MethodParameterNameChanged,
+                                $"{ShowPrefix()} parameter name changed from '{oParam.Name}' to '{nParam.Name}'.");
+                        }
+                        if (oParam.IsIn != nParam.IsIn || oParam.IsOut != nParam.IsOut)
+                        {
+                            yield return Diff.Major(Cause.MethodParameterInOutChanged,
+                                $"{ShowPrefix()} parameter '{oParam.Name}' changed from '{oParam.ShowInOut()}' to '{nParam.ShowInOut()}'.");
+                        }
+                    }
+                    // TODO: Generic constraints.
+                }
+                else
+                {
+                    // Presence/visibility changes.
+                    if (inO && o.IsExported())
+                    {
+                        yield return inN ?
+                            Diff.Major(Cause.MethodMadeNotExported, $"{ShowPrefix()} made non-public.") :
+                            Diff.Major(Cause.MethodRemoved, $"{ShowPrefix()} removed.");
+                    }
+                    else if (inN && n.IsExported())
+                    {
+                        var diff = typeType == TypeType.Class ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
+                        yield return inO ?
+                            diff(Cause.MethodMadeExported, $"{ShowPrefix()} made public.") :
+                            diff(Cause.MethodAdded, $"{ShowPrefix()} added.");
+                    }
                 }
             }
         }
