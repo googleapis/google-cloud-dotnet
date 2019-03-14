@@ -48,5 +48,9 @@ namespace Google.Cloud.Tools.VersionCompat
         PropertyTypeChanged,
         PropertyMadeNonStatic,
         PropertyMadeStatic,
+        EnumValueAdded,
+        EnumValueRemoved,
+        EnumValueChanged,
+        EnumUnderlyingTypeChanged,
     }
 }
