@@ -26,43 +26,54 @@ namespace Google.LongRunning {
           string.Concat(
             "CiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxISZ29vZ2xl",
             "LmxvbmdydW5uaW5nGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhln",
-            "b29nbGUvcHJvdG9idWYvYW55LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1w",
-            "dHkucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIqgBCglPcGVyYXRp",
-            "b24SDAoEbmFtZRgBIAEoCRImCghtZXRhZGF0YRgCIAEoCzIULmdvb2dsZS5w",
-            "cm90b2J1Zi5BbnkSDAoEZG9uZRgDIAEoCBIjCgVlcnJvchgEIAEoCzISLmdv",
-            "b2dsZS5ycGMuU3RhdHVzSAASKAoIcmVzcG9uc2UYBSABKAsyFC5nb29nbGUu",
-            "cHJvdG9idWYuQW55SABCCAoGcmVzdWx0IiMKE0dldE9wZXJhdGlvblJlcXVl",
-            "c3QSDAoEbmFtZRgBIAEoCSJcChVMaXN0T3BlcmF0aW9uc1JlcXVlc3QSDAoE",
-            "bmFtZRgEIAEoCRIOCgZmaWx0ZXIYASABKAkSEQoJcGFnZV9zaXplGAIgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YAyABKAkiZAoWTGlzdE9wZXJhdGlvbnNSZXNwb25z",
-            "ZRIxCgpvcGVyYXRpb25zGAEgAygLMh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJgoWQ2FuY2VsT3Bl",
-            "cmF0aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJIiYKFkRlbGV0ZU9wZXJhdGlv",
-            "blJlcXVlc3QSDAoEbmFtZRgBIAEoCTKMBAoKT3BlcmF0aW9ucxKGAQoOTGlz",
-            "dE9wZXJhdGlvbnMSKS5nb29nbGUubG9uZ3J1bm5pbmcuTGlzdE9wZXJhdGlv",
-            "bnNSZXF1ZXN0GiouZ29vZ2xlLmxvbmdydW5uaW5nLkxpc3RPcGVyYXRpb25z",
-            "UmVzcG9uc2UiHYLT5JMCFxIVL3YxL3tuYW1lPW9wZXJhdGlvbnN9EngKDEdl",
-            "dE9wZXJhdGlvbhInLmdvb2dsZS5sb25ncnVubmluZy5HZXRPcGVyYXRpb25S",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiIggtPkkwIa",
-            "EhgvdjEve25hbWU9b3BlcmF0aW9ucy8qKn0SdwoPRGVsZXRlT3BlcmF0aW9u",
-            "EiouZ29vZ2xlLmxvbmdydW5uaW5nLkRlbGV0ZU9wZXJhdGlvblJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiIILT5JMCGioYL3YxL3tuYW1lPW9w",
-            "ZXJhdGlvbnMvKip9EoEBCg9DYW5jZWxPcGVyYXRpb24SKi5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuQ2FuY2VsT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIqgtPkkwIkIh8vdjEve25hbWU9b3BlcmF0aW9ucy8qKn06",
-            "Y2FuY2VsOgEqQpQBChZjb20uZ29vZ2xlLmxvbmdydW5uaW5nQg9PcGVyYXRp",
-            "b25zUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9sb25ncnVubmluZztsb25ncnVubmluZ6oCEkdvb2dsZS5Mb25nUnVu",
-            "bmluZ8oCEkdvb2dsZVxMb25nUnVubmluZ2IGcHJvdG8z"));
+            "b29nbGUvcHJvdG9idWYvYW55LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVy",
+            "YXRpb24ucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxoXZ29v",
+            "Z2xlL3JwYy9zdGF0dXMucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9kZXNjcmlw",
+            "dG9yLnByb3RvIqgBCglPcGVyYXRpb24SDAoEbmFtZRgBIAEoCRImCghtZXRh",
+            "ZGF0YRgCIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSDAoEZG9uZRgDIAEo",
+            "CBIjCgVlcnJvchgEIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzSAASKAoIcmVz",
+            "cG9uc2UYBSABKAsyFC5nb29nbGUucHJvdG9idWYuQW55SABCCAoGcmVzdWx0",
+            "IiMKE0dldE9wZXJhdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJcChVMaXN0",
+            "T3BlcmF0aW9uc1JlcXVlc3QSDAoEbmFtZRgEIAEoCRIOCgZmaWx0ZXIYASAB",
+            "KAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiZAoW",
+            "TGlzdE9wZXJhdGlvbnNSZXNwb25zZRIxCgpvcGVyYXRpb25zGAEgAygLMh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbhIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkiJgoWQ2FuY2VsT3BlcmF0aW9uUmVxdWVzdBIMCgRuYW1lGAEg",
+            "ASgJIiYKFkRlbGV0ZU9wZXJhdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJQ",
+            "ChRXYWl0T3BlcmF0aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJEioKB3RpbWVv",
+            "dXQYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iPQoNT3BlcmF0",
+            "aW9uSW5mbxIVCg1yZXNwb25zZV90eXBlGAEgASgJEhUKDW1ldGFkYXRhX3R5",
+            "cGUYAiABKAky6AQKCk9wZXJhdGlvbnMShgEKDkxpc3RPcGVyYXRpb25zEiku",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLkxpc3RPcGVyYXRpb25zUmVxdWVzdBoqLmdv",
+            "b2dsZS5sb25ncnVubmluZy5MaXN0T3BlcmF0aW9uc1Jlc3BvbnNlIh2C0+ST",
+            "AhcSFS92MS97bmFtZT1vcGVyYXRpb25zfRJ4CgxHZXRPcGVyYXRpb24SJy5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuR2V0T3BlcmF0aW9uUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iIILT5JMCGhIYL3YxL3tuYW1lPW9w",
+            "ZXJhdGlvbnMvKip9EncKD0RlbGV0ZU9wZXJhdGlvbhIqLmdvb2dsZS5sb25n",
+            "cnVubmluZy5EZWxldGVPcGVyYXRpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3Rv",
+            "YnVmLkVtcHR5IiCC0+STAhoqGC92MS97bmFtZT1vcGVyYXRpb25zLyoqfRKB",
+            "AQoPQ2FuY2VsT3BlcmF0aW9uEiouZ29vZ2xlLmxvbmdydW5uaW5nLkNhbmNl",
+            "bE9wZXJhdGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiKoLT",
+            "5JMCJCIfL3YxL3tuYW1lPW9wZXJhdGlvbnMvKip9OmNhbmNlbDoBKhJaCg1X",
+            "YWl0T3BlcmF0aW9uEiguZ29vZ2xlLmxvbmdydW5uaW5nLldhaXRPcGVyYXRp",
+            "b25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiIAOloK",
+            "Dm9wZXJhdGlvbl9pbmZvEh4uZ29vZ2xlLnByb3RvYnVmLk1ldGhvZE9wdGlv",
+            "bnMYmQggASgLMiEuZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbkluZm9C",
+            "lwEKFmNvbS5nb29nbGUubG9uZ3J1bm5pbmdCD09wZXJhdGlvbnNQcm90b1AB",
+            "Wj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2xvbmdy",
+            "dW5uaW5nO2xvbmdydW5uaW5n+AEBqgISR29vZ2xlLkxvbmdSdW5uaW5nygIS",
+            "R29vZ2xlXExvbmdSdW5uaW5nYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, pbr::FileDescriptor.DescriptorProtoFileDescriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.Operation), global::Google.LongRunning.Operation.Parser, new[]{ "Name", "Metadata", "Done", "Error", "Response" }, new[]{ "Result" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.GetOperationRequest), global::Google.LongRunning.GetOperationRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsRequest), global::Google.LongRunning.ListOperationsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsResponse), global::Google.LongRunning.ListOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.CancelOperationRequest), global::Google.LongRunning.CancelOperationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.DeleteOperationRequest), global::Google.LongRunning.DeleteOperationRequest.Parser, new[]{ "Name" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.DeleteOperationRequest), global::Google.LongRunning.DeleteOperationRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.WaitOperationRequest), global::Google.LongRunning.WaitOperationRequest.Parser, new[]{ "Name", "Timeout" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.OperationInfo), global::Google.LongRunning.OperationInfo.Parser, new[]{ "ResponseType", "MetadataType" }, null, null, null)
           }));
     }
     #endregion
@@ -156,7 +167,7 @@ namespace Google.LongRunning {
     private bool done_;
     /// <summary>
     /// If the value is `false`, it means the operation is still in progress.
-    /// If true, the operation is completed, and either `error` or `response` is
+    /// If `true`, the operation is completed, and either `error` or `response` is
     /// available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -397,8 +408,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+  /// The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
   /// </summary>
   public sealed partial class GetOperationRequest : pb::IMessage<GetOperationRequest> {
     private static readonly pb::MessageParser<GetOperationRequest> _parser = new pb::MessageParser<GetOperationRequest>(() => new GetOperationRequest());
@@ -533,8 +543,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
   public sealed partial class ListOperationsRequest : pb::IMessage<ListOperationsRequest> {
     private static readonly pb::MessageParser<ListOperationsRequest> _parser = new pb::MessageParser<ListOperationsRequest>(() => new ListOperationsRequest());
@@ -577,7 +586,7 @@ namespace Google.LongRunning {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// The name of the operation collection.
+    /// The name of the operation's parent resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -762,8 +771,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The response message for
-  /// [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
   public sealed partial class ListOperationsResponse : pb::IMessage<ListOperationsResponse> {
     private static readonly pb::MessageParser<ListOperationsResponse> _parser = new pb::MessageParser<ListOperationsResponse>(() => new ListOperationsResponse());
@@ -921,8 +929,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+  /// The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
   /// </summary>
   public sealed partial class CancelOperationRequest : pb::IMessage<CancelOperationRequest> {
     private static readonly pb::MessageParser<CancelOperationRequest> _parser = new pb::MessageParser<CancelOperationRequest>(() => new CancelOperationRequest());
@@ -1057,8 +1064,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+  /// The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
   /// </summary>
   public sealed partial class DeleteOperationRequest : pb::IMessage<DeleteOperationRequest> {
     private static readonly pb::MessageParser<DeleteOperationRequest> _parser = new pb::MessageParser<DeleteOperationRequest>(() => new DeleteOperationRequest());
@@ -1184,6 +1190,369 @@ namespace Google.LongRunning {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+  /// </summary>
+  public sealed partial class WaitOperationRequest : pb::IMessage<WaitOperationRequest> {
+    private static readonly pb::MessageParser<WaitOperationRequest> _parser = new pb::MessageParser<WaitOperationRequest>(() => new WaitOperationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<WaitOperationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WaitOperationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WaitOperationRequest(WaitOperationRequest other) : this() {
+      name_ = other.name_;
+      timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WaitOperationRequest Clone() {
+      return new WaitOperationRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The name of the operation resource to wait on.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "timeout" field.</summary>
+    public const int TimeoutFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
+    /// <summary>
+    /// The maximum duration to wait before timing out. If left blank, the wait
+    /// will be at most the time permitted by the underlying HTTP/RPC protocol.
+    /// If RPC context deadline is also specified, the shorter one will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration Timeout {
+      get { return timeout_; }
+      set {
+        timeout_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as WaitOperationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(WaitOperationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(Timeout, other.Timeout)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (timeout_ != null) hash ^= Timeout.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (timeout_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Timeout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (timeout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timeout);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(WaitOperationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.timeout_ != null) {
+        if (timeout_ == null) {
+          timeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Timeout.MergeFrom(other.Timeout);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (timeout_ == null) {
+              timeout_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(timeout_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A message representing the message types used by a long-running operation.
+  ///
+  /// Example:
+  ///
+  ///   rpc LongRunningRecognize(LongRunningRecognizeRequest)
+  ///       returns (google.longrunning.Operation) {
+  ///     option (google.longrunning.operation_info) = {
+  ///       response_type: "LongRunningRecognizeResponse"
+  ///       metadata_type: "LongRunningRecognizeMetadata"
+  ///     };
+  ///   }
+  /// </summary>
+  public sealed partial class OperationInfo : pb::IMessage<OperationInfo> {
+    private static readonly pb::MessageParser<OperationInfo> _parser = new pb::MessageParser<OperationInfo>(() => new OperationInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OperationInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OperationInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OperationInfo(OperationInfo other) : this() {
+      responseType_ = other.responseType_;
+      metadataType_ = other.metadataType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OperationInfo Clone() {
+      return new OperationInfo(this);
+    }
+
+    /// <summary>Field number for the "response_type" field.</summary>
+    public const int ResponseTypeFieldNumber = 1;
+    private string responseType_ = "";
+    /// <summary>
+    /// Required. The message name of the primary return type for this
+    /// long-running operation.
+    /// This type will be used to deserialize the LRO's response.
+    ///
+    /// If the response is in a different package from the rpc, a fully-qualified
+    /// message name must be used (e.g. `google.protobuf.Struct`).
+    ///
+    /// Note: Altering this value constitutes a breaking change.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ResponseType {
+      get { return responseType_; }
+      set {
+        responseType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "metadata_type" field.</summary>
+    public const int MetadataTypeFieldNumber = 2;
+    private string metadataType_ = "";
+    /// <summary>
+    /// Required. The message name of the metadata type for this long-running
+    /// operation.
+    ///
+    /// If the response is in a different package from the rpc, a fully-qualified
+    /// message name must be used (e.g. `google.protobuf.Struct`).
+    ///
+    /// Note: Altering this value constitutes a breaking change.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MetadataType {
+      get { return metadataType_; }
+      set {
+        metadataType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OperationInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OperationInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ResponseType != other.ResponseType) return false;
+      if (MetadataType != other.MetadataType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ResponseType.Length != 0) hash ^= ResponseType.GetHashCode();
+      if (MetadataType.Length != 0) hash ^= MetadataType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ResponseType.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResponseType);
+      }
+      if (MetadataType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MetadataType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ResponseType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResponseType);
+      }
+      if (MetadataType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MetadataType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OperationInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ResponseType.Length != 0) {
+        ResponseType = other.ResponseType;
+      }
+      if (other.MetadataType.Length != 0) {
+        MetadataType = other.MetadataType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ResponseType = input.ReadString();
+            break;
+          }
+          case 18: {
+            MetadataType = input.ReadString();
             break;
           }
         }
