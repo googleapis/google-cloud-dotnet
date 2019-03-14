@@ -40,7 +40,9 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             {
                 return false;
             }
-            if (x.Namespace != y.Namespace || x.Name != y.Name || !Equals(x.DeclaringType, y.DeclaringType))
+            var xName = x.Name.Split(' ')[0]; // Required because `modreq(...)` and `modopt(...)` are appended after a space
+            var yName = y.Name.Split(' ')[0]; // to the type name, but do not become part of the method signature for overloads.
+            if (x.Namespace != y.Namespace || xName != yName || !Equals(x.DeclaringType, y.DeclaringType))
             {
                 return false;
             }

@@ -32,7 +32,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 .Concat(cls.BaseType())
                 .Concat(classAndInterface.ImplementedInterfaces())
                 .Concat(classAndInterface.GenericConstraints())
-                .Concat(cls.Methods())
+                .Concat(classAndInterface.Methods(TypeType.Class))
                 .Concat(cls.Properties());
         }
 
@@ -79,68 +79,6 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     yield return Diff.Major(Cause.ClassBaseClassChanged, $"Class '{_n.Show()} changed base-class from '{_o.BaseType.Show()}' to '{_n.BaseType.Show()}'");
-                }
-            }
-        }
-
-        private IEnumerable<Diff> Methods()
-        {
-            var oMethods = _o.Methods.Where(x => !x.IsGetter && !x.IsSetter).ToImmutableHashSet(SameMethodComparer.Instance);
-            var nMethods = _n.Methods.Where(x => !x.IsGetter && !x.IsSetter).ToImmutableHashSet(SameMethodComparer.Instance);
-            foreach (var method in oMethods.Union(nMethods).OrderBy(x => x.FullName).ThenBy(x => x.Parameters.Count))
-            {
-                var inO = oMethods.TryGetValue(method, out var o);
-                var inN = nMethods.TryGetValue(method, out var n);
-                string ShowPrefix() => $"{_o.TypeType().Show()} '{_o.Show()}'; method '{o.Show()}'";
-                if (inO && inN && o.IsExported() && n.IsExported())
-                {
-                    // Method present and exported in both types.
-                    if (o.IsStatic && !n.IsStatic)
-                    {
-                        yield return Diff.Major(Cause.MethodMadeNonStatic, $"{ShowPrefix()} made non-static.");
-                    }
-                    else if (!o.IsStatic && n.IsStatic)
-                    {
-                        yield return Diff.Major(Cause.MethodMadeStatic, $"{ShowPrefix()} made static.");
-                    }
-                    else
-                    {
-                        // TODO: Abstract/virtual/sealed
-                    }
-                    if (!SameTypeComparer.Instance.Equals(o.ReturnType, n.ReturnType))
-                    {
-                        yield return Diff.Major(Cause.MethodReturnTypeChanged, $"{ShowPrefix()} return type changed to '{n.ReturnType.Show()}'.");
-                    }
-                    foreach (var (oParam, nParam) in o.Parameters.Zip(n.Parameters))
-                    {
-                        if (oParam.Name != nParam.Name)
-                        {
-                            yield return Diff.Major(Cause.MethodParameterNameChanged,
-                                $"{ShowPrefix()} parameter name changed from '{oParam.Name}' to '{nParam.Name}'.");
-                        }
-                        if (oParam.IsIn != nParam.IsIn || oParam.IsOut != nParam.IsOut)
-                        {
-                            yield return Diff.Major(Cause.MethodParameterInOutChanged,
-                                $"{ShowPrefix()} parameter '{oParam.Name}' changed from '{oParam.ShowInOut()}' to '{nParam.ShowInOut()}'.");
-                        }
-                    }
-                    // TODO: Generic constraints.
-                }
-                else
-                {
-                    // Presence/visibility changes.
-                    if (inO && o.IsExported())
-                    {
-                        yield return inN ?
-                            Diff.Major(Cause.MethodMadeNotExported, $"{ShowPrefix()} made non-public.") :
-                            Diff.Major(Cause.MethodRemoved, $"{ShowPrefix()} removed.");
-                    }
-                    else if (inN && n.IsExported())
-                    {
-                        yield return inO ?
-                            Diff.Minor(Cause.MethodMadeExported, $"{ShowPrefix()} made public.") :
-                            Diff.Minor(Cause.MethodAdded, $"{ShowPrefix()} added.");
-                    }
                 }
             }
         }
