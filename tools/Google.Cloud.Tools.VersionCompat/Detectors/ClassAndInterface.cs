@@ -49,31 +49,38 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
         }
 
-        public IEnumerable<Diff> GenericConstraints()
+        public IEnumerable<Diff> GenericConstraints() =>
+            GenericConstraints(isType: true, $"{_n.TypeType().Show()} '{_n.Show()}'", _o.GenericParameters, _n.GenericParameters);
+
+        private IEnumerable<Diff> GenericConstraints(bool isType, string prefix,
+            IList<GenericParameter> oGenericParameters, IList<GenericParameter> nGenericParameters)
         {
-            foreach (var (o, n) in _o.GenericParameters.Zip(_n.GenericParameters))
+            var (causeConstraint, causeVariance) = isType ?
+                (Cause.TypeGenericConstraintChanged, Cause.TypeGenericVarianceChanged) :
+                (Cause.MethodGenericConstraintChanged, Cause.MethodGenericVarianceChanged);
+            foreach (var (o, n) in oGenericParameters.Zip(nGenericParameters))
             {
                 if ((!o.HasReferenceTypeConstraint && n.HasReferenceTypeConstraint) ||
                     (!o.HasNotNullableValueTypeConstraint && n.HasNotNullableValueTypeConstraint) ||
                     (!o.HasDefaultConstructorConstraint && n.HasDefaultConstructorConstraint) ||
-                    o.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsProperSubsetOf(n.Constraints))
+                    !n.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsSubsetOf(o.Constraints))
                 {
-                    yield return Diff.Major(Cause.TypeGenericConstraintChanged, $"{_n.TypeType().Show()} '{_n.Show()}' changed constraint on generic parameter '{n.Show()}'");
+                    yield return Diff.Major(causeConstraint, $"{prefix} changed constraint on generic parameter '{n.Show()}'");
                 }
                 if ((!n.HasReferenceTypeConstraint && o.HasReferenceTypeConstraint) ||
                     (!n.HasNotNullableValueTypeConstraint && o.HasNotNullableValueTypeConstraint) ||
                     (!n.HasDefaultConstructorConstraint && o.HasDefaultConstructorConstraint) ||
-                    n.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsProperSubsetOf(o.Constraints))
+                    !o.Constraints.ToImmutableHashSet(SameTypeComparer.Instance).IsSubsetOf(n.Constraints))
                 {
-                    yield return Diff.Minor(Cause.TypeGenericConstraintChanged, $"{_n.TypeType().Show()} '{_n.Show()}' changed constraint on generic parameter '{n.Show()}'");
+                    yield return Diff.Minor(causeConstraint, $"{prefix} changed constraint on generic parameter '{n.Show()}'");
                 }
                 if ((o.IsCovariant && !n.IsCovariant) || (o.IsContravariant && !n.IsContravariant))
                 {
-                    yield return Diff.Major(Cause.TypeGenericVarianceChanged, $"{_n.TypeType().Show()} '{_n.Show()}' changed variance on generic parameter '{n.Show()}'");
+                    yield return Diff.Major(causeVariance, $"{prefix} changed variance on generic parameter '{n.Show()}'");
                 }
                 if ((!o.IsCovariant && n.IsCovariant) || (o.IsContravariant && !n.IsContravariant))
                 {
-                    yield return Diff.Minor(Cause.TypeGenericVarianceChanged, $"{_n.TypeType().Show()} '{_n.Show()}' changed variance on generic parameter '{n.Show()}'");
+                    yield return Diff.Minor(causeVariance, $"{prefix} changed variance on generic parameter '{n.Show()}'");
                 }
             }
         }
@@ -122,7 +129,10 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                                 $"{ShowPrefix()} parameter '{oParam.Name}' changed from '{oParam.ShowInOut()}' to '{nParam.ShowInOut()}'.");
                         }
                     }
-                    // TODO: Generic constraints.
+                    foreach (var diff in GenericConstraints(isType: false, ShowPrefix(), o.GenericParameters, n.GenericParameters))
+                    {
+                        yield return diff;
+                    }
                 }
                 else
                 {

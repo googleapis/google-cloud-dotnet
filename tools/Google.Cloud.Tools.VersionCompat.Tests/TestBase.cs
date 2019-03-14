@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
     {
         private static byte[] s_dllBytes = File.ReadAllBytes(typeof(TestBase).Assembly.Location);
 
-        protected DiffResult Test([CallerMemberName] string callerMemberName = null)
+        protected DiffResult RunTest([CallerMemberName] string callerMemberName = null)
         {
             var s = new MemoryStream(s_dllBytes);
             // Must be read twice, as each assembly definition will be independently mutated during the test.
@@ -45,13 +45,22 @@ namespace Google.Cloud.Tools.VersionCompat.Tests
 
         protected void TestNone([CallerMemberName] string callerMemberName = null)
         {
-            var result = Test(callerMemberName);
+            var result = RunTest(callerMemberName);
             Assert.Empty(result.All);
         }
 
+        protected delegate void Expected(params (Level level, Cause cause)[] expected);
+
+        protected Expected Test([CallerMemberName] string callerMemberName = null) => expected =>
+        {
+            var result = RunTest(callerMemberName);
+            Assert.Equal(expected.Length, result.All.Count);
+            Assert.Equal(expected.ToHashSet(), result.All.Select(x => (x.Level, x.Cause)).ToHashSet());
+        };
+
         protected Diff Test(Level expectedLevel, Cause expectedCause, string diffContains = null, [CallerMemberName] string callerMemberName = null)
         {
-            var result = Test(callerMemberName);
+            var result = RunTest(callerMemberName);
             var diffs = diffContains == null ? result.All : result.All.Where(x => x.Msg.Contains(diffContains)).ToImmutableList();
             Assert.Single(diffs);
             Assert.Equal(expectedLevel, diffs[0].Level);

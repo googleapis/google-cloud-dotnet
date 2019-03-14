@@ -39,6 +39,8 @@ namespace Google.Cloud.Tools.VersionCompat
         MethodParameterInOutChanged,
         MethodMadeStatic,
         MethodMadeNonStatic,
+        MethodGenericConstraintChanged,
+        MethodGenericVarianceChanged,
         PropertyRemoved,
         PropertyAdded,
         PropertyMadeNotExported,
