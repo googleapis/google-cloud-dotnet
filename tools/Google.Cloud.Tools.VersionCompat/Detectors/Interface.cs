@@ -27,7 +27,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             return Enumerable.Empty<Diff>()
                 .Concat(classAndInterface.ImplementedInterfaces())
                 .Concat(classAndInterface.GenericConstraints())
-                .Concat(classAndInterface.Methods(TypeType.Interface));
+                .Concat(classAndInterface.Methods(TypeType.Interface))
+                .Concat(classAndInterface.Properties(TypeType.Interface));
         }
     }
 }

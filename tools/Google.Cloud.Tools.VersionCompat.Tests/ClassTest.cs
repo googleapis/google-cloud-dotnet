@@ -114,12 +114,12 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Class
     public class ClassTest : TestBase
     {
         [Fact] public void NoChange() => TestNone();
-        [Fact(Skip = "Enable this test after ctors are dealt with properly")] public void ToStatic() => TestMajor(Cause.ClassModifierChanged);
+        [Fact] public void ToStatic() => TestMajor(Cause.ClassModifierChanged);
         [Fact] public void ToStaticNoCtor() => TestMajor(Cause.ClassModifierChanged);
         [Fact] public void ToAbstract() => TestMajor(Cause.ClassModifierChanged);
         [Fact] public void ToAbstractNoCtor() => TestNone();
         [Fact] public void ToSealed() => TestMajor(Cause.ClassModifierChanged);
-        [Fact(Skip = "Enable this test after ctors are dealt with properly")] public void FromStatic() => TestMinor(Cause.ClassModifierChanged);
+        [Fact] public void FromStatic() => TestMinor(Cause.ClassModifierChanged);
         [Fact] public void FromStaticNoCtor() => TestNone();
         [Fact] public void FromAbstract() => TestMinor(Cause.ClassModifierChanged);
         [Fact] public void FromAbstractNoCtor() => TestNone();
