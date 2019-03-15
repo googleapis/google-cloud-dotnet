@@ -49,8 +49,8 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         {
                             case TypeType.Class: typeDiffs = Class.Diffs(o, n); break;
                             case TypeType.Interface: typeDiffs = Interface.Diffs(o, n); break;
+                            case TypeType.Enum: typeDiffs = Enum.Diffs(o, n); break;
                             case TypeType.Delegate:
-                            case TypeType.Enum:
                             case TypeType.Struct:
                                 // TODO!
                                 typeDiffs = Enumerable.Empty<Diff>();
