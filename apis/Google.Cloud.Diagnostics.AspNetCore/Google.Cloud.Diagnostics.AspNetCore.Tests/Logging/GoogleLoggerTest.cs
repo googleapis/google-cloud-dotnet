@@ -57,8 +57,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             consumer = consumer ?? new Mock<IConsumer<LogEntry>>(MockBehavior.Strict).Object;
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.GlobalResource;
             logTarget = logTarget ?? s_defaultLogTarget;
-            LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, monitoredResource, retryOptions: retryOptions);
-            return new GoogleLogger(consumer, logTarget, options, _logName, s_clock, serviceProvider);
+            LoggerOptions options = LoggerOptions.Create(logLevel, LogName, labels, monitoredResource, retryOptions: retryOptions);
+            return new GoogleLogger(consumer, logTarget, options, LogName, s_clock, serviceProvider);
         }
 
         [Fact]
@@ -424,8 +424,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName);
-            logger.LogInformation(_logMessage);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName);
+            logger.LogInformation(LogMessage);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never);
         }
 
@@ -437,8 +437,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: _baseLogName, retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate));
-            Assert.Throws<ArgumentNullException>(() => logger.LogInformation(_logMessage));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName, retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate));
+            Assert.Throws<ArgumentNullException>(() => logger.LogInformation(LogMessage));
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never);
         }
 
