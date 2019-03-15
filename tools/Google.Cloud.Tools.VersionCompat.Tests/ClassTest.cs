@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using Xunit;
 
@@ -101,6 +102,15 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Class
     namespace GenericConstraintRemoved4.A { public class C<A> where A : IList<A> { } }
     namespace GenericConstraintRemoved4.B { public class C<A> { } }
 
+    namespace GenericConstraintChanged1.A { public class C<A> where A : IList<A> { } }
+    namespace GenericConstraintChanged1.B { public class C<A> where A : IEquatable<A> { } }
+
+    namespace GenericConstraintChanged2.A { public class C<A, B> where A : IList<A> { } }
+    namespace GenericConstraintChanged2.B { public class C<A, B> where A : IList<B> { } }
+
+    namespace GenericConstraintChanged3.A { public class C<A, B> where A : IList<A> where B : IList<A> { } }
+    namespace GenericConstraintChanged3.B { public class C<A, B> where A : IList<B> where B : IList<A> { } }
+
     public class ClassTest : TestBase
     {
         [Fact] public void NoChange() => TestNone();
@@ -127,5 +137,14 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Class
         [Fact] public void GenericConstraintAdded3() => TestMajor(Cause.TypeGenericConstraintChanged);
         [Fact] public void GenericConstraintAdded4() => TestMajor(Cause.TypeGenericConstraintChanged);
         [Fact] public void GenericConstraintRemoved1() => TestMinor(Cause.TypeGenericConstraintChanged);
+        [Fact] public void GenericConstraintRemoved2() => TestMinor(Cause.TypeGenericConstraintChanged);
+        [Fact] public void GenericConstraintRemoved3() => TestMinor(Cause.TypeGenericConstraintChanged);
+        [Fact] public void GenericConstraintRemoved4() => TestMinor(Cause.TypeGenericConstraintChanged);
+        [Fact] public void GenericConstraintChanged1() => Test()
+            ((Level.Major, Cause.TypeGenericConstraintChanged), (Level.Minor, Cause.TypeGenericConstraintChanged));
+        [Fact] public void GenericConstraintChanged2() => Test()
+            ((Level.Major, Cause.TypeGenericConstraintChanged), (Level.Minor, Cause.TypeGenericConstraintChanged));
+        [Fact] public void GenericConstraintChanged3() => Test()
+            ((Level.Major, Cause.TypeGenericConstraintChanged), (Level.Minor, Cause.TypeGenericConstraintChanged));
     }
 }
