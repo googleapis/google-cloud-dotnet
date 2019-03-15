@@ -85,6 +85,22 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             }
         }
 
+        private IEnumerable<Diff> MethodModifiers(MethodDefinition o, MethodDefinition n, Cause cause, string prefix)
+        {
+            if ((o.IsVirtual && !n.IsVirtual) ||
+                (!o.IsAbstract && n.IsAbstract) ||
+                (!o.IsFinal && n.IsFinal))
+            {
+                yield return Diff.Major(cause, $"{prefix} modifiers changed from '{o.ShowModifiers()}' to '{n.ShowModifiers()}'.");
+            }
+            if ((!o.IsVirtual && n.IsVirtual) ||
+                (o.IsAbstract && !n.IsAbstract) ||
+                (o.IsFinal && !n.IsFinal))
+            {
+                yield return Diff.Minor(cause, $"{prefix} modifers changed from '{o.ShowModifiers()}' to '{n.ShowModifiers()}'.");
+            }
+        }
+
         public IEnumerable<Diff> Methods(TypeType typeType)
         {
             var oMethods = _o.Methods.Where(x => !x.IsGetter && !x.IsSetter).ToImmutableHashSet(SameMethodComparer.Instance);
@@ -93,7 +109,7 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
             {
                 var inO = oMethods.TryGetValue(method, out var o);
                 var inN = nMethods.TryGetValue(method, out var n);
-                string ShowPrefix() => $"{_o.TypeType().Show()} '{_o.Show()}'; method '{o.Show()}'";
+                var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; method '{o.Show()}'";
                 if (inO && inN && o.IsExported() && n.IsExported())
                 {
                     if (typeType == TypeType.Class)
@@ -101,35 +117,38 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         // Method present and exported in both types.
                         if (o.IsStatic && !n.IsStatic)
                         {
-                            yield return Diff.Major(Cause.MethodMadeNonStatic, $"{ShowPrefix()} made non-static.");
+                            yield return Diff.Major(Cause.MethodMadeNonStatic, $"{prefix} made non-static.");
                         }
                         else if (!o.IsStatic && n.IsStatic)
                         {
-                            yield return Diff.Major(Cause.MethodMadeStatic, $"{ShowPrefix()} made static.");
+                            yield return Diff.Major(Cause.MethodMadeStatic, $"{prefix} made static.");
                         }
                         else
                         {
-                            // TODO: Abstract/virtual/sealed
+                            foreach (var diff in MethodModifiers(o, n, Cause.MethodModifierChanged, prefix))
+                            {
+                                yield return diff;
+                            }
                         }
                     }
                     if (!SameTypeComparer.Instance.Equals(o.ReturnType, n.ReturnType))
                     {
-                        yield return Diff.Major(Cause.MethodReturnTypeChanged, $"{ShowPrefix()} return type changed to '{n.ReturnType.Show()}'.");
+                        yield return Diff.Major(Cause.MethodReturnTypeChanged, $"{prefix} return type changed to '{n.ReturnType.Show()}'.");
                     }
                     foreach (var (oParam, nParam) in o.Parameters.Zip(n.Parameters))
                     {
                         if (oParam.Name != nParam.Name)
                         {
                             yield return Diff.Major(Cause.MethodParameterNameChanged,
-                                $"{ShowPrefix()} parameter name changed from '{oParam.Name}' to '{nParam.Name}'.");
+                                $"{prefix} parameter name changed from '{oParam.Name}' to '{nParam.Name}'.");
                         }
                         if (oParam.IsIn != nParam.IsIn || oParam.IsOut != nParam.IsOut)
                         {
                             yield return Diff.Major(Cause.MethodParameterInOutChanged,
-                                $"{ShowPrefix()} parameter '{oParam.Name}' changed from '{oParam.ShowInOut()}' to '{nParam.ShowInOut()}'.");
+                                $"{prefix} parameter '{oParam.Name}' changed from '{oParam.ShowInOut()}' to '{nParam.ShowInOut()}'.");
                         }
                     }
-                    foreach (var diff in GenericConstraints(isType: false, ShowPrefix(), o.GenericParameters, n.GenericParameters))
+                    foreach (var diff in GenericConstraints(isType: false, prefix, o.GenericParameters, n.GenericParameters))
                     {
                         yield return diff;
                     }
@@ -140,15 +159,73 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                     if (inO && o.IsExported())
                     {
                         yield return inN ?
-                            Diff.Major(Cause.MethodMadeNotExported, $"{ShowPrefix()} made non-public.") :
-                            Diff.Major(Cause.MethodRemoved, $"{ShowPrefix()} removed.");
+                            Diff.Major(Cause.MethodMadeNotExported, $"{prefix} made non-public.") :
+                            Diff.Major(Cause.MethodRemoved, $"{prefix} removed.");
                     }
                     else if (inN && n.IsExported())
                     {
                         var diff = typeType == TypeType.Class ? (Func<Cause, string, Diff>)Diff.Minor : Diff.Major;
                         yield return inO ?
-                            diff(Cause.MethodMadeExported, $"{ShowPrefix()} made public.") :
-                            diff(Cause.MethodAdded, $"{ShowPrefix()} added.");
+                            diff(Cause.MethodMadeExported, $"{prefix} made public.") :
+                            diff(Cause.MethodAdded, $"{prefix} added.");
+                    }
+                }
+            }
+        }
+
+        public IEnumerable<Diff> Properties(TypeType typeType)
+        {
+            var oProps = _o.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
+            var nProps = _n.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
+            foreach (var prop in oProps.Union(nProps).OrderBy(x => x.FullName))
+            {
+                var inO = oProps.TryGetValue(prop, out var o);
+                var inN = nProps.TryGetValue(prop, out var n);
+                var prefix = $"{_o.TypeType().Show()} '{_o.Show()}'; property '{o.Show()}'";
+                if (inO && inN && o.IsExported() && n.IsExported())
+                {
+                    if (typeType == TypeType.Class)
+                    {
+                        // Property present and exported in both types.
+                        if (o.IsStatic() && !n.IsStatic())
+                        {
+                            yield return Diff.Major(Cause.PropertyMadeNonStatic, $"{prefix} made non-static.");
+                        }
+                        else if (!o.IsStatic() && n.IsStatic())
+                        {
+                            yield return Diff.Major(Cause.PropertyMadeStatic, $"{prefix} made static.");
+                        }
+                        else
+                        {
+                            var oMethod = o.GetMethod ?? o.SetMethod;
+                            var nMethod = n.GetMethod ?? n.SetMethod;
+                            foreach (var diff in MethodModifiers(oMethod, nMethod, Cause.PropertyModifierChanged, prefix))
+                            {
+                                yield return diff;
+                            }
+                        }
+                    }
+                    if (!SameTypeComparer.Instance.Equals(o.PropertyType, n.PropertyType))
+                    {
+                        yield return Diff.Major(Cause.PropertyTypeChanged, $"{prefix} return type changed to '{n.PropertyType.Show()}'.");
+                    }
+                    // No need to check parameter names, or in/out/ref.
+                    // TODO: changes of get/set visibility.
+                }
+                else
+                {
+                    // Presence/visibility changes.
+                    if (inO && o.IsExported())
+                    {
+                        yield return inN ?
+                            Diff.Major(Cause.PropertyMadeNotExported, $"{prefix} made non-public.") :
+                            Diff.Major(Cause.PropertyRemoved, $"{prefix} removed.");
+                    }
+                    else if (inN && n.IsExported())
+                    {
+                        yield return inO ?
+                            Diff.Minor(Cause.PropertyMadeExported, $"{prefix} made public.") :
+                            Diff.Minor(Cause.PropertyAdded, $"{prefix} added.");
                     }
                 }
             }

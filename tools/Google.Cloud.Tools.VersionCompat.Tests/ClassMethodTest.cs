@@ -84,6 +84,26 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
     namespace GenericConstraintChanged3.A { public class C { public void A<T, U>() where T : IList<T> where U : IList<T> { } } }
     namespace GenericConstraintChanged3.B { public class C { public void A<T, U>() where T : IList<U> where U : IList<T> { } } }
 
+    namespace MethodModiferChanged1.A { public abstract class C { public virtual int A() => 0; } }
+    namespace MethodModiferChanged1.B { public abstract class C { public int A() => 0; } }
+
+    namespace MethodModiferChanged2.A { public abstract class C { public virtual int A() => 0; } }
+    namespace MethodModiferChanged2.B { public abstract class C { public abstract int A(); } }
+
+    public abstract class Base { public abstract int A(); }
+
+    namespace MethodModiferChanged3.A { public abstract class C : Base { public override int A() => 0; } }
+    namespace MethodModiferChanged3.B { public abstract class C : Base { public sealed override int A() => 0; } }
+
+    namespace MethodModiferChanged4.A { public abstract class C { public int A() => 0; } }
+    namespace MethodModiferChanged4.B { public abstract class C { public virtual int A() => 0; } }
+
+    namespace MethodModiferChanged5.A { public abstract class C { public abstract int A(); } }
+    namespace MethodModiferChanged5.B { public abstract class C { public virtual int A() => 0; } }
+
+    namespace MethodModiferChanged6.A { public abstract class C : Base { public sealed override int A() => 0; } }
+    namespace MethodModiferChanged6.B { public abstract class C : Base { public override int A() => 0; } }
+
     public class ClassMethodTest : TestBase
     {
         [Fact] public void MethodAdded() => TestMinor(Cause.MethodAdded);
@@ -111,5 +131,11 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.ClassMethod
             ((Level.Major, Cause.MethodGenericConstraintChanged), (Level.Minor, Cause.MethodGenericConstraintChanged));
         [Fact] public void GenericConstraintChanged3() => Test()
             ((Level.Major, Cause.MethodGenericConstraintChanged), (Level.Minor, Cause.MethodGenericConstraintChanged));
+        [Fact] public void MethodModiferChanged1() => TestMajor(Cause.MethodModifierChanged);
+        [Fact] public void MethodModiferChanged2() => TestMajor(Cause.MethodModifierChanged);
+        [Fact] public void MethodModiferChanged3() => TestMajor(Cause.MethodModifierChanged);
+        [Fact] public void MethodModiferChanged4() => TestMinor(Cause.MethodModifierChanged);
+        [Fact] public void MethodModiferChanged5() => TestMinor(Cause.MethodModifierChanged);
+        [Fact] public void MethodModiferChanged6() => TestMinor(Cause.MethodModifierChanged);
     }
 }
