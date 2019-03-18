@@ -137,10 +137,13 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var query = new Query("syncqueries") { Filter = Filter.LessThan("x", 3) };
             var gql = new GqlQuery { QueryString = "SELECT * FROM syncqueries WHERE x < 3", AllowLiterals = true };
 
-            ValidateQueryResults(db.RunQuery(gql).Entities);
-            ValidateQueryResults(db.RunQuery(query).Entities);
-            ValidateQueryResults(db.RunQueryLazily(query));
-            ValidateQueryResults(db.RunQueryLazily(gql));
+            _fixture.RetryQuery(() =>
+            {
+                ValidateQueryResults(db.RunQuery(gql).Entities);
+                ValidateQueryResults(db.RunQuery(query).Entities);
+                ValidateQueryResults(db.RunQueryLazily(query));
+                ValidateQueryResults(db.RunQueryLazily(gql));
+            });
         }
 
         [Fact]
@@ -160,10 +163,13 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var query = new Query("asyncqueries") { Filter = Filter.LessThan("x", 3) };
             var gql = new GqlQuery { QueryString = "SELECT * FROM asyncqueries WHERE x < 3", AllowLiterals = true };
 
-            ValidateQueryResults((await db.RunQueryAsync(gql)).Entities);
-            ValidateQueryResults((await db.RunQueryAsync(query)).Entities);
-            ValidateQueryResults(db.RunQueryLazilyAsync(query).ToEnumerable());
-            ValidateQueryResults(db.RunQueryLazilyAsync(gql).ToEnumerable());
+            await _fixture.RetryQueryAsync(async () =>
+            {
+                ValidateQueryResults((await db.RunQueryAsync(gql)).Entities);
+                ValidateQueryResults((await db.RunQueryAsync(query)).Entities);
+                ValidateQueryResults(db.RunQueryLazilyAsync(query).ToEnumerable());
+                ValidateQueryResults(db.RunQueryLazilyAsync(gql).ToEnumerable());
+            });
         }
 
         [Fact]
@@ -392,10 +398,14 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             {
                 Projection = { "ts" }
             };
-            var results = db.RunQuery(query).Entities;
-            Assert.Equal(1, results.Count);
-            Assert.Equal(sampleTimestamp, results[0]["ts"].ToDateTimeFromProjection());
-            Assert.Equal((DateTimeOffset) sampleTimestamp, results[0]["ts"].ToDateTimeOffsetFromProjection());
+
+            _fixture.RetryQuery(() =>
+            {
+                var results = db.RunQuery(query).Entities;
+                Assert.Equal(1, results.Count);
+                Assert.Equal(sampleTimestamp, results[0]["ts"].ToDateTimeFromProjection());
+                Assert.Equal((DateTimeOffset)sampleTimestamp, results[0]["ts"].ToDateTimeOffsetFromProjection());
+            });
         }
     }
 }
