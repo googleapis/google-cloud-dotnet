@@ -14,6 +14,8 @@
 using Google.Cloud.ClientTesting;
 using System;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Datastore.V1.IntegrationTests
@@ -25,6 +27,9 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
     [CollectionDefinition(nameof(DatastoreFixture))]
     public sealed class DatastoreFixture : CloudProjectFixtureBase, ICollectionFixture<DatastoreFixture>
     {
+        private const int RetryCount = 10;
+        private static readonly TimeSpan RetryDelay = TimeSpan.FromSeconds(3);
+
         public string NamespaceId { get; }
         public PartitionId PartitionId => new PartitionId { ProjectId = ProjectId, NamespaceId = NamespaceId };
 
@@ -42,6 +47,44 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var response = client.RunQuery(new RunQueryRequest { ProjectId = ProjectId, PartitionId = PartitionId, Query = query });
             var deletions = response.Batch.EntityResults.Select(entityResult => entityResult.Entity.ToDelete());
             client.Commit(ProjectId, CommitRequest.Types.Mode.NonTransactional, deletions);
+        }
+
+        // Helper methods to retry query operations. Global queries are eventually consistent, so we retry queries for a short while.
+        // (Most of the time the results are valid immediately anyway, in practice.)
+        public void RetryQuery(Action check)
+        {
+            int attempt = 0;
+            while (true)
+            {
+                try
+                {
+                    check();
+                    return;
+                }
+                catch (Exception) when (attempt < RetryCount)
+                {
+                    attempt++;
+                    Thread.Sleep(RetryDelay);
+                }
+            }
+        }
+
+        public async Task RetryQueryAsync(Func<Task> check)
+        {
+            int attempt = 0;
+            while (true)
+            {
+                try
+                {
+                    await check().ConfigureAwait(false);
+                    return;
+                }
+                catch (Exception) when (attempt < RetryCount)
+                {
+                    attempt++;
+                    await Task.Delay(RetryDelay);
+                }
+            }
         }
     }
 }
