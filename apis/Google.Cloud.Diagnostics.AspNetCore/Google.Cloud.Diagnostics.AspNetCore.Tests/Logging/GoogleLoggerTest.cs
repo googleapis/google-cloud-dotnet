@@ -57,7 +57,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             consumer = consumer ?? new Mock<IConsumer<LogEntry>>(MockBehavior.Strict).Object;
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.GlobalResource;
             logTarget = logTarget ?? s_defaultLogTarget;
-            LoggerOptions options = LoggerOptions.Create(logLevel, LogName, labels, monitoredResource, retryOptions: retryOptions);
+            LoggerOptions options = LoggerOptions.Create(logLevel, logName, labels, monitoredResource, retryOptions: retryOptions);
             return new GoogleLogger(consumer, logTarget, options, LogName, s_clock, serviceProvider);
         }
 
