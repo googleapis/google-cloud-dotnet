@@ -1,23 +1,14 @@
 env:
-- API_REGEX='Google\.Cloud\.[A-L].*'
-- API_REGEX='Google\.Cloud\.[M-Z].*'
-# List non-Cloud APIs here
-- API_REGEX='Google\.LongRunning'
 language: csharp
 mono: none
 dotnet: 2.2.104
 dist: xenial
 
-# Install the .NET Core 1.0 runtime as that's what we test against
-addons:
-  apt:
-    sources:
-    - sourceline: 'deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main'
-      key_url: 'https://packages.microsoft.com/keys/microsoft.asc'
-    packages:
-    - dotnet-sharedframework-microsoft.netcore.app-1.0.5
-
 script:
-  - touch build_timing_log.txt
-  - ./build.sh --diff --regex $API_REGEX
-  - ./processbuildtiminglog.sh
+  - curl -L https://www.nuget.org/api/v2/package/Google.Protobuf.Tools/3.7.0 --output Google.Protobuf.Tools.3.7.0.nupkg
+  - unzip -d protobuf Google.Protobuf.Tools.3.7.0.nupkg
+  - chmod +x protobuf/tools/linux_x64/protoc
+  - protobuf/tools/linux_x64/protoc -I storage/v1 --csharp_out=storage/v1/validation/ storage/v1/test.proto
+  - dotnet build storage/v1/validation
+  - dotnet run -p storage/v1/validation -- storage/v1/*.json
+

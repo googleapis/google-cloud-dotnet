@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package storage.v1.tests;
+
+message TestFile {
+  repeated SigningV4Test signing_v4_tests = 1;
+}
+
+message ValueList {
+  repeated string values = 1;
+}
+
+message SigningV4Test {
+  string fileName = 1;
+  string description = 2;
+  string bucket = 3;
+  string object = 4;
+  string method = 5;
+  int64 expiration = 6;
+  string timestamp = 7;
+  string expectedUrl = 8;
+  map<string, ValueList> headers = 9;
+}
