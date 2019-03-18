@@ -14,6 +14,7 @@ New features since 2.0.0:
 - Convenience extension method for registering Google Diagnostics in `Microsoft.AspNetCore.Hosting.IWebHostBuilder`.
 - By default all log entries are stored in one single log on Stackdriver.
 - Add trace IDs to log entries if they are available.
+- Optionally write out log target information to a TextWriter on initialization
 
 # 2.0.0, 2017-11-27
 
