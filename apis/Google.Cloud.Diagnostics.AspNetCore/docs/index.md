@@ -105,11 +105,11 @@ what might be happening. This feature should only be activated as a one off, if 
 to find your logs in the GCP Console, and not as a permanent feature in production code. To deactivate this feature
 simply stop passing a `System.IO.TextWriter` as part of the options when creating a Google Logger.
 
-#### Finding out the UR: where logs are written
+#### Finding out the URL where logs are written
 
 {{sample:Logging.RegisterGoogleLoggerWriteUrl}}
 
-#### Finding out the UR: where logs are written (ASP.NET Core 2.0+)
+#### Finding out the URL where logs are written (ASP.NET Core 2.0+)
 
 {{sample:Logging.RegisterGoogleLoggerWriteUrl2}}
 
