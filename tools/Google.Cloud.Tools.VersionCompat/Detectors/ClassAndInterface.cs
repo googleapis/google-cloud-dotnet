@@ -141,11 +141,9 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         }
                         else
                         {
-                            foreach (var diff in MethodModifiers(o, n, Cause.MethodModifierChanged, prefix))
-                            {
-                                yield return diff;
-                            }
-                            foreach (var diff in MethodAccessModifiers(o, n, Cause.MethodAccessModifierChanged, prefix))
+                            var diffs = MethodModifiers(o, n, Cause.MethodModifierChanged, prefix)
+                                .Concat(MethodAccessModifiers(o, n, Cause.MethodAccessModifierChanged, prefix));
+                            foreach (var diff in diffs)
                             {
                                 yield return diff;
                             }
@@ -217,17 +215,10 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                         }
                         else
                         {
-                            var oMethod = o.GetMethod ?? o.SetMethod;
-                            var nMethod = n.GetMethod ?? n.SetMethod;
-                            foreach (var diff in MethodModifiers(oMethod, nMethod, Cause.PropertyModifierChanged, prefix))
-                            {
-                                yield return diff;
-                            }
-                            foreach (var diff in MethodAccessModifiers(o.GetMethod, n.GetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} getter"))
-                            {
-                                yield return diff;
-                            }
-                            foreach (var diff in MethodAccessModifiers(o.SetMethod, n.SetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} setter"))
+                            var diffs = MethodModifiers(o.GetMethod ?? o.SetMethod, n.GetMethod ?? n.SetMethod, Cause.PropertyModifierChanged, prefix)
+                                .Concat(MethodAccessModifiers(o.GetMethod, n.GetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} getter"))
+                                .Concat(MethodAccessModifiers(o.SetMethod, n.SetMethod, Cause.PropertyAccessModifierChanged, $"{prefix} setter"));
+                            foreach (var diff in diffs)
                             {
                                 yield return diff;
                             }
