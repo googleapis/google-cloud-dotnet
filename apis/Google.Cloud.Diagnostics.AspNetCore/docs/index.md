@@ -100,7 +100,7 @@ when creating a Google Logger. Whenever a Google Logger is created, the URL wher
 will be written to the given text writer.
 
 Please note that since this is a Google Logger diagnostics feature, we don't respect settings for exception
-handling, i.e. we propogate any exception thrown while writing the URL to the given text writer so you know
+handling, i.e. we propagate any exception thrown while writing the URL to the given text writer so you know
 what might be happening. This feature should only be activated as a one off, if you are having trouble trying
 to find your logs in the GCP Console, and not as a permanent feature in production code. To deactivate this feature
 simply stop passing a `System.IO.TextWriter` as part of the options when creating a Google Logger.
