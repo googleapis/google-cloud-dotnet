@@ -78,5 +78,26 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
 
         public static string ShowInOut(this ParameterDefinition param) =>
             param.IsIn && param.IsOut ? "ref" : param.IsIn ? "in" : param.IsOut ? "out" : "<none>";
+
+        public static string ShowModifiers(this MethodDefinition method)
+        {
+            var oav = method.IsReuseSlot ? "override" :
+                method.IsAbstract ? "abstract" :
+                method.IsVirtual ? "virtual" :
+                "<none>";
+            var seal = method.IsFinal ? "sealed " : "";
+            return seal + oav;
+        }
+
+        public static string ShowAccessModifier(this MethodDefinition method) =>
+            method == null ? "<not present>" :
+            method.IsPublic ? "public" :
+            method.IsPrivate ? "private" :
+            method.IsFamily ? "protected" :
+            method.IsAssembly ? "internal" :
+            method.IsFamilyOrAssembly ? "protected internal" :
+            method.IsFamilyAndAssembly ? "private protected" :
+            method.IsCompilerControlled ? "<compiler controlled>" :
+            "<unknown>";
     }
 }

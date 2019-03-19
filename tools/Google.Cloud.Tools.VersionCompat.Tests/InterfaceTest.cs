@@ -34,6 +34,12 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Interface
     namespace MethodRemoved.A { public interface I { void M(); } }
     namespace MethodRemoved.B { public interface I { } }
 
+    namespace PropertyAdded.A { public interface I { } }
+    namespace PropertyAdded.B { public interface I { int P { get; } } }
+
+    namespace PropertyRemoved.A { public interface I { int P { get; } } }
+    namespace PropertyRemoved.B { public interface I { } }
+
     namespace ReturnTypeChanged1.A { public interface I { void A(); } }
     namespace ReturnTypeChanged1.B { public interface I { int A(); } }
 
@@ -56,6 +62,8 @@ namespace Google.Cloud.Tools.VersionCompat.Tests.Interface
         [Fact] public void InterfaceRemoved() => TestMajor(Cause.TypeImplementedInterfaceRemoved);
         [Fact] public void MethodAdded() => TestMajor(Cause.MethodAdded);
         [Fact] public void MethodRemoved() => TestMajor(Cause.MethodRemoved);
+        [Fact] public void PropertyAdded() => TestMajor(Cause.PropertyAdded);
+        [Fact] public void PropertyRemoved() => TestMajor(Cause.PropertyRemoved);
         [Fact] public void ReturnTypeChanged1() => TestMajor(Cause.MethodReturnTypeChanged);
         [Fact] public void ReturnTypeChanged2() => TestMajor(Cause.MethodReturnTypeChanged);
         [Fact] public void ParamNameChanged() => TestMajor(Cause.MethodParameterNameChanged);

@@ -74,6 +74,6 @@ namespace Google.Cloud.Tools.VersionCompat.CecilUtils
             throw new InvalidOperationException($"What is type: '{type.FullName}'?");
         }
 
-        public static bool IsStatic(this PropertyDefinition prop) => prop.GetMethod?.IsStatic ?? prop.SetMethod.IsStatic;
+        public static bool IsStatic(this PropertyDefinition prop) => (prop.GetMethod ?? prop.SetMethod).IsStatic;
     }
 }

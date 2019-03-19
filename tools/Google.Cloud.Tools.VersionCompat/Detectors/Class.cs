@@ -27,13 +27,14 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
         {
             var cls = new Class(o, n);
             var classAndInterface = new ClassAndInterface(o, n);
+            // TODO: Check (instance) constructors
             return Enumerable.Empty<Diff>()
                 .Concat(cls.SealedAbstractStatic())
                 .Concat(cls.BaseType())
                 .Concat(classAndInterface.ImplementedInterfaces())
                 .Concat(classAndInterface.GenericConstraints())
                 .Concat(classAndInterface.Methods(TypeType.Class))
-                .Concat(cls.Properties());
+                .Concat(classAndInterface.Properties(TypeType.Class));
         }
 
         private Class(TypeDefinition o, TypeDefinition n) => (_o, _n) = (o, n);
@@ -79,53 +80,6 @@ namespace Google.Cloud.Tools.VersionCompat.Detectors
                 else
                 {
                     yield return Diff.Major(Cause.ClassBaseClassChanged, $"Class '{_n.Show()} changed base-class from '{_o.BaseType.Show()}' to '{_n.BaseType.Show()}'");
-                }
-            }
-        }
-
-        private IEnumerable<Diff> Properties()
-        {
-            var oProps = _o.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
-            var nProps = _n.Properties.ToImmutableHashSet(SamePropertyComparer.Instance);
-            foreach (var prop in oProps.Union(nProps).OrderBy(x => x.FullName))
-            {
-                var inO = oProps.TryGetValue(prop, out var o);
-                var inN = nProps.TryGetValue(prop, out var n);
-                string ShowPrefix() => $"{_o.TypeType().Show()} '{_o.Show()}'; property '{o.Show()}'";
-                if (inO && inN && o.IsExported() && n.IsExported())
-                {
-                    // Property present and exported in both types.
-                    if (o.IsStatic() && !n.IsStatic())
-                    {
-                        yield return Diff.Major(Cause.PropertyMadeNonStatic, $"{ShowPrefix()} made non-static.");
-                    }
-                    else if (!o.IsStatic() && n.IsStatic())
-                    {
-                        yield return Diff.Major(Cause.PropertyMadeStatic, $"{ShowPrefix()} made static.");
-                    }
-                    if (!SameTypeComparer.Instance.Equals(o.PropertyType, n.PropertyType))
-                    {
-                        yield return Diff.Major(Cause.PropertyTypeChanged, $"{ShowPrefix()} return type changed to '{n.PropertyType.Show()}'.");
-                    }
-                    // No need to check parameter names, or in/out/ref.
-                    // TODO: abstract/virtual/sealed.
-                    // TODO: changes of get/set visibility.
-                }
-                else
-                {
-                    // Presence/visibility changes.
-                    if (inO && o.IsExported())
-                    {
-                        yield return inN ?
-                            Diff.Major(Cause.PropertyMadeNotExported, $"{ShowPrefix()} made non-public.") :
-                            Diff.Major(Cause.PropertyRemoved, $"{ShowPrefix()} removed.");
-                    }
-                    else if (inN && n.IsExported())
-                    {
-                        yield return inO ?
-                            Diff.Minor(Cause.PropertyMadeExported, $"{ShowPrefix()} made public.") :
-                            Diff.Minor(Cause.PropertyAdded, $"{ShowPrefix()} added.");
-                    }
                 }
             }
         }
