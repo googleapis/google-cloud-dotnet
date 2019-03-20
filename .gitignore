@@ -22,6 +22,7 @@ launchSettings.json
 tmp
 googleapis
 gapic-generator
+gapic-generator-csharp
 # Legacy name, still here to avoid suddenly adding it for
 # existing users
 toolkit
