@@ -192,6 +192,7 @@ generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
 generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 speech_v1.yaml
 generate_api Google.Cloud.Speech.V1P1Beta1 google/cloud/speech/v1p1beta1 speech_v1p1beta1.yaml
 generate_api Google.Cloud.Talent.V4Beta1 google/cloud/talent/v4beta1 talent_v4beta1.yaml
+generate_api Google.Cloud.Tasks.V2 google/cloud/tasks/v2 cloudtasks_v2.yaml
 generate_api Google.Cloud.Tasks.V2Beta2 google/cloud/tasks/v2beta2 cloudtasks_v2beta2.yaml
 generate_api Google.Cloud.Tasks.V2Beta3 google/cloud/tasks/v2beta3 cloudtasks_v2beta3.yaml
 generate_api Google.Cloud.TextToSpeech.V1 google/cloud/texttospeech/v1 tts_v1.yaml
