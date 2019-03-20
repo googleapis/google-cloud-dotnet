@@ -32,6 +32,14 @@ fetch_github_repos() {
       --config core.eol=lf
   fi
           
+  if [ -d "gapic-generator-csharp" ]
+  then
+    git -C gapic-generator-csharp pull -q
+    git -C gapic-generator-csharp submodule update
+  else
+    git clone --recursive https://github.com/googleapis/gapic-generator-csharp
+  fi
+
   if [ -d "googleapis" ]
   then
     git -C googleapis pull -q
@@ -39,6 +47,40 @@ fetch_github_repos() {
     # Auto-detect whether we're cloning the public or private googleapis repo.
     git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
     git clone --recursive https://github.com/googleapis/${repo} googleapis
+  fi
+}
+
+microgenerate_api() {
+  API_TMP_DIR=$OUTDIR/$1
+  PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$1
+  API_OUT_DIR=apis
+  API_SRC_DIR=googleapis/$2
+  
+  mkdir -p $PRODUCTION_PACKAGE_DIR
+  
+  echo "Generating $1 (micro-generator)"
+  
+  $PROTOC \
+    --csharp_out=$PRODUCTION_PACKAGE_DIR \
+    --grpc_out=$PRODUCTION_PACKAGE_DIR \
+    --gapic_out=$API_TMP_DIR \
+    -I googleapis \
+    -I $CORE_PROTOS_ROOT \
+    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
+    --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
+    $API_SRC_DIR/*.proto \
+    2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
+
+  # We generate our own project files
+  rm $(find tmp -name '*.csproj')
+  
+  # Copy the rest into the right place
+  cp -r $API_TMP_DIR $API_OUT_DIR
+
+  if [[ -f $API_OUT_DIR/$1/postgeneration.sh ]]
+  then
+    echo "Running post-generation script for $1"
+    (cd $API_OUT_DIR/$1; ./postgeneration.sh)
   fi
 }
 
@@ -126,6 +168,11 @@ GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 # won't be using Gradle at all by the end of 2018, with any luck...
 (cd gapic-generator; ./gradlew shadowJar --warning-mode=none)
 
+# Build the microgenerator
+# (This is disabled for now as we're not using it.)
+# (cd gapic-generator-csharp; dotnet publish -c Release --self-contained --runtime=win-x64 Google.Api.Generator)
+# declare -r GAPIC_PLUGIN=gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/win-x64/publish/Google.Api.Generator.exe
+
 OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
@@ -160,6 +207,8 @@ $PROTOC \
   googleapis/google/cloud/oslogin/common/*.proto
 
 # Now the per-API codegen
+
+# Legacy GAPIC generator
 generate_api Google.Cloud.Asset.V1 google/cloud/asset/v1 asset_v1.yaml
 generate_api Google.Cloud.Asset.V1Beta1 google/cloud/asset/v1beta1 asset_v1beta1.yaml
 generate_api Google.Cloud.BigQuery.DataTransfer.V1 google/cloud/bigquery/datatransfer/v1 datatransfer.yaml
@@ -201,3 +250,5 @@ generate_api Google.Cloud.Trace.V2 google/devtools/cloudtrace/v2 cloudtrace_v2.y
 generate_api Google.Cloud.VideoIntelligence.V1 google/cloud/videointelligence/v1 videointelligence_v1.yaml
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision_v1.yaml
 
+# Microgenerator
+# microgenerate_api Google.Cloud.Vision.V1 google/cloud/vision/v1
