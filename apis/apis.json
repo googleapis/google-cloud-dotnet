@@ -257,6 +257,9 @@
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
+      // Explicitly add dependencies for GAX so we have recent versions
+      "Google.Api.Gax": "default",
+      "Google.Api.Gax.Grpc": "default",
       "Google.Cloud.Logging.V2": "2.1.0",
       "Google.Cloud.Trace.V1": "1.0.0",
       "Grpc.Core": "default"
