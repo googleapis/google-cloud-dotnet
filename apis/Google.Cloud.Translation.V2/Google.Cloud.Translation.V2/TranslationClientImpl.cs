@@ -41,6 +41,10 @@ namespace Google.Cloud.Translation.V2
     /// </remarks>
     public sealed class TranslationClientImpl : TranslationClient
     {
+        // The Translate method doesn't use the format enum. While we could switch on it, it's simpler to hard-code the values it expects.
+        private const string HtmlFormat = "html";
+        private const string TextFormat = "text";
+
         private static readonly object _applicationNameLock = new object();
         private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(TranslationClient));
         private static Action<HttpRequestMessage> _versionHeaderAction = UserAgentHelper.CreateRequestModifier(typeof(TranslationClient));
@@ -95,8 +99,9 @@ namespace Google.Cloud.Translation.V2
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
-            var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Text, model);
+            var translateRequest = new TranslateTextRequest { Q = items, Target = targetLanguage };
+            var request = Service.Translations.Translate(translateRequest);
+            ModifyRequest(request, translateRequest, sourceLanguage, TextFormat, model);
             return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, request.Execute());
         }
 
@@ -105,8 +110,9 @@ namespace Google.Cloud.Translation.V2
         {
             var items = ConvertToListAndCheckNoNullElements(htmlItems, nameof(htmlItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
-            var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Html, model);
+            var translateRequest = new TranslateTextRequest { Q = items, Target = targetLanguage };
+            var request = Service.Translations.Translate(translateRequest);
+            ModifyRequest(request, translateRequest, sourceLanguage, HtmlFormat, model);
             return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, request.Execute());
         }
 
@@ -135,8 +141,9 @@ namespace Google.Cloud.Translation.V2
         {
             var items = ConvertToListAndCheckNoNullElements(textItems, nameof(textItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
-            var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Text, model);
+            var translateRequest = new TranslateTextRequest { Q = items, Target = targetLanguage };
+            var request = Service.Translations.Translate(translateRequest);
+            ModifyRequest(request, translateRequest, sourceLanguage, TextFormat, model);
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, response);
         }
@@ -147,8 +154,9 @@ namespace Google.Cloud.Translation.V2
         {
             var items = ConvertToListAndCheckNoNullElements(htmlItems, nameof(htmlItems));
             GaxPreconditions.CheckNotNull(targetLanguage, nameof(targetLanguage));
-            var request = Service.Translations.List(new Repeatable<string>(items), targetLanguage);
-            ModifyRequest(request, sourceLanguage, FormatEnum.Html, model);
+            var translateRequest = new TranslateTextRequest { Q = items, Target = targetLanguage };
+            var request = Service.Translations.Translate(translateRequest);
+            ModifyRequest(request, translateRequest, sourceLanguage, HtmlFormat, model);
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return UnpackTranslationResponse(items, sourceLanguage, targetLanguage, response);
         }
@@ -209,12 +217,12 @@ namespace Google.Cloud.Translation.V2
                 .ToList();
         }
 
-        private void ModifyRequest(ListRequest request, string sourceLanguage, FormatEnum format, TranslationModel? model)
+        private void ModifyRequest(TranslateRequest request, TranslateTextRequest body, string sourceLanguage, string format, TranslationModel? model)
         {
             request.ModifyRequest += _versionHeaderAction;
-            request.Source = sourceLanguage;
-            request.Format = format;
-            request.Model = GetEffectiveModelName(model);
+            body.Source = sourceLanguage;
+            body.Format = format;
+            body.Model = GetEffectiveModelName(model);
         }
 
         private string GetEffectiveModelName(TranslationModel? model)

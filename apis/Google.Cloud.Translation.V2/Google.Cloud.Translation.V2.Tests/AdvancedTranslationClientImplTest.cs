@@ -86,8 +86,13 @@ namespace Google.Cloud.Translation.V2.Tests
             var service = new FakeTranslateService();
             var client = new AdvancedTranslationClientImpl(service);
             var inputs = new string[] { "a", "b" };
-            var request = service.Translations.List(new Repeatable<string>(inputs), "en");
-            request.Format = FormatEnum.Text;
+            var body = new TranslateTextRequest
+            {
+                Q = inputs,
+                Format = "text",
+                Target = "en"
+            };
+            var request = service.Translations.Translate(body);
             var response = new TranslationsListResponse
             {
                 // Content is irrelevant; we shouldn't get that far

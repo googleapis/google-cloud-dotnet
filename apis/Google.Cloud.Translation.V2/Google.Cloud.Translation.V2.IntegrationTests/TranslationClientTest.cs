@@ -14,6 +14,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using Xunit;
 
@@ -22,6 +23,8 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
     public class TranslationClientTest
     {
         private static readonly string LargeText = LoadResource("independence.txt");
+        private const int ApiLimit = 100 * 1024;
+        private static readonly string VeryLargeText = string.Join("\n", Enumerable.Repeat(LargeText, ApiLimit / LargeText.Length));
 
         [Fact]
         public void DetectLanguage_LargeText()
@@ -38,6 +41,18 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
             var translation = client.TranslateText(LargeText, LanguageCodes.French);
             Assert.Contains("au cours d", translation.TranslatedText);
             Assert.Equal(LargeText, translation.OriginalText);
+            Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
+            Assert.Equal(LanguageCodes.English, translation.DetectedSourceLanguage);
+            Assert.Null(translation.SpecifiedSourceLanguage);
+        }
+
+        [Fact]
+        public void Translate_VeryLargeText()
+        {
+            var client = TranslationClient.Create();
+            var translation = client.TranslateText(VeryLargeText, LanguageCodes.French);
+            Assert.Contains("au cours d", translation.TranslatedText);
+            Assert.Equal(VeryLargeText, translation.OriginalText);
             Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
             Assert.Equal(LanguageCodes.English, translation.DetectedSourceLanguage);
             Assert.Null(translation.SpecifiedSourceLanguage);

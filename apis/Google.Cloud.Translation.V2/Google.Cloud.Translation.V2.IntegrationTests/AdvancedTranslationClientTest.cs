@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Translation.V2.IntegrationTests
@@ -19,6 +20,8 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
     public class AdvancedTranslationClientTest
     {
         private static readonly string LargeText = TranslationClientTest.LoadResource("independence.txt");
+        private const int ApiLimit = 100 * 1024;
+        private static readonly string VeryLargeText = string.Join("\n", Enumerable.Repeat(LargeText, ApiLimit / LargeText.Length));
 
         [Fact]
         public void DetectLanguage_LargeText()
@@ -33,6 +36,14 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         {
             var client = AdvancedTranslationClient.Create();
             var translation = client.TranslateText(LargeText, LanguageCodes.French);
+            Assert.Contains("au cours d", translation.TranslatedText);
+        }
+
+        [Fact]
+        public void Translate_VeryLargeText()
+        {
+            var client = AdvancedTranslationClient.Create();
+            var translation = client.TranslateText(VeryLargeText, LanguageCodes.French);
             Assert.Contains("au cours d", translation.TranslatedText);
         }
 
