@@ -1,0 +1,205 @@
+diff --git b/apis/Google.Cloud.Asset.V1/Google.Cloud.Asset.V1.Snippets/AssetServiceClientSnippets.g.cs a/apis/Google.Cloud.Asset.V1/Google.Cloud.Asset.V1.Snippets/AssetServiceClientSnippets.g.cs
+index a25a9b550..679dbff24 100644
+--- b/apis/Google.Cloud.Asset.V1/Google.Cloud.Asset.V1.Snippets/AssetServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.Asset.V1/Google.Cloud.Asset.V1.Snippets/AssetServiceClientSnippets.g.cs
+@@ -18,6 +18,7 @@ namespace Google.Cloud.Asset.V1.Snippets
+ {
+     using Google.Api.Gax;
+     using Google.Api.Gax.Grpc;
++    using Google.Api.Gax.ResourceNames;
+     using apis = Google.Cloud.Asset.V1;
+     using Google.LongRunning;
+     using Google.Protobuf;
+diff --git b/apis/Google.Cloud.Asset.V1Beta1/Google.Cloud.Asset.V1Beta1.Snippets/AssetServiceClientSnippets.g.cs a/apis/Google.Cloud.Asset.V1Beta1/Google.Cloud.Asset.V1Beta1.Snippets/AssetServiceClientSnippets.g.cs
+index 131f76293..2cc45eb39 100644
+--- b/apis/Google.Cloud.Asset.V1Beta1/Google.Cloud.Asset.V1Beta1.Snippets/AssetServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.Asset.V1Beta1/Google.Cloud.Asset.V1Beta1.Snippets/AssetServiceClientSnippets.g.cs
+@@ -18,6 +18,7 @@ namespace Google.Cloud.Asset.V1Beta1.Snippets
+ {
+     using Google.Api.Gax;
+     using Google.Api.Gax.Grpc;
++    using Google.Api.Gax.ResourceNames;
+     using apis = Google.Cloud.Asset.V1Beta1;
+     using Google.LongRunning;
+     using Google.Protobuf;
+diff --git b/apis/Google.Cloud.BigQuery.DataTransfer.V1/Google.Cloud.BigQuery.DataTransfer.V1.Snippets/DataTransferServiceClientSnippets.g.cs a/apis/Google.Cloud.BigQuery.DataTransfer.V1/Google.Cloud.BigQuery.DataTransfer.V1.Snippets/DataTransferServiceClientSnippets.g.cs
+index eafd1daeb..c1259e9ec 100644
+--- b/apis/Google.Cloud.BigQuery.DataTransfer.V1/Google.Cloud.BigQuery.DataTransfer.V1.Snippets/DataTransferServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.BigQuery.DataTransfer.V1/Google.Cloud.BigQuery.DataTransfer.V1.Snippets/DataTransferServiceClientSnippets.g.cs
+@@ -18,6 +18,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
+ {
+     using Google.Api.Gax;
+     using Google.Api.Gax.Grpc;
++    using Google.Api.Gax.ResourceNames;
+     using apis = Google.Cloud.BigQuery.DataTransfer.V1;
+     using Google.Protobuf;
+     using Google.Protobuf.WellKnownTypes;
+diff --git b/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Snippets/ClusterManagerClientSnippets.g.cs a/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Snippets/ClusterManagerClientSnippets.g.cs
+index d14d66c9c..8f0b68670 100644
+--- b/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Snippets/ClusterManagerClientSnippets.g.cs
++++ a/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Snippets/ClusterManagerClientSnippets.g.cs
+@@ -14,6 +14,11 @@
+ 
+ // Generated code. DO NOT EDIT!
+ 
++// Ignore obsolete members within this file.
++// This is currently a hand-written addition to the generated file, until the
++// generator includes it automatically.
++#pragma warning disable CS0612 // Type or member is obsolete
++
+ namespace Google.Cloud.Container.V1.Snippets
+ {
+     using Google.Api.Gax;
+diff --git b/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Tests/ClusterManagerClientTest.g.cs a/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Tests/ClusterManagerClientTest.g.cs
+index 35813ce7d..0acdfb11c 100644
+--- b/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Tests/ClusterManagerClientTest.g.cs
++++ a/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1.Tests/ClusterManagerClientTest.g.cs
+@@ -14,6 +14,11 @@
+ 
+ // Generated code. DO NOT EDIT!
+ 
++// Ignore obsolete members within this file.
++// This is currently a hand-written addition to the generated file, until the
++// generator includes it automatically.
++#pragma warning disable CS0612 // Type or member is obsolete
++
+ namespace Google.Cloud.Container.V1.Tests
+ {
+     using Google.Api.Gax;
+diff --git b/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1/ClusterManagerClient.cs a/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1/ClusterManagerClient.cs
+index a780039a4..5819599b7 100644
+--- b/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1/ClusterManagerClient.cs
++++ a/apis/Google.Cloud.Container.V1/Google.Cloud.Container.V1/ClusterManagerClient.cs
+@@ -14,6 +14,11 @@
+ 
+ // Generated code. DO NOT EDIT!
+ 
++// Ignore obsolete members within this file.
++// This is currently a hand-written addition to the generated file, until the
++// generator includes it automatically.
++#pragma warning disable CS0612 // Type or member is obsolete
++
+ using gax = Google.Api.Gax;
+ using gaxgrpc = Google.Api.Gax.Grpc;
+ using pb = Google.Protobuf;
+diff --git b/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs a/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs
+index 508541ed1..4edf92fd1 100644
+--- b/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs
+@@ -18,6 +18,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
+ {
+     using Google.Api.Gax;
+     using Google.Api.Gax.Grpc;
++    using Google.Api.Gax.ResourceNames;
+     using apis = Google.Cloud.Dlp.V2;
+     using Google.Protobuf;
+     using Google.Protobuf.WellKnownTypes;
+diff --git b/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2.Snippets/IncidentServiceClientSnippets.g.cs a/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2.Snippets/IncidentServiceClientSnippets.g.cs
+index 29e5f1a8d..0892d6303 100644
+--- b/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2.Snippets/IncidentServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2.Snippets/IncidentServiceClientSnippets.g.cs
+@@ -23,7 +23,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
+     using Google.Protobuf;
+     using Google.Protobuf.WellKnownTypes;
+     using Grpc.Core;
+-    using SearchSimilarIncidentsResponse.Types;
++    using static SearchSimilarIncidentsResponse.Types;
+     using System;
+     using System.Collections;
+     using System.Collections.Generic;
+diff --git b/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2/IncidentServiceClient.cs a/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2/IncidentServiceClient.cs
+index 54635ebce..cb450d01b 100644
+--- b/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2/IncidentServiceClient.cs
++++ a/apis/Google.Cloud.Irm.V1Alpha2/Google.Cloud.Irm.V1Alpha2/IncidentServiceClient.cs
+@@ -20,7 +20,6 @@ using gaxres = Google.Api.Gax.ResourceNames;
+ using pb = Google.Protobuf;
+ using pbwkt = Google.Protobuf.WellKnownTypes;
+ using grpccore = Grpc.Core;
+-using st = SearchSimilarIncidentsResponse.Types;
+ using sys = System;
+ using sc = System.Collections;
+ using scg = System.Collections.Generic;
+diff --git b/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1.Snippets/SecurityCenterClientSnippets.g.cs a/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1.Snippets/SecurityCenterClientSnippets.g.cs
+index e52ec80f4..3e82acb81 100644
+--- b/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1.Snippets/SecurityCenterClientSnippets.g.cs
++++ a/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1.Snippets/SecurityCenterClientSnippets.g.cs
+@@ -24,8 +24,8 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
+     using Google.Protobuf;
+     using Google.Protobuf.WellKnownTypes;
+     using Grpc.Core;
+-    using ListAssetsResponse.Types;
+-    using ListFindingsResponse.Types;
++    using static ListAssetsResponse.Types;
++    using static ListFindingsResponse.Types;
+     using System;
+     using System.Collections;
+     using System.Collections.Generic;
+diff --git b/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1/SecurityCenterClient.cs a/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1/SecurityCenterClient.cs
+index e8cef134a..93ef0a532 100644
+--- b/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1/SecurityCenterClient.cs
++++ a/apis/Google.Cloud.SecurityCenter.V1/Google.Cloud.SecurityCenter.V1/SecurityCenterClient.cs
+@@ -21,8 +21,6 @@ using lro = Google.LongRunning;
+ using pb = Google.Protobuf;
+ using pbwkt = Google.Protobuf.WellKnownTypes;
+ using grpccore = Grpc.Core;
+-using lt = ListAssetsResponse.Types;
+-using lt = ListFindingsResponse.Types;
+ using sys = System;
+ using sc = System.Collections;
+ using scg = System.Collections.Generic;
+diff --git b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs
+index 400b4498d..d231dddad 100644
+--- b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs
++++ a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs
+@@ -29,6 +29,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
+     using System.Linq;
+     using System.Threading;
+     using System.Threading.Tasks;
++    using Google.Api.Gax.ResourceNames;
+ 
+     /// <summary>Generated snippets</summary>
+     public class GeneratedCompletionClientSnippets
+diff --git b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs
+index 4a0839037..7b9c19f4b 100644
+--- b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs
+@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
+     using Google.Protobuf;
+     using Google.Protobuf.WellKnownTypes;
+     using Grpc.Core;
+-    using SearchJobsResponse.Types;
++    using static SearchJobsResponse.Types;
+     using System;
+     using System.Collections;
+     using System.Collections.Generic;
+diff --git b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs
+index bf6b1dda4..6de20bdae 100644
+--- b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs
++++ a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs
+@@ -20,7 +20,6 @@ using gaxres = Google.Api.Gax.ResourceNames;
+ using pb = Google.Protobuf;
+ using pbwkt = Google.Protobuf.WellKnownTypes;
+ using grpccore = Grpc.Core;
+-using st = SearchJobsResponse.Types;
+ using sys = System;
+ using sc = System.Collections;
+ using scg = System.Collections.Generic;
+@@ -2056,18 +2055,4 @@ namespace Google.Cloud.Talent.V4Beta1
+         /// <inheritdoc/>
+         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+     }
+-
+-    public partial class SearchJobsRequest : gaxgrpc::IPageRequest { }
+-    public partial class SearchJobsResponse : gaxgrpc::IPageResponse<SearchJobsResponse.Types.MatchingJob>
+-    {
+-        /// <summary>
+-        /// Returns an enumerator that iterates through the resources in this response.
+-        /// </summary>
+-        public scg::IEnumerator<SearchJobsResponse.Types.MatchingJob> GetEnumerator() => MatchingJobs.GetEnumerator();
+-
+-        /// <inheritdoc/>
+-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+-    }
+-
+-
+ }
