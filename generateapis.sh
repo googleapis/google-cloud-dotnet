@@ -252,3 +252,6 @@ generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision_v1.yaml
 
 # Microgenerator
 # microgenerate_api Google.Cloud.Vision.V1 google/cloud/vision/v1
+
+# Apply manually-created patches to fix current generator imperfections
+git apply post-generation.patch
