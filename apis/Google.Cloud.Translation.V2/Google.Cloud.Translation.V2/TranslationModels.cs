@@ -14,6 +14,8 @@
 
 using System;
 
+// This is a no-op change in translation
+
 namespace Google.Cloud.Translation.V2
 {
     /// <summary>
