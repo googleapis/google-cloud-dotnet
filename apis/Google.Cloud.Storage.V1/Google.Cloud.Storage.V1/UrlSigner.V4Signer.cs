@@ -170,10 +170,6 @@ namespace Google.Cloud.Storage.V1
                                 continue;
                             }
                             var headerName = pair.Key.ToLowerInvariant();
-                            if (headerName == EncryptionKey.KeyHeader || headerName == EncryptionKey.KeyHashHeader || headerName == EncryptionKey.AlgorithmHeader)
-                            {
-                                continue;
-                            }
                             var value = string.Join(", ", pair.Value.Select(PrepareHeaderValue)).Trim();
                             if (canonicalized.TryGetValue(headerName, out var existingValue))
                             {
