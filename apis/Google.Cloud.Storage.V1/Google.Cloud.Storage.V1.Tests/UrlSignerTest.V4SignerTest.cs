@@ -14,6 +14,7 @@
 
 using Google.Api.Gax.Testing;
 using Google.Apis.Auth.OAuth2;
+using Google.Cloud.ClientTesting;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -128,6 +129,14 @@ namespace Google.Cloud.Storage.V1.Tests
                     requestMethod: s_methods[test.Method],
                     requestHeaders: test.Headers?.ToDictionary(kvp => kvp.Key, kvp => (IEnumerable<string>) kvp.Value),
                     contentHeaders: null);
+
+                // We almost always want the complete URL afterwards, which xUnit doesn't give us.
+                if (test.ExpectedUrl != actualUrl)
+                {
+                    FileLogger.Log($"{test.Description} failure");
+                    FileLogger.Log($"Expected: {test.ExpectedUrl}");
+                    FileLogger.Log($"Actual: {actualUrl}");
+                }
                 Assert.Equal(test.ExpectedUrl, actualUrl);
             }
 
