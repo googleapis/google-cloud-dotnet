@@ -29,11 +29,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKUAQoNU2VjdXJpdHlNYXJrcxIM",
             "CgRuYW1lGAEgASgJEkcKBW1hcmtzGAIgAygLMjguZ29vZ2xlLmNsb3VkLnNl",
             "Y3VyaXR5Y2VudGVyLnYxLlNlY3VyaXR5TWFya3MuTWFya3NFbnRyeRosCgpN",
-            "YXJrc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFClQEK",
+            "YXJrc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCtgEK",
             "ImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xl",
             "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0",
             "eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1",
-            "cml0eUNlbnRlci5WMWIGcHJvdG8z"));
+            "cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
