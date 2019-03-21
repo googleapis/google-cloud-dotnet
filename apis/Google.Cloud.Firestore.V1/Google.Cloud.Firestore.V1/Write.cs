@@ -161,7 +161,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>Field number for the "transform" field.</summary>
     public const int TransformFieldNumber = 6;
     /// <summary>
-    /// Applies a tranformation to a document.
+    /// Applies a transformation to a document.
     /// At most one `transform` per document is allowed in a given request.
     /// An `update` cannot follow a `transform` on the same document in a given
     /// request.
