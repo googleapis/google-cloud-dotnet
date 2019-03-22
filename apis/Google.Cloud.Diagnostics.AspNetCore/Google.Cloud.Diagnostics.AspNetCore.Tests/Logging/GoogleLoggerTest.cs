@@ -417,6 +417,30 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
+        public void Log_Exception()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                return entry.JsonPayload.Fields.TryGetValue("message", out var message) &&
+                    message.StringValue == LogMessage &&
+                    entry.JsonPayload.Fields.TryGetValue("exception", out var exception) &&
+                    exception.StringValue.Contains("System.Exception") &&
+                    exception.StringValue.Contains("Exception message");
+            };
+
+            var mockServiceProvider = new Mock<IServiceProvider>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            ILogger logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName);
+            logger.LogError(new EventId(11, "some-event"), new Exception("Exception message"), LogMessage);
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void Log_DoesNotLogIfNullLabels()
         {
             var mockServiceProvider = new Mock<IServiceProvider>();
