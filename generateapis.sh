@@ -249,6 +249,7 @@ generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 cloudtrace_v1.y
 generate_api Google.Cloud.Trace.V2 google/devtools/cloudtrace/v2 cloudtrace_v2.yaml
 generate_api Google.Cloud.VideoIntelligence.V1 google/cloud/videointelligence/v1 videointelligence_v1.yaml
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision_v1.yaml
+generate_api Google.Cloud.WebRisk.V1Beta1 google/cloud/webrisk/v1beta1 webrisk.yaml
 
 # Microgenerator
 # microgenerate_api Google.Cloud.Vision.V1 google/cloud/vision/v1
