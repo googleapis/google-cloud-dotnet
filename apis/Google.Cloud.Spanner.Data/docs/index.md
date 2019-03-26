@@ -105,6 +105,24 @@ deletes a row using a `DELETE` command:
 When direct row modifications are performed in a transaction, they are only applied when the transaction is committed.
 Queries within the transaction will not observe any changes.
 
+### Using a commit timestamp
+
+Spanner allows you to write a commit timestamp for insert and update
+operations.
+
+When using direct row modifications, the commit timestamp can be set
+using `SpannerParameter.CommitTimestamp` as the value for a
+parameter, as shown below.
+
+{{sample:SpannerConnection.CommitTimestamp}}
+
+This parameter value cannot be used in DML. Instead, use the
+`PENDING_COMMIT_TIMESTAMP()` function in your DML statement.
+
+See the [Cloud Spanner
+documentation](https://cloud.google.com/spanner/docs/commit-timestamp)
+for more information about commit timestamps.
+
 ## Transactions and Fault Handling
 Cloud Spanner is fully ACID compliant.
 
