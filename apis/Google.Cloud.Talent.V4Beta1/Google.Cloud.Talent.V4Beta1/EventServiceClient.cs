@@ -508,7 +508,8 @@ namespace Google.Cloud.Talent.V4Beta1
             EventServiceSettings effectiveSettings = settings ?? EventServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateClientEvent = clientHelper.BuildApiCall<CreateClientEventRequest, ClientEvent>(
-                GrpcClient.CreateClientEventAsync, GrpcClient.CreateClientEvent, effectiveSettings.CreateClientEventSettings);
+                GrpcClient.CreateClientEventAsync, GrpcClient.CreateClientEvent, effectiveSettings.CreateClientEventSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callCreateClientEvent);
             Modify_CreateClientEventApiCall(ref _callCreateClientEvent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

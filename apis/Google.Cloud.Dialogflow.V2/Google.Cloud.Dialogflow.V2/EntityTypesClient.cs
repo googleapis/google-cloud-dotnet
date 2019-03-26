@@ -2801,25 +2801,35 @@ namespace Google.Cloud.Dialogflow.V2
             BatchDeleteEntitiesOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.BatchDeleteEntitiesOperationsSettings);
             _callListEntityTypes = clientHelper.BuildApiCall<ListEntityTypesRequest, ListEntityTypesResponse>(
-                GrpcClient.ListEntityTypesAsync, GrpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings);
+                GrpcClient.ListEntityTypesAsync, GrpcClient.ListEntityTypes, effectiveSettings.ListEntityTypesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetEntityType = clientHelper.BuildApiCall<GetEntityTypeRequest, EntityType>(
-                GrpcClient.GetEntityTypeAsync, GrpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings);
+                GrpcClient.GetEntityTypeAsync, GrpcClient.GetEntityType, effectiveSettings.GetEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateEntityType = clientHelper.BuildApiCall<CreateEntityTypeRequest, EntityType>(
-                GrpcClient.CreateEntityTypeAsync, GrpcClient.CreateEntityType, effectiveSettings.CreateEntityTypeSettings);
+                GrpcClient.CreateEntityTypeAsync, GrpcClient.CreateEntityType, effectiveSettings.CreateEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateEntityType = clientHelper.BuildApiCall<UpdateEntityTypeRequest, EntityType>(
-                GrpcClient.UpdateEntityTypeAsync, GrpcClient.UpdateEntityType, effectiveSettings.UpdateEntityTypeSettings);
+                GrpcClient.UpdateEntityTypeAsync, GrpcClient.UpdateEntityType, effectiveSettings.UpdateEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"entity_type.name={request.EntityType.Name}"));
             _callDeleteEntityType = clientHelper.BuildApiCall<DeleteEntityTypeRequest, pbwkt::Empty>(
-                GrpcClient.DeleteEntityTypeAsync, GrpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings);
+                GrpcClient.DeleteEntityTypeAsync, GrpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callBatchUpdateEntityTypes = clientHelper.BuildApiCall<BatchUpdateEntityTypesRequest, lro::Operation>(
-                GrpcClient.BatchUpdateEntityTypesAsync, GrpcClient.BatchUpdateEntityTypes, effectiveSettings.BatchUpdateEntityTypesSettings);
+                GrpcClient.BatchUpdateEntityTypesAsync, GrpcClient.BatchUpdateEntityTypes, effectiveSettings.BatchUpdateEntityTypesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callBatchDeleteEntityTypes = clientHelper.BuildApiCall<BatchDeleteEntityTypesRequest, lro::Operation>(
-                GrpcClient.BatchDeleteEntityTypesAsync, GrpcClient.BatchDeleteEntityTypes, effectiveSettings.BatchDeleteEntityTypesSettings);
+                GrpcClient.BatchDeleteEntityTypesAsync, GrpcClient.BatchDeleteEntityTypes, effectiveSettings.BatchDeleteEntityTypesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callBatchCreateEntities = clientHelper.BuildApiCall<BatchCreateEntitiesRequest, lro::Operation>(
-                GrpcClient.BatchCreateEntitiesAsync, GrpcClient.BatchCreateEntities, effectiveSettings.BatchCreateEntitiesSettings);
+                GrpcClient.BatchCreateEntitiesAsync, GrpcClient.BatchCreateEntities, effectiveSettings.BatchCreateEntitiesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callBatchUpdateEntities = clientHelper.BuildApiCall<BatchUpdateEntitiesRequest, lro::Operation>(
-                GrpcClient.BatchUpdateEntitiesAsync, GrpcClient.BatchUpdateEntities, effectiveSettings.BatchUpdateEntitiesSettings);
+                GrpcClient.BatchUpdateEntitiesAsync, GrpcClient.BatchUpdateEntities, effectiveSettings.BatchUpdateEntitiesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callBatchDeleteEntities = clientHelper.BuildApiCall<BatchDeleteEntitiesRequest, lro::Operation>(
-                GrpcClient.BatchDeleteEntitiesAsync, GrpcClient.BatchDeleteEntities, effectiveSettings.BatchDeleteEntitiesSettings);
+                GrpcClient.BatchDeleteEntitiesAsync, GrpcClient.BatchDeleteEntities, effectiveSettings.BatchDeleteEntitiesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callListEntityTypes);
             Modify_ListEntityTypesApiCall(ref _callListEntityTypes);
             Modify_ApiCall(ref _callGetEntityType);

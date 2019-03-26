@@ -1189,17 +1189,23 @@ namespace Google.Cloud.Dialogflow.V2
             ContextsSettings effectiveSettings = settings ?? ContextsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListContexts = clientHelper.BuildApiCall<ListContextsRequest, ListContextsResponse>(
-                GrpcClient.ListContextsAsync, GrpcClient.ListContexts, effectiveSettings.ListContextsSettings);
+                GrpcClient.ListContextsAsync, GrpcClient.ListContexts, effectiveSettings.ListContextsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetContext = clientHelper.BuildApiCall<GetContextRequest, Context>(
-                GrpcClient.GetContextAsync, GrpcClient.GetContext, effectiveSettings.GetContextSettings);
+                GrpcClient.GetContextAsync, GrpcClient.GetContext, effectiveSettings.GetContextSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateContext = clientHelper.BuildApiCall<CreateContextRequest, Context>(
-                GrpcClient.CreateContextAsync, GrpcClient.CreateContext, effectiveSettings.CreateContextSettings);
+                GrpcClient.CreateContextAsync, GrpcClient.CreateContext, effectiveSettings.CreateContextSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateContext = clientHelper.BuildApiCall<UpdateContextRequest, Context>(
-                GrpcClient.UpdateContextAsync, GrpcClient.UpdateContext, effectiveSettings.UpdateContextSettings);
+                GrpcClient.UpdateContextAsync, GrpcClient.UpdateContext, effectiveSettings.UpdateContextSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"context.name={request.Context.Name}"));
             _callDeleteContext = clientHelper.BuildApiCall<DeleteContextRequest, pbwkt::Empty>(
-                GrpcClient.DeleteContextAsync, GrpcClient.DeleteContext, effectiveSettings.DeleteContextSettings);
+                GrpcClient.DeleteContextAsync, GrpcClient.DeleteContext, effectiveSettings.DeleteContextSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDeleteAllContexts = clientHelper.BuildApiCall<DeleteAllContextsRequest, pbwkt::Empty>(
-                GrpcClient.DeleteAllContextsAsync, GrpcClient.DeleteAllContexts, effectiveSettings.DeleteAllContextsSettings);
+                GrpcClient.DeleteAllContextsAsync, GrpcClient.DeleteAllContexts, effectiveSettings.DeleteAllContextsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callListContexts);
             Modify_ListContextsApiCall(ref _callListContexts);
             Modify_ApiCall(ref _callGetContext);

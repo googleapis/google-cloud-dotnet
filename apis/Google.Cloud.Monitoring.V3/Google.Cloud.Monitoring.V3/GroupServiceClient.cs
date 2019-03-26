@@ -1134,17 +1134,23 @@ namespace Google.Cloud.Monitoring.V3
             GroupServiceSettings effectiveSettings = settings ?? GroupServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListGroups = clientHelper.BuildApiCall<ListGroupsRequest, ListGroupsResponse>(
-                GrpcClient.ListGroupsAsync, GrpcClient.ListGroups, effectiveSettings.ListGroupsSettings);
+                GrpcClient.ListGroupsAsync, GrpcClient.ListGroups, effectiveSettings.ListGroupsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, Group>(
-                GrpcClient.GetGroupAsync, GrpcClient.GetGroup, effectiveSettings.GetGroupSettings);
+                GrpcClient.GetGroupAsync, GrpcClient.GetGroup, effectiveSettings.GetGroupSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateGroup = clientHelper.BuildApiCall<CreateGroupRequest, Group>(
-                GrpcClient.CreateGroupAsync, GrpcClient.CreateGroup, effectiveSettings.CreateGroupSettings);
+                GrpcClient.CreateGroupAsync, GrpcClient.CreateGroup, effectiveSettings.CreateGroupSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, Group>(
-                GrpcClient.UpdateGroupAsync, GrpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings);
+                GrpcClient.UpdateGroupAsync, GrpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"group.name={request.Group.Name}"));
             _callDeleteGroup = clientHelper.BuildApiCall<DeleteGroupRequest, pbwkt::Empty>(
-                GrpcClient.DeleteGroupAsync, GrpcClient.DeleteGroup, effectiveSettings.DeleteGroupSettings);
+                GrpcClient.DeleteGroupAsync, GrpcClient.DeleteGroup, effectiveSettings.DeleteGroupSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListGroupMembers = clientHelper.BuildApiCall<ListGroupMembersRequest, ListGroupMembersResponse>(
-                GrpcClient.ListGroupMembersAsync, GrpcClient.ListGroupMembers, effectiveSettings.ListGroupMembersSettings);
+                GrpcClient.ListGroupMembersAsync, GrpcClient.ListGroupMembers, effectiveSettings.ListGroupMembersSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListGroups);
             Modify_ListGroupsApiCall(ref _callListGroups);
             Modify_ApiCall(ref _callGetGroup);

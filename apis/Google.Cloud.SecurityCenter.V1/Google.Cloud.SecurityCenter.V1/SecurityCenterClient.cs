@@ -3028,41 +3028,59 @@ namespace Google.Cloud.SecurityCenter.V1
             RunAssetDiscoveryOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.RunAssetDiscoveryOperationsSettings);
             _callCreateSource = clientHelper.BuildApiCall<CreateSourceRequest, Source>(
-                GrpcClient.CreateSourceAsync, GrpcClient.CreateSource, effectiveSettings.CreateSourceSettings);
+                GrpcClient.CreateSourceAsync, GrpcClient.CreateSource, effectiveSettings.CreateSourceSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callCreateFinding = clientHelper.BuildApiCall<CreateFindingRequest, Finding>(
-                GrpcClient.CreateFindingAsync, GrpcClient.CreateFinding, effectiveSettings.CreateFindingSettings);
+                GrpcClient.CreateFindingAsync, GrpcClient.CreateFinding, effectiveSettings.CreateFindingSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
-                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
+                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callGetOrganizationSettings = clientHelper.BuildApiCall<GetOrganizationSettingsRequest, OrganizationSettings>(
-                GrpcClient.GetOrganizationSettingsAsync, GrpcClient.GetOrganizationSettings, effectiveSettings.GetOrganizationSettingsSettings);
+                GrpcClient.GetOrganizationSettingsAsync, GrpcClient.GetOrganizationSettings, effectiveSettings.GetOrganizationSettingsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetSource = clientHelper.BuildApiCall<GetSourceRequest, Source>(
-                GrpcClient.GetSourceAsync, GrpcClient.GetSource, effectiveSettings.GetSourceSettings);
+                GrpcClient.GetSourceAsync, GrpcClient.GetSource, effectiveSettings.GetSourceSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGroupAssets = clientHelper.BuildApiCall<GroupAssetsRequest, GroupAssetsResponse>(
-                GrpcClient.GroupAssetsAsync, GrpcClient.GroupAssets, effectiveSettings.GroupAssetsSettings);
+                GrpcClient.GroupAssetsAsync, GrpcClient.GroupAssets, effectiveSettings.GroupAssetsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGroupFindings = clientHelper.BuildApiCall<GroupFindingsRequest, GroupFindingsResponse>(
-                GrpcClient.GroupFindingsAsync, GrpcClient.GroupFindings, effectiveSettings.GroupFindingsSettings);
+                GrpcClient.GroupFindingsAsync, GrpcClient.GroupFindings, effectiveSettings.GroupFindingsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callListAssets = clientHelper.BuildApiCall<ListAssetsRequest, ListAssetsResponse>(
-                GrpcClient.ListAssetsAsync, GrpcClient.ListAssets, effectiveSettings.ListAssetsSettings);
+                GrpcClient.ListAssetsAsync, GrpcClient.ListAssets, effectiveSettings.ListAssetsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callListFindings = clientHelper.BuildApiCall<ListFindingsRequest, ListFindingsResponse>(
-                GrpcClient.ListFindingsAsync, GrpcClient.ListFindings, effectiveSettings.ListFindingsSettings);
+                GrpcClient.ListFindingsAsync, GrpcClient.ListFindings, effectiveSettings.ListFindingsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callListSources = clientHelper.BuildApiCall<ListSourcesRequest, ListSourcesResponse>(
-                GrpcClient.ListSourcesAsync, GrpcClient.ListSources, effectiveSettings.ListSourcesSettings);
+                GrpcClient.ListSourcesAsync, GrpcClient.ListSources, effectiveSettings.ListSourcesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callRunAssetDiscovery = clientHelper.BuildApiCall<RunAssetDiscoveryRequest, lro::Operation>(
-                GrpcClient.RunAssetDiscoveryAsync, GrpcClient.RunAssetDiscovery, effectiveSettings.RunAssetDiscoverySettings);
+                GrpcClient.RunAssetDiscoveryAsync, GrpcClient.RunAssetDiscovery, effectiveSettings.RunAssetDiscoverySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callSetFindingState = clientHelper.BuildApiCall<SetFindingStateRequest, Finding>(
-                GrpcClient.SetFindingStateAsync, GrpcClient.SetFindingState, effectiveSettings.SetFindingStateSettings);
+                GrpcClient.SetFindingStateAsync, GrpcClient.SetFindingState, effectiveSettings.SetFindingStateSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
-                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
+                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
-                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callUpdateFinding = clientHelper.BuildApiCall<UpdateFindingRequest, Finding>(
-                GrpcClient.UpdateFindingAsync, GrpcClient.UpdateFinding, effectiveSettings.UpdateFindingSettings);
+                GrpcClient.UpdateFindingAsync, GrpcClient.UpdateFinding, effectiveSettings.UpdateFindingSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"finding.name={request.Finding.Name}"));
             _callUpdateOrganizationSettings = clientHelper.BuildApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings>(
-                GrpcClient.UpdateOrganizationSettingsAsync, GrpcClient.UpdateOrganizationSettings, effectiveSettings.UpdateOrganizationSettingsSettings);
+                GrpcClient.UpdateOrganizationSettingsAsync, GrpcClient.UpdateOrganizationSettings, effectiveSettings.UpdateOrganizationSettingsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"organization_settings.name={request.OrganizationSettings.Name}"));
             _callUpdateSource = clientHelper.BuildApiCall<UpdateSourceRequest, Source>(
-                GrpcClient.UpdateSourceAsync, GrpcClient.UpdateSource, effectiveSettings.UpdateSourceSettings);
+                GrpcClient.UpdateSourceAsync, GrpcClient.UpdateSource, effectiveSettings.UpdateSourceSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"source.name={request.Source.Name}"));
             _callUpdateSecurityMarks = clientHelper.BuildApiCall<UpdateSecurityMarksRequest, SecurityMarks>(
-                GrpcClient.UpdateSecurityMarksAsync, GrpcClient.UpdateSecurityMarks, effectiveSettings.UpdateSecurityMarksSettings);
+                GrpcClient.UpdateSecurityMarksAsync, GrpcClient.UpdateSecurityMarks, effectiveSettings.UpdateSecurityMarksSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"security_marks.name={request.SecurityMarks.Name}"));
             Modify_ApiCall(ref _callCreateSource);
             Modify_CreateSourceApiCall(ref _callCreateSource);
             Modify_ApiCall(ref _callCreateFinding);

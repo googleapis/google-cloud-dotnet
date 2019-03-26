@@ -1191,17 +1191,23 @@ namespace Google.Cloud.Talent.V4Beta1
             ProfileServiceSettings effectiveSettings = settings ?? ProfileServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListProfiles = clientHelper.BuildApiCall<ListProfilesRequest, ListProfilesResponse>(
-                GrpcClient.ListProfilesAsync, GrpcClient.ListProfiles, effectiveSettings.ListProfilesSettings);
+                GrpcClient.ListProfilesAsync, GrpcClient.ListProfiles, effectiveSettings.ListProfilesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callCreateProfile = clientHelper.BuildApiCall<CreateProfileRequest, Profile>(
-                GrpcClient.CreateProfileAsync, GrpcClient.CreateProfile, effectiveSettings.CreateProfileSettings);
+                GrpcClient.CreateProfileAsync, GrpcClient.CreateProfile, effectiveSettings.CreateProfileSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetProfile = clientHelper.BuildApiCall<GetProfileRequest, Profile>(
-                GrpcClient.GetProfileAsync, GrpcClient.GetProfile, effectiveSettings.GetProfileSettings);
+                GrpcClient.GetProfileAsync, GrpcClient.GetProfile, effectiveSettings.GetProfileSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateProfile = clientHelper.BuildApiCall<UpdateProfileRequest, Profile>(
-                GrpcClient.UpdateProfileAsync, GrpcClient.UpdateProfile, effectiveSettings.UpdateProfileSettings);
+                GrpcClient.UpdateProfileAsync, GrpcClient.UpdateProfile, effectiveSettings.UpdateProfileSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"profile.name={request.Profile.Name}"));
             _callDeleteProfile = clientHelper.BuildApiCall<DeleteProfileRequest, pbwkt::Empty>(
-                GrpcClient.DeleteProfileAsync, GrpcClient.DeleteProfile, effectiveSettings.DeleteProfileSettings);
+                GrpcClient.DeleteProfileAsync, GrpcClient.DeleteProfile, effectiveSettings.DeleteProfileSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSearchProfiles = clientHelper.BuildApiCall<SearchProfilesRequest, SearchProfilesResponse>(
-                GrpcClient.SearchProfilesAsync, GrpcClient.SearchProfiles, effectiveSettings.SearchProfilesSettings);
+                GrpcClient.SearchProfilesAsync, GrpcClient.SearchProfiles, effectiveSettings.SearchProfilesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callListProfiles);
             Modify_ListProfilesApiCall(ref _callListProfiles);
             Modify_ApiCall(ref _callCreateProfile);

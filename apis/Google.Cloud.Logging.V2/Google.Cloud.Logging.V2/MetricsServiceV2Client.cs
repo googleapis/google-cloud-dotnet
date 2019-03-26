@@ -1111,15 +1111,20 @@ namespace Google.Cloud.Logging.V2
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListLogMetrics = clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(
-                GrpcClient.ListLogMetricsAsync, GrpcClient.ListLogMetrics, effectiveSettings.ListLogMetricsSettings);
+                GrpcClient.ListLogMetricsAsync, GrpcClient.ListLogMetrics, effectiveSettings.ListLogMetricsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetLogMetric = clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>(
-                GrpcClient.GetLogMetricAsync, GrpcClient.GetLogMetric, effectiveSettings.GetLogMetricSettings);
+                GrpcClient.GetLogMetricAsync, GrpcClient.GetLogMetric, effectiveSettings.GetLogMetricSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"metric_name={request.MetricName}"));
             _callCreateLogMetric = clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>(
-                GrpcClient.CreateLogMetricAsync, GrpcClient.CreateLogMetric, effectiveSettings.CreateLogMetricSettings);
+                GrpcClient.CreateLogMetricAsync, GrpcClient.CreateLogMetric, effectiveSettings.CreateLogMetricSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateLogMetric = clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(
-                GrpcClient.UpdateLogMetricAsync, GrpcClient.UpdateLogMetric, effectiveSettings.UpdateLogMetricSettings);
+                GrpcClient.UpdateLogMetricAsync, GrpcClient.UpdateLogMetric, effectiveSettings.UpdateLogMetricSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"metric_name={request.MetricName}"));
             _callDeleteLogMetric = clientHelper.BuildApiCall<DeleteLogMetricRequest, pbwkt::Empty>(
-                GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings);
+                GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"metric_name={request.MetricName}"));
             Modify_ApiCall(ref _callListLogMetrics);
             Modify_ListLogMetricsApiCall(ref _callListLogMetrics);
             Modify_ApiCall(ref _callGetLogMetric);
