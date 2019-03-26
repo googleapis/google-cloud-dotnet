@@ -170,6 +170,11 @@ namespace Google.Cloud.Storage.V1
                                 continue;
                             }
                             var headerName = pair.Key.ToLowerInvariant();
+                            // Note: the comma-space separating here is because this is what HttpClient does.
+                            // Google Cloud Storage itself will just use commas if it receives multiple values for the same header name,
+                            // but HttpClient coalesces the values itself. This approach means that if the same request is made from .NET
+                            // with the signed URL, it will succeed - but it does mean that the signed URL won't be valid when used from
+                            // another platform that sends actual multiple values.
                             var value = string.Join(", ", pair.Value.Select(PrepareHeaderValue)).Trim();
                             if (canonicalized.TryGetValue(headerName, out var existingValue))
                             {
