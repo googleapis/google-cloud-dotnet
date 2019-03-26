@@ -1202,15 +1202,20 @@ namespace Google.Cloud.Monitoring.V3
             AlertPolicyServiceSettings effectiveSettings = settings ?? AlertPolicyServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListAlertPolicies = clientHelper.BuildApiCall<ListAlertPoliciesRequest, ListAlertPoliciesResponse>(
-                GrpcClient.ListAlertPoliciesAsync, GrpcClient.ListAlertPolicies, effectiveSettings.ListAlertPoliciesSettings);
+                GrpcClient.ListAlertPoliciesAsync, GrpcClient.ListAlertPolicies, effectiveSettings.ListAlertPoliciesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetAlertPolicy = clientHelper.BuildApiCall<GetAlertPolicyRequest, AlertPolicy>(
-                GrpcClient.GetAlertPolicyAsync, GrpcClient.GetAlertPolicy, effectiveSettings.GetAlertPolicySettings);
+                GrpcClient.GetAlertPolicyAsync, GrpcClient.GetAlertPolicy, effectiveSettings.GetAlertPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateAlertPolicy = clientHelper.BuildApiCall<CreateAlertPolicyRequest, AlertPolicy>(
-                GrpcClient.CreateAlertPolicyAsync, GrpcClient.CreateAlertPolicy, effectiveSettings.CreateAlertPolicySettings);
+                GrpcClient.CreateAlertPolicyAsync, GrpcClient.CreateAlertPolicy, effectiveSettings.CreateAlertPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDeleteAlertPolicy = clientHelper.BuildApiCall<DeleteAlertPolicyRequest, pbwkt::Empty>(
-                GrpcClient.DeleteAlertPolicyAsync, GrpcClient.DeleteAlertPolicy, effectiveSettings.DeleteAlertPolicySettings);
+                GrpcClient.DeleteAlertPolicyAsync, GrpcClient.DeleteAlertPolicy, effectiveSettings.DeleteAlertPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateAlertPolicy = clientHelper.BuildApiCall<UpdateAlertPolicyRequest, AlertPolicy>(
-                GrpcClient.UpdateAlertPolicyAsync, GrpcClient.UpdateAlertPolicy, effectiveSettings.UpdateAlertPolicySettings);
+                GrpcClient.UpdateAlertPolicyAsync, GrpcClient.UpdateAlertPolicy, effectiveSettings.UpdateAlertPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"alert_policy.name={request.AlertPolicy.Name}"));
             Modify_ApiCall(ref _callListAlertPolicies);
             Modify_ListAlertPoliciesApiCall(ref _callListAlertPolicies);
             Modify_ApiCall(ref _callGetAlertPolicy);

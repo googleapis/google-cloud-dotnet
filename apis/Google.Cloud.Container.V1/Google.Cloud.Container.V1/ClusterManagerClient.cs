@@ -5853,65 +5853,95 @@ namespace Google.Cloud.Container.V1
             ClusterManagerSettings effectiveSettings = settings ?? ClusterManagerSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>(
-                GrpcClient.ListClustersAsync, GrpcClient.ListClusters, effectiveSettings.ListClustersSettings);
+                GrpcClient.ListClustersAsync, GrpcClient.ListClusters, effectiveSettings.ListClustersSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetCluster = clientHelper.BuildApiCall<GetClusterRequest, Cluster>(
-                GrpcClient.GetClusterAsync, GrpcClient.GetCluster, effectiveSettings.GetClusterSettings);
+                GrpcClient.GetClusterAsync, GrpcClient.GetCluster, effectiveSettings.GetClusterSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateCluster = clientHelper.BuildApiCall<CreateClusterRequest, Operation>(
-                GrpcClient.CreateClusterAsync, GrpcClient.CreateCluster, effectiveSettings.CreateClusterSettings);
+                GrpcClient.CreateClusterAsync, GrpcClient.CreateCluster, effectiveSettings.CreateClusterSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateCluster = clientHelper.BuildApiCall<UpdateClusterRequest, Operation>(
-                GrpcClient.UpdateClusterAsync, GrpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings);
+                GrpcClient.UpdateClusterAsync, GrpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateNodePool = clientHelper.BuildApiCall<UpdateNodePoolRequest, Operation>(
-                GrpcClient.UpdateNodePoolAsync, GrpcClient.UpdateNodePool, effectiveSettings.UpdateNodePoolSettings);
+                GrpcClient.UpdateNodePoolAsync, GrpcClient.UpdateNodePool, effectiveSettings.UpdateNodePoolSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetNodePoolAutoscaling = clientHelper.BuildApiCall<SetNodePoolAutoscalingRequest, Operation>(
-                GrpcClient.SetNodePoolAutoscalingAsync, GrpcClient.SetNodePoolAutoscaling, effectiveSettings.SetNodePoolAutoscalingSettings);
+                GrpcClient.SetNodePoolAutoscalingAsync, GrpcClient.SetNodePoolAutoscaling, effectiveSettings.SetNodePoolAutoscalingSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetLoggingService = clientHelper.BuildApiCall<SetLoggingServiceRequest, Operation>(
-                GrpcClient.SetLoggingServiceAsync, GrpcClient.SetLoggingService, effectiveSettings.SetLoggingServiceSettings);
+                GrpcClient.SetLoggingServiceAsync, GrpcClient.SetLoggingService, effectiveSettings.SetLoggingServiceSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetMonitoringService = clientHelper.BuildApiCall<SetMonitoringServiceRequest, Operation>(
-                GrpcClient.SetMonitoringServiceAsync, GrpcClient.SetMonitoringService, effectiveSettings.SetMonitoringServiceSettings);
+                GrpcClient.SetMonitoringServiceAsync, GrpcClient.SetMonitoringService, effectiveSettings.SetMonitoringServiceSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetAddonsConfig = clientHelper.BuildApiCall<SetAddonsConfigRequest, Operation>(
-                GrpcClient.SetAddonsConfigAsync, GrpcClient.SetAddonsConfig, effectiveSettings.SetAddonsConfigSettings);
+                GrpcClient.SetAddonsConfigAsync, GrpcClient.SetAddonsConfig, effectiveSettings.SetAddonsConfigSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetLocations = clientHelper.BuildApiCall<SetLocationsRequest, Operation>(
-                GrpcClient.SetLocationsAsync, GrpcClient.SetLocations, effectiveSettings.SetLocationsSettings);
+                GrpcClient.SetLocationsAsync, GrpcClient.SetLocations, effectiveSettings.SetLocationsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateMaster = clientHelper.BuildApiCall<UpdateMasterRequest, Operation>(
-                GrpcClient.UpdateMasterAsync, GrpcClient.UpdateMaster, effectiveSettings.UpdateMasterSettings);
+                GrpcClient.UpdateMasterAsync, GrpcClient.UpdateMaster, effectiveSettings.UpdateMasterSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetMasterAuth = clientHelper.BuildApiCall<SetMasterAuthRequest, Operation>(
-                GrpcClient.SetMasterAuthAsync, GrpcClient.SetMasterAuth, effectiveSettings.SetMasterAuthSettings);
+                GrpcClient.SetMasterAuthAsync, GrpcClient.SetMasterAuth, effectiveSettings.SetMasterAuthSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, Operation>(
-                GrpcClient.DeleteClusterAsync, GrpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings);
+                GrpcClient.DeleteClusterAsync, GrpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(
-                GrpcClient.ListOperationsAsync, GrpcClient.ListOperations, effectiveSettings.ListOperationsSettings);
+                GrpcClient.ListOperationsAsync, GrpcClient.ListOperations, effectiveSettings.ListOperationsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(
-                GrpcClient.GetOperationAsync, GrpcClient.GetOperation, effectiveSettings.GetOperationSettings);
+                GrpcClient.GetOperationAsync, GrpcClient.GetOperation, effectiveSettings.GetOperationSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, pbwkt::Empty>(
-                GrpcClient.CancelOperationAsync, GrpcClient.CancelOperation, effectiveSettings.CancelOperationSettings);
+                GrpcClient.CancelOperationAsync, GrpcClient.CancelOperation, effectiveSettings.CancelOperationSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetServerConfig = clientHelper.BuildApiCall<GetServerConfigRequest, ServerConfig>(
-                GrpcClient.GetServerConfigAsync, GrpcClient.GetServerConfig, effectiveSettings.GetServerConfigSettings);
+                GrpcClient.GetServerConfigAsync, GrpcClient.GetServerConfig, effectiveSettings.GetServerConfigSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListNodePools = clientHelper.BuildApiCall<ListNodePoolsRequest, ListNodePoolsResponse>(
-                GrpcClient.ListNodePoolsAsync, GrpcClient.ListNodePools, effectiveSettings.ListNodePoolsSettings);
+                GrpcClient.ListNodePoolsAsync, GrpcClient.ListNodePools, effectiveSettings.ListNodePoolsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetNodePool = clientHelper.BuildApiCall<GetNodePoolRequest, NodePool>(
-                GrpcClient.GetNodePoolAsync, GrpcClient.GetNodePool, effectiveSettings.GetNodePoolSettings);
+                GrpcClient.GetNodePoolAsync, GrpcClient.GetNodePool, effectiveSettings.GetNodePoolSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateNodePool = clientHelper.BuildApiCall<CreateNodePoolRequest, Operation>(
-                GrpcClient.CreateNodePoolAsync, GrpcClient.CreateNodePool, effectiveSettings.CreateNodePoolSettings);
+                GrpcClient.CreateNodePoolAsync, GrpcClient.CreateNodePool, effectiveSettings.CreateNodePoolSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callDeleteNodePool = clientHelper.BuildApiCall<DeleteNodePoolRequest, Operation>(
-                GrpcClient.DeleteNodePoolAsync, GrpcClient.DeleteNodePool, effectiveSettings.DeleteNodePoolSettings);
+                GrpcClient.DeleteNodePoolAsync, GrpcClient.DeleteNodePool, effectiveSettings.DeleteNodePoolSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callRollbackNodePoolUpgrade = clientHelper.BuildApiCall<RollbackNodePoolUpgradeRequest, Operation>(
-                GrpcClient.RollbackNodePoolUpgradeAsync, GrpcClient.RollbackNodePoolUpgrade, effectiveSettings.RollbackNodePoolUpgradeSettings);
+                GrpcClient.RollbackNodePoolUpgradeAsync, GrpcClient.RollbackNodePoolUpgrade, effectiveSettings.RollbackNodePoolUpgradeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetNodePoolManagement = clientHelper.BuildApiCall<SetNodePoolManagementRequest, Operation>(
-                GrpcClient.SetNodePoolManagementAsync, GrpcClient.SetNodePoolManagement, effectiveSettings.SetNodePoolManagementSettings);
+                GrpcClient.SetNodePoolManagementAsync, GrpcClient.SetNodePoolManagement, effectiveSettings.SetNodePoolManagementSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetLabels = clientHelper.BuildApiCall<SetLabelsRequest, Operation>(
-                GrpcClient.SetLabelsAsync, GrpcClient.SetLabels, effectiveSettings.SetLabelsSettings);
+                GrpcClient.SetLabelsAsync, GrpcClient.SetLabels, effectiveSettings.SetLabelsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetLegacyAbac = clientHelper.BuildApiCall<SetLegacyAbacRequest, Operation>(
-                GrpcClient.SetLegacyAbacAsync, GrpcClient.SetLegacyAbac, effectiveSettings.SetLegacyAbacSettings);
+                GrpcClient.SetLegacyAbacAsync, GrpcClient.SetLegacyAbac, effectiveSettings.SetLegacyAbacSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callStartIPRotation = clientHelper.BuildApiCall<StartIPRotationRequest, Operation>(
-                GrpcClient.StartIPRotationAsync, GrpcClient.StartIPRotation, effectiveSettings.StartIPRotationSettings);
+                GrpcClient.StartIPRotationAsync, GrpcClient.StartIPRotation, effectiveSettings.StartIPRotationSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCompleteIPRotation = clientHelper.BuildApiCall<CompleteIPRotationRequest, Operation>(
-                GrpcClient.CompleteIPRotationAsync, GrpcClient.CompleteIPRotation, effectiveSettings.CompleteIPRotationSettings);
+                GrpcClient.CompleteIPRotationAsync, GrpcClient.CompleteIPRotation, effectiveSettings.CompleteIPRotationSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetNodePoolSize = clientHelper.BuildApiCall<SetNodePoolSizeRequest, Operation>(
-                GrpcClient.SetNodePoolSizeAsync, GrpcClient.SetNodePoolSize, effectiveSettings.SetNodePoolSizeSettings);
+                GrpcClient.SetNodePoolSizeAsync, GrpcClient.SetNodePoolSize, effectiveSettings.SetNodePoolSizeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetNetworkPolicy = clientHelper.BuildApiCall<SetNetworkPolicyRequest, Operation>(
-                GrpcClient.SetNetworkPolicyAsync, GrpcClient.SetNetworkPolicy, effectiveSettings.SetNetworkPolicySettings);
+                GrpcClient.SetNetworkPolicyAsync, GrpcClient.SetNetworkPolicy, effectiveSettings.SetNetworkPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callSetMaintenancePolicy = clientHelper.BuildApiCall<SetMaintenancePolicyRequest, Operation>(
-                GrpcClient.SetMaintenancePolicyAsync, GrpcClient.SetMaintenancePolicy, effectiveSettings.SetMaintenancePolicySettings);
+                GrpcClient.SetMaintenancePolicyAsync, GrpcClient.SetMaintenancePolicy, effectiveSettings.SetMaintenancePolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListClusters);
             Modify_ListClustersApiCall(ref _callListClusters);
             Modify_ApiCall(ref _callGetCluster);

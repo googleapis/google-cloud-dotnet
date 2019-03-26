@@ -658,7 +658,8 @@ namespace Google.Cloud.Talent.V4Beta1
             ResumeServiceSettings effectiveSettings = settings ?? ResumeServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callParseResume = clientHelper.BuildApiCall<ParseResumeRequest, ParseResumeResponse>(
-                GrpcClient.ParseResumeAsync, GrpcClient.ParseResume, effectiveSettings.ParseResumeSettings);
+                GrpcClient.ParseResumeAsync, GrpcClient.ParseResume, effectiveSettings.ParseResumeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callParseResume);
             Modify_ParseResumeApiCall(ref _callParseResume);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -1103,15 +1103,20 @@ namespace Google.Cloud.Talent.V4Beta1
             TenantServiceSettings effectiveSettings = settings ?? TenantServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callCreateTenant = clientHelper.BuildApiCall<CreateTenantRequest, Tenant>(
-                GrpcClient.CreateTenantAsync, GrpcClient.CreateTenant, effectiveSettings.CreateTenantSettings);
+                GrpcClient.CreateTenantAsync, GrpcClient.CreateTenant, effectiveSettings.CreateTenantSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetTenant = clientHelper.BuildApiCall<GetTenantRequest, Tenant>(
-                GrpcClient.GetTenantAsync, GrpcClient.GetTenant, effectiveSettings.GetTenantSettings);
+                GrpcClient.GetTenantAsync, GrpcClient.GetTenant, effectiveSettings.GetTenantSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateTenant = clientHelper.BuildApiCall<UpdateTenantRequest, Tenant>(
-                GrpcClient.UpdateTenantAsync, GrpcClient.UpdateTenant, effectiveSettings.UpdateTenantSettings);
+                GrpcClient.UpdateTenantAsync, GrpcClient.UpdateTenant, effectiveSettings.UpdateTenantSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"tenant.name={request.Tenant.Name}"));
             _callDeleteTenant = clientHelper.BuildApiCall<DeleteTenantRequest, pbwkt::Empty>(
-                GrpcClient.DeleteTenantAsync, GrpcClient.DeleteTenant, effectiveSettings.DeleteTenantSettings);
+                GrpcClient.DeleteTenantAsync, GrpcClient.DeleteTenant, effectiveSettings.DeleteTenantSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListTenants = clientHelper.BuildApiCall<ListTenantsRequest, ListTenantsResponse>(
-                GrpcClient.ListTenantsAsync, GrpcClient.ListTenants, effectiveSettings.ListTenantsSettings);
+                GrpcClient.ListTenantsAsync, GrpcClient.ListTenants, effectiveSettings.ListTenantsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callCreateTenant);
             Modify_CreateTenantApiCall(ref _callCreateTenant);
             Modify_ApiCall(ref _callGetTenant);

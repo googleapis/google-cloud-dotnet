@@ -1475,19 +1475,26 @@ namespace Google.Cloud.Monitoring.V3
             NotificationChannelServiceSettings effectiveSettings = settings ?? NotificationChannelServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListNotificationChannelDescriptors = clientHelper.BuildApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse>(
-                GrpcClient.ListNotificationChannelDescriptorsAsync, GrpcClient.ListNotificationChannelDescriptors, effectiveSettings.ListNotificationChannelDescriptorsSettings);
+                GrpcClient.ListNotificationChannelDescriptorsAsync, GrpcClient.ListNotificationChannelDescriptors, effectiveSettings.ListNotificationChannelDescriptorsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetNotificationChannelDescriptor = clientHelper.BuildApiCall<GetNotificationChannelDescriptorRequest, NotificationChannelDescriptor>(
-                GrpcClient.GetNotificationChannelDescriptorAsync, GrpcClient.GetNotificationChannelDescriptor, effectiveSettings.GetNotificationChannelDescriptorSettings);
+                GrpcClient.GetNotificationChannelDescriptorAsync, GrpcClient.GetNotificationChannelDescriptor, effectiveSettings.GetNotificationChannelDescriptorSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListNotificationChannels = clientHelper.BuildApiCall<ListNotificationChannelsRequest, ListNotificationChannelsResponse>(
-                GrpcClient.ListNotificationChannelsAsync, GrpcClient.ListNotificationChannels, effectiveSettings.ListNotificationChannelsSettings);
+                GrpcClient.ListNotificationChannelsAsync, GrpcClient.ListNotificationChannels, effectiveSettings.ListNotificationChannelsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callGetNotificationChannel = clientHelper.BuildApiCall<GetNotificationChannelRequest, NotificationChannel>(
-                GrpcClient.GetNotificationChannelAsync, GrpcClient.GetNotificationChannel, effectiveSettings.GetNotificationChannelSettings);
+                GrpcClient.GetNotificationChannelAsync, GrpcClient.GetNotificationChannel, effectiveSettings.GetNotificationChannelSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateNotificationChannel = clientHelper.BuildApiCall<CreateNotificationChannelRequest, NotificationChannel>(
-                GrpcClient.CreateNotificationChannelAsync, GrpcClient.CreateNotificationChannel, effectiveSettings.CreateNotificationChannelSettings);
+                GrpcClient.CreateNotificationChannelAsync, GrpcClient.CreateNotificationChannel, effectiveSettings.CreateNotificationChannelSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateNotificationChannel = clientHelper.BuildApiCall<UpdateNotificationChannelRequest, NotificationChannel>(
-                GrpcClient.UpdateNotificationChannelAsync, GrpcClient.UpdateNotificationChannel, effectiveSettings.UpdateNotificationChannelSettings);
+                GrpcClient.UpdateNotificationChannelAsync, GrpcClient.UpdateNotificationChannel, effectiveSettings.UpdateNotificationChannelSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"notification_channel.name={request.NotificationChannel.Name}"));
             _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, pbwkt::Empty>(
-                GrpcClient.DeleteNotificationChannelAsync, GrpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings);
+                GrpcClient.DeleteNotificationChannelAsync, GrpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListNotificationChannelDescriptors);
             Modify_ListNotificationChannelDescriptorsApiCall(ref _callListNotificationChannelDescriptors);
             Modify_ApiCall(ref _callGetNotificationChannelDescriptor);

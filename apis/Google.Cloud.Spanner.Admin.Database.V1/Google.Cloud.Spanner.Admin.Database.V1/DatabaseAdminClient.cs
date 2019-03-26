@@ -1970,23 +1970,32 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             UpdateDatabaseDdlOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseDdlOperationsSettings);
             _callListDatabases = clientHelper.BuildApiCall<ListDatabasesRequest, ListDatabasesResponse>(
-                GrpcClient.ListDatabasesAsync, GrpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings);
+                GrpcClient.ListDatabasesAsync, GrpcClient.ListDatabases, effectiveSettings.ListDatabasesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callCreateDatabase = clientHelper.BuildApiCall<CreateDatabaseRequest, lro::Operation>(
-                GrpcClient.CreateDatabaseAsync, GrpcClient.CreateDatabase, effectiveSettings.CreateDatabaseSettings);
+                GrpcClient.CreateDatabaseAsync, GrpcClient.CreateDatabase, effectiveSettings.CreateDatabaseSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetDatabase = clientHelper.BuildApiCall<GetDatabaseRequest, Database>(
-                GrpcClient.GetDatabaseAsync, GrpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings);
+                GrpcClient.GetDatabaseAsync, GrpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateDatabaseDdl = clientHelper.BuildApiCall<UpdateDatabaseDdlRequest, lro::Operation>(
-                GrpcClient.UpdateDatabaseDdlAsync, GrpcClient.UpdateDatabaseDdl, effectiveSettings.UpdateDatabaseDdlSettings);
+                GrpcClient.UpdateDatabaseDdlAsync, GrpcClient.UpdateDatabaseDdl, effectiveSettings.UpdateDatabaseDdlSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
             _callDropDatabase = clientHelper.BuildApiCall<DropDatabaseRequest, pbwkt::Empty>(
-                GrpcClient.DropDatabaseAsync, GrpcClient.DropDatabase, effectiveSettings.DropDatabaseSettings);
+                GrpcClient.DropDatabaseAsync, GrpcClient.DropDatabase, effectiveSettings.DropDatabaseSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
             _callGetDatabaseDdl = clientHelper.BuildApiCall<GetDatabaseDdlRequest, GetDatabaseDdlResponse>(
-                GrpcClient.GetDatabaseDdlAsync, GrpcClient.GetDatabaseDdl, effectiveSettings.GetDatabaseDdlSettings);
+                GrpcClient.GetDatabaseDdlAsync, GrpcClient.GetDatabaseDdl, effectiveSettings.GetDatabaseDdlSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
             _callSetIamPolicy = clientHelper.BuildApiCall<iam::SetIamPolicyRequest, iam::Policy>(
-                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
+                GrpcClient.SetIamPolicyAsync, GrpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callGetIamPolicy = clientHelper.BuildApiCall<iam::GetIamPolicyRequest, iam::Policy>(
-                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
+                GrpcClient.GetIamPolicyAsync, GrpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callTestIamPermissions = clientHelper.BuildApiCall<iam::TestIamPermissionsRequest, iam::TestIamPermissionsResponse>(
-                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+                GrpcClient.TestIamPermissionsAsync, GrpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             Modify_ApiCall(ref _callListDatabases);
             Modify_ListDatabasesApiCall(ref _callListDatabases);
             Modify_ApiCall(ref _callCreateDatabase);

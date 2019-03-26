@@ -1782,21 +1782,29 @@ namespace Google.Cloud.Scheduler.V1Beta1
             CloudSchedulerSettings effectiveSettings = settings ?? CloudSchedulerSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListJobs = clientHelper.BuildApiCall<ListJobsRequest, ListJobsResponse>(
-                GrpcClient.ListJobsAsync, GrpcClient.ListJobs, effectiveSettings.ListJobsSettings);
+                GrpcClient.ListJobsAsync, GrpcClient.ListJobs, effectiveSettings.ListJobsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetJob = clientHelper.BuildApiCall<GetJobRequest, Job>(
-                GrpcClient.GetJobAsync, GrpcClient.GetJob, effectiveSettings.GetJobSettings);
+                GrpcClient.GetJobAsync, GrpcClient.GetJob, effectiveSettings.GetJobSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>(
-                GrpcClient.CreateJobAsync, GrpcClient.CreateJob, effectiveSettings.CreateJobSettings);
+                GrpcClient.CreateJobAsync, GrpcClient.CreateJob, effectiveSettings.CreateJobSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>(
-                GrpcClient.UpdateJobAsync, GrpcClient.UpdateJob, effectiveSettings.UpdateJobSettings);
+                GrpcClient.UpdateJobAsync, GrpcClient.UpdateJob, effectiveSettings.UpdateJobSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"job.name={request.Job.Name}"));
             _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, pbwkt::Empty>(
-                GrpcClient.DeleteJobAsync, GrpcClient.DeleteJob, effectiveSettings.DeleteJobSettings);
+                GrpcClient.DeleteJobAsync, GrpcClient.DeleteJob, effectiveSettings.DeleteJobSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callPauseJob = clientHelper.BuildApiCall<PauseJobRequest, Job>(
-                GrpcClient.PauseJobAsync, GrpcClient.PauseJob, effectiveSettings.PauseJobSettings);
+                GrpcClient.PauseJobAsync, GrpcClient.PauseJob, effectiveSettings.PauseJobSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callResumeJob = clientHelper.BuildApiCall<ResumeJobRequest, Job>(
-                GrpcClient.ResumeJobAsync, GrpcClient.ResumeJob, effectiveSettings.ResumeJobSettings);
+                GrpcClient.ResumeJobAsync, GrpcClient.ResumeJob, effectiveSettings.ResumeJobSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callRunJob = clientHelper.BuildApiCall<RunJobRequest, Job>(
-                GrpcClient.RunJobAsync, GrpcClient.RunJob, effectiveSettings.RunJobSettings);
+                GrpcClient.RunJobAsync, GrpcClient.RunJob, effectiveSettings.RunJobSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListJobs);
             Modify_ListJobsApiCall(ref _callListJobs);
             Modify_ApiCall(ref _callGetJob);

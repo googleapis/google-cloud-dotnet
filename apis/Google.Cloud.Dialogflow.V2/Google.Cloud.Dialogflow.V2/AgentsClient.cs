@@ -1311,17 +1311,23 @@ namespace Google.Cloud.Dialogflow.V2
             RestoreAgentOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.RestoreAgentOperationsSettings);
             _callGetAgent = clientHelper.BuildApiCall<GetAgentRequest, Agent>(
-                GrpcClient.GetAgentAsync, GrpcClient.GetAgent, effectiveSettings.GetAgentSettings);
+                GrpcClient.GetAgentAsync, GrpcClient.GetAgent, effectiveSettings.GetAgentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callSearchAgents = clientHelper.BuildApiCall<SearchAgentsRequest, SearchAgentsResponse>(
-                GrpcClient.SearchAgentsAsync, GrpcClient.SearchAgents, effectiveSettings.SearchAgentsSettings);
+                GrpcClient.SearchAgentsAsync, GrpcClient.SearchAgents, effectiveSettings.SearchAgentsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callTrainAgent = clientHelper.BuildApiCall<TrainAgentRequest, lro::Operation>(
-                GrpcClient.TrainAgentAsync, GrpcClient.TrainAgent, effectiveSettings.TrainAgentSettings);
+                GrpcClient.TrainAgentAsync, GrpcClient.TrainAgent, effectiveSettings.TrainAgentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callExportAgent = clientHelper.BuildApiCall<ExportAgentRequest, lro::Operation>(
-                GrpcClient.ExportAgentAsync, GrpcClient.ExportAgent, effectiveSettings.ExportAgentSettings);
+                GrpcClient.ExportAgentAsync, GrpcClient.ExportAgent, effectiveSettings.ExportAgentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callImportAgent = clientHelper.BuildApiCall<ImportAgentRequest, lro::Operation>(
-                GrpcClient.ImportAgentAsync, GrpcClient.ImportAgent, effectiveSettings.ImportAgentSettings);
+                GrpcClient.ImportAgentAsync, GrpcClient.ImportAgent, effectiveSettings.ImportAgentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callRestoreAgent = clientHelper.BuildApiCall<RestoreAgentRequest, lro::Operation>(
-                GrpcClient.RestoreAgentAsync, GrpcClient.RestoreAgent, effectiveSettings.RestoreAgentSettings);
+                GrpcClient.RestoreAgentAsync, GrpcClient.RestoreAgent, effectiveSettings.RestoreAgentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callGetAgent);
             Modify_GetAgentApiCall(ref _callGetAgent);
             Modify_ApiCall(ref _callSearchAgents);

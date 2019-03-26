@@ -940,7 +940,8 @@ namespace Google.Cloud.Debugger.V2
             _callRegisterDebuggee = clientHelper.BuildApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse>(
                 GrpcClient.RegisterDebuggeeAsync, GrpcClient.RegisterDebuggee, effectiveSettings.RegisterDebuggeeSettings);
             _callListActiveBreakpoints = clientHelper.BuildApiCall<ListActiveBreakpointsRequest, ListActiveBreakpointsResponse>(
-                GrpcClient.ListActiveBreakpointsAsync, GrpcClient.ListActiveBreakpoints, effectiveSettings.ListActiveBreakpointsSettings);
+                GrpcClient.ListActiveBreakpointsAsync, GrpcClient.ListActiveBreakpoints, effectiveSettings.ListActiveBreakpointsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"debuggee_id={request.DebuggeeId}"));
             _callUpdateActiveBreakpoint = clientHelper.BuildApiCall<UpdateActiveBreakpointRequest, UpdateActiveBreakpointResponse>(
                 GrpcClient.UpdateActiveBreakpointAsync, GrpcClient.UpdateActiveBreakpoint, effectiveSettings.UpdateActiveBreakpointSettings);
             Modify_ApiCall(ref _callRegisterDebuggee);

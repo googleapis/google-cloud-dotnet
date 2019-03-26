@@ -1710,31 +1710,40 @@ namespace Google.Cloud.Firestore.V1
             FirestoreSettings effectiveSettings = settings ?? FirestoreSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callGetDocument = clientHelper.BuildApiCall<GetDocumentRequest, Document>(
-                GrpcClient.GetDocumentAsync, GrpcClient.GetDocument, effectiveSettings.GetDocumentSettings);
+                GrpcClient.GetDocumentAsync, GrpcClient.GetDocument, effectiveSettings.GetDocumentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callListDocuments = clientHelper.BuildApiCall<ListDocumentsRequest, ListDocumentsResponse>(
                 GrpcClient.ListDocumentsAsync, GrpcClient.ListDocuments, effectiveSettings.ListDocumentsSettings);
             _callCreateDocument = clientHelper.BuildApiCall<CreateDocumentRequest, Document>(
                 GrpcClient.CreateDocumentAsync, GrpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings);
             _callUpdateDocument = clientHelper.BuildApiCall<UpdateDocumentRequest, Document>(
-                GrpcClient.UpdateDocumentAsync, GrpcClient.UpdateDocument, effectiveSettings.UpdateDocumentSettings);
+                GrpcClient.UpdateDocumentAsync, GrpcClient.UpdateDocument, effectiveSettings.UpdateDocumentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"document.name={request.Document.Name}"));
             _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, pbwkt::Empty>(
-                GrpcClient.DeleteDocumentAsync, GrpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings);
+                GrpcClient.DeleteDocumentAsync, GrpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callBatchGetDocuments = clientHelper.BuildApiCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse>(
-                GrpcClient.BatchGetDocuments, effectiveSettings.BatchGetDocumentsSettings);
+                GrpcClient.BatchGetDocuments, effectiveSettings.BatchGetDocumentsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
             _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(
-                GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
+                GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
             _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
-                GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
+                GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
             _callRollback = clientHelper.BuildApiCall<RollbackRequest, pbwkt::Empty>(
-                GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
+                GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"database={request.Database}"));
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
-                GrpcClient.RunQuery, effectiveSettings.RunQuerySettings);
+                GrpcClient.RunQuery, effectiveSettings.RunQuerySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callWrite = clientHelper.BuildApiCall<WriteRequest, WriteResponse>(
                 GrpcClient.Write, effectiveSettings.WriteSettings, effectiveSettings.WriteStreamingSettings);
             _callListen = clientHelper.BuildApiCall<ListenRequest, ListenResponse>(
                 GrpcClient.Listen, effectiveSettings.ListenSettings, effectiveSettings.ListenStreamingSettings);
             _callListCollectionIds = clientHelper.BuildApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse>(
-                GrpcClient.ListCollectionIdsAsync, GrpcClient.ListCollectionIds, effectiveSettings.ListCollectionIdsSettings);
+                GrpcClient.ListCollectionIdsAsync, GrpcClient.ListCollectionIds, effectiveSettings.ListCollectionIdsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callGetDocument);
             Modify_GetDocumentApiCall(ref _callGetDocument);
             Modify_ApiCall(ref _callListDocuments);

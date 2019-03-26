@@ -2316,25 +2316,35 @@ namespace Google.Cloud.Logging.V2
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListSinks = clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(
-                GrpcClient.ListSinksAsync, GrpcClient.ListSinks, effectiveSettings.ListSinksSettings);
+                GrpcClient.ListSinksAsync, GrpcClient.ListSinks, effectiveSettings.ListSinksSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetSink = clientHelper.BuildApiCall<GetSinkRequest, LogSink>(
-                GrpcClient.GetSinkAsync, GrpcClient.GetSink, effectiveSettings.GetSinkSettings);
+                GrpcClient.GetSinkAsync, GrpcClient.GetSink, effectiveSettings.GetSinkSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"sink_name={request.SinkName}"));
             _callCreateSink = clientHelper.BuildApiCall<CreateSinkRequest, LogSink>(
-                GrpcClient.CreateSinkAsync, GrpcClient.CreateSink, effectiveSettings.CreateSinkSettings);
+                GrpcClient.CreateSinkAsync, GrpcClient.CreateSink, effectiveSettings.CreateSinkSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateSink = clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(
-                GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings);
+                GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"sink_name={request.SinkName}"));
             _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, pbwkt::Empty>(
-                GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings);
+                GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"sink_name={request.SinkName}"));
             _callListExclusions = clientHelper.BuildApiCall<ListExclusionsRequest, ListExclusionsResponse>(
-                GrpcClient.ListExclusionsAsync, GrpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings);
+                GrpcClient.ListExclusionsAsync, GrpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetExclusion = clientHelper.BuildApiCall<GetExclusionRequest, LogExclusion>(
-                GrpcClient.GetExclusionAsync, GrpcClient.GetExclusion, effectiveSettings.GetExclusionSettings);
+                GrpcClient.GetExclusionAsync, GrpcClient.GetExclusion, effectiveSettings.GetExclusionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateExclusion = clientHelper.BuildApiCall<CreateExclusionRequest, LogExclusion>(
-                GrpcClient.CreateExclusionAsync, GrpcClient.CreateExclusion, effectiveSettings.CreateExclusionSettings);
+                GrpcClient.CreateExclusionAsync, GrpcClient.CreateExclusion, effectiveSettings.CreateExclusionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateExclusion = clientHelper.BuildApiCall<UpdateExclusionRequest, LogExclusion>(
-                GrpcClient.UpdateExclusionAsync, GrpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings);
+                GrpcClient.UpdateExclusionAsync, GrpcClient.UpdateExclusion, effectiveSettings.UpdateExclusionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callDeleteExclusion = clientHelper.BuildApiCall<DeleteExclusionRequest, pbwkt::Empty>(
-                GrpcClient.DeleteExclusionAsync, GrpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings);
+                GrpcClient.DeleteExclusionAsync, GrpcClient.DeleteExclusion, effectiveSettings.DeleteExclusionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListSinks);
             Modify_ListSinksApiCall(ref _callListSinks);
             Modify_ApiCall(ref _callGetSink);

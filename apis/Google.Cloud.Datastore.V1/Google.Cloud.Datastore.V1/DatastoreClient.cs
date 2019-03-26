@@ -1590,19 +1590,26 @@ namespace Google.Cloud.Datastore.V1
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>(
-                GrpcClient.LookupAsync, GrpcClient.Lookup, effectiveSettings.LookupSettings);
+                GrpcClient.LookupAsync, GrpcClient.Lookup, effectiveSettings.LookupSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
-                GrpcClient.RunQueryAsync, GrpcClient.RunQuery, effectiveSettings.RunQuerySettings);
+                GrpcClient.RunQueryAsync, GrpcClient.RunQuery, effectiveSettings.RunQuerySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(
-                GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
+                GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
-                GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
+                GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             _callRollback = clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>(
-                GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
+                GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             _callAllocateIds = clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>(
-                GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings);
+                GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             _callReserveIds = clientHelper.BuildApiCall<ReserveIdsRequest, ReserveIdsResponse>(
-                GrpcClient.ReserveIdsAsync, GrpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings);
+                GrpcClient.ReserveIdsAsync, GrpcClient.ReserveIds, effectiveSettings.ReserveIdsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             Modify_ApiCall(ref _callLookup);
             Modify_LookupApiCall(ref _callLookup);
             Modify_ApiCall(ref _callRunQuery);

@@ -521,7 +521,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ReportErrorsServiceSettings effectiveSettings = settings ?? ReportErrorsServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callReportErrorEvent = clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>(
-                GrpcClient.ReportErrorEventAsync, GrpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings);
+                GrpcClient.ReportErrorEventAsync, GrpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_name={request.ProjectName}"));
             Modify_ApiCall(ref _callReportErrorEvent);
             Modify_ReportErrorEventApiCall(ref _callReportErrorEvent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

@@ -1056,15 +1056,20 @@ namespace Google.Cloud.Dialogflow.V2
             SessionEntityTypesSettings effectiveSettings = settings ?? SessionEntityTypesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callListSessionEntityTypes = clientHelper.BuildApiCall<ListSessionEntityTypesRequest, ListSessionEntityTypesResponse>(
-                GrpcClient.ListSessionEntityTypesAsync, GrpcClient.ListSessionEntityTypes, effectiveSettings.ListSessionEntityTypesSettings);
+                GrpcClient.ListSessionEntityTypesAsync, GrpcClient.ListSessionEntityTypes, effectiveSettings.ListSessionEntityTypesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetSessionEntityType = clientHelper.BuildApiCall<GetSessionEntityTypeRequest, SessionEntityType>(
-                GrpcClient.GetSessionEntityTypeAsync, GrpcClient.GetSessionEntityType, effectiveSettings.GetSessionEntityTypeSettings);
+                GrpcClient.GetSessionEntityTypeAsync, GrpcClient.GetSessionEntityType, effectiveSettings.GetSessionEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callCreateSessionEntityType = clientHelper.BuildApiCall<CreateSessionEntityTypeRequest, SessionEntityType>(
-                GrpcClient.CreateSessionEntityTypeAsync, GrpcClient.CreateSessionEntityType, effectiveSettings.CreateSessionEntityTypeSettings);
+                GrpcClient.CreateSessionEntityTypeAsync, GrpcClient.CreateSessionEntityType, effectiveSettings.CreateSessionEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateSessionEntityType = clientHelper.BuildApiCall<UpdateSessionEntityTypeRequest, SessionEntityType>(
-                GrpcClient.UpdateSessionEntityTypeAsync, GrpcClient.UpdateSessionEntityType, effectiveSettings.UpdateSessionEntityTypeSettings);
+                GrpcClient.UpdateSessionEntityTypeAsync, GrpcClient.UpdateSessionEntityType, effectiveSettings.UpdateSessionEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session_entity_type.name={request.SessionEntityType.Name}"));
             _callDeleteSessionEntityType = clientHelper.BuildApiCall<DeleteSessionEntityTypeRequest, pbwkt::Empty>(
-                GrpcClient.DeleteSessionEntityTypeAsync, GrpcClient.DeleteSessionEntityType, effectiveSettings.DeleteSessionEntityTypeSettings);
+                GrpcClient.DeleteSessionEntityTypeAsync, GrpcClient.DeleteSessionEntityType, effectiveSettings.DeleteSessionEntityTypeSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListSessionEntityTypes);
             Modify_ListSessionEntityTypesApiCall(ref _callListSessionEntityTypes);
             Modify_ApiCall(ref _callGetSessionEntityType);

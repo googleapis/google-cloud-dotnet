@@ -782,11 +782,13 @@ namespace Google.Cloud.Trace.V1
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, pbwkt::Empty>(
-                GrpcClient.PatchTracesAsync, GrpcClient.PatchTraces, effectiveSettings.PatchTracesSettings);
+                GrpcClient.PatchTracesAsync, GrpcClient.PatchTraces, effectiveSettings.PatchTracesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(
                 GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
             _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(
-                GrpcClient.ListTracesAsync, GrpcClient.ListTraces, effectiveSettings.ListTracesSettings);
+                GrpcClient.ListTracesAsync, GrpcClient.ListTraces, effectiveSettings.ListTracesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"project_id={request.ProjectId}"));
             Modify_ApiCall(ref _callPatchTraces);
             Modify_PatchTracesApiCall(ref _callPatchTraces);
             Modify_ApiCall(ref _callGetTrace);

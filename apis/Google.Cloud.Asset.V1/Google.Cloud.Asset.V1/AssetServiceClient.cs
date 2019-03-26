@@ -538,9 +538,11 @@ namespace Google.Cloud.Asset.V1
             ExportAssetsOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.ExportAssetsOperationsSettings);
             _callExportAssets = clientHelper.BuildApiCall<ExportAssetsRequest, lro::Operation>(
-                GrpcClient.ExportAssetsAsync, GrpcClient.ExportAssets, effectiveSettings.ExportAssetsSettings);
+                GrpcClient.ExportAssetsAsync, GrpcClient.ExportAssets, effectiveSettings.ExportAssetsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callBatchGetAssetsHistory = clientHelper.BuildApiCall<BatchGetAssetsHistoryRequest, BatchGetAssetsHistoryResponse>(
-                GrpcClient.BatchGetAssetsHistoryAsync, GrpcClient.BatchGetAssetsHistory, effectiveSettings.BatchGetAssetsHistorySettings);
+                GrpcClient.BatchGetAssetsHistoryAsync, GrpcClient.BatchGetAssetsHistory, effectiveSettings.BatchGetAssetsHistorySettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callExportAssets);
             Modify_ExportAssetsApiCall(ref _callExportAssets);
             Modify_ApiCall(ref _callBatchGetAssetsHistory);
