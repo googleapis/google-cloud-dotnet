@@ -21,27 +21,12 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     public static class ContextTracerManager
     {
-#if NET45
-        private static readonly string _callContextName = System.Guid.NewGuid().ToString("N");
-        private static IManagedTracer CurrentTracer
-        {
-            get
-            {
-                return System.Runtime.Remoting.Messaging.CallContext.LogicalGetData(_callContextName) as IManagedTracer;
-            }
-            set
-            {
-                System.Runtime.Remoting.Messaging.CallContext.LogicalSetData(_callContextName, value);
-            }
-        }
-#else
         private static readonly AsyncLocal<IManagedTracer> _currentTracer = new AsyncLocal<IManagedTracer>();
         private static IManagedTracer CurrentTracer
         {
             get { return _currentTracer.Value; }
             set { _currentTracer.Value = value; }
         }
-#endif
 
         /// <summary>
         /// Sets the current <see cref="IManagedTracer"/>.  This is called for each new trace context.

@@ -99,7 +99,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
         }
 
-#if NETCOREAPP2_1
         [Fact]
         public async Task UseGoogleDiagnostics_ConfiguresComponentsFromHostBuilderContext()
         {
@@ -134,7 +133,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await TestErrorReporting(testId, client);
             }
         }
-#endif
 
         private static async Task TestLogging(string testId, DateTime startTime, HttpClient client)
         {

@@ -192,15 +192,15 @@
     "id": "Google.Cloud.Diagnostics.AspNet",
     "version": "3.0.0-beta11",
     "type": "other",
-    "targetFrameworks": "net45",
-    "testTargetFrameworks": "net452",
+    "targetFrameworks": "net461",
+    "testTargetFrameworks": "net461",
     "description": "Google Stackdriver Instrumentation Libraries for ASP.NET.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
-      "Microsoft.AspNet.WebApi.Core": "5.2.3",
-      "Microsoft.AspNet.WebPages": "3.2.3",
-      "Microsoft.AspNet.Mvc": "5.2.3",
+      "Microsoft.AspNet.WebApi.Core": "5.2.7",
+      "Microsoft.AspNet.WebPages": "3.2.7",
+      "Microsoft.AspNet.Mvc": "5.2.7",
       "Grpc.Core": "default"
     },
     "testDependencies": {
@@ -214,8 +214,8 @@
     "id": "Google.Cloud.Diagnostics.AspNetCore",
     "version": "3.0.0-beta11",
     "type": "other",
-    "targetFrameworks": "netstandard2.0;netstandard1.5;net46",
-    "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.1;net46",
+    "targetFrameworks": "netstandard2.0",
+    "testTargetFrameworks": "netcoreapp2.1;net461",
     "description": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
@@ -252,8 +252,8 @@
     "id": "Google.Cloud.Diagnostics.Common",
     "version": "3.0.0-beta11",
     "type": "other",
-    "targetFrameworks": "netstandard2.0;netstandard1.5;net45",
-    "testTargetFrameworks": "netcoreapp2.1;netcoreapp1.0;net452",
+    "targetFrameworks": "netstandard2.0",
+    "testTargetFrameworks": "netcoreapp2.1;net461",
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {

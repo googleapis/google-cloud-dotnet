@@ -98,9 +98,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         [Theory]
         [InlineData(nameof(TraceController.TraceOutgoing))]
-#if NETCOREAPP2_1
         [InlineData(nameof(TraceController.TraceOutgoingClientFactory))]
-#endif
         public async Task Trace_OutGoing(string methodName)
         {
             var uri = $"/Trace/{methodName}/{_testId}";
@@ -462,13 +460,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 options.Options = traceOptions;
             });
 
-#if NETCOREAPP2_1
             services.AddHttpClient("google", c =>
                 {
                     c.BaseAddress = new Uri("https://google.com/");
                 })
                 .AddOutgoingGoogleTraceHandler();
-#endif
 
             services.AddMvc();
         }
@@ -553,7 +549,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             return message;
         }
 
-#if NETCOREAPP2_1
         public async Task<string> TraceOutgoingClientFactory(string id, [FromServices] IManagedTracer tracer, [FromServices] IHttpClientFactory httpClientFactory)
         {
             string message = EntryData.GetMessage(nameof(TraceOutgoingClientFactory), id);
@@ -564,7 +559,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
             return message;
         }
-#endif
+
         public async Task<string> TraceOutgoing(string id, [FromServices] IManagedTracer tracer, [FromServices] TraceHeaderPropagatingHandler propagatingHandler)
         {
             string message = EntryData.GetMessage(nameof(TraceOutgoing), id);

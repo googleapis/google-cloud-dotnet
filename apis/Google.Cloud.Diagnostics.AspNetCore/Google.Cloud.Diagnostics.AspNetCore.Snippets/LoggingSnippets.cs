@@ -137,7 +137,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         private IWebHostBuilder GetSimpleHostBuilder()
         {
-#if NETCOREAPP2_1
             string projectId = TestEnvironment.GetTestProjectId();
             // Sample: RegisterGoogleLogger2
             return new WebHostBuilder()
@@ -148,14 +147,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 })
                 .UseStartup<Startup>();
             // End sample
-#else
-            return new WebHostBuilder().UseStartup<LoggingTestApplication>();
-#endif
         }
 
         private IWebHostBuilder GetExceptionPropagatingHostBuilder()
         {
-#if NETCOREAPP2_1
             string projectId = LoggingTestApplicationPropagateExceptions.ProjectId;
             // Sample: RegisterGoogleLoggerPropagateExceptions2
             return new WebHostBuilder()
@@ -173,14 +168,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 })
                 .UseStartup<Startup>();
             // End sample
-#else
-            return new WebHostBuilder().UseStartup<LoggingTestApplicationPropagateExceptions>();
-#endif
         }
 
         private IWebHostBuilder GetUrlWriterHostBuilder()
         {
-#if NETCOREAPP2_0
             string projectId = TestEnvironment.GetTestProjectId();
 
             // Sample: RegisterGoogleLoggerWriteUrl2
@@ -196,9 +187,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 })
                 .UseStartup<Startup>();
             // End sample
-#else
-            return new WebHostBuilder().UseStartup<LoggingTestApplicationWriteUrl>();
-#endif
         }
     }
 
