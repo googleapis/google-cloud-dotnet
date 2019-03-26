@@ -127,7 +127,7 @@ namespace Google.Cloud.Storage.V1.Tests
                 var actualUrl = signer.Sign(test.Bucket, test.Object,
                     duration: TimeSpan.FromSeconds(test.Expiration),
                     requestMethod: s_methods[test.Method],
-                    requestHeaders: test.Headers?.ToDictionary(kvp => kvp.Key, kvp => (IEnumerable<string>) kvp.Value),
+                    requestHeaders: test.Headers?.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)),
                     contentHeaders: null);
 
                 // We almost always want the complete URL afterwards, which xUnit doesn't give us.
@@ -169,7 +169,7 @@ namespace Google.Cloud.Storage.V1.Tests
             public int Expiration { get; set; }
 
             [JsonProperty("headers")]
-            public Dictionary<string, string[]> Headers { get; set; }
+            public Dictionary<string, string> Headers { get; set; }
 
             [JsonProperty("timestamp")]
             public string Timestamp { get; set; }

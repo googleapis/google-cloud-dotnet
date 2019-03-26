@@ -26,7 +26,7 @@
         "method": "POST",
         "expiration": 10,
         "headers": {
-            "x-goog-resumable": [ "start" ]
+            "x-goog-resumable": "start"
         },
         "timestamp": "20190201T090000Z",
         "expectedUrl": "https://storage.googleapis.com/test-bucket/test-object?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=host%3Bx-goog-resumable&X-Goog-Signature=4a6d39b23343cedf4c30782aed4b384001828c79ffa3a080a481ea01a640dea0a0ceb58d67a12cef3b243c3f036bb3799c6ee88e8db3eaf7d0bdd4b70a228d0736e07eaa1ee076aff5c6ce09dff1f1f03a0d8ead0d2893408dd3604fdabff553aa6d7af2da67cdba6790006a70240f96717b98f1a6ccb24f00940749599be7ef72aaa5358db63ddd54b2de9e2d6d6a586eac4fe25f36d86fc6ab150418e9c6fa01b732cded226c6d62fc95b72473a4cc55a8257482583fe66d9ab6ede909eb41516a8690946c3e87b0f2052eb0e97e012a14b2f721c42e6e19b8a1cd5658ea36264f10b9b1ada66b8ed5bf7ed7d1708377ac6e5fe608ae361fb594d2e5b24c54"
@@ -57,8 +57,8 @@
         "bucket": "test-bucket",
         "object": "test-object",
         "headers": {
-            "foo": [ "foo-value" ],
-            "BAR": [ "BAR-value" ]
+            "foo": "foo-value",
+            "BAR": "BAR-value"
         },
         "method": "GET",
         "expiration": 10,
@@ -71,9 +71,9 @@
         "bucket": "test-bucket",
         "object": "test-object",
         "headers": {
-            "leading": [ "    xyz" ],
-            "trailing": [ "abc    " ],
-            "collapsed": [ "abc    def" ]
+            "leading": "    xyz",
+            "trailing": "abc    ",
+            "collapsed": "abc    def"
         },
         "method": "GET",
         "expiration": 10,
@@ -87,9 +87,9 @@
         "object": "test-object",
         "headers":
         {
-            "X-Goog-Encryption-Key": [ "key" ],
-            "X-Goog-Encryption-Key-Sha256": [ "key-hash" ],
-            "X-Goog-Encryption-Algorithm": [ "AES256" ]
+            "X-Goog-Encryption-Key": "key",
+            "X-Goog-Encryption-Key-Sha256": "key-hash",
+            "X-Goog-Encryption-Algorithm": "AES256"
         },
         "method": "GET",
         "expiration": 10,
