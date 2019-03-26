@@ -25,9 +25,9 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9nb29nbGUvZmlyZXN0b3JlL3YxL3F1ZXJ5LnByb3RvEhNnb29nbGUuZmly",
-            "ZXN0b3JlLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGiJnb29n",
-            "bGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3RvGh5nb29nbGUvcHJvdG9i",
-            "dWYvd3JhcHBlcnMucHJvdG8i2g4KD1N0cnVjdHVyZWRRdWVyeRI/CgZzZWxl",
+            "ZXN0b3JlLnYxGiJnb29nbGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3Rv",
+            "Gh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8i2g4KD1N0cnVjdHVyZWRRdWVyeRI/CgZzZWxl",
             "Y3QYASABKAsyLy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVy",
             "eS5Qcm9qZWN0aW9uEkUKBGZyb20YAiADKAsyNy5nb29nbGUuZmlyZXN0b3Jl",
             "LnYxLlN0cnVjdHVyZWRRdWVyeS5Db2xsZWN0aW9uU2VsZWN0b3ISOgoFd2hl",
@@ -61,11 +61,11 @@ namespace Google.Cloud.Firestore.V1 {
             "LlVuYXJ5RmlsdGVyLk9wZXJhdG9yEkQKBWZpZWxkGAIgASgLMjMuZ29vZ2xl",
             "LmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2VI",
             "ACI9CghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklFRBAAEgoKBklT",
-            "X05BThACEgsKB0lTX05VTEwQA0IOCgxvcGVyYW5kX3R5cGUajgEKBU9yZGVy",
-            "EkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1",
-            "cmVkUXVlcnkuRmllbGRSZWZlcmVuY2USQQoJZGlyZWN0aW9uGAIgASgOMi4u",
-            "Z29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRGlyZWN0aW9u",
-            "GiQKDkZpZWxkUmVmZXJlbmNlEhIKCmZpZWxkX3BhdGgYAiABKAkaUQoKUHJv",
+            "X05BThACEgsKB0lTX05VTEwQA0IOCgxvcGVyYW5kX3R5cGUaJAoORmllbGRS",
+            "ZWZlcmVuY2USEgoKZmllbGRfcGF0aBgCIAEoCRqOAQoFT3JkZXISQgoFZmll",
+            "bGQYASABKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVy",
+            "eS5GaWVsZFJlZmVyZW5jZRJBCglkaXJlY3Rpb24YAiABKA4yLi5nb29nbGUu",
+            "ZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5EaXJlY3Rpb24aUQoKUHJv",
             "amVjdGlvbhJDCgZmaWVsZHMYAiADKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYx",
             "LlN0cnVjdHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZSJFCglEaXJlY3Rpb24S",
             "GQoVRElSRUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAESDgoK",
@@ -76,15 +76,15 @@ namespace Google.Cloud.Firestore.V1 {
             "ZXN0b3JlogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlH",
             "b29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery), global::Google.Cloud.Firestore.V1.StructuredQuery.Parser, new[]{ "Select", "From", "Where", "OrderBy", "StartAt", "EndAt", "Offset", "Limit" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector.Parser, new[]{ "CollectionId", "AllDescendants" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter.Parser, new[]{ "CompositeFilter", "FieldFilter", "UnaryFilter" }, new[]{ "FilterType" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Parser, new[]{ "Field", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Parser, new[]{ "Op", "Field" }, new[]{ "OperandType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Cursor), global::Google.Cloud.Firestore.V1.Cursor.Parser, new[]{ "Values", "Before" }, null, null, null)
           }));
@@ -1584,6 +1584,138 @@ namespace Google.Cloud.Firestore.V1 {
       }
 
       /// <summary>
+      /// A reference to a field, such as `max(messages.time) as max_time`.
+      /// </summary>
+      public sealed partial class FieldReference : pb::IMessage<FieldReference> {
+        private static readonly pb::MessageParser<FieldReference> _parser = new pb::MessageParser<FieldReference>(() => new FieldReference());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<FieldReference> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference(FieldReference other) : this() {
+          fieldPath_ = other.fieldPath_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference Clone() {
+          return new FieldReference(this);
+        }
+
+        /// <summary>Field number for the "field_path" field.</summary>
+        public const int FieldPathFieldNumber = 2;
+        private string fieldPath_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FieldPath {
+          get { return fieldPath_; }
+          set {
+            fieldPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as FieldReference);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(FieldReference other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FieldPath != other.FieldPath) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (FieldPath.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FieldPath);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (FieldPath.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(FieldReference other) {
+          if (other == null) {
+            return;
+          }
+          if (other.FieldPath.Length != 0) {
+            FieldPath = other.FieldPath;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                FieldPath = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
       /// An order on a field.
       /// </summary>
       public sealed partial class Order : pb::IMessage<Order> {
@@ -1594,7 +1726,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1747,138 +1879,6 @@ namespace Google.Cloud.Firestore.V1 {
               }
               case 16: {
                 direction_ = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) input.ReadEnum();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-      /// <summary>
-      /// A reference to a field, such as `max(messages.time) as max_time`.
-      /// </summary>
-      public sealed partial class FieldReference : pb::IMessage<FieldReference> {
-        private static readonly pb::MessageParser<FieldReference> _parser = new pb::MessageParser<FieldReference>(() => new FieldReference());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<FieldReference> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[6]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference(FieldReference other) : this() {
-          fieldPath_ = other.fieldPath_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference Clone() {
-          return new FieldReference(this);
-        }
-
-        /// <summary>Field number for the "field_path" field.</summary>
-        public const int FieldPathFieldNumber = 2;
-        private string fieldPath_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string FieldPath {
-          get { return fieldPath_; }
-          set {
-            fieldPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as FieldReference);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(FieldReference other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (FieldPath != other.FieldPath) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (FieldPath.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(FieldPath);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (FieldPath.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(FieldReference other) {
-          if (other == null) {
-            return;
-          }
-          if (other.FieldPath.Length != 0) {
-            FieldPath = other.FieldPath;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 18: {
-                FieldPath = input.ReadString();
                 break;
               }
             }

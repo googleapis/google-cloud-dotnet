@@ -216,8 +216,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
   #region Messages
   /// <summary>
-  /// The request for
-  /// [Firestore.GetDocument][google.firestore.v1.Firestore.GetDocument].
+  /// The request for [Firestore.GetDocument][google.firestore.v1.Firestore.GetDocument].
   /// </summary>
   public sealed partial class GetDocumentRequest : pb::IMessage<GetDocumentRequest> {
     private static readonly pb::MessageParser<GetDocumentRequest> _parser = new pb::MessageParser<GetDocumentRequest>(() => new GetDocumentRequest());
@@ -495,8 +494,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Firestore.ListDocuments][google.firestore.v1.Firestore.ListDocuments].
+  /// The request for [Firestore.ListDocuments][google.firestore.v1.Firestore.ListDocuments].
   /// </summary>
   public sealed partial class ListDocumentsRequest : pb::IMessage<ListDocumentsRequest> {
     private static readonly pb::MessageParser<ListDocumentsRequest> _parser = new pb::MessageParser<ListDocumentsRequest>(() => new ListDocumentsRequest());
@@ -675,9 +673,8 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// If the list should show missing documents. A missing document is a
     /// document that does not exist but has sub-documents. These documents will
-    /// be returned with a key but will not have fields,
-    /// [Document.create_time][google.firestore.v1.Document.create_time], or
-    /// [Document.update_time][google.firestore.v1.Document.update_time] set.
+    /// be returned with a key but will not have fields, [Document.create_time][google.firestore.v1.Document.create_time],
+    /// or [Document.update_time][google.firestore.v1.Document.update_time] set.
     ///
     /// Requests with `show_missing` may not specify `where` or
     /// `order_by`.
@@ -941,8 +938,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Firestore.ListDocuments][google.firestore.v1.Firestore.ListDocuments].
+  /// The response for [Firestore.ListDocuments][google.firestore.v1.Firestore.ListDocuments].
   /// </summary>
   public sealed partial class ListDocumentsResponse : pb::IMessage<ListDocumentsResponse> {
     private static readonly pb::MessageParser<ListDocumentsResponse> _parser = new pb::MessageParser<ListDocumentsResponse>(() => new ListDocumentsResponse());
@@ -1100,8 +1096,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Firestore.CreateDocument][google.firestore.v1.Firestore.CreateDocument].
+  /// The request for [Firestore.CreateDocument][google.firestore.v1.Firestore.CreateDocument].
   /// </summary>
   public sealed partial class CreateDocumentRequest : pb::IMessage<CreateDocumentRequest> {
     private static readonly pb::MessageParser<CreateDocumentRequest> _parser = new pb::MessageParser<CreateDocumentRequest>(() => new CreateDocumentRequest());
@@ -1379,8 +1374,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Firestore.UpdateDocument][google.firestore.v1.Firestore.UpdateDocument].
+  /// The request for [Firestore.UpdateDocument][google.firestore.v1.Firestore.UpdateDocument].
   /// </summary>
   public sealed partial class UpdateDocumentRequest : pb::IMessage<UpdateDocumentRequest> {
     private static readonly pb::MessageParser<UpdateDocumentRequest> _parser = new pb::MessageParser<UpdateDocumentRequest>(() => new UpdateDocumentRequest());
@@ -1643,8 +1637,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Firestore.DeleteDocument][google.firestore.v1.Firestore.DeleteDocument].
+  /// The request for [Firestore.DeleteDocument][google.firestore.v1.Firestore.DeleteDocument].
   /// </summary>
   public sealed partial class DeleteDocumentRequest : pb::IMessage<DeleteDocumentRequest> {
     private static readonly pb::MessageParser<DeleteDocumentRequest> _parser = new pb::MessageParser<DeleteDocumentRequest>(() => new DeleteDocumentRequest());
@@ -1818,8 +1811,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Firestore.BatchGetDocuments][google.firestore.v1.Firestore.BatchGetDocuments].
+  /// The request for [Firestore.BatchGetDocuments][google.firestore.v1.Firestore.BatchGetDocuments].
   /// </summary>
   public sealed partial class BatchGetDocumentsRequest : pb::IMessage<BatchGetDocumentsRequest> {
     private static readonly pb::MessageParser<BatchGetDocumentsRequest> _parser = new pb::MessageParser<BatchGetDocumentsRequest>(() => new BatchGetDocumentsRequest());
@@ -2168,8 +2160,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The streamed response for
-  /// [Firestore.BatchGetDocuments][google.firestore.v1.Firestore.BatchGetDocuments].
+  /// The streamed response for [Firestore.BatchGetDocuments][google.firestore.v1.Firestore.BatchGetDocuments].
   /// </summary>
   public sealed partial class BatchGetDocumentsResponse : pb::IMessage<BatchGetDocumentsResponse> {
     private static readonly pb::MessageParser<BatchGetDocumentsResponse> _parser = new pb::MessageParser<BatchGetDocumentsResponse>(() => new BatchGetDocumentsResponse());
@@ -2250,8 +2241,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// The transaction that was started as part of this request.
     /// Will only be set in the first response, and only if
-    /// [BatchGetDocumentsRequest.new_transaction][google.firestore.v1.BatchGetDocumentsRequest.new_transaction]
-    /// was set in the request.
+    /// [BatchGetDocumentsRequest.new_transaction][google.firestore.v1.BatchGetDocumentsRequest.new_transaction] was set in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
@@ -2449,8 +2439,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Firestore.BeginTransaction][google.firestore.v1.Firestore.BeginTransaction].
+  /// The request for [Firestore.BeginTransaction][google.firestore.v1.Firestore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
@@ -2624,8 +2613,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Firestore.BeginTransaction][google.firestore.v1.Firestore.BeginTransaction].
+  /// The response for [Firestore.BeginTransaction][google.firestore.v1.Firestore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionResponse : pb::IMessage<BeginTransactionResponse> {
     private static readonly pb::MessageParser<BeginTransactionResponse> _parser = new pb::MessageParser<BeginTransactionResponse>(() => new BeginTransactionResponse());
@@ -3640,8 +3628,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The response for
-  /// [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery].
+  /// The response for [Firestore.RunQuery][google.firestore.v1.Firestore.RunQuery].
   /// </summary>
   public sealed partial class RunQueryResponse : pb::IMessage<RunQueryResponse> {
     private static readonly pb::MessageParser<RunQueryResponse> _parser = new pb::MessageParser<RunQueryResponse>(() => new RunQueryResponse());
@@ -3686,9 +3673,8 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// The transaction that was started as part of this request.
     /// Can only be set in the first response, and only if
-    /// [RunQueryRequest.new_transaction][google.firestore.v1.RunQueryRequest.new_transaction]
-    /// was set in the request. If set, no other fields will be set in this
-    /// response.
+    /// [RunQueryRequest.new_transaction][google.firestore.v1.RunQueryRequest.new_transaction] was set in the request.
+    /// If set, no other fields will be set in this response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
@@ -3999,9 +3985,9 @@ namespace Google.Cloud.Firestore.V1 {
     /// A stream token that was previously sent by the server.
     ///
     /// The client should set this field to the token from the most recent
-    /// [WriteResponse][google.firestore.v1.WriteResponse] it has received. This
-    /// acknowledges that the client has received responses up to this token. After
-    /// sending this token, earlier tokens may not be used anymore.
+    /// [WriteResponse][google.firestore.v1.WriteResponse] it has received. This acknowledges that the client has
+    /// received responses up to this token. After sending this token, earlier
+    /// tokens may not be used anymore.
     ///
     /// The server may close the stream if there are too many unacknowledged
     /// responses.
@@ -4758,8 +4744,8 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>Field number for the "document_remove" field.</summary>
     public const int DocumentRemoveFieldNumber = 6;
     /// <summary>
-    /// A [Document][google.firestore.v1.Document] has been removed from a target
-    /// (because it is no longer relevant to that target).
+    /// A [Document][google.firestore.v1.Document] has been removed from a target (because it is no longer
+    /// relevant to that target).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Firestore.V1.DocumentRemove DocumentRemove {
@@ -5090,8 +5076,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>Field number for the "resume_token" field.</summary>
     public const int ResumeTokenFieldNumber = 4;
     /// <summary>
-    /// A resume token from a prior
-    /// [TargetChange][google.firestore.v1.TargetChange] for an identical target.
+    /// A resume token from a prior [TargetChange][google.firestore.v1.TargetChange] for an identical target.
     ///
     /// Using a resume token with a different target is unsupported and may fail.
     /// </summary>
@@ -6064,8 +6049,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The request for
-  /// [Firestore.ListCollectionIds][google.firestore.v1.Firestore.ListCollectionIds].
+  /// The request for [Firestore.ListCollectionIds][google.firestore.v1.Firestore.ListCollectionIds].
   /// </summary>
   public sealed partial class ListCollectionIdsRequest : pb::IMessage<ListCollectionIdsRequest> {
     private static readonly pb::MessageParser<ListCollectionIdsRequest> _parser = new pb::MessageParser<ListCollectionIdsRequest>(() => new ListCollectionIdsRequest());
@@ -6266,8 +6250,7 @@ namespace Google.Cloud.Firestore.V1 {
   }
 
   /// <summary>
-  /// The response from
-  /// [Firestore.ListCollectionIds][google.firestore.v1.Firestore.ListCollectionIds].
+  /// The response from [Firestore.ListCollectionIds][google.firestore.v1.Firestore.ListCollectionIds].
   /// </summary>
   public sealed partial class ListCollectionIdsResponse : pb::IMessage<ListCollectionIdsResponse> {
     private static readonly pb::MessageParser<ListCollectionIdsResponse> _parser = new pb::MessageParser<ListCollectionIdsResponse>(() => new ListCollectionIdsResponse());
