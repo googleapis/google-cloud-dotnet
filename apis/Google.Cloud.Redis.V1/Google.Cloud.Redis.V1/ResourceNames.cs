@@ -238,6 +238,19 @@ namespace Google.Cloud.Redis.V1
 
     }
 
+    public partial class FailoverInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Redis.V1.InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Redis.V1.InstanceName InstanceName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Redis.V1.InstanceName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetInstanceRequest
     {
         /// <summary>

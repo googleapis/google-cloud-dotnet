@@ -1404,12 +1404,12 @@ namespace Google.Cloud.Redis.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FailoverInstanceAsync(
-            string name,
+            InstanceName name,
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode,
             gaxgrpc::CallSettings callSettings = null) => FailoverInstanceAsync(
                 new FailoverInstanceRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     DataProtectionMode = dataProtectionMode,
                 },
                 callSettings);
@@ -1434,7 +1434,7 @@ namespace Google.Cloud.Redis.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FailoverInstanceAsync(
-            string name,
+            InstanceName name,
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode,
             st::CancellationToken cancellationToken) => FailoverInstanceAsync(
                 name,
@@ -1461,12 +1461,12 @@ namespace Google.Cloud.Redis.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation<Instance, OperationMetadata> FailoverInstance(
-            string name,
+            InstanceName name,
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode,
             gaxgrpc::CallSettings callSettings = null) => FailoverInstance(
                 new FailoverInstanceRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     DataProtectionMode = dataProtectionMode,
                 },
                 callSettings);

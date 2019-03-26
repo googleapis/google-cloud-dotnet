@@ -744,16 +744,16 @@ namespace Google.Cloud.Redis.V1.Snippets
         /// <summary>Snippet for FailoverInstanceAsync</summary>
         public async Task FailoverInstanceAsync()
         {
-            // Snippet: FailoverInstanceAsync(string,FailoverInstanceRequest.Types.DataProtectionMode,CallSettings)
-            // Additional: FailoverInstanceAsync(string,FailoverInstanceRequest.Types.DataProtectionMode,CancellationToken)
+            // Snippet: FailoverInstanceAsync(InstanceName,FailoverInstanceRequest.Types.DataProtectionMode,CallSettings)
+            // Additional: FailoverInstanceAsync(InstanceName,FailoverInstanceRequest.Types.DataProtectionMode,CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified;
             // Make the request
             Operation<Instance, OperationMetadata> response =
-                await cloudRedisClient.FailoverInstanceAsync(formattedName, dataProtectionMode);
+                await cloudRedisClient.FailoverInstanceAsync(name, dataProtectionMode);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, OperationMetadata> completedResponse =
@@ -778,15 +778,15 @@ namespace Google.Cloud.Redis.V1.Snippets
         /// <summary>Snippet for FailoverInstance</summary>
         public void FailoverInstance()
         {
-            // Snippet: FailoverInstance(string,FailoverInstanceRequest.Types.DataProtectionMode,CallSettings)
+            // Snippet: FailoverInstance(InstanceName,FailoverInstanceRequest.Types.DataProtectionMode,CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified;
             // Make the request
             Operation<Instance, OperationMetadata> response =
-                cloudRedisClient.FailoverInstance(formattedName, dataProtectionMode);
+                cloudRedisClient.FailoverInstance(name, dataProtectionMode);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance, OperationMetadata> completedResponse =
@@ -817,7 +817,7 @@ namespace Google.Cloud.Redis.V1.Snippets
             // Initialize request argument(s)
             FailoverInstanceRequest request = new FailoverInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified,
             };
             // Make the request
@@ -853,7 +853,7 @@ namespace Google.Cloud.Redis.V1.Snippets
             // Initialize request argument(s)
             FailoverInstanceRequest request = new FailoverInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 DataProtectionMode = FailoverInstanceRequest.Types.DataProtectionMode.Unspecified,
             };
             // Make the request
