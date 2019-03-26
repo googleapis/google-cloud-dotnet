@@ -326,21 +326,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// will never be removed in the context of that async block/thread. Do not rely on the stack contents to know the state
         /// of things on other threads. It may contain previously closed spans.
         /// </summary>
-#if NET45
-        private readonly string _callContextName = Guid.NewGuid().ToString("N");
-        private ImmutableStack<Span> TraceStack
-        {
-            get
-            {
-                var ret = System.Runtime.Remoting.Messaging.CallContext.LogicalGetData(_callContextName) as ImmutableStack<Span>;
-                return ret ?? ImmutableStack<Span>.Empty;
-            }
-            set
-            {
-                System.Runtime.Remoting.Messaging.CallContext.LogicalSetData(_callContextName, value);
-            }
-        }
-#else
         private readonly AsyncLocal<ImmutableStack<Span>> _traceStack = new AsyncLocal<ImmutableStack<Span>>();
         private ImmutableStack<Span> TraceStack
         {
@@ -353,7 +338,6 @@ namespace Google.Cloud.Diagnostics.Common
                 _traceStack.Value = value;
             }
         }
-#endif
 
         private sealed class ImmutableStack<T>
         {

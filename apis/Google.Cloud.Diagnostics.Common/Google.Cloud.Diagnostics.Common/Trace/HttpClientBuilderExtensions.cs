@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if NETSTANDARD2_0
-
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -32,5 +30,3 @@ namespace Google.Cloud.Diagnostics.Common
             clientBuilder.AddHttpMessageHandler<UnchainedTraceHeaderPropagatingHandler>();
     }
 }
-
-#endif

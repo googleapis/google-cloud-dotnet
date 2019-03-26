@@ -128,7 +128,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-#if NETCOREAPP2_1
         [Fact]
         public async Task Traces_OutgoingClientFactory()
         {
@@ -148,7 +147,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
             }
         }
-#endif
 
         public void Dispose()
         {
@@ -197,7 +195,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         // End sample
     }
 
-#if NETCOREAPP2_1
     internal class TraceClientFactoryTestApplication
     {
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
@@ -239,7 +236,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         }
         // End sample
     }
-#endif
 
     /// <summary>
     /// A controller for the <see cref="TraceTestApplication"/> used to trace operations.
@@ -299,7 +295,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         }
         // End sample
 
-#if NETCOREAPP2_1
         // Sample: TraceOutgoingClientFactory
         /// <summary>
         /// Use the <see cref="IHttpClientFactory"/> to create an HttpClient that will guarantee
@@ -314,7 +309,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             return await httpClient.GetAsync("https://weather.com/");
         }
         // End sample
-#endif
     }
 
     // Sample: TraceMVCConstructor

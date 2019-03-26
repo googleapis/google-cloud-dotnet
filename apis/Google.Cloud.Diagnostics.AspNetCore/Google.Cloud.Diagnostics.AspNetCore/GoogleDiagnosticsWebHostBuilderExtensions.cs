@@ -46,7 +46,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static IWebHostBuilder UseGoogleDiagnostics(this IWebHostBuilder builder, string projectId = null, string serviceName = null, string serviceVersion = null)
             => UseGoogleDiagnostics(builder, projectId, serviceName, serviceVersion, monitoredResource: null);
 
-#if NETSTANDARD2_0
         // On .NET Standard 2.0 or higher the IWebHostBuilder.ConfigureServices has a new overload that takes both
         // an IServiceCollection and a WebHostBuilderContext. We can use the context for retrieving information from the
         // host builder at startup time, like reading configuration.
@@ -84,7 +83,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             return builder;
         }
-#endif
 
         // Overload which allows passing in a MonitoredResource instance
         // Internal for testing
