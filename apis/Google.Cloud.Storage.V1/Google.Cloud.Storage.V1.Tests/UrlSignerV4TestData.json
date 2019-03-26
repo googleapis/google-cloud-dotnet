@@ -67,20 +67,6 @@
     },
 
     {
-        "description": "Multi-value headers",
-        "bucket": "test-bucket",
-        "object": "test-object",
-        "headers": {
-            "foo": [ "foo-value1", "foo-value2" ],
-            "bar": [ "bar-value1", "bar-value2" ]
-        },
-        "method": "GET",
-        "expiration": 10,
-        "timestamp": "20190201T090000Z",
-        "expectedUrl": "https://storage.googleapis.com/test-bucket/test-object?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=bar%3Bfoo%3Bhost&X-Goog-Signature=84a14ff388457290bc3ed7bfeb4745a1c2287e58965457d9d9959326fc2cbdfbb9128b6a002e86d617cb1d2187e3e075de223489d4e91418de76e21d4e561c618bc13ac72e1cc3b4e0c9eee880be577c417eb4623347d3d1ffd2a0705ab70bab6786f67107d05dc4652f2b84531dc01a15efa9ee3fbe504f6e76e64658fd1df431bf671a997db8ef7371eae8abbcc2690c085407738e32f396d9b87d0e974740ee0b7a256fc8471db27a6b554527b96dbd972073b89f57d6486182816b0d307875f1753bf16140332c6116899447769dd9f1985a520ca6ab50c614a80b3619e9d9a81ff81a6c14f51f1cf487243c2708aa9064e30acb5694af04c3fe0f5fd5a4"
-    },
-
-    {
         "description": "Headers should be trimmed",
         "bucket": "test-bucket",
         "object": "test-object",
@@ -93,19 +79,6 @@
         "expiration": 10,
         "timestamp": "20190201T090000Z",
         "expectedUrl": "https://storage.googleapis.com/test-bucket/test-object?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=collapsed%3Bhost%3Bleading%3Btrailing&X-Goog-Signature=1839511d6238d9ac2bbcbba8b23515b3757db35dfa7b8f9bc4b8b4aa270224df747c812526f1a3bcf294d67ed84cd14e074c36bc090e0a542782934a7c925af4a5ea68123e97533704ce8b08ccdf5fe6b412f89c9fc4de243e29abdb098382c5672188ee3f6fef7131413e252c78e7a35658825ad842a50609e9cc463731e17284ff7a14824c989f87cef22fb99dfec20cfeed69d8b3a08f00b43b8284eecd535e50e982b05cd74c5750cd5f986cfc21a2a05f7f3ab7fc31bd684ed1b823b64d29281e923fc6580c49005552ca19c253de087d9d2df881144e44eda40965cfdb4889bf3a35553c9809f4ed20b8355be481b92b9618952b6a04f3017b36053e15"
-    },
-
-    {
-        "description": "Trimming of multiple header values",
-        "bucket": "test-bucket",
-        "object": "test-object",
-        "headers": {
-            "foo": [ "  abc  ", "  def  ", "  ghi  jkl  " ]
-        },
-        "method": "GET",
-        "expiration": 10,
-        "timestamp": "20190201T090000Z",
-        "expectedUrl": "https://storage.googleapis.com/test-bucket/test-object?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=test-iam-credentials%40dummy-project-id.iam.gserviceaccount.com%2F20190201%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20190201T090000Z&X-Goog-Expires=10&X-Goog-SignedHeaders=foo%3Bhost&X-Goog-Signature=96e36a82dd79e6d37070b5dfaffc616e8c5159c583261dd3858c2241c2a34f270f4fe2bf55ba6877a7c982f34b0b9114683ba37880e3ec378942972882dbcb99c6463573178c6167acc40b2be8db7f3a320de47373c30626a37fe9e6cc719ee6060f573bf1a30ef5e86338e834494c089226bef3722bf8ae2fa3a7599916bec92df30cf25852c3514e3be0f4541063cea2babf4825b8e38876454f1502f5e307d32381aa927113104a75c82a23f7e9597016ca0bc4971d5990515df2a0239a62c711d3aacea50b8e05106ae2a14201bd6dae369334c27fad5c14dac66103c5c1a980b3de263e85fe715010e603a518eaf6286b7beb24ca84b97752485c423f0a"
     },
 
     {
