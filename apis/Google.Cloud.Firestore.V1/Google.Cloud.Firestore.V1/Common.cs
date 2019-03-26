@@ -25,8 +25,8 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvZmlyZXN0b3JlL3YxL2NvbW1vbi5wcm90bxITZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIjCgxEb2N1bWVudE1hc2sS",
+            "cmVzdG9yZS52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byIjCgxEb2N1bWVudE1hc2sS",
             "EwoLZmllbGRfcGF0aHMYASADKAkiZQoMUHJlY29uZGl0aW9uEhAKBmV4aXN0",
             "cxgBIAEoCEgAEjEKC3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
             "YnVmLlRpbWVzdGFtcEgAQhAKDmNvbmRpdGlvbl90eXBlIqkCChJUcmFuc2Fj",
@@ -42,7 +42,7 @@ namespace Google.Cloud.Firestore.V1 {
             "b2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0",
             "b3JlXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentMask), global::Google.Cloud.Firestore.V1.DocumentMask.Parser, new[]{ "FieldPaths" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Precondition), global::Google.Cloud.Firestore.V1.Precondition.Parser, new[]{ "Exists", "UpdateTime" }, new[]{ "ConditionType" }, null, null),
@@ -59,8 +59,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// Used to restrict a get or update operation on a document to a subset of its
   /// fields.
   /// This is different from standard field masks, as this is always scoped to a
-  /// [Document][google.firestore.v1.Document], and takes in account the dynamic
-  /// nature of [Value][google.firestore.v1.Value].
+  /// [Document][google.firestore.v1.Document], and takes in account the dynamic nature of [Value][google.firestore.v1.Value].
   /// </summary>
   public sealed partial class DocumentMask : pb::IMessage<DocumentMask> {
     private static readonly pb::MessageParser<DocumentMask> _parser = new pb::MessageParser<DocumentMask>(() => new DocumentMask());
@@ -102,9 +101,8 @@ namespace Google.Cloud.Firestore.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> fieldPaths_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The list of field paths in the mask. See
-    /// [Document.fields][google.firestore.v1.Document.fields] for a field path
-    /// syntax reference.
+    /// The list of field paths in the mask. See [Document.fields][google.firestore.v1.Document.fields] for a field
+    /// path syntax reference.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> FieldPaths {

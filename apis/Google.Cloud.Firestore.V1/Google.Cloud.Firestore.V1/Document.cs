@@ -25,9 +25,9 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3RvEhNnb29nbGUu",
-            "ZmlyZXN0b3JlLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhxn",
-            "b29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
-            "dGltZXN0YW1wLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8igAIK",
+            "ZmlyZXN0b3JlLnYxGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9n",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhhnb29nbGUvdHlwZS9s",
+            "YXRsbmcucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8igAIK",
             "CERvY3VtZW50EgwKBG5hbWUYASABKAkSOQoGZmllbGRzGAIgAygLMikuZ29v",
             "Z2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudC5GaWVsZHNFbnRyeRIvCgtjcmVh",
             "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
@@ -53,7 +53,7 @@ namespace Google.Cloud.Firestore.V1 {
             "O2ZpcmVzdG9yZaICBEdDRlOqAhlHb29nbGUuQ2xvdWQuRmlyZXN0b3JlLlYx",
             "ygIZR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Document), global::Google.Cloud.Firestore.V1.Document.Parser, new[]{ "Name", "Fields", "CreateTime", "UpdateTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue" }, new[]{ "ValueType" }, null, null),
