@@ -6,10 +6,6 @@ message TestFile {
   repeated SigningV4Test signing_v4_tests = 1;
 }
 
-message ValueList {
-  repeated string values = 1;
-}
-
 message SigningV4Test {
   string fileName = 1;
   string description = 2;
@@ -19,5 +15,5 @@ message SigningV4Test {
   int64 expiration = 6;
   string timestamp = 7;
   string expectedUrl = 8;
-  map<string, ValueList> headers = 9;
+  map<string, string> headers = 9;
 }
