@@ -566,7 +566,8 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
-      "Google.LongRunning": "1.1.0"
+      "Google.LongRunning": "1.1.0",
+      "Google.Api.CommonProtos": "1.6.0"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
