@@ -31,22 +31,23 @@ namespace Google.Cloud.Talent.V4Beta1.CleanTestData
             ProjectName projectName = new ProjectName(args[0]);
             var companyClient = CompanyServiceClient.Create();
             var jobClient = JobServiceClient.Create();
+            var parentName = TenantOrProjectNameOneof.From(projectName);
 
-            var testCompanies = companyClient.ListCompanies(projectName)
+            var testCompanies = companyClient.ListCompanies(parentName)
                 .Where(cn => cn.ExternalId.StartsWith("test-"))
-                .Select(c => c.CompanyName)
+                .Select(c => c.CompanyNameOneof)
                 .ToList();
             Console.WriteLine($"Companies to delete: {testCompanies.Count}");
 
             foreach (var companyName in testCompanies)
             {
-                var jobs = jobClient.ListJobs(projectName, $"companyName=\"{companyName}\"").ToList();
-                Console.WriteLine($"Jobs for company {companyName.CompanyId}: {jobs.Count}");
+                var jobs = jobClient.ListJobs(parentName, $"companyName=\"{companyName}\"").ToList();
+                Console.WriteLine($"Jobs for company {companyName}: {jobs.Count}");
                 foreach (var job in jobs)
                 {
                     try
                     {
-                        jobClient.DeleteJob(job.JobName);
+                        jobClient.DeleteJob(job.JobNameOneof);
                     }
                     catch (RpcException e)
                     {

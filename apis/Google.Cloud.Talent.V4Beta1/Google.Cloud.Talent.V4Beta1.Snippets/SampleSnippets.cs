@@ -42,7 +42,8 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 ExternalId = externalId,
                 Size = CompanySize.Medium
             };
-            Company created = client.CreateCompany(projectName, company);
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(projectName);
+            Company created = client.CreateCompany(parent, company);
             Console.WriteLine($"Created company with resource name {created.Name}");
             // End sample
         }
@@ -51,7 +52,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         public void CreateJob()
         {
             ProjectName projectName = _fixture.ProjectName;
-            CompanyName companyName = _fixture.CreatedCompanyName;
+            CompanyNameOneof companyName = _fixture.CreatedCompanyName;
             string requisitionId = IdGenerator.FromGuid();
 
             // Sample: CreateJob
@@ -62,12 +63,13 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 {
                     Instruction = "See company web site"
                 },
-                CompanyName = companyName.ToString(),
+                Company = companyName.ToString(),
                 Description = "Company CEO, responsible for everything in the company.",
                 RequisitionId = requisitionId,
                 Title = "CEO"
             };
-            Job created = client.CreateJob(projectName, job);
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(projectName);
+            Job created = client.CreateJob(parent, job);
             Console.WriteLine($"Created job with resource name {created.Name}");
             // End sample
         }
