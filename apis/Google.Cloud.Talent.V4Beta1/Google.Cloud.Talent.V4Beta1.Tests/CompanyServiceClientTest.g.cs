@@ -18,7 +18,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -40,12 +39,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             CreateCompanyRequest expectedRequest = new CreateCompanyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -59,7 +58,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateCompany(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             Company company = new Company();
             Company response = client.CreateCompany(parent, company);
             Assert.Same(expectedResponse, response);
@@ -72,12 +71,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             CreateCompanyRequest expectedRequest = new CreateCompanyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -91,7 +90,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateCompanyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             Company company = new Company();
             Company response = await client.CreateCompanyAsync(parent, company);
             Assert.Same(expectedResponse, response);
@@ -104,12 +103,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -134,12 +133,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -164,11 +163,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             GetCompanyRequest expectedRequest = new GetCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -182,7 +181,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.GetCompany(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             Company response = client.GetCompany(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -194,11 +193,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             GetCompanyRequest expectedRequest = new GetCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -212,7 +211,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             mockGrpcClient.Setup(x => x.GetCompanyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Company>(Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             Company response = await client.GetCompanyAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
@@ -224,11 +223,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -253,11 +252,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -286,7 +285,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -316,7 +315,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -346,7 +345,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -375,7 +374,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 DisplayName = "displayName1615086568",
                 ExternalId = "externalId-1153075697",
                 HeadquartersAddress = "headquartersAddress-1879520036",
@@ -400,13 +399,13 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             DeleteCompanyRequest expectedRequest = new DeleteCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteCompany(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             client.DeleteCompany(name);
             mockGrpcClient.VerifyAll();
         }
@@ -417,13 +416,13 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             DeleteCompanyRequest expectedRequest = new DeleteCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             await client.DeleteCompanyAsync(name);
             mockGrpcClient.VerifyAll();
         }
@@ -434,7 +433,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteCompany(request, It.IsAny<CallOptions>()))
@@ -450,7 +449,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new Mock<CompanyService.CompanyServiceClient>(MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, It.IsAny<CallOptions>()))

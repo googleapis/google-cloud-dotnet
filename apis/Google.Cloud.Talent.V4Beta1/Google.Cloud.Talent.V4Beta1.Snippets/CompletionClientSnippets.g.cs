@@ -44,7 +44,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Query = "",
                 PageSize = 0,
             };
@@ -62,7 +62,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Query = "",
                 PageSize = 0,
             };

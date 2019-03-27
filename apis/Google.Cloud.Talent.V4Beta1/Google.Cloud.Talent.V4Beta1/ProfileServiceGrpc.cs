@@ -140,6 +140,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
       /// <summary>
       /// Deletes the specified profile.
+      /// Prerequisite: The profile has no associated applications or assignments
+      /// associated.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -370,6 +372,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       /// <summary>
       /// Deletes the specified profile.
+      /// Prerequisite: The profile has no associated applications or assignments
+      /// associated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -382,6 +386,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       /// <summary>
       /// Deletes the specified profile.
+      /// Prerequisite: The profile has no associated applications or assignments
+      /// associated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -392,6 +398,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       /// <summary>
       /// Deletes the specified profile.
+      /// Prerequisite: The profile has no associated applications or assignments
+      /// associated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -404,6 +412,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       /// <summary>
       /// Deletes the specified profile.
+      /// Prerequisite: The profile has no associated applications or assignments
+      /// associated.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

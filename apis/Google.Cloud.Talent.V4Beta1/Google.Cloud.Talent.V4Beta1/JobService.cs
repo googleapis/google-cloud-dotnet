@@ -96,36 +96,46 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "cm90b2J1Zi5EdXJhdGlvbip2CgdKb2JWaWV3EhgKFEpPQl9WSUVXX1VOU1BF",
             "Q0lGSUVEEAASFAoQSk9CX1ZJRVdfSURfT05MWRABEhQKEEpPQl9WSUVXX01J",
             "TklNQUwQAhISCg5KT0JfVklFV19TTUFMTBADEhEKDUpPQl9WSUVXX0ZVTEwQ",
-            "BDK3CQoKSm9iU2VydmljZRKKAQoJQ3JlYXRlSm9iEi0uZ29vZ2xlLmNsb3Vk",
+            "BDLiDAoKSm9iU2VydmljZRK8AQoJQ3JlYXRlSm9iEi0uZ29vZ2xlLmNsb3Vk",
             "LnRhbGVudC52NGJldGExLkNyZWF0ZUpvYlJlcXVlc3QaIC5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuSm9iIiyC0+STAiYiIS92NGJldGExL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vam9iczoBKhKBAQoGR2V0Sm9iEiouZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLkdldEpvYlJlcXVlc3QaIC5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuSm9iIimC0+STAiMSIS92NGJldGExL3tuYW1l",
-            "PXByb2plY3RzLyovam9icy8qfRKOAQoJVXBkYXRlSm9iEi0uZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLlVwZGF0ZUpvYlJlcXVlc3QaIC5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuSm9iIjCC0+STAioyJS92NGJldGExL3tq",
-            "b2IubmFtZT1wcm9qZWN0cy8qL2pvYnMvKn06ASoSfQoJRGVsZXRlSm9iEi0u",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlbGV0ZUpvYlJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiKYLT5JMCIyohL3Y0YmV0YTEve25h",
-            "bWU9cHJvamVjdHMvKi9qb2JzLyp9EpIBCghMaXN0Sm9icxIsLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5MaXN0Sm9ic1JlcXVlc3QaLS5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdEpvYnNSZXNwb25zZSIpgtPkkwIj",
-            "EiEvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pvYnMSmAEKD0JhdGNo",
-            "RGVsZXRlSm9icxIzLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5CYXRj",
-            "aERlbGV0ZUpvYnNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjiC",
-            "0+STAjIiLS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vam9iczpiYXRj",
-            "aERlbGV0ZToBKhKiAQoKU2VhcmNoSm9icxIuLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5TZWFyY2hKb2JzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5TZWFyY2hKb2JzUmVzcG9uc2UiM4LT5JMCLSIoL3Y0",
-            "YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9qb2JzOnNlYXJjaDoBKhKyAQoS",
-            "U2VhcmNoSm9ic0ZvckFsZXJ0Ei4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLlNlYXJjaEpvYnNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLlNlYXJjaEpvYnNSZXNwb25zZSI7gtPkkwI1IjAvdjRiZXRhMS97",
-            "cGFyZW50PXByb2plY3RzLyp9L2pvYnM6c2VhcmNoRm9yQWxlcnQ6ASpCfQof",
-            "Y29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIPSm9iU2VydmljZVBy",
-            "b3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "dWQudGFsZW50LnY0YmV0YTEuSm9iIl6C0+STAlgiKy92NGJldGExL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6ASpaJiIhL3Y0YmV0YTEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qfS9qb2JzOgEqErABCgZHZXRKb2ISKi5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuR2V0Sm9iUmVxdWVzdBogLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2IiWILT5JMCUhIrL3Y0YmV0YTEv",
+            "e25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovam9icy8qfVojEiEvdjRiZXRh",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2pvYnMvKn0SxAEKCVVwZGF0ZUpvYhItLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5VcGRhdGVKb2JSZXF1ZXN0GiAu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYiJmgtPkkwJgMi8vdjRi",
+            "ZXRhMS97am9iLm5hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovam9icy8qfToB",
+            "KloqMiUvdjRiZXRhMS97am9iLm5hbWU9cHJvamVjdHMvKi9qb2JzLyp9OgEq",
+            "EqwBCglEZWxldGVKb2ISLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "RGVsZXRlSm9iUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJYgtPk",
+            "kwJSKisvdjRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9qb2Jz",
+            "Lyp9WiMqIS92NGJldGExL3tuYW1lPXByb2plY3RzLyovam9icy8qfRLBAQoI",
+            "TGlzdEpvYnMSLC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdEpv",
+            "YnNSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxpc3RK",
+            "b2JzUmVzcG9uc2UiWILT5JMCUhIrL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0",
+            "cy8qL3RlbmFudHMvKn0vam9ic1ojEiEvdjRiZXRhMS97cGFyZW50PXByb2pl",
+            "Y3RzLyp9L2pvYnMS0wEKD0JhdGNoRGVsZXRlSm9icxIzLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5CYXRjaERlbGV0ZUpvYnNSZXF1ZXN0GhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5InOC0+STAm0iNy92NGJldGExL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6YmF0Y2hEZWxldGU6ASpaLyIt",
+            "L3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9qb2JzOmJhdGNoRGVsZXRl",
+            "EtsBCgpTZWFyY2hKb2JzEi4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LlNlYXJjaEpvYnNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLlNlYXJjaEpvYnNSZXNwb25zZSJsgtPkkwJmIjIvdjRiZXRhMS97cGFy",
+            "ZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2JzOnNlYXJjaDoBKlotIigv",
+            "djRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pvYnM6c2VhcmNoOgEqEvMB",
+            "ChJTZWFyY2hKb2JzRm9yQWxlcnQSLi5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuU2VhcmNoSm9ic1JlcXVlc3QaLy5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuU2VhcmNoSm9ic1Jlc3BvbnNlInyC0+STAnYiOi92NGJldGEx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6c2VhcmNoRm9y",
+            "QWxlcnQ6ASpaNSIwL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9qb2Jz",
+            "OnNlYXJjaEZvckFsZXJ0OgEqQn0KH2NvbS5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTFCD0pvYlNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3Rh",
+            "bGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.BatchReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.JobView), }, new pbr::GeneratedClrTypeInfo[] {
@@ -168,8 +178,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// A minimal view of the job, with the following attributes:
     /// [Job.name][google.cloud.talent.v4beta1.Job.name],
     /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
-    /// [Job.job_title][],
-    /// [Job.company_name][google.cloud.talent.v4beta1.Job.company_name],
+    /// [Job.job_title][], [Job.company][google.cloud.talent.v4beta1.Job.company],
     /// [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations],
     /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
     /// </summary>
@@ -178,8 +187,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// A small view of the job, with the following attributes in the search
     /// results: [Job.name][google.cloud.talent.v4beta1.Job.name],
     /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
-    /// [Job.job_title][],
-    /// [Job.company_name][google.cloud.talent.v4beta1.Job.company_name],
+    /// [Job.job_title][], [Job.company][google.cloud.talent.v4beta1.Job.company],
     /// [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations],
     /// [Job.visibility][google.cloud.talent.v4beta1.Job.visibility],
     /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code],
@@ -241,10 +249,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The resource name of the project under which the job is created.
+    /// The resource name of the tenant under which the job is created.
     ///
-    /// The format is "projects/{project_id}", for example,
-    /// "projects/api-test-project".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and a default tenant is created if unspecified, for
+    /// example, "projects/api-test-project".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -423,8 +434,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The resource name of the job to retrieve.
     ///
-    /// The format is "projects/{project_id}/jobs/{job_id}",
-    /// for example, "projects/api-test-project/jobs/1234".
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+    /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project/jobs/1234".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -756,8 +771,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The resource name of the job to be deleted.
     ///
-    /// The format is "projects/{project_id}/jobs/{job_id}",
-    /// for example, "projects/api-test-project/jobs/1234".
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+    /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project/jobs/1234".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -897,10 +916,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The resource name of the project under which the job is created.
+    /// The resource name of the tenant under which the job is created.
     ///
-    /// The format is "projects/{project_id}", for example,
-    /// "projects/api-test-project".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1085,10 +1107,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The resource name of the project under which the job is created.
+    /// The resource name of the tenant under which the job is created.
     ///
-    /// The format is "projects/{project_id}", for example,
-    /// "projects/api-test-project".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1117,11 +1142,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// Sample Query:
     ///
-    /// * companyName = "projects/api-test-project/companies/123"
-    /// * companyName = "projects/api-test-project/companies/123" AND requisitionId
-    /// = "req-1"
-    /// * companyName = "projects/api-test-project/companies/123" AND status =
-    /// "EXPIRED"
+    /// * companyName = "projects/api-test-project/tenants/foo/companies/bar"
+    /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+    /// requisitionId = "req-1"
+    /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+    /// status = "EXPIRED"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -1598,10 +1623,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The resource name of the project to search within.
+    /// The resource name of the tenant to search within.
     ///
-    /// The format is "projects/{project_id}", for example,
-    /// "projects/api-test-project".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

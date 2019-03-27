@@ -988,6 +988,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1015,6 +1017,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1039,6 +1043,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1063,6 +1069,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1082,6 +1090,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1100,6 +1110,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1418,6 +1430,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1438,6 +1452,8 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

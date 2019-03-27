@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -534,10 +533,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="job">
         /// Required.
@@ -551,12 +553,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> CreateJobAsync(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             Job job,
             gaxgrpc::CallSettings callSettings = null) => CreateJobAsync(
                 new CreateJobRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
@@ -570,10 +572,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="job">
         /// Required.
@@ -587,7 +592,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> CreateJobAsync(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             Job job,
             st::CancellationToken cancellationToken) => CreateJobAsync(
                 parent,
@@ -603,10 +608,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="job">
         /// Required.
@@ -620,12 +628,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job CreateJob(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             Job job,
             gaxgrpc::CallSettings callSettings = null) => CreateJob(
                 new CreateJobRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
@@ -704,8 +712,12 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The resource name of the job to retrieve.
         ///
-        /// The format is "projects/{project_id}/jobs/{job_id}",
-        /// for example, "projects/api-test-project/jobs/1234".
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project/jobs/1234".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -714,11 +726,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> GetJobAsync(
-            JobName name,
+            JobNameOneof name,
             gaxgrpc::CallSettings callSettings = null) => GetJobAsync(
                 new GetJobRequest
                 {
-                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    JobNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -731,8 +743,12 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The resource name of the job to retrieve.
         ///
-        /// The format is "projects/{project_id}/jobs/{job_id}",
-        /// for example, "projects/api-test-project/jobs/1234".
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project/jobs/1234".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -741,7 +757,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Job> GetJobAsync(
-            JobName name,
+            JobNameOneof name,
             st::CancellationToken cancellationToken) => GetJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -755,8 +771,12 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The resource name of the job to retrieve.
         ///
-        /// The format is "projects/{project_id}/jobs/{job_id}",
-        /// for example, "projects/api-test-project/jobs/1234".
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project/jobs/1234".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -765,11 +785,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual Job GetJob(
-            JobName name,
+            JobNameOneof name,
             gaxgrpc::CallSettings callSettings = null) => GetJob(
                 new GetJobRequest
                 {
-                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    JobNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -983,8 +1003,12 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The resource name of the job to be deleted.
         ///
-        /// The format is "projects/{project_id}/jobs/{job_id}",
-        /// for example, "projects/api-test-project/jobs/1234".
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project/jobs/1234".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -993,11 +1017,11 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteJobAsync(
-            JobName name,
+            JobNameOneof name,
             gaxgrpc::CallSettings callSettings = null) => DeleteJobAsync(
                 new DeleteJobRequest
                 {
-                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    JobNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1012,8 +1036,12 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The resource name of the job to be deleted.
         ///
-        /// The format is "projects/{project_id}/jobs/{job_id}",
-        /// for example, "projects/api-test-project/jobs/1234".
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project/jobs/1234".
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1022,7 +1050,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteJobAsync(
-            JobName name,
+            JobNameOneof name,
             st::CancellationToken cancellationToken) => DeleteJobAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1038,18 +1066,22 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// The resource name of the job to be deleted.
         ///
-        /// The format is "projects/{project_id}/jobs/{job_id}",
-        /// for example, "projects/api-test-project/jobs/1234".
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+        /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project/jobs/1234".
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteJob(
-            JobName name,
+            JobNameOneof name,
             gaxgrpc::CallSettings callSettings = null) => DeleteJob(
                 new DeleteJobRequest
                 {
-                    JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    JobNameOneof = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1121,10 +1153,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="filter">
         /// Required.
@@ -1142,11 +1177,11 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// Sample Query:
         ///
-        /// * companyName = "projects/api-test-project/companies/123"
-        /// * companyName = "projects/api-test-project/companies/123" AND requisitionId
-        /// = "req-1"
-        /// * companyName = "projects/api-test-project/companies/123" AND status =
-        /// "EXPIRED"
+        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar"
+        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1163,14 +1198,14 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable asynchronous sequence of <see cref="Job"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListJobsAsync(
                 new ListJobsRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1183,10 +1218,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="filter">
         /// Required.
@@ -1204,11 +1242,11 @@ namespace Google.Cloud.Talent.V4Beta1
         ///
         /// Sample Query:
         ///
-        /// * companyName = "projects/api-test-project/companies/123"
-        /// * companyName = "projects/api-test-project/companies/123" AND requisitionId
-        /// = "req-1"
-        /// * companyName = "projects/api-test-project/companies/123" AND status =
-        /// "EXPIRED"
+        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar"
+        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// requisitionId = "req-1"
+        /// * companyName = "projects/api-test-project/tenants/foo/companies/bar" AND
+        /// status = "EXPIRED"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1225,14 +1263,14 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A pageable sequence of <see cref="Job"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListJobs(
                 new ListJobsRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1283,10 +1321,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="filter">
         /// Required.
@@ -1310,12 +1351,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task BatchDeleteJobsAsync(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             string filter,
             gaxgrpc::CallSettings callSettings = null) => BatchDeleteJobsAsync(
                 new BatchDeleteJobsRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 },
                 callSettings);
@@ -1326,10 +1367,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="filter">
         /// Required.
@@ -1353,7 +1397,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task BatchDeleteJobsAsync(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             string filter,
             st::CancellationToken cancellationToken) => BatchDeleteJobsAsync(
                 parent,
@@ -1366,10 +1410,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="parent">
         /// Required.
         ///
-        /// The resource name of the project under which the job is created.
+        /// The resource name of the tenant under which the job is created.
         ///
-        /// The format is "projects/{project_id}", for example,
-        /// "projects/api-test-project".
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="filter">
         /// Required.
@@ -1390,12 +1437,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void BatchDeleteJobs(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             string filter,
             gaxgrpc::CallSettings callSettings = null) => BatchDeleteJobs(
                 new BatchDeleteJobsRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                 },
                 callSettings);
