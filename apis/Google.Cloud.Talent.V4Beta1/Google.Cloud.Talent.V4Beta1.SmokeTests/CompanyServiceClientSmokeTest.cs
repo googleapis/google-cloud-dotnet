@@ -40,9 +40,10 @@ namespace Google.Cloud.Talent.V4Beta1.SmokeTests
 
             // Initialize request argument(s)
             ProjectName projectName = new ProjectName(projectId);
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(projectName);
 
             // Call API method
-            PagedEnumerable<ListCompaniesResponse, Company> pagedResponse = client.ListCompanies(projectName);
+            PagedEnumerable<ListCompaniesResponse, Company> pagedResponse = client.ListCompanies(parent);
             // Show the result
             foreach (var item in pagedResponse)
             {

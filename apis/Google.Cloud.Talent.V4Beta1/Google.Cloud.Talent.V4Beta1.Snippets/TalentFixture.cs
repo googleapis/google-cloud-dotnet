@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
     {
         public ProjectName ProjectName => new ProjectName(ProjectId);
 
-        public CompanyName CreatedCompanyName { get; }
+        public CompanyNameOneof CreatedCompanyName { get; }
 
         private readonly string _companyExternalIdPrefix = IdGenerator.FromGuid(prefix: "test-", suffix: "-");
 
@@ -34,7 +34,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 
         public string GenerateCompanyExternalId() => IdGenerator.FromGuid(prefix: _companyExternalIdPrefix);
 
-        private CompanyName CreateSampleCompany()
+        private CompanyNameOneof CreateSampleCompany()
         {
             CompanyServiceClient client = CompanyServiceClient.Create();
             Company company = new Company
@@ -43,8 +43,8 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 ExternalId = GenerateCompanyExternalId(),
                 Size = CompanySize.Giant
             };
-            Company created = client.CreateCompany(ProjectName, company);
-            return CompanyName.Parse(created.Name);
+            Company created = client.CreateCompany(TenantOrProjectNameOneof.From(ProjectName), company);
+            return created.CompanyNameOneof;
         }
 
         // No clean-up: we can't do the full job here as there's a delay between the deletion of the last job for a company
