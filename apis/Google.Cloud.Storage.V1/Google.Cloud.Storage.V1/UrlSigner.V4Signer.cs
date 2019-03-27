@@ -142,7 +142,7 @@ namespace Google.Cloud.Storage.V1
 
                     _canonicalQueryString = string.Join("&", queryParameters.Select(p => $"{p.Key}={Uri.EscapeDataString(p.Value)}"));
                     _resourcePath = $"/{bucket}";
-                    if (objectName != null)
+                    if (!string.IsNullOrEmpty(objectName))
                     {
                         _resourcePath += $"/{Uri.EscapeDataString(objectName)}";
                     }
