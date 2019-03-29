@@ -169,7 +169,7 @@ GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 (cd gapic-generator; ./gradlew shadowJar --warning-mode=none)
 
 # Build the microgenerator
-# (This is disabled for now as we're not using it.)
+# This is disabled for now as we're not using it. We'll need to make it cross-platform, too.
 # (cd gapic-generator-csharp; dotnet publish -c Release --self-contained --runtime=win-x64 Google.Api.Generator)
 # declare -r GAPIC_PLUGIN=gapic-generator-csharp/Google.Api.Generator/bin/Release/netcoreapp2.2/win-x64/publish/Google.Api.Generator.exe
 
