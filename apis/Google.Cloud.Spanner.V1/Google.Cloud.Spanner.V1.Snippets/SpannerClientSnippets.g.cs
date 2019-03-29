@@ -798,7 +798,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             PartitionQueryRequest request = new PartitionQueryRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Sql = "",
             };
             // Make the request
@@ -815,7 +815,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             PartitionQueryRequest request = new PartitionQueryRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Sql = "",
             };
             // Make the request
@@ -833,7 +833,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             PartitionReadRequest request = new PartitionReadRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Table = "",
                 KeySet = new KeySet(),
             };
@@ -851,7 +851,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
             // Initialize request argument(s)
             PartitionReadRequest request = new PartitionReadRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Table = "",
                 KeySet = new KeySet(),
             };

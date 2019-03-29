@@ -671,7 +671,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
             PartitionQueryRequest request = new PartitionQueryRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Sql = "sql114126",
             };
             PartitionResponse expectedResponse = new PartitionResponse();
@@ -689,7 +689,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
             PartitionQueryRequest request = new PartitionQueryRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Sql = "sql114126",
             };
             PartitionResponse expectedResponse = new PartitionResponse();
@@ -707,7 +707,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
             PartitionReadRequest request = new PartitionReadRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Table = "table110115790",
                 KeySet = new KeySet(),
             };
@@ -726,7 +726,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             Mock<Spanner.SpannerClient> mockGrpcClient = new Mock<Spanner.SpannerClient>(MockBehavior.Strict);
             PartitionReadRequest request = new PartitionReadRequest
             {
-                Session = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]").ToString(),
+                SessionAsSessionName = new SessionName("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SESSION]"),
                 Table = "table110115790",
                 KeySet = new KeySet(),
             };
