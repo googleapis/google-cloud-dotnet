@@ -28,9 +28,10 @@ namespace Google.Monitoring.V3 {
             "Z29vZ2xlLm1vbml0b3JpbmcudjMaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
             "cHJvdG8ifAoNRHJvcHBlZExhYmVscxI9CgVsYWJlbBgBIAMoCzIuLmdvb2ds",
             "ZS5tb25pdG9yaW5nLnYzLkRyb3BwZWRMYWJlbHMuTGFiZWxFbnRyeRosCgpM",
-            "YWJlbEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCQFo+",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tb25pdG9y",
-            "aW5nL3YzO21vbml0b3JpbmdiBnByb3RvMw=="));
+            "YWJlbEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCcAoY",
+            "Y29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhJEcm9wcGVkTGFiZWxzUHJvdG9Q",
+            "AVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tb25p",
+            "dG9yaW5nL3YzO21vbml0b3JpbmdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

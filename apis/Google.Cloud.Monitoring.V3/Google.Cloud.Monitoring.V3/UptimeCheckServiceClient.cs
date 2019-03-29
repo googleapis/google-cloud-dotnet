@@ -593,11 +593,11 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<UptimeCheckConfig> GetUptimeCheckConfigAsync(
-            string name,
+            UptimeCheckConfigName name,
             gaxgrpc::CallSettings callSettings = null) => GetUptimeCheckConfigAsync(
                 new GetUptimeCheckConfigRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    UptimeCheckConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -615,7 +615,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<UptimeCheckConfig> GetUptimeCheckConfigAsync(
-            string name,
+            UptimeCheckConfigName name,
             st::CancellationToken cancellationToken) => GetUptimeCheckConfigAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -634,11 +634,11 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual UptimeCheckConfig GetUptimeCheckConfig(
-            string name,
+            UptimeCheckConfigName name,
             gaxgrpc::CallSettings callSettings = null) => GetUptimeCheckConfig(
                 new GetUptimeCheckConfigRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    UptimeCheckConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1012,11 +1012,11 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteUptimeCheckConfigAsync(
-            string name,
+            UptimeCheckConfigName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteUptimeCheckConfigAsync(
                 new DeleteUptimeCheckConfigRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    UptimeCheckConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1036,7 +1036,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteUptimeCheckConfigAsync(
-            string name,
+            UptimeCheckConfigName name,
             st::CancellationToken cancellationToken) => DeleteUptimeCheckConfigAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1054,11 +1054,11 @@ namespace Google.Cloud.Monitoring.V3
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteUptimeCheckConfig(
-            string name,
+            UptimeCheckConfigName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteUptimeCheckConfig(
                 new DeleteUptimeCheckConfigRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    UptimeCheckConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
