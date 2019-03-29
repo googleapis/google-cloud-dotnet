@@ -27,36 +27,37 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "CjRnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGxldGlvbl9zZXJ2",
             "aWNlLnByb3RvEhtnb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2ds",
             "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQv",
-            "djRiZXRhMS9jb21tb24ucHJvdG8ixQMKFENvbXBsZXRlUXVlcnlSZXF1ZXN0",
-            "EgwKBG5hbWUYASABKAkSDQoFcXVlcnkYAiABKAkSFgoObGFuZ3VhZ2VfY29k",
-            "ZXMYAyADKAkSEQoJcGFnZV9zaXplGAQgASgFEhQKDGNvbXBhbnlfbmFtZRgF",
-            "IAEoCRJQCgVzY29wZRgGIAEoDjJBLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5Db21wbGV0ZVF1ZXJ5UmVxdWVzdC5Db21wbGV0aW9uU2NvcGUSTgoE",
-            "dHlwZRgHIAEoDjJALmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21w",
-            "bGV0ZVF1ZXJ5UmVxdWVzdC5Db21wbGV0aW9uVHlwZSJLCg9Db21wbGV0aW9u",
-            "U2NvcGUSIAocQ09NUExFVElPTl9TQ09QRV9VTlNQRUNJRklFRBAAEgoKBlRF",
-            "TkFOVBABEgoKBlBVQkxJQxACImAKDkNvbXBsZXRpb25UeXBlEh8KG0NPTVBM",
-            "RVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEg0KCUpPQl9USVRMRRABEhAKDENP",
-            "TVBBTllfTkFNRRACEgwKCENPTUJJTkVEEAMixQIKFUNvbXBsZXRlUXVlcnlS",
-            "ZXNwb25zZRJfChJjb21wbGV0aW9uX3Jlc3VsdHMYASADKAsyQy5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlc3BvbnNlLkNv",
-            "bXBsZXRpb25SZXN1bHQSPwoIbWV0YWRhdGEYAiABKAsyLS5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuUmVzcG9uc2VNZXRhZGF0YRqJAQoQQ29tcGxl",
-            "dGlvblJlc3VsdBISCgpzdWdnZXN0aW9uGAEgASgJEk4KBHR5cGUYAiABKA4y",
-            "QC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJl",
-            "cXVlc3QuQ29tcGxldGlvblR5cGUSEQoJaW1hZ2VfdXJpGAMgASgJMrIBCgpD",
-            "b21wbGV0aW9uEqMBCg1Db21wbGV0ZVF1ZXJ5EjEuZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXF1ZXN0GjIuZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXNwb25zZSIrgtPk",
-            "kwIlEiMvdjRiZXRhMS97bmFtZT1wcm9qZWN0cy8qfTpjb21wbGV0ZUKEAQof",
-            "Y29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIWQ29tcGxldGlvblNl",
-            "cnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJv",
-            "dG8z"));
+            "djRiZXRhMS9jb21tb24ucHJvdG8iwgMKFENvbXBsZXRlUXVlcnlSZXF1ZXN0",
+            "Eg4KBnBhcmVudBgBIAEoCRINCgVxdWVyeRgCIAEoCRIWCg5sYW5ndWFnZV9j",
+            "b2RlcxgDIAMoCRIRCglwYWdlX3NpemUYBCABKAUSDwoHY29tcGFueRgFIAEo",
+            "CRJQCgVzY29wZRgGIAEoDjJBLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5Db21wbGV0ZVF1ZXJ5UmVxdWVzdC5Db21wbGV0aW9uU2NvcGUSTgoEdHlw",
+            "ZRgHIAEoDjJALmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wbGV0",
+            "ZVF1ZXJ5UmVxdWVzdC5Db21wbGV0aW9uVHlwZSJLCg9Db21wbGV0aW9uU2Nv",
+            "cGUSIAocQ09NUExFVElPTl9TQ09QRV9VTlNQRUNJRklFRBAAEgoKBlRFTkFO",
+            "VBABEgoKBlBVQkxJQxACImAKDkNvbXBsZXRpb25UeXBlEh8KG0NPTVBMRVRJ",
+            "T05fVFlQRV9VTlNQRUNJRklFRBAAEg0KCUpPQl9USVRMRRABEhAKDENPTVBB",
+            "TllfTkFNRRACEgwKCENPTUJJTkVEEAMixQIKFUNvbXBsZXRlUXVlcnlSZXNw",
+            "b25zZRJfChJjb21wbGV0aW9uX3Jlc3VsdHMYASADKAsyQy5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlc3BvbnNlLkNvbXBs",
+            "ZXRpb25SZXN1bHQSPwoIbWV0YWRhdGEYAiABKAsyLS5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuUmVzcG9uc2VNZXRhZGF0YRqJAQoQQ29tcGxldGlv",
+            "blJlc3VsdBISCgpzdWdnZXN0aW9uGAEgASgJEk4KBHR5cGUYAiABKA4yQC5n",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlcXVl",
+            "c3QuQ29tcGxldGlvblR5cGUSEQoJaW1hZ2VfdXJpGAMgASgJMucBCgpDb21w",
+            "bGV0aW9uEtgBCg1Db21wbGV0ZVF1ZXJ5EjEuZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXF1ZXN0GjIuZ29vZ2xlLmNsb3Vk",
+            "LnRhbGVudC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXNwb25zZSJggtPkkwJa",
+            "Ei8vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfTpjb21w",
+            "bGV0ZVonEiUvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9OmNvbXBsZXRl",
+            "QoQBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhZDb21wbGV0",
+            "aW9uU2VydmljZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RT",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest), global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Parser, new[]{ "Name", "Query", "LanguageCodes", "PageSize", "CompanyName", "Scope", "Type" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope), typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest), global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Parser, new[]{ "Parent", "Query", "LanguageCodes", "PageSize", "Company", "Scope", "Type" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope), typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Parser, new[]{ "CompletionResults", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult.Parser, new[]{ "Suggestion", "Type", "ImageUri" }, null, null, null)})
           }));
     }
@@ -94,11 +95,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CompleteQueryRequest(CompleteQueryRequest other) : this() {
-      name_ = other.name_;
+      parent_ = other.parent_;
       query_ = other.query_;
       languageCodes_ = other.languageCodes_.Clone();
       pageSize_ = other.pageSize_;
-      companyName_ = other.companyName_;
+      company_ = other.company_;
       scope_ = other.scope_;
       type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -109,22 +110,25 @@ namespace Google.Cloud.Talent.V4Beta1 {
       return new CompleteQueryRequest(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
     /// <summary>
     /// Required.
     ///
-    /// Resource name of project the completion is performed within.
+    /// Resource name of tenant the completion is performed within.
     ///
-    /// The format is "projects/{project_id}", for example,
-    /// "projects/api-test-project".
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
+    public string Parent {
+      get { return parent_; }
       set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -204,22 +208,26 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "company_name" field.</summary>
-    public const int CompanyNameFieldNumber = 5;
-    private string companyName_ = "";
+    /// <summary>Field number for the "company" field.</summary>
+    public const int CompanyFieldNumber = 5;
+    private string company_ = "";
     /// <summary>
     /// Optional.
     ///
     /// If provided, restricts completion to specified company.
     ///
-    /// The format is "projects/{project_id}/companies/{company_id}", for example,
-    /// "projects/api-test-project/companies/foo".
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
+    /// example, "projects/api-test-project/tenants/foo/companies/bar".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project/companies/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CompanyName {
-      get { return companyName_; }
+    public string Company {
+      get { return company_; }
       set {
-        companyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        company_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -270,11 +278,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
+      if (Parent != other.Parent) return false;
       if (Query != other.Query) return false;
       if(!languageCodes_.Equals(other.languageCodes_)) return false;
       if (PageSize != other.PageSize) return false;
-      if (CompanyName != other.CompanyName) return false;
+      if (Company != other.Company) return false;
       if (Scope != other.Scope) return false;
       if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -283,11 +291,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Query.Length != 0) hash ^= Query.GetHashCode();
       hash ^= languageCodes_.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (CompanyName.Length != 0) hash ^= CompanyName.GetHashCode();
+      if (Company.Length != 0) hash ^= Company.GetHashCode();
       if (Scope != 0) hash ^= Scope.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
@@ -303,9 +311,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Name.Length != 0) {
+      if (Parent.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Name);
+        output.WriteString(Parent);
       }
       if (Query.Length != 0) {
         output.WriteRawTag(18);
@@ -316,9 +324,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(32);
         output.WriteInt32(PageSize);
       }
-      if (CompanyName.Length != 0) {
+      if (Company.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(CompanyName);
+        output.WriteString(Company);
       }
       if (Scope != 0) {
         output.WriteRawTag(48);
@@ -336,8 +344,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
       if (Query.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Query);
@@ -346,8 +354,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
-      if (CompanyName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyName);
+      if (Company.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Company);
       }
       if (Scope != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Scope);
@@ -366,8 +374,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other == null) {
         return;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
       }
       if (other.Query.Length != 0) {
         Query = other.Query;
@@ -376,8 +384,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
       }
-      if (other.CompanyName.Length != 0) {
-        CompanyName = other.CompanyName;
+      if (other.Company.Length != 0) {
+        Company = other.Company;
       }
       if (other.Scope != 0) {
         Scope = other.Scope;
@@ -397,7 +405,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            Parent = input.ReadString();
             break;
           }
           case 18: {
@@ -413,7 +421,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 42: {
-            CompanyName = input.ReadString();
+            Company = input.ReadString();
             break;
           }
           case 48: {

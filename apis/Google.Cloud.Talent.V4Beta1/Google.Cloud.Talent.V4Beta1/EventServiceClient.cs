@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -322,7 +321,15 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Parent project name.
+        /// Required.
+        ///
+        /// Resource name of the tenant under which the event is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
         /// Required.
@@ -337,12 +344,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ClientEvent> CreateClientEventAsync(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             ClientEvent clientEvent,
             gaxgrpc::CallSettings callSettings = null) => CreateClientEventAsync(
                 new CreateClientEventRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ClientEvent = gax::GaxPreconditions.CheckNotNull(clientEvent, nameof(clientEvent)),
                 },
                 callSettings);
@@ -357,7 +364,15 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Parent project name.
+        /// Required.
+        ///
+        /// Resource name of the tenant under which the event is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
         /// Required.
@@ -372,7 +387,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ClientEvent> CreateClientEventAsync(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             ClientEvent clientEvent,
             st::CancellationToken cancellationToken) => CreateClientEventAsync(
                 parent,
@@ -389,7 +404,15 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Parent project name.
+        /// Required.
+        ///
+        /// Resource name of the tenant under which the event is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
         /// Required.
@@ -404,12 +427,12 @@ namespace Google.Cloud.Talent.V4Beta1
         /// The RPC response.
         /// </returns>
         public virtual ClientEvent CreateClientEvent(
-            gaxres::ProjectName parent,
+            TenantOrProjectNameOneof parent,
             ClientEvent clientEvent,
             gaxgrpc::CallSettings callSettings = null) => CreateClientEvent(
                 new CreateClientEventRequest
                 {
-                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ParentAsTenantOrProjectNameOneof = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     ClientEvent = gax::GaxPreconditions.CheckNotNull(clientEvent, nameof(clientEvent)),
                 },
                 callSettings);

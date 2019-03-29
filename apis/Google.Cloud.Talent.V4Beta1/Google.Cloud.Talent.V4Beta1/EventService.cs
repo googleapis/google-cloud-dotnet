@@ -29,14 +29,16 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "L2Fubm90YXRpb25zLnByb3RvGidnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0",
             "YTEvZXZlbnQucHJvdG8iagoYQ3JlYXRlQ2xpZW50RXZlbnRSZXF1ZXN0Eg4K",
             "BnBhcmVudBgBIAEoCRI+CgxjbGllbnRfZXZlbnQYAiABKAsyKC5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQ2xpZW50RXZlbnQyuwEKDEV2ZW50U2Vy",
-            "dmljZRKqAQoRQ3JlYXRlQ2xpZW50RXZlbnQSNS5nb29nbGUuY2xvdWQudGFs",
+            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQ2xpZW50RXZlbnQy9QEKDEV2ZW50U2Vy",
+            "dmljZRLkAQoRQ3JlYXRlQ2xpZW50RXZlbnQSNS5nb29nbGUuY2xvdWQudGFs",
             "ZW50LnY0YmV0YTEuQ3JlYXRlQ2xpZW50RXZlbnRSZXF1ZXN0GiguZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExLkNsaWVudEV2ZW50IjSC0+STAi4iKS92",
-            "NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vY2xpZW50RXZlbnRzOgEqQn8K",
-            "H2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCEUV2ZW50U2Vydmlj",
-            "ZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "LmNsb3VkLnRhbGVudC52NGJldGExLkNsaWVudEV2ZW50Im6C0+STAmgiMy92",
+            "NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2NsaWVudEV2",
+            "ZW50czoBKlouIikvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2NsaWVu",
+            "dEV2ZW50czoBKkJ/Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "QhFFdmVudFNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKIC",
+            "A0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +91,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Parent project name.
+    /// Required.
+    ///
+    /// Resource name of the tenant under which the event is created.
+    ///
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and a default tenant is created if unspecified, for
+    /// example, "projects/api-test-project".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

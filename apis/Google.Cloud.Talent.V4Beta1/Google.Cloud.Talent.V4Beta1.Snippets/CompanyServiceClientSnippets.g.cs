@@ -18,7 +18,6 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -37,12 +36,12 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for CreateCompanyAsync</summary>
         public async Task CreateCompanyAsync()
         {
-            // Snippet: CreateCompanyAsync(ProjectName,Company,CallSettings)
-            // Additional: CreateCompanyAsync(ProjectName,Company,CancellationToken)
+            // Snippet: CreateCompanyAsync(TenantOrProjectNameOneof,Company,CallSettings)
+            // Additional: CreateCompanyAsync(TenantOrProjectNameOneof,Company,CancellationToken)
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             Company company = new Company();
             // Make the request
             Company response = await companyServiceClient.CreateCompanyAsync(parent, company);
@@ -52,11 +51,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for CreateCompany</summary>
         public void CreateCompany()
         {
-            // Snippet: CreateCompany(ProjectName,Company,CallSettings)
+            // Snippet: CreateCompany(TenantOrProjectNameOneof,Company,CallSettings)
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             Company company = new Company();
             // Make the request
             Company response = companyServiceClient.CreateCompany(parent, company);
@@ -73,7 +72,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Company = new Company(),
             };
             // Make the request
@@ -90,7 +89,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 Company = new Company(),
             };
             // Make the request
@@ -101,12 +100,12 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for GetCompanyAsync</summary>
         public async Task GetCompanyAsync()
         {
-            // Snippet: GetCompanyAsync(CompanyName,CallSettings)
-            // Additional: GetCompanyAsync(CompanyName,CancellationToken)
+            // Snippet: GetCompanyAsync(CompanyNameOneof,CallSettings)
+            // Additional: GetCompanyAsync(CompanyNameOneof,CancellationToken)
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             // Make the request
             Company response = await companyServiceClient.GetCompanyAsync(name);
             // End snippet
@@ -115,11 +114,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for GetCompany</summary>
         public void GetCompany()
         {
-            // Snippet: GetCompany(CompanyName,CallSettings)
+            // Snippet: GetCompany(CompanyNameOneof,CallSettings)
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             // Make the request
             Company response = companyServiceClient.GetCompany(name);
             // End snippet
@@ -135,7 +134,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             // Make the request
             Company response = await companyServiceClient.GetCompanyAsync(request);
@@ -151,7 +150,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             // Make the request
             Company response = companyServiceClient.GetCompany(request);
@@ -221,12 +220,12 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for DeleteCompanyAsync</summary>
         public async Task DeleteCompanyAsync()
         {
-            // Snippet: DeleteCompanyAsync(CompanyName,CallSettings)
-            // Additional: DeleteCompanyAsync(CompanyName,CancellationToken)
+            // Snippet: DeleteCompanyAsync(CompanyNameOneof,CallSettings)
+            // Additional: DeleteCompanyAsync(CompanyNameOneof,CancellationToken)
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             // Make the request
             await companyServiceClient.DeleteCompanyAsync(name);
             // End snippet
@@ -235,11 +234,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for DeleteCompany</summary>
         public void DeleteCompany()
         {
-            // Snippet: DeleteCompany(CompanyName,CallSettings)
+            // Snippet: DeleteCompany(CompanyNameOneof,CallSettings)
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            CompanyName name = new CompanyName("[PROJECT]", "[COMPANY]");
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
             // Make the request
             companyServiceClient.DeleteCompany(name);
             // End snippet
@@ -255,7 +254,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             // Make the request
             await companyServiceClient.DeleteCompanyAsync(request);
@@ -271,7 +270,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = new CompanyName("[PROJECT]", "[COMPANY]"),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
             };
             // Make the request
             companyServiceClient.DeleteCompany(request);
@@ -281,11 +280,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ListCompaniesAsync</summary>
         public async Task ListCompaniesAsync()
         {
-            // Snippet: ListCompaniesAsync(ProjectName,string,int?,CallSettings)
+            // Snippet: ListCompaniesAsync(TenantOrProjectNameOneof,string,int?,CallSettings)
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             // Make the request
             PagedAsyncEnumerable<ListCompaniesResponse, Company> response =
                 companyServiceClient.ListCompaniesAsync(parent);
@@ -325,11 +324,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
         /// <summary>Snippet for ListCompanies</summary>
         public void ListCompanies()
         {
-            // Snippet: ListCompanies(ProjectName,string,int?,CallSettings)
+            // Snippet: ListCompanies(TenantOrProjectNameOneof,string,int?,CallSettings)
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             // Make the request
             PagedEnumerable<ListCompaniesResponse, Company> response =
                 companyServiceClient.ListCompanies(parent);
@@ -375,7 +374,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListCompaniesRequest request = new ListCompaniesRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
             };
             // Make the request
             PagedAsyncEnumerable<ListCompaniesResponse, Company> response =
@@ -422,7 +421,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             ListCompaniesRequest request = new ListCompaniesRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
             };
             // Make the request
             PagedEnumerable<ListCompaniesResponse, Company> response =
