@@ -410,5 +410,30 @@ namespace Google.Cloud.Firestore.V1
     }
 
 
+    public partial class DeleteDocumentRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Firestore.V1.AnyPathName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Firestore.V1.AnyPathName AnyPathName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Firestore.V1.AnyPathName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetDocumentRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Firestore.V1.AnyPathName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Firestore.V1.AnyPathName AnyPathName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Firestore.V1.AnyPathName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

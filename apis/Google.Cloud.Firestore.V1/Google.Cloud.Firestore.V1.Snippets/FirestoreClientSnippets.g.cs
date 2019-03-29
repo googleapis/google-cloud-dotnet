@@ -43,7 +43,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Initialize request argument(s)
             GetDocumentRequest request = new GetDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             // Make the request
             Document response = await firestoreClient.GetDocumentAsync(request);
@@ -59,7 +59,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Initialize request argument(s)
             GetDocumentRequest request = new GetDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             // Make the request
             Document response = firestoreClient.GetDocument(request);
@@ -268,27 +268,27 @@ namespace Google.Cloud.Firestore.V1.Snippets
         /// <summary>Snippet for DeleteDocumentAsync</summary>
         public async Task DeleteDocumentAsync()
         {
-            // Snippet: DeleteDocumentAsync(string,CallSettings)
-            // Additional: DeleteDocumentAsync(string,CancellationToken)
+            // Snippet: DeleteDocumentAsync(AnyPathName,CallSettings)
+            // Additional: DeleteDocumentAsync(AnyPathName,CancellationToken)
             // Create client
             FirestoreClient firestoreClient = await FirestoreClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
+            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
             // Make the request
-            await firestoreClient.DeleteDocumentAsync(formattedName);
+            await firestoreClient.DeleteDocumentAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteDocument</summary>
         public void DeleteDocument()
         {
-            // Snippet: DeleteDocument(string,CallSettings)
+            // Snippet: DeleteDocument(AnyPathName,CallSettings)
             // Create client
             FirestoreClient firestoreClient = FirestoreClient.Create();
             // Initialize request argument(s)
-            string formattedName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
+            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
             // Make the request
-            firestoreClient.DeleteDocument(formattedName);
+            firestoreClient.DeleteDocument(name);
             // End snippet
         }
 
@@ -302,7 +302,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Initialize request argument(s)
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             // Make the request
             await firestoreClient.DeleteDocumentAsync(request);
@@ -318,7 +318,7 @@ namespace Google.Cloud.Firestore.V1.Snippets
             // Initialize request argument(s)
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             // Make the request
             firestoreClient.DeleteDocument(request);

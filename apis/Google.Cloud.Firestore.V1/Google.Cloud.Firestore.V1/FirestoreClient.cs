@@ -975,11 +975,11 @@ namespace Google.Cloud.Firestore.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteDocumentAsync(
-            string name,
+            AnyPathName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteDocumentAsync(
                 new DeleteDocumentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    AnyPathName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -997,7 +997,7 @@ namespace Google.Cloud.Firestore.V1
         /// A Task that completes when the RPC has completed.
         /// </returns>
         public virtual stt::Task DeleteDocumentAsync(
-            string name,
+            AnyPathName name,
             st::CancellationToken cancellationToken) => DeleteDocumentAsync(
                 name,
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
@@ -1013,11 +1013,11 @@ namespace Google.Cloud.Firestore.V1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         public virtual void DeleteDocument(
-            string name,
+            AnyPathName name,
             gaxgrpc::CallSettings callSettings = null) => DeleteDocument(
                 new DeleteDocumentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    AnyPathName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
