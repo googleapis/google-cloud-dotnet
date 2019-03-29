@@ -138,12 +138,7 @@ namespace Google.Cloud.Spanner.Data
 
             if (!File.Exists(file) && !Path.IsPathRooted(file))
             {
-                string applicationFolder =
-#if NETSTANDARD1_5
-            AppContext.BaseDirectory;
-#else
-            AppDomain.CurrentDomain.BaseDirectory;
-#endif
+                string applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
 
                 // Try to find a file relative to the application's base directory.
                 file = Path.Combine(applicationFolder, file);

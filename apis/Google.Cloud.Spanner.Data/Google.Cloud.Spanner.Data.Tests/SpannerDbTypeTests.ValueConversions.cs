@@ -106,10 +106,6 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         private static void WithCulture(CultureInfo culture, Action action)
         {
-            // Even if there's a way of changing the current culture in .NET Core 1.0,
-            // it's probably not worth doing - if there's a bug in the code, we'll see it in
-            // one of the other builds.
-#if !NETCOREAPP1_0
             var originalCulture = Thread.CurrentThread.CurrentCulture;
             try
             {
@@ -120,7 +116,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Thread.CurrentThread.CurrentCulture = originalCulture;
             }
-#endif
         }
 
         // This data serves as inputs to converting from CLR types that a developer
@@ -388,12 +383,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         private static readonly CultureInfo[] s_cultures = new[]
         {
             CultureInfo.InvariantCulture,
-            // Under .NET Core we don't change the culture anyway, so let's not run the same
-            // test multiple times...
-#if !NETCOREAPP1_0
             new CultureInfo("fr-FR"),
             new CultureInfo("en-US")
-#endif
         };
 
         public static IEnumerable<object[]> GetValidValueConversionsWithCulture() =>
@@ -574,10 +565,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Throws<InvalidCastException>(() => SpannerDbType.String.ConvertToClrType<string>(input, options));
             Assert.Throws<InvalidCastException>(() => SpannerDbType.Int64.ConvertToClrType<int>(input, options));
             Assert.Equal(DBNull.Value, SpannerDbType.String.ConvertToClrType<object>(input, options));
-#if !NETCOREAPP1_0
             Assert.Equal(DBNull.Value, SpannerDbType.String.ConvertToClrType<IConvertible>(input, options));
             Assert.Equal(DBNull.Value, SpannerDbType.String.ConvertToClrType<System.Runtime.Serialization.ISerializable>(input, options));
-#endif
         }
 
         [Theory]

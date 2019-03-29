@@ -20,13 +20,10 @@ using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
-
-#if !NETSTANDARD1_5
-using System.Data;
-#endif
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -198,14 +195,7 @@ namespace Google.Cloud.Spanner.Data
         public override object GetValue(int i) => this[i];
 
         /// <inheritdoc />
-        public override IEnumerator GetEnumerator()
-        {
-#if !NETSTANDARD1_5
-            return new DbEnumerator(this);
-#else
-            throw new NotSupportedException("GetEnumerator not yet supported in .NET Core");
-#endif
-        }
+        public override IEnumerator GetEnumerator() => new DbEnumerator(this);
 
         /// <summary>
         /// Gets the value of the specified column as a pure Protobuf type.
@@ -404,8 +394,6 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-#if !NETSTANDARD1_5
-
         /// <inheritdoc />
         public override void Close()
         {
@@ -495,6 +483,5 @@ namespace Google.Cloud.Spanner.Data
 
             return table;
         }
-#endif
     }
 }

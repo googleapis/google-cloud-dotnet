@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if !NETSTANDARD1_5
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -214,5 +213,3 @@ namespace Google.Cloud.Spanner.Data
         }
     }
 }
-
-#endif

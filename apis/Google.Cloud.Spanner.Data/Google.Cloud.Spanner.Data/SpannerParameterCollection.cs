@@ -267,7 +267,6 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-#if !NETSTANDARD1_5
         /// <inheritdoc />
         public override bool IsFixedSize => false;
 
@@ -276,14 +275,11 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         public override bool IsReadOnly => false;
-#endif
+
         /// <summary>
         /// Clones the collection.
         /// </summary>
         /// <returns>A cloned copy of this instance.</returns>
-        public SpannerParameterCollection Clone()
-        {
-            return new SpannerParameterCollection(_innerList);
-        }
+        public SpannerParameterCollection Clone() => new SpannerParameterCollection(_innerList);
     }
 }

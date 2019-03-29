@@ -95,7 +95,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.False(collection.Contains(parameters[4]));
         }
 
-#if !NETCOREAPP1_0
         [Fact]
         public void AssertConsts()
         {
@@ -104,6 +103,5 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.False(collection.IsSynchronized);
             Assert.False(collection.IsReadOnly);
         }
-#endif
     }
 }

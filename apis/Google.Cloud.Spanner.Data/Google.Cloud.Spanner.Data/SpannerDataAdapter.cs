@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if !NETSTANDARD1_5
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,12 +20,9 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Api.Gax;
-#endif
 
 namespace Google.Cloud.Spanner.Data
 {
-#if !NETSTANDARD1_5
-
     /// <summary>
     /// Represents a set of data commands and a database connection that are used to fill the DataSet
     /// and update a Spanner database.
@@ -301,5 +297,4 @@ namespace Google.Cloud.Spanner.Data
             RowUpdating?.Invoke(this, (SpannerRowUpdatingEventArgs) rowUpdatingEventArgs);
         }
     }
-#endif
 }

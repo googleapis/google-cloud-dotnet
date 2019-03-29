@@ -42,12 +42,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.IsType<SpannerParameter>(SpannerProviderFactory.Instance.CreateParameter());
         }
 
-#if !NETCOREAPP1_0
         [Fact]
         public void CreateDataAdapter()
         {
             Assert.IsType<SpannerDataAdapter>(SpannerProviderFactory.Instance.CreateDataAdapter());
         }
-#endif
     }
 }

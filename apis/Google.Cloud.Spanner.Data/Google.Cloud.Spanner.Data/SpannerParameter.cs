@@ -23,10 +23,7 @@ namespace Google.Cloud.Spanner.Data
     /// <summary>
     /// Represents a parameter to a <see cref="SpannerCommand" /> and optionally its mapping to DataSet columns.
     /// </summary>
-    public sealed class SpannerParameter : DbParameter
-#if !NETSTANDARD1_5
-        , ICloneable
-#endif
+    public sealed class SpannerParameter : DbParameter, ICloneable
     {
         /// <summary>
         /// Returns a value that will be replaced with a commit timestamp on insert or update.
@@ -106,12 +103,8 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override bool SourceColumnNullMapping { get; set; }
 
-#if !NETSTANDARD1_5
-
         /// <inheritdoc />
         public override DataRowVersion SourceVersion { get; set; } = DataRowVersion.Current;
-
-#endif
 
         /// <summary>
         /// The <see cref="SpannerDbType" /> of the parameter or column. This should match the type as defined in Spanner

@@ -75,12 +75,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public async Task CredentialFile()
         {
-            string appFolder;
-#if NETCOREAPP1_0
-            appFolder = AppContext.BaseDirectory;
-#else
-            appFolder = AppDomain.CurrentDomain.BaseDirectory;
-#endif
+            string appFolder = AppDomain.CurrentDomain.BaseDirectory;
             string jsonFile = Path.Combine(appFolder, "SpannerEF-8dfc036f6000.json");
             Assert.True(File.Exists(jsonFile));
             var builder = new SpannerConnectionStringBuilder($"CredentialFile={jsonFile}");

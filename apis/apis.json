@@ -657,6 +657,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
+    "targetFrameworks": "netstandard2.0",
+    "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Database Administration",
     "productUrl": "https://cloud.google.com/spanner/",
     "version": "2.0.0-beta08",
@@ -672,6 +674,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
+    "targetFrameworks": "netstandard2.0",
+    "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Instance Administration",
     "productUrl": "https://cloud.google.com/spanner/",
     "version": "2.0.0-beta08",
@@ -687,10 +691,10 @@
 
   {
     "id": "Google.Cloud.Spanner.Data",
+    "targetFrameworks": "netstandard2.0",
+    "testTargetFrameworks": "netcoreapp2.0;net461",
     "version": "2.0.0-beta08",
     "type": "other",
-    "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
-    "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.1;net452",
     "description": "Google ADO.NET Provider for Google Cloud Spanner.",
     "tags": [ "Spanner", "ADO" ],
     "dependencies": {
@@ -710,7 +714,7 @@
   {
     "id": "Google.Cloud.Spanner.Common.V1",
     "type": "other",
-    "targetFrameworks": "netstandard1.5;net45",
+    "targetFrameworks": "netstandard2.0",
     "version": "2.0.0-beta08",
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
@@ -721,12 +725,12 @@
   
   {
     "id": "Google.Cloud.Spanner.V1",
+    "targetFrameworks": "netstandard2.0",
+    "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner",
     "productUrl": "https://cloud.google.com/spanner/",
     "version": "2.0.0-beta08",
     "type": "grpc",
-    "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
-    "testTargetFrameworks": "netcoreapp1.0;netcoreapp2.1;net452",
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [ "Spanner" ],
     "dependencies": {
