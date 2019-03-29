@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
             GetDocumentRequest request = new GetDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             Document expectedResponse = new Document
             {
@@ -60,7 +60,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
             GetDocumentRequest request = new GetDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             Document expectedResponse = new Document
             {
@@ -214,14 +214,14 @@ namespace Google.Cloud.Firestore.V1.Tests
             Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
             DeleteDocumentRequest expectedRequest = new DeleteDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteDocument(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
-            client.DeleteDocument(formattedName);
+            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
+            client.DeleteDocument(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -231,14 +231,14 @@ namespace Google.Cloud.Firestore.V1.Tests
             Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
             DeleteDocumentRequest expectedRequest = new DeleteDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteDocumentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString();
-            await client.DeleteDocumentAsync(formattedName);
+            AnyPathName name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]");
+            await client.DeleteDocumentAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -248,7 +248,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteDocument(request, It.IsAny<CallOptions>()))
@@ -264,7 +264,7 @@ namespace Google.Cloud.Firestore.V1.Tests
             Mock<Firestore.FirestoreClient> mockGrpcClient = new Mock<Firestore.FirestoreClient>(MockBehavior.Strict);
             DeleteDocumentRequest request = new DeleteDocumentRequest
             {
-                Name = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]").ToString(),
+                AnyPathName = new AnyPathName("[PROJECT]", "[DATABASE]", "[DOCUMENT]", "[ANY_PATH]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteDocumentAsync(request, It.IsAny<CallOptions>()))
