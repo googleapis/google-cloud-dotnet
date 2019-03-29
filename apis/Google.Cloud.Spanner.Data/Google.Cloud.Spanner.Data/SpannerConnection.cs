@@ -27,9 +27,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-#if !NETSTANDARD1_5
 using Transaction = System.Transactions.Transaction;
-#endif
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -61,10 +59,8 @@ namespace Google.Cloud.Spanner.Data
 
         private ConnectionState _state = ConnectionState.Closed;
 
-#if !NETSTANDARD1_5
         // State used for TransactionScope-based transactions.
         private VolatileResourceManager _volatileResourceManager;
-#endif
 
         /// <inheritdoc />
         public override string ConnectionString
@@ -557,12 +553,10 @@ namespace Google.Cloud.Spanner.Data
                         {
                             _state = _sessionPool != null ? ConnectionState.Open : ConnectionState.Broken;
                         }
-#if !NETSTANDARD1_5
                         if (IsOpen)
                         {
                             transactionEnlister?.Invoke();
                         }
-#endif
                         OnStateChange(new StateChangeEventArgs(ConnectionState.Connecting, _state));
                     }
                 }, "SpannerConnection.OpenAsync", Logger);
@@ -596,12 +590,7 @@ namespace Google.Cloud.Spanner.Data
         /// Returns the current ambient transaction (from TransactionScope), if any.
         /// The .NET Standard 1.x version will always return null, as TransactionScope is not supported in .NET Core 1.x.
         /// </summary>
-        internal ISpannerTransaction AmbientTransaction =>
-#if !NETSTANDARD1_5
-            _volatileResourceManager;
-#else
-            null;
-#endif
+        internal ISpannerTransaction AmbientTransaction => _volatileResourceManager;
 
         /// <summary>
         /// The current connection string builder. The object is never mutated and never exposed to consumers.
@@ -695,15 +684,9 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private Action GetTransactionEnlister()
         {
-#if NETSTANDARD1_5
-            return null;
-#else
             Transaction current = Transaction.Current;
             return current == null ? (Action) null : () => EnlistTransaction(current);
-#endif
         }
-
-#if !NETSTANDARD1_5
 
         /// <summary>
         /// Call OpenAsReadOnly within a <see cref="System.Transactions.TransactionScope" /> to open the connection
@@ -792,6 +775,5 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
-#endif
     }
 }

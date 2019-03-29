@@ -21,11 +21,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using Xunit;
-
-#if !NETCOREAPP1_0
 using System.Transactions;
-#endif
+using Xunit;
 
 // All samples now use a connection string variable declared before the start of the snippet.
 // There are pros and cons for this:
@@ -453,7 +450,6 @@ namespace Google.Cloud.Spanner.Data.Snippets
             // End sample
         }
 
-#if !NETCOREAPP1_0
         [Fact]
         public async Task TransactionScopeAsync()
         {
@@ -526,6 +522,5 @@ namespace Google.Cloud.Spanner.Data.Snippets
                 // End sample
             });
         }
-#endif
     }
 }

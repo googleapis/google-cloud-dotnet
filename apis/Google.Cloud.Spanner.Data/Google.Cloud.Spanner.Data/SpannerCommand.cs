@@ -36,10 +36,7 @@ namespace Google.Cloud.Spanner.Data
     /// The command may also be a DDL statement such as CREATE TABLE. Use <see cref="ExecuteNonQueryAsync"/>
     /// to execute a DDL statement.
     /// </summary>
-    public sealed partial class SpannerCommand : DbCommand
-#if !NETSTANDARD1_5
-        , ICloneable
-#endif
+    public sealed partial class SpannerCommand : DbCommand, ICloneable
     {
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;

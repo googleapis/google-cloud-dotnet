@@ -12,17 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if !NETSTANDARD1_5
 using System;
 using System.Data;
 using System.Data.Common;
 using Google.Api.Gax;
-#endif
 
 namespace Google.Cloud.Spanner.Data
 {
-#if !NETSTANDARD1_5
-
     /// <summary>
     /// Provides data for the RowUpdating event of the Spanner data provider.
     /// </summary>
@@ -50,6 +46,4 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public new SpannerCommand Command { get;  }
     }
-
-#endif
 }

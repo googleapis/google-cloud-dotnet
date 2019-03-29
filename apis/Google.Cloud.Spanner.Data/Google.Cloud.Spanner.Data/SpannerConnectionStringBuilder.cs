@@ -387,15 +387,6 @@ namespace Google.Cloud.Spanner.Data
             return defaultValue;
         }
 
-        private string GetApplicationFolder()
-        {
-#if NETSTANDARD1_5
-            return AppContext.BaseDirectory;
-#else
-            return AppDomain.CurrentDomain.BaseDirectory;
-#endif
-        }
-
         /// <inheritdoc />
         public override object this[string keyword]
         {

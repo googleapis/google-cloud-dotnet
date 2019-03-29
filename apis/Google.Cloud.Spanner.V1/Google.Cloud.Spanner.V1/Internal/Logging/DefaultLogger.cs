@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Google.Cloud.Spanner.V1.Internal.Logging
 {
@@ -33,11 +34,6 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
             WriteLine($"Performance:{separator}{string.Join(separator, entries)}");
         }
 
-        private void WriteLine(string line) =>
-#if !NETSTANDARD1_5
-            System.Diagnostics.Trace.TraceInformation(line);
-#else
-            Console.Error.WriteLine(line);
-#endif
+        private void WriteLine(string line) => Trace.TraceInformation(line);
     }
 }
