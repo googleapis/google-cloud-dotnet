@@ -218,27 +218,27 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         /// <summary>Snippet for GetUptimeCheckConfigAsync</summary>
         public async Task GetUptimeCheckConfigAsync()
         {
-            // Snippet: GetUptimeCheckConfigAsync(string,CallSettings)
-            // Additional: GetUptimeCheckConfigAsync(string,CancellationToken)
+            // Snippet: GetUptimeCheckConfigAsync(UptimeCheckConfigName,CallSettings)
+            // Additional: GetUptimeCheckConfigAsync(UptimeCheckConfigName,CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
             // Make the request
-            UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(formattedName);
+            UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for GetUptimeCheckConfig</summary>
         public void GetUptimeCheckConfig()
         {
-            // Snippet: GetUptimeCheckConfig(string,CallSettings)
+            // Snippet: GetUptimeCheckConfig(UptimeCheckConfigName,CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
             // Make the request
-            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(formattedName);
+            UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(name);
             // End snippet
         }
 
@@ -252,7 +252,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             // Make the request
             UptimeCheckConfig response = await uptimeCheckServiceClient.GetUptimeCheckConfigAsync(request);
@@ -268,7 +268,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             // Make the request
             UptimeCheckConfig response = uptimeCheckServiceClient.GetUptimeCheckConfig(request);
@@ -402,27 +402,27 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         /// <summary>Snippet for DeleteUptimeCheckConfigAsync</summary>
         public async Task DeleteUptimeCheckConfigAsync()
         {
-            // Snippet: DeleteUptimeCheckConfigAsync(string,CallSettings)
-            // Additional: DeleteUptimeCheckConfigAsync(string,CancellationToken)
+            // Snippet: DeleteUptimeCheckConfigAsync(UptimeCheckConfigName,CallSettings)
+            // Additional: DeleteUptimeCheckConfigAsync(UptimeCheckConfigName,CancellationToken)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = await UptimeCheckServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
             // Make the request
-            await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(formattedName);
+            await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(name);
             // End snippet
         }
 
         /// <summary>Snippet for DeleteUptimeCheckConfig</summary>
         public void DeleteUptimeCheckConfig()
         {
-            // Snippet: DeleteUptimeCheckConfig(string,CallSettings)
+            // Snippet: DeleteUptimeCheckConfig(UptimeCheckConfigName,CallSettings)
             // Create client
             UptimeCheckServiceClient uptimeCheckServiceClient = UptimeCheckServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
             // Make the request
-            uptimeCheckServiceClient.DeleteUptimeCheckConfig(formattedName);
+            uptimeCheckServiceClient.DeleteUptimeCheckConfig(name);
             // End snippet
         }
 
@@ -436,7 +436,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             // Make the request
             await uptimeCheckServiceClient.DeleteUptimeCheckConfigAsync(request);
@@ -452,7 +452,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             // Make the request
             uptimeCheckServiceClient.DeleteUptimeCheckConfig(request);

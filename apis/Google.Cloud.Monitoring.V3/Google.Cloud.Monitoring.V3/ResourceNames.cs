@@ -966,6 +966,19 @@ namespace Google.Cloud.Monitoring.V3
 
     }
 
+    public partial class DeleteUptimeCheckConfigRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Monitoring.V3.UptimeCheckConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Monitoring.V3.UptimeCheckConfigName UptimeCheckConfigName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.UptimeCheckConfigName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetAlertPolicyRequest
     {
         /// <summary>
@@ -1052,6 +1065,19 @@ namespace Google.Cloud.Monitoring.V3
         public Google.Cloud.Monitoring.V3.NotificationChannelName NotificationChannelName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.NotificationChannelName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetUptimeCheckConfigRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Monitoring.V3.UptimeCheckConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Monitoring.V3.UptimeCheckConfigName UptimeCheckConfigName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.UptimeCheckConfigName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 

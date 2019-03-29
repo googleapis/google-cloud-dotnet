@@ -39,7 +39,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             GetUptimeCheckConfigRequest expectedRequest = new GetUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
@@ -50,8 +50,8 @@ namespace Google.Cloud.Monitoring.V3.Tests
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
-            UptimeCheckConfig response = client.GetUptimeCheckConfig(formattedName);
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            UptimeCheckConfig response = client.GetUptimeCheckConfig(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -62,7 +62,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             GetUptimeCheckConfigRequest expectedRequest = new GetUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
@@ -73,8 +73,8 @@ namespace Google.Cloud.Monitoring.V3.Tests
             mockGrpcClient.Setup(x => x.GetUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<UptimeCheckConfig>(Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
-            UptimeCheckConfig response = await client.GetUptimeCheckConfigAsync(formattedName);
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            UptimeCheckConfig response = await client.GetUptimeCheckConfigAsync(name);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -85,7 +85,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
@@ -107,7 +107,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             GetUptimeCheckConfigRequest request = new GetUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             UptimeCheckConfig expectedResponse = new UptimeCheckConfig
             {
@@ -315,14 +315,14 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             DeleteUptimeCheckConfigRequest expectedRequest = new DeleteUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
-            client.DeleteUptimeCheckConfig(formattedName);
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            client.DeleteUptimeCheckConfig(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -332,14 +332,14 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             DeleteUptimeCheckConfigRequest expectedRequest = new DeleteUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             UptimeCheckServiceClient client = new UptimeCheckServiceClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString();
-            await client.DeleteUptimeCheckConfigAsync(formattedName);
+            UptimeCheckConfigName name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]");
+            await client.DeleteUptimeCheckConfigAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
@@ -349,7 +349,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfig(request, It.IsAny<CallOptions>()))
@@ -365,7 +365,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             Mock<UptimeCheckService.UptimeCheckServiceClient> mockGrpcClient = new Mock<UptimeCheckService.UptimeCheckServiceClient>(MockBehavior.Strict);
             DeleteUptimeCheckConfigRequest request = new DeleteUptimeCheckConfigRequest
             {
-                Name = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]").ToString(),
+                UptimeCheckConfigName = new UptimeCheckConfigName("[PROJECT]", "[UPTIME_CHECK_CONFIG]"),
             };
             Empty expectedResponse = new Empty();
             mockGrpcClient.Setup(x => x.DeleteUptimeCheckConfigAsync(request, It.IsAny<CallOptions>()))
