@@ -31,69 +31,69 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "MS9maWx0ZXJzLnByb3RvGitnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEv",
             "aGlzdG9ncmFtLnByb3RvGilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEv",
             "cHJvZmlsZS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBn",
-            "b29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJ8ChNMaXN0UHJvZmls",
+            "b29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJ7ChNMaXN0UHJvZmls",
             "ZXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRISCgpwYWdlX3Rva2VuGAIgASgJ",
-            "EhEKCXBhZ2Vfc2l6ZRgDIAEoBRIuCgpmaWVsZF9tYXNrGAQgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFzayJnChRMaXN0UHJvZmlsZXNSZXNwb25z",
-            "ZRI2Cghwcm9maWxlcxgBIAMoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5Qcm9maWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJdChRDcmVh",
-            "dGVQcm9maWxlUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSNQoHcHJvZmlsZRgC",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlIiEK",
-            "EUdldFByb2ZpbGVSZXF1ZXN0EgwKBG5hbWUYASABKAkifgoUVXBkYXRlUHJv",
-            "ZmlsZVJlcXVlc3QSNQoHcHJvZmlsZRgBIAEoCzIkLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5Qcm9maWxlEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIkChREZWxldGVQcm9maWxlUmVx",
-            "dWVzdBIMCgRuYW1lGAEgASgJIvwCChVTZWFyY2hQcm9maWxlc1JlcXVlc3QS",
-            "DgoGcGFyZW50GAEgASgJEkYKEHJlcXVlc3RfbWV0YWRhdGEYAiABKAsyLC5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUmVxdWVzdE1ldGFkYXRhEkAK",
-            "DXByb2ZpbGVfcXVlcnkYAyABKAsyKS5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuUHJvZmlsZVF1ZXJ5EhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdl",
-            "X3Rva2VuGAUgASgJEg4KBm9mZnNldBgGIAEoBRIbChNkaXNhYmxlX3NwZWxs",
-            "X2NoZWNrGAcgASgIEhAKCG9yZGVyX2J5GAggASgJEhsKE2Nhc2Vfc2Vuc2l0",
-            "aXZlX3NvcnQYCSABKAgSRgoRaGlzdG9ncmFtX3F1ZXJpZXMYCiADKAsyKy5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSGlzdG9ncmFtUXVlcnki/AIK",
-            "FlNlYXJjaFByb2ZpbGVzUmVzcG9uc2USHAoUZXN0aW1hdGVkX3RvdGFsX3Np",
-            "emUYASABKAMSSQoQc3BlbGxfY29ycmVjdGlvbhgCIAEoCzIvLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5TcGVsbGluZ0NvcnJlY3Rpb24SPwoIbWV0",
-            "YWRhdGEYAyABKAsyLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUmVz",
-            "cG9uc2VNZXRhZGF0YRIXCg9uZXh0X3BhZ2VfdG9rZW4YBCABKAkSUgoXaGlz",
-            "dG9ncmFtX3F1ZXJ5X3Jlc3VsdHMYBSADKAsyMS5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuSGlzdG9ncmFtUXVlcnlSZXN1bHQSSwoTc3VtbWFyaXpl",
-            "ZF9wcm9maWxlcxgGIAMoCzIuLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5TdW1tYXJpemVkUHJvZmlsZSKCAQoRU3VtbWFyaXplZFByb2ZpbGUSNgoI",
-            "cHJvZmlsZXMYASADKAsyJC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "UHJvZmlsZRI1CgdzdW1tYXJ5GAIgASgLMiQuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLlByb2ZpbGUy/wcKDlByb2ZpbGVTZXJ2aWNlEqwBCgxMaXN0",
-            "UHJvZmlsZXMSMC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdFBy",
-            "b2ZpbGVzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5M",
-            "aXN0UHJvZmlsZXNSZXNwb25zZSI3gtPkkwIxEi8vdjRiZXRhMS97cGFyZW50",
-            "PXByb2plY3RzLyovdGVuYW50cy8qfS9wcm9maWxlcxKkAQoNQ3JlYXRlUHJv",
-            "ZmlsZRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DcmVhdGVQcm9m",
-            "aWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9m",
-            "aWxlIjqC0+STAjQiLy92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5h",
-            "bnRzLyp9L3Byb2ZpbGVzOgEqEpsBCgpHZXRQcm9maWxlEi4uZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLkdldFByb2ZpbGVSZXF1ZXN0GiQuZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiN4LT5JMCMRIvL3Y0YmV0",
-            "YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovcHJvZmlsZXMvKn0SrAEK",
-            "DVVwZGF0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "VXBkYXRlUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuUHJvZmlsZSJCgtPkkwI8MjcvdjRiZXRhMS97cHJvZmlsZS5uYW1l",
-            "PXByb2plY3RzLyovdGVuYW50cy8qL3Byb2ZpbGVzLyp9OgEqEpMBCg1EZWxl",
-            "dGVQcm9maWxlEjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlbGV0",
-            "ZVByb2ZpbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjeC0+ST",
-            "AjEqLy92NGJldGExL3tuYW1lPXByb2plY3RzLyovdGVuYW50cy8qL3Byb2Zp",
-            "bGVzLyp9ErMBCg5TZWFyY2hQcm9maWxlcxIyLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5TZWFyY2hQcm9maWxlc1JlcXVlc3QaMy5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuU2VhcmNoUHJvZmlsZXNSZXNwb25zZSI4gtPk",
-            "kwIyIi0vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfTpz",
-            "ZWFyY2g6ASpCgQEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFC",
-            "E1Byb2ZpbGVTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSi",
-            "AgNDVFNiBnByb3RvMw=="));
+            "EhEKCXBhZ2Vfc2l6ZRgDIAEoBRItCglyZWFkX21hc2sYBCABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrImcKFExpc3RQcm9maWxlc1Jlc3BvbnNl",
+            "EjYKCHByb2ZpbGVzGAEgAygLMiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLlByb2ZpbGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl0KFENyZWF0",
+            "ZVByb2ZpbGVSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRI1Cgdwcm9maWxlGAIg",
+            "ASgLMiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiIQoR",
+            "R2V0UHJvZmlsZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJ+ChRVcGRhdGVQcm9m",
+            "aWxlUmVxdWVzdBI1Cgdwcm9maWxlGAEgASgLMiQuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLlByb2ZpbGUSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrIiQKFERlbGV0ZVByb2ZpbGVSZXF1",
+            "ZXN0EgwKBG5hbWUYASABKAki/AIKFVNlYXJjaFByb2ZpbGVzUmVxdWVzdBIO",
+            "CgZwYXJlbnQYASABKAkSRgoQcmVxdWVzdF9tZXRhZGF0YRgCIAEoCzIsLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5SZXF1ZXN0TWV0YWRhdGESQAoN",
+            "cHJvZmlsZV9xdWVyeRgDIAEoCzIpLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMS5Qcm9maWxlUXVlcnkSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBhZ2Vf",
+            "dG9rZW4YBSABKAkSDgoGb2Zmc2V0GAYgASgFEhsKE2Rpc2FibGVfc3BlbGxf",
+            "Y2hlY2sYByABKAgSEAoIb3JkZXJfYnkYCCABKAkSGwoTY2FzZV9zZW5zaXRp",
+            "dmVfc29ydBgJIAEoCBJGChFoaXN0b2dyYW1fcXVlcmllcxgKIAMoCzIrLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5IaXN0b2dyYW1RdWVyeSL8AgoW",
+            "U2VhcmNoUHJvZmlsZXNSZXNwb25zZRIcChRlc3RpbWF0ZWRfdG90YWxfc2l6",
+            "ZRgBIAEoAxJJChBzcGVsbF9jb3JyZWN0aW9uGAIgASgLMi8uZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLlNwZWxsaW5nQ29ycmVjdGlvbhI/CghtZXRh",
+            "ZGF0YRgDIAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5SZXNw",
+            "b25zZU1ldGFkYXRhEhcKD25leHRfcGFnZV90b2tlbhgEIAEoCRJSChdoaXN0",
+            "b2dyYW1fcXVlcnlfcmVzdWx0cxgFIAMoCzIxLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5IaXN0b2dyYW1RdWVyeVJlc3VsdBJLChNzdW1tYXJpemVk",
+            "X3Byb2ZpbGVzGAYgAygLMi4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LlN1bW1hcml6ZWRQcm9maWxlIoIBChFTdW1tYXJpemVkUHJvZmlsZRI2Cghw",
+            "cm9maWxlcxgBIAMoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Q",
+            "cm9maWxlEjUKB3N1bW1hcnkYAiABKAsyJC5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuUHJvZmlsZTL/BwoOUHJvZmlsZVNlcnZpY2USrAEKDExpc3RQ",
+            "cm9maWxlcxIwLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5MaXN0UHJv",
+            "ZmlsZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxp",
+            "c3RQcm9maWxlc1Jlc3BvbnNlIjeC0+STAjESLy92NGJldGExL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi90ZW5hbnRzLyp9L3Byb2ZpbGVzEqQBCg1DcmVhdGVQcm9m",
+            "aWxlEjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNyZWF0ZVByb2Zp",
+            "bGVSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2Zp",
+            "bGUiOoLT5JMCNCIvL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFu",
+            "dHMvKn0vcHJvZmlsZXM6ASoSmwEKCkdldFByb2ZpbGUSLi5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuR2V0UHJvZmlsZVJlcXVlc3QaJC5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZSI3gtPkkwIxEi8vdjRiZXRh",
+            "MS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9wcm9maWxlcy8qfRKsAQoN",
+            "VXBkYXRlUHJvZmlsZRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5V",
+            "cGRhdGVQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMS5Qcm9maWxlIkKC0+STAjwyNy92NGJldGExL3twcm9maWxlLm5hbWU9",
+            "cHJvamVjdHMvKi90ZW5hbnRzLyovcHJvZmlsZXMvKn06ASoSkwEKDURlbGV0",
+            "ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRGVsZXRl",
+            "UHJvZmlsZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiN4LT5JMC",
+            "MSovL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovcHJvZmls",
+            "ZXMvKn0SswEKDlNlYXJjaFByb2ZpbGVzEjIuZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLlNlYXJjaFByb2ZpbGVzUmVxdWVzdBozLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hQcm9maWxlc1Jlc3BvbnNlIjiC0+ST",
+            "AjIiLS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9OnNl",
+            "YXJjaDoBKkKBAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIT",
+            "UHJvZmlsZVNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
+            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKIC",
+            "A0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest), global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "FieldMask" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest), global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "ReadMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse), global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse.Parser, new[]{ "Profiles", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateProfileRequest), global::Google.Cloud.Talent.V4Beta1.CreateProfileRequest.Parser, new[]{ "Parent", "Profile" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetProfileRequest), global::Google.Cloud.Talent.V4Beta1.GetProfileRequest.Parser, new[]{ "Name" }, null, null, null),
@@ -139,7 +139,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       parent_ = other.parent_;
       pageToken_ = other.pageToken_;
       pageSize_ = other.pageSize_;
-      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      readMask_ = other.readMask_ != null ? other.readMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -205,9 +205,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "field_mask" field.</summary>
-    public const int FieldMaskFieldNumber = 4;
-    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>Field number for the "read_mask" field.</summary>
+    public const int ReadMaskFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
     /// Optional.
     ///
@@ -219,10 +219,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * name
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
-      get { return fieldMask_; }
+    public global::Google.Protobuf.WellKnownTypes.FieldMask ReadMask {
+      get { return readMask_; }
       set {
-        fieldMask_ = value;
+        readMask_ = value;
       }
     }
 
@@ -242,7 +242,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Parent != other.Parent) return false;
       if (PageToken != other.PageToken) return false;
       if (PageSize != other.PageSize) return false;
-      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (!object.Equals(ReadMask, other.ReadMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -252,7 +252,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (readMask_ != null) hash ^= ReadMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -278,9 +278,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(24);
         output.WriteInt32(PageSize);
       }
-      if (fieldMask_ != null) {
+      if (readMask_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(FieldMask);
+        output.WriteMessage(ReadMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -299,8 +299,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
       }
-      if (fieldMask_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      if (readMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -322,11 +322,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
       }
-      if (other.fieldMask_ != null) {
-        if (fieldMask_ == null) {
-          fieldMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+      if (other.readMask_ != null) {
+        if (readMask_ == null) {
+          readMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
-        FieldMask.MergeFrom(other.FieldMask);
+        ReadMask.MergeFrom(other.ReadMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -352,10 +352,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 34: {
-            if (fieldMask_ == null) {
-              fieldMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            if (readMask_ == null) {
+              readMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(fieldMask_);
+            input.ReadMessage(readMask_);
             break;
           }
         }
@@ -929,7 +929,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * publications
     /// * patents
     /// * certifications
-    /// * jobApplications
     /// * recruitingNotes
     /// * customAttributes
     /// </summary>
@@ -1489,7 +1488,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * institution: The school name. For example, "MIT",
     /// "University of California, Berkeley"
     /// * degree: Highest education degree in ISCED code. Each value in degree
-    /// covers specific level of education, without any expansion to upper nor
+    /// covers a specific level of education, without any expansion to upper nor
     /// lower levels of education degree.
     /// * experience_in_months: experience in months. 0 means 0 month to 1 month
     /// (exclusive).
@@ -1497,10 +1496,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// See
     /// [ApplicationDateFilter][google.cloud.talent.v4beta1.ApplicationDateFilter]
     /// for more details.
-    /// * application_outcome_reason: The application outcome reason specifies the
-    /// outcome reasons of job application.
+    /// * application_outcome_notes: The application outcome reason specifies the
+    /// reasons behind the outcome of the job application.
     /// See
-    /// [ApplicationOutcomeReasonFilter][google.cloud.talent.v4beta1.ApplicationOutcomeReasonFilter]
+    /// [ApplicationOutcomeNotesFilter][google.cloud.talent.v4beta1.ApplicationOutcomeNotesFilter]
     /// for more details.
     /// * application_last_stage: The application last stage specifies the last
     /// stage of job application.

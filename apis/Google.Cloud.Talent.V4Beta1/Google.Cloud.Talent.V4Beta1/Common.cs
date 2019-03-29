@@ -27,118 +27,137 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvEhtn",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
             "dGlvbnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8a",
-            "Hmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoYZ29vZ2xlL3R5cGUv",
-            "bGF0bG5nLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90bxogZ29vZ2xl",
-            "L3R5cGUvcG9zdGFsX2FkZHJlc3MucHJvdG8ibgoOVGltZXN0YW1wUmFuZ2US",
-            "LgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wIrcDCghMb2NhdGlvbhJJCg1sb2NhdGlvbl90eXBlGAEgASgOMjIuZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uLkxvY2F0aW9uVHlw",
-            "ZRIyCg5wb3N0YWxfYWRkcmVzcxgCIAEoCzIaLmdvb2dsZS50eXBlLlBvc3Rh",
-            "bEFkZHJlc3MSJAoHbGF0X2xuZxgDIAEoCzITLmdvb2dsZS50eXBlLkxhdExu",
-            "ZxIUCgxyYWRpdXNfbWlsZXMYBCABKAEi7wEKDExvY2F0aW9uVHlwZRIdChlM",
-            "T0NBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ09VTlRSWRABEhcKE0FE",
-            "TUlOSVNUUkFUSVZFX0FSRUEQAhIbChdTVUJfQURNSU5JU1RSQVRJVkVfQVJF",
-            "QRADEgwKCExPQ0FMSVRZEAQSDwoLUE9TVEFMX0NPREUQBRIQCgxTVUJfTE9D",
-            "QUxJVFkQBhISCg5TVUJfTE9DQUxJVFlfMRAHEhIKDlNVQl9MT0NBTElUWV8y",
-            "EAgSEAoMTkVJR0hCT1JIT09EEAkSEgoOU1RSRUVUX0FERFJFU1MQCiKfAQoP",
-            "UmVxdWVzdE1ldGFkYXRhEg4KBmRvbWFpbhgBIAEoCRISCgpzZXNzaW9uX2lk",
-            "GAIgASgJEg8KB3VzZXJfaWQYAyABKAkSGQoRYWxsb3dfbWlzc2luZ19pZHMY",
-            "BCABKAgSPAoLZGV2aWNlX2luZm8YBSABKAsyJy5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuRGV2aWNlSW5mbyImChBSZXNwb25zZU1ldGFkYXRhEhIK",
-            "CnJlcXVlc3RfaWQYASABKAkizwEKCkRldmljZUluZm8SRwoLZGV2aWNlX3R5",
-            "cGUYASABKA4yMi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRGV2aWNl",
-            "SW5mby5EZXZpY2VUeXBlEgoKAmlkGAIgASgJImwKCkRldmljZVR5cGUSGwoX",
-            "REVWSUNFX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNXRUIQARIOCgpNT0JJTEVf",
-            "V0VCEAISCwoHQU5EUk9JRBADEgcKA0lPUxAEEgcKA0JPVBAFEgkKBU9USEVS",
-            "EAYiUQoPQ3VzdG9tQXR0cmlidXRlEhUKDXN0cmluZ192YWx1ZXMYASADKAkS",
-            "EwoLbG9uZ192YWx1ZXMYAiADKAMSEgoKZmlsdGVyYWJsZRgDIAEoCCJXChJT",
-            "cGVsbGluZ0NvcnJlY3Rpb24SEQoJY29ycmVjdGVkGAEgASgIEhYKDmNvcnJl",
-            "Y3RlZF90ZXh0GAIgASgJEhYKDmNvcnJlY3RlZF9odG1sGAMgASgJIpwJChBD",
-            "b21wZW5zYXRpb25JbmZvElAKB2VudHJpZXMYASADKAsyPy5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuQ29tcGVuc2F0aW9uSW5mby5Db21wZW5zYXRp",
-            "b25FbnRyeRJrCiJhbm51YWxpemVkX2Jhc2VfY29tcGVuc2F0aW9uX3Jhbmdl",
-            "GAIgASgLMj8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBlbnNh",
-            "dGlvbkluZm8uQ29tcGVuc2F0aW9uUmFuZ2USbAojYW5udWFsaXplZF90b3Rh",
-            "bF9jb21wZW5zYXRpb25fcmFuZ2UYAyABKAsyPy5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuQ29tcGVuc2F0aW9uSW5mby5Db21wZW5zYXRpb25SYW5n",
-            "ZRqSAwoRQ29tcGVuc2F0aW9uRW50cnkSTAoEdHlwZRgBIAEoDjI+Lmdvb2ds",
-            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wZW5zYXRpb25JbmZvLkNvbXBl",
-            "bnNhdGlvblR5cGUSTAoEdW5pdBgCIAEoDjI+Lmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5Db21wZW5zYXRpb25JbmZvLkNvbXBlbnNhdGlvblVuaXQS",
-            "JAoGYW1vdW50GAMgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlIABJQCgVyYW5n",
-            "ZRgEIAEoCzI/Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wZW5z",
-            "YXRpb25JbmZvLkNvbXBlbnNhdGlvblJhbmdlSAASEwoLZGVzY3JpcHRpb24Y",
-            "BSABKAkSPQoXZXhwZWN0ZWRfdW5pdHNfcGVyX3llYXIYBiABKAsyHC5nb29n",
-            "bGUucHJvdG9idWYuRG91YmxlVmFsdWVCFQoTY29tcGVuc2F0aW9uX2Ftb3Vu",
-            "dBpvChFDb21wZW5zYXRpb25SYW5nZRIsChBtYXhfY29tcGVuc2F0aW9uGAIg",
-            "ASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXkSLAoQbWluX2NvbXBlbnNhdGlvbhgB",
-            "IAEoCzISLmdvb2dsZS50eXBlLk1vbmV5IrUBChBDb21wZW5zYXRpb25UeXBl",
-            "EiEKHUNPTVBFTlNBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEQkFTRRAB",
-            "EgkKBUJPTlVTEAISEQoNU0lHTklOR19CT05VUxADEgoKBkVRVUlUWRAEEhIK",
-            "DlBST0ZJVF9TSEFSSU5HEAUSDwoLQ09NTUlTU0lPTlMQBhIICgRUSVBTEAcS",
-            "GwoXT1RIRVJfQ09NUEVOU0FUSU9OX1RZUEUQCCKcAQoQQ29tcGVuc2F0aW9u",
-            "VW5pdBIhCh1DT01QRU5TQVRJT05fVU5JVF9VTlNQRUNJRklFRBAAEgoKBkhP",
-            "VVJMWRABEgkKBURBSUxZEAISCgoGV0VFS0xZEAMSCwoHTU9OVEhMWRAEEgoK",
-            "BllFQVJMWRAFEgwKCE9ORV9USU1FEAYSGwoXT1RIRVJfQ09NUEVOU0FUSU9O",
-            "X1VOSVQQByp5CgtDb21wYW55U2l6ZRIcChhDT01QQU5ZX1NJWkVfVU5TUEVD",
-            "SUZJRUQQABIICgRNSU5JEAESCQoFU01BTEwQAhILCgdTTUVESVVNEAMSCgoG",
-            "TUVESVVNEAQSBwoDQklHEAUSCgoGQklHR0VSEAYSCQoFR0lBTlQQByriAQoK",
-            "Sm9iQmVuZWZpdBIbChdKT0JfQkVORUZJVF9VTlNQRUNJRklFRBAAEg4KCkNI",
-            "SUxEX0NBUkUQARIKCgZERU5UQUwQAhIUChBET01FU1RJQ19QQVJUTkVSEAMS",
-            "EgoORkxFWElCTEVfSE9VUlMQBBILCgdNRURJQ0FMEAUSEgoOTElGRV9JTlNV",
-            "UkFOQ0UQBhISCg5QQVJFTlRBTF9MRUFWRRAHEhMKD1JFVElSRU1FTlRfUExB",
-            "ThAIEg0KCVNJQ0tfREFZUxAJEgwKCFZBQ0FUSU9OEAoSCgoGVklTSU9OEAsq",
-            "jgIKCkRlZ3JlZVR5cGUSGwoXREVHUkVFX1RZUEVfVU5TUEVDSUZJRUQQABIV",
-            "ChFQUklNQVJZX0VEVUNBVElPThABEh0KGUxPV0VSX1NFQ09OREFSWV9FRFVD",
-            "QVRJT04QAhIdChlVUFBFUl9TRUNPTkRBUllfRURVQ0FUSU9OEAMSHAoYQURV",
-            "TFRfUkVNRURJQUxfRURVQ0FUSU9OEAQSHAoYQVNTT0NJQVRFU19PUl9FUVVJ",
-            "VkFMRU5UEAUSGwoXQkFDSEVMT1JTX09SX0VRVUlWQUxFTlQQBhIZChVNQVNU",
-            "RVJTX09SX0VRVUlWQUxFTlQQBxIaChZET0NUT1JBTF9PUl9FUVVJVkFMRU5U",
-            "EAgq3AEKDkVtcGxveW1lbnRUeXBlEh8KG0VNUExPWU1FTlRfVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEg0KCUZVTExfVElNRRABEg0KCVBBUlRfVElNRRACEg4KCkNP",
-            "TlRSQUNUT1IQAxIUChBDT05UUkFDVF9UT19ISVJFEAQSDQoJVEVNUE9SQVJZ",
-            "EAUSCgoGSU5URVJOEAYSDQoJVk9MVU5URUVSEAcSDAoIUEVSX0RJRU0QCBIS",
-            "Cg5GTFlfSU5fRkxZX09VVBAJEhkKFU9USEVSX0VNUExPWU1FTlRfVFlQRRAK",
-            "KnEKCEpvYkxldmVsEhkKFUpPQl9MRVZFTF9VTlNQRUNJRklFRBAAEg8KC0VO",
-            "VFJZX0xFVkVMEAESDwoLRVhQRVJJRU5DRUQQAhILCgdNQU5BR0VSEAMSDAoI",
-            "RElSRUNUT1IQBBINCglFWEVDVVRJVkUQBSq6BgoLSm9iQ2F0ZWdvcnkSHAoY",
-            "Sk9CX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAASGgoWQUNDT1VOVElOR19BTkRf",
-            "RklOQU5DRRABEh0KGUFETUlOSVNUUkFUSVZFX0FORF9PRkZJQ0UQAhIdChlB",
-            "RFZFUlRJU0lOR19BTkRfTUFSS0VUSU5HEAMSDwoLQU5JTUFMX0NBUkUQBBIa",
-            "ChZBUlRfRkFTSElPTl9BTkRfREVTSUdOEAUSFwoTQlVTSU5FU1NfT1BFUkFU",
-            "SU9OUxAGEhsKF0NMRUFOSU5HX0FORF9GQUNJTElUSUVTEAcSEwoPQ09NUFVU",
-            "RVJfQU5EX0lUEAgSEAoMQ09OU1RSVUNUSU9OEAkSFAoQQ1VTVE9NRVJfU0VS",
-            "VklDRRAKEg0KCUVEVUNBVElPThALEhwKGEVOVEVSVEFJTk1FTlRfQU5EX1RS",
-            "QVZFTBAMEhgKFEZBUk1JTkdfQU5EX09VVERPT1JTEA0SDgoKSEVBTFRIQ0FS",
-            "RRAOEhMKD0hVTUFOX1JFU09VUkNFUxAPEicKI0lOU1RBTExBVElPTl9NQUlO",
-            "VEVOQU5DRV9BTkRfUkVQQUlSEBASCQoFTEVHQUwQERIOCgpNQU5BR0VNRU5U",
-            "EBISHwobTUFOVUZBQ1RVUklOR19BTkRfV0FSRUhPVVNFEBMSJAogTUVESUFf",
-            "Q09NTVVOSUNBVElPTlNfQU5EX1dSSVRJTkcQFBIWChJPSUxfR0FTX0FORF9N",
-            "SU5JTkcQFRIeChpQRVJTT05BTF9DQVJFX0FORF9TRVJWSUNFUxAWEhcKE1BS",
-            "T1RFQ1RJVkVfU0VSVklDRVMQFxIPCgtSRUFMX0VTVEFURRAYEh4KGlJFU1RB",
-            "VVJBTlRfQU5EX0hPU1BJVEFMSVRZEBkSFAoQU0FMRVNfQU5EX1JFVEFJTBAa",
-            "EhsKF1NDSUVOQ0VfQU5EX0VOR0lORUVSSU5HEBsSIgoeU09DSUFMX1NFUlZJ",
-            "Q0VTX0FORF9OT05fUFJPRklUEBwSIQodU1BPUlRTX0ZJVE5FU1NfQU5EX1JF",
-            "Q1JFQVRJT04QHRIgChxUUkFOU1BPUlRBVElPTl9BTkRfTE9HSVNUSUNTEB4q",
-            "ZQoNUG9zdGluZ1JlZ2lvbhIeChpQT1NUSU5HX1JFR0lPTl9VTlNQRUNJRklF",
-            "RBAAEhcKE0FETUlOSVNUUkFUSVZFX0FSRUEQARIKCgZOQVRJT04QAhIPCgtU",
-            "RUxFQ09NTVVURRADKmoKClZpc2liaWxpdHkSGgoWVklTSUJJTElUWV9VTlNQ",
-            "RUNJRklFRBAAEhAKDEFDQ09VTlRfT05MWRABEhYKElNIQVJFRF9XSVRIX0dP",
-            "T0dMRRACEhYKElNIQVJFRF9XSVRIX1BVQkxJQxADKloKEENvbnRhY3RJbmZv",
-            "VXNhZ2USIgoeQ09OVEFDVF9JTkZPX1VTQUdFX1VOU1BFQ0lGSUVEEAASDAoI",
-            "UEVSU09OQUwQARIICgRXT1JLEAISCgoGU0NIT09MEAMqcQoQSHRtbFNhbml0",
-            "aXphdGlvbhIhCh1IVE1MX1NBTklUSVpBVElPTl9VTlNQRUNJRklFRBAAEh4K",
-            "GkhUTUxfU0FOSVRJWkFUSU9OX0RJU0FCTEVEEAESGgoWU0lNUExFX0ZPUk1B",
-            "VFRJTkdfT05MWRACKnsKDUNvbW11dGVNZXRob2QSHgoaQ09NTVVURV9NRVRI",
-            "T0RfVU5TUEVDSUZJRUQQABILCgdEUklWSU5HEAESCwoHVFJBTlNJVBACEgsK",
-            "B1dBTEtJTkcQAxILCgdDWUNMSU5HEAQSFgoSVFJBTlNJVF9BQ0NFU1NJQkxF",
-            "EAVCeQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUILQ29tbW9u",
-            "UHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
+            "Hmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoWZ29vZ2xlL3R5cGUv",
+            "ZGF0ZS5wcm90bxobZ29vZ2xlL3R5cGUvZGF5b2Z3ZWVrLnByb3RvGhhnb29n",
+            "bGUvdHlwZS9sYXRsbmcucHJvdG8aF2dvb2dsZS90eXBlL21vbmV5LnByb3Rv",
+            "GiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90bxobZ29vZ2xlL3R5",
+            "cGUvdGltZW9mZGF5LnByb3RvIm4KDlRpbWVzdGFtcFJhbmdlEi4KCnN0YXJ0",
+            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVu",
+            "ZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCK3AwoI",
+            "TG9jYXRpb24SSQoNbG9jYXRpb25fdHlwZRgBIAEoDjIyLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5Mb2NhdGlvbi5Mb2NhdGlvblR5cGUSMgoOcG9z",
+            "dGFsX2FkZHJlc3MYAiABKAsyGi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNz",
+            "EiQKB2xhdF9sbmcYAyABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcSFAoMcmFk",
+            "aXVzX21pbGVzGAQgASgBIu8BCgxMb2NhdGlvblR5cGUSHQoZTE9DQVRJT05f",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgsKB0NPVU5UUlkQARIXChNBRE1JTklTVFJB",
+            "VElWRV9BUkVBEAISGwoXU1VCX0FETUlOSVNUUkFUSVZFX0FSRUEQAxIMCghM",
+            "T0NBTElUWRAEEg8KC1BPU1RBTF9DT0RFEAUSEAoMU1VCX0xPQ0FMSVRZEAYS",
+            "EgoOU1VCX0xPQ0FMSVRZXzEQBxISCg5TVUJfTE9DQUxJVFlfMhAIEhAKDE5F",
+            "SUdIQk9SSE9PRBAJEhIKDlNUUkVFVF9BRERSRVNTEAoinwEKD1JlcXVlc3RN",
+            "ZXRhZGF0YRIOCgZkb21haW4YASABKAkSEgoKc2Vzc2lvbl9pZBgCIAEoCRIP",
+            "Cgd1c2VyX2lkGAMgASgJEhkKEWFsbG93X21pc3NpbmdfaWRzGAQgASgIEjwK",
+            "C2RldmljZV9pbmZvGAUgASgLMicuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLkRldmljZUluZm8iJgoQUmVzcG9uc2VNZXRhZGF0YRISCgpyZXF1ZXN0",
+            "X2lkGAEgASgJIs8BCgpEZXZpY2VJbmZvEkcKC2RldmljZV90eXBlGAEgASgO",
+            "MjIuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRldmljZUluZm8uRGV2",
+            "aWNlVHlwZRIKCgJpZBgCIAEoCSJsCgpEZXZpY2VUeXBlEhsKF0RFVklDRV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASBwoDV0VCEAESDgoKTU9CSUxFX1dFQhACEgsK",
+            "B0FORFJPSUQQAxIHCgNJT1MQBBIHCgNCT1QQBRIJCgVPVEhFUhAGIlEKD0N1",
+            "c3RvbUF0dHJpYnV0ZRIVCg1zdHJpbmdfdmFsdWVzGAEgAygJEhMKC2xvbmdf",
+            "dmFsdWVzGAIgAygDEhIKCmZpbHRlcmFibGUYAyABKAgiVwoSU3BlbGxpbmdD",
+            "b3JyZWN0aW9uEhEKCWNvcnJlY3RlZBgBIAEoCBIWCg5jb3JyZWN0ZWRfdGV4",
+            "dBgCIAEoCRIWCg5jb3JyZWN0ZWRfaHRtbBgDIAEoCSKcCQoQQ29tcGVuc2F0",
+            "aW9uSW5mbxJQCgdlbnRyaWVzGAEgAygLMj8uZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLkNvbXBlbnNhdGlvbkluZm8uQ29tcGVuc2F0aW9uRW50cnkS",
+            "awoiYW5udWFsaXplZF9iYXNlX2NvbXBlbnNhdGlvbl9yYW5nZRgCIAEoCzI/",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wZW5zYXRpb25JbmZv",
+            "LkNvbXBlbnNhdGlvblJhbmdlEmwKI2FubnVhbGl6ZWRfdG90YWxfY29tcGVu",
+            "c2F0aW9uX3JhbmdlGAMgASgLMj8uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLkNvbXBlbnNhdGlvbkluZm8uQ29tcGVuc2F0aW9uUmFuZ2UakgMKEUNv",
+            "bXBlbnNhdGlvbkVudHJ5EkwKBHR5cGUYASABKA4yPi5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuQ29tcGVuc2F0aW9uSW5mby5Db21wZW5zYXRpb25U",
+            "eXBlEkwKBHVuaXQYAiABKA4yPi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
+            "YTEuQ29tcGVuc2F0aW9uSW5mby5Db21wZW5zYXRpb25Vbml0EiQKBmFtb3Vu",
+            "dBgDIAEoCzISLmdvb2dsZS50eXBlLk1vbmV5SAASUAoFcmFuZ2UYBCABKAsy",
+            "Py5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGVuc2F0aW9uSW5m",
+            "by5Db21wZW5zYXRpb25SYW5nZUgAEhMKC2Rlc2NyaXB0aW9uGAUgASgJEj0K",
+            "F2V4cGVjdGVkX3VuaXRzX3Blcl95ZWFyGAYgASgLMhwuZ29vZ2xlLnByb3Rv",
+            "YnVmLkRvdWJsZVZhbHVlQhUKE2NvbXBlbnNhdGlvbl9hbW91bnQabwoRQ29t",
+            "cGVuc2F0aW9uUmFuZ2USLAoQbWF4X2NvbXBlbnNhdGlvbhgCIAEoCzISLmdv",
+            "b2dsZS50eXBlLk1vbmV5EiwKEG1pbl9jb21wZW5zYXRpb24YASABKAsyEi5n",
+            "b29nbGUudHlwZS5Nb25leSK1AQoQQ29tcGVuc2F0aW9uVHlwZRIhCh1DT01Q",
+            "RU5TQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEggKBEJBU0UQARIJCgVCT05V",
+            "UxACEhEKDVNJR05JTkdfQk9OVVMQAxIKCgZFUVVJVFkQBBISCg5QUk9GSVRf",
+            "U0hBUklORxAFEg8KC0NPTU1JU1NJT05TEAYSCAoEVElQUxAHEhsKF09USEVS",
+            "X0NPTVBFTlNBVElPTl9UWVBFEAginAEKEENvbXBlbnNhdGlvblVuaXQSIQod",
+            "Q09NUEVOU0FUSU9OX1VOSVRfVU5TUEVDSUZJRUQQABIKCgZIT1VSTFkQARIJ",
+            "CgVEQUlMWRACEgoKBldFRUtMWRADEgsKB01PTlRITFkQBBIKCgZZRUFSTFkQ",
+            "BRIMCghPTkVfVElNRRAGEhsKF09USEVSX0NPTVBFTlNBVElPTl9VTklUEAci",
+            "ngEKDUNlcnRpZmljYXRpb24SFAoMZGlzcGxheV9uYW1lGAEgASgJEicKDGFj",
+            "cXVpcmVfZGF0ZRgCIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSJgoLZXhwaXJl",
+            "X2RhdGUYAyABKAsyES5nb29nbGUudHlwZS5EYXRlEhEKCWF1dGhvcml0eRgE",
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgFIAEoCSK4AQoFU2tpbGwSFAoMZGlzcGxh",
+            "eV9uYW1lGAEgASgJEikKDmxhc3RfdXNlZF9kYXRlGAIgASgLMhEuZ29vZ2xl",
+            "LnR5cGUuRGF0ZRJBCgVsZXZlbBgDIAEoDjIyLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5Ta2lsbFByb2ZpY2llbmN5TGV2ZWwSDwoHY29udGV4dBgE",
+            "IAEoCRIaChJza2lsbF9uYW1lX3NuaXBwZXQYBSABKAkidwoJSW50ZXJ2aWV3",
+            "EjMKBnJhdGluZxgGIAEoCzIjLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5SYXRpbmcSNQoHb3V0Y29tZRgHIAEoDjIkLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5PdXRjb21lIkUKBlJhdGluZxIPCgdvdmVyYWxsGAEgASgB",
+            "EgsKA21pbhgCIAEoARILCgNtYXgYAyABKAESEAoIaW50ZXJ2YWwYBCABKAEq",
+            "eQoLQ29tcGFueVNpemUSHAoYQ09NUEFOWV9TSVpFX1VOU1BFQ0lGSUVEEAAS",
+            "CAoETUlOSRABEgkKBVNNQUxMEAISCwoHU01FRElVTRADEgoKBk1FRElVTRAE",
+            "EgcKA0JJRxAFEgoKBkJJR0dFUhAGEgkKBUdJQU5UEAcq4gEKCkpvYkJlbmVm",
+            "aXQSGwoXSk9CX0JFTkVGSVRfVU5TUEVDSUZJRUQQABIOCgpDSElMRF9DQVJF",
+            "EAESCgoGREVOVEFMEAISFAoQRE9NRVNUSUNfUEFSVE5FUhADEhIKDkZMRVhJ",
+            "QkxFX0hPVVJTEAQSCwoHTUVESUNBTBAFEhIKDkxJRkVfSU5TVVJBTkNFEAYS",
+            "EgoOUEFSRU5UQUxfTEVBVkUQBxITCg9SRVRJUkVNRU5UX1BMQU4QCBINCglT",
+            "SUNLX0RBWVMQCRIMCghWQUNBVElPThAKEgoKBlZJU0lPThALKo4CCgpEZWdy",
+            "ZWVUeXBlEhsKF0RFR1JFRV9UWVBFX1VOU1BFQ0lGSUVEEAASFQoRUFJJTUFS",
+            "WV9FRFVDQVRJT04QARIdChlMT1dFUl9TRUNPTkRBUllfRURVQ0FUSU9OEAIS",
+            "HQoZVVBQRVJfU0VDT05EQVJZX0VEVUNBVElPThADEhwKGEFEVUxUX1JFTUVE",
+            "SUFMX0VEVUNBVElPThAEEhwKGEFTU09DSUFURVNfT1JfRVFVSVZBTEVOVBAF",
+            "EhsKF0JBQ0hFTE9SU19PUl9FUVVJVkFMRU5UEAYSGQoVTUFTVEVSU19PUl9F",
+            "UVVJVkFMRU5UEAcSGgoWRE9DVE9SQUxfT1JfRVFVSVZBTEVOVBAIKtwBCg5F",
+            "bXBsb3ltZW50VHlwZRIfChtFTVBMT1lNRU5UX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABINCglGVUxMX1RJTUUQARINCglQQVJUX1RJTUUQAhIOCgpDT05UUkFDVE9S",
+            "EAMSFAoQQ09OVFJBQ1RfVE9fSElSRRAEEg0KCVRFTVBPUkFSWRAFEgoKBklO",
+            "VEVSThAGEg0KCVZPTFVOVEVFUhAHEgwKCFBFUl9ESUVNEAgSEgoORkxZX0lO",
+            "X0ZMWV9PVVQQCRIZChVPVEhFUl9FTVBMT1lNRU5UX1RZUEUQCipxCghKb2JM",
+            "ZXZlbBIZChVKT0JfTEVWRUxfVU5TUEVDSUZJRUQQABIPCgtFTlRSWV9MRVZF",
+            "TBABEg8KC0VYUEVSSUVOQ0VEEAISCwoHTUFOQUdFUhADEgwKCERJUkVDVE9S",
+            "EAQSDQoJRVhFQ1VUSVZFEAUqugYKC0pvYkNhdGVnb3J5EhwKGEpPQl9DQVRF",
+            "R09SWV9VTlNQRUNJRklFRBAAEhoKFkFDQ09VTlRJTkdfQU5EX0ZJTkFOQ0UQ",
+            "ARIdChlBRE1JTklTVFJBVElWRV9BTkRfT0ZGSUNFEAISHQoZQURWRVJUSVNJ",
+            "TkdfQU5EX01BUktFVElORxADEg8KC0FOSU1BTF9DQVJFEAQSGgoWQVJUX0ZB",
+            "U0hJT05fQU5EX0RFU0lHThAFEhcKE0JVU0lORVNTX09QRVJBVElPTlMQBhIb",
+            "ChdDTEVBTklOR19BTkRfRkFDSUxJVElFUxAHEhMKD0NPTVBVVEVSX0FORF9J",
+            "VBAIEhAKDENPTlNUUlVDVElPThAJEhQKEENVU1RPTUVSX1NFUlZJQ0UQChIN",
+            "CglFRFVDQVRJT04QCxIcChhFTlRFUlRBSU5NRU5UX0FORF9UUkFWRUwQDBIY",
+            "ChRGQVJNSU5HX0FORF9PVVRET09SUxANEg4KCkhFQUxUSENBUkUQDhITCg9I",
+            "VU1BTl9SRVNPVVJDRVMQDxInCiNJTlNUQUxMQVRJT05fTUFJTlRFTkFOQ0Vf",
+            "QU5EX1JFUEFJUhAQEgkKBUxFR0FMEBESDgoKTUFOQUdFTUVOVBASEh8KG01B",
+            "TlVGQUNUVVJJTkdfQU5EX1dBUkVIT1VTRRATEiQKIE1FRElBX0NPTU1VTklD",
+            "QVRJT05TX0FORF9XUklUSU5HEBQSFgoST0lMX0dBU19BTkRfTUlOSU5HEBUS",
+            "HgoaUEVSU09OQUxfQ0FSRV9BTkRfU0VSVklDRVMQFhIXChNQUk9URUNUSVZF",
+            "X1NFUlZJQ0VTEBcSDwoLUkVBTF9FU1RBVEUQGBIeChpSRVNUQVVSQU5UX0FO",
+            "RF9IT1NQSVRBTElUWRAZEhQKEFNBTEVTX0FORF9SRVRBSUwQGhIbChdTQ0lF",
+            "TkNFX0FORF9FTkdJTkVFUklORxAbEiIKHlNPQ0lBTF9TRVJWSUNFU19BTkRf",
+            "Tk9OX1BST0ZJVBAcEiEKHVNQT1JUU19GSVRORVNTX0FORF9SRUNSRUFUSU9O",
+            "EB0SIAocVFJBTlNQT1JUQVRJT05fQU5EX0xPR0lTVElDUxAeKmUKDVBvc3Rp",
+            "bmdSZWdpb24SHgoaUE9TVElOR19SRUdJT05fVU5TUEVDSUZJRUQQABIXChNB",
+            "RE1JTklTVFJBVElWRV9BUkVBEAESCgoGTkFUSU9OEAISDwoLVEVMRUNPTU1V",
+            "VEUQAypqCgpWaXNpYmlsaXR5EhoKFlZJU0lCSUxJVFlfVU5TUEVDSUZJRUQQ",
+            "ABIQCgxBQ0NPVU5UX09OTFkQARIWChJTSEFSRURfV0lUSF9HT09HTEUQAhIW",
+            "ChJTSEFSRURfV0lUSF9QVUJMSUMQAypaChBDb250YWN0SW5mb1VzYWdlEiIK",
+            "HkNPTlRBQ1RfSU5GT19VU0FHRV9VTlNQRUNJRklFRBAAEgwKCFBFUlNPTkFM",
+            "EAESCAoEV09SSxACEgoKBlNDSE9PTBADKnEKEEh0bWxTYW5pdGl6YXRpb24S",
+            "IQodSFRNTF9TQU5JVElaQVRJT05fVU5TUEVDSUZJRUQQABIeChpIVE1MX1NB",
+            "TklUSVpBVElPTl9ESVNBQkxFRBABEhoKFlNJTVBMRV9GT1JNQVRUSU5HX09O",
+            "TFkQAipjCg1Db21tdXRlTWV0aG9kEh4KGkNPTU1VVEVfTUVUSE9EX1VOU1BF",
+            "Q0lGSUVEEAASCwoHRFJJVklORxABEgsKB1RSQU5TSVQQAhILCgdXQUxLSU5H",
+            "EAMSCwoHQ1lDTElORxAEKpMBChVTa2lsbFByb2ZpY2llbmN5TGV2ZWwSJwoj",
+            "U0tJTExfUFJPRklDSUVOQ1lfTEVWRUxfVU5TUEVDSUZJRUQQABIZChVGVU5E",
+            "QU1FTlRBTF9BV0FSRU5FU1MQARIKCgZOT1ZJQ0UQAhIQCgxJTlRFUk1FRElB",
+            "VEUQAxIMCghBRFZBTkNFRBAEEgoKBkVYUEVSVBAFKmYKB091dGNvbWUSFwoT",
+            "T1VUQ09NRV9VTlNQRUNJRklFRBAAEgwKCFBPU0lUSVZFEAESCwoHTkVVVFJB",
+            "TBACEgwKCE5FR0FUSVZFEAMSGQoVT1VUQ09NRV9OT1RfQVZBSUxBQkxFEARC",
+            "eQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUILQ29tbW9uUHJv",
+            "dG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
+            "bG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.CompanySize), typeof(global::Google.Cloud.Talent.V4Beta1.JobBenefit), typeof(global::Google.Cloud.Talent.V4Beta1.DegreeType), typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentType), typeof(global::Google.Cloud.Talent.V4Beta1.JobLevel), typeof(global::Google.Cloud.Talent.V4Beta1.JobCategory), typeof(global::Google.Cloud.Talent.V4Beta1.PostingRegion), typeof(global::Google.Cloud.Talent.V4Beta1.Visibility), typeof(global::Google.Cloud.Talent.V4Beta1.ContactInfoUsage), typeof(global::Google.Cloud.Talent.V4Beta1.HtmlSanitization), typeof(global::Google.Cloud.Talent.V4Beta1.CommuteMethod), typeof(global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel), typeof(global::Google.Cloud.Talent.V4Beta1.Outcome), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimestampRange), global::Google.Cloud.Talent.V4Beta1.TimestampRange.Parser, new[]{ "StartTime", "EndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Location), global::Google.Cloud.Talent.V4Beta1.Location.Parser, new[]{ "LocationType", "PostalAddress", "LatLng", "RadiusMiles" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Location.Types.LocationType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.RequestMetadata), global::Google.Cloud.Talent.V4Beta1.RequestMetadata.Parser, new[]{ "Domain", "SessionId", "UserId", "AllowMissingIds", "DeviceInfo" }, null, null, null),
@@ -147,7 +166,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CustomAttribute), global::Google.Cloud.Talent.V4Beta1.CustomAttribute.Parser, new[]{ "StringValues", "LongValues", "Filterable" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SpellingCorrection), global::Google.Cloud.Talent.V4Beta1.SpellingCorrection.Parser, new[]{ "Corrected", "CorrectedText", "CorrectedHtml" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Parser, new[]{ "Entries", "AnnualizedBaseCompensationRange", "AnnualizedTotalCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType), typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry.Parser, new[]{ "Type", "Unit", "Amount", "Range", "Description", "ExpectedUnitsPerYear" }, new[]{ "CompensationAmount" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange.Parser, new[]{ "MaxCompensation", "MinCompensation" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange), global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange.Parser, new[]{ "MaxCompensation", "MinCompensation" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Certification), global::Google.Cloud.Talent.V4Beta1.Certification.Parser, new[]{ "DisplayName", "AcquireDate", "ExpireDate", "Authority", "Description" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Skill), global::Google.Cloud.Talent.V4Beta1.Skill.Parser, new[]{ "DisplayName", "LastUsedDate", "Level", "Context", "SkillNameSnippet" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Interview), global::Google.Cloud.Talent.V4Beta1.Interview.Parser, new[]{ "Rating", "Outcome" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Rating), global::Google.Cloud.Talent.V4Beta1.Rating.Parser, new[]{ "Overall", "Min", "Max", "Interval" }, null, null, null)
           }));
     }
     #endregion
@@ -683,11 +706,71 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Commute time is calculated based on biking time.
     /// </summary>
     [pbr::OriginalName("CYCLING")] Cycling = 4,
+  }
+
+  /// <summary>
+  /// Enum that represents the skill proficiency level.
+  /// </summary>
+  public enum SkillProficiencyLevel {
     /// <summary>
-    /// Commute time is calculated based on public transit that is wheelchair
-    /// accessible.
+    /// Default value.
     /// </summary>
-    [pbr::OriginalName("TRANSIT_ACCESSIBLE")] TransitAccessible = 5,
+    [pbr::OriginalName("SKILL_PROFICIENCY_LEVEL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Have a common knowledge or an understanding of basic techniques and
+    /// concepts.
+    /// </summary>
+    [pbr::OriginalName("FUNDAMENTAL_AWARENESS")] FundamentalAwareness = 1,
+    /// <summary>
+    /// Have the level of experience gained in a classroom and/or experimental
+    /// scenarios or as a trainee on-the-job.
+    /// </summary>
+    [pbr::OriginalName("NOVICE")] Novice = 2,
+    /// <summary>
+    /// Be able to successfully complete tasks in this skill as requested. Help
+    /// from an expert may be required from time to time, but can usually perform
+    /// skill independently.
+    /// </summary>
+    [pbr::OriginalName("INTERMEDIATE")] Intermediate = 3,
+    /// <summary>
+    /// Can perform the actions associated with this skill without assistance.
+    /// </summary>
+    [pbr::OriginalName("ADVANCED")] Advanced = 4,
+    /// <summary>
+    /// Known as an expert in this area.
+    /// </summary>
+    [pbr::OriginalName("EXPERT")] Expert = 5,
+  }
+
+  /// <summary>
+  /// The overall outcome /decision / result indicator.
+  /// </summary>
+  public enum Outcome {
+    /// <summary>
+    /// Default value.
+    /// </summary>
+    [pbr::OriginalName("OUTCOME_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// A positive outcome / passing indicator (for example, candidate was
+    /// recommended for hiring or to be moved forward in the hiring process,
+    /// candidate passed a test).
+    /// </summary>
+    [pbr::OriginalName("POSITIVE")] Positive = 1,
+    /// <summary>
+    /// A neutral outcome / no clear indicator (for example, no strong
+    /// reccommendation either to move forward / not move forward, neutral score).
+    /// </summary>
+    [pbr::OriginalName("NEUTRAL")] Neutral = 2,
+    /// <summary>
+    /// A negative outcome / failing indicator (for example, candidate was
+    /// recommended to NOT move forward in the hiring process, failed a test).
+    /// </summary>
+    [pbr::OriginalName("NEGATIVE")] Negative = 3,
+    /// <summary>
+    /// The assessment outcome is not available or otherwise unknown (for example,
+    /// candidate did not complete assessment).
+    /// </summary>
+    [pbr::OriginalName("OUTCOME_NOT_AVAILABLE")] NotAvailable = 4,
   }
 
   #endregion
@@ -735,7 +818,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StartTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Begin of the period.
+    /// Begin of the period (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -749,7 +832,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// End of the period.
+    /// End of the period (exclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -3182,6 +3265,983 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Resource that represents a license or certification.
+  /// </summary>
+  public sealed partial class Certification : pb::IMessage<Certification> {
+    private static readonly pb::MessageParser<Certification> _parser = new pb::MessageParser<Certification>(() => new Certification());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Certification> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Certification() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Certification(Certification other) : this() {
+      displayName_ = other.displayName_;
+      acquireDate_ = other.acquireDate_ != null ? other.acquireDate_.Clone() : null;
+      expireDate_ = other.expireDate_ != null ? other.expireDate_.Clone() : null;
+      authority_ = other.authority_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Certification Clone() {
+      return new Certification(this);
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 1;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional.
+    ///
+    /// Name of license or certification.
+    ///
+    /// Number of characters allowed is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "acquire_date" field.</summary>
+    public const int AcquireDateFieldNumber = 2;
+    private global::Google.Type.Date acquireDate_;
+    /// <summary>
+    /// Optional.
+    ///
+    /// Acquisition date or effective date of license or certification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Date AcquireDate {
+      get { return acquireDate_; }
+      set {
+        acquireDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expire_date" field.</summary>
+    public const int ExpireDateFieldNumber = 3;
+    private global::Google.Type.Date expireDate_;
+    /// <summary>
+    /// Optional.
+    ///
+    /// Expiration date of license of certification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Date ExpireDate {
+      get { return expireDate_; }
+      set {
+        expireDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "authority" field.</summary>
+    public const int AuthorityFieldNumber = 4;
+    private string authority_ = "";
+    /// <summary>
+    /// Optional.
+    ///
+    /// Authority of license, such as government.
+    ///
+    /// Number of characters allowed is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Authority {
+      get { return authority_; }
+      set {
+        authority_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 5;
+    private string description_ = "";
+    /// <summary>
+    /// Optional.
+    ///
+    /// Description of license or certification.
+    ///
+    /// Number of characters allowed is 100,000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Certification);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Certification other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayName != other.DisplayName) return false;
+      if (!object.Equals(AcquireDate, other.AcquireDate)) return false;
+      if (!object.Equals(ExpireDate, other.ExpireDate)) return false;
+      if (Authority != other.Authority) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (acquireDate_ != null) hash ^= AcquireDate.GetHashCode();
+      if (expireDate_ != null) hash ^= ExpireDate.GetHashCode();
+      if (Authority.Length != 0) hash ^= Authority.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (acquireDate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AcquireDate);
+      }
+      if (expireDate_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ExpireDate);
+      }
+      if (Authority.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Authority);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (acquireDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AcquireDate);
+      }
+      if (expireDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireDate);
+      }
+      if (Authority.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Authority);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Certification other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.acquireDate_ != null) {
+        if (acquireDate_ == null) {
+          acquireDate_ = new global::Google.Type.Date();
+        }
+        AcquireDate.MergeFrom(other.AcquireDate);
+      }
+      if (other.expireDate_ != null) {
+        if (expireDate_ == null) {
+          expireDate_ = new global::Google.Type.Date();
+        }
+        ExpireDate.MergeFrom(other.ExpireDate);
+      }
+      if (other.Authority.Length != 0) {
+        Authority = other.Authority;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (acquireDate_ == null) {
+              acquireDate_ = new global::Google.Type.Date();
+            }
+            input.ReadMessage(acquireDate_);
+            break;
+          }
+          case 26: {
+            if (expireDate_ == null) {
+              expireDate_ = new global::Google.Type.Date();
+            }
+            input.ReadMessage(expireDate_);
+            break;
+          }
+          case 34: {
+            Authority = input.ReadString();
+            break;
+          }
+          case 42: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Resource that represents a skill of a candidate.
+  /// </summary>
+  public sealed partial class Skill : pb::IMessage<Skill> {
+    private static readonly pb::MessageParser<Skill> _parser = new pb::MessageParser<Skill>(() => new Skill());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Skill> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Skill() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Skill(Skill other) : this() {
+      displayName_ = other.displayName_;
+      lastUsedDate_ = other.lastUsedDate_ != null ? other.lastUsedDate_.Clone() : null;
+      level_ = other.level_;
+      context_ = other.context_;
+      skillNameSnippet_ = other.skillNameSnippet_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Skill Clone() {
+      return new Skill(this);
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 1;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional.
+    ///
+    /// Skill display name.
+    ///
+    /// For example, "Java", "Python".
+    ///
+    /// Number of characters allowed is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "last_used_date" field.</summary>
+    public const int LastUsedDateFieldNumber = 2;
+    private global::Google.Type.Date lastUsedDate_;
+    /// <summary>
+    /// Optional.
+    ///
+    /// The last time this skill was used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Date LastUsedDate {
+      get { return lastUsedDate_; }
+      set {
+        lastUsedDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 3;
+    private global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel level_ = 0;
+    /// <summary>
+    /// Optional.
+    ///
+    /// Skill proficiency level which indicates how proficient the candidate is at
+    /// this skill.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "context" field.</summary>
+    public const int ContextFieldNumber = 4;
+    private string context_ = "";
+    /// <summary>
+    /// Optional.
+    ///
+    /// A paragraph describes context of this skill.
+    ///
+    /// Number of characters allowed is 100,000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Context {
+      get { return context_; }
+      set {
+        context_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "skill_name_snippet" field.</summary>
+    public const int SkillNameSnippetFieldNumber = 5;
+    private string skillNameSnippet_ = "";
+    /// <summary>
+    /// Output only. Skill name snippet shows how the
+    /// [display_name][google.cloud.talent.v4beta1.Skill.display_name] is related
+    /// to a search query. It's empty if the
+    /// [display_name][google.cloud.talent.v4beta1.Skill.display_name] isn't
+    /// related to the search query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SkillNameSnippet {
+      get { return skillNameSnippet_; }
+      set {
+        skillNameSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Skill);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Skill other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayName != other.DisplayName) return false;
+      if (!object.Equals(LastUsedDate, other.LastUsedDate)) return false;
+      if (Level != other.Level) return false;
+      if (Context != other.Context) return false;
+      if (SkillNameSnippet != other.SkillNameSnippet) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (lastUsedDate_ != null) hash ^= LastUsedDate.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
+      if (Context.Length != 0) hash ^= Context.GetHashCode();
+      if (SkillNameSnippet.Length != 0) hash ^= SkillNameSnippet.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (lastUsedDate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LastUsedDate);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Level);
+      }
+      if (Context.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Context);
+      }
+      if (SkillNameSnippet.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(SkillNameSnippet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (lastUsedDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUsedDate);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+      }
+      if (Context.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Context);
+      }
+      if (SkillNameSnippet.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SkillNameSnippet);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Skill other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.lastUsedDate_ != null) {
+        if (lastUsedDate_ == null) {
+          lastUsedDate_ = new global::Google.Type.Date();
+        }
+        LastUsedDate.MergeFrom(other.LastUsedDate);
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
+      if (other.Context.Length != 0) {
+        Context = other.Context;
+      }
+      if (other.SkillNameSnippet.Length != 0) {
+        SkillNameSnippet = other.SkillNameSnippet;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (lastUsedDate_ == null) {
+              lastUsedDate_ = new global::Google.Type.Date();
+            }
+            input.ReadMessage(lastUsedDate_);
+            break;
+          }
+          case 24: {
+            level_ = (global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Context = input.ReadString();
+            break;
+          }
+          case 42: {
+            SkillNameSnippet = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Details of an interview.
+  /// </summary>
+  public sealed partial class Interview : pb::IMessage<Interview> {
+    private static readonly pb::MessageParser<Interview> _parser = new pb::MessageParser<Interview>(() => new Interview());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Interview> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Interview() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Interview(Interview other) : this() {
+      rating_ = other.rating_ != null ? other.rating_.Clone() : null;
+      outcome_ = other.outcome_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Interview Clone() {
+      return new Interview(this);
+    }
+
+    /// <summary>Field number for the "rating" field.</summary>
+    public const int RatingFieldNumber = 6;
+    private global::Google.Cloud.Talent.V4Beta1.Rating rating_;
+    /// <summary>
+    /// Optional.
+    ///
+    /// The rating on this interview.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.Rating Rating {
+      get { return rating_; }
+      set {
+        rating_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "outcome" field.</summary>
+    public const int OutcomeFieldNumber = 7;
+    private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = 0;
+    /// <summary>
+    /// Required.
+    ///
+    /// The overall decision resulting from this interview (positive, negative,
+    /// nuetral).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.Outcome Outcome {
+      get { return outcome_; }
+      set {
+        outcome_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Interview);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Interview other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Rating, other.Rating)) return false;
+      if (Outcome != other.Outcome) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (rating_ != null) hash ^= Rating.GetHashCode();
+      if (Outcome != 0) hash ^= Outcome.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (rating_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Rating);
+      }
+      if (Outcome != 0) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Outcome);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (rating_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rating);
+      }
+      if (Outcome != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Outcome);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Interview other) {
+      if (other == null) {
+        return;
+      }
+      if (other.rating_ != null) {
+        if (rating_ == null) {
+          rating_ = new global::Google.Cloud.Talent.V4Beta1.Rating();
+        }
+        Rating.MergeFrom(other.Rating);
+      }
+      if (other.Outcome != 0) {
+        Outcome = other.Outcome;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 50: {
+            if (rating_ == null) {
+              rating_ = new global::Google.Cloud.Talent.V4Beta1.Rating();
+            }
+            input.ReadMessage(rating_);
+            break;
+          }
+          case 56: {
+            outcome_ = (global::Google.Cloud.Talent.V4Beta1.Outcome) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The details of the score received for an assessment or interview.
+  /// </summary>
+  public sealed partial class Rating : pb::IMessage<Rating> {
+    private static readonly pb::MessageParser<Rating> _parser = new pb::MessageParser<Rating>(() => new Rating());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Rating> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Rating() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Rating(Rating other) : this() {
+      overall_ = other.overall_;
+      min_ = other.min_;
+      max_ = other.max_;
+      interval_ = other.interval_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Rating Clone() {
+      return new Rating(this);
+    }
+
+    /// <summary>Field number for the "overall" field.</summary>
+    public const int OverallFieldNumber = 1;
+    private double overall_;
+    /// <summary>
+    /// Overall score.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Overall {
+      get { return overall_; }
+      set {
+        overall_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "min" field.</summary>
+    public const int MinFieldNumber = 2;
+    private double min_;
+    /// <summary>
+    /// The minimum value for the score.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Min {
+      get { return min_; }
+      set {
+        min_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max" field.</summary>
+    public const int MaxFieldNumber = 3;
+    private double max_;
+    /// <summary>
+    /// The maximum value for the score.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Max {
+      get { return max_; }
+      set {
+        max_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "interval" field.</summary>
+    public const int IntervalFieldNumber = 4;
+    private double interval_;
+    /// <summary>
+    /// The steps within the score (for example, interval = 1 max = 5
+    /// min = 1 indicates that the score can be 1, 2, 3, 4, or 5)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Interval {
+      get { return interval_; }
+      set {
+        interval_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Rating);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Rating other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Overall, other.Overall)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Min, other.Min)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Max, other.Max)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Interval, other.Interval)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Overall != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Overall);
+      if (Min != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Min);
+      if (Max != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Max);
+      if (Interval != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Interval);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Overall != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Overall);
+      }
+      if (Min != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Min);
+      }
+      if (Max != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Max);
+      }
+      if (Interval != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(Interval);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Overall != 0D) {
+        size += 1 + 8;
+      }
+      if (Min != 0D) {
+        size += 1 + 8;
+      }
+      if (Max != 0D) {
+        size += 1 + 8;
+      }
+      if (Interval != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Rating other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Overall != 0D) {
+        Overall = other.Overall;
+      }
+      if (other.Min != 0D) {
+        Min = other.Min;
+      }
+      if (other.Max != 0D) {
+        Max = other.Max;
+      }
+      if (other.Interval != 0D) {
+        Interval = other.Interval;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            Overall = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            Min = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            Max = input.ReadDouble();
+            break;
+          }
+          case 33: {
+            Interval = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
 
   }
 

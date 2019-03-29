@@ -18,7 +18,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
-    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.Talent.V4Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -40,18 +39,19 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest expectedRequest = new CreateClientEventRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
+                EventNotes = "eventNotes445073628",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             ClientEvent clientEvent = new ClientEvent();
             ClientEvent response = client.CreateClientEvent(parent, clientEvent);
             Assert.Same(expectedResponse, response);
@@ -64,18 +64,19 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest expectedRequest = new CreateClientEventRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
+                EventNotes = "eventNotes445073628",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ClientEvent>(Task.FromResult(expectedResponse), null, null, null, null));
             EventServiceClient client = new EventServiceClientImpl(mockGrpcClient.Object, null);
-            ProjectName parent = new ProjectName("[PROJECT]");
+            TenantOrProjectNameOneof parent = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]"));
             ClientEvent clientEvent = new ClientEvent();
             ClientEvent response = await client.CreateClientEventAsync(parent, clientEvent);
             Assert.Same(expectedResponse, response);
@@ -88,13 +89,14 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
+                EventNotes = "eventNotes445073628",
             };
             mockGrpcClient.Setup(x => x.CreateClientEvent(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -110,13 +112,14 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Mock<EventService.EventServiceClient> mockGrpcClient = new Mock<EventService.EventServiceClient>(MockBehavior.Strict);
             CreateClientEventRequest request = new CreateClientEventRequest
             {
-                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
                 ClientEvent = new ClientEvent(),
             };
             ClientEvent expectedResponse = new ClientEvent
             {
                 RequestId = "requestId37109963",
                 EventId = "eventId278118624",
+                EventNotes = "eventNotes445073628",
             };
             mockGrpcClient.Setup(x => x.CreateClientEventAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ClientEvent>(Task.FromResult(expectedResponse), null, null, null, null));

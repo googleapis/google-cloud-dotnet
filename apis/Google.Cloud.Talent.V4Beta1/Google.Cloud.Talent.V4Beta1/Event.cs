@@ -26,44 +26,38 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZXZlbnQucHJvdG8SG2dv",
             "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLs",
+            "aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKC",
             "AgoLQ2xpZW50RXZlbnQSEgoKcmVxdWVzdF9pZBgBIAEoCRIQCghldmVudF9p",
             "ZBgCIAEoCRIvCgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
             "Zi5UaW1lc3RhbXASOgoJam9iX2V2ZW50GAUgASgLMiUuZ29vZ2xlLmNsb3Vk",
             "LnRhbGVudC52NGJldGExLkpvYkV2ZW50SAASQgoNcHJvZmlsZV9ldmVudBgG",
             "IAEoCzIpLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlRXZl",
-            "bnRIABJLCgpleHRyYV9pbmZvGAcgAygLMjcuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLkNsaWVudEV2ZW50LkV4dHJhSW5mb0VudHJ5GjAKDkV4dHJh",
-            "SW5mb0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCBwoF",
-            "ZXZlbnQi7wMKCEpvYkV2ZW50EkAKBHR5cGUYASABKA4yMi5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuSm9iRXZlbnQuSm9iRXZlbnRUeXBlEgwKBGpv",
-            "YnMYAiADKAkikgMKDEpvYkV2ZW50VHlwZRIeChpKT0JfRVZFTlRfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEg4KCklNUFJFU1NJT04QARIICgRWSUVXEAISEQoNVklF",
-            "V19SRURJUkVDVBADEhUKEUFQUExJQ0FUSU9OX1NUQVJUEAQSFgoSQVBQTElD",
-            "QVRJT05fRklOSVNIEAUSIAocQVBQTElDQVRJT05fUVVJQ0tfU1VCTUlTU0lP",
-            "ThAGEhgKFEFQUExJQ0FUSU9OX1JFRElSRUNUEAcSIQodQVBQTElDQVRJT05f",
-            "U1RBUlRfRlJPTV9TRUFSQ0gQCBIkCiBBUFBMSUNBVElPTl9SRURJUkVDVF9G",
-            "Uk9NX1NFQVJDSBAJEh4KGkFQUExJQ0FUSU9OX0NPTVBBTllfU1VCTUlUEAoS",
-            "DAoIQk9PS01BUksQCxIQCgxOT1RJRklDQVRJT04QDBIJCgVISVJFRBANEgsK",
-            "B1NFTlRfQ1YQDhIVChFJTlRFUlZJRVdfR1JBTlRFRBAPEhIKDk5PVF9JTlRF",
-            "UkVTVEVEEBAi8QIKDFByb2ZpbGVFdmVudBJICgR0eXBlGAEgASgOMjouZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGVFdmVudC5Qcm9maWxl",
-            "RXZlbnRUeXBlEhAKCHByb2ZpbGVzGAIgAygJEg4KBmpvYl9pZBgDIAEoCSL0",
-            "AQoQUHJvZmlsZUV2ZW50VHlwZRIiCh5QUk9GSUxFX0VWRU5UX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIOCgpJTVBSRVNTSU9OEAESCAoEVklFVxACEgwKCEJPT0tN",
-            "QVJLEAMSEQoNQ09NTUVOVF9BRERFRBAEEg4KCkVNQUlMX1NFTlQQBRIRCg1S",
-            "RVNVTUVfVklFV0VEEAYSDgoKQUREX1RPX0pPQhAHEiAKHFBPU0lUSVZFX1JF",
-            "QUNUSU9OX1RPX1BST0ZJTEUQCBIgChxORUdBVElWRV9SRUFDVElPTl9UT19Q",
-            "Uk9GSUxFEAkSCgoGU0NSRUVOEApCeAofY29tLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMUIKRXZlbnRQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVu",
-            "dKICA0NUU2IGcHJvdG8z"));
+            "bnRIABITCgtldmVudF9ub3RlcxgJIAEoCUIHCgVldmVudCLvAwoISm9iRXZl",
+            "bnQSQAoEdHlwZRgBIAEoDjIyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5Kb2JFdmVudC5Kb2JFdmVudFR5cGUSDAoEam9icxgCIAMoCSKSAwoMSm9i",
+            "RXZlbnRUeXBlEh4KGkpPQl9FVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDgoK",
+            "SU1QUkVTU0lPThABEggKBFZJRVcQAhIRCg1WSUVXX1JFRElSRUNUEAMSFQoR",
+            "QVBQTElDQVRJT05fU1RBUlQQBBIWChJBUFBMSUNBVElPTl9GSU5JU0gQBRIg",
+            "ChxBUFBMSUNBVElPTl9RVUlDS19TVUJNSVNTSU9OEAYSGAoUQVBQTElDQVRJ",
+            "T05fUkVESVJFQ1QQBxIhCh1BUFBMSUNBVElPTl9TVEFSVF9GUk9NX1NFQVJD",
+            "SBAIEiQKIEFQUExJQ0FUSU9OX1JFRElSRUNUX0ZST01fU0VBUkNIEAkSHgoa",
+            "QVBQTElDQVRJT05fQ09NUEFOWV9TVUJNSVQQChIMCghCT09LTUFSSxALEhAK",
+            "DE5PVElGSUNBVElPThAMEgkKBUhJUkVEEA0SCwoHU0VOVF9DVhAOEhUKEUlO",
+            "VEVSVklFV19HUkFOVEVEEA8SEgoOTk9UX0lOVEVSRVNURUQQECLYAQoMUHJv",
+            "ZmlsZUV2ZW50EkgKBHR5cGUYASABKA4yOi5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuUHJvZmlsZUV2ZW50LlByb2ZpbGVFdmVudFR5cGUSEAoIcHJv",
+            "ZmlsZXMYAiADKAkSDAoEam9icxgGIAMoCSJeChBQcm9maWxlRXZlbnRUeXBl",
+            "EiIKHlBST0ZJTEVfRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEg4KCklNUFJF",
+            "U1NJT04QARIICgRWSUVXEAISDAoIQk9PS01BUksQA0J4Ch9jb20uZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExQgpFdmVudFByb3RvUAFaQWdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0",
+            "YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "ProfileEvent", "ExtraInfo" }, new[]{ "Event" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "ProfileEvent", "EventNotes" }, new[]{ "Event" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent), global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Parser, new[]{ "Type", "Profiles", "JobId" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent), global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Parser, new[]{ "Type", "Profiles", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) }, null)
           }));
     }
     #endregion
@@ -105,7 +99,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       requestId_ = other.requestId_;
       eventId_ = other.eventId_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
-      extraInfo_ = other.extraInfo_.Clone();
+      eventNotes_ = other.eventNotes_;
       switch (other.EventCase) {
         case EventOneofCase.JobEvent:
           JobEvent = other.JobEvent.Clone();
@@ -202,24 +196,21 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "extra_info" field.</summary>
-    public const int ExtraInfoFieldNumber = 7;
-    private static readonly pbc::MapField<string, string>.Codec _map_extraInfo_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
-    private readonly pbc::MapField<string, string> extraInfo_ = new pbc::MapField<string, string>();
+    /// <summary>Field number for the "event_notes" field.</summary>
+    public const int EventNotesFieldNumber = 9;
+    private string eventNotes_ = "";
     /// <summary>
     /// Optional.
     ///
-    /// Extra information about this event. Used for storing information with no
-    /// matching field in [event][google.cloud.talent.v4beta1.event] payload, for
-    /// example, user application specific context or details.
-    ///
-    /// At most 20 keys are supported. The maximum total size of all keys and
-    /// values is 2 KB.
+    /// Notes about the event provided by recruiters or other users, for example,
+    /// feedback on why a profile was bookmarked.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, string> ExtraInfo {
-      get { return extraInfo_; }
+    public string EventNotes {
+      get { return eventNotes_; }
+      set {
+        eventNotes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     private object event_;
@@ -259,7 +250,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(JobEvent, other.JobEvent)) return false;
       if (!object.Equals(ProfileEvent, other.ProfileEvent)) return false;
-      if (!ExtraInfo.Equals(other.ExtraInfo)) return false;
+      if (EventNotes != other.EventNotes) return false;
       if (EventCase != other.EventCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -272,7 +263,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (eventCase_ == EventOneofCase.JobEvent) hash ^= JobEvent.GetHashCode();
       if (eventCase_ == EventOneofCase.ProfileEvent) hash ^= ProfileEvent.GetHashCode();
-      hash ^= ExtraInfo.GetHashCode();
+      if (EventNotes.Length != 0) hash ^= EventNotes.GetHashCode();
       hash ^= (int) eventCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -307,7 +298,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(50);
         output.WriteMessage(ProfileEvent);
       }
-      extraInfo_.WriteTo(output, _map_extraInfo_codec);
+      if (EventNotes.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(EventNotes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -331,7 +325,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (eventCase_ == EventOneofCase.ProfileEvent) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProfileEvent);
       }
-      size += extraInfo_.CalculateSize(_map_extraInfo_codec);
+      if (EventNotes.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventNotes);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -355,7 +351,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         CreateTime.MergeFrom(other.CreateTime);
       }
-      extraInfo_.Add(other.extraInfo_);
+      if (other.EventNotes.Length != 0) {
+        EventNotes = other.EventNotes;
+      }
       switch (other.EventCase) {
         case EventOneofCase.JobEvent:
           if (JobEvent == null) {
@@ -415,8 +413,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             ProfileEvent = subBuilder;
             break;
           }
-          case 58: {
-            extraInfo_.AddEntriesFrom(input, _map_extraInfo_codec);
+          case 74: {
+            EventNotes = input.ReadString();
             break;
           }
         }
@@ -757,7 +755,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public ProfileEvent(ProfileEvent other) : this() {
       type_ = other.type_;
       profiles_ = other.profiles_.Clone();
-      jobId_ = other.jobId_;
+      jobs_ = other.jobs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -798,9 +796,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
       get { return profiles_; }
     }
 
-    /// <summary>Field number for the "job_id" field.</summary>
-    public const int JobIdFieldNumber = 3;
-    private string jobId_ = "";
+    /// <summary>Field number for the "jobs" field.</summary>
+    public const int JobsFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_jobs_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> jobs_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional.
     ///
@@ -811,11 +811,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// [JobApplication.job.requisition_id][] in the profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string JobId {
-      get { return jobId_; }
-      set {
-        jobId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
+    public pbc::RepeatedField<string> Jobs {
+      get { return jobs_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -833,7 +830,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (Type != other.Type) return false;
       if(!profiles_.Equals(other.profiles_)) return false;
-      if (JobId != other.JobId) return false;
+      if(!jobs_.Equals(other.jobs_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -842,7 +839,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       int hash = 1;
       if (Type != 0) hash ^= Type.GetHashCode();
       hash ^= profiles_.GetHashCode();
-      if (JobId.Length != 0) hash ^= JobId.GetHashCode();
+      hash ^= jobs_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -861,10 +858,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteEnum((int) Type);
       }
       profiles_.WriteTo(output, _repeated_profiles_codec);
-      if (JobId.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(JobId);
-      }
+      jobs_.WriteTo(output, _repeated_jobs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -877,9 +871,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += profiles_.CalculateSize(_repeated_profiles_codec);
-      if (JobId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(JobId);
-      }
+      size += jobs_.CalculateSize(_repeated_jobs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -895,9 +887,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         Type = other.Type;
       }
       profiles_.Add(other.profiles_);
-      if (other.JobId.Length != 0) {
-        JobId = other.JobId;
-      }
+      jobs_.Add(other.jobs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -917,8 +907,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             profiles_.AddEntriesFrom(input, _repeated_profiles_codec);
             break;
           }
-          case 26: {
-            JobId = input.ReadString();
+          case 50: {
+            jobs_.AddEntriesFrom(input, _repeated_jobs_codec);
             break;
           }
         }
@@ -949,38 +939,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// The profile is bookmarked.
         /// </summary>
         [pbr::OriginalName("BOOKMARK")] Bookmark = 3,
-        /// <summary>
-        /// Comment added to the profile.
-        /// </summary>
-        [pbr::OriginalName("COMMENT_ADDED")] CommentAdded = 4,
-        /// <summary>
-        /// Email sent regarding the profile.
-        /// </summary>
-        [pbr::OriginalName("EMAIL_SENT")] EmailSent = 5,
-        /// <summary>
-        /// The resume of the profile is viewed.
-        /// </summary>
-        [pbr::OriginalName("RESUME_VIEWED")] ResumeViewed = 6,
-        /// <summary>
-        /// The profile is added to a job.
-        /// </summary>
-        [pbr::OriginalName("ADD_TO_JOB")] AddToJob = 7,
-        /// <summary>
-        /// The recruiter explicitly highlights that a given profile is interesting
-        /// enough for later review or is a good result for the search.
-        /// </summary>
-        [pbr::OriginalName("POSITIVE_REACTION_TO_PROFILE")] PositiveReactionToProfile = 8,
-        /// <summary>
-        /// The recruiter explicitly highlights that a given profile is not
-        /// interesting enough for later review or is not a good result for the
-        /// search.
-        /// </summary>
-        [pbr::OriginalName("NEGATIVE_REACTION_TO_PROFILE")] NegativeReactionToProfile = 9,
-        /// <summary>
-        /// The candidate is interesting enough to set up an initial screen with the
-        /// recruiter. This step may be skipped based on the interview process.
-        /// </summary>
-        [pbr::OriginalName("SCREEN")] Screen = 10,
       }
 
     }

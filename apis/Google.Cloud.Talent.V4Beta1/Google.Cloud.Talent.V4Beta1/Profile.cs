@@ -28,72 +28,71 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBpL2Fubm90",
             "YXRpb25zLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29t",
             "bW9uLnByb3RvGiVnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvam9iLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJv",
-            "dG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvIr4LCgdQcm9m",
-            "aWxlEgwKBG5hbWUYASABKAkSEwoLZXh0ZXJuYWxfaWQYAiABKAkSDgoGc291",
-            "cmNlGAMgASgJEgsKA3VyaRgEIAEoCRIQCghncm91cF9pZBgFIAEoCRIuCgpp",
-            "c19oaXJhYmxlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZRIv",
-            "CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASLwoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEhQKDHJlc3VtZV9ocnhtbBgKIAEoCRI9CgxwZXJzb25fbmFtZXMY",
-            "CyADKAsyJy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUGVyc29uTmFt",
-            "ZRI3CglhZGRyZXNzZXMYDCADKAsyJC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuQWRkcmVzcxI7Cg9lbWFpbF9hZGRyZXNzZXMYDSADKAsyIi5nb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRW1haWwSOQoNcGhvbmVfbnVtYmVy",
-            "cxgOIAMoCzIiLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5QaG9uZRI/",
-            "Cg1wZXJzb25hbF91cmlzGA8gAygLMiguZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLlBlcnNvbmFsVXJpElMKF2FkZGl0aW9uYWxfY29udGFjdF9pbmZv",
-            "GBAgAygLMjIuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkFkZGl0aW9u",
-            "YWxDb250YWN0SW5mbxJJChJlbXBsb3ltZW50X3JlY29yZHMYESADKAsyLS5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRW1wbG95bWVudFJlY29yZBJH",
-            "ChFlZHVjYXRpb25fcmVjb3JkcxgSIAMoCzIsLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5FZHVjYXRpb25SZWNvcmQSMgoGc2tpbGxzGBMgAygLMiIu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNraWxsEjkKCmFjdGl2aXRp",
-            "ZXMYFCADKAsyJS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQWN0aXZp",
-            "dHkSPgoMcHVibGljYXRpb25zGBUgAygLMiguZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLlB1YmxpY2F0aW9uEjQKB3BhdGVudHMYFiADKAsyIy5nb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUGF0ZW50EkIKDmNlcnRpZmljYXRp",
-            "b25zGBcgAygLMiouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNlcnRp",
-            "ZmljYXRpb24SRQoQam9iX2FwcGxpY2F0aW9ucxgYIAMoCzIrLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5Kb2JBcHBsaWNhdGlvbhJFChByZWNydWl0",
-            "aW5nX25vdGVzGBkgAygLMisuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LlJlY3J1aXRpbmdOb3RlElUKEWN1c3RvbV9hdHRyaWJ1dGVzGBogAygLMjou",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUuQ3VzdG9tQXR0",
-            "cmlidXRlc0VudHJ5EhEKCXByb2Nlc3NlZBgbIAEoCBIXCg9rZXl3b3JkX3Nu",
-            "aXBwZXQYHCABKAkaZQoVQ3VzdG9tQXR0cmlidXRlc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5DdXN0b21BdHRyaWJ1dGU6AjgBIqMCCgpQZXJzb25OYW1lEhgKDmZv",
-            "cm1hdHRlZF9uYW1lGAEgASgJSAASVwoPc3RydWN0dXJlZF9uYW1lGAIgASgL",
-            "MjwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBlcnNvbk5hbWUuUGVy",
-            "c29uU3RydWN0dXJlZE5hbWVIABIWCg5wcmVmZXJyZWRfbmFtZRgDIAEoCRp7",
-            "ChRQZXJzb25TdHJ1Y3R1cmVkTmFtZRISCgpnaXZlbl9uYW1lGAEgASgJEhYK",
-            "Dm1pZGRsZV9pbml0aWFsGAIgASgJEhMKC2ZhbWlseV9uYW1lGAMgASgJEhAK",
-            "CHN1ZmZpeGVzGAQgAygJEhAKCHByZWZpeGVzGAUgAygJQg0KC3BlcnNvbl9u",
-            "YW1lItwBCgdBZGRyZXNzEjwKBXVzYWdlGAEgASgOMi0uZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLkNvbnRhY3RJbmZvVXNhZ2USHgoUdW5zdHJ1Y3R1",
-            "cmVkX2FkZHJlc3MYAiABKAlIABI4ChJzdHJ1Y3R1cmVkX2FkZHJlc3MYAyAB",
-            "KAsyGi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNzSAASLgoKaXNfY3VycmVu",
-            "dBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCCQoHYWRkcmVz",
-            "cyJcCgVFbWFpbBI8CgV1c2FnZRgBIAEoDjItLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5Db250YWN0SW5mb1VzYWdlEhUKDWVtYWlsX2FkZHJlc3MY",
-            "AiABKAkizwIKBVBob25lEjwKBXVzYWdlGAEgASgOMi0uZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLkNvbnRhY3RJbmZvVXNhZ2USOgoEdHlwZRgCIAEo",
-            "DjIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5QaG9uZS5QaG9uZVR5",
-            "cGUSDgoGbnVtYmVyGAMgASgJEhYKDndoZW5fYXZhaWxhYmxlGAQgASgJIqMB",
-            "CglQaG9uZVR5cGUSGgoWUEhPTkVfVFlQRV9VTlNQRUNJRklFRBAAEgwKCExB",
-            "TkRMSU5FEAESCgoGTU9CSUxFEAISBwoDRkFYEAMSCQoFUEFHRVIQBBIOCgpU",
-            "VFlfT1JfVEREEAUSDQoJVk9JQ0VNQUlMEAYSCwoHVklSVFVBTBAHEggKBFZP",
-            "SVAQCBIWChJNT0JJTEVfT1JfTEFORExJTkUQCSIaCgtQZXJzb25hbFVyaRIL",
-            "CgN1cmkYASABKAkidwoVQWRkaXRpb25hbENvbnRhY3RJbmZvEjwKBXVzYWdl",
-            "GAEgASgOMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbnRhY3RJ",
-            "bmZvVXNhZ2USDAoEbmFtZRgCIAEoCRISCgpjb250YWN0X2lkGAMgASgJIuwD",
-            "ChBFbXBsb3ltZW50UmVjb3JkEiUKCnN0YXJ0X2RhdGUYASABKAsyES5nb29n",
-            "bGUudHlwZS5EYXRlEiMKCGVuZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUu",
-            "RGF0ZRIVCg1lbXBsb3llcl9uYW1lGAMgASgJEhUKDWRpdmlzaW9uX25hbWUY",
-            "BCABKAkSNQoHYWRkcmVzcxgFIAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5BZGRyZXNzEhEKCWpvYl90aXRsZRgGIAEoCRIXCg9qb2JfZGVz",
-            "Y3JpcHRpb24YByABKAkSOgoWaXNfc3VwZXJ2aXNlZF9wb3NpdGlvbhgIIAEo",
+            "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9w",
+            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8a",
+            "Fmdvb2dsZS90eXBlL2RhdGUucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9h",
+            "ZGRyZXNzLnByb3RvItsKCgdQcm9maWxlEgwKBG5hbWUYASABKAkSEwoLZXh0",
+            "ZXJuYWxfaWQYAiABKAkSDgoGc291cmNlGAMgASgJEgsKA3VyaRgEIAEoCRIQ",
+            "Cghncm91cF9pZBgFIAEoCRIuCgppc19oaXJhYmxlGAYgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLkJvb2xWYWx1ZRIvCgtjcmVhdGVfdGltZRgHIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYCCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDHJlc3VtZV9ocnhtbBgK",
+            "IAEoCRI9CgxwZXJzb25fbmFtZXMYCyADKAsyJy5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTEuUGVyc29uTmFtZRI3CglhZGRyZXNzZXMYDCADKAsyJC5n",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQWRkcmVzcxI7Cg9lbWFpbF9h",
+            "ZGRyZXNzZXMYDSADKAsyIi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "RW1haWwSOQoNcGhvbmVfbnVtYmVycxgOIAMoCzIiLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5QaG9uZRI/Cg1wZXJzb25hbF91cmlzGA8gAygLMigu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBlcnNvbmFsVXJpElMKF2Fk",
+            "ZGl0aW9uYWxfY29udGFjdF9pbmZvGBAgAygLMjIuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkFkZGl0aW9uYWxDb250YWN0SW5mbxJJChJlbXBsb3lt",
+            "ZW50X3JlY29yZHMYESADKAsyLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
+            "YTEuRW1wbG95bWVudFJlY29yZBJHChFlZHVjYXRpb25fcmVjb3JkcxgSIAMo",
+            "CzIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5FZHVjYXRpb25SZWNv",
+            "cmQSMgoGc2tpbGxzGBMgAygLMiIuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLlNraWxsEjkKCmFjdGl2aXRpZXMYFCADKAsyJS5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuQWN0aXZpdHkSPgoMcHVibGljYXRpb25zGBUgAygL",
+            "MiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlB1YmxpY2F0aW9uEjQK",
+            "B3BhdGVudHMYFiADKAsyIy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "UGF0ZW50EkIKDmNlcnRpZmljYXRpb25zGBcgAygLMiouZ29vZ2xlLmNsb3Vk",
+            "LnRhbGVudC52NGJldGExLkNlcnRpZmljYXRpb24SFAoMYXBwbGljYXRpb25z",
+            "GC8gAygJEhMKC2Fzc2lnbm1lbnRzGDAgAygJElUKEWN1c3RvbV9hdHRyaWJ1",
+            "dGVzGBogAygLMjouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2Zp",
+            "bGUuQ3VzdG9tQXR0cmlidXRlc0VudHJ5EhEKCXByb2Nlc3NlZBgbIAEoCBIX",
+            "Cg9rZXl3b3JkX3NuaXBwZXQYHCABKAkaZQoVQ3VzdG9tQXR0cmlidXRlc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5DdXN0b21BdHRyaWJ1dGU6AjgBIqMCCgpQZXJz",
+            "b25OYW1lEhgKDmZvcm1hdHRlZF9uYW1lGAEgASgJSAASVwoPc3RydWN0dXJl",
+            "ZF9uYW1lGAIgASgLMjwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBl",
+            "cnNvbk5hbWUuUGVyc29uU3RydWN0dXJlZE5hbWVIABIWCg5wcmVmZXJyZWRf",
+            "bmFtZRgDIAEoCRp7ChRQZXJzb25TdHJ1Y3R1cmVkTmFtZRISCgpnaXZlbl9u",
+            "YW1lGAEgASgJEhYKDm1pZGRsZV9pbml0aWFsGAIgASgJEhMKC2ZhbWlseV9u",
+            "YW1lGAMgASgJEhAKCHN1ZmZpeGVzGAQgAygJEhAKCHByZWZpeGVzGAUgAygJ",
+            "Qg0KC3BlcnNvbl9uYW1lItkBCgdBZGRyZXNzEjwKBXVzYWdlGAEgASgOMi0u",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbnRhY3RJbmZvVXNhZ2US",
+            "HgoUdW5zdHJ1Y3R1cmVkX2FkZHJlc3MYAiABKAlIABI4ChJzdHJ1Y3R1cmVk",
+            "X2FkZHJlc3MYAyABKAsyGi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNzSAAS",
+            "KwoHY3VycmVudBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVC",
+            "CQoHYWRkcmVzcyJcCgVFbWFpbBI8CgV1c2FnZRgBIAEoDjItLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5Db250YWN0SW5mb1VzYWdlEhUKDWVtYWls",
+            "X2FkZHJlc3MYAiABKAkizwIKBVBob25lEjwKBXVzYWdlGAEgASgOMi0uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbnRhY3RJbmZvVXNhZ2USOgoE",
+            "dHlwZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5QaG9u",
+            "ZS5QaG9uZVR5cGUSDgoGbnVtYmVyGAMgASgJEhYKDndoZW5fYXZhaWxhYmxl",
+            "GAQgASgJIqMBCglQaG9uZVR5cGUSGgoWUEhPTkVfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgwKCExBTkRMSU5FEAESCgoGTU9CSUxFEAISBwoDRkFYEAMSCQoFUEFH",
+            "RVIQBBIOCgpUVFlfT1JfVEREEAUSDQoJVk9JQ0VNQUlMEAYSCwoHVklSVFVB",
+            "TBAHEggKBFZPSVAQCBIWChJNT0JJTEVfT1JfTEFORExJTkUQCSIaCgtQZXJz",
+            "b25hbFVyaRILCgN1cmkYASABKAkidwoVQWRkaXRpb25hbENvbnRhY3RJbmZv",
+            "EjwKBXVzYWdlGAEgASgOMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkNvbnRhY3RJbmZvVXNhZ2USDAoEbmFtZRgCIAEoCRISCgpjb250YWN0X2lk",
+            "GAMgASgJIuMDChBFbXBsb3ltZW50UmVjb3JkEiUKCnN0YXJ0X2RhdGUYASAB",
+            "KAsyES5nb29nbGUudHlwZS5EYXRlEiMKCGVuZF9kYXRlGAIgASgLMhEuZ29v",
+            "Z2xlLnR5cGUuRGF0ZRIVCg1lbXBsb3llcl9uYW1lGAMgASgJEhUKDWRpdmlz",
+            "aW9uX25hbWUYBCABKAkSNQoHYWRkcmVzcxgFIAEoCzIkLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5BZGRyZXNzEhEKCWpvYl90aXRsZRgGIAEoCRIX",
+            "Cg9qb2JfZGVzY3JpcHRpb24YByABKAkSMQoNaXNfc3VwZXJ2aXNvchgIIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSNAoQaXNfc2VsZl9lbXBs",
             "b3llZBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSLgoKaXNf",
             "Y3VycmVudBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSGQoR",
@@ -111,79 +110,45 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "aXBwZXQYCiABKAkSFgoOZGVncmVlX3NuaXBwZXQYCyABKAlCCAoGZGVncmVl",
             "InQKBkRlZ3JlZRI8CgtkZWdyZWVfdHlwZRgBIAEoDjInLmdvb2dsZS5jbG91",
             "ZC50YWxlbnQudjRiZXRhMS5EZWdyZWVUeXBlEhMKC2RlZ3JlZV9uYW1lGAIg",
-            "ASgJEhcKD2ZpZWxkc19vZl9zdHVkeRgDIAMoCSLUAgoFU2tpbGwSFAoMZGlz",
-            "cGxheV9uYW1lGAEgASgJEikKDmxhc3RfdXNlZF9kYXRlGAIgASgLMhEuZ29v",
-            "Z2xlLnR5cGUuRGF0ZRJHCgVsZXZlbBgDIAEoDjI4Lmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5Ta2lsbC5Ta2lsbFByb2ZpY2llbmN5TGV2ZWwSDwoH",
-            "Y29udGV4dBgEIAEoCRIaChJza2lsbF9uYW1lX3NuaXBwZXQYBSABKAkikwEK",
-            "FVNraWxsUHJvZmljaWVuY3lMZXZlbBInCiNTS0lMTF9QUk9GSUNJRU5DWV9M",
-            "RVZFTF9VTlNQRUNJRklFRBAAEhkKFUZVTkRBTUVOVEFMX0FXQVJFTkVTUxAB",
-            "EgoKBk5PVklDRRACEhAKDElOVEVSTUVESUFURRADEgwKCEFEVkFOQ0VEEAQS",
-            "CgoGRVhQRVJUEAUiwwIKCEFjdGl2aXR5EhQKDGRpc3BsYXlfbmFtZRgBIAEo",
-            "CRITCgtkZXNjcmlwdGlvbhgCIAEoCRILCgN1cmkYAyABKAkSJgoLY3JlYXRl",
-            "X2RhdGUYBCABKAsyES5nb29nbGUudHlwZS5EYXRlEiYKC3VwZGF0ZV9kYXRl",
-            "GAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIUCgx0ZWFtX21lbWJlcnMYBiAD",
-            "KAkSNwoLc2tpbGxzX3VzZWQYByADKAsyIi5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuU2tpbGwSHQoVYWN0aXZpdHlfbmFtZV9zbmlwcGV0GAggASgJ",
-            "EiQKHGFjdGl2aXR5X2Rlc2NyaXB0aW9uX3NuaXBwZXQYCSABKAkSGwoTc2tp",
-            "bGxzX3VzZWRfc25pcHBldBgKIAMoCSLLAQoLUHVibGljYXRpb24SDwoHYXV0",
-            "aG9ycxgBIAMoCRINCgV0aXRsZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEo",
-            "CRIPCgdqb3VybmFsGAQgASgJEg4KBnZvbHVtZRgFIAEoCRIRCglwdWJsaXNo",
-            "ZXIYBiABKAkSKwoQcHVibGljYXRpb25fZGF0ZRgHIAEoCzIRLmdvb2dsZS50",
-            "eXBlLkRhdGUSGAoQcHVibGljYXRpb25fdHlwZRgIIAEoCRIMCgRpc2JuGAkg",
-            "ASgJIqkCCgZQYXRlbnQSFAoMZGlzcGxheV9uYW1lGAEgASgJEhEKCWludmVu",
-            "dG9ycxgCIAMoCRIVCg1wYXRlbnRfc3RhdHVzGAMgASgJEi0KEnBhdGVudF9z",
-            "dGF0dXNfZGF0ZRgEIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSLQoScGF0ZW50",
-            "X2ZpbGluZ19kYXRlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIVCg1wYXRl",
-            "bnRfb2ZmaWNlGAYgASgJEhUKDXBhdGVudF9udW1iZXIYByABKAkSGgoScGF0",
-            "ZW50X2Rlc2NyaXB0aW9uGAggASgJEjcKC3NraWxsc191c2VkGAkgAygLMiIu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNraWxsIvsFCg5Kb2JBcHBs",
-            "aWNhdGlvbhItCgNqb2IYASABKAsyIC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuSm9iEhYKDmFwcGxpY2F0aW9uX2lkGAIgASgJEisKEGFwcGxpY2F0",
-            "aW9uX2RhdGUYAyABKAsyES5nb29nbGUudHlwZS5EYXRlEhIKCmxhc3Rfc3Rh",
-            "Z2UYBCABKAkSTAoFc3RhdGUYBSABKA4yPS5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuSm9iQXBwbGljYXRpb24uQXBwbGljYXRpb25TdGF0dXMSHwoX",
-            "YXZlcmFnZV9pbnRlcnZpZXdfc2NvcmUYBiABKAESIAoYaW50ZXJ2aWV3X3Nj",
-            "b3JlX3NjYWxlX2lkGAcgASgJEhwKFG51bWJlcl9vZl9pbnRlcnZpZXdzGAgg",
-            "ASgFEjgKFGlzX2VtcGxveWVlX3JlZmVycmVkGAkgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkJvb2xWYWx1ZRIvCgt1cGRhdGVfdGltZRgKIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASFgoOb3V0Y29tZV9yZWFzb24YCyABKAkS",
-            "HAoUb3V0Y29tZV9wb3NpdGl2ZW5lc3MYDCABKAESLAoIaXNfbWF0Y2gYDSAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEhkKEWpvYl90aXRsZV9z",
-            "bmlwcGV0GA4gASgJIscBChFBcHBsaWNhdGlvblN0YXR1cxIiCh5BUFBMSUNB",
-            "VElPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABISCg5PRkZFUl9FWFRFTkRFRBAB",
-            "EhkKFVJFSkVDVEVEX0JZX0NBTkRJREFURRACEgoKBkFDVElWRRADEhgKFFJF",
-            "SkVDVEVEX0JZX0VNUExPWUVSEAQSFgoSSElSRURfUEVORElOR19EQVRFEAUS",
-            "EQoNSElSRURfU1RBUlRFRBAGEg4KClBST1NQRUNURUQQByKeAQoNQ2VydGlm",
-            "aWNhdGlvbhIUCgxkaXNwbGF5X25hbWUYASABKAkSJwoMYWNxdWlyZV9kYXRl",
-            "GAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRImCgtleHBpcmVfZGF0ZRgDIAEo",
-            "CzIRLmdvb2dsZS50eXBlLkRhdGUSEQoJYXV0aG9yaXR5GAQgASgJEhMKC2Rl",
-            "c2NyaXB0aW9uGAUgASgJImcKDlJlY3J1aXRpbmdOb3RlEgwKBG5vdGUYASAB",
-            "KAkSEQoJY29tbWVudGVyGAIgASgJEiYKC2NyZWF0ZV9kYXRlGAMgASgLMhEu",
-            "Z29vZ2xlLnR5cGUuRGF0ZRIMCgR0eXBlGAQgASgJQoIBCh9jb20uZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExQhRQcm9maWxlUmVzb3VyY2VQcm90b1AB",
-            "WkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "ASgJEhcKD2ZpZWxkc19vZl9zdHVkeRgDIAMoCSLDAgoIQWN0aXZpdHkSFAoM",
+            "ZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEgsKA3Vy",
+            "aRgDIAEoCRImCgtjcmVhdGVfZGF0ZRgEIAEoCzIRLmdvb2dsZS50eXBlLkRh",
+            "dGUSJgoLdXBkYXRlX2RhdGUYBSABKAsyES5nb29nbGUudHlwZS5EYXRlEhQK",
+            "DHRlYW1fbWVtYmVycxgGIAMoCRI3Cgtza2lsbHNfdXNlZBgHIAMoCzIiLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Ta2lsbBIdChVhY3Rpdml0eV9u",
+            "YW1lX3NuaXBwZXQYCCABKAkSJAocYWN0aXZpdHlfZGVzY3JpcHRpb25fc25p",
+            "cHBldBgJIAEoCRIbChNza2lsbHNfdXNlZF9zbmlwcGV0GAogAygJIssBCgtQ",
+            "dWJsaWNhdGlvbhIPCgdhdXRob3JzGAEgAygJEg0KBXRpdGxlGAIgASgJEhMK",
+            "C2Rlc2NyaXB0aW9uGAMgASgJEg8KB2pvdXJuYWwYBCABKAkSDgoGdm9sdW1l",
+            "GAUgASgJEhEKCXB1Ymxpc2hlchgGIAEoCRIrChBwdWJsaWNhdGlvbl9kYXRl",
+            "GAcgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIYChBwdWJsaWNhdGlvbl90eXBl",
+            "GAggASgJEgwKBGlzYm4YCSABKAkiqQIKBlBhdGVudBIUCgxkaXNwbGF5X25h",
+            "bWUYASABKAkSEQoJaW52ZW50b3JzGAIgAygJEhUKDXBhdGVudF9zdGF0dXMY",
+            "AyABKAkSLQoScGF0ZW50X3N0YXR1c19kYXRlGAQgASgLMhEuZ29vZ2xlLnR5",
+            "cGUuRGF0ZRItChJwYXRlbnRfZmlsaW5nX2RhdGUYBSABKAsyES5nb29nbGUu",
+            "dHlwZS5EYXRlEhUKDXBhdGVudF9vZmZpY2UYBiABKAkSFQoNcGF0ZW50X251",
+            "bWJlchgHIAEoCRIaChJwYXRlbnRfZGVzY3JpcHRpb24YCCABKAkSNwoLc2tp",
+            "bGxzX3VzZWQYCSADKAsyIi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "U2tpbGxCggEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCFFBy",
+            "b2ZpbGVSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogID",
+            "Q1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "ResumeHrxml", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "JobApplications", "RecruitingNotes", "CustomAttributes", "Processed", "KeywordSnippet" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "ResumeHrxml", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "Applications", "Assignments", "CustomAttributes", "Processed", "KeywordSnippet" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName), global::Google.Cloud.Talent.V4Beta1.PersonName.Parser, new[]{ "FormattedName", "StructuredName", "PreferredName" }, new[]{ "PersonName" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName), global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName.Parser, new[]{ "GivenName", "MiddleInitial", "FamilyName", "Suffixes", "Prefixes" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Address), global::Google.Cloud.Talent.V4Beta1.Address.Parser, new[]{ "Usage", "UnstructuredAddress", "StructuredAddress", "IsCurrent" }, new[]{ "Address" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Address), global::Google.Cloud.Talent.V4Beta1.Address.Parser, new[]{ "Usage", "UnstructuredAddress", "StructuredAddress", "Current" }, new[]{ "Address" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Email), global::Google.Cloud.Talent.V4Beta1.Email.Parser, new[]{ "Usage", "EmailAddress" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Phone), global::Google.Cloud.Talent.V4Beta1.Phone.Parser, new[]{ "Usage", "Type", "Number", "WhenAvailable" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonalUri), global::Google.Cloud.Talent.V4Beta1.PersonalUri.Parser, new[]{ "Uri" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo), global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo.Parser, new[]{ "Usage", "Name", "ContactId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentRecord), global::Google.Cloud.Talent.V4Beta1.EmploymentRecord.Parser, new[]{ "StartDate", "EndDate", "EmployerName", "DivisionName", "Address", "JobTitle", "JobDescription", "IsSupervisedPosition", "IsSelfEmployed", "IsCurrent", "JobTitleSnippet", "JobDescriptionSnippet", "EmployerNameSnippet" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EmploymentRecord), global::Google.Cloud.Talent.V4Beta1.EmploymentRecord.Parser, new[]{ "StartDate", "EndDate", "EmployerName", "DivisionName", "Address", "JobTitle", "JobDescription", "IsSupervisor", "IsSelfEmployed", "IsCurrent", "JobTitleSnippet", "JobDescriptionSnippet", "EmployerNameSnippet" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.EducationRecord), global::Google.Cloud.Talent.V4Beta1.EducationRecord.Parser, new[]{ "StartDate", "EndDate", "ExpectedGraduationDate", "SchoolName", "Address", "DegreeDescription", "StructuredDegree", "Description", "IsCurrent", "SchoolNameSnippet", "DegreeSnippet" }, new[]{ "Degree" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Degree), global::Google.Cloud.Talent.V4Beta1.Degree.Parser, new[]{ "DegreeType", "DegreeName", "FieldsOfStudy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Skill), global::Google.Cloud.Talent.V4Beta1.Skill.Parser, new[]{ "DisplayName", "LastUsedDate", "Level", "Context", "SkillNameSnippet" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Skill.Types.SkillProficiencyLevel) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Activity), global::Google.Cloud.Talent.V4Beta1.Activity.Parser, new[]{ "DisplayName", "Description", "Uri", "CreateDate", "UpdateDate", "TeamMembers", "SkillsUsed", "ActivityNameSnippet", "ActivityDescriptionSnippet", "SkillsUsedSnippet" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Publication), global::Google.Cloud.Talent.V4Beta1.Publication.Parser, new[]{ "Authors", "Title", "Description", "Journal", "Volume", "Publisher", "PublicationDate", "PublicationType", "Isbn" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Patent), global::Google.Cloud.Talent.V4Beta1.Patent.Parser, new[]{ "DisplayName", "Inventors", "PatentStatus", "PatentStatusDate", "PatentFilingDate", "PatentOffice", "PatentNumber", "PatentDescription", "SkillsUsed" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobApplication), global::Google.Cloud.Talent.V4Beta1.JobApplication.Parser, new[]{ "Job", "ApplicationId", "ApplicationDate", "LastStage", "State", "AverageInterviewScore", "InterviewScoreScaleId", "NumberOfInterviews", "IsEmployeeReferred", "UpdateTime", "OutcomeReason", "OutcomePositiveness", "IsMatch", "JobTitleSnippet" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobApplication.Types.ApplicationStatus) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Certification), global::Google.Cloud.Talent.V4Beta1.Certification.Parser, new[]{ "DisplayName", "AcquireDate", "ExpireDate", "Authority", "Description" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.RecruitingNote), global::Google.Cloud.Talent.V4Beta1.RecruitingNote.Parser, new[]{ "Note", "Commenter", "CreateDate", "Type" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Patent), global::Google.Cloud.Talent.V4Beta1.Patent.Parser, new[]{ "DisplayName", "Inventors", "PatentStatus", "PatentStatusDate", "PatentFilingDate", "PatentOffice", "PatentNumber", "PatentDescription", "SkillsUsed" }, null, null, null)
           }));
     }
     #endregion
@@ -193,8 +158,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// A resource that represents the profile for a job candidate (also referred to
   /// as a "single-source profile"). A profile belongs to a
-  /// [Tenant][google.cloud.talent.v4beta1.Tenant], which is an isolated instance
-  /// of the customer that owns the profile.
+  /// [Company][google.cloud.talent.v4beta1.Company], which is the
+  /// company/organization that owns the profile.
   /// </summary>
   public sealed partial class Profile : pb::IMessage<Profile> {
     private static readonly pb::MessageParser<Profile> _parser = new pb::MessageParser<Profile>(() => new Profile());
@@ -243,8 +208,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       publications_ = other.publications_.Clone();
       patents_ = other.patents_.Clone();
       certifications_ = other.certifications_.Clone();
-      jobApplications_ = other.jobApplications_.Clone();
-      recruitingNotes_ = other.recruitingNotes_.Clone();
+      applications_ = other.applications_.Clone();
+      assignments_ = other.assignments_.Clone();
       customAttributes_ = other.customAttributes_.Clone();
       processed_ = other.processed_;
       keywordSnippet_ = other.keywordSnippet_;
@@ -679,37 +644,30 @@ namespace Google.Cloud.Talent.V4Beta1 {
       get { return certifications_; }
     }
 
-    /// <summary>Field number for the "job_applications" field.</summary>
-    public const int JobApplicationsFieldNumber = 24;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4Beta1.JobApplication> _repeated_jobApplications_codec
-        = pb::FieldCodec.ForMessage(194, global::Google.Cloud.Talent.V4Beta1.JobApplication.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobApplication> jobApplications_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobApplication>();
+    /// <summary>Field number for the "applications" field.</summary>
+    public const int ApplicationsFieldNumber = 47;
+    private static readonly pb::FieldCodec<string> _repeated_applications_codec
+        = pb::FieldCodec.ForString(378);
+    private readonly pbc::RepeatedField<string> applications_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The job applications of the candidate.
+    /// Output only. The resource names of the candidate's applications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobApplication> JobApplications {
-      get { return jobApplications_; }
+    public pbc::RepeatedField<string> Applications {
+      get { return applications_; }
     }
 
-    /// <summary>Field number for the "recruiting_notes" field.</summary>
-    public const int RecruitingNotesFieldNumber = 25;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4Beta1.RecruitingNote> _repeated_recruitingNotes_codec
-        = pb::FieldCodec.ForMessage(202, global::Google.Cloud.Talent.V4Beta1.RecruitingNote.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.RecruitingNote> recruitingNotes_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.RecruitingNote>();
+    /// <summary>Field number for the "assignments" field.</summary>
+    public const int AssignmentsFieldNumber = 48;
+    private static readonly pb::FieldCodec<string> _repeated_assignments_codec
+        = pb::FieldCodec.ForString(386);
+    private readonly pbc::RepeatedField<string> assignments_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The recruiting notes added for the candidate.
-    ///
-    /// For example, the recruiter can add some unstructured comments for this
-    /// candidate like "this candidate also has experiences in volunteer work".
+    /// Output only. The resource names of the candidate's assignments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.RecruitingNote> RecruitingNotes {
-      get { return recruitingNotes_; }
+    public pbc::RepeatedField<string> Assignments {
+      get { return assignments_; }
     }
 
     /// <summary>Field number for the "custom_attributes" field.</summary>
@@ -726,19 +684,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// details.
     ///
     /// At most 100 filterable and at most 100 unfilterable keys are supported. If
-    /// limit is exceeded, an error is thrown.
+    /// limit is exceeded, an error is thrown. Custom attributes are `unfilterable`
+    /// by default. These are filterable when the `filterable` flag is set to
+    /// `true`.
     ///
     /// Numeric custom attributes: each key can only map to one numeric value,
-    /// otherwise an error is thrown.
+    /// otherwise an error is thrown. Client can also filter on numeric custom
+    /// attributes using '>', '&lt;' or '=' operators.
     ///
     /// String custom attributes: each key can map up to 50 string values. For
     /// filterable string value, each value has a byte size of no more than 256B.
     /// For unfilterable string values, the maximum byte size of a single key is
     /// 64B. An error is thrown for any request exceeding the limit.
     /// The maximum total byte size is 10KB.
-    ///
-    /// Currently filterable numeric custom attributes are not supported, and
-    /// they automatically set to unfilterable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Talent.V4Beta1.CustomAttribute> CustomAttributes {
@@ -809,8 +767,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if(!publications_.Equals(other.publications_)) return false;
       if(!patents_.Equals(other.patents_)) return false;
       if(!certifications_.Equals(other.certifications_)) return false;
-      if(!jobApplications_.Equals(other.jobApplications_)) return false;
-      if(!recruitingNotes_.Equals(other.recruitingNotes_)) return false;
+      if(!applications_.Equals(other.applications_)) return false;
+      if(!assignments_.Equals(other.assignments_)) return false;
       if (!CustomAttributes.Equals(other.CustomAttributes)) return false;
       if (Processed != other.Processed) return false;
       if (KeywordSnippet != other.KeywordSnippet) return false;
@@ -842,8 +800,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= publications_.GetHashCode();
       hash ^= patents_.GetHashCode();
       hash ^= certifications_.GetHashCode();
-      hash ^= jobApplications_.GetHashCode();
-      hash ^= recruitingNotes_.GetHashCode();
+      hash ^= applications_.GetHashCode();
+      hash ^= assignments_.GetHashCode();
       hash ^= CustomAttributes.GetHashCode();
       if (Processed != false) hash ^= Processed.GetHashCode();
       if (KeywordSnippet.Length != 0) hash ^= KeywordSnippet.GetHashCode();
@@ -908,8 +866,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
       publications_.WriteTo(output, _repeated_publications_codec);
       patents_.WriteTo(output, _repeated_patents_codec);
       certifications_.WriteTo(output, _repeated_certifications_codec);
-      jobApplications_.WriteTo(output, _repeated_jobApplications_codec);
-      recruitingNotes_.WriteTo(output, _repeated_recruitingNotes_codec);
       customAttributes_.WriteTo(output, _map_customAttributes_codec);
       if (Processed != false) {
         output.WriteRawTag(216, 1);
@@ -919,6 +875,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(226, 1);
         output.WriteString(KeywordSnippet);
       }
+      applications_.WriteTo(output, _repeated_applications_codec);
+      assignments_.WriteTo(output, _repeated_assignments_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -967,8 +925,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       size += publications_.CalculateSize(_repeated_publications_codec);
       size += patents_.CalculateSize(_repeated_patents_codec);
       size += certifications_.CalculateSize(_repeated_certifications_codec);
-      size += jobApplications_.CalculateSize(_repeated_jobApplications_codec);
-      size += recruitingNotes_.CalculateSize(_repeated_recruitingNotes_codec);
+      size += applications_.CalculateSize(_repeated_applications_codec);
+      size += assignments_.CalculateSize(_repeated_assignments_codec);
       size += customAttributes_.CalculateSize(_map_customAttributes_codec);
       if (Processed != false) {
         size += 2 + 1;
@@ -1035,8 +993,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       publications_.Add(other.publications_);
       patents_.Add(other.patents_);
       certifications_.Add(other.certifications_);
-      jobApplications_.Add(other.jobApplications_);
-      recruitingNotes_.Add(other.recruitingNotes_);
+      applications_.Add(other.applications_);
+      assignments_.Add(other.assignments_);
       customAttributes_.Add(other.customAttributes_);
       if (other.Processed != false) {
         Processed = other.Processed;
@@ -1152,14 +1110,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
             certifications_.AddEntriesFrom(input, _repeated_certifications_codec);
             break;
           }
-          case 194: {
-            jobApplications_.AddEntriesFrom(input, _repeated_jobApplications_codec);
-            break;
-          }
-          case 202: {
-            recruitingNotes_.AddEntriesFrom(input, _repeated_recruitingNotes_codec);
-            break;
-          }
           case 210: {
             customAttributes_.AddEntriesFrom(input, _map_customAttributes_codec);
             break;
@@ -1170,6 +1120,14 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 226: {
             KeywordSnippet = input.ReadString();
+            break;
+          }
+          case 378: {
+            applications_.AddEntriesFrom(input, _repeated_applications_codec);
+            break;
+          }
+          case 386: {
+            assignments_.AddEntriesFrom(input, _repeated_assignments_codec);
             break;
           }
         }
@@ -1733,7 +1691,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Address(Address other) : this() {
       usage_ = other.usage_;
-      IsCurrent = other.IsCurrent;
+      Current = other.Current;
       switch (other.AddressCase) {
         case AddressOneofCase.UnstructuredAddress:
           UnstructuredAddress = other.UnstructuredAddress;
@@ -1805,20 +1763,20 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "is_current" field.</summary>
-    public const int IsCurrentFieldNumber = 4;
-    private static readonly pb::FieldCodec<bool?> _single_isCurrent_codec = pb::FieldCodec.ForStructWrapper<bool>(34);
-    private bool? isCurrent_;
+    /// <summary>Field number for the "current" field.</summary>
+    public const int CurrentFieldNumber = 4;
+    private static readonly pb::FieldCodec<bool?> _single_current_codec = pb::FieldCodec.ForStructWrapper<bool>(34);
+    private bool? current_;
     /// <summary>
     /// Optional.
     ///
     /// Indicates if it's the person's current address.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool? IsCurrent {
-      get { return isCurrent_; }
+    public bool? Current {
+      get { return current_; }
       set {
-        isCurrent_ = value;
+        current_ = value;
       }
     }
 
@@ -1857,7 +1815,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Usage != other.Usage) return false;
       if (UnstructuredAddress != other.UnstructuredAddress) return false;
       if (!object.Equals(StructuredAddress, other.StructuredAddress)) return false;
-      if (IsCurrent != other.IsCurrent) return false;
+      if (Current != other.Current) return false;
       if (AddressCase != other.AddressCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1868,7 +1826,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Usage != 0) hash ^= Usage.GetHashCode();
       if (addressCase_ == AddressOneofCase.UnstructuredAddress) hash ^= UnstructuredAddress.GetHashCode();
       if (addressCase_ == AddressOneofCase.StructuredAddress) hash ^= StructuredAddress.GetHashCode();
-      if (isCurrent_ != null) hash ^= IsCurrent.GetHashCode();
+      if (current_ != null) hash ^= Current.GetHashCode();
       hash ^= (int) addressCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1895,8 +1853,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(StructuredAddress);
       }
-      if (isCurrent_ != null) {
-        _single_isCurrent_codec.WriteTagAndValue(output, IsCurrent);
+      if (current_ != null) {
+        _single_current_codec.WriteTagAndValue(output, Current);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1915,8 +1873,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (addressCase_ == AddressOneofCase.StructuredAddress) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructuredAddress);
       }
-      if (isCurrent_ != null) {
-        size += _single_isCurrent_codec.CalculateSizeWithTag(IsCurrent);
+      if (current_ != null) {
+        size += _single_current_codec.CalculateSizeWithTag(Current);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1932,9 +1890,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.Usage != 0) {
         Usage = other.Usage;
       }
-      if (other.isCurrent_ != null) {
-        if (isCurrent_ == null || other.IsCurrent != false) {
-          IsCurrent = other.IsCurrent;
+      if (other.current_ != null) {
+        if (current_ == null || other.Current != false) {
+          Current = other.Current;
         }
       }
       switch (other.AddressCase) {
@@ -1978,9 +1936,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 34: {
-            bool? value = _single_isCurrent_codec.Read(input);
-            if (isCurrent_ == null || value != false) {
-              IsCurrent = value;
+            bool? value = _single_current_codec.Read(input);
+            if (current_ == null || value != false) {
+              Current = value;
             }
             break;
           }
@@ -2850,7 +2808,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       address_ = other.address_ != null ? other.address_.Clone() : null;
       jobTitle_ = other.jobTitle_;
       jobDescription_ = other.jobDescription_;
-      IsSupervisedPosition = other.IsSupervisedPosition;
+      IsSupervisor = other.IsSupervisor;
       IsSelfEmployed = other.IsSelfEmployed;
       IsCurrent = other.IsCurrent;
       jobTitleSnippet_ = other.jobTitleSnippet_;
@@ -3003,20 +2961,20 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "is_supervised_position" field.</summary>
-    public const int IsSupervisedPositionFieldNumber = 8;
-    private static readonly pb::FieldCodec<bool?> _single_isSupervisedPosition_codec = pb::FieldCodec.ForStructWrapper<bool>(66);
-    private bool? isSupervisedPosition_;
+    /// <summary>Field number for the "is_supervisor" field.</summary>
+    public const int IsSupervisorFieldNumber = 8;
+    private static readonly pb::FieldCodec<bool?> _single_isSupervisor_codec = pb::FieldCodec.ForStructWrapper<bool>(66);
+    private bool? isSupervisor_;
     /// <summary>
     /// Optional.
     ///
-    /// If it's a supervised position.
+    /// If it is a supervisor position.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool? IsSupervisedPosition {
-      get { return isSupervisedPosition_; }
+    public bool? IsSupervisor {
+      get { return isSupervisor_; }
       set {
-        isSupervisedPosition_ = value;
+        isSupervisor_ = value;
       }
     }
 
@@ -3128,7 +3086,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (!object.Equals(Address, other.Address)) return false;
       if (JobTitle != other.JobTitle) return false;
       if (JobDescription != other.JobDescription) return false;
-      if (IsSupervisedPosition != other.IsSupervisedPosition) return false;
+      if (IsSupervisor != other.IsSupervisor) return false;
       if (IsSelfEmployed != other.IsSelfEmployed) return false;
       if (IsCurrent != other.IsCurrent) return false;
       if (JobTitleSnippet != other.JobTitleSnippet) return false;
@@ -3147,7 +3105,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (address_ != null) hash ^= Address.GetHashCode();
       if (JobTitle.Length != 0) hash ^= JobTitle.GetHashCode();
       if (JobDescription.Length != 0) hash ^= JobDescription.GetHashCode();
-      if (isSupervisedPosition_ != null) hash ^= IsSupervisedPosition.GetHashCode();
+      if (isSupervisor_ != null) hash ^= IsSupervisor.GetHashCode();
       if (isSelfEmployed_ != null) hash ^= IsSelfEmployed.GetHashCode();
       if (isCurrent_ != null) hash ^= IsCurrent.GetHashCode();
       if (JobTitleSnippet.Length != 0) hash ^= JobTitleSnippet.GetHashCode();
@@ -3194,8 +3152,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(58);
         output.WriteString(JobDescription);
       }
-      if (isSupervisedPosition_ != null) {
-        _single_isSupervisedPosition_codec.WriteTagAndValue(output, IsSupervisedPosition);
+      if (isSupervisor_ != null) {
+        _single_isSupervisor_codec.WriteTagAndValue(output, IsSupervisor);
       }
       if (isSelfEmployed_ != null) {
         _single_isSelfEmployed_codec.WriteTagAndValue(output, IsSelfEmployed);
@@ -3244,8 +3202,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (JobDescription.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JobDescription);
       }
-      if (isSupervisedPosition_ != null) {
-        size += _single_isSupervisedPosition_codec.CalculateSizeWithTag(IsSupervisedPosition);
+      if (isSupervisor_ != null) {
+        size += _single_isSupervisor_codec.CalculateSizeWithTag(IsSupervisor);
       }
       if (isSelfEmployed_ != null) {
         size += _single_isSelfEmployed_codec.CalculateSizeWithTag(IsSelfEmployed);
@@ -3303,9 +3261,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.JobDescription.Length != 0) {
         JobDescription = other.JobDescription;
       }
-      if (other.isSupervisedPosition_ != null) {
-        if (isSupervisedPosition_ == null || other.IsSupervisedPosition != false) {
-          IsSupervisedPosition = other.IsSupervisedPosition;
+      if (other.isSupervisor_ != null) {
+        if (isSupervisor_ == null || other.IsSupervisor != false) {
+          IsSupervisor = other.IsSupervisor;
         }
       }
       if (other.isSelfEmployed_ != null) {
@@ -3376,9 +3334,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 66: {
-            bool? value = _single_isSupervisedPosition_codec.Read(input);
-            if (isSupervisedPosition_ == null || value != false) {
-              IsSupervisedPosition = value;
+            bool? value = _single_isSupervisor_codec.Read(input);
+            if (isSupervisor_ == null || value != false) {
+              IsSupervisor = value;
             }
             break;
           }
@@ -4167,331 +4125,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// Resource that represents a skill of a candidate.
-  /// </summary>
-  public sealed partial class Skill : pb::IMessage<Skill> {
-    private static readonly pb::MessageParser<Skill> _parser = new pb::MessageParser<Skill>(() => new Skill());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Skill> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[10]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Skill() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Skill(Skill other) : this() {
-      displayName_ = other.displayName_;
-      lastUsedDate_ = other.lastUsedDate_ != null ? other.lastUsedDate_.Clone() : null;
-      level_ = other.level_;
-      context_ = other.context_;
-      skillNameSnippet_ = other.skillNameSnippet_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Skill Clone() {
-      return new Skill(this);
-    }
-
-    /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 1;
-    private string displayName_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// Skill display name.
-    ///
-    /// For example, "Java", "Python".
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DisplayName {
-      get { return displayName_; }
-      set {
-        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "last_used_date" field.</summary>
-    public const int LastUsedDateFieldNumber = 2;
-    private global::Google.Type.Date lastUsedDate_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The last time this skill was used.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Type.Date LastUsedDate {
-      get { return lastUsedDate_; }
-      set {
-        lastUsedDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 3;
-    private global::Google.Cloud.Talent.V4Beta1.Skill.Types.SkillProficiencyLevel level_ = 0;
-    /// <summary>
-    /// Optional.
-    ///
-    /// Skill proficiency level which indicates how proficient the candidate is at
-    /// this skill.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Talent.V4Beta1.Skill.Types.SkillProficiencyLevel Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "context" field.</summary>
-    public const int ContextFieldNumber = 4;
-    private string context_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// A paragraph describes context of this skill.
-    ///
-    /// Number of characters allowed is 100,000.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Context {
-      get { return context_; }
-      set {
-        context_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "skill_name_snippet" field.</summary>
-    public const int SkillNameSnippetFieldNumber = 5;
-    private string skillNameSnippet_ = "";
-    /// <summary>
-    /// Output only. Skill name snippet shows how the
-    /// [display_name][google.cloud.talent.v4beta1.Skill.display_name] is related
-    /// to a search query. It's empty if the
-    /// [display_name][google.cloud.talent.v4beta1.Skill.display_name] isn't
-    /// related to the search query.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string SkillNameSnippet {
-      get { return skillNameSnippet_; }
-      set {
-        skillNameSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Skill);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Skill other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (DisplayName != other.DisplayName) return false;
-      if (!object.Equals(LastUsedDate, other.LastUsedDate)) return false;
-      if (Level != other.Level) return false;
-      if (Context != other.Context) return false;
-      if (SkillNameSnippet != other.SkillNameSnippet) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (lastUsedDate_ != null) hash ^= LastUsedDate.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
-      if (Context.Length != 0) hash ^= Context.GetHashCode();
-      if (SkillNameSnippet.Length != 0) hash ^= SkillNameSnippet.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(DisplayName);
-      }
-      if (lastUsedDate_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(LastUsedDate);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) Level);
-      }
-      if (Context.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Context);
-      }
-      if (SkillNameSnippet.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(SkillNameSnippet);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (DisplayName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
-      if (lastUsedDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUsedDate);
-      }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
-      }
-      if (Context.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Context);
-      }
-      if (SkillNameSnippet.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SkillNameSnippet);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Skill other) {
-      if (other == null) {
-        return;
-      }
-      if (other.DisplayName.Length != 0) {
-        DisplayName = other.DisplayName;
-      }
-      if (other.lastUsedDate_ != null) {
-        if (lastUsedDate_ == null) {
-          lastUsedDate_ = new global::Google.Type.Date();
-        }
-        LastUsedDate.MergeFrom(other.LastUsedDate);
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
-      if (other.Context.Length != 0) {
-        Context = other.Context;
-      }
-      if (other.SkillNameSnippet.Length != 0) {
-        SkillNameSnippet = other.SkillNameSnippet;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            DisplayName = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (lastUsedDate_ == null) {
-              lastUsedDate_ = new global::Google.Type.Date();
-            }
-            input.ReadMessage(lastUsedDate_);
-            break;
-          }
-          case 24: {
-            level_ = (global::Google.Cloud.Talent.V4Beta1.Skill.Types.SkillProficiencyLevel) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            Context = input.ReadString();
-            break;
-          }
-          case 42: {
-            SkillNameSnippet = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the Skill message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      /// <summary>
-      /// Enum that represents the skill proficiency level.
-      /// </summary>
-      public enum SkillProficiencyLevel {
-        /// <summary>
-        /// Default value.
-        /// </summary>
-        [pbr::OriginalName("SKILL_PROFICIENCY_LEVEL_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// Have a common knowledge or an understanding of basic techniques and
-        /// concepts.
-        /// </summary>
-        [pbr::OriginalName("FUNDAMENTAL_AWARENESS")] FundamentalAwareness = 1,
-        /// <summary>
-        /// Have the level of experience gained in a classroom and/or experimental
-        /// scenarios or as a trainee on-the-job.
-        /// </summary>
-        [pbr::OriginalName("NOVICE")] Novice = 2,
-        /// <summary>
-        /// Be able to successfully complete tasks in this skill as requested. Help
-        /// from an expert may be required from time to time, but can usually perform
-        /// skill independently.
-        /// </summary>
-        [pbr::OriginalName("INTERMEDIATE")] Intermediate = 3,
-        /// <summary>
-        /// Can perform the actions associated with this skill without assistance.
-        /// </summary>
-        [pbr::OriginalName("ADVANCED")] Advanced = 4,
-        /// <summary>
-        /// Known as an expert in this area.
-        /// </summary>
-        [pbr::OriginalName("EXPERT")] Expert = 5,
-      }
-
-    }
-    #endregion
-
-  }
-
-  /// <summary>
   /// Resource that represents an individual or collaborative activity participated
   /// in by a candidate, for example, an open-source project, a class assignment,
   /// etc.
@@ -4504,7 +4137,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4940,7 +4573,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5355,7 +4988,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5745,1204 +5378,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 74: {
             skillsUsed_.AddEntriesFrom(input, _repeated_skillsUsed_codec);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
-  /// Resource that represents a job application record of a candidate.
-  /// </summary>
-  public sealed partial class JobApplication : pb::IMessage<JobApplication> {
-    private static readonly pb::MessageParser<JobApplication> _parser = new pb::MessageParser<JobApplication>(() => new JobApplication());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<JobApplication> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[14]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public JobApplication() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public JobApplication(JobApplication other) : this() {
-      job_ = other.job_ != null ? other.job_.Clone() : null;
-      applicationId_ = other.applicationId_;
-      applicationDate_ = other.applicationDate_ != null ? other.applicationDate_.Clone() : null;
-      lastStage_ = other.lastStage_;
-      state_ = other.state_;
-      averageInterviewScore_ = other.averageInterviewScore_;
-      interviewScoreScaleId_ = other.interviewScoreScaleId_;
-      numberOfInterviews_ = other.numberOfInterviews_;
-      IsEmployeeReferred = other.IsEmployeeReferred;
-      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
-      outcomeReason_ = other.outcomeReason_;
-      outcomePositiveness_ = other.outcomePositiveness_;
-      IsMatch = other.IsMatch;
-      jobTitleSnippet_ = other.jobTitleSnippet_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public JobApplication Clone() {
-      return new JobApplication(this);
-    }
-
-    /// <summary>Field number for the "job" field.</summary>
-    public const int JobFieldNumber = 1;
-    private global::Google.Cloud.Talent.V4Beta1.Job job_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The information of job which the candidate applied for.
-    ///
-    /// If [Job.name][google.cloud.talent.v4beta1.Job.name] is provided, the
-    /// corresponding [Job][google.cloud.talent.v4beta1.Job] must be created.
-    ///
-    /// Otherwise, only
-    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
-    /// [Job.title][google.cloud.talent.v4beta1.Job.title],
-    /// [Job.description][google.cloud.talent.v4beta1.Job.description] and
-    /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] provided here
-    /// are persisted in the application. No [Job][google.cloud.talent.v4beta1.Job]
-    /// entity is created in this case.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Talent.V4Beta1.Job Job {
-      get { return job_; }
-      set {
-        job_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "application_id" field.</summary>
-    public const int ApplicationIdFieldNumber = 2;
-    private string applicationId_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// The job application id.
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ApplicationId {
-      get { return applicationId_; }
-      set {
-        applicationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "application_date" field.</summary>
-    public const int ApplicationDateFieldNumber = 3;
-    private global::Google.Type.Date applicationDate_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The application date.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Type.Date ApplicationDate {
-      get { return applicationDate_; }
-      set {
-        applicationDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "last_stage" field.</summary>
-    public const int LastStageFieldNumber = 4;
-    private string lastStage_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// The last stage the candidate reached in the application progress.
-    /// For example, "new", "phone screen", "interview".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string LastStage {
-      get { return lastStage_; }
-      set {
-        lastStage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 5;
-    private global::Google.Cloud.Talent.V4Beta1.JobApplication.Types.ApplicationStatus state_ = 0;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The application state.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Talent.V4Beta1.JobApplication.Types.ApplicationStatus State {
-      get { return state_; }
-      set {
-        state_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "average_interview_score" field.</summary>
-    public const int AverageInterviewScoreFieldNumber = 6;
-    private double averageInterviewScore_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The average interview score.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double AverageInterviewScore {
-      get { return averageInterviewScore_; }
-      set {
-        averageInterviewScore_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "interview_score_scale_id" field.</summary>
-    public const int InterviewScoreScaleIdFieldNumber = 7;
-    private string interviewScoreScaleId_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// The scale id of the interview score.
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string InterviewScoreScaleId {
-      get { return interviewScoreScaleId_; }
-      set {
-        interviewScoreScaleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "number_of_interviews" field.</summary>
-    public const int NumberOfInterviewsFieldNumber = 8;
-    private int numberOfInterviews_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The number of interviews.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int NumberOfInterviews {
-      get { return numberOfInterviews_; }
-      set {
-        numberOfInterviews_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_employee_referred" field.</summary>
-    public const int IsEmployeeReferredFieldNumber = 9;
-    private static readonly pb::FieldCodec<bool?> _single_isEmployeeReferred_codec = pb::FieldCodec.ForStructWrapper<bool>(74);
-    private bool? isEmployeeReferred_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// If the candidate is referred by a employee.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool? IsEmployeeReferred {
-      get { return isEmployeeReferred_; }
-      set {
-        isEmployeeReferred_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "update_time" field.</summary>
-    public const int UpdateTimeFieldNumber = 10;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The last update timestamp.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
-      get { return updateTime_; }
-      set {
-        updateTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "outcome_reason" field.</summary>
-    public const int OutcomeReasonFieldNumber = 11;
-    private string outcomeReason_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// The outcome reason for the job application.
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string OutcomeReason {
-      get { return outcomeReason_; }
-      set {
-        outcomeReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "outcome_positiveness" field.</summary>
-    public const int OutcomePositivenessFieldNumber = 12;
-    private double outcomePositiveness_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// Outcome positiveness shows how positive the outcome is.
-    ///
-    /// Currently only -1, 0 and 1 are accepted, where -1 means not positive, 0
-    /// means neutral and 1 means positive. An error is thrown if other value is
-    /// set.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double OutcomePositiveness {
-      get { return outcomePositiveness_; }
-      set {
-        outcomePositiveness_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_match" field.</summary>
-    public const int IsMatchFieldNumber = 13;
-    private static readonly pb::FieldCodec<bool?> _single_isMatch_codec = pb::FieldCodec.ForStructWrapper<bool>(106);
-    private bool? isMatch_;
-    /// <summary>
-    /// Output only. Indicates whether this job application is a match to
-    /// application related filters. This value is only applicable in profile
-    /// search response.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool? IsMatch {
-      get { return isMatch_; }
-      set {
-        isMatch_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "job_title_snippet" field.</summary>
-    public const int JobTitleSnippetFieldNumber = 14;
-    private string jobTitleSnippet_ = "";
-    /// <summary>
-    /// Output only. Job title snippet shows how the job title is related to a
-    /// search query. It's empty if the job title isn't related to the search
-    /// query.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string JobTitleSnippet {
-      get { return jobTitleSnippet_; }
-      set {
-        jobTitleSnippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as JobApplication);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(JobApplication other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Job, other.Job)) return false;
-      if (ApplicationId != other.ApplicationId) return false;
-      if (!object.Equals(ApplicationDate, other.ApplicationDate)) return false;
-      if (LastStage != other.LastStage) return false;
-      if (State != other.State) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(AverageInterviewScore, other.AverageInterviewScore)) return false;
-      if (InterviewScoreScaleId != other.InterviewScoreScaleId) return false;
-      if (NumberOfInterviews != other.NumberOfInterviews) return false;
-      if (IsEmployeeReferred != other.IsEmployeeReferred) return false;
-      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
-      if (OutcomeReason != other.OutcomeReason) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(OutcomePositiveness, other.OutcomePositiveness)) return false;
-      if (IsMatch != other.IsMatch) return false;
-      if (JobTitleSnippet != other.JobTitleSnippet) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (job_ != null) hash ^= Job.GetHashCode();
-      if (ApplicationId.Length != 0) hash ^= ApplicationId.GetHashCode();
-      if (applicationDate_ != null) hash ^= ApplicationDate.GetHashCode();
-      if (LastStage.Length != 0) hash ^= LastStage.GetHashCode();
-      if (State != 0) hash ^= State.GetHashCode();
-      if (AverageInterviewScore != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(AverageInterviewScore);
-      if (InterviewScoreScaleId.Length != 0) hash ^= InterviewScoreScaleId.GetHashCode();
-      if (NumberOfInterviews != 0) hash ^= NumberOfInterviews.GetHashCode();
-      if (isEmployeeReferred_ != null) hash ^= IsEmployeeReferred.GetHashCode();
-      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (OutcomeReason.Length != 0) hash ^= OutcomeReason.GetHashCode();
-      if (OutcomePositiveness != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(OutcomePositiveness);
-      if (isMatch_ != null) hash ^= IsMatch.GetHashCode();
-      if (JobTitleSnippet.Length != 0) hash ^= JobTitleSnippet.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (job_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Job);
-      }
-      if (ApplicationId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ApplicationId);
-      }
-      if (applicationDate_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(ApplicationDate);
-      }
-      if (LastStage.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(LastStage);
-      }
-      if (State != 0) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) State);
-      }
-      if (AverageInterviewScore != 0D) {
-        output.WriteRawTag(49);
-        output.WriteDouble(AverageInterviewScore);
-      }
-      if (InterviewScoreScaleId.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(InterviewScoreScaleId);
-      }
-      if (NumberOfInterviews != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(NumberOfInterviews);
-      }
-      if (isEmployeeReferred_ != null) {
-        _single_isEmployeeReferred_codec.WriteTagAndValue(output, IsEmployeeReferred);
-      }
-      if (updateTime_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(UpdateTime);
-      }
-      if (OutcomeReason.Length != 0) {
-        output.WriteRawTag(90);
-        output.WriteString(OutcomeReason);
-      }
-      if (OutcomePositiveness != 0D) {
-        output.WriteRawTag(97);
-        output.WriteDouble(OutcomePositiveness);
-      }
-      if (isMatch_ != null) {
-        _single_isMatch_codec.WriteTagAndValue(output, IsMatch);
-      }
-      if (JobTitleSnippet.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(JobTitleSnippet);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (job_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Job);
-      }
-      if (ApplicationId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplicationId);
-      }
-      if (applicationDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplicationDate);
-      }
-      if (LastStage.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LastStage);
-      }
-      if (State != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
-      }
-      if (AverageInterviewScore != 0D) {
-        size += 1 + 8;
-      }
-      if (InterviewScoreScaleId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(InterviewScoreScaleId);
-      }
-      if (NumberOfInterviews != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NumberOfInterviews);
-      }
-      if (isEmployeeReferred_ != null) {
-        size += _single_isEmployeeReferred_codec.CalculateSizeWithTag(IsEmployeeReferred);
-      }
-      if (updateTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
-      }
-      if (OutcomeReason.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutcomeReason);
-      }
-      if (OutcomePositiveness != 0D) {
-        size += 1 + 8;
-      }
-      if (isMatch_ != null) {
-        size += _single_isMatch_codec.CalculateSizeWithTag(IsMatch);
-      }
-      if (JobTitleSnippet.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(JobTitleSnippet);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(JobApplication other) {
-      if (other == null) {
-        return;
-      }
-      if (other.job_ != null) {
-        if (job_ == null) {
-          job_ = new global::Google.Cloud.Talent.V4Beta1.Job();
-        }
-        Job.MergeFrom(other.Job);
-      }
-      if (other.ApplicationId.Length != 0) {
-        ApplicationId = other.ApplicationId;
-      }
-      if (other.applicationDate_ != null) {
-        if (applicationDate_ == null) {
-          applicationDate_ = new global::Google.Type.Date();
-        }
-        ApplicationDate.MergeFrom(other.ApplicationDate);
-      }
-      if (other.LastStage.Length != 0) {
-        LastStage = other.LastStage;
-      }
-      if (other.State != 0) {
-        State = other.State;
-      }
-      if (other.AverageInterviewScore != 0D) {
-        AverageInterviewScore = other.AverageInterviewScore;
-      }
-      if (other.InterviewScoreScaleId.Length != 0) {
-        InterviewScoreScaleId = other.InterviewScoreScaleId;
-      }
-      if (other.NumberOfInterviews != 0) {
-        NumberOfInterviews = other.NumberOfInterviews;
-      }
-      if (other.isEmployeeReferred_ != null) {
-        if (isEmployeeReferred_ == null || other.IsEmployeeReferred != false) {
-          IsEmployeeReferred = other.IsEmployeeReferred;
-        }
-      }
-      if (other.updateTime_ != null) {
-        if (updateTime_ == null) {
-          updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        UpdateTime.MergeFrom(other.UpdateTime);
-      }
-      if (other.OutcomeReason.Length != 0) {
-        OutcomeReason = other.OutcomeReason;
-      }
-      if (other.OutcomePositiveness != 0D) {
-        OutcomePositiveness = other.OutcomePositiveness;
-      }
-      if (other.isMatch_ != null) {
-        if (isMatch_ == null || other.IsMatch != false) {
-          IsMatch = other.IsMatch;
-        }
-      }
-      if (other.JobTitleSnippet.Length != 0) {
-        JobTitleSnippet = other.JobTitleSnippet;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (job_ == null) {
-              job_ = new global::Google.Cloud.Talent.V4Beta1.Job();
-            }
-            input.ReadMessage(job_);
-            break;
-          }
-          case 18: {
-            ApplicationId = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (applicationDate_ == null) {
-              applicationDate_ = new global::Google.Type.Date();
-            }
-            input.ReadMessage(applicationDate_);
-            break;
-          }
-          case 34: {
-            LastStage = input.ReadString();
-            break;
-          }
-          case 40: {
-            state_ = (global::Google.Cloud.Talent.V4Beta1.JobApplication.Types.ApplicationStatus) input.ReadEnum();
-            break;
-          }
-          case 49: {
-            AverageInterviewScore = input.ReadDouble();
-            break;
-          }
-          case 58: {
-            InterviewScoreScaleId = input.ReadString();
-            break;
-          }
-          case 64: {
-            NumberOfInterviews = input.ReadInt32();
-            break;
-          }
-          case 74: {
-            bool? value = _single_isEmployeeReferred_codec.Read(input);
-            if (isEmployeeReferred_ == null || value != false) {
-              IsEmployeeReferred = value;
-            }
-            break;
-          }
-          case 82: {
-            if (updateTime_ == null) {
-              updateTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(updateTime_);
-            break;
-          }
-          case 90: {
-            OutcomeReason = input.ReadString();
-            break;
-          }
-          case 97: {
-            OutcomePositiveness = input.ReadDouble();
-            break;
-          }
-          case 106: {
-            bool? value = _single_isMatch_codec.Read(input);
-            if (isMatch_ == null || value != false) {
-              IsMatch = value;
-            }
-            break;
-          }
-          case 114: {
-            JobTitleSnippet = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the JobApplication message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      /// <summary>
-      /// Enum that represents the application status.
-      /// </summary>
-      public enum ApplicationStatus {
-        /// <summary>
-        /// Default value.
-        /// </summary>
-        [pbr::OriginalName("APPLICATION_STATUS_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// The offer is extended.
-        /// </summary>
-        [pbr::OriginalName("OFFER_EXTENDED")] OfferExtended = 1,
-        /// <summary>
-        /// The offer is rejected by candidate.
-        /// </summary>
-        [pbr::OriginalName("REJECTED_BY_CANDIDATE")] RejectedByCandidate = 2,
-        /// <summary>
-        /// The application is active.
-        /// </summary>
-        [pbr::OriginalName("ACTIVE")] Active = 3,
-        /// <summary>
-        /// The candidate is rejected by employer.
-        /// </summary>
-        [pbr::OriginalName("REJECTED_BY_EMPLOYER")] RejectedByEmployer = 4,
-        /// <summary>
-        /// The candidate is hired and hasn't started the new job.
-        /// </summary>
-        [pbr::OriginalName("HIRED_PENDING_DATE")] HiredPendingDate = 5,
-        /// <summary>
-        /// The candidate is hired started.
-        /// </summary>
-        [pbr::OriginalName("HIRED_STARTED")] HiredStarted = 6,
-        /// <summary>
-        /// The candidate is a prospect candidate.
-        /// </summary>
-        [pbr::OriginalName("PROSPECTED")] Prospected = 7,
-      }
-
-    }
-    #endregion
-
-  }
-
-  /// <summary>
-  /// Resource that represents a license or certification.
-  /// </summary>
-  public sealed partial class Certification : pb::IMessage<Certification> {
-    private static readonly pb::MessageParser<Certification> _parser = new pb::MessageParser<Certification>(() => new Certification());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Certification> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[15]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Certification() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Certification(Certification other) : this() {
-      displayName_ = other.displayName_;
-      acquireDate_ = other.acquireDate_ != null ? other.acquireDate_.Clone() : null;
-      expireDate_ = other.expireDate_ != null ? other.expireDate_.Clone() : null;
-      authority_ = other.authority_;
-      description_ = other.description_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Certification Clone() {
-      return new Certification(this);
-    }
-
-    /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 1;
-    private string displayName_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// Name of license or certification.
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DisplayName {
-      get { return displayName_; }
-      set {
-        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "acquire_date" field.</summary>
-    public const int AcquireDateFieldNumber = 2;
-    private global::Google.Type.Date acquireDate_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// Acquirement date or effective date of license or certification.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Type.Date AcquireDate {
-      get { return acquireDate_; }
-      set {
-        acquireDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "expire_date" field.</summary>
-    public const int ExpireDateFieldNumber = 3;
-    private global::Google.Type.Date expireDate_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// Expiration date of license of certification.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Type.Date ExpireDate {
-      get { return expireDate_; }
-      set {
-        expireDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "authority" field.</summary>
-    public const int AuthorityFieldNumber = 4;
-    private string authority_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// Authority of license, such as government.
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Authority {
-      get { return authority_; }
-      set {
-        authority_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 5;
-    private string description_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// Description of license or certification.
-    ///
-    /// Number of characters allowed is 100,000.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Description {
-      get { return description_; }
-      set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Certification);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Certification other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (DisplayName != other.DisplayName) return false;
-      if (!object.Equals(AcquireDate, other.AcquireDate)) return false;
-      if (!object.Equals(ExpireDate, other.ExpireDate)) return false;
-      if (Authority != other.Authority) return false;
-      if (Description != other.Description) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (acquireDate_ != null) hash ^= AcquireDate.GetHashCode();
-      if (expireDate_ != null) hash ^= ExpireDate.GetHashCode();
-      if (Authority.Length != 0) hash ^= Authority.GetHashCode();
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(DisplayName);
-      }
-      if (acquireDate_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(AcquireDate);
-      }
-      if (expireDate_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(ExpireDate);
-      }
-      if (Authority.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Authority);
-      }
-      if (Description.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(Description);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (DisplayName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
-      if (acquireDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AcquireDate);
-      }
-      if (expireDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireDate);
-      }
-      if (Authority.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Authority);
-      }
-      if (Description.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Certification other) {
-      if (other == null) {
-        return;
-      }
-      if (other.DisplayName.Length != 0) {
-        DisplayName = other.DisplayName;
-      }
-      if (other.acquireDate_ != null) {
-        if (acquireDate_ == null) {
-          acquireDate_ = new global::Google.Type.Date();
-        }
-        AcquireDate.MergeFrom(other.AcquireDate);
-      }
-      if (other.expireDate_ != null) {
-        if (expireDate_ == null) {
-          expireDate_ = new global::Google.Type.Date();
-        }
-        ExpireDate.MergeFrom(other.ExpireDate);
-      }
-      if (other.Authority.Length != 0) {
-        Authority = other.Authority;
-      }
-      if (other.Description.Length != 0) {
-        Description = other.Description;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            DisplayName = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (acquireDate_ == null) {
-              acquireDate_ = new global::Google.Type.Date();
-            }
-            input.ReadMessage(acquireDate_);
-            break;
-          }
-          case 26: {
-            if (expireDate_ == null) {
-              expireDate_ = new global::Google.Type.Date();
-            }
-            input.ReadMessage(expireDate_);
-            break;
-          }
-          case 34: {
-            Authority = input.ReadString();
-            break;
-          }
-          case 42: {
-            Description = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
-  /// RecruitingNote represents a note/comment regarding the recruiting for a
-  /// candidate. For example, "This candidate is a potential match for a frontend
-  /// engineer at SF".
-  /// </summary>
-  public sealed partial class RecruitingNote : pb::IMessage<RecruitingNote> {
-    private static readonly pb::MessageParser<RecruitingNote> _parser = new pb::MessageParser<RecruitingNote>(() => new RecruitingNote());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RecruitingNote> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[16]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RecruitingNote() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RecruitingNote(RecruitingNote other) : this() {
-      note_ = other.note_;
-      commenter_ = other.commenter_;
-      createDate_ = other.createDate_ != null ? other.createDate_.Clone() : null;
-      type_ = other.type_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RecruitingNote Clone() {
-      return new RecruitingNote(this);
-    }
-
-    /// <summary>Field number for the "note" field.</summary>
-    public const int NoteFieldNumber = 1;
-    private string note_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// The content of note.
-    ///
-    /// Number of characters allowed is 4,000.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Note {
-      get { return note_; }
-      set {
-        note_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "commenter" field.</summary>
-    public const int CommenterFieldNumber = 2;
-    private string commenter_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// The person who wrote the notes.
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Commenter {
-      get { return commenter_; }
-      set {
-        commenter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "create_date" field.</summary>
-    public const int CreateDateFieldNumber = 3;
-    private global::Google.Type.Date createDate_;
-    /// <summary>
-    /// Optional.
-    ///
-    /// The create date of the note.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Type.Date CreateDate {
-      get { return createDate_; }
-      set {
-        createDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 4;
-    private string type_ = "";
-    /// <summary>
-    /// Optional.
-    ///
-    /// The note type.
-    ///
-    /// Number of characters allowed is 100.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Type {
-      get { return type_; }
-      set {
-        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as RecruitingNote);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RecruitingNote other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Note != other.Note) return false;
-      if (Commenter != other.Commenter) return false;
-      if (!object.Equals(CreateDate, other.CreateDate)) return false;
-      if (Type != other.Type) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Note.Length != 0) hash ^= Note.GetHashCode();
-      if (Commenter.Length != 0) hash ^= Commenter.GetHashCode();
-      if (createDate_ != null) hash ^= CreateDate.GetHashCode();
-      if (Type.Length != 0) hash ^= Type.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Note.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Note);
-      }
-      if (Commenter.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Commenter);
-      }
-      if (createDate_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(CreateDate);
-      }
-      if (Type.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Type);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Note.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Note);
-      }
-      if (Commenter.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Commenter);
-      }
-      if (createDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateDate);
-      }
-      if (Type.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RecruitingNote other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Note.Length != 0) {
-        Note = other.Note;
-      }
-      if (other.Commenter.Length != 0) {
-        Commenter = other.Commenter;
-      }
-      if (other.createDate_ != null) {
-        if (createDate_ == null) {
-          createDate_ = new global::Google.Type.Date();
-        }
-        CreateDate.MergeFrom(other.CreateDate);
-      }
-      if (other.Type.Length != 0) {
-        Type = other.Type;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Note = input.ReadString();
-            break;
-          }
-          case 18: {
-            Commenter = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (createDate_ == null) {
-              createDate_ = new global::Google.Type.Date();
-            }
-            input.ReadMessage(createDate_);
-            break;
-          }
-          case 34: {
-            Type = input.ReadString();
             break;
           }
         }

@@ -27,55 +27,56 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "CiVnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvam9iLnByb3RvEhtnb29n",
             "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
             "bnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24u",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8irA4KA0pv",
-            "YhIMCgRuYW1lGAEgASgJEhQKDGNvbXBhbnlfbmFtZRgCIAEoCRIWCg5yZXF1",
-            "aXNpdGlvbl9pZBgDIAEoCRINCgV0aXRsZRgEIAEoCRITCgtkZXNjcmlwdGlv",
-            "bhgFIAEoCRIRCglhZGRyZXNzZXMYBiADKAkSSgoQYXBwbGljYXRpb25faW5m",
-            "bxgHIAEoCzIwLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2IuQXBw",
-            "bGljYXRpb25JbmZvEj0KDGpvYl9iZW5lZml0cxgIIAMoDjInLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5Kb2JCZW5lZml0EkgKEWNvbXBlbnNhdGlv",
-            "bl9pbmZvGAkgASgLMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNv",
-            "bXBlbnNhdGlvbkluZm8SUQoRY3VzdG9tX2F0dHJpYnV0ZXMYCiADKAsyNi5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iLkN1c3RvbUF0dHJpYnV0",
-            "ZXNFbnRyeRI9CgxkZWdyZWVfdHlwZXMYCyADKA4yJy5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuRGVncmVlVHlwZRISCgpkZXBhcnRtZW50GAwgASgJ",
-            "EkUKEGVtcGxveW1lbnRfdHlwZXMYDSADKA4yKy5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuRW1wbG95bWVudFR5cGUSEgoKaW5jZW50aXZlcxgOIAEo",
-            "CRIVCg1sYW5ndWFnZV9jb2RlGA8gASgJEjgKCWpvYl9sZXZlbBgQIAEoDjIl",
-            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2JMZXZlbBIXCg9wcm9t",
-            "b3Rpb25fdmFsdWUYESABKAUSFgoOcXVhbGlmaWNhdGlvbnMYEiABKAkSGAoQ",
-            "cmVzcG9uc2liaWxpdGllcxgTIAEoCRJCCg5wb3N0aW5nX3JlZ2lvbhgUIAEo",
-            "DjIqLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qb3N0aW5nUmVnaW9u",
-            "EjsKCnZpc2liaWxpdHkYFSABKA4yJy5nb29nbGUuY2xvdWQudGFsZW50LnY0",
-            "YmV0YTEuVmlzaWJpbGl0eRIyCg5qb2Jfc3RhcnRfdGltZRgWIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMam9iX2VuZF90aW1lGBcgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI4ChRwb3N0aW5nX3B1Ymxp",
-            "c2hfdGltZRgYIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoT",
-            "cG9zdGluZ19leHBpcmVfdGltZRgZIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASNwoTcG9zdGluZ19jcmVhdGVfdGltZRgaIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoTcG9zdGluZ191cGRhdGVfdGltZRgb",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASHAoUY29tcGFueV9k",
-            "aXNwbGF5X25hbWUYHCABKAkSQgoMZGVyaXZlZF9pbmZvGB0gASgLMiwuZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYi5EZXJpdmVkSW5mbxJOChJw",
-            "cm9jZXNzaW5nX29wdGlvbnMYHiABKAsyMi5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuSm9iLlByb2Nlc3NpbmdPcHRpb25zGkQKD0FwcGxpY2F0aW9u",
-            "SW5mbxIOCgZlbWFpbHMYASADKAkSEwoLaW5zdHJ1Y3Rpb24YAiABKAkSDAoE",
-            "dXJpcxgDIAMoCRqJAQoLRGVyaXZlZEluZm8SOAoJbG9jYXRpb25zGAEgAygL",
-            "MiUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uEkAKDmpv",
-            "Yl9jYXRlZ29yaWVzGAMgAygOMiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLkpvYkNhdGVnb3J5GogBChFQcm9jZXNzaW5nT3B0aW9ucxIpCiFkaXNh",
-            "YmxlX3N0cmVldF9hZGRyZXNzX3Jlc29sdXRpb24YASABKAgSSAoRaHRtbF9z",
-            "YW5pdGl6YXRpb24YAiABKA4yLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
-            "YTEuSHRtbFNhbml0aXphdGlvbhplChVDdXN0b21BdHRyaWJ1dGVzRW50cnkS",
-            "CwoDa2V5GAEgASgJEjsKBXZhbHVlGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NGJldGExLkN1c3RvbUF0dHJpYnV0ZToCOAFCfgofY29tLmdvb2ds",
-            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMUIQSm9iUmVzb3VyY2VQcm90b1ABWkFn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Rh",
-            "bGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2ds",
+            "ZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byKnDgoDSm9iEgwKBG5hbWUYASAB",
+            "KAkSDwoHY29tcGFueRgCIAEoCRIWCg5yZXF1aXNpdGlvbl9pZBgDIAEoCRIN",
+            "CgV0aXRsZRgEIAEoCRITCgtkZXNjcmlwdGlvbhgFIAEoCRIRCglhZGRyZXNz",
+            "ZXMYBiADKAkSSgoQYXBwbGljYXRpb25faW5mbxgHIAEoCzIwLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5Kb2IuQXBwbGljYXRpb25JbmZvEj0KDGpv",
+            "Yl9iZW5lZml0cxgIIAMoDjInLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5Kb2JCZW5lZml0EkgKEWNvbXBlbnNhdGlvbl9pbmZvGAkgASgLMi0uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBlbnNhdGlvbkluZm8SUQoR",
+            "Y3VzdG9tX2F0dHJpYnV0ZXMYCiADKAsyNi5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuSm9iLkN1c3RvbUF0dHJpYnV0ZXNFbnRyeRI9CgxkZWdyZWVf",
+            "dHlwZXMYCyADKA4yJy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRGVn",
+            "cmVlVHlwZRISCgpkZXBhcnRtZW50GAwgASgJEkUKEGVtcGxveW1lbnRfdHlw",
+            "ZXMYDSADKA4yKy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRW1wbG95",
+            "bWVudFR5cGUSEgoKaW5jZW50aXZlcxgOIAEoCRIVCg1sYW5ndWFnZV9jb2Rl",
+            "GA8gASgJEjgKCWpvYl9sZXZlbBgQIAEoDjIlLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5Kb2JMZXZlbBIXCg9wcm9tb3Rpb25fdmFsdWUYESABKAUS",
+            "FgoOcXVhbGlmaWNhdGlvbnMYEiABKAkSGAoQcmVzcG9uc2liaWxpdGllcxgT",
+            "IAEoCRJCCg5wb3N0aW5nX3JlZ2lvbhgUIAEoDjIqLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Qb3N0aW5nUmVnaW9uEjsKCnZpc2liaWxpdHkYFSAB",
+            "KA4yJy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVmlzaWJpbGl0eRIy",
+            "Cg5qb2Jfc3RhcnRfdGltZRgWIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASMAoMam9iX2VuZF90aW1lGBcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBI4ChRwb3N0aW5nX3B1Ymxpc2hfdGltZRgYIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoTcG9zdGluZ19leHBpcmVfdGlt",
+            "ZRgZIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNwoTcG9zdGlu",
+            "Z19jcmVhdGVfdGltZRgaIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASNwoTcG9zdGluZ191cGRhdGVfdGltZRgbIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASHAoUY29tcGFueV9kaXNwbGF5X25hbWUYHCABKAkS",
+            "QgoMZGVyaXZlZF9pbmZvGB0gASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExLkpvYi5EZXJpdmVkSW5mbxJOChJwcm9jZXNzaW5nX29wdGlvbnMY",
+            "HiABKAsyMi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iLlByb2Nl",
+            "c3NpbmdPcHRpb25zGkQKD0FwcGxpY2F0aW9uSW5mbxIOCgZlbWFpbHMYASAD",
+            "KAkSEwoLaW5zdHJ1Y3Rpb24YAiABKAkSDAoEdXJpcxgDIAMoCRqJAQoLRGVy",
+            "aXZlZEluZm8SOAoJbG9jYXRpb25zGAEgAygLMiUuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkxvY2F0aW9uEkAKDmpvYl9jYXRlZ29yaWVzGAMgAygO",
+            "MiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYkNhdGVnb3J5GogB",
+            "ChFQcm9jZXNzaW5nT3B0aW9ucxIpCiFkaXNhYmxlX3N0cmVldF9hZGRyZXNz",
+            "X3Jlc29sdXRpb24YASABKAgSSAoRaHRtbF9zYW5pdGl6YXRpb24YAiABKA4y",
+            "LS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSHRtbFNhbml0aXphdGlv",
+            "bhplChVDdXN0b21BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjsKBXZh",
+            "bHVlGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkN1c3Rv",
+            "bUF0dHJpYnV0ZToCOAFCfgofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMUIQSm9iUmVzb3VyY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVu",
+            "dKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job), global::Google.Cloud.Talent.V4Beta1.Job.Parser, new[]{ "Name", "CompanyName", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job), global::Google.Cloud.Talent.V4Beta1.Job.Parser, new[]{ "Name", "Company", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo.Parser, new[]{ "Locations", "JobCategories" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions), global::Google.Cloud.Talent.V4Beta1.Job.Types.ProcessingOptions.Parser, new[]{ "DisableStreetAddressResolution", "HtmlSanitization" }, null, null, null),
             null, })
@@ -117,7 +118,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Job(Job other) : this() {
       name_ = other.name_;
-      companyName_ = other.companyName_;
+      company_ = other.company_;
       requisitionId_ = other.requisitionId_;
       title_ = other.title_;
       description_ = other.description_;
@@ -163,8 +164,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The resource name for the job. This is generated by the service when a
     /// job is created.
     ///
-    /// The format is "projects/{project_id}/jobs/{job_id}",
-    /// for example, "projects/api-test-project/jobs/1234".
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+    /// example, "projects/api-test-project/tenants/foo/jobs/1234".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project/jobs/1234".
     ///
     /// Use of this field in job queries and API calls is preferred over the use of
     /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] since this
@@ -178,20 +183,26 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "company_name" field.</summary>
-    public const int CompanyNameFieldNumber = 2;
-    private string companyName_ = "";
+    /// <summary>Field number for the "company" field.</summary>
+    public const int CompanyFieldNumber = 2;
+    private string company_ = "";
     /// <summary>
     /// Required.
     ///
-    /// The resource name of the company listing the job, such as
-    /// "projects/api-test-project/companies/foo".
+    /// The resource name of the company listing the job.
+    ///
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
+    /// example, "projects/api-test-project/tenants/foo/companies/bar".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project/companies/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CompanyName {
-      get { return companyName_; }
+    public string Company {
+      get { return company_; }
       set {
-        companyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        company_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -334,7 +345,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// Job compensation information.
+    /// Job compensation information (a.k.a. "pay rate") i.e., the compensation
+    /// that will paid to the employee.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationInfo CompensationInfo {
@@ -664,8 +676,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// updated with the [UpdateJob][] API. An expired job can be updated and
     /// opened again by using a future expiration timestamp. Updating an expired
     /// job fails if there is another existing open job with same
-    /// [company][google.cloud.talent.v4beta1.Job.name][],
-    /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and
+    /// [company][google.cloud.talent.v4beta1.Job.name][], [language_code][] and
     /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
     ///
     /// The expired jobs are retained in our system for 90 days. However, the
@@ -785,7 +796,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (CompanyName != other.CompanyName) return false;
+      if (Company != other.Company) return false;
       if (RequisitionId != other.RequisitionId) return false;
       if (Title != other.Title) return false;
       if (Description != other.Description) return false;
@@ -821,7 +832,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (CompanyName.Length != 0) hash ^= CompanyName.GetHashCode();
+      if (Company.Length != 0) hash ^= Company.GetHashCode();
       if (RequisitionId.Length != 0) hash ^= RequisitionId.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -867,9 +878,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (CompanyName.Length != 0) {
+      if (Company.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(CompanyName);
+        output.WriteString(Company);
       }
       if (RequisitionId.Length != 0) {
         output.WriteRawTag(26);
@@ -979,8 +990,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (CompanyName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyName);
+      if (Company.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Company);
       }
       if (RequisitionId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RequisitionId);
@@ -1070,8 +1081,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.CompanyName.Length != 0) {
-        CompanyName = other.CompanyName;
+      if (other.Company.Length != 0) {
+        Company = other.Company;
       }
       if (other.RequisitionId.Length != 0) {
         RequisitionId = other.RequisitionId;
@@ -1193,7 +1204,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             break;
           }
           case 18: {
-            CompanyName = input.ReadString();
+            Company = input.ReadString();
             break;
           }
           case 26: {
