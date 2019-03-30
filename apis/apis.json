@@ -657,7 +657,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
-    "targetFrameworks": "netstandard2.0",
+    "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Database Administration",
     "productUrl": "https://cloud.google.com/spanner/",
@@ -674,7 +674,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
-    "targetFrameworks": "netstandard2.0",
+    "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Instance Administration",
     "productUrl": "https://cloud.google.com/spanner/",
@@ -691,7 +691,7 @@
 
   {
     "id": "Google.Cloud.Spanner.Data",
-    "targetFrameworks": "netstandard2.0",
+    "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "version": "2.0.0-beta08",
     "type": "other",
@@ -714,7 +714,7 @@
   {
     "id": "Google.Cloud.Spanner.Common.V1",
     "type": "other",
-    "targetFrameworks": "netstandard2.0",
+    "targetFrameworks": "netstandard2.0;net45",
     "version": "2.0.0-beta08",
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
@@ -725,7 +725,7 @@
   
   {
     "id": "Google.Cloud.Spanner.V1",
-    "targetFrameworks": "netstandard2.0",
+    "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner",
     "productUrl": "https://cloud.google.com/spanner/",
