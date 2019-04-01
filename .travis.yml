@@ -8,7 +8,7 @@ script:
   - curl -L https://www.nuget.org/api/v2/package/Google.Protobuf.Tools/3.7.0 --output Google.Protobuf.Tools.3.7.0.nupkg
   - unzip -d protobuf Google.Protobuf.Tools.3.7.0.nupkg
   - chmod +x protobuf/tools/linux_x64/protoc
-  - protobuf/tools/linux_x64/protoc -I storage/v1 --csharp_out=storage/v1/validation/ storage/v1/test.proto
+  - protobuf/tools/linux_x64/protoc -I protobuf/tools -I storage/v1 --csharp_out=storage/v1/validation/ storage/v1/test.proto
   - dotnet build storage/v1/validation
   - dotnet run -p storage/v1/validation -- storage/v1/*.json
 

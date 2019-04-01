@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package storage.v1.tests;
 
+import "google/protobuf/timestamp.proto";
+
 message TestFile {
   repeated SigningV4Test signing_v4_tests = 1;
 }
@@ -13,7 +15,7 @@ message SigningV4Test {
   string object = 4;
   string method = 5;
   int64 expiration = 6;
-  string timestamp = 7;
+  google.protobuf.Timestamp timestamp = 7;
   string expectedUrl = 8;
   map<string, string> headers = 9;
 }
