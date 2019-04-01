@@ -104,8 +104,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         {
             Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient =
                 new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
             ListTablesRequest expectedRequest = new ListTablesRequest
             {
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
@@ -133,8 +131,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         {
             Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient =
                 new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
             ListTablesRequest expectedRequest = new ListTablesRequest
             {
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
@@ -163,8 +159,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         {
             Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient =
                 new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
             ListTablesRequest request = new ListTablesRequest
             {
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
@@ -191,8 +185,6 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         {
             Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient =
                 new Mock<BigtableTableAdmin.BigtableTableAdminClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
             ListTablesRequest request = new ListTablesRequest
             {
                 ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
