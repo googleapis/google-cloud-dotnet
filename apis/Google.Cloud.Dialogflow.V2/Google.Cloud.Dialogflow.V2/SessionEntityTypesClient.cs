@@ -295,10 +295,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// The default SessionEntityTypes scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/dialogflow"</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/dialogflow",
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
@@ -662,6 +664,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -689,6 +694,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -713,6 +721,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a session entity type for.
@@ -740,6 +751,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -759,6 +773,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -777,6 +794,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1196,6 +1216,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1216,6 +1239,9 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

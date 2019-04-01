@@ -26,166 +26,167 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9pbnRlbnQucHJvdG8SGmdv",
             "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvGihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9jb250ZXh0",
-            "LnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxob",
-            "Z29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYv",
-            "ZmllbGRfbWFzay5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90",
-            "byLzIAoGSW50ZW50EgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIg",
-            "ASgJEkYKDXdlYmhvb2tfc3RhdGUYBiABKA4yLy5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52Mi5JbnRlbnQuV2ViaG9va1N0YXRlEhAKCHByaW9yaXR5GAMg",
-            "ASgFEhMKC2lzX2ZhbGxiYWNrGAQgASgIEhMKC21sX2Rpc2FibGVkGBMgASgI",
-            "EhsKE2lucHV0X2NvbnRleHRfbmFtZXMYByADKAkSDgoGZXZlbnRzGAggAygJ",
-            "EksKEHRyYWluaW5nX3BocmFzZXMYCSADKAsyMS5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52Mi5JbnRlbnQuVHJhaW5pbmdQaHJhc2USDgoGYWN0aW9uGAog",
-            "ASgJEjwKD291dHB1dF9jb250ZXh0cxgLIAMoCzIjLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLkNvbnRleHQSFgoOcmVzZXRfY29udGV4dHMYDCABKAgS",
-            "QAoKcGFyYW1ldGVycxgNIAMoCzIsLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkludGVudC5QYXJhbWV0ZXISPAoIbWVzc2FnZXMYDiADKAsyKi5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVzc2FnZRJXChpkZWZh",
-            "dWx0X3Jlc3BvbnNlX3BsYXRmb3JtcxgPIAMoDjIzLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdlLlBsYXRmb3JtEiEKGXJvb3Rf",
-            "Zm9sbG93dXBfaW50ZW50X25hbWUYECABKAkSIwobcGFyZW50X2ZvbGxvd3Vw",
-            "X2ludGVudF9uYW1lGBEgASgJElMKFGZvbGxvd3VwX2ludGVudF9pbmZvGBIg",
-            "AygLMjUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50LkZvbGxv",
-            "d3VwSW50ZW50SW5mbxrPAgoOVHJhaW5pbmdQaHJhc2USDAoEbmFtZRgBIAEo",
-            "CRJECgR0eXBlGAIgASgOMjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "SW50ZW50LlRyYWluaW5nUGhyYXNlLlR5cGUSRQoFcGFydHMYAyADKAsyNi5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuVHJhaW5pbmdQaHJh",
-            "c2UuUGFydBIZChF0aW1lc19hZGRlZF9jb3VudBgEIAEoBRpOCgRQYXJ0EgwK",
-            "BHRleHQYASABKAkSEwoLZW50aXR5X3R5cGUYAiABKAkSDQoFYWxpYXMYAyAB",
-            "KAkSFAoMdXNlcl9kZWZpbmVkGAQgASgIIjcKBFR5cGUSFAoQVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEgsKB0VYQU1QTEUQARIMCghURU1QTEFURRACGqwBCglQYXJh",
-            "bWV0ZXISDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSDQoF",
-            "dmFsdWUYAyABKAkSFQoNZGVmYXVsdF92YWx1ZRgEIAEoCRIgChhlbnRpdHlf",
-            "dHlwZV9kaXNwbGF5X25hbWUYBSABKAkSEQoJbWFuZGF0b3J5GAYgASgIEg8K",
-            "B3Byb21wdHMYByADKAkSDwoHaXNfbGlzdBgIIAEoCBqaFQoHTWVzc2FnZRI/",
-            "CgR0ZXh0GAEgASgLMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50",
-            "ZW50Lk1lc3NhZ2UuVGV4dEgAEkEKBWltYWdlGAIgASgLMjAuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuSW1hZ2VIABJQCg1x",
-            "dWlja19yZXBsaWVzGAMgASgLMjcuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuSW50ZW50Lk1lc3NhZ2UuUXVpY2tSZXBsaWVzSAASPwoEY2FyZBgEIAEo",
-            "CzIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdl",
-            "LkNhcmRIABIqCgdwYXlsb2FkGAUgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cnVjdEgAElYKEHNpbXBsZV9yZXNwb25zZXMYByABKAsyOi5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVzc2FnZS5TaW1wbGVSZXNwb25z",
-            "ZXNIABJKCgpiYXNpY19jYXJkGAggASgLMjQuZ29vZ2xlLmNsb3VkLmRpYWxv",
-            "Z2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuQmFzaWNDYXJkSAASTQoLc3VnZ2Vz",
-            "dGlvbnMYCSABKAsyNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRl",
-            "bnQuTWVzc2FnZS5TdWdnZXN0aW9uc0gAElsKE2xpbmtfb3V0X3N1Z2dlc3Rp",
-            "b24YCiABKAsyPC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQu",
-            "TWVzc2FnZS5MaW5rT3V0U3VnZ2VzdGlvbkgAEkwKC2xpc3Rfc2VsZWN0GAsg",
-            "ASgLMjUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3Nh",
-            "Z2UuTGlzdFNlbGVjdEgAElQKD2Nhcm91c2VsX3NlbGVjdBgMIAEoCzI5Lmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdlLkNhcm91",
-            "c2VsU2VsZWN0SAASRQoIcGxhdGZvcm0YBiABKA4yMy5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVzc2FnZS5QbGF0Zm9ybRoUCgRUZXh0",
-            "EgwKBHRleHQYASADKAkaNgoFSW1hZ2USEQoJaW1hZ2VfdXJpGAEgASgJEhoK",
-            "EmFjY2Vzc2liaWxpdHlfdGV4dBgCIAEoCRo0CgxRdWlja1JlcGxpZXMSDQoF",
-            "dGl0bGUYASABKAkSFQoNcXVpY2tfcmVwbGllcxgCIAMoCRqtAQoEQ2FyZBIN",
-            "CgV0aXRsZRgBIAEoCRIQCghzdWJ0aXRsZRgCIAEoCRIRCglpbWFnZV91cmkY",
-            "AyABKAkSRwoHYnV0dG9ucxgEIAMoCzI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LnYyLkludGVudC5NZXNzYWdlLkNhcmQuQnV0dG9uGigKBkJ1dHRvbhIM",
-            "CgR0ZXh0GAEgASgJEhAKCHBvc3RiYWNrGAIgASgJGkwKDlNpbXBsZVJlc3Bv",
-            "bnNlEhYKDnRleHRfdG9fc3BlZWNoGAEgASgJEgwKBHNzbWwYAiABKAkSFAoM",
-            "ZGlzcGxheV90ZXh0GAMgASgJGmYKD1NpbXBsZVJlc3BvbnNlcxJTChBzaW1w",
-            "bGVfcmVzcG9uc2VzGAEgAygLMjkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuSW50ZW50Lk1lc3NhZ2UuU2ltcGxlUmVzcG9uc2Ua7wIKCUJhc2ljQ2Fy",
-            "ZBINCgV0aXRsZRgBIAEoCRIQCghzdWJ0aXRsZRgCIAEoCRIWCg5mb3JtYXR0",
-            "ZWRfdGV4dBgDIAEoCRI/CgVpbWFnZRgEIAEoCzIwLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdlLkltYWdlEkwKB2J1dHRvbnMY",
-            "BSADKAsyOy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVz",
-            "c2FnZS5CYXNpY0NhcmQuQnV0dG9uGpkBCgZCdXR0b24SDQoFdGl0bGUYASAB",
-            "KAkSYgoPb3Blbl91cmlfYWN0aW9uGAIgASgLMkkuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuQmFzaWNDYXJkLkJ1dHRvbi5P",
-            "cGVuVXJpQWN0aW9uGhwKDU9wZW5VcmlBY3Rpb24SCwoDdXJpGAEgASgJGhsK",
-            "ClN1Z2dlc3Rpb24SDQoFdGl0bGUYASABKAkaWQoLU3VnZ2VzdGlvbnMSSgoL",
-            "c3VnZ2VzdGlvbnMYASADKAsyNS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "Mi5JbnRlbnQuTWVzc2FnZS5TdWdnZXN0aW9uGjoKEUxpbmtPdXRTdWdnZXN0",
-            "aW9uEhgKEGRlc3RpbmF0aW9uX25hbWUYASABKAkSCwoDdXJpGAIgASgJGp0C",
-            "CgpMaXN0U2VsZWN0Eg0KBXRpdGxlGAEgASgJEkkKBWl0ZW1zGAIgAygLMjou",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuTGlz",
-            "dFNlbGVjdC5JdGVtGrQBCgRJdGVtEkcKBGluZm8YASABKAsyOS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVzc2FnZS5TZWxlY3RJdGVt",
-            "SW5mbxINCgV0aXRsZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRI/CgVp",
-            "bWFnZRgEIAEoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVu",
-            "dC5NZXNzYWdlLkltYWdlGpYCCg5DYXJvdXNlbFNlbGVjdBJNCgVpdGVtcxgB",
-            "IAMoCzI+Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNz",
-            "YWdlLkNhcm91c2VsU2VsZWN0Lkl0ZW0atAEKBEl0ZW0SRwoEaW5mbxgBIAEo",
-            "CzI5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdl",
-            "LlNlbGVjdEl0ZW1JbmZvEg0KBXRpdGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9u",
-            "GAMgASgJEj8KBWltYWdlGAQgASgLMjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuSW50ZW50Lk1lc3NhZ2UuSW1hZ2UaLwoOU2VsZWN0SXRlbUluZm8S",
-            "CwoDa2V5GAEgASgJEhAKCHN5bm9ueW1zGAIgAygJIosBCghQbGF0Zm9ybRIY",
-            "ChRQTEFURk9STV9VTlNQRUNJRklFRBAAEgwKCEZBQ0VCT09LEAESCQoFU0xB",
-            "Q0sQAhIMCghURUxFR1JBTRADEgcKA0tJSxAEEgkKBVNLWVBFEAUSCAoETElO",
-            "RRAGEgkKBVZJQkVSEAcSFQoRQUNUSU9OU19PTl9HT09HTEUQCEIJCgdtZXNz",
-            "YWdlGlcKEkZvbGxvd3VwSW50ZW50SW5mbxIcChRmb2xsb3d1cF9pbnRlbnRf",
-            "bmFtZRgBIAEoCRIjChtwYXJlbnRfZm9sbG93dXBfaW50ZW50X25hbWUYAiAB",
-            "KAkidAoMV2ViaG9va1N0YXRlEh0KGVdFQkhPT0tfU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABIZChVXRUJIT09LX1NUQVRFX0VOQUJMRUQQARIqCiZXRUJIT09LX1NU",
-            "QVRFX0VOQUJMRURfRk9SX1NMT1RfRklMTElORxACIp8BChJMaXN0SW50ZW50",
-            "c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhUKDWxhbmd1YWdlX2NvZGUYAiAB",
-            "KAkSOwoLaW50ZW50X3ZpZXcYAyABKA4yJi5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy52Mi5JbnRlbnRWaWV3EhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdl",
-            "X3Rva2VuGAUgASgJImMKE0xpc3RJbnRlbnRzUmVzcG9uc2USMwoHaW50ZW50",
-            "cxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudBIX",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkidAoQR2V0SW50ZW50UmVxdWVzdBIM",
-            "CgRuYW1lGAEgASgJEhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSOwoLaW50ZW50",
-            "X3ZpZXcYAyABKA4yJi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRl",
-            "bnRWaWV3Iq0BChNDcmVhdGVJbnRlbnRSZXF1ZXN0Eg4KBnBhcmVudBgBIAEo",
-            "CRIyCgZpbnRlbnQYAiABKAsyIi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "Mi5JbnRlbnQSFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCRI7CgtpbnRlbnRfdmll",
-            "dxgEIAEoDjImLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudFZp",
-            "ZXcizgEKE1VwZGF0ZUludGVudFJlcXVlc3QSMgoGaW50ZW50GAEgASgLMiIu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50EhUKDWxhbmd1YWdl",
-            "X2NvZGUYAiABKAkSLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuRmllbGRNYXNrEjsKC2ludGVudF92aWV3GAQgASgOMiYuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50VmlldyIjChNEZWxldGVJbnRl",
-            "bnRSZXF1ZXN0EgwKBG5hbWUYASABKAkipAIKGUJhdGNoVXBkYXRlSW50ZW50",
-            "c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhoKEGludGVudF9iYXRjaF91cmkY",
-            "AiABKAlIABJGChNpbnRlbnRfYmF0Y2hfaW5saW5lGAMgASgLMicuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50QmF0Y2hIABIVCg1sYW5ndWFn",
-            "ZV9jb2RlGAQgASgJEi8KC3VwZGF0ZV9tYXNrGAUgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkZpZWxkTWFzaxI7CgtpbnRlbnRfdmlldxgGIAEoDjImLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudFZpZXdCDgoMaW50ZW50X2Jh",
-            "dGNoIlEKGkJhdGNoVXBkYXRlSW50ZW50c1Jlc3BvbnNlEjMKB2ludGVudHMY",
-            "ASADKAsyIi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQiYAoZ",
-            "QmF0Y2hEZWxldGVJbnRlbnRzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSMwoH",
-            "aW50ZW50cxgCIAMoCzIiLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLklu",
-            "dGVudCJCCgtJbnRlbnRCYXRjaBIzCgdpbnRlbnRzGAEgAygLMiIuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Kj8KCkludGVudFZpZXcSGwoX",
-            "SU5URU5UX1ZJRVdfVU5TUEVDSUZJRUQQABIUChBJTlRFTlRfVklFV19GVUxM",
-            "EAEy2AgKB0ludGVudHMSnQEKC0xpc3RJbnRlbnRzEi4uZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuTGlzdEludGVudHNSZXF1ZXN0Gi8uZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuTGlzdEludGVudHNSZXNwb25zZSItgtPkkwIn",
-            "EiUvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50fS9pbnRlbnRzEowBCglH",
-            "ZXRJbnRlbnQSLC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5HZXRJbnRl",
-            "bnRSZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50",
-            "Ii2C0+STAicSJS92Mi97bmFtZT1wcm9qZWN0cy8qL2FnZW50L2ludGVudHMv",
-            "Kn0SmgEKDENyZWF0ZUludGVudBIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkNyZWF0ZUludGVudFJlcXVlc3QaIi5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy52Mi5JbnRlbnQiNYLT5JMCLyIlL3YyL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9hZ2VudH0vaW50ZW50czoGaW50ZW50EqEBCgxVcGRhdGVJbnRlbnQSLy5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5VcGRhdGVJbnRlbnRSZXF1ZXN0",
-            "GiIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50IjyC0+STAjYy",
-            "LC92Mi97aW50ZW50Lm5hbWU9cHJvamVjdHMvKi9hZ2VudC9pbnRlbnRzLyp9",
-            "OgZpbnRlbnQShgEKDERlbGV0ZUludGVudBIvLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLkRlbGV0ZUludGVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiLYLT5JMCJyolL3YyL3tuYW1lPXByb2plY3RzLyovYWdlbnQv",
-            "aW50ZW50cy8qfRKoAQoSQmF0Y2hVcGRhdGVJbnRlbnRzEjUuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuQmF0Y2hVcGRhdGVJbnRlbnRzUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iPILT5JMCNiIxL3YyL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0vaW50ZW50czpiYXRjaFVwZGF0ZToB",
-            "KhKoAQoSQmF0Y2hEZWxldGVJbnRlbnRzEjUuZ29vZ2xlLmNsb3VkLmRpYWxv",
-            "Z2Zsb3cudjIuQmF0Y2hEZWxldGVJbnRlbnRzUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24iPILT5JMCNiIxL3YyL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9hZ2VudH0vaW50ZW50czpiYXRjaERlbGV0ZToBKkKaAQoeY29t",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQgtJbnRlbnRQcm90b1ABWkRn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Rp",
-            "YWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3Vk",
-            "LkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
+            "b25zLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGihnb29nbGUv",
+            "Y2xvdWQvZGlhbG9nZmxvdy92Mi9jb250ZXh0LnByb3RvGiNnb29nbGUvbG9u",
+            "Z3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1",
+            "cmF0aW9uLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdv",
+            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhxnb29nbGUvcHJvdG9i",
+            "dWYvc3RydWN0LnByb3RvIvcgCgZJbnRlbnQSDAoEbmFtZRgBIAEoCRIUCgxk",
+            "aXNwbGF5X25hbWUYAiABKAkSRgoNd2ViaG9va19zdGF0ZRgGIAEoDjIvLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5XZWJob29rU3RhdGUS",
+            "EAoIcHJpb3JpdHkYAyABKAUSEwoLaXNfZmFsbGJhY2sYBCABKAgSEwoLbWxf",
+            "ZGlzYWJsZWQYEyABKAgSGwoTaW5wdXRfY29udGV4dF9uYW1lcxgHIAMoCRIO",
+            "CgZldmVudHMYCCADKAkSSwoQdHJhaW5pbmdfcGhyYXNlcxgJIAMoCzIxLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5UcmFpbmluZ1BocmFz",
+            "ZRIOCgZhY3Rpb24YCiABKAkSPAoPb3V0cHV0X2NvbnRleHRzGAsgAygLMiMu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udGV4dBIWCg5yZXNldF9j",
+            "b250ZXh0cxgMIAEoCBJACgpwYXJhbWV0ZXJzGA0gAygLMiwuZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50LlBhcmFtZXRlchI8CghtZXNzYWdl",
+            "cxgOIAMoCzIqLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5N",
+            "ZXNzYWdlElcKGmRlZmF1bHRfcmVzcG9uc2VfcGxhdGZvcm1zGA8gAygOMjMu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuUGxh",
+            "dGZvcm0SIQoZcm9vdF9mb2xsb3d1cF9pbnRlbnRfbmFtZRgQIAEoCRIjChtw",
+            "YXJlbnRfZm9sbG93dXBfaW50ZW50X25hbWUYESABKAkSUwoUZm9sbG93dXBf",
+            "aW50ZW50X2luZm8YEiADKAsyNS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5JbnRlbnQuRm9sbG93dXBJbnRlbnRJbmZvGtMCCg5UcmFpbmluZ1BocmFz",
+            "ZRIMCgRuYW1lGAEgASgJEkQKBHR5cGUYAiABKA4yNi5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52Mi5JbnRlbnQuVHJhaW5pbmdQaHJhc2UuVHlwZRJFCgVw",
+            "YXJ0cxgDIAMoCzI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVu",
+            "dC5UcmFpbmluZ1BocmFzZS5QYXJ0EhkKEXRpbWVzX2FkZGVkX2NvdW50GAQg",
+            "ASgFGk4KBFBhcnQSDAoEdGV4dBgBIAEoCRITCgtlbnRpdHlfdHlwZRgCIAEo",
+            "CRINCgVhbGlhcxgDIAEoCRIUCgx1c2VyX2RlZmluZWQYBCABKAgiOwoEVHlw",
+            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCwoHRVhBTVBMRRABEhAKCFRFTVBM",
+            "QVRFEAIaAggBGqwBCglQYXJhbWV0ZXISDAoEbmFtZRgBIAEoCRIUCgxkaXNw",
+            "bGF5X25hbWUYAiABKAkSDQoFdmFsdWUYAyABKAkSFQoNZGVmYXVsdF92YWx1",
+            "ZRgEIAEoCRIgChhlbnRpdHlfdHlwZV9kaXNwbGF5X25hbWUYBSABKAkSEQoJ",
+            "bWFuZGF0b3J5GAYgASgIEg8KB3Byb21wdHMYByADKAkSDwoHaXNfbGlzdBgI",
+            "IAEoCBqaFQoHTWVzc2FnZRI/CgR0ZXh0GAEgASgLMi8uZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuVGV4dEgAEkEKBWltYWdl",
+            "GAIgASgLMjAuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1l",
+            "c3NhZ2UuSW1hZ2VIABJQCg1xdWlja19yZXBsaWVzGAMgASgLMjcuZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuUXVpY2tSZXBs",
+            "aWVzSAASPwoEY2FyZBgEIAEoCzIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LnYyLkludGVudC5NZXNzYWdlLkNhcmRIABIqCgdwYXlsb2FkGAUgASgLMhcu",
+            "Z29vZ2xlLnByb3RvYnVmLlN0cnVjdEgAElYKEHNpbXBsZV9yZXNwb25zZXMY",
+            "ByABKAsyOi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVz",
+            "c2FnZS5TaW1wbGVSZXNwb25zZXNIABJKCgpiYXNpY19jYXJkGAggASgLMjQu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuQmFz",
+            "aWNDYXJkSAASTQoLc3VnZ2VzdGlvbnMYCSABKAsyNi5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVzc2FnZS5TdWdnZXN0aW9uc0gAElsK",
+            "E2xpbmtfb3V0X3N1Z2dlc3Rpb24YCiABKAsyPC5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy52Mi5JbnRlbnQuTWVzc2FnZS5MaW5rT3V0U3VnZ2VzdGlvbkgA",
+            "EkwKC2xpc3Rfc2VsZWN0GAsgASgLMjUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cudjIuSW50ZW50Lk1lc3NhZ2UuTGlzdFNlbGVjdEgAElQKD2Nhcm91c2Vs",
+            "X3NlbGVjdBgMIAEoCzI5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLklu",
+            "dGVudC5NZXNzYWdlLkNhcm91c2VsU2VsZWN0SAASRQoIcGxhdGZvcm0YBiAB",
+            "KA4yMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVzc2Fn",
+            "ZS5QbGF0Zm9ybRoUCgRUZXh0EgwKBHRleHQYASADKAkaNgoFSW1hZ2USEQoJ",
+            "aW1hZ2VfdXJpGAEgASgJEhoKEmFjY2Vzc2liaWxpdHlfdGV4dBgCIAEoCRo0",
+            "CgxRdWlja1JlcGxpZXMSDQoFdGl0bGUYASABKAkSFQoNcXVpY2tfcmVwbGll",
+            "cxgCIAMoCRqtAQoEQ2FyZBINCgV0aXRsZRgBIAEoCRIQCghzdWJ0aXRsZRgC",
+            "IAEoCRIRCglpbWFnZV91cmkYAyABKAkSRwoHYnV0dG9ucxgEIAMoCzI2Lmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdlLkNhcmQu",
+            "QnV0dG9uGigKBkJ1dHRvbhIMCgR0ZXh0GAEgASgJEhAKCHBvc3RiYWNrGAIg",
+            "ASgJGkwKDlNpbXBsZVJlc3BvbnNlEhYKDnRleHRfdG9fc3BlZWNoGAEgASgJ",
+            "EgwKBHNzbWwYAiABKAkSFAoMZGlzcGxheV90ZXh0GAMgASgJGmYKD1NpbXBs",
+            "ZVJlc3BvbnNlcxJTChBzaW1wbGVfcmVzcG9uc2VzGAEgAygLMjkuZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuU2ltcGxlUmVz",
+            "cG9uc2Ua7wIKCUJhc2ljQ2FyZBINCgV0aXRsZRgBIAEoCRIQCghzdWJ0aXRs",
+            "ZRgCIAEoCRIWCg5mb3JtYXR0ZWRfdGV4dBgDIAEoCRI/CgVpbWFnZRgEIAEo",
+            "CzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdl",
+            "LkltYWdlEkwKB2J1dHRvbnMYBSADKAsyOy5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52Mi5JbnRlbnQuTWVzc2FnZS5CYXNpY0NhcmQuQnV0dG9uGpkBCgZC",
+            "dXR0b24SDQoFdGl0bGUYASABKAkSYgoPb3Blbl91cmlfYWN0aW9uGAIgASgL",
+            "MkkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2Uu",
+            "QmFzaWNDYXJkLkJ1dHRvbi5PcGVuVXJpQWN0aW9uGhwKDU9wZW5VcmlBY3Rp",
+            "b24SCwoDdXJpGAEgASgJGhsKClN1Z2dlc3Rpb24SDQoFdGl0bGUYASABKAka",
+            "WQoLU3VnZ2VzdGlvbnMSSgoLc3VnZ2VzdGlvbnMYASADKAsyNS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQuTWVzc2FnZS5TdWdnZXN0aW9u",
+            "GjoKEUxpbmtPdXRTdWdnZXN0aW9uEhgKEGRlc3RpbmF0aW9uX25hbWUYASAB",
+            "KAkSCwoDdXJpGAIgASgJGp0CCgpMaXN0U2VsZWN0Eg0KBXRpdGxlGAEgASgJ",
+            "EkkKBWl0ZW1zGAIgAygLMjouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "SW50ZW50Lk1lc3NhZ2UuTGlzdFNlbGVjdC5JdGVtGrQBCgRJdGVtEkcKBGlu",
+            "Zm8YASABKAsyOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQu",
+            "TWVzc2FnZS5TZWxlY3RJdGVtSW5mbxINCgV0aXRsZRgCIAEoCRITCgtkZXNj",
+            "cmlwdGlvbhgDIAEoCRI/CgVpbWFnZRgEIAEoCzIwLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdlLkltYWdlGpYCCg5DYXJvdXNl",
+            "bFNlbGVjdBJNCgVpdGVtcxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LnYyLkludGVudC5NZXNzYWdlLkNhcm91c2VsU2VsZWN0Lkl0ZW0atAEK",
+            "BEl0ZW0SRwoEaW5mbxgBIAEoCzI5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LnYyLkludGVudC5NZXNzYWdlLlNlbGVjdEl0ZW1JbmZvEg0KBXRpdGxlGAIg",
+            "ASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEj8KBWltYWdlGAQgASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50Lk1lc3NhZ2UuSW1hZ2Ua",
+            "LwoOU2VsZWN0SXRlbUluZm8SCwoDa2V5GAEgASgJEhAKCHN5bm9ueW1zGAIg",
+            "AygJIosBCghQbGF0Zm9ybRIYChRQTEFURk9STV9VTlNQRUNJRklFRBAAEgwK",
+            "CEZBQ0VCT09LEAESCQoFU0xBQ0sQAhIMCghURUxFR1JBTRADEgcKA0tJSxAE",
+            "EgkKBVNLWVBFEAUSCAoETElORRAGEgkKBVZJQkVSEAcSFQoRQUNUSU9OU19P",
+            "Tl9HT09HTEUQCEIJCgdtZXNzYWdlGlcKEkZvbGxvd3VwSW50ZW50SW5mbxIc",
+            "ChRmb2xsb3d1cF9pbnRlbnRfbmFtZRgBIAEoCRIjChtwYXJlbnRfZm9sbG93",
+            "dXBfaW50ZW50X25hbWUYAiABKAkidAoMV2ViaG9va1N0YXRlEh0KGVdFQkhP",
+            "T0tfU1RBVEVfVU5TUEVDSUZJRUQQABIZChVXRUJIT09LX1NUQVRFX0VOQUJM",
+            "RUQQARIqCiZXRUJIT09LX1NUQVRFX0VOQUJMRURfRk9SX1NMT1RfRklMTElO",
+            "RxACIp8BChJMaXN0SW50ZW50c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhUK",
+            "DWxhbmd1YWdlX2NvZGUYAiABKAkSOwoLaW50ZW50X3ZpZXcYAyABKA4yJi5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnRWaWV3EhEKCXBhZ2Vf",
+            "c2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJImMKE0xpc3RJbnRlbnRz",
+            "UmVzcG9uc2USMwoHaW50ZW50cxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLkludGVudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkidAoQ",
+            "R2V0SW50ZW50UmVxdWVzdBIMCgRuYW1lGAEgASgJEhUKDWxhbmd1YWdlX2Nv",
+            "ZGUYAiABKAkSOwoLaW50ZW50X3ZpZXcYAyABKA4yJi5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52Mi5JbnRlbnRWaWV3Iq0BChNDcmVhdGVJbnRlbnRSZXF1",
+            "ZXN0Eg4KBnBhcmVudBgBIAEoCRIyCgZpbnRlbnQYAiABKAsyIi5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQSFQoNbGFuZ3VhZ2VfY29kZRgD",
+            "IAEoCRI7CgtpbnRlbnRfdmlldxgEIAEoDjImLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLkludGVudFZpZXcizgEKE1VwZGF0ZUludGVudFJlcXVlc3QS",
+            "MgoGaW50ZW50GAEgASgLMiIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "SW50ZW50EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkSLwoLdXBkYXRlX21hc2sY",
+            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEjsKC2ludGVudF92",
+            "aWV3GAQgASgOMiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50",
+            "VmlldyIjChNEZWxldGVJbnRlbnRSZXF1ZXN0EgwKBG5hbWUYASABKAkipAIK",
+            "GUJhdGNoVXBkYXRlSW50ZW50c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhoK",
+            "EGludGVudF9iYXRjaF91cmkYAiABKAlIABJGChNpbnRlbnRfYmF0Y2hfaW5s",
+            "aW5lGAMgASgLMicuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50",
+            "QmF0Y2hIABIVCg1sYW5ndWFnZV9jb2RlGAQgASgJEi8KC3VwZGF0ZV9tYXNr",
+            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxI7CgtpbnRlbnRf",
+            "dmlldxgGIAEoDjImLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVu",
+            "dFZpZXdCDgoMaW50ZW50X2JhdGNoIlEKGkJhdGNoVXBkYXRlSW50ZW50c1Jl",
+            "c3BvbnNlEjMKB2ludGVudHMYASADKAsyIi5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52Mi5JbnRlbnQiYAoZQmF0Y2hEZWxldGVJbnRlbnRzUmVxdWVzdBIO",
+            "CgZwYXJlbnQYASABKAkSMwoHaW50ZW50cxgCIAMoCzIiLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLkludGVudCJCCgtJbnRlbnRCYXRjaBIzCgdpbnRl",
+            "bnRzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSW50ZW50",
+            "Kj8KCkludGVudFZpZXcSGwoXSU5URU5UX1ZJRVdfVU5TUEVDSUZJRUQQABIU",
+            "ChBJTlRFTlRfVklFV19GVUxMEAEy2AgKB0ludGVudHMSnQEKC0xpc3RJbnRl",
+            "bnRzEi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdEludGVudHNS",
+            "ZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdEludGVu",
+            "dHNSZXNwb25zZSItgtPkkwInEiUvdjIve3BhcmVudD1wcm9qZWN0cy8qL2Fn",
+            "ZW50fS9pbnRlbnRzEowBCglHZXRJbnRlbnQSLC5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy52Mi5HZXRJbnRlbnRSZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjIuSW50ZW50Ii2C0+STAicSJS92Mi97bmFtZT1wcm9qZWN0",
+            "cy8qL2FnZW50L2ludGVudHMvKn0SmgEKDENyZWF0ZUludGVudBIvLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNyZWF0ZUludGVudFJlcXVlc3QaIi5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQiNYLT5JMCLyIlL3Yy",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0vaW50ZW50czoGaW50ZW50EqEB",
+            "CgxVcGRhdGVJbnRlbnQSLy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5V",
+            "cGRhdGVJbnRlbnRSZXF1ZXN0GiIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuSW50ZW50IjyC0+STAjYyLC92Mi97aW50ZW50Lm5hbWU9cHJvamVjdHMv",
+            "Ki9hZ2VudC9pbnRlbnRzLyp9OgZpbnRlbnQShgEKDERlbGV0ZUludGVudBIv",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkRlbGV0ZUludGVudFJlcXVl",
+            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiLYLT5JMCJyolL3YyL3tuYW1l",
+            "PXByb2plY3RzLyovYWdlbnQvaW50ZW50cy8qfRKoAQoSQmF0Y2hVcGRhdGVJ",
+            "bnRlbnRzEjUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQmF0Y2hVcGRh",
+            "dGVJbnRlbnRzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24iPILT5JMCNiIxL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0vaW50",
+            "ZW50czpiYXRjaFVwZGF0ZToBKhKoAQoSQmF0Y2hEZWxldGVJbnRlbnRzEjUu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQmF0Y2hEZWxldGVJbnRlbnRz",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iPILT5JMC",
+            "NiIxL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0vaW50ZW50czpiYXRj",
+            "aERlbGV0ZToBKkKaAQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "QgtJbnRlbnRQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaIC",
+            "AkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.IntentView), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent), global::Google.Cloud.Dialogflow.V2.Intent.Parser, new[]{ "Name", "DisplayName", "WebhookState", "Priority", "IsFallback", "MlDisabled", "InputContextNames", "Events", "TrainingPhrases", "Action", "OutputContexts", "ResetContexts", "Parameters", "Messages", "DefaultResponsePlatforms", "RootFollowupIntentName", "ParentFollowupIntentName", "FollowupIntentInfo" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase), global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Parser, new[]{ "Name", "Type", "Parts", "TimesAddedCount" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part), global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part.Parser, new[]{ "Text", "EntityType", "Alias", "UserDefined" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Intent.Types.Parameter), global::Google.Cloud.Dialogflow.V2.Intent.Types.Parameter.Parser, new[]{ "Name", "DisplayName", "Value", "DefaultValue", "EntityTypeDisplayName", "Mandatory", "Prompts", "IsList" }, null, null, null),
@@ -298,9 +299,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required for all methods except `create` (`create` populates the name
-    /// automatically.
     /// The unique identifier of this intent.
+    /// Required for [Intents.UpdateIntent][google.cloud.dialogflow.v2.Intents.UpdateIntent] and [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents]
+    /// methods.
     /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -329,7 +330,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int WebhookStateFieldNumber = 6;
     private global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState webhookState_ = 0;
     /// <summary>
-    /// Required. Indicates whether webhooks are enabled for the intent.
+    /// Optional. Indicates whether webhooks are enabled for the intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState WebhookState {
@@ -344,7 +345,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     private int priority_;
     /// <summary>
     /// Optional. The priority of this intent. Higher numbers represent higher
-    /// priorities. Zero or negative numbers mean that the intent is disabled.
+    /// priorities. If this is zero or unspecified, we use the default
+    /// priority 500000.
+    ///
+    /// Negative numbers mean that the intent is disabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Priority {
@@ -421,7 +425,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase> trainingPhrases_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase>();
     /// <summary>
-    /// Optional. The collection of examples/templates that the agent is
+    /// Optional. The collection of examples that the agent is
     /// trained on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -434,6 +438,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string action_ = "";
     /// <summary>
     /// Optional. The name of the action associated with the intent.
+    /// Note: The action name must not contain whitespaces.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Action {
@@ -520,8 +525,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int RootFollowupIntentNameFieldNumber = 16;
     private string rootFollowupIntentName_ = "";
     /// <summary>
-    /// The unique identifier of the root intent in the chain of followup intents.
-    /// It identifies the correct followup intents chain for this intent.
+    /// Read-only. The unique identifier of the root intent in the chain of
+    /// followup intents. It identifies the correct followup intents chain for
+    /// this intent. We populate this field only in the output.
+    ///
     /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -536,8 +543,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ParentFollowupIntentNameFieldNumber = 17;
     private string parentFollowupIntentName_ = "";
     /// <summary>
-    /// The unique identifier of the parent intent in the chain of followup
-    /// intents.
+    /// Read-only after creation. The unique identifier of the parent intent in the
+    /// chain of followup intents. You can set this field when creating an intent,
+    /// for example with [CreateIntent][] or [BatchUpdateIntents][], in order to
+    /// make this intent a followup intent.
+    ///
     /// It identifies the parent followup intent.
     /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
     /// </summary>
@@ -555,8 +565,8 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(146, global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo> followupIntentInfo_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo>();
     /// <summary>
-    /// Optional. Collection of information about all followup intents that have
-    /// name of this intent as a root_name.
+    /// Read-only. Information about all followup intents that have this intent as
+    /// a direct or indirect parent. We populate this field only in the output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo> FollowupIntentInfo {
@@ -886,7 +896,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
-      /// Represents an example or template that the agent is trained on.
+      /// Represents an example that the agent is trained on.
       /// </summary>
       public sealed partial class TrainingPhrase : pb::IMessage<TrainingPhrase> {
         private static readonly pb::MessageParser<TrainingPhrase> _parser = new pb::MessageParser<TrainingPhrase>(() => new TrainingPhrase());
@@ -929,7 +939,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        /// Required. The unique identifier of this training phrase.
+        /// Output only. The unique identifier of this training phrase.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Name {
@@ -959,9 +969,25 @@ namespace Google.Cloud.Dialogflow.V2 {
             = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part> parts_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part>();
         /// <summary>
-        /// Required. The collection of training phrase parts (can be annotated).
-        /// Fields: `entity_type`, `alias` and `user_defined` should be populated
-        /// only for the annotated parts of the training phrase.
+        /// Required. The ordered list of training phrase parts.
+        /// The parts are concatenated in order to form the training phrase.
+        ///
+        /// Note: The API does not automatically annotate training phrases like the
+        /// Dialogflow Console does.
+        ///
+        /// Note: Do not forget to include whitespace at part boundaries,
+        /// so the training phrase is well formatted when the parts are concatenated.
+        ///
+        /// If the training phrase does not need to be annotated with parameters,
+        /// you just need a single part with only the [Part.text][google.cloud.dialogflow.v2.Intent.TrainingPhrase.Part.text] field set.
+        ///
+        /// If you want to annotate the training phrase, you must create multiple
+        /// parts, where the fields of each part are populated in one of two ways:
+        ///
+        /// -   `Part.text` is set to a part of the phrase that has no parameters.
+        /// -   `Part.text` is set to a part of the phrase that you want to annotate,
+        ///     and the `entity_type`, `alias`, and `user_defined` fields are all
+        ///     set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part> Parts {
@@ -972,7 +998,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         public const int TimesAddedCountFieldNumber = 4;
         private int timesAddedCount_;
         /// <summary>
-        /// Optional. Indicates how many times this example or template was added to
+        /// Optional. Indicates how many times this example was added to
         /// the intent. Each time a developer adds an existing sample by editing an
         /// intent or training, this counter is increased.
         /// </summary>
@@ -1127,6 +1153,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// <summary>
             /// Templates are not annotated with entity types, but they can contain
             /// @-prefixed entity type names as substrings.
+            /// Template mode has been deprecated. Example mode is the only supported
+            /// way to create new training phrases. If you have existing training
+            /// phrases that you've created in template mode, those will continue to
+            /// work.
             /// </summary>
             [pbr::OriginalName("TEMPLATE")] Template = 2,
           }
@@ -1175,9 +1205,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             public const int TextFieldNumber = 1;
             private string text_ = "";
             /// <summary>
-            /// Required. The text corresponding to the example or template,
-            /// if there are no annotations. For
-            /// annotated examples, it is the text for one of the example's parts.
+            /// Required. The text for this part.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string Text {
@@ -1191,9 +1219,8 @@ namespace Google.Cloud.Dialogflow.V2 {
             public const int EntityTypeFieldNumber = 2;
             private string entityType_ = "";
             /// <summary>
-            /// Optional. The entity type name prefixed with `@`. This field is
-            /// required for the annotated part of the text and applies only to
-            /// examples.
+            /// Optional. The entity type name prefixed with `@`.
+            /// This field is required for annotated parts of the training phrase.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string EntityType {
@@ -1209,6 +1236,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// <summary>
             /// Optional. The parameter name for the value extracted from the
             /// annotated part of the example.
+            /// This field is required for annotated parts of the training phrase.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string Alias {
@@ -1222,8 +1250,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             public const int UserDefinedFieldNumber = 4;
             private bool userDefined_;
             /// <summary>
-            /// Optional. Indicates whether the text was manually annotated by the
-            /// developer.
+            /// Optional. Indicates whether the text was manually annotated.
+            /// This field is set to true when the Dialogflow Console is used to
+            /// manually annotate the part. When creating an annotated part with the
+            /// API, you must set this to true.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public bool UserDefined {
@@ -5642,7 +5672,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         public const int ParentFollowupIntentNameFieldNumber = 2;
         private string parentFollowupIntentName_ = "";
         /// <summary>
-        /// The unique identifier of the followup intent parent.
+        /// The unique identifier of the followup intent's parent.
         /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5759,8 +5789,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
+  /// The request message for [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsRequest : pb::IMessage<ListIntentsRequest> {
     private static readonly pb::MessageParser<ListIntentsRequest> _parser = new pb::MessageParser<ListIntentsRequest>(() => new ListIntentsRequest());
@@ -5821,9 +5850,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language to list training phrases, parameters and rich
     /// messages for. If not specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -6025,8 +6055,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
+  /// The response message for [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
   /// </summary>
   public sealed partial class ListIntentsResponse : pb::IMessage<ListIntentsResponse> {
     private static readonly pb::MessageParser<ListIntentsResponse> _parser = new pb::MessageParser<ListIntentsResponse>(() => new ListIntentsResponse());
@@ -6186,8 +6215,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Intents.GetIntent][google.cloud.dialogflow.v2.Intents.GetIntent].
+  /// The request message for [Intents.GetIntent][google.cloud.dialogflow.v2.Intents.GetIntent].
   /// </summary>
   public sealed partial class GetIntentRequest : pb::IMessage<GetIntentRequest> {
     private static readonly pb::MessageParser<GetIntentRequest> _parser = new pb::MessageParser<GetIntentRequest>(() => new GetIntentRequest());
@@ -6246,9 +6274,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language to retrieve training phrases, parameters and rich
     /// messages for. If not specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -6389,8 +6418,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Intents.CreateIntent][google.cloud.dialogflow.v2.Intents.CreateIntent].
+  /// The request message for [Intents.CreateIntent][google.cloud.dialogflow.v2.Intents.CreateIntent].
   /// </summary>
   public sealed partial class CreateIntentRequest : pb::IMessage<CreateIntentRequest> {
     private static readonly pb::MessageParser<CreateIntentRequest> _parser = new pb::MessageParser<CreateIntentRequest>(() => new CreateIntentRequest());
@@ -6464,9 +6492,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of training phrases, parameters and rich messages
     /// defined in `intent`. If not specified, the agent's default language is
-    /// used. [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// used. [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -6629,8 +6658,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Intents.UpdateIntent][google.cloud.dialogflow.v2.Intents.UpdateIntent].
+  /// The request message for [Intents.UpdateIntent][google.cloud.dialogflow.v2.Intents.UpdateIntent].
   /// </summary>
   public sealed partial class UpdateIntentRequest : pb::IMessage<UpdateIntentRequest> {
     private static readonly pb::MessageParser<UpdateIntentRequest> _parser = new pb::MessageParser<UpdateIntentRequest>(() => new UpdateIntentRequest());
@@ -6674,7 +6702,6 @@ namespace Google.Cloud.Dialogflow.V2 {
     private global::Google.Cloud.Dialogflow.V2.Intent intent_;
     /// <summary>
     /// Required. The intent to update.
-    /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.Intent Intent {
@@ -6690,9 +6717,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of training phrases, parameters and rich messages
     /// defined in `intent`. If not specified, the agent's default language is
-    /// used. [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// used. [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -6875,8 +6903,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Intents.DeleteIntent][google.cloud.dialogflow.v2.Intents.DeleteIntent].
+  /// The request message for [Intents.DeleteIntent][google.cloud.dialogflow.v2.Intents.DeleteIntent].
   /// </summary>
   public sealed partial class DeleteIntentRequest : pb::IMessage<DeleteIntentRequest> {
     private static readonly pb::MessageParser<DeleteIntentRequest> _parser = new pb::MessageParser<DeleteIntentRequest>(() => new DeleteIntentRequest());
@@ -6916,7 +6943,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the intent to delete.
+    /// Required. The name of the intent to delete. If this intent has direct or
+    /// indirect followup intents, we also delete them.
     /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7012,8 +7040,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
+  /// The request message for [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
   /// </summary>
   public sealed partial class BatchUpdateIntentsRequest : pb::IMessage<BatchUpdateIntentsRequest> {
     private static readonly pb::MessageParser<BatchUpdateIntentsRequest> _parser = new pb::MessageParser<BatchUpdateIntentsRequest>(() => new BatchUpdateIntentsRequest());
@@ -7112,9 +7139,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of training phrases, parameters and rich messages
     /// defined in `intents`. If not specified, the agent's default language is
-    /// used. [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// used. [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -7355,8 +7383,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
+  /// The response message for [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents].
   /// </summary>
   public sealed partial class BatchUpdateIntentsResponse : pb::IMessage<BatchUpdateIntentsResponse> {
     private static readonly pb::MessageParser<BatchUpdateIntentsResponse> _parser = new pb::MessageParser<BatchUpdateIntentsResponse>(() => new BatchUpdateIntentsResponse());
@@ -7483,8 +7510,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Intents.BatchDeleteIntents][google.cloud.dialogflow.v2.Intents.BatchDeleteIntents].
+  /// The request message for [Intents.BatchDeleteIntents][google.cloud.dialogflow.v2.Intents.BatchDeleteIntents].
   /// </summary>
   public sealed partial class BatchDeleteIntentsRequest : pb::IMessage<BatchDeleteIntentsRequest> {
     private static readonly pb::MessageParser<BatchDeleteIntentsRequest> _parser = new pb::MessageParser<BatchDeleteIntentsRequest>(() => new BatchDeleteIntentsRequest());

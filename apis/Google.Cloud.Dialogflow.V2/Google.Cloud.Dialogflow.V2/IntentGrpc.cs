@@ -3,7 +3,7 @@
 //     source: google/cloud/dialogflow/v2/intent.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+//
 #pragma warning disable 1591
 #region Designer generated code
 
@@ -27,10 +28,10 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// An intent represents a mapping between input from a user and an action to
   /// be taken by your application. When you pass user input to the
   /// [DetectIntent][google.cloud.dialogflow.v2.Sessions.DetectIntent] (or
-  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent])
-  /// method, the Dialogflow API analyzes the input and searches for a matching
-  /// intent. If no match is found, the Dialogflow API returns a fallback intent
-  /// (`is_fallback` = true).
+  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent]) method, the
+  /// Dialogflow API analyzes the input and searches
+  /// for a matching intent. If no match is found, the Dialogflow API returns a
+  /// fallback intent (`is_fallback` = true).
   ///
   /// You can provide additional information for the Dialogflow API to use to
   /// match user input to an intent by adding the following to your intent.
@@ -38,7 +39,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// *   **Contexts** - provide additional context for intent analysis. For
   ///     example, if an intent is related to an object in your application that
   ///     plays music, you can provide a context to determine when to match the
-  ///     intent if the user input is “turn it off”.  You can include a context
+  ///     intent if the user input is "turn it off". You can include a context
   ///     that matches the intent when there is previous user input of
   ///     "play music", and not when there is previous user input of
   ///     "turn on the light".
@@ -54,7 +55,8 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///     Dialogflow API agent to better match intents.
   ///
   /// For more information about intents, see the
-  /// [Dialogflow documentation](https://dialogflow.com/docs/intents).
+  /// [Dialogflow
+  /// documentation](https://cloud.google.com/dialogflow-enterprise/docs/intents-overview).
   /// </summary>
   public static partial class Intents
   {
@@ -175,7 +177,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
-      /// Deletes the specified intent.
+      /// Deletes the specified intent and its direct or indirect followup intents.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -188,8 +190,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -414,7 +415,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIntent, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified intent.
+      /// Deletes the specified intent and its direct or indirect followup intents.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -426,7 +427,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return DeleteIntent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified intent.
+      /// Deletes the specified intent and its direct or indirect followup intents.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +437,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteIntent, null, options, request);
       }
       /// <summary>
-      /// Deletes the specified intent.
+      /// Deletes the specified intent and its direct or indirect followup intents.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -448,7 +449,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return DeleteIntentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the specified intent.
+      /// Deletes the specified intent and its direct or indirect followup intents.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -460,8 +461,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -475,8 +475,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -488,8 +487,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -503,8 +501,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

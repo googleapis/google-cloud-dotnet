@@ -26,99 +26,100 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9lbnRpdHlfdHlwZS5wcm90",
             "bxIaZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIaHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
-            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9w",
-            "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3Ry",
-            "dWN0LnByb3RvIsQDCgpFbnRpdHlUeXBlEgwKBG5hbWUYASABKAkSFAoMZGlz",
-            "cGxheV9uYW1lGAIgASgJEjkKBGtpbmQYAyABKA4yKy5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5FbnRpdHlUeXBlLktpbmQSVQoTYXV0b19leHBhbnNp",
-            "b25fbW9kZRgEIAEoDjI4Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkVu",
-            "dGl0eVR5cGUuQXV0b0V4cGFuc2lvbk1vZGUSPwoIZW50aXRpZXMYBiADKAsy",
-            "LS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5FbnRpdHlUeXBlLkVudGl0",
-            "eRopCgZFbnRpdHkSDQoFdmFsdWUYASABKAkSEAoIc3lub255bXMYAiADKAki",
-            "OQoES2luZBIUChBLSU5EX1VOU1BFQ0lGSUVEEAASDAoIS0lORF9NQVAQARIN",
-            "CglLSU5EX0xJU1QQAiJZChFBdXRvRXhwYW5zaW9uTW9kZRIjCh9BVVRPX0VY",
-            "UEFOU0lPTl9NT0RFX1VOU1BFQ0lGSUVEEAASHwobQVVUT19FWFBBTlNJT05f",
-            "TU9ERV9ERUZBVUxUEAEiZgoWTGlzdEVudGl0eVR5cGVzUmVxdWVzdBIOCgZw",
-            "YXJlbnQYASABKAkSFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRIRCglwYWdlX3Np",
-            "emUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJwChdMaXN0RW50aXR5VHlw",
-            "ZXNSZXNwb25zZRI8CgxlbnRpdHlfdHlwZXMYASADKAsyJi5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5FbnRpdHlUeXBlEhcKD25leHRfcGFnZV90b2tl",
-            "bhgCIAEoCSI7ChRHZXRFbnRpdHlUeXBlUmVxdWVzdBIMCgRuYW1lGAEgASgJ",
-            "EhUKDWxhbmd1YWdlX2NvZGUYAiABKAkifQoXQ3JlYXRlRW50aXR5VHlwZVJl",
-            "cXVlc3QSDgoGcGFyZW50GAEgASgJEjsKC2VudGl0eV90eXBlGAIgASgLMiYu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZRIVCg1sYW5n",
-            "dWFnZV9jb2RlGAMgASgJIp4BChdVcGRhdGVFbnRpdHlUeXBlUmVxdWVzdBI7",
-            "CgtlbnRpdHlfdHlwZRgBIAEoCzImLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkVudGl0eVR5cGUSFQoNbGFuZ3VhZ2VfY29kZRgCIAEoCRIvCgt1cGRh",
-            "dGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siJwoX",
-            "RGVsZXRlRW50aXR5VHlwZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSL+AQodQmF0",
-            "Y2hVcGRhdGVFbnRpdHlUeXBlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEh8K",
-            "FWVudGl0eV90eXBlX2JhdGNoX3VyaRgCIAEoCUgAEk8KGGVudGl0eV90eXBl",
-            "X2JhdGNoX2lubGluZRgDIAEoCzIrLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkVudGl0eVR5cGVCYXRjaEgAEhUKDWxhbmd1YWdlX2NvZGUYBCABKAkS",
-            "LwoLdXBkYXRlX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
-            "YXNrQhMKEWVudGl0eV90eXBlX2JhdGNoIl4KHkJhdGNoVXBkYXRlRW50aXR5",
-            "VHlwZXNSZXNwb25zZRI8CgxlbnRpdHlfdHlwZXMYASADKAsyJi5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5FbnRpdHlUeXBlIkoKHUJhdGNoRGVsZXRl",
-            "RW50aXR5VHlwZXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIZChFlbnRpdHlf",
-            "dHlwZV9uYW1lcxgCIAMoCSKEAQoaQmF0Y2hDcmVhdGVFbnRpdGllc1JlcXVl",
-            "c3QSDgoGcGFyZW50GAEgASgJEj8KCGVudGl0aWVzGAIgAygLMi0uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZS5FbnRpdHkSFQoNbGFu",
-            "Z3VhZ2VfY29kZRgDIAEoCSK1AQoaQmF0Y2hVcGRhdGVFbnRpdGllc1JlcXVl",
-            "c3QSDgoGcGFyZW50GAEgASgJEj8KCGVudGl0aWVzGAIgAygLMi0uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZS5FbnRpdHkSFQoNbGFu",
-            "Z3VhZ2VfY29kZRgDIAEoCRIvCgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5GaWVsZE1hc2siWgoaQmF0Y2hEZWxldGVFbnRpdGllc1Jl",
-            "cXVlc3QSDgoGcGFyZW50GAEgASgJEhUKDWVudGl0eV92YWx1ZXMYAiADKAkS",
-            "FQoNbGFuZ3VhZ2VfY29kZRgDIAEoCSJPCg9FbnRpdHlUeXBlQmF0Y2gSPAoM",
-            "ZW50aXR5X3R5cGVzGAEgAygLMiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuRW50aXR5VHlwZTKDDgoLRW50aXR5VHlwZXMSrQEKD0xpc3RFbnRpdHlU",
-            "eXBlcxIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RFbnRpdHlU",
-            "eXBlc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0",
-            "RW50aXR5VHlwZXNSZXNwb25zZSIxgtPkkwIrEikvdjIve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2FnZW50fS9lbnRpdHlUeXBlcxKcAQoNR2V0RW50aXR5VHlwZRIw",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdldEVudGl0eVR5cGVSZXF1",
-            "ZXN0GiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZSIx",
-            "gtPkkwIrEikvdjIve25hbWU9cHJvamVjdHMvKi9hZ2VudC9lbnRpdHlUeXBl",
-            "cy8qfRKvAQoQQ3JlYXRlRW50aXR5VHlwZRIzLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLkNyZWF0ZUVudGl0eVR5cGVSZXF1ZXN0GiYuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZSI+gtPkkwI4IikvdjIve3Bh",
-            "cmVudD1wcm9qZWN0cy8qL2FnZW50fS9lbnRpdHlUeXBlczoLZW50aXR5X3R5",
-            "cGUSuwEKEFVwZGF0ZUVudGl0eVR5cGUSMy5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy52Mi5VcGRhdGVFbnRpdHlUeXBlUmVxdWVzdBomLmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LnYyLkVudGl0eVR5cGUiSoLT5JMCRDI1L3YyL3tlbnRp",
-            "dHlfdHlwZS5uYW1lPXByb2plY3RzLyovYWdlbnQvZW50aXR5VHlwZXMvKn06",
-            "C2VudGl0eV90eXBlEpIBChBEZWxldGVFbnRpdHlUeXBlEjMuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuRGVsZXRlRW50aXR5VHlwZVJlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiMYLT5JMCKyopL3YyL3tuYW1lPXByb2pl",
-            "Y3RzLyovYWdlbnQvZW50aXR5VHlwZXMvKn0StAEKFkJhdGNoVXBkYXRlRW50",
-            "aXR5VHlwZXMSOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRjaFVw",
-            "ZGF0ZUVudGl0eVR5cGVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iQILT5JMCOiI1L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2Vu",
-            "dH0vZW50aXR5VHlwZXM6YmF0Y2hVcGRhdGU6ASoStAEKFkJhdGNoRGVsZXRl",
-            "RW50aXR5VHlwZXMSOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRj",
-            "aERlbGV0ZUVudGl0eVR5cGVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmlu",
-            "Zy5PcGVyYXRpb24iQILT5JMCOiI1L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9h",
-            "Z2VudH0vZW50aXR5VHlwZXM6YmF0Y2hEZWxldGU6ASoSuQEKE0JhdGNoQ3Jl",
-            "YXRlRW50aXRpZXMSNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRj",
-            "aENyZWF0ZUVudGl0aWVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iS4LT5JMCRSJAL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2Vu",
-            "dC9lbnRpdHlUeXBlcy8qfS9lbnRpdGllczpiYXRjaENyZWF0ZToBKhK5AQoT",
-            "QmF0Y2hVcGRhdGVFbnRpdGllcxI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkJhdGNoVXBkYXRlRW50aXRpZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiJLgtPkkwJFIkAvdjIve3BhcmVudD1wcm9qZWN0",
-            "cy8qL2FnZW50L2VudGl0eVR5cGVzLyp9L2VudGl0aWVzOmJhdGNoVXBkYXRl",
-            "OgEqErkBChNCYXRjaERlbGV0ZUVudGl0aWVzEjYuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuQmF0Y2hEZWxldGVFbnRpdGllc1JlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIkuC0+STAkUiQC92Mi97cGFyZW50",
-            "PXByb2plY3RzLyovYWdlbnQvZW50aXR5VHlwZXMvKn0vZW50aXRpZXM6YmF0",
-            "Y2hEZWxldGU6ASpCngEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "MkIPRW50aXR5VHlwZVByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93",
-            "+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "b3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dv",
+            "b2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGhtnb29nbGUvcHJv",
+            "dG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNr",
+            "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIsQDCgpFbnRp",
+            "dHlUeXBlEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEjkK",
+            "BGtpbmQYAyABKA4yKy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5FbnRp",
+            "dHlUeXBlLktpbmQSVQoTYXV0b19leHBhbnNpb25fbW9kZRgEIAEoDjI4Lmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkVudGl0eVR5cGUuQXV0b0V4cGFu",
+            "c2lvbk1vZGUSPwoIZW50aXRpZXMYBiADKAsyLS5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy52Mi5FbnRpdHlUeXBlLkVudGl0eRopCgZFbnRpdHkSDQoFdmFs",
+            "dWUYASABKAkSEAoIc3lub255bXMYAiADKAkiOQoES2luZBIUChBLSU5EX1VO",
+            "U1BFQ0lGSUVEEAASDAoIS0lORF9NQVAQARINCglLSU5EX0xJU1QQAiJZChFB",
+            "dXRvRXhwYW5zaW9uTW9kZRIjCh9BVVRPX0VYUEFOU0lPTl9NT0RFX1VOU1BF",
+            "Q0lGSUVEEAASHwobQVVUT19FWFBBTlNJT05fTU9ERV9ERUZBVUxUEAEiZgoW",
+            "TGlzdEVudGl0eVR5cGVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSFQoNbGFu",
+            "Z3VhZ2VfY29kZRgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90",
+            "b2tlbhgEIAEoCSJwChdMaXN0RW50aXR5VHlwZXNSZXNwb25zZRI8CgxlbnRp",
+            "dHlfdHlwZXMYASADKAsyJi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5F",
+            "bnRpdHlUeXBlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSI7ChRHZXRFbnRp",
+            "dHlUeXBlUmVxdWVzdBIMCgRuYW1lGAEgASgJEhUKDWxhbmd1YWdlX2NvZGUY",
+            "AiABKAkifQoXQ3JlYXRlRW50aXR5VHlwZVJlcXVlc3QSDgoGcGFyZW50GAEg",
+            "ASgJEjsKC2VudGl0eV90eXBlGAIgASgLMiYuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cudjIuRW50aXR5VHlwZRIVCg1sYW5ndWFnZV9jb2RlGAMgASgJIp4B",
+            "ChdVcGRhdGVFbnRpdHlUeXBlUmVxdWVzdBI7CgtlbnRpdHlfdHlwZRgBIAEo",
+            "CzImLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkVudGl0eVR5cGUSFQoN",
+            "bGFuZ3VhZ2VfY29kZRgCIAEoCRIvCgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siJwoXRGVsZXRlRW50aXR5VHlwZVJl",
+            "cXVlc3QSDAoEbmFtZRgBIAEoCSL+AQodQmF0Y2hVcGRhdGVFbnRpdHlUeXBl",
+            "c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEh8KFWVudGl0eV90eXBlX2JhdGNo",
+            "X3VyaRgCIAEoCUgAEk8KGGVudGl0eV90eXBlX2JhdGNoX2lubGluZRgDIAEo",
+            "CzIrLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkVudGl0eVR5cGVCYXRj",
+            "aEgAEhUKDWxhbmd1YWdlX2NvZGUYBCABKAkSLwoLdXBkYXRlX21hc2sYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQhMKEWVudGl0eV90eXBl",
+            "X2JhdGNoIl4KHkJhdGNoVXBkYXRlRW50aXR5VHlwZXNSZXNwb25zZRI8Cgxl",
+            "bnRpdHlfdHlwZXMYASADKAsyJi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5FbnRpdHlUeXBlIkoKHUJhdGNoRGVsZXRlRW50aXR5VHlwZXNSZXF1ZXN0",
+            "Eg4KBnBhcmVudBgBIAEoCRIZChFlbnRpdHlfdHlwZV9uYW1lcxgCIAMoCSKE",
+            "AQoaQmF0Y2hDcmVhdGVFbnRpdGllc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
+            "Ej8KCGVudGl0aWVzGAIgAygLMi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuRW50aXR5VHlwZS5FbnRpdHkSFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCSK1",
+            "AQoaQmF0Y2hVcGRhdGVFbnRpdGllc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
+            "Ej8KCGVudGl0aWVzGAIgAygLMi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuRW50aXR5VHlwZS5FbnRpdHkSFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCRIv",
+            "Cgt1cGRhdGVfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2siWgoaQmF0Y2hEZWxldGVFbnRpdGllc1JlcXVlc3QSDgoGcGFyZW50GAEg",
+            "ASgJEhUKDWVudGl0eV92YWx1ZXMYAiADKAkSFQoNbGFuZ3VhZ2VfY29kZRgD",
+            "IAEoCSJPCg9FbnRpdHlUeXBlQmF0Y2gSPAoMZW50aXR5X3R5cGVzGAEgAygL",
+            "MiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZTKDDgoL",
+            "RW50aXR5VHlwZXMSrQEKD0xpc3RFbnRpdHlUeXBlcxIyLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLkxpc3RFbnRpdHlUeXBlc1JlcXVlc3QaMy5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0RW50aXR5VHlwZXNSZXNwb25z",
+            "ZSIxgtPkkwIrEikvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50fS9lbnRp",
+            "dHlUeXBlcxKcAQoNR2V0RW50aXR5VHlwZRIwLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLkdldEVudGl0eVR5cGVSZXF1ZXN0GiYuZ29vZ2xlLmNsb3Vk",
+            "LmRpYWxvZ2Zsb3cudjIuRW50aXR5VHlwZSIxgtPkkwIrEikvdjIve25hbWU9",
+            "cHJvamVjdHMvKi9hZ2VudC9lbnRpdHlUeXBlcy8qfRKvAQoQQ3JlYXRlRW50",
+            "aXR5VHlwZRIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNyZWF0ZUVu",
+            "dGl0eVR5cGVSZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "RW50aXR5VHlwZSI+gtPkkwI4IikvdjIve3BhcmVudD1wcm9qZWN0cy8qL2Fn",
+            "ZW50fS9lbnRpdHlUeXBlczoLZW50aXR5X3R5cGUSuwEKEFVwZGF0ZUVudGl0",
+            "eVR5cGUSMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5VcGRhdGVFbnRp",
+            "dHlUeXBlUmVxdWVzdBomLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkVu",
+            "dGl0eVR5cGUiSoLT5JMCRDI1L3YyL3tlbnRpdHlfdHlwZS5uYW1lPXByb2pl",
+            "Y3RzLyovYWdlbnQvZW50aXR5VHlwZXMvKn06C2VudGl0eV90eXBlEpIBChBE",
+            "ZWxldGVFbnRpdHlUeXBlEjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "RGVsZXRlRW50aXR5VHlwZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiMYLT5JMCKyopL3YyL3tuYW1lPXByb2plY3RzLyovYWdlbnQvZW50aXR5",
+            "VHlwZXMvKn0StAEKFkJhdGNoVXBkYXRlRW50aXR5VHlwZXMSOS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRjaFVwZGF0ZUVudGl0eVR5cGVzUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iQILT5JMCOiI1",
+            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0vZW50aXR5VHlwZXM6YmF0",
+            "Y2hVcGRhdGU6ASoStAEKFkJhdGNoRGVsZXRlRW50aXR5VHlwZXMSOS5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRjaERlbGV0ZUVudGl0eVR5cGVz",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iQILT5JMC",
+            "OiI1L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudH0vZW50aXR5VHlwZXM6",
+            "YmF0Y2hEZWxldGU6ASoSuQEKE0JhdGNoQ3JlYXRlRW50aXRpZXMSNi5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5CYXRjaENyZWF0ZUVudGl0aWVzUmVx",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iS4LT5JMCRSJA",
+            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudC9lbnRpdHlUeXBlcy8qfS9l",
+            "bnRpdGllczpiYXRjaENyZWF0ZToBKhK5AQoTQmF0Y2hVcGRhdGVFbnRpdGll",
+            "cxI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkJhdGNoVXBkYXRlRW50",
+            "aXRpZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJL",
+            "gtPkkwJFIkAvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L2VudGl0eVR5",
+            "cGVzLyp9L2VudGl0aWVzOmJhdGNoVXBkYXRlOgEqErkBChNCYXRjaERlbGV0",
+            "ZUVudGl0aWVzEjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQmF0Y2hE",
+            "ZWxldGVFbnRpdGllc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIkuC0+STAkUiQC92Mi97cGFyZW50PXByb2plY3RzLyovYWdlbnQv",
+            "ZW50aXR5VHlwZXMvKn0vZW50aXRpZXM6YmF0Y2hEZWxldGU6ASpCngEKHmNv",
+            "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIPRW50aXR5VHlwZVByb3Rv",
+            "UAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
+            "dWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUu",
+            "Q2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityType), global::Google.Cloud.Dialogflow.V2.EntityType.Parser, new[]{ "Name", "DisplayName", "Kind", "AutoExpansionMode", "Entities" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.Kind), typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.AutoExpansionMode) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity), global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity.Parser, new[]{ "Value", "Synonyms" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.ListEntityTypesRequest.Parser, new[]{ "Parent", "LanguageCode", "PageSize", "PageToken" }, null, null, null),
@@ -187,10 +188,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required for all methods except `create` (`create` populates the name
-    /// automatically.
-    /// The unique identifier of the entity type. Format:
-    /// `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
+    /// The unique identifier of the entity type.
+    /// Required for [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType] and
+    /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes] methods.
+    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -204,7 +205,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required. The name of the entity.
+    /// Required. The name of the entity type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -249,7 +250,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity>();
     /// <summary>
-    /// Optional. The collection of entities associated with the entity type.
+    /// Optional. The collection of entity entries associated with the entity type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity> Entities {
@@ -438,7 +439,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
-      /// Optional. Represents an entity.
+      /// An **entity entry** for an associated entity type.
       /// </summary>
       public sealed partial class Entity : pb::IMessage<Entity> {
         private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
@@ -479,12 +480,18 @@ namespace Google.Cloud.Dialogflow.V2 {
         public const int ValueFieldNumber = 1;
         private string value_ = "";
         /// <summary>
-        /// Required.
+        /// Required. The primary value associated with this entity entry.
+        /// For example, if the entity type is *vegetable*, the value could be
+        /// *scallions*.
+        ///
         /// For `KIND_MAP` entity types:
-        ///   A canonical name to be used in place of synonyms.
+        ///
+        /// *   A canonical value to be used in place of synonyms.
+        ///
         /// For `KIND_LIST` entity types:
-        ///   A string that can contain references to other entity types (with or
-        ///   without aliases).
+        ///
+        /// *   A string that can contain references to other entity types (with or
+        ///     without aliases).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Value {
@@ -500,8 +507,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> synonyms_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Required. A collection of synonyms. For `KIND_LIST` entity types this
-        /// must contain exactly one synonym equal to `value`.
+        /// Required. A collection of value synonyms. For example, if the entity type
+        /// is *vegetable*, and `value` is *scallions*, a synonym could be *green
+        /// onions*.
+        ///
+        /// For `KIND_LIST` entity types:
+        ///
+        /// *   This collection must contain exactly one synonym equal to `value`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<string> Synonyms {
@@ -607,8 +619,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
+  /// The request message for [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesRequest : pb::IMessage<ListEntityTypesRequest> {
     private static readonly pb::MessageParser<ListEntityTypesRequest> _parser = new pb::MessageParser<ListEntityTypesRequest>(() => new ListEntityTypesRequest());
@@ -668,9 +679,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language to list entity synonyms for. If not specified,
     /// the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -842,8 +854,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
+  /// The response message for [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2.EntityTypes.ListEntityTypes].
   /// </summary>
   public sealed partial class ListEntityTypesResponse : pb::IMessage<ListEntityTypesResponse> {
     private static readonly pb::MessageParser<ListEntityTypesResponse> _parser = new pb::MessageParser<ListEntityTypesResponse>(() => new ListEntityTypesResponse());
@@ -1003,8 +1014,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.GetEntityType][google.cloud.dialogflow.v2.EntityTypes.GetEntityType].
+  /// The request message for [EntityTypes.GetEntityType][google.cloud.dialogflow.v2.EntityTypes.GetEntityType].
   /// </summary>
   public sealed partial class GetEntityTypeRequest : pb::IMessage<GetEntityTypeRequest> {
     private static readonly pb::MessageParser<GetEntityTypeRequest> _parser = new pb::MessageParser<GetEntityTypeRequest>(() => new GetEntityTypeRequest());
@@ -1062,9 +1072,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language to retrieve entity synonyms for. If not specified,
     /// the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -1175,8 +1186,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.CreateEntityType][google.cloud.dialogflow.v2.EntityTypes.CreateEntityType].
+  /// The request message for [EntityTypes.CreateEntityType][google.cloud.dialogflow.v2.EntityTypes.CreateEntityType].
   /// </summary>
   public sealed partial class CreateEntityTypeRequest : pb::IMessage<CreateEntityTypeRequest> {
     private static readonly pb::MessageParser<CreateEntityTypeRequest> _parser = new pb::MessageParser<CreateEntityTypeRequest>(() => new CreateEntityTypeRequest());
@@ -1249,9 +1259,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of entity synonyms defined in `entity_type`. If not
     /// specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -1384,8 +1395,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType].
+  /// The request message for [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType].
   /// </summary>
   public sealed partial class UpdateEntityTypeRequest : pb::IMessage<UpdateEntityTypeRequest> {
     private static readonly pb::MessageParser<UpdateEntityTypeRequest> _parser = new pb::MessageParser<UpdateEntityTypeRequest>(() => new UpdateEntityTypeRequest());
@@ -1428,7 +1438,6 @@ namespace Google.Cloud.Dialogflow.V2 {
     private global::Google.Cloud.Dialogflow.V2.EntityType entityType_;
     /// <summary>
     /// Required. The entity type to update.
-    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;EntityType ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.EntityType EntityType {
@@ -1444,9 +1453,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of entity synonyms defined in `entity_type`. If not
     /// specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -1599,8 +1609,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.DeleteEntityType][google.cloud.dialogflow.v2.EntityTypes.DeleteEntityType].
+  /// The request message for [EntityTypes.DeleteEntityType][google.cloud.dialogflow.v2.EntityTypes.DeleteEntityType].
   /// </summary>
   public sealed partial class DeleteEntityTypeRequest : pb::IMessage<DeleteEntityTypeRequest> {
     private static readonly pb::MessageParser<DeleteEntityTypeRequest> _parser = new pb::MessageParser<DeleteEntityTypeRequest>(() => new DeleteEntityTypeRequest());
@@ -1736,8 +1745,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
+  /// The request message for [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
   /// </summary>
   public sealed partial class BatchUpdateEntityTypesRequest : pb::IMessage<BatchUpdateEntityTypesRequest> {
     private static readonly pb::MessageParser<BatchUpdateEntityTypesRequest> _parser = new pb::MessageParser<BatchUpdateEntityTypesRequest>(() => new BatchUpdateEntityTypesRequest());
@@ -1819,7 +1827,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>Field number for the "entity_type_batch_inline" field.</summary>
     public const int EntityTypeBatchInlineFieldNumber = 3;
     /// <summary>
-    /// The collection of entity type to update or create.
+    /// The collection of entity types to update or create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.EntityTypeBatch EntityTypeBatchInline {
@@ -1836,9 +1844,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of entity synonyms defined in `entity_types`. If not
     /// specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -2049,8 +2058,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
+  /// The response message for [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes].
   /// </summary>
   public sealed partial class BatchUpdateEntityTypesResponse : pb::IMessage<BatchUpdateEntityTypesResponse> {
     private static readonly pb::MessageParser<BatchUpdateEntityTypesResponse> _parser = new pb::MessageParser<BatchUpdateEntityTypesResponse>(() => new BatchUpdateEntityTypesResponse());
@@ -2177,8 +2185,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.BatchDeleteEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntityTypes].
+  /// The request message for [EntityTypes.BatchDeleteEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntityTypes].
   /// </summary>
   public sealed partial class BatchDeleteEntityTypesRequest : pb::IMessage<BatchDeleteEntityTypesRequest> {
     private static readonly pb::MessageParser<BatchDeleteEntityTypesRequest> _parser = new pb::MessageParser<BatchDeleteEntityTypesRequest>(() => new BatchDeleteEntityTypesRequest());
@@ -2338,8 +2345,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
+  /// The request message for [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
   /// </summary>
   public sealed partial class BatchCreateEntitiesRequest : pb::IMessage<BatchCreateEntitiesRequest> {
     private static readonly pb::MessageParser<BatchCreateEntitiesRequest> _parser = new pb::MessageParser<BatchCreateEntitiesRequest>(() => new BatchCreateEntitiesRequest());
@@ -2398,7 +2404,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity>();
     /// <summary>
-    /// Required. The collection of entities to create.
+    /// Required. The entities to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity> Entities {
@@ -2411,9 +2417,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of entity synonyms defined in `entities`. If not
     /// specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -2533,8 +2540,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [EntityTypes.BatchCreateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchCreateEntities].
+  /// The request message for [EntityTypes.BatchUpdateEntities][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntities].
   /// </summary>
   public sealed partial class BatchUpdateEntitiesRequest : pb::IMessage<BatchUpdateEntitiesRequest> {
     private static readonly pb::MessageParser<BatchUpdateEntitiesRequest> _parser = new pb::MessageParser<BatchUpdateEntitiesRequest>(() => new BatchUpdateEntitiesRequest());
@@ -2577,8 +2583,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the entity type to update the entities in. Format:
-    /// `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
+    /// Required. The name of the entity type to update or create entities in.
+    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2594,7 +2600,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity>();
     /// <summary>
-    /// Required. The collection of new entities to replace the existing entities.
+    /// Required. The entities to update or create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.EntityType.Types.Entity> Entities {
@@ -2607,9 +2613,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of entity synonyms defined in `entities`. If not
     /// specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -2765,8 +2772,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [EntityTypes.BatchDeleteEntities][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntities].
+  /// The request message for [EntityTypes.BatchDeleteEntities][google.cloud.dialogflow.v2.EntityTypes.BatchDeleteEntities].
   /// </summary>
   public sealed partial class BatchDeleteEntitiesRequest : pb::IMessage<BatchDeleteEntitiesRequest> {
     private static readonly pb::MessageParser<BatchDeleteEntitiesRequest> _parser = new pb::MessageParser<BatchDeleteEntitiesRequest>(() => new BatchDeleteEntitiesRequest());
@@ -2840,9 +2846,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The language of entity synonyms defined in `entities`. If not
     /// specified, the agent's default language is used.
-    /// [More than a dozen
-    /// languages](https://dialogflow.com/docs/reference/language) are supported.
-    /// Note: languages must be enabled in the agent, before they can be used.
+    /// [Many
+    /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// are supported. Note: languages must be enabled in the agent before they can
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {

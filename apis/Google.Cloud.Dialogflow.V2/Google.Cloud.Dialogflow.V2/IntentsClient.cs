@@ -401,10 +401,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// The default Intents scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/dialogflow"</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/dialogflow",
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
@@ -616,9 +618,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language to list training phrases, parameters and rich
         /// messages for. If not specified, the agent's default language is used.
-        /// [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent before they can be used.
+        /// [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -659,9 +662,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language to list training phrases, parameters and rich
         /// messages for. If not specified, the agent's default language is used.
-        /// [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent before they can be used.
+        /// [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -803,9 +807,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language to retrieve training phrases, parameters and rich
         /// messages for. If not specified, the agent's default language is used.
-        /// [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -834,9 +839,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language to retrieve training phrases, parameters and rich
         /// messages for. If not specified, the agent's default language is used.
-        /// [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -862,9 +868,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language to retrieve training phrases, parameters and rich
         /// messages for. If not specified, the agent's default language is used.
-        /// [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1030,9 +1037,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1066,9 +1074,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1099,9 +1108,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1183,14 +1193,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="intent">
         /// Required. The intent to update.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1214,14 +1224,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="intent">
         /// Required. The intent to update.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1242,14 +1252,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="intent">
         /// Required. The intent to update.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1273,14 +1283,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="intent">
         /// Required. The intent to update.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields get updated.
@@ -1309,14 +1319,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="intent">
         /// Required. The intent to update.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields get updated.
@@ -1342,14 +1352,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="intent">
         /// Required. The intent to update.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language of training phrases, parameters and rich messages
         /// defined in `intent`. If not specified, the agent's default language is
-        /// used. [More than a dozen
-        /// languages](https://dialogflow.com/docs/reference/language) are supported.
-        /// Note: languages must be enabled in the agent, before they can be used.
+        /// used. [Many
+        /// languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+        /// are supported. Note: languages must be enabled in the agent before they can
+        /// be used.
         /// </param>
         /// <param name="updateMask">
         /// Optional. The mask to control which fields get updated.
@@ -1430,10 +1440,11 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the intent to delete.
+        /// Required. The name of the intent to delete. If this intent has direct or
+        /// indirect followup intents, we also delete them.
         /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="callSettings">
@@ -1452,10 +1463,11 @@ namespace Google.Cloud.Dialogflow.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the intent to delete.
+        /// Required. The name of the intent to delete. If this intent has direct or
+        /// indirect followup intents, we also delete them.
         /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="cancellationToken">
@@ -1471,10 +1483,11 @@ namespace Google.Cloud.Dialogflow.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the intent to delete.
+        /// Required. The name of the intent to delete. If this intent has direct or
+        /// indirect followup intents, we also delete them.
         /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
         /// </param>
         /// <param name="callSettings">
@@ -1490,7 +1503,7 @@ namespace Google.Cloud.Dialogflow.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1509,7 +1522,7 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1527,7 +1540,7 @@ namespace Google.Cloud.Dialogflow.V2
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1545,8 +1558,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple intents in the specified agent.
         ///
-        /// Operation &lt;response:
-        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
+        /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1580,8 +1592,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple intents in the specified agent.
         ///
-        /// Operation &lt;response:
-        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
+        /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2046,7 +2057,7 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2066,7 +2077,7 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
-        /// Deletes the specified intent.
+        /// Deletes the specified intent and its direct or indirect followup intents.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2085,8 +2096,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple intents in the specified agent.
         ///
-        /// Operation &lt;response:
-        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
+        /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2109,8 +2119,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Updates/Creates multiple intents in the specified agent.
         ///
-        /// Operation &lt;response:
-        /// [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
+        /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

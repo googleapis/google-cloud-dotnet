@@ -417,10 +417,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// The default Agents scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/dialogflow"</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/dialogflow",
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
@@ -806,8 +808,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -831,8 +832,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -853,8 +853,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
@@ -878,8 +877,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -913,8 +911,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -956,9 +953,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response:
-        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -982,9 +977,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response:
-        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1005,9 +998,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response:
-        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
@@ -1031,9 +1022,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response:
-        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1067,9 +1056,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response:
-        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1115,8 +1102,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Intents and entity types with the same name are replaced with the new
         /// versions from ImportAgentRequest.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1154,8 +1140,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Intents and entity types with the same name are replaced with the new
         /// versions from ImportAgentRequest.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1200,8 +1185,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Replaces the current agent version with a new one. All the intents and
         /// entity types in the older version are deleted.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1238,8 +1222,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Replaces the current agent version with a new one. All the intents and
         /// entity types in the older version are deleted.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1471,8 +1454,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1495,8 +1477,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1524,9 +1505,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response:
-        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1549,9 +1528,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         ///
-        /// Operation &lt;response:
-        /// [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1583,8 +1560,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Intents and entity types with the same name are replaced with the new
         /// versions from ImportAgentRequest.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1611,8 +1587,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Intents and entity types with the same name are replaced with the new
         /// versions from ImportAgentRequest.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1643,8 +1618,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Replaces the current agent version with a new one. All the intents and
         /// entity types in the older version are deleted.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1670,8 +1644,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// Replaces the current agent version with a new one. All the intents and
         /// entity types in the older version are deleted.
         ///
-        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-        ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]&gt;
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

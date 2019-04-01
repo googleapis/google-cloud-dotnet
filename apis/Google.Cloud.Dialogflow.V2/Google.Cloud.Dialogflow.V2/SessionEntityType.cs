@@ -26,59 +26,60 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9zZXNzaW9uX2VudGl0eV90",
             "eXBlLnByb3RvEhpnb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MhocZ29vZ2xl",
-            "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxosZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zs",
-            "b3cvdjIvZW50aXR5X3R5cGUucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0",
-            "eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8ixwIK",
-            "EVNlc3Npb25FbnRpdHlUeXBlEgwKBG5hbWUYASABKAkSXgoUZW50aXR5X292",
-            "ZXJyaWRlX21vZGUYAiABKA4yQC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
-            "Mi5TZXNzaW9uRW50aXR5VHlwZS5FbnRpdHlPdmVycmlkZU1vZGUSPwoIZW50",
-            "aXRpZXMYAyADKAsyLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5FbnRp",
-            "dHlUeXBlLkVudGl0eSKCAQoSRW50aXR5T3ZlcnJpZGVNb2RlEiQKIEVOVElU",
-            "WV9PVkVSUklERV9NT0RFX1VOU1BFQ0lGSUVEEAASIQodRU5USVRZX09WRVJS",
-            "SURFX01PREVfT1ZFUlJJREUQARIjCh9FTlRJVFlfT1ZFUlJJREVfTU9ERV9T",
-            "VVBQTEVNRU5UEAIiVgodTGlzdFNlc3Npb25FbnRpdHlUeXBlc1JlcXVlc3QS",
-            "DgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rv",
-            "a2VuGAMgASgJIoYBCh5MaXN0U2Vzc2lvbkVudGl0eVR5cGVzUmVzcG9uc2US",
-            "SwoUc2Vzc2lvbl9lbnRpdHlfdHlwZXMYASADKAsyLS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5TZXNzaW9uRW50aXR5VHlwZRIXCg9uZXh0X3BhZ2Vf",
-            "dG9rZW4YAiABKAkiKwobR2V0U2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0EgwK",
-            "BG5hbWUYASABKAkifAoeQ3JlYXRlU2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0",
-            "Eg4KBnBhcmVudBgBIAEoCRJKChNzZXNzaW9uX2VudGl0eV90eXBlGAIgASgL",
-            "Mi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5",
-            "cGUinQEKHlVwZGF0ZVNlc3Npb25FbnRpdHlUeXBlUmVxdWVzdBJKChNzZXNz",
-            "aW9uX2VudGl0eV90eXBlGAEgASgLMi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuU2Vzc2lvbkVudGl0eVR5cGUSLwoLdXBkYXRlX21hc2sYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIi4KHkRlbGV0ZVNlc3Npb25F",
-            "bnRpdHlUeXBlUmVxdWVzdBIMCgRuYW1lGAEgASgJMpkIChJTZXNzaW9uRW50",
-            "aXR5VHlwZXMSzQEKFkxpc3RTZXNzaW9uRW50aXR5VHlwZXMSOS5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0U2Vzc2lvbkVudGl0eVR5cGVzUmVx",
-            "dWVzdBo6Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RTZXNzaW9u",
-            "RW50aXR5VHlwZXNSZXNwb25zZSI8gtPkkwI2EjQvdjIve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2FnZW50L3Nlc3Npb25zLyp9L2VudGl0eVR5cGVzErwBChRHZXRT",
-            "ZXNzaW9uRW50aXR5VHlwZRI3Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
-            "LkdldFNlc3Npb25FbnRpdHlUeXBlUmVxdWVzdBotLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLlNlc3Npb25FbnRpdHlUeXBlIjyC0+STAjYSNC92Mi97",
-            "bmFtZT1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25zLyovZW50aXR5VHlwZXMv",
-            "Kn0S1wEKF0NyZWF0ZVNlc3Npb25FbnRpdHlUeXBlEjouZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuQ3JlYXRlU2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0",
-            "Gi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5",
-            "cGUiUYLT5JMCSyI0L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudC9zZXNz",
-            "aW9ucy8qfS9lbnRpdHlUeXBlczoTc2Vzc2lvbl9lbnRpdHlfdHlwZRLrAQoX",
-            "VXBkYXRlU2Vzc2lvbkVudGl0eVR5cGUSOi5nb29nbGUuY2xvdWQuZGlhbG9n",
-            "Zmxvdy52Mi5VcGRhdGVTZXNzaW9uRW50aXR5VHlwZVJlcXVlc3QaLS5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TZXNzaW9uRW50aXR5VHlwZSJlgtPk",
-            "kwJfMkgvdjIve3Nlc3Npb25fZW50aXR5X3R5cGUubmFtZT1wcm9qZWN0cy8q",
-            "L2FnZW50L3Nlc3Npb25zLyovZW50aXR5VHlwZXMvKn06E3Nlc3Npb25fZW50",
-            "aXR5X3R5cGUSqwEKF0RlbGV0ZVNlc3Npb25FbnRpdHlUeXBlEjouZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuRGVsZXRlU2Vzc2lvbkVudGl0eVR5cGVS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjyC0+STAjYqNC92Mi97",
-            "bmFtZT1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25zLyovZW50aXR5VHlwZXMv",
-            "Kn1CpQEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIWU2Vzc2lv",
-            "bkVudGl0eVR5cGVQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gB",
-            "AaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
+            "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
+            "cm90bxosZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvZW50aXR5X3R5cGUu",
+            "cHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3By",
+            "b3RvYnVmL2ZpZWxkX21hc2sucHJvdG8ixwIKEVNlc3Npb25FbnRpdHlUeXBl",
+            "EgwKBG5hbWUYASABKAkSXgoUZW50aXR5X292ZXJyaWRlX21vZGUYAiABKA4y",
+            "QC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TZXNzaW9uRW50aXR5VHlw",
+            "ZS5FbnRpdHlPdmVycmlkZU1vZGUSPwoIZW50aXRpZXMYAyADKAsyLS5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5FbnRpdHlUeXBlLkVudGl0eSKCAQoS",
+            "RW50aXR5T3ZlcnJpZGVNb2RlEiQKIEVOVElUWV9PVkVSUklERV9NT0RFX1VO",
+            "U1BFQ0lGSUVEEAASIQodRU5USVRZX09WRVJSSURFX01PREVfT1ZFUlJJREUQ",
+            "ARIjCh9FTlRJVFlfT1ZFUlJJREVfTU9ERV9TVVBQTEVNRU5UEAIiVgodTGlz",
+            "dFNlc3Npb25FbnRpdHlUeXBlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEK",
+            "CXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIoYBCh5MaXN0",
+            "U2Vzc2lvbkVudGl0eVR5cGVzUmVzcG9uc2USSwoUc2Vzc2lvbl9lbnRpdHlf",
+            "dHlwZXMYASADKAsyLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TZXNz",
+            "aW9uRW50aXR5VHlwZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiKwobR2V0",
+            "U2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0EgwKBG5hbWUYASABKAkifAoeQ3Jl",
+            "YXRlU2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRJK",
+            "ChNzZXNzaW9uX2VudGl0eV90eXBlGAIgASgLMi0uZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5cGUinQEKHlVwZGF0ZVNlc3Np",
+            "b25FbnRpdHlUeXBlUmVxdWVzdBJKChNzZXNzaW9uX2VudGl0eV90eXBlGAEg",
+            "ASgLMi0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0",
+            "eVR5cGUSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "RmllbGRNYXNrIi4KHkRlbGV0ZVNlc3Npb25FbnRpdHlUeXBlUmVxdWVzdBIM",
+            "CgRuYW1lGAEgASgJMpkIChJTZXNzaW9uRW50aXR5VHlwZXMSzQEKFkxpc3RT",
+            "ZXNzaW9uRW50aXR5VHlwZXMSOS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5MaXN0U2Vzc2lvbkVudGl0eVR5cGVzUmVxdWVzdBo6Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLkxpc3RTZXNzaW9uRW50aXR5VHlwZXNSZXNwb25z",
+            "ZSI8gtPkkwI2EjQvdjIve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L3Nlc3Np",
+            "b25zLyp9L2VudGl0eVR5cGVzErwBChRHZXRTZXNzaW9uRW50aXR5VHlwZRI3",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkdldFNlc3Npb25FbnRpdHlU",
+            "eXBlUmVxdWVzdBotLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNlc3Np",
+            "b25FbnRpdHlUeXBlIjyC0+STAjYSNC92Mi97bmFtZT1wcm9qZWN0cy8qL2Fn",
+            "ZW50L3Nlc3Npb25zLyovZW50aXR5VHlwZXMvKn0S1wEKF0NyZWF0ZVNlc3Np",
+            "b25FbnRpdHlUeXBlEjouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ3Jl",
+            "YXRlU2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5cGUiUYLT5JMCSyI0L3YyL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9hZ2VudC9zZXNzaW9ucy8qfS9lbnRpdHlUeXBl",
+            "czoTc2Vzc2lvbl9lbnRpdHlfdHlwZRLrAQoXVXBkYXRlU2Vzc2lvbkVudGl0",
+            "eVR5cGUSOi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5VcGRhdGVTZXNz",
+            "aW9uRW50aXR5VHlwZVJlcXVlc3QaLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5TZXNzaW9uRW50aXR5VHlwZSJlgtPkkwJfMkgvdjIve3Nlc3Npb25f",
+            "ZW50aXR5X3R5cGUubmFtZT1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25zLyov",
+            "ZW50aXR5VHlwZXMvKn06E3Nlc3Npb25fZW50aXR5X3R5cGUSqwEKF0RlbGV0",
+            "ZVNlc3Npb25FbnRpdHlUeXBlEjouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuRGVsZXRlU2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IjyC0+STAjYqNC92Mi97bmFtZT1wcm9qZWN0cy8qL2Fn",
+            "ZW50L3Nlc3Npb25zLyovZW50aXR5VHlwZXMvKn1CpQEKHmNvbS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52MkIWU2Vzc2lvbkVudGl0eVR5cGVQcm90b1AB",
+            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNs",
+            "b3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.EntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.EntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SessionEntityType), global::Google.Cloud.Dialogflow.V2.SessionEntityType.Parser, new[]{ "Name", "EntityOverrideMode", "Entities" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.SessionEntityType.Types.EntityOverrideMode) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest), global::Google.Cloud.Dialogflow.V2.ListSessionEntityTypesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
@@ -145,6 +146,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The unique identifier of this session entity type. Format:
     /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/entityTypes/&lt;Entity Type
     /// Display Name>`.
+    ///
+    /// `&lt;Entity Type Display Name>` must be the display name of an existing entity
+    /// type in the same agent that will be overridden or supplemented.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -310,10 +314,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// <summary>
         /// The collection of session entities extends the collection of entities in
         /// the corresponding developer entity type.
-        /// Calls to `ListSessionEntityTypes`, `GetSessionEntityType`,
-        /// `CreateSessionEntityType` and `UpdateSessionEntityType` return the full
-        /// collection of entities from the developer entity type in the agent's
-        /// default language and the session entity type.
+        ///
+        /// Note: Even in this override mode calls to `ListSessionEntityTypes`,
+        /// `GetSessionEntityType`, `CreateSessionEntityType` and
+        /// `UpdateSessionEntityType` only return the additional entities added in
+        /// this session entity type. If you want to get the supplemented list,
+        /// please call [EntityTypes.GetEntityType][google.cloud.dialogflow.v2.EntityTypes.GetEntityType] on the developer entity type
+        /// and merge.
         /// </summary>
         [pbr::OriginalName("ENTITY_OVERRIDE_MODE_SUPPLEMENT")] Supplement = 2,
       }
@@ -324,8 +331,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
+  /// The request message for [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
   public sealed partial class ListSessionEntityTypesRequest : pb::IMessage<ListSessionEntityTypesRequest> {
     private static readonly pb::MessageParser<ListSessionEntityTypesRequest> _parser = new pb::MessageParser<ListSessionEntityTypesRequest>(() => new ListSessionEntityTypesRequest());
@@ -524,8 +530,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
+  /// The response message for [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
   public sealed partial class ListSessionEntityTypesResponse : pb::IMessage<ListSessionEntityTypesResponse> {
     private static readonly pb::MessageParser<ListSessionEntityTypesResponse> _parser = new pb::MessageParser<ListSessionEntityTypesResponse>(() => new ListSessionEntityTypesResponse());
@@ -685,8 +690,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.GetSessionEntityType].
+  /// The request message for [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.GetSessionEntityType].
   /// </summary>
   public sealed partial class GetSessionEntityTypeRequest : pb::IMessage<GetSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<GetSessionEntityTypeRequest> _parser = new pb::MessageParser<GetSessionEntityTypeRequest>(() => new GetSessionEntityTypeRequest());
@@ -823,8 +827,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.CreateSessionEntityType].
+  /// The request message for [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.CreateSessionEntityType].
   /// </summary>
   public sealed partial class CreateSessionEntityTypeRequest : pb::IMessage<CreateSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<CreateSessionEntityTypeRequest> _parser = new pb::MessageParser<CreateSessionEntityTypeRequest>(() => new CreateSessionEntityTypeRequest());
@@ -997,8 +1000,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.UpdateSessionEntityType].
+  /// The request message for [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.UpdateSessionEntityType].
   /// </summary>
   public sealed partial class UpdateSessionEntityTypeRequest : pb::IMessage<UpdateSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<UpdateSessionEntityTypeRequest> _parser = new pb::MessageParser<UpdateSessionEntityTypeRequest>(() => new UpdateSessionEntityTypeRequest());
@@ -1178,8 +1180,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.DeleteSessionEntityType].
+  /// The request message for [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.v2.SessionEntityTypes.DeleteSessionEntityType].
   /// </summary>
   public sealed partial class DeleteSessionEntityTypeRequest : pb::IMessage<DeleteSessionEntityTypeRequest> {
     private static readonly pb::MessageParser<DeleteSessionEntityTypeRequest> _parser = new pb::MessageParser<DeleteSessionEntityTypeRequest>(() => new DeleteSessionEntityTypeRequest());

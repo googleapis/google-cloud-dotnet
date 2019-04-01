@@ -3,7 +3,7 @@
 //     source: google/cloud/dialogflow/v2/session.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+//
 #pragma warning disable 1591
 #region Designer generated code
 
@@ -25,10 +26,9 @@ using grpc = global::Grpc.Core;
 namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// A session represents an interaction with a user. You retrieve user input
-  /// and pass it to the
-  /// [DetectIntent][google.cloud.dialogflow.v2.Sessions.DetectIntent] (or
-  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent])
-  /// method to determine user intent and respond.
+  /// and pass it to the [DetectIntent][google.cloud.dialogflow.v2.Sessions.DetectIntent] (or
+  /// [StreamingDetectIntent][google.cloud.dialogflow.v2.Sessions.StreamingDetectIntent]) method to determine
+  /// user intent and respond.
   /// </summary>
   public static partial class Sessions
   {

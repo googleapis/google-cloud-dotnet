@@ -3,7 +3,7 @@
 //     source: google/cloud/dialogflow/v2/entity_type.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 1591
 #region Designer generated code
@@ -47,11 +48,11 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// *   **User** - entities that are built for an individual user such as
   ///     favorites, preferences, playlists, and so on. A user entity is
-  ///     represented by the
-  ///     [SessionEntityType][google.cloud.dialogflow.v2.SessionEntityType] type.
+  ///     represented by the [SessionEntityType][google.cloud.dialogflow.v2.SessionEntityType] type.
   ///
   /// For more information about entity types, see the
-  /// [Dialogflow documentation](https://dialogflow.com/docs/entities).
+  /// [Dialogflow
+  /// documentation](https://cloud.google.com/dialogflow-enterprise/docs/entities-overview).
   /// </summary>
   public static partial class EntityTypes
   {
@@ -209,9 +210,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -224,8 +223,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -236,8 +234,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
-      /// Creates multiple new entities in the specified entity type (extends the
-      /// existing collection of entries).
+      /// Creates multiple new entities in the specified entity type.
       ///
       /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
@@ -250,11 +247,11 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
-      /// Updates entities in the specified entity type (replaces the existing
-      /// collection of entries).
+      /// Updates or creates multiple entities in the specified entity type. This
+      /// method does not affect entities in the entity type that aren't explicitly
+      /// specified in the request.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -267,8 +264,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -526,9 +522,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -542,9 +536,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -556,9 +548,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -572,9 +562,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
-      /// Operation &lt;response:
-      /// [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -586,8 +574,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -601,8 +588,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -614,8 +600,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -629,8 +614,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -640,8 +624,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteEntityTypes, null, options, request);
       }
       /// <summary>
-      /// Creates multiple new entities in the specified entity type (extends the
-      /// existing collection of entries).
+      /// Creates multiple new entities in the specified entity type.
       ///
       /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
@@ -655,8 +638,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return BatchCreateEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates multiple new entities in the specified entity type (extends the
-      /// existing collection of entries).
+      /// Creates multiple new entities in the specified entity type.
       ///
       /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
@@ -668,8 +650,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateEntities, null, options, request);
       }
       /// <summary>
-      /// Creates multiple new entities in the specified entity type (extends the
-      /// existing collection of entries).
+      /// Creates multiple new entities in the specified entity type.
       ///
       /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
@@ -683,8 +664,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         return BatchCreateEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates multiple new entities in the specified entity type (extends the
-      /// existing collection of entries).
+      /// Creates multiple new entities in the specified entity type.
       ///
       /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
@@ -696,11 +676,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateEntities, null, options, request);
       }
       /// <summary>
-      /// Updates entities in the specified entity type (replaces the existing
-      /// collection of entries).
+      /// Updates or creates multiple entities in the specified entity type. This
+      /// method does not affect entities in the entity type that aren't explicitly
+      /// specified in the request.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -712,11 +692,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         return BatchUpdateEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates entities in the specified entity type (replaces the existing
-      /// collection of entries).
+      /// Updates or creates multiple entities in the specified entity type. This
+      /// method does not affect entities in the entity type that aren't explicitly
+      /// specified in the request.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -726,11 +706,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateEntities, null, options, request);
       }
       /// <summary>
-      /// Updates entities in the specified entity type (replaces the existing
-      /// collection of entries).
+      /// Updates or creates multiple entities in the specified entity type. This
+      /// method does not affect entities in the entity type that aren't explicitly
+      /// specified in the request.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -742,11 +722,11 @@ namespace Google.Cloud.Dialogflow.V2 {
         return BatchUpdateEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates entities in the specified entity type (replaces the existing
-      /// collection of entries).
+      /// Updates or creates multiple entities in the specified entity type. This
+      /// method does not affect entities in the entity type that aren't explicitly
+      /// specified in the request.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -758,8 +738,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -773,8 +752,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -786,8 +764,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -801,8 +778,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty],
-      ///            metadata: [google.protobuf.Struct][google.protobuf.Struct]>
+      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
