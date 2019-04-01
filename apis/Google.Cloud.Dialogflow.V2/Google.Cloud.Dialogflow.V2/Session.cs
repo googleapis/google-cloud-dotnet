@@ -26,97 +26,118 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9zZXNzaW9uLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MhocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90bxooZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvY29udGV4",
-            "dC5wcm90bxonZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvaW50ZW50LnBy",
-            "b3RvGjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9zZXNzaW9uX2VudGl0",
-            "eV90eXBlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGhdn",
-            "b29nbGUvcnBjL3N0YXR1cy5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnBy",
-            "b3RvIrsBChNEZXRlY3RJbnRlbnRSZXF1ZXN0Eg8KB3Nlc3Npb24YASABKAkS",
-            "QQoMcXVlcnlfcGFyYW1zGAIgASgLMisuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuUXVlcnlQYXJhbWV0ZXJzEjsKC3F1ZXJ5X2lucHV0GAMgASgLMiYu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlJbnB1dBITCgtpbnB1",
-            "dF9hdWRpbxgFIAEoDCKWAQoURGV0ZWN0SW50ZW50UmVzcG9uc2USEwoLcmVz",
-            "cG9uc2VfaWQYASABKAkSPQoMcXVlcnlfcmVzdWx0GAIgASgLMicuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlSZXN1bHQSKgoOd2ViaG9va19z",
-            "dGF0dXMYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1cyKVAgoPUXVlcnlQYXJh",
-            "bWV0ZXJzEhEKCXRpbWVfem9uZRgBIAEoCRIpCgxnZW9fbG9jYXRpb24YAiAB",
-            "KAsyEy5nb29nbGUudHlwZS5MYXRMbmcSNQoIY29udGV4dHMYAyADKAsyIy5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Db250ZXh0EhYKDnJlc2V0X2Nv",
-            "bnRleHRzGAQgASgIEksKFHNlc3Npb25fZW50aXR5X3R5cGVzGAUgAygLMi0u",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU2Vzc2lvbkVudGl0eVR5cGUS",
-            "KAoHcGF5bG9hZBgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QiywEK",
-            "ClF1ZXJ5SW5wdXQSRAoMYXVkaW9fY29uZmlnGAEgASgLMiwuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuSW5wdXRBdWRpb0NvbmZpZ0gAEjUKBHRleHQY",
-            "AiABKAsyJS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5UZXh0SW5wdXRI",
-            "ABI3CgVldmVudBgDIAEoCzImLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
-            "LkV2ZW50SW5wdXRIAEIHCgVpbnB1dCK4BAoLUXVlcnlSZXN1bHQSEgoKcXVl",
-            "cnlfdGV4dBgBIAEoCRIVCg1sYW5ndWFnZV9jb2RlGA8gASgJEiUKHXNwZWVj",
-            "aF9yZWNvZ25pdGlvbl9jb25maWRlbmNlGAIgASgCEg4KBmFjdGlvbhgDIAEo",
-            "CRIrCgpwYXJhbWV0ZXJzGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
-            "dBIjChthbGxfcmVxdWlyZWRfcGFyYW1zX3ByZXNlbnQYBSABKAgSGAoQZnVs",
-            "ZmlsbG1lbnRfdGV4dBgGIAEoCRJIChRmdWxmaWxsbWVudF9tZXNzYWdlcxgH",
-            "IAMoCzIqLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNz",
-            "YWdlEhYKDndlYmhvb2tfc291cmNlGAggASgJEjAKD3dlYmhvb2tfcGF5bG9h",
-            "ZBgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSPAoPb3V0cHV0X2Nv",
-            "bnRleHRzGAogAygLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29u",
-            "dGV4dBIyCgZpbnRlbnQYCyABKAsyIi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52Mi5JbnRlbnQSIwobaW50ZW50X2RldGVjdGlvbl9jb25maWRlbmNlGAwg",
-            "ASgCEjAKD2RpYWdub3N0aWNfaW5mbxgOIAEoCzIXLmdvb2dsZS5wcm90b2J1",
-            "Zi5TdHJ1Y3Qi3gEKHFN0cmVhbWluZ0RldGVjdEludGVudFJlcXVlc3QSDwoH",
-            "c2Vzc2lvbhgBIAEoCRJBCgxxdWVyeV9wYXJhbXMYAiABKAsyKy5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5RdWVyeVBhcmFtZXRlcnMSOwoLcXVlcnlf",
-            "aW5wdXQYAyABKAsyJi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5RdWVy",
-            "eUlucHV0EhgKEHNpbmdsZV91dHRlcmFuY2UYBCABKAgSEwoLaW5wdXRfYXVk",
-            "aW8YBiABKAwi8wEKHVN0cmVhbWluZ0RldGVjdEludGVudFJlc3BvbnNlEhMK",
-            "C3Jlc3BvbnNlX2lkGAEgASgJElIKEnJlY29nbml0aW9uX3Jlc3VsdBgCIAEo",
-            "CzI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0cmVhbWluZ1JlY29n",
-            "bml0aW9uUmVzdWx0Ej0KDHF1ZXJ5X3Jlc3VsdBgDIAEoCzInLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyLlF1ZXJ5UmVzdWx0EioKDndlYmhvb2tfc3Rh",
-            "dHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMiigIKGlN0cmVhbWluZ1Jl",
-            "Y29nbml0aW9uUmVzdWx0ElgKDG1lc3NhZ2VfdHlwZRgBIAEoDjJCLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0cmVhbWluZ1JlY29nbml0aW9uUmVz",
-            "dWx0Lk1lc3NhZ2VUeXBlEhIKCnRyYW5zY3JpcHQYAiABKAkSEAoIaXNfZmlu",
-            "YWwYAyABKAgSEgoKY29uZmlkZW5jZRgEIAEoAiJYCgtNZXNzYWdlVHlwZRIc",
-            "ChhNRVNTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpUUkFOU0NSSVBUEAES",
-            "GwoXRU5EX09GX1NJTkdMRV9VVFRFUkFOQ0UQAiKdAQoQSW5wdXRBdWRpb0Nv",
-            "bmZpZxJBCg5hdWRpb19lbmNvZGluZxgBIAEoDjIpLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLkF1ZGlvRW5jb2RpbmcSGQoRc2FtcGxlX3JhdGVfaGVy",
-            "dHoYAiABKAUSFQoNbGFuZ3VhZ2VfY29kZRgDIAEoCRIUCgxwaHJhc2VfaGlu",
-            "dHMYBCADKAkiMAoJVGV4dElucHV0EgwKBHRleHQYASABKAkSFQoNbGFuZ3Vh",
-            "Z2VfY29kZRgCIAEoCSJeCgpFdmVudElucHV0EgwKBG5hbWUYASABKAkSKwoK",
-            "cGFyYW1ldGVycxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSFQoN",
-            "bGFuZ3VhZ2VfY29kZRgDIAEoCSr7AQoNQXVkaW9FbmNvZGluZxIeChpBVURJ",
-            "T19FTkNPRElOR19VTlNQRUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJ",
-            "TkVBUl8xNhABEhcKE0FVRElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19F",
-            "TkNPRElOR19NVUxBVxADEhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFV",
-            "RElPX0VOQ09ESU5HX0FNUl9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19P",
-            "UFVTEAYSKQolQVVESU9fRU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllU",
-            "RRAHMtQCCghTZXNzaW9ucxK0AQoMRGV0ZWN0SW50ZW50Ei8uZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuRGV0ZWN0SW50ZW50UmVxdWVzdBowLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyLkRldGVjdEludGVudFJlc3BvbnNlIkGC",
-            "0+STAjsiNi92Mi97c2Vzc2lvbj1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25z",
-            "Lyp9OmRldGVjdEludGVudDoBKhKQAQoVU3RyZWFtaW5nRGV0ZWN0SW50ZW50",
-            "EjguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3RyZWFtaW5nRGV0ZWN0",
-            "SW50ZW50UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN0",
-            "cmVhbWluZ0RldGVjdEludGVudFJlc3BvbnNlKAEwAUKbAQoeY29tLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyQgxTZXNzaW9uUHJvdG9QAVpEZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFsb2dm",
-            "bG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFs",
-            "b2dmbG93LlYyYgZwcm90bzM="));
+            "aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxotZ29vZ2xl",
+            "L2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvYXVkaW9fY29uZmlnLnByb3RvGihnb29n",
+            "bGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9jb250ZXh0LnByb3RvGidnb29nbGUv",
+            "Y2xvdWQvZGlhbG9nZmxvdy92Mi9pbnRlbnQucHJvdG8aNGdvb2dsZS9jbG91",
+            "ZC9kaWFsb2dmbG93L3YyL3Nlc3Npb25fZW50aXR5X3R5cGUucHJvdG8aHGdv",
+            "b2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
+            "LnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8ihwIKE0RldGVjdElu",
+            "dGVudFJlcXVlc3QSDwoHc2Vzc2lvbhgBIAEoCRJBCgxxdWVyeV9wYXJhbXMY",
+            "AiABKAsyKy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5RdWVyeVBhcmFt",
+            "ZXRlcnMSOwoLcXVlcnlfaW5wdXQYAyABKAsyJi5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy52Mi5RdWVyeUlucHV0EkoKE291dHB1dF9hdWRpb19jb25maWcY",
+            "BCABKAsyLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRp",
+            "b0NvbmZpZxITCgtpbnB1dF9hdWRpbxgFIAEoDCL4AQoURGV0ZWN0SW50ZW50",
+            "UmVzcG9uc2USEwoLcmVzcG9uc2VfaWQYASABKAkSPQoMcXVlcnlfcmVzdWx0",
+            "GAIgASgLMicuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlSZXN1",
+            "bHQSKgoOd2ViaG9va19zdGF0dXMYAyABKAsyEi5nb29nbGUucnBjLlN0YXR1",
+            "cxIUCgxvdXRwdXRfYXVkaW8YBCABKAwSSgoTb3V0cHV0X2F1ZGlvX2NvbmZp",
+            "ZxgGIAEoCzItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk91dHB1dEF1",
+            "ZGlvQ29uZmlnIvwCCg9RdWVyeVBhcmFtZXRlcnMSEQoJdGltZV96b25lGAEg",
+            "ASgJEikKDGdlb19sb2NhdGlvbhgCIAEoCzITLmdvb2dsZS50eXBlLkxhdExu",
+            "ZxI1Cghjb250ZXh0cxgDIAMoCzIjLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LnYyLkNvbnRleHQSFgoOcmVzZXRfY29udGV4dHMYBCABKAgSSwoUc2Vzc2lv",
+            "bl9lbnRpdHlfdHlwZXMYBSADKAsyLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5TZXNzaW9uRW50aXR5VHlwZRIoCgdwYXlsb2FkGAYgASgLMhcuZ29v",
+            "Z2xlLnByb3RvYnVmLlN0cnVjdBJlCiFzZW50aW1lbnRfYW5hbHlzaXNfcmVx",
+            "dWVzdF9jb25maWcYCiABKAsyOi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5TZW50aW1lbnRBbmFseXNpc1JlcXVlc3RDb25maWciywEKClF1ZXJ5SW5w",
+            "dXQSRAoMYXVkaW9fY29uZmlnGAEgASgLMiwuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cudjIuSW5wdXRBdWRpb0NvbmZpZ0gAEjUKBHRleHQYAiABKAsyJS5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5UZXh0SW5wdXRIABI3CgVldmVu",
+            "dBgDIAEoCzImLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkV2ZW50SW5w",
+            "dXRIAEIHCgVpbnB1dCKQBQoLUXVlcnlSZXN1bHQSEgoKcXVlcnlfdGV4dBgB",
+            "IAEoCRIVCg1sYW5ndWFnZV9jb2RlGA8gASgJEiUKHXNwZWVjaF9yZWNvZ25p",
+            "dGlvbl9jb25maWRlbmNlGAIgASgCEg4KBmFjdGlvbhgDIAEoCRIrCgpwYXJh",
+            "bWV0ZXJzGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIjChthbGxf",
+            "cmVxdWlyZWRfcGFyYW1zX3ByZXNlbnQYBSABKAgSGAoQZnVsZmlsbG1lbnRf",
+            "dGV4dBgGIAEoCRJIChRmdWxmaWxsbWVudF9tZXNzYWdlcxgHIAMoCzIqLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkludGVudC5NZXNzYWdlEhYKDndl",
+            "Ymhvb2tfc291cmNlGAggASgJEjAKD3dlYmhvb2tfcGF5bG9hZBgJIAEoCzIX",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSPAoPb3V0cHV0X2NvbnRleHRzGAog",
+            "AygLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udGV4dBIyCgZp",
+            "bnRlbnQYCyABKAsyIi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRl",
+            "bnQSIwobaW50ZW50X2RldGVjdGlvbl9jb25maWRlbmNlGAwgASgCEjAKD2Rp",
+            "YWdub3N0aWNfaW5mbxgOIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QS",
+            "VgoZc2VudGltZW50X2FuYWx5c2lzX3Jlc3VsdBgRIAEoCzIzLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyLlNlbnRpbWVudEFuYWx5c2lzUmVzdWx0IqoC",
+            "ChxTdHJlYW1pbmdEZXRlY3RJbnRlbnRSZXF1ZXN0Eg8KB3Nlc3Npb24YASAB",
+            "KAkSQQoMcXVlcnlfcGFyYW1zGAIgASgLMisuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cudjIuUXVlcnlQYXJhbWV0ZXJzEjsKC3F1ZXJ5X2lucHV0GAMgASgL",
+            "MiYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlJbnB1dBIYChBz",
+            "aW5nbGVfdXR0ZXJhbmNlGAQgASgIEkoKE291dHB1dF9hdWRpb19jb25maWcY",
+            "BSABKAsyLS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRp",
+            "b0NvbmZpZxITCgtpbnB1dF9hdWRpbxgGIAEoDCLVAgodU3RyZWFtaW5nRGV0",
+            "ZWN0SW50ZW50UmVzcG9uc2USEwoLcmVzcG9uc2VfaWQYASABKAkSUgoScmVj",
+            "b2duaXRpb25fcmVzdWx0GAIgASgLMjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cudjIuU3RyZWFtaW5nUmVjb2duaXRpb25SZXN1bHQSPQoMcXVlcnlfcmVz",
+            "dWx0GAMgASgLMicuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUXVlcnlS",
+            "ZXN1bHQSKgoOd2ViaG9va19zdGF0dXMYBCABKAsyEi5nb29nbGUucnBjLlN0",
+            "YXR1cxIUCgxvdXRwdXRfYXVkaW8YBSABKAwSSgoTb3V0cHV0X2F1ZGlvX2Nv",
+            "bmZpZxgGIAEoCzItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk91dHB1",
+            "dEF1ZGlvQ29uZmlnIooCChpTdHJlYW1pbmdSZWNvZ25pdGlvblJlc3VsdBJY",
+            "CgxtZXNzYWdlX3R5cGUYASABKA4yQi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5TdHJlYW1pbmdSZWNvZ25pdGlvblJlc3VsdC5NZXNzYWdlVHlwZRIS",
+            "Cgp0cmFuc2NyaXB0GAIgASgJEhAKCGlzX2ZpbmFsGAMgASgIEhIKCmNvbmZp",
+            "ZGVuY2UYBCABKAIiWAoLTWVzc2FnZVR5cGUSHAoYTUVTU0FHRV9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASDgoKVFJBTlNDUklQVBABEhsKF0VORF9PRl9TSU5HTEVf",
+            "VVRURVJBTkNFEAIinQEKEElucHV0QXVkaW9Db25maWcSQQoOYXVkaW9fZW5j",
+            "b2RpbmcYASABKA4yKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5BdWRp",
+            "b0VuY29kaW5nEhkKEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFEhUKDWxhbmd1",
+            "YWdlX2NvZGUYAyABKAkSFAoMcGhyYXNlX2hpbnRzGAQgAygJIjAKCVRleHRJ",
+            "bnB1dBIMCgR0ZXh0GAEgASgJEhUKDWxhbmd1YWdlX2NvZGUYAiABKAkiXgoK",
+            "RXZlbnRJbnB1dBIMCgRuYW1lGAEgASgJEisKCnBhcmFtZXRlcnMYAiABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0EhUKDWxhbmd1YWdlX2NvZGUYAyAB",
+            "KAkiRgoeU2VudGltZW50QW5hbHlzaXNSZXF1ZXN0Q29uZmlnEiQKHGFuYWx5",
+            "emVfcXVlcnlfdGV4dF9zZW50aW1lbnQYASABKAgiXgoXU2VudGltZW50QW5h",
+            "bHlzaXNSZXN1bHQSQwoUcXVlcnlfdGV4dF9zZW50aW1lbnQYASABKAsyJS5n",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TZW50aW1lbnQiLQoJU2VudGlt",
+            "ZW50Eg0KBXNjb3JlGAEgASgCEhEKCW1hZ25pdHVkZRgCIAEoAir7AQoNQXVk",
+            "aW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEhwK",
+            "GEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcKE0FVRElPX0VOQ09ESU5H",
+            "X0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxBVxADEhYKEkFVRElPX0VO",
+            "Q09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5HX0FNUl9XQhAFEhsKF0FV",
+            "RElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVESU9fRU5DT0RJTkdfU1BF",
+            "RVhfV0lUSF9IRUFERVJfQllURRAHMtYCCghTZXNzaW9ucxK0AQoMRGV0ZWN0",
+            "SW50ZW50Ei8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuRGV0ZWN0SW50",
+            "ZW50UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkRldGVj",
+            "dEludGVudFJlc3BvbnNlIkGC0+STAjsiNi92Mi97c2Vzc2lvbj1wcm9qZWN0",
+            "cy8qL2FnZW50L3Nlc3Npb25zLyp9OmRldGVjdEludGVudDoBKhKSAQoVU3Ry",
+            "ZWFtaW5nRGV0ZWN0SW50ZW50EjguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuU3RyZWFtaW5nRGV0ZWN0SW50ZW50UmVxdWVzdBo5Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLlN0cmVhbWluZ0RldGVjdEludGVudFJlc3BvbnNl",
+            "IgAoATABQpsBCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCDFNl",
+            "c3Npb25Qcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRG",
+            "qgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DetectIntentRequest), global::Google.Cloud.Dialogflow.V2.DetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "InputAudio" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DetectIntentResponse), global::Google.Cloud.Dialogflow.V2.DetectIntentResponse.Parser, new[]{ "ResponseId", "QueryResult", "WebhookStatus" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.QueryParameters), global::Google.Cloud.Dialogflow.V2.QueryParameters.Parser, new[]{ "TimeZone", "GeoLocation", "Contexts", "ResetContexts", "SessionEntityTypes", "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DetectIntentRequest), global::Google.Cloud.Dialogflow.V2.DetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "OutputAudioConfig", "InputAudio" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DetectIntentResponse), global::Google.Cloud.Dialogflow.V2.DetectIntentResponse.Parser, new[]{ "ResponseId", "QueryResult", "WebhookStatus", "OutputAudio", "OutputAudioConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.QueryParameters), global::Google.Cloud.Dialogflow.V2.QueryParameters.Parser, new[]{ "TimeZone", "GeoLocation", "Contexts", "ResetContexts", "SessionEntityTypes", "Payload", "SentimentAnalysisRequestConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.QueryInput), global::Google.Cloud.Dialogflow.V2.QueryInput.Parser, new[]{ "AudioConfig", "Text", "Event" }, new[]{ "Input" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.QueryResult), global::Google.Cloud.Dialogflow.V2.QueryResult.Parser, new[]{ "QueryText", "LanguageCode", "SpeechRecognitionConfidence", "Action", "Parameters", "AllRequiredParamsPresent", "FulfillmentText", "FulfillmentMessages", "WebhookSource", "WebhookPayload", "OutputContexts", "Intent", "IntentDetectionConfidence", "DiagnosticInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "SingleUtterance", "InputAudio" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse.Parser, new[]{ "ResponseId", "RecognitionResult", "QueryResult", "WebhookStatus" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.QueryResult), global::Google.Cloud.Dialogflow.V2.QueryResult.Parser, new[]{ "QueryText", "LanguageCode", "SpeechRecognitionConfidence", "Action", "Parameters", "AllRequiredParamsPresent", "FulfillmentText", "FulfillmentMessages", "WebhookSource", "WebhookPayload", "OutputContexts", "Intent", "IntentDetectionConfidence", "DiagnosticInfo", "SentimentAnalysisResult" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "SingleUtterance", "OutputAudioConfig", "InputAudio" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse), global::Google.Cloud.Dialogflow.V2.StreamingDetectIntentResponse.Parser, new[]{ "ResponseId", "RecognitionResult", "QueryResult", "WebhookStatus", "OutputAudio", "OutputAudioConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult), global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult.Parser, new[]{ "MessageType", "Transcript", "IsFinal", "Confidence" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.StreamingRecognitionResult.Types.MessageType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "PhraseHints" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.TextInput), global::Google.Cloud.Dialogflow.V2.TextInput.Parser, new[]{ "Text", "LanguageCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EventInput), global::Google.Cloud.Dialogflow.V2.EventInput.Parser, new[]{ "Name", "Parameters", "LanguageCode" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.EventInput), global::Google.Cloud.Dialogflow.V2.EventInput.Parser, new[]{ "Name", "Parameters", "LanguageCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig), global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig.Parser, new[]{ "AnalyzeQueryTextSentiment" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult), global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult.Parser, new[]{ "QueryTextSentiment" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Sentiment), global::Google.Cloud.Dialogflow.V2.Sentiment.Parser, new[]{ "Score", "Magnitude" }, null, null, null)
           }));
     }
     #endregion
@@ -125,7 +146,9 @@ namespace Google.Cloud.Dialogflow.V2 {
   #region Enums
   /// <summary>
   /// Audio encoding of the audio content sent in the conversational query request.
-  /// Refer to the [Cloud Speech API documentation](/speech/docs/basics) for more
+  /// Refer to the
+  /// [Cloud Speech API
+  /// documentation](https://cloud.google.com/speech-to-text/docs/basics) for more
   /// details.
   /// </summary>
   public enum AudioEncoding {
@@ -215,6 +238,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       session_ = other.session_;
       queryParams_ = other.queryParams_ != null ? other.queryParams_.Clone() : null;
       queryInput_ = other.queryInput_ != null ? other.queryInput_.Clone() : null;
+      outputAudioConfig_ = other.outputAudioConfig_ != null ? other.outputAudioConfig_.Clone() : null;
       inputAudio_ = other.inputAudio_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -277,6 +301,22 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "output_audio_config" field.</summary>
+    public const int OutputAudioConfigFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.V2.OutputAudioConfig outputAudioConfig_;
+    /// <summary>
+    /// Optional. Instructs the speech synthesizer how to generate the output
+    /// audio. If this field is not set and agent-level speech synthesizer is not
+    /// configured, no output audio is generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.OutputAudioConfig OutputAudioConfig {
+      get { return outputAudioConfig_; }
+      set {
+        outputAudioConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "input_audio" field.</summary>
     public const int InputAudioFieldNumber = 5;
     private pb::ByteString inputAudio_ = pb::ByteString.Empty;
@@ -309,6 +349,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Session != other.Session) return false;
       if (!object.Equals(QueryParams, other.QueryParams)) return false;
       if (!object.Equals(QueryInput, other.QueryInput)) return false;
+      if (!object.Equals(OutputAudioConfig, other.OutputAudioConfig)) return false;
       if (InputAudio != other.InputAudio) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -319,6 +360,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (Session.Length != 0) hash ^= Session.GetHashCode();
       if (queryParams_ != null) hash ^= QueryParams.GetHashCode();
       if (queryInput_ != null) hash ^= QueryInput.GetHashCode();
+      if (outputAudioConfig_ != null) hash ^= OutputAudioConfig.GetHashCode();
       if (InputAudio.Length != 0) hash ^= InputAudio.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -345,6 +387,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(QueryInput);
       }
+      if (outputAudioConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(OutputAudioConfig);
+      }
       if (InputAudio.Length != 0) {
         output.WriteRawTag(42);
         output.WriteBytes(InputAudio);
@@ -365,6 +411,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (queryInput_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryInput);
+      }
+      if (outputAudioConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputAudioConfig);
       }
       if (InputAudio.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(InputAudio);
@@ -394,6 +443,12 @@ namespace Google.Cloud.Dialogflow.V2 {
           queryInput_ = new global::Google.Cloud.Dialogflow.V2.QueryInput();
         }
         QueryInput.MergeFrom(other.QueryInput);
+      }
+      if (other.outputAudioConfig_ != null) {
+        if (outputAudioConfig_ == null) {
+          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+        }
+        OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
       if (other.InputAudio.Length != 0) {
         InputAudio = other.InputAudio;
@@ -425,6 +480,13 @@ namespace Google.Cloud.Dialogflow.V2 {
               queryInput_ = new global::Google.Cloud.Dialogflow.V2.QueryInput();
             }
             input.ReadMessage(queryInput_);
+            break;
+          }
+          case 34: {
+            if (outputAudioConfig_ == null) {
+              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+            }
+            input.ReadMessage(outputAudioConfig_);
             break;
           }
           case 42: {
@@ -468,6 +530,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       responseId_ = other.responseId_;
       queryResult_ = other.queryResult_ != null ? other.queryResult_.Clone() : null;
       webhookStatus_ = other.webhookStatus_ != null ? other.webhookStatus_.Clone() : null;
+      outputAudio_ = other.outputAudio_;
+      outputAudioConfig_ = other.outputAudioConfig_ != null ? other.outputAudioConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -495,7 +559,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int QueryResultFieldNumber = 2;
     private global::Google.Cloud.Dialogflow.V2.QueryResult queryResult_;
     /// <summary>
-    /// The results of the conversational query or event processing.
+    /// The selected results of the conversational query or event processing.
+    /// See `alternative_query_results` for additional potential results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.QueryResult QueryResult {
@@ -509,14 +574,46 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int WebhookStatusFieldNumber = 3;
     private global::Google.Rpc.Status webhookStatus_;
     /// <summary>
-    /// Specifies the status of the webhook request. `webhook_status`
-    /// is never populated in webhook requests.
+    /// Specifies the status of the webhook request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status WebhookStatus {
       get { return webhookStatus_; }
       set {
         webhookStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "output_audio" field.</summary>
+    public const int OutputAudioFieldNumber = 4;
+    private pb::ByteString outputAudio_ = pb::ByteString.Empty;
+    /// <summary>
+    /// The audio data bytes encoded as specified in the request.
+    /// Note: The output audio is generated based on the values of default platform
+    /// text responses found in the `query_result.fulfillment_messages` field. If
+    /// multiple default text responses exist, they will be concatenated when
+    /// generating audio. If no default platform text responses exist, the
+    /// generated audio content will be empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString OutputAudio {
+      get { return outputAudio_; }
+      set {
+        outputAudio_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "output_audio_config" field.</summary>
+    public const int OutputAudioConfigFieldNumber = 6;
+    private global::Google.Cloud.Dialogflow.V2.OutputAudioConfig outputAudioConfig_;
+    /// <summary>
+    /// The config used by the speech synthesizer to generate the output audio.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.OutputAudioConfig OutputAudioConfig {
+      get { return outputAudioConfig_; }
+      set {
+        outputAudioConfig_ = value;
       }
     }
 
@@ -536,6 +633,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (ResponseId != other.ResponseId) return false;
       if (!object.Equals(QueryResult, other.QueryResult)) return false;
       if (!object.Equals(WebhookStatus, other.WebhookStatus)) return false;
+      if (OutputAudio != other.OutputAudio) return false;
+      if (!object.Equals(OutputAudioConfig, other.OutputAudioConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -545,6 +644,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (ResponseId.Length != 0) hash ^= ResponseId.GetHashCode();
       if (queryResult_ != null) hash ^= QueryResult.GetHashCode();
       if (webhookStatus_ != null) hash ^= WebhookStatus.GetHashCode();
+      if (OutputAudio.Length != 0) hash ^= OutputAudio.GetHashCode();
+      if (outputAudioConfig_ != null) hash ^= OutputAudioConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -570,6 +671,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(WebhookStatus);
       }
+      if (OutputAudio.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(OutputAudio);
+      }
+      if (outputAudioConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(OutputAudioConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -586,6 +695,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (webhookStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebhookStatus);
+      }
+      if (OutputAudio.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(OutputAudio);
+      }
+      if (outputAudioConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputAudioConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -612,6 +727,15 @@ namespace Google.Cloud.Dialogflow.V2 {
           webhookStatus_ = new global::Google.Rpc.Status();
         }
         WebhookStatus.MergeFrom(other.WebhookStatus);
+      }
+      if (other.OutputAudio.Length != 0) {
+        OutputAudio = other.OutputAudio;
+      }
+      if (other.outputAudioConfig_ != null) {
+        if (outputAudioConfig_ == null) {
+          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+        }
+        OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -640,6 +764,17 @@ namespace Google.Cloud.Dialogflow.V2 {
               webhookStatus_ = new global::Google.Rpc.Status();
             }
             input.ReadMessage(webhookStatus_);
+            break;
+          }
+          case 34: {
+            OutputAudio = input.ReadBytes();
+            break;
+          }
+          case 50: {
+            if (outputAudioConfig_ == null) {
+              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+            }
+            input.ReadMessage(outputAudioConfig_);
             break;
           }
         }
@@ -682,6 +817,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       resetContexts_ = other.resetContexts_;
       sessionEntityTypes_ = other.sessionEntityTypes_.Clone();
       payload_ = other.payload_ != null ? other.payload_.Clone() : null;
+      sentimentAnalysisRequestConfig_ = other.sentimentAnalysisRequestConfig_ != null ? other.sentimentAnalysisRequestConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -756,9 +892,9 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dialogflow.V2.SessionEntityType.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SessionEntityType> sessionEntityTypes_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SessionEntityType>();
     /// <summary>
-    /// Optional. The collection of session entity types to replace or extend
-    /// developer entities with for this query only. The entity synonyms apply
-    /// to all languages.
+    /// Optional. Additional session entity types to replace or extend developer
+    /// entity types with. The entity synonyms apply to all languages and persist
+    /// for the session of this query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.SessionEntityType> SessionEntityTypes {
@@ -777,6 +913,21 @@ namespace Google.Cloud.Dialogflow.V2 {
       get { return payload_; }
       set {
         payload_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sentiment_analysis_request_config" field.</summary>
+    public const int SentimentAnalysisRequestConfigFieldNumber = 10;
+    private global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig_;
+    /// <summary>
+    /// Optional. Configures the type of sentiment analysis to perform. If not
+    /// provided, sentiment analysis is not performed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig SentimentAnalysisRequestConfig {
+      get { return sentimentAnalysisRequestConfig_; }
+      set {
+        sentimentAnalysisRequestConfig_ = value;
       }
     }
 
@@ -799,6 +950,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (ResetContexts != other.ResetContexts) return false;
       if(!sessionEntityTypes_.Equals(other.sessionEntityTypes_)) return false;
       if (!object.Equals(Payload, other.Payload)) return false;
+      if (!object.Equals(SentimentAnalysisRequestConfig, other.SentimentAnalysisRequestConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -811,6 +963,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (ResetContexts != false) hash ^= ResetContexts.GetHashCode();
       hash ^= sessionEntityTypes_.GetHashCode();
       if (payload_ != null) hash ^= Payload.GetHashCode();
+      if (sentimentAnalysisRequestConfig_ != null) hash ^= SentimentAnalysisRequestConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -842,6 +995,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(Payload);
       }
+      if (sentimentAnalysisRequestConfig_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(SentimentAnalysisRequestConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -863,6 +1020,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       size += sessionEntityTypes_.CalculateSize(_repeated_sessionEntityTypes_codec);
       if (payload_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
+      }
+      if (sentimentAnalysisRequestConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SentimentAnalysisRequestConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -894,6 +1054,12 @@ namespace Google.Cloud.Dialogflow.V2 {
           payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Payload.MergeFrom(other.Payload);
+      }
+      if (other.sentimentAnalysisRequestConfig_ != null) {
+        if (sentimentAnalysisRequestConfig_ == null) {
+          sentimentAnalysisRequestConfig_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig();
+        }
+        SentimentAnalysisRequestConfig.MergeFrom(other.SentimentAnalysisRequestConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -934,6 +1100,13 @@ namespace Google.Cloud.Dialogflow.V2 {
               payload_ = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
             input.ReadMessage(payload_);
+            break;
+          }
+          case 82: {
+            if (sentimentAnalysisRequestConfig_ == null) {
+              sentimentAnalysisRequestConfig_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisRequestConfig();
+            }
+            input.ReadMessage(sentimentAnalysisRequestConfig_);
             break;
           }
         }
@@ -1246,6 +1419,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       intent_ = other.intent_ != null ? other.intent_.Clone() : null;
       intentDetectionConfidence_ = other.intentDetectionConfidence_;
       diagnosticInfo_ = other.diagnosticInfo_ != null ? other.diagnosticInfo_.Clone() : null;
+      sentimentAnalysisResult_ = other.sentimentAnalysisResult_ != null ? other.sentimentAnalysisResult_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1279,7 +1453,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string languageCode_ = "";
     /// <summary>
     /// The language that was triggered during intent detection.
-    /// See [Language Support](https://dialogflow.com/docs/reference/language)
+    /// See [Language
+    /// Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
     /// for a list of the currently supported language codes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1299,10 +1474,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// correct. The default of 0.0 is a sentinel value indicating that confidence
     /// was not set.
     ///
-    /// You should not rely on this field as it isn't guaranteed to be accurate, or
-    /// even set. In particular this field isn't set in Webhook calls and for
-    /// StreamingDetectIntent since the streaming endpoint has separate confidence
-    /// estimates per portion of the audio in StreamingRecognitionResult.
+    /// This field is not guaranteed to be accurate or set. In particular this
+    /// field isn't set for StreamingDetectIntent since the streaming endpoint has
+    /// separate confidence estimates per portion of the audio in
+    /// StreamingRecognitionResult.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float SpeechRecognitionConfidence {
@@ -1363,6 +1538,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string fulfillmentText_ = "";
     /// <summary>
     /// The text to be pronounced to the user or shown on the screen.
+    /// Note: This is a legacy field, `fulfillment_messages` should be preferred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FulfillmentText {
@@ -1453,6 +1629,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// The intent detection confidence. Values range from 0.0
     /// (completely uncertain) to 1.0 (completely certain).
+    /// If there are `multiple knowledge_answers` messages, this value is set to
+    /// the greatest `knowledgeAnswers.match_confidence` value in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float IntentDetectionConfidence {
@@ -1466,14 +1644,30 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int DiagnosticInfoFieldNumber = 14;
     private global::Google.Protobuf.WellKnownTypes.Struct diagnosticInfo_;
     /// <summary>
-    /// The free-form diagnostic info. For example, this field
-    /// could contain webhook call latency.
+    /// The free-form diagnostic info. For example, this field could contain
+    /// webhook call latency. The string keys of the Struct's fields map can change
+    /// without notice.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct DiagnosticInfo {
       get { return diagnosticInfo_; }
       set {
         diagnosticInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sentiment_analysis_result" field.</summary>
+    public const int SentimentAnalysisResultFieldNumber = 17;
+    private global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult sentimentAnalysisResult_;
+    /// <summary>
+    /// The sentiment analysis result, which depends on the
+    /// `sentiment_analysis_request_config` specified in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult SentimentAnalysisResult {
+      get { return sentimentAnalysisResult_; }
+      set {
+        sentimentAnalysisResult_ = value;
       }
     }
 
@@ -1504,6 +1698,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (!object.Equals(Intent, other.Intent)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(IntentDetectionConfidence, other.IntentDetectionConfidence)) return false;
       if (!object.Equals(DiagnosticInfo, other.DiagnosticInfo)) return false;
+      if (!object.Equals(SentimentAnalysisResult, other.SentimentAnalysisResult)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1524,6 +1719,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (intent_ != null) hash ^= Intent.GetHashCode();
       if (IntentDetectionConfidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(IntentDetectionConfidence);
       if (diagnosticInfo_ != null) hash ^= DiagnosticInfo.GetHashCode();
+      if (sentimentAnalysisResult_ != null) hash ^= SentimentAnalysisResult.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1587,6 +1783,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(122);
         output.WriteString(LanguageCode);
       }
+      if (sentimentAnalysisResult_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(SentimentAnalysisResult);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1632,6 +1832,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (diagnosticInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiagnosticInfo);
+      }
+      if (sentimentAnalysisResult_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SentimentAnalysisResult);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1693,6 +1896,12 @@ namespace Google.Cloud.Dialogflow.V2 {
           diagnosticInfo_ = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         DiagnosticInfo.MergeFrom(other.DiagnosticInfo);
+      }
+      if (other.sentimentAnalysisResult_ != null) {
+        if (sentimentAnalysisResult_ == null) {
+          sentimentAnalysisResult_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult();
+        }
+        SentimentAnalysisResult.MergeFrom(other.SentimentAnalysisResult);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1773,6 +1982,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             LanguageCode = input.ReadString();
             break;
           }
+          case 138: {
+            if (sentimentAnalysisResult_ == null) {
+              sentimentAnalysisResult_ = new global::Google.Cloud.Dialogflow.V2.SentimentAnalysisResult();
+            }
+            input.ReadMessage(sentimentAnalysisResult_);
+            break;
+          }
         }
       }
     }
@@ -1786,8 +2002,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Multiple request messages should be sent in order:
   ///
   /// 1.  The first message must contain `session`, `query_input` plus optionally
-  ///     `query_params` and/or `single_utterance`. The message must not contain
-  ///     `input_audio`.
+  ///     `query_params` and/or `single_utterance`. The message must not contain `input_audio`.
   ///
   /// 2.  If `query_input` was set to a streaming input audio config,
   ///     all subsequent messages must contain only `input_audio`.
@@ -1822,6 +2037,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       queryParams_ = other.queryParams_ != null ? other.queryParams_.Clone() : null;
       queryInput_ = other.queryInput_ != null ? other.queryInput_.Clone() : null;
       singleUtterance_ = other.singleUtterance_;
+      outputAudioConfig_ = other.outputAudioConfig_ != null ? other.outputAudioConfig_.Clone() : null;
       inputAudio_ = other.inputAudio_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1838,7 +2054,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The name of the session the query is sent to.
     /// Format of the session name:
     /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>`. It’s up to the API
-    /// caller to choose an appropriate &lt;Session ID>. It can be a random number or
+    /// caller to choose an appropriate `Session ID`. It can be a random number or
     /// some type of user identifier (preferably hashed). The length of the session
     /// ID must not exceed 36 characters.
     /// </summary>
@@ -1906,6 +2122,22 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "output_audio_config" field.</summary>
+    public const int OutputAudioConfigFieldNumber = 5;
+    private global::Google.Cloud.Dialogflow.V2.OutputAudioConfig outputAudioConfig_;
+    /// <summary>
+    /// Optional. Instructs the speech synthesizer how to generate the output
+    /// audio. If this field is not set and agent-level speech synthesizer is not
+    /// configured, no output audio is generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.OutputAudioConfig OutputAudioConfig {
+      get { return outputAudioConfig_; }
+      set {
+        outputAudioConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "input_audio" field.</summary>
     public const int InputAudioFieldNumber = 6;
     private pb::ByteString inputAudio_ = pb::ByteString.Empty;
@@ -1939,6 +2171,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (!object.Equals(QueryParams, other.QueryParams)) return false;
       if (!object.Equals(QueryInput, other.QueryInput)) return false;
       if (SingleUtterance != other.SingleUtterance) return false;
+      if (!object.Equals(OutputAudioConfig, other.OutputAudioConfig)) return false;
       if (InputAudio != other.InputAudio) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1950,6 +2183,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (queryParams_ != null) hash ^= QueryParams.GetHashCode();
       if (queryInput_ != null) hash ^= QueryInput.GetHashCode();
       if (SingleUtterance != false) hash ^= SingleUtterance.GetHashCode();
+      if (outputAudioConfig_ != null) hash ^= OutputAudioConfig.GetHashCode();
       if (InputAudio.Length != 0) hash ^= InputAudio.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1980,6 +2214,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(32);
         output.WriteBool(SingleUtterance);
       }
+      if (outputAudioConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(OutputAudioConfig);
+      }
       if (InputAudio.Length != 0) {
         output.WriteRawTag(50);
         output.WriteBytes(InputAudio);
@@ -2003,6 +2241,9 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (SingleUtterance != false) {
         size += 1 + 1;
+      }
+      if (outputAudioConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputAudioConfig);
       }
       if (InputAudio.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(InputAudio);
@@ -2035,6 +2276,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.SingleUtterance != false) {
         SingleUtterance = other.SingleUtterance;
+      }
+      if (other.outputAudioConfig_ != null) {
+        if (outputAudioConfig_ == null) {
+          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+        }
+        OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
       if (other.InputAudio.Length != 0) {
         InputAudio = other.InputAudio;
@@ -2070,6 +2317,13 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 32: {
             SingleUtterance = input.ReadBool();
+            break;
+          }
+          case 42: {
+            if (outputAudioConfig_ == null) {
+              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+            }
+            input.ReadMessage(outputAudioConfig_);
             break;
           }
           case 50: {
@@ -2125,6 +2379,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       recognitionResult_ = other.recognitionResult_ != null ? other.recognitionResult_.Clone() : null;
       queryResult_ = other.queryResult_ != null ? other.queryResult_.Clone() : null;
       webhookStatus_ = other.webhookStatus_ != null ? other.webhookStatus_.Clone() : null;
+      outputAudio_ = other.outputAudio_;
+      outputAudioConfig_ = other.outputAudioConfig_ != null ? other.outputAudioConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2190,6 +2446,36 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "output_audio" field.</summary>
+    public const int OutputAudioFieldNumber = 5;
+    private pb::ByteString outputAudio_ = pb::ByteString.Empty;
+    /// <summary>
+    /// The audio data bytes encoded as specified in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString OutputAudio {
+      get { return outputAudio_; }
+      set {
+        outputAudio_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "output_audio_config" field.</summary>
+    public const int OutputAudioConfigFieldNumber = 6;
+    private global::Google.Cloud.Dialogflow.V2.OutputAudioConfig outputAudioConfig_;
+    /// <summary>
+    /// Instructs the speech synthesizer how to generate the output audio. This
+    /// field is populated from the agent-level speech synthesizer configuration,
+    /// if enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.OutputAudioConfig OutputAudioConfig {
+      get { return outputAudioConfig_; }
+      set {
+        outputAudioConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as StreamingDetectIntentResponse);
@@ -2207,6 +2493,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (!object.Equals(RecognitionResult, other.RecognitionResult)) return false;
       if (!object.Equals(QueryResult, other.QueryResult)) return false;
       if (!object.Equals(WebhookStatus, other.WebhookStatus)) return false;
+      if (OutputAudio != other.OutputAudio) return false;
+      if (!object.Equals(OutputAudioConfig, other.OutputAudioConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2217,6 +2505,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (recognitionResult_ != null) hash ^= RecognitionResult.GetHashCode();
       if (queryResult_ != null) hash ^= QueryResult.GetHashCode();
       if (webhookStatus_ != null) hash ^= WebhookStatus.GetHashCode();
+      if (OutputAudio.Length != 0) hash ^= OutputAudio.GetHashCode();
+      if (outputAudioConfig_ != null) hash ^= OutputAudioConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2246,6 +2536,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(34);
         output.WriteMessage(WebhookStatus);
       }
+      if (OutputAudio.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(OutputAudio);
+      }
+      if (outputAudioConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(OutputAudioConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2265,6 +2563,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (webhookStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebhookStatus);
+      }
+      if (OutputAudio.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(OutputAudio);
+      }
+      if (outputAudioConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputAudioConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2297,6 +2601,15 @@ namespace Google.Cloud.Dialogflow.V2 {
           webhookStatus_ = new global::Google.Rpc.Status();
         }
         WebhookStatus.MergeFrom(other.WebhookStatus);
+      }
+      if (other.OutputAudio.Length != 0) {
+        OutputAudio = other.OutputAudio;
+      }
+      if (other.outputAudioConfig_ != null) {
+        if (outputAudioConfig_ == null) {
+          outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+        }
+        OutputAudioConfig.MergeFrom(other.OutputAudioConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2334,6 +2647,17 @@ namespace Google.Cloud.Dialogflow.V2 {
             input.ReadMessage(webhookStatus_);
             break;
           }
+          case 42: {
+            OutputAudio = input.ReadBytes();
+            break;
+          }
+          case 50: {
+            if (outputAudioConfig_ == null) {
+              outputAudioConfig_ = new global::Google.Cloud.Dialogflow.V2.OutputAudioConfig();
+            }
+            input.ReadMessage(outputAudioConfig_);
+            break;
+          }
         }
       }
     }
@@ -2360,7 +2684,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// 6.  transcript: " that is"
   ///
-  /// 7.  recognition_event_type: `RECOGNITION_EVENT_END_OF_SINGLE_UTTERANCE`
+  /// 7.  message_type: `MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE`
   ///
   /// 8.  transcript: " that is the question"
   ///     is_final: true
@@ -2373,7 +2697,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// *  for `MESSAGE_TYPE_TRANSCRIPT`: `transcript` and possibly `is_final`.
   ///
-  /// *  for `MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE`: only `event_type`.
+  /// *  for `MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE`: only `message_type`.
   /// </summary>
   public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult> {
     private static readonly pb::MessageParser<StreamingRecognitionResult> _parser = new pb::MessageParser<StreamingRecognitionResult>(() => new StreamingRecognitionResult());
@@ -2431,7 +2755,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string transcript_ = "";
     /// <summary>
     /// Transcript text representing the words that the user spoke.
-    /// Populated if and only if `event_type` = `RECOGNITION_EVENT_TRANSCRIPT`.
+    /// Populated if and only if `message_type` = `MESSAGE_TYPE_TRANSCRIPT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Transcript {
@@ -2445,11 +2769,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int IsFinalFieldNumber = 3;
     private bool isFinal_;
     /// <summary>
-    /// The default of 0.0 is a sentinel value indicating `confidence` was not set.
     /// If `false`, the `StreamingRecognitionResult` represents an
     /// interim result that may change. If `true`, the recognizer will not return
     /// any further hypotheses about this piece of the audio. May only be populated
-    /// for `event_type` = `RECOGNITION_EVENT_TRANSCRIPT`.
+    /// for `message_type` = `MESSAGE_TYPE_TRANSCRIPT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsFinal {
@@ -2701,8 +3024,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     private int sampleRateHertz_;
     /// <summary>
     /// Required. Sample rate (in Hertz) of the audio content sent in the query.
-    /// Refer to [Cloud Speech API documentation](/speech/docs/basics) for more
-    /// details.
+    /// Refer to
+    /// [Cloud Speech API
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics) for
+    /// more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SampleRateHertz {
@@ -2718,9 +3043,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The language of the supplied audio. Dialogflow does not do
     /// translations. See [Language
-    /// Support](https://dialogflow.com/docs/languages) for a list of the
-    /// currently supported language codes. Note that queries in the same session
-    /// do not necessarily need to specify the same language.
+    /// Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// for a list of the currently supported language codes. Note that queries in
+    /// the same session do not necessarily need to specify the same language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -2738,7 +3063,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The collection of phrase hints which are used to boost accuracy
     /// of speech recognition.
-    /// Refer to [Cloud Speech API documentation](/speech/docs/basics#phrase-hints)
+    /// Refer to
+    /// [Cloud Speech API
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
     /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2914,7 +3241,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string text_ = "";
     /// <summary>
     /// Required. The UTF-8 encoded natural language text to be processed.
-    /// Text length must not exceed 256 bytes.
+    /// Text length must not exceed 256 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -2929,9 +3256,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string languageCode_ = "";
     /// <summary>
     /// Required. The language of this conversational query. See [Language
-    /// Support](https://dialogflow.com/docs/languages) for a list of the
-    /// currently supported language codes. Note that queries in the same session
-    /// do not necessarily need to specify the same language.
+    /// Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// for a list of the currently supported language codes. Note that queries in
+    /// the same session do not necessarily need to specify the same language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -3043,10 +3370,10 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   /// <summary>
   /// Events allow for matching intents by event name instead of the natural
-  /// language input. For instance, input `&lt;event: { name: “welcome_event”,
-  /// parameters: { name: “Sam” } }>` can trigger a personalized welcome response.
+  /// language input. For instance, input `&lt;event: { name: "welcome_event",
+  /// parameters: { name: "Sam" } }>` can trigger a personalized welcome response.
   /// The parameter `name` may be used by the agent in the response:
-  /// `“Hello #welcome_event.name! What can I do for you today?”`.
+  /// `"Hello #welcome_event.name! What can I do for you today?"`.
   /// </summary>
   public sealed partial class EventInput : pb::IMessage<EventInput> {
     private static readonly pb::MessageParser<EventInput> _parser = new pb::MessageParser<EventInput>(() => new EventInput());
@@ -3117,9 +3444,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string languageCode_ = "";
     /// <summary>
     /// Required. The language of this query. See [Language
-    /// Support](https://dialogflow.com/docs/languages) for a list of the
-    /// currently supported language codes. Note that queries in the same session
-    /// do not necessarily need to specify the same language.
+    /// Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// for a list of the currently supported language codes. Note that queries in
+    /// the same session do not necessarily need to specify the same language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -3243,6 +3570,454 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 26: {
             LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Configures the types of sentiment analysis to perform.
+  /// </summary>
+  public sealed partial class SentimentAnalysisRequestConfig : pb::IMessage<SentimentAnalysisRequestConfig> {
+    private static readonly pb::MessageParser<SentimentAnalysisRequestConfig> _parser = new pb::MessageParser<SentimentAnalysisRequestConfig>(() => new SentimentAnalysisRequestConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SentimentAnalysisRequestConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SentimentAnalysisRequestConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SentimentAnalysisRequestConfig(SentimentAnalysisRequestConfig other) : this() {
+      analyzeQueryTextSentiment_ = other.analyzeQueryTextSentiment_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SentimentAnalysisRequestConfig Clone() {
+      return new SentimentAnalysisRequestConfig(this);
+    }
+
+    /// <summary>Field number for the "analyze_query_text_sentiment" field.</summary>
+    public const int AnalyzeQueryTextSentimentFieldNumber = 1;
+    private bool analyzeQueryTextSentiment_;
+    /// <summary>
+    /// Optional. Instructs the service to perform sentiment analysis on
+    /// `query_text`. If not provided, sentiment analysis is not performed on
+    /// `query_text`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AnalyzeQueryTextSentiment {
+      get { return analyzeQueryTextSentiment_; }
+      set {
+        analyzeQueryTextSentiment_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SentimentAnalysisRequestConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SentimentAnalysisRequestConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AnalyzeQueryTextSentiment != other.AnalyzeQueryTextSentiment) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AnalyzeQueryTextSentiment != false) hash ^= AnalyzeQueryTextSentiment.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (AnalyzeQueryTextSentiment != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(AnalyzeQueryTextSentiment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (AnalyzeQueryTextSentiment != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SentimentAnalysisRequestConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AnalyzeQueryTextSentiment != false) {
+        AnalyzeQueryTextSentiment = other.AnalyzeQueryTextSentiment;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AnalyzeQueryTextSentiment = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The result of sentiment analysis as configured by
+  /// `sentiment_analysis_request_config`.
+  /// </summary>
+  public sealed partial class SentimentAnalysisResult : pb::IMessage<SentimentAnalysisResult> {
+    private static readonly pb::MessageParser<SentimentAnalysisResult> _parser = new pb::MessageParser<SentimentAnalysisResult>(() => new SentimentAnalysisResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SentimentAnalysisResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SentimentAnalysisResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SentimentAnalysisResult(SentimentAnalysisResult other) : this() {
+      queryTextSentiment_ = other.queryTextSentiment_ != null ? other.queryTextSentiment_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SentimentAnalysisResult Clone() {
+      return new SentimentAnalysisResult(this);
+    }
+
+    /// <summary>Field number for the "query_text_sentiment" field.</summary>
+    public const int QueryTextSentimentFieldNumber = 1;
+    private global::Google.Cloud.Dialogflow.V2.Sentiment queryTextSentiment_;
+    /// <summary>
+    /// The sentiment analysis result for `query_text`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.Sentiment QueryTextSentiment {
+      get { return queryTextSentiment_; }
+      set {
+        queryTextSentiment_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SentimentAnalysisResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SentimentAnalysisResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(QueryTextSentiment, other.QueryTextSentiment)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (queryTextSentiment_ != null) hash ^= QueryTextSentiment.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (queryTextSentiment_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(QueryTextSentiment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (queryTextSentiment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryTextSentiment);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SentimentAnalysisResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.queryTextSentiment_ != null) {
+        if (queryTextSentiment_ == null) {
+          queryTextSentiment_ = new global::Google.Cloud.Dialogflow.V2.Sentiment();
+        }
+        QueryTextSentiment.MergeFrom(other.QueryTextSentiment);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (queryTextSentiment_ == null) {
+              queryTextSentiment_ = new global::Google.Cloud.Dialogflow.V2.Sentiment();
+            }
+            input.ReadMessage(queryTextSentiment_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The sentiment, such as positive/negative feeling or association, for a unit
+  /// of analysis, such as the query text.
+  /// </summary>
+  public sealed partial class Sentiment : pb::IMessage<Sentiment> {
+    private static readonly pb::MessageParser<Sentiment> _parser = new pb::MessageParser<Sentiment>(() => new Sentiment());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Sentiment> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Sentiment() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Sentiment(Sentiment other) : this() {
+      score_ = other.score_;
+      magnitude_ = other.magnitude_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Sentiment Clone() {
+      return new Sentiment(this);
+    }
+
+    /// <summary>Field number for the "score" field.</summary>
+    public const int ScoreFieldNumber = 1;
+    private float score_;
+    /// <summary>
+    /// Sentiment score between -1.0 (negative sentiment) and 1.0 (positive
+    /// sentiment).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Score {
+      get { return score_; }
+      set {
+        score_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "magnitude" field.</summary>
+    public const int MagnitudeFieldNumber = 2;
+    private float magnitude_;
+    /// <summary>
+    /// A non-negative number in the [0, +inf) range, which represents the absolute
+    /// magnitude of sentiment, regardless of score (positive or negative).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Magnitude {
+      get { return magnitude_; }
+      set {
+        magnitude_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Sentiment);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Sentiment other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Score, other.Score)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Magnitude, other.Magnitude)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Score != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Score);
+      if (Magnitude != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Magnitude);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Score != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Score);
+      }
+      if (Magnitude != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Magnitude);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Score != 0F) {
+        size += 1 + 4;
+      }
+      if (Magnitude != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Sentiment other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Score != 0F) {
+        Score = other.Score;
+      }
+      if (other.Magnitude != 0F) {
+        Magnitude = other.Magnitude;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            Score = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Magnitude = input.ReadFloat();
             break;
           }
         }

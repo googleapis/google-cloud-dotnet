@@ -19,6 +19,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.Dialogflow.V2;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
     using Moq;
@@ -45,6 +46,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {
                 ResponseId = "responseId1847552473",
+                OutputAudio = ByteString.CopyFromUtf8("24"),
             };
             mockGrpcClient.Setup(x => x.DetectIntent(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -68,6 +70,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {
                 ResponseId = "responseId1847552473",
+                OutputAudio = ByteString.CopyFromUtf8("24"),
             };
             mockGrpcClient.Setup(x => x.DetectIntentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<DetectIntentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -91,6 +94,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {
                 ResponseId = "responseId1847552473",
+                OutputAudio = ByteString.CopyFromUtf8("24"),
             };
             mockGrpcClient.Setup(x => x.DetectIntent(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -112,6 +116,7 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             DetectIntentResponse expectedResponse = new DetectIntentResponse
             {
                 ResponseId = "responseId1847552473",
+                OutputAudio = ByteString.CopyFromUtf8("24"),
             };
             mockGrpcClient.Setup(x => x.DetectIntentAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<DetectIntentResponse>(Task.FromResult(expectedResponse), null, null, null, null));

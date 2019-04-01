@@ -326,10 +326,12 @@ namespace Google.Cloud.Dialogflow.V2
         /// The default Contexts scopes are:
         /// <list type="bullet">
         /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// <item><description>"https://www.googleapis.com/auth/dialogflow"</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/dialogflow",
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
@@ -690,6 +692,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
@@ -717,6 +721,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
@@ -741,6 +747,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
@@ -768,6 +776,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -787,6 +797,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -805,6 +817,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1336,6 +1350,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1356,6 +1372,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         /// <summary>
         /// Creates a context.
+        ///
+        /// If the specified context already exists, overrides the context.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

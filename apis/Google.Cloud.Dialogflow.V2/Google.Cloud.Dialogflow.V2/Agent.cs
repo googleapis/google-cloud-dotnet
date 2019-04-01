@@ -26,56 +26,57 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9hZ2VudC5wcm90bxIaZ29v",
             "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3Rv",
-            "Ghtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1",
-            "Zi9maWVsZF9tYXNrLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnBy",
-            "b3RvIv0CCgVBZ2VudBIOCgZwYXJlbnQYASABKAkSFAoMZGlzcGxheV9uYW1l",
-            "GAIgASgJEh0KFWRlZmF1bHRfbGFuZ3VhZ2VfY29kZRgDIAEoCRIgChhzdXBw",
-            "b3J0ZWRfbGFuZ3VhZ2VfY29kZXMYBCADKAkSEQoJdGltZV96b25lGAUgASgJ",
-            "EhMKC2Rlc2NyaXB0aW9uGAYgASgJEhIKCmF2YXRhcl91cmkYByABKAkSFgoO",
-            "ZW5hYmxlX2xvZ2dpbmcYCCABKAgSPwoKbWF0Y2hfbW9kZRgJIAEoDjIrLmdv",
-            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkFnZW50Lk1hdGNoTW9kZRIgChhj",
-            "bGFzc2lmaWNhdGlvbl90aHJlc2hvbGQYCiABKAIiVgoJTWF0Y2hNb2RlEhoK",
-            "Fk1BVENIX01PREVfVU5TUEVDSUZJRUQQABIVChFNQVRDSF9NT0RFX0hZQlJJ",
-            "RBABEhYKEk1BVENIX01PREVfTUxfT05MWRACIiEKD0dldEFnZW50UmVxdWVz",
-            "dBIOCgZwYXJlbnQYASABKAkiTAoTU2VhcmNoQWdlbnRzUmVxdWVzdBIOCgZw",
-            "YXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
-            "AyABKAkiYgoUU2VhcmNoQWdlbnRzUmVzcG9uc2USMQoGYWdlbnRzGAEgAygL",
-            "MiEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQWdlbnQSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJIiMKEVRyYWluQWdlbnRSZXF1ZXN0Eg4KBnBhcmVu",
-            "dBgBIAEoCSI3ChJFeHBvcnRBZ2VudFJlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
-            "EhEKCWFnZW50X3VyaRgCIAEoCSJMChNFeHBvcnRBZ2VudFJlc3BvbnNlEhMK",
-            "CWFnZW50X3VyaRgBIAEoCUgAEhcKDWFnZW50X2NvbnRlbnQYAiABKAxIAEIH",
-            "CgVhZ2VudCJbChJJbXBvcnRBZ2VudFJlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
-            "EhMKCWFnZW50X3VyaRgCIAEoCUgAEhcKDWFnZW50X2NvbnRlbnQYAyABKAxI",
-            "AEIHCgVhZ2VudCJcChNSZXN0b3JlQWdlbnRSZXF1ZXN0Eg4KBnBhcmVudBgB",
-            "IAEoCRITCglhZ2VudF91cmkYAiABKAlIABIXCg1hZ2VudF9jb250ZW50GAMg",
-            "ASgMSABCBwoFYWdlbnQy7gYKBkFnZW50cxKBAQoIR2V0QWdlbnQSKy5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5HZXRBZ2VudFJlcXVlc3QaIS5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5BZ2VudCIlgtPkkwIfEh0vdjIve3Bh",
-            "cmVudD1wcm9qZWN0cy8qfS9hZ2VudBKfAQoMU2VhcmNoQWdlbnRzEi8uZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU2VhcmNoQWdlbnRzUmVxdWVzdBow",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNlYXJjaEFnZW50c1Jlc3Bv",
-            "bnNlIiyC0+STAiYSJC92Mi97cGFyZW50PXByb2plY3RzLyp9L2FnZW50OnNl",
-            "YXJjaBKKAQoKVHJhaW5BZ2VudBItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLlRyYWluQWdlbnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiIugtPkkwIoIiMvdjIve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2Vu",
-            "dDp0cmFpbjoBKhKNAQoLRXhwb3J0QWdlbnQSLi5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52Mi5FeHBvcnRBZ2VudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIi+C0+STAikiJC92Mi97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2FnZW50OmV4cG9ydDoBKhKNAQoLSW1wb3J0QWdlbnQSLi5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5JbXBvcnRBZ2VudFJlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIi+C0+STAikiJC92Mi97cGFyZW50",
-            "PXByb2plY3RzLyp9L2FnZW50OmltcG9ydDoBKhKQAQoMUmVzdG9yZUFnZW50",
-            "Ei8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuUmVzdG9yZUFnZW50UmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iMILT5JMCKiIl",
-            "L3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vYWdlbnQ6cmVzdG9yZToBKkKZAQoe",
-            "Y29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQgpBZ2VudFByb3RvUAFa",
-            "RGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "ZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xv",
-            "dWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "bnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9s",
+            "b25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYv",
+            "ZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3Rv",
+            "Ghxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIv0CCgVBZ2VudBIOCgZw",
+            "YXJlbnQYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEh0KFWRlZmF1bHRf",
+            "bGFuZ3VhZ2VfY29kZRgDIAEoCRIgChhzdXBwb3J0ZWRfbGFuZ3VhZ2VfY29k",
+            "ZXMYBCADKAkSEQoJdGltZV96b25lGAUgASgJEhMKC2Rlc2NyaXB0aW9uGAYg",
+            "ASgJEhIKCmF2YXRhcl91cmkYByABKAkSFgoOZW5hYmxlX2xvZ2dpbmcYCCAB",
+            "KAgSPwoKbWF0Y2hfbW9kZRgJIAEoDjIrLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LnYyLkFnZW50Lk1hdGNoTW9kZRIgChhjbGFzc2lmaWNhdGlvbl90aHJl",
+            "c2hvbGQYCiABKAIiVgoJTWF0Y2hNb2RlEhoKFk1BVENIX01PREVfVU5TUEVD",
+            "SUZJRUQQABIVChFNQVRDSF9NT0RFX0hZQlJJRBABEhYKEk1BVENIX01PREVf",
+            "TUxfT05MWRACIiEKD0dldEFnZW50UmVxdWVzdBIOCgZwYXJlbnQYASABKAki",
+            "TAoTU2VhcmNoQWdlbnRzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFn",
+            "ZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiYgoUU2VhcmNoQWdl",
+            "bnRzUmVzcG9uc2USMQoGYWdlbnRzGAEgAygLMiEuZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjIuQWdlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiMK",
+            "EVRyYWluQWdlbnRSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCSI3ChJFeHBvcnRB",
+            "Z2VudFJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCWFnZW50X3VyaRgCIAEo",
+            "CSJMChNFeHBvcnRBZ2VudFJlc3BvbnNlEhMKCWFnZW50X3VyaRgBIAEoCUgA",
+            "EhcKDWFnZW50X2NvbnRlbnQYAiABKAxIAEIHCgVhZ2VudCJbChJJbXBvcnRB",
+            "Z2VudFJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhMKCWFnZW50X3VyaRgCIAEo",
+            "CUgAEhcKDWFnZW50X2NvbnRlbnQYAyABKAxIAEIHCgVhZ2VudCJcChNSZXN0",
+            "b3JlQWdlbnRSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRITCglhZ2VudF91cmkY",
+            "AiABKAlIABIXCg1hZ2VudF9jb250ZW50GAMgASgMSABCBwoFYWdlbnQy7gYK",
+            "BkFnZW50cxKBAQoIR2V0QWdlbnQSKy5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5HZXRBZ2VudFJlcXVlc3QaIS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5BZ2VudCIlgtPkkwIfEh0vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9h",
+            "Z2VudBKfAQoMU2VhcmNoQWdlbnRzEi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cudjIuU2VhcmNoQWdlbnRzUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLlNlYXJjaEFnZW50c1Jlc3BvbnNlIiyC0+STAiYSJC92Mi97",
+            "cGFyZW50PXByb2plY3RzLyp9L2FnZW50OnNlYXJjaBKKAQoKVHJhaW5BZ2Vu",
+            "dBItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlRyYWluQWdlbnRSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiIugtPkkwIoIiMv",
+            "djIve3BhcmVudD1wcm9qZWN0cy8qfS9hZ2VudDp0cmFpbjoBKhKNAQoLRXhw",
+            "b3J0QWdlbnQSLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5FeHBvcnRB",
+            "Z2VudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIi+C",
+            "0+STAikiJC92Mi97cGFyZW50PXByb2plY3RzLyp9L2FnZW50OmV4cG9ydDoB",
+            "KhKNAQoLSW1wb3J0QWdlbnQSLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5JbXBvcnRBZ2VudFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIi+C0+STAikiJC92Mi97cGFyZW50PXByb2plY3RzLyp9L2FnZW50",
+            "OmltcG9ydDoBKhKQAQoMUmVzdG9yZUFnZW50Ei8uZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjIuUmVzdG9yZUFnZW50UmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24iMILT5JMCKiIlL3YyL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn0vYWdlbnQ6cmVzdG9yZToBKkKZAQoeY29tLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LnYyQgpBZ2VudFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFs",
+            "b2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.Agent), global::Google.Cloud.Dialogflow.V2.Agent.Parser, new[]{ "Parent", "DisplayName", "DefaultLanguageCode", "SupportedLanguageCodes", "TimeZone", "Description", "AvatarUri", "EnableLogging", "MatchMode", "ClassificationThreshold" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2.Agent.Types.MatchMode) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.GetAgentRequest), global::Google.Cloud.Dialogflow.V2.GetAgentRequest.Parser, new[]{ "Parent" }, null, null, null),
@@ -172,9 +173,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string defaultLanguageCode_ = "";
     /// <summary>
     /// Required. The default language of the agent as a language tag. See
-    /// [Language Support](https://dialogflow.com/docs/reference/language) for a
-    /// list of the currently supported language codes.
-    /// This field cannot be set by the `Update` method.
+    /// [Language
+    /// Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// for a list of the currently supported language codes. This field cannot be
+    /// set by the `Update` method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DefaultLanguageCode {
@@ -235,7 +237,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The URI of the agent's avatar.
     /// Avatars are used throughout the Dialogflow console and in the self-hosted
-    /// [Web Demo](https://dialogflow.com/docs/integrations/web-demo) integration.
+    /// [Web
+    /// Demo](https://cloud.google.com/dialogflow-enterprise/docs/integrations/web-demo)
+    /// integration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AvatarUri {
@@ -280,7 +284,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. To filter out false positive results and still get variety in
     /// matched natural language inputs for your agent, you can tune the machine
     /// learning classification threshold. If the returned score value is less than
-    /// the threshold value, then a fallback intent is be triggered or, if there
+    /// the threshold value, then a fallback intent will be triggered or, if there
     /// are no fallback intents defined, no intent will be triggered. The score
     /// values range from 0.0 (completely uncertain) to 1.0 (completely certain).
     /// If set to 0.0, the default of 0.3 is used.
@@ -542,8 +546,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Agents.GetAgent][google.cloud.dialogflow.v2.Agents.GetAgent].
+  /// The request message for [Agents.GetAgent][google.cloud.dialogflow.v2.Agents.GetAgent].
   /// </summary>
   public sealed partial class GetAgentRequest : pb::IMessage<GetAgentRequest> {
     private static readonly pb::MessageParser<GetAgentRequest> _parser = new pb::MessageParser<GetAgentRequest>(() => new GetAgentRequest());
@@ -679,8 +682,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
+  /// The request message for [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
   /// </summary>
   public sealed partial class SearchAgentsRequest : pb::IMessage<SearchAgentsRequest> {
     private static readonly pb::MessageParser<SearchAgentsRequest> _parser = new pb::MessageParser<SearchAgentsRequest>(() => new SearchAgentsRequest());
@@ -879,8 +881,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
+  /// The response message for [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
   /// </summary>
   public sealed partial class SearchAgentsResponse : pb::IMessage<SearchAgentsResponse> {
     private static readonly pb::MessageParser<SearchAgentsResponse> _parser = new pb::MessageParser<SearchAgentsResponse>(() => new SearchAgentsResponse());
@@ -1040,8 +1041,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Agents.TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent].
+  /// The request message for [Agents.TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent].
   /// </summary>
   public sealed partial class TrainAgentRequest : pb::IMessage<TrainAgentRequest> {
     private static readonly pb::MessageParser<TrainAgentRequest> _parser = new pb::MessageParser<TrainAgentRequest>(() => new TrainAgentRequest());
@@ -1177,8 +1177,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
+  /// The request message for [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentRequest : pb::IMessage<ExportAgentRequest> {
     private static readonly pb::MessageParser<ExportAgentRequest> _parser = new pb::MessageParser<ExportAgentRequest>(() => new ExportAgentRequest());
@@ -1234,9 +1233,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int AgentUriFieldNumber = 2;
     private string agentUri_ = "";
     /// <summary>
-    /// Optional. The Google Cloud Storage URI to export the agent to.
-    /// Note: The URI must start with
-    /// "gs://". If left unspecified, the serialized agent is returned inline.
+    /// Optional. The
+    /// [Google Cloud Storage](https://cloud.google.com/storage/docs/)
+    /// URI to export the agent to.
+    /// The format of this URI must be `gs://&lt;bucket-name>/&lt;object-name>`.
+    /// If left unspecified, the serialized agent is returned inline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AgentUri {
@@ -1347,8 +1348,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The response message for
-  /// [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
+  /// The response message for [Agents.ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent].
   /// </summary>
   public sealed partial class ExportAgentResponse : pb::IMessage<ExportAgentResponse> {
     private static readonly pb::MessageParser<ExportAgentResponse> _parser = new pb::MessageParser<ExportAgentResponse>(() => new ExportAgentResponse());
@@ -1413,17 +1413,17 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The exported agent.
     ///
     /// Example for how to export an agent to a zip file via a command line:
-    ///
-    /// curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&lt;project_name>/agent:export'\
+    /// &lt;pre>curl \
+    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_name&amp;gt;/agent:export'\
     ///   -X POST \
-    ///   -H 'Authorization: Bearer '$(gcloud auth print-access-token) \
+    ///   -H 'Authorization: Bearer '$(gcloud auth application-default
+    ///   print-access-token) \
     ///   -H 'Accept: application/json' \
     ///   -H 'Content-Type: application/json' \
     ///   --compressed \
     ///   --data-binary '{}' \
     /// | grep agentContent | sed -e 's/.*"agentContent": "\([^"]*\)".*/\1/' \
-    /// | base64 --decode > &lt;agent zip file>
+    /// | base64 --decode > &amp;lt;agent zip file&amp;gt;&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AgentContent {
@@ -1559,8 +1559,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Agents.ImportAgent][google.cloud.dialogflow.v2.Agents.ImportAgent].
+  /// The request message for [Agents.ImportAgent][google.cloud.dialogflow.v2.Agents.ImportAgent].
   /// </summary>
   public sealed partial class ImportAgentRequest : pb::IMessage<ImportAgentRequest> {
     private static readonly pb::MessageParser<ImportAgentRequest> _parser = new pb::MessageParser<ImportAgentRequest>(() => new ImportAgentRequest());
@@ -1641,17 +1640,17 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The agent to import.
     ///
     /// Example for how to import an agent via the command line:
-    ///
-    /// curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&lt;project_name>/agent:import\
+    /// &lt;pre>curl \
+    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_name&amp;gt;/agent:import\
     ///    -X POST \
-    ///    -H 'Authorization: Bearer '$(gcloud auth print-access-token) \
+    ///    -H 'Authorization: Bearer '$(gcloud auth application-default
+    ///    print-access-token) \
     ///    -H 'Accept: application/json' \
     ///    -H 'Content-Type: application/json' \
     ///    --compressed \
     ///    --data-binary "{
-    ///       'agentContent': '$(cat &lt;agent zip file> | base64 -w 0)'
-    ///    }"
+    ///       'agentContent': '$(cat &amp;lt;agent zip file&amp;gt; | base64 -w 0)'
+    ///    }"&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AgentContent {
@@ -1803,8 +1802,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The request message for
-  /// [Agents.RestoreAgent][google.cloud.dialogflow.v2.Agents.RestoreAgent].
+  /// The request message for [Agents.RestoreAgent][google.cloud.dialogflow.v2.Agents.RestoreAgent].
   /// </summary>
   public sealed partial class RestoreAgentRequest : pb::IMessage<RestoreAgentRequest> {
     private static readonly pb::MessageParser<RestoreAgentRequest> _parser = new pb::MessageParser<RestoreAgentRequest>(() => new RestoreAgentRequest());
@@ -1885,17 +1883,17 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The agent to restore.
     ///
     /// Example for how to restore an agent via the command line:
-    ///
-    /// curl \
-    ///   'https://dialogflow.googleapis.com/v2/projects/&lt;project_name>/agent:restore\
+    /// &lt;pre>curl \
+    ///   'https://dialogflow.googleapis.com/v2/projects/&amp;lt;project_name&amp;gt;/agent:restore\
     ///    -X POST \
-    ///    -H 'Authorization: Bearer '$(gcloud auth print-access-token) \
+    ///    -H 'Authorization: Bearer '$(gcloud auth application-default
+    ///    print-access-token) \
     ///    -H 'Accept: application/json' \
     ///    -H 'Content-Type: application/json' \
     ///    --compressed \
     ///    --data-binary "{
-    ///        'agentContent': '$(cat &lt;agent zip file> | base64 -w 0)'
-    ///    }" \
+    ///        'agentContent': '$(cat &amp;lt;agent zip file&amp;gt; | base64 -w 0)'
+    ///    }"&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AgentContent {
