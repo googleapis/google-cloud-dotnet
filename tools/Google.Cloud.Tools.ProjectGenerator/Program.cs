@@ -330,7 +330,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC"),
                 new XElement("Authors", "Google Inc."),
                 new XElement("PackageIconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"),
-                new XElement("PackageLicenseExpression", "Apache-2.0"),
+                new XElement("PackageLicenseFile", "LICENSE"),
                 new XElement("PackageProjectUrl", "https://github.com/googleapis/google-cloud-dotnet"),
                 new XElement("RepositoryType", "git"),
                 new XElement("RepositoryUrl", "https://github.com/googleapis/google-cloud-dotnet")
@@ -340,6 +340,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
             }
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
+            // Pack the license file; this element isn't a dependency, but it still belongs in an ItemGroup...
+            dependenciesElement.Add(new XElement("None",
+                new XAttribute("Include", "../../../LICENSE"),
+                new XAttribute("Pack", true),
+                new XAttribute("PackagePath", ""))); // Note: not $(PackageLicenseFile) as suggested in docs, due to us using a file with no extension
+
             if (api.Type == ApiType.Analyzers)
             {
                 propertyGroup.Add(new XElement("IncludeBuildOutput", false));
