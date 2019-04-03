@@ -63,7 +63,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 {
                     Instruction = "See company web site"
                 },
-                Company = companyName.ToString(),
+                CompanyAsCompanyNameOneof = companyName,
                 Description = "Company CEO, responsible for everything in the company.",
                 RequisitionId = requisitionId,
                 Title = "CEO"
