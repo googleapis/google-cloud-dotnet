@@ -235,9 +235,11 @@ namespace Google.Cloud.WebRisk.V1Beta1
         /// <remarks>
         /// The default WebRiskServiceV1Beta1 scopes are:
         /// <list type="bullet">
+        /// <item><description>"https://www.googleapis.com/auth/cloud-platform"</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] {
+            "https://www.googleapis.com/auth/cloud-platform",
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
