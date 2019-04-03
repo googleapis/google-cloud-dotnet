@@ -86,5 +86,17 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 }
             }
         }
+
+        public DatastoreDb CreateDatastoreDb(string namespaceId = null)
+        {
+            string effectiveNamespace = namespaceId ?? NamespaceId;
+            var builder = new DatastoreDbBuilder
+            {
+                ProjectId = ProjectId,
+                NamespaceId = effectiveNamespace,
+                EmulatorDetection = EmulatorDetection.ProductionOrEmulator
+            };
+            return builder.Build();
+        }
     }
 }
