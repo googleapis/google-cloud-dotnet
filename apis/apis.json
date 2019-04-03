@@ -294,7 +294,10 @@
     "version": "1.0.0-beta09",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Data Loss Prevention API, provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
-    "tags": [ "DLP", "data loss prevention", "privacy", "pii" ]
+    "tags": [ "DLP", "data loss prevention", "privacy", "pii" ],
+    "dependencies": {
+      "Google.Api.CommonProtos": "1.6.0"
+    }
   },
 
   {
