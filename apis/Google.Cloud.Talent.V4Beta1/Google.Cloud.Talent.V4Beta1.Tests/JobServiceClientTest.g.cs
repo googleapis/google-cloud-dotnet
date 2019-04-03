@@ -45,7 +45,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -79,7 +79,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -113,7 +113,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -145,7 +145,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -176,7 +176,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -208,7 +208,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -240,7 +240,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -271,7 +271,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -302,7 +302,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -334,7 +334,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -366,7 +366,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",
@@ -397,7 +397,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             Job expectedResponse = new Job
             {
                 JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
-                Company = "company950484093",
+                CompanyAsCompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
                 RequisitionId = "requisitionId980224926",
                 Title = "title110371416",
                 Description = "description-1724546052",

@@ -1363,6 +1363,15 @@ namespace Google.Cloud.Talent.V4Beta1
             set { Parent = value != null ? value.ToString() : ""; }
         }
 
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyNameOneof"/>-typed view over the <see cref="Company"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyNameOneof CompanyAsCompanyNameOneof
+        {
+            get { return string.IsNullOrEmpty(Company) ? null : Google.Cloud.Talent.V4Beta1.CompanyNameOneof.Parse(Company, true); }
+            set { Company = value != null ? value.ToString() : ""; }
+        }
+
     }
 
     public partial class CreateApplicationRequest
@@ -1582,6 +1591,15 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Talent.V4Beta1.JobNameOneof.Parse(Name, true); }
             set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="Google.Cloud.Talent.V4Beta1.CompanyNameOneof"/>-typed view over the <see cref="Company"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Talent.V4Beta1.CompanyNameOneof CompanyAsCompanyNameOneof
+        {
+            get { return string.IsNullOrEmpty(Company) ? null : Google.Cloud.Talent.V4Beta1.CompanyNameOneof.Parse(Company, true); }
+            set { Company = value != null ? value.ToString() : ""; }
         }
 
     }
