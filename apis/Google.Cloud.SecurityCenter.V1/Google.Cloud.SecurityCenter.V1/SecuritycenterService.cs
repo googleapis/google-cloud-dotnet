@@ -972,6 +972,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * integer literals without quotes.
     /// * boolean literals `true` and `false` without quotes.
     ///
+    /// The following field and operator combinations are supported:
+    /// name | `=`
+    /// update_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// iam_policy.policy_blob | '=', ':'
+    /// resource_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
+    /// security_marks | '=', ':'
+    /// security_center_properties.resource_name | '=', ':'
+    /// security_center_properties.resource_type | '=', ':'
+    /// security_center_properties.resource_parent | '=', ':'
+    /// security_center_properties.resource_project | '=', ':'
+    /// security_center_properties.resource_owners | '=', ':'
+    ///
     /// For example, `resource_properties.size = 100` is a valid filter string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1606,6 +1618,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * integer literals without quotes.
     /// * boolean literals `true` and `false` without quotes.
     ///
+    /// The following field and operator combinations are supported:
+    /// name | `=`
+    /// parent | '=', ':'
+    /// resource_name | '=', ':'
+    /// state | '=', ':'
+    /// category | '=', ':'
+    /// external_uri | '=', ':'
+    /// event_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// security_marks | '=', ':'
+    /// source_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
+    ///
     /// For example, `source_properties.size = 100` is a valid filter string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1629,8 +1652,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * resource_name
     /// * category
     /// * state
-    /// * state_change
     /// * parent
+    ///
+    /// The following fields are supported when compare_duration is set:
+    ///
+    /// * state_change
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupBy {
@@ -2755,6 +2781,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * integer literals without quotes.
     /// * boolean literals `true` and `false` without quotes.
     ///
+    /// The following are the allowed field and operator combinations:
+    /// name | `=`
+    /// update_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// iam_policy.policy_blob | '=', ':'
+    /// resource_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
+    /// security_marks | '=', ':'
+    /// security_center_properties.resource_name | '=', ':'
+    /// security_center_properties.resource_type | '=', ':'
+    /// security_center_properties.resource_parent | '=', ':'
+    /// security_center_properties.resource_project | '=', ':'
+    /// security_center_properties.resource_owners | '=', ':'
+    ///
     /// For example, `resource_properties.size = 100` is a valid filter string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2777,6 +2815,16 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// desc,resource_properties.a_property". Redundant space characters in the
     /// syntax are insignificant. "name desc,resource_properties.a_property" and "
     /// name     desc  ,   resource_properties.a_property  " are equivalent.
+    ///
+    /// The following fields are supported:
+    /// name
+    /// update_time
+    /// resource_properties
+    /// security_marks
+    /// security_center_properties.resource_name
+    /// security_center_properties.resource_parent
+    /// security_center_properties.resource_project
+    /// security_center_properties.resource_type
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -3632,6 +3680,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * integer literals without quotes.
     /// * boolean literals `true` and `false` without quotes.
     ///
+    /// The following field and operator combinations are supported:
+    /// name | `=`
+    /// parent | '=', ':'
+    /// resource_name | '=', ':'
+    /// state | '=', ':'
+    /// category | '=', ':'
+    /// external_uri | '=', ':'
+    /// event_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// security_marks | '=', ':'
+    /// source_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
+    ///
     /// For example, `source_properties.size = 100` is a valid filter string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3654,6 +3713,16 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// desc,source_properties.a_property". Redundant space characters in the
     /// syntax are insignificant. "name desc,source_properties.a_property" and "
     /// name     desc  ,   source_properties.a_property  " are equivalent.
+    ///
+    /// The following fields are supported:
+    /// name
+    /// parent
+    /// state
+    /// category
+    /// resource_name
+    /// event_time
+    /// source_properties
+    /// security_marks
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
