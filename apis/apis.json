@@ -547,6 +547,20 @@
   },
 
   {
+    "id": "Google.Cloud.PhishingProtection.V1Beta1",
+    // TODO: Review these before the first release
+    "productName": "Cloud Phishing Protection",
+    "productUrl": "https://cloud.google.com/phishingprotection/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Google Cloud Phishing Protection API.",
+    "dependencies": {
+      "Google.Api.CommonProtos": "1.6.0"
+    },
+    "tags": [ "Phishing", "Security" ]
+  },
+  
+  {
     "id": "Google.Cloud.PubSub.V1",
     "productName": "Cloud Pub/Sub",
     "productUrl": "https://cloud.google.com/pubsub/",
