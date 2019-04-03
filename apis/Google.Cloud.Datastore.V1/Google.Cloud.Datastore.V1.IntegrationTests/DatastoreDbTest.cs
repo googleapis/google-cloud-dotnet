@@ -35,7 +35,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void Lookup_FullPartition()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("test");
             var entity = new Entity
             {
@@ -52,7 +52,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void Lookup_NamespaceOnly()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("test");
             var entity = new Entity
             {
@@ -71,7 +71,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         public async Task Lookup_NoPartition()
         {
             // Deliberately in the empty namespace, which won't be cleaned up automatically - hence the db.Delete call later.
-            var db = DatastoreDb.Create(_fixture.ProjectId);
+            var db = _fixture.CreateDatastoreDb(namespaceId: "");
             var keyFactory = db.CreateKeyFactory("test");
             var entity = new Entity
             {
@@ -98,7 +98,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task Lookup()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("lookup_test");
             var entity = new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" };
             db.Insert(entity);
@@ -111,7 +111,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void RunQuery_NoResults()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var query = db.RunQueryLazily(new Query("absent"));
             // Each of the checks below will run the query again, as the query is only lazily
             // evaluated.
@@ -123,7 +123,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void SyncQueries()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("syncqueries");
             using (var transaction = db.BeginTransaction())
             {
@@ -149,7 +149,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task AsyncQueries()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("asyncqueries");
             using (var transaction = await db.BeginTransactionAsync())
             {
@@ -175,7 +175,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void BeginTransaction_ReadOnly()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("readonly_test");
             var options = TransactionOptions.CreateReadOnly();
             using (var transaction = db.BeginTransaction(options))
@@ -189,7 +189,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task BeginTransactionAsync_ReadOnly()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("readonly_test");
             var options = TransactionOptions.CreateReadOnly();
             using (var transaction = await db.BeginTransactionAsync(options))
@@ -203,7 +203,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void BeginTransaction_ReadWrite()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("readonly_test");
             var options = TransactionOptions.CreateReadWrite();
             using (var transaction = db.BeginTransaction(options))
@@ -216,7 +216,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task BeginTransactionAsync_ReadWrite()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("readonly_test");
             var options = TransactionOptions.CreateReadWrite();
             using (var transaction = await db.BeginTransactionAsync(options))
@@ -236,7 +236,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void Insert_ResultKeys()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("insert_test");
             var entities = new[]
             {
@@ -258,7 +258,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void Upsert_ResultKeys()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("upsert_test");
             var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
 
@@ -281,7 +281,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task InsertAsync_ResultKeys()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("insertasync_test");
             var entities = new[]
             {
@@ -303,7 +303,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task UpsertAsync_ResultKeys()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("upsertasync_test");
             var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
 
@@ -326,7 +326,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void Update()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("update_test");
 
             var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
@@ -342,7 +342,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task UpdateAsync()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("update_test");
 
             var insertedKey = await db.InsertAsync(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
@@ -358,7 +358,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void Delete()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("update_test");
 
             var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
@@ -370,7 +370,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task DeleteAsync()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("update_test");
 
             var insertedKey = await db.InsertAsync(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
@@ -382,7 +382,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void TimestampFromProjection()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             string kind = "projection_test";
             var keyFactory = db.CreateKeyFactory(kind);
 

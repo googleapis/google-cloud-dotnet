@@ -33,7 +33,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void SyncQueries_ImplicityUsePartition()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var parentKey = PrepareQueryTest(db);
             using (var transaction = db.BeginTransaction())
             {
@@ -58,7 +58,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public async Task AsyncQueries_ImplicityUsePartition()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var parentKey = PrepareQueryTest(db);
             using (var transaction = db.BeginTransaction())
             {
@@ -100,7 +100,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         [Fact]
         public void Delete()
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("book");
             var entity = new Entity { Key = keyFactory.CreateIncompleteKey(), ["title"] = "Programming F#" };
 
@@ -129,7 +129,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
 
         private async Task CommitTest(Func<DatastoreTransaction, Task<CommitResponse>> commitCall)
         {
-            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var db = _fixture.CreateDatastoreDb();
             var keyFactory = db.CreateKeyFactory("book");
             var updatedEntity = new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "Inserted before transaction" };
             db.Insert(updatedEntity);
