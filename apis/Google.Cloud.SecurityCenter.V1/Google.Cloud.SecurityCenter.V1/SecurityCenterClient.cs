@@ -1576,8 +1576,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// * resource_name
         /// * category
         /// * state
-        /// * state_change
         /// * parent
+        ///
+        /// The following fields are supported when compare_duration is set:
+        ///
+        /// * state_change
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1631,8 +1634,11 @@ namespace Google.Cloud.SecurityCenter.V1
         /// * resource_name
         /// * category
         /// * state
-        /// * state_change
         /// * parent
+        ///
+        /// The following fields are supported when compare_duration is set:
+        ///
+        /// * state_change
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
