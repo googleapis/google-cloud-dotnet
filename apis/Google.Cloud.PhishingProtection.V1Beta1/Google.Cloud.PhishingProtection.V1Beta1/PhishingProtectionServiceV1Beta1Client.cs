@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -331,12 +332,12 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReportPhishingResponse> ReportPhishingAsync(
-            string parent,
+            gaxres::ProjectName parent,
             string uri,
             gaxgrpc::CallSettings callSettings = null) => ReportPhishingAsync(
                 new ReportPhishingRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Uri = gax::GaxPreconditions.CheckNotNullOrEmpty(uri, nameof(uri)),
                 },
                 callSettings);
@@ -363,7 +364,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<ReportPhishingResponse> ReportPhishingAsync(
-            string parent,
+            gaxres::ProjectName parent,
             string uri,
             st::CancellationToken cancellationToken) => ReportPhishingAsync(
                 parent,
@@ -392,12 +393,12 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual ReportPhishingResponse ReportPhishing(
-            string parent,
+            gaxres::ProjectName parent,
             string uri,
             gaxgrpc::CallSettings callSettings = null) => ReportPhishing(
                 new ReportPhishingRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Uri = gax::GaxPreconditions.CheckNotNullOrEmpty(uri, nameof(uri)),
                 },
                 callSettings);
