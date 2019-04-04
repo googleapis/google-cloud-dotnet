@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -356,12 +357,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Assessment> CreateAssessmentAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Assessment assessment,
             gaxgrpc::CallSettings callSettings = null) => CreateAssessmentAsync(
                 new CreateAssessmentRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Assessment = gax::GaxPreconditions.CheckNotNull(assessment, nameof(assessment)),
                 },
                 callSettings);
@@ -383,7 +384,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Assessment> CreateAssessmentAsync(
-            string parent,
+            gaxres::ProjectName parent,
             Assessment assessment,
             st::CancellationToken cancellationToken) => CreateAssessmentAsync(
                 parent,
@@ -407,12 +408,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual Assessment CreateAssessment(
-            string parent,
+            gaxres::ProjectName parent,
             Assessment assessment,
             gaxgrpc::CallSettings callSettings = null) => CreateAssessment(
                 new CreateAssessmentRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Assessment = gax::GaxPreconditions.CheckNotNull(assessment, nameof(assessment)),
                 },
                 callSettings);
@@ -491,12 +492,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<AnnotateAssessmentResponse> AnnotateAssessmentAsync(
-            string name,
+            AssessmentName name,
             AnnotateAssessmentRequest.Types.Annotation annotation,
             gaxgrpc::CallSettings callSettings = null) => AnnotateAssessmentAsync(
                 new AnnotateAssessmentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    AssessmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     Annotation = annotation,
                 },
                 callSettings);
@@ -519,7 +520,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<AnnotateAssessmentResponse> AnnotateAssessmentAsync(
-            string name,
+            AssessmentName name,
             AnnotateAssessmentRequest.Types.Annotation annotation,
             st::CancellationToken cancellationToken) => AnnotateAssessmentAsync(
                 name,
@@ -544,12 +545,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual AnnotateAssessmentResponse AnnotateAssessment(
-            string name,
+            AssessmentName name,
             AnnotateAssessmentRequest.Types.Annotation annotation,
             gaxgrpc::CallSettings callSettings = null) => AnnotateAssessment(
                 new AnnotateAssessmentRequest
                 {
-                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    AssessmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                     Annotation = annotation,
                 },
                 callSettings);
