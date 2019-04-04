@@ -18,6 +18,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.PhishingProtection.V1Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -39,16 +40,16 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
             ReportPhishingRequest expectedRequest = new ReportPhishingRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Uri = "uri116076",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse();
             mockGrpcClient.Setup(x => x.ReportPhishing(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string uri = "uri116076";
-            ReportPhishingResponse response = client.ReportPhishing(formattedParent, uri);
+            ReportPhishingResponse response = client.ReportPhishing(parent, uri);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -59,16 +60,16 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
             ReportPhishingRequest expectedRequest = new ReportPhishingRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Uri = "uri116076",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse();
             mockGrpcClient.Setup(x => x.ReportPhishingAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<ReportPhishingResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             PhishingProtectionServiceV1Beta1Client client = new PhishingProtectionServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string uri = "uri116076";
-            ReportPhishingResponse response = await client.ReportPhishingAsync(formattedParent, uri);
+            ReportPhishingResponse response = await client.ReportPhishingAsync(parent, uri);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -79,7 +80,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Uri = "uri116076",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse();
@@ -97,7 +98,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Tests
             Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client> mockGrpcClient = new Mock<PhishingProtectionServiceV1Beta1.PhishingProtectionServiceV1Beta1Client>(MockBehavior.Strict);
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Uri = "uri116076",
             };
             ReportPhishingResponse expectedResponse = new ReportPhishingResponse();

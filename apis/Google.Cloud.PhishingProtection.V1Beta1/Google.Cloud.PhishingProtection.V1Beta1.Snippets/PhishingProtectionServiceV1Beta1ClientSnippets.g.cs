@@ -18,6 +18,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.PhishingProtection.V1Beta1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -36,29 +37,29 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
         /// <summary>Snippet for ReportPhishingAsync</summary>
         public async Task ReportPhishingAsync()
         {
-            // Snippet: ReportPhishingAsync(string,string,CallSettings)
-            // Additional: ReportPhishingAsync(string,string,CancellationToken)
+            // Snippet: ReportPhishingAsync(ProjectName,string,CallSettings)
+            // Additional: ReportPhishingAsync(ProjectName,string,CancellationToken)
             // Create client
             PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = await PhishingProtectionServiceV1Beta1Client.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string uri = "";
             // Make the request
-            ReportPhishingResponse response = await phishingProtectionServiceV1Beta1Client.ReportPhishingAsync(formattedParent, uri);
+            ReportPhishingResponse response = await phishingProtectionServiceV1Beta1Client.ReportPhishingAsync(parent, uri);
             // End snippet
         }
 
         /// <summary>Snippet for ReportPhishing</summary>
         public void ReportPhishing()
         {
-            // Snippet: ReportPhishing(string,string,CallSettings)
+            // Snippet: ReportPhishing(ProjectName,string,CallSettings)
             // Create client
             PhishingProtectionServiceV1Beta1Client phishingProtectionServiceV1Beta1Client = PhishingProtectionServiceV1Beta1Client.Create();
             // Initialize request argument(s)
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             string uri = "";
             // Make the request
-            ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(formattedParent, uri);
+            ReportPhishingResponse response = phishingProtectionServiceV1Beta1Client.ReportPhishing(parent, uri);
             // End snippet
         }
 
@@ -72,7 +73,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
             // Initialize request argument(s)
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Uri = "",
             };
             // Make the request
@@ -89,7 +90,7 @@ namespace Google.Cloud.PhishingProtection.V1Beta1.Snippets
             // Initialize request argument(s)
             ReportPhishingRequest request = new ReportPhishingRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Uri = "",
             };
             // Make the request
