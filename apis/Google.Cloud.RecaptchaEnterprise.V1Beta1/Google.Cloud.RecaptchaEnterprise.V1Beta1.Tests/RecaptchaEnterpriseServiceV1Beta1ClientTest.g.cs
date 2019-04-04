@@ -18,6 +18,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Api.Gax.ResourceNames;
     using apis = Google.Cloud.RecaptchaEnterprise.V1Beta1;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -39,7 +40,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             CreateAssessmentRequest expectedRequest = new CreateAssessmentRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             Assessment expectedResponse = new Assessment
@@ -50,9 +51,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateAssessment(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Assessment assessment = new Assessment();
-            Assessment response = client.CreateAssessment(formattedParent, assessment);
+            Assessment response = client.CreateAssessment(parent, assessment);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -63,7 +64,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             CreateAssessmentRequest expectedRequest = new CreateAssessmentRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             Assessment expectedResponse = new Assessment
@@ -74,9 +75,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Assessment>(Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             Assessment assessment = new Assessment();
-            Assessment response = await client.CreateAssessmentAsync(formattedParent, assessment);
+            Assessment response = await client.CreateAssessmentAsync(parent, assessment);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -87,7 +88,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             Assessment expectedResponse = new Assessment
@@ -109,7 +110,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             CreateAssessmentRequest request = new CreateAssessmentRequest
             {
-                Parent = new Google.Api.Gax.ResourceNames.ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
                 Assessment = new Assessment(),
             };
             Assessment expectedResponse = new Assessment
@@ -131,16 +132,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             AnnotateAssessmentRequest expectedRequest = new AnnotateAssessmentRequest
             {
-                Name = new AssessmentName("[PROJECT]", "[ASSESSMENT]").ToString(),
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
             mockGrpcClient.Setup(x => x.AnnotateAssessment(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new AssessmentName("[PROJECT]", "[ASSESSMENT]").ToString();
+            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
             AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
-            AnnotateAssessmentResponse response = client.AnnotateAssessment(formattedName, annotation);
+            AnnotateAssessmentResponse response = client.AnnotateAssessment(name, annotation);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -151,16 +152,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             AnnotateAssessmentRequest expectedRequest = new AnnotateAssessmentRequest
             {
-                Name = new AssessmentName("[PROJECT]", "[ASSESSMENT]").ToString(),
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
             mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<AnnotateAssessmentResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceV1Beta1Client client = new RecaptchaEnterpriseServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
-            string formattedName = new AssessmentName("[PROJECT]", "[ASSESSMENT]").ToString();
+            AssessmentName name = new AssessmentName("[PROJECT]", "[ASSESSMENT]");
             AnnotateAssessmentRequest.Types.Annotation annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified;
-            AnnotateAssessmentResponse response = await client.AnnotateAssessmentAsync(formattedName, annotation);
+            AnnotateAssessmentResponse response = await client.AnnotateAssessmentAsync(name, annotation);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -171,7 +172,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
             {
-                Name = new AssessmentName("[PROJECT]", "[ASSESSMENT]").ToString(),
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
@@ -189,7 +190,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client> mockGrpcClient = new Mock<RecaptchaEnterpriseServiceV1Beta1.RecaptchaEnterpriseServiceV1Beta1Client>(MockBehavior.Strict);
             AnnotateAssessmentRequest request = new AnnotateAssessmentRequest
             {
-                Name = new AssessmentName("[PROJECT]", "[ASSESSMENT]").ToString(),
+                AssessmentName = new AssessmentName("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse();
