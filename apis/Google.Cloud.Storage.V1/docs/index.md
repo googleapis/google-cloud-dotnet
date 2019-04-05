@@ -72,6 +72,25 @@ account ID as part of your application configuration.
 
 {{sample:UrlSigner.IamServiceBlobSignerUsage}}
 
+### Specifying the signing version
+
+(V4 signing is currently beta functionality.)
+
+Google Cloud Storage supports two signing process versions: V2 and V4.
+Currently the default is V2, although in the future the library may
+be updated to use V4 by default.
+
+To specify the URL signing versioning, use the
+[UrlSigner.WithSigningVersion](obj/api/Google.Cloud.Storage.V1.UrlSigner.yml#Google_Cloud_Storage_V1_UrlSigner_WithSigningVersion_Google_Cloud_Storage_V1_SigningVersion_)
+method, specifying the signing version you wish to use. This does
+not change the UrlSigner it is called on; it returns a new UrlSigner
+that uses the specified version.
+
+Note that V4 signing is restricted to generating URLs that are valid
+for at most 7 days.
+
+{{sample:UrlSigner.WithSigningVersion}}
+
 ## Upload URIs
 
 In some cases, it may not make sense for client applications to have permissions

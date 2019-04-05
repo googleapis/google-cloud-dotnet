@@ -23,7 +23,7 @@ namespace Google.Cloud.Storage.V1
     /// The algorithm version to use in <see cref="UrlSigner"/>. See
     /// <see cref="UrlSigner.WithSigningVersion(SigningVersion)" /> for usage.
     /// </summary>
-    internal enum SigningVersion
+    public enum SigningVersion
     {
         /// <summary>
         /// The default signing version, where the version to use is chosen by the client library implementation.
