@@ -46,6 +46,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.GetQueue(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -67,6 +68,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -88,6 +90,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -108,6 +111,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -129,6 +133,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.CreateQueue(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -152,6 +157,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -175,6 +181,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -196,6 +203,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -217,6 +225,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -240,6 +249,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -262,6 +272,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -282,6 +293,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -368,6 +380,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -389,6 +402,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -410,6 +424,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -430,6 +445,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -450,6 +466,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PauseQueue(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -471,6 +488,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -492,6 +510,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -512,6 +531,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -532,6 +552,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -553,6 +574,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -574,6 +596,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -594,6 +617,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
             apis::Queue expectedResponse = new apis::Queue
             {
                 QueueName = new QueueName("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                LogSamplingRatio = -1.25350193E8,
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<apis::Queue>(Task.FromResult(expectedResponse), null, null, null, null));

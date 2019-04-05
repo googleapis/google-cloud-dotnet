@@ -26,33 +26,33 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvdGFza3MvdjJiZXRhMy90YXNrLnByb3RvEhpnb29n",
             "bGUuY2xvdWQudGFza3MudjJiZXRhMxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxonZ29vZ2xlL2Nsb3VkL3Rhc2tzL3YyYmV0YTMvdGFyZ2V0LnBy",
-            "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnBy",
-            "b3RvIuMECgRUYXNrEgwKBG5hbWUYASABKAkSUwoXYXBwX2VuZ2luZV9odHRw",
-            "X3JlcXVlc3QYAyABKAsyMC5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5B",
-            "cHBFbmdpbmVIdHRwUmVxdWVzdEgAEj8KDGh0dHBfcmVxdWVzdBgLIAEoCzIn",
-            "Lmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkh0dHBSZXF1ZXN0SAASMQoN",
-            "c2NoZWR1bGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASLwoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEjQKEWRpc3BhdGNoX2RlYWRsaW5lGAwgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uEhYKDmRpc3BhdGNoX2NvdW50GAYgASgFEhYKDnJl",
-            "c3BvbnNlX2NvdW50GAcgASgFEjoKDWZpcnN0X2F0dGVtcHQYCCABKAsyIy5n",
-            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5BdHRlbXB0EjkKDGxhc3RfYXR0",
-            "ZW1wdBgJIAEoCzIjLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkF0dGVt",
-            "cHQSMwoEdmlldxgKIAEoDjIlLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEz",
-            "LlRhc2suVmlldyIxCgRWaWV3EhQKEFZJRVdfVU5TUEVDSUZJRUQQABIJCgVC",
-            "QVNJQxABEggKBEZVTEwQAkIOCgxwYXlsb2FkX3R5cGUizwEKB0F0dGVtcHQS",
-            "MQoNc2NoZWR1bGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASMQoNZGlzcGF0Y2hfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASMQoNcmVzcG9uc2VfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASKwoPcmVzcG9uc2Vfc3RhdHVzGAQgASgLMhIu",
-            "Z29vZ2xlLnJwYy5TdGF0dXNCbgoeY29tLmdvb2dsZS5jbG91ZC50YXNrcy52",
-            "MmJldGEzQglUYXNrUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC90YXNrcy92MmJldGEzO3Rhc2tzYgZwcm90",
-            "bzM="));
+            "cy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxonZ29vZ2xlL2Ns",
+            "b3VkL3Rhc2tzL3YyYmV0YTMvdGFyZ2V0LnByb3RvGh5nb29nbGUvcHJvdG9i",
+            "dWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
+            "cHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvIuMECgRUYXNrEgwKBG5h",
+            "bWUYASABKAkSUwoXYXBwX2VuZ2luZV9odHRwX3JlcXVlc3QYAyABKAsyMC5n",
+            "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5BcHBFbmdpbmVIdHRwUmVxdWVz",
+            "dEgAEj8KDGh0dHBfcmVxdWVzdBgLIAEoCzInLmdvb2dsZS5jbG91ZC50YXNr",
+            "cy52MmJldGEzLkh0dHBSZXF1ZXN0SAASMQoNc2NoZWR1bGVfdGltZRgEIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRlX3RpbWUY",
+            "BSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKEWRpc3BhdGNo",
+            "X2RlYWRsaW5lGAwgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhYK",
+            "DmRpc3BhdGNoX2NvdW50GAYgASgFEhYKDnJlc3BvbnNlX2NvdW50GAcgASgF",
+            "EjoKDWZpcnN0X2F0dGVtcHQYCCABKAsyIy5nb29nbGUuY2xvdWQudGFza3Mu",
+            "djJiZXRhMy5BdHRlbXB0EjkKDGxhc3RfYXR0ZW1wdBgJIAEoCzIjLmdvb2ds",
+            "ZS5jbG91ZC50YXNrcy52MmJldGEzLkF0dGVtcHQSMwoEdmlldxgKIAEoDjIl",
+            "Lmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlRhc2suVmlldyIxCgRWaWV3",
+            "EhQKEFZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEggKBEZVTEwQAkIO",
+            "CgxwYXlsb2FkX3R5cGUizwEKB0F0dGVtcHQSMQoNc2NoZWR1bGVfdGltZRgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNZGlzcGF0Y2hf",
+            "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcmVz",
+            "cG9uc2VfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "KwoPcmVzcG9uc2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNC",
+            "bgoeY29tLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzQglUYXNrUHJvdG9Q",
+            "AVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
+            "ZC90YXNrcy92MmJldGEzO3Rhc2tzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Task), global::Google.Cloud.Tasks.V2Beta3.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "HttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "PayloadType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Attempt), global::Google.Cloud.Tasks.V2Beta3.Attempt.Parser, new[]{ "ScheduleTime", "DispatchTime", "ResponseTime", "ResponseStatus" }, null, null, null)
@@ -120,8 +120,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Optionally caller-specified in
-    /// [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
+    /// Optionally caller-specified in [CreateTask][google.cloud.tasks.v2beta3.CloudTasks.CreateTask].
     ///
     /// The task name.
     ///
@@ -155,9 +154,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// HTTP request that is sent to the App Engine app handler.
     ///
-    /// An App Engine task is a task that has
-    /// [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest]
-    /// set.
+    /// An App Engine task is a task that has [AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest] set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpRequest AppEngineHttpRequest {
@@ -175,10 +172,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// Warning: This is an [alpha](https://cloud.google.com/terms/launch-stages)
     /// feature. If you haven't already joined, you can [use this form to sign
-    /// up](https://docs.google.com/forms/d/e/1FAIpQLSfc4uEy9CBHKYUSdnY1hdhKDCX7julVZHy3imOiR-XrU7bUNQ/viewform?usp=sf_link).
+    /// up](https://docs.google.com/forms/d/e/1FAIpQLSfc4uEy9CBHKYUSdnY1hdhKDCX7julVZHy3imOiR-XrU7bUNQ/viewform).
     ///
-    /// An HTTP task is a task that has
-    /// [HttpRequest][google.cloud.tasks.v2beta3.HttpRequest] set.
+    /// An HTTP task is a task that has [HttpRequest][google.cloud.tasks.v2beta3.HttpRequest] set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.HttpRequest HttpRequest {
@@ -230,8 +226,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// The deadline for requests sent to the worker. If the worker does not
     /// respond by this deadline then the request is cancelled and the attempt
     /// is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the
-    /// task according to the
-    /// [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig].
+    /// task according to the [RetryConfig][google.cloud.tasks.v2beta3.RetryConfig].
     ///
     /// Note that when the request is cancelled, Cloud Tasks will stop listing for
     /// the response, but whether the worker stops processing depends on the
@@ -240,12 +235,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///
     /// The default and maximum values depend on the type of request:
     ///
-    /// * For [HTTP tasks][google.cloud.tasks.v2beta3.HttpRequest], the default is
-    ///   10 minutes.
-    ///   The deadline must be in the interval [15 seconds, 30 minutes].
+    /// * For [HTTP tasks][google.cloud.tasks.v2beta3.HttpRequest], the default is 10 minutes. The deadline
+    ///   must be in the interval [15 seconds, 30 minutes].
     ///
-    /// * For [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest],
-    /// 0 indicates that the
+    /// * For [App Engine tasks][google.cloud.tasks.v2beta3.AppEngineHttpRequest], 0 indicates that the
     ///   request has the default deadline. The default deadline depends on the
     ///   [scaling
     ///   type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling)
@@ -307,9 +300,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// <summary>
     /// Output only. The status of the task's first attempt.
     ///
-    /// Only [dispatch_time][google.cloud.tasks.v2beta3.Attempt.dispatch_time] will
-    /// be set. The other [Attempt][google.cloud.tasks.v2beta3.Attempt] information
-    /// is not retained by Cloud Tasks.
+    /// Only [dispatch_time][google.cloud.tasks.v2beta3.Attempt.dispatch_time] will be set.
+    /// The other [Attempt][google.cloud.tasks.v2beta3.Attempt] information is not retained by Cloud Tasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.Attempt FirstAttempt {
@@ -337,8 +329,8 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int ViewFieldNumber = 10;
     private global::Google.Cloud.Tasks.V2Beta3.Task.Types.View view_ = 0;
     /// <summary>
-    /// Output only. The view specifies which subset of the
-    /// [Task][google.cloud.tasks.v2beta3.Task] has been returned.
+    /// Output only. The view specifies which subset of the [Task][google.cloud.tasks.v2beta3.Task] has
+    /// been returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.Task.Types.View View {
@@ -665,8 +657,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// The view specifies a subset of [Task][google.cloud.tasks.v2beta3.Task]
-      /// data.
+      /// The view specifies a subset of [Task][google.cloud.tasks.v2beta3.Task] data.
       ///
       /// When a task is returned in a response, not all
       /// information is retrieved by default because some data, such as
@@ -684,8 +675,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         /// sensitive data.
         ///
         /// This view does not include the
-        /// [body in
-        /// AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest.body].
+        /// [body in AppEngineHttpRequest][google.cloud.tasks.v2beta3.AppEngineHttpRequest.body].
         /// Bodies are desirable to return only when needed, because they
         /// can be large and because of the sensitivity of the data that you
         /// choose to store in it.
@@ -694,10 +684,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         /// <summary>
         /// All information is returned.
         ///
-        /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL]
-        /// requires `cloudtasks.tasks.fullView` [Google
-        /// IAM](https://cloud.google.com/iam/) permission on the
-        /// [Queue][google.cloud.tasks.v2beta3.Queue] resource.
+        /// Authorization for [FULL][google.cloud.tasks.v2beta3.Task.View.FULL] requires
+        /// `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
+        /// permission on the [Queue][google.cloud.tasks.v2beta3.Queue] resource.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 2,
       }
