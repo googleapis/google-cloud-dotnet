@@ -74,6 +74,35 @@ namespace Google.Cloud.Storage.V1.Snippets
         // End see-also
 
         [Fact]
+        public async Task WithSigningVersion()
+        {
+            var bucketName = _fixture.BucketName;
+            var objectName = _fixture.HelloStorageObjectName;
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+            var httpClient = new HttpClient();
+
+            // Sample: WithSigningVersion
+            // Additional: WithSigningVersion(SigningVersion)
+            // Create a signed URL which can be used to get a specific object for one hour,
+            // using the V4 signing process.
+            UrlSigner urlSigner = UrlSigner
+                .FromServiceAccountCredential(credential)
+                .WithSigningVersion(SigningVersion.V4);
+            string url = urlSigner.Sign(
+                bucketName,
+                objectName,
+                TimeSpan.FromHours(1),
+                HttpMethod.Get);
+
+            // Get the content at the created URL.
+            HttpResponseMessage response = await httpClient.GetAsync(url);
+            string content = await response.Content.ReadAsStringAsync();
+            // End sample
+
+            Assert.Equal(_fixture.HelloWorldContent, content);
+        }
+
+        [Fact]
         public async Task SignedURLPut()
         {
             var bucketName = _fixture.BucketName;
