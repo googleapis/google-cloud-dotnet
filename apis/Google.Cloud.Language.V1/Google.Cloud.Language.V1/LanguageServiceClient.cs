@@ -727,10 +727,8 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="document">
         /// Input document.
@@ -756,10 +754,8 @@ namespace Google.Cloud.Language.V1
                 callSettings);
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="document">
         /// Input document.
@@ -782,10 +778,8 @@ namespace Google.Cloud.Language.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="document">
         /// Input document.
@@ -811,10 +805,8 @@ namespace Google.Cloud.Language.V1
                 callSettings);
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -833,10 +825,8 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -854,10 +844,8 @@ namespace Google.Cloud.Language.V1
                 gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1455,10 +1443,8 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1478,10 +1464,8 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds entities, similar to
-        /// [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities]
-        /// in the text and analyzes sentiment associated with each entity and its
-        /// mentions.
+        /// Finds entities, similar to [AnalyzeEntities][google.cloud.language.v1.LanguageService.AnalyzeEntities] in the text and analyzes
+        /// sentiment associated with each entity and its mentions.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
