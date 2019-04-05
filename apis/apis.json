@@ -612,6 +612,7 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
     "dependencies": {
+      "Google.Api.CommonProtos": "1.6.0",
       "Google.LongRunning": "1.1.0"
     },
     "tags": [ "Redis", "Memorystore" ]
@@ -634,6 +635,9 @@
     "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Scheduler API (v1beta1), which creates and manages jobs run on a regular recurring schedule.",
+    "dependencies": {
+      "Google.Api.CommonProtos": "1.6.0",
+    },
     "tags": [ "scheduler", "cron" ]
   },
 
@@ -827,6 +831,7 @@
     "description": "Recommended Google client library to access the Google Cloud Tasks API (v2beta3), which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
     "dependencies": {
+      "Google.Api.CommonProtos": "1.6.0",
       "Google.Cloud.Iam.V1": "1.2.0"
     }
   },

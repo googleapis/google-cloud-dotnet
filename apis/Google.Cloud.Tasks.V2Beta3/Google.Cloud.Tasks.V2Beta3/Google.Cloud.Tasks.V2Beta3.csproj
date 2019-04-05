@@ -23,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.CommonProtos" Version="1.6.0" />
     <PackageReference Include="Google.Api.Gax.Grpc" Version="2.6.0" />
     <PackageReference Include="Google.Cloud.Iam.V1" Version="1.2.0" />
     <PackageReference Include="Grpc.Core" Version="1.18.0" PrivateAssets="None" />
