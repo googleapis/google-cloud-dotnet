@@ -26,77 +26,89 @@ namespace Google.Cloud.Redis.V1Beta1 {
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvcmVkaXMvdjFiZXRhMS9jbG91ZF9yZWRpcy5wcm90",
             "bxIaZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25z",
-            "LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLkBgoISW5zdGFuY2USDAoE",
-            "bmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSQAoGbGFiZWxzGAMg",
-            "AygLMjAuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2UuTGFi",
-            "ZWxzRW50cnkSEwoLbG9jYXRpb25faWQYBCABKAkSHwoXYWx0ZXJuYXRpdmVf",
-            "bG9jYXRpb25faWQYBSABKAkSFQoNcmVkaXNfdmVyc2lvbhgHIAEoCRIZChFy",
-            "ZXNlcnZlZF9pcF9yYW5nZRgJIAEoCRIMCgRob3N0GAogASgJEgwKBHBvcnQY",
-            "CyABKAUSGwoTY3VycmVudF9sb2NhdGlvbl9pZBgMIAEoCRIvCgtjcmVhdGVf",
-            "dGltZRgNIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASOQoFc3Rh",
-            "dGUYDiABKA4yKi5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5j",
-            "ZS5TdGF0ZRIWCg5zdGF0dXNfbWVzc2FnZRgPIAEoCRJNCg1yZWRpc19jb25m",
-            "aWdzGBAgAygLMjYuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFu",
-            "Y2UuUmVkaXNDb25maWdzRW50cnkSNwoEdGllchgRIAEoDjIpLmdvb2dsZS5j",
-            "bG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlLlRpZXISFgoObWVtb3J5X3Np",
-            "emVfZ2IYEiABKAUSGgoSYXV0aG9yaXplZF9uZXR3b3JrGBQgASgJGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMwoR",
-            "UmVkaXNDb25maWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ASJzCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFU",
-            "SU5HEAESCQoFUkVBRFkQAhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQS",
-            "DQoJUkVQQUlSSU5HEAUSDwoLTUFJTlRFTkFOQ0UQBiI4CgRUaWVyEhQKEFRJ",
-            "RVJfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEg8KC1NUQU5EQVJEX0hBEAMi",
-            "TQoUTGlzdEluc3RhbmNlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBh",
-            "Z2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImkKFUxpc3RJbnN0",
-            "YW5jZXNSZXNwb25zZRI3CglpbnN0YW5jZXMYASADKAsyJC5nb29nbGUuY2xv",
-            "dWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkiIgoSR2V0SW5zdGFuY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkidAoV",
-            "Q3JlYXRlSW5zdGFuY2VSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRITCgtpbnN0",
-            "YW5jZV9pZBgCIAEoCRI2CghpbnN0YW5jZRgDIAEoCzIkLmdvb2dsZS5jbG91",
-            "ZC5yZWRpcy52MWJldGExLkluc3RhbmNlIoABChVVcGRhdGVJbnN0YW5jZVJl",
-            "cXVlc3QSLwoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "RmllbGRNYXNrEjYKCGluc3RhbmNlGAIgASgLMiQuZ29vZ2xlLmNsb3VkLnJl",
-            "ZGlzLnYxYmV0YTEuSW5zdGFuY2UiJQoVRGVsZXRlSW5zdGFuY2VSZXF1ZXN0",
-            "EgwKBG5hbWUYASABKAkizgEKEExvY2F0aW9uTWV0YWRhdGESWQoPYXZhaWxh",
-            "YmxlX3pvbmVzGAEgAygLMkAuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEu",
-            "TG9jYXRpb25NZXRhZGF0YS5BdmFpbGFibGVab25lc0VudHJ5Gl8KE0F2YWls",
-            "YWJsZVpvbmVzRW50cnkSCwoDa2V5GAEgASgJEjcKBXZhbHVlGAIgASgLMigu",
-            "Z29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuWm9uZU1ldGFkYXRhOgI4ASIO",
-            "Cgxab25lTWV0YWRhdGEy4QYKCkNsb3VkUmVkaXMSsAEKDUxpc3RJbnN0YW5j",
-            "ZXMSMC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5MaXN0SW5zdGFuY2Vz",
-            "UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkxpc3RJbnN0",
-            "YW5jZXNSZXNwb25zZSI6gtPkkwI0EjIvdjFiZXRhMS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L2luc3RhbmNlcxKfAQoLR2V0SW5zdGFuY2US",
-            "Li5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5HZXRJbnN0YW5jZVJlcXVl",
-            "c3QaJC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZSI6gtPk",
-            "kwI0EjIvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2lu",
-            "c3RhbmNlcy8qfRKoAQoOQ3JlYXRlSW5zdGFuY2USMS5nb29nbGUuY2xvdWQu",
-            "cmVkaXMudjFiZXRhMS5DcmVhdGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUu",
-            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIkSC0+STAj4iMi92MWJldGExL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFuY2VzOghpbnN0YW5j",
-            "ZRKxAQoOVXBkYXRlSW5zdGFuY2USMS5nb29nbGUuY2xvdWQucmVkaXMudjFi",
-            "ZXRhMS5VcGRhdGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIk2C0+STAkcyOy92MWJldGExL3tpbnN0YW5jZS5uYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OghpbnN0YW5j",
-            "ZRKeAQoORGVsZXRlSW5zdGFuY2USMS5nb29nbGUuY2xvdWQucmVkaXMudjFi",
-            "ZXRhMS5EZWxldGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIjqC0+STAjQqMi92MWJldGExL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9Qn8KHmNvbS5nb29nbGUuY2xv",
-            "dWQucmVkaXMudjFiZXRhMUIaQ2xvdWRSZWRpc1NlcnZpY2VCZXRhUHJvdG9Q",
-            "AVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9yZWRpcy92MWJldGExO3JlZGlzYgZwcm90bzM="));
+            "b3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dv",
+            "b2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGiBnb29nbGUvcHJv",
+            "dG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
+            "dGFtcC5wcm90byKGBwoISW5zdGFuY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNw",
+            "bGF5X25hbWUYAiABKAkSQAoGbGFiZWxzGAMgAygLMjAuZ29vZ2xlLmNsb3Vk",
+            "LnJlZGlzLnYxYmV0YTEuSW5zdGFuY2UuTGFiZWxzRW50cnkSEwoLbG9jYXRp",
+            "b25faWQYBCABKAkSHwoXYWx0ZXJuYXRpdmVfbG9jYXRpb25faWQYBSABKAkS",
+            "FQoNcmVkaXNfdmVyc2lvbhgHIAEoCRIZChFyZXNlcnZlZF9pcF9yYW5nZRgJ",
+            "IAEoCRIMCgRob3N0GAogASgJEgwKBHBvcnQYCyABKAUSGwoTY3VycmVudF9s",
+            "b2NhdGlvbl9pZBgMIAEoCRIvCgtjcmVhdGVfdGltZRgNIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASOQoFc3RhdGUYDiABKA4yKi5nb29nbGUu",
+            "Y2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZS5TdGF0ZRIWCg5zdGF0dXNf",
+            "bWVzc2FnZRgPIAEoCRJNCg1yZWRpc19jb25maWdzGBAgAygLMjYuZ29vZ2xl",
+            "LmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2UuUmVkaXNDb25maWdzRW50",
+            "cnkSNwoEdGllchgRIAEoDjIpLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGEx",
+            "Lkluc3RhbmNlLlRpZXISFgoObWVtb3J5X3NpemVfZ2IYEiABKAUSGgoSYXV0",
+            "aG9yaXplZF9uZXR3b3JrGBQgASgJGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMwoRUmVkaXNDb25maWdzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKUAQoFU3RhdGUSFQoR",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgkKBVJFQURZEAIS",
+            "DAoIVVBEQVRJTkcQAxIMCghERUxFVElORxAEEg0KCVJFUEFJUklORxAFEg8K",
+            "C01BSU5URU5BTkNFEAYSDQoJSU1QT1JUSU5HEAgSEAoMRkFJTElOR19PVkVS",
+            "EAoiOAoEVGllchIUChBUSUVSX1VOU1BFQ0lGSUVEEAASCQoFQkFTSUMQARIP",
+            "CgtTVEFOREFSRF9IQRADIk0KFExpc3RJbnN0YW5jZXNSZXF1ZXN0Eg4KBnBh",
+            "cmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
+            "IAEoCSJ+ChVMaXN0SW5zdGFuY2VzUmVzcG9uc2USNwoJaW5zdGFuY2VzGAEg",
+            "AygLMiQuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIiIK",
+            "EkdldEluc3RhbmNlUmVxdWVzdBIMCgRuYW1lGAEgASgJInQKFUNyZWF0ZUlu",
+            "c3RhbmNlUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEwoLaW5zdGFuY2VfaWQY",
+            "AiABKAkSNgoIaW5zdGFuY2UYAyABKAsyJC5nb29nbGUuY2xvdWQucmVkaXMu",
+            "djFiZXRhMS5JbnN0YW5jZSKAAQoVVXBkYXRlSW5zdGFuY2VSZXF1ZXN0Ei8K",
+            "C3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
+            "axI2CghpbnN0YW5jZRgCIAEoCzIkLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJl",
+            "dGExLkluc3RhbmNlIiUKFURlbGV0ZUluc3RhbmNlUmVxdWVzdBIMCgRuYW1l",
+            "GAEgASgJIvUBChdGYWlsb3Zlckluc3RhbmNlUmVxdWVzdBIMCgRuYW1lGAEg",
+            "ASgJEmQKFGRhdGFfcHJvdGVjdGlvbl9tb2RlGAIgASgOMkYuZ29vZ2xlLmNs",
+            "b3VkLnJlZGlzLnYxYmV0YTEuRmFpbG92ZXJJbnN0YW5jZVJlcXVlc3QuRGF0",
+            "YVByb3RlY3Rpb25Nb2RlImYKEkRhdGFQcm90ZWN0aW9uTW9kZRIkCiBEQVRB",
+            "X1BST1RFQ1RJT05fTU9ERV9VTlNQRUNJRklFRBAAEhUKEUxJTUlURURfREFU",
+            "QV9MT1NTEAESEwoPRk9SQ0VfREFUQV9MT1NTEAIizgEKEExvY2F0aW9uTWV0",
+            "YWRhdGESWQoPYXZhaWxhYmxlX3pvbmVzGAEgAygLMkAuZ29vZ2xlLmNsb3Vk",
+            "LnJlZGlzLnYxYmV0YTEuTG9jYXRpb25NZXRhZGF0YS5BdmFpbGFibGVab25l",
+            "c0VudHJ5Gl8KE0F2YWlsYWJsZVpvbmVzRW50cnkSCwoDa2V5GAEgASgJEjcK",
+            "BXZhbHVlGAIgASgLMiguZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuWm9u",
+            "ZU1ldGFkYXRhOgI4ASIOCgxab25lTWV0YWRhdGEykggKCkNsb3VkUmVkaXMS",
+            "sAEKDUxpc3RJbnN0YW5jZXMSMC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRh",
+            "MS5MaXN0SW5zdGFuY2VzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5yZWRpcy52",
+            "MWJldGExLkxpc3RJbnN0YW5jZXNSZXNwb25zZSI6gtPkkwI0EjIvdjFiZXRh",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2luc3RhbmNlcxKf",
+            "AQoLR2V0SW5zdGFuY2USLi5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5H",
+            "ZXRJbnN0YW5jZVJlcXVlc3QaJC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRh",
+            "MS5JbnN0YW5jZSI6gtPkkwI0EjIvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfRKoAQoOQ3JlYXRlSW5zdGFuY2US",
+            "MS5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5DcmVhdGVJbnN0YW5jZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIkSC0+STAj4i",
+            "Mi92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5z",
+            "dGFuY2VzOghpbnN0YW5jZRKxAQoOVXBkYXRlSW5zdGFuY2USMS5nb29nbGUu",
+            "Y2xvdWQucmVkaXMudjFiZXRhMS5VcGRhdGVJbnN0YW5jZVJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIk2C0+STAkcyOy92MWJldGEx",
+            "L3tpbnN0YW5jZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFu",
+            "Y2VzLyp9OghpbnN0YW5jZRKuAQoQRmFpbG92ZXJJbnN0YW5jZRIzLmdvb2ds",
+            "ZS5jbG91ZC5yZWRpcy52MWJldGExLkZhaWxvdmVySW5zdGFuY2VSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJGgtPkkwJAIjsvdjFi",
+            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8q",
+            "fTpmYWlsb3ZlcjoBKhKeAQoORGVsZXRlSW5zdGFuY2USMS5nb29nbGUuY2xv",
+            "dWQucmVkaXMudjFiZXRhMS5EZWxldGVJbnN0YW5jZVJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIjqC0+STAjQqMi92MWJldGExL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9Qn8KHmNv",
+            "bS5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMUIaQ2xvdWRSZWRpc1NlcnZp",
+            "Y2VCZXRhUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC9yZWRpcy92MWJldGExO3JlZGlzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.Instance), global::Google.Cloud.Redis.V1Beta1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier) }, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest), global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse), global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse), global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest), global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest), global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest.Parser, new[]{ "Parent", "InstanceId", "Instance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest), global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest.Parser, new[]{ "UpdateMask", "Instance" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest), global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest), global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Parser, new[]{ "Name", "DataProtectionMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.LocationMetadata), global::Google.Cloud.Redis.V1Beta1.LocationMetadata.Parser, new[]{ "AvailableZones" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ZoneMetadata), global::Google.Cloud.Redis.V1Beta1.ZoneMetadata.Parser, null, null, null, null)
           }));
@@ -167,7 +179,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
     ///
     /// Note: Redis instances are managed and addressed at regional level so
-    /// location_id here refers to a GCP region; however, users get to choose which
+    /// location_id here refers to a GCP region; however, users may choose which
     /// specific zone (or collection of zones for cross-zone instances) an instance
     /// should be provisioned in. Refer to [location_id] and
     /// [alternative_location_id] fields for more details.
@@ -214,7 +226,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// Optional. The zone where the instance will be provisioned. If not provided,
     /// the service will choose a zone for the instance. For STANDARD_HA tier,
     /// instances will be created across two zones for protection against zonal
-    /// failures. if [alternative_location_id] is also provided, it must be
+    /// failures. If [alternative_location_id] is also provided, it must be
     /// different from [location_id].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -246,7 +258,12 @@ namespace Google.Cloud.Redis.V1Beta1 {
     private string redisVersion_ = "";
     /// <summary>
     /// Optional. The version of Redis software.
-    /// If not provided, latest supported version will be used.
+    /// If not provided, latest supported version will be used. Updating the
+    /// version will perform an upgrade/downgrade to the new version. Currently,
+    /// the supported values are:
+    ///
+    ///  *   `REDIS_4_0` for Redis 4.0 compatibility
+    ///  *   `REDIS_3_2` for Redis 3.2 compatibility (default)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RedisVersion {
@@ -263,7 +280,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// Optional. The CIDR range of internal addresses that are reserved for this
     /// instance. If not provided, the service will choose an unused /29 block,
     /// for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique
-    /// and non-overlapping with existing subnets in a network.
+    /// and non-overlapping with existing subnets in an authorized network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ReservedIpRange {
@@ -277,7 +294,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int HostFieldNumber = 10;
     private string host_ = "";
     /// <summary>
-    /// Output only. Hostname or IP address of the exposed redis endpoint used by
+    /// Output only. Hostname or IP address of the exposed Redis endpoint used by
     /// clients to connect to the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -292,7 +309,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int PortFieldNumber = 11;
     private int port_;
     /// <summary>
-    /// Output only. The port number of the exposed redis endpoint.
+    /// Output only. The port number of the exposed Redis endpoint.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Port {
@@ -306,11 +323,11 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int CurrentLocationIdFieldNumber = 12;
     private string currentLocationId_ = "";
     /// <summary>
-    /// Output only. The current zone where the Redis endpoint is placed. In
-    /// single zone deployments, this will always be the same as [location_id]
-    /// provided by the user at creation time. In cross-zone instances (only
-    /// applicable in STANDARD_HA tier), this can be either [location_id] or
-    /// [alternative_location_id] and can change on a failover event.
+    /// Output only. The current zone where the Redis endpoint is placed. For Basic
+    /// Tier instances, this will always be the same as the [location_id]
+    /// provided by the user at creation time. For Standard Tier instances,
+    /// this can be either [location_id] or [alternative_location_id] and can
+    /// change after a failover event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CurrentLocationId {
@@ -372,8 +389,17 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// Optional. Redis configuration parameters, according to
     /// http://redis.io/topics/config. Currently, the only supported parameters
     /// are:
-    ///  * maxmemory-policy
-    ///  * notify-keyspace-events
+    ///
+    ///  Redis 3.2 and above:
+    ///
+    ///  *   maxmemory-policy
+    ///  *   notify-keyspace-events
+    ///
+    ///  Redis 4.0 and above:
+    ///
+    ///  *   activedefrag
+    ///  *   lfu-log-factor
+    ///  *   lfu-decay-time
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> RedisConfigs {
@@ -398,7 +424,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int MemorySizeGbFieldNumber = 18;
     private int memorySizeGb_;
     /// <summary>
-    /// Required. Redis memory size in GB.
+    /// Required. Redis memory size in GiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MemorySizeGb {
@@ -786,14 +812,21 @@ namespace Google.Cloud.Redis.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("DELETING")] Deleting = 4,
         /// <summary>
-        /// Redis instance is being repaired and may be unusable. Details can be
-        /// found in the `status_message` field.
+        /// Redis instance is being repaired and may be unusable.
         /// </summary>
         [pbr::OriginalName("REPAIRING")] Repairing = 5,
         /// <summary>
         /// Maintenance is being performed on this Redis instance.
         /// </summary>
         [pbr::OriginalName("MAINTENANCE")] Maintenance = 6,
+        /// <summary>
+        /// Redis instance is importing data (availability may be affected).
+        /// </summary>
+        [pbr::OriginalName("IMPORTING")] Importing = 8,
+        /// <summary>
+        /// Redis instance is failing over (availability may be affected).
+        /// </summary>
+        [pbr::OriginalName("FAILING_OVER")] FailingOver = 10,
       }
 
       /// <summary>
@@ -1057,6 +1090,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public ListInstancesResponse(ListInstancesResponse other) : this() {
       instances_ = other.instances_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1102,6 +1136,19 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Locations that could not be reached.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListInstancesResponse);
@@ -1117,6 +1164,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if(!instances_.Equals(other.instances_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1125,6 +1173,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       int hash = 1;
       hash ^= instances_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1143,6 +1192,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1155,6 +1205,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1170,6 +1221,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1187,6 +1239,10 @@ namespace Google.Cloud.Redis.V1Beta1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
             break;
           }
         }
@@ -1590,11 +1646,12 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// <summary>
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. The elements of the repeated paths field may only include these
-    /// fields from [Instance][CloudRedis.Instance]:
-    /// * `display_name`
-    /// * `labels`
-    /// * `memory_size_gb`
-    /// * `redis_config`
+    /// fields from [Instance][google.cloud.redis.v1beta1.Instance]:
+    ///
+    ///  *   `displayName`
+    ///  *   `labels`
+    ///  *   `memorySizeGb`
+    ///  *   `redisConfig`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -1870,6 +1927,198 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
+  /// Request for
+  /// [Failover][google.cloud.redis.v1beta1.CloudRedis.FailoverInstance].
+  /// </summary>
+  public sealed partial class FailoverInstanceRequest : pb::IMessage<FailoverInstanceRequest> {
+    private static readonly pb::MessageParser<FailoverInstanceRequest> _parser = new pb::MessageParser<FailoverInstanceRequest>(() => new FailoverInstanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FailoverInstanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FailoverInstanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FailoverInstanceRequest(FailoverInstanceRequest other) : this() {
+      name_ = other.name_;
+      dataProtectionMode_ = other.dataProtectionMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FailoverInstanceRequest Clone() {
+      return new FailoverInstanceRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Redis instance resource name using the form:
+    ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+    /// where `location_id` refers to a GCP region
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_protection_mode" field.</summary>
+    public const int DataProtectionModeFieldNumber = 2;
+    private global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode_ = 0;
+    /// <summary>
+    /// Optional. Available data protection modes that the user can choose. If it's
+    /// unspecified, data protection mode will be LIMITED_DATA_LOSS by default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode DataProtectionMode {
+      get { return dataProtectionMode_; }
+      set {
+        dataProtectionMode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FailoverInstanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FailoverInstanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DataProtectionMode != other.DataProtectionMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DataProtectionMode != 0) hash ^= DataProtectionMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DataProtectionMode != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DataProtectionMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (DataProtectionMode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataProtectionMode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FailoverInstanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.DataProtectionMode != 0) {
+        DataProtectionMode = other.DataProtectionMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            dataProtectionMode_ = (global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Types.DataProtectionMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FailoverInstanceRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum DataProtectionMode {
+        [pbr::OriginalName("DATA_PROTECTION_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Instance failover will be protected with data loss control. More
+        /// specifically, the failover will only be performed if the current
+        /// replication offset diff between master and replica is under a certain
+        /// threshold.
+        /// </summary>
+        [pbr::OriginalName("LIMITED_DATA_LOSS")] LimitedDataLoss = 1,
+        /// <summary>
+        /// Instance failover will be performed without data loss control.
+        /// </summary>
+        [pbr::OriginalName("FORCE_DATA_LOSS")] ForceDataLoss = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// This location metadata represents additional configuration options for a
   /// given location where a Redis instance may be created. All fields are output
   /// only. It is returned as content of the
@@ -1883,7 +2132,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2014,7 +2263,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

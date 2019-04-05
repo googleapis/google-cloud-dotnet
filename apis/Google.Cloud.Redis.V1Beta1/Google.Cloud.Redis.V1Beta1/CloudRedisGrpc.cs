@@ -3,7 +3,7 @@
 //     source: google/cloud/redis/v1beta1/cloud_redis.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google Inc.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 //
 #pragma warning disable 1591
 #region Designer generated code
@@ -51,6 +52,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest> __Marshaller_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest> __Marshaller_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest> __Marshaller_FailoverInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest, global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest, global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse>(
@@ -79,6 +81,13 @@ namespace Google.Cloud.Redis.V1Beta1 {
         __ServiceName,
         "UpdateInstance",
         __Marshaller_UpdateInstanceRequest,
+        __Marshaller_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest, global::Google.LongRunning.Operation> __Method_FailoverInstance = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FailoverInstance",
+        __Marshaller_FailoverInstanceRequest,
         __Marshaller_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest, global::Google.LongRunning.Operation> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(
@@ -129,7 +138,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <summary>
       /// Creates a Redis instance based on the specified tier and memory size.
       ///
-      /// By default, the instance is peered to the project's
+      /// By default, the instance is accessible from the project's
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// The creation is executed asynchronously and callers may check the returned
@@ -159,6 +168,18 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInstance(global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Failover the master role to current replica node against a specific
+      /// STANDARD tier redis instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> FailoverInstance(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -319,7 +340,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <summary>
       /// Creates a Redis instance based on the specified tier and memory size.
       ///
-      /// By default, the instance is peered to the project's
+      /// By default, the instance is accessible from the project's
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// The creation is executed asynchronously and callers may check the returned
@@ -342,7 +363,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <summary>
       /// Creates a Redis instance based on the specified tier and memory size.
       ///
-      /// By default, the instance is peered to the project's
+      /// By default, the instance is accessible from the project's
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// The creation is executed asynchronously and callers may check the returned
@@ -363,7 +384,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <summary>
       /// Creates a Redis instance based on the specified tier and memory size.
       ///
-      /// By default, the instance is peered to the project's
+      /// By default, the instance is accessible from the project's
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// The creation is executed asynchronously and callers may check the returned
@@ -386,7 +407,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <summary>
       /// Creates a Redis instance based on the specified tier and memory size.
       ///
-      /// By default, the instance is peered to the project's
+      /// By default, the instance is accessible from the project's
       /// [default network](/compute/docs/networks-and-firewalls#networks).
       ///
       /// The creation is executed asynchronously and callers may check the returned
@@ -465,6 +486,54 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
+      /// Failover the master role to current replica node against a specific
+      /// STANDARD tier redis instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation FailoverInstance(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FailoverInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Failover the master role to current replica node against a specific
+      /// STANDARD tier redis instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation FailoverInstance(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FailoverInstance, null, options, request);
+      }
+      /// <summary>
+      /// Failover the master role to current replica node against a specific
+      /// STANDARD tier redis instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> FailoverInstanceAsync(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FailoverInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Failover the master role to current replica node against a specific
+      /// STANDARD tier redis instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> FailoverInstanceAsync(global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FailoverInstance, null, options, request);
+      }
+      /// <summary>
       /// Deletes a specific Redis instance.  Instance stops serving and data is
       /// deleted.
       /// </summary>
@@ -528,6 +597,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
+          .AddMethod(__Method_FailoverInstance, serviceImpl.FailoverInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance).Build();
     }
 
