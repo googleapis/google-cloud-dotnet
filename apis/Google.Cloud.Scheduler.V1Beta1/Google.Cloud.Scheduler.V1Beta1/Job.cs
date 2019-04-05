@@ -26,38 +26,40 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvc2NoZWR1bGVyL3YxYmV0YTEvam9iLnByb3RvEh5n",
             "b29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEaHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8aK2dvb2dsZS9jbG91ZC9zY2hlZHVsZXIvdjFiZXRh",
-            "MS90YXJnZXQucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90",
-            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3Jw",
-            "Yy9zdGF0dXMucHJvdG8i0wUKA0pvYhIMCgRuYW1lGAEgASgJEhMKC2Rlc2Ny",
-            "aXB0aW9uGAIgASgJEkUKDXB1YnN1Yl90YXJnZXQYBCABKAsyLC5nb29nbGUu",
-            "Y2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEuUHVic3ViVGFyZ2V0SAASVQoWYXBw",
-            "X2VuZ2luZV9odHRwX3RhcmdldBgFIAEoCzIzLmdvb2dsZS5jbG91ZC5zY2hl",
-            "ZHVsZXIudjFiZXRhMS5BcHBFbmdpbmVIdHRwVGFyZ2V0SAASQQoLaHR0cF90",
-            "YXJnZXQYBiABKAsyKi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEu",
-            "SHR0cFRhcmdldEgAEhAKCHNjaGVkdWxlGBQgASgJEhEKCXRpbWVfem9uZRgV",
-            "IAEoCRI0ChB1c2VyX3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBI4CgVzdGF0ZRgKIAEoDjIpLmdvb2dsZS5jbG91ZC5z",
-            "Y2hlZHVsZXIudjFiZXRhMS5Kb2IuU3RhdGUSIgoGc3RhdHVzGAsgASgLMhIu",
-            "Z29vZ2xlLnJwYy5TdGF0dXMSMQoNc2NoZWR1bGVfdGltZRgRIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNQoRbGFzdF9hdHRlbXB0X3RpbWUY",
-            "EiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkEKDHJldHJ5X2Nv",
-            "bmZpZxgTIAEoCzIrLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5S",
-            "ZXRyeUNvbmZpZyJYCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsK",
-            "B0VOQUJMRUQQARIKCgZQQVVTRUQQAhIMCghESVNBQkxFRBADEhEKDVVQREFU",
-            "RV9GQUlMRUQQBEIICgZ0YXJnZXQi4gEKC1JldHJ5Q29uZmlnEhMKC3JldHJ5",
-            "X2NvdW50GAEgASgFEjUKEm1heF9yZXRyeV9kdXJhdGlvbhgCIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI3ChRtaW5fYmFja29mZl9kdXJhdGlv",
-            "bhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI3ChRtYXhfYmFj",
-            "a29mZl9kdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bhIVCg1tYXhfZG91YmxpbmdzGAUgASgFQnkKImNvbS5nb29nbGUuY2xvdWQu",
-            "c2NoZWR1bGVyLnYxYmV0YTFCCEpvYlByb3RvUAFaR2dvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2NoZWR1bGVyL3YxYmV0",
-            "YTE7c2NoZWR1bGVyYgZwcm90bzM="));
+            "b3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aK2dv",
+            "b2dsZS9jbG91ZC9zY2hlZHVsZXIvdjFiZXRhMS90YXJnZXQucHJvdG8aHmdv",
+            "b2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iiAYK",
+            "A0pvYhIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEkUKDXB1",
+            "YnN1Yl90YXJnZXQYBCABKAsyLC5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYx",
+            "YmV0YTEuUHVic3ViVGFyZ2V0SAASVQoWYXBwX2VuZ2luZV9odHRwX3Rhcmdl",
+            "dBgFIAEoCzIzLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5BcHBF",
+            "bmdpbmVIdHRwVGFyZ2V0SAASQQoLaHR0cF90YXJnZXQYBiABKAsyKi5nb29n",
+            "bGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEuSHR0cFRhcmdldEgAEhAKCHNj",
+            "aGVkdWxlGBQgASgJEhEKCXRpbWVfem9uZRgVIAEoCRI0ChB1c2VyX3VwZGF0",
+            "ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI4CgVz",
+            "dGF0ZRgKIAEoDjIpLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5K",
+            "b2IuU3RhdGUSIgoGc3RhdHVzGAsgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMS",
+            "MQoNc2NoZWR1bGVfdGltZRgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASNQoRbGFzdF9hdHRlbXB0X3RpbWUYEiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEkEKDHJldHJ5X2NvbmZpZxgTIAEoCzIrLmdvb2ds",
+            "ZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5SZXRyeUNvbmZpZxIzChBhdHRl",
+            "bXB0X2RlYWRsaW5lGBYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "IlgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBAB",
+            "EgoKBlBBVVNFRBACEgwKCERJU0FCTEVEEAMSEQoNVVBEQVRFX0ZBSUxFRBAE",
+            "QggKBnRhcmdldCLiAQoLUmV0cnlDb25maWcSEwoLcmV0cnlfY291bnQYASAB",
+            "KAUSNQoSbWF4X3JldHJ5X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEjcKFG1pbl9iYWNrb2ZmX2R1cmF0aW9uGAMgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjcKFG1heF9iYWNrb2ZmX2R1cmF0",
+            "aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhUKDW1heF9k",
+            "b3VibGluZ3MYBSABKAVCeQoiY29tLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIu",
+            "djFiZXRhMUIISm9iUHJvdG9QAVpHZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9zY2hlZHVsZXIvdjFiZXRhMTtzY2hlZHVs",
+            "ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Scheduler.V1Beta1.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1Beta1.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1Beta1.Job), global::Google.Cloud.Scheduler.V1Beta1.Job.Parser, new[]{ "Name", "Description", "PubsubTarget", "AppEngineHttpTarget", "HttpTarget", "Schedule", "TimeZone", "UserUpdateTime", "State", "Status", "ScheduleTime", "LastAttemptTime", "RetryConfig" }, new[]{ "Target" }, new[]{ typeof(global::Google.Cloud.Scheduler.V1Beta1.Job.Types.State) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1Beta1.Job), global::Google.Cloud.Scheduler.V1Beta1.Job.Parser, new[]{ "Name", "Description", "PubsubTarget", "AppEngineHttpTarget", "HttpTarget", "Schedule", "TimeZone", "UserUpdateTime", "State", "Status", "ScheduleTime", "LastAttemptTime", "RetryConfig", "AttemptDeadline" }, new[]{ "Target" }, new[]{ typeof(global::Google.Cloud.Scheduler.V1Beta1.Job.Types.State) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1Beta1.RetryConfig), global::Google.Cloud.Scheduler.V1Beta1.RetryConfig.Parser, new[]{ "RetryCount", "MaxRetryDuration", "MinBackoffDuration", "MaxBackoffDuration", "MaxDoublings" }, null, null, null)
           }));
     }
@@ -104,6 +106,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
       scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
       lastAttemptTime_ = other.lastAttemptTime_ != null ? other.lastAttemptTime_.Clone() : null;
       retryConfig_ = other.retryConfig_ != null ? other.retryConfig_.Clone() : null;
+      attemptDeadline_ = other.attemptDeadline_ != null ? other.attemptDeadline_.Clone() : null;
       switch (other.TargetCase) {
         case TargetOneofCase.PubsubTarget:
           PubsubTarget = other.PubsubTarget.Clone();
@@ -128,6 +131,9 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
+    /// Optionally caller-specified in [CreateJob][google.cloud.scheduler.v1beta1.CloudScheduler.CreateJob], after
+    /// which it becomes output only.
+    ///
     /// The job name. For example:
     /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
     ///
@@ -155,6 +161,9 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
+    /// Optionally caller-specified in [CreateJob][google.cloud.scheduler.v1beta1.CloudScheduler.CreateJob] or
+    /// [UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob].
+    ///
     /// A human-readable description for the job. This string must not contain
     /// more than 500 characters.
     /// </summary>
@@ -212,9 +221,15 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     public const int ScheduleFieldNumber = 20;
     private string schedule_ = "";
     /// <summary>
-    /// Required.
+    /// Required, except when used with [UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob].
     ///
     /// Describes the schedule on which the job will be executed.
+    ///
+    /// The schedule can be either of the following types:
+    ///
+    /// * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview)
+    /// * English-like
+    /// [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
     ///
     /// As a general rule, execution `n + 1` of a job will not begin
     /// until execution `n` has finished. Cloud Scheduler will never
@@ -225,17 +240,10 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// A scheduled start time will be delayed if the previous
     /// execution has not ended when its scheduled time occurs.
     ///
-    /// If [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] >
-    /// 0 and a job attempt fails, the job will be tried a total of
-    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
+    /// If [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] > 0 and a job attempt fails,
+    /// the job will be tried a total of [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
     /// times, with exponential backoff, until the next scheduled start
     /// time.
-    ///
-    /// The schedule can be either of the following types:
-    ///
-    /// * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview)
-    /// * English-like
-    /// [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Schedule {
@@ -250,9 +258,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     private string timeZone_ = "";
     /// <summary>
     /// Specifies the time zone to be used in interpreting
-    /// [schedule][google.cloud.scheduler.v1beta1.Job.schedule]. The value of this
-    /// field must be a time zone name from the [tz
-    /// database](http://en.wikipedia.org/wiki/Tz_database).
+    /// [schedule][google.cloud.scheduler.v1beta1.Job.schedule]. The value of this field must be a time
+    /// zone name from the [tz database](http://en.wikipedia.org/wiki/Tz_database).
     ///
     /// Note that some time zones include a provision for
     /// daylight savings time. The rules for daylight saving time are
@@ -354,6 +361,31 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "attempt_deadline" field.</summary>
+    public const int AttemptDeadlineFieldNumber = 22;
+    private global::Google.Protobuf.WellKnownTypes.Duration attemptDeadline_;
+    /// <summary>
+    /// The deadline for job attempts. If the request handler does not respond by
+    /// this deadline then the request is cancelled and the attempt is marked as a
+    /// `DEADLINE_EXCEEDED` failure. The failed attempt can be viewed in
+    /// execution logs. Cloud Scheduler will retry the job according
+    /// to the [RetryConfig][google.cloud.scheduler.v1beta1.RetryConfig].
+    ///
+    /// The allowed duration for this deadline is:
+    ///
+    /// * For [HTTP targets][google.cloud.scheduler.v1beta1.Job.http_target], between 15 seconds and 30 minutes.
+    /// * For [App Engine HTTP targets][google.cloud.scheduler.v1beta1.Job.app_engine_http_target], between 15
+    ///   seconds and 24 hours.
+    /// * For [PubSub targets][google.cloud.scheduler.v1beta1.Job.pubsub_target], this field is ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration AttemptDeadline {
+      get { return attemptDeadline_; }
+      set {
+        attemptDeadline_ = value;
+      }
+    }
+
     private object target_;
     /// <summary>Enum of possible cases for the "target" oneof.</summary>
     public enum TargetOneofCase {
@@ -400,6 +432,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
       if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
       if (!object.Equals(LastAttemptTime, other.LastAttemptTime)) return false;
       if (!object.Equals(RetryConfig, other.RetryConfig)) return false;
+      if (!object.Equals(AttemptDeadline, other.AttemptDeadline)) return false;
       if (TargetCase != other.TargetCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -420,6 +453,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
       if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (lastAttemptTime_ != null) hash ^= LastAttemptTime.GetHashCode();
       if (retryConfig_ != null) hash ^= RetryConfig.GetHashCode();
+      if (attemptDeadline_ != null) hash ^= AttemptDeadline.GetHashCode();
       hash ^= (int) targetCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -486,6 +520,10 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
         output.WriteRawTag(170, 1);
         output.WriteString(TimeZone);
       }
+      if (attemptDeadline_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(AttemptDeadline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -532,6 +570,9 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
       }
       if (retryConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RetryConfig);
+      }
+      if (attemptDeadline_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AttemptDeadline);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -588,6 +629,12 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
           retryConfig_ = new global::Google.Cloud.Scheduler.V1Beta1.RetryConfig();
         }
         RetryConfig.MergeFrom(other.RetryConfig);
+      }
+      if (other.attemptDeadline_ != null) {
+        if (attemptDeadline_ == null) {
+          attemptDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        AttemptDeadline.MergeFrom(other.AttemptDeadline);
       }
       switch (other.TargetCase) {
         case TargetOneofCase.PubsubTarget:
@@ -703,6 +750,13 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
             TimeZone = input.ReadString();
             break;
           }
+          case 178: {
+            if (attemptDeadline_ == null) {
+              attemptDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(attemptDeadline_);
+            break;
+          }
         }
       }
     }
@@ -735,11 +789,9 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 3,
         /// <summary>
-        /// The job state resulting from a failed
-        /// [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob]
+        /// The job state resulting from a failed [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob]
         /// operation. To recover a job from this state, retry
-        /// [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob]
-        /// until a successful response is received.
+        /// [CloudScheduler.UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob] until a successful response is received.
         /// </summary>
         [pbr::OriginalName("UPDATE_FAILED")] UpdateFailed = 4,
       }
@@ -754,8 +806,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   ///
   /// By default, if a job does not complete successfully (meaning that
   /// an acknowledgement is not received from the handler, then it will be retried
-  /// with exponential backoff according to the settings in
-  /// [RetryConfig][google.cloud.scheduler.v1beta1.RetryConfig].
+  /// with exponential backoff according to the settings in [RetryConfig][google.cloud.scheduler.v1beta1.RetryConfig].
   /// </summary>
   public sealed partial class RetryConfig : pb::IMessage<RetryConfig> {
     private static readonly pb::MessageParser<RetryConfig> _parser = new pb::MessageParser<RetryConfig>(() => new RetryConfig());
@@ -830,8 +881,8 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// <summary>
     /// The time limit for retrying a failed job, measured from time when an
     /// execution was first attempted. If specified with
-    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count], the
-    /// job will be retried until both limits are reached.
+    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count], the job will be retried until both
+    /// limits are reached.
     ///
     /// The default value for max_retry_duration is zero, which means retry
     /// duration is unlimited.
@@ -885,25 +936,20 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// The time between retries will double `max_doublings` times.
     ///
     /// A job's retry interval starts at
-    /// [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration],
-    /// then doubles `max_doublings` times, then increases linearly, and finally
+    /// [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration], then doubles
+    /// `max_doublings` times, then increases linearly, and finally
     /// retries retries at intervals of
-    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration]
-    /// up to [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
-    /// times.
+    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration] up to
+    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] times.
     ///
-    /// For example, if
-    /// [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration]
-    /// is 10s,
-    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration]
-    /// is 300s, and `max_doublings` is 3, then the a job will first be retried in
-    /// 10s. The retry interval will double three times, and then increase linearly
-    /// by 2^3 * 10s.  Finally, the job will retry at intervals of
-    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration]
-    /// until the job has been attempted
-    /// [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count]
-    /// times. Thus, the requests will retry at 10s, 20s, 40s, 80s, 160s, 240s,
-    /// 300s, 300s, ....
+    /// For example, if [min_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.min_backoff_duration] is
+    /// 10s, [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration] is 300s, and
+    /// `max_doublings` is 3, then the a job will first be retried in 10s. The
+    /// retry interval will double three times, and then increase linearly by
+    /// 2^3 * 10s.  Finally, the job will retry at intervals of
+    /// [max_backoff_duration][google.cloud.scheduler.v1beta1.RetryConfig.max_backoff_duration] until the job has
+    /// been attempted [retry_count][google.cloud.scheduler.v1beta1.RetryConfig.retry_count] times. Thus, the
+    /// requests will retry at 10s, 20s, 40s, 80s, 160s, 240s, 300s, 300s, ....
     ///
     /// The default value of this field is 5.
     /// </summary>
