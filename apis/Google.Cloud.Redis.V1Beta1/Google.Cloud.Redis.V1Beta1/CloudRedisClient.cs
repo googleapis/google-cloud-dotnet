@@ -58,6 +58,8 @@ namespace Google.Cloud.Redis.V1Beta1
             UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings?.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings?.Clone();
+            FailoverInstanceSettings = existing.FailoverInstanceSettings;
+            FailoverInstanceOperationsSettings = existing.FailoverInstanceOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -273,13 +275,13 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <item><description>Initial delay: 60000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.5</description></item>
         /// <item><description>Maximum delay: 360000 milliseconds</description></item>
-        /// <item><description>Total timeout: 1200000 milliseconds</description></item>
+        /// <item><description>Total timeout: 7200000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
-                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000L)),
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(7200000L)),
                 sys::TimeSpan.FromMilliseconds(60000L),
                 1.5,
                 sys::TimeSpan.FromMilliseconds(360000L))
@@ -327,6 +329,56 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000L)),
+                sys::TimeSpan.FromMilliseconds(60000L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(360000L))
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClient.FailoverInstance</c> and <c>CloudRedisClient.FailoverInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>CloudRedisClient.FailoverInstance</c> and
+        /// <c>CloudRedisClient.FailoverInstanceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings FailoverInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClient.FailoverInstance</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 60000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 360000 milliseconds</description></item>
+        /// <item><description>Total timeout: 1200000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings FailoverInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(
                 gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000L)),
@@ -757,7 +809,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
         ///
-        /// By default, the instance is peered to the project's
+        /// By default, the instance is accessible from the project's
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// The creation is executed asynchronously and callers may check the returned
@@ -808,7 +860,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
         ///
-        /// By default, the instance is peered to the project's
+        /// By default, the instance is accessible from the project's
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// The creation is executed asynchronously and callers may check the returned
@@ -856,7 +908,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
         ///
-        /// By default, the instance is peered to the project's
+        /// By default, the instance is accessible from the project's
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// The creation is executed asynchronously and callers may check the returned
@@ -907,7 +959,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
         ///
-        /// By default, the instance is peered to the project's
+        /// By default, the instance is accessible from the project's
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// The creation is executed asynchronously and callers may check the returned
@@ -950,7 +1002,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
         ///
-        /// By default, the instance is peered to the project's
+        /// By default, the instance is accessible from the project's
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// The creation is executed asynchronously and callers may check the returned
@@ -1008,11 +1060,12 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. The elements of the repeated paths field may only include these
-        /// fields from [Instance][CloudRedis.Instance]:
-        /// * `display_name`
-        /// * `labels`
-        /// * `memory_size_gb`
-        /// * `redis_config`
+        /// fields from [Instance][google.cloud.redis.v1beta1.Instance]:
+        ///
+        ///  *   `displayName`
+        ///  *   `labels`
+        ///  *   `memorySizeGb`
+        ///  *   `redisConfig`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1045,11 +1098,12 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. The elements of the repeated paths field may only include these
-        /// fields from [Instance][CloudRedis.Instance]:
-        /// * `display_name`
-        /// * `labels`
-        /// * `memory_size_gb`
-        /// * `redis_config`
+        /// fields from [Instance][google.cloud.redis.v1beta1.Instance]:
+        ///
+        ///  *   `displayName`
+        ///  *   `labels`
+        ///  *   `memorySizeGb`
+        ///  *   `redisConfig`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1079,11 +1133,12 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. The elements of the repeated paths field may only include these
-        /// fields from [Instance][CloudRedis.Instance]:
-        /// * `display_name`
-        /// * `labels`
-        /// * `memory_size_gb`
-        /// * `redis_config`
+        /// fields from [Instance][google.cloud.redis.v1beta1.Instance]:
+        ///
+        ///  *   `displayName`
+        ///  *   `labels`
+        ///  *   `memorySizeGb`
+        ///  *   `redisConfig`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1329,6 +1384,167 @@ namespace Google.Cloud.Redis.V1Beta1
                 DeleteInstanceOperationsClient,
                 callSettings);
 
+        /// <summary>
+        /// Failover the master role to current replica node against a specific
+        /// STANDARD tier redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="dataProtectionMode">
+        /// Optional. Available data protection modes that the user can choose. If it's
+        /// unspecified, data protection mode will be LIMITED_DATA_LOSS by default.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> FailoverInstanceAsync(
+            string name,
+            FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode,
+            gaxgrpc::CallSettings callSettings = null) => FailoverInstanceAsync(
+                new FailoverInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    DataProtectionMode = dataProtectionMode,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Failover the master role to current replica node against a specific
+        /// STANDARD tier redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="dataProtectionMode">
+        /// Optional. Available data protection modes that the user can choose. If it's
+        /// unspecified, data protection mode will be LIMITED_DATA_LOSS by default.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> FailoverInstanceAsync(
+            string name,
+            FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode,
+            st::CancellationToken cancellationToken) => FailoverInstanceAsync(
+                name,
+                dataProtectionMode,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Failover the master role to current replica node against a specific
+        /// STANDARD tier redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="dataProtectionMode">
+        /// Optional. Available data protection modes that the user can choose. If it's
+        /// unspecified, data protection mode will be LIMITED_DATA_LOSS by default.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Instance, pbwkt::Any> FailoverInstance(
+            string name,
+            FailoverInstanceRequest.Types.DataProtectionMode dataProtectionMode,
+            gaxgrpc::CallSettings callSettings = null) => FailoverInstance(
+                new FailoverInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    DataProtectionMode = dataProtectionMode,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Failover the master role to current replica node against a specific
+        /// STANDARD tier redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> FailoverInstanceAsync(
+            FailoverInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>FailoverInstanceAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> PollOnceFailoverInstanceAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, pbwkt::Any>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                FailoverInstanceOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Failover the master role to current replica node against a specific
+        /// STANDARD tier redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Instance, pbwkt::Any> FailoverInstance(
+            FailoverInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>FailoverInstance</c>.
+        /// </summary>
+        public virtual lro::OperationsClient FailoverInstanceOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>FailoverInstance</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, pbwkt::Any> PollOnceFailoverInstance(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<Instance, pbwkt::Any>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                FailoverInstanceOperationsClient,
+                callSettings);
+
     }
 
     /// <summary>
@@ -1341,6 +1557,7 @@ namespace Google.Cloud.Redis.V1Beta1
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
         private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
+        private readonly gaxgrpc::ApiCall<FailoverInstanceRequest, lro::Operation> _callFailoverInstance;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudRedis service, with the specified gRPC client and settings.
@@ -1358,6 +1575,8 @@ namespace Google.Cloud.Redis.V1Beta1
                 grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings);
+            FailoverInstanceOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.FailoverInstanceOperationsSettings);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(
                 GrpcClient.ListInstancesAsync, GrpcClient.ListInstances, effectiveSettings.ListInstancesSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
@@ -1373,6 +1592,9 @@ namespace Google.Cloud.Redis.V1Beta1
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callFailoverInstance = clientHelper.BuildApiCall<FailoverInstanceRequest, lro::Operation>(
+                GrpcClient.FailoverInstanceAsync, GrpcClient.FailoverInstance, effectiveSettings.FailoverInstanceSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
             Modify_ApiCall(ref _callGetInstance);
@@ -1383,6 +1605,8 @@ namespace Google.Cloud.Redis.V1Beta1
             Modify_UpdateInstanceApiCall(ref _callUpdateInstance);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
+            Modify_ApiCall(ref _callFailoverInstance);
+            Modify_FailoverInstanceApiCall(ref _callFailoverInstance);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1401,6 +1625,7 @@ namespace Google.Cloud.Redis.V1Beta1
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
         partial void Modify_UpdateInstanceApiCall(ref gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> call);
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
+        partial void Modify_FailoverInstanceApiCall(ref gaxgrpc::ApiCall<FailoverInstanceRequest, lro::Operation> call);
         partial void OnConstruction(CloudRedis.CloudRedisClient grpcClient, CloudRedisSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -1416,6 +1641,7 @@ namespace Google.Cloud.Redis.V1Beta1
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_FailoverInstanceRequest(ref FailoverInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all Redis instances owned by a project in either the specified
@@ -1514,7 +1740,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
         ///
-        /// By default, the instance is peered to the project's
+        /// By default, the instance is accessible from the project's
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// The creation is executed asynchronously and callers may check the returned
@@ -1546,7 +1772,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
         ///
-        /// By default, the instance is peered to the project's
+        /// By default, the instance is accessible from the project's
         /// [default network](/compute/docs/networks-and-firewalls#networks).
         ///
         /// The creation is executed asynchronously and callers may check the returned
@@ -1683,6 +1909,55 @@ namespace Google.Cloud.Redis.V1Beta1
         /// The long-running operations client for <c>DeleteInstance</c>.
         /// </summary>
         public override lro::OperationsClient DeleteInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Failover the master role to current replica node against a specific
+        /// STANDARD tier redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<Instance, pbwkt::Any>> FailoverInstanceAsync(
+            FailoverInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FailoverInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, pbwkt::Any>(
+                await _callFailoverInstance.Async(request, callSettings).ConfigureAwait(false), FailoverInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Failover the master role to current replica node against a specific
+        /// STANDARD tier redis instance.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<Instance, pbwkt::Any> FailoverInstance(
+            FailoverInstanceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FailoverInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, pbwkt::Any>(
+                _callFailoverInstance.Sync(request, callSettings), FailoverInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>FailoverInstance</c>.
+        /// </summary>
+        public override lro::OperationsClient FailoverInstanceOperationsClient { get; }
 
     }
 
