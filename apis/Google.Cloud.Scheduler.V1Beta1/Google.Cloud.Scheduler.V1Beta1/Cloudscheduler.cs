@@ -26,55 +26,56 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
           string.Concat(
             "CjNnb29nbGUvY2xvdWQvc2NoZWR1bGVyL3YxYmV0YTEvY2xvdWRzY2hlZHVs",
             "ZXIucHJvdG8SHmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMRocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxooZ29vZ2xlL2Nsb3VkL3NjaGVk",
-            "dWxlci92MWJldGExL2pvYi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5",
-            "LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJICg9M",
-            "aXN0Sm9ic1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgF",
-            "IAEoBRISCgpwYWdlX3Rva2VuGAYgASgJIl4KEExpc3RKb2JzUmVzcG9uc2US",
-            "MQoEam9icxgBIAMoCzIjLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRh",
-            "MS5Kb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIh0KDUdldEpvYlJlcXVl",
-            "c3QSDAoEbmFtZRgBIAEoCSJUChBDcmVhdGVKb2JSZXF1ZXN0Eg4KBnBhcmVu",
-            "dBgBIAEoCRIwCgNqb2IYAiABKAsyIy5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
-            "LnYxYmV0YTEuSm9iInUKEFVwZGF0ZUpvYlJlcXVlc3QSMAoDam9iGAEgASgL",
-            "MiMuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGExLkpvYhIvCgt1cGRh",
-            "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siIAoQ",
-            "RGVsZXRlSm9iUmVxdWVzdBIMCgRuYW1lGAEgASgJIh8KD1BhdXNlSm9iUmVx",
-            "dWVzdBIMCgRuYW1lGAEgASgJIiAKEFJlc3VtZUpvYlJlcXVlc3QSDAoEbmFt",
-            "ZRgBIAEoCSIdCg1SdW5Kb2JSZXF1ZXN0EgwKBG5hbWUYASABKAkyiAoKDkNs",
-            "b3VkU2NoZWR1bGVyEqQBCghMaXN0Sm9icxIvLmdvb2dsZS5jbG91ZC5zY2hl",
-            "ZHVsZXIudjFiZXRhMS5MaXN0Sm9ic1JlcXVlc3QaMC5nb29nbGUuY2xvdWQu",
-            "c2NoZWR1bGVyLnYxYmV0YTEuTGlzdEpvYnNSZXNwb25zZSI1gtPkkwIvEi0v",
-            "djFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnMS",
-            "kwEKBkdldEpvYhItLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5H",
-            "ZXRKb2JSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGEx",
-            "LkpvYiI1gtPkkwIvEi0vdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2pvYnMvKn0SngEKCUNyZWF0ZUpvYhIwLmdvb2dsZS5jbG91ZC5z",
-            "Y2hlZHVsZXIudjFiZXRhMS5DcmVhdGVKb2JSZXF1ZXN0GiMuZ29vZ2xlLmNs",
-            "b3VkLnNjaGVkdWxlci52MWJldGExLkpvYiI6gtPkkwI0Ii0vdjFiZXRhMS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnM6A2pvYhKiAQoJ",
-            "VXBkYXRlSm9iEjAuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGExLlVw",
-            "ZGF0ZUpvYlJlcXVlc3QaIy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0",
-            "YTEuSm9iIj6C0+STAjgyMS92MWJldGExL3tqb2IubmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2pvYnMvKn06A2pvYhKMAQoJRGVsZXRlSm9iEjAuZ29v",
-            "Z2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGExLkRlbGV0ZUpvYlJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiNYLT5JMCLyotL3YxYmV0YTEve25h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyp9EqABCghQYXVzZUpv",
-            "YhIvLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5QYXVzZUpvYlJl",
-            "cXVlc3QaIy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEuSm9iIj6C",
-            "0+STAjgiMy92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "am9icy8qfTpwYXVzZToBKhKjAQoJUmVzdW1lSm9iEjAuZ29vZ2xlLmNsb3Vk",
-            "LnNjaGVkdWxlci52MWJldGExLlJlc3VtZUpvYlJlcXVlc3QaIy5nb29nbGUu",
-            "Y2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEuSm9iIj+C0+STAjkiNC92MWJldGEx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpyZXN1bWU6",
-            "ASoSmgEKBlJ1bkpvYhItLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRh",
-            "MS5SdW5Kb2JSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJl",
-            "dGExLkpvYiI8gtPkkwI2IjEvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2pvYnMvKn06cnVuOgEqQosBCiJjb20uZ29vZ2xlLmNsb3Vk",
-            "LnNjaGVkdWxlci52MWJldGExQg5TY2hlZHVsZXJQcm90b1ABWkdnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NjaGVkdWxl",
-            "ci92MWJldGExO3NjaGVkdWxlcqICCVNDSEVEVUxFUmIGcHJvdG8z"));
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
+            "ZS5wcm90bxooZ29vZ2xlL2Nsb3VkL3NjaGVkdWxlci92MWJldGExL2pvYi5w",
+            "cm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJv",
+            "dG9idWYvZmllbGRfbWFzay5wcm90byJICg9MaXN0Sm9ic1JlcXVlc3QSDgoG",
+            "cGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rva2Vu",
+            "GAYgASgJIl4KEExpc3RKb2JzUmVzcG9uc2USMQoEam9icxgBIAMoCzIjLmdv",
+            "b2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5Kb2ISFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJIh0KDUdldEpvYlJlcXVlc3QSDAoEbmFtZRgBIAEoCSJU",
+            "ChBDcmVhdGVKb2JSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIwCgNqb2IYAiAB",
+            "KAsyIy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEuSm9iInUKEFVw",
+            "ZGF0ZUpvYlJlcXVlc3QSMAoDam9iGAEgASgLMiMuZ29vZ2xlLmNsb3VkLnNj",
+            "aGVkdWxlci52MWJldGExLkpvYhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siIAoQRGVsZXRlSm9iUmVxdWVzdBIM",
+            "CgRuYW1lGAEgASgJIh8KD1BhdXNlSm9iUmVxdWVzdBIMCgRuYW1lGAEgASgJ",
+            "IiAKEFJlc3VtZUpvYlJlcXVlc3QSDAoEbmFtZRgBIAEoCSIdCg1SdW5Kb2JS",
+            "ZXF1ZXN0EgwKBG5hbWUYASABKAkyiAoKDkNsb3VkU2NoZWR1bGVyEqQBCghM",
+            "aXN0Sm9icxIvLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5MaXN0",
+            "Sm9ic1JlcXVlc3QaMC5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEu",
+            "TGlzdEpvYnNSZXNwb25zZSI1gtPkkwIvEi0vdjFiZXRhMS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnMSkwEKBkdldEpvYhItLmdvb2ds",
+            "ZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5HZXRKb2JSZXF1ZXN0GiMuZ29v",
+            "Z2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGExLkpvYiI1gtPkkwIvEi0vdjFi",
+            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn0SngEK",
+            "CUNyZWF0ZUpvYhIwLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5D",
+            "cmVhdGVKb2JSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJl",
+            "dGExLkpvYiI6gtPkkwI0Ii0vdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2pvYnM6A2pvYhKiAQoJVXBkYXRlSm9iEjAuZ29vZ2xl",
+            "LmNsb3VkLnNjaGVkdWxlci52MWJldGExLlVwZGF0ZUpvYlJlcXVlc3QaIy5n",
+            "b29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxYmV0YTEuSm9iIj6C0+STAjgyMS92",
+            "MWJldGExL3tqb2IubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMv",
+            "Kn06A2pvYhKMAQoJRGVsZXRlSm9iEjAuZ29vZ2xlLmNsb3VkLnNjaGVkdWxl",
+            "ci52MWJldGExLkRlbGV0ZUpvYlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiNYLT5JMCLyotL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9qb2JzLyp9EqABCghQYXVzZUpvYhIvLmdvb2dsZS5jbG91ZC5z",
+            "Y2hlZHVsZXIudjFiZXRhMS5QYXVzZUpvYlJlcXVlc3QaIy5nb29nbGUuY2xv",
+            "dWQuc2NoZWR1bGVyLnYxYmV0YTEuSm9iIj6C0+STAjgiMy92MWJldGExL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpwYXVzZToBKhKj",
+            "AQoJUmVzdW1lSm9iEjAuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGEx",
+            "LlJlc3VtZUpvYlJlcXVlc3QaIy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYx",
+            "YmV0YTEuSm9iIj+C0+STAjkiNC92MWJldGExL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovam9icy8qfTpyZXN1bWU6ASoSmgEKBlJ1bkpvYhItLmdv",
+            "b2dsZS5jbG91ZC5zY2hlZHVsZXIudjFiZXRhMS5SdW5Kb2JSZXF1ZXN0GiMu",
+            "Z29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGExLkpvYiI8gtPkkwI2IjEv",
+            "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn06",
+            "cnVuOgEqQosBCiJjb20uZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MWJldGEx",
+            "Qg5TY2hlZHVsZXJQcm90b1ABWkdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3NjaGVkdWxlci92MWJldGExO3NjaGVkdWxl",
+            "cqICCVNDSEVEVUxFUmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Scheduler.V1Beta1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1Beta1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1Beta1.ListJobsRequest), global::Google.Cloud.Scheduler.V1Beta1.ListJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1Beta1.ListJobsResponse), global::Google.Cloud.Scheduler.V1Beta1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken" }, null, null, null),
@@ -92,8 +93,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for listing jobs using
-  /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
+  /// Request message for listing jobs using [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
   /// </summary>
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest> {
     private static readonly pb::MessageParser<ListJobsRequest> _parser = new pb::MessageParser<ListJobsRequest>(() => new ListJobsRequest());
@@ -174,13 +174,10 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// A token identifying a page of results the server will return. To
     /// request the first page results, page_token must be empty. To
     /// request the next page of results, page_token must be the value of
-    /// [next_page_token][google.cloud.scheduler.v1beta1.ListJobsResponse.next_page_token]
-    /// returned from the previous call to
-    /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs]. It is
-    /// an error to switch the value of
-    /// [filter][google.cloud.scheduler.v1beta1.ListJobsRequest.filter] or
-    /// [order_by][google.cloud.scheduler.v1beta1.ListJobsRequest.order_by] while
-    /// iterating through pages.
+    /// [next_page_token][google.cloud.scheduler.v1beta1.ListJobsResponse.next_page_token] returned from
+    /// the previous call to [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs]. It is an error to
+    /// switch the value of [filter][google.cloud.scheduler.v1beta1.ListJobsRequest.filter] or
+    /// [order_by][google.cloud.scheduler.v1beta1.ListJobsRequest.order_by] while iterating through pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -307,8 +304,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Response message for listing jobs using
-  /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
+  /// Response message for listing jobs using [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs].
   /// </summary>
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse> {
     private static readonly pb::MessageParser<ListJobsResponse> _parser = new pb::MessageParser<ListJobsResponse>(() => new ListJobsResponse());
@@ -363,11 +359,10 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in the
-    /// [page_token][google.cloud.scheduler.v1beta1.ListJobsRequest.page_token]
-    /// field in the subsequent call to
-    /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs] to
-    /// retrieve the next page of results. If this is empty it indicates that there
-    /// are no more results through which to paginate.
+    /// [page_token][google.cloud.scheduler.v1beta1.ListJobsRequest.page_token] field in the subsequent call to
+    /// [ListJobs][google.cloud.scheduler.v1beta1.CloudScheduler.ListJobs] to retrieve the next page of results.
+    /// If this is empty it indicates that there are no more results
+    /// through which to paginate.
     ///
     /// The page token is valid for only 2 hours.
     /// </summary>
@@ -473,8 +468,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [GetJob][google.cloud.scheduler.v1beta1.CloudScheduler.GetJob].
+  /// Request message for [GetJob][google.cloud.scheduler.v1beta1.CloudScheduler.GetJob].
   /// </summary>
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest> {
     private static readonly pb::MessageParser<GetJobRequest> _parser = new pb::MessageParser<GetJobRequest>(() => new GetJobRequest());
@@ -612,8 +606,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [CreateJob][google.cloud.scheduler.v1beta1.CloudScheduler.CreateJob].
+  /// Request message for [CreateJob][google.cloud.scheduler.v1beta1.CloudScheduler.CreateJob].
   /// </summary>
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest> {
     private static readonly pb::MessageParser<CreateJobRequest> _parser = new pb::MessageParser<CreateJobRequest>(() => new CreateJobRequest());
@@ -674,8 +667,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// Required.
     ///
     /// The job to add. The user can optionally specify a name for the
-    /// job in [name][google.cloud.scheduler.v1beta1.Job.name].
-    /// [name][google.cloud.scheduler.v1beta1.Job.name] cannot be the same as an
+    /// job in [name][google.cloud.scheduler.v1beta1.Job.name]. [name][google.cloud.scheduler.v1beta1.Job.name] cannot be the same as an
     /// existing job. If a name is not specified then the system will
     /// generate a random unique name that will be returned
     /// ([name][google.cloud.scheduler.v1beta1.Job.name]) in the response.
@@ -795,8 +787,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob].
+  /// Request message for [UpdateJob][google.cloud.scheduler.v1beta1.CloudScheduler.UpdateJob].
   /// </summary>
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest> {
     private static readonly pb::MessageParser<UpdateJobRequest> _parser = new pb::MessageParser<UpdateJobRequest>(() => new UpdateJobRequest());
@@ -839,8 +830,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The new job properties. [name][google.cloud.scheduler.v1beta1.Job.name]
-    /// must be specified.
+    /// The new job properties. [name][google.cloud.scheduler.v1beta1.Job.name] must be specified.
     ///
     /// Output only fields cannot be modified using UpdateJob.
     /// Any value specified for an output only field will be ignored.
@@ -1119,8 +1109,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [PauseJob][google.cloud.scheduler.v1beta1.CloudScheduler.PauseJob].
+  /// Request message for [PauseJob][google.cloud.scheduler.v1beta1.CloudScheduler.PauseJob].
   /// </summary>
   public sealed partial class PauseJobRequest : pb::IMessage<PauseJobRequest> {
     private static readonly pb::MessageParser<PauseJobRequest> _parser = new pb::MessageParser<PauseJobRequest>(() => new PauseJobRequest());
@@ -1258,8 +1247,7 @@ namespace Google.Cloud.Scheduler.V1Beta1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [ResumeJob][google.cloud.scheduler.v1beta1.CloudScheduler.ResumeJob].
+  /// Request message for [ResumeJob][google.cloud.scheduler.v1beta1.CloudScheduler.ResumeJob].
   /// </summary>
   public sealed partial class ResumeJobRequest : pb::IMessage<ResumeJobRequest> {
     private static readonly pb::MessageParser<ResumeJobRequest> _parser = new pb::MessageParser<ResumeJobRequest>(() => new ResumeJobRequest());
