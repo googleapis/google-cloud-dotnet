@@ -1,5 +1,12 @@
 # Version history
 
+# 2.4.0-beta01, 2019-04-08
+
+New features since 2.3.0:
+
+- Beta support for V4 signing URLs
+- Add `IncludeTrailingDelimiter` to `ListObjectsOptions`
+
 # 2.3.0, 2019-02-11
 
 New features since 2.2.0:
