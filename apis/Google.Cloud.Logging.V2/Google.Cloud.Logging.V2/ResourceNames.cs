@@ -3021,19 +3021,6 @@ namespace Google.Cloud.Logging.V2
 
     }
 
-    public partial class LogSink
-    {
-        /// <summary>
-        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Destination"/> resource name property.
-        /// </summary>
-        public gax::IResourceName DestinationAsResourceName
-        {
-            get { return string.IsNullOrEmpty(Destination) ? null : gax::UnknownResourceName.Parse(Destination); }
-            set { Destination = value != null ? value.ToString() : ""; }
-        }
-
-    }
-
     public partial class UpdateExclusionRequest
     {
         /// <summary>
