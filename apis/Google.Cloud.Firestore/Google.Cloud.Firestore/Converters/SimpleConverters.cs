@@ -99,6 +99,10 @@ namespace Google.Cloud.Firestore.Converters
         internal DoubleConverter() : base(typeof(double)) { }
         public override Value Serialize(object value) => new Value { DoubleValue = (double) value };
         protected override object DeserializeDouble(FirestoreDb db, double value) => value;
+        // We allow serialization from integer values as some interactions with Firestore end up storing
+        // an integer value even when a double value is expected, if the value happens to be an integer.
+        // See https://github.com/googleapis/google-cloud-dotnet/issues/3013
+        protected override object DeserializeInteger(FirestoreDb db, long value) => (double) value;
     }
 
     internal sealed class BooleanConverter : ConverterBase
