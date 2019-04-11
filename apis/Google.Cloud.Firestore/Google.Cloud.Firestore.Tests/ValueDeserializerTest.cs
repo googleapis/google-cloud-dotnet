@@ -318,6 +318,16 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("test", deserialized.Name);
             Assert.Equal(15, deserialized.Value);
         }
+
+        [Fact]
+        public void DeserializeInt64ToDouble()
+        {
+            var value = ValueSerializer.Serialize(new { Name = "Test", Value = 100L });
+            Assert.Equal(Value.ValueTypeOneofCase.IntegerValue, value.MapValue.Fields["Value"].ValueTypeCase);
+            var deserialized = (ModelWithDouble) DeserializeDefault(value, typeof(ModelWithDouble));
+            Assert.Equal("Test", deserialized.Name);
+            Assert.Equal(100.0, deserialized.Value);
+        }
         
         private string DeserializeAndReturnWarnings<T>(object valueToSerialize)
         {
@@ -362,6 +372,16 @@ namespace Google.Cloud.Firestore.Tests
 
             public static PrivateConstructor Create(string name, int value) =>
                 new PrivateConstructor { Name = name, Value = value };
+        }
+
+        [FirestoreData]
+        private class ModelWithDouble
+        {
+            [FirestoreProperty]
+            public string Name { get; set; }
+
+            [FirestoreProperty]
+            public double Value { get; set; }
         }
     }
 }
