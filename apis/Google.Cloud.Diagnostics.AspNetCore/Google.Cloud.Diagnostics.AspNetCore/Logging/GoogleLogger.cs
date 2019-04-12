@@ -135,7 +135,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         private Dictionary<string, string> CreateLabels()
         {
-            var labelProviders = GetLabelProviders();
+            var labelProviders = _serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>();
             if (labelProviders is null)
             {
                 return _loggerOptions.Labels;
@@ -284,13 +284,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var traceContext = TraceHeaderContext.FromHeader(header);
             return traceContext.TraceId == null ? null : _traceTarget.GetFullTraceName(traceContext.TraceId);
         }
-
-        /// <summary>
-        /// Gets the collection of <see cref="ILogEntryLabelProvider"/>'s
-        /// registered in the application <see cref="IServiceProvider"/>.
-        /// </summary>
-        internal IEnumerable<ILogEntryLabelProvider> GetLabelProviders() =>
-            _serviceProvider?.GetService<IEnumerable<ILogEntryLabelProvider>>();
 
         /// <summary>
         /// For diagnostic purposes. Builds and returns the URL where the entries logged by
