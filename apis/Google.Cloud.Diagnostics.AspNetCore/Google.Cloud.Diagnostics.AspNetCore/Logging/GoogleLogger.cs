@@ -117,64 +117,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     return;
                 }
 
-                var jsonStruct = new Struct();
-                jsonStruct.Fields.Add("message", Value.ForString(message));
-                jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
-                if (exception != null)
-                {
-                    jsonStruct.Fields.Add("exception", Value.ForString(exception.ToString()));
-                }
-
-                if (eventId.Id != 0 || eventId.Name != null)
-                {
-                    var eventStruct = new Struct();
-                    if (eventId.Id != 0)
-                    {
-                        eventStruct.Fields.Add("id", Value.ForNumber(eventId.Id));
-                    }
-                    if (!string.IsNullOrWhiteSpace(eventId.Name))
-                    {
-                        eventStruct.Fields.Add("name", Value.ForString(eventId.Name));
-                    }
-                    jsonStruct.Fields.Add("event_id", Value.ForStruct(eventStruct));
-                }
-
-                // If we have format params and its more than just the original message add them.
-                if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
-                    !(formatParams.Count() == 1 && formatParams.Single().Key.Equals("{OriginalFormat}")))
-                {
-                    var paramStruct = CreateStruct(formatParams);
-                    if (paramStruct.Fields.Count > 0)
-                    {
-                        jsonStruct.Fields.Add("format_parameters", Value.ForStruct(paramStruct));
-                    }
-                }
-
-                var currentLogScope = GoogleLoggerScope.Current;
-                if (currentLogScope != null)
-                {
-                    jsonStruct.Fields.Add("scope", Value.ForString(currentLogScope.ToString()));
-                }
-
-                // Create a map of format parameters of all the parent scopes,
-                // starting from the most inner scope to the top-level scope.
-                var scopeParamsList = new List<Value>();
-                while (currentLogScope != null)
-                {
-                    // Determine if the state of the scope are format params
-                    if (currentLogScope.State is FormattedLogValues scopeFormatParams)
-                    {
-                        var scopeParams = CreateStruct(scopeFormatParams);
-                        scopeParamsList.Add(Value.ForStruct(scopeParams));
-                    }
-
-                    currentLogScope = currentLogScope.Parent;
-                }
-
-                if (scopeParamsList.Count > 0)
-                {
-                    jsonStruct.Fields.Add("parent_scopes", Value.ForList(scopeParamsList.ToArray()));
-                }
+                Struct jsonStruct = CreateJsonPayload(eventId, state, exception, message);
 
                 Dictionary<string, string> labels;
                 var labelProviders = GetLabelProviders()?.ToArray();
@@ -206,8 +149,91 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 _consumer.Receive(new[] { entry });
             }
             catch (Exception) when (_loggerOptions.RetryOptions.ExceptionHandling == ExceptionHandling.Ignore) { }
+        }
 
-            Struct CreateStruct(IEnumerable<KeyValuePair<string, object>> fields)
+        private Struct CreateJsonPayload<TState>(EventId eventId, TState state, Exception exception, string message)
+        {
+            var jsonStruct = new Struct();
+            jsonStruct.Fields.Add("message", Value.ForString(message));
+            jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
+            if (exception != null)
+            {
+                jsonStruct.Fields.Add("exception", Value.ForString(exception.ToString()));
+            }
+
+            if (eventId.Id != 0 || eventId.Name != null)
+            {
+                var eventStruct = new Struct();
+                if (eventId.Id != 0)
+                {
+                    eventStruct.Fields.Add("id", Value.ForNumber(eventId.Id));
+                }
+                if (!string.IsNullOrWhiteSpace(eventId.Name))
+                {
+                    eventStruct.Fields.Add("name", Value.ForString(eventId.Name));
+                }
+                jsonStruct.Fields.Add("event_id", Value.ForStruct(eventStruct));
+            }
+
+            // If we have format params and its more than just the original message add them.
+            if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
+                ContainsFormatParameters(formatParams))
+            {
+                jsonStruct.Fields.Add("format_parameters", CreateStructValue(formatParams));
+            }
+
+            var currentLogScope = GoogleLoggerScope.Current;
+            if (currentLogScope != null)
+            {
+                jsonStruct.Fields.Add("scope", Value.ForString(currentLogScope.ToString()));
+            }
+
+            // Create a map of format parameters of all the parent scopes,
+            // starting from the most inner scope to the top-level scope.
+            var scopeParamsList = new List<Value>();
+            while (currentLogScope != null)
+            {
+                // Determine if the state of the scope are format params
+                if (currentLogScope.State is FormattedLogValues scopeFormatParams)
+                {
+                    scopeParamsList.Add(CreateStructValue(scopeFormatParams));
+                }
+
+                currentLogScope = currentLogScope.Parent;
+            }
+
+            if (scopeParamsList.Count > 0)
+            {
+                jsonStruct.Fields.Add("parent_scopes", Value.ForList(scopeParamsList.ToArray()));
+            }
+
+            return jsonStruct;
+
+            // Checks that fields is:
+            // - Non-empty
+            // - Not just a single entry with a key of "{OriginalFormat}"
+            // so we can decide whether or not to populate a struct with it.
+            bool ContainsFormatParameters(IEnumerable<KeyValuePair<string, object>> fields)
+            {
+                using (var iterator = fields.GetEnumerator())
+                {
+                    // No fields? Nothing to format.
+                    if (!iterator.MoveNext())
+                    {
+                        return false;
+                    }
+                    // If the first entry isn't the original format, we definitely want to create a struct
+                    if (iterator.Current.Key != "{OriginalFormat}")
+                    {
+                        return true;
+                    }
+                    // If the first entry *is* the original format, we want to create a struct
+                    // if and only if there's at least one more entry.
+                    return iterator.MoveNext();
+                }
+            }
+
+            Value CreateStructValue(IEnumerable<KeyValuePair<string, object>> fields)
             {
                 Struct fieldsStruct = new Struct();
                 foreach (var pair in fields)
@@ -230,7 +256,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     }
                     fieldsStruct.Fields[key] = Value.ForString(pair.Value?.ToString() ?? "");
                 }
-                return fieldsStruct;
+                return Value.ForStruct(fieldsStruct);
             }
         }
 
