@@ -49,14 +49,5 @@
     <Compile Update="SpannerDbType.*.cs">
       <DependentUpon>SpannerDbType.cs</DependentUpon>
     </Compile>
-    <Compile Update="SpannerCommand.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="SpannerConnection.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="SpannerDataAdapter.cs">
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
