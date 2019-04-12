@@ -20,7 +20,7 @@ using Microsoft.AspNetCore.Http;
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
-    /// A <see cref="ILogEntryLabelProvider"/> which adds the information of the authenitacted user to the log entry labels.
+    /// A <see cref="ILogEntryLabelProvider"/> which adds the information of the authenticated user to the log entry labels.
     /// </summary>
     public class UserLogEntryLabelProvider : HttpLogEntryLabelProvider
     {
