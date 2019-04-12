@@ -155,6 +155,34 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
+        public void BeginScope_DigitOnlyFormatParametersHaveUnderscorePrefix()
+        {
+            Predicate<IEnumerable<LogEntry>> matcher = l =>
+            {
+                var json = l.Single().JsonPayload.Fields;
+                var parentScopes = json["parent_scopes"].ListValue.Values;
+                var parentScope0 = parentScopes[0].StructValue.Fields;
+                return json["message"].StringValue == LogMessage &&
+                       json["scope"].StringValue == "scope 42, Baz => " &&
+                       parentScopes.Count == 1 &&
+                       parentScope0.Count == 3 &&
+                       parentScope0["_0"].StringValue == "42" &&
+                       parentScope0["_1"].StringValue == "Baz" &&
+                       parentScope0["{OriginalFormat}"].StringValue == "scope {0}, {1}";
+            };
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, logLevel: LogLevel.Information);
+            using (logger.BeginScope("scope {0}, {1}", 42, "Baz"))
+            {
+                logger.LogError(LogMessage);
+            }
+
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void BeginScope_WithNestedFormattedScope()
         {
             Predicate<IEnumerable<LogEntry>> matcher = l =>
@@ -334,6 +362,32 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, null, null, BaseLogName);
             var eventId = new EventId(11, "some-event");
             logger.LogError(eventId, s_exception, LogMessage);
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void Log_DigitOnlyFormatParametersHaveUnderscorePrefix()
+        {
+            var message = "a {123} message with {other} stuff";
+            var logStr1 = "log";
+            var logStr2 = "other-log";
+
+            var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
+            Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
+            {
+                LogEntry entry = logEntries.Single();
+                KeyValuePair<string, string> label = entry.Labels.Single();
+                var formatParameters = entry.JsonPayload.Fields["format_parameters"].StructValue.Fields;
+                return formatParameters.Count == 3 &&
+                    formatParameters["_123"].StringValue == logStr1 &&
+                    formatParameters["other"].StringValue == logStr2 &&
+                    formatParameters["{OriginalFormat}"].StringValue == message;
+            };
+
+            var mockConsumer = new Mock<IConsumer<LogEntry>>();
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels, null, BaseLogName);
+            logger.LogError(28, s_exception, message, logStr1, logStr2);
             mockConsumer.VerifyAll();
         }
 
