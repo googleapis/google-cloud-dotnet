@@ -119,21 +119,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
                 Struct jsonStruct = CreateJsonPayload(eventId, state, exception, message);
 
-                Dictionary<string, string> labels;
-                var labelProviders = GetLabelProviders()?.ToArray();
-                if (labelProviders?.Length > 0)
-                {
-                    // Create a copy of the labels from the options and invoke each provider
-                    labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-                    foreach (var provider in labelProviders)
-                    {
-                        provider.Invoke(labels);
-                    }
-                }
-                else
-                {
-                    labels = _loggerOptions.Labels;
-                }
+                Dictionary<string, string> labels = CreateLabels();
 
                 LogEntry entry = new LogEntry
                 {
@@ -149,6 +135,27 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 _consumer.Receive(new[] { entry });
             }
             catch (Exception) when (_loggerOptions.RetryOptions.ExceptionHandling == ExceptionHandling.Ignore) { }
+        }
+
+        private Dictionary<string, string> CreateLabels()
+        {
+            Dictionary<string, string> labels;
+            var labelProviders = GetLabelProviders()?.ToArray();
+            if (labelProviders?.Length > 0)
+            {
+                // Create a copy of the labels from the options and invoke each provider
+                labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                foreach (var provider in labelProviders)
+                {
+                    provider.Invoke(labels);
+                }
+            }
+            else
+            {
+                labels = _loggerOptions.Labels;
+            }
+
+            return labels;
         }
 
         private Struct CreateJsonPayload<TState>(EventId eventId, TState state, Exception exception, string message)
