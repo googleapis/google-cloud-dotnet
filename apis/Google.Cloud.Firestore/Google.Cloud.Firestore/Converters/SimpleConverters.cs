@@ -21,8 +21,6 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Firestore.Converters
 {
     // All the simple converters in a single place for simplicity.
-    // It might make sense to have a single IntegerConverter accepting delegates for the conversion to/from Int64,
-    // but there's no real benefit of that over this approach, and it does introduce an extra level of indirection.
 
     internal sealed class StringConverter : ConverterBase
     {
@@ -31,56 +29,67 @@ namespace Google.Cloud.Firestore.Converters
         protected override object DeserializeString(FirestoreDb db, string value) => value;
     }
 
-    internal sealed class ByteConverter : ConverterBase
+    internal abstract class IntegerConverterBase : ConverterBase
+    {
+        internal IntegerConverterBase(System.Type type) : base(type)
+        {
+        }
+
+        // All integer types allow conversion from double as well.
+        protected override object DeserializeDouble(FirestoreDb db, double value) =>
+            DeserializeInteger(db, checked((long) value));
+    }
+
+    internal sealed class ByteConverter : IntegerConverterBase
     {
         internal ByteConverter() : base(typeof(byte)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = (byte) value };
         protected override object DeserializeInteger(FirestoreDb db, long value) => checked((byte) value);
     }
 
-    internal sealed class SByteConverter : ConverterBase
+    internal sealed class SByteConverter : IntegerConverterBase
     {
         internal SByteConverter() : base(typeof(sbyte)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = (sbyte) value };
         protected override object DeserializeInteger(FirestoreDb db, long value) => checked((sbyte) value);
     }
 
-    internal sealed class Int16Converter : ConverterBase
+    internal sealed class Int16Converter : IntegerConverterBase
     {
         internal Int16Converter() : base(typeof(short)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = (short) value };
         protected override object DeserializeInteger(FirestoreDb db, long value) => checked((short) value);
     }
 
-    internal sealed class UInt16Converter : ConverterBase
+    internal sealed class UInt16Converter : IntegerConverterBase
     {
         internal UInt16Converter() : base(typeof(ushort)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = (ushort) value };
         protected override object DeserializeInteger(FirestoreDb db, long value) => checked((ushort) value);
     }
 
-    internal sealed class Int32Converter : ConverterBase
+    internal sealed class Int32Converter : IntegerConverterBase
     {
         internal Int32Converter() : base(typeof(int)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = (int) value };
         protected override object DeserializeInteger(FirestoreDb db, long value) => checked((int) value);
     }
 
-    internal sealed class UInt32Converter : ConverterBase
+    internal sealed class UInt32Converter : IntegerConverterBase
     {
         internal UInt32Converter() : base(typeof(uint)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = (uint) value };
         protected override object DeserializeInteger(FirestoreDb db, long value) => checked((uint) value);
     }
 
-    internal sealed class Int64Converter : ConverterBase
+    internal sealed class Int64Converter : IntegerConverterBase
     {
         internal Int64Converter() : base(typeof(long)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = (long) value };
         protected override object DeserializeInteger(FirestoreDb db, long value) => value;
     }
 
-    internal sealed class UInt64Converter : ConverterBase
+    internal sealed class UInt64Converter : IntegerConverterBase
     {
         internal UInt64Converter() : base(typeof(ulong)) { }
         public override Value Serialize(object value) => new Value { IntegerValue = checked((long) (ulong) value) };
@@ -92,6 +101,10 @@ namespace Google.Cloud.Firestore.Converters
         internal SingleConverter() : base(typeof(float)) { }
         public override Value Serialize(object value) => new Value { DoubleValue = (float) value };
         protected override object DeserializeDouble(FirestoreDb db, double value) => (float) value;
+        // We allow serialization from integer values as some interactions with Firestore end up storing
+        // an integer value even when a double value is expected, if the value happens to be an integer.
+        // See https://github.com/googleapis/google-cloud-dotnet/issues/3013
+        protected override object DeserializeInteger(FirestoreDb db, long value) => (float) value;
     }
 
     internal sealed class DoubleConverter : ConverterBase

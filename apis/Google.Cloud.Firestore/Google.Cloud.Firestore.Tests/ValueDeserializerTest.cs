@@ -320,15 +320,60 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void DeserializeInt64ToDouble()
+        public void DeserializeInt64AndDoubleToEachOther()
         {
-            var value = ValueSerializer.Serialize(new { Name = "Test", Value = 100L });
-            Assert.Equal(Value.ValueTypeOneofCase.IntegerValue, value.MapValue.Fields["Value"].ValueTypeCase);
-            var deserialized = (ModelWithDouble) DeserializeDefault(value, typeof(ModelWithDouble));
+            var value = ValueSerializer.Serialize(new { Name = "Test", DoubleValue = 100L, LongValue = 10.9 });
+            Assert.Equal(Value.ValueTypeOneofCase.IntegerValue, value.MapValue.Fields["DoubleValue"].ValueTypeCase);
+            Assert.Equal(Value.ValueTypeOneofCase.DoubleValue, value.MapValue.Fields["LongValue"].ValueTypeCase);
+            var deserialized = (ModelWithDoubleAndLong) DeserializeDefault(value, typeof(ModelWithDoubleAndLong));
             Assert.Equal("Test", deserialized.Name);
-            Assert.Equal(100.0, deserialized.Value);
+            Assert.Equal(100.0, deserialized.DoubleValue);
+            Assert.Equal(10.9, deserialized.LongValue);
         }
-        
+
+        [Theory]
+        [InlineData(typeof(float), 10.0f)]
+        [InlineData(typeof(double), 10.0)]
+        public void DeserializeIntegerToDouble(BclType type, object expectedValue)
+        {
+            var value = new Value { IntegerValue = 10 };
+            var deserialized = DeserializeDefault(value, type);
+            Assert.Equal(expectedValue, deserialized);
+        }
+
+        [Theory]
+        [InlineData(typeof(byte), (byte) 10)]
+        [InlineData(typeof(sbyte), (sbyte) 10)]
+        [InlineData(typeof(short), (short) 10)]
+        [InlineData(typeof(ushort), (ushort) 10)]
+        [InlineData(typeof(int), 10)]
+        [InlineData(typeof(uint), (uint) 10)]
+        [InlineData(typeof(long), (long) 10)]
+        [InlineData(typeof(ulong), (ulong) 10)]
+        public void DeserializeDoubleToInteger(BclType type, object expectedValue)
+        {
+            var value = new Value { DoubleValue = 10.9 };
+            var deserialized = DeserializeDefault(value, type);
+            Assert.Equal(expectedValue, deserialized);
+        }
+
+        [Theory]
+        [InlineData(typeof(byte), byte.MaxValue + 1.0)]
+        [InlineData(typeof(sbyte), sbyte.MaxValue + 1.0)]
+        [InlineData(typeof(short), short.MaxValue + 1.0)]
+        [InlineData(typeof(ushort), ushort.MaxValue + 1.0)]
+        [InlineData(typeof(int), int.MaxValue + 1.0)]
+        [InlineData(typeof(uint), uint.MaxValue + 1.0)]
+        // We can't just add 1.0 to long.MaxValue and ulong.MaxValue as the precision at that stage is too low.
+        // Doubling should easily get a value that's out of range though...
+        [InlineData(typeof(long), long.MaxValue * 2.0)]
+        [InlineData(typeof(ulong), ulong.MaxValue * 2.0)]
+        public void DeserializeDoubleToInteger_OutOfRange(BclType type, double doubleValue)
+        {
+            var value = new Value { DoubleValue = doubleValue };
+            Assert.Throws<OverflowException>(() => DeserializeDefault(value, type));
+        }
+
         private string DeserializeAndReturnWarnings<T>(object valueToSerialize)
         {
             var value = ValueSerializer.Serialize(valueToSerialize);
@@ -375,13 +420,16 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [FirestoreData]
-        private class ModelWithDouble
+        private class ModelWithDoubleAndLong
         {
             [FirestoreProperty]
             public string Name { get; set; }
 
             [FirestoreProperty]
-            public double Value { get; set; }
+            public double DoubleValue { get; set; }
+
+            [FirestoreProperty]
+            public double LongValue { get; set; }
         }
     }
 }
