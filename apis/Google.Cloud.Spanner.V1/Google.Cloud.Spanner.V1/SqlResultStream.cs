@@ -79,7 +79,7 @@ namespace Google.Cloud.Spanner.V1
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _request = GaxPreconditions.CheckNotNull(request, nameof(request));
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
-            _callSettings = GaxPreconditions.CheckNotNull(callSettings, nameof(callSettings));
+            _callSettings = callSettings;
             _maxBufferSize = GaxPreconditions.CheckArgumentRange(maxBufferSize, nameof(maxBufferSize), 1, 10_000);
             _backoffSettings = GaxPreconditions.CheckNotNull(backoffSettings, nameof(backoffSettings));
             _backoffJitter = GaxPreconditions.CheckNotNull(backoffJitter, nameof(backoffJitter));
