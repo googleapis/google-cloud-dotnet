@@ -73,13 +73,9 @@ namespace Google.Cloud.Spanner.Data
 
                 using (var reader = await ExecuteReaderAsync(CommandBehavior.SingleRow, null, cancellationToken).ConfigureAwait(false))
                 {
-                    if (await reader.ReadAsync(cancellationToken).ConfigureAwait(false) && reader.HasRows &&
-                        reader.FieldCount > 0)
-                    {
-                        return reader.GetFieldValue<T>(0);
-                    }
+                    bool readValue = await reader.ReadAsync(cancellationToken).ConfigureAwait(false) && reader.FieldCount > 0;
+                    return readValue ? reader.GetFieldValue<T>(0) : default;
                 }
-                return default;
             }
 
             // Convenience method for upcasting the from SpannerDataReader to DbDataReader.

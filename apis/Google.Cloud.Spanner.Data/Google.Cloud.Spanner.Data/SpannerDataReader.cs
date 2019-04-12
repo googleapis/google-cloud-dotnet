@@ -38,6 +38,12 @@ namespace Google.Cloud.Spanner.Data
         private static long s_readerCount;
 
         private bool _rowValid = false;
+
+        // Tristate:
+        // - True if we've either checked already, or read a value
+        // - False if we've either checked already, or failed or read a first value, or NextResult has been called
+        // - Null if a call to HasRows should ask the reader.
+        private bool? _hasRows = null;
         private readonly List<Value> _innerList = new List<Value>();
         private readonly ReliableStreamReader _resultSet;
         private readonly ConcurrentDictionary<string, int> _fieldIndex = new ConcurrentDictionary<string, int>();
@@ -77,8 +83,13 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override int FieldCount => PopulateMetadata().RowType.Fields.Count;
 
-        /// <inheritdoc />
-        public override bool HasRows => Task.Run(() => _resultSet.HasDataAsync(CancellationToken.None)).ResultWithUnwrappedExceptions();
+        /// <summary>
+        /// Gets a value that indicates whether the SpannerDataReader contains one or more rows.
+        /// If any rows have been read, this will continue to return true even when there are no more rows.
+        /// </summary>
+        public override bool HasRows =>
+            // We only need to ask the result set if we haven't actually read any rows or checked before.
+            _hasRows ?? (_hasRows = Task.Run(() => _resultSet.HasDataAsync(CancellationToken.None)).ResultWithUnwrappedExceptions()).Value;
 
         /// <inheritdoc />
         public override bool IsClosed => _resultSet.IsClosed;
@@ -240,6 +251,7 @@ namespace Google.Cloud.Spanner.Data
         public override bool NextResult()
         {
             _rowValid = false;
+            _hasRows = false;
             _innerList.Clear();
             Logger.Warn("Spanner does not support multiple SQL queries in a single command");
             return false;
@@ -270,6 +282,11 @@ namespace Google.Cloud.Spanner.Data
                     var first = await _resultSet.NextAsync(cancellationToken).ConfigureAwait(false);
                     if (first == null)
                     {
+                        // If this is the first thing we've tried to read, then we know there are no rows.
+                        if (_hasRows == null)
+                        {
+                            _hasRows = false;
+                        }
                         return false;
                     }
 
@@ -282,6 +299,7 @@ namespace Google.Cloud.Spanner.Data
                         _innerList.Add(value);
                     }
                     _rowValid = true;
+                    _hasRows = true;
 
                     return true;
                 },

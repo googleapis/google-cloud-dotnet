@@ -31,12 +31,17 @@ namespace Google.Cloud.Spanner.V1
     public sealed class ReliableStreamReader : IDisposable
     {
         private readonly IAsyncEnumerator<PartialResultSet> _resultStream;
+        private readonly Logger _logger;
 
         private bool _initialized = false;
         private PartialResultSet _currentResultSet;
         private ResultSetMetadata _metadata;
         private int _nextIndex;
-        private Logger _logger;
+
+        // In order to make HasDataAsync work properly, we need to cache the value fetched by that method,
+        // and then pop the cache again in NextAsync.
+        private bool _cachedValueIsValid;
+        private Value _cachedValue;
 
         internal ReliableStreamReader(IAsyncEnumerator<PartialResultSet> resultStream, Logger logger)
         {
@@ -99,28 +104,37 @@ namespace Google.Cloud.Spanner.V1
         /// </summary>
         public event EventHandler<StreamClosedEventArgs> StreamClosed;
 
-        // TODO: Handle a case where the query returns no values. Currently HasDataAsync will return true, but it shouldn't (I guess?)
-        // It's not clear what we want to do in that case, to be honest.
-
         /// <summary>
-        /// Determines whether this stream has data or not.
+        /// Determines whether this stream has any more data or not.
+        /// This is equivalent to calling <see cref="NextAsync(CancellationToken)"/> to see whether the return
+        /// value is null, but without consuming the value from the stream.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
         /// <returns>A task which, when completed, will indicate whether the stream contains data.</returns>
         public async Task<bool> HasDataAsync(CancellationToken cancellationToken)
         {
-            await EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
-            return _currentResultSet != null;
+            _cachedValue = await NextAsync(cancellationToken).ConfigureAwait(false);
+            _cachedValueIsValid = true;
+            return _cachedValue != null;
         }
 
         /// <summary>
-        /// Asynchronously reads the next value from the stream.
+        /// Asynchronously reads the next value from the stream. A null value indicates the end of the stream.
         /// </summary>
         /// <param name="cancellationToken">A cancellation token for the asynchronous operation.</param>
         /// <returns>A task which, when completed, will provide the next value read from the stream.</returns>
         public async Task<Value> NextAsync(CancellationToken cancellationToken)
         {
             await EnsureInitializedAsync(cancellationToken).ConfigureAwait(false);
+
+            // If we previously cached a value in HasDataAsync, return it now (and clear the cache).
+            if (_cachedValueIsValid)
+            {
+                var ret = _cachedValue;
+                _cachedValue = null;
+                _cachedValueIsValid = false;
+                return ret;
+            }
 
             Value result = await NextChunkAsync(cancellationToken).ConfigureAwait(false);
             // If we have a chunk, and it's the last value within the current response, and it's marked as a chunked

@@ -485,5 +485,80 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
         // [END spanner_test_query_select_unbound_param_fails]
+
+        [Fact]
+        public void HasRows_NoRows_HasRowsFirst()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = @Key");
+                cmd.Parameters.Add("Key", SpannerDbType.String).Value = "not found";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    Assert.False(reader.HasRows);
+                    Assert.False(reader.Read());
+                }
+            }
+        }
+
+        [Fact]
+        public void HasRows_NoRows_ReadFirst()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = @Key");
+                cmd.Parameters.Add("Key", SpannerDbType.String).Value = "not found";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    Assert.False(reader.Read());
+                    Assert.False(reader.HasRows);
+                }
+            }
+        }
+
+        [Fact]
+        public void HasRows_WithRows_HasRowsFirst()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = @Key");
+                cmd.Parameters.Add("Key", SpannerDbType.String).Value = "k0";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    Assert.True(reader.Read());
+                    Assert.True(reader.HasRows);
+                    Assert.False(reader.Read());
+                    // Even after we've exhausted the reader, we "know" it has rows
+                    Assert.True(reader.HasRows);
+
+                    // But after a call to NextResult, there are no more rows.
+                    Assert.False(reader.NextResult());
+                    Assert.False(reader.HasRows);
+                }
+            }
+
+        }
+
+        [Fact]
+        public void HasRows_WithRows_ReadFirst()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = @Key");
+                cmd.Parameters.Add("Key", SpannerDbType.String).Value = "k0";
+                using (var reader = cmd.ExecuteReader())
+                {
+                    Assert.True(reader.HasRows);
+                    Assert.True(reader.Read());
+                    Assert.False(reader.Read());
+                    // Even after we've exhausted the reader, we "know" it has rows
+                    Assert.True(reader.HasRows);
+
+                    // But after a call to NextResult, there are no more rows.
+                    Assert.False(reader.NextResult());
+                    Assert.False(reader.HasRows);
+                }
+            }
+        }
     }
 }
