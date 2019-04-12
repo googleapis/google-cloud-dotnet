@@ -64,9 +64,11 @@ type that a value will be deserialized as, when no other information is availabl
   	</tr>
   	<tr>
       <td>Floating-point number</td>
-      <td><code>double</code>, <code>float</code></td>
+      <td><code>double</code>, <code>float</code>, integer types listed below</td>
       <td><code>double</code></td>
-      <td>64-bit double precision, IEEE 754.</td>
+      <td>64-bit double precision, IEEE 754. Floating point values are permitted to be deserialized      
+      as integer values for compatibility with platforms which do not distinguish between
+      floating point values and integer values.</td>
   	</tr>
   	<tr>
       <td>Geographical point</td>
@@ -79,14 +81,14 @@ type that a value will be deserialized as, when no other information is availabl
   	</tr>
   	<tr>
       <td>Integer</td>
-      <td>Any integer type (<code>byte</code>, <code>short</code>, <code>ushort</code>, <code>int</code>, <code>long</code> etc) or enum type; <code>double</code> for deserialization</td>
+      <td>Any integer type (<code>byte</code>, <code>short</code>, <code>ushort</code>, <code>int</code>, <code>long</code> etc) or enum type; <code>float</code> and <code>double</code></td>
       <td><code>long</code></td>
       <td>Signed 64-bit integer. When deserializing from server data, if the value is outside the range of the target type,
       	<code>OverflowException</code> is thrown. Similarly, an <code>OverflowException</code> will
         be thrown if a <code>ulong</code> value outside the range of <code>long</code> is serialized.
-        Integer values are permitted to be deserialized as <code>double</code> values for compatibility
-        with platforms which treat any whole number as an integer, even if it's intended to be a
-        floating-point value.</td>
+        Integer values are permitted to be deserialized as <code>float</code> and <code>double</code>
+        values for compatibility with platforms which do not distinguish between floating point
+        values and integer values.</td>
   	</tr>
   	<tr>
       <td>Map</td>
