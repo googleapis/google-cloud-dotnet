@@ -33,9 +33,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <inheritdoc/>
         protected override void InvokeCore(Dictionary<string, string> labels, HttpContext httpContext)
         {
-            if (!string.IsNullOrEmpty(httpContext.Connection.RemoteIpAddress?.ToString()))
+            string value = httpContext.Connection.RemoteIpAddress?.ToString();
+            if (!string.IsNullOrEmpty(value))
             {
-                labels["client_ip"] = httpContext.Connection.RemoteIpAddress.ToString();
+                labels["client_ip"] = value;
             }
         }
     }
