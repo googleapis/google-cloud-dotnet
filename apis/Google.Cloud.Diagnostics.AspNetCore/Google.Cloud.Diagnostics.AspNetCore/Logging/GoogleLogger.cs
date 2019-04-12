@@ -117,18 +117,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     return;
                 }
 
-                Struct jsonStruct = CreateJsonPayload(eventId, state, exception, message);
-
-                Dictionary<string, string> labels = CreateLabels();
-
                 LogEntry entry = new LogEntry
                 {
                     Resource = _loggerOptions.MonitoredResource,
                     LogName = _fullLogName,
                     Severity = logLevel.ToLogSeverity(),
                     Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
-                    JsonPayload = jsonStruct,
-                    Labels = { labels },
+                    JsonPayload = CreateJsonPayload(eventId, state, exception, message),
+                    Labels = { CreateLabels() },
                     Trace = GetTraceName() ?? "",
                 };
 
