@@ -245,18 +245,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 foreach (var pair in fields)
                 {
                     string key = pair.Key;
-                    bool allDigits = true;
-                    // Optimized version of key.All(char.IsDigit) to avoid unnecessary allocations for
-                    // every parameter of every log entry.
-                    for (int i = 0; i < key.Length; i++)
+                    if (string.IsNullOrEmpty(key))
                     {
-                        if (!char.IsDigit(key[i]))
-                        {
-                            allDigits = false;
-                            break;
-                        }
+                        continue;
                     }
-                    if (allDigits)
+                    if (char.IsDigit(key[0]))
                     {
                         key = "_" + key;
                     }
