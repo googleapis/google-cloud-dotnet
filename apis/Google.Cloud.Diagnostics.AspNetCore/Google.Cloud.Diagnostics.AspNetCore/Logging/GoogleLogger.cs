@@ -143,13 +143,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 if (state is IEnumerable<KeyValuePair<string, object>> formatParams &&
                     !(formatParams.Count() == 1 && formatParams.Single().Key.Equals("{OriginalFormat}")))
                 {
-                    var paramStruct = new Struct();
-                    foreach (var pair in formatParams)
-                    {
-                        // Consider adding formatting support for values that are IFormattable.
-                        paramStruct.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
-                    }
-
+                    var paramStruct = CreateStruct(formatParams);
                     if (paramStruct.Fields.Count > 0)
                     {
                         jsonStruct.Fields.Add("format_parameters", Value.ForStruct(paramStruct));
@@ -170,12 +164,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     // Determine if the state of the scope are format params
                     if (currentLogScope.State is FormattedLogValues scopeFormatParams)
                     {
-                        var scopeParams = new Struct();
-                        foreach (var pair in scopeFormatParams)
-                        {
-                            scopeParams.Fields[pair.Key] = Value.ForString(pair.Value?.ToString() ?? "");
-                        }
-
+                        var scopeParams = CreateStruct(scopeFormatParams);
                         scopeParamsList.Add(Value.ForStruct(scopeParams));
                     }
 
@@ -217,6 +206,32 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 _consumer.Receive(new[] { entry });
             }
             catch (Exception) when (_loggerOptions.RetryOptions.ExceptionHandling == ExceptionHandling.Ignore) { }
+
+            Struct CreateStruct(IEnumerable<KeyValuePair<string, object>> fields)
+            {
+                Struct fieldsStruct = new Struct();
+                foreach (var pair in fields)
+                {
+                    string key = pair.Key;
+                    bool allDigits = true;
+                    // Optimized version of key.All(char.IsDigit) to avoid unnecessary allocations for
+                    // every parameter of every log entry.
+                    for (int i = 0; i < key.Length; i++)
+                    {
+                        if (!char.IsDigit(key[i]))
+                        {
+                            allDigits = false;
+                            break;
+                        }
+                    }
+                    if (allDigits)
+                    {
+                        key = "_" + key;
+                    }
+                    fieldsStruct.Fields[key] = Value.ForString(pair.Value?.ToString() ?? "");
+                }
+                return fieldsStruct;
+            }
         }
 
         /// <summary>
