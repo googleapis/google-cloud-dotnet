@@ -135,23 +135,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         private Dictionary<string, string> CreateLabels()
         {
-            Dictionary<string, string> labels;
-            var labelProviders = GetLabelProviders()?.ToArray();
-            if (labelProviders?.Length > 0)
+            var labelProviders = GetLabelProviders();
+            if (labelProviders is null)
             {
-                // Create a copy of the labels from the options and invoke each provider
-                labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-                foreach (var provider in labelProviders)
+                return _loggerOptions.Labels;
+            }
+            using (var iterator = labelProviders.GetEnumerator())
+            {
+                if (!iterator.MoveNext())
                 {
-                    provider.Invoke(labels);
+                    return _loggerOptions.Labels;
                 }
+                // By now, we know we have at least one label provider. Clone the labels from the options,
+                // and invoke each provider on the clone in turn.
+                var labels = _loggerOptions.Labels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                do
+                {
+                    iterator.Current.Invoke(labels);
+                } while (iterator.MoveNext());
+                return labels;
             }
-            else
-            {
-                labels = _loggerOptions.Labels;
-            }
-
-            return labels;
         }
 
         private Struct CreateJsonPayload<TState>(EventId eventId, TState state, Exception exception, string message)
