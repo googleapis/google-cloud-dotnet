@@ -640,6 +640,9 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        internal CallSettings CreateCallSettings(Func<SpannerSettings, CallSettings> settingsProvider, CancellationToken cancellationToken) =>
+            settingsProvider(Builder.SessionPoolManager.SpannerSettings).WithCancellationToken(cancellationToken);
+
         internal CallSettings CreateCallSettings(Func<SpannerSettings, CallSettings> settingsProvider, int timeoutSeconds, CancellationToken cancellationToken)
         {
             var originalSettings = settingsProvider(Builder.SessionPoolManager.SpannerSettings);

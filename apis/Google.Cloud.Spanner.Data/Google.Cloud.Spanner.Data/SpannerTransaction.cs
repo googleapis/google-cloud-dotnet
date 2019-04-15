@@ -229,13 +229,13 @@ namespace Google.Cloud.Spanner.Data
 
         Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(
             ExecuteSqlRequest request,
-            CancellationToken cancellationToken, // Not used in this case
-            int timeoutSeconds)
+            CancellationToken cancellationToken,
+            int timeoutSeconds) // Ignored
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
             // We're not making any Spanner requests here, so we don't need profiling or error translation.
-            var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
+            var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, cancellationToken);
             return Task.FromResult(_session.ExecuteSqlStreamReader(request, callSettings));
         }
 

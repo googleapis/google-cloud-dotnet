@@ -51,6 +51,7 @@ namespace Google.Cloud.Spanner.Data
         private readonly IDisposable _resourceToClose;
         private readonly SpannerConversionOptions _conversionOptions;
         private readonly bool _provideSchemaTable;
+        private readonly int _readTimeoutSeconds;
 
         // Lock for _closed; could possibly be removed and just used Interlocked, but this is simple.
         private readonly object _lock = new object();
@@ -61,7 +62,8 @@ namespace Google.Cloud.Spanner.Data
             ReliableStreamReader resultSet,
             IDisposable resourceToClose,
             SpannerConversionOptions conversionOptions,
-            bool provideSchemaTable)
+            bool provideSchemaTable,
+            int readTimeoutSeconds)
         {
             GaxPreconditions.CheckNotNull(resultSet, nameof(resultSet));
             Logger = logger;
@@ -72,6 +74,7 @@ namespace Google.Cloud.Spanner.Data
             _resourceToClose = resourceToClose;
             _conversionOptions = conversionOptions;
             _provideSchemaTable = provideSchemaTable;
+            _readTimeoutSeconds = readTimeoutSeconds;
         }
 
         private Logger Logger { get; }
@@ -267,44 +270,62 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="cancellationToken">A cancellation token to cancel the read. Cloud Spanner currently
         /// supports limited cancellation while advancing the read to the next row.</param>
         /// <returns>True if another row was read.</returns>
-        public override Task<bool> ReadAsync(CancellationToken cancellationToken)
-        {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                async () =>
+        public override Task<bool> ReadAsync(CancellationToken cancellationToken) =>
+            ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
                 {
-                    if (_metadata == null)
+                    // Note: the using statement ensures that the timer tasks is closed appropriately; otherwise
+                    // we could flood the system with timers.
+                    using (var timeoutCts = new CancellationTokenSource(TimeSpan.FromSeconds(_readTimeoutSeconds)))
                     {
-                        await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
-                    }
-                    _rowValid = false;
-                    _innerList.Clear();
-                    
-                    var first = await _resultSet.NextAsync(cancellationToken).ConfigureAwait(false);
-                    if (first == null)
-                    {
-                        // If this is the first thing we've tried to read, then we know there are no rows.
-                        if (_hasRows == null)
+                        var timeoutToken = timeoutCts.Token;
+                        var effectiveToken = !cancellationToken.CanBeCanceled ? timeoutToken
+                            : CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeoutToken).Token;
+
+                        try
                         {
-                            _hasRows = false;
+                            if (_metadata == null)
+                            {
+                                await PopulateMetadataAsync(effectiveToken).ConfigureAwait(false);
+                            }
+                            _rowValid = false;
+                            _innerList.Clear();
+
+                            var first = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
+                            if (first == null)
+                            {
+                                // If this is the first thing we've tried to read, then we know there are no rows.
+                                if (_hasRows == null)
+                                {
+                                    _hasRows = false;
+                                }
+                                return false;
+                            }
+
+                            _innerList.Add(first);
+                            // We expect to get full rows...
+                            for (var i = 1; i < _metadata.RowType.Fields.Count; i++)
+                            {
+                                var value = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
+                                GaxPreconditions.CheckState(value != null, "Incomplete row returned by Spanner server");
+                                _innerList.Add(value);
+                            }
+                            _rowValid = true;
+                            _hasRows = true;
+
+                            return true;
                         }
-                        return false;
+                        // Translate timeouts from our own cancellation token into a Spanner exception.
+                        // This mimics the behavior of SqlDataReader, which throws a SqlException on timeout.
+                        // It's *possible* that the operation was cancelled due to the user-provided cancellation token,
+                        // and that it just happens that the timeout has been fired as well... but there's a race
+                        // condition anyway in that case, so it's probably reasonable to take the simple path.
+                        catch (OperationCanceledException) when (timeoutToken.IsCancellationRequested)
+                        {
+                            throw new SpannerException(ErrorCode.DeadlineExceeded, "Read operation timed out");
+                        }
                     }
-
-                    _innerList.Add(first);
-                    // We expect to get full rows...
-                    for (var i = 1; i < _metadata.RowType.Fields.Count; i++)
-                    {
-                        var value = await _resultSet.NextAsync(cancellationToken).ConfigureAwait(false);
-                        GaxPreconditions.CheckState(value != null, "Incomplete row returned by Spanner server");
-                        _innerList.Add(value);
-                    }
-                    _rowValid = true;
-                    _hasRows = true;
-
-                    return true;
                 },
                 "SpannerDataReader.Read", Logger);
-        }
 
         /// <inheritdoc />
         protected override void Dispose(bool disposing)

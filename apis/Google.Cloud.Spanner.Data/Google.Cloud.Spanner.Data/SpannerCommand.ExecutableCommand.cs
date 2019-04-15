@@ -115,7 +115,7 @@ namespace Google.Cloud.Spanner.Data
 
                 Connection.Logger.SensitiveInfo(() => $"SpannerCommand.ExecuteReader.Query={request.Sql}");
 
-                // Execute the command.
+                // Execute the command. Note that the command timeout here is only used for ambient transactions where we need to set a commit timeout.
                 var resultSet = await effectiveTransaction.ExecuteQueryAsync(request, cancellationToken, CommandTimeout)
                     .ConfigureAwait(false);
                 var conversionOptions = SpannerConversionOptions.ForConnection(Connection);
@@ -123,7 +123,7 @@ namespace Google.Cloud.Spanner.Data
                 // When the data reader is closed, we may need to dispose of the connection.
                 IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
 
-                return new SpannerDataReader(Connection.Logger, resultSet, resourceToClose, conversionOptions, enableGetSchemaTable);
+                return new SpannerDataReader(Connection.Logger, resultSet, resourceToClose, conversionOptions, enableGetSchemaTable, CommandTimeout);
             }
 
             internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)
