@@ -128,8 +128,9 @@ namespace Google.Cloud.Spanner.V1
                 {
                     if (_grpcCall == null)
                     {
-                        // TODO: Handle the case where the original call settings have a cancellation token too.
-                        _grpcCall = _client.ExecuteStreamingSql(_request, _callSettings.WithCancellationToken(cancellationToken)).GrpcCall;
+                        // Note: no cancellation token here; if we've been given a short cancellation token,
+                        // it ought to apply to just the MoveNext call, not the original request.
+                        _grpcCall = _client.ExecuteStreamingSql(_request, _callSettings).GrpcCall;
                     }
                     bool hasNext = await _grpcCall.ResponseStream
                         .MoveNext(cancellationToken)
