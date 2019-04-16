@@ -34,7 +34,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         [InlineData(StatusCode.Aborted, false)]
         [InlineData(StatusCode.Internal, true)]
         [InlineData(StatusCode.Unavailable, true)]
-        [InlineData(StatusCode.DeadlineExceeded, true)]
+        [InlineData(StatusCode.DeadlineExceeded, false)]
         public void CanRetry_SimpleStatusCodes(StatusCode code, bool expectedRetriable)
         {
             var exception = new RpcException(new Status(code, "Bang"));

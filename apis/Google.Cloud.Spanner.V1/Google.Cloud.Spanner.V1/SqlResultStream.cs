@@ -237,9 +237,6 @@ namespace Google.Cloud.Spanner.V1
                     // It matches on messages "HTTP/2 error code: INTERNAL_ERROR", "Connection closed with unknown cause", "Received unexpected EOS on DATA frame from server".
                     // I'd rather not use the message text if possible.
                     case StatusCode.Internal:
-                    // TODO: Check that this is valid. The Java code doesn't allow it, but it seems reasonable for a large
-                    // result set to require multiple calls to fetch all the data.
-                    case StatusCode.DeadlineExceeded:
                     case StatusCode.Unavailable:
                         return true;
                     case StatusCode.ResourceExhausted:
