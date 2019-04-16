@@ -273,55 +273,54 @@ namespace Google.Cloud.Spanner.Data
         public override Task<bool> ReadAsync(CancellationToken cancellationToken) =>
             ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
                 {
-                    // Note: the using statement ensures that the timer tasks is closed appropriately; otherwise
-                    // we could flood the system with timers.
                     using (var timeoutCts = new CancellationTokenSource(TimeSpan.FromSeconds(_readTimeoutSeconds)))
                     {
                         var timeoutToken = timeoutCts.Token;
-                        var effectiveToken = !cancellationToken.CanBeCanceled ? timeoutToken
-                            : CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeoutToken).Token;
-
-                        try
+                        using (var linkedCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeoutToken))
                         {
-                            if (_metadata == null)
+                            try
                             {
-                                await PopulateMetadataAsync(effectiveToken).ConfigureAwait(false);
-                            }
-                            _rowValid = false;
-                            _innerList.Clear();
-
-                            var first = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
-                            if (first == null)
-                            {
-                                // If this is the first thing we've tried to read, then we know there are no rows.
-                                if (_hasRows == null)
+                                var effectiveToken = linkedCts.Token;
+                                if (_metadata == null)
                                 {
-                                    _hasRows = false;
+                                    await PopulateMetadataAsync(effectiveToken).ConfigureAwait(false);
                                 }
-                                return false;
-                            }
+                                _rowValid = false;
+                                _innerList.Clear();
 
-                            _innerList.Add(first);
-                            // We expect to get full rows...
-                            for (var i = 1; i < _metadata.RowType.Fields.Count; i++)
+                                var first = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
+                                if (first == null)
+                                {
+                                    // If this is the first thing we've tried to read, then we know there are no rows.
+                                    if (_hasRows == null)
+                                    {
+                                        _hasRows = false;
+                                    }
+                                    return false;
+                                }
+
+                                _innerList.Add(first);
+                                // We expect to get full rows...
+                                for (var i = 1; i < _metadata.RowType.Fields.Count; i++)
+                                {
+                                    var value = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
+                                    GaxPreconditions.CheckState(value != null, "Incomplete row returned by Spanner server");
+                                    _innerList.Add(value);
+                                }
+                                _rowValid = true;
+                                _hasRows = true;
+
+                                return true;
+                            }
+                            // Translate timeouts from our own cancellation token into a Spanner exception.
+                            // This mimics the behavior of SqlDataReader, which throws a SqlException on timeout.
+                            // It's *possible* that the operation was cancelled due to the user-provided cancellation token,
+                            // and that it just happens that the timeout has been fired as well... but there's a race
+                            // condition anyway in that case, so it's probably reasonable to take the simple path.
+                            catch (OperationCanceledException) when (timeoutToken.IsCancellationRequested)
                             {
-                                var value = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
-                                GaxPreconditions.CheckState(value != null, "Incomplete row returned by Spanner server");
-                                _innerList.Add(value);
+                                throw new SpannerException(ErrorCode.DeadlineExceeded, "Read operation timed out");
                             }
-                            _rowValid = true;
-                            _hasRows = true;
-
-                            return true;
-                        }
-                        // Translate timeouts from our own cancellation token into a Spanner exception.
-                        // This mimics the behavior of SqlDataReader, which throws a SqlException on timeout.
-                        // It's *possible* that the operation was cancelled due to the user-provided cancellation token,
-                        // and that it just happens that the timeout has been fired as well... but there's a race
-                        // condition anyway in that case, so it's probably reasonable to take the simple path.
-                        catch (OperationCanceledException) when (timeoutToken.IsCancellationRequested)
-                        {
-                            throw new SpannerException(ErrorCode.DeadlineExceeded, "Read operation timed out");
                         }
                     }
                 },
