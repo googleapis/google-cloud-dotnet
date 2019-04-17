@@ -39,7 +39,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
         };
 
-        private const string DefaultRestTargetFrameworks = "netstandard1.3;net45";
+        private const string DefaultRestTargetFrameworks = "netstandard1.3;netstandard2.0;net45";
         private const string DefaultGrpcTargetFrameworks = "netstandard1.5;netstandard2.0;net45";
         private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net452";
 
