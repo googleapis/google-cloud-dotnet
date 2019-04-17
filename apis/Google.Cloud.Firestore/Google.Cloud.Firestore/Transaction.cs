@@ -76,8 +76,10 @@ namespace Google.Cloud.Firestore
         {
             GaxPreconditions.CheckNotNull(documentReference, nameof(documentReference));
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
-            return documentReference.GetSnapshotAsync(TransactionId, effectiveToken);
+            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken))
+            {
+                return documentReference.GetSnapshotAsync(TransactionId, cts.Token);
+            }
         }
 
         /// <summary>
@@ -111,8 +113,10 @@ namespace Google.Cloud.Firestore
         public Task<IList<DocumentSnapshot>> GetAllSnapshotsAsync(IEnumerable<DocumentReference> documentReferences, FieldMask fieldMask, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
-            return Database.GetAllSnapshotsAsync(documentReferences, TransactionId, fieldMask, effectiveToken);
+            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken))
+            {
+                return Database.GetAllSnapshotsAsync(documentReferences, TransactionId, fieldMask, cts.Token);
+            }
         }
 
         /// <summary>
@@ -125,9 +129,11 @@ namespace Google.Cloud.Firestore
         public Task<QuerySnapshot> GetSnapshotAsync(Query query, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
-            CancellationToken effectiveToken = GetEffectiveCancellationToken(cancellationToken);
             GaxPreconditions.CheckState(_writes.IsEmpty, "Firestore transactions require all reads to be executed before all writes.");
-            return query.GetSnapshotAsync(TransactionId, cancellationToken);
+            using (var cts = CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, cancellationToken))
+            {
+                return query.GetSnapshotAsync(TransactionId, cts.Token);
+            }
         }
 
         /// <summary>
@@ -217,10 +223,5 @@ namespace Google.Cloud.Firestore
         /// <returns>A task representing the asynchronous operation.</returns>
         internal Task RollbackAsync() =>
             Database.Client.RollbackAsync(Database.RootPath, TransactionId, CancellationToken);
-
-        private CancellationToken GetEffectiveCancellationToken(CancellationToken other) =>
-            !CancellationToken.CanBeCanceled ? other
-            : !other.CanBeCanceled ? CancellationToken
-            : CancellationTokenSource.CreateLinkedTokenSource(CancellationToken, other).Token;
     }
 }
