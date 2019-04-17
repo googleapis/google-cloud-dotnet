@@ -195,7 +195,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNet",
-    "version": "3.0.0-beta11",
+    "version": "3.0.0-beta12",
     "type": "other",
     "targetFrameworks": "net461",
     "testTargetFrameworks": "net461",
@@ -206,7 +206,7 @@
       "Microsoft.AspNet.WebApi.Core": "5.2.7",
       "Microsoft.AspNet.WebPages": "3.2.7",
       "Microsoft.AspNet.Mvc": "5.2.7",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.19.0"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -217,7 +217,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.AspNetCore",
-    "version": "3.0.0-beta11",
+    "version": "3.0.0-beta12",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -226,12 +226,12 @@
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
       "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0-beta02",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.19.0"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-      "Google.Api.Gax.Testing": "default"
+      "Google.Api.Gax.Testing": "2.7.0-beta04"
     },
     "additionalAnalyzerTestDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
@@ -255,7 +255,7 @@
 
   {
     "id": "Google.Cloud.Diagnostics.Common",
-    "version": "3.0.0-beta11",
+    "version": "3.0.0-beta12",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -263,11 +263,11 @@
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
       // Explicitly add dependencies for GAX so we have recent versions
-      "Google.Api.Gax": "default",
-      "Google.Api.Gax.Grpc": "default",
+      "Google.Api.Gax": "2.7.0-beta04",
+      "Google.Api.Gax.Grpc": "2.7.0-beta04",
       "Google.Cloud.Logging.V2": "2.1.0",
       "Google.Cloud.Trace.V1": "1.0.0",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.19.0"
     },
     "testDependencies": {
       "Google.Cloud.ErrorReporting.V1Beta1": "project",
