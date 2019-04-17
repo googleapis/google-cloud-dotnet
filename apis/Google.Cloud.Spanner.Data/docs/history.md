@@ -23,6 +23,8 @@ Breaking changes:
 - `Hashtable` is no longer used as a default type for
   struct values. It can still be specified explicitly.
   The new default is `Dictionary<string, object>`.
+- The libraries no longer target netstandard1.5; only netstandard2.0
+  and net45 are supported
 
 # 1.0.0, 2017-12-05
 
