@@ -159,9 +159,7 @@ Some APIs (such as Datastore and PubSub) provide emulators in the
 [Cloud SDK](https://cloud.google.com/sdk/). Client libraries in some
 other languages automatically use emulators if specific environment
 variables are set, but the Google Cloud Libraries for .NET do not do
-this. (We are hoping to work with a more ambient emulator manager
-solution which does not require environment variables, and is
-therefore more amenable to IDEs such as Visual Studio.)
+this in GA libraries.
 
 However, it is quite simple to manually create the appropriate
 client for gRPC-based APIs, by first creating a channel and then
@@ -172,6 +170,12 @@ credentials must be set to `ChannelCredentials.Insecure`.
 Example for PubSub:
 
 [!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#Emulator)]
+
+### Beta support for Datastore emulator detection
+
+From 2.2.0-beta02, the Datastore library has support for detecting
+and using the emulator. See the [Datastore API documentation](Google.Cloud.Datastore.V1/)
+for more details and an example.
 
 ## Why aren't the gRPC native libraries being found?
 
