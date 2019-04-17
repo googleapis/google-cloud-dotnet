@@ -25,10 +25,10 @@ are provided to simplify working with the protobuf messages.
 
 # Using the Datastore Emulator
 
-This package does not automatically connect to an emulator via
-environment variables. However, it is reasonably simple do so. If
-you wish to automatically connect to an emulator, simply include the
-following method in your code, and call that instead of
+The GA version of this package does not automatically connect to an
+emulator via environment variables. However, it is reasonably simple
+do so. If you wish to automatically connect to an emulator, simply
+include the following method in your code, and call that instead of
 `DatastoreDb.Create`.
 
 {{sample:DatastoreDb.EmulatorInit}}
@@ -39,6 +39,23 @@ amounts of data, you may wish to write an alternative method that
 been configured. That avoids accidentally connecting to the
 production Datastore service and potentially incurring large bills
 due to forgetting to set an environment variable.
+
+## Beta support for emulator detection
+
+As of 2.2.0-beta02, the library has support for detecting the
+emulator via environment variables, if requested. This is configured
+via `DatastoreDbBuilder`, which can also be used to configure custom
+credentials easily.
+
+The following code creates a `DatastoreDb` which will use the
+emulator when the environment variables are present, but will
+otherwise connect to the production environment.
+
+{{sample:DatastoreDb.EmulatorDetection}}
+
+See the
+[EmulatorDetection](obj/api/Google.Cloud.Datastore.V1.EmulatorDetection.yml)
+enum for details of the other possible values.
 
 # Sample code
 
@@ -58,4 +75,3 @@ either integer or timestamp values to `DateTime` or `DateTimeOffset`.
 
 Lots more samples:
 [github.com/googleapis/dotnet-docs-samples](https://github.com/googleapis/dotnet-docs-samples/tree/master/datastore/api)
-

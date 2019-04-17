@@ -1195,5 +1195,19 @@ namespace Google.Cloud.Datastore.V1.Snippets
             return DatastoreDb.Create(projectId, namespaceId, client);
         }
         // End sample
+
+        [Fact]
+        public void DetectEmulator()
+        {
+            string projectId = _fixture.ProjectId;
+            // Sample: EmulatorDetection
+            DatastoreDb db = new DatastoreDbBuilder
+            {
+                ProjectId = projectId,
+                EmulatorDetection = EmulatorDetection.ProductionOrEmulator
+            }.Build();
+            // Use db as normal
+            // End sample
+        }
     }
 }
