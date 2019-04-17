@@ -378,7 +378,7 @@ namespace Google.Cloud.Logging.Log4Net
                 {
                     try
                     {
-#if NET45
+#if NET45 || NETSTANDARD2_0
                             return AppDomain.CurrentDomain.GetAssemblies()
                                 .SelectMany(a => a.GetTypes())
                                 .FirstOrDefault(t => t.FullName == fullTypeName);

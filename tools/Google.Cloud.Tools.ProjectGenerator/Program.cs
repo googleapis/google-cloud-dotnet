@@ -40,7 +40,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         };
 
         private const string DefaultRestTargetFrameworks = "netstandard1.3;net45";
-        private const string DefaultGrpcTargetFrameworks = "netstandard1.5;net45";
+        private const string DefaultGrpcTargetFrameworks = "netstandard1.5;netstandard2.0;net45";
         private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net452";
 
         private const string AnalyzersTargetFramework = "netstandard1.3";
