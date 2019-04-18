@@ -46,7 +46,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Assessment expectedResponse = new Assessment
             {
                 Name = "name3373707",
-                Confidence = 8.2925121E7f,
+                Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -70,7 +70,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Assessment expectedResponse = new Assessment
             {
                 Name = "name3373707",
-                Confidence = 8.2925121E7f,
+                Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Assessment>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -94,7 +94,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Assessment expectedResponse = new Assessment
             {
                 Name = "name3373707",
-                Confidence = 8.2925121E7f,
+                Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -116,7 +116,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1.Tests
             Assessment expectedResponse = new Assessment
             {
                 Name = "name3373707",
-                Confidence = 8.2925121E7f,
+                Score = 1.0926453E7f,
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Assessment>(Task.FromResult(expectedResponse), null, null, null, null));
