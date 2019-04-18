@@ -175,13 +175,13 @@ namespace Google.Cloud.Datastore.V1
             internal DatastoreDb Build()
             {
                 var client = _clientBuilder.Build();
-                return DatastoreDb.Create(_projectId, _namespaceId, client);
+                return DatastoreDb.Create(_projectId, _namespaceId ?? DatastoreDb.DefaultNamespaceId, client);
             }
 
             internal async Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken)
             {
                 var client = await _clientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
-                return DatastoreDb.Create(_projectId, _namespaceId, client);
+                return DatastoreDb.Create(_projectId, _namespaceId ?? DatastoreDb.DefaultNamespaceId, client);
             }
         }
     }
