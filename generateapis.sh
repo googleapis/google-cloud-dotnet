@@ -222,6 +222,7 @@ generate_api Google.Cloud.Dialogflow.V2 google/cloud/dialogflow/v2 dialogflow_v2
 generate_api Google.Cloud.Dlp.V2 google/privacy/dlp/v2 dlp_v2.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
 generate_api Google.Cloud.Firestore.V1 google/firestore/v1 firestore_v1.yaml
+generate_api Google.Cloud.Firestore.Admin.V1 google/firestore/admin/v1 firestore_admin_v1.yaml
 generate_api Google.Cloud.Irm.V1Alpha2 google/cloud/irm/v1alpha2 irm_v1alpha2.yaml
 generate_api Google.Cloud.Kms.V1 google/cloud/kms/v1 cloudkms.yaml
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
