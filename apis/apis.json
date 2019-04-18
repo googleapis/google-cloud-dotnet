@@ -341,6 +341,21 @@
   },
 
   {
+    "id": "Google.Cloud.Firestore.Admin.V1",
+    "productName": "Firestore Admin",
+    "productUrl": "https://firebase.google.com",
+    "targetFrameworks": "netstandard2.0;net45",
+    "testTargetFrameworks": "netcoreapp2.1;net452",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended Google client library to access the Firestore Admin API.",
+    "tags": [ "firestore", "firebase", "admin" ],
+    "dependencies": {
+      "Google.LongRunning": "1.1.0"
+    }
+  },
+  
+  {
     "id": "Google.Cloud.Firestore",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com/docs/firestore/",
