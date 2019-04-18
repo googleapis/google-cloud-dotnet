@@ -25,10 +25,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvam9iLnByb3RvEhtnb29n",
-            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24u",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2ds",
-            "ZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byKnDgoDSm9iEgwKBG5hbWUYASAB",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEaKGdvb2dsZS9jbG91ZC90YWxlbnQv",
+            "djRiZXRhMS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxocZ29v",
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKnDgoDSm9iEgwKBG5hbWUYASAB",
             "KAkSDwoHY29tcGFueRgCIAEoCRIWCg5yZXF1aXNpdGlvbl9pZBgDIAEoCRIN",
             "CgV0aXRsZRgEIAEoCRITCgtkZXNjcmlwdGlvbhgFIAEoCRIRCglhZGRyZXNz",
             "ZXMYBiADKAkSSgoQYXBwbGljYXRpb25faW5mbxgHIAEoCzIwLmdvb2dsZS5j",
@@ -74,7 +74,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVu",
             "dKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job), global::Google.Cloud.Talent.V4Beta1.Job.Parser, new[]{ "Name", "Company", "RequisitionId", "Title", "Description", "Addresses", "ApplicationInfo", "JobBenefits", "CompensationInfo", "CustomAttributes", "DegreeTypes", "Department", "EmploymentTypes", "Incentives", "LanguageCode", "JobLevel", "PromotionValue", "Qualifications", "Responsibilities", "PostingRegion", "Visibility", "JobStartTime", "JobEndTime", "PostingPublishTime", "PostingExpireTime", "PostingCreateTime", "PostingUpdateTime", "CompanyDisplayName", "DerivedInfo", "ProcessingOptions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo.Parser, new[]{ "Emails", "Instruction", "Uris" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Job.Types.DerivedInfo.Parser, new[]{ "Locations", "JobCategories" }, null, null, null),
@@ -88,9 +88,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   #region Messages
   /// <summary>
   /// A Job resource represents a job posting (also referred to as a "job listing"
-  /// or "job requisition"). A job belongs to a
-  /// [Company][google.cloud.talent.v4beta1.Company], which is the hiring entity
-  /// responsible for the job.
+  /// or "job requisition"). A job belongs to a [Company][google.cloud.talent.v4beta1.Company], which is the hiring
+  /// entity responsible for the job.
   /// </summary>
   public sealed partial class Job : pb::IMessage<Job> {
     private static readonly pb::MessageParser<Job> _parser = new pb::MessageParser<Job>(() => new Job());
@@ -172,8 +171,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// example, "projects/api-test-project/jobs/1234".
     ///
     /// Use of this field in job queries and API calls is preferred over the use of
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] since this
-    /// value is unique.
+    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] since this value is unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -215,10 +213,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The requisition ID, also referred to as the posting ID, is assigned by the
     /// client to identify a job. This field is intended to be used by clients
     /// for client identification and tracking of postings. A job isn't allowed
-    /// to be created if there is another job with the same
-    /// [company][google.cloud.talent.v4beta1.Job.name],
-    /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
+    /// to be created if there is another job with the same [company][google.cloud.talent.v4beta1.Job.name],
+    /// [language_code][google.cloud.talent.v4beta1.Job.language_code] and [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -256,10 +252,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The description of the job, which typically includes a multi-paragraph
     /// description of the company and related information. Separate fields are
-    /// provided on the job object for
-    /// [responsibilities][google.cloud.talent.v4beta1.Job.responsibilities],
-    /// [qualifications][google.cloud.talent.v4beta1.Job.qualifications], and other
-    /// job characteristics. Use of these separate job fields is recommended.
+    /// provided on the job object for [responsibilities][google.cloud.talent.v4beta1.Job.responsibilities],
+    /// [qualifications][google.cloud.talent.v4beta1.Job.qualifications], and other job characteristics. Use of
+    /// these separate job fields is recommended.
     ///
     /// This field accepts and sanitizes HTML input, and also accepts
     /// bold, italic, ordered list, and unordered list markup tags.
@@ -289,15 +284,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// At most 50 locations are allowed for best search performance. If a job has
     /// more locations, it is suggested to split it into multiple jobs with unique
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id]s (e.g.
-    /// 'ReqA' becomes 'ReqA-1', 'ReqA-2', etc.) as multiple jobs with the same
-    /// [company][google.cloud.talent.v4beta1.Job.name][], [language_code][] and
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] are not
-    /// allowed. If the original
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] must be
-    /// preserved, a custom field should be used for storage. It is also suggested
-    /// to group the locations that close to each other in the same job for better
-    /// search experience.
+    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id]s (e.g. 'ReqA' becomes 'ReqA-1', 'ReqA-2', and so on.) as
+    /// multiple jobs with the same [company][google.cloud.talent.v4beta1.Job.name][], [language_code][] and
+    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] are not allowed. If the original [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] must
+    /// be preserved, a custom field should be used for storage. It is also
+    /// suggested to group the locations that close to each other in the same job
+    /// for better search experience.
     ///
     /// The maximum number of allowed characters is 500.
     /// </summary>
@@ -310,9 +302,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ApplicationInfoFieldNumber = 7;
     private global::Google.Cloud.Talent.V4Beta1.Job.Types.ApplicationInfo applicationInfo_;
     /// <summary>
-    /// Required. At least one field within
-    /// [ApplicationInfo][google.cloud.talent.v4beta1.Job.ApplicationInfo] must be
-    /// specified.
+    /// Optional.
     ///
     /// Job application information.
     /// </summary>
@@ -466,11 +456,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){:
     /// class="external" target="_blank" }.
     ///
-    /// If this field is unspecified and
-    /// [Job.description][google.cloud.talent.v4beta1.Job.description] is present,
-    /// detected language code based on
-    /// [Job.description][google.cloud.talent.v4beta1.Job.description] is assigned,
-    /// otherwise defaults to 'en_US'.
+    /// If this field is unspecified and [Job.description][google.cloud.talent.v4beta1.Job.description] is present, detected
+    /// language code based on [Job.description][google.cloud.talent.v4beta1.Job.description] is assigned, otherwise
+    /// defaults to 'en_US'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -526,8 +514,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// A description of the qualifications required to perform the
     /// job. The use of this field is recommended
-    /// as an alternative to using the more general
-    /// [description][google.cloud.talent.v4beta1.Job.description] field.
+    /// as an alternative to using the more general [description][google.cloud.talent.v4beta1.Job.description] field.
     ///
     /// This field accepts and sanitizes HTML input, and also accepts
     /// bold, italic, ordered list, and unordered list markup tags.
@@ -549,8 +536,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// A description of job responsibilities. The use of this field is
-    /// recommended as an alternative to using the more general
-    /// [description][google.cloud.talent.v4beta1.Job.description] field.
+    /// recommended as an alternative to using the more general [description][google.cloud.talent.v4beta1.Job.description]
+    /// field.
     ///
     /// This field accepts and sanitizes HTML input, and also accepts
     /// bold, italic, ordered list, and unordered list markup tags.
@@ -571,16 +558,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// The job [PostingRegion][google.cloud.talent.v4beta1.PostingRegion] (for
-    /// example, state, country) throughout which the job is available. If this
-    /// field is set, a
-    /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] in a search
-    /// query within the job region finds this job posting if an exact location
-    /// match isn't specified. If this field is set to
-    /// [PostingRegion.NATION][google.cloud.talent.v4beta1.PostingRegion.NATION] or
-    /// [PostingRegion.ADMINISTRATIVE_AREA][google.cloud.talent.v4beta1.PostingRegion.ADMINISTRATIVE_AREA],
-    /// setting job [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] to
-    /// the same location level as this field is strongly recommended.
+    /// The job [PostingRegion][google.cloud.talent.v4beta1.PostingRegion] (for example, state, country) throughout
+    /// which the job is available. If this field is set, a [LocationFilter][google.cloud.talent.v4beta1.LocationFilter]
+    /// in a search query within the job region finds this job posting if an
+    /// exact location match isn't specified. If this field is set to
+    /// [PostingRegion.NATION][google.cloud.talent.v4beta1.PostingRegion.NATION] or [PostingRegion.ADMINISTRATIVE_AREA][google.cloud.talent.v4beta1.PostingRegion.ADMINISTRATIVE_AREA],
+    /// setting job [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] to the same location level as this field
+    /// is strongly recommended.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.PostingRegion PostingRegion {
@@ -598,9 +582,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The visibility of the job.
     ///
-    /// Defaults to
-    /// [Visibility.ACCOUNT_ONLY][google.cloud.talent.v4beta1.Visibility.ACCOUNT_ONLY]
-    /// if not specified.
+    /// Defaults to [Visibility.ACCOUNT_ONLY][google.cloud.talent.v4beta1.Visibility.ACCOUNT_ONLY] if not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Visibility Visibility {
@@ -676,8 +658,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// updated with the [UpdateJob][] API. An expired job can be updated and
     /// opened again by using a future expiration timestamp. Updating an expired
     /// job fails if there is another existing open job with same
-    /// [company][google.cloud.talent.v4beta1.Job.name][], [language_code][] and
-    /// [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
+    /// [company][google.cloud.talent.v4beta1.Job.name][], [language_code][] and [requisition_id][google.cloud.talent.v4beta1.Job.requisition_id].
     ///
     /// The expired jobs are retained in our system for 90 days. However, the
     /// overall expired job count cannot exceed 3 times the maximum of open jobs
@@ -696,11 +677,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// unspecified expiration date, the job expires after 2017/01/31 13:00AM UTC.
     ///
     /// If this value isn't provided on job update, it depends on the field masks
-    /// set by
-    /// [UpdateJobRequest.update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask].
-    /// If the field masks include [expiry_time][], or the masks are empty meaning
-    /// that every field is updated, the job posting expires after 30 days from the
-    /// job's last update time. Otherwise the expiration date isn't updated.
+    /// set by [UpdateJobRequest.update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask]. If the field masks include
+    /// [expiry_time][], or the masks are empty meaning that every field is
+    /// updated, the job posting expires after 30 days from the job's last
+    /// update time. Otherwise the expiration date isn't updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PostingExpireTime {
@@ -1405,11 +1385,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> emails_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional but at least one of
-        /// [uris][google.cloud.talent.v4beta1.Job.ApplicationInfo.uris],
-        /// [emails][google.cloud.talent.v4beta1.Job.ApplicationInfo.emails] or
-        /// [instruction][google.cloud.talent.v4beta1.Job.ApplicationInfo.instruction]
-        /// must be specified.
+        /// Optional.
         ///
         /// Use this field to specify email address(es) to which resumes or
         /// applications can be sent.
@@ -1425,11 +1401,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int InstructionFieldNumber = 2;
         private string instruction_ = "";
         /// <summary>
-        /// Optional but at least one of
-        /// [uris][google.cloud.talent.v4beta1.Job.ApplicationInfo.uris],
-        /// [emails][google.cloud.talent.v4beta1.Job.ApplicationInfo.emails] or
-        /// [instruction][google.cloud.talent.v4beta1.Job.ApplicationInfo.instruction]
-        /// must be specified.
+        /// Optional.
         ///
         /// Use this field to provide instructions, such as "Mail your application
         /// to ...", that a candidate can follow to apply for the job.
@@ -1453,11 +1425,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> uris_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional but at least one of
-        /// [uris][google.cloud.talent.v4beta1.Job.ApplicationInfo.uris],
-        /// [emails][google.cloud.talent.v4beta1.Job.ApplicationInfo.emails] or
-        /// [instruction][google.cloud.talent.v4beta1.Job.ApplicationInfo.instruction]
-        /// must be specified.
+        /// Optional.
         ///
         /// Use this URI field to direct an applicant to a website, for example to
         /// link to an online application form.
@@ -1617,12 +1585,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Talent.V4Beta1.Location.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location> locations_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location>();
         /// <summary>
-        /// Structured locations of the job, resolved from
-        /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses].
+        /// Structured locations of the job, resolved from [Job.addresses][google.cloud.talent.v4beta1.Job.addresses].
         ///
-        /// [locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations] are
-        /// exactly matched to
-        /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] in the same
+        /// [locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations] are exactly matched to [Job.addresses][google.cloud.talent.v4beta1.Job.addresses] in the same
         /// order.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1636,9 +1601,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.Talent.V4Beta1.JobCategory) x);
         private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory> jobCategories_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory>();
         /// <summary>
-        /// Job categories derived from
-        /// [Job.title][google.cloud.talent.v4beta1.Job.title] and
-        /// [Job.description][google.cloud.talent.v4beta1.Job.description].
+        /// Job categories derived from [Job.title][google.cloud.talent.v4beta1.Job.title] and [Job.description][google.cloud.talent.v4beta1.Job.description].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory> JobCategories {
@@ -1806,8 +1769,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// HTML tags in these fields may be stripped if sanitiazation isn't
         /// disabled.
         ///
-        /// Defaults to
-        /// [HtmlSanitization.SIMPLE_FORMATTING_ONLY][google.cloud.talent.v4beta1.HtmlSanitization.SIMPLE_FORMATTING_ONLY].
+        /// Defaults to [HtmlSanitization.SIMPLE_FORMATTING_ONLY][google.cloud.talent.v4beta1.HtmlSanitization.SIMPLE_FORMATTING_ONLY].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.HtmlSanitization HtmlSanitization {

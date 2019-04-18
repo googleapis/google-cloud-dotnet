@@ -25,9 +25,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21t",
-            "b24ucHJvdG8iwgEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFs",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaKGdvb2dsZS9jbG91ZC90YWxl",
+            "bnQvdjRiZXRhMS9jb21tb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
+            "bnMucHJvdG8iwgEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFs",
             "X2lkGAIgASgJEkUKCnVzYWdlX3R5cGUYAyABKA4yMS5nb29nbGUuY2xvdWQu",
             "dGFsZW50LnY0YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUiTgoNRGF0YVVz",
             "YWdlVHlwZRIfChtEQVRBX1VTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpB",
@@ -36,7 +36,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
             "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
           }));
@@ -134,9 +134,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Indicates whether data owned by this tenant may be used to provide product
     /// improvements across other tenants.
     ///
-    /// Defaults behavior is
-    /// [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED]
-    /// if it's unset.
+    /// Defaults behavior is [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED] if it's unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType UsageType {

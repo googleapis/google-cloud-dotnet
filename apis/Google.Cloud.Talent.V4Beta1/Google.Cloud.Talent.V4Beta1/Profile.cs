@@ -157,9 +157,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   #region Messages
   /// <summary>
   /// A resource that represents the profile for a job candidate (also referred to
-  /// as a "single-source profile"). A profile belongs to a
-  /// [Company][google.cloud.talent.v4beta1.Company], which is the
-  /// company/organization that owns the profile.
+  /// as a "single-source profile"). A profile belongs to a [Company][google.cloud.talent.v4beta1.Company], which is
+  /// the company/organization that owns the profile.
   /// </summary>
   public sealed partial class Profile : pb::IMessage<Profile> {
     private static readonly pb::MessageParser<Profile> _parser = new pb::MessageParser<Profile>(() => new Profile());
@@ -307,22 +306,17 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The cluster id of the profile to associate with other profile(s) for the
     /// same candidate.
     ///
-    /// A random UUID is assigned if
-    /// [group_id][google.cloud.talent.v4beta1.Profile.group_id] isn't provided. To
-    /// ensure global uniqueness, customized
-    /// [group_id][google.cloud.talent.v4beta1.Profile.group_id] isn't supported.
-    /// If [group_id][google.cloud.talent.v4beta1.Profile.group_id] is set, there
-    /// must be at least one other profile with the same system generated
-    /// [group_id][google.cloud.talent.v4beta1.Profile.group_id], otherwise an
-    /// error is thrown.
+    /// A random UUID is assigned if [group_id][google.cloud.talent.v4beta1.Profile.group_id] isn't provided. To ensure
+    /// global uniqueness, customized [group_id][google.cloud.talent.v4beta1.Profile.group_id] isn't supported. If
+    /// [group_id][google.cloud.talent.v4beta1.Profile.group_id] is set, there must be at least one other profile with the
+    /// same system generated [group_id][google.cloud.talent.v4beta1.Profile.group_id], otherwise an error is thrown.
     ///
     /// This is used to link multiple profiles to the same candidate. For example,
     /// a client has a candidate with two profiles, where one was created recently
     /// and the other one was created 5 years ago. These two profiles may be very
     /// different. The clients can create the first profile and get a generated
-    /// [group_id][google.cloud.talent.v4beta1.Profile.group_id], and assign it
-    /// when the second profile is created, indicating these two profiles are
-    /// referring to the same candidate.
+    /// [group_id][google.cloud.talent.v4beta1.Profile.group_id], and assign it when the second profile is created,
+    /// indicating these two profiles are referring to the same candidate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupId {
@@ -391,21 +385,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// See http://schemas.liquid-technologies.com/hr-xml/2007-04-15/ for more
     /// information about Human Resources XML.
     ///
-    /// Users can create a profile with only
-    /// [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] field. For
-    /// example, the API parses the
-    /// [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] and
-    /// creates a profile with all structured fields populated, for example.
-    /// [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord],
-    /// [EducationRecord][google.cloud.talent.v4beta1.EducationRecord], etc. An
-    /// error is thrown if the
-    /// [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] can't be
-    /// parsed.
+    /// Users can create a profile with only [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] field. For example,
+    /// the API parses the [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] and creates a profile with all
+    /// structured fields populated, for example. [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord],
+    /// [EducationRecord][google.cloud.talent.v4beta1.EducationRecord], and so on. An error is thrown if the [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml]
+    /// can't be parsed.
     ///
-    /// If the [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] is
-    /// provided during profile creation or update, any other structured data
-    /// provided in the profile is ignored. The API populates these fields by
-    /// parsing the HR-XML.
+    /// If the [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] is provided during profile creation or update,
+    /// any other structured data provided in the profile is ignored. The
+    /// API populates these fields by parsing the HR-XML.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResumeHrxml {
@@ -500,12 +488,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// Available contact information besides
-    /// [addresses][google.cloud.talent.v4beta1.Profile.addresses],
-    /// [email_addresses][google.cloud.talent.v4beta1.Profile.email_addresses],
-    /// [phone_numbers][google.cloud.talent.v4beta1.Profile.phone_numbers] and
-    /// [personal_uris][google.cloud.talent.v4beta1.Profile.personal_uris]. For
-    /// example, Hang-out, Skype.
+    /// Available contact information besides [addresses][google.cloud.talent.v4beta1.Profile.addresses], [email_addresses][google.cloud.talent.v4beta1.Profile.email_addresses],
+    /// [phone_numbers][google.cloud.talent.v4beta1.Profile.phone_numbers] and [personal_uris][google.cloud.talent.v4beta1.Profile.personal_uris]. For example, Hang-out, Skype.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.AdditionalContactInfo> AdditionalContactInfo {
@@ -529,10 +513,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// change is.
     /// For example, only job title is changed from "software engineer" to "senior
     /// software engineer".
-    /// * Provide
-    /// [EmploymentRecord.is_current][google.cloud.talent.v4beta1.EmploymentRecord.is_current]
-    /// for the current employment if possible. If not, it's inferred from user
-    /// inputs.
+    /// * Provide [EmploymentRecord.is_current][google.cloud.talent.v4beta1.EmploymentRecord.is_current] for the current employment if
+    /// possible. If not, it's inferred from user inputs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentRecord> EmploymentRecords {
@@ -555,10 +537,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * List each education type separately, no matter how minor the change is.
     /// For example, the profile contains the education experience from the same
     /// school but different degrees.
-    /// * Provide
-    /// [EducationRecord.is_current][google.cloud.talent.v4beta1.EducationRecord.is_current]
-    /// for the current education if possible. If not, it's inferred from user
-    /// inputs.
+    /// * Provide [EducationRecord.is_current][google.cloud.talent.v4beta1.EducationRecord.is_current] for the current education if
+    /// possible. If not, it's inferred from user inputs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EducationRecord> EducationRecords {
@@ -591,8 +571,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The individual or collaborative activities which the candidate has
     /// participated in, for example, open-source projects, class assignments that
-    /// aren't listed in
-    /// [employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
+    /// aren't listed in [employment_records][google.cloud.talent.v4beta1.Profile.employment_records].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Activity> Activities {
@@ -680,8 +659,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// A map of fields to hold both filterable and non-filterable custom profile
     /// attributes that aren't covered by the provided structured fields. See
-    /// [CustomAttribute][google.cloud.talent.v4beta1.CustomAttribute] for more
-    /// details.
+    /// [CustomAttribute][google.cloud.talent.v4beta1.CustomAttribute] for more details.
     ///
     /// At most 100 filterable and at most 100 unfilterable keys are supported. If
     /// limit is exceeded, an error is thrown. Custom attributes are `unfilterable`
@@ -1205,7 +1183,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// A person's name in a structured way (last name, first name, suffix, etc.)
+    /// A person's name in a structured way (last name, first name, suffix, and
+    /// so on.)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName StructuredName {
@@ -1431,9 +1410,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         ///
         /// Given/first name.
         ///
-        /// It's derived from
-        /// [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name]
-        /// if not provided.
+        /// It's derived from [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name] if not provided.
         ///
         /// Number of characters allowed is 100.
         /// </summary>
@@ -1453,9 +1430,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         ///
         /// Middle initial.
         ///
-        /// It's derived from
-        /// [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name]
-        /// if not provided.
+        /// It's derived from [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name] if not provided.
         ///
         /// Number of characters allowed is 20.
         /// </summary>
@@ -1475,9 +1450,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         ///
         /// Family/last name.
         ///
-        /// It's derived from
-        /// [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name]
-        /// if not provided.
+        /// It's derived from [formatted_name][google.cloud.talent.v4beta1.PersonName.formatted_name] if not provided.
         ///
         /// Number of characters allowed is 100.
         /// </summary>
@@ -1752,7 +1725,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// Structured address that contains street address, city, state, country,
-    /// etc.
+    /// and so on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.PostalAddress StructuredAddress {
@@ -2401,10 +2374,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [pbr::OriginalName("VOICEMAIL")] Voicemail = 6,
         /// <summary>
         /// A virtual telephone number is a number that can be routed to another
-        /// number and managed by the user via Web, SMS, IVR, etc.  It is associated
-        /// with a particular person, and may be routed to either a MOBILE or
-        /// LANDLINE number. The phone usage (see ContactInfoUsage above) should be
-        /// set to PERSONAL for these phone types. Some more information can be
+        /// number and managed by the user via Web, SMS, IVR, and so on.  It is
+        /// associated with a particular person, and may be routed to either a MOBILE
+        /// or LANDLINE number. The phone usage (see ContactInfoUsage above) should
+        /// be set to PERSONAL for these phone types. Some more information can be
         /// found here: http://en.wikipedia.org/wiki/Personal_Numbers
         /// </summary>
         [pbr::OriginalName("VIRTUAL")] Virtual = 7,
@@ -2875,7 +2848,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The name of the employer company/organization.
     ///
-    /// For example, "Google", "Alphabet", etc.
+    /// For example, "Google", "Alphabet", and so on.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -2895,7 +2868,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The division name of the employment.
     ///
-    /// For example, division, department, client, etc.
+    /// For example, division, department, client, and so on.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -2931,7 +2904,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The job title of the employment.
     ///
-    /// For example, "Software Engineer", "Data Scientist", etc.
+    /// For example, "Software Engineer", "Data Scientist", and so on.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -2968,7 +2941,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// If it is a supervisor position.
+    /// If the jobs is a supervisor position.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? IsSupervisor {
@@ -3016,11 +2989,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobTitleSnippetFieldNumber = 11;
     private string jobTitleSnippet_ = "";
     /// <summary>
-    /// Output only. The job title snippet shows how the
-    /// [job_title][google.cloud.talent.v4beta1.EmploymentRecord.job_title] is
-    /// related to a search query. It's empty if the
-    /// [job_title][google.cloud.talent.v4beta1.EmploymentRecord.job_title] isn't
-    /// related to the search query.
+    /// Output only. The job title snippet shows how the [job_title][google.cloud.talent.v4beta1.EmploymentRecord.job_title] is related
+    /// to a search query. It's empty if the [job_title][google.cloud.talent.v4beta1.EmploymentRecord.job_title] isn't related to the
+    /// search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobTitleSnippet {
@@ -3034,11 +3005,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobDescriptionSnippetFieldNumber = 12;
     private string jobDescriptionSnippet_ = "";
     /// <summary>
-    /// Output only. The job description snippet shows how the
-    /// [job_description][google.cloud.talent.v4beta1.EmploymentRecord.job_description]
-    /// is related to a search query. It's empty if the
-    /// [job_description][google.cloud.talent.v4beta1.EmploymentRecord.job_description]
-    /// isn't related to the search query.
+    /// Output only. The job description snippet shows how the [job_description][google.cloud.talent.v4beta1.EmploymentRecord.job_description]
+    /// is related to a search query. It's empty if the [job_description][google.cloud.talent.v4beta1.EmploymentRecord.job_description] isn't
+    /// related to the search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobDescriptionSnippet {
@@ -3052,11 +3021,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EmployerNameSnippetFieldNumber = 13;
     private string employerNameSnippet_ = "";
     /// <summary>
-    /// Output only. The employer name snippet shows how the
-    /// [employer_name][google.cloud.talent.v4beta1.EmploymentRecord.employer_name]
-    /// is related to a search query. It's empty if the
-    /// [employer_name][google.cloud.talent.v4beta1.EmploymentRecord.employer_name]
-    /// isn't related to the search query.
+    /// Output only. The employer name snippet shows how the [employer_name][google.cloud.talent.v4beta1.EmploymentRecord.employer_name] is
+    /// related to a search query. It's empty if the [employer_name][google.cloud.talent.v4beta1.EmploymentRecord.employer_name] isn't
+    /// related to the search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string EmployerNameSnippet {
@@ -3482,7 +3449,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The name of the school or institution.
     ///
-    /// For example, "Stanford University", "UC Berkeley", etc.
+    /// For example, "Stanford University", "UC Berkeley", and so on.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -3585,11 +3552,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SchoolNameSnippetFieldNumber = 10;
     private string schoolNameSnippet_ = "";
     /// <summary>
-    /// Output only. The school name snippet shows how the
-    /// [school_name][google.cloud.talent.v4beta1.EducationRecord.school_name] is
+    /// Output only. The school name snippet shows how the [school_name][google.cloud.talent.v4beta1.EducationRecord.school_name] is
     /// related to a search query in search result. It's empty if the
-    /// [school_name][google.cloud.talent.v4beta1.EducationRecord.school_name]
-    /// isn't related to the search query.
+    /// [school_name][google.cloud.talent.v4beta1.EducationRecord.school_name] isn't related to the search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SchoolNameSnippet {
@@ -3603,11 +3568,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DegreeSnippetFieldNumber = 11;
     private string degreeSnippet_ = "";
     /// <summary>
-    /// Output only. The job description snippet shows how the
-    /// [degree][google.cloud.talent.v4beta1.degree] is related to a search query
-    /// in search result. It's empty if the
-    /// [degree][google.cloud.talent.v4beta1.degree] isn't related to the search
-    /// query.
+    /// Output only. The job description snippet shows how the [degree][google.cloud.talent.v4beta1.degree] is
+    /// related to a search query in search result. It's empty if the [degree][google.cloud.talent.v4beta1.degree]
+    /// isn't related to the search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DegreeSnippet {
@@ -3984,7 +3947,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// Full Degree name.
     ///
-    /// For example, "B.S.", "Master of Arts", etc.
+    /// For example, "B.S.", "Master of Arts", and so on.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -4127,7 +4090,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Resource that represents an individual or collaborative activity participated
   /// in by a candidate, for example, an open-source project, a class assignment,
-  /// etc.
+  /// and so on.
   /// </summary>
   public sealed partial class Activity : pb::IMessage<Activity> {
     private static readonly pb::MessageParser<Activity> _parser = new pb::MessageParser<Activity>(() => new Activity());
@@ -4294,11 +4257,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ActivityNameSnippetFieldNumber = 8;
     private string activityNameSnippet_ = "";
     /// <summary>
-    /// Output only. Activity name snippet shows how the
-    /// [display_name][google.cloud.talent.v4beta1.Activity.display_name] is
-    /// related to a search query. It's empty if the
-    /// [display_name][google.cloud.talent.v4beta1.Activity.display_name] isn't
-    /// related to the search query.
+    /// Output only. Activity name snippet shows how the [display_name][google.cloud.talent.v4beta1.Activity.display_name] is
+    /// related to a search query. It's empty if the [display_name][google.cloud.talent.v4beta1.Activity.display_name] isn't related
+    /// to the search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ActivityNameSnippet {
@@ -4313,10 +4274,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string activityDescriptionSnippet_ = "";
     /// <summary>
     /// Output only. Activity description snippet shows how the
-    /// [description][google.cloud.talent.v4beta1.Activity.description] is related
-    /// to a search query. It's empty if the
-    /// [description][google.cloud.talent.v4beta1.Activity.description] isn't
-    /// related to the search query.
+    /// [description][google.cloud.talent.v4beta1.Activity.description] is related to a search query. It's empty if the
+    /// [description][google.cloud.talent.v4beta1.Activity.description] isn't related to the search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ActivityDescriptionSnippet {
@@ -4333,10 +4292,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<string> skillsUsedSnippet_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Output only. Skill used snippet shows how the corresponding
-    /// [skills_used][google.cloud.talent.v4beta1.Activity.skills_used] are related
-    /// to a search query. It's empty if the corresponding
-    /// [skills_used][google.cloud.talent.v4beta1.Activity.skills_used] are not
-    /// related to the search query.
+    /// [skills_used][google.cloud.talent.v4beta1.Activity.skills_used] are related to a search query. It's empty if the
+    /// corresponding [skills_used][google.cloud.talent.v4beta1.Activity.skills_used] are not related to the search query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> SkillsUsedSnippet {

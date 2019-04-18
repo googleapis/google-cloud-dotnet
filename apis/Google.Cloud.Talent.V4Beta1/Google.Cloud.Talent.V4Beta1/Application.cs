@@ -25,11 +25,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvYXBwbGljYXRpb24ucHJv",
-            "dG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxooZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGEx",
-            "L2NvbW1vbi5wcm90bxolZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2pv",
-            "Yi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29v",
-            "Z2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhZnb29nbGUvdHlwZS9kYXRl",
+            "dG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRooZ29vZ2xlL2Nsb3Vk",
+            "L3RhbGVudC92NGJldGExL2NvbW1vbi5wcm90bxolZ29vZ2xlL2Nsb3VkL3Rh",
+            "bGVudC92NGJldGExL2pvYi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
+            "dGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhZn",
+            "b29nbGUvdHlwZS9kYXRlLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
             "LnByb3RvIsIHCgtBcHBsaWNhdGlvbhIMCgRuYW1lGAEgASgJEhMKC2V4dGVy",
             "bmFsX2lkGB8gASgJEg8KB3Byb2ZpbGUYAiABKAkSCwoDam9iGAQgASgJEg8K",
             "B2NvbXBhbnkYBSABKAkSKwoQYXBwbGljYXRpb25fZGF0ZRgHIAEoCzIRLmdv",
@@ -56,7 +56,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "WkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
             "L3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Application), global::Google.Cloud.Talent.V4Beta1.Application.Parser, new[]{ "Name", "ExternalId", "Profile", "Job", "Company", "ApplicationDate", "Stage", "State", "Interviews", "Referral", "CreateTime", "UpdateTime", "OutcomeNotes", "Outcome", "IsMatch", "JobTitleSnippet" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState), typeof(global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) }, null)
           }));
@@ -186,8 +186,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Resource name of the job which the candidate applied for.
     ///
     /// The format is
-    /// "projects/{project_id}/jobs/{job_id}",
-    /// for example, "projects/api-test-project/jobs/bar".
+    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}",
+    /// for example, "projects/api-test-project/tenants/foo/jobs/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Job {
@@ -206,8 +206,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Resource name of the company which the candidate applied for.
     ///
     /// The format is
-    /// "projects/{project_id}/companies/{company_id}",
-    /// for example, "projects/api-test-project/companies/foo".
+    /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}",
+    /// for example, "projects/api-test-project/tenants/foo/companies/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Company {
@@ -276,9 +276,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// All interviews (screen, onsite, etc) conducted as part of this application
-    /// (includes details such as user conducting the interview, timestamp,
-    /// feedback, etc).
+    /// All interviews (screen, onsite, and so on) conducted as part of this
+    /// application (includes details such as user conducting the interview,
+    /// timestamp, feedback, and so on).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Interview> Interviews {
