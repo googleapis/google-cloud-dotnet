@@ -175,9 +175,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The token that specifies the current offset (that is, starting result).
     ///
-    /// Please set the value to
-    /// [ListProfilesResponse.next_page_token][google.cloud.talent.v4beta1.ListProfilesResponse.next_page_token]
-    /// to continue the list.
+    /// Please set the value to [ListProfilesResponse.next_page_token][google.cloud.talent.v4beta1.ListProfilesResponse.next_page_token] to
+    /// continue the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -931,6 +930,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * certifications
     /// * recruitingNotes
     /// * customAttributes
+    /// * groupId
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -1282,8 +1282,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// Search query to execute. See
-    /// [ProfileQuery][google.cloud.talent.v4beta1.ProfileQuery] for more details.
+    /// Search query to execute. See [ProfileQuery][google.cloud.talent.v4beta1.ProfileQuery] for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ProfileQuery ProfileQuery {
@@ -1321,10 +1320,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The pageToken, similar to offset enables users of the API to paginate
     /// through the search results. To retrieve the first page of results, set the
     /// pageToken to empty. The search response includes a
-    /// [nextPageToken][google.cloud.talent.v4beta1.SearchProfilesResponse.next_page_token]
-    /// field that can be used to populate the pageToken field for the next page of
-    /// results. Using pageToken instead of offset increases the performance of the
-    /// API, especially compared to larger offset values.
+    /// [nextPageToken][google.cloud.talent.v4beta1.SearchProfilesResponse.next_page_token] field that can be
+    /// used to populate the pageToken field for the next page of results. Using
+    /// pageToken instead of offset increases the performance of the API,
+    /// especially compared to larger offset values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1341,9 +1340,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// An integer that specifies the current offset (that is, starting result) in
-    /// search results. This field is only considered if
-    /// [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token]
-    /// is unset.
+    /// search results. This field is only considered if [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token] is unset.
     ///
     /// The maximum allowed value is 5000. Otherwise an error is thrown.
     ///
@@ -1439,8 +1436,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// A list of expressions specifies histogram requests against matching
-    /// profiles for
-    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
+    /// profiles for [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
     ///
     /// The expression syntax looks like a function definition with optional
     /// parameters.
@@ -1493,29 +1489,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// * experience_in_months: experience in months. 0 means 0 month to 1 month
     /// (exclusive).
     /// * application_date: The application date specifies application start dates.
-    /// See
-    /// [ApplicationDateFilter][google.cloud.talent.v4beta1.ApplicationDateFilter]
-    /// for more details.
+    /// See [ApplicationDateFilter][google.cloud.talent.v4beta1.ApplicationDateFilter] for more details.
     /// * application_outcome_notes: The application outcome reason specifies the
     /// reasons behind the outcome of the job application.
-    /// See
-    /// [ApplicationOutcomeNotesFilter][google.cloud.talent.v4beta1.ApplicationOutcomeNotesFilter]
-    /// for more details.
+    /// See [ApplicationOutcomeNotesFilter][google.cloud.talent.v4beta1.ApplicationOutcomeNotesFilter] for more details.
     /// * application_last_stage: The application last stage specifies the last
     /// stage of job application.
-    /// See
-    /// [ApplicationLastStageFilter][google.cloud.talent.v4beta1.ApplicationLastStageFilter]
-    /// for more details.
+    /// See [ApplicationLastStageFilter][] for more details.
     /// * application_job_title: The application job title specifies the job
     /// applied for in the application.
-    /// See
-    /// [ApplicationJobFilter][google.cloud.talent.v4beta1.ApplicationJobFilter]
-    /// for more details.
+    /// See [ApplicationJobFilter][google.cloud.talent.v4beta1.ApplicationJobFilter] for more details.
     /// * application_status: The application status specifies the status of job
     /// application.
-    /// See
-    /// [ApplicationStatusFilter][google.cloud.talent.v4beta1.ApplicationStatusFilter]
-    /// for more details.
+    /// See [ApplicationStatusFilter][] for more details.
     /// * hirable_status: Hirable status specifies the profile's hirable status.
     /// * string_custom_attribute: String custom attributes. Values can be accessed
     /// via square bracket notation like string_custom_attribute["key1"].
@@ -1891,8 +1877,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Talent.V4Beta1.SummarizedProfile.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile> summarizedProfiles_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile>();
     /// <summary>
-    /// The profile entities that match the specified
-    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
+    /// The profile entities that match the specified [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SummarizedProfile> SummarizedProfiles {
@@ -2064,8 +2049,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Output only.
   ///
-  /// Profile entry with metadata inside
-  /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse].
+  /// Profile entry with metadata inside [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse].
   /// </summary>
   public sealed partial class SummarizedProfile : pb::IMessage<SummarizedProfile> {
     private static readonly pb::MessageParser<SummarizedProfile> _parser = new pb::MessageParser<SummarizedProfile>(() => new SummarizedProfile());

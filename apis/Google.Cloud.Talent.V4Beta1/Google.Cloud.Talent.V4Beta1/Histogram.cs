@@ -25,8 +25,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvaGlzdG9ncmFtLnByb3Rv",
-            "Ehtnb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90",
+            "Ehtnb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHmdvb2dsZS9wcm90b2J1",
+            "Zi93cmFwcGVycy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
             "byIpCg5IaXN0b2dyYW1RdWVyeRIXCg9oaXN0b2dyYW1fcXVlcnkYASABKAki",
             "tgEKFEhpc3RvZ3JhbVF1ZXJ5UmVzdWx0EhcKD2hpc3RvZ3JhbV9xdWVyeRgB",
             "IAEoCRJTCgloaXN0b2dyYW0YAiADKAsyQC5nb29nbGUuY2xvdWQudGFsZW50",
@@ -37,7 +37,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "bGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.HistogramQuery), global::Google.Cloud.Talent.V4Beta1.HistogramQuery.Parser, new[]{ "HistogramQuery_" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.HistogramQueryResult), global::Google.Cloud.Talent.V4Beta1.HistogramQueryResult.Parser, new[]{ "HistogramQuery", "Histogram" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
@@ -93,11 +93,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// An expression specifies a histogram request against matching resources
     /// (for example, jobs, profiles) for searches.
     ///
-    /// See
-    /// [SearchJobsRequest.histogram_queries][google.cloud.talent.v4beta1.SearchJobsRequest.histogram_queries]
-    /// and
-    /// [SearchProfilesRequest.histogram_queries][google.cloud.talent.v4beta1.SearchProfilesRequest.histogram_queries]
-    /// for details about syntax.
+    /// See [SearchJobsRequest.histogram_queries][google.cloud.talent.v4beta1.SearchJobsRequest.histogram_queries] and
+    /// [SearchProfilesRequest.histogram_queries][google.cloud.talent.v4beta1.SearchProfilesRequest.histogram_queries] for details about syntax.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string HistogramQuery_ {
