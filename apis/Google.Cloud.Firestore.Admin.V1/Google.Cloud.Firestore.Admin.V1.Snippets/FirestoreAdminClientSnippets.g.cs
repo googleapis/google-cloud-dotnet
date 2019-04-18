@@ -37,29 +37,29 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         /// <summary>Snippet for CreateIndexAsync</summary>
         public async Task CreateIndexAsync()
         {
-            // Snippet: CreateIndexAsync(string,Index,CallSettings)
-            // Additional: CreateIndexAsync(string,Index,CancellationToken)
+            // Snippet: CreateIndexAsync(ParentName,Index,CallSettings)
+            // Additional: CreateIndexAsync(ParentName,Index,CancellationToken)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             Index index = new Index();
             // Make the request
-            Operation response = await firestoreAdminClient.CreateIndexAsync(formattedParent, index);
+            Operation response = await firestoreAdminClient.CreateIndexAsync(parent, index);
             // End snippet
         }
 
         /// <summary>Snippet for CreateIndex</summary>
         public void CreateIndex()
         {
-            // Snippet: CreateIndex(string,Index,CallSettings)
+            // Snippet: CreateIndex(ParentName,Index,CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             Index index = new Index();
             // Make the request
-            Operation response = firestoreAdminClient.CreateIndex(formattedParent, index);
+            Operation response = firestoreAdminClient.CreateIndex(parent, index);
             // End snippet
         }
 
@@ -73,7 +73,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             CreateIndexRequest request = new CreateIndexRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
                 Index = new Index(),
             };
             // Make the request
@@ -90,7 +90,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             CreateIndexRequest request = new CreateIndexRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
                 Index = new Index(),
             };
             // Make the request
@@ -101,14 +101,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         /// <summary>Snippet for ListIndexesAsync</summary>
         public async Task ListIndexesAsync()
         {
-            // Snippet: ListIndexesAsync(string,string,int?,CallSettings)
+            // Snippet: ListIndexesAsync(ParentName,string,int?,CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             // Make the request
             PagedAsyncEnumerable<ListIndexesResponse, Index> response =
-                firestoreAdminClient.ListIndexesAsync(formattedParent);
+                firestoreAdminClient.ListIndexesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Index item) =>
@@ -145,14 +145,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         /// <summary>Snippet for ListIndexes</summary>
         public void ListIndexes()
         {
-            // Snippet: ListIndexes(string,string,int?,CallSettings)
+            // Snippet: ListIndexes(ParentName,string,int?,CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             // Make the request
             PagedEnumerable<ListIndexesResponse, Index> response =
-                firestoreAdminClient.ListIndexes(formattedParent);
+                firestoreAdminClient.ListIndexes(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Index item in response)
@@ -195,7 +195,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             ListIndexesRequest request = new ListIndexesRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListIndexesResponse, Index> response =
@@ -242,7 +242,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             ListIndexesRequest request = new ListIndexesRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
             };
             // Make the request
             PagedEnumerable<ListIndexesResponse, Index> response =
@@ -583,14 +583,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         /// <summary>Snippet for ListFieldsAsync</summary>
         public async Task ListFieldsAsync()
         {
-            // Snippet: ListFieldsAsync(string,string,int?,CallSettings)
+            // Snippet: ListFieldsAsync(ParentName,string,int?,CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             // Make the request
             PagedAsyncEnumerable<ListFieldsResponse, apis::Field> response =
-                firestoreAdminClient.ListFieldsAsync(formattedParent);
+                firestoreAdminClient.ListFieldsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((apis::Field item) =>
@@ -627,14 +627,14 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
         /// <summary>Snippet for ListFields</summary>
         public void ListFields()
         {
-            // Snippet: ListFields(string,string,int?,CallSettings)
+            // Snippet: ListFields(ParentName,string,int?,CallSettings)
             // Create client
             FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             // Make the request
             PagedEnumerable<ListFieldsResponse, apis::Field> response =
-                firestoreAdminClient.ListFields(formattedParent);
+                firestoreAdminClient.ListFields(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (apis::Field item in response)
@@ -677,7 +677,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             ListFieldsRequest request = new ListFieldsRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListFieldsResponse, apis::Field> response =
@@ -724,7 +724,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             // Initialize request argument(s)
             ListFieldsRequest request = new ListFieldsRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
             };
             // Make the request
             PagedEnumerable<ListFieldsResponse, apis::Field> response =

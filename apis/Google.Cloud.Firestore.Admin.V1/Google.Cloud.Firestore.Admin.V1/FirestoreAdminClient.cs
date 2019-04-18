@@ -576,12 +576,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation> CreateIndexAsync(
-            string parent,
+            ParentName parent,
             Index index,
             gaxgrpc::CallSettings callSettings = null) => CreateIndexAsync(
                 new CreateIndexRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Index = gax::GaxPreconditions.CheckNotNull(index, nameof(index)),
                 },
                 callSettings);
@@ -605,7 +605,7 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<lro::Operation> CreateIndexAsync(
-            string parent,
+            ParentName parent,
             Index index,
             st::CancellationToken cancellationToken) => CreateIndexAsync(
                 parent,
@@ -631,12 +631,12 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// The RPC response.
         /// </returns>
         public virtual lro::Operation CreateIndex(
-            string parent,
+            ParentName parent,
             Index index,
             gaxgrpc::CallSettings callSettings = null) => CreateIndex(
                 new CreateIndexRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     Index = gax::GaxPreconditions.CheckNotNull(index, nameof(index)),
                 },
                 callSettings);
@@ -725,13 +725,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// A pageable asynchronous sequence of <see cref="Index"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(
-            string parent,
+            ParentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListIndexesAsync(
                 new ListIndexesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -759,13 +759,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// A pageable sequence of <see cref="Index"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(
-            string parent,
+            ParentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListIndexes(
                 new ListIndexesRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1491,13 +1491,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// A pageable asynchronous sequence of <see cref="Field"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(
-            string parent,
+            ParentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListFieldsAsync(
                 new ListFieldsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1530,13 +1530,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// A pageable sequence of <see cref="Field"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(
-            string parent,
+            ParentName parent,
             string pageToken = null,
             int? pageSize = null,
             gaxgrpc::CallSettings callSettings = null) => ListFields(
                 new ListFieldsRequest
                 {
-                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

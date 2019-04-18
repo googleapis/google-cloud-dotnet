@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
             CreateIndexRequest expectedRequest = new CreateIndexRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
                 Index = new Index(),
             };
             Operation expectedResponse = new Operation
@@ -51,9 +51,9 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             mockGrpcClient.Setup(x => x.CreateIndex(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             Index index = new Index();
-            Operation response = client.CreateIndex(formattedParent, index);
+            Operation response = client.CreateIndex(parent, index);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -64,7 +64,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
             CreateIndexRequest expectedRequest = new CreateIndexRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
                 Index = new Index(),
             };
             Operation expectedResponse = new Operation
@@ -75,9 +75,9 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             mockGrpcClient.Setup(x => x.CreateIndexAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Operation>(Task.FromResult(expectedResponse), null, null, null, null));
             FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
-            string formattedParent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString();
+            ParentName parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]");
             Index index = new Index();
-            Operation response = await client.CreateIndexAsync(formattedParent, index);
+            Operation response = await client.CreateIndexAsync(parent, index);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -88,7 +88,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
             CreateIndexRequest request = new CreateIndexRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
                 Index = new Index(),
             };
             Operation expectedResponse = new Operation
@@ -110,7 +110,7 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new Mock<FirestoreAdmin.FirestoreAdminClient>(MockBehavior.Strict);
             CreateIndexRequest request = new CreateIndexRequest
             {
-                Parent = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]").ToString(),
+                ParentAsParentName = new ParentName("[PROJECT]", "[DATABASE]", "[COLLECTION_ID]"),
                 Index = new Index(),
             };
             Operation expectedResponse = new Operation
