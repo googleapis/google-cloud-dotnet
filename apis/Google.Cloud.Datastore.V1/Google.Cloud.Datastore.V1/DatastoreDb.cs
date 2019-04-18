@@ -56,6 +56,8 @@ namespace Google.Cloud.Datastore.V1
     /// </remarks>
     public abstract class DatastoreDb
     {
+        internal const string DefaultNamespaceId = "";
+
         /// <summary>
         /// The <see cref="DatastoreClient"/> used for all remote operations.
         /// </summary>
@@ -80,7 +82,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="client">The client to use for remote operations. If this is null, an instance will be created
         /// using default settings.</param>
         /// <returns>A <see cref="DatastoreDb"/> operating on the specified partition.</returns>
-        public static DatastoreDb Create(string projectId, string namespaceId = "", DatastoreClient client = null) =>
+        public static DatastoreDb Create(string projectId, string namespaceId = DefaultNamespaceId, DatastoreClient client = null) =>
             new DatastoreDbImpl(projectId, namespaceId, client ?? DatastoreClient.Create());
 
         /// <summary>
