@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.Admin.V1", "Google.Cloud.Firestore.Admin.V1\Google.Cloud.Firestore.Admin.V1.csproj", "{9E1F6DAB-41CF-4DA5-9A58-B7E69E4F32D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Admin.V1", "Google.Cloud.Firestore.Admin.V1\Google.Cloud.Firestore.Admin.V1.csproj", "{9E1F6DAB-41CF-4DA5-9A58-B7E69E4F32D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.Admin.V1.Snippets", "Google.Cloud.Firestore.Admin.V1.Snippets\Google.Cloud.Firestore.Admin.V1.Snippets.csproj", "{05D78452-AA2E-4050-A065-D216258AE4B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Admin.V1.Snippets", "Google.Cloud.Firestore.Admin.V1.Snippets\Google.Cloud.Firestore.Admin.V1.Snippets.csproj", "{05D78452-AA2E-4050-A065-D216258AE4B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{0AE938B9-5DB5-45CB-83C9-CBEFB7521550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{0AE938B9-5DB5-45CB-83C9-CBEFB7521550}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.Admin.V1.Tests", "Google.Cloud.Firestore.Admin.V1.Tests\Google.Cloud.Firestore.Admin.V1.Tests.csproj", "{D53D81EF-C242-424F-AB76-11899EE61DE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Admin.V1.Tests", "Google.Cloud.Firestore.Admin.V1.Tests\Google.Cloud.Firestore.Admin.V1.Tests.csproj", "{D53D81EF-C242-424F-AB76-11899EE61DE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Admin.V1.SmokeTests", "Google.Cloud.Firestore.Admin.V1.SmokeTests\Google.Cloud.Firestore.Admin.V1.SmokeTests.csproj", "{F9316993-0941-4B67-AFC5-7D265BF43367}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9E1F6DAB-41CF-4DA5-9A58-B7E69E4F32D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,5 +71,23 @@ Global
 		{D53D81EF-C242-424F-AB76-11899EE61DE3}.Release|x64.Build.0 = Release|Any CPU
 		{D53D81EF-C242-424F-AB76-11899EE61DE3}.Release|x86.ActiveCfg = Release|Any CPU
 		{D53D81EF-C242-424F-AB76-11899EE61DE3}.Release|x86.Build.0 = Release|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Debug|x64.Build.0 = Debug|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Debug|x86.Build.0 = Debug|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Release|x64.ActiveCfg = Release|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Release|x64.Build.0 = Release|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Release|x86.ActiveCfg = Release|Any CPU
+		{F9316993-0941-4B67-AFC5-7D265BF43367}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC0FEA16-1EDE-4A46-8CE2-210177659145}
 	EndGlobalSection
 EndGlobal
