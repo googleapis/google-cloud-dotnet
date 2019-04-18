@@ -424,6 +424,19 @@ namespace Google.Cloud.Firestore.Admin.V1
     }
 
 
+    public partial class CreateIndexRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Firestore.Admin.V1.ParentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Firestore.Admin.V1.ParentName ParentAsParentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Firestore.Admin.V1.ParentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class DeleteIndexRequest
     {
         /// <summary>
@@ -485,6 +498,32 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Firestore.Admin.V1.DatabaseName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListFieldsRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Firestore.Admin.V1.ParentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Firestore.Admin.V1.ParentName ParentAsParentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Firestore.Admin.V1.ParentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListIndexesRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Firestore.Admin.V1.ParentName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Firestore.Admin.V1.ParentName ParentAsParentName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Firestore.Admin.V1.ParentName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
