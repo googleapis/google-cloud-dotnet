@@ -343,6 +343,38 @@ namespace Google.LongRunning.Tests
         }
 
         [Theory]
+        [InlineData(false)]
+        [InlineData(true)]
+        public void PollUntilCompleted_NoHeaderDuplication_WithCallSettings(bool provideCallSettings)
+        {
+            var baseSettings = CallSettings.FromHeader("foo", "bar");
+            var client = new FakeOperationsClient(new FakeScheduler(), baseSettings, settings => Assert.Null(settings?.HeaderMutation));
+            var callSettings = provideCallSettings ? CallSettings.FromCancellationToken(new CancellationTokenSource().Token) : null;
+            client.FakeScheduler.Run(() =>
+            {
+                client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
+                var initial = Operation<StringValue, Timestamp>.PollOnceFromName("op", client);
+                initial.PollUntilCompleted(callSettings: callSettings);
+            });
+        }
+
+        [Theory]
+        [InlineData(false)]
+        [InlineData(true)]
+        public async Task PollUntilCompletedAsync_NoHeaderDuplication_WithCallSettings(bool provideCallSettings)
+        {
+            var baseSettings = CallSettings.FromHeader("foo", "bar");
+            var client = new FakeOperationsClient(new FakeScheduler(), baseSettings, settings => Assert.Null(settings?.HeaderMutation));
+            var callSettings = provideCallSettings ? CallSettings.FromCancellationToken(new CancellationTokenSource().Token) : null;
+            await client.FakeScheduler.RunAsync(async () =>
+            {
+                client.AddSuccessfulOperation("op", client.Clock.GetCurrentDateTimeUtc().AddSeconds(3), new StringValue { Value = "result" });
+                var initial = Operation<StringValue, Timestamp>.PollOnceFromNameAsync("op", client).Result;
+                await initial.PollUntilCompletedAsync(callSettings: callSettings);
+            });
+        }
+
+        [Theory]
         [InlineData("metadata")]
         [InlineData(null)]
         public static void Metadata(string metadata)
@@ -399,6 +431,7 @@ namespace Google.LongRunning.Tests
         class FakeOperationsClient : OperationsClient
         {
             private readonly CallSettings _baseCallSettings;
+            private readonly Action<CallSettings> _callSettingsValidation;
             public override IClock Clock => FakeScheduler.Clock;
             public override IScheduler Scheduler => FakeScheduler;
             public override PollSettings DefaultPollSettings => null;
@@ -413,10 +446,11 @@ namespace Google.LongRunning.Tests
             {
             }
 
-            public FakeOperationsClient(FakeScheduler scheduler, CallSettings baseCallSettings)
+            public FakeOperationsClient(FakeScheduler scheduler, CallSettings baseCallSettings, Action<CallSettings> callSettingsValidation = null)
             {
                 FakeScheduler = scheduler;
                 _baseCallSettings = baseCallSettings;
+                _callSettingsValidation = callSettingsValidation;
                 operations = new Dictionary<string, Tuple<DateTime, Operation>>();
             }
 
@@ -446,7 +480,9 @@ namespace Google.LongRunning.Tests
 
             public override Operation GetOperation(string name, CallSettings callSettings = null)
             {
-                callSettings?.CancellationToken?.ThrowIfCancellationRequested();
+                _callSettingsValidation?.Invoke(callSettings);
+                var effectiveSettings = GetEffectiveCallSettingsForGetOperation(callSettings);
+                effectiveSettings?.CancellationToken?.ThrowIfCancellationRequested();
                 RequestCount++;
                 Tuple<DateTime, Operation> tuple;
                 if (!operations.TryGetValue(name, out tuple))
@@ -461,12 +497,14 @@ namespace Google.LongRunning.Tests
 
             public override void CancelOperation(string name, CallSettings callSettings = null)
             {
+                _callSettingsValidation?.Invoke(callSettings);
                 RequestCount++;
                 throw new RpcException(new GrpcStatus(StatusCode.Unimplemented, "Cancellation not implemented yet"));
             }
 
             public override void DeleteOperation(string name, CallSettings callSettings = null)
             {
+                _callSettingsValidation?.Invoke(callSettings);
                 RequestCount++;
                 throw new RpcException(new GrpcStatus(StatusCode.Unimplemented, "Deletion not implemented yet"));
             }

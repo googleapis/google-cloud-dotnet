@@ -220,7 +220,13 @@ namespace Google.LongRunning
                 metadataCallback?.Invoke(Metadata);
                 return this;
             }
-            callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
+
+            // We need to work out the effective timing so that we can truncate any deadline, but anything else
+            // that's in the effective call settings can be left to the normal merging process. In particular,
+            // we don't want to include the header mutation that adds the version header, as otherwise we'll end up
+            // including it twice.
+            var effectiveTiming = Client.GetEffectiveCallSettingsForGetOperation(callSettings)?.Timing;
+            callSettings = callSettings.WithCallTiming(effectiveTiming);
 
             Func<DateTime?, Operation<TResponse, TMetadata>> pollAction =
                 deadline =>
@@ -266,7 +272,13 @@ namespace Google.LongRunning
                 metadataCallback?.Invoke(Metadata);
                 return Task.FromResult(this);
             }
-            callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
+
+            // We need to work out the effective timing so that we can truncate any deadline, but anything else
+            // that's in the effective call settings can be left to the normal merging process. In particular,
+            // we don't want to include the header mutation that adds the version header, as otherwise we'll end up
+            // including it twice.
+            var effectiveTiming = Client.GetEffectiveCallSettingsForGetOperation(callSettings)?.Timing;
+            callSettings = callSettings.WithCallTiming(effectiveTiming);
             Func<DateTime?, Task<Operation<TResponse, TMetadata>>> pollAction =
                 async deadline =>
                 {
