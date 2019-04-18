@@ -35,50 +35,50 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             "Z2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bbm5vdGF0",
             "ZUFzc2Vzc21lbnRSZXF1ZXN0LkFubm90YXRpb24iSAoKQW5ub3RhdGlvbhIa",
             "ChZBTk5PVEFUSU9OX1VOU1BFQ0lGSUVEEAASDgoKTEVHSVRJTUFURRABEg4K",
-            "CkZSQVVEVUxFTlQQAiIcChpBbm5vdGF0ZUFzc2Vzc21lbnRSZXNwb25zZSLJ",
+            "CkZSQVVEVUxFTlQQAiIcChpBbm5vdGF0ZUFzc2Vzc21lbnRSZXNwb25zZSLE",
             "AwoKQXNzZXNzbWVudBIMCgRuYW1lGAEgASgJEj4KBWV2ZW50GAIgASgLMi8u",
             "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5FdmVu",
-            "dBISCgpjb25maWRlbmNlGAMgASgCElMKEHRva2VuX3Byb3BlcnRpZXMYBCAB",
-            "KAsyOS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGEx",
-            "LlRva2VuUHJvcGVydGllcxJaCgdyZWFzb25zGAUgAygOMkkuZ29vZ2xlLmNs",
-            "b3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bc3Nlc3NtZW50LkNs",
-            "YXNzaWZpY2F0aW9uUmVhc29uIqcBChRDbGFzc2lmaWNhdGlvblJlYXNvbhIl",
-            "CiFDTEFTU0lGSUNBVElPTl9SRUFTT05fVU5TUEVDSUZJRUQQABIOCgpBVVRP",
-            "TUFUSU9OEAESGgoWVU5FWFBFQ1RFRF9FTlZJUk9OTUVOVBACEh0KGVVORVhQ",
-            "RUNURURfVVNBR0VfUEFUVEVSTlMQBBIdChlQUk9WSVNJT05BTF9SSVNLX0FO",
-            "QUxZU0lTEAUiKAoFRXZlbnQSDQoFdG9rZW4YASABKAkSEAoIc2l0ZV9rZXkY",
-            "AiABKAki6AIKD1Rva2VuUHJvcGVydGllcxINCgV2YWxpZBgBIAEoCBJfCg5p",
-            "bnZhbGlkX3JlYXNvbhgCIAEoDjJHLmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFl",
-            "bnRlcnByaXNlLnYxYmV0YTEuVG9rZW5Qcm9wZXJ0aWVzLkludmFsaWRSZWFz",
-            "b24SLwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEhAKCGhvc3RuYW1lGAQgASgJEg4KBmFjdGlvbhgFIAEoCSKRAQoN",
-            "SW52YWxpZFJlYXNvbhIeChpJTlZBTElEX1JFQVNPTl9VTlNQRUNJRklFRBAA",
-            "EhoKFlVOS05PV05fSU5WQUxJRF9SRUFTT04QARINCglNQUxGT1JNRUQQAhIL",
-            "CgdFWFBJUkVEEAMSCAoERFVQRRAEEhEKDVNJVEVfTUlTTUFUQ0gQBRILCgdN",
-            "SVNTSU5HEAYyzwMKIVJlY2FwdGNoYUVudGVycHJpc2VTZXJ2aWNlVjFCZXRh",
-            "MRLJAQoQQ3JlYXRlQXNzZXNzbWVudBJBLmdvb2dsZS5jbG91ZC5yZWNhcHRj",
-            "aGFlbnRlcnByaXNlLnYxYmV0YTEuQ3JlYXRlQXNzZXNzbWVudFJlcXVlc3Qa",
-            "NC5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJwcmlzZS52MWJldGExLkFz",
-            "c2Vzc21lbnQiPILT5JMCNiIoL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9hc3Nlc3NtZW50czoKYXNzZXNzbWVudBLdAQoSQW5ub3RhdGVBc3Nlc3Nt",
-            "ZW50EkMuZ29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRh",
-            "MS5Bbm5vdGF0ZUFzc2Vzc21lbnRSZXF1ZXN0GkQuZ29vZ2xlLmNsb3VkLnJl",
-            "Y2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bbm5vdGF0ZUFzc2Vzc21lbnRS",
-            "ZXNwb25zZSI8gtPkkwI2IjEvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2Fz",
-            "c2Vzc21lbnRzLyp9OmFubm90YXRlOgEqQv4BCiZjb20uZ29vZ2xlLnJlY2Fw",
-            "dGNoYWVudGVycHJpc2UudjFiZXRhMUIYUmVjYXB0Y2hhRW50ZXJwcmlzZVBy",
-            "b3RvUAFaW2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvcmVjYXB0Y2hhZW50ZXJwcmlzZS92MWJldGExO3JlY2FwdGNoYWVu",
-            "dGVycHJpc2WiAgRHQ1JFqgIoR29vZ2xlLkNsb3VkLlJlY2FwdGNoYUVudGVy",
-            "cHJpc2UuVjFCZXRhMcoCKEdvb2dsZVxDbG91ZFxSZWNhcHRjaGFFbnRlcnBy",
-            "aXNlXFYxYmV0YTFiBnByb3RvMw=="));
+            "dBINCgVzY29yZRgDIAEoAhJTChB0b2tlbl9wcm9wZXJ0aWVzGAQgASgLMjku",
+            "Z29vZ2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Ub2tl",
+            "blByb3BlcnRpZXMSWgoHcmVhc29ucxgFIAMoDjJJLmdvb2dsZS5jbG91ZC5y",
+            "ZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQXNzZXNzbWVudC5DbGFzc2lm",
+            "aWNhdGlvblJlYXNvbiKnAQoUQ2xhc3NpZmljYXRpb25SZWFzb24SJQohQ0xB",
+            "U1NJRklDQVRJT05fUkVBU09OX1VOU1BFQ0lGSUVEEAASDgoKQVVUT01BVElP",
+            "ThABEhoKFlVORVhQRUNURURfRU5WSVJPTk1FTlQQAhIdChlVTkVYUEVDVEVE",
+            "X1VTQUdFX1BBVFRFUk5TEAQSHQoZUFJPVklTSU9OQUxfUklTS19BTkFMWVNJ",
+            "UxAFIigKBUV2ZW50Eg0KBXRva2VuGAEgASgJEhAKCHNpdGVfa2V5GAIgASgJ",
+            "IugCCg9Ub2tlblByb3BlcnRpZXMSDQoFdmFsaWQYASABKAgSXwoOaW52YWxp",
+            "ZF9yZWFzb24YAiABKA4yRy5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50ZXJw",
+            "cmlzZS52MWJldGExLlRva2VuUHJvcGVydGllcy5JbnZhbGlkUmVhc29uEi8K",
+            "C2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIQCghob3N0bmFtZRgEIAEoCRIOCgZhY3Rpb24YBSABKAkikQEKDUludmFs",
+            "aWRSZWFzb24SHgoaSU5WQUxJRF9SRUFTT05fVU5TUEVDSUZJRUQQABIaChZV",
+            "TktOT1dOX0lOVkFMSURfUkVBU09OEAESDQoJTUFMRk9STUVEEAISCwoHRVhQ",
+            "SVJFRBADEggKBERVUEUQBBIRCg1TSVRFX01JU01BVENIEAUSCwoHTUlTU0lO",
+            "RxAGMs8DCiFSZWNhcHRjaGFFbnRlcnByaXNlU2VydmljZVYxQmV0YTESyQEK",
+            "EENyZWF0ZUFzc2Vzc21lbnQSQS5nb29nbGUuY2xvdWQucmVjYXB0Y2hhZW50",
+            "ZXJwcmlzZS52MWJldGExLkNyZWF0ZUFzc2Vzc21lbnRSZXF1ZXN0GjQuZ29v",
+            "Z2xlLmNsb3VkLnJlY2FwdGNoYWVudGVycHJpc2UudjFiZXRhMS5Bc3Nlc3Nt",
+            "ZW50IjyC0+STAjYiKC92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXNz",
+            "ZXNzbWVudHM6CmFzc2Vzc21lbnQS3QEKEkFubm90YXRlQXNzZXNzbWVudBJD",
+            "Lmdvb2dsZS5jbG91ZC5yZWNhcHRjaGFlbnRlcnByaXNlLnYxYmV0YTEuQW5u",
+            "b3RhdGVBc3Nlc3NtZW50UmVxdWVzdBpELmdvb2dsZS5jbG91ZC5yZWNhcHRj",
+            "aGFlbnRlcnByaXNlLnYxYmV0YTEuQW5ub3RhdGVBc3Nlc3NtZW50UmVzcG9u",
+            "c2UiPILT5JMCNiIxL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9hc3Nlc3Nt",
+            "ZW50cy8qfTphbm5vdGF0ZToBKkL+AQomY29tLmdvb2dsZS5yZWNhcHRjaGFl",
+            "bnRlcnByaXNlLnYxYmV0YTFCGFJlY2FwdGNoYUVudGVycHJpc2VQcm90b1AB",
+            "Wltnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L3JlY2FwdGNoYWVudGVycHJpc2UvdjFiZXRhMTtyZWNhcHRjaGFlbnRlcnBy",
+            "aXNlogIER0NSRaoCKEdvb2dsZS5DbG91ZC5SZWNhcHRjaGFFbnRlcnByaXNl",
+            "LlYxQmV0YTHKAihHb29nbGVcQ2xvdWRcUmVjYXB0Y2hhRW50ZXJwcmlzZVxW",
+            "MWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser, new[]{ "Parent", "Assessment" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser, new[]{ "Name", "Annotation" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Types.Annotation) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser, new[]{ "Name", "Event", "Confidence", "TokenProperties", "Reasons" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Types.ClassificationReason) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser, new[]{ "Name", "Event", "Score", "TokenProperties", "Reasons" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Types.ClassificationReason) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Event.Parser, new[]{ "Token", "SiteKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties), global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Parser, new[]{ "Valid", "InvalidReason", "CreateTime", "Hostname", "Action" }, null, new[]{ typeof(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.TokenProperties.Types.InvalidReason) }, null)
           }));
@@ -586,7 +586,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     public Assessment(Assessment other) : this() {
       name_ = other.name_;
       event_ = other.event_ != null ? other.event_.Clone() : null;
-      confidence_ = other.confidence_;
+      score_ = other.score_;
       tokenProperties_ = other.tokenProperties_ != null ? other.tokenProperties_.Clone() : null;
       reasons_ = other.reasons_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -626,18 +626,19 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
     }
 
-    /// <summary>Field number for the "confidence" field.</summary>
-    public const int ConfidenceFieldNumber = 3;
-    private float confidence_;
+    /// <summary>Field number for the "score" field.</summary>
+    public const int ScoreFieldNumber = 3;
+    private float score_;
     /// <summary>
-    /// Output only. Legitimate event confidence estimate from 0.0 to 1.0
-    /// (1.0 means legitimate).
+    /// Output only. Legitimate event score from 0.0 to 1.0.
+    /// (1.0 means very likely legitimate traffic while 0.0 means very likely
+    /// non-legitimate traffic).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Confidence {
-      get { return confidence_; }
+    public float Score {
+      get { return score_; }
       set {
-        confidence_ = value;
+        score_ = value;
       }
     }
 
@@ -683,7 +684,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(Event, other.Event)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Score, other.Score)) return false;
       if (!object.Equals(TokenProperties, other.TokenProperties)) return false;
       if(!reasons_.Equals(other.reasons_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -694,7 +695,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (event_ != null) hash ^= Event.GetHashCode();
-      if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
+      if (Score != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Score);
       if (tokenProperties_ != null) hash ^= TokenProperties.GetHashCode();
       hash ^= reasons_.GetHashCode();
       if (_unknownFields != null) {
@@ -718,9 +719,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteMessage(Event);
       }
-      if (Confidence != 0F) {
+      if (Score != 0F) {
         output.WriteRawTag(29);
-        output.WriteFloat(Confidence);
+        output.WriteFloat(Score);
       }
       if (tokenProperties_ != null) {
         output.WriteRawTag(34);
@@ -741,7 +742,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       if (event_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Event);
       }
-      if (Confidence != 0F) {
+      if (Score != 0F) {
         size += 1 + 4;
       }
       if (tokenProperties_ != null) {
@@ -768,8 +769,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         }
         Event.MergeFrom(other.Event);
       }
-      if (other.Confidence != 0F) {
-        Confidence = other.Confidence;
+      if (other.Score != 0F) {
+        Score = other.Score;
       }
       if (other.tokenProperties_ != null) {
         if (tokenProperties_ == null) {
@@ -801,7 +802,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
             break;
           }
           case 29: {
-            Confidence = input.ReadFloat();
+            Score = input.ReadFloat();
             break;
           }
           case 34: {
