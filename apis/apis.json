@@ -346,7 +346,7 @@
     "productUrl": "https://firebase.google.com",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.1;net452",
-    "version": "1.0.0-beta00",
+    "version": "1.0.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Firestore Admin API.",
     "tags": [ "firestore", "firebase", "admin" ],
