@@ -145,12 +145,6 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         // Request creation
-        private JobsResource.InsertRequest CreateInsertQueryJobRequest(JobConfigurationQuery query, QueryOptions options)
-        {
-            options?.ModifyRequest(query);
-            return CreateInsertJobRequest(new JobConfiguration { Query = query, DryRun = options?.DryRun }, options);
-        }
-
         private JobsResource.InsertRequest CreateInsertQueryJobRequest(string sql, IEnumerable<BigQueryParameter> parameters, QueryOptions options)
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
