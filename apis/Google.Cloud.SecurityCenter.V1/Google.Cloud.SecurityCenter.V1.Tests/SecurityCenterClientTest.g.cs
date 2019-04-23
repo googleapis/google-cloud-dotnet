@@ -49,7 +49,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -76,7 +76,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -103,7 +103,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -128,7 +128,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -154,7 +154,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent21175163357",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -185,7 +185,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent21175163357",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -216,7 +216,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent21175163357",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -244,7 +244,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent21175163357",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -458,7 +458,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name2-1052831874",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -483,7 +483,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name2-1052831874",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -508,7 +508,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name2-1052831874",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -532,7 +532,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name2-1052831874",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -558,7 +558,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name2-1052831874",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -589,7 +589,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name2-1052831874",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -620,7 +620,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name2-1052831874",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -648,7 +648,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name2-1052831874",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -858,7 +858,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -885,7 +885,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -912,7 +912,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -938,7 +938,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Finding expectedResponse = new Finding
             {
-                Name = "name3373707",
+                FindingName = new FindingName("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
                 Parent = "parent-995424086",
                 ResourceName = "resourceName979421212",
                 Category = "category50511102",
@@ -1058,7 +1058,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -1083,7 +1083,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             };
             Source expectedResponse = new Source
             {
-                Name = "name3373707",
+                SourceName = new SourceName("[ORGANIZATION]", "[SOURCE]"),
                 DisplayName = "displayName1615086568",
                 Description = "description-1724546052",
             };
