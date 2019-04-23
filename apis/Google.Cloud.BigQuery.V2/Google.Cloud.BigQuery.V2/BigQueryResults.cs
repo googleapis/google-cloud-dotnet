@@ -30,8 +30,9 @@ namespace Google.Cloud.BigQuery.V2
     public sealed class BigQueryResults : IEnumerable<BigQueryRow>
     {
         private readonly BigQueryClient _client;
-        private readonly ListRowsOptions _options;
+        private readonly GetQueryResultsOptions _options;
         private readonly GetQueryResultsResponse _response;
+        private readonly Dictionary<string, int> _fieldNames;
 
         /// <summary>
         /// The reference to the query job.
@@ -71,6 +72,11 @@ namespace Google.Cloud.BigQuery.V2
         public long? NumDmlAffectedRows => _response.NumDmlAffectedRows;
 
         /// <summary>
+        /// The rows in the response, or an empty sequence if the response contains no rows.
+        /// </summary>
+        private IEnumerable<BigQueryRow> ResponseRows => ConvertResponseRows(_response);
+
+        /// <summary>
         /// Returns an asynchronous sequence of rows from this set of results.
         /// </summary>
         /// <remarks>
@@ -78,14 +84,7 @@ namespace Google.Cloud.BigQuery.V2
         /// ambiguity.</para>
         /// </remarks>
         /// <returns>An asynchronous sequence of rows from this set of results.</returns>
-        public IAsyncEnumerable<BigQueryRow> GetRowsAsync() => _client.ListRowsAsync(TableReference, Schema, _options);
-
-        /// <summary>
-        /// Returns an iterator over the query results.
-        /// </summary>
-        /// <returns>An iterator over the query results.</returns>
-        public IEnumerator<BigQueryRow> GetEnumerator() =>
-            _client.ListRows(TableReference, Schema, _options).GetEnumerator();
+        public IAsyncEnumerable<BigQueryRow> GetRowsAsync() => new AsyncRowEnumerable(this);
 
         /// <summary>
         /// Returns an iterator over the query results.
@@ -104,12 +103,54 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="response">The response to a GetQueryResults API call. Must not be null.</param>
         /// <param name="tableReference">A reference to the table containing the results.</param>
         /// <param name="options">Options to use when listing rows. May be null.</param>
+        [Obsolete("Please use the constructor accepting a GetQueryResultsOptions instead")]
         public BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, ListRowsOptions options)
+            : this(client, response, tableReference, options?.ToGetQueryResultsOptions())
+        {
+        }
+
+        /// <summary>
+        /// Constructs a new set of results.
+        /// </summary>
+        /// <remarks>
+        /// This is public to allow tests to construct instances for production code to consume;
+        /// production code should not normally construct instances itself.
+        /// </remarks>
+        /// <param name="client">The client to use for further operations. Must not be null.</param>
+        /// <param name="response">The response to a GetQueryResults API call. Must not be null.</param>
+        /// <param name="tableReference">A reference to the table containing the results.</param>
+        /// <param name="options">Options to use when fetching results. May be null.</param>
+        public BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, TableReference tableReference, GetQueryResultsOptions options)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _response = GaxPreconditions.CheckNotNull(response, nameof(response));
             TableReference = GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             _options = options;
+            _fieldNames = response.Schema?.IndexFieldNames();
+        }
+
+        /// <summary>
+        /// Returns an iterator over the query results.
+        /// </summary>
+        /// <returns>An iterator over the query results.</returns>
+        public IEnumerator<BigQueryRow> GetEnumerator()
+        {
+            foreach (var row in ResponseRows)
+            {
+                yield return row;
+            }
+            GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
+            clonedOptions.StartIndex = null;
+            clonedOptions.PageToken = _response.PageToken;
+            while (clonedOptions.PageToken != null)
+            {
+                var response = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
+                foreach (var row in ConvertResponseRows(response))
+                {
+                    yield return row;
+                }
+                clonedOptions.PageToken = response.PageToken;
+            }
         }
 
         /// <summary>
@@ -122,10 +163,32 @@ namespace Google.Cloud.BigQuery.V2
         public BigQueryPage ReadPage(int pageSize)
         {
             GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
-            // Make sure we start off by trying to read the right page size...
-            var options = GetOptionsWithPageSize(pageSize);
-            var page = _client.ListRows(TableReference, Schema, options).ReadPage(pageSize);
-            return new BigQueryPage(page, Schema, JobReference, TableReference);
+            GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
+            List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
+
+            // Work out whether to use the response we've already got, or create a new one.
+            GetQueryResultsResponse response = _response;
+            if (_response.Rows?.Count > pageSize)
+            {
+                // Oops. Do it again from scratch, with a useful page size.
+                clonedOptions.PageSize = pageSize;
+                response = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
+            }
+            // First add the rows from the existing response.
+            rows.AddRange(ConvertResponseRows(response));
+            string pageToken = _response.PageToken;
+            clonedOptions.StartIndex = null;
+
+            // Now keep going until we've filled the result set or know there's no more data.
+            while (rows.Count < pageSize && pageToken != null)
+            {
+                clonedOptions.PageToken = pageToken;
+                clonedOptions.PageSize = pageSize - rows.Count;
+                var nextResponse = _client.GetRawQueryResults(JobReference, clonedOptions, timeoutBase: null);
+                rows.AddRange(ConvertResponseRows(nextResponse));
+                pageToken = nextResponse.PageToken;
+            }
+            return new BigQueryPage(rows, Schema, JobReference, TableReference, pageToken);
         }
 
         /// <summary>
@@ -140,27 +203,32 @@ namespace Google.Cloud.BigQuery.V2
         public async Task<BigQueryPage> ReadPageAsync(int pageSize, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
-            // Make sure we start off by trying to read the right page size...
-            var options = GetOptionsWithPageSize(pageSize);
-            var page = await _client.ListRowsAsync(TableReference, Schema, options)
-                .ReadPageAsync(pageSize, cancellationToken)
-                .ConfigureAwait(false);
-            return new BigQueryPage(page, Schema, JobReference, TableReference);
-        }
+            GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
+            List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
 
-        private ListRowsOptions GetOptionsWithPageSize(int pageSize)
-        {
-            if (_options == null)
+            // Work out whether to use the response we've already got, or create a new one.
+            GetQueryResultsResponse response = _response;
+            if (_response.Rows?.Count > pageSize)
             {
-                return new ListRowsOptions { PageSize = pageSize };
+                // Oops. Do it again from scratch, with a useful page size.
+                clonedOptions.PageSize = pageSize;
+                response = await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false);
             }
-            if (_options.PageSize == pageSize)
+            // First add the rows from the existing response.
+            rows.AddRange(ConvertResponseRows(response));
+            string pageToken = _response.PageToken;
+            clonedOptions.StartIndex = null;
+
+            // Now keep going until we've filled the result set or know there's no more data.
+            while (rows.Count < pageSize && pageToken != null)
             {
-                return _options;
+                clonedOptions.PageToken = pageToken;
+                clonedOptions.PageSize = pageSize - rows.Count;
+                var nextResponse = await _client.GetRawQueryResultsAsync(JobReference, clonedOptions, timeoutBase: null, cancellationToken).ConfigureAwait(false);
+                rows.AddRange(ConvertResponseRows(nextResponse));
+                pageToken = nextResponse.PageToken;
             }
-            var clone = _options.Clone();
-            clone.PageSize = pageSize;
-            return clone;
+            return new BigQueryPage(rows, Schema, JobReference, TableReference, pageToken);
         }
 
         // TODO: Work out how we can get this far (a valid query with results, but with an error as well).
@@ -192,5 +260,58 @@ namespace Google.Cloud.BigQuery.V2
             }
             return this;
         }
+
+        private sealed class AsyncRowEnumerable : IAsyncEnumerable<BigQueryRow>
+        {
+            private readonly BigQueryResults _parent;
+
+            public AsyncRowEnumerable(BigQueryResults parent) => _parent = parent;
+
+            public IAsyncEnumerator<BigQueryRow> GetEnumerator() => new AsyncRowEnumerator(_parent);
+        }
+
+        private sealed class AsyncRowEnumerator : IAsyncEnumerator<BigQueryRow>
+        {
+            private readonly GetQueryResultsOptions _options;
+            private readonly BigQueryResults _parent;
+            private IEnumerator<BigQueryRow> _underlyingEnumerator;
+
+            public AsyncRowEnumerator(BigQueryResults parent)
+            {
+                _parent = parent;
+                _options = parent._options?.Clone() ?? new GetQueryResultsOptions();
+                _options.StartIndex = null;
+                _options.PageToken = parent._response.PageToken;
+                _underlyingEnumerator = parent.ResponseRows.GetEnumerator();
+            }
+
+            public BigQueryRow Current => _underlyingEnumerator.Current;
+
+            public async Task<bool> MoveNext(CancellationToken cancellationToken)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                // Keep asking for rows until we've got one, or we've run out of pages.
+                while (!_underlyingEnumerator.MoveNext())
+                {
+                    if (_options.PageToken == null)
+                    {
+                        return false;
+                    }
+                    var nextResponse = await _parent._client.GetRawQueryResultsAsync(_parent.JobReference, _options, timeoutBase: null, cancellationToken).ConfigureAwait(false);
+                    // Set the page token for the next time we need to fetch
+                    _options.PageToken = nextResponse.PageToken;
+                    _underlyingEnumerator = _parent.ConvertResponseRows(nextResponse).GetEnumerator();
+                }
+                return true;
+            }
+
+            public void Dispose()
+            {
+                // No-op
+            }
+        }
+
+        private IEnumerable<BigQueryRow> ConvertResponseRows(GetQueryResultsResponse response) =>
+            (response.Rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema, _fieldNames));
     }
 }

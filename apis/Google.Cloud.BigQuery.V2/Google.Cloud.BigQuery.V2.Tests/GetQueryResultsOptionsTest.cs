@@ -22,7 +22,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
     public class GetQueryResultsOptionsTest
     {
         [Fact]
-        public void ModifyRequest_NoOp()
+        public void ModifyRequest()
         {
             var options = new GetQueryResultsOptions
             {
@@ -32,48 +32,28 @@ namespace Google.Cloud.BigQuery.V2.Tests
             };
             GetQueryResultsRequest request = new GetQueryResultsRequest(new BigqueryService(), "project", "job");
             options.ModifyRequest(request);
-            Assert.Null(request.PageToken);
-            Assert.Null(request.MaxResults);
+            Assert.Equal("foo", request.PageToken);
+            Assert.Equal(25, request.MaxResults);
+            // ModifyRequest doesn't modify the timeout, as that's done externally
             Assert.Null(request.TimeoutMs);
-        }        
-
-        [Fact]
-        public void ToListRowsOptions_BothPageTokenAndStartIndexSet()
-        {
-            var options = new GetQueryResultsOptions
-            {
-                StartIndex = 10,
-                PageToken = "foo"
-            };
-            Assert.Throws<ArgumentException>(() => options.ToListRowsOptions());
         }
 
-        [Fact]
-        public void ToListRowsOptions_StartIndex()
-        {
-            var options = new GetQueryResultsOptions
-            {
-                StartIndex = 10,
-                PageSize = 25,
-            };
-            var listOptions = options.ToListRowsOptions();
-            Assert.Equal(10UL, listOptions.StartIndex);
-            Assert.Equal(25, listOptions.PageSize);
-            Assert.Null(listOptions.PageToken);
-        }
 
         [Fact]
-        public void ToListRowsOptions_PageToken()
+        public void Clone()
         {
             var options = new GetQueryResultsOptions
             {
                 PageSize = 25,
-                PageToken = "token"
+                StartIndex = 10,
+                Timeout = TimeSpan.FromMinutes(20)
             };
-            var listOptions = options.ToListRowsOptions();
-            Assert.Equal(25, listOptions.PageSize);
-            Assert.Equal("token", listOptions.PageToken);
-            Assert.Null(listOptions.StartIndex);
+            var clone = options.Clone();
+            options.PageSize = 20;
+            options.StartIndex = 5;
+            Assert.Equal(25, clone.PageSize);
+            Assert.Equal(10UL, clone.StartIndex);
+            Assert.Equal(TimeSpan.FromMinutes(20), clone.Timeout);
         }
     }
 }

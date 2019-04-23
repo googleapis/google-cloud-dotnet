@@ -311,6 +311,27 @@ namespace Google.Cloud.BigQuery.V2
         }
         #endregion
 
+        /// <summary>
+        /// "Raw" version of GetQueryResults, with no translation to BigQueryResults.
+        /// </summary>
+        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="timeoutBase">A base value to use when applying a timeout, or null to use the current date/time.</param>
+        /// <returns>The results of the query.</returns>
+        internal virtual GetQueryResultsResponse GetRawQueryResults(JobReference jobReference, GetQueryResultsOptions options, DateTime? timeoutBase) =>
+            throw new NotImplementedException();
+
+        /// <summary>
+        /// "Raw" version of GetQueryResultsAsync, with no translation to BigQueryResults.
+        /// </summary>
+        /// <param name="jobReference">A fully-qualified identifier for the job. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="timeoutBase">A base value to use when applying a timeout, or null to use the current date/time.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>The results of the query.</returns>
+        internal virtual Task<GetQueryResultsResponse> GetRawQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options, DateTime? timeoutBase, CancellationToken cancellationToken) =>
+            throw new NotImplementedException();
+
         // Note - these methods are not part of the regular "pattern", so are not in the GetQueryResults region above.
         // We want to remove them, if the underlying GetQueryResultsResponse starts including the table reference.
         // These methods allow us to call GetQueryResultsAsync from BigQueryJob without fetching the job again.

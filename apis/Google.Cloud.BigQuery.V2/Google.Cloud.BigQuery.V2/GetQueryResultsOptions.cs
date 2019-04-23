@@ -58,22 +58,32 @@ namespace Google.Cloud.BigQuery.V2
 
         internal void ModifyRequest(GetQueryResultsRequest request)
         {
-            // Nothing to do? We may have something later...
-        }
-
-        internal ListRowsOptions ToListRowsOptions()
-        {
             if (PageToken != null && StartIndex != null)
             {
                 throw new ArgumentException($"Cannot specify both {nameof(PageToken)} and {nameof(StartIndex)}");
             }
 
-            return new ListRowsOptions
+            if (PageSize != null)
             {
-                PageSize = PageSize,
-                StartIndex = StartIndex,
-                PageToken = PageToken
-            };
+                request.MaxResults = PageSize;
+            }
+            if (PageToken != null)
+            {
+                request.PageToken = PageToken;
+            }
+            if (StartIndex != null)
+            {
+                request.StartIndex = StartIndex;
+            }
         }
+
+        internal GetQueryResultsOptions Clone() => new GetQueryResultsOptions
+        {
+            PageSize = PageSize,
+            PageToken = PageToken,
+            StartIndex = StartIndex,
+            Timeout = Timeout
+        };
+
     }
 }
