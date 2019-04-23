@@ -72,24 +72,33 @@ namespace Google.Cloud.BigQuery.V2
             return job.GetQueryResults(options);
         }
 
+        internal override GetQueryResultsResponse GetRawQueryResults(JobReference jobReference, GetQueryResultsOptions options, DateTime? timeoutBase)
+        {
+            var request = CreateGetQueryResultsRequest(jobReference, options, timeoutBase ?? Clock.GetCurrentDateTimeUtc());
+            return request.Execute();
+        }
+
         internal override BigQueryResults GetQueryResults(JobReference jobReference, TableReference tableReference, GetQueryResultsOptions options)
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            // This validates the options before we make any RPCs
-            var listRowsOptions = options?.ToListRowsOptions();
 
             DateTime start = Clock.GetCurrentDateTimeUtc();
             while (true)
             {
                 // This will throw if the query has timed out.
-                var request = CreateGetQueryResultsRequest(jobReference, options, start);
-                var response = request.Execute();
+                var response = GetRawQueryResults(jobReference, options, start);
                 if (response.JobComplete == true)
                 {
-                    return new BigQueryResults(this, response, tableReference, listRowsOptions);
+                    return new BigQueryResults(this, response, tableReference, options);
                 }
             }
+        }
+
+        internal override Task<GetQueryResultsResponse> GetRawQueryResultsAsync(JobReference jobReference, GetQueryResultsOptions options, DateTime? timeoutBase, CancellationToken cancellationToken)
+        {
+            var request = CreateGetQueryResultsRequest(jobReference, options, timeoutBase ?? Clock.GetCurrentDateTimeUtc());
+            return request.ExecuteAsync(cancellationToken);
         }
 
         /// <inheritdoc />
@@ -104,18 +113,15 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            // This validates the options before we make any RPCs
-            var listRowsOptions = options?.ToListRowsOptions();
 
             DateTime start = Clock.GetCurrentDateTimeUtc();
             while (true)
             {
                 // This will throw if the query has timed out.
-                var request = CreateGetQueryResultsRequest(jobReference, options, start);
-                var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
+                var response = await GetRawQueryResultsAsync(jobReference, options, start, cancellationToken).ConfigureAwait(false);
                 if (response.JobComplete == true)
                 {
-                    return new BigQueryResults(this, response, tableReference, listRowsOptions);
+                    return new BigQueryResults(this, response, tableReference, options);
                 }
             }
         }
@@ -199,9 +205,6 @@ namespace Google.Cloud.BigQuery.V2
             var requestTimeoutMs = Math.Min(timeRemainingMs, s_maxGetQueryResultsRequestTimeout);
             var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
             request.Location = jobReference.Location;
-            // We never use the results within the first response; instead, we're just checking that the job has
-            // completed and using the statistics and schema from it.
-            request.MaxResults = 0;
             request.ModifyRequest += _versionHeaderAction;
             request.TimeoutMs = requestTimeoutMs;
             options?.ModifyRequest(request);

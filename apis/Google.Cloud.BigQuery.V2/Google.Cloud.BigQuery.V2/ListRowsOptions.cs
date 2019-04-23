@@ -61,11 +61,20 @@ namespace Google.Cloud.BigQuery.V2
             }
         }
 
-        internal ListRowsOptions Clone() => new ListRowsOptions
+        internal GetQueryResultsOptions ToGetQueryResultsOptions()
         {
-            PageSize = PageSize,
-            PageToken = PageToken,
-            StartIndex = StartIndex
-        };
+            if (PageToken != null && StartIndex != null)
+            {
+                throw new ArgumentException($"Cannot specify both {nameof(PageToken)} and {nameof(StartIndex)}");
+            }
+
+            return new GetQueryResultsOptions
+            {
+                PageSize = PageSize,
+                StartIndex = StartIndex,
+                PageToken = PageToken
+            };
+        }
+
     }
 }

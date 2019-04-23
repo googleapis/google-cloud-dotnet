@@ -80,14 +80,18 @@ afterwards using DML:
 
 {{sample:BigQueryClient.DmlSample}}
 
-### Important note on the result returned by DML operations
+### Important note on the result returned by DML operations (in version 1.3.0)
 
-Iterating over the results of a `BigQueryResults` object returned
+In version 1.3.0, iterating over the results of a `BigQueryResults` object returned
 from a DML operation will iterate over the entire table modified by
 that operation. This is a side-effect of the way the underlying API
 is called, but it's rarely useful to iterate over the results. The
 `NumDmlAffectedRows` property of the results object is useful,
 however, in determining how many rows were modified.
+
+From version 1.4.0-beta01 onwards, the `BigQueryResults` object
+returned from a DML operation returns no rows, but
+`NumDmlAffectedRows` still returns the number of affected rows.
 
 ## Creating a table partitioned by time
 
