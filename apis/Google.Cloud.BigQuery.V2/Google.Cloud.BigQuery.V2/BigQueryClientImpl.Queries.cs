@@ -28,13 +28,11 @@ namespace Google.Cloud.BigQuery.V2
     {
         private sealed class TableRowPageManager : IPageManager<TabledataResource.ListRequest, TableDataList, BigQueryRow>
         {
-            private readonly BigQueryClient _client;
             private readonly TableSchema _schema;
             private readonly Dictionary<string, int> _fieldNameToIndexMap;
 
-            internal TableRowPageManager(BigQueryClient client, TableSchema schema)
+            internal TableRowPageManager(TableSchema schema)
             {
-                _client = client;
                 _schema = schema;
                 _fieldNameToIndexMap = schema.IndexFieldNames();                
             }
@@ -128,7 +126,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
 
-            var pageManager = new TableRowPageManager(this, schema);
+            var pageManager = new TableRowPageManager(schema);
             return new RestPagedEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 () => CreateListRequest(tableReference, options), pageManager);
         }
@@ -141,7 +139,7 @@ namespace Google.Cloud.BigQuery.V2
             // a non-task value. We could defer until the first MoveNext call, but that's tricky.
             schema = schema ?? GetSchema(tableReference);
 
-            var pageManager = new TableRowPageManager(this, schema);
+            var pageManager = new TableRowPageManager(schema);
             return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 () => CreateListRequest(tableReference, options), pageManager);
         }
