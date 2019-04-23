@@ -954,6 +954,19 @@ namespace Google.Cloud.SecurityCenter.V1
     }
 
 
+    public partial class Asset
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.SecurityCenter.V1.AssetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.SecurityCenter.V1.AssetName AssetName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.SecurityCenter.V1.AssetName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class CreateFindingRequest
     {
         /// <summary>
@@ -976,6 +989,19 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.SecurityCenter.V1.OrganizationName.Parse(Parent); }
             set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Finding
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.SecurityCenter.V1.FindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.SecurityCenter.V1.FindingName FindingName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.SecurityCenter.V1.FindingName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -1092,6 +1118,19 @@ namespace Google.Cloud.SecurityCenter.V1
         public Google.Cloud.SecurityCenter.V1.FindingName FindingName
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.SecurityCenter.V1.FindingName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Source
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.SecurityCenter.V1.SourceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.SecurityCenter.V1.SourceName SourceName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.SecurityCenter.V1.SourceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 

@@ -974,10 +974,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * boolean literals `true` and `false` without quotes.
     ///
     /// The following field and operator combinations are supported:
-    /// name | `=`
-    /// update_time | `>`, `&lt;`, `>=`, `&lt;=`
+    /// name | '='
+    /// update_time | '>', '&lt;', '>=', '&lt;=', '='
+    /// create_time | '>', '&lt;', '>=', '&lt;=', '='
     /// iam_policy.policy_blob | '=', ':'
-    /// resource_properties | '=', ':', `>`, `&lt;`, `>=`, `&lt;=`
+    /// resource_properties | '=', ':', '>', '&lt;', '>=', '&lt;='
     /// security_marks | '=', ':'
     /// security_center_properties.resource_name | '=', ':'
     /// security_center_properties.resource_type | '=', ':'
