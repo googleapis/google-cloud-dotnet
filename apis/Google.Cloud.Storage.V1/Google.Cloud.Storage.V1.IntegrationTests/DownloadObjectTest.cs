@@ -256,7 +256,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/2898")]
+        [Fact]
         public void DownloadGzippedFile()
         {
             TestEnvironment.SkipIfVpcSc();
