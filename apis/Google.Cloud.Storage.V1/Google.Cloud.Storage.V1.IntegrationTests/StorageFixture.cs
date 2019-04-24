@@ -172,6 +172,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                 RequesterPaysBucket = CreateRequesterPaysBucket();
             }
+
+            // Clean up any HMAC keys left over previous runs.
+            PurgeHmacKeys();
         }
 
         private static StorageClient CreateRequesterPaysClient()
@@ -315,6 +318,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 DeleteBucket(RequesterPaysClient, RequesterPaysBucket, RequesterPaysProjectId);
             }
+            PurgeHmacKeys();
         }
 
         private void DeleteBucket(StorageClient client, string bucket, string userProject)
@@ -369,6 +373,20 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             FileLogger.Log($"Finished clearing labels for {LabelsTestBucket} by {callerName}.");
 
             SleepAfterBucketCreateDelete();
+        }
+
+        private void PurgeHmacKeys()
+        {
+            var keys = Client.ListHmacKeys(ProjectId).ToList();
+            foreach (var key in keys)
+            {
+                if (key.State != HmacKeyStates.Inactive)
+                {
+                    key.State = HmacKeyStates.Inactive;
+                    Client.UpdateHmacKey(key);
+                }
+                Client.DeleteHmacKey(ProjectId, key.AccessId);
+            }
         }
 
         private class DelayTestInfo
