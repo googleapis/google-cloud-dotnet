@@ -1,5 +1,13 @@
 # Version history
 
+# 1.4.0-beta01, 2019-04-24
+
+Changes since 1.3.0:
+
+- netstandard2.0 target
+- Reimplemented query handling using GetQueryResults RPC instead of ListRows,
+  resulting in a performance improvement
+
 # 1.3.0, 2019-02-07
 
 New features since 1.2.0:
