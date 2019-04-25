@@ -52,6 +52,7 @@ namespace Google.Cloud.BigQuery.V2
     ///   <item><description><c>Time</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c>, <c>System.TimeSpan</c></description></item>
     ///   <item><description><c>Timestamp</c>: <c>System.DateTime</c>, <c>System.DateTimeOffset</c></description></item>
     ///   <item><description><c>Numeric</c>: <c>Google.Cloud.BigQuery.V1.BigQueryNumeric</c></description></item>
+    ///   <item><description><c>Geography</c>: <c>Google.Cloud.BigQuery.V1.BigQueryGeography</c></description></item>
     ///   <item><description><c>Array</c>: An <c>IReadOnlyList&lt;T&gt;</c> of any of the above types corresponding to the <see cref="ArrayElementType"/>,
     ///   which will be inferred from the value's element type if not otherwise specified.</description></item>
     /// </list>
@@ -86,7 +87,8 @@ namespace Google.Cloud.BigQuery.V2
             typeof(bool),
             typeof(string), typeof(byte[]),
             typeof(DateTime), typeof(DateTimeOffset), typeof(TimeSpan),
-            typeof(BigQueryNumeric)
+            typeof(BigQueryNumeric),
+            typeof(BigQueryGeography),
         };
 
         private static List<TypeInfo> s_validRepeatedTypes = s_validSingleTypes
@@ -113,6 +115,7 @@ namespace Google.Cloud.BigQuery.V2
             { typeof(DateTimeOffset), BigQueryDbType.Timestamp },
             { typeof(TimeSpan), BigQueryDbType.Time },
             { typeof(BigQueryNumeric), BigQueryDbType.Numeric },
+            { typeof(BigQueryGeography), BigQueryDbType.Geography },
         };
 
         /// <summary>
@@ -271,6 +274,10 @@ namespace Google.Cloud.BigQuery.V2
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.Numeric:
                     return parameter.PopulateScalar<BigQueryNumeric>(value, x => x.ToString())
+                        ?? parameter.PopulateScalar<string>(value, x => x)
+                        ?? parameter.UseNullScalarOrThrow(value);
+                case BigQueryDbType.Geography:
+                    return parameter.PopulateScalar<BigQueryGeography>(value, x => x.Text)
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.Timestamp:

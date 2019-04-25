@@ -134,6 +134,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
             ScalarTest("Numeric parameter", BigQueryDbType.Numeric, BigQueryNumeric.Parse("123.45"), "123.45"),
             ScalarTest("Numeric parameter, string value", BigQueryDbType.Numeric, "string value", "string value"),
             ScalarTest("Numeric parameter, null value", BigQueryDbType.Numeric, null, null),
+
+            // Geography (where the underlying value is just the string)
+            ScalarTest("Geography parameter, BigQueryGeography value", BigQueryDbType.Geography, BigQueryGeography.Parse("POINT"), "POINT"),
+            ScalarTest("Geogprahy parameter, string value", BigQueryDbType.Numeric, "POINT", "POINT"),
+            ScalarTest("Geography parameter, null value", BigQueryDbType.Geography, null, null),
+
         };
 
         public static IEnumerable<object[]> InvalidParameterData => new[]
@@ -159,6 +165,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             new object[] { "Double", 1.0d, BigQueryDbType.Float64 },
             new object[] { "TimeSpan", TimeSpan.FromHours(1), BigQueryDbType.Time },
             new object[] { "Numeric", BigQueryNumeric.Parse("123.45"), BigQueryDbType.Numeric },
+            new object[] { "Geography", BigQueryGeography.Parse("POINT"), BigQueryDbType.Geography },
             new object[] { "DateTime (local)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Local), BigQueryDbType.DateTime },
             new object[] { "DateTime (unspecified)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Unspecified), BigQueryDbType.DateTime },
             new object[] { "DateTime (UTC)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Utc), BigQueryDbType.DateTime },
@@ -180,6 +187,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             new object[] { "DateTime[]", new DateTime[0], BigQueryDbType.DateTime },
             new object[] { "DateTimeOffset[]", new DateTimeOffset[0], BigQueryDbType.Timestamp },
             new object[] { "Byte[][]", new byte[0][], BigQueryDbType.Bytes },
+            new object[] { "BigQueryNumeric[]", new BigQueryNumeric[0], BigQueryDbType.Numeric },
+            new object[] { "BigQueryGeography[]", new BigQueryGeography[0], BigQueryDbType.Geography },
         };
 
         [Theory]

@@ -66,6 +66,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(123456789012L, (long) row["single_int64"]);
             Assert.Equal(1.25, (double) row["single_float64"]);
             Assert.Equal(BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), (BigQueryNumeric) row["single_numeric"]);
+            Assert.Equal(BigQueryGeography.Parse("POINT(1 2)"), (BigQueryGeography) row["single_geography"]);
 
             var singleRecord = (Dictionary<string, object>) row["single_record"];
             Assert.Equal("nested string", (string) singleRecord["single_string"]);
@@ -91,6 +92,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(new[] { -1.25, 2.5 }, (double[]) row["array_float64"]);
             Assert.Equal(new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") },
                 (BigQueryNumeric[]) row["array_numeric"]);
+            Assert.Equal(new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") },
+                (BigQueryGeography[]) row["array_geography"]);
 
             var arrayRecords = (Dictionary<string, object>[]) row["array_record"];
 
@@ -121,6 +124,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Timestamp, new DateTime(2017, 2, 14, 17, 25, 30, DateTimeKind.Utc)));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Time, new TimeSpan(0, 1, 2, 3, 456)));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Numeric, BigQueryNumeric.Parse("1234567890123456789012345678.123456789")));
+            AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Geography, BigQueryGeography.Parse("POINT(1 2)")));
 
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array, new[] { "foo", "bar" }));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array, new[] { true, false }));
@@ -141,6 +145,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new[] { new TimeSpan(0, 1, 2, 3, 456), new TimeSpan(0, 23, 59, 59, 987) }));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") }));
+            AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
+                new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") }));
         }
 
         private void AssertParameterRoundTrip(BigQueryClient client, BigQueryParameter parameter)
@@ -191,6 +197,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             ["single_int64"] = 123456789012L, // Larger than an int32
             ["single_float64"] = 1.25,
             ["single_numeric"] = BigQueryNumeric.Parse("1234567890123456789012345678.123456789"),
+            ["single_geography"] = BigQueryGeography.Parse("POINT(1 2)"),
             ["single_record"] = new BigQueryInsertRow
             {
                 ["single_string"] = "nested string",
@@ -208,6 +215,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             ["array_int64"] = new[] { 1234567890123L, 12345678901234L },
             ["array_float64"] = new[] { -1.25, 2.5 },
             ["array_numeric"] = new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") },
+            ["array_geography"] = new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") },
             ["array_record"] = new[] {
                     new BigQueryInsertRow
                     {

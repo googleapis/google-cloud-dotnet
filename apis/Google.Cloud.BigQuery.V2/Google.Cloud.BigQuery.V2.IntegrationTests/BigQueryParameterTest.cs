@@ -107,6 +107,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(2, (long)row["length"]);
         }
 
+        [Fact]
+        public void GeographyParameter()
+        {
+            var row = GetSingleRow("SELECT @p AS WKT",
+                new BigQueryParameter("p", BigQueryDbType.Geography, BigQueryGeography.Parse("POINT(1 2)")));
+            Assert.Equal(BigQueryGeography.Parse("POINT(1 2)"), (BigQueryGeography) row["WKT"]);
+        }
+
         private BigQueryRow GetSingleRow(string sql, params BigQueryParameter[] parameters)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
