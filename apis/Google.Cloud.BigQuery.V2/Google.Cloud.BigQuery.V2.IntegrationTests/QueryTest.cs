@@ -675,6 +675,23 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Empty(results);
         }
 
+        [Fact]
+        public void GisQuery()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            string sql = @"SELECT ST_GeogPoint(longitude, latitude) AS WKT, num_bikes_available
+                           FROM `bigquery-public-data.new_york.citibike_stations`
+                           WHERE num_bikes_available > 30
+                           LIMIT 10";
+            var results = client.ExecuteQuery(sql, parameters: null);
+            foreach (var row in results)
+            {
+                var geography = (BigQueryGeography) row["WKT"];
+                Assert.StartsWith("POINT", geography.Text);
+            }
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];

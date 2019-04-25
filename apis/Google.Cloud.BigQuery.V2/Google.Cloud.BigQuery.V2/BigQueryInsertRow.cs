@@ -46,6 +46,7 @@ namespace Google.Cloud.BigQuery.V2
     ///   <item><description><c>System.DateTimeOffset</c></description></item>
     ///   <item><description><c>System.TimeSpan</c></description></item>
     ///   <item><description><c>Google.Cloud.BigQuery.V2.BigQueryNumeric</c></description></item>
+    ///   <item><description><c>Google.Cloud.BigQuery.V2.BigQueryGeography</c></description></item>
     ///   <item><description>A <c>Google.Cloud.BigQuery.V2.InsertRow</c> (for record/struct fields)</description></item>
     ///   <item><description>Any <c>IReadOnlyList&lt;T&gt;</c> of one of the above types (for repeated fields). This
     ///   includes arrays and <c>List&lt;T&gt;</c> values.</description></item>
@@ -86,6 +87,7 @@ namespace Google.Cloud.BigQuery.V2
             typeof(DateTime), typeof(DateTimeOffset),
             typeof(TimeSpan),
             typeof(BigQueryNumeric),
+            typeof(BigQueryGeography),
             typeof(BigQueryInsertRow)
         };
 
@@ -227,6 +229,8 @@ namespace Google.Cloud.BigQuery.V2
                     return (new DateTime(1970, 1, 1) + ts).ToString("HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
                 case BigQueryNumeric numeric:
                     return numeric.ToString();
+                case BigQueryGeography geography:
+                    return geography.ToString();
                 case BigQueryInsertRow row:
                     return row.GetJsonValues();
             }
