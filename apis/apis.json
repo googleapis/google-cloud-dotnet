@@ -646,9 +646,13 @@
     "id": "Google.Cloud.Scheduler.V1",
     "productName": "Google Cloud Scheduler",
     "productUrl": "https://cloud.google.com/scheduler/",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Scheduler API (v1), which creates and manages jobs run on a regular recurring schedule.",
+    "dependencies": {
+      "Google.Api.Gax.Grpc": "2.6.0",
+      "Grpc.Core": "1.20.0"
+    },
     "tags": [ "scheduler", "cron" ]
   },
 
@@ -831,13 +835,15 @@
     "id": "Google.Cloud.Tasks.V2",
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Tasks API (v2), which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0-beta01",
-      "Google.Cloud.Iam.V1": "1.2.0"
+      "Google.Api.CommonProtos": "1.6.0",
+      "Google.Api.Gax.Grpc": "2.6.0",
+      "Google.Cloud.Iam.V1": "1.2.0",
+      "Grpc.Core": "1.20.0"
     }
   },
 
