@@ -236,7 +236,6 @@ generate_api Google.Cloud.RecaptchaEnterprise.V1Beta1 google/cloud/recaptchaente
 generate_api Google.Cloud.Redis.V1 google/cloud/redis/v1 redis_v1.yaml
 generate_api Google.Cloud.Redis.V1Beta1 google/cloud/redis/v1beta1 redis_v1beta1.yaml
 generate_api Google.Cloud.Scheduler.V1 google/cloud/scheduler/v1 cloudscheduler_v1.yaml
-generate_api Google.Cloud.Scheduler.V1Beta1 google/cloud/scheduler/v1beta1 cloudscheduler_v1beta1.yaml
 generate_api Google.Cloud.SecurityCenter.V1 google/cloud/securitycenter/v1 securitycenter_v1.yaml
 generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
 generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
@@ -245,8 +244,6 @@ generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 speech_v1.yaml
 generate_api Google.Cloud.Speech.V1P1Beta1 google/cloud/speech/v1p1beta1 speech_v1p1beta1.yaml
 generate_api Google.Cloud.Talent.V4Beta1 google/cloud/talent/v4beta1 talent_v4beta1.yaml
 generate_api Google.Cloud.Tasks.V2 google/cloud/tasks/v2 cloudtasks_v2.yaml
-generate_api Google.Cloud.Tasks.V2Beta2 google/cloud/tasks/v2beta2 cloudtasks_v2beta2.yaml
-generate_api Google.Cloud.Tasks.V2Beta3 google/cloud/tasks/v2beta3 cloudtasks_v2beta3.yaml
 generate_api Google.Cloud.TextToSpeech.V1 google/cloud/texttospeech/v1 tts_v1.yaml
 generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 cloudtrace_v1.yaml
 generate_api Google.Cloud.Trace.V2 google/devtools/cloudtrace/v2 cloudtrace_v2.yaml
