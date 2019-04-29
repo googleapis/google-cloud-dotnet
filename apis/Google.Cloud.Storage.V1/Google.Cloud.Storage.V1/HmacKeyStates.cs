@@ -37,6 +37,6 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// The key has been deleted.
         /// </summary>
-        public const string Deleted = "DELETE";
+        public const string Deleted = "DELETED";
     }
 }
