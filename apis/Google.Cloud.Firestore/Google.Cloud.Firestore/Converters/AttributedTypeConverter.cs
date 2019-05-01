@@ -57,6 +57,7 @@ namespace Google.Cloud.Firestore.Converters
                 {
                     continue;
                 }
+                // FIXME: Check that the FirestoreId attribute *isn't* defined.
                 var attributedProperty = new AttributedProperty(property, propertyAttribute);
                 string firestoreName = attributedProperty.FirestoreName;
 

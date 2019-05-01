@@ -289,6 +289,30 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(0, custom.Value);
         }
 
+        [Fact]
+        public void ConvertTo_WithId()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var readTime = new Timestamp(10, 2);
+            var proto = new Document
+            {
+                CreateTime = CreateProtoTimestamp(1, 10),
+                UpdateTime = CreateProtoTimestamp(2, 20),
+                Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2",
+                Fields =
+                {
+                    ["Name"] = ProtoHelpers.CreateValue("text"),
+                    ["Value"] = ProtoHelpers.CreateValue(100)
+                }
+            };
+            var document = DocumentSnapshot.ForDocument(db, proto, readTime);
+
+            var converted = document.ConvertTo<SampleDataWithDocumentId>();
+            Assert.Equal("text", converted.Name);
+            Assert.Equal(100, converted.Value);
+            Assert.Equal("doc2", converted.DocumentId);
+        }
+
         private static DocumentSnapshot GetSampleSnapshot()
         {
             var poco = new SampleData
@@ -326,6 +350,19 @@ namespace Google.Cloud.Firestore.Tests
         {
             [FirestoreProperty]
             public int Score { get; set; }
+        }
+
+        [FirestoreData]
+        private class SampleDataWithDocumentId
+        {
+            [FirestoreDocumentId]
+            public string DocumentId { get; set; }
+
+            [FirestoreProperty]
+            public string Name { get; set; }
+            
+            [FirestoreProperty]
+            public int Value { get; set; }
         }
     }
 }
