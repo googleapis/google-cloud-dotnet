@@ -106,7 +106,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
-            JobNameOneof name = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]"));
+            JobNameOneof name = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]"));
             // Make the request
             Job response = await jobServiceClient.GetJobAsync(name);
             // End snippet
@@ -119,7 +119,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
-            JobNameOneof name = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]"));
+            JobNameOneof name = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]"));
             // Make the request
             Job response = jobServiceClient.GetJob(name);
             // End snippet
@@ -135,7 +135,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetJobRequest request = new GetJobRequest
             {
-                JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
+                JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
             };
             // Make the request
             Job response = await jobServiceClient.GetJobAsync(request);
@@ -151,7 +151,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetJobRequest request = new GetJobRequest
             {
-                JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
+                JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
             };
             // Make the request
             Job response = jobServiceClient.GetJob(request);
@@ -226,7 +226,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
             // Initialize request argument(s)
-            JobNameOneof name = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]"));
+            JobNameOneof name = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]"));
             // Make the request
             await jobServiceClient.DeleteJobAsync(name);
             // End snippet
@@ -239,7 +239,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             JobServiceClient jobServiceClient = JobServiceClient.Create();
             // Initialize request argument(s)
-            JobNameOneof name = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]"));
+            JobNameOneof name = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]"));
             // Make the request
             jobServiceClient.DeleteJob(name);
             // End snippet
@@ -255,7 +255,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteJobRequest request = new DeleteJobRequest
             {
-                JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
+                JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
             };
             // Make the request
             await jobServiceClient.DeleteJobAsync(request);
@@ -271,7 +271,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteJobRequest request = new DeleteJobRequest
             {
-                JobNameOneof = JobNameOneof.From(new JobOldName("[PROJECT]", "[JOBS]")),
+                JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
             };
             // Make the request
             jobServiceClient.DeleteJob(request);
