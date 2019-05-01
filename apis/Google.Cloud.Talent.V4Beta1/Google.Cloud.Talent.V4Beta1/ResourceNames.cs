@@ -128,44 +128,44 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>
-    /// Resource name for the 'company_new' resource.
+    /// Resource name for the 'company' resource.
     /// </summary>
-    public sealed partial class CompanyNewName : gax::IResourceName, sys::IEquatable<CompanyNewName>
+    public sealed partial class CompanyName : gax::IResourceName, sys::IEquatable<CompanyName>
     {
         private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/tenants/{tenant}/companies/{company}");
 
         /// <summary>
-        /// Parses the given company_new resource name in string form into a new
-        /// <see cref="CompanyNewName"/> instance.
+        /// Parses the given company resource name in string form into a new
+        /// <see cref="CompanyName"/> instance.
         /// </summary>
-        /// <param name="companyNewName">The company_new resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="CompanyNewName"/> if successful.</returns>
-        public static CompanyNewName Parse(string companyNewName)
+        /// <param name="companyName">The company resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CompanyName"/> if successful.</returns>
+        public static CompanyName Parse(string companyName)
         {
-            gax::GaxPreconditions.CheckNotNull(companyNewName, nameof(companyNewName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(companyNewName);
-            return new CompanyNewName(resourceName[0], resourceName[1], resourceName[2]);
+            gax::GaxPreconditions.CheckNotNull(companyName, nameof(companyName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(companyName);
+            return new CompanyName(resourceName[0], resourceName[1], resourceName[2]);
         }
 
         /// <summary>
-        /// Tries to parse the given company_new resource name in string form into a new
-        /// <see cref="CompanyNewName"/> instance.
+        /// Tries to parse the given company resource name in string form into a new
+        /// <see cref="CompanyName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="companyNewName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="companyName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="companyNewName">The company_new resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="CompanyNewName"/>,
+        /// <param name="companyName">The company resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="CompanyName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string companyNewName, out CompanyNewName result)
+        public static bool TryParse(string companyName, out CompanyName result)
         {
-            gax::GaxPreconditions.CheckNotNull(companyNewName, nameof(companyNewName));
+            gax::GaxPreconditions.CheckNotNull(companyName, nameof(companyName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(companyNewName, out resourceName))
+            if (s_template.TryParseName(companyName, out resourceName))
             {
-                result = new CompanyNewName(resourceName[0], resourceName[1], resourceName[2]);
+                result = new CompanyName(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
             else
@@ -176,13 +176,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="CompanyNewName"/> resource name class
+        /// Constructs a new instance of the <see cref="CompanyName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="tenantId">The tenant ID. Must not be <c>null</c>.</param>
         /// <param name="companyId">The company ID. Must not be <c>null</c>.</param>
-        public CompanyNewName(string projectId, string tenantId, string companyId)
+        public CompanyName(string projectId, string tenantId, string companyId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             TenantId = gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId));
@@ -214,108 +214,16 @@ namespace Google.Cloud.Talent.V4Beta1
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as CompanyNewName);
+        public override bool Equals(object obj) => Equals(obj as CompanyName);
 
         /// <inheritdoc />
-        public bool Equals(CompanyNewName other) => ToString() == other?.ToString();
+        public bool Equals(CompanyName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(CompanyNewName a, CompanyNewName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(CompanyName a, CompanyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(CompanyNewName a, CompanyNewName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'company_old' resource.
-    /// </summary>
-    public sealed partial class CompanyOldName : gax::IResourceName, sys::IEquatable<CompanyOldName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/companies/{company}");
-
-        /// <summary>
-        /// Parses the given company_old resource name in string form into a new
-        /// <see cref="CompanyOldName"/> instance.
-        /// </summary>
-        /// <param name="companyOldName">The company_old resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="CompanyOldName"/> if successful.</returns>
-        public static CompanyOldName Parse(string companyOldName)
-        {
-            gax::GaxPreconditions.CheckNotNull(companyOldName, nameof(companyOldName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(companyOldName);
-            return new CompanyOldName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given company_old resource name in string form into a new
-        /// <see cref="CompanyOldName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="companyOldName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="companyOldName">The company_old resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="CompanyOldName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string companyOldName, out CompanyOldName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(companyOldName, nameof(companyOldName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(companyOldName, out resourceName))
-            {
-                result = new CompanyOldName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="CompanyOldName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="companyId">The company ID. Must not be <c>null</c>.</param>
-        public CompanyOldName(string projectId, string companyId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            CompanyId = gax::GaxPreconditions.CheckNotNull(companyId, nameof(companyId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The company ID. Never <c>null</c>.
-        /// </summary>
-        public string CompanyId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, CompanyId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as CompanyOldName);
-
-        /// <inheritdoc />
-        public bool Equals(CompanyOldName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(CompanyOldName a, CompanyOldName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(CompanyOldName a, CompanyOldName b) => !(a == b);
+        public static bool operator !=(CompanyName a, CompanyName b) => !(a == b);
     }
 
     /// <summary>
@@ -324,8 +232,8 @@ namespace Google.Cloud.Talent.V4Beta1
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
-    /// <item><description>CompanyOldName: A resource of type 'company_old'.</description></item>
-    /// <item><description>CompanyNewName: A resource of type 'company_new'.</description></item>
+    /// <item><description>CompanyName: A resource of type 'company'.</description></item>
+    /// <item><description>CompanyWithoutTenantName: A resource of type 'company_without_tenant'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class CompanyNameOneof : gax::IResourceName, sys::IEquatable<CompanyNameOneof>
@@ -341,14 +249,14 @@ namespace Google.Cloud.Talent.V4Beta1
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'company_old'.
+            /// A resource of type 'company'.
             /// </summary>
-            CompanyOldName = 1,
+            CompanyName = 1,
 
             /// <summary>
-            /// A resource of type 'company_new'.
+            /// A resource of type 'company_without_tenant'.
             /// </summary>
-            CompanyNewName = 2,
+            CompanyWithoutTenantName = 2,
         }
 
         /// <summary>
@@ -357,8 +265,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>CompanyOldName: A resource of type 'company_old'.</description></item>
-        /// <item><description>CompanyNewName: A resource of type 'company_new'.</description></item>
+        /// <item><description>CompanyName: A resource of type 'company'.</description></item>
+        /// <item><description>CompanyWithoutTenantName: A resource of type 'company_without_tenant'.</description></item>
         /// </list>
         /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -383,8 +291,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>CompanyOldName: A resource of type 'company_old'.</description></item>
-        /// <item><description>CompanyNewName: A resource of type 'company_new'.</description></item>
+        /// <item><description>CompanyName: A resource of type 'company'.</description></item>
+        /// <item><description>CompanyWithoutTenantName: A resource of type 'company_without_tenant'.</description></item>
         /// </list>
         /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -397,16 +305,16 @@ namespace Google.Cloud.Talent.V4Beta1
         public static bool TryParse(string name, bool allowUnknown, out CompanyNameOneof result)
         {
             gax::GaxPreconditions.CheckNotNull(name, nameof(name));
-            CompanyOldName companyOldName;
-            if (CompanyOldName.TryParse(name, out companyOldName))
+            CompanyName companyName;
+            if (CompanyName.TryParse(name, out companyName))
             {
-                result = new CompanyNameOneof(OneofType.CompanyOldName, companyOldName);
+                result = new CompanyNameOneof(OneofType.CompanyName, companyName);
                 return true;
             }
-            CompanyNewName companyNewName;
-            if (CompanyNewName.TryParse(name, out companyNewName))
+            CompanyWithoutTenantName companyWithoutTenantName;
+            if (CompanyWithoutTenantName.TryParse(name, out companyWithoutTenantName))
             {
-                result = new CompanyNameOneof(OneofType.CompanyNewName, companyNewName);
+                result = new CompanyNameOneof(OneofType.CompanyWithoutTenantName, companyWithoutTenantName);
                 return true;
             }
             if (allowUnknown)
@@ -423,28 +331,28 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Construct a new instance of <see cref="CompanyNameOneof"/> from the provided <see cref="CompanyOldName"/>
+        /// Construct a new instance of <see cref="CompanyNameOneof"/> from the provided <see cref="CompanyName"/>
         /// </summary>
-        /// <param name="companyOldName">The <see cref="CompanyOldName"/> to be contained within
+        /// <param name="companyName">The <see cref="CompanyName"/> to be contained within
         /// the returned <see cref="CompanyNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="CompanyNameOneof"/>, containing <paramref name="companyOldName"/>.</returns>
-        public static CompanyNameOneof From(CompanyOldName companyOldName) => new CompanyNameOneof(OneofType.CompanyOldName, companyOldName);
+        /// <returns>A new <see cref="CompanyNameOneof"/>, containing <paramref name="companyName"/>.</returns>
+        public static CompanyNameOneof From(CompanyName companyName) => new CompanyNameOneof(OneofType.CompanyName, companyName);
 
         /// <summary>
-        /// Construct a new instance of <see cref="CompanyNameOneof"/> from the provided <see cref="CompanyNewName"/>
+        /// Construct a new instance of <see cref="CompanyNameOneof"/> from the provided <see cref="CompanyWithoutTenantName"/>
         /// </summary>
-        /// <param name="companyNewName">The <see cref="CompanyNewName"/> to be contained within
+        /// <param name="companyWithoutTenantName">The <see cref="CompanyWithoutTenantName"/> to be contained within
         /// the returned <see cref="CompanyNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="CompanyNameOneof"/>, containing <paramref name="companyNewName"/>.</returns>
-        public static CompanyNameOneof From(CompanyNewName companyNewName) => new CompanyNameOneof(OneofType.CompanyNewName, companyNewName);
+        /// <returns>A new <see cref="CompanyNameOneof"/>, containing <paramref name="companyWithoutTenantName"/>.</returns>
+        public static CompanyNameOneof From(CompanyWithoutTenantName companyWithoutTenantName) => new CompanyNameOneof(OneofType.CompanyWithoutTenantName, companyWithoutTenantName);
 
         private static bool IsValid(OneofType type, gax::IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.CompanyOldName: return name is CompanyOldName;
-                case OneofType.CompanyNewName: return name is CompanyNewName;
+                case OneofType.CompanyName: return name is CompanyName;
+                case OneofType.CompanyWithoutTenantName: return name is CompanyWithoutTenantName;
                 default: return false;
             }
         }
@@ -483,22 +391,22 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="CompanyOldName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="CompanyName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="CompanyOldName"/>.
+        /// contain an instance of <see cref="CompanyName"/>.
         /// </remarks>
-        public CompanyOldName CompanyOldName => CheckAndReturn<CompanyOldName>(OneofType.CompanyOldName);
+        public CompanyName CompanyName => CheckAndReturn<CompanyName>(OneofType.CompanyName);
 
         /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="CompanyNewName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="CompanyWithoutTenantName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="CompanyNewName"/>.
+        /// contain an instance of <see cref="CompanyWithoutTenantName"/>.
         /// </remarks>
-        public CompanyNewName CompanyNewName => CheckAndReturn<CompanyNewName>(OneofType.CompanyNewName);
+        public CompanyWithoutTenantName CompanyWithoutTenantName => CheckAndReturn<CompanyWithoutTenantName>(OneofType.CompanyWithoutTenantName);
 
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
@@ -523,44 +431,44 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>
-    /// Resource name for the 'job_new' resource.
+    /// Resource name for the 'company_without_tenant' resource.
     /// </summary>
-    public sealed partial class JobNewName : gax::IResourceName, sys::IEquatable<JobNewName>
+    public sealed partial class CompanyWithoutTenantName : gax::IResourceName, sys::IEquatable<CompanyWithoutTenantName>
     {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/tenants/{tenant}/jobs/{jobs}");
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/companies/{company}");
 
         /// <summary>
-        /// Parses the given job_new resource name in string form into a new
-        /// <see cref="JobNewName"/> instance.
+        /// Parses the given company_without_tenant resource name in string form into a new
+        /// <see cref="CompanyWithoutTenantName"/> instance.
         /// </summary>
-        /// <param name="jobNewName">The job_new resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="JobNewName"/> if successful.</returns>
-        public static JobNewName Parse(string jobNewName)
+        /// <param name="companyWithoutTenantName">The company_without_tenant resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="CompanyWithoutTenantName"/> if successful.</returns>
+        public static CompanyWithoutTenantName Parse(string companyWithoutTenantName)
         {
-            gax::GaxPreconditions.CheckNotNull(jobNewName, nameof(jobNewName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(jobNewName);
-            return new JobNewName(resourceName[0], resourceName[1], resourceName[2]);
+            gax::GaxPreconditions.CheckNotNull(companyWithoutTenantName, nameof(companyWithoutTenantName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(companyWithoutTenantName);
+            return new CompanyWithoutTenantName(resourceName[0], resourceName[1]);
         }
 
         /// <summary>
-        /// Tries to parse the given job_new resource name in string form into a new
-        /// <see cref="JobNewName"/> instance.
+        /// Tries to parse the given company_without_tenant resource name in string form into a new
+        /// <see cref="CompanyWithoutTenantName"/> instance.
         /// </summary>
         /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="jobNewName"/> is null,
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="companyWithoutTenantName"/> is null,
         /// as this would usually indicate a programming error rather than a data error.
         /// </remarks>
-        /// <param name="jobNewName">The job_new resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="JobNewName"/>,
+        /// <param name="companyWithoutTenantName">The company_without_tenant resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="CompanyWithoutTenantName"/>,
         /// or <c>null</c> if parsing fails.</param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string jobNewName, out JobNewName result)
+        public static bool TryParse(string companyWithoutTenantName, out CompanyWithoutTenantName result)
         {
-            gax::GaxPreconditions.CheckNotNull(jobNewName, nameof(jobNewName));
+            gax::GaxPreconditions.CheckNotNull(companyWithoutTenantName, nameof(companyWithoutTenantName));
             gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(jobNewName, out resourceName))
+            if (s_template.TryParseName(companyWithoutTenantName, out resourceName))
             {
-                result = new JobNewName(resourceName[0], resourceName[1], resourceName[2]);
+                result = new CompanyWithoutTenantName(resourceName[0], resourceName[1]);
                 return true;
             }
             else
@@ -571,13 +479,105 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Constructs a new instance of the <see cref="JobNewName"/> resource name class
+        /// Constructs a new instance of the <see cref="CompanyWithoutTenantName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="companyId">The company ID. Must not be <c>null</c>.</param>
+        public CompanyWithoutTenantName(string projectId, string companyId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            CompanyId = gax::GaxPreconditions.CheckNotNull(companyId, nameof(companyId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The company ID. Never <c>null</c>.
+        /// </summary>
+        public string CompanyId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, CompanyId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as CompanyWithoutTenantName);
+
+        /// <inheritdoc />
+        public bool Equals(CompanyWithoutTenantName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(CompanyWithoutTenantName a, CompanyWithoutTenantName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(CompanyWithoutTenantName a, CompanyWithoutTenantName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'job' resource.
+    /// </summary>
+    public sealed partial class JobName : gax::IResourceName, sys::IEquatable<JobName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/tenants/{tenant}/jobs/{jobs}");
+
+        /// <summary>
+        /// Parses the given job resource name in string form into a new
+        /// <see cref="JobName"/> instance.
+        /// </summary>
+        /// <param name="jobName">The job resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="JobName"/> if successful.</returns>
+        public static JobName Parse(string jobName)
+        {
+            gax::GaxPreconditions.CheckNotNull(jobName, nameof(jobName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(jobName);
+            return new JobName(resourceName[0], resourceName[1], resourceName[2]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given job resource name in string form into a new
+        /// <see cref="JobName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="jobName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="jobName">The job resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="JobName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string jobName, out JobName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(jobName, nameof(jobName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(jobName, out resourceName))
+            {
+                result = new JobName(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="JobName"/> resource name class
         /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="tenantId">The tenant ID. Must not be <c>null</c>.</param>
         /// <param name="jobsId">The jobs ID. Must not be <c>null</c>.</param>
-        public JobNewName(string projectId, string tenantId, string jobsId)
+        public JobName(string projectId, string tenantId, string jobsId)
         {
             ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             TenantId = gax::GaxPreconditions.CheckNotNull(tenantId, nameof(tenantId));
@@ -609,108 +609,16 @@ namespace Google.Cloud.Talent.V4Beta1
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as JobNewName);
+        public override bool Equals(object obj) => Equals(obj as JobName);
 
         /// <inheritdoc />
-        public bool Equals(JobNewName other) => ToString() == other?.ToString();
+        public bool Equals(JobName other) => ToString() == other?.ToString();
 
         /// <inheritdoc />
-        public static bool operator ==(JobNewName a, JobNewName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(JobName a, JobName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc />
-        public static bool operator !=(JobNewName a, JobNewName b) => !(a == b);
-    }
-
-    /// <summary>
-    /// Resource name for the 'job_old' resource.
-    /// </summary>
-    public sealed partial class JobOldName : gax::IResourceName, sys::IEquatable<JobOldName>
-    {
-        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobs/{jobs}");
-
-        /// <summary>
-        /// Parses the given job_old resource name in string form into a new
-        /// <see cref="JobOldName"/> instance.
-        /// </summary>
-        /// <param name="jobOldName">The job_old resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="JobOldName"/> if successful.</returns>
-        public static JobOldName Parse(string jobOldName)
-        {
-            gax::GaxPreconditions.CheckNotNull(jobOldName, nameof(jobOldName));
-            gax::TemplatedResourceName resourceName = s_template.ParseName(jobOldName);
-            return new JobOldName(resourceName[0], resourceName[1]);
-        }
-
-        /// <summary>
-        /// Tries to parse the given job_old resource name in string form into a new
-        /// <see cref="JobOldName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="jobOldName"/> is null,
-        /// as this would usually indicate a programming error rather than a data error.
-        /// </remarks>
-        /// <param name="jobOldName">The job_old resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">When this method returns, the parsed <see cref="JobOldName"/>,
-        /// or <c>null</c> if parsing fails.</param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string jobOldName, out JobOldName result)
-        {
-            gax::GaxPreconditions.CheckNotNull(jobOldName, nameof(jobOldName));
-            gax::TemplatedResourceName resourceName;
-            if (s_template.TryParseName(jobOldName, out resourceName))
-            {
-                result = new JobOldName(resourceName[0], resourceName[1]);
-                return true;
-            }
-            else
-            {
-                result = null;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Constructs a new instance of the <see cref="JobOldName"/> resource name class
-        /// from its component parts.
-        /// </summary>
-        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
-        /// <param name="jobsId">The jobs ID. Must not be <c>null</c>.</param>
-        public JobOldName(string projectId, string jobsId)
-        {
-            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            JobsId = gax::GaxPreconditions.CheckNotNull(jobsId, nameof(jobsId));
-        }
-
-        /// <summary>
-        /// The project ID. Never <c>null</c>.
-        /// </summary>
-        public string ProjectId { get; }
-
-        /// <summary>
-        /// The jobs ID. Never <c>null</c>.
-        /// </summary>
-        public string JobsId { get; }
-
-        /// <inheritdoc />
-        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
-
-        /// <inheritdoc />
-        public override string ToString() => s_template.Expand(ProjectId, JobsId);
-
-        /// <inheritdoc />
-        public override int GetHashCode() => ToString().GetHashCode();
-
-        /// <inheritdoc />
-        public override bool Equals(object obj) => Equals(obj as JobOldName);
-
-        /// <inheritdoc />
-        public bool Equals(JobOldName other) => ToString() == other?.ToString();
-
-        /// <inheritdoc />
-        public static bool operator ==(JobOldName a, JobOldName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
-
-        /// <inheritdoc />
-        public static bool operator !=(JobOldName a, JobOldName b) => !(a == b);
+        public static bool operator !=(JobName a, JobName b) => !(a == b);
     }
 
     /// <summary>
@@ -719,8 +627,8 @@ namespace Google.Cloud.Talent.V4Beta1
     /// <remarks>
     /// This resource name will contain one of the following:
     /// <list type="bullet">
-    /// <item><description>JobOldName: A resource of type 'job_old'.</description></item>
-    /// <item><description>JobNewName: A resource of type 'job_new'.</description></item>
+    /// <item><description>JobName: A resource of type 'job'.</description></item>
+    /// <item><description>JobWithoutTenantName: A resource of type 'job_without_tenant'.</description></item>
     /// </list>
     /// </remarks>
     public sealed partial class JobNameOneof : gax::IResourceName, sys::IEquatable<JobNameOneof>
@@ -736,14 +644,14 @@ namespace Google.Cloud.Talent.V4Beta1
             Unknown = 0,
 
             /// <summary>
-            /// A resource of type 'job_old'.
+            /// A resource of type 'job'.
             /// </summary>
-            JobOldName = 1,
+            JobName = 1,
 
             /// <summary>
-            /// A resource of type 'job_new'.
+            /// A resource of type 'job_without_tenant'.
             /// </summary>
-            JobNewName = 2,
+            JobWithoutTenantName = 2,
         }
 
         /// <summary>
@@ -752,8 +660,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>JobOldName: A resource of type 'job_old'.</description></item>
-        /// <item><description>JobNewName: A resource of type 'job_new'.</description></item>
+        /// <item><description>JobName: A resource of type 'job'.</description></item>
+        /// <item><description>JobWithoutTenantName: A resource of type 'job_without_tenant'.</description></item>
         /// </list>
         /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -778,8 +686,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
         /// <list type="bullet">
-        /// <item><description>JobOldName: A resource of type 'job_old'.</description></item>
-        /// <item><description>JobNewName: A resource of type 'job_new'.</description></item>
+        /// <item><description>JobName: A resource of type 'job'.</description></item>
+        /// <item><description>JobWithoutTenantName: A resource of type 'job_without_tenant'.</description></item>
         /// </list>
         /// Or an <see cref="gax::UnknownResourceName"/> if <paramref name="allowUnknown"/> is <c>true</c>.
         /// </remarks>
@@ -792,16 +700,16 @@ namespace Google.Cloud.Talent.V4Beta1
         public static bool TryParse(string name, bool allowUnknown, out JobNameOneof result)
         {
             gax::GaxPreconditions.CheckNotNull(name, nameof(name));
-            JobOldName jobOldName;
-            if (JobOldName.TryParse(name, out jobOldName))
+            JobName jobName;
+            if (JobName.TryParse(name, out jobName))
             {
-                result = new JobNameOneof(OneofType.JobOldName, jobOldName);
+                result = new JobNameOneof(OneofType.JobName, jobName);
                 return true;
             }
-            JobNewName jobNewName;
-            if (JobNewName.TryParse(name, out jobNewName))
+            JobWithoutTenantName jobWithoutTenantName;
+            if (JobWithoutTenantName.TryParse(name, out jobWithoutTenantName))
             {
-                result = new JobNameOneof(OneofType.JobNewName, jobNewName);
+                result = new JobNameOneof(OneofType.JobWithoutTenantName, jobWithoutTenantName);
                 return true;
             }
             if (allowUnknown)
@@ -818,28 +726,28 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Construct a new instance of <see cref="JobNameOneof"/> from the provided <see cref="JobOldName"/>
+        /// Construct a new instance of <see cref="JobNameOneof"/> from the provided <see cref="JobName"/>
         /// </summary>
-        /// <param name="jobOldName">The <see cref="JobOldName"/> to be contained within
+        /// <param name="jobName">The <see cref="JobName"/> to be contained within
         /// the returned <see cref="JobNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="JobNameOneof"/>, containing <paramref name="jobOldName"/>.</returns>
-        public static JobNameOneof From(JobOldName jobOldName) => new JobNameOneof(OneofType.JobOldName, jobOldName);
+        /// <returns>A new <see cref="JobNameOneof"/>, containing <paramref name="jobName"/>.</returns>
+        public static JobNameOneof From(JobName jobName) => new JobNameOneof(OneofType.JobName, jobName);
 
         /// <summary>
-        /// Construct a new instance of <see cref="JobNameOneof"/> from the provided <see cref="JobNewName"/>
+        /// Construct a new instance of <see cref="JobNameOneof"/> from the provided <see cref="JobWithoutTenantName"/>
         /// </summary>
-        /// <param name="jobNewName">The <see cref="JobNewName"/> to be contained within
+        /// <param name="jobWithoutTenantName">The <see cref="JobWithoutTenantName"/> to be contained within
         /// the returned <see cref="JobNameOneof"/>. Must not be <c>null</c>.</param>
-        /// <returns>A new <see cref="JobNameOneof"/>, containing <paramref name="jobNewName"/>.</returns>
-        public static JobNameOneof From(JobNewName jobNewName) => new JobNameOneof(OneofType.JobNewName, jobNewName);
+        /// <returns>A new <see cref="JobNameOneof"/>, containing <paramref name="jobWithoutTenantName"/>.</returns>
+        public static JobNameOneof From(JobWithoutTenantName jobWithoutTenantName) => new JobNameOneof(OneofType.JobWithoutTenantName, jobWithoutTenantName);
 
         private static bool IsValid(OneofType type, gax::IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.JobOldName: return name is JobOldName;
-                case OneofType.JobNewName: return name is JobNewName;
+                case OneofType.JobName: return name is JobName;
+                case OneofType.JobWithoutTenantName: return name is JobWithoutTenantName;
                 default: return false;
             }
         }
@@ -878,22 +786,22 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="JobOldName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="JobName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="JobOldName"/>.
+        /// contain an instance of <see cref="JobName"/>.
         /// </remarks>
-        public JobOldName JobOldName => CheckAndReturn<JobOldName>(OneofType.JobOldName);
+        public JobName JobName => CheckAndReturn<JobName>(OneofType.JobName);
 
         /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="JobNewName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="JobWithoutTenantName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="JobNewName"/>.
+        /// contain an instance of <see cref="JobWithoutTenantName"/>.
         /// </remarks>
-        public JobNewName JobNewName => CheckAndReturn<JobNewName>(OneofType.JobNewName);
+        public JobWithoutTenantName JobWithoutTenantName => CheckAndReturn<JobWithoutTenantName>(OneofType.JobWithoutTenantName);
 
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
@@ -915,6 +823,98 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <inheritdoc />
         public static bool operator !=(JobNameOneof a, JobNameOneof b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'job_without_tenant' resource.
+    /// </summary>
+    public sealed partial class JobWithoutTenantName : gax::IResourceName, sys::IEquatable<JobWithoutTenantName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/jobs/{jobs}");
+
+        /// <summary>
+        /// Parses the given job_without_tenant resource name in string form into a new
+        /// <see cref="JobWithoutTenantName"/> instance.
+        /// </summary>
+        /// <param name="jobWithoutTenantName">The job_without_tenant resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="JobWithoutTenantName"/> if successful.</returns>
+        public static JobWithoutTenantName Parse(string jobWithoutTenantName)
+        {
+            gax::GaxPreconditions.CheckNotNull(jobWithoutTenantName, nameof(jobWithoutTenantName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(jobWithoutTenantName);
+            return new JobWithoutTenantName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given job_without_tenant resource name in string form into a new
+        /// <see cref="JobWithoutTenantName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="jobWithoutTenantName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="jobWithoutTenantName">The job_without_tenant resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="JobWithoutTenantName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string jobWithoutTenantName, out JobWithoutTenantName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(jobWithoutTenantName, nameof(jobWithoutTenantName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(jobWithoutTenantName, out resourceName))
+            {
+                result = new JobWithoutTenantName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="JobWithoutTenantName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="jobsId">The jobs ID. Must not be <c>null</c>.</param>
+        public JobWithoutTenantName(string projectId, string jobsId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            JobsId = gax::GaxPreconditions.CheckNotNull(jobsId, nameof(jobsId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The jobs ID. Never <c>null</c>.
+        /// </summary>
+        public string JobsId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, JobsId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as JobWithoutTenantName);
+
+        /// <inheritdoc />
+        public bool Equals(JobWithoutTenantName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(JobWithoutTenantName a, JobWithoutTenantName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(JobWithoutTenantName a, JobWithoutTenantName b) => !(a == b);
     }
 
     /// <summary>

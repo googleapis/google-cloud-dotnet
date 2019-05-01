@@ -105,7 +105,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
             // Make the request
             Company response = await companyServiceClient.GetCompanyAsync(name);
             // End snippet
@@ -118,7 +118,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
             // Make the request
             Company response = companyServiceClient.GetCompany(name);
             // End snippet
@@ -134,7 +134,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
             };
             // Make the request
             Company response = await companyServiceClient.GetCompanyAsync(request);
@@ -150,7 +150,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
             };
             // Make the request
             Company response = companyServiceClient.GetCompany(request);
@@ -225,7 +225,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = await CompanyServiceClient.CreateAsync();
             // Initialize request argument(s)
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
             // Make the request
             await companyServiceClient.DeleteCompanyAsync(name);
             // End snippet
@@ -238,7 +238,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Create client
             CompanyServiceClient companyServiceClient = CompanyServiceClient.Create();
             // Initialize request argument(s)
-            CompanyNameOneof name = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]"));
+            CompanyNameOneof name = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]"));
             // Make the request
             companyServiceClient.DeleteCompany(name);
             // End snippet
@@ -254,7 +254,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
             };
             // Make the request
             await companyServiceClient.DeleteCompanyAsync(request);
@@ -270,7 +270,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyNameOneof = CompanyNameOneof.From(new CompanyOldName("[PROJECT]", "[COMPANY]")),
+                CompanyNameOneof = CompanyNameOneof.From(new CompanyName("[PROJECT]", "[TENANT]", "[COMPANY]")),
             };
             // Make the request
             companyServiceClient.DeleteCompany(request);
