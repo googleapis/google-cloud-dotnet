@@ -67,8 +67,7 @@
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
-      "Google.Api.Gax.Rest": "2.7.0-beta04",
-      "Google.Apis.Bigquery.v2": "1.38.2.1527"
+      "Google.Apis.Bigquery.v2": "1.39.0.1527"
     },
     "testDependencies": {
       "Google.Cloud.Storage.V1": "project"
@@ -156,11 +155,6 @@
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Datastore API, which accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
     "tags": [ "Datastore" ],
-    "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0",
-      "Google.Api.Gax.Grpc": "2.7.0-beta04",
-      "Grpc.Core": "1.19.0",
-    },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "default"
     }
@@ -188,8 +182,7 @@
     "description": "Common Protocol Buffer messages for Google Cloud Developer Tools APIs.",
     "tags": [ "Tools" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.5.0",
-      "Google.Protobuf": "3.6.1"
+      "Google.Api.CommonProtos": "1.6.0"
     }
   },
 
@@ -206,7 +199,7 @@
       "Microsoft.AspNet.WebApi.Core": "5.2.7",
       "Microsoft.AspNet.WebPages": "3.2.7",
       "Microsoft.AspNet.Mvc": "5.2.7",
-      "Grpc.Core": "1.19.0"
+      "Grpc.Core": "1.20.1"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -226,12 +219,12 @@
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
       "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0-beta02",
-      "Grpc.Core": "1.19.0"
+      "Grpc.Core": "1.20.1"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-      "Google.Api.Gax.Testing": "2.7.0-beta04"
+      "Google.Api.Gax.Testing": "2.7.0"
     },
     "additionalAnalyzerTestDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
@@ -262,12 +255,9 @@
     "description": "Google Stackdriver Instrumentation Libraries Common Components.",
     "tags": [ "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace", "Diagnostics" ],
     "dependencies": {
-      // Explicitly add dependencies for GAX so we have recent versions
-      "Google.Api.Gax": "2.7.0-beta04",
-      "Google.Api.Gax.Grpc": "2.7.0-beta04",
+      "Google.Api.Gax.Grpc": "default",
       "Google.Cloud.Logging.V2": "2.1.0",
       "Google.Cloud.Trace.V1": "1.0.0",
-      "Grpc.Core": "1.19.0"
     },
     "testDependencies": {
       "Google.Cloud.ErrorReporting.V1Beta1": "project",
@@ -299,10 +289,7 @@
     "version": "1.0.0-beta10",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Data Loss Prevention API, provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.",
-    "tags": [ "DLP", "data loss prevention", "privacy", "pii" ],
-    "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0"
-    }
+    "tags": [ "DLP", "data loss prevention", "privacy", "pii" ]
   },
 
   {
@@ -367,10 +354,10 @@
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
       "Google.Cloud.Firestore.V1": "project",
-      "Grpc.Core": "1.19.0"
+      "Grpc.Core": "default"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.7.0-beta04",
+      "Google.Api.Gax.Testing": "default",
       "Grpc.Core.Testing": "1.19.0",
       "System.ValueTuple": "4.4.0"
     }
@@ -387,9 +374,7 @@
     "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0-beta04",
       "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "1.19.0"
     }
   },
 
@@ -491,7 +476,7 @@
     "description": "Version-agnostic types for the Google Stackdriver Logging API.",
     "tags": [ "Logging", "Stackdriver" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.5.0"
+      "Google.Api.CommonProtos": "1.6.0"
     }
   },
 
@@ -504,7 +489,7 @@
     "description": "Recommended Google client library to access the Google Stackdriver Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
     "tags": [ "Logging", "Stackdriver" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.5.0",
+      "Google.Api.CommonProtos": "1.6.0",
       "Google.Cloud.Logging.Type": "2.0.0",
     }
   },
@@ -518,7 +503,7 @@
     "description": "Google Compute Engine Metadata v1 client library",
     "tags": [ "Metadata" ],
     "dependencies": {
-      "Google.Apis.Compute.v1": "1.34.0.1231"
+      "Google.Apis.Compute.v1": "1.39.0.1553"
     }
   },
 
@@ -540,7 +525,7 @@
     "description": "Version-agnostic types for the Google OS Login API.",
     "tags": [ "OsLogin", "Login" ],
     "dependencies": {
-      "Google.Api.CommonProtos": "1.5.0"
+      "Google.Api.CommonProtos": "1.6.0"
     }
   },
 
@@ -578,9 +563,6 @@
     "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Phishing Protection API.",
-    "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0"
-    },
     "tags": [ "Phishing", "Security" ]
   },
   
@@ -608,9 +590,6 @@
     "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API.",
-    "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0"
-    },
     "tags": [ "reCAPTCHA" ]
   },
 
@@ -623,7 +602,6 @@
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
       "Google.LongRunning": "1.1.0",
-      "Google.Api.CommonProtos": "1.6.0"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
@@ -636,7 +614,6 @@
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
     "dependencies": {
-      "Google.Api.CommonProtos": "1.6.0",
       "Google.LongRunning": "1.1.0"
     },
     "tags": [ "Redis", "Memorystore" ]
@@ -683,8 +660,7 @@
     "dependencies": {
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Spanner.Common.V1": "project",
-      "Grpc.Core": "1.19.0"
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -701,8 +677,7 @@
     "dependencies": {
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Spanner.Common.V1": "project",
-      "Grpc.Core": "1.19.0"
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -718,7 +693,7 @@
       "Google.Cloud.Spanner.V1": "project",
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Grpc.Core": "1.19.0",
+      "Grpc.Core": "1.20.1",
       "Grpc.Gcp": "1.1.1"
     },
     "testDependencies": {
@@ -736,7 +711,7 @@
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax": "2.7.0-beta04"
+      "Google.Api.Gax": "default"
     }
   },
   
@@ -751,9 +726,7 @@
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0-beta04",
-      "Google.Cloud.Spanner.Common.V1": "project",
-      "Grpc.Core": "1.19.0"
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -793,14 +766,14 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
-      "Google.Api.Gax.Rest": "2.6.0",
-      "Google.Apis.Storage.v1": "1.38.2.1545"
+      "Google.Api.Gax.Rest": "default",
+      "Google.Apis.Storage.v1": "1.39.0.1545"
     },
     "testDependencies": {
       "Google.Cloud.Iam.V1": "1.2.0",
       "Google.Cloud.PubSub.V1": "project",
-      "Google.Api.Gax.Testing": "2.6.0",
-      "Google.Apis.Iam.v1": "1.38.0.1540"
+      "Google.Api.Gax.Testing": "default",
+      "Google.Apis.Iam.v1": "1.39.0.1540"
     },
     "tags": [ "Storage" ]
   },
@@ -872,8 +845,7 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
     "dependencies": {
-      "Google.Api.Gax.Rest": "2.6.0",
-      "Google.Apis.Translate.v2": "1.38.0.875"
+      "Google.Apis.Translate.v2": "1.39.0.875"
     },
     "tags": [ "Translate", "Translation" ]
   },
