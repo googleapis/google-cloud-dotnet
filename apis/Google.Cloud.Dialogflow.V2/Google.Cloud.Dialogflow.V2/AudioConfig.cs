@@ -26,31 +26,46 @@ namespace Google.Cloud.Dialogflow.V2 {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9hdWRpb19jb25maWcucHJv",
             "dG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGhxnb29nbGUvYXBpL2Fu",
-            "bm90YXRpb25zLnByb3RvImYKFFZvaWNlU2VsZWN0aW9uUGFyYW1zEgwKBG5h",
-            "bWUYASABKAkSQAoLc3NtbF9nZW5kZXIYAiABKA4yKy5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5Tc21sVm9pY2VHZW5kZXIiswEKFlN5bnRoZXNpemVT",
-            "cGVlY2hDb25maWcSFQoNc3BlYWtpbmdfcmF0ZRgBIAEoARINCgVwaXRjaBgC",
-            "IAEoARIWCg52b2x1bWVfZ2Fpbl9kYhgDIAEoARIaChJlZmZlY3RzX3Byb2Zp",
-            "bGVfaWQYBSADKAkSPwoFdm9pY2UYBCABKAsyMC5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtcyLNAQoRT3V0cHV0QXVk",
-            "aW9Db25maWcSRwoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nEhkKEXNhbXBs",
-            "ZV9yYXRlX2hlcnR6GAIgASgFElQKGHN5bnRoZXNpemVfc3BlZWNoX2NvbmZp",
-            "ZxgDIAEoCzIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN5bnRoZXNp",
-            "emVTcGVlY2hDb25maWcqjQEKD1NzbWxWb2ljZUdlbmRlchIhCh1TU01MX1ZP",
-            "SUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoKFlNTTUxfVk9JQ0VfR0VOREVS",
-            "X01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhIdChlTU01M",
-            "X1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMqpAEKE091dHB1dEF1ZGlvRW5jb2Rp",
-            "bmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASIwof",
-            "T1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEh0KGU9VVFBVVF9B",
-            "VURJT19FTkNPRElOR19NUDMQAhIiCh5PVVRQVVRfQVVESU9fRU5DT0RJTkdf",
-            "T0dHX09QVVMQA0KfAQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
-            "QhBBdWRpb0NvbmZpZ1Byb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93",
-            "+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "bm90YXRpb25zLnByb3RvIuQBChBJbnB1dEF1ZGlvQ29uZmlnEkEKDmF1ZGlv",
+            "X2VuY29kaW5nGAEgASgOMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
+            "QXVkaW9FbmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRIVCg1s",
+            "YW5ndWFnZV9jb2RlGAMgASgJEhQKDHBocmFzZV9oaW50cxgEIAMoCRJFCg1t",
+            "b2RlbF92YXJpYW50GAogASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuU3BlZWNoTW9kZWxWYXJpYW50ImYKFFZvaWNlU2VsZWN0aW9uUGFyYW1z",
+            "EgwKBG5hbWUYASABKAkSQAoLc3NtbF9nZW5kZXIYAiABKA4yKy5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5Tc21sVm9pY2VHZW5kZXIiswEKFlN5bnRo",
+            "ZXNpemVTcGVlY2hDb25maWcSFQoNc3BlYWtpbmdfcmF0ZRgBIAEoARINCgVw",
+            "aXRjaBgCIAEoARIWCg52b2x1bWVfZ2Fpbl9kYhgDIAEoARIaChJlZmZlY3Rz",
+            "X3Byb2ZpbGVfaWQYBSADKAkSPwoFdm9pY2UYBCABKAsyMC5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtcyLNAQoRT3V0",
+            "cHV0QXVkaW9Db25maWcSRwoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nEhkK",
+            "EXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFElQKGHN5bnRoZXNpemVfc3BlZWNo",
+            "X2NvbmZpZxgDIAEoCzIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN5",
+            "bnRoZXNpemVTcGVlY2hDb25maWcq+wEKDUF1ZGlvRW5jb2RpbmcSHgoaQVVE",
+            "SU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIcChhBVURJT19FTkNPRElOR19M",
+            "SU5FQVJfMTYQARIXChNBVURJT19FTkNPRElOR19GTEFDEAISGAoUQVVESU9f",
+            "RU5DT0RJTkdfTVVMQVcQAxIWChJBVURJT19FTkNPRElOR19BTVIQBBIZChVB",
+            "VURJT19FTkNPRElOR19BTVJfV0IQBRIbChdBVURJT19FTkNPRElOR19PR0df",
+            "T1BVUxAGEikKJUFVRElPX0VOQ09ESU5HX1NQRUVYX1dJVEhfSEVBREVSX0JZ",
+            "VEUQByp2ChJTcGVlY2hNb2RlbFZhcmlhbnQSJAogU1BFRUNIX01PREVMX1ZB",
+            "UklBTlRfVU5TUEVDSUZJRUQQABIWChJVU0VfQkVTVF9BVkFJTEFCTEUQARIQ",
+            "CgxVU0VfU1RBTkRBUkQQAhIQCgxVU0VfRU5IQU5DRUQQAyqNAQoPU3NtbFZv",
+            "aWNlR2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAAS",
+            "GgoWU1NNTF9WT0lDRV9HRU5ERVJfTUFMRRABEhwKGFNTTUxfVk9JQ0VfR0VO",
+            "REVSX0ZFTUFMRRACEh0KGVNTTUxfVk9JQ0VfR0VOREVSX05FVVRSQUwQAyqk",
+            "AQoTT3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQVVRfQVVESU9fRU5DT0RJ",
+            "TkdfVU5TUEVDSUZJRUQQABIjCh9PVVRQVVRfQVVESU9fRU5DT0RJTkdfTElO",
+            "RUFSXzE2EAESHQoZT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QMxACEiIKHk9V",
+            "VFBVVF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADQp8BCh5jb20uZ29vZ2xl",
+            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJCEEF1ZGlvQ29uZmlnUHJvdG9QAVpEZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFs",
+            "b2dmbG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5E",
+            "aWFsb2dmbG93LlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "PhraseHints", "ModelVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioConfig), global::Google.Cloud.Dialogflow.V2.OutputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SynthesizeSpeechConfig" }, null, null, null)
@@ -60,6 +75,116 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   }
   #region Enums
+  /// <summary>
+  /// Audio encoding of the audio content sent in the conversational query request.
+  /// Refer to the
+  /// [Cloud Speech API
+  /// documentation](https://cloud.google.com/speech-to-text/docs/basics) for more
+  /// details.
+  /// </summary>
+  public enum AudioEncoding {
+    /// <summary>
+    /// Not specified.
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Uncompressed 16-bit signed little-endian samples (Linear PCM).
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_LINEAR_16")] Linear16 = 1,
+    /// <summary>
+    /// [`FLAC`](https://xiph.org/flac/documentation.html) (Free Lossless Audio
+    /// Codec) is the recommended encoding because it is lossless (therefore
+    /// recognition is not compromised) and requires only about half the
+    /// bandwidth of `LINEAR16`. `FLAC` stream encoding supports 16-bit and
+    /// 24-bit samples, however, not all fields in `STREAMINFO` are supported.
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_FLAC")] Flac = 2,
+    /// <summary>
+    /// 8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_MULAW")] Mulaw = 3,
+    /// <summary>
+    /// Adaptive Multi-Rate Narrowband codec. `sample_rate_hertz` must be 8000.
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_AMR")] Amr = 4,
+    /// <summary>
+    /// Adaptive Multi-Rate Wideband codec. `sample_rate_hertz` must be 16000.
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_AMR_WB")] AmrWb = 5,
+    /// <summary>
+    /// Opus encoded audio frames in Ogg container
+    /// ([OggOpus](https://wiki.xiph.org/OggOpus)).
+    /// `sample_rate_hertz` must be 16000.
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_OGG_OPUS")] OggOpus = 6,
+    /// <summary>
+    /// Although the use of lossy encodings is not recommended, if a very low
+    /// bitrate encoding is required, `OGG_OPUS` is highly preferred over
+    /// Speex encoding. The [Speex](https://speex.org/) encoding supported by
+    /// Dialogflow API has a header byte in each block, as in MIME type
+    /// `audio/x-speex-with-header-byte`.
+    /// It is a variant of the RTP Speex encoding defined in
+    /// [RFC 5574](https://tools.ietf.org/html/rfc5574).
+    /// The stream is a sequence of blocks, one block per RTP packet. Each block
+    /// starts with a byte containing the length of the block, in bytes, followed
+    /// by one or more frames of Speex data, padded to an integral number of
+    /// bytes (octets) as specified in RFC 5574. In other words, each RTP header
+    /// is replaced with a single byte containing the block length. Only Speex
+    /// wideband is supported. `sample_rate_hertz` must be 16000.
+    /// </summary>
+    [pbr::OriginalName("AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE")] SpeexWithHeaderByte = 7,
+  }
+
+  /// <summary>
+  /// Variant of the specified [Speech model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
+  ///
+  /// See the [Cloud Speech
+  /// documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
+  /// for which models have different variants. For example, the "phone_call" model
+  /// has both a standard and an enhanced variant. When you use an enhanced model,
+  /// you will generally receive higher quality results than for a standard model.
+  /// </summary>
+  public enum SpeechModelVariant {
+    /// <summary>
+    /// No model variant specified. In this case Dialogflow defaults to
+    /// USE_BEST_AVAILABLE.
+    /// </summary>
+    [pbr::OriginalName("SPEECH_MODEL_VARIANT_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Use the best available variant of the [Speech
+    /// model][InputAudioConfig.model] that the caller is eligible for.
+    ///
+    /// Please see the [Dialogflow
+    /// docs](https://cloud.google.com/dialogflow-enterprise/docs/data-logging) for
+    /// how to make your project eligible for enhanced models.
+    /// </summary>
+    [pbr::OriginalName("USE_BEST_AVAILABLE")] UseBestAvailable = 1,
+    /// <summary>
+    /// Use standard model variant even if an enhanced model is available.  See the
+    /// [Cloud Speech
+    /// documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
+    /// for details about enhanced models.
+    /// </summary>
+    [pbr::OriginalName("USE_STANDARD")] UseStandard = 2,
+    /// <summary>
+    /// Use an enhanced model variant:
+    ///
+    /// * If an enhanced variant does not exist for the given
+    ///   [model][google.cloud.dialogflow.v2.InputAudioConfig.model] and request language, Dialogflow falls
+    ///   back to the standard variant.
+    ///
+    ///   The [Cloud Speech
+    ///   documentation](https://cloud.google.com/speech-to-text/docs/enhanced-models)
+    ///   describes which models have enhanced variants.
+    ///
+    /// * If the API caller isn't eligible for enhanced models, Dialogflow returns
+    ///   an error. Please see the [Dialogflow
+    ///   docs](https://cloud.google.com/dialogflow-enterprise/docs/data-logging)
+    ///   for how to make your project eligible.
+    /// </summary>
+    [pbr::OriginalName("USE_ENHANCED")] UseEnhanced = 3,
+  }
+
   /// <summary>
   /// Gender of the voice as described in
   /// [SSML voice element](https://www.w3.org/TR/speech-synthesis11/#edef_voice).
@@ -114,6 +239,270 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   #region Messages
   /// <summary>
+  /// Instructs the speech recognizer how to process the audio content.
+  /// </summary>
+  public sealed partial class InputAudioConfig : pb::IMessage<InputAudioConfig> {
+    private static readonly pb::MessageParser<InputAudioConfig> _parser = new pb::MessageParser<InputAudioConfig>(() => new InputAudioConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InputAudioConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InputAudioConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InputAudioConfig(InputAudioConfig other) : this() {
+      audioEncoding_ = other.audioEncoding_;
+      sampleRateHertz_ = other.sampleRateHertz_;
+      languageCode_ = other.languageCode_;
+      phraseHints_ = other.phraseHints_.Clone();
+      modelVariant_ = other.modelVariant_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InputAudioConfig Clone() {
+      return new InputAudioConfig(this);
+    }
+
+    /// <summary>Field number for the "audio_encoding" field.</summary>
+    public const int AudioEncodingFieldNumber = 1;
+    private global::Google.Cloud.Dialogflow.V2.AudioEncoding audioEncoding_ = 0;
+    /// <summary>
+    /// Required. Audio encoding of the audio content to process.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.AudioEncoding AudioEncoding {
+      get { return audioEncoding_; }
+      set {
+        audioEncoding_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sample_rate_hertz" field.</summary>
+    public const int SampleRateHertzFieldNumber = 2;
+    private int sampleRateHertz_;
+    /// <summary>
+    /// Required. Sample rate (in Hertz) of the audio content sent in the query.
+    /// Refer to
+    /// [Cloud Speech API
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics) for
+    /// more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SampleRateHertz {
+      get { return sampleRateHertz_; }
+      set {
+        sampleRateHertz_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 3;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Required. The language of the supplied audio. Dialogflow does not do
+    /// translations. See [Language
+    /// Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// for a list of the currently supported language codes. Note that queries in
+    /// the same session do not necessarily need to specify the same language.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "phrase_hints" field.</summary>
+    public const int PhraseHintsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_phraseHints_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> phraseHints_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The collection of phrase hints which are used to boost accuracy
+    /// of speech recognition.
+    /// Refer to
+    /// [Cloud Speech API
+    /// documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
+    /// for more details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> PhraseHints {
+      get { return phraseHints_; }
+    }
+
+    /// <summary>Field number for the "model_variant" field.</summary>
+    public const int ModelVariantFieldNumber = 10;
+    private global::Google.Cloud.Dialogflow.V2.SpeechModelVariant modelVariant_ = 0;
+    /// <summary>
+    /// Optional. Which variant of the [Speech model][google.cloud.dialogflow.v2.InputAudioConfig.model] to use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dialogflow.V2.SpeechModelVariant ModelVariant {
+      get { return modelVariant_; }
+      set {
+        modelVariant_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InputAudioConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InputAudioConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AudioEncoding != other.AudioEncoding) return false;
+      if (SampleRateHertz != other.SampleRateHertz) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if(!phraseHints_.Equals(other.phraseHints_)) return false;
+      if (ModelVariant != other.ModelVariant) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AudioEncoding != 0) hash ^= AudioEncoding.GetHashCode();
+      if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      hash ^= phraseHints_.GetHashCode();
+      if (ModelVariant != 0) hash ^= ModelVariant.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (AudioEncoding != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) AudioEncoding);
+      }
+      if (SampleRateHertz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHertz);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LanguageCode);
+      }
+      phraseHints_.WriteTo(output, _repeated_phraseHints_codec);
+      if (ModelVariant != 0) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ModelVariant);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (AudioEncoding != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AudioEncoding);
+      }
+      if (SampleRateHertz != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHertz);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      size += phraseHints_.CalculateSize(_repeated_phraseHints_codec);
+      if (ModelVariant != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModelVariant);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InputAudioConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AudioEncoding != 0) {
+        AudioEncoding = other.AudioEncoding;
+      }
+      if (other.SampleRateHertz != 0) {
+        SampleRateHertz = other.SampleRateHertz;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      phraseHints_.Add(other.phraseHints_);
+      if (other.ModelVariant != 0) {
+        ModelVariant = other.ModelVariant;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            audioEncoding_ = (global::Google.Cloud.Dialogflow.V2.AudioEncoding) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            SampleRateHertz = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 34: {
+            phraseHints_.AddEntriesFrom(input, _repeated_phraseHints_codec);
+            break;
+          }
+          case 80: {
+            modelVariant_ = (global::Google.Cloud.Dialogflow.V2.SpeechModelVariant) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Description of which voice to use for speech synthesis.
   /// </summary>
   public sealed partial class VoiceSelectionParams : pb::IMessage<VoiceSelectionParams> {
@@ -124,7 +513,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -295,7 +684,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -556,7 +945,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Instructs the speech synthesizer how to generate the output audio content.
+  /// Instructs the speech synthesizer on how to generate the output audio content.
   /// </summary>
   public sealed partial class OutputAudioConfig : pb::IMessage<OutputAudioConfig> {
     private static readonly pb::MessageParser<OutputAudioConfig> _parser = new pb::MessageParser<OutputAudioConfig>(() => new OutputAudioConfig());
@@ -566,7 +955,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
