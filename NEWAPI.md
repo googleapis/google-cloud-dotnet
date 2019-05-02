@@ -7,16 +7,16 @@ parties.
 
 Prerequisites:
 
-- A Windows machine with Git for Windows, Visual Studio 2017
-  (including .NET Core tools) installed
-- A Linux environment equivalent to Ubuntu 16.04 or higher.
-  The simplest way to accomplish this is usually to use the Linux
-  Subsystem for Windows, as you can then use a single fork for all
-  instructions here. This environment must include jdk8.
+- `git`
+- `bash` (on Windows, the version that comes with Git for Windows)
+- `wget`
+- Java 9+ (until the microgenerators are in use for everything)
+- .NET Core SDK, suitable for the version specified in `global.json`
 
-Note that Git for Windows includes bash, and that's what our scripts
-have all been written to use. Do not try to use the Linux subsystem
-for Windows to run the scripts.
+*Almost* all of the generation process works fine on Linux and
+should work on OSX too (untested). Bigtable has a post-generation
+step that currently requires Windows, but that's skipped on
+non-Windows platforms so should only affect Bigtable developers.
 
 Relevant repositories:
 
@@ -88,14 +88,12 @@ reaching out at that point.
 Step 5: Commit just the changes for your API
 --------------------------------------------
 
-You may see changes for other APIs. Ignore those. Create a commit containing:
+You may see changes for other APIs. Ignore those, discarding the
+changes if that's the most convenient approach. Create a commit containing:
 
 - Your `generateapis.sh` change
 - The new directory under `apis`
 
-If you're using separate machine for the Linux part, push the change
-up to your fork on github, so you can pull it down to the Windows
-machine.
 
 Step 6: Modify the API catalog
 ------------------------------
@@ -128,8 +126,8 @@ If your project uses the IAM or long-running operations APIs, you'll need to add
 
 ```json
 "dependencies": {
-  "Google.LongRunning": "1.0.0",
-  "Google.Cloud.Iam.V1": "1.0.0"
+  "Google.LongRunning": "1.1.0",
+  "Google.Cloud.Iam.V1": "1.2.0"
 }
 ```
 
@@ -173,7 +171,8 @@ Step 10: Merge the PR
 ---------------------
 
 As everything is generated other than the API catalog change, the PR
-can be merged on green.
+can be merged on green. Of course, a second pair of eyes on the
+change is always useful.
 
 Step 11 (Optional): Release the first package for the API
 ---------------------------------------------------------
