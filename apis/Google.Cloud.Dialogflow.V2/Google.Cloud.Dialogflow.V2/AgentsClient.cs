@@ -622,6 +622,69 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Retrieves the specified agent.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to fetch is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Agent> GetAgentAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => GetAgentAsync(
+                new GetAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to fetch is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Agent> GetAgentAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => GetAgentAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to fetch is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Agent GetAgent(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => GetAgent(
+                new GetAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves the specified agent.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -764,6 +827,86 @@ namespace Google.Cloud.Dialogflow.V2
         /// Refer to [List
         /// Sub-Collections](https://cloud.google.com/apis/design/design_patterns#list_sub-collections).
         /// </summary>
+        /// <param name="parent">
+        /// Required. The project to list agents from.
+        /// Format: `projects/&lt;Project ID or '-'&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Agent"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchAgentsResponse, Agent> SearchAgentsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => SearchAgentsAsync(
+                new SearchAgentsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the list of agents.
+        ///
+        /// Since there is at most one conversational agent per project, this method is
+        /// useful primarily for listing all agents across projects the caller has
+        /// access to. One can achieve that with a wildcard project collection id "-".
+        /// Refer to [List
+        /// Sub-Collections](https://cloud.google.com/apis/design/design_patterns#list_sub-collections).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project to list agents from.
+        /// Format: `projects/&lt;Project ID or '-'&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Agent"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<SearchAgentsResponse, Agent> SearchAgents(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => SearchAgents(
+                new SearchAgentsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the list of agents.
+        ///
+        /// Since there is at most one conversational agent per project, this method is
+        /// useful primarily for listing all agents across projects the caller has
+        /// access to. One can achieve that with a wildcard project collection id "-".
+        /// Refer to [List
+        /// Sub-Collections](https://cloud.google.com/apis/design/design_patterns#list_sub-collections).
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -871,6 +1014,75 @@ namespace Google.Cloud.Dialogflow.V2
                 new TrainAgentRequest
                 {
                     ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Trains the specified agent.
+        ///
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to train is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Struct>> TrainAgentAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => TrainAgentAsync(
+                new TrainAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Trains the specified agent.
+        ///
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to train is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Struct>> TrainAgentAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => TrainAgentAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Trains the specified agent.
+        ///
+        /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]&gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to train is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, pbwkt::Struct> TrainAgent(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => TrainAgent(
+                new TrainAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1016,6 +1228,75 @@ namespace Google.Cloud.Dialogflow.V2
                 new ExportAgentRequest
                 {
                     ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Exports the specified agent to a ZIP file.
+        ///
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to export is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<ExportAgentResponse, pbwkt::Struct>> ExportAgentAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ExportAgentAsync(
+                new ExportAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Exports the specified agent to a ZIP file.
+        ///
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to export is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<ExportAgentResponse, pbwkt::Struct>> ExportAgentAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => ExportAgentAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports the specified agent to a ZIP file.
+        ///
+        /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&gt;
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to export is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<ExportAgentResponse, pbwkt::Struct> ExportAgent(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ExportAgent(
+                new ExportAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 },
                 callSettings);
 

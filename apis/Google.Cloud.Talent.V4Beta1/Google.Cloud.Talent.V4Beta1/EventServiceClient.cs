@@ -446,6 +446,132 @@ namespace Google.Cloud.Talent.V4Beta1
         /// more](https://cloud.google.com/talent-solution/docs/management-tools)
         /// about self service tools.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the tenant under which the event is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="clientEvent">
+        /// Required.
+        ///
+        /// Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ClientEvent> CreateClientEventAsync(
+            string parent,
+            ClientEvent clientEvent,
+            gaxgrpc::CallSettings callSettings = null) => CreateClientEventAsync(
+                new CreateClientEventRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ClientEvent = gax::GaxPreconditions.CheckNotNull(clientEvent, nameof(clientEvent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Report events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution. You may inspect the created events in
+        /// [self service
+        /// tools](https://console.cloud.google.com/talent-solution/overview).
+        /// [Learn
+        /// more](https://cloud.google.com/talent-solution/docs/management-tools)
+        /// about self service tools.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the tenant under which the event is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="clientEvent">
+        /// Required.
+        ///
+        /// Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ClientEvent> CreateClientEventAsync(
+            string parent,
+            ClientEvent clientEvent,
+            st::CancellationToken cancellationToken) => CreateClientEventAsync(
+                parent,
+                clientEvent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Report events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution. You may inspect the created events in
+        /// [self service
+        /// tools](https://console.cloud.google.com/talent-solution/overview).
+        /// [Learn
+        /// more](https://cloud.google.com/talent-solution/docs/management-tools)
+        /// about self service tools.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the tenant under which the event is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="clientEvent">
+        /// Required.
+        ///
+        /// Events issued when end user interacts with customer's application that
+        /// uses Cloud Talent Solution.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ClientEvent CreateClientEvent(
+            string parent,
+            ClientEvent clientEvent,
+            gaxgrpc::CallSettings callSettings = null) => CreateClientEvent(
+                new CreateClientEventRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ClientEvent = gax::GaxPreconditions.CheckNotNull(clientEvent, nameof(clientEvent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Report events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution. You may inspect the created events in
+        /// [self service
+        /// tools](https://console.cloud.google.com/talent-solution/overview).
+        /// [Learn
+        /// more](https://cloud.google.com/talent-solution/docs/management-tools)
+        /// about self service tools.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>

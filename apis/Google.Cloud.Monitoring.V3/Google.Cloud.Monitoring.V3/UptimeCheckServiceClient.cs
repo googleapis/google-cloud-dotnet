@@ -645,6 +645,69 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Gets a single uptime check configuration.
         /// </summary>
+        /// <param name="name">
+        /// The uptime check configuration to retrieve. The format
+        ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UptimeCheckConfig> GetUptimeCheckConfigAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetUptimeCheckConfigAsync(
+                new GetUptimeCheckConfigRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single uptime check configuration.
+        /// </summary>
+        /// <param name="name">
+        /// The uptime check configuration to retrieve. The format
+        ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<UptimeCheckConfig> GetUptimeCheckConfigAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetUptimeCheckConfigAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single uptime check configuration.
+        /// </summary>
+        /// <param name="name">
+        /// The uptime check configuration to retrieve. The format
+        ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual UptimeCheckConfig GetUptimeCheckConfig(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetUptimeCheckConfig(
+                new GetUptimeCheckConfigRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single uptime check configuration.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1059,6 +1122,72 @@ namespace Google.Cloud.Monitoring.V3
                 new DeleteUptimeCheckConfigRequest
                 {
                     UptimeCheckConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an uptime check configuration. Note that this method will fail
+        /// if the uptime check configuration is referenced by an alert policy or
+        /// other dependent configs that would be rendered invalid by the deletion.
+        /// </summary>
+        /// <param name="name">
+        /// The uptime check configuration to delete. The format
+        ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteUptimeCheckConfigAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteUptimeCheckConfigAsync(
+                new DeleteUptimeCheckConfigRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an uptime check configuration. Note that this method will fail
+        /// if the uptime check configuration is referenced by an alert policy or
+        /// other dependent configs that would be rendered invalid by the deletion.
+        /// </summary>
+        /// <param name="name">
+        /// The uptime check configuration to delete. The format
+        ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteUptimeCheckConfigAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteUptimeCheckConfigAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an uptime check configuration. Note that this method will fail
+        /// if the uptime check configuration is referenced by an alert policy or
+        /// other dependent configs that would be rendered invalid by the deletion.
+        /// </summary>
+        /// <param name="name">
+        /// The uptime check configuration to delete. The format
+        ///   is `projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID]`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteUptimeCheckConfig(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteUptimeCheckConfig(
+                new DeleteUptimeCheckConfigRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

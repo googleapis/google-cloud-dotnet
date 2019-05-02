@@ -425,6 +425,87 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Get the specified group.
         /// </summary>
+        /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
+        /// Call
+        /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
+        /// &lt;code&gt;groupStats.list&lt;/code&gt;&lt;/a&gt; to return a list of groups belonging to
+        /// this project.
+        ///
+        /// Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ErrorGroup> GetGroupAsync(
+            string groupName,
+            gaxgrpc::CallSettings callSettings = null) => GetGroupAsync(
+                new GetGroupRequest
+                {
+                    GroupName = gax::GaxPreconditions.CheckNotNullOrEmpty(groupName, nameof(groupName)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Get the specified group.
+        /// </summary>
+        /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
+        /// Call
+        /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
+        /// &lt;code&gt;groupStats.list&lt;/code&gt;&lt;/a&gt; to return a list of groups belonging to
+        /// this project.
+        ///
+        /// Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ErrorGroup> GetGroupAsync(
+            string groupName,
+            st::CancellationToken cancellationToken) => GetGroupAsync(
+                groupName,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the specified group.
+        /// </summary>
+        /// <param name="groupName">
+        /// [Required] The group resource name. Written as
+        /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
+        /// Call
+        /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
+        /// &lt;code&gt;groupStats.list&lt;/code&gt;&lt;/a&gt; to return a list of groups belonging to
+        /// this project.
+        ///
+        /// Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ErrorGroup GetGroup(
+            string groupName,
+            gaxgrpc::CallSettings callSettings = null) => GetGroup(
+                new GetGroupRequest
+                {
+                    GroupName = gax::GaxPreconditions.CheckNotNullOrEmpty(groupName, nameof(groupName)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Get the specified group.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>

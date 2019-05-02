@@ -756,6 +756,87 @@ namespace Google.Cloud.PubSub.V1
         /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
         /// resource name rules&lt;/a&gt;.
         /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Topic> CreateTopicAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => CreateTopicAsync(
+                new Topic
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Topic> CreateTopicAsync(
+            string name,
+            st::CancellationToken cancellationToken) => CreateTopicAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
+        /// </summary>
+        /// <param name="name">
+        /// The name of the topic. It must have the format
+        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+        /// signs (`%`). It must be between 3 and 255 characters in length, and it
+        /// must not start with `"goog"`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Topic CreateTopic(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => CreateTopic(
+                new Topic
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates the given topic with the given name. See the
+        /// &lt;a href="https://cloud.google.com/pubsub/docs/admin#resource_names"&gt;
+        /// resource name rules&lt;/a&gt;.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -957,6 +1038,87 @@ namespace Google.Cloud.PubSub.V1
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
         /// does not exist.
         /// </summary>
+        /// <param name="topic">
+        /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="messages">
+        /// The messages to publish.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<PublishResponse> PublishAsync(
+            string topic,
+            scg::IEnumerable<PubsubMessage> messages,
+            gaxgrpc::CallSettings callSettings = null) => PublishAsync(
+                new PublishRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
+                    Messages = { gax::GaxPreconditions.CheckNotNull(messages, nameof(messages)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist.
+        /// </summary>
+        /// <param name="topic">
+        /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="messages">
+        /// The messages to publish.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<PublishResponse> PublishAsync(
+            string topic,
+            scg::IEnumerable<PubsubMessage> messages,
+            st::CancellationToken cancellationToken) => PublishAsync(
+                topic,
+                messages,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist.
+        /// </summary>
+        /// <param name="topic">
+        /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="messages">
+        /// The messages to publish.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual PublishResponse Publish(
+            string topic,
+            scg::IEnumerable<PubsubMessage> messages,
+            gaxgrpc::CallSettings callSettings = null) => Publish(
+                new PublishRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
+                    Messages = { gax::GaxPreconditions.CheckNotNull(messages, nameof(messages)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1072,6 +1234,69 @@ namespace Google.Cloud.PubSub.V1
                 new GetTopicRequest
                 {
                     TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">
+        /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Topic> GetTopicAsync(
+            string topic,
+            gaxgrpc::CallSettings callSettings = null) => GetTopicAsync(
+                new GetTopicRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">
+        /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Topic> GetTopicAsync(
+            string topic,
+            st::CancellationToken cancellationToken) => GetTopicAsync(
+                topic,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="topic">
+        /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Topic GetTopic(
+            string topic,
+            gaxgrpc::CallSettings callSettings = null) => GetTopic(
+                new GetTopicRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
                 },
                 callSettings);
 
@@ -1202,6 +1427,74 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Lists matching topics.
         /// </summary>
+        /// <param name="project">
+        /// The name of the project in which to list topics.
+        /// Format is `projects/{project-id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
+            string project,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTopicsAsync(
+                new ListTopicsRequest
+                {
+                    Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
+        /// <param name="project">
+        /// The name of the project in which to list topics.
+        /// Format is `projects/{project-id}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Topic"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
+            string project,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTopics(
+                new ListTopicsRequest
+                {
+                    Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1300,6 +1593,74 @@ namespace Google.Cloud.PubSub.V1
                 new ListTopicSubscriptionsRequest
                 {
                     TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the names of the subscriptions on this topic.
+        /// </summary>
+        /// <param name="topic">
+        /// The name of the topic that subscriptions are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
+            string topic,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTopicSubscriptionsAsync(
+                new ListTopicSubscriptionsRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the names of the subscriptions on this topic.
+        /// </summary>
+        /// <param name="topic">
+        /// The name of the topic that subscriptions are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
+            string topic,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTopicSubscriptions(
+                new ListTopicSubscriptionsRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1412,6 +1773,78 @@ namespace Google.Cloud.PubSub.V1
                 new DeleteTopicRequest
                 {
                     TopicAsTopicName = gax::GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">
+        /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTopicAsync(
+            string topic,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTopicAsync(
+                new DeleteTopicRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">
+        /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTopicAsync(
+            string topic,
+            st::CancellationToken cancellationToken) => DeleteTopicAsync(
+                topic,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="topic">
+        /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteTopic(
+            string topic,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTopic(
+                new DeleteTopicRequest
+                {
+                    Topic = gax::GaxPreconditions.CheckNotNullOrEmpty(topic, nameof(topic)),
                 },
                 callSettings);
 

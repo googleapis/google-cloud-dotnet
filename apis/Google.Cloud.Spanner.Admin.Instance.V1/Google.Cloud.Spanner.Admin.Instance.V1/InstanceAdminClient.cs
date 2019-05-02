@@ -708,6 +708,76 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <summary>
         /// Lists the supported instance configurations for a given project.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project for which a list of supported instance
+        /// configurations is requested. Values are of the form
+        /// `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigsAsync(
+                new ListInstanceConfigsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the supported instance configurations for a given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project for which a list of supported instance
+        /// configurations is requested. Values are of the form
+        /// `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="InstanceConfig"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstanceConfigs(
+                new ListInstanceConfigsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the supported instance configurations for a given project.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -803,6 +873,69 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 new GetInstanceConfigRequest
                 {
                     InstanceConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance configuration. Values are of
+        /// the form `projects/&lt;project&gt;/instanceConfigs/&lt;config&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<InstanceConfig> GetInstanceConfigAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceConfigAsync(
+                new GetInstanceConfigRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance configuration. Values are of
+        /// the form `projects/&lt;project&gt;/instanceConfigs/&lt;config&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<InstanceConfig> GetInstanceConfigAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetInstanceConfigAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance configuration.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance configuration. Values are of
+        /// the form `projects/&lt;project&gt;/instanceConfigs/&lt;config&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual InstanceConfig GetInstanceConfig(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceConfig(
+                new GetInstanceConfigRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -933,6 +1066,74 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <summary>
         /// Lists all instances in the given project.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all instances in the given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project for which a list of instances is
+        /// requested. Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstances(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all instances in the given project.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1028,6 +1229,69 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 new GetInstanceRequest
                 {
                     InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a particular instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a particular instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested instance. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Instance GetInstance(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstance(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1284,6 +1548,207 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 {
                     ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     InstanceIdAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates an instance and begins preparing it to begin serving. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new
+        /// instance. The instance name is assigned by the caller. If the
+        /// named instance already exists, `CreateInstance` returns
+        /// `ALREADY_EXISTS`.
+        ///
+        /// Immediately upon completion of this request:
+        ///
+        ///   * The instance is readable via the API, with all requested attributes
+        ///     but no allocated resources. Its state is `CREATING`.
+        ///
+        /// Until completion of the returned operation:
+        ///
+        ///   * Cancelling the operation renders the instance immediately unreadable
+        ///     via the API.
+        ///   * The instance can be deleted.
+        ///   * All other attempts to modify the instance are rejected.
+        ///
+        /// Upon completion of the returned operation:
+        ///
+        ///   * Billing for all successfully-allocated resources begins (some types
+        ///     may have lower than the requested levels).
+        ///   * Databases can be created in the instance.
+        ///   * The instance's allocated resource levels are readable via the API.
+        ///   * The instance's state becomes `READY`.
+        ///
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track creation of the instance.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which to create the instance. Values
+        /// are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The ID of the instance to create.  Valid identifiers are of the
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// length.
+        /// </param>
+        /// <param name="instance">
+        /// Required. The instance to create.  The name may be omitted, but if
+        /// specified must be `&lt;parent&gt;/instances/&lt;instance_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+            string parent,
+            string instanceId,
+            Instance instance,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
+                new CreateInstanceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates an instance and begins preparing it to begin serving. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new
+        /// instance. The instance name is assigned by the caller. If the
+        /// named instance already exists, `CreateInstance` returns
+        /// `ALREADY_EXISTS`.
+        ///
+        /// Immediately upon completion of this request:
+        ///
+        ///   * The instance is readable via the API, with all requested attributes
+        ///     but no allocated resources. Its state is `CREATING`.
+        ///
+        /// Until completion of the returned operation:
+        ///
+        ///   * Cancelling the operation renders the instance immediately unreadable
+        ///     via the API.
+        ///   * The instance can be deleted.
+        ///   * All other attempts to modify the instance are rejected.
+        ///
+        /// Upon completion of the returned operation:
+        ///
+        ///   * Billing for all successfully-allocated resources begins (some types
+        ///     may have lower than the requested levels).
+        ///   * Databases can be created in the instance.
+        ///   * The instance's allocated resource levels are readable via the API.
+        ///   * The instance's state becomes `READY`.
+        ///
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track creation of the instance.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which to create the instance. Values
+        /// are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The ID of the instance to create.  Valid identifiers are of the
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// length.
+        /// </param>
+        /// <param name="instance">
+        /// Required. The instance to create.  The name may be omitted, but if
+        /// specified must be `&lt;parent&gt;/instances/&lt;instance_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+            string parent,
+            string instanceId,
+            Instance instance,
+            st::CancellationToken cancellationToken) => CreateInstanceAsync(
+                parent,
+                instanceId,
+                instance,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an instance and begins preparing it to begin serving. The
+        /// returned [long-running operation][google.longrunning.Operation]
+        /// can be used to track the progress of preparing the new
+        /// instance. The instance name is assigned by the caller. If the
+        /// named instance already exists, `CreateInstance` returns
+        /// `ALREADY_EXISTS`.
+        ///
+        /// Immediately upon completion of this request:
+        ///
+        ///   * The instance is readable via the API, with all requested attributes
+        ///     but no allocated resources. Its state is `CREATING`.
+        ///
+        /// Until completion of the returned operation:
+        ///
+        ///   * Cancelling the operation renders the instance immediately unreadable
+        ///     via the API.
+        ///   * The instance can be deleted.
+        ///   * All other attempts to modify the instance are rejected.
+        ///
+        /// Upon completion of the returned operation:
+        ///
+        ///   * Billing for all successfully-allocated resources begins (some types
+        ///     may have lower than the requested levels).
+        ///   * Databases can be created in the instance.
+        ///   * The instance's allocated resource levels are readable via the API.
+        ///   * The instance's state becomes `READY`.
+        ///
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track creation of the instance.  The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which to create the instance. Values
+        /// are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The ID of the instance to create.  Valid identifiers are of the
+        /// form `[a-z][-a-z0-9]*[a-z0-9]` and must be between 6 and 30 characters in
+        /// length.
+        /// </param>
+        /// <param name="instance">
+        /// Required. The instance to create.  The name may be omitted, but if
+        /// specified must be `&lt;parent&gt;/instances/&lt;instance_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
+            string parent,
+            string instanceId,
+            Instance instance,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstance(
+                new CreateInstanceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                     Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
                 callSettings);
@@ -1879,6 +2344,96 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
                 new DeleteInstanceRequest
                 {
                     InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an instance.
+        ///
+        /// Immediately upon completion of the request:
+        ///
+        ///   * Billing ceases for all of the instance's reserved resources.
+        ///
+        /// Soon afterward:
+        ///
+        ///   * The instance and *all of its databases* immediately and
+        ///     irrevocably disappear from the API. All data in the databases
+        ///     is permanently deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteInstanceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
+                new DeleteInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an instance.
+        ///
+        /// Immediately upon completion of the request:
+        ///
+        ///   * Billing ceases for all of the instance's reserved resources.
+        ///
+        /// Soon afterward:
+        ///
+        ///   * The instance and *all of its databases* immediately and
+        ///     irrevocably disappear from the API. All data in the databases
+        ///     is permanently deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteInstanceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an instance.
+        ///
+        /// Immediately upon completion of the request:
+        ///
+        ///   * Billing ceases for all of the instance's reserved resources.
+        ///
+        /// Soon afterward:
+        ///
+        ///   * The instance and *all of its databases* immediately and
+        ///     irrevocably disappear from the API. All data in the databases
+        ///     is permanently deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the instance to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteInstance(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
+                new DeleteInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

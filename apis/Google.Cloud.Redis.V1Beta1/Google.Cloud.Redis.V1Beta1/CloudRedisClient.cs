@@ -642,6 +642,90 @@ namespace Google.Cloud.Redis.V1Beta1
         /// If `location_id` is specified as `-` (wildcard), then all regions
         /// available to the project are queried, and the results are aggregated.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Instance"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListInstances(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all Redis instances owned by a project in either the specified
+        /// location (region) or all locations.
+        ///
+        /// The location should have the following format:
+        /// * `projects/{project_id}/locations/{location_id}`
+        ///
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -747,6 +831,72 @@ namespace Google.Cloud.Redis.V1Beta1
                 new GetInstanceRequest
                 {
                     InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific Redis instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Instance GetInstance(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstance(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -951,6 +1101,156 @@ namespace Google.Cloud.Redis.V1Beta1
                 new CreateInstanceRequest
                 {
                     ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a Redis instance based on the specified tier and memory size.
+        ///
+        /// By default, the instance is accessible from the project's
+        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        ///
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress. Once the operation is completed the Redis
+        /// instance will be fully functional. Completed longrunning.Operation will
+        /// contain the new instance object in the response field.
+        ///
+        /// The returned operation is automatically deleted after a few hours, so there
+        /// is no need to call DeleteOperation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The logical name of the Redis instance in the customer project
+        /// with the following restrictions:
+        ///
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-40 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="instance">
+        /// Required. A Redis [Instance] resource
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> CreateInstanceAsync(
+            string parent,
+            string instanceId,
+            Instance instance,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
+                new CreateInstanceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a Redis instance based on the specified tier and memory size.
+        ///
+        /// By default, the instance is accessible from the project's
+        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        ///
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress. Once the operation is completed the Redis
+        /// instance will be fully functional. Completed longrunning.Operation will
+        /// contain the new instance object in the response field.
+        ///
+        /// The returned operation is automatically deleted after a few hours, so there
+        /// is no need to call DeleteOperation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The logical name of the Redis instance in the customer project
+        /// with the following restrictions:
+        ///
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-40 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="instance">
+        /// Required. A Redis [Instance] resource
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, pbwkt::Any>> CreateInstanceAsync(
+            string parent,
+            string instanceId,
+            Instance instance,
+            st::CancellationToken cancellationToken) => CreateInstanceAsync(
+                parent,
+                instanceId,
+                instance,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a Redis instance based on the specified tier and memory size.
+        ///
+        /// By default, the instance is accessible from the project's
+        /// [default network](/compute/docs/networks-and-firewalls#networks).
+        ///
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress. Once the operation is completed the Redis
+        /// instance will be fully functional. Completed longrunning.Operation will
+        /// contain the new instance object in the response field.
+        ///
+        /// The returned operation is automatically deleted after a few hours, so there
+        /// is no need to call DeleteOperation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the instance location using the form:
+        ///     `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The logical name of the Redis instance in the customer project
+        /// with the following restrictions:
+        ///
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-40 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the customer project / location
+        /// </param>
+        /// <param name="instance">
+        /// Required. A Redis [Instance] resource
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Instance, pbwkt::Any> CreateInstance(
+            string parent,
+            string instanceId,
+            Instance instance,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstance(
+                new CreateInstanceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                     Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
@@ -1307,6 +1607,75 @@ namespace Google.Cloud.Redis.V1Beta1
                 new DeleteInstanceRequest
                 {
                     InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a specific Redis instance.  Instance stops serving and data is
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Any>> DeleteInstanceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
+                new DeleteInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a specific Redis instance.  Instance stops serving and data is
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Any>> DeleteInstanceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific Redis instance.  Instance stops serving and data is
+        /// deleted.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, pbwkt::Any> DeleteInstance(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
+                new DeleteInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

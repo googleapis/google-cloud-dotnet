@@ -647,6 +647,108 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// The table can be created with a full set of initial column families,
         /// specified in the request.
         /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="tableId">
+        /// The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// </param>
+        /// <param name="table">
+        /// The Table to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Table> CreateTableAsync(
+            string parent,
+            string tableId,
+            Table table,
+            gaxgrpc::CallSettings callSettings = null) => CreateTableAsync(
+                new CreateTableRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    TableId = gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    Table = gax::GaxPreconditions.CheckNotNull(table, nameof(table)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new table in the specified instance.
+        /// The table can be created with a full set of initial column families,
+        /// specified in the request.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="tableId">
+        /// The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// </param>
+        /// <param name="table">
+        /// The Table to create.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Table> CreateTableAsync(
+            string parent,
+            string tableId,
+            Table table,
+            st::CancellationToken cancellationToken) => CreateTableAsync(
+                parent,
+                tableId,
+                table,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new table in the specified instance.
+        /// The table can be created with a full set of initial column families,
+        /// specified in the request.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the table.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="tableId">
+        /// The name by which the new table should be referred to within the parent
+        /// instance, e.g., `foobar` rather than `&lt;parent&gt;/tables/foobar`.
+        /// </param>
+        /// <param name="table">
+        /// The Table to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Table CreateTable(
+            string parent,
+            string tableId,
+            Table table,
+            gaxgrpc::CallSettings callSettings = null) => CreateTable(
+                new CreateTableRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    TableId = gax::GaxPreconditions.CheckNotNullOrEmpty(tableId, nameof(tableId)),
+                    Table = gax::GaxPreconditions.CheckNotNull(table, nameof(table)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new table in the specified instance.
+        /// The table can be created with a full set of initial column families,
+        /// specified in the request.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -775,6 +877,74 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Lists all tables served from a specified instance.
         /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which tables should be listed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Table"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTablesAsync(
+                new ListTablesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all tables served from a specified instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which tables should be listed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Table"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTables(
+                new ListTablesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all tables served from a specified instance.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -873,6 +1043,72 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new GetTableRequest
                 {
                     TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets metadata information about the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested table.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Table> GetTableAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetTableAsync(
+                new GetTableRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets metadata information about the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested table.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Table> GetTableAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetTableAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets metadata information about the specified table.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested table.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Table GetTable(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetTable(
+                new GetTableRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -992,6 +1228,69 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new DeleteTableRequest
                 {
                     TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified table and all of its data.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to be deleted.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTableAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTableAsync(
+                new DeleteTableRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified table and all of its data.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to be deleted.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTableAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteTableAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a specified table and all of its data.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table to be deleted.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteTable(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTable(
+                new DeleteTableRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1143,6 +1442,105 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new ModifyColumnFamiliesRequest
                 {
                     TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Modifications = { gax::GaxPreconditions.CheckNotNull(modifications, nameof(modifications)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Performs a series of column family modifications on the specified table.
+        /// Either all or none of the modifications will occur before this method
+        /// returns, but data requests received prior to that point may see a table
+        /// where only some modifications have taken effect.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table whose families should be modified.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="modifications">
+        /// Modifications to be atomically applied to the specified table's families.
+        /// Entries are applied in order, meaning that earlier modifications can be
+        /// masked by later ones (in the case of repeated updates to the same family,
+        /// for example).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
+            string name,
+            scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
+            gaxgrpc::CallSettings callSettings = null) => ModifyColumnFamiliesAsync(
+                new ModifyColumnFamiliesRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Modifications = { gax::GaxPreconditions.CheckNotNull(modifications, nameof(modifications)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Performs a series of column family modifications on the specified table.
+        /// Either all or none of the modifications will occur before this method
+        /// returns, but data requests received prior to that point may see a table
+        /// where only some modifications have taken effect.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table whose families should be modified.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="modifications">
+        /// Modifications to be atomically applied to the specified table's families.
+        /// Entries are applied in order, meaning that earlier modifications can be
+        /// masked by later ones (in the case of repeated updates to the same family,
+        /// for example).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(
+            string name,
+            scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
+            st::CancellationToken cancellationToken) => ModifyColumnFamiliesAsync(
+                name,
+                modifications,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Performs a series of column family modifications on the specified table.
+        /// Either all or none of the modifications will occur before this method
+        /// returns, but data requests received prior to that point may see a table
+        /// where only some modifications have taken effect.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the table whose families should be modified.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="modifications">
+        /// Modifications to be atomically applied to the specified table's families.
+        /// Entries are applied in order, meaning that earlier modifications can be
+        /// masked by later ones (in the case of repeated updates to the same family,
+        /// for example).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Table ModifyColumnFamilies(
+            string name,
+            scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications,
+            gaxgrpc::CallSettings callSettings = null) => ModifyColumnFamilies(
+                new ModifyColumnFamiliesRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                     Modifications = { gax::GaxPreconditions.CheckNotNull(modifications, nameof(modifications)) },
                 },
                 callSettings);
@@ -1352,6 +1750,81 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// before this call started have been replicated. The tokens will be available
         /// for 90 days.
         /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to create a consistency token.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GenerateConsistencyTokenAsync(
+                new GenerateConsistencyTokenRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to create a consistency token.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GenerateConsistencyTokenAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to create a consistency token.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GenerateConsistencyToken(
+                new GenerateConsistencyTokenRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Generates a consistency token for a Table, which can be used in
+        /// CheckConsistency to check whether mutations to the table that finished
+        /// before this call started have been replicated. The tokens will be available
+        /// for 90 days.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1494,6 +1967,93 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new CheckConsistencyRequest
                 {
                     TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    ConsistencyToken = gax::GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to check replication consistency.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="consistencyToken">
+        /// The token created using GenerateConsistencyToken for the Table.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
+            string name,
+            string consistencyToken,
+            gaxgrpc::CallSettings callSettings = null) => CheckConsistencyAsync(
+                new CheckConsistencyRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    ConsistencyToken = gax::GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to check replication consistency.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="consistencyToken">
+        /// The token created using GenerateConsistencyToken for the Table.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(
+            string name,
+            string consistencyToken,
+            st::CancellationToken cancellationToken) => CheckConsistencyAsync(
+                name,
+                consistencyToken,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Checks replication consistency based on a consistency token, that is, if
+        /// replication has caught up based on the conditions specified in the token
+        /// and the check request.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the Table for which to check replication consistency.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="consistencyToken">
+        /// The token created using GenerateConsistencyToken for the Table.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CheckConsistencyResponse CheckConsistency(
+            string name,
+            string consistencyToken,
+            gaxgrpc::CallSettings callSettings = null) => CheckConsistency(
+                new CheckConsistencyRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                     ConsistencyToken = gax::GaxPreconditions.CheckNotNullOrEmpty(consistencyToken, nameof(consistencyToken)),
                 },
                 callSettings);

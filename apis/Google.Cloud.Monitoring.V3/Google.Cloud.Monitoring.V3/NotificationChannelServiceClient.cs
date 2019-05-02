@@ -588,6 +588,90 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the descriptors for supported channel types. The use of descriptors
         /// makes it possible for new channel types to be dynamically added.
         /// </summary>
+        /// <param name="name">
+        /// The REST resource name of the parent from which to retrieve
+        /// the notification channel descriptors. The expected syntax is:
+        ///
+        ///     projects/[PROJECT_ID]
+        ///
+        /// Note that this names the parent container in which to look for the
+        /// descriptors; to retrieve a single descriptor by name, use the
+        /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
+        /// operation, instead.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="NotificationChannelDescriptor"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptorsAsync(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannelDescriptorsAsync(
+                new ListNotificationChannelDescriptorsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the descriptors for supported channel types. The use of descriptors
+        /// makes it possible for new channel types to be dynamically added.
+        /// </summary>
+        /// <param name="name">
+        /// The REST resource name of the parent from which to retrieve
+        /// the notification channel descriptors. The expected syntax is:
+        ///
+        ///     projects/[PROJECT_ID]
+        ///
+        /// Note that this names the parent container in which to look for the
+        /// descriptors; to retrieve a single descriptor by name, use the
+        /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
+        /// operation, instead.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="NotificationChannelDescriptor"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListNotificationChannelDescriptorsResponse, NotificationChannelDescriptor> ListNotificationChannelDescriptors(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannelDescriptors(
+                new ListNotificationChannelDescriptorsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the descriptors for supported channel types. The use of descriptors
+        /// makes it possible for new channel types to be dynamically added.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -687,6 +771,72 @@ namespace Google.Cloud.Monitoring.V3
                 new GetNotificationChannelDescriptorRequest
                 {
                     NotificationChannelDescriptorName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single channel descriptor. The descriptor indicates which fields
+        /// are expected / permitted for a notification channel of the given type.
+        /// </summary>
+        /// <param name="name">
+        /// The channel type for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelDescriptorAsync(
+                new GetNotificationChannelDescriptorRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single channel descriptor. The descriptor indicates which fields
+        /// are expected / permitted for a notification channel of the given type.
+        /// </summary>
+        /// <param name="name">
+        /// The channel type for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetNotificationChannelDescriptorAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single channel descriptor. The descriptor indicates which fields
+        /// are expected / permitted for a notification channel of the given type.
+        /// </summary>
+        /// <param name="name">
+        /// The channel type for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannelDescriptors/{channel_type}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual NotificationChannelDescriptor GetNotificationChannelDescriptor(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelDescriptor(
+                new GetNotificationChannelDescriptorRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -830,6 +980,84 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists the notification channels that have been created for the project.
         /// </summary>
+        /// <param name="name">
+        /// The project on which to execute the request. The format is
+        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// in which to look for the notification channels; it does not name a
+        /// specific channel. To query a specific channel by REST resource name, use
+        /// the
+        /// [`GetNotificationChannel`][google.monitoring.v3.NotificationChannelService.GetNotificationChannel]
+        /// operation.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="NotificationChannel"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannelsAsync(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannelsAsync(
+                new ListNotificationChannelsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the notification channels that have been created for the project.
+        /// </summary>
+        /// <param name="name">
+        /// The project on which to execute the request. The format is
+        /// `projects/[PROJECT_ID]`. That is, this names the container
+        /// in which to look for the notification channels; it does not name a
+        /// specific channel. To query a specific channel by REST resource name, use
+        /// the
+        /// [`GetNotificationChannel`][google.monitoring.v3.NotificationChannelService.GetNotificationChannel]
+        /// operation.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="NotificationChannel"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListNotificationChannelsResponse, NotificationChannel> ListNotificationChannels(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListNotificationChannels(
+                new ListNotificationChannelsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the notification channels that have been created for the project.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -937,6 +1165,81 @@ namespace Google.Cloud.Monitoring.V3
                 new GetNotificationChannelRequest
                 {
                     NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single notification channel. The channel includes the relevant
+        /// configuration details with which the channel was created. However, the
+        /// response may truncate or omit passwords, API keys, or other private key
+        /// matter and thus the response may not be 100% identical to the information
+        /// that was supplied in the call to the create method.
+        /// </summary>
+        /// <param name="name">
+        /// The channel for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> GetNotificationChannelAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannelAsync(
+                new GetNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single notification channel. The channel includes the relevant
+        /// configuration details with which the channel was created. However, the
+        /// response may truncate or omit passwords, API keys, or other private key
+        /// matter and thus the response may not be 100% identical to the information
+        /// that was supplied in the call to the create method.
+        /// </summary>
+        /// <param name="name">
+        /// The channel for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> GetNotificationChannelAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetNotificationChannelAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a single notification channel. The channel includes the relevant
+        /// configuration details with which the channel was created. However, the
+        /// response may truncate or omit passwords, API keys, or other private key
+        /// matter and thus the response may not be 100% identical to the information
+        /// that was supplied in the call to the create method.
+        /// </summary>
+        /// <param name="name">
+        /// The channel for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual NotificationChannel GetNotificationChannel(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetNotificationChannel(
+                new GetNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1103,6 +1406,105 @@ namespace Google.Cloud.Monitoring.V3
                 new CreateNotificationChannelRequest
                 {
                     ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    NotificationChannel = gax::GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new notification channel, representing a single notification
+        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// </summary>
+        /// <param name="name">
+        /// The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID]
+        ///
+        /// Note that this names the container into which the channel will be
+        /// written. This does not name the newly created channel. The resulting
+        /// channel's name will have a normalized version of this field as a prefix,
+        /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
+        /// </param>
+        /// <param name="notificationChannel">
+        /// The definition of the `NotificationChannel` to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> CreateNotificationChannelAsync(
+            string name,
+            NotificationChannel notificationChannel,
+            gaxgrpc::CallSettings callSettings = null) => CreateNotificationChannelAsync(
+                new CreateNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    NotificationChannel = gax::GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new notification channel, representing a single notification
+        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// </summary>
+        /// <param name="name">
+        /// The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID]
+        ///
+        /// Note that this names the container into which the channel will be
+        /// written. This does not name the newly created channel. The resulting
+        /// channel's name will have a normalized version of this field as a prefix,
+        /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
+        /// </param>
+        /// <param name="notificationChannel">
+        /// The definition of the `NotificationChannel` to create.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<NotificationChannel> CreateNotificationChannelAsync(
+            string name,
+            NotificationChannel notificationChannel,
+            st::CancellationToken cancellationToken) => CreateNotificationChannelAsync(
+                name,
+                notificationChannel,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new notification channel, representing a single notification
+        /// endpoint such as an email address, SMS number, or PagerDuty service.
+        /// </summary>
+        /// <param name="name">
+        /// The project on which to execute the request. The format is:
+        ///
+        ///     projects/[PROJECT_ID]
+        ///
+        /// Note that this names the container into which the channel will be
+        /// written. This does not name the newly created channel. The resulting
+        /// channel's name will have a normalized version of this field as a prefix,
+        /// but will add `/notificationChannels/[CHANNEL_ID]` to identify the channel.
+        /// </param>
+        /// <param name="notificationChannel">
+        /// The definition of the `NotificationChannel` to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual NotificationChannel CreateNotificationChannel(
+            string name,
+            NotificationChannel notificationChannel,
+            gaxgrpc::CallSettings callSettings = null) => CreateNotificationChannel(
+                new CreateNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                     NotificationChannel = gax::GaxPreconditions.CheckNotNull(notificationChannel, nameof(notificationChannel)),
                 },
                 callSettings);
@@ -1392,6 +1794,90 @@ namespace Google.Cloud.Monitoring.V3
                 new DeleteNotificationChannelRequest
                 {
                     NotificationChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Force = force ?? false, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a notification channel.
+        /// </summary>
+        /// <param name="name">
+        /// The channel for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// </param>
+        /// <param name="force">
+        /// If true, the notification channel will be deleted regardless of its
+        /// use in alert policies (the policies will be updated to remove the
+        /// channel). If false, channels that are still referenced by an existing
+        /// alerting policy will fail to be deleted in a delete operation.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteNotificationChannelAsync(
+            string name,
+            bool? force,
+            gaxgrpc::CallSettings callSettings = null) => DeleteNotificationChannelAsync(
+                new DeleteNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Force = force ?? false, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a notification channel.
+        /// </summary>
+        /// <param name="name">
+        /// The channel for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// </param>
+        /// <param name="force">
+        /// If true, the notification channel will be deleted regardless of its
+        /// use in alert policies (the policies will be updated to remove the
+        /// channel). If false, channels that are still referenced by an existing
+        /// alerting policy will fail to be deleted in a delete operation.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteNotificationChannelAsync(
+            string name,
+            bool? force,
+            st::CancellationToken cancellationToken) => DeleteNotificationChannelAsync(
+                name,
+                force,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a notification channel.
+        /// </summary>
+        /// <param name="name">
+        /// The channel for which to execute the request. The format is
+        /// `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`.
+        /// </param>
+        /// <param name="force">
+        /// If true, the notification channel will be deleted regardless of its
+        /// use in alert policies (the policies will be updated to remove the
+        /// channel). If false, channels that are still referenced by an existing
+        /// alerting policy will fail to be deleted in a delete operation.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteNotificationChannel(
+            string name,
+            bool? force,
+            gaxgrpc::CallSettings callSettings = null) => DeleteNotificationChannel(
+                new DeleteNotificationChannelRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                     Force = force ?? false, // Optional
                 },
                 callSettings);

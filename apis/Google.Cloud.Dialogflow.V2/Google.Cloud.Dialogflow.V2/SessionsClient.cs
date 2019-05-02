@@ -455,6 +455,123 @@ namespace Google.Cloud.Dialogflow.V2
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
         /// </summary>
+        /// <param name="session">
+        /// Required. The name of the session this query is sent to. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`. It's up to the API
+        /// caller to choose an appropriate session ID. It can be a random number or
+        /// some type of user identifier (preferably hashed). The length of the session
+        /// ID must not exceed 36 bytes.
+        /// </param>
+        /// <param name="queryInput">
+        /// Required. The input specification. It can be set to:
+        ///
+        /// 1.  an audio config
+        ///     which instructs the speech recognizer how to process the speech audio,
+        ///
+        /// 2.  a conversational query in the form of text, or
+        ///
+        /// 3.  an event that specifies which intent to trigger.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<DetectIntentResponse> DetectIntentAsync(
+            string session,
+            QueryInput queryInput,
+            gaxgrpc::CallSettings callSettings = null) => DetectIntentAsync(
+                new DetectIntentRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    QueryInput = gax::GaxPreconditions.CheckNotNull(queryInput, nameof(queryInput)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result. This method is not idempotent, because it may cause contexts
+        /// and session entity types to be updated, which in turn might affect
+        /// results of future queries.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The name of the session this query is sent to. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`. It's up to the API
+        /// caller to choose an appropriate session ID. It can be a random number or
+        /// some type of user identifier (preferably hashed). The length of the session
+        /// ID must not exceed 36 bytes.
+        /// </param>
+        /// <param name="queryInput">
+        /// Required. The input specification. It can be set to:
+        ///
+        /// 1.  an audio config
+        ///     which instructs the speech recognizer how to process the speech audio,
+        ///
+        /// 2.  a conversational query in the form of text, or
+        ///
+        /// 3.  an event that specifies which intent to trigger.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<DetectIntentResponse> DetectIntentAsync(
+            string session,
+            QueryInput queryInput,
+            st::CancellationToken cancellationToken) => DetectIntentAsync(
+                session,
+                queryInput,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result. This method is not idempotent, because it may cause contexts
+        /// and session entity types to be updated, which in turn might affect
+        /// results of future queries.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The name of the session this query is sent to. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`. It's up to the API
+        /// caller to choose an appropriate session ID. It can be a random number or
+        /// some type of user identifier (preferably hashed). The length of the session
+        /// ID must not exceed 36 bytes.
+        /// </param>
+        /// <param name="queryInput">
+        /// Required. The input specification. It can be set to:
+        ///
+        /// 1.  an audio config
+        ///     which instructs the speech recognizer how to process the speech audio,
+        ///
+        /// 2.  a conversational query in the form of text, or
+        ///
+        /// 3.  an event that specifies which intent to trigger.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual DetectIntentResponse DetectIntent(
+            string session,
+            QueryInput queryInput,
+            gaxgrpc::CallSettings callSettings = null) => DetectIntent(
+                new DetectIntentRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    QueryInput = gax::GaxPreconditions.CheckNotNull(queryInput, nameof(queryInput)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Processes a natural language query and returns structured, actionable data
+        /// as a result. This method is not idempotent, because it may cause contexts
+        /// and session entity types to be updated, which in turn might affect
+        /// results of future queries.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>

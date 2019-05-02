@@ -849,6 +849,82 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Queues are returned in lexicographical order.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name.
+        /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Queue"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListQueuesResponse, Queue> ListQueuesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListQueuesAsync(
+                new ListQueuesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists queues.
+        ///
+        /// Queues are returned in lexicographical order.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name.
+        /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Queue"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListQueuesResponse, Queue> ListQueues(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListQueues(
+                new ListQueuesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists queues.
+        ///
+        /// Queues are returned in lexicographical order.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -952,6 +1028,75 @@ namespace Google.Cloud.Tasks.V2
                 new GetQueueRequest
                 {
                     QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a queue.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the queue. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> GetQueueAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetQueueAsync(
+                new GetQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a queue.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the queue. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> GetQueueAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetQueueAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a queue.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the queue. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Queue GetQueue(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetQueue(
+                new GetQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1145,6 +1290,144 @@ namespace Google.Cloud.Tasks.V2
                 new CreateQueueRequest
                 {
                     ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Queue = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a queue.
+        ///
+        /// Queues created with this method allow tasks to live for a maximum of 31
+        /// days. After a task is 31 days old, the task will be deleted regardless of whether
+        /// it was dispatched or not.
+        ///
+        /// WARNING: Using this method may have unintended side effects if you are
+        /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
+        /// Read
+        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
+        /// before using this method.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name in which the queue will be created.
+        /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+        ///
+        /// The list of allowed locations can be obtained by calling Cloud
+        /// Tasks' implementation of
+        /// [ListLocations][google.cloud.location.Locations.ListLocations].
+        /// </param>
+        /// <param name="queue">
+        /// Required.
+        ///
+        /// The queue to create.
+        ///
+        /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> CreateQueueAsync(
+            string parent,
+            Queue queue,
+            gaxgrpc::CallSettings callSettings = null) => CreateQueueAsync(
+                new CreateQueueRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Queue = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a queue.
+        ///
+        /// Queues created with this method allow tasks to live for a maximum of 31
+        /// days. After a task is 31 days old, the task will be deleted regardless of whether
+        /// it was dispatched or not.
+        ///
+        /// WARNING: Using this method may have unintended side effects if you are
+        /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
+        /// Read
+        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
+        /// before using this method.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name in which the queue will be created.
+        /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+        ///
+        /// The list of allowed locations can be obtained by calling Cloud
+        /// Tasks' implementation of
+        /// [ListLocations][google.cloud.location.Locations.ListLocations].
+        /// </param>
+        /// <param name="queue">
+        /// Required.
+        ///
+        /// The queue to create.
+        ///
+        /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> CreateQueueAsync(
+            string parent,
+            Queue queue,
+            st::CancellationToken cancellationToken) => CreateQueueAsync(
+                parent,
+                queue,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a queue.
+        ///
+        /// Queues created with this method allow tasks to live for a maximum of 31
+        /// days. After a task is 31 days old, the task will be deleted regardless of whether
+        /// it was dispatched or not.
+        ///
+        /// WARNING: Using this method may have unintended side effects if you are
+        /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
+        /// Read
+        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
+        /// before using this method.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name in which the queue will be created.
+        /// For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+        ///
+        /// The list of allowed locations can be obtained by calling Cloud
+        /// Tasks' implementation of
+        /// [ListLocations][google.cloud.location.Locations.ListLocations].
+        /// </param>
+        /// <param name="queue">
+        /// Required.
+        ///
+        /// The queue to create.
+        ///
+        /// [Queue's name][google.cloud.tasks.v2.Queue.name] cannot be the same as an existing queue.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Queue CreateQueue(
+            string parent,
+            Queue queue,
+            gaxgrpc::CallSettings callSettings = null) => CreateQueue(
+                new CreateQueueRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     Queue = gax::GaxPreconditions.CheckNotNull(queue, nameof(queue)),
                 },
                 callSettings);
@@ -1587,6 +1870,105 @@ namespace Google.Cloud.Tasks.V2
         /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
         /// before using this method.
         /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteQueueAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteQueueAsync(
+                new DeleteQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a queue.
+        ///
+        /// This command will delete the queue even if it has tasks in it.
+        ///
+        /// Note: If you delete a queue, a queue with the same name can't be created
+        /// for 7 days.
+        ///
+        /// WARNING: Using this method may have unintended side effects if you are
+        /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
+        /// Read
+        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
+        /// before using this method.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteQueueAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteQueueAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a queue.
+        ///
+        /// This command will delete the queue even if it has tasks in it.
+        ///
+        /// Note: If you delete a queue, a queue with the same name can't be created
+        /// for 7 days.
+        ///
+        /// WARNING: Using this method may have unintended side effects if you are
+        /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
+        /// Read
+        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
+        /// before using this method.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteQueue(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteQueue(
+                new DeleteQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a queue.
+        ///
+        /// This command will delete the queue even if it has tasks in it.
+        ///
+        /// Note: If you delete a queue, a queue with the same name can't be created
+        /// for 7 days.
+        ///
+        /// WARNING: Using this method may have unintended side effects if you are
+        /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
+        /// Read
+        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
+        /// before using this method.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1751,6 +2133,90 @@ namespace Google.Cloud.Tasks.V2
         /// Purge operations can take up to one minute to take effect. Tasks
         /// might be dispatched before the purge takes effect. A purge is irreversible.
         /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> PurgeQueueAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => PurgeQueueAsync(
+                new PurgeQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Purges a queue by deleting all of its tasks.
+        ///
+        /// All tasks created before this method is called are permanently deleted.
+        ///
+        /// Purge operations can take up to one minute to take effect. Tasks
+        /// might be dispatched before the purge takes effect. A purge is irreversible.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> PurgeQueueAsync(
+            string name,
+            st::CancellationToken cancellationToken) => PurgeQueueAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Purges a queue by deleting all of its tasks.
+        ///
+        /// All tasks created before this method is called are permanently deleted.
+        ///
+        /// Purge operations can take up to one minute to take effect. Tasks
+        /// might be dispatched before the purge takes effect. A purge is irreversible.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Queue PurgeQueue(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => PurgeQueue(
+                new PurgeQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Purges a queue by deleting all of its tasks.
+        ///
+        /// All tasks created before this method is called are permanently deleted.
+        ///
+        /// Purge operations can take up to one minute to take effect. Tasks
+        /// might be dispatched before the purge takes effect. A purge is irreversible.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1898,6 +2364,93 @@ namespace Google.Cloud.Tasks.V2
                 new PauseQueueRequest
                 {
                     QueueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Pauses the queue.
+        ///
+        /// If a queue is paused then the system will stop dispatching tasks
+        /// until the queue is resumed via
+        /// [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue]. Tasks can still be added
+        /// when the queue is paused. A queue is paused if its
+        /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> PauseQueueAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => PauseQueueAsync(
+                new PauseQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Pauses the queue.
+        ///
+        /// If a queue is paused then the system will stop dispatching tasks
+        /// until the queue is resumed via
+        /// [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue]. Tasks can still be added
+        /// when the queue is paused. A queue is paused if its
+        /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> PauseQueueAsync(
+            string name,
+            st::CancellationToken cancellationToken) => PauseQueueAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses the queue.
+        ///
+        /// If a queue is paused then the system will stop dispatching tasks
+        /// until the queue is resumed via
+        /// [ResumeQueue][google.cloud.tasks.v2.CloudTasks.ResumeQueue]. Tasks can still be added
+        /// when the queue is paused. A queue is paused if its
+        /// [state][google.cloud.tasks.v2.Queue.state] is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Queue PauseQueue(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => PauseQueue(
+                new PauseQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2091,6 +2644,108 @@ namespace Google.Cloud.Tasks.V2
         /// queues, follow the 500/50/5 pattern described in
         /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> ResumeQueueAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ResumeQueueAsync(
+                new ResumeQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Resume a queue.
+        ///
+        /// This method resumes a queue after it has been
+        /// [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED] or
+        /// [DISABLED][google.cloud.tasks.v2.Queue.State.DISABLED]. The state of a queue is stored
+        /// in the queue's [state][google.cloud.tasks.v2.Queue.state]; after calling this method it
+        /// will be set to [RUNNING][google.cloud.tasks.v2.Queue.State.RUNNING].
+        ///
+        /// WARNING: Resuming many high-QPS queues at the same time can
+        /// lead to target overloading. If you are resuming high-QPS
+        /// queues, follow the 500/50/5 pattern described in
+        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Queue> ResumeQueueAsync(
+            string name,
+            st::CancellationToken cancellationToken) => ResumeQueueAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resume a queue.
+        ///
+        /// This method resumes a queue after it has been
+        /// [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED] or
+        /// [DISABLED][google.cloud.tasks.v2.Queue.State.DISABLED]. The state of a queue is stored
+        /// in the queue's [state][google.cloud.tasks.v2.Queue.state]; after calling this method it
+        /// will be set to [RUNNING][google.cloud.tasks.v2.Queue.State.RUNNING].
+        ///
+        /// WARNING: Resuming many high-QPS queues at the same time can
+        /// lead to target overloading. If you are resuming high-QPS
+        /// queues, follow the 500/50/5 pattern described in
+        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Queue ResumeQueue(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ResumeQueue(
+                new ResumeQueueRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Resume a queue.
+        ///
+        /// This method resumes a queue after it has been
+        /// [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED] or
+        /// [DISABLED][google.cloud.tasks.v2.Queue.State.DISABLED]. The state of a queue is stored
+        /// in the queue's [state][google.cloud.tasks.v2.Queue.state]; after calling this method it
+        /// will be set to [RUNNING][google.cloud.tasks.v2.Queue.State.RUNNING].
+        ///
+        /// WARNING: Resuming many high-QPS queues at the same time can
+        /// lead to target overloading. If you are resuming high-QPS
+        /// queues, follow the 500/50/5 pattern described in
+        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2253,6 +2908,96 @@ namespace Google.Cloud.Tasks.V2
                 new iam::GetIamPolicyRequest
                 {
                     ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a [Queue][google.cloud.tasks.v2.Queue].
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        ///
+        /// Authorization requires the following
+        /// [Google IAM](https://cloud.google.com/iam) permission on the specified
+        /// resource parent:
+        ///
+        /// * `cloudtasks.queues.getIamPolicy`
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            string resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
+                new iam::GetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a [Queue][google.cloud.tasks.v2.Queue].
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        ///
+        /// Authorization requires the following
+        /// [Google IAM](https://cloud.google.com/iam) permission on the specified
+        /// resource parent:
+        ///
+        /// * `cloudtasks.queues.getIamPolicy`
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            string resource,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a [Queue][google.cloud.tasks.v2.Queue].
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        ///
+        /// Authorization requires the following
+        /// [Google IAM](https://cloud.google.com/iam) permission on the specified
+        /// resource parent:
+        ///
+        /// * `cloudtasks.queues.getIamPolicy`
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy GetIamPolicy(
+            string resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
+                new iam::GetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2469,6 +3214,126 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// * `cloudtasks.queues.setIamPolicy`
         /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            string resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
+                new iam::SetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy for a [Queue][google.cloud.tasks.v2.Queue]. Replaces any existing
+        /// policy.
+        ///
+        /// Note: The Cloud Console does not check queue-level IAM permissions yet.
+        /// Project-level permissions are required to use the Cloud Console.
+        ///
+        /// Authorization requires the following
+        /// [Google IAM](https://cloud.google.com/iam) permission on the specified
+        /// resource parent:
+        ///
+        /// * `cloudtasks.queues.setIamPolicy`
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            string resource,
+            iam::Policy policy,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy for a [Queue][google.cloud.tasks.v2.Queue]. Replaces any existing
+        /// policy.
+        ///
+        /// Note: The Cloud Console does not check queue-level IAM permissions yet.
+        /// Project-level permissions are required to use the Cloud Console.
+        ///
+        /// Authorization requires the following
+        /// [Google IAM](https://cloud.google.com/iam) permission on the specified
+        /// resource parent:
+        ///
+        /// * `cloudtasks.queues.setIamPolicy`
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy SetIamPolicy(
+            string resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
+                new iam::SetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy for a [Queue][google.cloud.tasks.v2.Queue]. Replaces any existing
+        /// policy.
+        ///
+        /// Note: The Cloud Console does not check queue-level IAM permissions yet.
+        /// Project-level permissions are required to use the Cloud Console.
+        ///
+        /// Authorization requires the following
+        /// [Google IAM](https://cloud.google.com/iam) permission on the specified
+        /// resource parent:
+        ///
+        /// * `cloudtasks.queues.setIamPolicy`
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2659,6 +3524,114 @@ namespace Google.Cloud.Tasks.V2
         /// UIs and command-line tools, not for authorization checking. This operation
         /// may "fail open" without warning.
         /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new iam::TestIamPermissionsRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2.Queue].
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+        ///
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2.Queue].
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+        ///
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
+                new iam::TestIamPermissionsRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on a [Queue][google.cloud.tasks.v2.Queue].
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a [NOT_FOUND][google.rpc.Code.NOT_FOUND] error.
+        ///
+        /// Note: This operation is designed to be used for building permission-aware
+        /// UIs and command-line tools, not for authorization checking. This operation
+        /// may "fail open" without warning.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2823,6 +3796,94 @@ namespace Google.Cloud.Tasks.V2
         /// The tasks may be returned in any order. The ordering may change at any
         /// time.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Task"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListTasksResponse, Task> ListTasksAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTasksAsync(
+                new ListTasksRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the tasks in a queue.
+        ///
+        /// By default, only the [BASIC][google.cloud.tasks.v2.Task.View.BASIC] view is retrieved
+        /// due to performance considerations;
+        /// [response_view][google.cloud.tasks.v2.ListTasksRequest.response_view] controls the
+        /// subset of information which is returned.
+        ///
+        /// The tasks may be returned in any order. The ordering may change at any
+        /// time.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Task"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListTasksResponse, Task> ListTasks(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTasks(
+                new ListTasksRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the tasks in a queue.
+        ///
+        /// By default, only the [BASIC][google.cloud.tasks.v2.Task.View.BASIC] view is retrieved
+        /// due to performance considerations;
+        /// [response_view][google.cloud.tasks.v2.ListTasksRequest.response_view] controls the
+        /// subset of information which is returned.
+        ///
+        /// The tasks may be returned in any order. The ordering may change at any
+        /// time.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2932,6 +3993,75 @@ namespace Google.Cloud.Tasks.V2
                 new GetTaskRequest
                 {
                     TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a task.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Task> GetTaskAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetTaskAsync(
+                new GetTaskRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a task.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Task> GetTaskAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetTaskAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a task.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Task GetTask(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetTask(
+                new GetTaskRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3206,6 +4336,213 @@ namespace Google.Cloud.Tasks.V2
         /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
         ///   100KB.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        ///
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="task">
+        /// Required.
+        ///
+        /// The task to add.
+        ///
+        /// Task names have the following format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
+        /// The user can optionally specify a task [name][google.cloud.tasks.v2.Task.name]. If a
+        /// name is not specified then the system will generate a random
+        /// unique task id, which will be set in the task returned in the
+        /// [response][google.cloud.tasks.v2.Task.name].
+        ///
+        /// If [schedule_time][google.cloud.tasks.v2.Task.schedule_time] is not set or is in the
+        /// past then Cloud Tasks will set it to the current time.
+        ///
+        /// Task De-duplication:
+        ///
+        /// Explicitly specifying a task ID enables task de-duplication.  If
+        /// a task's ID is identical to that of an existing task or a task
+        /// that was deleted or executed recently then the call will fail
+        /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
+        /// If the task's queue was created using Cloud Tasks, then another task with
+        /// the same name can't be created for ~1hour after the original task was
+        /// deleted or executed. If the task's queue was created using queue.yaml or
+        /// queue.xml, then another task with the same name can't be created
+        /// for ~9days after the original task was deleted or executed.
+        ///
+        /// Because there is an extra lookup cost to identify duplicate task
+        /// names, these [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask] calls have significantly
+        /// increased latency. Using hashed strings for the task id or for
+        /// the prefix of the task id is recommended. Choosing task ids that
+        /// are sequential or have sequential prefixes, for example using a
+        /// timestamp, causes an increase in latency and error rates in all
+        /// task commands. The infrastructure relies on an approximately
+        /// uniform distribution of task ids to store and serve tasks
+        /// efficiently.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Task> CreateTaskAsync(
+            string parent,
+            Task task,
+            gaxgrpc::CallSettings callSettings = null) => CreateTaskAsync(
+                new CreateTaskRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Task = gax::GaxPreconditions.CheckNotNull(task, nameof(task)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a task and adds it to a queue.
+        ///
+        /// Tasks cannot be updated after creation; there is no UpdateTask command.
+        ///
+        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
+        ///   100KB.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        ///
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="task">
+        /// Required.
+        ///
+        /// The task to add.
+        ///
+        /// Task names have the following format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
+        /// The user can optionally specify a task [name][google.cloud.tasks.v2.Task.name]. If a
+        /// name is not specified then the system will generate a random
+        /// unique task id, which will be set in the task returned in the
+        /// [response][google.cloud.tasks.v2.Task.name].
+        ///
+        /// If [schedule_time][google.cloud.tasks.v2.Task.schedule_time] is not set or is in the
+        /// past then Cloud Tasks will set it to the current time.
+        ///
+        /// Task De-duplication:
+        ///
+        /// Explicitly specifying a task ID enables task de-duplication.  If
+        /// a task's ID is identical to that of an existing task or a task
+        /// that was deleted or executed recently then the call will fail
+        /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
+        /// If the task's queue was created using Cloud Tasks, then another task with
+        /// the same name can't be created for ~1hour after the original task was
+        /// deleted or executed. If the task's queue was created using queue.yaml or
+        /// queue.xml, then another task with the same name can't be created
+        /// for ~9days after the original task was deleted or executed.
+        ///
+        /// Because there is an extra lookup cost to identify duplicate task
+        /// names, these [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask] calls have significantly
+        /// increased latency. Using hashed strings for the task id or for
+        /// the prefix of the task id is recommended. Choosing task ids that
+        /// are sequential or have sequential prefixes, for example using a
+        /// timestamp, causes an increase in latency and error rates in all
+        /// task commands. The infrastructure relies on an approximately
+        /// uniform distribution of task ids to store and serve tasks
+        /// efficiently.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Task> CreateTaskAsync(
+            string parent,
+            Task task,
+            st::CancellationToken cancellationToken) => CreateTaskAsync(
+                parent,
+                task,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a task and adds it to a queue.
+        ///
+        /// Tasks cannot be updated after creation; there is no UpdateTask command.
+        ///
+        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
+        ///   100KB.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The queue name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+        ///
+        /// The queue must already exist.
+        /// </param>
+        /// <param name="task">
+        /// Required.
+        ///
+        /// The task to add.
+        ///
+        /// Task names have the following format:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`.
+        /// The user can optionally specify a task [name][google.cloud.tasks.v2.Task.name]. If a
+        /// name is not specified then the system will generate a random
+        /// unique task id, which will be set in the task returned in the
+        /// [response][google.cloud.tasks.v2.Task.name].
+        ///
+        /// If [schedule_time][google.cloud.tasks.v2.Task.schedule_time] is not set or is in the
+        /// past then Cloud Tasks will set it to the current time.
+        ///
+        /// Task De-duplication:
+        ///
+        /// Explicitly specifying a task ID enables task de-duplication.  If
+        /// a task's ID is identical to that of an existing task or a task
+        /// that was deleted or executed recently then the call will fail
+        /// with [ALREADY_EXISTS][google.rpc.Code.ALREADY_EXISTS].
+        /// If the task's queue was created using Cloud Tasks, then another task with
+        /// the same name can't be created for ~1hour after the original task was
+        /// deleted or executed. If the task's queue was created using queue.yaml or
+        /// queue.xml, then another task with the same name can't be created
+        /// for ~9days after the original task was deleted or executed.
+        ///
+        /// Because there is an extra lookup cost to identify duplicate task
+        /// names, these [CreateTask][google.cloud.tasks.v2.CloudTasks.CreateTask] calls have significantly
+        /// increased latency. Using hashed strings for the task id or for
+        /// the prefix of the task id is recommended. Choosing task ids that
+        /// are sequential or have sequential prefixes, for example using a
+        /// timestamp, causes an increase in latency and error rates in all
+        /// task commands. The infrastructure relies on an approximately
+        /// uniform distribution of task ids to store and serve tasks
+        /// efficiently.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Task CreateTask(
+            string parent,
+            Task task,
+            gaxgrpc::CallSettings callSettings = null) => CreateTask(
+                new CreateTaskRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Task = gax::GaxPreconditions.CheckNotNull(task, nameof(task)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a task and adds it to a queue.
+        ///
+        /// Tasks cannot be updated after creation; there is no UpdateTask command.
+        ///
+        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
+        ///   100KB.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -3344,6 +4681,84 @@ namespace Google.Cloud.Tasks.V2
                 new DeleteTaskRequest
                 {
                     TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a task.
+        ///
+        /// A task can be deleted if it is scheduled or dispatched. A task
+        /// cannot be deleted if it has executed successfully or permanently
+        /// failed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTaskAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTaskAsync(
+                new DeleteTaskRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a task.
+        ///
+        /// A task can be deleted if it is scheduled or dispatched. A task
+        /// cannot be deleted if it has executed successfully or permanently
+        /// failed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTaskAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteTaskAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a task.
+        ///
+        /// A task can be deleted if it is scheduled or dispatched. A task
+        /// cannot be deleted if it has executed successfully or permanently
+        /// failed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteTask(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTask(
+                new DeleteTaskRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3547,6 +4962,144 @@ namespace Google.Cloud.Tasks.V2
                 new RunTaskRequest
                 {
                     TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Forces a task to run now.
+        ///
+        /// When this method is called, Cloud Tasks will dispatch the task, even if
+        /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2.RateLimits] or
+        /// is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
+        ///
+        /// This command is meant to be used for manual debugging. For
+        /// example, [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] can be used to retry a failed
+        /// task after a fix has been made or to manually force a task to be
+        /// dispatched now.
+        ///
+        /// The dispatched task is returned. That is, the task that is returned
+        /// contains the [status][Task.status] after the task is dispatched but
+        /// before the task is received by its target.
+        ///
+        /// If Cloud Tasks receives a successful response from the task's
+        /// target, then the task will be deleted; otherwise the task's
+        /// [schedule_time][google.cloud.tasks.v2.Task.schedule_time] will be reset to the time that
+        /// [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] was called plus the retry delay specified
+        /// in the queue's [RetryConfig][google.cloud.tasks.v2.RetryConfig].
+        ///
+        /// [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] returns
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
+        /// task that has already succeeded or permanently failed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Task> RunTaskAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => RunTaskAsync(
+                new RunTaskRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Forces a task to run now.
+        ///
+        /// When this method is called, Cloud Tasks will dispatch the task, even if
+        /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2.RateLimits] or
+        /// is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
+        ///
+        /// This command is meant to be used for manual debugging. For
+        /// example, [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] can be used to retry a failed
+        /// task after a fix has been made or to manually force a task to be
+        /// dispatched now.
+        ///
+        /// The dispatched task is returned. That is, the task that is returned
+        /// contains the [status][Task.status] after the task is dispatched but
+        /// before the task is received by its target.
+        ///
+        /// If Cloud Tasks receives a successful response from the task's
+        /// target, then the task will be deleted; otherwise the task's
+        /// [schedule_time][google.cloud.tasks.v2.Task.schedule_time] will be reset to the time that
+        /// [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] was called plus the retry delay specified
+        /// in the queue's [RetryConfig][google.cloud.tasks.v2.RetryConfig].
+        ///
+        /// [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] returns
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
+        /// task that has already succeeded or permanently failed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Task> RunTaskAsync(
+            string name,
+            st::CancellationToken cancellationToken) => RunTaskAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Forces a task to run now.
+        ///
+        /// When this method is called, Cloud Tasks will dispatch the task, even if
+        /// the task is already running, the queue has reached its [RateLimits][google.cloud.tasks.v2.RateLimits] or
+        /// is [PAUSED][google.cloud.tasks.v2.Queue.State.PAUSED].
+        ///
+        /// This command is meant to be used for manual debugging. For
+        /// example, [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] can be used to retry a failed
+        /// task after a fix has been made or to manually force a task to be
+        /// dispatched now.
+        ///
+        /// The dispatched task is returned. That is, the task that is returned
+        /// contains the [status][Task.status] after the task is dispatched but
+        /// before the task is received by its target.
+        ///
+        /// If Cloud Tasks receives a successful response from the task's
+        /// target, then the task will be deleted; otherwise the task's
+        /// [schedule_time][google.cloud.tasks.v2.Task.schedule_time] will be reset to the time that
+        /// [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] was called plus the retry delay specified
+        /// in the queue's [RetryConfig][google.cloud.tasks.v2.RetryConfig].
+        ///
+        /// [RunTask][google.cloud.tasks.v2.CloudTasks.RunTask] returns
+        /// [NOT_FOUND][google.rpc.Code.NOT_FOUND] when it is called on a
+        /// task that has already succeeded or permanently failed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The task name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Task RunTask(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => RunTask(
+                new RunTaskRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

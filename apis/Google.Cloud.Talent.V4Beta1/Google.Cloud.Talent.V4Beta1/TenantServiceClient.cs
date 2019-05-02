@@ -534,6 +534,102 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>
         /// Creates a new tenant entity.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the project under which the tenant is created.
+        ///
+        /// The format is "projects/{project_id}", for example,
+        /// "projects/api-test-project".
+        /// </param>
+        /// <param name="tenant">
+        /// Required.
+        ///
+        /// The tenant to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Tenant> CreateTenantAsync(
+            string parent,
+            Tenant tenant,
+            gaxgrpc::CallSettings callSettings = null) => CreateTenantAsync(
+                new CreateTenantRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Tenant = gax::GaxPreconditions.CheckNotNull(tenant, nameof(tenant)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new tenant entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the project under which the tenant is created.
+        ///
+        /// The format is "projects/{project_id}", for example,
+        /// "projects/api-test-project".
+        /// </param>
+        /// <param name="tenant">
+        /// Required.
+        ///
+        /// The tenant to be created.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Tenant> CreateTenantAsync(
+            string parent,
+            Tenant tenant,
+            st::CancellationToken cancellationToken) => CreateTenantAsync(
+                parent,
+                tenant,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new tenant entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the project under which the tenant is created.
+        ///
+        /// The format is "projects/{project_id}", for example,
+        /// "projects/api-test-project".
+        /// </param>
+        /// <param name="tenant">
+        /// Required.
+        ///
+        /// The tenant to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Tenant CreateTenant(
+            string parent,
+            Tenant tenant,
+            gaxgrpc::CallSettings callSettings = null) => CreateTenant(
+                new CreateTenantRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Tenant = gax::GaxPreconditions.CheckNotNull(tenant, nameof(tenant)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new tenant entity.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -659,6 +755,81 @@ namespace Google.Cloud.Talent.V4Beta1
                 new GetTenantRequest
                 {
                     TenantName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves specified tenant.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the tenant to be retrieved.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Tenant> GetTenantAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetTenantAsync(
+                new GetTenantRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves specified tenant.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the tenant to be retrieved.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Tenant> GetTenantAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetTenantAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves specified tenant.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the tenant to be retrieved.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Tenant GetTenant(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetTenant(
+                new GetTenantRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -915,6 +1086,78 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>
         /// Deletes specified tenant.
         /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the tenant to be deleted.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTenantAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTenantAsync(
+                new DeleteTenantRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes specified tenant.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the tenant to be deleted.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteTenantAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteTenantAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes specified tenant.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the tenant to be deleted.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteTenant(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteTenant(
+                new DeleteTenantRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes specified tenant.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1036,6 +1279,82 @@ namespace Google.Cloud.Talent.V4Beta1
                 new ListTenantsRequest
                 {
                     ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all tenants associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the project under which the tenant is created.
+        ///
+        /// The format is "projects/{project_id}", for example,
+        /// "projects/api-test-project".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Tenant"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListTenantsResponse, Tenant> ListTenantsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTenantsAsync(
+                new ListTenantsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all tenants associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the project under which the tenant is created.
+        ///
+        /// The format is "projects/{project_id}", for example,
+        /// "projects/api-test-project".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Tenant"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListTenantsResponse, Tenant> ListTenants(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListTenants(
+                new ListTenantsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

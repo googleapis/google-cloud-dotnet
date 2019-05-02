@@ -87,6 +87,32 @@ namespace Google.Cloud.Bigtable.V2
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
         /// </summary>
+        /// <param name="tableName">
+        /// The unique name of the table from which to sample row keys.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The server stream.
+        /// </returns>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(
+            string tableName,
+            gaxgrpc::CallSettings callSettings = null) => SampleRowKeys(
+                new SampleRowKeysRequest
+                {
+                    TableName = gax::GaxPreconditions.CheckNotNullOrEmpty(tableName, nameof(tableName)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns a sample of row keys in the table. The returned row keys will
+        /// delimit contiguous sections of the table of approximately equal size,
+        /// which can be used to break up the data for distributed tasks like
+        /// mapreduces.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// If the <see cref="SampleRowKeysRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.

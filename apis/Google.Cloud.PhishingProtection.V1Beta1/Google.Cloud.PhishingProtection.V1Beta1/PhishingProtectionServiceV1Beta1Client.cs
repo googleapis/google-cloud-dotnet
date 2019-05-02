@@ -411,6 +411,99 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         /// in order to protect users that could get exposed to this threat in
         /// the future.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project for which the report will be created,
+        /// in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="uri">
+        /// The URI that is being reported for phishing content to be analyzed.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReportPhishingResponse> ReportPhishingAsync(
+            string parent,
+            string uri,
+            gaxgrpc::CallSettings callSettings = null) => ReportPhishingAsync(
+                new ReportPhishingRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Uri = gax::GaxPreconditions.CheckNotNullOrEmpty(uri, nameof(uri)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Reports a URI suspected of containing phishing content to be reviewed. Once
+        /// the report review is completed, if its result verifies the existince of
+        /// malicious phishing content, the site will be added the to [Google's Social
+        /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
+        /// in order to protect users that could get exposed to this threat in
+        /// the future.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project for which the report will be created,
+        /// in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="uri">
+        /// The URI that is being reported for phishing content to be analyzed.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReportPhishingResponse> ReportPhishingAsync(
+            string parent,
+            string uri,
+            st::CancellationToken cancellationToken) => ReportPhishingAsync(
+                parent,
+                uri,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reports a URI suspected of containing phishing content to be reviewed. Once
+        /// the report review is completed, if its result verifies the existince of
+        /// malicious phishing content, the site will be added the to [Google's Social
+        /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
+        /// in order to protect users that could get exposed to this threat in
+        /// the future.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project for which the report will be created,
+        /// in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="uri">
+        /// The URI that is being reported for phishing content to be analyzed.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReportPhishingResponse ReportPhishing(
+            string parent,
+            string uri,
+            gaxgrpc::CallSettings callSettings = null) => ReportPhishing(
+                new ReportPhishingRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Uri = gax::GaxPreconditions.CheckNotNullOrEmpty(uri, nameof(uri)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Reports a URI suspected of containing phishing content to be reviewed. Once
+        /// the report review is completed, if its result verifies the existince of
+        /// malicious phishing content, the site will be added the to [Google's Social
+        /// Engineering lists](https://support.google.com/webmasters/answer/6350487/)
+        /// in order to protect users that could get exposed to this threat in
+        /// the future.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
