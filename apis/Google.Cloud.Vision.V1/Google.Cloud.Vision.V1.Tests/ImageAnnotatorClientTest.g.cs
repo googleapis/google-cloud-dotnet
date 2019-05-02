@@ -112,5 +112,83 @@ namespace Google.Cloud.Vision.V1.Tests
             mockGrpcClient.VerifyAll();
         }
 
+        [Fact]
+        public void BatchAnnotateFiles()
+        {
+            Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            BatchAnnotateFilesRequest expectedRequest = new BatchAnnotateFilesRequest
+            {
+                Requests = { },
+            };
+            BatchAnnotateFilesResponse expectedResponse = new BatchAnnotateFilesResponse();
+            mockGrpcClient.Setup(x => x.BatchAnnotateFiles(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            IEnumerable<AnnotateFileRequest> requests = new List<AnnotateFileRequest>();
+            BatchAnnotateFilesResponse response = client.BatchAnnotateFiles(requests);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BatchAnnotateFilesAsync()
+        {
+            Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            BatchAnnotateFilesRequest expectedRequest = new BatchAnnotateFilesRequest
+            {
+                Requests = { },
+            };
+            BatchAnnotateFilesResponse expectedResponse = new BatchAnnotateFilesResponse();
+            mockGrpcClient.Setup(x => x.BatchAnnotateFilesAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<BatchAnnotateFilesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            IEnumerable<AnnotateFileRequest> requests = new List<AnnotateFileRequest>();
+            BatchAnnotateFilesResponse response = await client.BatchAnnotateFilesAsync(requests);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void BatchAnnotateFiles2()
+        {
+            Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            BatchAnnotateFilesRequest request = new BatchAnnotateFilesRequest
+            {
+                Requests = { },
+            };
+            BatchAnnotateFilesResponse expectedResponse = new BatchAnnotateFilesResponse();
+            mockGrpcClient.Setup(x => x.BatchAnnotateFiles(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            BatchAnnotateFilesResponse response = client.BatchAnnotateFiles(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task BatchAnnotateFilesAsync2()
+        {
+            Mock<ImageAnnotator.ImageAnnotatorClient> mockGrpcClient = new Mock<ImageAnnotator.ImageAnnotatorClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            BatchAnnotateFilesRequest request = new BatchAnnotateFilesRequest
+            {
+                Requests = { },
+            };
+            BatchAnnotateFilesResponse expectedResponse = new BatchAnnotateFilesResponse();
+            mockGrpcClient.Setup(x => x.BatchAnnotateFilesAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<BatchAnnotateFilesResponse>(Task.FromResult(expectedResponse), null, null, null, null));
+            ImageAnnotatorClient client = new ImageAnnotatorClientImpl(mockGrpcClient.Object, null);
+            BatchAnnotateFilesResponse response = await client.BatchAnnotateFilesAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
     }
 }

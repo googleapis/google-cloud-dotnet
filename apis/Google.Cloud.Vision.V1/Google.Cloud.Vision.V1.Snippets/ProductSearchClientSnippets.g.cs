@@ -34,6 +34,436 @@ namespace Google.Cloud.Vision.V1.Snippets
     /// <summary>Generated snippets</summary>
     public class GeneratedProductSearchClientSnippets
     {
+        /// <summary>Snippet for CreateProductSetAsync</summary>
+        public async Task CreateProductSetAsync()
+        {
+            // Snippet: CreateProductSetAsync(LocationName,ProductSet,string,CallSettings)
+            // Additional: CreateProductSetAsync(LocationName,ProductSet,string,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            ProductSet productSet = new ProductSet();
+            string productSetId = "";
+            // Make the request
+            ProductSet response = await productSearchClient.CreateProductSetAsync(parent, productSet, productSetId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProductSet</summary>
+        public void CreateProductSet()
+        {
+            // Snippet: CreateProductSet(LocationName,ProductSet,string,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            ProductSet productSet = new ProductSet();
+            string productSetId = "";
+            // Make the request
+            ProductSet response = productSearchClient.CreateProductSet(parent, productSet, productSetId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProductSetAsync</summary>
+        public async Task CreateProductSetAsync_RequestObject()
+        {
+            // Snippet: CreateProductSetAsync(CreateProductSetRequest,CallSettings)
+            // Additional: CreateProductSetAsync(CreateProductSetRequest,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateProductSetRequest request = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+            };
+            // Make the request
+            ProductSet response = await productSearchClient.CreateProductSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateProductSet</summary>
+        public void CreateProductSet_RequestObject()
+        {
+            // Snippet: CreateProductSet(CreateProductSetRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            CreateProductSetRequest request = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+            };
+            // Make the request
+            ProductSet response = productSearchClient.CreateProductSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProductSetsAsync</summary>
+        public async Task ListProductSetsAsync()
+        {
+            // Snippet: ListProductSetsAsync(LocationName,string,int?,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response =
+                productSearchClient.ListProductSetsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProductSet item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProductSetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProductSet item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProductSet> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProductSet item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProductSets</summary>
+        public void ListProductSets()
+        {
+            // Snippet: ListProductSets(LocationName,string,int?,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListProductSetsResponse, ProductSet> response =
+                productSearchClient.ListProductSets(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProductSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProductSetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProductSet item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProductSet> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProductSet item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProductSetsAsync</summary>
+        public async Task ListProductSetsAsync_RequestObject()
+        {
+            // Snippet: ListProductSetsAsync(ListProductSetsRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            ListProductSetsRequest request = new ListProductSetsRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response =
+                productSearchClient.ListProductSetsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ProductSet item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListProductSetsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProductSet item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProductSet> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProductSet item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListProductSets</summary>
+        public void ListProductSets_RequestObject()
+        {
+            // Snippet: ListProductSets(ListProductSetsRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            ListProductSetsRequest request = new ListProductSetsRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListProductSetsResponse, ProductSet> response =
+                productSearchClient.ListProductSets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ProductSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListProductSetsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ProductSet item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ProductSet> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ProductSet item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProductSetAsync</summary>
+        public async Task GetProductSetAsync()
+        {
+            // Snippet: GetProductSetAsync(ProductSetName,CallSettings)
+            // Additional: GetProductSetAsync(ProductSetName,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            // Make the request
+            ProductSet response = await productSearchClient.GetProductSetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProductSet</summary>
+        public void GetProductSet()
+        {
+            // Snippet: GetProductSet(ProductSetName,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            // Make the request
+            ProductSet response = productSearchClient.GetProductSet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProductSetAsync</summary>
+        public async Task GetProductSetAsync_RequestObject()
+        {
+            // Snippet: GetProductSetAsync(GetProductSetRequest,CallSettings)
+            // Additional: GetProductSetAsync(GetProductSetRequest,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProductSetRequest request = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            // Make the request
+            ProductSet response = await productSearchClient.GetProductSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProductSet</summary>
+        public void GetProductSet_RequestObject()
+        {
+            // Snippet: GetProductSet(GetProductSetRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            GetProductSetRequest request = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            // Make the request
+            ProductSet response = productSearchClient.GetProductSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductSetAsync</summary>
+        public async Task UpdateProductSetAsync()
+        {
+            // Snippet: UpdateProductSetAsync(ProductSet,FieldMask,CallSettings)
+            // Additional: UpdateProductSetAsync(ProductSet,FieldMask,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductSet productSet = new ProductSet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProductSet response = await productSearchClient.UpdateProductSetAsync(productSet, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductSet</summary>
+        public void UpdateProductSet()
+        {
+            // Snippet: UpdateProductSet(ProductSet,FieldMask,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            ProductSet productSet = new ProductSet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProductSet response = productSearchClient.UpdateProductSet(productSet, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductSetAsync</summary>
+        public async Task UpdateProductSetAsync_RequestObject()
+        {
+            // Snippet: UpdateProductSetAsync(UpdateProductSetRequest,CallSettings)
+            // Additional: UpdateProductSetAsync(UpdateProductSetRequest,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateProductSetRequest request = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+            };
+            // Make the request
+            ProductSet response = await productSearchClient.UpdateProductSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductSet</summary>
+        public void UpdateProductSet_RequestObject()
+        {
+            // Snippet: UpdateProductSet(UpdateProductSetRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            UpdateProductSetRequest request = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+            };
+            // Make the request
+            ProductSet response = productSearchClient.UpdateProductSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteProductSetAsync</summary>
+        public async Task DeleteProductSetAsync()
+        {
+            // Snippet: DeleteProductSetAsync(ProductSetName,CallSettings)
+            // Additional: DeleteProductSetAsync(ProductSetName,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            // Make the request
+            await productSearchClient.DeleteProductSetAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteProductSet</summary>
+        public void DeleteProductSet()
+        {
+            // Snippet: DeleteProductSet(ProductSetName,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            // Make the request
+            productSearchClient.DeleteProductSet(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteProductSetAsync</summary>
+        public async Task DeleteProductSetAsync_RequestObject()
+        {
+            // Snippet: DeleteProductSetAsync(DeleteProductSetRequest,CallSettings)
+            // Additional: DeleteProductSetAsync(DeleteProductSetRequest,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteProductSetRequest request = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            // Make the request
+            await productSearchClient.DeleteProductSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteProductSet</summary>
+        public void DeleteProductSet_RequestObject()
+        {
+            // Snippet: DeleteProductSet(DeleteProductSetRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            DeleteProductSetRequest request = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            // Make the request
+            productSearchClient.DeleteProductSet(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateProductAsync</summary>
         public async Task CreateProductAsync()
         {
@@ -464,6 +894,132 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateReferenceImageAsync</summary>
+        public async Task CreateReferenceImageAsync()
+        {
+            // Snippet: CreateReferenceImageAsync(ProductName,ReferenceImage,string,CallSettings)
+            // Additional: CreateReferenceImageAsync(ProductName,ReferenceImage,string,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ReferenceImage referenceImage = new ReferenceImage();
+            string referenceImageId = "";
+            // Make the request
+            ReferenceImage response = await productSearchClient.CreateReferenceImageAsync(parent, referenceImage, referenceImageId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReferenceImage</summary>
+        public void CreateReferenceImage()
+        {
+            // Snippet: CreateReferenceImage(ProductName,ReferenceImage,string,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
+            ReferenceImage referenceImage = new ReferenceImage();
+            string referenceImageId = "";
+            // Make the request
+            ReferenceImage response = productSearchClient.CreateReferenceImage(parent, referenceImage, referenceImageId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReferenceImageAsync</summary>
+        public async Task CreateReferenceImageAsync_RequestObject()
+        {
+            // Snippet: CreateReferenceImageAsync(CreateReferenceImageRequest,CallSettings)
+            // Additional: CreateReferenceImageAsync(CreateReferenceImageRequest,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateReferenceImageRequest request = new CreateReferenceImageRequest
+            {
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImage = new ReferenceImage(),
+            };
+            // Make the request
+            ReferenceImage response = await productSearchClient.CreateReferenceImageAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateReferenceImage</summary>
+        public void CreateReferenceImage_RequestObject()
+        {
+            // Snippet: CreateReferenceImage(CreateReferenceImageRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            CreateReferenceImageRequest request = new CreateReferenceImageRequest
+            {
+                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
+                ReferenceImage = new ReferenceImage(),
+            };
+            // Make the request
+            ReferenceImage response = productSearchClient.CreateReferenceImage(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReferenceImageAsync</summary>
+        public async Task DeleteReferenceImageAsync()
+        {
+            // Snippet: DeleteReferenceImageAsync(ReferenceImageName,CallSettings)
+            // Additional: DeleteReferenceImageAsync(ReferenceImageName,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            // Make the request
+            await productSearchClient.DeleteReferenceImageAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReferenceImage</summary>
+        public void DeleteReferenceImage()
+        {
+            // Snippet: DeleteReferenceImage(ReferenceImageName,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            // Make the request
+            productSearchClient.DeleteReferenceImage(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReferenceImageAsync</summary>
+        public async Task DeleteReferenceImageAsync_RequestObject()
+        {
+            // Snippet: DeleteReferenceImageAsync(DeleteReferenceImageRequest,CallSettings)
+            // Additional: DeleteReferenceImageAsync(DeleteReferenceImageRequest,CancellationToken)
+            // Create client
+            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            // Make the request
+            await productSearchClient.DeleteReferenceImageAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteReferenceImage</summary>
+        public void DeleteReferenceImage_RequestObject()
+        {
+            // Snippet: DeleteReferenceImage(DeleteReferenceImageRequest,CallSettings)
+            // Create client
+            ProductSearchClient productSearchClient = ProductSearchClient.Create();
+            // Initialize request argument(s)
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            // Make the request
+            productSearchClient.DeleteReferenceImage(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListReferenceImagesAsync</summary>
         public async Task ListReferenceImagesAsync()
         {
@@ -703,562 +1259,6 @@ namespace Google.Cloud.Vision.V1.Snippets
             };
             // Make the request
             ReferenceImage response = productSearchClient.GetReferenceImage(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteReferenceImageAsync</summary>
-        public async Task DeleteReferenceImageAsync()
-        {
-            // Snippet: DeleteReferenceImageAsync(ReferenceImageName,CallSettings)
-            // Additional: DeleteReferenceImageAsync(ReferenceImageName,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            // Make the request
-            await productSearchClient.DeleteReferenceImageAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteReferenceImage</summary>
-        public void DeleteReferenceImage()
-        {
-            // Snippet: DeleteReferenceImage(ReferenceImageName,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            // Make the request
-            productSearchClient.DeleteReferenceImage(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteReferenceImageAsync</summary>
-        public async Task DeleteReferenceImageAsync_RequestObject()
-        {
-            // Snippet: DeleteReferenceImageAsync(DeleteReferenceImageRequest,CallSettings)
-            // Additional: DeleteReferenceImageAsync(DeleteReferenceImageRequest,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            // Make the request
-            await productSearchClient.DeleteReferenceImageAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteReferenceImage</summary>
-        public void DeleteReferenceImage_RequestObject()
-        {
-            // Snippet: DeleteReferenceImage(DeleteReferenceImageRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            // Make the request
-            productSearchClient.DeleteReferenceImage(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateReferenceImageAsync</summary>
-        public async Task CreateReferenceImageAsync()
-        {
-            // Snippet: CreateReferenceImageAsync(ProductName,ReferenceImage,string,CallSettings)
-            // Additional: CreateReferenceImageAsync(ProductName,ReferenceImage,string,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            ReferenceImage referenceImage = new ReferenceImage();
-            string referenceImageId = "";
-            // Make the request
-            ReferenceImage response = await productSearchClient.CreateReferenceImageAsync(parent, referenceImage, referenceImageId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateReferenceImage</summary>
-        public void CreateReferenceImage()
-        {
-            // Snippet: CreateReferenceImage(ProductName,ReferenceImage,string,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            ProductName parent = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]");
-            ReferenceImage referenceImage = new ReferenceImage();
-            string referenceImageId = "";
-            // Make the request
-            ReferenceImage response = productSearchClient.CreateReferenceImage(parent, referenceImage, referenceImageId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateReferenceImageAsync</summary>
-        public async Task CreateReferenceImageAsync_RequestObject()
-        {
-            // Snippet: CreateReferenceImageAsync(CreateReferenceImageRequest,CallSettings)
-            // Additional: CreateReferenceImageAsync(CreateReferenceImageRequest,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateReferenceImageRequest request = new CreateReferenceImageRequest
-            {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
-            };
-            // Make the request
-            ReferenceImage response = await productSearchClient.CreateReferenceImageAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateReferenceImage</summary>
-        public void CreateReferenceImage_RequestObject()
-        {
-            // Snippet: CreateReferenceImage(CreateReferenceImageRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            CreateReferenceImageRequest request = new CreateReferenceImageRequest
-            {
-                ParentAsProductName = new ProductName("[PROJECT]", "[LOCATION]", "[PRODUCT]"),
-                ReferenceImage = new ReferenceImage(),
-            };
-            // Make the request
-            ReferenceImage response = productSearchClient.CreateReferenceImage(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateProductSetAsync</summary>
-        public async Task CreateProductSetAsync()
-        {
-            // Snippet: CreateProductSetAsync(LocationName,ProductSet,string,CallSettings)
-            // Additional: CreateProductSetAsync(LocationName,ProductSet,string,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            ProductSet productSet = new ProductSet();
-            string productSetId = "";
-            // Make the request
-            ProductSet response = await productSearchClient.CreateProductSetAsync(parent, productSet, productSetId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateProductSet</summary>
-        public void CreateProductSet()
-        {
-            // Snippet: CreateProductSet(LocationName,ProductSet,string,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            ProductSet productSet = new ProductSet();
-            string productSetId = "";
-            // Make the request
-            ProductSet response = productSearchClient.CreateProductSet(parent, productSet, productSetId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateProductSetAsync</summary>
-        public async Task CreateProductSetAsync_RequestObject()
-        {
-            // Snippet: CreateProductSetAsync(CreateProductSetRequest,CallSettings)
-            // Additional: CreateProductSetAsync(CreateProductSetRequest,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            CreateProductSetRequest request = new CreateProductSetRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-            };
-            // Make the request
-            ProductSet response = await productSearchClient.CreateProductSetAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateProductSet</summary>
-        public void CreateProductSet_RequestObject()
-        {
-            // Snippet: CreateProductSet(CreateProductSetRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            CreateProductSetRequest request = new CreateProductSetRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-            };
-            // Make the request
-            ProductSet response = productSearchClient.CreateProductSet(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListProductSetsAsync</summary>
-        public async Task ListProductSetsAsync()
-        {
-            // Snippet: ListProductSetsAsync(LocationName,string,int?,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            // Make the request
-            PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response =
-                productSearchClient.ListProductSetsAsync(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProductSet item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductSetsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (ProductSet item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<ProductSet> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ProductSet item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListProductSets</summary>
-        public void ListProductSets()
-        {
-            // Snippet: ListProductSets(LocationName,string,int?,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            // Make the request
-            PagedEnumerable<ListProductSetsResponse, ProductSet> response =
-                productSearchClient.ListProductSets(parent);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (ProductSet item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListProductSetsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (ProductSet item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<ProductSet> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ProductSet item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListProductSetsAsync</summary>
-        public async Task ListProductSetsAsync_RequestObject()
-        {
-            // Snippet: ListProductSetsAsync(ListProductSetsRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            ListProductSetsRequest request = new ListProductSetsRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-            };
-            // Make the request
-            PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> response =
-                productSearchClient.ListProductSetsAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((ProductSet item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListProductSetsResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (ProductSet item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<ProductSet> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ProductSet item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for ListProductSets</summary>
-        public void ListProductSets_RequestObject()
-        {
-            // Snippet: ListProductSets(ListProductSetsRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            ListProductSetsRequest request = new ListProductSetsRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-            };
-            // Make the request
-            PagedEnumerable<ListProductSetsResponse, ProductSet> response =
-                productSearchClient.ListProductSets(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (ProductSet item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListProductSetsResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (ProductSet item in page)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<ProductSet> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ProductSet item in singlePage)
-            {
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetProductSetAsync</summary>
-        public async Task GetProductSetAsync()
-        {
-            // Snippet: GetProductSetAsync(ProductSetName,CallSettings)
-            // Additional: GetProductSetAsync(ProductSetName,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            // Make the request
-            ProductSet response = await productSearchClient.GetProductSetAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetProductSet</summary>
-        public void GetProductSet()
-        {
-            // Snippet: GetProductSet(ProductSetName,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            // Make the request
-            ProductSet response = productSearchClient.GetProductSet(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetProductSetAsync</summary>
-        public async Task GetProductSetAsync_RequestObject()
-        {
-            // Snippet: GetProductSetAsync(GetProductSetRequest,CallSettings)
-            // Additional: GetProductSetAsync(GetProductSetRequest,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            GetProductSetRequest request = new GetProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            // Make the request
-            ProductSet response = await productSearchClient.GetProductSetAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetProductSet</summary>
-        public void GetProductSet_RequestObject()
-        {
-            // Snippet: GetProductSet(GetProductSetRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            GetProductSetRequest request = new GetProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            // Make the request
-            ProductSet response = productSearchClient.GetProductSet(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateProductSetAsync</summary>
-        public async Task UpdateProductSetAsync()
-        {
-            // Snippet: UpdateProductSetAsync(ProductSet,FieldMask,CallSettings)
-            // Additional: UpdateProductSetAsync(ProductSet,FieldMask,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            ProductSet productSet = new ProductSet();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            ProductSet response = await productSearchClient.UpdateProductSetAsync(productSet, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateProductSet</summary>
-        public void UpdateProductSet()
-        {
-            // Snippet: UpdateProductSet(ProductSet,FieldMask,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            ProductSet productSet = new ProductSet();
-            FieldMask updateMask = new FieldMask();
-            // Make the request
-            ProductSet response = productSearchClient.UpdateProductSet(productSet, updateMask);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateProductSetAsync</summary>
-        public async Task UpdateProductSetAsync_RequestObject()
-        {
-            // Snippet: UpdateProductSetAsync(UpdateProductSetRequest,CallSettings)
-            // Additional: UpdateProductSetAsync(UpdateProductSetRequest,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            UpdateProductSetRequest request = new UpdateProductSetRequest
-            {
-                ProductSet = new ProductSet(),
-            };
-            // Make the request
-            ProductSet response = await productSearchClient.UpdateProductSetAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for UpdateProductSet</summary>
-        public void UpdateProductSet_RequestObject()
-        {
-            // Snippet: UpdateProductSet(UpdateProductSetRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            UpdateProductSetRequest request = new UpdateProductSetRequest
-            {
-                ProductSet = new ProductSet(),
-            };
-            // Make the request
-            ProductSet response = productSearchClient.UpdateProductSet(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteProductSetAsync</summary>
-        public async Task DeleteProductSetAsync()
-        {
-            // Snippet: DeleteProductSetAsync(ProductSetName,CallSettings)
-            // Additional: DeleteProductSetAsync(ProductSetName,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            // Make the request
-            await productSearchClient.DeleteProductSetAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteProductSet</summary>
-        public void DeleteProductSet()
-        {
-            // Snippet: DeleteProductSet(ProductSetName,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            // Make the request
-            productSearchClient.DeleteProductSet(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteProductSetAsync</summary>
-        public async Task DeleteProductSetAsync_RequestObject()
-        {
-            // Snippet: DeleteProductSetAsync(DeleteProductSetRequest,CallSettings)
-            // Additional: DeleteProductSetAsync(DeleteProductSetRequest,CancellationToken)
-            // Create client
-            ProductSearchClient productSearchClient = await ProductSearchClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteProductSetRequest request = new DeleteProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            // Make the request
-            await productSearchClient.DeleteProductSetAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteProductSet</summary>
-        public void DeleteProductSet_RequestObject()
-        {
-            // Snippet: DeleteProductSet(DeleteProductSetRequest,CallSettings)
-            // Create client
-            ProductSearchClient productSearchClient = ProductSearchClient.Create();
-            // Initialize request argument(s)
-            DeleteProductSetRequest request = new DeleteProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            // Make the request
-            productSearchClient.DeleteProductSet(request);
             // End snippet
         }
 
