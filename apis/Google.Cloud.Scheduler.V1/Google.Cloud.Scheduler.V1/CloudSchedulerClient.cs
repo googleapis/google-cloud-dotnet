@@ -597,6 +597,78 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Lists jobs.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Job"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListJobsResponse, Job> ListJobsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListJobsAsync(
+                new ListJobsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists jobs.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Job"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListJobsResponse, Job> ListJobs(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListJobs(
+                new ListJobsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists jobs.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -698,6 +770,75 @@ namespace Google.Cloud.Scheduler.V1
                 new GetJobRequest
                 {
                     JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a job.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> GetJobAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetJobAsync(
+                new GetJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a job.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> GetJobAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetJobAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a job.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Job GetJob(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetJob(
+                new GetJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -855,6 +996,108 @@ namespace Google.Cloud.Scheduler.V1
                 new CreateJobRequest
                 {
                     ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`.
+        /// </param>
+        /// <param name="job">
+        /// Required.
+        ///
+        /// The job to add. The user can optionally specify a name for the
+        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// existing job. If a name is not specified then the system will
+        /// generate a random unique name that will be returned
+        /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> CreateJobAsync(
+            string parent,
+            Job job,
+            gaxgrpc::CallSettings callSettings = null) => CreateJobAsync(
+                new CreateJobRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`.
+        /// </param>
+        /// <param name="job">
+        /// Required.
+        ///
+        /// The job to add. The user can optionally specify a name for the
+        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// existing job. If a name is not specified then the system will
+        /// generate a random unique name that will be returned
+        /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> CreateJobAsync(
+            string parent,
+            Job job,
+            st::CancellationToken cancellationToken) => CreateJobAsync(
+                parent,
+                job,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a job.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The location name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID`.
+        /// </param>
+        /// <param name="job">
+        /// Required.
+        ///
+        /// The job to add. The user can optionally specify a name for the
+        /// job in [name][google.cloud.scheduler.v1.Job.name]. [name][google.cloud.scheduler.v1.Job.name] cannot be the same as an
+        /// existing job. If a name is not specified then the system will
+        /// generate a random unique name that will be returned
+        /// ([name][google.cloud.scheduler.v1.Job.name]) in the response.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Job CreateJob(
+            string parent,
+            Job job,
+            gaxgrpc::CallSettings callSettings = null) => CreateJob(
+                new CreateJobRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     Job = gax::GaxPreconditions.CheckNotNull(job, nameof(job)),
                 },
                 callSettings);
@@ -1178,6 +1421,72 @@ namespace Google.Cloud.Scheduler.V1
         /// <summary>
         /// Deletes a job.
         /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteJobAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteJobAsync(
+                new DeleteJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a job.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteJobAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteJobAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a job.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteJob(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteJob(
+                new DeleteJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a job.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1312,6 +1621,93 @@ namespace Google.Cloud.Scheduler.V1
                 new PauseJobRequest
                 {
                     JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Pauses a job.
+        ///
+        /// If a job is paused then the system will stop executing the job
+        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
+        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
+        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
+        /// to be paused.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> PauseJobAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => PauseJobAsync(
+                new PauseJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Pauses a job.
+        ///
+        /// If a job is paused then the system will stop executing the job
+        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
+        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
+        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
+        /// to be paused.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> PauseJobAsync(
+            string name,
+            st::CancellationToken cancellationToken) => PauseJobAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses a job.
+        ///
+        /// If a job is paused then the system will stop executing the job
+        /// until it is re-enabled via [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob]. The
+        /// state of the job is stored in [state][google.cloud.scheduler.v1.Job.state]; if paused it
+        /// will be set to [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. A job must be in [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]
+        /// to be paused.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Job PauseJob(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => PauseJob(
+                new PauseJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1481,6 +1877,90 @@ namespace Google.Cloud.Scheduler.V1
         /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
         /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
         /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> ResumeJobAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ResumeJobAsync(
+                new ResumeJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Resume a job.
+        ///
+        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
+        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
+        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> ResumeJobAsync(
+            string name,
+            st::CancellationToken cancellationToken) => ResumeJobAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resume a job.
+        ///
+        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
+        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
+        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Job ResumeJob(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ResumeJob(
+                new ResumeJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Resume a job.
+        ///
+        /// This method reenables a job after it has been [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED]. The
+        /// state of a job is stored in [Job.state][google.cloud.scheduler.v1.Job.state]; after calling this method it
+        /// will be set to [Job.State.ENABLED][google.cloud.scheduler.v1.Job.State.ENABLED]. A job must be in
+        /// [Job.State.PAUSED][google.cloud.scheduler.v1.Job.State.PAUSED] to be resumed.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1619,6 +2099,84 @@ namespace Google.Cloud.Scheduler.V1
                 new RunJobRequest
                 {
                     JobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Forces a job to run now.
+        ///
+        /// When this method is called, Cloud Scheduler will dispatch the job, even
+        /// if the job is already running.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> RunJobAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => RunJobAsync(
+                new RunJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Forces a job to run now.
+        ///
+        /// When this method is called, Cloud Scheduler will dispatch the job, even
+        /// if the job is already running.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Job> RunJobAsync(
+            string name,
+            st::CancellationToken cancellationToken) => RunJobAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Forces a job to run now.
+        ///
+        /// When this method is called, Cloud Scheduler will dispatch the job, even
+        /// if the job is already running.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The job name. For example:
+        /// `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Job RunJob(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => RunJob(
+                new RunJobRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

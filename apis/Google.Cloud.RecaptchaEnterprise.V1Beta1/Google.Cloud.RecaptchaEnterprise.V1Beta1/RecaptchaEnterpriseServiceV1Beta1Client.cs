@@ -421,6 +421,84 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         /// <summary>
         /// Creates an Assessment of the likelihood an event is legitimate.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the assessment will be created,
+        /// in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="assessment">
+        /// The asessment details.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Assessment> CreateAssessmentAsync(
+            string parent,
+            Assessment assessment,
+            gaxgrpc::CallSettings callSettings = null) => CreateAssessmentAsync(
+                new CreateAssessmentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Assessment = gax::GaxPreconditions.CheckNotNull(assessment, nameof(assessment)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates an Assessment of the likelihood an event is legitimate.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the assessment will be created,
+        /// in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="assessment">
+        /// The asessment details.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Assessment> CreateAssessmentAsync(
+            string parent,
+            Assessment assessment,
+            st::CancellationToken cancellationToken) => CreateAssessmentAsync(
+                parent,
+                assessment,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Assessment of the likelihood an event is legitimate.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project in which the assessment will be created,
+        /// in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="assessment">
+        /// The asessment details.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Assessment CreateAssessment(
+            string parent,
+            Assessment assessment,
+            gaxgrpc::CallSettings callSettings = null) => CreateAssessment(
+                new CreateAssessmentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Assessment = gax::GaxPreconditions.CheckNotNull(assessment, nameof(assessment)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates an Assessment of the likelihood an event is legitimate.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -551,6 +629,87 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
                 new AnnotateAssessmentRequest
                 {
                     AssessmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Annotation = annotation,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Annotates a previously created Assessment to provide additional information
+        /// on whether the event turned out to be authentic or fradulent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Assessment, in the format
+        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// </param>
+        /// <param name="annotation">
+        /// The annotation that will be assigned to the Event.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotateAssessmentResponse> AnnotateAssessmentAsync(
+            string name,
+            AnnotateAssessmentRequest.Types.Annotation annotation,
+            gaxgrpc::CallSettings callSettings = null) => AnnotateAssessmentAsync(
+                new AnnotateAssessmentRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Annotation = annotation,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Annotates a previously created Assessment to provide additional information
+        /// on whether the event turned out to be authentic or fradulent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Assessment, in the format
+        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// </param>
+        /// <param name="annotation">
+        /// The annotation that will be assigned to the Event.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AnnotateAssessmentResponse> AnnotateAssessmentAsync(
+            string name,
+            AnnotateAssessmentRequest.Types.Annotation annotation,
+            st::CancellationToken cancellationToken) => AnnotateAssessmentAsync(
+                name,
+                annotation,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Annotates a previously created Assessment to provide additional information
+        /// on whether the event turned out to be authentic or fradulent.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Assessment, in the format
+        /// "projects/{project_number}/assessments/{assessment_id}".
+        /// </param>
+        /// <param name="annotation">
+        /// The annotation that will be assigned to the Event.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnnotateAssessmentResponse AnnotateAssessment(
+            string name,
+            AnnotateAssessmentRequest.Types.Annotation annotation,
+            gaxgrpc::CallSettings callSettings = null) => AnnotateAssessment(
+                new AnnotateAssessmentRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                     Annotation = annotation,
                 },
                 callSettings);

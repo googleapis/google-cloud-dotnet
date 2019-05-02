@@ -936,6 +936,87 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary>
         /// Creates a source.
         /// </summary>
+        /// <param name="parent">
+        /// Resource name of the new source's parent. Its format should be
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="source">
+        /// The Source being created, only the display_name and description will be
+        /// used. All other fields will be ignored.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Source> CreateSourceAsync(
+            string parent,
+            Source source,
+            gaxgrpc::CallSettings callSettings = null) => CreateSourceAsync(
+                new CreateSourceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Source = gax::GaxPreconditions.CheckNotNull(source, nameof(source)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a source.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the new source's parent. Its format should be
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="source">
+        /// The Source being created, only the display_name and description will be
+        /// used. All other fields will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Source> CreateSourceAsync(
+            string parent,
+            Source source,
+            st::CancellationToken cancellationToken) => CreateSourceAsync(
+                parent,
+                source,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a source.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the new source's parent. Its format should be
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="source">
+        /// The Source being created, only the display_name and description will be
+        /// used. All other fields will be ignored.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Source CreateSource(
+            string parent,
+            Source source,
+            gaxgrpc::CallSettings callSettings = null) => CreateSource(
+                new CreateSourceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Source = gax::GaxPreconditions.CheckNotNull(source, nameof(source)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a source.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1098,6 +1179,111 @@ namespace Google.Cloud.SecurityCenter.V1
         /// Creates a finding. The corresponding source must exist for finding creation
         /// to succeed.
         /// </summary>
+        /// <param name="parent">
+        /// Resource name of the new finding's parent. Its format should be
+        /// "organizations/[organization_id]/sources/[source_id]".
+        /// </param>
+        /// <param name="findingId">
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be alphanumeric and less than or equal to 32 characters and
+        /// greater than 0 characters in length.
+        /// </param>
+        /// <param name="finding">
+        /// The Finding being created. The name and security_marks will be ignored as
+        /// they are both output only fields on this resource.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Finding> CreateFindingAsync(
+            string parent,
+            string findingId,
+            Finding finding,
+            gaxgrpc::CallSettings callSettings = null) => CreateFindingAsync(
+                new CreateFindingRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    FindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)),
+                    Finding = gax::GaxPreconditions.CheckNotNull(finding, nameof(finding)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a finding. The corresponding source must exist for finding creation
+        /// to succeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the new finding's parent. Its format should be
+        /// "organizations/[organization_id]/sources/[source_id]".
+        /// </param>
+        /// <param name="findingId">
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be alphanumeric and less than or equal to 32 characters and
+        /// greater than 0 characters in length.
+        /// </param>
+        /// <param name="finding">
+        /// The Finding being created. The name and security_marks will be ignored as
+        /// they are both output only fields on this resource.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Finding> CreateFindingAsync(
+            string parent,
+            string findingId,
+            Finding finding,
+            st::CancellationToken cancellationToken) => CreateFindingAsync(
+                parent,
+                findingId,
+                finding,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a finding. The corresponding source must exist for finding creation
+        /// to succeed.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the new finding's parent. Its format should be
+        /// "organizations/[organization_id]/sources/[source_id]".
+        /// </param>
+        /// <param name="findingId">
+        /// Unique identifier provided by the client within the parent scope.
+        /// It must be alphanumeric and less than or equal to 32 characters and
+        /// greater than 0 characters in length.
+        /// </param>
+        /// <param name="finding">
+        /// The Finding being created. The name and security_marks will be ignored as
+        /// they are both output only fields on this resource.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Finding CreateFinding(
+            string parent,
+            string findingId,
+            Finding finding,
+            gaxgrpc::CallSettings callSettings = null) => CreateFinding(
+                new CreateFindingRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    FindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)),
+                    Finding = gax::GaxPreconditions.CheckNotNull(finding, nameof(finding)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a finding. The corresponding source must exist for finding creation
+        /// to succeed.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1216,6 +1402,72 @@ namespace Google.Cloud.SecurityCenter.V1
                 new iam::GetIamPolicyRequest
                 {
                     ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy on the specified Source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            string resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicyAsync(
+                new iam::GetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy on the specified Source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> GetIamPolicyAsync(
+            string resource,
+            st::CancellationToken cancellationToken) => GetIamPolicyAsync(
+                resource,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy on the specified Source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy GetIamPolicy(
+            string resource,
+            gaxgrpc::CallSettings callSettings = null) => GetIamPolicy(
+                new iam::GetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -1341,6 +1593,69 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary>
         /// Gets the settings for an organization.
         /// </summary>
+        /// <param name="name">
+        /// Name of the organization to get organization settings for. Its format is
+        /// "organizations/[organization_id]/organizationSettings".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<OrganizationSettings> GetOrganizationSettingsAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetOrganizationSettingsAsync(
+                new GetOrganizationSettingsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the settings for an organization.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the organization to get organization settings for. Its format is
+        /// "organizations/[organization_id]/organizationSettings".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<OrganizationSettings> GetOrganizationSettingsAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetOrganizationSettingsAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the settings for an organization.
+        /// </summary>
+        /// <param name="name">
+        /// Name of the organization to get organization settings for. Its format is
+        /// "organizations/[organization_id]/organizationSettings".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual OrganizationSettings GetOrganizationSettings(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetOrganizationSettings(
+                new GetOrganizationSettingsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the settings for an organization.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1454,6 +1769,69 @@ namespace Google.Cloud.SecurityCenter.V1
                 new GetSourceRequest
                 {
                     SourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a source.
+        /// </summary>
+        /// <param name="name">
+        /// Relative resource name of the source. Its format is
+        /// "organizations/[organization_id]/source/[source_id]".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Source> GetSourceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetSourceAsync(
+                new GetSourceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a source.
+        /// </summary>
+        /// <param name="name">
+        /// Relative resource name of the source. Its format is
+        /// "organizations/[organization_id]/source/[source_id]".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Source> GetSourceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetSourceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a source.
+        /// </summary>
+        /// <param name="name">
+        /// Relative resource name of the source. Its format is
+        /// "organizations/[organization_id]/source/[source_id]".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Source GetSource(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetSource(
+                new GetSourceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1676,6 +2054,122 @@ namespace Google.Cloud.SecurityCenter.V1
         /// To group across all sources provide a `-` as the source id.
         /// Example: /v1/organizations/123/sources/-/findings
         /// </summary>
+        /// <param name="parent">
+        /// Name of the source to groupBy. Its format is
+        /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
+        /// all sources provide a source_id of `-`. For example:
+        /// organizations/123/sources/-
+        /// </param>
+        /// <param name="groupBy">
+        /// Expression that defines what assets fields to use for grouping (including
+        /// `state_change`). The string value should follow SQL syntax: comma separated
+        /// list of fields. For example: "parent,resource_name".
+        ///
+        /// The following fields are supported:
+        ///
+        /// * resource_name
+        /// * category
+        /// * state
+        /// * parent
+        ///
+        /// The following fields are supported when compare_duration is set:
+        ///
+        /// * state_change
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GroupResult"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<GroupFindingsResponse, GroupResult> GroupFindingsAsync(
+            string parent,
+            string groupBy,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => GroupFindingsAsync(
+                new GroupFindingsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    GroupBy = gax::GaxPreconditions.CheckNotNullOrEmpty(groupBy, nameof(groupBy)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Filters an organization or source's findings and  groups them by their
+        /// specified properties.
+        ///
+        /// To group across all sources provide a `-` as the source id.
+        /// Example: /v1/organizations/123/sources/-/findings
+        /// </summary>
+        /// <param name="parent">
+        /// Name of the source to groupBy. Its format is
+        /// "organizations/[organization_id]/sources/[source_id]". To groupBy across
+        /// all sources provide a source_id of `-`. For example:
+        /// organizations/123/sources/-
+        /// </param>
+        /// <param name="groupBy">
+        /// Expression that defines what assets fields to use for grouping (including
+        /// `state_change`). The string value should follow SQL syntax: comma separated
+        /// list of fields. For example: "parent,resource_name".
+        ///
+        /// The following fields are supported:
+        ///
+        /// * resource_name
+        /// * category
+        /// * state
+        /// * parent
+        ///
+        /// The following fields are supported when compare_duration is set:
+        ///
+        /// * state_change
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="GroupResult"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<GroupFindingsResponse, GroupResult> GroupFindings(
+            string parent,
+            string groupBy,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => GroupFindings(
+                new GroupFindingsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    GroupBy = gax::GaxPreconditions.CheckNotNullOrEmpty(groupBy, nameof(groupBy)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Filters an organization or source's findings and  groups them by their
+        /// specified properties.
+        ///
+        /// To group across all sources provide a `-` as the source id.
+        /// Example: /v1/organizations/123/sources/-/findings
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1868,6 +2362,74 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary>
         /// Lists all sources belonging to an organization.
         /// </summary>
+        /// <param name="parent">
+        /// Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Source"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSourcesResponse, Source> ListSourcesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListSourcesAsync(
+                new ListSourcesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all sources belonging to an organization.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the parent of sources to list. Its format should be
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Source"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListSourcesResponse, Source> ListSources(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListSources(
+                new ListSourcesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all sources belonging to an organization.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1978,6 +2540,84 @@ namespace Google.Cloud.SecurityCenter.V1
                 new RunAssetDiscoveryRequest
                 {
                     ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Runs asset discovery. The discovery is tracked with a long-running
+        /// operation.
+        ///
+        /// This API can only be called with limited frequency for an organization. If
+        /// it is called too frequently the caller will receive a TOO_MANY_REQUESTS
+        /// error.
+        /// </summary>
+        /// <param name="parent">
+        /// Name of the organization to run asset discovery for. Its format is
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Empty>> RunAssetDiscoveryAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => RunAssetDiscoveryAsync(
+                new RunAssetDiscoveryRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Runs asset discovery. The discovery is tracked with a long-running
+        /// operation.
+        ///
+        /// This API can only be called with limited frequency for an organization. If
+        /// it is called too frequently the caller will receive a TOO_MANY_REQUESTS
+        /// error.
+        /// </summary>
+        /// <param name="parent">
+        /// Name of the organization to run asset discovery for. Its format is
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, pbwkt::Empty>> RunAssetDiscoveryAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => RunAssetDiscoveryAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Runs asset discovery. The discovery is tracked with a long-running
+        /// operation.
+        ///
+        /// This API can only be called with limited frequency for an organization. If
+        /// it is called too frequently the caller will receive a TOO_MANY_REQUESTS
+        /// error.
+        /// </summary>
+        /// <param name="parent">
+        /// Name of the organization to run asset discovery for. Its format is
+        /// "organizations/[organization_id]".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, pbwkt::Empty> RunAssetDiscovery(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => RunAssetDiscovery(
+                new RunAssetDiscoveryRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -2165,6 +2805,105 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary>
         /// Updates the state of a finding.
         /// </summary>
+        /// <param name="name">
+        /// The relative resource name of the finding. See:
+        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
+        /// Example:
+        /// "organizations/123/sources/456/finding/789".
+        /// </param>
+        /// <param name="state">
+        /// The desired State of the finding.
+        /// </param>
+        /// <param name="startTime">
+        /// The time at which the updated state takes effect.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Finding> SetFindingStateAsync(
+            string name,
+            Finding.Types.State state,
+            pbwkt::Timestamp startTime,
+            gaxgrpc::CallSettings callSettings = null) => SetFindingStateAsync(
+                new SetFindingStateRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    State = state,
+                    StartTime = gax::GaxPreconditions.CheckNotNull(startTime, nameof(startTime)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates the state of a finding.
+        /// </summary>
+        /// <param name="name">
+        /// The relative resource name of the finding. See:
+        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
+        /// Example:
+        /// "organizations/123/sources/456/finding/789".
+        /// </param>
+        /// <param name="state">
+        /// The desired State of the finding.
+        /// </param>
+        /// <param name="startTime">
+        /// The time at which the updated state takes effect.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Finding> SetFindingStateAsync(
+            string name,
+            Finding.Types.State state,
+            pbwkt::Timestamp startTime,
+            st::CancellationToken cancellationToken) => SetFindingStateAsync(
+                name,
+                state,
+                startTime,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the state of a finding.
+        /// </summary>
+        /// <param name="name">
+        /// The relative resource name of the finding. See:
+        /// https://cloud.google.com/apis/design/resource_names#relative_resource_name
+        /// Example:
+        /// "organizations/123/sources/456/finding/789".
+        /// </param>
+        /// <param name="state">
+        /// The desired State of the finding.
+        /// </param>
+        /// <param name="startTime">
+        /// The time at which the updated state takes effect.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Finding SetFindingState(
+            string name,
+            Finding.Types.State state,
+            pbwkt::Timestamp startTime,
+            gaxgrpc::CallSettings callSettings = null) => SetFindingState(
+                new SetFindingStateRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    State = state,
+                    StartTime = gax::GaxPreconditions.CheckNotNull(startTime, nameof(startTime)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates the state of a finding.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2311,6 +3050,96 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <summary>
         /// Sets the access control policy on the specified Source.
         /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            string resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicyAsync(
+                new iam::SetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified Source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::Policy> SetIamPolicyAsync(
+            string resource,
+            iam::Policy policy,
+            st::CancellationToken cancellationToken) => SetIamPolicyAsync(
+                resource,
+                policy,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy on the specified Source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::Policy SetIamPolicy(
+            string resource,
+            iam::Policy policy,
+            gaxgrpc::CallSettings callSettings = null) => SetIamPolicy(
+                new iam::SetIamPolicyRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified Source.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2450,6 +3279,96 @@ namespace Google.Cloud.SecurityCenter.V1
                 new iam::TestIamPermissionsRequest
                 {
                     ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the permissions that a caller has on the specified source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new iam::TestIamPermissionsRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the permissions that a caller has on the specified source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<iam::TestIamPermissionsResponse> TestIamPermissionsAsync(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            st::CancellationToken cancellationToken) => TestIamPermissionsAsync(
+                resource,
+                permissions,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the permissions that a caller has on the specified source.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy detail is being requested.
+        /// `resource` is usually specified as a path. For example, a Project
+        /// resource is specified as `projects/{project}`.
+        /// </param>
+        /// <param name="permissions">
+        /// The set of permissions to check for the `resource`. Permissions with
+        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
+        /// information see
+        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual iam::TestIamPermissionsResponse TestIamPermissions(
+            string resource,
+            scg::IEnumerable<string> permissions,
+            gaxgrpc::CallSettings callSettings = null) => TestIamPermissions(
+                new iam::TestIamPermissionsRequest
+                {
+                    Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                     Permissions = { gax::GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);

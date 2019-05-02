@@ -1024,6 +1024,66 @@ namespace Google.Cloud.Firestore.V1
         /// <summary>
         /// Deletes a document.
         /// </summary>
+        /// <param name="name">
+        /// The resource name of the Document to delete. In the format:
+        /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteDocumentAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteDocumentAsync(
+                new DeleteDocumentRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a document.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the Document to delete. In the format:
+        /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteDocumentAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteDocumentAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a document.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the Document to delete. In the format:
+        /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteDocument(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteDocument(
+                new DeleteDocumentRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a document.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>

@@ -543,6 +543,82 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>
         /// Lists profiles by filter. The order is unspecified.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Profile"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListProfilesResponse, Profile> ListProfilesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProfilesAsync(
+                new ListProfilesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists profiles by filter. The order is unspecified.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Profile"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListProfilesResponse, Profile> ListProfiles(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProfiles(
+                new ListProfilesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists profiles by filter. The order is unspecified.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -670,6 +746,102 @@ namespace Google.Cloud.Talent.V4Beta1
                 new CreateProfileRequest
                 {
                     ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Profile = gax::GaxPreconditions.CheckNotNull(profile, nameof(profile)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new profile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The name of the tenant this profile belongs to.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="profile">
+        /// Required.
+        ///
+        /// The profile to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Profile> CreateProfileAsync(
+            string parent,
+            Profile profile,
+            gaxgrpc::CallSettings callSettings = null) => CreateProfileAsync(
+                new CreateProfileRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Profile = gax::GaxPreconditions.CheckNotNull(profile, nameof(profile)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new profile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The name of the tenant this profile belongs to.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="profile">
+        /// Required.
+        ///
+        /// The profile to be created.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Profile> CreateProfileAsync(
+            string parent,
+            Profile profile,
+            st::CancellationToken cancellationToken) => CreateProfileAsync(
+                parent,
+                profile,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new profile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The name of the tenant this profile belongs to.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenants/foo".
+        /// </param>
+        /// <param name="profile">
+        /// Required.
+        ///
+        /// The profile to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Profile CreateProfile(
+            string parent,
+            Profile profile,
+            gaxgrpc::CallSettings callSettings = null) => CreateProfile(
+                new CreateProfileRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     Profile = gax::GaxPreconditions.CheckNotNull(profile, nameof(profile)),
                 },
                 callSettings);
@@ -805,6 +977,84 @@ namespace Google.Cloud.Talent.V4Beta1
                 new GetProfileRequest
                 {
                     ProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the specified profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// Resource name of the profile to get.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Profile> GetProfileAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetProfileAsync(
+                new GetProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the specified profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// Resource name of the profile to get.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Profile> GetProfileAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetProfileAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the specified profile.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// Resource name of the profile to get.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Profile GetProfile(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetProfile(
+                new GetProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1064,6 +1314,87 @@ namespace Google.Cloud.Talent.V4Beta1
                 new DeleteProfileRequest
                 {
                     ProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// Resource name of the profile to be deleted.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProfileAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProfileAsync(
+                new DeleteProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// Resource name of the profile to be deleted.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProfileAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteProfileAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified profile.
+        /// Prerequisite: The profile has no associated applications or assignments
+        /// associated.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// Resource name of the profile to be deleted.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+        /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteProfile(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProfile(
+                new DeleteProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

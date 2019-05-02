@@ -1094,6 +1094,135 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Create an instance within a project.
         /// </summary>
+        /// <param name="parent">
+        /// The unique name of the project in which to create the new instance.
+        /// Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="instanceId">
+        /// The ID to be used when referring to the new instance within its project,
+        /// e.g., just `myinstance` rather than
+        /// `projects/myproject/instances/myinstance`.
+        /// </param>
+        /// <param name="instance">
+        /// The instance to create.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// </param>
+        /// <param name="clusters">
+        /// The clusters to be created within the instance, mapped by desired
+        /// cluster ID, e.g., just `mycluster` rather than
+        /// `projects/myproject/instances/myinstance/clusters/mycluster`.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// Currently, at most two clusters can be specified.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+            string parent,
+            string instanceId,
+            Instance instance,
+            scg::IDictionary<string, Cluster> clusters,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstanceAsync(
+                new CreateInstanceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    Clusters = { gax::GaxPreconditions.CheckNotNull(clusters, nameof(clusters)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Create an instance within a project.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the project in which to create the new instance.
+        /// Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="instanceId">
+        /// The ID to be used when referring to the new instance within its project,
+        /// e.g., just `myinstance` rather than
+        /// `projects/myproject/instances/myinstance`.
+        /// </param>
+        /// <param name="instance">
+        /// The instance to create.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// </param>
+        /// <param name="clusters">
+        /// The clusters to be created within the instance, mapped by desired
+        /// cluster ID, e.g., just `mycluster` rather than
+        /// `projects/myproject/instances/myinstance/clusters/mycluster`.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// Currently, at most two clusters can be specified.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Instance, CreateInstanceMetadata>> CreateInstanceAsync(
+            string parent,
+            string instanceId,
+            Instance instance,
+            scg::IDictionary<string, Cluster> clusters,
+            st::CancellationToken cancellationToken) => CreateInstanceAsync(
+                parent,
+                instanceId,
+                instance,
+                clusters,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an instance within a project.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the project in which to create the new instance.
+        /// Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="instanceId">
+        /// The ID to be used when referring to the new instance within its project,
+        /// e.g., just `myinstance` rather than
+        /// `projects/myproject/instances/myinstance`.
+        /// </param>
+        /// <param name="instance">
+        /// The instance to create.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// </param>
+        /// <param name="clusters">
+        /// The clusters to be created within the instance, mapped by desired
+        /// cluster ID, e.g., just `mycluster` rather than
+        /// `projects/myproject/instances/myinstance/clusters/mycluster`.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// Currently, at most two clusters can be specified.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Instance, CreateInstanceMetadata> CreateInstance(
+            string parent,
+            string instanceId,
+            Instance instance,
+            scg::IDictionary<string, Cluster> clusters,
+            gaxgrpc::CallSettings callSettings = null) => CreateInstance(
+                new CreateInstanceRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                    Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    Clusters = { gax::GaxPreconditions.CheckNotNull(clusters, nameof(clusters)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Create an instance within a project.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1229,6 +1358,69 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Gets information about an instance.
         /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested instance. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstanceAsync(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested instance. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Instance> GetInstanceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested instance. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Instance GetInstance(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetInstance(
+                new GetInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about an instance.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1342,6 +1534,69 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new ListInstancesRequest
                 {
                     ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about instances in a project.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the project for which a list of instances is requested.
+        /// Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ListInstancesAsync(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about instances in a project.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the project for which a list of instances is requested.
+        /// Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListInstancesResponse> ListInstancesAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => ListInstancesAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists information about instances in a project.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the project for which a list of instances is requested.
+        /// Values are of the form `projects/&lt;project&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ListInstancesResponse ListInstances(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ListInstances(
+                new ListInstancesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -1614,6 +1869,66 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Delete an instance from a project.
         /// </summary>
+        /// <param name="name">
+        /// The unique name of the instance to be deleted.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteInstanceAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstanceAsync(
+                new DeleteInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Delete an instance from a project.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the instance to be deleted.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteInstanceAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteInstanceAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete an instance from a project.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the instance to be deleted.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteInstance(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteInstance(
+                new DeleteInstanceRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Delete an instance from a project.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1772,6 +2087,111 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Creates a cluster within an instance.
         /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new cluster.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="clusterId">
+        /// The ID to be used when referring to the new cluster within its instance,
+        /// e.g., just `mycluster` rather than
+        /// `projects/myproject/instances/myinstance/clusters/mycluster`.
+        /// </param>
+        /// <param name="cluster">
+        /// The cluster to be created.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
+            string parent,
+            string clusterId,
+            Cluster cluster,
+            gaxgrpc::CallSettings callSettings = null) => CreateClusterAsync(
+                new CreateClusterRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a cluster within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new cluster.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="clusterId">
+        /// The ID to be used when referring to the new cluster within its instance,
+        /// e.g., just `mycluster` rather than
+        /// `projects/myproject/instances/myinstance/clusters/mycluster`.
+        /// </param>
+        /// <param name="cluster">
+        /// The cluster to be created.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Cluster, CreateClusterMetadata>> CreateClusterAsync(
+            string parent,
+            string clusterId,
+            Cluster cluster,
+            st::CancellationToken cancellationToken) => CreateClusterAsync(
+                parent,
+                clusterId,
+                cluster,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a cluster within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new cluster.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="clusterId">
+        /// The ID to be used when referring to the new cluster within its instance,
+        /// e.g., just `mycluster` rather than
+        /// `projects/myproject/instances/myinstance/clusters/mycluster`.
+        /// </param>
+        /// <param name="cluster">
+        /// The cluster to be created.
+        /// Fields marked `OutputOnly` must be left blank.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Cluster, CreateClusterMetadata> CreateCluster(
+            string parent,
+            string clusterId,
+            Cluster cluster,
+            gaxgrpc::CallSettings callSettings = null) => CreateCluster(
+                new CreateClusterRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ClusterId = gax::GaxPreconditions.CheckNotNullOrEmpty(clusterId, nameof(clusterId)),
+                    Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a cluster within an instance.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1907,6 +2327,69 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Gets information about a cluster.
         /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested cluster. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Cluster> GetClusterAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetClusterAsync(
+                new GetClusterRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested cluster. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Cluster> GetClusterAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetClusterAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a cluster.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested cluster. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Cluster GetCluster(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetCluster(
+                new GetClusterRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about a cluster.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2026,6 +2509,75 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new ListClustersRequest
                 {
                     ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about clusters in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which a list of clusters is requested.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Use `&lt;instance&gt; = '-'` to list Clusters for all Instances in a project,
+        /// e.g., `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ListClustersAsync(
+                new ListClustersRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about clusters in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which a list of clusters is requested.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Use `&lt;instance&gt; = '-'` to list Clusters for all Instances in a project,
+        /// e.g., `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ListClustersResponse> ListClustersAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => ListClustersAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists information about clusters in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which a list of clusters is requested.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Use `&lt;instance&gt; = '-'` to list Clusters for all Instances in a project,
+        /// e.g., `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ListClustersResponse ListClusters(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => ListClusters(
+                new ListClustersRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 },
                 callSettings);
 
@@ -2220,6 +2772,66 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Deletes a cluster from an instance.
         /// </summary>
+        /// <param name="name">
+        /// The unique name of the cluster to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteClusterAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteClusterAsync(
+                new DeleteClusterRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a cluster from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the cluster to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteClusterAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteClusterAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a cluster from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the cluster to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteCluster(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteCluster(
+                new DeleteClusterRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a cluster from an instance.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2378,6 +2990,111 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <summary>
         /// Creates an app profile within an instance.
         /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new app profile.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// The ID to be used when referring to the new app profile within its
+        /// instance, e.g., just `myprofile` rather than
+        /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+        /// </param>
+        /// <param name="appProfile">
+        /// The app profile to be created.
+        /// Fields marked `OutputOnly` will be ignored.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(
+            string parent,
+            string appProfileId,
+            AppProfile appProfile,
+            gaxgrpc::CallSettings callSettings = null) => CreateAppProfileAsync(
+                new CreateAppProfileRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    AppProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
+                    AppProfile = gax::GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new app profile.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// The ID to be used when referring to the new app profile within its
+        /// instance, e.g., just `myprofile` rather than
+        /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+        /// </param>
+        /// <param name="appProfile">
+        /// The app profile to be created.
+        /// Fields marked `OutputOnly` will be ignored.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AppProfile> CreateAppProfileAsync(
+            string parent,
+            string appProfileId,
+            AppProfile appProfile,
+            st::CancellationToken cancellationToken) => CreateAppProfileAsync(
+                parent,
+                appProfileId,
+                appProfile,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an app profile within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance in which to create the new app profile.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="appProfileId">
+        /// The ID to be used when referring to the new app profile within its
+        /// instance, e.g., just `myprofile` rather than
+        /// `projects/myproject/instances/myinstance/appProfiles/myprofile`.
+        /// </param>
+        /// <param name="appProfile">
+        /// The app profile to be created.
+        /// Fields marked `OutputOnly` will be ignored.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AppProfile CreateAppProfile(
+            string parent,
+            string appProfileId,
+            AppProfile appProfile,
+            gaxgrpc::CallSettings callSettings = null) => CreateAppProfile(
+                new CreateAppProfileRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    AppProfileId = gax::GaxPreconditions.CheckNotNullOrEmpty(appProfileId, nameof(appProfileId)),
+                    AppProfile = gax::GaxPreconditions.CheckNotNull(appProfile, nameof(appProfile)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates an app profile within an instance.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2491,6 +3208,69 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new GetAppProfileRequest
                 {
                     AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested app profile. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AppProfile> GetAppProfileAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetAppProfileAsync(
+                new GetAppProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested app profile. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<AppProfile> GetAppProfileAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetAppProfileAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about an app profile.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the requested app profile. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AppProfile GetAppProfile(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetAppProfile(
+                new GetAppProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2619,6 +3399,80 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new ListAppProfilesRequest
                 {
                     ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which a list of app profiles is
+        /// requested. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Use `&lt;instance&gt; = '-'` to list AppProfiles for all Instances in a project,
+        /// e.g., `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfilesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListAppProfilesAsync(
+                new ListAppProfilesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists information about app profiles in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// The unique name of the instance for which a list of app profiles is
+        /// requested. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Use `&lt;instance&gt; = '-'` to list AppProfiles for all Instances in a project,
+        /// e.g., `projects/myproject/instances/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="AppProfile"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListAppProfilesResponse, AppProfile> ListAppProfiles(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListAppProfiles(
+                new ListAppProfilesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -2869,6 +3723,66 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 new DeleteAppProfileRequest
                 {
                     AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the app profile to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAppProfileAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteAppProfileAsync(
+                new DeleteAppProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the app profile to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAppProfileAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteAppProfileAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// The unique name of the app profile to be deleted. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;app_profile&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteAppProfile(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteAppProfile(
+                new DeleteAppProfileRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

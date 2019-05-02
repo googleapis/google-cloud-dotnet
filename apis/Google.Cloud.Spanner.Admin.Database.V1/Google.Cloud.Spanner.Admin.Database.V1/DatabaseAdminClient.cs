@@ -675,6 +675,74 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Lists Cloud Spanner databases.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose databases should be listed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Database"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListDatabasesAsync(
+                new ListDatabasesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists Cloud Spanner databases.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance whose databases should be listed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Database"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListDatabases(
+                new ListDatabasesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists Cloud Spanner databases.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -831,6 +899,117 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance that will serve the new database.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="createStatement">
+        /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
+        /// new database.  The database ID must conform to the regular expression
+        /// `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
+        /// If the database ID is a reserved word or if it contains a hyphen, the
+        /// database ID must be enclosed in backticks (`` ` ``).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
+            string parent,
+            string createStatement,
+            gaxgrpc::CallSettings callSettings = null) => CreateDatabaseAsync(
+                new CreateDatabaseRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    CreateStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(createStatement, nameof(createStatement)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track preparation of the database. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance that will serve the new database.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="createStatement">
+        /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
+        /// new database.  The database ID must conform to the regular expression
+        /// `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
+        /// If the database ID is a reserved word or if it contains a hyphen, the
+        /// database ID must be enclosed in backticks (`` ` ``).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(
+            string parent,
+            string createStatement,
+            st::CancellationToken cancellationToken) => CreateDatabaseAsync(
+                parent,
+                createStatement,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track preparation of the database. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the instance that will serve the new database.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// </param>
+        /// <param name="createStatement">
+        /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
+        /// new database.  The database ID must conform to the regular expression
+        /// `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
+        /// If the database ID is a reserved word or if it contains a hyphen, the
+        /// database ID must be enclosed in backticks (`` ` ``).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(
+            string parent,
+            string createStatement,
+            gaxgrpc::CallSettings callSettings = null) => CreateDatabase(
+                new CreateDatabaseRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    CreateStatement = gax::GaxPreconditions.CheckNotNullOrEmpty(createStatement, nameof(createStatement)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
+        /// can be used to track preparation of the database. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -967,6 +1146,69 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 new GetDatabaseRequest
                 {
                     DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the state of a Cloud Spanner database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested database. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Database> GetDatabaseAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetDatabaseAsync(
+                new GetDatabaseRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the state of a Cloud Spanner database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested database. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Database> GetDatabaseAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetDatabaseAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the state of a Cloud Spanner database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested database. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Database GetDatabase(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetDatabase(
+                new GetDatabaseRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1132,6 +1374,102 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
         /// The operation has no response.
         /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// </param>
+        /// <param name="statements">
+        /// DDL statements to be applied to the database.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
+            string database,
+            scg::IEnumerable<string> statements,
+            gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdlAsync(
+                new UpdateDatabaseDdlRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Statements = { gax::GaxPreconditions.CheckNotNull(statements, nameof(statements)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates the schema of a Cloud Spanner database by
+        /// creating/altering/dropping tables, columns, indexes, etc. The returned
+        /// [long-running operation][google.longrunning.Operation] will have a name of
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track execution of the schema change(s). The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// </param>
+        /// <param name="statements">
+        /// DDL statements to be applied to the database.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata>> UpdateDatabaseDdlAsync(
+            string database,
+            scg::IEnumerable<string> statements,
+            st::CancellationToken cancellationToken) => UpdateDatabaseDdlAsync(
+                database,
+                statements,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the schema of a Cloud Spanner database by
+        /// creating/altering/dropping tables, columns, indexes, etc. The returned
+        /// [long-running operation][google.longrunning.Operation] will have a name of
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track execution of the schema change(s). The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// </param>
+        /// <param name="statements">
+        /// DDL statements to be applied to the database.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, UpdateDatabaseDdlMetadata> UpdateDatabaseDdl(
+            string database,
+            scg::IEnumerable<string> statements,
+            gaxgrpc::CallSettings callSettings = null) => UpdateDatabaseDdl(
+                new UpdateDatabaseDdlRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                    Statements = { gax::GaxPreconditions.CheckNotNull(statements, nameof(statements)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates the schema of a Cloud Spanner database by
+        /// creating/altering/dropping tables, columns, indexes, etc. The returned
+        /// [long-running operation][google.longrunning.Operation] will have a name of
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
+        /// track execution of the schema change(s). The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1268,6 +1606,63 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Drops (aka deletes) a Cloud Spanner database.
         /// </summary>
+        /// <param name="database">
+        /// Required. The database to be dropped.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DropDatabaseAsync(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => DropDatabaseAsync(
+                new DropDatabaseRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Drops (aka deletes) a Cloud Spanner database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to be dropped.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DropDatabaseAsync(
+            string database,
+            st::CancellationToken cancellationToken) => DropDatabaseAsync(
+                database,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Drops (aka deletes) a Cloud Spanner database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to be dropped.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DropDatabase(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => DropDatabase(
+                new DropDatabaseRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Drops (aka deletes) a Cloud Spanner database.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1381,6 +1776,72 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
                 new GetDatabaseDdlRequest
                 {
                     DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the schema of a Cloud Spanner database as a list of formatted
+        /// DDL statements. This method does not show pending schema updates, those may
+        /// be queried using the [Operations][google.longrunning.Operations] API.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database whose schema we wish to get.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => GetDatabaseDdlAsync(
+                new GetDatabaseDdlRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the schema of a Cloud Spanner database as a list of formatted
+        /// DDL statements. This method does not show pending schema updates, those may
+        /// be queried using the [Operations][google.longrunning.Operations] API.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database whose schema we wish to get.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
+            string database,
+            st::CancellationToken cancellationToken) => GetDatabaseDdlAsync(
+                database,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the schema of a Cloud Spanner database as a list of formatted
+        /// DDL statements. This method does not show pending schema updates, those may
+        /// be queried using the [Operations][google.longrunning.Operations] API.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database whose schema we wish to get.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual GetDatabaseDdlResponse GetDatabaseDdl(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => GetDatabaseDdl(
+                new GetDatabaseDdlRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
                 },
                 callSettings);
 

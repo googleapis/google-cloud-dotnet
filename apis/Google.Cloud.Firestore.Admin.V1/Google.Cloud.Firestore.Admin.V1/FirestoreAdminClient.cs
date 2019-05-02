@@ -646,6 +646,90 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// which may be used to track the status of the creation. The metadata for
         /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
+        /// <param name="parent">
+        /// A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+        /// </param>
+        /// <param name="index">
+        /// The composite index to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation> CreateIndexAsync(
+            string parent,
+            Index index,
+            gaxgrpc::CallSettings callSettings = null) => CreateIndexAsync(
+                new CreateIndexRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Index = gax::GaxPreconditions.CheckNotNull(index, nameof(index)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
+        /// which may be used to track the status of the creation. The metadata for
+        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// </summary>
+        /// <param name="parent">
+        /// A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+        /// </param>
+        /// <param name="index">
+        /// The composite index to create.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation> CreateIndexAsync(
+            string parent,
+            Index index,
+            st::CancellationToken cancellationToken) => CreateIndexAsync(
+                parent,
+                index,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
+        /// which may be used to track the status of the creation. The metadata for
+        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// </summary>
+        /// <param name="parent">
+        /// A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+        /// </param>
+        /// <param name="index">
+        /// The composite index to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation CreateIndex(
+            string parent,
+            Index index,
+            gaxgrpc::CallSettings callSettings = null) => CreateIndex(
+                new CreateIndexRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Index = gax::GaxPreconditions.CheckNotNull(index, nameof(index)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
+        /// which may be used to track the status of the creation. The metadata for
+        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -774,6 +858,74 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists composite indexes.
         /// </summary>
+        /// <param name="parent">
+        /// A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Index"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListIndexesAsync(
+                new ListIndexesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists composite indexes.
+        /// </summary>
+        /// <param name="parent">
+        /// A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Index"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListIndexes(
+                new ListIndexesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists composite indexes.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -869,6 +1021,69 @@ namespace Google.Cloud.Firestore.Admin.V1
                 new GetIndexRequest
                 {
                     IndexName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a composite index.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Index> GetIndexAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetIndexAsync(
+                new GetIndexRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a composite index.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Index> GetIndexAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetIndexAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a composite index.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Index GetIndex(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetIndex(
+                new GetIndexRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -985,6 +1200,66 @@ namespace Google.Cloud.Firestore.Admin.V1
                 new DeleteIndexRequest
                 {
                     IndexName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a composite index.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteIndexAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteIndexAsync(
+                new DeleteIndexRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a composite index.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteIndexAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteIndexAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a composite index.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteIndex(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteIndex(
+                new DeleteIndexRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1113,6 +1388,81 @@ namespace Google.Cloud.Firestore.Admin.V1
                 new ImportDocumentsRequest
                 {
                     DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Imports documents into Google Cloud Firestore. Existing documents with the
+        /// same name are overwritten. The import occurs in the background and its
+        /// progress can be monitored and managed via the Operation resource that is
+        /// created. If an ImportDocuments operation is cancelled, it is possible
+        /// that a subset of the data has already been imported to Cloud Firestore.
+        /// </summary>
+        /// <param name="name">
+        /// Database to import into. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation> ImportDocumentsAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ImportDocumentsAsync(
+                new ImportDocumentsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Imports documents into Google Cloud Firestore. Existing documents with the
+        /// same name are overwritten. The import occurs in the background and its
+        /// progress can be monitored and managed via the Operation resource that is
+        /// created. If an ImportDocuments operation is cancelled, it is possible
+        /// that a subset of the data has already been imported to Cloud Firestore.
+        /// </summary>
+        /// <param name="name">
+        /// Database to import into. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation> ImportDocumentsAsync(
+            string name,
+            st::CancellationToken cancellationToken) => ImportDocumentsAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports documents into Google Cloud Firestore. Existing documents with the
+        /// same name are overwritten. The import occurs in the background and its
+        /// progress can be monitored and managed via the Operation resource that is
+        /// created. If an ImportDocuments operation is cancelled, it is possible
+        /// that a subset of the data has already been imported to Cloud Firestore.
+        /// </summary>
+        /// <param name="name">
+        /// Database to import into. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation ImportDocuments(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ImportDocuments(
+                new ImportDocumentsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1278,6 +1628,90 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// cancelled before completion it may leave partial data behind in Google
         /// Cloud Storage.
         /// </summary>
+        /// <param name="name">
+        /// Database to export. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation> ExportDocumentsAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ExportDocumentsAsync(
+                new ExportDocumentsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Exports a copy of all or a subset of documents from Google Cloud Firestore
+        /// to another storage system, such as Google Cloud Storage. Recent updates to
+        /// documents may not be reflected in the export. The export occurs in the
+        /// background and its progress can be monitored and managed via the
+        /// Operation resource that is created. The output of an export may only be
+        /// used once the associated operation is done. If an export operation is
+        /// cancelled before completion it may leave partial data behind in Google
+        /// Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// Database to export. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation> ExportDocumentsAsync(
+            string name,
+            st::CancellationToken cancellationToken) => ExportDocumentsAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports a copy of all or a subset of documents from Google Cloud Firestore
+        /// to another storage system, such as Google Cloud Storage. Recent updates to
+        /// documents may not be reflected in the export. The export occurs in the
+        /// background and its progress can be monitored and managed via the
+        /// Operation resource that is created. The output of an export may only be
+        /// used once the associated operation is done. If an export operation is
+        /// cancelled before completion it may leave partial data behind in Google
+        /// Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// Database to export. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation ExportDocuments(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => ExportDocuments(
+                new ExportDocumentsRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Exports a copy of all or a subset of documents from Google Cloud Firestore
+        /// to another storage system, such as Google Cloud Storage. Recent updates to
+        /// documents may not be reflected in the export. The export occurs in the
+        /// background and its progress can be monitored and managed via the
+        /// Operation resource that is created. The output of an export may only be
+        /// used once the associated operation is done. If an export operation is
+        /// cancelled before completion it may leave partial data behind in Google
+        /// Cloud Storage.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1411,6 +1845,69 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Gets the metadata and configuration for a Field.
         /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Field> GetFieldAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetFieldAsync(
+                new GetFieldRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the metadata and configuration for a Field.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Field> GetFieldAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetFieldAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the metadata and configuration for a Field.
+        /// </summary>
+        /// <param name="name">
+        /// A name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Field GetField(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetField(
+                new GetFieldRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the metadata and configuration for a Field.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1537,6 +2034,84 @@ namespace Google.Cloud.Firestore.Admin.V1
                 new ListFieldsRequest
                 {
                     ParentAsParentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the field configuration and metadata for this database.
+        ///
+        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
+        /// that have been explicitly overridden. To issue this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
+        /// `indexConfig.usesAncestorConfig:false`.
+        /// </summary>
+        /// <param name="parent">
+        /// A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Field"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListFieldsAsync(
+                new ListFieldsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the field configuration and metadata for this database.
+        ///
+        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
+        /// that have been explicitly overridden. To issue this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
+        /// `indexConfig.usesAncestorConfig:false`.
+        /// </summary>
+        /// <param name="parent">
+        /// A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Field"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListFields(
+                new ListFieldsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

@@ -428,6 +428,87 @@ namespace Google.Cloud.Trace.V2
         /// Sends new spans to new or existing traces. You cannot update
         /// existing spans.
         /// </summary>
+        /// <param name="name">
+        /// Required. The name of the project where the spans belong. The format is
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="spans">
+        /// A list of new spans. The span names must not match existing
+        /// spans, or the results are undefined.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task BatchWriteSpansAsync(
+            string name,
+            scg::IEnumerable<Span> spans,
+            gaxgrpc::CallSettings callSettings = null) => BatchWriteSpansAsync(
+                new BatchWriteSpansRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Spans = { gax::GaxPreconditions.CheckNotNull(spans, nameof(spans)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sends new spans to new or existing traces. You cannot update
+        /// existing spans.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the project where the spans belong. The format is
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="spans">
+        /// A list of new spans. The span names must not match existing
+        /// spans, or the results are undefined.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task BatchWriteSpansAsync(
+            string name,
+            scg::IEnumerable<Span> spans,
+            st::CancellationToken cancellationToken) => BatchWriteSpansAsync(
+                name,
+                spans,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sends new spans to new or existing traces. You cannot update
+        /// existing spans.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the project where the spans belong. The format is
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="spans">
+        /// A list of new spans. The span names must not match existing
+        /// spans, or the results are undefined.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void BatchWriteSpans(
+            string name,
+            scg::IEnumerable<Span> spans,
+            gaxgrpc::CallSettings callSettings = null) => BatchWriteSpans(
+                new BatchWriteSpansRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Spans = { gax::GaxPreconditions.CheckNotNull(spans, nameof(spans)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sends new spans to new or existing traces. You cannot update
+        /// existing spans.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>

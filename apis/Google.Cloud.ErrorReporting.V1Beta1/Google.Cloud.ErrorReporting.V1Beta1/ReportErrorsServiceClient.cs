@@ -432,6 +432,117 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// &lt;pre&gt;POST
         /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
         /// </summary>
+        /// <param name="projectName">
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840). Example:
+        /// `projects/my-project-123`.
+        /// </param>
+        /// <param name="event">
+        /// [Required] The error event to be reported.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReportErrorEventResponse> ReportErrorEventAsync(
+            string projectName,
+            ReportedErrorEvent @event,
+            gaxgrpc::CallSettings callSettings = null) => ReportErrorEventAsync(
+                new ReportErrorEventRequest
+                {
+                    ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
+                    Event = gax::GaxPreconditions.CheckNotNull(@event, nameof(@event)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Report an individual error event.
+        ///
+        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
+        /// &lt;strong&gt;or&lt;/strong&gt; an
+        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// for authentication. To use an API key, append it to the URL as the value of
+        /// a `key` parameter. For example:
+        /// &lt;pre&gt;POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        /// </summary>
+        /// <param name="projectName">
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840). Example:
+        /// `projects/my-project-123`.
+        /// </param>
+        /// <param name="event">
+        /// [Required] The error event to be reported.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReportErrorEventResponse> ReportErrorEventAsync(
+            string projectName,
+            ReportedErrorEvent @event,
+            st::CancellationToken cancellationToken) => ReportErrorEventAsync(
+                projectName,
+                @event,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Report an individual error event.
+        ///
+        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
+        /// &lt;strong&gt;or&lt;/strong&gt; an
+        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// for authentication. To use an API key, append it to the URL as the value of
+        /// a `key` parameter. For example:
+        /// &lt;pre&gt;POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        /// </summary>
+        /// <param name="projectName">
+        /// [Required] The resource name of the Google Cloud Platform project. Written
+        /// as `projects/` plus the
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840). Example:
+        /// `projects/my-project-123`.
+        /// </param>
+        /// <param name="event">
+        /// [Required] The error event to be reported.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReportErrorEventResponse ReportErrorEvent(
+            string projectName,
+            ReportedErrorEvent @event,
+            gaxgrpc::CallSettings callSettings = null) => ReportErrorEvent(
+                new ReportErrorEventRequest
+                {
+                    ProjectName = gax::GaxPreconditions.CheckNotNullOrEmpty(projectName, nameof(projectName)),
+                    Event = gax::GaxPreconditions.CheckNotNull(@event, nameof(@event)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Report an individual error event.
+        ///
+        /// This endpoint accepts &lt;strong&gt;either&lt;/strong&gt; an OAuth token,
+        /// &lt;strong&gt;or&lt;/strong&gt; an
+        /// &lt;a href="https://support.google.com/cloud/answer/6158862"&gt;API key&lt;/a&gt;
+        /// for authentication. To use an API key, append it to the URL as the value of
+        /// a `key` parameter. For example:
+        /// &lt;pre&gt;POST
+        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre&gt;
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>

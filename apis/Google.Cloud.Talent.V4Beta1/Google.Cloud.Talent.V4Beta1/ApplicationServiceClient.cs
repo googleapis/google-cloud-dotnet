@@ -536,6 +536,105 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>
         /// Creates a new application entity.
         /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the profile under which the application is created.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
+        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// </param>
+        /// <param name="application">
+        /// Required.
+        ///
+        /// The application to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(
+            string parent,
+            Application application,
+            gaxgrpc::CallSettings callSettings = null) => CreateApplicationAsync(
+                new CreateApplicationRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new application entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the profile under which the application is created.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
+        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// </param>
+        /// <param name="application">
+        /// Required.
+        ///
+        /// The application to be created.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(
+            string parent,
+            Application application,
+            st::CancellationToken cancellationToken) => CreateApplicationAsync(
+                parent,
+                application,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new application entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the profile under which the application is created.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
+        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// </param>
+        /// <param name="application">
+        /// Required.
+        ///
+        /// The application to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Application CreateApplication(
+            string parent,
+            Application application,
+            gaxgrpc::CallSettings callSettings = null) => CreateApplication(
+                new CreateApplicationRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new application entity.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -667,6 +766,87 @@ namespace Google.Cloud.Talent.V4Beta1
                 new GetApplicationRequest
                 {
                     ApplicationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves specified application.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the application to be retrieved.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
+        /// for example,
+        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Application> GetApplicationAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetApplicationAsync(
+                new GetApplicationRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves specified application.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the application to be retrieved.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
+        /// for example,
+        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Application> GetApplicationAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetApplicationAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves specified application.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the application to be retrieved.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
+        /// for example,
+        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Application GetApplication(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetApplication(
+                new GetApplicationRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -929,6 +1109,84 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <summary>
         /// Deletes specified application.
         /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the application to be deleted.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
+        /// for example,
+        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteApplicationAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteApplicationAsync(
+                new DeleteApplicationRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes specified application.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the application to be deleted.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
+        /// for example,
+        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteApplicationAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteApplicationAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes specified application.
+        /// </summary>
+        /// <param name="name">
+        /// Required.
+        ///
+        /// The resource name of the application to be deleted.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}/applications/{application_id}",
+        /// for example,
+        /// "projects/test-project/tenants/test-tenant/profiles/test-profile/applications/test-application".
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteApplication(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteApplication(
+                new DeleteApplicationRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes specified application.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1052,6 +1310,84 @@ namespace Google.Cloud.Talent.V4Beta1
                 new ListApplicationsRequest
                 {
                     ParentAsProfileName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all applications associated with the profile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the profile under which the application is created.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
+        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Application"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListApplicationsResponse, Application> ListApplicationsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListApplicationsAsync(
+                new ListApplicationsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists all applications associated with the profile.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// Resource name of the profile under which the application is created.
+        ///
+        /// The format is
+        /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}", for
+        /// example, "projects/test-project/tenants/test-tenant/profiles/test-profile".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Application"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListApplicationsResponse, Application> ListApplications(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListApplications(
+                new ListApplicationsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

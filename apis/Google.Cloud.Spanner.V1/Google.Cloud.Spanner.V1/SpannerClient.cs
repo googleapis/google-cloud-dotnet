@@ -901,6 +901,120 @@ namespace Google.Cloud.Spanner.V1
         /// Idle sessions can be kept alive by sending a trivial SQL query
         /// periodically, e.g., `"SELECT 1"`.
         /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new session is created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Session> CreateSessionAsync(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => CreateSessionAsync(
+                new CreateSessionRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new session. A session can be used to perform
+        /// transactions that read and/or modify data in a Cloud Spanner database.
+        /// Sessions are meant to be reused for many consecutive
+        /// transactions.
+        ///
+        /// Sessions can only execute one transaction at a time. To execute
+        /// multiple concurrent read-write/write-only transactions, create
+        /// multiple sessions. Note that standalone reads and queries use a
+        /// transaction internally, and count toward the one transaction
+        /// limit.
+        ///
+        /// Cloud Spanner limits the number of sessions that can exist at any given
+        /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+        /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+        /// operations are sent for more than an hour. If a session is deleted,
+        /// requests to it return `NOT_FOUND`.
+        ///
+        /// Idle sessions can be kept alive by sending a trivial SQL query
+        /// periodically, e.g., `"SELECT 1"`.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new session is created.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Session> CreateSessionAsync(
+            string database,
+            st::CancellationToken cancellationToken) => CreateSessionAsync(
+                database,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new session. A session can be used to perform
+        /// transactions that read and/or modify data in a Cloud Spanner database.
+        /// Sessions are meant to be reused for many consecutive
+        /// transactions.
+        ///
+        /// Sessions can only execute one transaction at a time. To execute
+        /// multiple concurrent read-write/write-only transactions, create
+        /// multiple sessions. Note that standalone reads and queries use a
+        /// transaction internally, and count toward the one transaction
+        /// limit.
+        ///
+        /// Cloud Spanner limits the number of sessions that can exist at any given
+        /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+        /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+        /// operations are sent for more than an hour. If a session is deleted,
+        /// requests to it return `NOT_FOUND`.
+        ///
+        /// Idle sessions can be kept alive by sending a trivial SQL query
+        /// periodically, e.g., `"SELECT 1"`.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database in which the new session is created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Session CreateSession(
+            string database,
+            gaxgrpc::CallSettings callSettings = null) => CreateSession(
+                new CreateSessionRequest
+                {
+                    Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new session. A session can be used to perform
+        /// transactions that read and/or modify data in a Cloud Spanner database.
+        /// Sessions are meant to be reused for many consecutive
+        /// transactions.
+        ///
+        /// Sessions can only execute one transaction at a time. To execute
+        /// multiple concurrent read-write/write-only transactions, create
+        /// multiple sessions. Note that standalone reads and queries use a
+        /// transaction internally, and count toward the one transaction
+        /// limit.
+        ///
+        /// Cloud Spanner limits the number of sessions that can exist at any given
+        /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+        /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+        /// operations are sent for more than an hour. If a session is deleted,
+        /// requests to it return `NOT_FOUND`.
+        ///
+        /// Idle sessions can be kept alive by sending a trivial SQL query
+        /// periodically, e.g., `"SELECT 1"`.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1053,6 +1167,72 @@ namespace Google.Cloud.Spanner.V1
                 new GetSessionRequest
                 {
                     SessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+        /// This is mainly useful for determining whether a session is still
+        /// alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Session> GetSessionAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetSessionAsync(
+                new GetSessionRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+        /// This is mainly useful for determining whether a session is still
+        /// alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Session> GetSessionAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetSessionAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+        /// This is mainly useful for determining whether a session is still
+        /// alive.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session to retrieve.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Session GetSession(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetSession(
+                new GetSessionRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1282,6 +1462,69 @@ namespace Google.Cloud.Spanner.V1
                 new DeleteSessionRequest
                 {
                     SessionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Ends a session, releasing server resources associated with it. This will
+        /// asynchronously trigger cancellation of any operations that are running with
+        /// this session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session to delete.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteSessionAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteSessionAsync(
+                new DeleteSessionRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Ends a session, releasing server resources associated with it. This will
+        /// asynchronously trigger cancellation of any operations that are running with
+        /// this session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session to delete.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteSessionAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteSessionAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Ends a session, releasing server resources associated with it. This will
+        /// asynchronously trigger cancellation of any operations that are running with
+        /// this session.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session to delete.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteSession(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteSession(
+                new DeleteSessionRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1795,6 +2038,93 @@ namespace Google.Cloud.Spanner.V1
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction runs.
+        /// </param>
+        /// <param name="options">
+        /// Required. Options for the new transaction.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Transaction> BeginTransactionAsync(
+            string session,
+            TransactionOptions options,
+            gaxgrpc::CallSettings callSettings = null) => BeginTransactionAsync(
+                new BeginTransactionRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    Options = gax::GaxPreconditions.CheckNotNull(options, nameof(options)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Begins a new transaction. This step can often be skipped:
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+        /// side-effect.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction runs.
+        /// </param>
+        /// <param name="options">
+        /// Required. Options for the new transaction.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Transaction> BeginTransactionAsync(
+            string session,
+            TransactionOptions options,
+            st::CancellationToken cancellationToken) => BeginTransactionAsync(
+                session,
+                options,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Begins a new transaction. This step can often be skipped:
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+        /// side-effect.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction runs.
+        /// </param>
+        /// <param name="options">
+        /// Required. Options for the new transaction.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Transaction BeginTransaction(
+            string session,
+            TransactionOptions options,
+            gaxgrpc::CallSettings callSettings = null) => BeginTransaction(
+                new BeginTransactionRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    Options = gax::GaxPreconditions.CheckNotNull(options, nameof(options)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Begins a new transaction. This step can often be skipped:
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+        /// side-effect.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1986,6 +2316,123 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="session">
         /// Required. The session in which the transaction to be committed is running.
         /// </param>
+        /// <param name="transactionId">
+        /// Commit a previously-started transaction.
+        /// </param>
+        /// <param name="mutations">
+        /// The mutations to be executed when this transaction commits. All
+        /// mutations are applied atomically, in the order they appear in
+        /// this list.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CommitResponse> CommitAsync(
+            string session,
+            pb::ByteString transactionId,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => CommitAsync(
+                new CommitRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    TransactionId = transactionId ?? pb::ByteString.Empty, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Commits a transaction. The request includes the mutations to be
+        /// applied to rows in the database.
+        ///
+        /// `Commit` might return an `ABORTED` error. This can occur at any time;
+        /// commonly, the cause is conflicts with concurrent
+        /// transactions. However, it can also happen for a variety of other
+        /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+        /// the transaction from the beginning, re-using the same session.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to be committed is running.
+        /// </param>
+        /// <param name="transactionId">
+        /// Commit a previously-started transaction.
+        /// </param>
+        /// <param name="mutations">
+        /// The mutations to be executed when this transaction commits. All
+        /// mutations are applied atomically, in the order they appear in
+        /// this list.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CommitResponse> CommitAsync(
+            string session,
+            pb::ByteString transactionId,
+            scg::IEnumerable<Mutation> mutations,
+            st::CancellationToken cancellationToken) => CommitAsync(
+                session,
+                transactionId,
+                mutations,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Commits a transaction. The request includes the mutations to be
+        /// applied to rows in the database.
+        ///
+        /// `Commit` might return an `ABORTED` error. This can occur at any time;
+        /// commonly, the cause is conflicts with concurrent
+        /// transactions. However, it can also happen for a variety of other
+        /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+        /// the transaction from the beginning, re-using the same session.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to be committed is running.
+        /// </param>
+        /// <param name="transactionId">
+        /// Commit a previously-started transaction.
+        /// </param>
+        /// <param name="mutations">
+        /// The mutations to be executed when this transaction commits. All
+        /// mutations are applied atomically, in the order they appear in
+        /// this list.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CommitResponse Commit(
+            string session,
+            pb::ByteString transactionId,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => Commit(
+                new CommitRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    TransactionId = transactionId ?? pb::ByteString.Empty, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Commits a transaction. The request includes the mutations to be
+        /// applied to rows in the database.
+        ///
+        /// `Commit` might return an `ABORTED` error. This can occur at any time;
+        /// commonly, the cause is conflicts with concurrent
+        /// transactions. However, it can also happen for a variety of other
+        /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+        /// the transaction from the beginning, re-using the same session.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to be committed is running.
+        /// </param>
         /// <param name="singleUseTransaction">
         /// Execute mutations in a temporary transaction. Note that unlike
         /// commit of a previously-started transaction, commit with a
@@ -2109,6 +2556,147 @@ namespace Google.Cloud.Spanner.V1
                 new CommitRequest
                 {
                     SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    SingleUseTransaction = singleUseTransaction, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Commits a transaction. The request includes the mutations to be
+        /// applied to rows in the database.
+        ///
+        /// `Commit` might return an `ABORTED` error. This can occur at any time;
+        /// commonly, the cause is conflicts with concurrent
+        /// transactions. However, it can also happen for a variety of other
+        /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+        /// the transaction from the beginning, re-using the same session.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to be committed is running.
+        /// </param>
+        /// <param name="singleUseTransaction">
+        /// Execute mutations in a temporary transaction. Note that unlike
+        /// commit of a previously-started transaction, commit with a
+        /// temporary transaction is non-idempotent. That is, if the
+        /// `CommitRequest` is sent to Cloud Spanner more than once (for
+        /// instance, due to retries in the application, or in the
+        /// transport library), it is possible that the mutations are
+        /// executed more than once. If this is undesirable, use
+        /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
+        /// [Commit][google.spanner.v1.Spanner.Commit] instead.
+        /// </param>
+        /// <param name="mutations">
+        /// The mutations to be executed when this transaction commits. All
+        /// mutations are applied atomically, in the order they appear in
+        /// this list.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CommitResponse> CommitAsync(
+            string session,
+            TransactionOptions singleUseTransaction,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => CommitAsync(
+                new CommitRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    SingleUseTransaction = singleUseTransaction, // Optional
+                    Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Commits a transaction. The request includes the mutations to be
+        /// applied to rows in the database.
+        ///
+        /// `Commit` might return an `ABORTED` error. This can occur at any time;
+        /// commonly, the cause is conflicts with concurrent
+        /// transactions. However, it can also happen for a variety of other
+        /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+        /// the transaction from the beginning, re-using the same session.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to be committed is running.
+        /// </param>
+        /// <param name="singleUseTransaction">
+        /// Execute mutations in a temporary transaction. Note that unlike
+        /// commit of a previously-started transaction, commit with a
+        /// temporary transaction is non-idempotent. That is, if the
+        /// `CommitRequest` is sent to Cloud Spanner more than once (for
+        /// instance, due to retries in the application, or in the
+        /// transport library), it is possible that the mutations are
+        /// executed more than once. If this is undesirable, use
+        /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
+        /// [Commit][google.spanner.v1.Spanner.Commit] instead.
+        /// </param>
+        /// <param name="mutations">
+        /// The mutations to be executed when this transaction commits. All
+        /// mutations are applied atomically, in the order they appear in
+        /// this list.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<CommitResponse> CommitAsync(
+            string session,
+            TransactionOptions singleUseTransaction,
+            scg::IEnumerable<Mutation> mutations,
+            st::CancellationToken cancellationToken) => CommitAsync(
+                session,
+                singleUseTransaction,
+                mutations,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Commits a transaction. The request includes the mutations to be
+        /// applied to rows in the database.
+        ///
+        /// `Commit` might return an `ABORTED` error. This can occur at any time;
+        /// commonly, the cause is conflicts with concurrent
+        /// transactions. However, it can also happen for a variety of other
+        /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+        /// the transaction from the beginning, re-using the same session.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to be committed is running.
+        /// </param>
+        /// <param name="singleUseTransaction">
+        /// Execute mutations in a temporary transaction. Note that unlike
+        /// commit of a previously-started transaction, commit with a
+        /// temporary transaction is non-idempotent. That is, if the
+        /// `CommitRequest` is sent to Cloud Spanner more than once (for
+        /// instance, due to retries in the application, or in the
+        /// transport library), it is possible that the mutations are
+        /// executed more than once. If this is undesirable, use
+        /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
+        /// [Commit][google.spanner.v1.Spanner.Commit] instead.
+        /// </param>
+        /// <param name="mutations">
+        /// The mutations to be executed when this transaction commits. All
+        /// mutations are applied atomically, in the order they appear in
+        /// this list.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CommitResponse Commit(
+            string session,
+            TransactionOptions singleUseTransaction,
+            scg::IEnumerable<Mutation> mutations,
+            gaxgrpc::CallSettings callSettings = null) => Commit(
+                new CommitRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
                     SingleUseTransaction = singleUseTransaction, // Optional
                     Mutations = { gax::GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
@@ -2283,6 +2871,102 @@ namespace Google.Cloud.Spanner.V1
                 new RollbackRequest
                 {
                     SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = gax::GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Rolls back a transaction, releasing any locks it holds. It is a good
+        /// idea to call this for any transaction that includes one or more
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
+        ///
+        /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+        /// transaction was already aborted, or the transaction is not
+        /// found. `Rollback` never returns `ABORTED`.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to roll back is running.
+        /// </param>
+        /// <param name="transactionId">
+        /// Required. The transaction to roll back.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task RollbackAsync(
+            string session,
+            pb::ByteString transactionId,
+            gaxgrpc::CallSettings callSettings = null) => RollbackAsync(
+                new RollbackRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                    TransactionId = gax::GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Rolls back a transaction, releasing any locks it holds. It is a good
+        /// idea to call this for any transaction that includes one or more
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
+        ///
+        /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+        /// transaction was already aborted, or the transaction is not
+        /// found. `Rollback` never returns `ABORTED`.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to roll back is running.
+        /// </param>
+        /// <param name="transactionId">
+        /// Required. The transaction to roll back.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task RollbackAsync(
+            string session,
+            pb::ByteString transactionId,
+            st::CancellationToken cancellationToken) => RollbackAsync(
+                session,
+                transactionId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rolls back a transaction, releasing any locks it holds. It is a good
+        /// idea to call this for any transaction that includes one or more
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
+        ///
+        /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+        /// transaction was already aborted, or the transaction is not
+        /// found. `Rollback` never returns `ABORTED`.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the transaction to roll back is running.
+        /// </param>
+        /// <param name="transactionId">
+        /// Required. The transaction to roll back.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void Rollback(
+            string session,
+            pb::ByteString transactionId,
+            gaxgrpc::CallSettings callSettings = null) => Rollback(
+                new RollbackRequest
+                {
+                    Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
                     TransactionId = gax::GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
                 },
                 callSettings);

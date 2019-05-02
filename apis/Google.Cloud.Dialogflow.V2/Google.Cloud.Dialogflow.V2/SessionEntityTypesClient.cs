@@ -505,6 +505,74 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Returns the list of all session entity types in the specified session.
         /// </summary>
+        /// <param name="parent">
+        /// Required. The session to list all session entity types from.
+        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="SessionEntityType"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListSessionEntityTypesAsync(
+                new ListSessionEntityTypesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the list of all session entity types in the specified session.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to list all session entity types from.
+        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="SessionEntityType"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListSessionEntityTypesResponse, SessionEntityType> ListSessionEntityTypes(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListSessionEntityTypes(
+                new ListSessionEntityTypesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns the list of all session entity types in the specified session.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -603,6 +671,72 @@ namespace Google.Cloud.Dialogflow.V2
                 new GetSessionEntityTypeRequest
                 {
                     SessionEntityTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type
+        /// Display Name&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SessionEntityType> GetSessionEntityTypeAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetSessionEntityTypeAsync(
+                new GetSessionEntityTypeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type
+        /// Display Name&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SessionEntityType> GetSessionEntityTypeAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetSessionEntityTypeAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the specified session entity type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the session entity type. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type
+        /// Display Name&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SessionEntityType GetSessionEntityType(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetSessionEntityType(
+                new GetSessionEntityTypeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -745,6 +879,93 @@ namespace Google.Cloud.Dialogflow.V2
                 new CreateSessionEntityTypeRequest
                 {
                     ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to create a session entity type for.
+        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`.
+        /// </param>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SessionEntityType> CreateSessionEntityTypeAsync(
+            string parent,
+            SessionEntityType sessionEntityType,
+            gaxgrpc::CallSettings callSettings = null) => CreateSessionEntityTypeAsync(
+                new CreateSessionEntityTypeRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to create a session entity type for.
+        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`.
+        /// </param>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to create.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<SessionEntityType> CreateSessionEntityTypeAsync(
+            string parent,
+            SessionEntityType sessionEntityType,
+            st::CancellationToken cancellationToken) => CreateSessionEntityTypeAsync(
+                parent,
+                sessionEntityType,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a session entity type.
+        ///
+        /// If the specified session entity type already exists, overrides the session
+        /// entity type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The session to create a session entity type for.
+        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;`.
+        /// </param>
+        /// <param name="sessionEntityType">
+        /// Required. The session entity type to create.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SessionEntityType CreateSessionEntityType(
+            string parent,
+            SessionEntityType sessionEntityType,
+            gaxgrpc::CallSettings callSettings = null) => CreateSessionEntityType(
+                new CreateSessionEntityTypeRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     SessionEntityType = gax::GaxPreconditions.CheckNotNull(sessionEntityType, nameof(sessionEntityType)),
                 },
                 callSettings);
@@ -996,6 +1217,69 @@ namespace Google.Cloud.Dialogflow.V2
                 new DeleteSessionEntityTypeRequest
                 {
                     SessionEntityTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified session entity type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entity type to delete. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type
+        /// Display Name&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteSessionEntityTypeAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteSessionEntityTypeAsync(
+                new DeleteSessionEntityTypeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified session entity type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entity type to delete. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type
+        /// Display Name&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteSessionEntityTypeAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteSessionEntityTypeAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified session entity type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the entity type to delete. Format:
+        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/entityTypes/&lt;Entity Type
+        /// Display Name&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteSessionEntityType(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteSessionEntityType(
+                new DeleteSessionEntityTypeRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

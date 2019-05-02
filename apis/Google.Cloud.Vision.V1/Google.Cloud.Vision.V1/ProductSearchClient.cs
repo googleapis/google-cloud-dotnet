@@ -986,6 +986,126 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
         ///   4096 characters.
         /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSet should be created.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="productSet">
+        /// The ProductSet to create.
+        /// </param>
+        /// <param name="productSetId">
+        /// A user-supplied resource id for this ProductSet. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> CreateProductSetAsync(
+            string parent,
+            ProductSet productSet,
+            string productSetId,
+            gaxgrpc::CallSettings callSettings = null) => CreateProductSetAsync(
+                new CreateProductSetRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
+                    ProductSetId = productSetId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSet should be created.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="productSet">
+        /// The ProductSet to create.
+        /// </param>
+        /// <param name="productSetId">
+        /// A user-supplied resource id for this ProductSet. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> CreateProductSetAsync(
+            string parent,
+            ProductSet productSet,
+            string productSetId,
+            st::CancellationToken cancellationToken) => CreateProductSetAsync(
+                parent,
+                productSet,
+                productSetId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSet should be created.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="productSet">
+        /// The ProductSet to create.
+        /// </param>
+        /// <param name="productSetId">
+        /// A user-supplied resource id for this ProductSet. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet CreateProductSet(
+            string parent,
+            ProductSet productSet,
+            string productSetId,
+            gaxgrpc::CallSettings callSettings = null) => CreateProductSet(
+                new CreateProductSetRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
+                    ProductSetId = productSetId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1137,6 +1257,86 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
         ///   than 1.
         /// </summary>
+        /// <param name="parent">
+        /// The project from which ProductSets should be listed.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProductSetsAsync(
+                new ListProductSetsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="parent">
+        /// The project from which ProductSets should be listed.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProductSets(
+                new ListProductSetsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1255,6 +1455,87 @@ namespace Google.Cloud.Vision.V1
                 new GetProductSetRequest
                 {
                     ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> GetProductSetAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetProductSetAsync(
+                new GetProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> GetProductSetAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetProductSetAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet GetProductSet(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetProductSet(
+                new GetProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1589,6 +1870,81 @@ namespace Google.Cloud.Vision.V1
         ///
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductSetAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProductSetAsync(
+                new DeleteProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductSetAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteProductSetAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteProductSet(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProductSet(
+                new DeleteProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1784,6 +2140,135 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if description is longer than 4096 characters.
         /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
         /// </summary>
+        /// <param name="parent">
+        /// The project in which the Product should be created.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="product">
+        /// The product to create.
+        /// </param>
+        /// <param name="productId">
+        /// A user-supplied resource id for this Product. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Product> CreateProductAsync(
+            string parent,
+            Product product,
+            string productId,
+            gaxgrpc::CallSettings callSettings = null) => CreateProductAsync(
+                new CreateProductRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Product = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
+                    ProductId = productId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new product resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if description is longer than 4096 characters.
+        /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the Product should be created.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="product">
+        /// The product to create.
+        /// </param>
+        /// <param name="productId">
+        /// A user-supplied resource id for this Product. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Product> CreateProductAsync(
+            string parent,
+            Product product,
+            string productId,
+            st::CancellationToken cancellationToken) => CreateProductAsync(
+                parent,
+                product,
+                productId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new product resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if description is longer than 4096 characters.
+        /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the Product should be created.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="product">
+        /// The product to create.
+        /// </param>
+        /// <param name="productId">
+        /// A user-supplied resource id for this Product. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Product CreateProduct(
+            string parent,
+            Product product,
+            string productId,
+            gaxgrpc::CallSettings callSettings = null) => CreateProduct(
+                new CreateProductRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Product = gax::GaxPreconditions.CheckNotNull(product, nameof(product)),
+                    ProductId = productId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new product resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if description is longer than 4096 characters.
+        /// * Returns INVALID_ARGUMENT if product_category is missing or invalid.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -1938,6 +2423,86 @@ namespace Google.Cloud.Vision.V1
         ///
         /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
         /// </summary>
+        /// <param name="parent">
+        /// The project OR ProductSet from which Products should be listed.
+        ///
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOC_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Product"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListProductsResponse, Product> ListProductsAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProductsAsync(
+                new ListProductsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists products in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+        /// </summary>
+        /// <param name="parent">
+        /// The project OR ProductSet from which Products should be listed.
+        ///
+        /// Format:
+        /// `projects/PROJECT_ID/locations/LOC_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Product"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListProductsResponse, Product> ListProducts(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProducts(
+                new ListProductsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists products in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2055,6 +2620,87 @@ namespace Google.Cloud.Vision.V1
                 new GetProductRequest
                 {
                     ProductName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a Product.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the Product does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the Product to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Product> GetProductAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetProductAsync(
+                new GetProductRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a Product.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the Product does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the Product to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Product> GetProductAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetProductAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information associated with a Product.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the Product does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the Product to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Product GetProduct(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetProduct(
+                new GetProductRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -2441,6 +3087,84 @@ namespace Google.Cloud.Vision.V1
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
         /// </summary>
+        /// <param name="name">
+        /// Resource name of product to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProductAsync(
+                new DeleteProductRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a product and its reference images.
+        ///
+        /// Metadata of the product and all its images will be deleted right away, but
+        /// search queries against ProductSets containing the product may still work
+        /// until all related caches are refreshed.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of product to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteProductAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a product and its reference images.
+        ///
+        /// Metadata of the product and all its images will be deleted right away, but
+        /// search queries against ProductSets containing the product may still work
+        /// until all related caches are refreshed.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of product to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteProduct(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProduct(
+                new DeleteProductRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a product and its reference images.
+        ///
+        /// Metadata of the product and all its images will be deleted right away, but
+        /// search queries against ProductSets containing the product may still work
+        /// until all related caches are refreshed.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2685,6 +3409,171 @@ namespace Google.Cloud.Vision.V1
         ///   compatible with the parent product's product_category is detected.
         /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
         /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product in which to create the reference image.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="referenceImage">
+        /// The reference image to create.
+        /// If an image ID is specified, it is ignored.
+        /// </param>
+        /// <param name="referenceImageId">
+        /// A user-supplied resource id for the ReferenceImage to be added. If set,
+        /// the server will attempt to use this value as the resource id. If it is
+        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
+        /// most 128 characters long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
+            string parent,
+            ReferenceImage referenceImage,
+            string referenceImageId,
+            gaxgrpc::CallSettings callSettings = null) => CreateReferenceImageAsync(
+                new CreateReferenceImageRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
+                    ReferenceImageId = referenceImageId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product in which to create the reference image.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="referenceImage">
+        /// The reference image to create.
+        /// If an image ID is specified, it is ignored.
+        /// </param>
+        /// <param name="referenceImageId">
+        /// A user-supplied resource id for the ReferenceImage to be added. If set,
+        /// the server will attempt to use this value as the resource id. If it is
+        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
+        /// most 128 characters long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
+            string parent,
+            ReferenceImage referenceImage,
+            string referenceImageId,
+            st::CancellationToken cancellationToken) => CreateReferenceImageAsync(
+                parent,
+                referenceImage,
+                referenceImageId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product in which to create the reference image.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="referenceImage">
+        /// The reference image to create.
+        /// If an image ID is specified, it is ignored.
+        /// </param>
+        /// <param name="referenceImageId">
+        /// A user-supplied resource id for the ReferenceImage to be added. If set,
+        /// the server will attempt to use this value as the resource id. If it is
+        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
+        /// most 128 characters long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReferenceImage CreateReferenceImage(
+            string parent,
+            ReferenceImage referenceImage,
+            string referenceImageId,
+            gaxgrpc::CallSettings callSettings = null) => CreateReferenceImage(
+                new CreateReferenceImageRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
+                    ReferenceImageId = referenceImageId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -2870,6 +3759,93 @@ namespace Google.Cloud.Vision.V1
         ///
         /// The actual image files are not deleted from Google Cloud Storage.
         /// </summary>
+        /// <param name="name">
+        /// The resource name of the reference image to delete.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteReferenceImageAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImageAsync(
+                new DeleteReferenceImageRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the reference image to delete.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteReferenceImageAsync(
+            string name,
+            st::CancellationToken cancellationToken) => DeleteReferenceImageAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the reference image to delete.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteReferenceImage(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImage(
+                new DeleteReferenceImageRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -3025,6 +4001,90 @@ namespace Google.Cloud.Vision.V1
         /// * Returns INVALID_ARGUMENT if the page_size is greater than 100, or less
         ///   than 1.
         /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product containing the reference images.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ReferenceImage"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImagesAsync(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListReferenceImagesAsync(
+                new ListReferenceImagesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists reference images.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the parent product does not exist.
+        /// * Returns INVALID_ARGUMENT if the page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product containing the reference images.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ReferenceImage"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListReferenceImagesResponse, ReferenceImage> ListReferenceImages(
+            string parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListReferenceImages(
+                new ListReferenceImagesRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists reference images.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the parent product does not exist.
+        /// * Returns INVALID_ARGUMENT if the page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -3147,6 +4207,90 @@ namespace Google.Cloud.Vision.V1
                 new GetReferenceImageRequest
                 {
                     ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a ReferenceImage.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the specified image does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the ReferenceImage to get.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> GetReferenceImageAsync(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetReferenceImageAsync(
+                new GetReferenceImageRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a ReferenceImage.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the specified image does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the ReferenceImage to get.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> GetReferenceImageAsync(
+            string name,
+            st::CancellationToken cancellationToken) => GetReferenceImageAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information associated with a ReferenceImage.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the specified image does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the ReferenceImage to get.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReferenceImage GetReferenceImage(
+            string name,
+            gaxgrpc::CallSettings callSettings = null) => GetReferenceImage(
+                new GetReferenceImageRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -3339,6 +4483,117 @@ namespace Google.Cloud.Vision.V1
         ///
         /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
         /// </summary>
+        /// <param name="name">
+        /// The resource name for the ProductSet to modify.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="product">
+        /// The resource name for the Product to be added to this ProductSet.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task AddProductToProductSetAsync(
+            string name,
+            string product,
+            gaxgrpc::CallSettings callSettings = null) => AddProductToProductSetAsync(
+                new AddProductToProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Adds a Product to the specified ProductSet. If the Product is already
+        /// present, no change is made.
+        ///
+        /// One Product can be added to at most 100 ProductSets.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name for the ProductSet to modify.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="product">
+        /// The resource name for the Product to be added to this ProductSet.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task AddProductToProductSetAsync(
+            string name,
+            string product,
+            st::CancellationToken cancellationToken) => AddProductToProductSetAsync(
+                name,
+                product,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a Product to the specified ProductSet. If the Product is already
+        /// present, no change is made.
+        ///
+        /// One Product can be added to at most 100 ProductSets.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name for the ProductSet to modify.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="product">
+        /// The resource name for the Product to be added to this ProductSet.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void AddProductToProductSet(
+            string name,
+            string product,
+            gaxgrpc::CallSettings callSettings = null) => AddProductToProductSet(
+                new AddProductToProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Adds a Product to the specified ProductSet. If the Product is already
+        /// present, no change is made.
+        ///
+        /// One Product can be added to at most 100 ProductSets.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -3496,6 +4751,96 @@ namespace Google.Cloud.Vision.V1
         /// <summary>
         /// Removes a Product from the specified ProductSet.
         /// </summary>
+        /// <param name="name">
+        /// The resource name for the ProductSet to modify.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="product">
+        /// The resource name for the Product to be removed from this ProductSet.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task RemoveProductFromProductSetAsync(
+            string name,
+            string product,
+            gaxgrpc::CallSettings callSettings = null) => RemoveProductFromProductSetAsync(
+                new RemoveProductFromProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Removes a Product from the specified ProductSet.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name for the ProductSet to modify.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="product">
+        /// The resource name for the Product to be removed from this ProductSet.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task RemoveProductFromProductSetAsync(
+            string name,
+            string product,
+            st::CancellationToken cancellationToken) => RemoveProductFromProductSetAsync(
+                name,
+                product,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Removes a Product from the specified ProductSet.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name for the ProductSet to modify.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="product">
+        /// The resource name for the Product to be removed from this ProductSet.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void RemoveProductFromProductSet(
+            string name,
+            string product,
+            gaxgrpc::CallSettings callSettings = null) => RemoveProductFromProductSet(
+                new RemoveProductFromProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Product = gax::GaxPreconditions.CheckNotNullOrEmpty(product, nameof(product)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Removes a Product from the specified ProductSet.
+        /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
         /// </param>
@@ -3625,6 +4970,90 @@ namespace Google.Cloud.Vision.V1
                 new ListProductsInProductSetRequest
                 {
                     ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the Products in a ProductSet, in an unspecified order. If the
+        /// ProductSet does not exist, the products field of the response will be
+        /// empty.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+        /// </summary>
+        /// <param name="name">
+        /// The ProductSet resource for which to retrieve Products.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Product"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSetAsync(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProductsInProductSetAsync(
+                new ListProductsInProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the Products in a ProductSet, in an unspecified order. If the
+        /// ProductSet does not exist, the products field of the response will be
+        /// empty.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+        /// </summary>
+        /// <param name="name">
+        /// The ProductSet resource for which to retrieve Products.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Product"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListProductsInProductSetResponse, Product> ListProductsInProductSet(
+            string name,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProductsInProductSet(
+                new ListProductsInProductSetRequest
+                {
+                    Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -3787,6 +5216,117 @@ namespace Google.Cloud.Vision.V1
                 new ImportProductSetsRequest
                 {
                     ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Asynchronous API that imports a list of reference images to specified
+        /// product sets based on a list of image information.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// `Operation.response` contains `ImportProductSetsResponse`. (results)
+        ///
+        /// The input source of this method is a csv file on Google Cloud Storage.
+        /// For the format of the csv file please see
+        /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSets should be imported.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="inputConfig">
+        /// The input content for the list of requests.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<ImportProductSetsResponse, BatchOperationMetadata>> ImportProductSetsAsync(
+            string parent,
+            ImportProductSetsInputConfig inputConfig,
+            gaxgrpc::CallSettings callSettings = null) => ImportProductSetsAsync(
+                new ImportProductSetsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Asynchronous API that imports a list of reference images to specified
+        /// product sets based on a list of image information.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// `Operation.response` contains `ImportProductSetsResponse`. (results)
+        ///
+        /// The input source of this method is a csv file on Google Cloud Storage.
+        /// For the format of the csv file please see
+        /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSets should be imported.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="inputConfig">
+        /// The input content for the list of requests.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<ImportProductSetsResponse, BatchOperationMetadata>> ImportProductSetsAsync(
+            string parent,
+            ImportProductSetsInputConfig inputConfig,
+            st::CancellationToken cancellationToken) => ImportProductSetsAsync(
+                parent,
+                inputConfig,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Asynchronous API that imports a list of reference images to specified
+        /// product sets based on a list of image information.
+        ///
+        /// The [google.longrunning.Operation][google.longrunning.Operation] API can be
+        /// used to keep track of the progress and results of the request.
+        /// `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+        /// `Operation.response` contains `ImportProductSetsResponse`. (results)
+        ///
+        /// The input source of this method is a csv file on Google Cloud Storage.
+        /// For the format of the csv file please see
+        /// [ImportProductSetsGcsSource.csv_file_uri][google.cloud.vision.v1.ImportProductSetsGcsSource.csv_file_uri].
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSets should be imported.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="inputConfig">
+        /// The input content for the list of requests.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<ImportProductSetsResponse, BatchOperationMetadata> ImportProductSets(
+            string parent,
+            ImportProductSetsInputConfig inputConfig,
+            gaxgrpc::CallSettings callSettings = null) => ImportProductSets(
+                new ImportProductSetsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                     InputConfig = gax::GaxPreconditions.CheckNotNull(inputConfig, nameof(inputConfig)),
                 },
                 callSettings);
