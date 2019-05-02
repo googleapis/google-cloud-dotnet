@@ -3,7 +3,7 @@
 //     source: google/cloud/vision/v1/product_search_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -279,10 +279,6 @@ namespace Google.Cloud.Vision.V1 {
       /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the ProductSet does not exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -371,10 +367,6 @@ namespace Google.Cloud.Vision.V1 {
       /// Metadata of the product and all its images will be deleted right away, but
       /// search queries against ProductSets containing the product may still work
       /// until all related caches are refreshed.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the product does not exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -421,10 +413,6 @@ namespace Google.Cloud.Vision.V1 {
       /// caches are refreshed.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the reference image does not exist.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -486,10 +474,6 @@ namespace Google.Cloud.Vision.V1 {
 
       /// <summary>
       /// Removes a Product from the specified ProductSet.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -827,10 +811,6 @@ namespace Google.Cloud.Vision.V1 {
       /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the ProductSet does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -846,10 +826,6 @@ namespace Google.Cloud.Vision.V1 {
       /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the ProductSet does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -863,10 +839,6 @@ namespace Google.Cloud.Vision.V1 {
       /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the ProductSet does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -882,10 +854,6 @@ namespace Google.Cloud.Vision.V1 {
       /// ProductSet are not deleted.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the ProductSet does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1192,10 +1160,6 @@ namespace Google.Cloud.Vision.V1 {
       /// Metadata of the product and all its images will be deleted right away, but
       /// search queries against ProductSets containing the product may still work
       /// until all related caches are refreshed.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the product does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1212,10 +1176,6 @@ namespace Google.Cloud.Vision.V1 {
       /// Metadata of the product and all its images will be deleted right away, but
       /// search queries against ProductSets containing the product may still work
       /// until all related caches are refreshed.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the product does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1230,10 +1190,6 @@ namespace Google.Cloud.Vision.V1 {
       /// Metadata of the product and all its images will be deleted right away, but
       /// search queries against ProductSets containing the product may still work
       /// until all related caches are refreshed.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the product does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1250,10 +1206,6 @@ namespace Google.Cloud.Vision.V1 {
       /// Metadata of the product and all its images will be deleted right away, but
       /// search queries against ProductSets containing the product may still work
       /// until all related caches are refreshed.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the product does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1386,10 +1338,6 @@ namespace Google.Cloud.Vision.V1 {
       /// caches are refreshed.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the reference image does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1408,10 +1356,6 @@ namespace Google.Cloud.Vision.V1 {
       /// caches are refreshed.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the reference image does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1428,10 +1372,6 @@ namespace Google.Cloud.Vision.V1 {
       /// caches are refreshed.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the reference image does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1450,10 +1390,6 @@ namespace Google.Cloud.Vision.V1 {
       /// caches are refreshed.
       ///
       /// The actual image files are not deleted from Google Cloud Storage.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND if the reference image does not exist.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1664,10 +1600,6 @@ namespace Google.Cloud.Vision.V1 {
       }
       /// <summary>
       /// Removes a Product from the specified ProductSet.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1680,10 +1612,6 @@ namespace Google.Cloud.Vision.V1 {
       }
       /// <summary>
       /// Removes a Product from the specified ProductSet.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1694,10 +1622,6 @@ namespace Google.Cloud.Vision.V1 {
       }
       /// <summary>
       /// Removes a Product from the specified ProductSet.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1710,10 +1634,6 @@ namespace Google.Cloud.Vision.V1 {
       }
       /// <summary>
       /// Removes a Product from the specified ProductSet.
-      ///
-      /// Possible errors:
-      ///
-      /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

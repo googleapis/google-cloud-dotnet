@@ -35,6 +35,376 @@ namespace Google.Cloud.Vision.V1.Tests
     public class GeneratedProductSearchClientTest
     {
         [Fact]
+        public void CreateProductSet()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            CreateProductSetRequest expectedRequest = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+                ProductSetId = "productSetId4216680",
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateProductSet(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            ProductSet productSet = new ProductSet();
+            string productSetId = "productSetId4216680";
+            ProductSet response = client.CreateProductSet(parent, productSet, productSetId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateProductSetAsync()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            CreateProductSetRequest expectedRequest = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+                ProductSetId = "productSetId4216680",
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
+            ProductSet productSet = new ProductSet();
+            string productSetId = "productSetId4216680";
+            ProductSet response = await client.CreateProductSetAsync(parent, productSet, productSetId);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateProductSet2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            CreateProductSetRequest request = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateProductSet(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = client.CreateProductSet(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateProductSetAsync2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            CreateProductSetRequest request = new CreateProductSetRequest
+            {
+                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
+                ProductSet = new ProductSet(),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = await client.CreateProductSetAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetProductSet()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetProductSetRequest expectedRequest = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetProductSet(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSet response = client.GetProductSet(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetProductSetAsync()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetProductSetRequest expectedRequest = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            ProductSet response = await client.GetProductSetAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetProductSet2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetProductSetRequest request = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetProductSet(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = client.GetProductSet(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetProductSetAsync2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetProductSetRequest request = new GetProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.GetProductSetAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = await client.GetProductSetAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateProductSet()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            UpdateProductSetRequest expectedRequest = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+                UpdateMask = new FieldMask(),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateProductSet(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet productSet = new ProductSet();
+            FieldMask updateMask = new FieldMask();
+            ProductSet response = client.UpdateProductSet(productSet, updateMask);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateProductSetAsync()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            UpdateProductSetRequest expectedRequest = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+                UpdateMask = new FieldMask(),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet productSet = new ProductSet();
+            FieldMask updateMask = new FieldMask();
+            ProductSet response = await client.UpdateProductSetAsync(productSet, updateMask);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void UpdateProductSet2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            UpdateProductSetRequest request = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateProductSet(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = client.UpdateProductSet(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task UpdateProductSetAsync2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            UpdateProductSetRequest request = new UpdateProductSetRequest
+            {
+                ProductSet = new ProductSet(),
+            };
+            ProductSet expectedResponse = new ProductSet
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                DisplayName = "displayName1615086568",
+            };
+            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSet response = await client.UpdateProductSetAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteProductSet()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteProductSet(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            client.DeleteProductSet(name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteProductSetAsync()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
+            await client.DeleteProductSetAsync(name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteProductSet2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DeleteProductSetRequest request = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteProductSet(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            client.DeleteProductSet(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteProductSetAsync2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DeleteProductSetRequest request = new DeleteProductSetRequest
+            {
+                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+            };
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteProductSetAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void CreateProduct()
         {
             Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
@@ -429,174 +799,6 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [Fact]
-        public void GetReferenceImage()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.GetReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            ReferenceImage response = client.GetReferenceImage(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetReferenceImageAsync()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            ReferenceImage response = await client.GetReferenceImageAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetReferenceImage2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetReferenceImageRequest request = new GetReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.GetReferenceImage(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImage response = client.GetReferenceImage(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetReferenceImageAsync2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetReferenceImageRequest request = new GetReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            ReferenceImage expectedResponse = new ReferenceImage
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-                Uri = "uri116076",
-            };
-            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImage response = await client.GetReferenceImageAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteReferenceImage()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            client.DeleteReferenceImage(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteReferenceImageAsync()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
-            await client.DeleteReferenceImageAsync(name);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteReferenceImage2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            client.DeleteReferenceImage(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task DeleteReferenceImageAsync2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
-            {
-                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
-            };
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteReferenceImageAsync(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
         public void CreateReferenceImage()
         {
             Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
@@ -701,372 +903,170 @@ namespace Google.Cloud.Vision.V1.Tests
         }
 
         [Fact]
-        public void CreateProductSet()
+        public void DeleteReferenceImage()
         {
             Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient())
                 .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductSetRequest expectedRequest = new CreateProductSetRequest
+            DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
             {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-                ProductSetId = "productSetId4216680",
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            ProductSet productSet = new ProductSet();
-            string productSetId = "productSetId4216680";
-            ProductSet response = client.CreateProductSet(parent, productSet, productSetId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateProductSetAsync()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductSetRequest expectedRequest = new CreateProductSetRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-                ProductSetId = "productSetId4216680",
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            LocationName parent = new LocationName("[PROJECT]", "[LOCATION]");
-            ProductSet productSet = new ProductSet();
-            string productSetId = "productSetId4216680";
-            ProductSet response = await client.CreateProductSetAsync(parent, productSet, productSetId);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void CreateProductSet2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductSetRequest request = new CreateProductSetRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = client.CreateProductSet(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task CreateProductSetAsync2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            CreateProductSetRequest request = new CreateProductSetRequest
-            {
-                ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
-                ProductSet = new ProductSet(),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.CreateProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = await client.CreateProductSetAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetProductSet()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductSetRequest expectedRequest = new GetProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductSet response = client.GetProductSet(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetProductSetAsync()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductSetRequest expectedRequest = new GetProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            ProductSet response = await client.GetProductSetAsync(name);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void GetProductSet2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductSetRequest request = new GetProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = client.GetProductSet(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task GetProductSetAsync2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            GetProductSetRequest request = new GetProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.GetProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = await client.GetProductSetAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateProductSet()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductSetRequest expectedRequest = new UpdateProductSetRequest
-            {
-                ProductSet = new ProductSet(),
-                UpdateMask = new FieldMask(),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.UpdateProductSet(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet productSet = new ProductSet();
-            FieldMask updateMask = new FieldMask();
-            ProductSet response = client.UpdateProductSet(productSet, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateProductSetAsync()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductSetRequest expectedRequest = new UpdateProductSetRequest
-            {
-                ProductSet = new ProductSet(),
-                UpdateMask = new FieldMask(),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet productSet = new ProductSet();
-            FieldMask updateMask = new FieldMask();
-            ProductSet response = await client.UpdateProductSetAsync(productSet, updateMask);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void UpdateProductSet2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductSetRequest request = new UpdateProductSetRequest
-            {
-                ProductSet = new ProductSet(),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.UpdateProductSet(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = client.UpdateProductSet(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task UpdateProductSetAsync2()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            UpdateProductSetRequest request = new UpdateProductSetRequest
-            {
-                ProductSet = new ProductSet(),
-            };
-            ProductSet expectedResponse = new ProductSet
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
-                DisplayName = "displayName1615086568",
-            };
-            mockGrpcClient.Setup(x => x.UpdateProductSetAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<ProductSet>(Task.FromResult(expectedResponse), null, null, null, null));
-            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSet response = await client.UpdateProductSetAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void DeleteProductSet()
-        {
-            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient())
-                .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
-            {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSet(expectedRequest, It.IsAny<CallOptions>()))
+            mockGrpcClient.Setup(x => x.DeleteReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            client.DeleteProductSet(name);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            client.DeleteReferenceImage(name);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public async Task DeleteProductSetAsync()
+        public async Task DeleteReferenceImageAsync()
         {
             Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient())
                 .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductSetRequest expectedRequest = new DeleteProductSetRequest
+            DeleteReferenceImageRequest expectedRequest = new DeleteReferenceImageRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(expectedRequest, It.IsAny<CallOptions>()))
+            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            ProductSetName name = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]");
-            await client.DeleteProductSetAsync(name);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            await client.DeleteReferenceImageAsync(name);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public void DeleteProductSet2()
+        public void DeleteReferenceImage2()
         {
             Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient())
                 .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductSetRequest request = new DeleteProductSetRequest
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSet(request, It.IsAny<CallOptions>()))
+            mockGrpcClient.Setup(x => x.DeleteReferenceImage(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            client.DeleteProductSet(request);
+            client.DeleteReferenceImage(request);
             mockGrpcClient.VerifyAll();
         }
 
         [Fact]
-        public async Task DeleteProductSetAsync2()
+        public async Task DeleteReferenceImageAsync2()
         {
             Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient())
                 .Returns(new Mock<Operations.OperationsClient>().Object);
-            DeleteProductSetRequest request = new DeleteProductSetRequest
+            DeleteReferenceImageRequest request = new DeleteReferenceImageRequest
             {
-                ProductSetName = new ProductSetName("[PROJECT]", "[LOCATION]", "[PRODUCT_SET]"),
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
             };
             Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.DeleteProductSetAsync(request, It.IsAny<CallOptions>()))
+            mockGrpcClient.Setup(x => x.DeleteReferenceImageAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
             ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
-            await client.DeleteProductSetAsync(request);
+            await client.DeleteReferenceImageAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetReferenceImage()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri116076",
+            };
+            mockGrpcClient.Setup(x => x.GetReferenceImage(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImage response = client.GetReferenceImage(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetReferenceImageAsync()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetReferenceImageRequest expectedRequest = new GetReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri116076",
+            };
+            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImageName name = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]");
+            ReferenceImage response = await client.GetReferenceImageAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetReferenceImage2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetReferenceImageRequest request = new GetReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri116076",
+            };
+            mockGrpcClient.Setup(x => x.GetReferenceImage(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImage response = client.GetReferenceImage(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetReferenceImageAsync2()
+        {
+            Mock<ProductSearch.ProductSearchClient> mockGrpcClient = new Mock<ProductSearch.ProductSearchClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            GetReferenceImageRequest request = new GetReferenceImageRequest
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+            };
+            ReferenceImage expectedResponse = new ReferenceImage
+            {
+                ReferenceImageName = new ReferenceImageName("[PROJECT]", "[LOCATION]", "[PRODUCT]", "[REFERENCE_IMAGE]"),
+                Uri = "uri116076",
+            };
+            mockGrpcClient.Setup(x => x.GetReferenceImageAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ReferenceImage>(Task.FromResult(expectedResponse), null, null, null, null));
+            ProductSearchClient client = new ProductSearchClientImpl(mockGrpcClient.Object, null);
+            ReferenceImage response = await client.GetReferenceImageAsync(request);
+            Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
 

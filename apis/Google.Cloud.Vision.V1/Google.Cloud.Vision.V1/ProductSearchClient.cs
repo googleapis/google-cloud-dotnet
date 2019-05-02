@@ -50,20 +50,20 @@ namespace Google.Cloud.Vision.V1
         private ProductSearchSettings(ProductSearchSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
-            CreateProductSettings = existing.CreateProductSettings;
-            ListProductsSettings = existing.ListProductsSettings;
-            GetProductSettings = existing.GetProductSettings;
-            UpdateProductSettings = existing.UpdateProductSettings;
-            DeleteProductSettings = existing.DeleteProductSettings;
-            ListReferenceImagesSettings = existing.ListReferenceImagesSettings;
-            GetReferenceImageSettings = existing.GetReferenceImageSettings;
-            DeleteReferenceImageSettings = existing.DeleteReferenceImageSettings;
-            CreateReferenceImageSettings = existing.CreateReferenceImageSettings;
             CreateProductSetSettings = existing.CreateProductSetSettings;
             ListProductSetsSettings = existing.ListProductSetsSettings;
             GetProductSetSettings = existing.GetProductSetSettings;
             UpdateProductSetSettings = existing.UpdateProductSetSettings;
             DeleteProductSetSettings = existing.DeleteProductSetSettings;
+            CreateProductSettings = existing.CreateProductSettings;
+            ListProductsSettings = existing.ListProductsSettings;
+            GetProductSettings = existing.GetProductSettings;
+            UpdateProductSettings = existing.UpdateProductSettings;
+            DeleteProductSettings = existing.DeleteProductSettings;
+            CreateReferenceImageSettings = existing.CreateReferenceImageSettings;
+            DeleteReferenceImageSettings = existing.DeleteReferenceImageSettings;
+            ListReferenceImagesSettings = existing.ListReferenceImagesSettings;
+            GetReferenceImageSettings = existing.GetReferenceImageSettings;
             AddProductToProductSetSettings = existing.AddProductToProductSetSettings;
             RemoveProductFromProductSetSettings = existing.RemoveProductFromProductSetSettings;
             ListProductsInProductSetSettings = existing.ListProductsInProductSetSettings;
@@ -137,6 +137,155 @@ namespace Google.Cloud.Vision.V1
             maxDelay: sys::TimeSpan.FromMilliseconds(60000),
             delayMultiplier: 1.0
         );
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.CreateProductSet</c> and <c>ProductSearchClient.CreateProductSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.CreateProductSet</c> and
+        /// <c>ProductSearchClient.CreateProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.ListProductSets</c> and <c>ProductSearchClient.ListProductSetsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.ListProductSets</c> and
+        /// <c>ProductSearchClient.ListProductSetsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings ListProductSetsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.GetProductSet</c> and <c>ProductSearchClient.GetProductSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.GetProductSet</c> and
+        /// <c>ProductSearchClient.GetProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings GetProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.UpdateProductSet</c> and <c>ProductSearchClient.UpdateProductSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.UpdateProductSet</c> and
+        /// <c>ProductSearchClient.UpdateProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.DeleteProductSet</c> and <c>ProductSearchClient.DeleteProductSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.DeleteProductSet</c> and
+        /// <c>ProductSearchClient.DeleteProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -289,6 +438,65 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.CreateReferenceImage</c> and <c>ProductSearchClient.CreateReferenceImageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.CreateReferenceImage</c> and
+        /// <c>ProductSearchClient.CreateReferenceImageAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateReferenceImageSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductSearchClient.DeleteReferenceImage</c> and <c>ProductSearchClient.DeleteReferenceImageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ProductSearchClient.DeleteReferenceImage</c> and
+        /// <c>ProductSearchClient.DeleteReferenceImageAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteReferenceImageSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ProductSearchClient.ListReferenceImages</c> and <c>ProductSearchClient.ListReferenceImagesAsync</c>.
         /// </summary>
         /// <remarks>
@@ -340,214 +548,6 @@ namespace Google.Cloud.Vision.V1
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings GetReferenceImageSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ProductSearchClient.DeleteReferenceImage</c> and <c>ProductSearchClient.DeleteReferenceImageAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>ProductSearchClient.DeleteReferenceImage</c> and
-        /// <c>ProductSearchClient.DeleteReferenceImageAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteReferenceImageSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ProductSearchClient.CreateReferenceImage</c> and <c>ProductSearchClient.CreateReferenceImageAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>ProductSearchClient.CreateReferenceImage</c> and
-        /// <c>ProductSearchClient.CreateReferenceImageAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateReferenceImageSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ProductSearchClient.CreateProductSet</c> and <c>ProductSearchClient.CreateProductSetAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>ProductSearchClient.CreateProductSet</c> and
-        /// <c>ProductSearchClient.CreateProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ProductSearchClient.ListProductSets</c> and <c>ProductSearchClient.ListProductSetsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>ProductSearchClient.ListProductSets</c> and
-        /// <c>ProductSearchClient.ListProductSetsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings ListProductSetsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ProductSearchClient.GetProductSet</c> and <c>ProductSearchClient.GetProductSetAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>ProductSearchClient.GetProductSet</c> and
-        /// <c>ProductSearchClient.GetProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings GetProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ProductSearchClient.UpdateProductSet</c> and <c>ProductSearchClient.UpdateProductSetAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>ProductSearchClient.UpdateProductSet</c> and
-        /// <c>ProductSearchClient.UpdateProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: IdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>ProductSearchClient.DeleteProductSet</c> and <c>ProductSearchClient.DeleteProductSetAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>ProductSearchClient.DeleteProductSet</c> and
-        /// <c>ProductSearchClient.DeleteProductSetAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteProductSetSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -856,6 +856,793 @@ namespace Google.Cloud.Vision.V1
         public virtual ProductSearch.ProductSearchClient GrpcClient
         {
             get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSet should be created.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="productSet">
+        /// The ProductSet to create.
+        /// </param>
+        /// <param name="productSetId">
+        /// A user-supplied resource id for this ProductSet. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> CreateProductSetAsync(
+            LocationName parent,
+            ProductSet productSet,
+            string productSetId,
+            gaxgrpc::CallSettings callSettings = null) => CreateProductSetAsync(
+                new CreateProductSetRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
+                    ProductSetId = productSetId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSet should be created.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="productSet">
+        /// The ProductSet to create.
+        /// </param>
+        /// <param name="productSetId">
+        /// A user-supplied resource id for this ProductSet. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> CreateProductSetAsync(
+            LocationName parent,
+            ProductSet productSet,
+            string productSetId,
+            st::CancellationToken cancellationToken) => CreateProductSetAsync(
+                parent,
+                productSet,
+                productSetId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="parent">
+        /// The project in which the ProductSet should be created.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="productSet">
+        /// The ProductSet to create.
+        /// </param>
+        /// <param name="productSetId">
+        /// A user-supplied resource id for this ProductSet. If set, the server will
+        /// attempt to use this value as the resource id. If it is already in use, an
+        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
+        /// long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet CreateProductSet(
+            LocationName parent,
+            ProductSet productSet,
+            string productSetId,
+            gaxgrpc::CallSettings callSettings = null) => CreateProductSet(
+                new CreateProductSetRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
+                    ProductSetId = productSetId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> CreateProductSetAsync(
+            CreateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> CreateProductSetAsync(
+            CreateProductSetRequest request,
+            st::CancellationToken cancellationToken) => CreateProductSetAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet CreateProductSet(
+            CreateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="parent">
+        /// The project from which ProductSets should be listed.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
+            LocationName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProductSetsAsync(
+                new ListProductSetsRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="parent">
+        /// The project from which ProductSets should be listed.
+        ///
+        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
+            LocationName parent,
+            string pageToken = null,
+            int? pageSize = null,
+            gaxgrpc::CallSettings callSettings = null) => ListProductSets(
+                new ListProductSetsRequest
+                {
+                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
+            ListProductSetsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
+            ListProductSetsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> GetProductSetAsync(
+            ProductSetName name,
+            gaxgrpc::CallSettings callSettings = null) => GetProductSetAsync(
+                new GetProductSetRequest
+                {
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> GetProductSetAsync(
+            ProductSetName name,
+            st::CancellationToken cancellationToken) => GetProductSetAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to get.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet GetProductSet(
+            ProductSetName name,
+            gaxgrpc::CallSettings callSettings = null) => GetProductSet(
+                new GetProductSetRequest
+                {
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> GetProductSetAsync(
+            GetProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> GetProductSetAsync(
+            GetProductSetRequest request,
+            st::CancellationToken cancellationToken) => GetProductSetAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet GetProductSet(
+            GetProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="productSet">
+        /// The ProductSet resource which replaces the one on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
+        /// update.
+        /// If update_mask isn't specified, all mutable fields are to be updated.
+        /// Valid mask path is `display_name`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
+            ProductSet productSet,
+            pbwkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateProductSetAsync(
+                new UpdateProductSetRequest
+                {
+                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
+                    UpdateMask = updateMask, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="productSet">
+        /// The ProductSet resource which replaces the one on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
+        /// update.
+        /// If update_mask isn't specified, all mutable fields are to be updated.
+        /// Valid mask path is `display_name`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
+            ProductSet productSet,
+            pbwkt::FieldMask updateMask,
+            st::CancellationToken cancellationToken) => UpdateProductSetAsync(
+                productSet,
+                updateMask,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="productSet">
+        /// The ProductSet resource which replaces the one on the server.
+        /// </param>
+        /// <param name="updateMask">
+        /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
+        /// update.
+        /// If update_mask isn't specified, all mutable fields are to be updated.
+        /// Valid mask path is `display_name`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet UpdateProductSet(
+            ProductSet productSet,
+            pbwkt::FieldMask updateMask,
+            gaxgrpc::CallSettings callSettings = null) => UpdateProductSet(
+                new UpdateProductSetRequest
+                {
+                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
+                    UpdateMask = updateMask, // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
+            UpdateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
+            UpdateProductSetRequest request,
+            st::CancellationToken cancellationToken) => UpdateProductSetAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ProductSet UpdateProductSet(
+            UpdateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductSetAsync(
+            ProductSetName name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProductSetAsync(
+                new DeleteProductSetRequest
+                {
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductSetAsync(
+            ProductSetName name,
+            st::CancellationToken cancellationToken) => DeleteProductSetAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// Resource name of the ProductSet to delete.
+        ///
+        /// Format is:
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteProductSet(
+            ProductSetName name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteProductSet(
+                new DeleteProductSetRequest
+                {
+                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductSetAsync(
+            DeleteProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteProductSetAsync(
+            DeleteProductSetRequest request,
+            st::CancellationToken cancellationToken) => DeleteProductSetAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteProductSet(
+            DeleteProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1575,10 +2362,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="name">
         /// Resource name of product to delete.
@@ -1607,10 +2390,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="name">
         /// Resource name of product to delete.
@@ -1636,10 +2415,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="name">
         /// Resource name of product to delete.
@@ -1665,10 +2440,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1692,10 +2463,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1718,10 +2485,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1731,6 +2494,439 @@ namespace Google.Cloud.Vision.V1
         /// </param>
         public virtual void DeleteProduct(
             DeleteProductRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product in which to create the reference image.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="referenceImage">
+        /// The reference image to create.
+        /// If an image ID is specified, it is ignored.
+        /// </param>
+        /// <param name="referenceImageId">
+        /// A user-supplied resource id for the ReferenceImage to be added. If set,
+        /// the server will attempt to use this value as the resource id. If it is
+        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
+        /// most 128 characters long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
+            ProductName parent,
+            ReferenceImage referenceImage,
+            string referenceImageId,
+            gaxgrpc::CallSettings callSettings = null) => CreateReferenceImageAsync(
+                new CreateReferenceImageRequest
+                {
+                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
+                    ReferenceImageId = referenceImageId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product in which to create the reference image.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="referenceImage">
+        /// The reference image to create.
+        /// If an image ID is specified, it is ignored.
+        /// </param>
+        /// <param name="referenceImageId">
+        /// A user-supplied resource id for the ReferenceImage to be added. If set,
+        /// the server will attempt to use this value as the resource id. If it is
+        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
+        /// most 128 characters long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
+            ProductName parent,
+            ReferenceImage referenceImage,
+            string referenceImageId,
+            st::CancellationToken cancellationToken) => CreateReferenceImageAsync(
+                parent,
+                referenceImage,
+                referenceImageId,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="parent">
+        /// Resource name of the product in which to create the reference image.
+        ///
+        /// Format is
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        /// </param>
+        /// <param name="referenceImage">
+        /// The reference image to create.
+        /// If an image ID is specified, it is ignored.
+        /// </param>
+        /// <param name="referenceImageId">
+        /// A user-supplied resource id for the ReferenceImage to be added. If set,
+        /// the server will attempt to use this value as the resource id. If it is
+        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
+        /// most 128 characters long. It cannot contain the character `/`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReferenceImage CreateReferenceImage(
+            ProductName parent,
+            ReferenceImage referenceImage,
+            string referenceImageId,
+            gaxgrpc::CallSettings callSettings = null) => CreateReferenceImage(
+                new CreateReferenceImageRequest
+                {
+                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
+                    ReferenceImageId = referenceImageId ?? "", // Optional
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
+            CreateReferenceImageRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
+            CreateReferenceImageRequest request,
+            st::CancellationToken cancellationToken) => CreateReferenceImageAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReferenceImage CreateReferenceImage(
+            CreateReferenceImageRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the reference image to delete.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteReferenceImageAsync(
+            ReferenceImageName name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImageAsync(
+                new DeleteReferenceImageRequest
+                {
+                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the reference image to delete.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteReferenceImageAsync(
+            ReferenceImageName name,
+            st::CancellationToken cancellationToken) => DeleteReferenceImageAsync(
+                name,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="name">
+        /// The resource name of the reference image to delete.
+        ///
+        /// Format is:
+        ///
+        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteReferenceImage(
+            ReferenceImageName name,
+            gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImage(
+                new DeleteReferenceImageRequest
+                {
+                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteReferenceImageAsync(
+            DeleteReferenceImageRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteReferenceImageAsync(
+            DeleteReferenceImageRequest request,
+            st::CancellationToken cancellationToken) => DeleteReferenceImageAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteReferenceImage(
+            DeleteReferenceImageRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -2023,1274 +3219,6 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// The resource name of the reference image to delete.
-        ///
-        /// Format is:
-        ///
-        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteReferenceImageAsync(
-            ReferenceImageName name,
-            gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImageAsync(
-                new DeleteReferenceImageRequest
-                {
-                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// The resource name of the reference image to delete.
-        ///
-        /// Format is:
-        ///
-        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteReferenceImageAsync(
-            ReferenceImageName name,
-            st::CancellationToken cancellationToken) => DeleteReferenceImageAsync(
-                name,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// The resource name of the reference image to delete.
-        ///
-        /// Format is:
-        ///
-        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public virtual void DeleteReferenceImage(
-            ReferenceImageName name,
-            gaxgrpc::CallSettings callSettings = null) => DeleteReferenceImage(
-                new DeleteReferenceImageRequest
-                {
-                    ReferenceImageName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteReferenceImageAsync(
-            DeleteReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteReferenceImageAsync(
-            DeleteReferenceImageRequest request,
-            st::CancellationToken cancellationToken) => DeleteReferenceImageAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public virtual void DeleteReferenceImage(
-            DeleteReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
-        ///
-        /// Format is
-        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-        /// </param>
-        /// <param name="referenceImage">
-        /// The reference image to create.
-        /// If an image ID is specified, it is ignored.
-        /// </param>
-        /// <param name="referenceImageId">
-        /// A user-supplied resource id for the ReferenceImage to be added. If set,
-        /// the server will attempt to use this value as the resource id. If it is
-        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
-        /// most 128 characters long. It cannot contain the character `/`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
-            ProductName parent,
-            ReferenceImage referenceImage,
-            string referenceImageId,
-            gaxgrpc::CallSettings callSettings = null) => CreateReferenceImageAsync(
-                new CreateReferenceImageRequest
-                {
-                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
-                    ReferenceImageId = referenceImageId ?? "", // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
-        ///
-        /// Format is
-        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-        /// </param>
-        /// <param name="referenceImage">
-        /// The reference image to create.
-        /// If an image ID is specified, it is ignored.
-        /// </param>
-        /// <param name="referenceImageId">
-        /// A user-supplied resource id for the ReferenceImage to be added. If set,
-        /// the server will attempt to use this value as the resource id. If it is
-        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
-        /// most 128 characters long. It cannot contain the character `/`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
-            ProductName parent,
-            ReferenceImage referenceImage,
-            string referenceImageId,
-            st::CancellationToken cancellationToken) => CreateReferenceImageAsync(
-                parent,
-                referenceImage,
-                referenceImageId,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="parent">
-        /// Resource name of the product in which to create the reference image.
-        ///
-        /// Format is
-        /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-        /// </param>
-        /// <param name="referenceImage">
-        /// The reference image to create.
-        /// If an image ID is specified, it is ignored.
-        /// </param>
-        /// <param name="referenceImageId">
-        /// A user-supplied resource id for the ReferenceImage to be added. If set,
-        /// the server will attempt to use this value as the resource id. If it is
-        /// already in use, an error is returned with code ALREADY_EXISTS. Must be at
-        /// most 128 characters long. It cannot contain the character `/`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ReferenceImage CreateReferenceImage(
-            ProductName parent,
-            ReferenceImage referenceImage,
-            string referenceImageId,
-            gaxgrpc::CallSettings callSettings = null) => CreateReferenceImage(
-                new CreateReferenceImageRequest
-                {
-                    ParentAsProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    ReferenceImage = gax::GaxPreconditions.CheckNotNull(referenceImage, nameof(referenceImage)),
-                    ReferenceImageId = referenceImageId ?? "", // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
-            CreateReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ReferenceImage> CreateReferenceImageAsync(
-            CreateReferenceImageRequest request,
-            st::CancellationToken cancellationToken) => CreateReferenceImageAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ReferenceImage CreateReferenceImage(
-            CreateReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="parent">
-        /// The project in which the ProductSet should be created.
-        ///
-        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
-        /// </param>
-        /// <param name="productSet">
-        /// The ProductSet to create.
-        /// </param>
-        /// <param name="productSetId">
-        /// A user-supplied resource id for this ProductSet. If set, the server will
-        /// attempt to use this value as the resource id. If it is already in use, an
-        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
-        /// long. It cannot contain the character `/`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> CreateProductSetAsync(
-            LocationName parent,
-            ProductSet productSet,
-            string productSetId,
-            gaxgrpc::CallSettings callSettings = null) => CreateProductSetAsync(
-                new CreateProductSetRequest
-                {
-                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
-                    ProductSetId = productSetId ?? "", // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="parent">
-        /// The project in which the ProductSet should be created.
-        ///
-        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
-        /// </param>
-        /// <param name="productSet">
-        /// The ProductSet to create.
-        /// </param>
-        /// <param name="productSetId">
-        /// A user-supplied resource id for this ProductSet. If set, the server will
-        /// attempt to use this value as the resource id. If it is already in use, an
-        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
-        /// long. It cannot contain the character `/`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> CreateProductSetAsync(
-            LocationName parent,
-            ProductSet productSet,
-            string productSetId,
-            st::CancellationToken cancellationToken) => CreateProductSetAsync(
-                parent,
-                productSet,
-                productSetId,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="parent">
-        /// The project in which the ProductSet should be created.
-        ///
-        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
-        /// </param>
-        /// <param name="productSet">
-        /// The ProductSet to create.
-        /// </param>
-        /// <param name="productSetId">
-        /// A user-supplied resource id for this ProductSet. If set, the server will
-        /// attempt to use this value as the resource id. If it is already in use, an
-        /// error is returned with code ALREADY_EXISTS. Must be at most 128 characters
-        /// long. It cannot contain the character `/`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ProductSet CreateProductSet(
-            LocationName parent,
-            ProductSet productSet,
-            string productSetId,
-            gaxgrpc::CallSettings callSettings = null) => CreateProductSet(
-                new CreateProductSetRequest
-                {
-                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
-                    ProductSetId = productSetId ?? "", // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> CreateProductSetAsync(
-            CreateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> CreateProductSetAsync(
-            CreateProductSetRequest request,
-            st::CancellationToken cancellationToken) => CreateProductSetAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ProductSet CreateProductSet(
-            CreateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Lists ProductSets in an unspecified order.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
-        ///   than 1.
-        /// </summary>
-        /// <param name="parent">
-        /// The project from which ProductSets should be listed.
-        ///
-        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
-            LocationName parent,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListProductSetsAsync(
-                new ListProductSetsRequest
-                {
-                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists ProductSets in an unspecified order.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
-        ///   than 1.
-        /// </summary>
-        /// <param name="parent">
-        /// The project from which ProductSets should be listed.
-        ///
-        /// Format is `projects/PROJECT_ID/locations/LOC_ID`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="ProductSet"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
-            LocationName parent,
-            string pageToken = null,
-            int? pageSize = null,
-            gaxgrpc::CallSettings callSettings = null) => ListProductSets(
-                new ListProductSetsRequest
-                {
-                    ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                    PageToken = pageToken ?? "",
-                    PageSize = pageSize ?? 0,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Lists ProductSets in an unspecified order.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
-        ///   than 1.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
-        /// </returns>
-        public virtual gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
-            ListProductSetsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Lists ProductSets in an unspecified order.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
-        ///   than 1.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="ProductSet"/> resources.
-        /// </returns>
-        public virtual gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
-            ListProductSetsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the ProductSet to get.
-        ///
-        /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> GetProductSetAsync(
-            ProductSetName name,
-            gaxgrpc::CallSettings callSettings = null) => GetProductSetAsync(
-                new GetProductSetRequest
-                {
-                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the ProductSet to get.
-        ///
-        /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> GetProductSetAsync(
-            ProductSetName name,
-            st::CancellationToken cancellationToken) => GetProductSetAsync(
-                name,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the ProductSet to get.
-        ///
-        /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ProductSet GetProductSet(
-            ProductSetName name,
-            gaxgrpc::CallSettings callSettings = null) => GetProductSet(
-                new GetProductSetRequest
-                {
-                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> GetProductSetAsync(
-            GetProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> GetProductSetAsync(
-            GetProductSetRequest request,
-            st::CancellationToken cancellationToken) => GetProductSetAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ProductSet GetProductSet(
-            GetProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="productSet">
-        /// The ProductSet resource which replaces the one on the server.
-        /// </param>
-        /// <param name="updateMask">
-        /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
-        /// update.
-        /// If update_mask isn't specified, all mutable fields are to be updated.
-        /// Valid mask path is `display_name`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
-            ProductSet productSet,
-            pbwkt::FieldMask updateMask,
-            gaxgrpc::CallSettings callSettings = null) => UpdateProductSetAsync(
-                new UpdateProductSetRequest
-                {
-                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
-                    UpdateMask = updateMask, // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="productSet">
-        /// The ProductSet resource which replaces the one on the server.
-        /// </param>
-        /// <param name="updateMask">
-        /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
-        /// update.
-        /// If update_mask isn't specified, all mutable fields are to be updated.
-        /// Valid mask path is `display_name`.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
-            ProductSet productSet,
-            pbwkt::FieldMask updateMask,
-            st::CancellationToken cancellationToken) => UpdateProductSetAsync(
-                productSet,
-                updateMask,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="productSet">
-        /// The ProductSet resource which replaces the one on the server.
-        /// </param>
-        /// <param name="updateMask">
-        /// The [FieldMask][google.protobuf.FieldMask] that specifies which fields to
-        /// update.
-        /// If update_mask isn't specified, all mutable fields are to be updated.
-        /// Valid mask path is `display_name`.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ProductSet UpdateProductSet(
-            ProductSet productSet,
-            pbwkt::FieldMask updateMask,
-            gaxgrpc::CallSettings callSettings = null) => UpdateProductSet(
-                new UpdateProductSetRequest
-                {
-                    ProductSet = gax::GaxPreconditions.CheckNotNull(productSet, nameof(productSet)),
-                    UpdateMask = updateMask, // Optional
-                },
-                callSettings);
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
-            UpdateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<ProductSet> UpdateProductSetAsync(
-            UpdateProductSetRequest request,
-            st::CancellationToken cancellationToken) => UpdateProductSetAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual ProductSet UpdateProductSet(
-            UpdateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the ProductSet to delete.
-        ///
-        /// Format is:
-        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteProductSetAsync(
-            ProductSetName name,
-            gaxgrpc::CallSettings callSettings = null) => DeleteProductSetAsync(
-                new DeleteProductSetRequest
-                {
-                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the ProductSet to delete.
-        ///
-        /// Format is:
-        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteProductSetAsync(
-            ProductSetName name,
-            st::CancellationToken cancellationToken) => DeleteProductSetAsync(
-                name,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="name">
-        /// Resource name of the ProductSet to delete.
-        ///
-        /// Format is:
-        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public virtual void DeleteProductSet(
-            ProductSetName name,
-            gaxgrpc::CallSettings callSettings = null) => DeleteProductSet(
-                new DeleteProductSetRequest
-                {
-                    ProductSetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                },
-                callSettings);
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteProductSetAsync(
-            DeleteProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteProductSetAsync(
-            DeleteProductSetRequest request,
-            st::CancellationToken cancellationToken) => DeleteProductSetAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public virtual void DeleteProductSet(
-            DeleteProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
         /// Adds a Product to the specified ProductSet. If the Product is already
         /// present, no change is made.
         ///
@@ -3477,10 +3405,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="name">
         /// The resource name for the ProductSet to modify.
@@ -3513,10 +3437,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="name">
         /// The resource name for the ProductSet to modify.
@@ -3546,10 +3466,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="name">
         /// The resource name for the ProductSet to modify.
@@ -3579,10 +3495,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3602,10 +3514,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3624,10 +3532,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3986,20 +3890,20 @@ namespace Google.Cloud.Vision.V1
     /// </summary>
     public sealed partial class ProductSearchClientImpl : ProductSearchClient
     {
-        private readonly gaxgrpc::ApiCall<CreateProductRequest, Product> _callCreateProduct;
-        private readonly gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> _callListProducts;
-        private readonly gaxgrpc::ApiCall<GetProductRequest, Product> _callGetProduct;
-        private readonly gaxgrpc::ApiCall<UpdateProductRequest, Product> _callUpdateProduct;
-        private readonly gaxgrpc::ApiCall<DeleteProductRequest, pbwkt::Empty> _callDeleteProduct;
-        private readonly gaxgrpc::ApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse> _callListReferenceImages;
-        private readonly gaxgrpc::ApiCall<GetReferenceImageRequest, ReferenceImage> _callGetReferenceImage;
-        private readonly gaxgrpc::ApiCall<DeleteReferenceImageRequest, pbwkt::Empty> _callDeleteReferenceImage;
-        private readonly gaxgrpc::ApiCall<CreateReferenceImageRequest, ReferenceImage> _callCreateReferenceImage;
         private readonly gaxgrpc::ApiCall<CreateProductSetRequest, ProductSet> _callCreateProductSet;
         private readonly gaxgrpc::ApiCall<ListProductSetsRequest, ListProductSetsResponse> _callListProductSets;
         private readonly gaxgrpc::ApiCall<GetProductSetRequest, ProductSet> _callGetProductSet;
         private readonly gaxgrpc::ApiCall<UpdateProductSetRequest, ProductSet> _callUpdateProductSet;
         private readonly gaxgrpc::ApiCall<DeleteProductSetRequest, pbwkt::Empty> _callDeleteProductSet;
+        private readonly gaxgrpc::ApiCall<CreateProductRequest, Product> _callCreateProduct;
+        private readonly gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> _callListProducts;
+        private readonly gaxgrpc::ApiCall<GetProductRequest, Product> _callGetProduct;
+        private readonly gaxgrpc::ApiCall<UpdateProductRequest, Product> _callUpdateProduct;
+        private readonly gaxgrpc::ApiCall<DeleteProductRequest, pbwkt::Empty> _callDeleteProduct;
+        private readonly gaxgrpc::ApiCall<CreateReferenceImageRequest, ReferenceImage> _callCreateReferenceImage;
+        private readonly gaxgrpc::ApiCall<DeleteReferenceImageRequest, pbwkt::Empty> _callDeleteReferenceImage;
+        private readonly gaxgrpc::ApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse> _callListReferenceImages;
+        private readonly gaxgrpc::ApiCall<GetReferenceImageRequest, ReferenceImage> _callGetReferenceImage;
         private readonly gaxgrpc::ApiCall<AddProductToProductSetRequest, pbwkt::Empty> _callAddProductToProductSet;
         private readonly gaxgrpc::ApiCall<RemoveProductFromProductSetRequest, pbwkt::Empty> _callRemoveProductFromProductSet;
         private readonly gaxgrpc::ApiCall<ListProductsInProductSetRequest, ListProductsInProductSetResponse> _callListProductsInProductSet;
@@ -4017,33 +3921,6 @@ namespace Google.Cloud.Vision.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             ImportProductSetsOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.ImportProductSetsOperationsSettings);
-            _callCreateProduct = clientHelper.BuildApiCall<CreateProductRequest, Product>(
-                GrpcClient.CreateProductAsync, GrpcClient.CreateProduct, effectiveSettings.CreateProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>(
-                GrpcClient.ListProductsAsync, GrpcClient.ListProducts, effectiveSettings.ListProductsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callGetProduct = clientHelper.BuildApiCall<GetProductRequest, Product>(
-                GrpcClient.GetProductAsync, GrpcClient.GetProduct, effectiveSettings.GetProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>(
-                GrpcClient.UpdateProductAsync, GrpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product.name={request.Product.Name}"));
-            _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, pbwkt::Empty>(
-                GrpcClient.DeleteProductAsync, GrpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callListReferenceImages = clientHelper.BuildApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse>(
-                GrpcClient.ListReferenceImagesAsync, GrpcClient.ListReferenceImages, effectiveSettings.ListReferenceImagesSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callGetReferenceImage = clientHelper.BuildApiCall<GetReferenceImageRequest, ReferenceImage>(
-                GrpcClient.GetReferenceImageAsync, GrpcClient.GetReferenceImage, effectiveSettings.GetReferenceImageSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callDeleteReferenceImage = clientHelper.BuildApiCall<DeleteReferenceImageRequest, pbwkt::Empty>(
-                GrpcClient.DeleteReferenceImageAsync, GrpcClient.DeleteReferenceImage, effectiveSettings.DeleteReferenceImageSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
-            _callCreateReferenceImage = clientHelper.BuildApiCall<CreateReferenceImageRequest, ReferenceImage>(
-                GrpcClient.CreateReferenceImageAsync, GrpcClient.CreateReferenceImage, effectiveSettings.CreateReferenceImageSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callCreateProductSet = clientHelper.BuildApiCall<CreateProductSetRequest, ProductSet>(
                 GrpcClient.CreateProductSetAsync, GrpcClient.CreateProductSet, effectiveSettings.CreateProductSetSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
@@ -4059,6 +3936,33 @@ namespace Google.Cloud.Vision.V1
             _callDeleteProductSet = clientHelper.BuildApiCall<DeleteProductSetRequest, pbwkt::Empty>(
                 GrpcClient.DeleteProductSetAsync, GrpcClient.DeleteProductSet, effectiveSettings.DeleteProductSetSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callCreateProduct = clientHelper.BuildApiCall<CreateProductRequest, Product>(
+                GrpcClient.CreateProductAsync, GrpcClient.CreateProduct, effectiveSettings.CreateProductSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callListProducts = clientHelper.BuildApiCall<ListProductsRequest, ListProductsResponse>(
+                GrpcClient.ListProductsAsync, GrpcClient.ListProducts, effectiveSettings.ListProductsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callGetProduct = clientHelper.BuildApiCall<GetProductRequest, Product>(
+                GrpcClient.GetProductAsync, GrpcClient.GetProduct, effectiveSettings.GetProductSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>(
+                GrpcClient.UpdateProductAsync, GrpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product.name={request.Product.Name}"));
+            _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, pbwkt::Empty>(
+                GrpcClient.DeleteProductAsync, GrpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callCreateReferenceImage = clientHelper.BuildApiCall<CreateReferenceImageRequest, ReferenceImage>(
+                GrpcClient.CreateReferenceImageAsync, GrpcClient.CreateReferenceImage, effectiveSettings.CreateReferenceImageSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callDeleteReferenceImage = clientHelper.BuildApiCall<DeleteReferenceImageRequest, pbwkt::Empty>(
+                GrpcClient.DeleteReferenceImageAsync, GrpcClient.DeleteReferenceImage, effectiveSettings.DeleteReferenceImageSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callListReferenceImages = clientHelper.BuildApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse>(
+                GrpcClient.ListReferenceImagesAsync, GrpcClient.ListReferenceImages, effectiveSettings.ListReferenceImagesSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callGetReferenceImage = clientHelper.BuildApiCall<GetReferenceImageRequest, ReferenceImage>(
+                GrpcClient.GetReferenceImageAsync, GrpcClient.GetReferenceImage, effectiveSettings.GetReferenceImageSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callAddProductToProductSet = clientHelper.BuildApiCall<AddProductToProductSetRequest, pbwkt::Empty>(
                 GrpcClient.AddProductToProductSetAsync, GrpcClient.AddProductToProductSet, effectiveSettings.AddProductToProductSetSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
@@ -4071,24 +3975,6 @@ namespace Google.Cloud.Vision.V1
             _callImportProductSets = clientHelper.BuildApiCall<ImportProductSetsRequest, lro::Operation>(
                 GrpcClient.ImportProductSetsAsync, GrpcClient.ImportProductSets, effectiveSettings.ImportProductSetsSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            Modify_ApiCall(ref _callCreateProduct);
-            Modify_CreateProductApiCall(ref _callCreateProduct);
-            Modify_ApiCall(ref _callListProducts);
-            Modify_ListProductsApiCall(ref _callListProducts);
-            Modify_ApiCall(ref _callGetProduct);
-            Modify_GetProductApiCall(ref _callGetProduct);
-            Modify_ApiCall(ref _callUpdateProduct);
-            Modify_UpdateProductApiCall(ref _callUpdateProduct);
-            Modify_ApiCall(ref _callDeleteProduct);
-            Modify_DeleteProductApiCall(ref _callDeleteProduct);
-            Modify_ApiCall(ref _callListReferenceImages);
-            Modify_ListReferenceImagesApiCall(ref _callListReferenceImages);
-            Modify_ApiCall(ref _callGetReferenceImage);
-            Modify_GetReferenceImageApiCall(ref _callGetReferenceImage);
-            Modify_ApiCall(ref _callDeleteReferenceImage);
-            Modify_DeleteReferenceImageApiCall(ref _callDeleteReferenceImage);
-            Modify_ApiCall(ref _callCreateReferenceImage);
-            Modify_CreateReferenceImageApiCall(ref _callCreateReferenceImage);
             Modify_ApiCall(ref _callCreateProductSet);
             Modify_CreateProductSetApiCall(ref _callCreateProductSet);
             Modify_ApiCall(ref _callListProductSets);
@@ -4099,6 +3985,24 @@ namespace Google.Cloud.Vision.V1
             Modify_UpdateProductSetApiCall(ref _callUpdateProductSet);
             Modify_ApiCall(ref _callDeleteProductSet);
             Modify_DeleteProductSetApiCall(ref _callDeleteProductSet);
+            Modify_ApiCall(ref _callCreateProduct);
+            Modify_CreateProductApiCall(ref _callCreateProduct);
+            Modify_ApiCall(ref _callListProducts);
+            Modify_ListProductsApiCall(ref _callListProducts);
+            Modify_ApiCall(ref _callGetProduct);
+            Modify_GetProductApiCall(ref _callGetProduct);
+            Modify_ApiCall(ref _callUpdateProduct);
+            Modify_UpdateProductApiCall(ref _callUpdateProduct);
+            Modify_ApiCall(ref _callDeleteProduct);
+            Modify_DeleteProductApiCall(ref _callDeleteProduct);
+            Modify_ApiCall(ref _callCreateReferenceImage);
+            Modify_CreateReferenceImageApiCall(ref _callCreateReferenceImage);
+            Modify_ApiCall(ref _callDeleteReferenceImage);
+            Modify_DeleteReferenceImageApiCall(ref _callDeleteReferenceImage);
+            Modify_ApiCall(ref _callListReferenceImages);
+            Modify_ListReferenceImagesApiCall(ref _callListReferenceImages);
+            Modify_ApiCall(ref _callGetReferenceImage);
+            Modify_GetReferenceImageApiCall(ref _callGetReferenceImage);
             Modify_ApiCall(ref _callAddProductToProductSet);
             Modify_AddProductToProductSetApiCall(ref _callAddProductToProductSet);
             Modify_ApiCall(ref _callRemoveProductFromProductSet);
@@ -4120,20 +4024,20 @@ namespace Google.Cloud.Vision.V1
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
-        partial void Modify_CreateProductApiCall(ref gaxgrpc::ApiCall<CreateProductRequest, Product> call);
-        partial void Modify_ListProductsApiCall(ref gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> call);
-        partial void Modify_GetProductApiCall(ref gaxgrpc::ApiCall<GetProductRequest, Product> call);
-        partial void Modify_UpdateProductApiCall(ref gaxgrpc::ApiCall<UpdateProductRequest, Product> call);
-        partial void Modify_DeleteProductApiCall(ref gaxgrpc::ApiCall<DeleteProductRequest, pbwkt::Empty> call);
-        partial void Modify_ListReferenceImagesApiCall(ref gaxgrpc::ApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse> call);
-        partial void Modify_GetReferenceImageApiCall(ref gaxgrpc::ApiCall<GetReferenceImageRequest, ReferenceImage> call);
-        partial void Modify_DeleteReferenceImageApiCall(ref gaxgrpc::ApiCall<DeleteReferenceImageRequest, pbwkt::Empty> call);
-        partial void Modify_CreateReferenceImageApiCall(ref gaxgrpc::ApiCall<CreateReferenceImageRequest, ReferenceImage> call);
         partial void Modify_CreateProductSetApiCall(ref gaxgrpc::ApiCall<CreateProductSetRequest, ProductSet> call);
         partial void Modify_ListProductSetsApiCall(ref gaxgrpc::ApiCall<ListProductSetsRequest, ListProductSetsResponse> call);
         partial void Modify_GetProductSetApiCall(ref gaxgrpc::ApiCall<GetProductSetRequest, ProductSet> call);
         partial void Modify_UpdateProductSetApiCall(ref gaxgrpc::ApiCall<UpdateProductSetRequest, ProductSet> call);
         partial void Modify_DeleteProductSetApiCall(ref gaxgrpc::ApiCall<DeleteProductSetRequest, pbwkt::Empty> call);
+        partial void Modify_CreateProductApiCall(ref gaxgrpc::ApiCall<CreateProductRequest, Product> call);
+        partial void Modify_ListProductsApiCall(ref gaxgrpc::ApiCall<ListProductsRequest, ListProductsResponse> call);
+        partial void Modify_GetProductApiCall(ref gaxgrpc::ApiCall<GetProductRequest, Product> call);
+        partial void Modify_UpdateProductApiCall(ref gaxgrpc::ApiCall<UpdateProductRequest, Product> call);
+        partial void Modify_DeleteProductApiCall(ref gaxgrpc::ApiCall<DeleteProductRequest, pbwkt::Empty> call);
+        partial void Modify_CreateReferenceImageApiCall(ref gaxgrpc::ApiCall<CreateReferenceImageRequest, ReferenceImage> call);
+        partial void Modify_DeleteReferenceImageApiCall(ref gaxgrpc::ApiCall<DeleteReferenceImageRequest, pbwkt::Empty> call);
+        partial void Modify_ListReferenceImagesApiCall(ref gaxgrpc::ApiCall<ListReferenceImagesRequest, ListReferenceImagesResponse> call);
+        partial void Modify_GetReferenceImageApiCall(ref gaxgrpc::ApiCall<GetReferenceImageRequest, ReferenceImage> call);
         partial void Modify_AddProductToProductSetApiCall(ref gaxgrpc::ApiCall<AddProductToProductSetRequest, pbwkt::Empty> call);
         partial void Modify_RemoveProductFromProductSetApiCall(ref gaxgrpc::ApiCall<RemoveProductFromProductSetRequest, pbwkt::Empty> call);
         partial void Modify_ListProductsInProductSetApiCall(ref gaxgrpc::ApiCall<ListProductsInProductSetRequest, ListProductsInProductSetResponse> call);
@@ -4148,24 +4052,269 @@ namespace Google.Cloud.Vision.V1
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
-        partial void Modify_CreateProductRequest(ref CreateProductRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_ListProductsRequest(ref ListProductsRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_GetProductRequest(ref GetProductRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_UpdateProductRequest(ref UpdateProductRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_DeleteProductRequest(ref DeleteProductRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_ListReferenceImagesRequest(ref ListReferenceImagesRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_GetReferenceImageRequest(ref GetReferenceImageRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_DeleteReferenceImageRequest(ref DeleteReferenceImageRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_CreateReferenceImageRequest(ref CreateReferenceImageRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateProductSetRequest(ref CreateProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListProductSetsRequest(ref ListProductSetsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetProductSetRequest(ref GetProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateProductSetRequest(ref UpdateProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_DeleteProductSetRequest(ref DeleteProductSetRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateProductRequest(ref CreateProductRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListProductsRequest(ref ListProductsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetProductRequest(ref GetProductRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_UpdateProductRequest(ref UpdateProductRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteProductRequest(ref DeleteProductRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_CreateReferenceImageRequest(ref CreateReferenceImageRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteReferenceImageRequest(ref DeleteReferenceImageRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_ListReferenceImagesRequest(ref ListReferenceImagesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_GetReferenceImageRequest(ref GetReferenceImageRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_AddProductToProductSetRequest(ref AddProductToProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_RemoveProductFromProductSetRequest(ref RemoveProductFromProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListProductsInProductSetRequest(ref ListProductsInProductSetRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ImportProductSetsRequest(ref ImportProductSetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ProductSet> CreateProductSetAsync(
+            CreateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateProductSetRequest(ref request, ref callSettings);
+            return _callCreateProductSet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates and returns a new ProductSet resource.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
+        ///   4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ProductSet CreateProductSet(
+            CreateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateProductSetRequest(ref request, ref callSettings);
+            return _callCreateProductSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
+            ListProductSetsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListProductSetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListProductSetsRequest, ListProductSetsResponse, ProductSet>(_callListProductSets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ProductSets in an unspecified order.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
+        ///   than 1.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ProductSet"/> resources.
+        /// </returns>
+        public override gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
+            ListProductSetsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListProductSetsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListProductSetsRequest, ListProductSetsResponse, ProductSet>(_callListProductSets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ProductSet> GetProductSetAsync(
+            GetProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProductSetRequest(ref request, ref callSettings);
+            return _callGetProductSet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information associated with a ProductSet.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ProductSet GetProductSet(
+            GetProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProductSetRequest(ref request, ref callSettings);
+            return _callGetProductSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ProductSet> UpdateProductSetAsync(
+            UpdateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProductSetRequest(ref request, ref callSettings);
+            return _callUpdateProductSet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Makes changes to a ProductSet resource.
+        /// Only display_name can be updated currently.
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns NOT_FOUND if the ProductSet does not exist.
+        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
+        ///   missing from the request or longer than 4096 characters.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ProductSet UpdateProductSet(
+            UpdateProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProductSetRequest(ref request, ref callSettings);
+            return _callUpdateProductSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task DeleteProductSetAsync(
+            DeleteProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteProductSetRequest(ref request, ref callSettings);
+            return _callDeleteProductSet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
+        /// ProductSet are not deleted.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void DeleteProductSet(
+            DeleteProductSetRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteProductSetRequest(ref request, ref callSettings);
+            _callDeleteProductSet.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates and returns a new product resource.
@@ -4391,10 +4540,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4419,10 +4564,6 @@ namespace Google.Cloud.Vision.V1
         /// Metadata of the product and all its images will be deleted right away, but
         /// search queries against ProductSets containing the product may still work
         /// until all related caches are refreshed.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the product does not exist.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4436,6 +4577,131 @@ namespace Google.Cloud.Vision.V1
         {
             Modify_DeleteProductRequest(ref request, ref callSettings);
             _callDeleteProduct.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<ReferenceImage> CreateReferenceImageAsync(
+            CreateReferenceImageRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReferenceImageRequest(ref request, ref callSettings);
+            return _callCreateReferenceImage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates and returns a new ReferenceImage resource.
+        ///
+        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
+        /// the system will try to detect regions of interest in the image that are
+        /// compatible with the product_category on the parent product. If it is
+        /// specified, detection is ALWAYS skipped. The system converts polygons into
+        /// non-rotated rectangles.
+        ///
+        /// Note that the pipeline will resize the image if the image resolution is too
+        /// large to process (above 50MP).
+        ///
+        /// Possible errors:
+        ///
+        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+        ///   characters.
+        /// * Returns INVALID_ARGUMENT if the product does not exist.
+        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
+        ///   compatible with the parent product's product_category is detected.
+        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ReferenceImage CreateReferenceImage(
+            CreateReferenceImageRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateReferenceImageRequest(ref request, ref callSettings);
+            return _callCreateReferenceImage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task DeleteReferenceImageAsync(
+            DeleteReferenceImageRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReferenceImageRequest(ref request, ref callSettings);
+            return _callDeleteReferenceImage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes a reference image.
+        ///
+        /// The image metadata will be deleted right away, but search queries
+        /// against ProductSets containing the image may still work until all related
+        /// caches are refreshed.
+        ///
+        /// The actual image files are not deleted from Google Cloud Storage.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void DeleteReferenceImage(
+            DeleteReferenceImageRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteReferenceImageRequest(ref request, ref callSettings);
+            _callDeleteReferenceImage.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -4539,392 +4805,6 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public override stt::Task DeleteReferenceImageAsync(
-            DeleteReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteReferenceImageRequest(ref request, ref callSettings);
-            return _callDeleteReferenceImage.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Permanently deletes a reference image.
-        ///
-        /// The image metadata will be deleted right away, but search queries
-        /// against ProductSets containing the image may still work until all related
-        /// caches are refreshed.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the reference image does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public override void DeleteReferenceImage(
-            DeleteReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteReferenceImageRequest(ref request, ref callSettings);
-            _callDeleteReferenceImage.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<ReferenceImage> CreateReferenceImageAsync(
-            CreateReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateReferenceImageRequest(ref request, ref callSettings);
-            return _callCreateReferenceImage.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates and returns a new ReferenceImage resource.
-        ///
-        /// The `bounding_poly` field is optional. If `bounding_poly` is not specified,
-        /// the system will try to detect regions of interest in the image that are
-        /// compatible with the product_category on the parent product. If it is
-        /// specified, detection is ALWAYS skipped. The system converts polygons into
-        /// non-rotated rectangles.
-        ///
-        /// Note that the pipeline will resize the image if the image resolution is too
-        /// large to process (above 50MP).
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
-        ///   characters.
-        /// * Returns INVALID_ARGUMENT if the product does not exist.
-        /// * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing
-        ///   compatible with the parent product's product_category is detected.
-        /// * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override ReferenceImage CreateReferenceImage(
-            CreateReferenceImageRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateReferenceImageRequest(ref request, ref callSettings);
-            return _callCreateReferenceImage.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<ProductSet> CreateProductSetAsync(
-            CreateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateProductSetRequest(ref request, ref callSettings);
-            return _callCreateProductSet.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates and returns a new ProductSet resource.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if display_name is missing, or is longer than
-        ///   4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override ProductSet CreateProductSet(
-            CreateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateProductSetRequest(ref request, ref callSettings);
-            return _callCreateProductSet.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists ProductSets in an unspecified order.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
-        ///   than 1.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable asynchronous sequence of <see cref="ProductSet"/> resources.
-        /// </returns>
-        public override gax::PagedAsyncEnumerable<ListProductSetsResponse, ProductSet> ListProductSetsAsync(
-            ListProductSetsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListProductSetsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListProductSetsRequest, ListProductSetsResponse, ProductSet>(_callListProductSets, request, callSettings);
-        }
-
-        /// <summary>
-        /// Lists ProductSets in an unspecified order.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns INVALID_ARGUMENT if page_size is greater than 100, or less
-        ///   than 1.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A pageable sequence of <see cref="ProductSet"/> resources.
-        /// </returns>
-        public override gax::PagedEnumerable<ListProductSetsResponse, ProductSet> ListProductSets(
-            ListProductSetsRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ListProductSetsRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<ListProductSetsRequest, ListProductSetsResponse, ProductSet>(_callListProductSets, request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<ProductSet> GetProductSetAsync(
-            GetProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetProductSetRequest(ref request, ref callSettings);
-            return _callGetProductSet.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Gets information associated with a ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override ProductSet GetProductSet(
-            GetProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetProductSetRequest(ref request, ref callSettings);
-            return _callGetProductSet.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<ProductSet> UpdateProductSetAsync(
-            UpdateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateProductSetRequest(ref request, ref callSettings);
-            return _callUpdateProductSet.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Makes changes to a ProductSet resource.
-        /// Only display_name can be updated currently.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// * Returns INVALID_ARGUMENT if display_name is present in update_mask but
-        ///   missing from the request or longer than 4096 characters.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override ProductSet UpdateProductSet(
-            UpdateProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateProductSetRequest(ref request, ref callSettings);
-            return _callUpdateProductSet.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public override stt::Task DeleteProductSetAsync(
-            DeleteProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteProductSetRequest(ref request, ref callSettings);
-            return _callDeleteProductSet.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Permanently deletes a ProductSet. Products and ReferenceImages in the
-        /// ProductSet are not deleted.
-        ///
-        /// The actual image files are not deleted from Google Cloud Storage.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND if the ProductSet does not exist.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public override void DeleteProductSet(
-            DeleteProductSetRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteProductSetRequest(ref request, ref callSettings);
-            _callDeleteProductSet.Sync(request, callSettings);
-        }
-
-        /// <summary>
         /// Adds a Product to the specified ProductSet. If the Product is already
         /// present, no change is made.
         ///
@@ -4977,10 +4857,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5001,10 +4877,6 @@ namespace Google.Cloud.Vision.V1
 
         /// <summary>
         /// Removes a Product from the specified ProductSet.
-        ///
-        /// Possible errors:
-        ///
-        /// * Returns NOT_FOUND If the Product is not found under the ProductSet.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5143,6 +5015,18 @@ namespace Google.Cloud.Vision.V1
 
     // Partial classes to enable page-streaming
 
+    public partial class ListProductSetsRequest : gaxgrpc::IPageRequest { }
+    public partial class ListProductSetsResponse : gaxgrpc::IPageResponse<ProductSet>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public scg::IEnumerator<ProductSet> GetEnumerator() => ProductSets.GetEnumerator();
+
+        /// <inheritdoc/>
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListProductsRequest : gaxgrpc::IPageRequest { }
     public partial class ListProductsResponse : gaxgrpc::IPageResponse<Product>
     {
@@ -5162,18 +5046,6 @@ namespace Google.Cloud.Vision.V1
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
         public scg::IEnumerator<ReferenceImage> GetEnumerator() => ReferenceImages.GetEnumerator();
-
-        /// <inheritdoc/>
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class ListProductSetsRequest : gaxgrpc::IPageRequest { }
-    public partial class ListProductSetsResponse : gaxgrpc::IPageResponse<ProductSet>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public scg::IEnumerator<ProductSet> GetEnumerator() => ProductSets.GetEnumerator();
 
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();

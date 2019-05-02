@@ -51,6 +51,9 @@ namespace Google.Cloud.Vision.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             BatchAnnotateImagesSettings = existing.BatchAnnotateImagesSettings;
+            BatchAnnotateFilesSettings = existing.BatchAnnotateFilesSettings;
+            AsyncBatchAnnotateImagesSettings = existing.AsyncBatchAnnotateImagesSettings;
+            AsyncBatchAnnotateImagesOperationsSettings = existing.AsyncBatchAnnotateImagesOperationsSettings?.Clone();
             AsyncBatchAnnotateFilesSettings = existing.AsyncBatchAnnotateFilesSettings;
             AsyncBatchAnnotateFilesOperationsSettings = existing.AsyncBatchAnnotateFilesOperationsSettings?.Clone();
             OnCopy(existing);
@@ -151,6 +154,87 @@ namespace Google.Cloud.Vision.V1
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ImageAnnotatorClient.BatchAnnotateFiles</c> and <c>ImageAnnotatorClient.BatchAnnotateFilesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ImageAnnotatorClient.BatchAnnotateFiles</c> and
+        /// <c>ImageAnnotatorClient.BatchAnnotateFilesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchAnnotateFilesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ImageAnnotatorClient.AsyncBatchAnnotateImages</c> and <c>ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>ImageAnnotatorClient.AsyncBatchAnnotateImages</c> and
+        /// <c>ImageAnnotatorClient.AsyncBatchAnnotateImagesAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings AsyncBatchAnnotateImagesSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ImageAnnotatorClient.AsyncBatchAnnotateImages</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20000 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45000 milliseconds</description></item>
+        /// <item><description>Total timeout: 86400000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AsyncBatchAnnotateImagesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(86400000L)),
+                sys::TimeSpan.FromMilliseconds(20000L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(45000L))
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -483,6 +567,348 @@ namespace Google.Cloud.Vision.V1
         }
 
         /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="requests">
+        /// The list of file annotation requests. Right now we support only one
+        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchAnnotateFilesResponse> BatchAnnotateFilesAsync(
+            scg::IEnumerable<AnnotateFileRequest> requests,
+            gaxgrpc::CallSettings callSettings = null) => BatchAnnotateFilesAsync(
+                new BatchAnnotateFilesRequest
+                {
+                    Requests = { gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="requests">
+        /// The list of file annotation requests. Right now we support only one
+        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchAnnotateFilesResponse> BatchAnnotateFilesAsync(
+            scg::IEnumerable<AnnotateFileRequest> requests,
+            st::CancellationToken cancellationToken) => BatchAnnotateFilesAsync(
+                requests,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="requests">
+        /// The list of file annotation requests. Right now we support only one
+        /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual BatchAnnotateFilesResponse BatchAnnotateFiles(
+            scg::IEnumerable<AnnotateFileRequest> requests,
+            gaxgrpc::CallSettings callSettings = null) => BatchAnnotateFiles(
+                new BatchAnnotateFilesRequest
+                {
+                    Requests = { gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchAnnotateFilesResponse> BatchAnnotateFilesAsync(
+            BatchAnnotateFilesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<BatchAnnotateFilesResponse> BatchAnnotateFilesAsync(
+            BatchAnnotateFilesRequest request,
+            st::CancellationToken cancellationToken) => BatchAnnotateFilesAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual BatchAnnotateFilesResponse BatchAnnotateFiles(
+            BatchAnnotateFilesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of images.
+        ///
+        /// Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+        ///
+        /// This service will write image annotation outputs to json files in customer
+        /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+        /// </summary>
+        /// <param name="requests">
+        /// Individual image annotation requests for this batch.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and metadata (e.g. format).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>> AsyncBatchAnnotateImagesAsync(
+            scg::IEnumerable<AnnotateImageRequest> requests,
+            OutputConfig outputConfig,
+            gaxgrpc::CallSettings callSettings = null) => AsyncBatchAnnotateImagesAsync(
+                new AsyncBatchAnnotateImagesRequest
+                {
+                    Requests = { gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
+                    OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of images.
+        ///
+        /// Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+        ///
+        /// This service will write image annotation outputs to json files in customer
+        /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+        /// </summary>
+        /// <param name="requests">
+        /// Individual image annotation requests for this batch.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and metadata (e.g. format).
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>> AsyncBatchAnnotateImagesAsync(
+            scg::IEnumerable<AnnotateImageRequest> requests,
+            OutputConfig outputConfig,
+            st::CancellationToken cancellationToken) => AsyncBatchAnnotateImagesAsync(
+                requests,
+                outputConfig,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of images.
+        ///
+        /// Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+        ///
+        /// This service will write image annotation outputs to json files in customer
+        /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+        /// </summary>
+        /// <param name="requests">
+        /// Individual image annotation requests for this batch.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. The desired output location and metadata (e.g. format).
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> AsyncBatchAnnotateImages(
+            scg::IEnumerable<AnnotateImageRequest> requests,
+            OutputConfig outputConfig,
+            gaxgrpc::CallSettings callSettings = null) => AsyncBatchAnnotateImages(
+                new AsyncBatchAnnotateImagesRequest
+                {
+                    Requests = { gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
+                    OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of images.
+        ///
+        /// Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+        ///
+        /// This service will write image annotation outputs to json files in customer
+        /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>> AsyncBatchAnnotateImagesAsync(
+            AsyncBatchAnnotateImagesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AsyncBatchAnnotateImagesAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>> PollOnceAsyncBatchAnnotateImagesAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                AsyncBatchAnnotateImagesOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of images.
+        ///
+        /// Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+        ///
+        /// This service will write image annotation outputs to json files in customer
+        /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> AsyncBatchAnnotateImages(
+            AsyncBatchAnnotateImagesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>AsyncBatchAnnotateImages</c>.
+        /// </summary>
+        public virtual lro::OperationsClient AsyncBatchAnnotateImagesOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AsyncBatchAnnotateImages</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> PollOnceAsyncBatchAnnotateImages(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                AsyncBatchAnnotateImagesOperationsClient,
+                callSettings);
+
+        /// <summary>
         /// Run asynchronous image detection and annotation for a list of generic
         /// files, such as PDF files, which may contain multiple pages and multiple
         /// images per page. Progress and results can be retrieved through the
@@ -647,6 +1073,8 @@ namespace Google.Cloud.Vision.V1
     public sealed partial class ImageAnnotatorClientImpl : ImageAnnotatorClient
     {
         private readonly gaxgrpc::ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> _callBatchAnnotateImages;
+        private readonly gaxgrpc::ApiCall<BatchAnnotateFilesRequest, BatchAnnotateFilesResponse> _callBatchAnnotateFiles;
+        private readonly gaxgrpc::ApiCall<AsyncBatchAnnotateImagesRequest, lro::Operation> _callAsyncBatchAnnotateImages;
         private readonly gaxgrpc::ApiCall<AsyncBatchAnnotateFilesRequest, lro::Operation> _callAsyncBatchAnnotateFiles;
 
         /// <summary>
@@ -659,14 +1087,24 @@ namespace Google.Cloud.Vision.V1
             GrpcClient = grpcClient;
             ImageAnnotatorSettings effectiveSettings = settings ?? ImageAnnotatorSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            AsyncBatchAnnotateImagesOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateImagesOperationsSettings);
             AsyncBatchAnnotateFilesOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.AsyncBatchAnnotateFilesOperationsSettings);
             _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(
                 GrpcClient.BatchAnnotateImagesAsync, GrpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
+            _callBatchAnnotateFiles = clientHelper.BuildApiCall<BatchAnnotateFilesRequest, BatchAnnotateFilesResponse>(
+                GrpcClient.BatchAnnotateFilesAsync, GrpcClient.BatchAnnotateFiles, effectiveSettings.BatchAnnotateFilesSettings);
+            _callAsyncBatchAnnotateImages = clientHelper.BuildApiCall<AsyncBatchAnnotateImagesRequest, lro::Operation>(
+                GrpcClient.AsyncBatchAnnotateImagesAsync, GrpcClient.AsyncBatchAnnotateImages, effectiveSettings.AsyncBatchAnnotateImagesSettings);
             _callAsyncBatchAnnotateFiles = clientHelper.BuildApiCall<AsyncBatchAnnotateFilesRequest, lro::Operation>(
                 GrpcClient.AsyncBatchAnnotateFilesAsync, GrpcClient.AsyncBatchAnnotateFiles, effectiveSettings.AsyncBatchAnnotateFilesSettings);
             Modify_ApiCall(ref _callBatchAnnotateImages);
             Modify_BatchAnnotateImagesApiCall(ref _callBatchAnnotateImages);
+            Modify_ApiCall(ref _callBatchAnnotateFiles);
+            Modify_BatchAnnotateFilesApiCall(ref _callBatchAnnotateFiles);
+            Modify_ApiCall(ref _callAsyncBatchAnnotateImages);
+            Modify_AsyncBatchAnnotateImagesApiCall(ref _callAsyncBatchAnnotateImages);
             Modify_ApiCall(ref _callAsyncBatchAnnotateFiles);
             Modify_AsyncBatchAnnotateFilesApiCall(ref _callAsyncBatchAnnotateFiles);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -683,6 +1121,8 @@ namespace Google.Cloud.Vision.V1
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
         partial void Modify_BatchAnnotateImagesApiCall(ref gaxgrpc::ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> call);
+        partial void Modify_BatchAnnotateFilesApiCall(ref gaxgrpc::ApiCall<BatchAnnotateFilesRequest, BatchAnnotateFilesResponse> call);
+        partial void Modify_AsyncBatchAnnotateImagesApiCall(ref gaxgrpc::ApiCall<AsyncBatchAnnotateImagesRequest, lro::Operation> call);
         partial void Modify_AsyncBatchAnnotateFilesApiCall(ref gaxgrpc::ApiCall<AsyncBatchAnnotateFilesRequest, lro::Operation> call);
         partial void OnConstruction(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -695,6 +1135,8 @@ namespace Google.Cloud.Vision.V1
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
         partial void Modify_BatchAnnotateImagesRequest(ref BatchAnnotateImagesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BatchAnnotateFilesRequest(ref BatchAnnotateFilesRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_AsyncBatchAnnotateImagesRequest(ref AsyncBatchAnnotateImagesRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_AsyncBatchAnnotateFilesRequest(ref AsyncBatchAnnotateFilesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
@@ -736,6 +1178,121 @@ namespace Google.Cloud.Vision.V1
             Modify_BatchAnnotateImagesRequest(ref request, ref callSettings);
             return _callBatchAnnotateImages.Sync(request, callSettings);
         }
+
+        /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<BatchAnnotateFilesResponse> BatchAnnotateFilesAsync(
+            BatchAnnotateFilesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchAnnotateFilesRequest(ref request, ref callSettings);
+            return _callBatchAnnotateFiles.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Service that performs image detection and annotation for a batch of files.
+        /// Now only "application/pdf", "image/tiff" and "image/gif" are supported.
+        ///
+        /// This service will extract at most 5 (customers can specify which 5 in
+        /// AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each
+        /// file provided and perform detection and annotation for each image
+        /// extracted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override BatchAnnotateFilesResponse BatchAnnotateFiles(
+            BatchAnnotateFilesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchAnnotateFilesRequest(ref request, ref callSettings);
+            return _callBatchAnnotateFiles.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of images.
+        ///
+        /// Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+        ///
+        /// This service will write image annotation outputs to json files in customer
+        /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>> AsyncBatchAnnotateImagesAsync(
+            AsyncBatchAnnotateImagesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsyncBatchAnnotateImagesRequest(ref request, ref callSettings);
+            return new lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>(
+                await _callAsyncBatchAnnotateImages.Async(request, callSettings).ConfigureAwait(false), AsyncBatchAnnotateImagesOperationsClient);
+        }
+
+        /// <summary>
+        /// Run asynchronous image detection and annotation for a list of images.
+        ///
+        /// Progress and results can be retrieved through the
+        /// `google.longrunning.Operations` interface.
+        /// `Operation.metadata` contains `OperationMetadata` (metadata).
+        /// `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results).
+        ///
+        /// This service will write image annotation outputs to json files in customer
+        /// GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> AsyncBatchAnnotateImages(
+            AsyncBatchAnnotateImagesRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AsyncBatchAnnotateImagesRequest(ref request, ref callSettings);
+            return new lro::Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata>(
+                _callAsyncBatchAnnotateImages.Sync(request, callSettings), AsyncBatchAnnotateImagesOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>AsyncBatchAnnotateImages</c>.
+        /// </summary>
+        public override lro::OperationsClient AsyncBatchAnnotateImagesOperationsClient { get; }
 
         /// <summary>
         /// Run asynchronous image detection and annotation for a list of generic

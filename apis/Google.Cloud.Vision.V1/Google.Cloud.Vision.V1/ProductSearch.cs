@@ -152,10 +152,12 @@ namespace Google.Cloud.Vision.V1 {
     /// <summary>
     /// The filtering expression. This can be used to restrict search results based
     /// on Product labels. We currently support an AND of OR of key-value
-    /// expressions, where each expression within an OR must have the same key.
+    /// expressions, where each expression within an OR must have the same key. An
+    /// '=' should be used to connect the key and value.
     ///
     /// For example, "(color = red OR color = blue) AND brand = Google" is
-    /// acceptable, but not "(color = red OR brand = Google)" or "color: red".
+    /// acceptable, but "(color = red OR brand = Google)" is not acceptable.
+    /// "color: red" is not acceptable because it uses a ':' instead of an '='.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -339,8 +341,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int IndexTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp indexTime_;
     /// <summary>
-    /// Timestamp of the index which provided these results. Changes made after
-    /// this time are not reflected in the current results.
+    /// Timestamp of the index which provided these results. Products added to the
+    /// product set and products removed from the product set after this time are
+    /// not reflected in the current results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp IndexTime {

@@ -39,13 +39,13 @@ namespace Google.Cloud.Vision.V1 {
             "LmNsb3VkLnZpc2lvbi52MS5XZWJEZXRlY3Rpb24uV2ViTGFiZWwaQgoJV2Vi",
             "RW50aXR5EhEKCWVudGl0eV9pZBgBIAEoCRINCgVzY29yZRgCIAEoAhITCgtk",
             "ZXNjcmlwdGlvbhgDIAEoCRomCghXZWJJbWFnZRILCgN1cmwYASABKAkSDQoF",
-            "c2NvcmUYAiABKAIa1gEKB1dlYlBhZ2USCwoDdXJsGAEgASgJEg0KBXNjb3Jl",
-            "GAIgASgCEhIKCnBhZ2VfdGl0bGUYAyABKAkSSwoUZnVsbF9tYXRjaGluZ19p",
-            "bWFnZXMYBCADKAsyLS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLldlYkRldGVj",
-            "dGlvbi5XZWJJbWFnZRJOChdwYXJ0aWFsX21hdGNoaW5nX2ltYWdlcxgFIAMo",
-            "CzItLmdvb2dsZS5jbG91ZC52aXNpb24udjEuV2ViRGV0ZWN0aW9uLldlYklt",
-            "YWdlGjAKCFdlYkxhYmVsEg0KBWxhYmVsGAEgASgJEhUKDWxhbmd1YWdlX2Nv",
-            "ZGUYAiABKAlCeQoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCEVdlYkRl",
+            "c2NvcmUYAiABKAIaMAoIV2ViTGFiZWwSDQoFbGFiZWwYASABKAkSFQoNbGFu",
+            "Z3VhZ2VfY29kZRgCIAEoCRrWAQoHV2ViUGFnZRILCgN1cmwYASABKAkSDQoF",
+            "c2NvcmUYAiABKAISEgoKcGFnZV90aXRsZRgDIAEoCRJLChRmdWxsX21hdGNo",
+            "aW5nX2ltYWdlcxgEIAMoCzItLmdvb2dsZS5jbG91ZC52aXNpb24udjEuV2Vi",
+            "RGV0ZWN0aW9uLldlYkltYWdlEk4KF3BhcnRpYWxfbWF0Y2hpbmdfaW1hZ2Vz",
+            "GAUgAygLMi0uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5XZWJEZXRlY3Rpb24u",
+            "V2ViSW1hZ2VCeQoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCEVdlYkRl",
             "dGVjdGlvblByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
             "b2dsZWFwaXMvY2xvdWQvdmlzaW9uL3YxO3Zpc2lvbvgBAaICBEdDVk5iBnBy",
             "b3RvMw=="));
@@ -54,8 +54,8 @@ namespace Google.Cloud.Vision.V1 {
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection), global::Google.Cloud.Vision.V1.WebDetection.Parser, new[]{ "WebEntities", "FullMatchingImages", "PartialMatchingImages", "PagesWithMatchingImages", "VisuallySimilarImages", "BestGuessLabels" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity), global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity.Parser, new[]{ "EntityId", "Score", "Description" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser, new[]{ "Url", "Score" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage.Parser, new[]{ "Url", "Score", "PageTitle", "FullMatchingImages", "PartialMatchingImages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel), global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel.Parser, new[]{ "Label", "LanguageCode" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel), global::Google.Cloud.Vision.V1.WebDetection.Types.WebLabel.Parser, new[]{ "Label", "LanguageCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage), global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage.Parser, new[]{ "Url", "Score", "PageTitle", "FullMatchingImages", "PartialMatchingImages" }, null, null, null)})
           }));
     }
     #endregion
@@ -675,6 +675,174 @@ namespace Google.Cloud.Vision.V1 {
       }
 
       /// <summary>
+      /// Label to provide extra metadata for the web detection.
+      /// </summary>
+      public sealed partial class WebLabel : pb::IMessage<WebLabel> {
+        private static readonly pb::MessageParser<WebLabel> _parser = new pb::MessageParser<WebLabel>(() => new WebLabel());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<WebLabel> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Vision.V1.WebDetection.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WebLabel() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WebLabel(WebLabel other) : this() {
+          label_ = other.label_;
+          languageCode_ = other.languageCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WebLabel Clone() {
+          return new WebLabel(this);
+        }
+
+        /// <summary>Field number for the "label" field.</summary>
+        public const int LabelFieldNumber = 1;
+        private string label_ = "";
+        /// <summary>
+        /// Label for extra metadata.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Label {
+          get { return label_; }
+          set {
+            label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "language_code" field.</summary>
+        public const int LanguageCodeFieldNumber = 2;
+        private string languageCode_ = "";
+        /// <summary>
+        /// The BCP-47 language code for `label`, such as "en-US" or "sr-Latn".
+        /// For more information, see
+        /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string LanguageCode {
+          get { return languageCode_; }
+          set {
+            languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as WebLabel);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(WebLabel other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Label != other.Label) return false;
+          if (LanguageCode != other.LanguageCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Label.Length != 0) hash ^= Label.GetHashCode();
+          if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Label.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Label);
+          }
+          if (LanguageCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(LanguageCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Label.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
+          }
+          if (LanguageCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(WebLabel other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Label.Length != 0) {
+            Label = other.Label;
+          }
+          if (other.LanguageCode.Length != 0) {
+            LanguageCode = other.LanguageCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Label = input.ReadString();
+                break;
+              }
+              case 18: {
+                LanguageCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
       /// Metadata for web pages.
       /// </summary>
       public sealed partial class WebPage : pb::IMessage<WebPage> {
@@ -685,7 +853,7 @@ namespace Google.Cloud.Vision.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Vision.V1.WebDetection.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.Vision.V1.WebDetection.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -913,174 +1081,6 @@ namespace Google.Cloud.Vision.V1 {
               }
               case 42: {
                 partialMatchingImages_.AddEntriesFrom(input, _repeated_partialMatchingImages_codec);
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-      /// <summary>
-      /// Label to provide extra metadata for the web detection.
-      /// </summary>
-      public sealed partial class WebLabel : pb::IMessage<WebLabel> {
-        private static readonly pb::MessageParser<WebLabel> _parser = new pb::MessageParser<WebLabel>(() => new WebLabel());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<WebLabel> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Vision.V1.WebDetection.Descriptor.NestedTypes[3]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public WebLabel() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public WebLabel(WebLabel other) : this() {
-          label_ = other.label_;
-          languageCode_ = other.languageCode_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public WebLabel Clone() {
-          return new WebLabel(this);
-        }
-
-        /// <summary>Field number for the "label" field.</summary>
-        public const int LabelFieldNumber = 1;
-        private string label_ = "";
-        /// <summary>
-        /// Label for extra metadata.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Label {
-          get { return label_; }
-          set {
-            label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "language_code" field.</summary>
-        public const int LanguageCodeFieldNumber = 2;
-        private string languageCode_ = "";
-        /// <summary>
-        /// The BCP-47 language code for `label`, such as "en-US" or "sr-Latn".
-        /// For more information, see
-        /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string LanguageCode {
-          get { return languageCode_; }
-          set {
-            languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as WebLabel);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(WebLabel other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (Label != other.Label) return false;
-          if (LanguageCode != other.LanguageCode) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (Label.Length != 0) hash ^= Label.GetHashCode();
-          if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (Label.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(Label);
-          }
-          if (LanguageCode.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(LanguageCode);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (Label.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
-          }
-          if (LanguageCode.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(WebLabel other) {
-          if (other == null) {
-            return;
-          }
-          if (other.Label.Length != 0) {
-            Label = other.Label;
-          }
-          if (other.LanguageCode.Length != 0) {
-            LanguageCode = other.LanguageCode;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                Label = input.ReadString();
-                break;
-              }
-              case 18: {
-                LanguageCode = input.ReadString();
                 break;
               }
             }
