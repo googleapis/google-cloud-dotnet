@@ -199,7 +199,7 @@
       "Microsoft.AspNet.WebApi.Core": "5.2.7",
       "Microsoft.AspNet.WebPages": "3.2.7",
       "Microsoft.AspNet.Mvc": "5.2.7",
-      "Grpc.Core": "1.20.1"
+      "Grpc.Core": "default"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -219,7 +219,7 @@
     "dependencies": {
       "Google.Cloud.Diagnostics.Common": "project",
       "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "1.0.0-beta02",
-      "Grpc.Core": "1.20.1"
+      "Grpc.Core": "default"
     },
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -693,7 +693,7 @@
       "Google.Cloud.Spanner.V1": "project",
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Grpc.Core": "1.20.1",
+      "Grpc.Core": "default",
       "Grpc.Gcp": "1.1.1"
     },
     "testDependencies": {
