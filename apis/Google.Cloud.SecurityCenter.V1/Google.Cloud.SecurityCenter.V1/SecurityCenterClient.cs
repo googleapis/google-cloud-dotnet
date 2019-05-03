@@ -17,7 +17,6 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using iam = Google.Cloud.Iam.V1;
-using gcsv = Google.Cloud.Securitycenter.V1;
 using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
@@ -2484,7 +2483,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
+        public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
             OrganizationName parent,
             gaxgrpc::CallSettings callSettings = null) => RunAssetDiscoveryAsync(
                 new RunAssetDiscoveryRequest
@@ -2511,7 +2510,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
+        public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
             OrganizationName parent,
             st::CancellationToken cancellationToken) => RunAssetDiscoveryAsync(
                 parent,
@@ -2535,7 +2534,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
+        public virtual lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
             OrganizationName parent,
             gaxgrpc::CallSettings callSettings = null) => RunAssetDiscovery(
                 new RunAssetDiscoveryRequest
@@ -2562,7 +2561,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
+        public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
             string parent,
             gaxgrpc::CallSettings callSettings = null) => RunAssetDiscoveryAsync(
                 new RunAssetDiscoveryRequest
@@ -2589,7 +2588,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
+        public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
             string parent,
             st::CancellationToken cancellationToken) => RunAssetDiscoveryAsync(
                 parent,
@@ -2613,7 +2612,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
+        public virtual lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
             string parent,
             gaxgrpc::CallSettings callSettings = null) => RunAssetDiscovery(
                 new RunAssetDiscoveryRequest
@@ -2639,7 +2638,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual stt::Task<lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
+        public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
             RunAssetDiscoveryRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -2652,9 +2651,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>> PollOnceRunAssetDiscoveryAsync(
+        public virtual stt::Task<lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>> PollOnceRunAssetDiscoveryAsync(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>.PollOnceFromNameAsync(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>.PollOnceFromNameAsync(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 RunAssetDiscoveryOperationsClient,
                 callSettings);
@@ -2676,7 +2675,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
+        public virtual lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
             RunAssetDiscoveryRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -2697,9 +2696,9 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty> PollOnceRunAssetDiscovery(
+        public virtual lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty> PollOnceRunAssetDiscovery(
             string operationName,
-            gaxgrpc::CallSettings callSettings = null) => lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>.PollOnceFromName(
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>.PollOnceFromName(
                 gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
                 RunAssetDiscoveryOperationsClient,
                 callSettings);
@@ -4538,12 +4537,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override async stt::Task<lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
+        public override async stt::Task<lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>> RunAssetDiscoveryAsync(
             RunAssetDiscoveryRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunAssetDiscoveryRequest(ref request, ref callSettings);
-            return new lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>(
+            return new lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>(
                 await _callRunAssetDiscovery.Async(request, callSettings).ConfigureAwait(false), RunAssetDiscoveryOperationsClient);
         }
 
@@ -4564,12 +4563,12 @@ namespace Google.Cloud.SecurityCenter.V1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
+        public override lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty> RunAssetDiscovery(
             RunAssetDiscoveryRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunAssetDiscoveryRequest(ref request, ref callSettings);
-            return new lro::Operation<gcsv::RunAssetDiscoveryResponse, pbwkt::Empty>(
+            return new lro::Operation<RunAssetDiscoveryResponse, pbwkt::Empty>(
                 _callRunAssetDiscovery.Sync(request, callSettings), RunAssetDiscoveryOperationsClient);
         }
 
