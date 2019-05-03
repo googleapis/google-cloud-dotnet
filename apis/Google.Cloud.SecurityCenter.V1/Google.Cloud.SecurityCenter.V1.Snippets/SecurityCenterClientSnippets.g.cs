@@ -20,6 +20,7 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.SecurityCenter.V1;
+    using Google.Cloud.Securitycenter.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -1011,23 +1012,25 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             OrganizationName parent = new OrganizationName("[ORGANIZATION]");
             // Make the request
-            Operation<Empty, Empty> response =
+            Operation<RunAssetDiscoveryResponse, Empty> response =
                 await securityCenterClient.RunAssetDiscoveryAsync(parent);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Empty> completedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> completedResponse =
                 await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            RunAssetDiscoveryResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Empty> retrievedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse =
                 await securityCenterClient.PollOnceRunAssetDiscoveryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                RunAssetDiscoveryResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1041,23 +1044,25 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Initialize request argument(s)
             OrganizationName parent = new OrganizationName("[ORGANIZATION]");
             // Make the request
-            Operation<Empty, Empty> response =
+            Operation<RunAssetDiscoveryResponse, Empty> response =
                 securityCenterClient.RunAssetDiscovery(parent);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Empty> completedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> completedResponse =
                 response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            RunAssetDiscoveryResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Empty> retrievedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse =
                 securityCenterClient.PollOnceRunAssetDiscovery(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                RunAssetDiscoveryResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1074,23 +1079,25 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
                 ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
             };
             // Make the request
-            Operation<Empty, Empty> response =
+            Operation<RunAssetDiscoveryResponse, Empty> response =
                 await securityCenterClient.RunAssetDiscoveryAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Empty> completedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> completedResponse =
                 await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            RunAssetDiscoveryResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Empty> retrievedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse =
                 await securityCenterClient.PollOnceRunAssetDiscoveryAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                RunAssetDiscoveryResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1107,23 +1114,25 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
                 ParentAsOrganizationName = new OrganizationName("[ORGANIZATION]"),
             };
             // Make the request
-            Operation<Empty, Empty> response =
+            Operation<RunAssetDiscoveryResponse, Empty> response =
                 securityCenterClient.RunAssetDiscovery(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, Empty> completedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> completedResponse =
                 response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            RunAssetDiscoveryResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, Empty> retrievedResponse =
+            Operation<RunAssetDiscoveryResponse, Empty> retrievedResponse =
                 securityCenterClient.PollOnceRunAssetDiscovery(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                RunAssetDiscoveryResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
