@@ -40,7 +40,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             string projectId = _fixture.ProjectId;
 
             // Sample: ListGroupStats
-            // Additional: ListGroupStats(*,*,*,*,*)
+            // Additional: ListGroupStats(ProjectName,*,*,*,*)
             ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
             ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> groupStats = client.ListGroupStats(

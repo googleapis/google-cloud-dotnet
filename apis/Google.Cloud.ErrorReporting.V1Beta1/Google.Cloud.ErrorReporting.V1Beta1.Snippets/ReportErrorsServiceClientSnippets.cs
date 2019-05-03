@@ -37,7 +37,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             string projectId = _fixture.ProjectId;
 
             // Sample: ReportErrorEvent
-            // Additional: ReportErrorEvent(*,*,*)
+            // Additional: ReportErrorEvent(ProjectName,*,*)
             ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
             ProjectName projectName = new ProjectName(projectId);
             ReportedErrorEvent error = new ReportedErrorEvent
