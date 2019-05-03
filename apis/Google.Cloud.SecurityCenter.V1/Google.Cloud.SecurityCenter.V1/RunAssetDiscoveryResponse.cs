@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.Securitycenter.V1 {
+namespace Google.Cloud.SecurityCenter.V1 {
 
   /// <summary>Holder for reflection information generated from google/cloud/securitycenter/v1/run_asset_discovery_response.proto</summary>
   public static partial class RunAssetDiscoveryResponseReflection {
@@ -33,15 +33,16 @@ namespace Google.Cloud.Securitycenter.V1 {
             "djEuUnVuQXNzZXREaXNjb3ZlcnlSZXNwb25zZS5TdGF0ZRIrCghkdXJhdGlv",
             "bhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJNCgVTdGF0ZRIV",
             "ChFTVEFURV9VTlNQRUNJRklFRBAAEg0KCUNPTVBMRVRFRBABEg4KClNVUEVS",
-            "U0VERUQQAhIOCgpURVJNSU5BVEVEEANCuQEKImNvbS5nb29nbGUuY2xvdWQu",
+            "U0VERUQQAhIOCgpURVJNSU5BVEVEEANC2gEKImNvbS5nb29nbGUuY2xvdWQu",
             "c2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
             "dG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtzZWN1cml0",
-            "eWNlbnRlcsoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdv",
-            "b2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
+            "eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdv",
+            "b2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6",
+            "OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Securitycenter.V1.RunAssetDiscoveryResponse), global::Google.Cloud.Securitycenter.V1.RunAssetDiscoveryResponse.Parser, new[]{ "State", "Duration" }, null, new[]{ typeof(global::Google.Cloud.Securitycenter.V1.RunAssetDiscoveryResponse.Types.State) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse), global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Parser, new[]{ "State", "Duration" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State) }, null)
           }));
     }
     #endregion
@@ -59,7 +60,7 @@ namespace Google.Cloud.Securitycenter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Securitycenter.V1.RunAssetDiscoveryResponseReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponseReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -88,12 +89,12 @@ namespace Google.Cloud.Securitycenter.V1 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Securitycenter.V1.RunAssetDiscoveryResponse.Types.State state_ = 0;
+    private global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State state_ = 0;
     /// <summary>
     /// The state of an asset discovery run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Securitycenter.V1.RunAssetDiscoveryResponse.Types.State State {
+    public global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State State {
       get { return state_; }
       set {
         state_ = value;
@@ -204,7 +205,7 @@ namespace Google.Cloud.Securitycenter.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            state_ = (global::Google.Cloud.Securitycenter.V1.RunAssetDiscoveryResponse.Types.State) input.ReadEnum();
+            state_ = (global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponse.Types.State) input.ReadEnum();
             break;
           }
           case 18: {

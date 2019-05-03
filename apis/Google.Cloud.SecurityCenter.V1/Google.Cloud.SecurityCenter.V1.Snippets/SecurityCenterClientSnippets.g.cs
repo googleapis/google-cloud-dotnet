@@ -20,7 +20,6 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.SecurityCenter.V1;
-    using Google.Cloud.Securitycenter.V1;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
