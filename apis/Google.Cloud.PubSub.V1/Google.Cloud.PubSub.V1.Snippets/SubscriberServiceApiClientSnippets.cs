@@ -147,7 +147,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListSubscriptions(*,*,*,*)
+            // Snippet: ListSubscriptions(ProjectName,*,*,*)
             SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
@@ -163,7 +163,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListSubscriptionsAsync(*,*,*,*)
+            // Snippet: ListSubscriptionsAsync(ProjectName,*,*,*)
             SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
@@ -184,7 +184,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             PublisherServiceApiClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
-            // Snippet: CreateSubscription(*,*,*,*,*)
+            // Snippet: CreateSubscription(SubscriptionName,*,*,*,*)
             SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
@@ -230,7 +230,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             SubscriberServiceApiClient.Create().CreateSubscription(new SubscriptionName(projectId, subscriptionId), topicName, null, 60);
             publisher.Publish(topicName, new[] { newMessage });
 
-            // Snippet: Pull(*,*,*,*)
+            // Snippet: Pull(SubscriptionName,*,*,*)
             SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);

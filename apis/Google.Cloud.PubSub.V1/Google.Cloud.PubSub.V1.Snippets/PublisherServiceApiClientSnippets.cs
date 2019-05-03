@@ -40,7 +40,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopics(*,*,*,*)
+            // Snippet: ListTopics(ProjectName,*,*,*)
             PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
@@ -56,7 +56,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopicsAsync(*,*,*,*)
+            // Snippet: ListTopicsAsync(ProjectName,*,*,*)
             PublisherServiceApiClient client = PublisherServiceApiClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
@@ -105,7 +105,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            // Snippet: Publish(*,*,*)
+            // Snippet: Publish(TopicName,*,*)
             PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             // Make sure we have a topic to publish to
             TopicName topicName = new TopicName(projectId, topicId);
@@ -132,8 +132,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            // Snippet: PublishAsync(*,*,CallSettings)
-            // Additional: PublishAsync(*,*,CancellationToken)
+            // Snippet: PublishAsync(TopicName,*,CallSettings)
+            // Additional: PublishAsync(TopicName,*,CancellationToken)
             PublisherServiceApiClient client = PublisherServiceApiClient.Create();
             // Make sure we have a topic to publish to
             TopicName topicName = new TopicName(projectId, topicId);
