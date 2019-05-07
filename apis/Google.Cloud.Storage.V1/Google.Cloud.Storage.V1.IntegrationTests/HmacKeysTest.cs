@@ -42,9 +42,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
             Assert.Empty(client.ListHmacKeys(projectId));
             var key = client.CreateHmacKey(projectId, serviceAccountEmail);
-            // TODO: When the discovery doc has been updated, this should be an HmacKeyMetadata
-            dynamic metadata = key.Metadata;
-            string accessId = metadata.accessId;
+            string accessId = key.Metadata.AccessId;
 
             // We should always get a 40 character secret, which is valid base64.
             Assert.Equal(40, key.Secret.Length);
@@ -99,9 +97,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
             Assert.Empty(await client.ListHmacKeysAsync(projectId).ToList());
             var key = await client.CreateHmacKeyAsync(projectId, serviceAccountEmail);
-            // TODO: When the discovery doc has been updated, this should be an HmacKeyMetadata
-            dynamic metadata = key.Metadata;
-            string accessId = metadata.accessId;
+            string accessId = key.Metadata.AccessId;
 
             // We should always get a 40 character secret, which is valid base64.
             Assert.Equal(40, key.Secret.Length);
