@@ -377,8 +377,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private void PurgeHmacKeys()
         {
-// HMAC currently disabled            
-#if false
             var keys = Client.ListHmacKeys(ProjectId).ToList();
             foreach (var key in keys)
             {
@@ -389,7 +387,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 }
                 Client.DeleteHmacKey(ProjectId, key.AccessId);
             }
-#endif
         }
 
         private class DelayTestInfo

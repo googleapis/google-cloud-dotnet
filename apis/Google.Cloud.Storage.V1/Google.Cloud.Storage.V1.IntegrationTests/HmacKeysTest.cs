@@ -28,7 +28,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         public HmacKeysTest(StorageFixture fixture) => _fixture = fixture;
 
-        [Fact(Skip = "HMAC is temporarily disabled")]
+        [Fact]
         public void Lifecycle()
         {
             var client = _fixture.Client;
@@ -84,7 +84,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 k => k.AccessId == accessId);
         }
 
-        [Fact(Skip = "HMAC is temporarily disabled")]
+        [Fact]
         public async Task LifecycleAsync()
         {
             var client = _fixture.Client;
