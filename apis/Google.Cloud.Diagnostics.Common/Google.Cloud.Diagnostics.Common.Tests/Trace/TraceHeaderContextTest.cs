@@ -27,10 +27,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// </summary>
         private string CreateTraceHeaderValue(int? mask = null)
         {
-            string headerValue = $"{TraceId}/{SpanId};";
+            string headerValue = $"{TraceId}/{SpanId}";
             if (mask != null)
             {
-                headerValue += "o=" + mask;
+                headerValue += ";o=" + mask;
             }
             return headerValue;
         }
@@ -145,7 +145,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal($"{TraceId}/{SpanId};o=1", context.ToString());
 
             context = TraceHeaderContext.Create(TraceId, SpanId, null);
-            Assert.Equal($"{TraceId}/{SpanId};", context.ToString());
+            Assert.Equal($"{TraceId}/{SpanId}", context.ToString());
 
             context = TraceHeaderContext.Create(TraceId, SpanId, false);
             Assert.Equal($"{TraceId}/{SpanId};o=0", context.ToString());
