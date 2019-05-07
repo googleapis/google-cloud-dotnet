@@ -25,27 +25,28 @@ namespace Google.Cloud.Iam.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5nb29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8SDWdvb2dsZS5pYW0u",
-            "djEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aGmdvb2dsZS9pYW0v",
-            "djEvcG9saWN5LnByb3RvIk4KE1NldElhbVBvbGljeVJlcXVlc3QSEAoIcmVz",
-            "b3VyY2UYASABKAkSJQoGcG9saWN5GAIgASgLMhUuZ29vZ2xlLmlhbS52MS5Q",
-            "b2xpY3kiJwoTR2V0SWFtUG9saWN5UmVxdWVzdBIQCghyZXNvdXJjZRgBIAEo",
-            "CSJCChlUZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0EhAKCHJlc291cmNlGAEg",
-            "ASgJEhMKC3Blcm1pc3Npb25zGAIgAygJIjEKGlRlc3RJYW1QZXJtaXNzaW9u",
-            "c1Jlc3BvbnNlEhMKC3Blcm1pc3Npb25zGAEgAygJMpQDCglJQU1Qb2xpY3kS",
-            "dAoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lS",
-            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiKYLT5JMCIyIeL3YxL3ty",
-            "ZXNvdXJjZT0qKn06c2V0SWFtUG9saWN5OgEqEnQKDEdldElhbVBvbGljeRIi",
-            "Lmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5p",
-            "YW0udjEuUG9saWN5IimC0+STAiMiHi92MS97cmVzb3VyY2U9Kip9OmdldElh",
-            "bVBvbGljeToBKhKaAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlh",
-            "bS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52",
-            "MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSIvgtPkkwIpIiQvdjEve3Jl",
-            "c291cmNlPSoqfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpChgEKEWNvbS5nb29n",
-            "bGUuaWFtLnYxQg5JYW1Qb2xpY3lQcm90b1ABWjBnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2lhbS92MTtpYW34AQGqAhNHb29nbGUu",
-            "Q2xvdWQuSWFtLlYxygITR29vZ2xlXENsb3VkXElhbVxWMWIGcHJvdG8z"));
+            "djEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aGmdvb2dsZS9pYW0vdjEv",
+            "cG9saWN5LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIk4K",
+            "E1NldElhbVBvbGljeVJlcXVlc3QSEAoIcmVzb3VyY2UYASABKAkSJQoGcG9s",
+            "aWN5GAIgASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiJwoTR2V0SWFtUG9s",
+            "aWN5UmVxdWVzdBIQCghyZXNvdXJjZRgBIAEoCSJCChlUZXN0SWFtUGVybWlz",
+            "c2lvbnNSZXF1ZXN0EhAKCHJlc291cmNlGAEgASgJEhMKC3Blcm1pc3Npb25z",
+            "GAIgAygJIjEKGlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlEhMKC3Blcm1p",
+            "c3Npb25zGAEgAygJMpQDCglJQU1Qb2xpY3kSdAoMU2V0SWFtUG9saWN5EiIu",
+            "Z29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlh",
+            "bS52MS5Qb2xpY3kiKYLT5JMCIyIeL3YxL3tyZXNvdXJjZT0qKn06c2V0SWFt",
+            "UG9saWN5OgEqEnQKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0",
+            "SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IimC0+ST",
+            "AiMiHi92MS97cmVzb3VyY2U9Kip9OmdldElhbVBvbGljeToBKhKaAQoSVGVz",
+            "dElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlz",
+            "c2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lv",
+            "bnNSZXNwb25zZSIvgtPkkwIpIiQvdjEve3Jlc291cmNlPSoqfTp0ZXN0SWFt",
+            "UGVybWlzc2lvbnM6ASpChgEKEWNvbS5nb29nbGUuaWFtLnYxQg5JYW1Qb2xp",
+            "Y3lQcm90b1ABWjBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2lhbS92MTtpYW34AQGqAhNHb29nbGUuQ2xvdWQuSWFtLlYxygITR29v",
+            "Z2xlXENsb3VkXElhbVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.SetIamPolicyRequest), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser, new[]{ "Resource", "Policy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetIamPolicyRequest), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource" }, null, null, null),
@@ -100,8 +101,7 @@ namespace Google.Cloud.Iam.V1 {
     private string resource_ = "";
     /// <summary>
     /// REQUIRED: The resource for which the policy is being specified.
-    /// `resource` is usually specified as a path. For example, a Project
-    /// resource is specified as `projects/{project}`.
+    /// See the operation documentation for the appropriate value for this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
@@ -276,8 +276,7 @@ namespace Google.Cloud.Iam.V1 {
     private string resource_ = "";
     /// <summary>
     /// REQUIRED: The resource for which the policy is being requested.
-    /// `resource` is usually specified as a path. For example, a Project
-    /// resource is specified as `projects/{project}`.
+    /// See the operation documentation for the appropriate value for this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
@@ -414,8 +413,7 @@ namespace Google.Cloud.Iam.V1 {
     private string resource_ = "";
     /// <summary>
     /// REQUIRED: The resource for which the policy detail is being requested.
-    /// `resource` is usually specified as a path. For example, a Project
-    /// resource is specified as `projects/{project}`.
+    /// See the operation documentation for the appropriate value for this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
