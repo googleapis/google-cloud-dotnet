@@ -41,10 +41,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// A regex to match the trace header. 
         /// - ([A-Fa-f0-9]{32}): The trace id, a 32 character hex value.
         /// - ([0-9]+): The span id, a 64 bit integer.
-        /// - (o=([0-3])): The trace mask, 1-3 denote it should be traced.
+        /// - (?:;o=([0-3])): The trace mask, 1-3 denote it should be traced. (The ?: makes the outer group non-capturing.)
         /// </summary>
         internal static readonly Regex TraceHeaderRegex =
-            new Regex(@"^([A-Fa-f0-9]{32})/([0-9]+);(o=([0-3]))?$", RegexOptions.Compiled);
+            new Regex(@"^([A-Fa-f0-9]{32})/([0-9]+)(?:;o=([0-3]))?$", RegexOptions.Compiled);
 
         /// <summary>Gets the trace id or null if none is available.</summary>
         public string TraceId { get; }
@@ -88,8 +88,8 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return InvalidTraceHeaderContext;
             }
-            bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
-            bool? shouldTrace = hasMask ? Convert.ToInt32(match.Groups[4].Value) > 0 : (bool?) null;
+            bool hasMask = match.Groups.Count > 3 && match.Groups[3].Success;
+            bool? shouldTrace = hasMask ? Convert.ToInt32(match.Groups[3].Value) > 0 : (bool?) null;
             return new TraceHeaderContext(traceId, spanId, shouldTrace);
         }
 
@@ -134,10 +134,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         public override string ToString()
         {
-            var header = $"{TraceId}/{SpanId};";
+            var header = $"{TraceId}/{SpanId}";
             if (ShouldTrace != null)
             {
-                header += ShouldTrace.Value ? "o=1" : "o=0";
+                header += ShouldTrace.Value ? ";o=1" : ";o=0";
             }
             return header;
         }
