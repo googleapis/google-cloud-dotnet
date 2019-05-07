@@ -48,6 +48,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.CreateTopic(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -71,6 +72,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -94,6 +96,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.CreateTopic(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -116,6 +119,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -139,6 +143,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.UpdateTopic(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -162,6 +167,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.UpdateTopicAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -320,6 +326,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.GetTopic(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -343,6 +350,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -366,6 +374,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.GetTopic(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -388,6 +397,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             Topic expectedResponse = new Topic
             {
                 TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                KmsKeyName = "kmsKeyName2094986649",
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Topic>(Task.FromResult(expectedResponse), null, null, null, null));
