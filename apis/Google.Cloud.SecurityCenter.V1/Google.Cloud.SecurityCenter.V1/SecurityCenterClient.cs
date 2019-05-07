@@ -1344,8 +1344,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1367,8 +1366,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1387,8 +1385,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1410,8 +1407,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1433,8 +1429,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1453,8 +1448,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2962,8 +2956,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="policy">
         /// REQUIRED: The complete policy to be applied to the `resource`. The size of
@@ -2993,8 +2986,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="policy">
         /// REQUIRED: The complete policy to be applied to the `resource`. The size of
@@ -3021,8 +3013,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="policy">
         /// REQUIRED: The complete policy to be applied to the `resource`. The size of
@@ -3052,8 +3043,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="policy">
         /// REQUIRED: The complete policy to be applied to the `resource`. The size of
@@ -3083,8 +3073,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="policy">
         /// REQUIRED: The complete policy to be applied to the `resource`. The size of
@@ -3111,8 +3100,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="policy">
         /// REQUIRED: The complete policy to be applied to the `resource`. The size of
@@ -3198,8 +3186,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="permissions">
         /// The set of permissions to check for the `resource`. Permissions with
@@ -3229,8 +3216,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="permissions">
         /// The set of permissions to check for the `resource`. Permissions with
@@ -3257,8 +3243,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="permissions">
         /// The set of permissions to check for the `resource`. Permissions with
@@ -3288,8 +3273,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="permissions">
         /// The set of permissions to check for the `resource`. Permissions with
@@ -3319,8 +3303,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="permissions">
         /// The set of permissions to check for the `resource`. Permissions with
@@ -3347,8 +3330,7 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// See the operation documentation for the appropriate value for this field.
         /// </param>
         /// <param name="permissions">
         /// The set of permissions to check for the `resource`. Permissions with
