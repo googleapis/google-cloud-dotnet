@@ -26,37 +26,45 @@ namespace Google.Cloud.Scheduler.V1 {
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvc2NoZWR1bGVyL3YxL3RhcmdldC5wcm90bxIZZ29v",
             "Z2xlLmNsb3VkLnNjaGVkdWxlci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90byLYAQoKSHR0cFRh",
+            "cy5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90byLqAgoKSHR0cFRh",
             "cmdldBILCgN1cmkYASABKAkSOgoLaHR0cF9tZXRob2QYAiABKA4yJS5nb29n",
             "bGUuY2xvdWQuc2NoZWR1bGVyLnYxLkh0dHBNZXRob2QSQwoHaGVhZGVycxgD",
             "IAMoCzIyLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSHR0cFRhcmdldC5I",
-            "ZWFkZXJzRW50cnkSDAoEYm9keRgEIAEoDBouCgxIZWFkZXJzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASK8AgoTQXBwRW5naW5lSHR0",
-            "cFRhcmdldBI6CgtodHRwX21ldGhvZBgBIAEoDjIlLmdvb2dsZS5jbG91ZC5z",
-            "Y2hlZHVsZXIudjEuSHR0cE1ldGhvZBJHChJhcHBfZW5naW5lX3JvdXRpbmcY",
-            "AiABKAsyKy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkFwcEVuZ2luZVJv",
-            "dXRpbmcSFAoMcmVsYXRpdmVfdXJpGAMgASgJEkwKB2hlYWRlcnMYBCADKAsy",
-            "Oy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkFwcEVuZ2luZUh0dHBUYXJn",
-            "ZXQuSGVhZGVyc0VudHJ5EgwKBGJvZHkYBSABKAwaLgoMSGVhZGVyc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEisAEKDFB1YnN1YlRh",
-            "cmdldBISCgp0b3BpY19uYW1lGAEgASgJEgwKBGRhdGEYAyABKAwSSwoKYXR0",
-            "cmlidXRlcxgEIAMoCzI3Lmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuUHVi",
-            "c3ViVGFyZ2V0LkF0dHJpYnV0ZXNFbnRyeRoxCg9BdHRyaWJ1dGVzRW50cnkS",
-            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJUChBBcHBFbmdpbmVS",
-            "b3V0aW5nEg8KB3NlcnZpY2UYASABKAkSDwoHdmVyc2lvbhgCIAEoCRIQCghp",
-            "bnN0YW5jZRgDIAEoCRIMCgRob3N0GAQgASgJKnMKCkh0dHBNZXRob2QSGwoX",
-            "SFRUUF9NRVRIT0RfVU5TUEVDSUZJRUQQABIICgRQT1NUEAESBwoDR0VUEAIS",
-            "CAoESEVBRBADEgcKA1BVVBAEEgoKBkRFTEVURRAFEgkKBVBBVENIEAYSCwoH",
-            "T1BUSU9OUxAHQnIKHWNvbS5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxQgtU",
-            "YXJnZXRQcm90b1ABWkJnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL3NjaGVkdWxlci92MTtzY2hlZHVsZXJiBnByb3RvMw=="));
+            "ZWFkZXJzRW50cnkSDAoEYm9keRgEIAEoDBI8CgtvYXV0aF90b2tlbhgFIAEo",
+            "CzIlLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuT0F1dGhUb2tlbkgAEjoK",
+            "Cm9pZGNfdG9rZW4YBiABKAsyJC5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYx",
+            "Lk9pZGNUb2tlbkgAGi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBQhYKFGF1dGhvcml6YXRpb25faGVhZGVyIrwCChNB",
+            "cHBFbmdpbmVIdHRwVGFyZ2V0EjoKC2h0dHBfbWV0aG9kGAEgASgOMiUuZ29v",
+            "Z2xlLmNsb3VkLnNjaGVkdWxlci52MS5IdHRwTWV0aG9kEkcKEmFwcF9lbmdp",
+            "bmVfcm91dGluZxgCIAEoCzIrLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEu",
+            "QXBwRW5naW5lUm91dGluZxIUCgxyZWxhdGl2ZV91cmkYAyABKAkSTAoHaGVh",
+            "ZGVycxgEIAMoCzI7Lmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuQXBwRW5n",
+            "aW5lSHR0cFRhcmdldC5IZWFkZXJzRW50cnkSDAoEYm9keRgFIAEoDBouCgxI",
+            "ZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKw",
+            "AQoMUHVic3ViVGFyZ2V0EhIKCnRvcGljX25hbWUYASABKAkSDAoEZGF0YRgD",
+            "IAEoDBJLCgphdHRyaWJ1dGVzGAQgAygLMjcuZ29vZ2xlLmNsb3VkLnNjaGVk",
+            "dWxlci52MS5QdWJzdWJUYXJnZXQuQXR0cmlidXRlc0VudHJ5GjEKD0F0dHJp",
+            "YnV0ZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlQK",
+            "EEFwcEVuZ2luZVJvdXRpbmcSDwoHc2VydmljZRgBIAEoCRIPCgd2ZXJzaW9u",
+            "GAIgASgJEhAKCGluc3RhbmNlGAMgASgJEgwKBGhvc3QYBCABKAkiOgoKT0F1",
+            "dGhUb2tlbhIdChVzZXJ2aWNlX2FjY291bnRfZW1haWwYASABKAkSDQoFc2Nv",
+            "cGUYAiABKAkiPAoJT2lkY1Rva2VuEh0KFXNlcnZpY2VfYWNjb3VudF9lbWFp",
+            "bBgBIAEoCRIQCghhdWRpZW5jZRgCIAEoCSpzCgpIdHRwTWV0aG9kEhsKF0hU",
+            "VFBfTUVUSE9EX1VOU1BFQ0lGSUVEEAASCAoEUE9TVBABEgcKA0dFVBACEggK",
+            "BEhFQUQQAxIHCgNQVVQQBBIKCgZERUxFVEUQBRIJCgVQQVRDSBAGEgsKB09Q",
+            "VElPTlMQB0JyCh1jb20uZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MUILVGFy",
+            "Z2V0UHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC9zY2hlZHVsZXIvdjE7c2NoZWR1bGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Scheduler.V1.HttpMethod), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.HttpTarget), global::Google.Cloud.Scheduler.V1.HttpTarget.Parser, new[]{ "Uri", "HttpMethod", "Headers", "Body" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.HttpTarget), global::Google.Cloud.Scheduler.V1.HttpTarget.Parser, new[]{ "Uri", "HttpMethod", "Headers", "Body", "OauthToken", "OidcToken" }, new[]{ "AuthorizationHeader" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget), global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget.Parser, new[]{ "HttpMethod", "AppEngineRouting", "RelativeUri", "Headers", "Body" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.PubsubTarget), global::Google.Cloud.Scheduler.V1.PubsubTarget.Parser, new[]{ "TopicName", "Data", "Attributes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineRouting), global::Google.Cloud.Scheduler.V1.AppEngineRouting.Parser, new[]{ "Service", "Version", "Instance", "Host" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.AppEngineRouting), global::Google.Cloud.Scheduler.V1.AppEngineRouting.Parser, new[]{ "Service", "Version", "Instance", "Host" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.OAuthToken), global::Google.Cloud.Scheduler.V1.OAuthToken.Parser, new[]{ "ServiceAccountEmail", "Scope" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.OidcToken), global::Google.Cloud.Scheduler.V1.OidcToken.Parser, new[]{ "ServiceAccountEmail", "Audience" }, null, null, null)
           }));
     }
     #endregion
@@ -141,6 +149,15 @@ namespace Google.Cloud.Scheduler.V1 {
       httpMethod_ = other.httpMethod_;
       headers_ = other.headers_.Clone();
       body_ = other.body_;
+      switch (other.AuthorizationHeaderCase) {
+        case AuthorizationHeaderOneofCase.OauthToken:
+          OauthToken = other.OauthToken.Clone();
+          break;
+        case AuthorizationHeaderOneofCase.OidcToken:
+          OidcToken = other.OidcToken.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -227,6 +244,65 @@ namespace Google.Cloud.Scheduler.V1 {
       }
     }
 
+    /// <summary>Field number for the "oauth_token" field.</summary>
+    public const int OauthTokenFieldNumber = 5;
+    /// <summary>
+    /// If specified, an
+    /// [OAuth token](https://developers.google.com/identity/protocols/OAuth2)
+    /// will be generated and attached as an `Authorization` header in the HTTP
+    /// request.
+    ///
+    /// This type of authorization should be used when sending requests to a GCP
+    /// endpoint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Scheduler.V1.OAuthToken OauthToken {
+      get { return authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken ? (global::Google.Cloud.Scheduler.V1.OAuthToken) authorizationHeader_ : null; }
+      set {
+        authorizationHeader_ = value;
+        authorizationHeaderCase_ = value == null ? AuthorizationHeaderOneofCase.None : AuthorizationHeaderOneofCase.OauthToken;
+      }
+    }
+
+    /// <summary>Field number for the "oidc_token" field.</summary>
+    public const int OidcTokenFieldNumber = 6;
+    /// <summary>
+    /// If specified, an
+    /// [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect)
+    /// token will be generated and attached as an `Authorization` header in the
+    /// HTTP request.
+    ///
+    /// This type of authorization should be used when sending requests to third
+    /// party endpoints or Cloud Run.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Scheduler.V1.OidcToken OidcToken {
+      get { return authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken ? (global::Google.Cloud.Scheduler.V1.OidcToken) authorizationHeader_ : null; }
+      set {
+        authorizationHeader_ = value;
+        authorizationHeaderCase_ = value == null ? AuthorizationHeaderOneofCase.None : AuthorizationHeaderOneofCase.OidcToken;
+      }
+    }
+
+    private object authorizationHeader_;
+    /// <summary>Enum of possible cases for the "authorization_header" oneof.</summary>
+    public enum AuthorizationHeaderOneofCase {
+      None = 0,
+      OauthToken = 5,
+      OidcToken = 6,
+    }
+    private AuthorizationHeaderOneofCase authorizationHeaderCase_ = AuthorizationHeaderOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AuthorizationHeaderOneofCase AuthorizationHeaderCase {
+      get { return authorizationHeaderCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearAuthorizationHeader() {
+      authorizationHeaderCase_ = AuthorizationHeaderOneofCase.None;
+      authorizationHeader_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as HttpTarget);
@@ -244,6 +320,9 @@ namespace Google.Cloud.Scheduler.V1 {
       if (HttpMethod != other.HttpMethod) return false;
       if (!Headers.Equals(other.Headers)) return false;
       if (Body != other.Body) return false;
+      if (!object.Equals(OauthToken, other.OauthToken)) return false;
+      if (!object.Equals(OidcToken, other.OidcToken)) return false;
+      if (AuthorizationHeaderCase != other.AuthorizationHeaderCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -254,6 +333,9 @@ namespace Google.Cloud.Scheduler.V1 {
       if (HttpMethod != 0) hash ^= HttpMethod.GetHashCode();
       hash ^= Headers.GetHashCode();
       if (Body.Length != 0) hash ^= Body.GetHashCode();
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) hash ^= OauthToken.GetHashCode();
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) hash ^= OidcToken.GetHashCode();
+      hash ^= (int) authorizationHeaderCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -280,6 +362,14 @@ namespace Google.Cloud.Scheduler.V1 {
         output.WriteRawTag(34);
         output.WriteBytes(Body);
       }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+        output.WriteRawTag(42);
+        output.WriteMessage(OauthToken);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+        output.WriteRawTag(50);
+        output.WriteMessage(OidcToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -297,6 +387,12 @@ namespace Google.Cloud.Scheduler.V1 {
       size += headers_.CalculateSize(_map_headers_codec);
       if (Body.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Body);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OauthToken);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OidcToken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -319,6 +415,21 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
+      switch (other.AuthorizationHeaderCase) {
+        case AuthorizationHeaderOneofCase.OauthToken:
+          if (OauthToken == null) {
+            OauthToken = new global::Google.Cloud.Scheduler.V1.OAuthToken();
+          }
+          OauthToken.MergeFrom(other.OauthToken);
+          break;
+        case AuthorizationHeaderOneofCase.OidcToken:
+          if (OidcToken == null) {
+            OidcToken = new global::Google.Cloud.Scheduler.V1.OidcToken();
+          }
+          OidcToken.MergeFrom(other.OidcToken);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -344,6 +455,24 @@ namespace Google.Cloud.Scheduler.V1 {
           }
           case 34: {
             Body = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Scheduler.V1.OAuthToken subBuilder = new global::Google.Cloud.Scheduler.V1.OAuthToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+              subBuilder.MergeFrom(OauthToken);
+            }
+            input.ReadMessage(subBuilder);
+            OauthToken = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Scheduler.V1.OidcToken subBuilder = new global::Google.Cloud.Scheduler.V1.OidcToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+              subBuilder.MergeFrom(OidcToken);
+            }
+            input.ReadMessage(subBuilder);
+            OidcToken = subBuilder;
             break;
           }
         }
@@ -1165,6 +1294,354 @@ namespace Google.Cloud.Scheduler.V1 {
           }
           case 34: {
             Host = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Contains information needed for generating an
+  /// [OAuth token](https://developers.google.com/identity/protocols/OAuth2).
+  /// This type of authorization should be used when sending requests to a GCP
+  /// endpoint.
+  /// </summary>
+  public sealed partial class OAuthToken : pb::IMessage<OAuthToken> {
+    private static readonly pb::MessageParser<OAuthToken> _parser = new pb::MessageParser<OAuthToken>(() => new OAuthToken());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OAuthToken> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Scheduler.V1.TargetReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OAuthToken() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OAuthToken(OAuthToken other) : this() {
+      serviceAccountEmail_ = other.serviceAccountEmail_;
+      scope_ = other.scope_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OAuthToken Clone() {
+      return new OAuthToken(this);
+    }
+
+    /// <summary>Field number for the "service_account_email" field.</summary>
+    public const int ServiceAccountEmailFieldNumber = 1;
+    private string serviceAccountEmail_ = "";
+    /// <summary>
+    /// [Service account email](https://cloud.google.com/iam/docs/service-accounts)
+    /// to be used for generating OAuth token.
+    /// The service account must be within the same project as the job. The caller
+    /// must have iam.serviceAccounts.actAs permission for the service account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ServiceAccountEmail {
+      get { return serviceAccountEmail_; }
+      set {
+        serviceAccountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 2;
+    private string scope_ = "";
+    /// <summary>
+    /// OAuth scope to be used for generating OAuth access token.
+    /// If not specified, "https://www.googleapis.com/auth/cloud-platform"
+    /// will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Scope {
+      get { return scope_; }
+      set {
+        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OAuthToken);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OAuthToken other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ServiceAccountEmail != other.ServiceAccountEmail) return false;
+      if (Scope != other.Scope) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ServiceAccountEmail.Length != 0) hash ^= ServiceAccountEmail.GetHashCode();
+      if (Scope.Length != 0) hash ^= Scope.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccountEmail);
+      }
+      if (Scope.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Scope);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ServiceAccountEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountEmail);
+      }
+      if (Scope.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OAuthToken other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ServiceAccountEmail.Length != 0) {
+        ServiceAccountEmail = other.ServiceAccountEmail;
+      }
+      if (other.Scope.Length != 0) {
+        Scope = other.Scope;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
+          case 18: {
+            Scope = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Contains information needed for generating an
+  /// [OpenID Connect
+  /// token](https://developers.google.com/identity/protocols/OpenIDConnect). This
+  /// type of authorization should be used when sending requests to third party
+  /// endpoints or Cloud Run.
+  /// </summary>
+  public sealed partial class OidcToken : pb::IMessage<OidcToken> {
+    private static readonly pb::MessageParser<OidcToken> _parser = new pb::MessageParser<OidcToken>(() => new OidcToken());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OidcToken> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Scheduler.V1.TargetReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OidcToken() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OidcToken(OidcToken other) : this() {
+      serviceAccountEmail_ = other.serviceAccountEmail_;
+      audience_ = other.audience_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OidcToken Clone() {
+      return new OidcToken(this);
+    }
+
+    /// <summary>Field number for the "service_account_email" field.</summary>
+    public const int ServiceAccountEmailFieldNumber = 1;
+    private string serviceAccountEmail_ = "";
+    /// <summary>
+    /// [Service account email](https://cloud.google.com/iam/docs/service-accounts)
+    /// to be used for generating OIDC token.
+    /// The service account must be within the same project as the job. The caller
+    /// must have iam.serviceAccounts.actAs permission for the service account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ServiceAccountEmail {
+      get { return serviceAccountEmail_; }
+      set {
+        serviceAccountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "audience" field.</summary>
+    public const int AudienceFieldNumber = 2;
+    private string audience_ = "";
+    /// <summary>
+    /// Audience to be used when generating OIDC token. If not specified, the URI
+    /// specified in target will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Audience {
+      get { return audience_; }
+      set {
+        audience_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OidcToken);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OidcToken other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ServiceAccountEmail != other.ServiceAccountEmail) return false;
+      if (Audience != other.Audience) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ServiceAccountEmail.Length != 0) hash ^= ServiceAccountEmail.GetHashCode();
+      if (Audience.Length != 0) hash ^= Audience.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccountEmail);
+      }
+      if (Audience.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Audience);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ServiceAccountEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountEmail);
+      }
+      if (Audience.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Audience);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OidcToken other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ServiceAccountEmail.Length != 0) {
+        ServiceAccountEmail = other.ServiceAccountEmail;
+      }
+      if (other.Audience.Length != 0) {
+        Audience = other.Audience;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
+          case 18: {
+            Audience = input.ReadString();
             break;
           }
         }

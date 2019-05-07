@@ -26,37 +26,39 @@ namespace Google.Cloud.Scheduler.V1 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvc2NoZWR1bGVyL3YxL2pvYi5wcm90bxIZZ29vZ2xl",
             "LmNsb3VkLnNjaGVkdWxlci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
-            "cm90bxomZ29vZ2xlL2Nsb3VkL3NjaGVkdWxlci92MS90YXJnZXQucHJvdG8a",
-            "Hmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8i",
-            "ugUKA0pvYhIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEkAK",
-            "DXB1YnN1Yl90YXJnZXQYBCABKAsyJy5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
-            "LnYxLlB1YnN1YlRhcmdldEgAElAKFmFwcF9lbmdpbmVfaHR0cF90YXJnZXQY",
-            "BSABKAsyLi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkFwcEVuZ2luZUh0",
-            "dHBUYXJnZXRIABI8CgtodHRwX3RhcmdldBgGIAEoCzIlLmdvb2dsZS5jbG91",
-            "ZC5zY2hlZHVsZXIudjEuSHR0cFRhcmdldEgAEhAKCHNjaGVkdWxlGBQgASgJ",
-            "EhEKCXRpbWVfem9uZRgVIAEoCRI0ChB1c2VyX3VwZGF0ZV90aW1lGAkgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIzCgVzdGF0ZRgKIAEoDjIk",
-            "Lmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSm9iLlN0YXRlEiIKBnN0YXR1",
-            "cxgLIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEjEKDXNjaGVkdWxlX3RpbWUY",
-            "ESABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjUKEWxhc3RfYXR0",
-            "ZW1wdF90aW1lGBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI8",
-            "CgxyZXRyeV9jb25maWcYEyABKAsyJi5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
-            "LnYxLlJldHJ5Q29uZmlnIlgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASCwoHRU5BQkxFRBABEgoKBlBBVVNFRBACEgwKCERJU0FCTEVEEAMSEQoN",
-            "VVBEQVRFX0ZBSUxFRBAEQggKBnRhcmdldCLiAQoLUmV0cnlDb25maWcSEwoL",
-            "cmV0cnlfY291bnQYASABKAUSNQoSbWF4X3JldHJ5X2R1cmF0aW9uGAIgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjcKFG1pbl9iYWNrb2ZmX2R1",
-            "cmF0aW9uGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjcKFG1h",
-            "eF9iYWNrb2ZmX2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uEhUKDW1heF9kb3VibGluZ3MYBSABKAVCbwodY29tLmdvb2dsZS5j",
-            "bG91ZC5zY2hlZHVsZXIudjFCCEpvYlByb3RvUAFaQmdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2NoZWR1bGVyL3YxO3Nj",
-            "aGVkdWxlcmIGcHJvdG8z"));
+            "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxomZ29vZ2xlL2Nsb3Vk",
+            "L3NjaGVkdWxlci92MS90YXJnZXQucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9k",
+            "dXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
+            "bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8i7wUKA0pvYhIMCgRuYW1lGAEg",
+            "ASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEkAKDXB1YnN1Yl90YXJnZXQYBCAB",
+            "KAsyJy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLlB1YnN1YlRhcmdldEgA",
+            "ElAKFmFwcF9lbmdpbmVfaHR0cF90YXJnZXQYBSABKAsyLi5nb29nbGUuY2xv",
+            "dWQuc2NoZWR1bGVyLnYxLkFwcEVuZ2luZUh0dHBUYXJnZXRIABI8CgtodHRw",
+            "X3RhcmdldBgGIAEoCzIlLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSHR0",
+            "cFRhcmdldEgAEhAKCHNjaGVkdWxlGBQgASgJEhEKCXRpbWVfem9uZRgVIAEo",
+            "CRI0ChB1c2VyX3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBIzCgVzdGF0ZRgKIAEoDjIkLmdvb2dsZS5jbG91ZC5zY2hl",
+            "ZHVsZXIudjEuSm9iLlN0YXRlEiIKBnN0YXR1cxgLIAEoCzISLmdvb2dsZS5y",
+            "cGMuU3RhdHVzEjEKDXNjaGVkdWxlX3RpbWUYESABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEjUKEWxhc3RfYXR0ZW1wdF90aW1lGBIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI8CgxyZXRyeV9jb25maWcYEyAB",
+            "KAsyJi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLlJldHJ5Q29uZmlnEjMK",
+            "EGF0dGVtcHRfZGVhZGxpbmUYFiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb24iWAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdFTkFC",
+            "TEVEEAESCgoGUEFVU0VEEAISDAoIRElTQUJMRUQQAxIRCg1VUERBVEVfRkFJ",
+            "TEVEEARCCAoGdGFyZ2V0IuIBCgtSZXRyeUNvbmZpZxITCgtyZXRyeV9jb3Vu",
+            "dBgBIAEoBRI1ChJtYXhfcmV0cnlfZHVyYXRpb24YAiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SNwoUbWluX2JhY2tvZmZfZHVyYXRpb24YAyAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SNwoUbWF4X2JhY2tvZmZf",
+            "ZHVyYXRpb24YBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFQoN",
+            "bWF4X2RvdWJsaW5ncxgFIAEoBUJvCh1jb20uZ29vZ2xlLmNsb3VkLnNjaGVk",
+            "dWxlci52MUIISm9iUHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9zY2hlZHVsZXIvdjE7c2NoZWR1bGVyYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Scheduler.V1.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.Job), global::Google.Cloud.Scheduler.V1.Job.Parser, new[]{ "Name", "Description", "PubsubTarget", "AppEngineHttpTarget", "HttpTarget", "Schedule", "TimeZone", "UserUpdateTime", "State", "Status", "ScheduleTime", "LastAttemptTime", "RetryConfig" }, new[]{ "Target" }, new[]{ typeof(global::Google.Cloud.Scheduler.V1.Job.Types.State) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.Job), global::Google.Cloud.Scheduler.V1.Job.Parser, new[]{ "Name", "Description", "PubsubTarget", "AppEngineHttpTarget", "HttpTarget", "Schedule", "TimeZone", "UserUpdateTime", "State", "Status", "ScheduleTime", "LastAttemptTime", "RetryConfig", "AttemptDeadline" }, new[]{ "Target" }, new[]{ typeof(global::Google.Cloud.Scheduler.V1.Job.Types.State) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.RetryConfig), global::Google.Cloud.Scheduler.V1.RetryConfig.Parser, new[]{ "RetryCount", "MaxRetryDuration", "MinBackoffDuration", "MaxBackoffDuration", "MaxDoublings" }, null, null, null)
           }));
     }
@@ -103,6 +105,7 @@ namespace Google.Cloud.Scheduler.V1 {
       scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
       lastAttemptTime_ = other.lastAttemptTime_ != null ? other.lastAttemptTime_.Clone() : null;
       retryConfig_ = other.retryConfig_ != null ? other.retryConfig_.Clone() : null;
+      attemptDeadline_ = other.attemptDeadline_ != null ? other.attemptDeadline_.Clone() : null;
       switch (other.TargetCase) {
         case TargetOneofCase.PubsubTarget:
           PubsubTarget = other.PubsubTarget.Clone();
@@ -357,6 +360,29 @@ namespace Google.Cloud.Scheduler.V1 {
       }
     }
 
+    /// <summary>Field number for the "attempt_deadline" field.</summary>
+    public const int AttemptDeadlineFieldNumber = 22;
+    private global::Google.Protobuf.WellKnownTypes.Duration attemptDeadline_;
+    /// <summary>
+    /// The deadline for job attempts. If the request handler does not respond by
+    /// this deadline then the request is cancelled and the attempt is marked as a
+    /// `DEADLINE_EXCEEDED` failure. The failed attempt can be viewed in
+    /// execution logs. Cloud Scheduler will retry the job according
+    /// to the [RetryConfig][google.cloud.scheduler.v1.RetryConfig].
+    ///
+    /// The allowed duration for this deadline is:
+    /// * For [HTTP targets][google.cloud.scheduler.v1.Job.http_target], between 15 seconds and 30 minutes.
+    /// * For [App Engine HTTP targets][google.cloud.scheduler.v1.Job.app_engine_http_target], between 15
+    ///   seconds and 24 hours.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration AttemptDeadline {
+      get { return attemptDeadline_; }
+      set {
+        attemptDeadline_ = value;
+      }
+    }
+
     private object target_;
     /// <summary>Enum of possible cases for the "target" oneof.</summary>
     public enum TargetOneofCase {
@@ -403,6 +429,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
       if (!object.Equals(LastAttemptTime, other.LastAttemptTime)) return false;
       if (!object.Equals(RetryConfig, other.RetryConfig)) return false;
+      if (!object.Equals(AttemptDeadline, other.AttemptDeadline)) return false;
       if (TargetCase != other.TargetCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -423,6 +450,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (lastAttemptTime_ != null) hash ^= LastAttemptTime.GetHashCode();
       if (retryConfig_ != null) hash ^= RetryConfig.GetHashCode();
+      if (attemptDeadline_ != null) hash ^= AttemptDeadline.GetHashCode();
       hash ^= (int) targetCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -489,6 +517,10 @@ namespace Google.Cloud.Scheduler.V1 {
         output.WriteRawTag(170, 1);
         output.WriteString(TimeZone);
       }
+      if (attemptDeadline_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(AttemptDeadline);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -535,6 +567,9 @@ namespace Google.Cloud.Scheduler.V1 {
       }
       if (retryConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RetryConfig);
+      }
+      if (attemptDeadline_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AttemptDeadline);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -591,6 +626,12 @@ namespace Google.Cloud.Scheduler.V1 {
           retryConfig_ = new global::Google.Cloud.Scheduler.V1.RetryConfig();
         }
         RetryConfig.MergeFrom(other.RetryConfig);
+      }
+      if (other.attemptDeadline_ != null) {
+        if (attemptDeadline_ == null) {
+          attemptDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        AttemptDeadline.MergeFrom(other.AttemptDeadline);
       }
       switch (other.TargetCase) {
         case TargetOneofCase.PubsubTarget:
@@ -704,6 +745,13 @@ namespace Google.Cloud.Scheduler.V1 {
           }
           case 170: {
             TimeZone = input.ReadString();
+            break;
+          }
+          case 178: {
+            if (attemptDeadline_ == null) {
+              attemptDeadline_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(attemptDeadline_);
             break;
           }
         }
