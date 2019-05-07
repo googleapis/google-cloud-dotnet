@@ -187,10 +187,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -526,10 +523,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -546,10 +540,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -564,10 +555,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -584,10 +572,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -989,10 +974,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview">Seek&lt;/a>
       /// operations, which allow you to manage message acknowledgments in bulk. That
       /// is, you can set the acknowledgment state of messages in an existing
-      /// subscription to the state captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// subscription to the state captured by a snapshot.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1008,10 +990,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1028,11 +1007,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.
-      /// &lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
-      /// If the snapshot already exists, returns `ALREADY_EXISTS`.
+      /// &lt;br>&lt;br>If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
       /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
@@ -1059,11 +1034,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
-      /// Note that certain properties of a snapshot are not modifiable.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1080,9 +1051,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
       /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
@@ -1104,10 +1072,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot. Note that both the subscription and the snapshot
-      /// must be on the same topic.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// must be on the same topic.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1711,10 +1676,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview">Seek&lt;/a>
       /// operations, which allow you to manage message acknowledgments in bulk. That
       /// is, you can set the acknowledgment state of messages in an existing
-      /// subscription to the state captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// subscription to the state captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1730,10 +1692,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview">Seek&lt;/a>
       /// operations, which allow you to manage message acknowledgments in bulk. That
       /// is, you can set the acknowledgment state of messages in an existing
-      /// subscription to the state captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// subscription to the state captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1747,10 +1706,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview">Seek&lt;/a>
       /// operations, which allow you to manage message acknowledgments in bulk. That
       /// is, you can set the acknowledgment state of messages in an existing
-      /// subscription to the state captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// subscription to the state captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1766,10 +1722,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview">Seek&lt;/a>
       /// operations, which allow you to manage message acknowledgments in bulk. That
       /// is, you can set the acknowledgment state of messages in an existing
-      /// subscription to the state captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// subscription to the state captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1784,10 +1737,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1804,10 +1754,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1822,10 +1769,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1842,10 +1786,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1861,11 +1802,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.
-      /// &lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
-      /// If the snapshot already exists, returns `ALREADY_EXISTS`.
+      /// &lt;br>&lt;br>If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
       /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
@@ -1894,11 +1831,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.
-      /// &lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
-      /// If the snapshot already exists, returns `ALREADY_EXISTS`.
+      /// &lt;br>&lt;br>If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
       /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
@@ -1925,11 +1858,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.
-      /// &lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
-      /// If the snapshot already exists, returns `ALREADY_EXISTS`.
+      /// &lt;br>&lt;br>If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
       /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
@@ -1958,11 +1887,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.
-      /// &lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.&lt;br>&lt;br>
-      /// If the snapshot already exists, returns `ALREADY_EXISTS`.
+      /// &lt;br>&lt;br>If the snapshot already exists, returns `ALREADY_EXISTS`.
       /// If the requested subscription doesn't exist, returns `NOT_FOUND`.
       /// If the backlog in the subscription is too old -- and the resulting snapshot
       /// would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
@@ -1988,11 +1913,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
-      /// Note that certain properties of a snapshot are not modifiable.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2009,11 +1930,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
-      /// Note that certain properties of a snapshot are not modifiable.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2028,11 +1945,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
-      /// Note that certain properties of a snapshot are not modifiable.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2049,11 +1962,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// operations, which allow
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
-      /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
-      /// Note that certain properties of a snapshot are not modifiable.
+      /// captured by a snapshot.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2069,9 +1978,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
       /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
@@ -2093,9 +1999,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
       /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
@@ -2115,9 +2018,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
       /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
@@ -2139,9 +2039,6 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
       /// When the snapshot is deleted, all messages retained in the snapshot
       /// are immediately dropped. After a snapshot is deleted, a new one may be
       /// created with the same name, but the new one has no association with the old
@@ -2162,10 +2059,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot. Note that both the subscription and the snapshot
-      /// must be on the same topic.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// must be on the same topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2184,10 +2078,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot. Note that both the subscription and the snapshot
-      /// must be on the same topic.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// must be on the same topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2204,10 +2095,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot. Note that both the subscription and the snapshot
-      /// must be on the same topic.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// must be on the same topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2226,10 +2114,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// you to manage message acknowledgments in bulk. That is, you can set the
       /// acknowledgment state of messages in an existing subscription to the state
       /// captured by a snapshot. Note that both the subscription and the snapshot
-      /// must be on the same topic.&lt;br>&lt;br>
-      /// &lt;b>BETA:&lt;/b> This feature is part of a beta release. This API might be
-      /// changed in backward-incompatible ways and is not recommended for production
-      /// use. It is not subject to any SLA or deprecation policy.
+      /// must be on the same topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
