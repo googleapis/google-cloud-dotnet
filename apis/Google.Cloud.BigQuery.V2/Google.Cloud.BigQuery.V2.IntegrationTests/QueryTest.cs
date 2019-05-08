@@ -692,6 +692,16 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             }
         }
 
+        [Fact]
+        public void EarlyDate()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var results = client.ExecuteQuery("SELECT DATE '0001-01-01' AS x", null);
+            var rows = results.ToList();
+            var row = Assert.Single(rows);
+            Assert.Equal(DateTime.MinValue, (DateTime) row["x"]);
+        }
+
         private class TitleComparer : IEqualityComparer<BigQueryRow>
         {
             public bool Equals(BigQueryRow x, BigQueryRow y) => (string)x["title"] == (string)y["title"];
