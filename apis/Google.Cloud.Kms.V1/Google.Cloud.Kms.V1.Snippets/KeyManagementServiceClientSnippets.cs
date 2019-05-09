@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using System;
 using Xunit;
@@ -38,6 +39,20 @@ namespace Google.Cloud.Kms.V1.Snippets
             foreach (KeyRing keyRing in client.ListKeyRings(globalLocation))
             {
                 Console.WriteLine(keyRing.Name);
+            }
+            // End sample
+        }
+
+        [Fact]
+        public void ListLocations()
+        {
+            string projectId = _fixture.ProjectId;
+
+            // Sample: ListLocations
+            KeyManagementServiceClient client = KeyManagementServiceClient.Create();
+            foreach (var location in client.ListLocations(new ProjectName(projectId).ToString()))
+            {
+                Console.WriteLine(location.Name);
             }
             // End sample
         }
