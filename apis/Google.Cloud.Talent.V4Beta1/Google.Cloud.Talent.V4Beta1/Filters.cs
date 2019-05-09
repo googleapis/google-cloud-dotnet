@@ -491,7 +491,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// This filter specifies a list of job names to be excluded during search.
     ///
-    /// At most 200 excluded job names are allowed.
+    /// At most 400 excluded job names are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ExcludedJobs {
