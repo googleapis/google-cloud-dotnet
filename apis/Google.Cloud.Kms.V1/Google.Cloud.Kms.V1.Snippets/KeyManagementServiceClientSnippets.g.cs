@@ -20,6 +20,7 @@ namespace Google.Cloud.Kms.V1.Snippets
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Kms.V1;
+    using Google.Cloud.Location;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -1817,6 +1818,248 @@ namespace Google.Cloud.Kms.V1.Snippets
             };
             // Make the request
             TestIamPermissionsResponse response = keyManagementServiceClient.TestIamPermissions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocationsAsync</summary>
+        public async Task ListLocationsAsync()
+        {
+            // Snippet: ListLocationsAsync(string,string,int?,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            PagedAsyncEnumerable<ListLocationsResponse, Location> response =
+                keyManagementServiceClient.ListLocationsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Location item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLocationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocations</summary>
+        public void ListLocations()
+        {
+            // Snippet: ListLocations(string,string,int?,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            PagedEnumerable<ListLocationsResponse, Location> response =
+                keyManagementServiceClient.ListLocations(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Location item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLocationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocationsAsync</summary>
+        public async Task ListLocationsAsync_RequestObject()
+        {
+            // Snippet: ListLocationsAsync(ListLocationsRequest,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListLocationsRequest request = new ListLocationsRequest
+            {
+                Name = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLocationsResponse, Location> response =
+                keyManagementServiceClient.ListLocationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Location item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLocationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLocations</summary>
+        public void ListLocations_RequestObject()
+        {
+            // Snippet: ListLocations(ListLocationsRequest,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            ListLocationsRequest request = new ListLocationsRequest
+            {
+                Name = "",
+            };
+            // Make the request
+            PagedEnumerable<ListLocationsResponse, Location> response =
+                keyManagementServiceClient.ListLocations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Location item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLocationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Location item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Location> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Location item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocationAsync</summary>
+        public async Task GetLocationAsync()
+        {
+            // Snippet: GetLocationAsync(string,CallSettings)
+            // Additional: GetLocationAsync(string,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Location response = await keyManagementServiceClient.GetLocationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocation</summary>
+        public void GetLocation()
+        {
+            // Snippet: GetLocation(string,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Location response = keyManagementServiceClient.GetLocation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocationAsync</summary>
+        public async Task GetLocationAsync_RequestObject()
+        {
+            // Snippet: GetLocationAsync(GetLocationRequest,CallSettings)
+            // Additional: GetLocationAsync(GetLocationRequest,CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetLocationRequest request = new GetLocationRequest
+            {
+                Name = "",
+            };
+            // Make the request
+            Location response = await keyManagementServiceClient.GetLocationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLocation</summary>
+        public void GetLocation_RequestObject()
+        {
+            // Snippet: GetLocation(GetLocationRequest,CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            GetLocationRequest request = new GetLocationRequest
+            {
+                Name = "",
+            };
+            // Make the request
+            Location response = keyManagementServiceClient.GetLocation(request);
             // End snippet
         }
 

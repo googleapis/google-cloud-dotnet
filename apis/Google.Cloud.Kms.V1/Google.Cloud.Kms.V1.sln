@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{CC1760EF-3DCA-40F8-BDC3-B7755F59A8C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Kms.V1.Tests", "Google.Cloud.Kms.V1.Tests\Google.Cloud.Kms.V1.Tests.csproj", "{D488675D-FD2C-49AC-B7F2-557BAB31621A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Location", "..\Google.Cloud.Location\Google.Cloud.Location\Google.Cloud.Location.csproj", "{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,5 +74,17 @@ Global
 		{D488675D-FD2C-49AC-B7F2-557BAB31621A}.Release|x64.Build.0 = Release|x64
 		{D488675D-FD2C-49AC-B7F2-557BAB31621A}.Release|x86.ActiveCfg = Release|x86
 		{D488675D-FD2C-49AC-B7F2-557BAB31621A}.Release|x86.Build.0 = Release|x86
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Debug|x64.Build.0 = Debug|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Debug|x86.Build.0 = Debug|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Release|x64.ActiveCfg = Release|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Release|x64.Build.0 = Release|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Release|x86.ActiveCfg = Release|Any CPU
+		{D1761B6B-D5C1-4CA4-85AD-F74A241F009E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

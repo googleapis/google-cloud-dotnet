@@ -20,6 +20,7 @@ namespace Google.Cloud.Kms.V1.Tests
     using Google.Api.Gax.Grpc;
     using Google.Cloud.Iam.V1;
     using apis = Google.Cloud.Kms.V1;
+    using Google.Cloud.Location;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
@@ -41,6 +42,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetKeyRingRequest expectedRequest = new GetKeyRingRequest
             {
                 KeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -64,6 +67,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetKeyRingRequest expectedRequest = new GetKeyRingRequest
             {
                 KeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -87,6 +92,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -109,6 +116,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetKeyRingRequest request = new GetKeyRingRequest
             {
                 KeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -131,6 +140,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyRequest expectedRequest = new GetCryptoKeyRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -154,6 +165,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyRequest expectedRequest = new GetCryptoKeyRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -177,6 +190,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -199,6 +214,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyRequest request = new GetCryptoKeyRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -221,6 +238,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyVersionRequest expectedRequest = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -244,6 +263,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyVersionRequest expectedRequest = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -267,6 +288,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -289,6 +312,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetCryptoKeyVersionRequest request = new GetCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -311,6 +336,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateKeyRingRequest expectedRequest = new CreateKeyRingRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -338,6 +365,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateKeyRingRequest expectedRequest = new CreateKeyRingRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -365,6 +394,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -389,6 +420,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateKeyRingRequest request = new CreateKeyRingRequest
             {
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
@@ -413,6 +446,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyRequest expectedRequest = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -462,6 +497,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyRequest expectedRequest = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -511,6 +548,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -546,6 +585,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyRequest request = new CreateCryptoKeyRequest
             {
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
@@ -581,6 +622,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyVersionRequest expectedRequest = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -606,6 +649,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyVersionRequest expectedRequest = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -631,6 +676,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -654,6 +701,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             CreateCryptoKeyVersionRequest request = new CreateCryptoKeyVersionRequest
             {
                 ParentAsCryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -677,6 +726,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyRequest expectedRequest = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -702,6 +753,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyRequest expectedRequest = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -727,6 +780,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -750,6 +805,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyRequest request = new UpdateCryptoKeyRequest
             {
                 CryptoKey = new CryptoKey(),
@@ -773,6 +830,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyVersionRequest expectedRequest = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -798,6 +857,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyVersionRequest expectedRequest = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -823,6 +884,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -846,6 +909,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyVersionRequest request = new UpdateCryptoKeyVersionRequest
             {
                 CryptoKeyVersion = new CryptoKeyVersion(),
@@ -869,6 +934,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             EncryptRequest expectedRequest = new EncryptRequest
             {
                 CryptoKeyPathName = new CryptoKeyPathName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY_PATH]"),
@@ -895,6 +962,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             EncryptRequest expectedRequest = new EncryptRequest
             {
                 CryptoKeyPathName = new CryptoKeyPathName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY_PATH]"),
@@ -921,6 +990,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 CryptoKeyPathName = new CryptoKeyPathName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY_PATH]"),
@@ -945,6 +1016,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             EncryptRequest request = new EncryptRequest
             {
                 CryptoKeyPathName = new CryptoKeyPathName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY_PATH]"),
@@ -969,6 +1042,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DecryptRequest expectedRequest = new DecryptRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -994,6 +1069,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DecryptRequest expectedRequest = new DecryptRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1019,6 +1096,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1042,6 +1121,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DecryptRequest request = new DecryptRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1065,6 +1146,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest expectedRequest = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1090,6 +1173,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest expectedRequest = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1115,6 +1200,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1138,6 +1225,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             UpdateCryptoKeyPrimaryVersionRequest request = new UpdateCryptoKeyPrimaryVersionRequest
             {
                 CryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
@@ -1161,6 +1250,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DestroyCryptoKeyVersionRequest expectedRequest = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1184,6 +1275,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DestroyCryptoKeyVersionRequest expectedRequest = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1207,6 +1300,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1229,6 +1324,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             DestroyCryptoKeyVersionRequest request = new DestroyCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1251,6 +1348,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RestoreCryptoKeyVersionRequest expectedRequest = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1274,6 +1373,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RestoreCryptoKeyVersionRequest expectedRequest = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1297,6 +1398,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1319,6 +1422,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             RestoreCryptoKeyVersionRequest request = new RestoreCryptoKeyVersionRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1341,6 +1446,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetPublicKeyRequest expectedRequest = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1364,6 +1471,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetPublicKeyRequest expectedRequest = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1387,6 +1496,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1409,6 +1520,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1431,6 +1544,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricDecryptRequest expectedRequest = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1456,6 +1571,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricDecryptRequest expectedRequest = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1481,6 +1598,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1504,6 +1623,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricDecryptRequest request = new AsymmetricDecryptRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1527,6 +1648,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricSignRequest expectedRequest = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1552,6 +1675,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricSignRequest expectedRequest = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1577,6 +1702,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
@@ -1600,6 +1727,8 @@ namespace Google.Cloud.Kms.V1.Tests
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
                 .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateLocationsClient())
+                .Returns(new Mock<Locations.LocationsClient>().Object);
             AsymmetricSignRequest request = new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
