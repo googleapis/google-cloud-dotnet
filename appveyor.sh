@@ -6,6 +6,10 @@ dotnet --info
 echo "Regenerating projects: if this fails, run generateprojects.sh and commit changes"
 bash generateprojects.sh && git diff --exit-code
 
+echo "Cloning submodules"
+git submodule init
+git submodule update
+
 > build_timing_log.txt
 
 if [[ -z "$APPVEYOR_PULL_REQUEST_NUMBER" ]]
