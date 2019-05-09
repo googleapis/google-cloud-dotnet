@@ -106,8 +106,8 @@ generate_api() {
   done
 
   # Generate the descriptor set for this API. We always explicitly
-  # include IAM so that gRPC rerouting works; it doesn't have any negative
-  # impact for non-IAM APIs.
+  # include IAM and locations so that gRPC rerouting works; it doesn't have any negative
+  # impact for non-IAM/locations APIs.
   $PROTOC \
     -I googleapis \
     -I $CORE_PROTOS_ROOT \
@@ -116,6 +116,7 @@ generate_api() {
     -o $API_TMP_DIR/protos.desc \
     $API_SRC_DIR/*.proto \
     googleapis/google/iam/v1/*.proto \
+    googleapis/google/cloud/location/*.proto \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
 
@@ -191,6 +192,15 @@ $PROTOC \
   -I $CORE_PROTOS_ROOT \
   --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
   googleapis/google/iam/v1/*.proto
+
+# Locations (just proto and grpc)
+$PROTOC \
+  --csharp_out=apis/Google.Cloud.Location/Google.Cloud.Location \
+  --grpc_out=apis/Google.Cloud.Location/Google.Cloud.Location \
+  -I googleapis \
+  -I $CORE_PROTOS_ROOT \
+  --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
+  googleapis/google/cloud/location/*.proto
 
 # Logging version-agnostic types
 $PROTOC \
