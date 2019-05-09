@@ -113,7 +113,6 @@ namespace Google.Cloud.PubSub.V1
         /// <list type="bullet">
         /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Cancelled"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
@@ -121,7 +120,7 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> PublishRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown);
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.Internal, grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="PublisherServiceApiClient"/> RPC methods.
@@ -280,7 +279,6 @@ namespace Google.Cloud.PubSub.V1
         /// <list>
         /// <item><description><see cref="grpccore::StatusCode.Aborted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Cancelled"/></description></item>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.ResourceExhausted"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
