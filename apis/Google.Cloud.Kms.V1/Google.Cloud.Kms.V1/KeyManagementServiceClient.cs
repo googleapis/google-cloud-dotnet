@@ -7772,18 +7772,6 @@ namespace Google.Cloud.Kms.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
-    public partial class gcl::ListLocationsRequest : gaxgrpc::IPageRequest { }
-    public partial class gcl::ListLocationsResponse : gaxgrpc::IPageResponse<gcl::Location>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public scg::IEnumerator<gcl::Location> GetEnumerator() => Locations.GetEnumerator();
-
-        /// <inheritdoc/>
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
     // Partial Grpc class to enable iam::IAMPolicy.IAMPolicyClient client creation
     public static partial class KeyManagementService
     {
