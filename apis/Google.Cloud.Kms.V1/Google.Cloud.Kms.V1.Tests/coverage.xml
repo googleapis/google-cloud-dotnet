@@ -8,6 +8,9 @@
         <ModuleMask>Google.Cloud.Kms.V1</ModuleMask>
       </FilterEntry>
       <FilterEntry>
+        <ModuleMask>Google.Cloud.Iam.V1</ModuleMask>
+      </FilterEntry>
+      <FilterEntry>
         <ModuleMask>Google.Cloud.Location</ModuleMask>
       </FilterEntry>
     </IncludeFilters>
