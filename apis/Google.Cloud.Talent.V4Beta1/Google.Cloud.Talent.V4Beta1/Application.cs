@@ -145,7 +145,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Required.
     ///
     /// Client side application identifier, used to uniquely identify the
-    /// recruiter.
+    /// application.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -161,9 +161,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ProfileFieldNumber = 2;
     private string profile_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Resource name of the candidate of this application.
+    /// Output only. Resource name of the candidate of this application.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",

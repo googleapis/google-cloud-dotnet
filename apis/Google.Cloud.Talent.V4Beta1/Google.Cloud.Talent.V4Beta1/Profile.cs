@@ -32,112 +32,118 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "cm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
             "ZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8a",
             "Fmdvb2dsZS90eXBlL2RhdGUucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9h",
-            "ZGRyZXNzLnByb3RvItsKCgdQcm9maWxlEgwKBG5hbWUYASABKAkSEwoLZXh0",
+            "ZGRyZXNzLnByb3RvIvoKCgdQcm9maWxlEgwKBG5hbWUYASABKAkSEwoLZXh0",
             "ZXJuYWxfaWQYAiABKAkSDgoGc291cmNlGAMgASgJEgsKA3VyaRgEIAEoCRIQ",
             "Cghncm91cF9pZBgFIAEoCRIuCgppc19oaXJhYmxlGAYgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLkJvb2xWYWx1ZRIvCgtjcmVhdGVfdGltZRgHIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYCCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDHJlc3VtZV9ocnhtbBgK",
-            "IAEoCRI9CgxwZXJzb25fbmFtZXMYCyADKAsyJy5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuUGVyc29uTmFtZRI3CglhZGRyZXNzZXMYDCADKAsyJC5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQWRkcmVzcxI7Cg9lbWFpbF9h",
-            "ZGRyZXNzZXMYDSADKAsyIi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "RW1haWwSOQoNcGhvbmVfbnVtYmVycxgOIAMoCzIiLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5QaG9uZRI/Cg1wZXJzb25hbF91cmlzGA8gAygLMigu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBlcnNvbmFsVXJpElMKF2Fk",
-            "ZGl0aW9uYWxfY29udGFjdF9pbmZvGBAgAygLMjIuZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NGJldGExLkFkZGl0aW9uYWxDb250YWN0SW5mbxJJChJlbXBsb3lt",
-            "ZW50X3JlY29yZHMYESADKAsyLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
-            "YTEuRW1wbG95bWVudFJlY29yZBJHChFlZHVjYXRpb25fcmVjb3JkcxgSIAMo",
-            "CzIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5FZHVjYXRpb25SZWNv",
-            "cmQSMgoGc2tpbGxzGBMgAygLMiIuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLlNraWxsEjkKCmFjdGl2aXRpZXMYFCADKAsyJS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuQWN0aXZpdHkSPgoMcHVibGljYXRpb25zGBUgAygL",
-            "MiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlB1YmxpY2F0aW9uEjQK",
-            "B3BhdGVudHMYFiADKAsyIy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "UGF0ZW50EkIKDmNlcnRpZmljYXRpb25zGBcgAygLMiouZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLkNlcnRpZmljYXRpb24SFAoMYXBwbGljYXRpb25z",
-            "GC8gAygJEhMKC2Fzc2lnbm1lbnRzGDAgAygJElUKEWN1c3RvbV9hdHRyaWJ1",
-            "dGVzGBogAygLMjouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2Zp",
-            "bGUuQ3VzdG9tQXR0cmlidXRlc0VudHJ5EhEKCXByb2Nlc3NlZBgbIAEoCBIX",
-            "Cg9rZXl3b3JkX3NuaXBwZXQYHCABKAkaZQoVQ3VzdG9tQXR0cmlidXRlc0Vu",
-            "dHJ5EgsKA2tleRgBIAEoCRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMS5DdXN0b21BdHRyaWJ1dGU6AjgBIqMCCgpQZXJz",
-            "b25OYW1lEhgKDmZvcm1hdHRlZF9uYW1lGAEgASgJSAASVwoPc3RydWN0dXJl",
-            "ZF9uYW1lGAIgASgLMjwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBl",
-            "cnNvbk5hbWUuUGVyc29uU3RydWN0dXJlZE5hbWVIABIWCg5wcmVmZXJyZWRf",
-            "bmFtZRgDIAEoCRp7ChRQZXJzb25TdHJ1Y3R1cmVkTmFtZRISCgpnaXZlbl9u",
-            "YW1lGAEgASgJEhYKDm1pZGRsZV9pbml0aWFsGAIgASgJEhMKC2ZhbWlseV9u",
-            "YW1lGAMgASgJEhAKCHN1ZmZpeGVzGAQgAygJEhAKCHByZWZpeGVzGAUgAygJ",
-            "Qg0KC3BlcnNvbl9uYW1lItkBCgdBZGRyZXNzEjwKBXVzYWdlGAEgASgOMi0u",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbnRhY3RJbmZvVXNhZ2US",
-            "HgoUdW5zdHJ1Y3R1cmVkX2FkZHJlc3MYAiABKAlIABI4ChJzdHJ1Y3R1cmVk",
-            "X2FkZHJlc3MYAyABKAsyGi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNzSAAS",
-            "KwoHY3VycmVudBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVC",
-            "CQoHYWRkcmVzcyJcCgVFbWFpbBI8CgV1c2FnZRgBIAEoDjItLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5Db250YWN0SW5mb1VzYWdlEhUKDWVtYWls",
-            "X2FkZHJlc3MYAiABKAkizwIKBVBob25lEjwKBXVzYWdlGAEgASgOMi0uZ29v",
-            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbnRhY3RJbmZvVXNhZ2USOgoE",
-            "dHlwZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5QaG9u",
-            "ZS5QaG9uZVR5cGUSDgoGbnVtYmVyGAMgASgJEhYKDndoZW5fYXZhaWxhYmxl",
-            "GAQgASgJIqMBCglQaG9uZVR5cGUSGgoWUEhPTkVfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEgwKCExBTkRMSU5FEAESCgoGTU9CSUxFEAISBwoDRkFYEAMSCQoFUEFH",
-            "RVIQBBIOCgpUVFlfT1JfVEREEAUSDQoJVk9JQ0VNQUlMEAYSCwoHVklSVFVB",
-            "TBAHEggKBFZPSVAQCBIWChJNT0JJTEVfT1JfTEFORExJTkUQCSIaCgtQZXJz",
-            "b25hbFVyaRILCgN1cmkYASABKAkidwoVQWRkaXRpb25hbENvbnRhY3RJbmZv",
-            "EjwKBXVzYWdlGAEgASgOMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LkNvbnRhY3RJbmZvVXNhZ2USDAoEbmFtZRgCIAEoCRISCgpjb250YWN0X2lk",
-            "GAMgASgJIuMDChBFbXBsb3ltZW50UmVjb3JkEiUKCnN0YXJ0X2RhdGUYASAB",
-            "KAsyES5nb29nbGUudHlwZS5EYXRlEiMKCGVuZF9kYXRlGAIgASgLMhEuZ29v",
-            "Z2xlLnR5cGUuRGF0ZRIVCg1lbXBsb3llcl9uYW1lGAMgASgJEhUKDWRpdmlz",
-            "aW9uX25hbWUYBCABKAkSNQoHYWRkcmVzcxgFIAEoCzIkLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMS5BZGRyZXNzEhEKCWpvYl90aXRsZRgGIAEoCRIX",
-            "Cg9qb2JfZGVzY3JpcHRpb24YByABKAkSMQoNaXNfc3VwZXJ2aXNvchgIIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSNAoQaXNfc2VsZl9lbXBs",
-            "b3llZBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSLgoKaXNf",
-            "Y3VycmVudBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSGQoR",
-            "am9iX3RpdGxlX3NuaXBwZXQYCyABKAkSHwoXam9iX2Rlc2NyaXB0aW9uX3Nu",
-            "aXBwZXQYDCABKAkSHQoVZW1wbG95ZXJfbmFtZV9zbmlwcGV0GA0gASgJIsID",
-            "Cg9FZHVjYXRpb25SZWNvcmQSJQoKc3RhcnRfZGF0ZRgBIAEoCzIRLmdvb2ds",
-            "ZS50eXBlLkRhdGUSIwoIZW5kX2RhdGUYAiABKAsyES5nb29nbGUudHlwZS5E",
-            "YXRlEjMKGGV4cGVjdGVkX2dyYWR1YXRpb25fZGF0ZRgDIAEoCzIRLmdvb2ds",
-            "ZS50eXBlLkRhdGUSEwoLc2Nob29sX25hbWUYBCABKAkSNQoHYWRkcmVzcxgF",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5BZGRyZXNzEhwK",
-            "EmRlZ3JlZV9kZXNjcmlwdGlvbhgGIAEoCUgAEkAKEXN0cnVjdHVyZWRfZGVn",
-            "cmVlGAcgASgLMiMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlZ3Jl",
-            "ZUgAEhMKC2Rlc2NyaXB0aW9uGAggASgJEi4KCmlzX2N1cnJlbnQYCSABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEhsKE3NjaG9vbF9uYW1lX3Nu",
-            "aXBwZXQYCiABKAkSFgoOZGVncmVlX3NuaXBwZXQYCyABKAlCCAoGZGVncmVl",
-            "InQKBkRlZ3JlZRI8CgtkZWdyZWVfdHlwZRgBIAEoDjInLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMS5EZWdyZWVUeXBlEhMKC2RlZ3JlZV9uYW1lGAIg",
-            "ASgJEhcKD2ZpZWxkc19vZl9zdHVkeRgDIAMoCSLDAgoIQWN0aXZpdHkSFAoM",
-            "ZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEgsKA3Vy",
-            "aRgDIAEoCRImCgtjcmVhdGVfZGF0ZRgEIAEoCzIRLmdvb2dsZS50eXBlLkRh",
-            "dGUSJgoLdXBkYXRlX2RhdGUYBSABKAsyES5nb29nbGUudHlwZS5EYXRlEhQK",
-            "DHRlYW1fbWVtYmVycxgGIAMoCRI3Cgtza2lsbHNfdXNlZBgHIAMoCzIiLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Ta2lsbBIdChVhY3Rpdml0eV9u",
-            "YW1lX3NuaXBwZXQYCCABKAkSJAocYWN0aXZpdHlfZGVzY3JpcHRpb25fc25p",
-            "cHBldBgJIAEoCRIbChNza2lsbHNfdXNlZF9zbmlwcGV0GAogAygJIssBCgtQ",
-            "dWJsaWNhdGlvbhIPCgdhdXRob3JzGAEgAygJEg0KBXRpdGxlGAIgASgJEhMK",
-            "C2Rlc2NyaXB0aW9uGAMgASgJEg8KB2pvdXJuYWwYBCABKAkSDgoGdm9sdW1l",
-            "GAUgASgJEhEKCXB1Ymxpc2hlchgGIAEoCRIrChBwdWJsaWNhdGlvbl9kYXRl",
-            "GAcgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIYChBwdWJsaWNhdGlvbl90eXBl",
-            "GAggASgJEgwKBGlzYm4YCSABKAkiqQIKBlBhdGVudBIUCgxkaXNwbGF5X25h",
-            "bWUYASABKAkSEQoJaW52ZW50b3JzGAIgAygJEhUKDXBhdGVudF9zdGF0dXMY",
-            "AyABKAkSLQoScGF0ZW50X3N0YXR1c19kYXRlGAQgASgLMhEuZ29vZ2xlLnR5",
-            "cGUuRGF0ZRItChJwYXRlbnRfZmlsaW5nX2RhdGUYBSABKAsyES5nb29nbGUu",
-            "dHlwZS5EYXRlEhUKDXBhdGVudF9vZmZpY2UYBiABKAkSFQoNcGF0ZW50X251",
-            "bWJlchgHIAEoCRIaChJwYXRlbnRfZGVzY3JpcHRpb24YCCABKAkSNwoLc2tp",
-            "bGxzX3VzZWQYCSADKAsyIi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "U2tpbGxCggEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCFFBy",
-            "b2ZpbGVSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogID",
-            "Q1RTYgZwcm90bzM="));
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjMKBnJlc3VtZRg1IAEoCzIj",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5SZXN1bWUSPQoMcGVyc29u",
+            "X25hbWVzGAsgAygLMicuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBl",
+            "cnNvbk5hbWUSNwoJYWRkcmVzc2VzGAwgAygLMiQuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkFkZHJlc3MSOwoPZW1haWxfYWRkcmVzc2VzGA0gAygL",
+            "MiIuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkVtYWlsEjkKDXBob25l",
+            "X251bWJlcnMYDiADKAsyIi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "UGhvbmUSPwoNcGVyc29uYWxfdXJpcxgPIAMoCzIoLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5QZXJzb25hbFVyaRJTChdhZGRpdGlvbmFsX2NvbnRh",
+            "Y3RfaW5mbxgQIAMoCzIyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5B",
+            "ZGRpdGlvbmFsQ29udGFjdEluZm8SSQoSZW1wbG95bWVudF9yZWNvcmRzGBEg",
+            "AygLMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkVtcGxveW1lbnRS",
+            "ZWNvcmQSRwoRZWR1Y2F0aW9uX3JlY29yZHMYEiADKAsyLC5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuRWR1Y2F0aW9uUmVjb3JkEjIKBnNraWxscxgT",
+            "IAMoCzIiLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Ta2lsbBI5Cgph",
+            "Y3Rpdml0aWVzGBQgAygLMiUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkFjdGl2aXR5Ej4KDHB1YmxpY2F0aW9ucxgVIAMoCzIoLmdvb2dsZS5jbG91",
+            "ZC50YWxlbnQudjRiZXRhMS5QdWJsaWNhdGlvbhI0CgdwYXRlbnRzGBYgAygL",
+            "MiMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlBhdGVudBJCCg5jZXJ0",
+            "aWZpY2F0aW9ucxgXIAMoCzIqLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5DZXJ0aWZpY2F0aW9uEhQKDGFwcGxpY2F0aW9ucxgvIAMoCRITCgthc3Np",
+            "Z25tZW50cxgwIAMoCRJVChFjdXN0b21fYXR0cmlidXRlcxgaIAMoCzI6Lmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlLkN1c3RvbUF0dHJp",
+            "YnV0ZXNFbnRyeRIRCglwcm9jZXNzZWQYGyABKAgSFwoPa2V5d29yZF9zbmlw",
+            "cGV0GBwgASgJGmUKFUN1c3RvbUF0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASAB",
+            "KAkSOwoFdmFsdWUYAiABKAsyLC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0",
+            "YTEuQ3VzdG9tQXR0cmlidXRlOgI4ASK1AQoGUmVzdW1lEhkKEXN0cnVjdHVy",
+            "ZWRfcmVzdW1lGAEgASgJEkMKC3Jlc3VtZV90eXBlGAIgASgOMi4uZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLlJlc3VtZS5SZXN1bWVUeXBlIksKClJl",
+            "c3VtZVR5cGUSGwoXUkVTVU1FX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVIUlhN",
+            "TBABEhUKEU9USEVSX1JFU1VNRV9UWVBFEAIivAIKClBlcnNvbk5hbWUSGAoO",
+            "Zm9ybWF0dGVkX25hbWUYASABKAlIABJXCg9zdHJ1Y3R1cmVkX25hbWUYAiAB",
+            "KAsyPC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUGVyc29uTmFtZS5Q",
+            "ZXJzb25TdHJ1Y3R1cmVkTmFtZUgAEhYKDnByZWZlcnJlZF9uYW1lGAMgASgJ",
+            "GpMBChRQZXJzb25TdHJ1Y3R1cmVkTmFtZRISCgpnaXZlbl9uYW1lGAEgASgJ",
+            "EhYKDnByZWZlcnJlZF9uYW1lGAYgASgJEhYKDm1pZGRsZV9pbml0aWFsGAIg",
+            "ASgJEhMKC2ZhbWlseV9uYW1lGAMgASgJEhAKCHN1ZmZpeGVzGAQgAygJEhAK",
+            "CHByZWZpeGVzGAUgAygJQg0KC3BlcnNvbl9uYW1lItkBCgdBZGRyZXNzEjwK",
+            "BXVzYWdlGAEgASgOMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNv",
+            "bnRhY3RJbmZvVXNhZ2USHgoUdW5zdHJ1Y3R1cmVkX2FkZHJlc3MYAiABKAlI",
+            "ABI4ChJzdHJ1Y3R1cmVkX2FkZHJlc3MYAyABKAsyGi5nb29nbGUudHlwZS5Q",
+            "b3N0YWxBZGRyZXNzSAASKwoHY3VycmVudBgEIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5Cb29sVmFsdWVCCQoHYWRkcmVzcyJcCgVFbWFpbBI8CgV1c2FnZRgB",
+            "IAEoDjItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db250YWN0SW5m",
+            "b1VzYWdlEhUKDWVtYWlsX2FkZHJlc3MYAiABKAkizwIKBVBob25lEjwKBXVz",
+            "YWdlGAEgASgOMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbnRh",
+            "Y3RJbmZvVXNhZ2USOgoEdHlwZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5QaG9uZS5QaG9uZVR5cGUSDgoGbnVtYmVyGAMgASgJEhYK",
+            "DndoZW5fYXZhaWxhYmxlGAQgASgJIqMBCglQaG9uZVR5cGUSGgoWUEhPTkVf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgwKCExBTkRMSU5FEAESCgoGTU9CSUxFEAIS",
+            "BwoDRkFYEAMSCQoFUEFHRVIQBBIOCgpUVFlfT1JfVEREEAUSDQoJVk9JQ0VN",
+            "QUlMEAYSCwoHVklSVFVBTBAHEggKBFZPSVAQCBIWChJNT0JJTEVfT1JfTEFO",
+            "RExJTkUQCSIaCgtQZXJzb25hbFVyaRILCgN1cmkYASABKAkidwoVQWRkaXRp",
+            "b25hbENvbnRhY3RJbmZvEjwKBXVzYWdlGAEgASgOMi0uZ29vZ2xlLmNsb3Vk",
+            "LnRhbGVudC52NGJldGExLkNvbnRhY3RJbmZvVXNhZ2USDAoEbmFtZRgCIAEo",
+            "CRISCgpjb250YWN0X2lkGAMgASgJIuMDChBFbXBsb3ltZW50UmVjb3JkEiUK",
+            "CnN0YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlEiMKCGVuZF9k",
+            "YXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIVCg1lbXBsb3llcl9uYW1l",
+            "GAMgASgJEhUKDWRpdmlzaW9uX25hbWUYBCABKAkSNQoHYWRkcmVzcxgFIAEo",
+            "CzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5BZGRyZXNzEhEKCWpv",
+            "Yl90aXRsZRgGIAEoCRIXCg9qb2JfZGVzY3JpcHRpb24YByABKAkSMQoNaXNf",
+            "c3VwZXJ2aXNvchgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUS",
+            "NAoQaXNfc2VsZl9lbXBsb3llZBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5C",
+            "b29sVmFsdWUSLgoKaXNfY3VycmVudBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5Cb29sVmFsdWUSGQoRam9iX3RpdGxlX3NuaXBwZXQYCyABKAkSHwoXam9i",
+            "X2Rlc2NyaXB0aW9uX3NuaXBwZXQYDCABKAkSHQoVZW1wbG95ZXJfbmFtZV9z",
+            "bmlwcGV0GA0gASgJIsIDCg9FZHVjYXRpb25SZWNvcmQSJQoKc3RhcnRfZGF0",
+            "ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSIwoIZW5kX2RhdGUYAiABKAsy",
+            "ES5nb29nbGUudHlwZS5EYXRlEjMKGGV4cGVjdGVkX2dyYWR1YXRpb25fZGF0",
+            "ZRgDIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSEwoLc2Nob29sX25hbWUYBCAB",
+            "KAkSNQoHYWRkcmVzcxgFIAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMS5BZGRyZXNzEhwKEmRlZ3JlZV9kZXNjcmlwdGlvbhgGIAEoCUgAEkAK",
+            "EXN0cnVjdHVyZWRfZGVncmVlGAcgASgLMiMuZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLkRlZ3JlZUgAEhMKC2Rlc2NyaXB0aW9uGAggASgJEi4KCmlz",
+            "X2N1cnJlbnQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEhsK",
+            "E3NjaG9vbF9uYW1lX3NuaXBwZXQYCiABKAkSFgoOZGVncmVlX3NuaXBwZXQY",
+            "CyABKAlCCAoGZGVncmVlInQKBkRlZ3JlZRI8CgtkZWdyZWVfdHlwZRgBIAEo",
+            "DjInLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5EZWdyZWVUeXBlEhMK",
+            "C2RlZ3JlZV9uYW1lGAIgASgJEhcKD2ZpZWxkc19vZl9zdHVkeRgDIAMoCSLD",
+            "AgoIQWN0aXZpdHkSFAoMZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0",
+            "aW9uGAIgASgJEgsKA3VyaRgDIAEoCRImCgtjcmVhdGVfZGF0ZRgEIAEoCzIR",
+            "Lmdvb2dsZS50eXBlLkRhdGUSJgoLdXBkYXRlX2RhdGUYBSABKAsyES5nb29n",
+            "bGUudHlwZS5EYXRlEhQKDHRlYW1fbWVtYmVycxgGIAMoCRI3Cgtza2lsbHNf",
+            "dXNlZBgHIAMoCzIiLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Ta2ls",
+            "bBIdChVhY3Rpdml0eV9uYW1lX3NuaXBwZXQYCCABKAkSJAocYWN0aXZpdHlf",
+            "ZGVzY3JpcHRpb25fc25pcHBldBgJIAEoCRIbChNza2lsbHNfdXNlZF9zbmlw",
+            "cGV0GAogAygJIssBCgtQdWJsaWNhdGlvbhIPCgdhdXRob3JzGAEgAygJEg0K",
+            "BXRpdGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEg8KB2pvdXJuYWwY",
+            "BCABKAkSDgoGdm9sdW1lGAUgASgJEhEKCXB1Ymxpc2hlchgGIAEoCRIrChBw",
+            "dWJsaWNhdGlvbl9kYXRlGAcgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIYChBw",
+            "dWJsaWNhdGlvbl90eXBlGAggASgJEgwKBGlzYm4YCSABKAkiqQIKBlBhdGVu",
+            "dBIUCgxkaXNwbGF5X25hbWUYASABKAkSEQoJaW52ZW50b3JzGAIgAygJEhUK",
+            "DXBhdGVudF9zdGF0dXMYAyABKAkSLQoScGF0ZW50X3N0YXR1c19kYXRlGAQg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRItChJwYXRlbnRfZmlsaW5nX2RhdGUY",
+            "BSABKAsyES5nb29nbGUudHlwZS5EYXRlEhUKDXBhdGVudF9vZmZpY2UYBiAB",
+            "KAkSFQoNcGF0ZW50X251bWJlchgHIAEoCRIaChJwYXRlbnRfZGVzY3JpcHRp",
+            "b24YCCABKAkSNwoLc2tpbGxzX3VzZWQYCSADKAsyIi5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuU2tpbGxCggEKH2NvbS5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTFCFFByb2ZpbGVSZXNvdXJjZVByb3RvUAFaQWdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0",
+            "YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "ResumeHrxml", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "Applications", "Assignments", "CustomAttributes", "Processed", "KeywordSnippet" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName), global::Google.Cloud.Talent.V4Beta1.PersonName.Parser, new[]{ "FormattedName", "StructuredName", "PreferredName" }, new[]{ "PersonName" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName), global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName.Parser, new[]{ "GivenName", "MiddleInitial", "FamilyName", "Suffixes", "Prefixes" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Profile), global::Google.Cloud.Talent.V4Beta1.Profile.Parser, new[]{ "Name", "ExternalId", "Source", "Uri", "GroupId", "IsHirable", "CreateTime", "UpdateTime", "Resume", "PersonNames", "Addresses", "EmailAddresses", "PhoneNumbers", "PersonalUris", "AdditionalContactInfo", "EmploymentRecords", "EducationRecords", "Skills", "Activities", "Publications", "Patents", "Certifications", "Applications", "Assignments", "CustomAttributes", "Processed", "KeywordSnippet" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Resume), global::Google.Cloud.Talent.V4Beta1.Resume.Parser, new[]{ "StructuredResume", "ResumeType" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName), global::Google.Cloud.Talent.V4Beta1.PersonName.Parser, new[]{ "FormattedName", "StructuredName", "PreferredName" }, new[]{ "PersonName" }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName), global::Google.Cloud.Talent.V4Beta1.PersonName.Types.PersonStructuredName.Parser, new[]{ "GivenName", "PreferredName", "MiddleInitial", "FamilyName", "Suffixes", "Prefixes" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Address), global::Google.Cloud.Talent.V4Beta1.Address.Parser, new[]{ "Usage", "UnstructuredAddress", "StructuredAddress", "Current" }, new[]{ "Address" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Email), global::Google.Cloud.Talent.V4Beta1.Email.Parser, new[]{ "Usage", "EmailAddress" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Phone), global::Google.Cloud.Talent.V4Beta1.Phone.Parser, new[]{ "Usage", "Type", "Number", "WhenAvailable" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Phone.Types.PhoneType) }, null),
@@ -193,7 +199,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       IsHirable = other.IsHirable;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
-      resumeHrxml_ = other.resumeHrxml_;
+      resume_ = other.resume_ != null ? other.resume_.Clone() : null;
       personNames_ = other.personNames_.Clone();
       addresses_ = other.addresses_.Clone();
       emailAddresses_ = other.emailAddresses_.Clone();
@@ -306,10 +312,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The cluster id of the profile to associate with other profile(s) for the
     /// same candidate.
     ///
-    /// A random UUID is assigned if [group_id][google.cloud.talent.v4beta1.Profile.group_id] isn't provided. To ensure
-    /// global uniqueness, customized [group_id][google.cloud.talent.v4beta1.Profile.group_id] isn't supported. If
-    /// [group_id][google.cloud.talent.v4beta1.Profile.group_id] is set, there must be at least one other profile with the
-    /// same system generated [group_id][google.cloud.talent.v4beta1.Profile.group_id], otherwise an error is thrown.
+    /// This field should be generated by the customer. If a value is not provided,
+    /// a random UUI is assigned to this field of the profile.
     ///
     /// This is used to link multiple profiles to the same candidate. For example,
     /// a client has a candidate with two profiles, where one was created recently
@@ -375,31 +379,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
-    /// <summary>Field number for the "resume_hrxml" field.</summary>
-    public const int ResumeHrxmlFieldNumber = 10;
-    private string resumeHrxml_ = "";
+    /// <summary>Field number for the "resume" field.</summary>
+    public const int ResumeFieldNumber = 53;
+    private global::Google.Cloud.Talent.V4Beta1.Resume resume_;
     /// <summary>
     /// Optional.
     ///
-    /// The profile contents in HR-XML format.
-    /// See http://schemas.liquid-technologies.com/hr-xml/2007-04-15/ for more
-    /// information about Human Resources XML.
-    ///
-    /// Users can create a profile with only [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] field. For example,
-    /// the API parses the [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] and creates a profile with all
-    /// structured fields populated, for example. [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord],
-    /// [EducationRecord][google.cloud.talent.v4beta1.EducationRecord], and so on. An error is thrown if the [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml]
-    /// can't be parsed.
-    ///
-    /// If the [resume_hrxml][google.cloud.talent.v4beta1.Profile.resume_hrxml] is provided during profile creation or update,
-    /// any other structured data provided in the profile is ignored. The
-    /// API populates these fields by parsing the HR-XML.
+    /// The resume representing this profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ResumeHrxml {
-      get { return resumeHrxml_; }
+    public global::Google.Cloud.Talent.V4Beta1.Resume Resume {
+      get { return resume_; }
       set {
-        resumeHrxml_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        resume_ = value;
       }
     }
 
@@ -700,7 +692,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private string keywordSnippet_ = "";
     /// <summary>
     /// Output only. Keyword snippet shows how the search result is related to a
-    /// search query.
+    /// search query.  This is only returned in [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string KeywordSnippet {
@@ -731,7 +723,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (IsHirable != other.IsHirable) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
-      if (ResumeHrxml != other.ResumeHrxml) return false;
+      if (!object.Equals(Resume, other.Resume)) return false;
       if(!personNames_.Equals(other.personNames_)) return false;
       if(!addresses_.Equals(other.addresses_)) return false;
       if(!emailAddresses_.Equals(other.emailAddresses_)) return false;
@@ -764,7 +756,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (isHirable_ != null) hash ^= IsHirable.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (ResumeHrxml.Length != 0) hash ^= ResumeHrxml.GetHashCode();
+      if (resume_ != null) hash ^= Resume.GetHashCode();
       hash ^= personNames_.GetHashCode();
       hash ^= addresses_.GetHashCode();
       hash ^= emailAddresses_.GetHashCode();
@@ -827,10 +819,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(UpdateTime);
       }
-      if (ResumeHrxml.Length != 0) {
-        output.WriteRawTag(82);
-        output.WriteString(ResumeHrxml);
-      }
       personNames_.WriteTo(output, _repeated_personNames_codec);
       addresses_.WriteTo(output, _repeated_addresses_codec);
       emailAddresses_.WriteTo(output, _repeated_emailAddresses_codec);
@@ -855,6 +843,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       applications_.WriteTo(output, _repeated_applications_codec);
       assignments_.WriteTo(output, _repeated_assignments_codec);
+      if (resume_ != null) {
+        output.WriteRawTag(170, 3);
+        output.WriteMessage(Resume);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -887,8 +879,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (ResumeHrxml.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResumeHrxml);
+      if (resume_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Resume);
       }
       size += personNames_.CalculateSize(_repeated_personNames_codec);
       size += addresses_.CalculateSize(_repeated_addresses_codec);
@@ -955,8 +947,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.ResumeHrxml.Length != 0) {
-        ResumeHrxml = other.ResumeHrxml;
+      if (other.resume_ != null) {
+        if (resume_ == null) {
+          resume_ = new global::Google.Cloud.Talent.V4Beta1.Resume();
+        }
+        Resume.MergeFrom(other.Resume);
       }
       personNames_.Add(other.personNames_);
       addresses_.Add(other.addresses_);
@@ -1032,10 +1027,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
             input.ReadMessage(updateTime_);
             break;
           }
-          case 82: {
-            ResumeHrxml = input.ReadString();
-            break;
-          }
           case 90: {
             personNames_.AddEntriesFrom(input, _repeated_personNames_codec);
             break;
@@ -1108,9 +1099,221 @@ namespace Google.Cloud.Talent.V4Beta1 {
             assignments_.AddEntriesFrom(input, _repeated_assignments_codec);
             break;
           }
+          case 426: {
+            if (resume_ == null) {
+              resume_ = new global::Google.Cloud.Talent.V4Beta1.Resume();
+            }
+            input.ReadMessage(resume_);
+            break;
+          }
         }
       }
     }
+
+  }
+
+  /// <summary>
+  /// Resource that represents a resume.
+  /// </summary>
+  public sealed partial class Resume : pb::IMessage<Resume> {
+    private static readonly pb::MessageParser<Resume> _parser = new pb::MessageParser<Resume>(() => new Resume());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Resume> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Resume() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Resume(Resume other) : this() {
+      structuredResume_ = other.structuredResume_;
+      resumeType_ = other.resumeType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Resume Clone() {
+      return new Resume(this);
+    }
+
+    /// <summary>Field number for the "structured_resume" field.</summary>
+    public const int StructuredResumeFieldNumber = 1;
+    private string structuredResume_ = "";
+    /// <summary>
+    /// Optional.
+    ///
+    /// Users can create a profile with only this field field, if [resume_type][google.cloud.talent.v4beta1.Resume.resume_type]
+    /// is [HRXML][]. For example, the API parses this field and creates a profile
+    /// with all structured fields populated, for example. [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord],
+    /// [EducationRecord][google.cloud.talent.v4beta1.EducationRecord], and so on. An error is thrown if this field cannot be
+    /// parsed.
+    ///
+    /// If this field is provided during profile creation or update,
+    /// any other structured data provided in the profile is ignored. The
+    /// API populates these fields by parsing this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string StructuredResume {
+      get { return structuredResume_; }
+      set {
+        structuredResume_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resume_type" field.</summary>
+    public const int ResumeTypeFieldNumber = 2;
+    private global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType resumeType_ = 0;
+    /// <summary>
+    /// Optional.
+    ///
+    /// The format of [structured_resume][google.cloud.talent.v4beta1.Resume.structured_resume].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType ResumeType {
+      get { return resumeType_; }
+      set {
+        resumeType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Resume);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Resume other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StructuredResume != other.StructuredResume) return false;
+      if (ResumeType != other.ResumeType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StructuredResume.Length != 0) hash ^= StructuredResume.GetHashCode();
+      if (ResumeType != 0) hash ^= ResumeType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (StructuredResume.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(StructuredResume);
+      }
+      if (ResumeType != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ResumeType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (StructuredResume.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StructuredResume);
+      }
+      if (ResumeType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResumeType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Resume other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StructuredResume.Length != 0) {
+        StructuredResume = other.StructuredResume;
+      }
+      if (other.ResumeType != 0) {
+        ResumeType = other.ResumeType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            StructuredResume = input.ReadString();
+            break;
+          }
+          case 16: {
+            resumeType_ = (global::Google.Cloud.Talent.V4Beta1.Resume.Types.ResumeType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Resume message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// The format of a structured resume.
+      /// </summary>
+      public enum ResumeType {
+        /// <summary>
+        /// Default value.
+        /// </summary>
+        [pbr::OriginalName("RESUME_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The profile contents in HR-XML format.
+        /// See http://schemas.liquid-technologies.com/hr-xml/2007-04-15/ for more
+        /// information about Human Resources XML.
+        /// </summary>
+        [pbr::OriginalName("HRXML")] Hrxml = 1,
+        /// <summary>
+        /// Resume type not specified.
+        /// </summary>
+        [pbr::OriginalName("OTHER_RESUME_TYPE")] OtherResumeType = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -1125,7 +1328,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1201,7 +1404,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// Preferred name for the person.
+    /// Preferred name for the person. This field is ignored if [structured_name][google.cloud.talent.v4beta1.PersonName.structured_name]
+    /// is provided.
+    ///
+    /// Number of characters allowed is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PreferredName {
@@ -1390,6 +1596,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public PersonStructuredName(PersonStructuredName other) : this() {
           givenName_ = other.givenName_;
+          preferredName_ = other.preferredName_;
           middleInitial_ = other.middleInitial_;
           familyName_ = other.familyName_;
           suffixes_ = other.suffixes_.Clone();
@@ -1419,6 +1626,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
           get { return givenName_; }
           set {
             givenName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "preferred_name" field.</summary>
+        public const int PreferredNameFieldNumber = 6;
+        private string preferredName_ = "";
+        /// <summary>
+        /// Optional.
+        ///
+        /// Preferred given/first name or nickname.
+        ///
+        /// Number of characters allowed is 100.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string PreferredName {
+          get { return preferredName_; }
+          set {
+            preferredName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -1510,6 +1735,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             return true;
           }
           if (GivenName != other.GivenName) return false;
+          if (PreferredName != other.PreferredName) return false;
           if (MiddleInitial != other.MiddleInitial) return false;
           if (FamilyName != other.FamilyName) return false;
           if(!suffixes_.Equals(other.suffixes_)) return false;
@@ -1521,6 +1747,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public override int GetHashCode() {
           int hash = 1;
           if (GivenName.Length != 0) hash ^= GivenName.GetHashCode();
+          if (PreferredName.Length != 0) hash ^= PreferredName.GetHashCode();
           if (MiddleInitial.Length != 0) hash ^= MiddleInitial.GetHashCode();
           if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
           hash ^= suffixes_.GetHashCode();
@@ -1552,6 +1779,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           suffixes_.WriteTo(output, _repeated_suffixes_codec);
           prefixes_.WriteTo(output, _repeated_prefixes_codec);
+          if (PreferredName.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(PreferredName);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1562,6 +1793,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           int size = 0;
           if (GivenName.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(GivenName);
+          }
+          if (PreferredName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PreferredName);
           }
           if (MiddleInitial.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(MiddleInitial);
@@ -1584,6 +1818,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           if (other.GivenName.Length != 0) {
             GivenName = other.GivenName;
+          }
+          if (other.PreferredName.Length != 0) {
+            PreferredName = other.PreferredName;
           }
           if (other.MiddleInitial.Length != 0) {
             MiddleInitial = other.MiddleInitial;
@@ -1624,6 +1861,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
                 prefixes_.AddEntriesFrom(input, _repeated_prefixes_codec);
                 break;
               }
+              case 50: {
+                PreferredName = input.ReadString();
+                break;
+              }
             }
           }
         }
@@ -1646,7 +1887,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1932,7 +2173,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2104,7 +2345,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2408,7 +2649,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2548,7 +2789,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2757,7 +2998,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2802,19 +3043,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// Start date of the employment.
-    ///
-    /// It can be a partial date (only year, or only year and month), but must be
-    /// valid. Otherwise an error is thrown.
-    ///
-    /// Examples:
-    /// {"year": 2017, "month": 2, "day": 28} is valid.
-    /// {"year": 2020, "month": 1, "date": 31} is valid.
-    /// {"year": 2018, "month": 12} is valid (partial date).
-    /// {"year": 2018} is valid (partial date).
-    /// {"year": 2015, "day": 21} is not valid (month is missing but day is
-    /// presented).
-    /// {"year": 2018, "month": 13} is not valid (invalid month).
-    /// {"year": 2017, "month": 1, "day": 32} is not valid (invalid day).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date StartDate {
@@ -3350,7 +3578,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3895,7 +4123,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4100,7 +4328,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4530,7 +4758,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4945,7 +5173,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

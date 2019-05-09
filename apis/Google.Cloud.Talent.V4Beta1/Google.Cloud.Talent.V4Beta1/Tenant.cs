@@ -27,18 +27,19 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaKGdvb2dsZS9jbG91ZC90YWxl",
             "bnQvdjRiZXRhMS9jb21tb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8iwgEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFs",
+            "bnMucHJvdG8i+AEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFs",
             "X2lkGAIgASgJEkUKCnVzYWdlX3R5cGUYAyABKA4yMS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUiTgoNRGF0YVVz",
-            "YWdlVHlwZRIfChtEQVRBX1VTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpB",
-            "R0dSRUdBVEVEEAESDAoISVNPTEFURUQQAkKBAQofY29tLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMUITVGVuYW50UmVzb3VyY2VQcm90b1ABWkFnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVu",
-            "dC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
+            "dGFsZW50LnY0YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUSNAosa2V5d29y",
+            "ZF9zZWFyY2hhYmxlX3Byb2ZpbGVfY3VzdG9tX2F0dHJpYnV0ZXMYBCADKAki",
+            "TgoNRGF0YVVzYWdlVHlwZRIfChtEQVRBX1VTQUdFX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIOCgpBR0dSRUdBVEVEEAESDAoISVNPTEFURUQQAkKBAQofY29tLmdv",
+            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUITVGVuYW50UmVzb3VyY2VQcm90",
+            "b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
           }));
     }
     #endregion
@@ -79,6 +80,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       name_ = other.name_;
       externalId_ = other.externalId_;
       usageType_ = other.usageType_;
+      keywordSearchableProfileCustomAttributes_ = other.keywordSearchableProfileCustomAttributes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -144,6 +146,26 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+    /// <summary>Field number for the "keyword_searchable_profile_custom_attributes" field.</summary>
+    public const int KeywordSearchableProfileCustomAttributesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_keywordSearchableProfileCustomAttributes_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> keywordSearchableProfileCustomAttributes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional.
+    ///
+    /// A list of keys of filterable [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes], whose
+    /// corresponding `string_values` are used in keyword searches. Profiles with
+    /// `string_values` under these specified field keys are returned if any
+    /// of the values match the search keyword. Custom field values with
+    /// parenthesis, brackets and special symbols are not searchable as-is,
+    /// and must be surrounded by quotes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> KeywordSearchableProfileCustomAttributes {
+      get { return keywordSearchableProfileCustomAttributes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Tenant);
@@ -160,6 +182,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Name != other.Name) return false;
       if (ExternalId != other.ExternalId) return false;
       if (UsageType != other.UsageType) return false;
+      if(!keywordSearchableProfileCustomAttributes_.Equals(other.keywordSearchableProfileCustomAttributes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -169,6 +192,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
       if (UsageType != 0) hash ^= UsageType.GetHashCode();
+      hash ^= keywordSearchableProfileCustomAttributes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -194,6 +218,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) UsageType);
       }
+      keywordSearchableProfileCustomAttributes_.WriteTo(output, _repeated_keywordSearchableProfileCustomAttributes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -211,6 +236,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (UsageType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UsageType);
       }
+      size += keywordSearchableProfileCustomAttributes_.CalculateSize(_repeated_keywordSearchableProfileCustomAttributes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -231,6 +257,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (other.UsageType != 0) {
         UsageType = other.UsageType;
       }
+      keywordSearchableProfileCustomAttributes_.Add(other.keywordSearchableProfileCustomAttributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -252,6 +279,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 24: {
             usageType_ = (global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            keywordSearchableProfileCustomAttributes_.AddEntriesFrom(input, _repeated_keywordSearchableProfileCustomAttributes_codec);
             break;
           }
         }

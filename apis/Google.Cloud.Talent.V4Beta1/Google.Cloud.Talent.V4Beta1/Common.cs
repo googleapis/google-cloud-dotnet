@@ -951,9 +951,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// Output only.
-  ///
-  /// A resource that represents a location with full geographic information.
+  /// Output only. A resource that represents a location with full geographic
+  /// information.
   /// </summary>
   public sealed partial class Location : pb::IMessage<Location> {
     private static readonly pb::MessageParser<Location> _parser = new pb::MessageParser<Location>(() => new Location());
@@ -1577,9 +1576,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// Output only.
-  ///
-  /// Additional information returned to client, such as debugging information.
+  /// Output only. Additional information returned to client, such as debugging
+  /// information.
   /// </summary>
   public sealed partial class ResponseMetadata : pb::IMessage<ResponseMetadata> {
     private static readonly pb::MessageParser<ResponseMetadata> _parser = new pb::MessageParser<ResponseMetadata>(() => new ResponseMetadata());
@@ -2135,9 +2133,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   }
 
   /// <summary>
-  /// Output only.
-  ///
-  /// Spell check result.
+  /// Output only. Spell check result.
   /// </summary>
   public sealed partial class SpellingCorrection : pb::IMessage<SpellingCorrection> {
     private static readonly pb::MessageParser<SpellingCorrection> _parser = new pb::MessageParser<SpellingCorrection>(() => new SpellingCorrection());

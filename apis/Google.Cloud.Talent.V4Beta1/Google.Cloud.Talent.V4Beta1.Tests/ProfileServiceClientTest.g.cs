@@ -49,7 +49,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -79,7 +78,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -109,7 +107,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -137,7 +134,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -164,7 +160,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -192,7 +187,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -220,7 +214,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -247,7 +240,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -274,7 +266,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -302,7 +293,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -330,7 +320,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
@@ -357,7 +346,6 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
                 Source = "source-896505829",
                 Uri = "uri116076",
                 GroupId = "groupId506361563",
-                ResumeHrxml = "resumeHrxml1834730555",
                 Processed = true,
                 KeywordSnippet = "keywordSnippet1325317319",
             };
