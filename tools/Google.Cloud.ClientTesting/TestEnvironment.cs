@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
 using Xunit;
 
@@ -82,6 +83,37 @@ namespace Google.Cloud.ClientTesting
             {
                 throw new SkipException("Test skipped in VPCSC environment");
             }
+        }
+
+        /// <summary>
+        /// Finds the conformance-tests directory, throwing an exception if it's not present.
+        /// </summary>
+        public static string FindConformanceTestsDirectory()
+        {
+            var root = FindRepositoryRootDirectory();
+            var tests = Path.Combine(root, "conformance-tests");
+            return Directory.Exists(tests) ? tests : throw new InvalidOperationException("conformance-tests directory not found");
+        }
+
+        /// <summary>
+        /// Finds the root directory of the repository by looking for common files.
+        /// </summary>
+        /// <returns></returns>
+        public static string FindRepositoryRootDirectory()
+        {
+            var currentDirectory = Path.GetFullPath(".");
+            var directory = new DirectoryInfo(currentDirectory);
+            while (directory != null &&
+                (!File.Exists(Path.Combine(directory.FullName, "LICENSE"))
+                || !Directory.Exists(Path.Combine(directory.FullName, "apis"))))
+            {
+                directory = directory.Parent;
+            }
+            if (directory == null)
+            {
+                throw new InvalidOperationException("Unable to determine root directory. Please run within google-cloud-dotnet repository.");
+            }
+            return directory.FullName;
         }
     }
 }
