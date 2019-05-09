@@ -15,6 +15,7 @@
 using Google.Api.Gax.Testing;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Storage.V1.Tests.Conformance;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -34,15 +35,6 @@ namespace Google.Cloud.Storage.V1.Tests
         /// </summary>
         public class V4SignerTest
         {
-            private static readonly ServiceAccountCredential s_testCredential =
-                (ServiceAccountCredential) GoogleCredential.FromJson(ReadTextResource("UrlSignerV4TestAccount.json")).UnderlyingCredential;
-            private static readonly Dictionary<string, HttpMethod> s_methods = new Dictionary<string, HttpMethod>
-            {
-                { "GET", HttpMethod.Get },
-                { "POST", HttpMethod.Post },
-                { "PUT", HttpMethod.Put }
-            };
-
             // The data in this test is from an example in the Ruby implementation.
             [Fact]
             public void SampleRequest()
@@ -80,10 +72,6 @@ namespace Google.Cloud.Storage.V1.Tests
                     .ToDictionary(bits => bits[0], bits => bits[1]);
             }
 
-            public static IEnumerable<object[]> JsonTestData = JsonConvert.DeserializeObject<List<JsonTest>>(ReadTextResource("UrlSignerV4TestData.json"))
-                .Select(test => new object[] { test })
-                .ToList();
-
             [Theory]
             [InlineData(-1)]
             [InlineData(0)]
@@ -91,7 +79,7 @@ namespace Google.Cloud.Storage.V1.Tests
             public void ExpiryValidation_Invalid(int seconds)
             {
                 var signer = UrlSigner
-                    .FromServiceAccountCredential(s_testCredential)
+                    .FromServiceAccountCredential(ConformanceTestData.TestCredential)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
 
@@ -102,82 +90,13 @@ namespace Google.Cloud.Storage.V1.Tests
             public void ExpiryValidation_Exactly1Week()
             {
                 var signer = UrlSigner
-                    .FromServiceAccountCredential(s_testCredential)
+                    .FromServiceAccountCredential(ConformanceTestData.TestCredential)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
 
                 // Just testing that no exception is thrown.
                 signer.Sign("bucket", "object", TimeSpan.FromDays(7), HttpMethod.Get);
             }
-
-            [Theory, MemberData(nameof(JsonTestData))]
-            public void JsonSourceTest(JsonTest test)
-            {
-                var timestamp = DateTime.ParseExact(
-                    test.Timestamp,
-                    "yyyyMMdd'T'HHmmss'Z'",
-                    CultureInfo.InvariantCulture,
-                    DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
-                var clock = new FakeClock(timestamp);
-                var signer = UrlSigner
-                    .FromServiceAccountCredential(s_testCredential)
-                    .WithSigningVersion(SigningVersion.V4)
-                    .WithClock(clock);
-
-                var actualUrl = signer.Sign(test.Bucket, test.Object,
-                    duration: TimeSpan.FromSeconds(test.Expiration),
-                    requestMethod: s_methods[test.Method],
-                    requestHeaders: test.Headers?.ToDictionary(kvp => kvp.Key, kvp => Enumerable.Repeat(kvp.Value, 1)),
-                    contentHeaders: null);
-
-                // We almost always want the complete URL afterwards, which xUnit doesn't give us.
-                if (test.ExpectedUrl != actualUrl)
-                {
-                    FileLogger.Log($"{test.Description} failure");
-                    FileLogger.Log($"Expected: {test.ExpectedUrl}");
-                    FileLogger.Log($"Actual: {actualUrl}");
-                }
-                Assert.Equal(test.ExpectedUrl, actualUrl);
-            }
-
-            private static string ReadTextResource(string name)
-            {
-                var typeInfo = typeof(UrlSignerTest).GetTypeInfo();
-
-                using (var reader = new StreamReader(typeInfo.Assembly.GetManifestResourceStream($"{typeInfo.Namespace}.{name}")))
-                {
-                    return reader.ReadToEnd();
-                }
-            }
-        }
-
-        public class JsonTest
-        {
-            [JsonProperty("description")]
-            public string Description { get; set; }
-
-            [JsonProperty("bucket")]
-            public string Bucket { get; set; }
-
-            [JsonProperty("object")]
-            public string Object { get; set; }
-
-            [JsonProperty("method")]
-            public string Method { get; set; }
-
-            [JsonProperty("expiration")]
-            public int Expiration { get; set; }
-
-            [JsonProperty("headers")]
-            public Dictionary<string, string> Headers { get; set; }
-
-            [JsonProperty("timestamp")]
-            public string Timestamp { get; set; }
-
-            [JsonProperty("expectedUrl")]
-            public string ExpectedUrl { get; set; }
-
-            public override string ToString() => Description;
         }
     }
 }
