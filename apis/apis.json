@@ -425,6 +425,14 @@
   },
 
   {
+    "id": "Google.Cloud.Location",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "gRPC services for the Google Location API. This library is typically used as a dependency for other API client libraries.",
+    "tags": [ "location" ],
+  },
+
+  {
     "id": "Google.Cloud.Logging.Log4Net",
     "version": "2.3.0",
     "type": "other",
