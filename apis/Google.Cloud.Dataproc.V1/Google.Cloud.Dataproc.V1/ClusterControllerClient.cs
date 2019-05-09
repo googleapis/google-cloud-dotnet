@@ -72,13 +72,12 @@ namespace Google.Cloud.Dataproc.V1
         /// <remarks>
         /// The eligible RPC <see cref="grpccore::StatusCode"/>s for retry for "Idempotent" RPC methods are:
         /// <list type="bullet">
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
         public static sys::Predicate<grpccore::RpcException> IdempotentRetryFilter { get; } =
-            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
+            gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="grpccore::StatusCode"/>s are eligible for retry
@@ -300,7 +299,6 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
@@ -331,7 +329,6 @@ namespace Google.Cloud.Dataproc.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Internal"/></description></item>
         /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
         /// </list>
