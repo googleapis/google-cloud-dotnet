@@ -42,7 +42,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = await VideoIntelligenceServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string inputUri = "gs://videodemomaker/cat.mp4";
+            string inputUri = "gs://cloud-samples-data/video/cat.mp4";
             IEnumerable<Feature> features = new[]
             {
                 Feature.LabelDetection,
@@ -78,7 +78,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Create client
             VideoIntelligenceServiceClient videoIntelligenceServiceClient = VideoIntelligenceServiceClient.Create();
             // Initialize request argument(s)
-            string inputUri = "gs://videodemomaker/cat.mp4";
+            string inputUri = "gs://cloud-samples-data/video/cat.mp4";
             IEnumerable<Feature> features = new[]
             {
                 Feature.LabelDetection,
@@ -116,7 +116,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Initialize request argument(s)
             AnnotateVideoRequest request = new AnnotateVideoRequest
             {
-                InputUri = "gs://videodemomaker/cat.mp4",
+                InputUri = "gs://cloud-samples-data/video/cat.mp4",
                 Features = {
                                Feature.LabelDetection,
                            },
@@ -154,7 +154,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Snippets
             // Initialize request argument(s)
             AnnotateVideoRequest request = new AnnotateVideoRequest
             {
-                InputUri = "gs://videodemomaker/cat.mp4",
+                InputUri = "gs://cloud-samples-data/video/cat.mp4",
                 Features = {
                                Feature.LabelDetection,
                            },
