@@ -37,7 +37,7 @@ namespace Google.Cloud.VideoIntelligence.V1.SmokeTests
             VideoIntelligenceServiceClient client = VideoIntelligenceServiceClient.Create();
 
             // Initialize request argument(s)
-            string inputUri = "gs://videodemomaker/cat.mp4";
+            string inputUri = "gs://cloud-samples-data/video/cat.mp4";
             IEnumerable<Feature> features = new[]
             {
                 Feature.LabelDetection,
