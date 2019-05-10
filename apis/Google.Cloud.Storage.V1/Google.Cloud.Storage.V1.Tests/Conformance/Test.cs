@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Storage.V1.Tests {
+namespace Google.Cloud.Storage.V1.Tests.Conformance {
 
   /// <summary>Holder for reflection information generated from storage/v1/test.proto</summary>
   public static partial class TestReflection {
@@ -33,13 +33,14 @@ namespace Storage.V1.Tests {
             "Ei0KCXRpbWVzdGFtcBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
             "bXASEwoLZXhwZWN0ZWRVcmwYCCABKAkSPQoHaGVhZGVycxgJIAMoCzIsLnN0",
             "b3JhZ2UudjEudGVzdHMuU2lnbmluZ1Y0VGVzdC5IZWFkZXJzRW50cnkaLgoM",
-            "SGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFi",
-            "BnByb3RvMw=="));
+            "SGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFC",
+            "LKoCKUdvb2dsZS5DbG91ZC5TdG9yYWdlLlYxLlRlc3RzLkNvbmZvcm1hbmNl",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Storage.V1.Tests.TestFile), global::Storage.V1.Tests.TestFile.Parser, new[]{ "SigningV4Tests" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Storage.V1.Tests.SigningV4Test), global::Storage.V1.Tests.SigningV4Test.Parser, new[]{ "FileName", "Description", "Bucket", "Object", "Method", "Expiration", "Timestamp", "ExpectedUrl", "Headers" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile), global::Google.Cloud.Storage.V1.Tests.Conformance.TestFile.Parser, new[]{ "SigningV4Tests" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test), global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test.Parser, new[]{ "FileName", "Description", "Bucket", "Object", "Method", "Expiration", "Timestamp", "ExpectedUrl", "Headers" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -54,7 +55,7 @@ namespace Storage.V1.Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Storage.V1.Tests.TestReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Storage.V1.Tests.Conformance.TestReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -82,11 +83,11 @@ namespace Storage.V1.Tests {
 
     /// <summary>Field number for the "signing_v4_tests" field.</summary>
     public const int SigningV4TestsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Storage.V1.Tests.SigningV4Test> _repeated_signingV4Tests_codec
-        = pb::FieldCodec.ForMessage(10, global::Storage.V1.Tests.SigningV4Test.Parser);
-    private readonly pbc::RepeatedField<global::Storage.V1.Tests.SigningV4Test> signingV4Tests_ = new pbc::RepeatedField<global::Storage.V1.Tests.SigningV4Test>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test> _repeated_signingV4Tests_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test> signingV4Tests_ = new pbc::RepeatedField<global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Storage.V1.Tests.SigningV4Test> SigningV4Tests {
+    public pbc::RepeatedField<global::Google.Cloud.Storage.V1.Tests.Conformance.SigningV4Test> SigningV4Tests {
       get { return signingV4Tests_; }
     }
 
@@ -175,7 +176,7 @@ namespace Storage.V1.Tests {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Storage.V1.Tests.TestReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Storage.V1.Tests.Conformance.TestReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
