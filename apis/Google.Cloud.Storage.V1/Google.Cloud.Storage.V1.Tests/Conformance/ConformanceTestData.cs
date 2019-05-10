@@ -31,8 +31,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
 
         internal static ReadOnlyCollection<TestFile> TestFiles { get; } = 
             Directory.GetFiles(DataPath, "*.json")
-                .Where(path => !Path.GetFileName(path)
-                .Contains("not-a-test"))
+                .Where(path => !Path.GetFileName(path).Contains("not-a-test"))
                 .Select(path => TestFile.Parser.ParseJson(File.ReadAllText(path)))
                 .ToList()
                 .AsReadOnly();
