@@ -15,7 +15,6 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
 using Google.Protobuf.Collections;
-using Storage.V1.Tests;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;

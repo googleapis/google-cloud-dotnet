@@ -14,7 +14,7 @@
 
 using Google.Api.Gax.Testing;
 using Google.Cloud.ClientTesting;
-using Storage.V1.Tests;
+using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,5 +58,10 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
             }
             Assert.Equal(test.ExpectedUrl, actualUrl);
         }
+    }
+
+    public partial class SigningV4Test : ICustomDiagnosticMessage
+    {
+        public string ToDiagnosticString() => Description;
     }
 }
