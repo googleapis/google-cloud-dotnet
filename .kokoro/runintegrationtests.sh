@@ -2,6 +2,10 @@
 
 set -e
 
+echo "Cloning submodules"
+git submodule init
+git submodule update
+
 # Script entry point
 SCRIPT=$(readlink -f "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT")
