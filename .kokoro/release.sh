@@ -2,15 +2,15 @@
 
 set -e
 
-echo "Cloning submodules"
-git submodule init
-git submodule update
-
 SCRIPT=$(readlink -f "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT")
 
 cd $SCRIPT_DIR
 cd ..
+
+echo "Cloning submodules"
+git submodule init
+git submodule update
 
 export GOOGLE_APPLICATION_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_cloud-sharp-jenkins-compute-service-account"
 export REQUESTER_PAYS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_gcloud-devel-service-account"
