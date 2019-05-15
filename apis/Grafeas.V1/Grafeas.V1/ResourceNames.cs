@@ -100,14 +100,14 @@ namespace Grafeas.V1
         public static bool TryParse(string name, bool allowUnknown, out IamResourceNameOneof result)
         {
             gax::GaxPreconditions.CheckNotNull(name, nameof(name));
-            Grafeas.V1.NoteName noteName;
-            if (Grafeas.V1.NoteName.TryParse(name, out noteName))
+            NoteName noteName;
+            if (NoteName.TryParse(name, out noteName))
             {
                 result = new IamResourceNameOneof(OneofType.NoteName, noteName);
                 return true;
             }
-            Grafeas.V1.OccurrenceName occurrenceName;
-            if (Grafeas.V1.OccurrenceName.TryParse(name, out occurrenceName))
+            OccurrenceName occurrenceName;
+            if (OccurrenceName.TryParse(name, out occurrenceName))
             {
                 result = new IamResourceNameOneof(OneofType.OccurrenceName, occurrenceName);
                 return true;
@@ -126,28 +126,28 @@ namespace Grafeas.V1
         }
 
         /// <summary>
-        /// Construct a new instance of <see cref="IamResourceNameOneof"/> from the provided <see cref="Grafeas.V1.NoteName"/>
+        /// Construct a new instance of <see cref="IamResourceNameOneof"/> from the provided <see cref="NoteName"/>
         /// </summary>
-        /// <param name="noteName">The <see cref="Grafeas.V1.NoteName"/> to be contained within
+        /// <param name="noteName">The <see cref="NoteName"/> to be contained within
         /// the returned <see cref="IamResourceNameOneof"/>. Must not be <c>null</c>.</param>
         /// <returns>A new <see cref="IamResourceNameOneof"/>, containing <paramref name="noteName"/>.</returns>
-        public static IamResourceNameOneof From(Grafeas.V1.NoteName noteName) => new IamResourceNameOneof(OneofType.NoteName, noteName);
+        public static IamResourceNameOneof From(NoteName noteName) => new IamResourceNameOneof(OneofType.NoteName, noteName);
 
         /// <summary>
-        /// Construct a new instance of <see cref="IamResourceNameOneof"/> from the provided <see cref="Grafeas.V1.OccurrenceName"/>
+        /// Construct a new instance of <see cref="IamResourceNameOneof"/> from the provided <see cref="OccurrenceName"/>
         /// </summary>
-        /// <param name="occurrenceName">The <see cref="Grafeas.V1.OccurrenceName"/> to be contained within
+        /// <param name="occurrenceName">The <see cref="OccurrenceName"/> to be contained within
         /// the returned <see cref="IamResourceNameOneof"/>. Must not be <c>null</c>.</param>
         /// <returns>A new <see cref="IamResourceNameOneof"/>, containing <paramref name="occurrenceName"/>.</returns>
-        public static IamResourceNameOneof From(Grafeas.V1.OccurrenceName occurrenceName) => new IamResourceNameOneof(OneofType.OccurrenceName, occurrenceName);
+        public static IamResourceNameOneof From(OccurrenceName occurrenceName) => new IamResourceNameOneof(OneofType.OccurrenceName, occurrenceName);
 
         private static bool IsValid(OneofType type, gax::IResourceName name)
         {
             switch (type)
             {
                 case OneofType.Unknown: return true; // Anything goes with Unknown.
-                case OneofType.NoteName: return name is Grafeas.V1.NoteName;
-                case OneofType.OccurrenceName: return name is Grafeas.V1.OccurrenceName;
+                case OneofType.NoteName: return name is NoteName;
+                case OneofType.OccurrenceName: return name is OccurrenceName;
                 default: return false;
             }
         }
@@ -186,22 +186,22 @@ namespace Grafeas.V1
         }
 
         /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="Grafeas.V1.NoteName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="NoteName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="Grafeas.V1.NoteName"/>.
+        /// contain an instance of <see cref="NoteName"/>.
         /// </remarks>
-        public Grafeas.V1.NoteName NoteName => CheckAndReturn<Grafeas.V1.NoteName>(OneofType.NoteName);
+        public NoteName NoteName => CheckAndReturn<NoteName>(OneofType.NoteName);
 
         /// <summary>
-        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="Grafeas.V1.OccurrenceName"/>.
+        /// Get the contained <see cref="gax::IResourceName"/> as <see cref="OccurrenceName"/>.
         /// </summary>
         /// <remarks>
         /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="Grafeas.V1.OccurrenceName"/>.
+        /// contain an instance of <see cref="OccurrenceName"/>.
         /// </remarks>
-        public Grafeas.V1.OccurrenceName OccurrenceName => CheckAndReturn<Grafeas.V1.OccurrenceName>(OneofType.OccurrenceName);
+        public OccurrenceName OccurrenceName => CheckAndReturn<OccurrenceName>(OneofType.OccurrenceName);
 
         /// <inheritdoc />
         public gax::ResourceNameKind Kind => gax::ResourceNameKind.Oneof;
@@ -223,6 +223,190 @@ namespace Grafeas.V1
 
         /// <inheritdoc />
         public static bool operator !=(IamResourceNameOneof a, IamResourceNameOneof b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'note' resource.
+    /// </summary>
+    public sealed partial class NoteName : gax::IResourceName, sys::IEquatable<NoteName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/notes/{note}");
+
+        /// <summary>
+        /// Parses the given note resource name in string form into a new
+        /// <see cref="NoteName"/> instance.
+        /// </summary>
+        /// <param name="noteName">The note resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="NoteName"/> if successful.</returns>
+        public static NoteName Parse(string noteName)
+        {
+            gax::GaxPreconditions.CheckNotNull(noteName, nameof(noteName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(noteName);
+            return new NoteName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given note resource name in string form into a new
+        /// <see cref="NoteName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="noteName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="noteName">The note resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="NoteName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string noteName, out NoteName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(noteName, nameof(noteName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(noteName, out resourceName))
+            {
+                result = new NoteName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="NoteName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="noteId">The note ID. Must not be <c>null</c>.</param>
+        public NoteName(string projectId, string noteId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            NoteId = gax::GaxPreconditions.CheckNotNull(noteId, nameof(noteId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The note ID. Never <c>null</c>.
+        /// </summary>
+        public string NoteId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, NoteId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as NoteName);
+
+        /// <inheritdoc />
+        public bool Equals(NoteName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(NoteName a, NoteName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(NoteName a, NoteName b) => !(a == b);
+    }
+
+    /// <summary>
+    /// Resource name for the 'occurrence' resource.
+    /// </summary>
+    public sealed partial class OccurrenceName : gax::IResourceName, sys::IEquatable<OccurrenceName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/occurrences/{occurrence}");
+
+        /// <summary>
+        /// Parses the given occurrence resource name in string form into a new
+        /// <see cref="OccurrenceName"/> instance.
+        /// </summary>
+        /// <param name="occurrenceName">The occurrence resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="OccurrenceName"/> if successful.</returns>
+        public static OccurrenceName Parse(string occurrenceName)
+        {
+            gax::GaxPreconditions.CheckNotNull(occurrenceName, nameof(occurrenceName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(occurrenceName);
+            return new OccurrenceName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given occurrence resource name in string form into a new
+        /// <see cref="OccurrenceName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="occurrenceName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="occurrenceName">The occurrence resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="OccurrenceName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string occurrenceName, out OccurrenceName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(occurrenceName, nameof(occurrenceName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(occurrenceName, out resourceName))
+            {
+                result = new OccurrenceName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="OccurrenceName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="occurrenceId">The occurrence ID. Must not be <c>null</c>.</param>
+        public OccurrenceName(string projectId, string occurrenceId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            OccurrenceId = gax::GaxPreconditions.CheckNotNull(occurrenceId, nameof(occurrenceId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The occurrence ID. Never <c>null</c>.
+        /// </summary>
+        public string OccurrenceId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, OccurrenceId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as OccurrenceName);
+
+        /// <inheritdoc />
+        public bool Equals(OccurrenceName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(OccurrenceName a, OccurrenceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(OccurrenceName a, OccurrenceName b) => !(a == b);
     }
 
 
@@ -281,11 +465,11 @@ namespace Grafeas.V1
     public partial class DeleteNoteRequest
     {
         /// <summary>
-        /// <see cref="NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NoteName NoteName
+        public Grafeas.V1.NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -294,11 +478,11 @@ namespace Grafeas.V1
     public partial class DeleteOccurrenceRequest
     {
         /// <summary>
-        /// <see cref="OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public OccurrenceName OccurrenceName
+        public Grafeas.V1.OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -307,11 +491,11 @@ namespace Grafeas.V1
     public partial class GetNoteRequest
     {
         /// <summary>
-        /// <see cref="NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NoteName NoteName
+        public Grafeas.V1.NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -320,11 +504,11 @@ namespace Grafeas.V1
     public partial class GetOccurrenceNoteRequest
     {
         /// <summary>
-        /// <see cref="OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public OccurrenceName OccurrenceName
+        public Grafeas.V1.OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -333,11 +517,11 @@ namespace Grafeas.V1
     public partial class GetOccurrenceRequest
     {
         /// <summary>
-        /// <see cref="OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public OccurrenceName OccurrenceName
+        public Grafeas.V1.OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -346,11 +530,11 @@ namespace Grafeas.V1
     public partial class ListNoteOccurrencesRequest
     {
         /// <summary>
-        /// <see cref="NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NoteName NoteName
+        public Grafeas.V1.NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -385,11 +569,11 @@ namespace Grafeas.V1
     public partial class Note
     {
         /// <summary>
-        /// <see cref="NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NoteName NoteName
+        public Grafeas.V1.NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -398,11 +582,11 @@ namespace Grafeas.V1
     public partial class Occurrence
     {
         /// <summary>
-        /// <see cref="OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public OccurrenceName OccurrenceName
+        public Grafeas.V1.OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -411,11 +595,11 @@ namespace Grafeas.V1
     public partial class UpdateNoteRequest
     {
         /// <summary>
-        /// <see cref="NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public NoteName NoteName
+        public Grafeas.V1.NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -424,11 +608,11 @@ namespace Grafeas.V1
     public partial class UpdateOccurrenceRequest
     {
         /// <summary>
-        /// <see cref="OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public OccurrenceName OccurrenceName
+        public Grafeas.V1.OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
