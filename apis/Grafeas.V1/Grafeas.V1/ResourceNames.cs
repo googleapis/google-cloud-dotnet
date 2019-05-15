@@ -199,7 +199,7 @@ namespace Grafeas.V1
         /// </summary>
         /// <remarks>
         /// An <see cref="sys::InvalidOperationException"/> will be thrown if this does not
-        /// contain an instance of <see cref="OccurrenceName"/>.
+        /// contain an instance of <see cref="global::Grafeas.V1.OccurrenceName"/>.
         /// </remarks>
         public OccurrenceName OccurrenceName => CheckAndReturn<OccurrenceName>(OneofType.OccurrenceName);
 
@@ -465,11 +465,11 @@ namespace Grafeas.V1
     public partial class DeleteNoteRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.NoteName NoteName
+        public NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -478,11 +478,11 @@ namespace Grafeas.V1
     public partial class DeleteOccurrenceRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.OccurrenceName OccurrenceName
+        public OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -491,11 +491,11 @@ namespace Grafeas.V1
     public partial class GetNoteRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.NoteName NoteName
+        public NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -504,11 +504,11 @@ namespace Grafeas.V1
     public partial class GetOccurrenceNoteRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.OccurrenceName OccurrenceName
+        public OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -517,11 +517,11 @@ namespace Grafeas.V1
     public partial class GetOccurrenceRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.OccurrenceName OccurrenceName
+        public OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -530,11 +530,11 @@ namespace Grafeas.V1
     public partial class ListNoteOccurrencesRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.NoteName NoteName
+        public NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -569,11 +569,11 @@ namespace Grafeas.V1
     public partial class Note
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.NoteName NoteName
+        public NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -582,11 +582,11 @@ namespace Grafeas.V1
     public partial class Occurrence
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.OccurrenceName OccurrenceName
+        public OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -595,11 +595,11 @@ namespace Grafeas.V1
     public partial class UpdateNoteRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.NoteName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.NoteName NoteName
+        public NoteName NoteName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.NoteName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : NoteName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
@@ -608,11 +608,11 @@ namespace Grafeas.V1
     public partial class UpdateOccurrenceRequest
     {
         /// <summary>
-        /// <see cref="Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="global::Grafeas.V1.OccurrenceName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public Grafeas.V1.OccurrenceName OccurrenceName
+        public OccurrenceName OccurrenceName
         {
-            get { return string.IsNullOrEmpty(Name) ? null : Grafeas.V1.OccurrenceName.Parse(Name); }
+            get { return string.IsNullOrEmpty(Name) ? null : OccurrenceName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
         }
 
