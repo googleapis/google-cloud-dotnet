@@ -1166,8 +1166,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -1213,8 +1214,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -1257,8 +1259,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -1304,8 +1307,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -1351,8 +1355,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -1395,8 +1400,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -1442,8 +1448,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1471,8 +1478,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1499,8 +1507,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1531,8 +1540,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="queue">
         /// Required.
@@ -1580,8 +1590,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="queue">
         /// Required.
@@ -1626,8 +1637,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="queue">
         /// Required.
@@ -1675,8 +1687,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1707,8 +1720,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1738,8 +1752,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1768,8 +1783,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1803,8 +1819,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1835,8 +1852,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1867,8 +1885,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1902,8 +1921,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1934,8 +1954,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -1966,8 +1987,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1996,8 +2018,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2025,8 +2048,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2540,7 +2564,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -2575,7 +2600,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -2607,7 +2633,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -2642,7 +2669,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -2677,7 +2705,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -2709,7 +2738,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="name">
         /// Required.
@@ -2744,7 +2774,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2774,7 +2805,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2803,7 +2835,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4108,8 +4141,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -4178,8 +4210,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -4245,8 +4276,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -4315,8 +4345,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -4385,8 +4414,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -4452,8 +4480,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="parent">
         /// Required.
@@ -4522,8 +4549,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4546,8 +4572,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -4569,8 +4594,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5474,8 +5498,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5504,8 +5529,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5537,8 +5563,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5570,8 +5597,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5601,8 +5629,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5632,8 +5661,9 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Using this method may have unintended side effects if you are
         /// using an App Engine `queue.yaml` or `queue.xml` file to manage your queues.
         /// Read
-        /// [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml)
-        /// before using this method.
+        /// [Overview of Queue Management and
+        /// queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using
+        /// this method.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5763,7 +5793,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -5794,7 +5825,8 @@ namespace Google.Cloud.Tasks.V2
         /// WARNING: Resuming many high-QPS queues at the same time can
         /// lead to target overloading. If you are resuming high-QPS
         /// queues, follow the 500/50/5 pattern described in
-        /// [Managing Cloud Tasks Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
+        /// [Managing Cloud Tasks Scaling
+        /// Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6082,8 +6114,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -6107,8 +6138,7 @@ namespace Google.Cloud.Tasks.V2
         ///
         /// Tasks cannot be updated after creation; there is no UpdateTask command.
         ///
-        /// * For [App Engine queues][google.cloud.tasks.v2.AppEngineHttpQueue], the maximum task size is
-        ///   100KB.
+        /// * The maximum task size is 100KB.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
