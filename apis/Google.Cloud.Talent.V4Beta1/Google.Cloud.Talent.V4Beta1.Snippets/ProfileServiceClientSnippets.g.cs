@@ -472,11 +472,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request
-            PagedAsyncEnumerable<SearchProfilesResponse, HistogramQueryResult> response =
+            PagedAsyncEnumerable<SearchProfilesResponse, SummarizedProfile> response =
                 profileServiceClient.SearchProfilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((HistogramQueryResult item) =>
+            await response.ForEachAsync((SummarizedProfile item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -487,7 +487,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (HistogramQueryResult item in page)
+                foreach (SummarizedProfile item in page)
                 {
                     Console.WriteLine(item);
                 }
@@ -495,10 +495,10 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<HistogramQueryResult> singlePage = await response.ReadPageAsync(pageSize);
+            Page<SummarizedProfile> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (HistogramQueryResult item in singlePage)
+            foreach (SummarizedProfile item in singlePage)
             {
                 Console.WriteLine(item);
             }
@@ -520,11 +520,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
                 RequestMetadata = new RequestMetadata(),
             };
             // Make the request
-            PagedEnumerable<SearchProfilesResponse, HistogramQueryResult> response =
+            PagedEnumerable<SearchProfilesResponse, SummarizedProfile> response =
                 profileServiceClient.SearchProfiles(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (HistogramQueryResult item in response)
+            foreach (SummarizedProfile item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -535,7 +535,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (HistogramQueryResult item in page)
+                foreach (SummarizedProfile item in page)
                 {
                     Console.WriteLine(item);
                 }
@@ -543,10 +543,10 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<HistogramQueryResult> singlePage = response.ReadPage(pageSize);
+            Page<SummarizedProfile> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (HistogramQueryResult item in singlePage)
+            foreach (SummarizedProfile item in singlePage)
             {
                 Console.WriteLine(item);
             }

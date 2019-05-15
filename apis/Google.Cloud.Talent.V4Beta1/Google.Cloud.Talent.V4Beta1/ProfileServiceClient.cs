@@ -1472,9 +1472,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="HistogramQueryResult"/> resources.
+        /// A pageable asynchronous sequence of <see cref="SummarizedProfile"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfilesAsync(
+        public virtual gax::PagedAsyncEnumerable<SearchProfilesResponse, SummarizedProfile> SearchProfilesAsync(
             SearchProfilesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1496,9 +1496,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="HistogramQueryResult"/> resources.
+        /// A pageable sequence of <see cref="SummarizedProfile"/> resources.
         /// </returns>
-        public virtual gax::PagedEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfiles(
+        public virtual gax::PagedEnumerable<SearchProfilesResponse, SummarizedProfile> SearchProfiles(
             SearchProfilesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
@@ -1811,14 +1811,14 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable asynchronous sequence of <see cref="HistogramQueryResult"/> resources.
+        /// A pageable asynchronous sequence of <see cref="SummarizedProfile"/> resources.
         /// </returns>
-        public override gax::PagedAsyncEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfilesAsync(
+        public override gax::PagedAsyncEnumerable<SearchProfilesResponse, SummarizedProfile> SearchProfilesAsync(
             SearchProfilesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchProfilesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchProfilesRequest, SearchProfilesResponse, HistogramQueryResult>(_callSearchProfiles, request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchProfilesRequest, SearchProfilesResponse, SummarizedProfile>(_callSearchProfiles, request, callSettings);
         }
 
         /// <summary>
@@ -1836,14 +1836,14 @@ namespace Google.Cloud.Talent.V4Beta1
         /// If not null, applies overrides to this RPC call.
         /// </param>
         /// <returns>
-        /// A pageable sequence of <see cref="HistogramQueryResult"/> resources.
+        /// A pageable sequence of <see cref="SummarizedProfile"/> resources.
         /// </returns>
-        public override gax::PagedEnumerable<SearchProfilesResponse, HistogramQueryResult> SearchProfiles(
+        public override gax::PagedEnumerable<SearchProfilesResponse, SummarizedProfile> SearchProfiles(
             SearchProfilesRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchProfilesRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<SearchProfilesRequest, SearchProfilesResponse, HistogramQueryResult>(_callSearchProfiles, request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchProfilesRequest, SearchProfilesResponse, SummarizedProfile>(_callSearchProfiles, request, callSettings);
         }
 
     }
@@ -1863,12 +1863,12 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     public partial class SearchProfilesRequest : gaxgrpc::IPageRequest { }
-    public partial class SearchProfilesResponse : gaxgrpc::IPageResponse<HistogramQueryResult>
+    public partial class SearchProfilesResponse : gaxgrpc::IPageResponse<SummarizedProfile>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public scg::IEnumerator<HistogramQueryResult> GetEnumerator() => HistogramQueryResults.GetEnumerator();
+        public scg::IEnumerator<SummarizedProfile> GetEnumerator() => SummarizedProfiles.GetEnumerator();
 
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
