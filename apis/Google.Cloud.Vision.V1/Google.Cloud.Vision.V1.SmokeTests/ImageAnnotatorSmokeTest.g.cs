@@ -42,9 +42,9 @@ namespace Google.Cloud.Vision.V1.SmokeTests
                     Image = new Image
                             {
                                 Source = new ImageSource
-                                         {
-                                             GcsImageUri = "gs://gapic-toolkit/President_Barack_Obama.jpg",
-                                         },
+                                {
+                                    GcsImageUri = "gs://gapic-toolkit/President_Barack_Obama.jpg",
+                                },
                             },
                     Features = {
                                    new Feature

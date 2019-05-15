@@ -90,15 +90,15 @@ namespace Google.Cloud.Speech.V1.Snippets
             RecognizeRequest request = new RecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             // Make the request
             RecognizeResponse response = await speechClient.RecognizeAsync(request);
@@ -115,15 +115,15 @@ namespace Google.Cloud.Speech.V1.Snippets
             RecognizeRequest request = new RecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             // Make the request
             RecognizeResponse response = speechClient.Recognize(request);
@@ -223,15 +223,15 @@ namespace Google.Cloud.Speech.V1.Snippets
             LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             // Make the request
             Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
@@ -267,15 +267,15 @@ namespace Google.Cloud.Speech.V1.Snippets
             LongRunningRecognizeRequest request = new LongRunningRecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             // Make the request
             Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =

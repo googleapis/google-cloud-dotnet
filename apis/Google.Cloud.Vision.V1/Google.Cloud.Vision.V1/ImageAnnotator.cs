@@ -7532,8 +7532,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int MimeTypeFieldNumber = 2;
     private string mimeType_ = "";
     /// <summary>
-    /// The type of the file. Currently only "application/pdf" and "image/tiff"
-    /// are supported. Wildcards are not supported.
+    /// The type of the file. Currently only "application/pdf", "image/tiff" and
+    /// "image/gif" are supported. Wildcards are not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MimeType {

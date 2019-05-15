@@ -182,12 +182,13 @@ namespace Google.Cloud.PubSub.V1.Snippets
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages = {
-                               new PubsubMessage
-                               {
-                                   Data = ByteString.Empty,
-                               },
-                           },
+                Messages =
+                {
+                    new PubsubMessage
+                    {
+                        Data = ByteString.Empty,
+                    },
+                },
             };
             // Make the request
             PublishResponse response = await publisherServiceApiClient.PublishAsync(request);
@@ -204,12 +205,13 @@ namespace Google.Cloud.PubSub.V1.Snippets
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages = {
-                               new PubsubMessage
-                               {
-                                   Data = ByteString.Empty,
-                               },
-                           },
+                Messages =
+                {
+                    new PubsubMessage
+                    {
+                        Data = ByteString.Empty,
+                    },
+                },
             };
             // Make the request
             PublishResponse response = publisherServiceApiClient.Publish(request);

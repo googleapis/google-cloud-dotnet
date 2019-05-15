@@ -43,15 +43,15 @@ namespace Google.Cloud.Speech.V1.Tests
             RecognizeRequest expectedRequest = new RecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             RecognizeResponse expectedResponse = new RecognizeResponse();
             mockGrpcClient.Setup(x => x.Recognize(expectedRequest, It.IsAny<CallOptions>()))
@@ -81,15 +81,15 @@ namespace Google.Cloud.Speech.V1.Tests
             RecognizeRequest expectedRequest = new RecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             RecognizeResponse expectedResponse = new RecognizeResponse();
             mockGrpcClient.Setup(x => x.RecognizeAsync(expectedRequest, It.IsAny<CallOptions>()))
@@ -119,15 +119,15 @@ namespace Google.Cloud.Speech.V1.Tests
             RecognizeRequest request = new RecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             RecognizeResponse expectedResponse = new RecognizeResponse();
             mockGrpcClient.Setup(x => x.Recognize(request, It.IsAny<CallOptions>()))
@@ -147,15 +147,15 @@ namespace Google.Cloud.Speech.V1.Tests
             RecognizeRequest request = new RecognizeRequest
             {
                 Config = new RecognitionConfig
-                         {
-                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
-                             SampleRateHertz = 44100,
-                             LanguageCode = "en-US",
-                         },
+                {
+                    Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                    SampleRateHertz = 44100,
+                    LanguageCode = "en-US",
+                },
                 Audio = new RecognitionAudio
-                        {
-                            Uri = "gs://bucket_name/file_name.flac",
-                        },
+                {
+                    Uri = "gs://bucket_name/file_name.flac",
+                },
             };
             RecognizeResponse expectedResponse = new RecognizeResponse();
             mockGrpcClient.Setup(x => x.RecognizeAsync(request, It.IsAny<CallOptions>()))

@@ -50,18 +50,18 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.SmokeTests
             {
                 Message = "[MESSAGE]",
                 ServiceContext = new ServiceContext
-                                 {
-                                     Service = "[SERVICE]",
-                                 },
+                {
+                    Service = "[SERVICE]",
+                },
                 Context = new ErrorContext
-                          {
-                              ReportLocation = new SourceLocation
-                                               {
-                                                   FilePath = "path/to/file.lang",
-                                                   LineNumber = 42,
-                                                   FunctionName = "meaningOfLife",
-                                               },
-                          },
+                {
+                    ReportLocation = new SourceLocation
+                                     {
+                                         FilePath = "path/to/file.lang",
+                                         LineNumber = 42,
+                                         FunctionName = "meaningOfLife",
+                                     },
+                },
             };
 
             // Call API method
