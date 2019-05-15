@@ -907,5 +907,15 @@
     "testDependencies": {
       "Google.Api.Gax.Testing": "2.6.0"
     }
+  },
+
+  {
+    "id": "Grafeas.V1",
+    "productName": "Grafeas API",
+    "productUrl": "https://grafeas.io/",
+    "version": "1.0.0-beta00",
+    "type": "grpc",
+    "description": "Recommended client library to access Grafeas, an open artifact metadata API to audit and govern your software supply chain.",
+    "tags": [ "audit", "metadata", "artifact"  ],
   }
 ]
