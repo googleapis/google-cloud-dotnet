@@ -35,7 +35,7 @@ while (( "$#" )); do
     runtests=false
   elif [[ "$1" == "--diff" ]]
   then
-    apis+=($(git diff master --name-only | grep apis/Google | cut -d/ -f 2 | uniq))
+    apis+=($(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
   elif [[ "$1" == "--regex" ]]
   then
     shift
