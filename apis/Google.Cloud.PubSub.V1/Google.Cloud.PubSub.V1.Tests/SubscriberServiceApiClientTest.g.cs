@@ -269,15 +269,15 @@ namespace Google.Cloud.PubSub.V1.Tests
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
                 Subscription = new Subscription
-                               {
-                                   AckDeadlineSeconds = 42,
-                               },
+                {
+                    AckDeadlineSeconds = 42,
+                },
                 UpdateMask = new FieldMask
-                             {
-                                 Paths = {
-                                             "ack_deadline_seconds",
-                                         },
-                             },
+                {
+                    Paths = {
+                                "ack_deadline_seconds",
+                            },
+                },
             };
             Subscription expectedResponse = new Subscription
             {
@@ -304,15 +304,15 @@ namespace Google.Cloud.PubSub.V1.Tests
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
                 Subscription = new Subscription
-                               {
-                                   AckDeadlineSeconds = 42,
-                               },
+                {
+                    AckDeadlineSeconds = 42,
+                },
                 UpdateMask = new FieldMask
-                             {
-                                 Paths = {
-                                             "ack_deadline_seconds",
-                                         },
-                             },
+                {
+                    Paths = {
+                                "ack_deadline_seconds",
+                            },
+                },
             };
             Subscription expectedResponse = new Subscription
             {
@@ -847,18 +847,18 @@ namespace Google.Cloud.PubSub.V1.Tests
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
                 Snapshot = new Snapshot
-                           {
-                               ExpireTime = new Timestamp
-                                            {
-                                                Seconds = 123456L,
-                                            },
-                           },
+                {
+                    ExpireTime = new Timestamp
+                                 {
+                                     Seconds = 123456L,
+                                 },
+                },
                 UpdateMask = new FieldMask
-                             {
-                                 Paths = {
-                                             "expire_time",
-                                         },
-                             },
+                {
+                    Paths = {
+                                "expire_time",
+                            },
+                },
             };
             Snapshot expectedResponse = new Snapshot
             {
@@ -882,18 +882,18 @@ namespace Google.Cloud.PubSub.V1.Tests
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
                 Snapshot = new Snapshot
-                           {
-                               ExpireTime = new Timestamp
-                                            {
-                                                Seconds = 123456L,
-                                            },
-                           },
+                {
+                    ExpireTime = new Timestamp
+                                 {
+                                     Seconds = 123456L,
+                                 },
+                },
                 UpdateMask = new FieldMask
-                             {
-                                 Paths = {
-                                             "expire_time",
-                                         },
-                             },
+                {
+                    Paths = {
+                                "expire_time",
+                            },
+                },
             };
             Snapshot expectedResponse = new Snapshot
             {

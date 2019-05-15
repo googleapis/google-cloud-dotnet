@@ -186,18 +186,20 @@ namespace Google.Cloud.PubSub.V1.Tests
             PublishRequest expectedRequest = new PublishRequest
             {
                 TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages = {
-                               new PubsubMessage
-                               {
-                                   Data = ByteString.CopyFromUtf8("-86"),
-                               },
-                           },
+                Messages =
+                {
+                    new PubsubMessage
+                    {
+                        Data = ByteString.CopyFromUtf8("-86"),
+                    },
+                },
             };
             PublishResponse expectedResponse = new PublishResponse
             {
-                MessageIds = {
-                                 "messageIdsElement-744837059",
-                             },
+                MessageIds =
+                {
+                    "messageIdsElement-744837059",
+                },
             };
             mockGrpcClient.Setup(x => x.Publish(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -224,18 +226,20 @@ namespace Google.Cloud.PubSub.V1.Tests
             PublishRequest expectedRequest = new PublishRequest
             {
                 TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages = {
-                               new PubsubMessage
-                               {
-                                   Data = ByteString.CopyFromUtf8("-86"),
-                               },
-                           },
+                Messages =
+                {
+                    new PubsubMessage
+                    {
+                        Data = ByteString.CopyFromUtf8("-86"),
+                    },
+                },
             };
             PublishResponse expectedResponse = new PublishResponse
             {
-                MessageIds = {
-                                 "messageIdsElement-744837059",
-                             },
+                MessageIds =
+                {
+                    "messageIdsElement-744837059",
+                },
             };
             mockGrpcClient.Setup(x => x.PublishAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<PublishResponse>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -262,18 +266,20 @@ namespace Google.Cloud.PubSub.V1.Tests
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages = {
-                               new PubsubMessage
-                               {
-                                   Data = ByteString.CopyFromUtf8("-86"),
-                               },
-                           },
+                Messages =
+                {
+                    new PubsubMessage
+                    {
+                        Data = ByteString.CopyFromUtf8("-86"),
+                    },
+                },
             };
             PublishResponse expectedResponse = new PublishResponse
             {
-                MessageIds = {
-                                 "messageIdsElement-744837059",
-                             },
+                MessageIds =
+                {
+                    "messageIdsElement-744837059",
+                },
             };
             mockGrpcClient.Setup(x => x.Publish(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -292,18 +298,20 @@ namespace Google.Cloud.PubSub.V1.Tests
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
-                Messages = {
-                               new PubsubMessage
-                               {
-                                   Data = ByteString.CopyFromUtf8("-86"),
-                               },
-                           },
+                Messages =
+                {
+                    new PubsubMessage
+                    {
+                        Data = ByteString.CopyFromUtf8("-86"),
+                    },
+                },
             };
             PublishResponse expectedResponse = new PublishResponse
             {
-                MessageIds = {
-                                 "messageIdsElement-744837059",
-                             },
+                MessageIds =
+                {
+                    "messageIdsElement-744837059",
+                },
             };
             mockGrpcClient.Setup(x => x.PublishAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<PublishResponse>(Task.FromResult(expectedResponse), null, null, null, null));

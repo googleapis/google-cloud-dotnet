@@ -365,10 +365,10 @@ namespace Google.Cloud.Redis.V1.Snippets
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 InstanceId = "test_instance",
                 Instance = new Instance
-                           {
-                               Tier = Instance.Types.Tier.Basic,
-                               MemorySizeGb = 1,
-                           },
+                {
+                    Tier = Instance.Types.Tier.Basic,
+                    MemorySizeGb = 1,
+                },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response =
@@ -406,10 +406,10 @@ namespace Google.Cloud.Redis.V1.Snippets
                 ParentAsLocationName = new LocationName("[PROJECT]", "[LOCATION]"),
                 InstanceId = "test_instance",
                 Instance = new Instance
-                           {
-                               Tier = Instance.Types.Tier.Basic,
-                               MemorySizeGb = 1,
-                           },
+                {
+                    Tier = Instance.Types.Tier.Basic,
+                    MemorySizeGb = 1,
+                },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response =
@@ -445,10 +445,11 @@ namespace Google.Cloud.Redis.V1.Snippets
             // Initialize request argument(s)
             FieldMask updateMask = new FieldMask
             {
-                Paths = {
-                            "display_name",
-                            "memory_size_gb",
-                        },
+                Paths =
+                {
+                    "display_name",
+                    "memory_size_gb",
+                },
             };
             Instance instance = new Instance
             {
@@ -488,10 +489,11 @@ namespace Google.Cloud.Redis.V1.Snippets
             // Initialize request argument(s)
             FieldMask updateMask = new FieldMask
             {
-                Paths = {
-                            "display_name",
-                            "memory_size_gb",
-                        },
+                Paths =
+                {
+                    "display_name",
+                    "memory_size_gb",
+                },
             };
             Instance instance = new Instance
             {
@@ -532,17 +534,17 @@ namespace Google.Cloud.Redis.V1.Snippets
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
                 UpdateMask = new FieldMask
-                             {
-                                 Paths = {
-                                             "display_name",
-                                             "memory_size_gb",
-                                         },
-                             },
+                {
+                    Paths = {
+                                "display_name",
+                                "memory_size_gb",
+                            },
+                },
                 Instance = new Instance
-                           {
-                               DisplayName = "UpdatedDisplayName",
-                               MemorySizeGb = 4,
-                           },
+                {
+                    DisplayName = "UpdatedDisplayName",
+                    MemorySizeGb = 4,
+                },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response =
@@ -578,17 +580,17 @@ namespace Google.Cloud.Redis.V1.Snippets
             UpdateInstanceRequest request = new UpdateInstanceRequest
             {
                 UpdateMask = new FieldMask
-                             {
-                                 Paths = {
-                                             "display_name",
-                                             "memory_size_gb",
-                                         },
-                             },
+                {
+                    Paths = {
+                                "display_name",
+                                "memory_size_gb",
+                            },
+                },
                 Instance = new Instance
-                           {
-                               DisplayName = "UpdatedDisplayName",
-                               MemorySizeGb = 4,
-                           },
+                {
+                    DisplayName = "UpdatedDisplayName",
+                    MemorySizeGb = 4,
+                },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response =

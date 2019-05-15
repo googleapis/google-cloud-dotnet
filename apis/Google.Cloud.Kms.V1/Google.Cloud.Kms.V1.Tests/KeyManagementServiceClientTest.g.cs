@@ -418,17 +418,17 @@ namespace Google.Cloud.Kms.V1.Tests
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "my-app-key",
                 CryptoKey = new CryptoKey
-                            {
-                                Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
-                                NextRotationTime = new Timestamp
-                                                   {
-                                                       Seconds = 2147483647L,
-                                                   },
-                                RotationPeriod = new Duration
-                                                 {
-                                                     Seconds = 604800L,
-                                                 },
-                            },
+                {
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
+                    NextRotationTime = new Timestamp
+                                       {
+                                           Seconds = 2147483647L,
+                                       },
+                    RotationPeriod = new Duration
+                                     {
+                                         Seconds = 604800L,
+                                     },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
@@ -443,13 +443,13 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
                 NextRotationTime = new Timestamp
-                                   {
-                                       Seconds = 2147483647L,
-                                   },
+                {
+                    Seconds = 2147483647L,
+                },
                 RotationPeriod = new Duration
-                                 {
-                                     Seconds = 604800L,
-                                 },
+                {
+                    Seconds = 604800L,
+                },
             };
             CryptoKey response = client.CreateCryptoKey(parent, cryptoKeyId, cryptoKey);
             Assert.Same(expectedResponse, response);
@@ -467,17 +467,17 @@ namespace Google.Cloud.Kms.V1.Tests
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "my-app-key",
                 CryptoKey = new CryptoKey
-                            {
-                                Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
-                                NextRotationTime = new Timestamp
-                                                   {
-                                                       Seconds = 2147483647L,
-                                                   },
-                                RotationPeriod = new Duration
-                                                 {
-                                                     Seconds = 604800L,
-                                                 },
-                            },
+                {
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
+                    NextRotationTime = new Timestamp
+                                       {
+                                           Seconds = 2147483647L,
+                                       },
+                    RotationPeriod = new Duration
+                                     {
+                                         Seconds = 604800L,
+                                     },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
@@ -492,13 +492,13 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
                 NextRotationTime = new Timestamp
-                                   {
-                                       Seconds = 2147483647L,
-                                   },
+                {
+                    Seconds = 2147483647L,
+                },
                 RotationPeriod = new Duration
-                                 {
-                                     Seconds = 604800L,
-                                 },
+                {
+                    Seconds = 604800L,
+                },
             };
             CryptoKey response = await client.CreateCryptoKeyAsync(parent, cryptoKeyId, cryptoKey);
             Assert.Same(expectedResponse, response);
@@ -516,17 +516,17 @@ namespace Google.Cloud.Kms.V1.Tests
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "my-app-key",
                 CryptoKey = new CryptoKey
-                            {
-                                Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
-                                NextRotationTime = new Timestamp
-                                                   {
-                                                       Seconds = 2147483647L,
-                                                   },
-                                RotationPeriod = new Duration
-                                                 {
-                                                     Seconds = 604800L,
-                                                 },
-                            },
+                {
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
+                    NextRotationTime = new Timestamp
+                                       {
+                                           Seconds = 2147483647L,
+                                       },
+                    RotationPeriod = new Duration
+                                     {
+                                         Seconds = 604800L,
+                                     },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {
@@ -551,17 +551,17 @@ namespace Google.Cloud.Kms.V1.Tests
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "my-app-key",
                 CryptoKey = new CryptoKey
-                            {
-                                Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
-                                NextRotationTime = new Timestamp
-                                                   {
-                                                       Seconds = 2147483647L,
-                                                   },
-                                RotationPeriod = new Duration
-                                                 {
-                                                     Seconds = 604800L,
-                                                 },
-                            },
+                {
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
+                    NextRotationTime = new Timestamp
+                                       {
+                                           Seconds = 2147483647L,
+                                       },
+                    RotationPeriod = new Duration
+                                     {
+                                         Seconds = 604800L,
+                                     },
+                },
             };
             CryptoKey expectedResponse = new CryptoKey
             {

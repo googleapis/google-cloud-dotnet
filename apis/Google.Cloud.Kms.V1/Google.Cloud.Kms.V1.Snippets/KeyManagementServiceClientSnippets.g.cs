@@ -842,13 +842,13 @@ namespace Google.Cloud.Kms.V1.Snippets
             {
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
                 NextRotationTime = new Timestamp
-                                   {
-                                       Seconds = 2147483647L,
-                                   },
+                {
+                    Seconds = 2147483647L,
+                },
                 RotationPeriod = new Duration
-                                 {
-                                     Seconds = 604800L,
-                                 },
+                {
+                    Seconds = 604800L,
+                },
             };
             // Make the request
             CryptoKey response = await keyManagementServiceClient.CreateCryptoKeyAsync(parent, cryptoKeyId, cryptoKey);
@@ -868,13 +868,13 @@ namespace Google.Cloud.Kms.V1.Snippets
             {
                 Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
                 NextRotationTime = new Timestamp
-                                   {
-                                       Seconds = 2147483647L,
-                                   },
+                {
+                    Seconds = 2147483647L,
+                },
                 RotationPeriod = new Duration
-                                 {
-                                     Seconds = 604800L,
-                                 },
+                {
+                    Seconds = 604800L,
+                },
             };
             // Make the request
             CryptoKey response = keyManagementServiceClient.CreateCryptoKey(parent, cryptoKeyId, cryptoKey);
@@ -894,17 +894,17 @@ namespace Google.Cloud.Kms.V1.Snippets
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "my-app-key",
                 CryptoKey = new CryptoKey
-                            {
-                                Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
-                                NextRotationTime = new Timestamp
-                                                   {
-                                                       Seconds = 2147483647L,
-                                                   },
-                                RotationPeriod = new Duration
-                                                 {
-                                                     Seconds = 604800L,
-                                                 },
-                            },
+                {
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
+                    NextRotationTime = new Timestamp
+                                       {
+                                           Seconds = 2147483647L,
+                                       },
+                    RotationPeriod = new Duration
+                                     {
+                                         Seconds = 604800L,
+                                     },
+                },
             };
             // Make the request
             CryptoKey response = await keyManagementServiceClient.CreateCryptoKeyAsync(request);
@@ -923,17 +923,17 @@ namespace Google.Cloud.Kms.V1.Snippets
                 ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
                 CryptoKeyId = "my-app-key",
                 CryptoKey = new CryptoKey
-                            {
-                                Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
-                                NextRotationTime = new Timestamp
-                                                   {
-                                                       Seconds = 2147483647L,
-                                                   },
-                                RotationPeriod = new Duration
-                                                 {
-                                                     Seconds = 604800L,
-                                                 },
-                            },
+                {
+                    Purpose = CryptoKey.Types.CryptoKeyPurpose.EncryptDecrypt,
+                    NextRotationTime = new Timestamp
+                                       {
+                                           Seconds = 2147483647L,
+                                       },
+                    RotationPeriod = new Duration
+                                     {
+                                         Seconds = 604800L,
+                                     },
+                },
             };
             // Make the request
             CryptoKey response = keyManagementServiceClient.CreateCryptoKey(request);
