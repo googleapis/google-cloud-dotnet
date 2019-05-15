@@ -26,11 +26,11 @@ namespace Google.Cloud.Tasks.V2 {
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvdGFza3MvdjIvY2xvdWR0YXNrcy5wcm90bxIVZ29v",
             "Z2xlLmNsb3VkLnRhc2tzLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
-            "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhtnb29nbGUvcHJvdG9i",
-            "dWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnBy",
-            "b3RvGiBnb29nbGUvY2xvdWQvdGFza3MvdjIvdGFzay5wcm90bxohZ29vZ2xl",
-            "L2Nsb3VkL3Rhc2tzL3YyL3F1ZXVlLnByb3RvGh5nb29nbGUvaWFtL3YxL2lh",
-            "bV9wb2xpY3kucHJvdG8aGmdvb2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGhVn",
+            "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUvY2xvdWQv",
+            "dGFza3MvdjIvcXVldWUucHJvdG8aIGdvb2dsZS9jbG91ZC90YXNrcy92Mi90",
+            "YXNrLnByb3RvGh5nb29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8aGmdv",
+            "b2dsZS9pYW0vdjEvcG9saWN5LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1w",
+            "dHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhVn",
             "b29nbGUvcnBjL2NvZGUucHJvdG8iWgoRTGlzdFF1ZXVlc1JlcXVlc3QSDgoG",
             "cGFyZW50GAEgASgJEg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyAB",
             "KAUSEgoKcGFnZV90b2tlbhgEIAEoCSJbChJMaXN0UXVldWVzUmVzcG9uc2US",
@@ -114,7 +114,7 @@ namespace Google.Cloud.Tasks.V2 {
             "b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
             "b3VkL3Rhc2tzL3YyO3Rhc2tzogIFVEFTS1NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Cloud.Tasks.V2.TaskReflection.Descriptor, global::Google.Cloud.Tasks.V2.QueueReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2.QueueReflection.Descriptor, global::Google.Cloud.Tasks.V2.TaskReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.ListQueuesRequest), global::Google.Cloud.Tasks.V2.ListQueuesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2.ListQueuesResponse), global::Google.Cloud.Tasks.V2.ListQueuesResponse.Parser, new[]{ "Queues", "NextPageToken" }, null, null, null),
@@ -202,7 +202,8 @@ namespace Google.Cloud.Tasks.V2 {
     /// field can be used as a filter and several operators as supported.
     /// For example: `&lt;=, &lt;, >=, >, !=, =, :`. The filter syntax is the same as
     /// described in
-    /// [Stackdriver's Advanced Logs Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
+    /// [Stackdriver's Advanced Logs
+    /// Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
     ///
     /// Sample filter "state: PAUSED".
     ///
@@ -1703,13 +1704,14 @@ namespace Google.Cloud.Tasks.V2 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Requested page size. Fewer tasks than requested might be returned.
+    /// Maximum page size.
     ///
-    /// The maximum page size is 1000. If unspecified, the page size will
-    /// be the maximum. Fewer tasks than requested might be returned,
-    /// even if more tasks exist; use
-    /// [next_page_token][google.cloud.tasks.v2.ListTasksResponse.next_page_token] in the
-    /// response to determine if more tasks exist.
+    /// Fewer tasks than requested might be returned, even if more tasks exist; use
+    /// [next_page_token][google.cloud.tasks.v2.ListTasksResponse.next_page_token] in the response to
+    /// determine if more tasks exist.
+    ///
+    /// The maximum page size is 1000. If unspecified, the page size will be the
+    /// maximum.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
