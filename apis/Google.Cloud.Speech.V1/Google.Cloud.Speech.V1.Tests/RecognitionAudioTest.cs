@@ -18,14 +18,14 @@ using System.IO;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Vision.V1.Tests
+namespace Google.Cloud.Speech.V1.Tests
 {
     public class RecognitionAudioTest
     {
         // The tests which use a URI don't actually care that we're loading an image instead of an audio file.
         // If we could find a nice stable URL with an audio file, that would be good...
         private const string IconUri = "https://cloud.google.com/images/devtools-icon-64x64.png";
-        private const int IconContentSize = 1776;
+        private const int IconContentSize = 1665;
 
         [Fact]
         public void FromFile()
