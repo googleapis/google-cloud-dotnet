@@ -22,7 +22,7 @@ namespace Google.Cloud.Vision.V1.Tests
     {
         // Very unlikely this icon will change...
         private const string IconUri = "https://cloud.google.com/images/devtools-icon-64x64.png";
-        private const int IconContentSize = 1776;
+        private const int IconContentSize = 1665;
 
         [Fact]
         public void FromUri_String()
