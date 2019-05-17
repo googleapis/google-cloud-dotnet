@@ -39,7 +39,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: GetOccurrenceAsync(OccurrenceName,CallSettings)
             // Additional: GetOccurrenceAsync(OccurrenceName,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -52,7 +52,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: GetOccurrence(OccurrenceName,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -66,7 +66,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: GetOccurrenceAsync(GetOccurrenceRequest,CallSettings)
             // Additional: GetOccurrenceAsync(GetOccurrenceRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             GetOccurrenceRequest request = new GetOccurrenceRequest
             {
@@ -82,7 +82,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: GetOccurrence(GetOccurrenceRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             GetOccurrenceRequest request = new GetOccurrenceRequest
             {
@@ -98,7 +98,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListOccurrencesAsync(ProjectName,string,string,int?,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
@@ -143,7 +143,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListOccurrences(ProjectName,string,string,int?,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
@@ -188,7 +188,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListOccurrencesAsync(ListOccurrencesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ListOccurrencesRequest request = new ListOccurrencesRequest
             {
@@ -235,7 +235,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListOccurrences(ListOccurrencesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ListOccurrencesRequest request = new ListOccurrencesRequest
             {
@@ -283,7 +283,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: DeleteOccurrenceAsync(OccurrenceName,CallSettings)
             // Additional: DeleteOccurrenceAsync(OccurrenceName,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -296,7 +296,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: DeleteOccurrence(OccurrenceName,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -310,7 +310,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: DeleteOccurrenceAsync(DeleteOccurrenceRequest,CallSettings)
             // Additional: DeleteOccurrenceAsync(DeleteOccurrenceRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
             {
@@ -326,7 +326,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: DeleteOccurrence(DeleteOccurrenceRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
             {
@@ -343,7 +343,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: CreateOccurrenceAsync(ProjectName,Occurrence,CallSettings)
             // Additional: CreateOccurrenceAsync(ProjectName,Occurrence,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             Occurrence occurrence = new Occurrence();
@@ -357,7 +357,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: CreateOccurrence(ProjectName,Occurrence,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             Occurrence occurrence = new Occurrence();
@@ -372,7 +372,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: CreateOccurrenceAsync(CreateOccurrenceRequest,CallSettings)
             // Additional: CreateOccurrenceAsync(CreateOccurrenceRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
@@ -389,7 +389,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: CreateOccurrence(CreateOccurrenceRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
@@ -407,7 +407,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: BatchCreateOccurrencesAsync(ProjectName,IEnumerable<Occurrence>,CallSettings)
             // Additional: BatchCreateOccurrencesAsync(ProjectName,IEnumerable<Occurrence>,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             IEnumerable<Occurrence> occurrences = new List<Occurrence>();
@@ -421,7 +421,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: BatchCreateOccurrences(ProjectName,IEnumerable<Occurrence>,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             IEnumerable<Occurrence> occurrences = new List<Occurrence>();
@@ -436,7 +436,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: BatchCreateOccurrencesAsync(BatchCreateOccurrencesRequest,CallSettings)
             // Additional: BatchCreateOccurrencesAsync(BatchCreateOccurrencesRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
@@ -453,7 +453,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: BatchCreateOccurrences(BatchCreateOccurrencesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
@@ -471,7 +471,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: UpdateOccurrenceAsync(OccurrenceName,Occurrence,FieldMask,CallSettings)
             // Additional: UpdateOccurrenceAsync(OccurrenceName,Occurrence,FieldMask,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             Occurrence occurrence = new Occurrence();
@@ -486,7 +486,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: UpdateOccurrence(OccurrenceName,Occurrence,FieldMask,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             Occurrence occurrence = new Occurrence();
@@ -502,7 +502,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: UpdateOccurrenceAsync(UpdateOccurrenceRequest,CallSettings)
             // Additional: UpdateOccurrenceAsync(UpdateOccurrenceRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
             {
@@ -519,7 +519,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: UpdateOccurrence(UpdateOccurrenceRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
             {
@@ -537,7 +537,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: GetOccurrenceNoteAsync(OccurrenceName,CallSettings)
             // Additional: GetOccurrenceNoteAsync(OccurrenceName,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -550,7 +550,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: GetOccurrenceNote(OccurrenceName,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             OccurrenceName name = new OccurrenceName("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -564,7 +564,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: GetOccurrenceNoteAsync(GetOccurrenceNoteRequest,CallSettings)
             // Additional: GetOccurrenceNoteAsync(GetOccurrenceNoteRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
             {
@@ -580,7 +580,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: GetOccurrenceNote(GetOccurrenceNoteRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
             {
@@ -597,7 +597,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: GetNoteAsync(NoteName,CallSettings)
             // Additional: GetNoteAsync(NoteName,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             // Make the request
@@ -610,7 +610,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: GetNote(NoteName,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             // Make the request
@@ -624,7 +624,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: GetNoteAsync(GetNoteRequest,CallSettings)
             // Additional: GetNoteAsync(GetNoteRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             GetNoteRequest request = new GetNoteRequest
             {
@@ -640,7 +640,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: GetNote(GetNoteRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             GetNoteRequest request = new GetNoteRequest
             {
@@ -656,7 +656,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNotesAsync(ProjectName,string,string,int?,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
@@ -701,7 +701,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNotes(ProjectName,string,string,int?,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             string filter = "";
@@ -746,7 +746,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNotesAsync(ListNotesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ListNotesRequest request = new ListNotesRequest
             {
@@ -793,7 +793,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNotes(ListNotesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ListNotesRequest request = new ListNotesRequest
             {
@@ -841,7 +841,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: DeleteNoteAsync(NoteName,CallSettings)
             // Additional: DeleteNoteAsync(NoteName,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             // Make the request
@@ -854,7 +854,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: DeleteNote(NoteName,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             // Make the request
@@ -868,7 +868,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: DeleteNoteAsync(DeleteNoteRequest,CallSettings)
             // Additional: DeleteNoteAsync(DeleteNoteRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             DeleteNoteRequest request = new DeleteNoteRequest
             {
@@ -884,7 +884,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: DeleteNote(DeleteNoteRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             DeleteNoteRequest request = new DeleteNoteRequest
             {
@@ -901,7 +901,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: CreateNoteAsync(ProjectName,string,Note,CallSettings)
             // Additional: CreateNoteAsync(ProjectName,string,Note,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             string noteId = "";
@@ -916,7 +916,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: CreateNote(ProjectName,string,Note,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             string noteId = "";
@@ -932,7 +932,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: CreateNoteAsync(CreateNoteRequest,CallSettings)
             // Additional: CreateNoteAsync(CreateNoteRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             CreateNoteRequest request = new CreateNoteRequest
             {
@@ -950,7 +950,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: CreateNote(CreateNoteRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             CreateNoteRequest request = new CreateNoteRequest
             {
@@ -969,7 +969,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: BatchCreateNotesAsync(ProjectName,IDictionary<string, Note>,CallSettings)
             // Additional: BatchCreateNotesAsync(ProjectName,IDictionary<string, Note>,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note>();
@@ -983,7 +983,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: BatchCreateNotes(ProjectName,IDictionary<string, Note>,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ProjectName parent = new ProjectName("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note>();
@@ -998,7 +998,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: BatchCreateNotesAsync(BatchCreateNotesRequest,CallSettings)
             // Additional: BatchCreateNotesAsync(BatchCreateNotesRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
@@ -1015,7 +1015,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: BatchCreateNotes(BatchCreateNotesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
@@ -1033,7 +1033,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: UpdateNoteAsync(NoteName,Note,FieldMask,CallSettings)
             // Additional: UpdateNoteAsync(NoteName,Note,FieldMask,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             Note note = new Note();
@@ -1048,7 +1048,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: UpdateNote(NoteName,Note,FieldMask,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             Note note = new Note();
@@ -1064,7 +1064,7 @@ namespace Grafeas.V1.Snippets
             // Snippet: UpdateNoteAsync(UpdateNoteRequest,CallSettings)
             // Additional: UpdateNoteAsync(UpdateNoteRequest,CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             UpdateNoteRequest request = new UpdateNoteRequest
             {
@@ -1081,7 +1081,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: UpdateNote(UpdateNoteRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             UpdateNoteRequest request = new UpdateNoteRequest
             {
@@ -1098,7 +1098,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNoteOccurrencesAsync(NoteName,string,string,int?,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             string filter = "";
@@ -1143,7 +1143,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNoteOccurrences(NoteName,string,string,int?,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             NoteName name = new NoteName("[PROJECT]", "[NOTE]");
             string filter = "";
@@ -1188,7 +1188,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNoteOccurrencesAsync(ListNoteOccurrencesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
+            GrafeasClient grafeasClient = await CreateGrafeasClientAsync();
             // Initialize request argument(s)
             ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
@@ -1235,7 +1235,7 @@ namespace Grafeas.V1.Snippets
         {
             // Snippet: ListNoteOccurrences(ListNoteOccurrencesRequest,CallSettings)
             // Create client
-            GrafeasClient grafeasClient = GrafeasClient.Create();
+            GrafeasClient grafeasClient = CreateGrafeasClient();
             // Initialize request argument(s)
             ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
@@ -1277,5 +1277,8 @@ namespace Grafeas.V1.Snippets
             // End snippet
         }
 
+        // We never run the code...
+        private static GrafeasClient CreateGrafeasClient() => null;
+        private static Task<GrafeasClient> CreateGrafeasClientAsync() => null;
     }
 }
