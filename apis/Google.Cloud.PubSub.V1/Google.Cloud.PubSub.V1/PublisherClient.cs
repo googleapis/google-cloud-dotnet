@@ -514,25 +514,26 @@ namespace Google.Cloud.PubSub.V1
             // Pre-condition: Must be locked
             if (_batchDelayThreshold is TimeSpan batchDelayThreshold)
             {
-                // read cancellation token here, in case the current batch changes before the task below starts.
-                var timerCancellation =
-                    CancellationTokenSource.CreateLinkedTokenSource(_currentBatch.TimerCts.Token, _hardStopCts.Token);
+                // Read cancellation token here, in case the current batch changes before the task below starts.
+                var currentBatchToken = _currentBatch.TimerCts.Token;
                 // Ignore result of this Task. If it's cancelled, it's because the batch has already been sent.
                 _taskHelper.Run(async () =>
                 {
-                    await _taskHelper.ConfigureAwait(_scheduler.Delay(batchDelayThreshold, timerCancellation.Token));
-                    // If batch has already moved to queue, timerToken will have been cancelled.
-                    lock (_lock)
+                    using (var timerCancellation = CancellationTokenSource.CreateLinkedTokenSource(currentBatchToken, _hardStopCts.Token))
                     {
-                        // Check for cancellation inside lock to avoid race-condition.
-                        if (!timerCancellation.IsCancellationRequested)
+                        await _taskHelper.ConfigureAwaitHideCancellation(() => _scheduler.Delay(batchDelayThreshold, timerCancellation.Token));
+                        // If batch has already moved to queue, timerToken will have been cancelled.
+                        lock (_lock)
                         {
-                            // Force queuing of the current batch, whatever the size.
-                            // There will always be at least one message in the batch.
-                            QueueCurrentBatch();
+                            // Check for cancellation inside lock to avoid race-condition.
+                            if (!timerCancellation.IsCancellationRequested)
+                            {
+                                // Force queuing of the current batch, whatever the size.
+                                // There will always be at least one message in the batch.
+                                QueueCurrentBatch();
+                            }
                         }
                     }
-                    timerCancellation.Dispose();
                 });
             }
         }
