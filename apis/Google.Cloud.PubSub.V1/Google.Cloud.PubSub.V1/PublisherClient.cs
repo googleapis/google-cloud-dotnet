@@ -514,7 +514,7 @@ namespace Google.Cloud.PubSub.V1
             // Pre-condition: Must be locked
             if (_batchDelayThreshold is TimeSpan batchDelayThreshold)
             {
-                // read cancellation token here, in case the current batch changes before the task below starts.
+                // Read cancellation token here, in case the current batch changes before the task below starts.
                 var currentBatchToken = _currentBatch.TimerCts.Token;
                 // Ignore result of this Task. If it's cancelled, it's because the batch has already been sent.
                 _taskHelper.Run(async () =>
