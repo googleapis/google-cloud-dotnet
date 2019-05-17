@@ -16,7 +16,6 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gaxres = Google.Api.Gax.ResourceNames;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -915,7 +914,7 @@ namespace Grafeas.V1
         /// A pageable asynchronous sequence of <see cref="Occurrence"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrencesAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
@@ -954,7 +953,7 @@ namespace Grafeas.V1
         /// A pageable sequence of <see cref="Occurrence"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrences(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
@@ -1292,7 +1291,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Occurrence> CreateOccurrenceAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             Occurrence occurrence,
             gaxgrpc::CallSettings callSettings = null) => CreateOccurrenceAsync(
                 new CreateOccurrenceRequest
@@ -1319,7 +1318,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Occurrence> CreateOccurrenceAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             Occurrence occurrence,
             st::CancellationToken cancellationToken) => CreateOccurrenceAsync(
                 parent,
@@ -1343,7 +1342,7 @@ namespace Grafeas.V1
         /// The RPC response.
         /// </returns>
         public virtual Occurrence CreateOccurrence(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             Occurrence occurrence,
             gaxgrpc::CallSettings callSettings = null) => CreateOccurrence(
                 new CreateOccurrenceRequest
@@ -1504,7 +1503,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<BatchCreateOccurrencesResponse> BatchCreateOccurrencesAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             scg::IEnumerable<Occurrence> occurrences,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateOccurrencesAsync(
                 new BatchCreateOccurrencesRequest
@@ -1531,7 +1530,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<BatchCreateOccurrencesResponse> BatchCreateOccurrencesAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             scg::IEnumerable<Occurrence> occurrences,
             st::CancellationToken cancellationToken) => BatchCreateOccurrencesAsync(
                 parent,
@@ -1555,7 +1554,7 @@ namespace Grafeas.V1
         /// The RPC response.
         /// </returns>
         public virtual BatchCreateOccurrencesResponse BatchCreateOccurrences(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             scg::IEnumerable<Occurrence> occurrences,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateOccurrences(
                 new BatchCreateOccurrencesRequest
@@ -2339,7 +2338,7 @@ namespace Grafeas.V1
         /// A pageable asynchronous sequence of <see cref="Note"/> resources.
         /// </returns>
         public virtual gax::PagedAsyncEnumerable<ListNotesResponse, Note> ListNotesAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
@@ -2378,7 +2377,7 @@ namespace Grafeas.V1
         /// A pageable sequence of <see cref="Note"/> resources.
         /// </returns>
         public virtual gax::PagedEnumerable<ListNotesResponse, Note> ListNotes(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string filter,
             string pageToken = null,
             int? pageSize = null,
@@ -2701,7 +2700,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Note> CreateNoteAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string noteId,
             Note note,
             gaxgrpc::CallSettings callSettings = null) => CreateNoteAsync(
@@ -2733,7 +2732,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<Note> CreateNoteAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string noteId,
             Note note,
             st::CancellationToken cancellationToken) => CreateNoteAsync(
@@ -2762,7 +2761,7 @@ namespace Grafeas.V1
         /// The RPC response.
         /// </returns>
         public virtual Note CreateNote(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             string noteId,
             Note note,
             gaxgrpc::CallSettings callSettings = null) => CreateNote(
@@ -2940,7 +2939,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<BatchCreateNotesResponse> BatchCreateNotesAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             scg::IDictionary<string, Note> notes,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateNotesAsync(
                 new BatchCreateNotesRequest
@@ -2967,7 +2966,7 @@ namespace Grafeas.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual stt::Task<BatchCreateNotesResponse> BatchCreateNotesAsync(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             scg::IDictionary<string, Note> notes,
             st::CancellationToken cancellationToken) => BatchCreateNotesAsync(
                 parent,
@@ -2991,7 +2990,7 @@ namespace Grafeas.V1
         /// The RPC response.
         /// </returns>
         public virtual BatchCreateNotesResponse BatchCreateNotes(
-            gaxres::ProjectName parent,
+            ProjectName parent,
             scg::IDictionary<string, Note> notes,
             gaxgrpc::CallSettings callSettings = null) => BatchCreateNotes(
                 new BatchCreateNotesRequest
