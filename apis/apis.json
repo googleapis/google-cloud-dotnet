@@ -195,6 +195,7 @@
     "description": "Recommended Google client library to access the Google Cloud Container Analysis API.",
     "tags": [ "FIXME" ],
     "dependencies": {
+      "Google.Cloud.Iam.V1": "1.2.0",
       "Grafeas.V1": "project"
     }
   },
