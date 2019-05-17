@@ -107,7 +107,7 @@ generate_api() {
 
   # Generate the descriptor set for this API. We always explicitly
   # include IAM so that gRPC rerouting works; it doesn't have any negative
-  # impact for non-IAM APIs.
+  # impact for non-IAM APIs. (Ditto Grafeas.)
   $PROTOC \
     -I googleapis \
     -I $CORE_PROTOS_ROOT \
@@ -116,6 +116,7 @@ generate_api() {
     -o $API_TMP_DIR/protos.desc \
     $API_SRC_DIR/*.proto \
     googleapis/google/iam/v1/*.proto \
+    googleapis/grafeas/v1/*.proto \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
 
 
@@ -218,6 +219,7 @@ generate_api Google.Cloud.Container.V1 google/container/v1 container_v1.yaml
 generate_api Google.Cloud.Dataproc.V1 google/cloud/dataproc/v1 v1/dataproc.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebugger.yaml
+generate_api Google.Cloud.DevTools.ContainerAnalysis.V1 google/devtools/containeranalysis/v1 containeranalysis_v1.yaml
 generate_api Google.Cloud.Dialogflow.V2 google/cloud/dialogflow/v2 dialogflow_v2.yaml
 generate_api Google.Cloud.Dlp.V2 google/privacy/dlp/v2 dlp_v2.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
