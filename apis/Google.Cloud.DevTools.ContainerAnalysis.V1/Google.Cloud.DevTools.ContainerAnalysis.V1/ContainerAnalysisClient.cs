@@ -5401,44 +5401,6 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
 
     }
 
-    // Partial classes to enable page-streaming
-
-    public partial class gv::ListOccurrencesRequest : gaxgrpc::IPageRequest { }
-    public partial class gv::ListOccurrencesResponse : gaxgrpc::IPageResponse<gv::Occurrence>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public scg::IEnumerator<gv::Occurrence> GetEnumerator() => Occurrences.GetEnumerator();
-
-        /// <inheritdoc/>
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class gv::ListNotesRequest : gaxgrpc::IPageRequest { }
-    public partial class gv::ListNotesResponse : gaxgrpc::IPageResponse<gv::Note>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public scg::IEnumerator<gv::Note> GetEnumerator() => Notes.GetEnumerator();
-
-        /// <inheritdoc/>
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public partial class gv::ListNoteOccurrencesRequest : gaxgrpc::IPageRequest { }
-    public partial class gv::ListNoteOccurrencesResponse : gaxgrpc::IPageResponse<gv::Occurrence>
-    {
-        /// <summary>
-        /// Returns an enumerator that iterates through the resources in this response.
-        /// </summary>
-        public scg::IEnumerator<gv::Occurrence> GetEnumerator() => Occurrences.GetEnumerator();
-
-        /// <inheritdoc/>
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
     // Partial Grpc class to enable gv::Grafeas.GrafeasClient client creation
     public static partial class ContainerAnalysis
     {
