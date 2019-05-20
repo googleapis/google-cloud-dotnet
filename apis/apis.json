@@ -192,12 +192,12 @@
 
   {
     "id": "Google.Cloud.DevTools.ContainerAnalysis.V1",
-    "productName": "FIXME",
-    "productUrl": "https://cloud.google.com/FIXME/",
+    "productName": "Google Container Analysis",
+    "productUrl": "https://cloud.google.com/container-registry/docs/container-analysis/",
     "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Container Analysis API.",
-    "tags": [ "FIXME" ],
+    "tags": [ "analysis", "artifact", "metadata", "grafeas" ],
     "dependencies": {
       "Google.Cloud.Iam.V1": "1.2.0",
       "Grafeas.V1": "project"
@@ -934,6 +934,6 @@
     "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended client library to access Grafeas, an open artifact metadata API to audit and govern your software supply chain.",
-    "tags": [ "audit", "metadata", "artifact"  ],
+    "tags": [ "audit", "metadata", "artifact", "grafeas"  ],
   }
 ]
