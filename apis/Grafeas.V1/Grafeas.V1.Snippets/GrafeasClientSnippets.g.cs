@@ -20,7 +20,7 @@ namespace Grafeas.V1.Snippets
     using Google.Api.Gax.Grpc;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
-    using apis = Grafeas.V1;
+    using apis = global::Grafeas.V1;
     using Grpc.Core;
     using System;
     using System.Collections;

@@ -19,7 +19,7 @@ namespace Grafeas.V1.Tests
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using Google.Protobuf.WellKnownTypes;
-    using apis = Grafeas.V1;
+    using apis = global::Grafeas.V1;
     using Grpc.Core;
     using Moq;
     using System;
