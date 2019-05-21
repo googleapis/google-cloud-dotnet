@@ -34,6 +34,7 @@ message AugmentedValue {
   // These fields are populated or not according to the kind.
   // They must not collide with the fields in google.firestore.v1.Value
   google.firestore.v1.ArrayValue array = 10000;
+  google.firestore.v1.Value increment = 10001;
 }
 
 enum SentinelKind {
@@ -42,4 +43,5 @@ enum SentinelKind {
   DELETE = 2;
   ARRAY_UNION = 3;
   ARRAY_REMOVE = 4;
+  NUMERIC_INCREMENT = 5;
 }

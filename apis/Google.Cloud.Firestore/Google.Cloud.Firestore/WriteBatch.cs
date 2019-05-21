@@ -535,6 +535,9 @@ namespace Google.Cloud.Firestore
                     case SentinelKind.ArrayUnion:
                         transform.AppendMissingElements = SentinelValue.GetArrayValue(Value);
                         break;
+                    case SentinelKind.NumericIncrement:
+                        transform.Increment = SentinelValue.GetIncrement(Value);
+                        break;
                     default:
                         throw new InvalidOperationException($"Cannot convert sentinel value of kind {Kind} to field transform");
                 }

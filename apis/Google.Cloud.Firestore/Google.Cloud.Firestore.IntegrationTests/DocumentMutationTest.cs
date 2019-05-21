@@ -38,7 +38,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             AssertSerialized(snapshot, new { Name = "Original", Score = 20 });
 
             // Update a field
-            await doc.UpdateAsync(new Dictionary<FieldPath, object> { { new FieldPath("Name"), "Changed"} });
+            await doc.UpdateAsync(new Dictionary<FieldPath, object> { { new FieldPath("Name"), "Changed" } });
             snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Changed", Score = 20 });
 
@@ -172,6 +172,24 @@ namespace Google.Cloud.Firestore.IntegrationTests
             await batch.CommitAsync();
             var snapshot = await doc.GetSnapshotAsync();
             AssertSerialized(snapshot, new { Name = "Original", Values = new[] { 1, 3, 5 } });
+        }
+
+        [Fact]
+        public async Task Increment_Int64()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", Value = 10L });
+            await doc.UpdateAsync("Value", FieldValue.Increment(5));
+            var snapshot = await doc.GetSnapshotAsync();
+            AssertSerialized(snapshot, new { Name = "Original", Value = 15 });
+        }
+
+        [Fact]
+        public async Task Increment_Double()
+        {
+            var doc = await _fixture.NonQueryCollection.AddAsync(new { Name = "Original", Value = 10.25 });
+            await doc.UpdateAsync("Value", FieldValue.Increment(1.5));
+            var snapshot = await doc.GetSnapshotAsync();
+            AssertSerialized(snapshot, new { Name = "Original", Value = 11.75 });
         }
 
         /// <summary>
