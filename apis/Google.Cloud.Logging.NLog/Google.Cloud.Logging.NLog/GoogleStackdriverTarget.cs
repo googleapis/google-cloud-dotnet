@@ -144,7 +144,7 @@ namespace Google.Cloud.Logging.NLog
                         case TypeCode.Empty: 
                             return Value.ForNull();
                         case TypeCode.Boolean:
-                            return Value.ForBool((bool)o);
+                            return Value.ForBool(Convert.ToBoolean(o));
                         case TypeCode.Decimal:
                         case TypeCode.Double:
                         case TypeCode.Single:
@@ -161,7 +161,6 @@ namespace Google.Cloud.Logging.NLog
                                 break;  // Let StringEnumConverter handle formatting
                             return Value.ForNumber(Convert.ToDouble(o));
                         case TypeCode.String:
-                            return Value.ForString((string)o);
                         case TypeCode.Char:
                             return Value.ForString(o.ToString());
                     }
