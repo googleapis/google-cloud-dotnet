@@ -25,16 +25,18 @@ namespace Google.Cloud.Firestore {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5zZW50aW5lbC5wcm90bxoiZ29vZ2xlL2ZpcmVzdG9yZS92MS9kb2N1bWVu",
-            "dC5wcm90byJeCg5BdWdtZW50ZWRWYWx1ZRIbCgRraW5kGAsgASgOMg0uU2Vu",
-            "dGluZWxLaW5kEi8KBWFycmF5GJBOIAEoCzIfLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuQXJyYXlWYWx1ZSprCgxTZW50aW5lbEtpbmQSFgoSU0VOVElORUxfS0lO",
-            "RF9OT05FEAASFAoQU0VSVkVSX1RJTUVTVEFNUBABEgoKBkRFTEVURRACEg8K",
-            "C0FSUkFZX1VOSU9OEAMSEAoMQVJSQVlfUkVNT1ZFEARCGaoCFkdvb2dsZS5D",
-            "bG91ZC5GaXJlc3RvcmViBnByb3RvMw=="));
+            "dC5wcm90byKOAQoOQXVnbWVudGVkVmFsdWUSGwoEa2luZBgLIAEoDjINLlNl",
+            "bnRpbmVsS2luZBIvCgVhcnJheRiQTiABKAsyHy5nb29nbGUuZmlyZXN0b3Jl",
+            "LnYxLkFycmF5VmFsdWUSLgoJaW5jcmVtZW50GJFOIAEoCzIaLmdvb2dsZS5m",
+            "aXJlc3RvcmUudjEuVmFsdWUqggEKDFNlbnRpbmVsS2luZBIWChJTRU5USU5F",
+            "TF9LSU5EX05PTkUQABIUChBTRVJWRVJfVElNRVNUQU1QEAESCgoGREVMRVRF",
+            "EAISDwoLQVJSQVlfVU5JT04QAxIQCgxBUlJBWV9SRU1PVkUQBBIVChFOVU1F",
+            "UklDX0lOQ1JFTUVOVBAFQhmqAhZHb29nbGUuQ2xvdWQuRmlyZXN0b3JlYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Firestore.SentinelKind), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.AugmentedValue), global::Google.Cloud.Firestore.AugmentedValue.Parser, new[]{ "Kind", "Array" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.AugmentedValue), global::Google.Cloud.Firestore.AugmentedValue.Parser, new[]{ "Kind", "Array", "Increment" }, null, null, null)
           }));
     }
     #endregion
@@ -47,6 +49,7 @@ namespace Google.Cloud.Firestore {
     [pbr::OriginalName("DELETE")] Delete = 2,
     [pbr::OriginalName("ARRAY_UNION")] ArrayUnion = 3,
     [pbr::OriginalName("ARRAY_REMOVE")] ArrayRemove = 4,
+    [pbr::OriginalName("NUMERIC_INCREMENT")] NumericIncrement = 5,
   }
 
   #endregion
@@ -89,6 +92,7 @@ namespace Google.Cloud.Firestore {
     public AugmentedValue(AugmentedValue other) : this() {
       kind_ = other.kind_;
       array_ = other.array_ != null ? other.array_.Clone() : null;
+      increment_ = other.increment_ != null ? other.increment_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -126,6 +130,17 @@ namespace Google.Cloud.Firestore {
       }
     }
 
+    /// <summary>Field number for the "increment" field.</summary>
+    public const int IncrementFieldNumber = 10001;
+    private global::Google.Cloud.Firestore.V1.Value increment_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Firestore.V1.Value Increment {
+      get { return increment_; }
+      set {
+        increment_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AugmentedValue);
@@ -141,6 +156,7 @@ namespace Google.Cloud.Firestore {
       }
       if (Kind != other.Kind) return false;
       if (!object.Equals(Array, other.Array)) return false;
+      if (!object.Equals(Increment, other.Increment)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,6 +165,7 @@ namespace Google.Cloud.Firestore {
       int hash = 1;
       if (Kind != 0) hash ^= Kind.GetHashCode();
       if (array_ != null) hash ^= Array.GetHashCode();
+      if (increment_ != null) hash ^= Increment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,6 +187,10 @@ namespace Google.Cloud.Firestore {
         output.WriteRawTag(130, 241, 4);
         output.WriteMessage(Array);
       }
+      if (increment_ != null) {
+        output.WriteRawTag(138, 241, 4);
+        output.WriteMessage(Increment);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -183,6 +204,9 @@ namespace Google.Cloud.Firestore {
       }
       if (array_ != null) {
         size += 3 + pb::CodedOutputStream.ComputeMessageSize(Array);
+      }
+      if (increment_ != null) {
+        size += 3 + pb::CodedOutputStream.ComputeMessageSize(Increment);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -204,6 +228,12 @@ namespace Google.Cloud.Firestore {
         }
         Array.MergeFrom(other.Array);
       }
+      if (other.increment_ != null) {
+        if (increment_ == null) {
+          increment_ = new global::Google.Cloud.Firestore.V1.Value();
+        }
+        Increment.MergeFrom(other.Increment);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -224,6 +254,13 @@ namespace Google.Cloud.Firestore {
               array_ = new global::Google.Cloud.Firestore.V1.ArrayValue();
             }
             input.ReadMessage(array_);
+            break;
+          }
+          case 80010: {
+            if (increment_ == null) {
+              increment_ = new global::Google.Cloud.Firestore.V1.Value();
+            }
+            input.ReadMessage(increment_);
             break;
           }
         }

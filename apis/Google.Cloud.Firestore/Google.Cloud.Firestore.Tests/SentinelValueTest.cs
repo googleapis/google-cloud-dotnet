@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Firestore.V1;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -43,6 +44,28 @@ namespace Google.Cloud.Firestore.Tests
             var array = SentinelValue.GetArrayValue(value);
             var expected = CreateArray(CreateValue("a"), CreateValue("b")).ArrayValue;
             Assert.Equal(expected, array);
+        }
+
+        [Fact]
+        public void Increment_Int64()
+        {
+            var sentinel = FieldValue.Increment(100L);
+            var value = ValueSerializer.Serialize(sentinel);
+            Assert.Equal(SentinelKind.NumericIncrement, SentinelValue.GetKind(value));
+            var increment = SentinelValue.GetIncrement(value);
+            var expected = new Value { IntegerValue = 100L };
+            Assert.Equal(expected, increment);
+        }
+
+        [Fact]
+        public void Increment_Double()
+        {
+            var sentinel = FieldValue.Increment(12.5);
+            var value = ValueSerializer.Serialize(sentinel);
+            Assert.Equal(SentinelKind.NumericIncrement, SentinelValue.GetKind(value));
+            var increment = SentinelValue.GetIncrement(value);
+            var expected = new Value { DoubleValue = 12.5 };
+            Assert.Equal(expected, increment);
         }
     }
 }
