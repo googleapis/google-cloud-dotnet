@@ -51,6 +51,7 @@ Beta:
 - [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
 - [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html)
 - [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html)
+- [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html)
 - [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html)
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
 - [Google.Cloud.Dialogflow.V2](Google.Cloud.Dialogflow.V2/index.html)
@@ -68,6 +69,7 @@ Beta:
 - [Google.Cloud.SecurityCenter.V1](Google.Cloud.SecurityCenter.V1/index.html)
 - [Google.Cloud.TextToSpeech.V1](Google.Cloud.TextToSpeech.V1/index.html)
 - [Google.Cloud.Trace.V2](Google.Cloud.Trace.V2/index.html)
+- [Grafeas.V1](Grafeas.V1/index.html)
 
 Alpha:
 
