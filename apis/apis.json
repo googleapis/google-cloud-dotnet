@@ -929,7 +929,7 @@
 
   {
     "id": "Grafeas.V1",
-    "productName": "Grafeas API",
+    "productName": "Grafeas",
     "productUrl": "https://grafeas.io/",
     "version": "1.0.0-beta01",
     "type": "grpc",
