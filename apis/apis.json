@@ -79,17 +79,19 @@
     "id": "Google.Cloud.Bigtable.Admin.V2",
     "productName": "Google Cloud Bigtable Administration",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0-beta05",
+    "version": "1.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
     "tags": [ "Bigtable" ],
     "dependencies": {
+      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Bigtable.Common.V2": "project"
+      "Google.Cloud.Bigtable.Common.V2": "project",
+      "Grpc.Core": "1.21.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "default"
+      "Google.Api.Gax.Grpc.Testing": "2.7.0"
     }
   },
 
@@ -97,11 +99,11 @@
     "id": "Google.Cloud.Bigtable.Common.V2",
     "type": "other",
     "targetFrameworks": "netstandard1.5;netstandard2.0;net45",
-    "version": "1.0.0-beta05",
+    "version": "1.0.0",
     "description": "Common code used by Bigtable V2 APIs",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax": "default",
+      "Google.Api.Gax": "2.7.0",
       "Google.Protobuf": "3.6.1"
     }
   },
@@ -110,16 +112,18 @@
     "id": "Google.Cloud.Bigtable.V2",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0-beta05",
+    "version": "1.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc.Gcp": "default",
+      "Google.Api.Gax.Grpc": "2.7.0",
+      "Google.Api.Gax.Grpc.Gcp": "2.7.0",
       "Google.Cloud.Bigtable.Common.V2": "project",
+      "Grpc.Core": "1.21.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "default",
+      "Google.Api.Gax.Grpc.Testing": "2.7.0",
       "Google.Cloud.Bigtable.Admin.V2": "project",
     }
   },
