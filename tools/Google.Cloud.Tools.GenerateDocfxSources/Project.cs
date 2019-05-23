@@ -78,7 +78,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
         public static IEnumerable<Project> LoadProjects(string directory)
         {
-            foreach (string candidate in Directory.GetDirectories(directory, "Google.*"))
+            foreach (string candidate in Directory.GetDirectories(directory))
             {
                 var csproj = Directory.GetFiles(candidate, "*.csproj").FirstOrDefault();
                 if (csproj == null)
