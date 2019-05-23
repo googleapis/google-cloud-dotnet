@@ -24,6 +24,15 @@ namespace Grafeas.V1.SmokeTests
     {
         public static int Main(string[] args)
         {
+            // Read projectId from args
+            if (args.Length != 1)
+            {
+                Console.WriteLine("Usage: Project ID must be passed as first argument.");
+                Console.WriteLine();
+                return 1;
+            }
+            string projectId = args[0];
+            
             // Smoke test against the Google Container Analysis implementation, using
             // a known endpoint.
 
@@ -33,7 +42,7 @@ namespace Grafeas.V1.SmokeTests
             GrafeasClient client = GrafeasClient.Create(channel);
 
             // Call API method
-            ProjectName projectName = new ProjectName(args[0]);
+            ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListNotesResponse, Note> notes = client.ListNotes(projectName, "");
 
             // Show the result
