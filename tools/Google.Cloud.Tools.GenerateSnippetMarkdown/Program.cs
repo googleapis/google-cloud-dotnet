@@ -908,8 +908,12 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
             var dictionary = new Dictionary<string, List<Member>>();
             // Urgh - there must be a nicer way of doing this.
-            foreach (var file in Directory.GetFiles(metadataDir, "Google*.yml"))
+            foreach (var file in Directory.GetFiles(metadataDir, "*.yml"))
             {
+                if (Path.GetFileName(file) == "toc.yml")
+                {
+                    continue;
+                }
                 using (var input = File.OpenText(file))
                 {
                     var model = new DeserializerBuilder()
