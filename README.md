@@ -11,6 +11,8 @@
 The following libraries are available at a [GA](#versioning) quality level:
 
 * [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.V2/) (GA)
+* [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.V2/) (GA)
+  * Also the Bigtable admin API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.Admin.V2/) (GA)
 * [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Datastore.V1/) (GA)
 * Google Cloud Diagnostics for ASP.NET - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNet/) (GA)
 * Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (GA)
@@ -44,8 +46,6 @@ The following libraries are available at a [beta](#versioning) quality level:
   * [V1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1) (beta)
   * [V1Beta1 API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Asset.V1Beta1/) (beta)
 * [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.DataTransfer.V1/) (beta)
-* [Google Cloud Bigtable](https://cloud.google.com/bigtable/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.V2/) (beta)
-  * Also the Bigtable admin API - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Bigtable.Admin.V2/) (beta)
 * [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Container.V1) (beta)
 * [Google Cloud Dataproc](https://cloud.google.com/dataproc/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Dataproc.V1/) (beta)
 * [Google Cloud Debugger](https://cloud.google.com/debugger/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Debugger.V2) (beta)
