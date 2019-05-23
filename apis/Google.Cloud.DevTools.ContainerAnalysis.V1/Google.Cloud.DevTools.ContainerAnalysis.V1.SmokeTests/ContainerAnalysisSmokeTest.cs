@@ -22,13 +22,22 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.SmokeTests
     {
         public static int Main(string[] args)
         {
+            // Read projectId from args
+            if (args.Length != 1)
+            {
+                Console.WriteLine("Usage: Project ID must be passed as first argument.");
+                Console.WriteLine();
+                return 1;
+            }
+            string projectId = args[0];
+            
             // Create client
             ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
             // ContainerAnalysisClient doesn't contain Grafeas methods; only IAM, and a way of getting at a GrafeasClient.
             GrafeasClient grafeasClient = containerAnalysisClient.GrafeasClient;
 
             // Call API method
-            ProjectName projectName = new ProjectName(args[0]);
+            ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListNotesResponse, Note> notes = grafeasClient.ListNotes(projectName, "");
 
             // Show the result
