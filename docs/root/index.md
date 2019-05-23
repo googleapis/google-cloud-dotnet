@@ -17,6 +17,8 @@ supported here.
 GA:
 
 - [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
+- [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
+- [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html)
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
 - [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
 - [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
@@ -48,8 +50,6 @@ Beta:
 - [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html)
 - [Google.Cloud.Asset.V1Beta1](Google.Cloud.Asset.V1Beta1/index.html)
 - [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html)
-- [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html)
-- [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html)
 - [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html)
 - [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html)
 - [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html)
