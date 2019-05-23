@@ -50,14 +50,14 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         public override GrafeasClient GrafeasClient => _grafeasClient;
 
         partial void OnConstruction(ContainerAnalysis.ContainerAnalysisClient grpcClient, ContainerAnalysisSettings effectiveSettings, ClientHelper clientHelper) =>
-            _grafeasClient = grpcClient.CreateGrafeasClient(effectiveSettings.GrafeasSettings);
+            _grafeasClient = new GrafeasClientImpl(grpcClient.CreateGrafeasClient(), effectiveSettings.GrafeasSettings);
     }
 
     public static partial class ContainerAnalysis
     {
         public partial class ContainerAnalysisClient
         {
-            internal GrafeasClient CreateGrafeasClient(GrafeasSettings settings) => GrafeasClient.Create(CallInvoker, settings);
+            internal global::Grafeas.V1.Grafeas.GrafeasClient CreateGrafeasClient() => new global::Grafeas.V1.Grafeas.GrafeasClient(CallInvoker);
         }
     }
 }
