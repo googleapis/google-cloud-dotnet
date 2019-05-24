@@ -54,6 +54,7 @@ namespace Google.Cloud.PubSub.V1
             {
                 BatchingSettings = other.BatchingSettings;
                 Scheduler = other.Scheduler;
+                EnableMessageOrdering = other.EnableMessageOrdering;
             }
 
             /// <summary>
@@ -67,6 +68,12 @@ namespace Google.Cloud.PubSub.V1
             /// If <c>null</c>, defaults to <see cref="SystemScheduler"/>. Usually only useful for testing.
             /// </summary>
             public IScheduler Scheduler { get; set; }
+
+            /// <summary>
+            /// Enable message ordering. It is invalid to set <see cref="PubsubMessage.OrderingKey"/> in a message
+            /// if this has not been set to <c>true</c>.
+            /// </summary>
+            public bool EnableMessageOrdering { get; set; }
 
             internal void Validate()
             {
@@ -249,15 +256,41 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
         /// </summary>
+        /// <param name="orderingKey">The ordering key to use for this message.</param>
         /// <param name="message">The string to publish.</param>
         /// <param name="encoding">The encoding for string to byte conversion.
         /// If <c>null</c>, defaults to <see cref="Encoding.UTF8"/>.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public virtual Task<string> PublishAsync(string message, Encoding encoding = null) =>
+        public virtual Task<string> PublishAsync(string orderingKey, string message, Encoding encoding = null) =>
             PublishAsync(new PubsubMessage
             {
+                OrderingKey = orderingKey ?? "",
                 Data = encoding == null ? ByteString.CopyFromUtf8(message) : ByteString.CopyFrom(encoding.GetBytes(message))
+            });
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The string to publish.</param>
+        /// <param name="encoding">The encoding for string to byte conversion.
+        /// If <c>null</c>, defaults to <see cref="Encoding.UTF8"/>.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(string message, Encoding encoding = null) => PublishAsync("", message, encoding);
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="orderingKey">The ordering key to use for this message.</param>
+        /// <param name="message">The message to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(string orderingKey, IMessage message) =>
+            PublishAsync(new PubsubMessage
+            {
+                OrderingKey = orderingKey ?? "",
+                Data = message.ToByteString()
             });
 
         /// <summary>
@@ -266,10 +299,20 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="message">The message to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public virtual Task<string> PublishAsync(IMessage message) =>
+        public virtual Task<string> PublishAsync(IMessage message) => PublishAsync("", message);
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="orderingKey">The ordering key to use for this message.</param>
+        /// <param name="message">The <see cref="ByteString"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(string orderingKey, ByteString message) =>
             PublishAsync(new PubsubMessage
             {
-                Data = message.ToByteString()
+                OrderingKey = orderingKey ?? "",
+                Data = message
             });
 
         /// <summary>
@@ -278,10 +321,20 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="message">The <see cref="ByteString"/> to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public virtual Task<string> PublishAsync(ByteString message) =>
+        public virtual Task<string> PublishAsync(ByteString message) => PublishAsync("", message);
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="orderingKey">The ordering key to use for this message.</param>
+        /// <param name="message">The message to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(string orderingKey, byte[] message) =>
             PublishAsync(new PubsubMessage
             {
-                Data = message
+                OrderingKey = orderingKey ?? "",
+                Data = ByteString.CopyFrom(message)
             });
 
         /// <summary>
@@ -290,11 +343,13 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="message">The message to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public virtual Task<string> PublishAsync(byte[] message) =>
-            PublishAsync(new PubsubMessage
-            {
-                Data = ByteString.CopyFrom(message)
-            });
+        public virtual Task<string> PublishAsync(byte[] message) => PublishAsync("", message);
+
+        /// <summary>
+        /// Re-enable publishing the the given ordering key, after an error has caused the ordering key to be disabled.
+        /// </summary>
+        /// <param name="orderingKey">The ordering key to re-enable.</param>
+        public virtual void ResumePublish(string orderingKey) => throw new NotImplementedException();
 
         /// <summary>
         /// Shutdown this <see cref="PublisherClient"/>. Cancelling <paramref name="hardStopToken"/> aborts the
@@ -327,9 +382,11 @@ namespace Google.Cloud.PubSub.V1
         private class Batch
         {
             public TaskCompletionSource<IList<string>> BatchCompletion { get; } = new TaskCompletionSource<IList<string>>();
-            public List<PubsubMessage> Messages { get; } = new List<PubsubMessage>();
-            public CancellationTokenSource TimerCts { get; } = new CancellationTokenSource();
+            public List<PubsubMessage> Messages { get; private set; } = new List<PubsubMessage>();
+            public CancellationTokenSource ProcessedCts { get; } = new CancellationTokenSource();
             public long ByteCount { get; private set; }
+
+            public bool IsProcessed => ProcessedCts.IsCancellationRequested;
 
             public int AddMessage(PubsubMessage message, int byteCount)
             {
@@ -338,6 +395,42 @@ namespace Google.Cloud.PubSub.V1
                 ByteCount += byteCount;
                 return Messages.Count - 1;
             }
+        }
+
+        private enum OrderingKeyState {
+            Normal = 0,
+            InFlight, // In the "batches-ready" queue, or actually in-flight to/from server.
+            Error // This ordering-key is in an error state, so reject all messages.
+        };
+
+        private class KeyState
+        {
+            public KeyState(string orderingKey) => OrderingKey = orderingKey;
+            public string OrderingKey { get; } // Never null.
+            public LinkedList<Batch> Batches { get; } = new LinkedList<Batch>(); // First: Currently-filling batch; Last: Next batch to send.
+            public OrderingKeyState State { get; private set; } = OrderingKeyState.Normal;
+
+            public bool HasOrderingKey => OrderingKey.Length > 0;
+
+            public void SetState(OrderingKeyState state)
+            {
+                // The state of ordering-key "" (ie no ordering key) is always `Normal`.
+                if (HasOrderingKey)
+                {
+                    State = state;
+                }
+            }
+        }
+
+        private struct ReadyBatch
+        {
+            public ReadyBatch(KeyState state, Batch batch)
+            {
+                State = state;
+                Batch = batch;
+            }
+            public KeyState State { get; }
+            public Batch Batch { get; }
         }
 
         // TODO: Logging
@@ -363,6 +456,7 @@ namespace Google.Cloud.PubSub.V1
             settings.Validate();
             _shutdown = shutdown;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
+            _enableMessageOrdering = settings.EnableMessageOrdering;
 
             // Initialise batching settings. Use ApiMax settings for components not given.
             var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings;
@@ -372,7 +466,8 @@ namespace Google.Cloud.PubSub.V1
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
 
             // Initialise internal state
-            _batchesReady = new Queue<Batch>();
+            _batchesReady = new Queue<ReadyBatch>();
+            _keyedState = new Dictionary<string, KeyState>();
             _softStopCts = new CancellationTokenSource();
             _hardStopCts = new CancellationTokenSource();
             _shutdownTcs = new TaskCompletionSource<int>();
@@ -383,23 +478,28 @@ namespace Google.Cloud.PubSub.V1
         private readonly IScheduler _scheduler;
         private readonly TaskHelper _taskHelper;
         private readonly Func<Task> _shutdown;
+        private readonly bool _enableMessageOrdering;
 
         // Batching settings
         private readonly long _batchElementCountThreshold;
         private readonly long _batchByteCountThreshold;
         private readonly TimeSpan? _batchDelayThreshold;
 
-        //Internal state
+        // Internal state
+        // Clients idle, ready to be used.
         private readonly Queue<PublisherServiceApiClient> _idleClients;
-        private readonly Queue<Batch> _batchesReady;
-        private readonly CancellationTokenSource _softStopCts;
-        private readonly CancellationTokenSource _hardStopCts;
-        private readonly TaskCompletionSource<int> _shutdownTcs;
-        private Batch _currentBatch;
+        // Batches ready to send. Will only ever include at most one batch per ordering-key.
+        private readonly Queue<ReadyBatch> _batchesReady;
+        // First: Currently-filling batch; Last: Next batch to send.
+        private readonly Dictionary<string, KeyState> _keyedState;
         private long _queueElementCount;
         private long _queueByteCount;
         private int _batchesInFlightCount;
+        // Cancellation/shutdown state
         private bool _shutdownStarted;
+        private readonly CancellationTokenSource _softStopCts;
+        private readonly CancellationTokenSource _hardStopCts;
+        private readonly TaskCompletionSource<int> _shutdownTcs;
 
         /// <inheritdoc/>
         public override TopicName TopicName { get; }
@@ -407,6 +507,11 @@ namespace Google.Cloud.PubSub.V1
         /// <inheritdoc/>
         public override async Task<string> PublishAsync(PubsubMessage message)
         {
+            string orderingKey = message.OrderingKey ?? "";
+            if (!_enableMessageOrdering && orderingKey.Length > 0)
+            {
+                throw new InvalidOperationException($"Message ordering must be enabled in settings before using {nameof(message.OrderingKey)}");
+            }
             Task<IList<string>> batchTask;
             int index;
             int messageByteCount = message.CalculateSize();
@@ -414,28 +519,69 @@ namespace Google.Cloud.PubSub.V1
             {
                 // Check for shutdown in the lock, to avoid a race-condition.
                 CheckShutdown();
+                // Get existing state for this ordering-key
+                var hasState = _keyedState.TryGetValue(orderingKey, out var state);
+                // Check for an error condition for the ordering-key.
+                if (hasState && state.State == OrderingKeyState.Error)
+                {
+                    throw new OrderingKeyInErrorStateException(orderingKey);
+                }
                 // Update flow-control counts.
                 _queueElementCount += 1;
                 _queueByteCount += messageByteCount;
-                // Queue the current batch if this message would cause the batch to go over-byte-size
-                // (unless this would be the only message in the batch, then it's allowed).
-                QueueCurrentBatchIfRequired(messageByteCount);
-                if (_currentBatch == null)
+
+                // Possible states:
+                // * No existing batches with the given ordering-key.
+                // * Existing batches, with one that is not yet full.
+                // * Existing batches, but all are full or in-flight.
+                if (hasState)
                 {
-                    // Create a new batch if this is the first ever batch, or a batch has just been queued.
-                    _currentBatch = new Batch();
-                    DelaySendCurrentBatch();
+                    // Batches for this ordering-key already exist.
+                    // Queue the current batch if this message would cause the batch to go over-byte-size
+                    // (unless this would be the only message in the batch, then it's allowed).
+                    ProcessBatchIfFull(state, messageByteCount);
                 }
-                batchTask = _currentBatch.BatchCompletion.Task;
+                else
+                {
+                    // Batches for this ordering-key do not exist; so create an empty list of batches.
+                    state = new KeyState(orderingKey);
+                    _keyedState.Add(orderingKey, state);
+                }
+                var batches = state.Batches;
+                if (batches.Count == 0 || batches.First.Value.IsProcessed)
+                {
+                    // Create a new batch; and prepare to send it after the user-configured delay.
+                    var newBatch = new Batch();
+                    batches.AddFirst(newBatch);
+                    DelaySendBatch(state, newBatch);
+                }
+                var currentBatch = batches.First.Value;
+                batchTask = currentBatch.BatchCompletion.Task;
                 // Add message to current batch, and record the message index for later ID retrieval.
-                index = _currentBatch.AddMessage(message, messageByteCount);
+                index = currentBatch.AddMessage(message, messageByteCount);
                 // Queue the current batch if this message has caused the batch to be over-count or over-byte-size.
-                QueueCurrentBatchIfRequired();
+                ProcessBatchIfFull(state, 0);
             }
             // Awaits until batch is sent and response received.
             IList<string> ids = await _taskHelper.ConfigureAwait(batchTask);
             // Return the message ID sent from the server.
             return ids[index];
+        }
+
+        /// <inheritdoc/>
+        public override void ResumePublish(string orderingKey)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(orderingKey, nameof(orderingKey));
+            lock (_lock)
+            {
+                if (_keyedState.TryGetValue(orderingKey, out var state))
+                {
+                    if (state.State == OrderingKeyState.Error)
+                    {
+                        state.SetState(OrderingKeyState.Normal);
+                    }
+                }
+            }
         }
 
         /// <inheritdoc/>
@@ -445,9 +591,12 @@ namespace Google.Cloud.PubSub.V1
             {
                 CheckShutdown();
                 _softStopCts.Cancel();
-                if (_currentBatch != null)
+                foreach (var state in _keyedState.Values)
                 {
-                    QueueCurrentBatch();
+                    if (state.Batches.Count > 0 && !state.Batches.First.Value.IsProcessed)
+                    {
+                        ProcessBatch(state);
+                    }
                 }
                 var registration = hardStopToken.Register(() =>
                 {
@@ -482,12 +631,16 @@ namespace Google.Cloud.PubSub.V1
                 if (_hardStopCts.IsCancellationRequested)
                 {
                     // Cancel any remaining batches. Only relevant if hard-stopped.
+                    List<Batch> batchesToCancel;
                     lock (_lock)
                     {
-                        foreach (var batch in _batchesReady)
-                        {
-                            batch.BatchCompletion.SetCanceled();
-                        }
+                        batchesToCancel = _batchesReady.Select(x => x.Batch)
+                            .Concat(_keyedState.Values.SelectMany(state => state.Batches))
+                            .ToList();
+                    }
+                    foreach (var batch in batchesToCancel)
+                    {
+                        batch.BatchCompletion.SetCanceled();
                     }
                 }
                 // All batches sent and shutdown requested, so signal shutdown completed successfully.
@@ -509,28 +662,28 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        private void DelaySendCurrentBatch()
+        private void DelaySendBatch(KeyState state, Batch batch)
         {
-            // Pre-condition: Must be locked
+            // Pre-condition: Must be locked.
             if (_batchDelayThreshold is TimeSpan batchDelayThreshold)
             {
-                // Read cancellation token here, in case the current batch changes before the task below starts.
-                var currentBatchToken = _currentBatch.TimerCts.Token;
-                // Ignore result of this Task. If it's cancelled, it's because the batch has already been sent.
                 _taskHelper.Run(async () =>
                 {
-                    using (var timerCancellation = CancellationTokenSource.CreateLinkedTokenSource(currentBatchToken, _hardStopCts.Token))
+                    using (var timerCancellation = CancellationTokenSource.CreateLinkedTokenSource(batch.ProcessedCts.Token, _hardStopCts.Token))
                     {
-                        await _taskHelper.ConfigureAwaitHideCancellation(() => _scheduler.Delay(batchDelayThreshold, timerCancellation.Token));
-                        // If batch has already moved to queue, timerToken will have been cancelled.
-                        lock (_lock)
+                        var cancelled = await _taskHelper.ConfigureAwaitHideCancellation(() => _scheduler.Delay(batchDelayThreshold, timerCancellation.Token));
+                        if (!cancelled)
                         {
-                            // Check for cancellation inside lock to avoid race-condition.
-                            if (!timerCancellation.IsCancellationRequested)
+                            // If batch has already been processed, ProcessedCts will have been cancelled.
+                            lock (_lock)
                             {
-                                // Force queuing of the current batch, whatever the size.
-                                // There will always be at least one message in the batch.
-                                QueueCurrentBatch();
+                                // Check for cancellation inside lock to avoid race-condition.
+                                if (!timerCancellation.IsCancellationRequested)
+                                {
+                                    // Force queuing of the current batch, whatever the size.
+                                    // There will always be at least one message in the batch.
+                                    ProcessBatch(state);
+                                }
                             }
                         }
                     }
@@ -538,13 +691,14 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        private void QueueCurrentBatchIfRequired(int extraByteCount = 0)
+        private void ProcessBatchIfFull(KeyState state, int extraByteCount)
         {
             // Pre-condition: Must be locked
-            if (_currentBatch == null)
+            if (state.Batches.Count == 0)
             {
                 return;
             }
+            var currentBatch = state.Batches.First.Value;
             // Current batch is full if either:
             // * The number of messages in the batch >= the maximum number of messages allowed; or
             // * The byte-count in the batch >= the maximum number of messages allowed.
@@ -554,25 +708,40 @@ namespace Google.Cloud.PubSub.V1
             //   batch is considered already full.
             // * But if that is the first message in the batch, then that one message only is allowed
             //   to make the batch go over its maximum allowed byte-count.
-            bool currentBatchIsFull = _currentBatch.Messages.Count >= _batchElementCountThreshold ||
-                (_currentBatch.Messages.Count > 0 && _currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
+            bool currentBatchIsFull = currentBatch.Messages.Count >= _batchElementCountThreshold ||
+                (currentBatch.Messages.Count > 0 && currentBatch.ByteCount + extraByteCount >= _batchByteCountThreshold);
             if (currentBatchIsFull)
             {
-                QueueCurrentBatch();
+                ProcessBatch(state);
             }
         }
 
-        private void QueueCurrentBatch()
+        private void ProcessBatch(KeyState state)
         {
-            // Pre-condition: Must be locked
-            // Cancel the timeout for this batch.
-            _currentBatch.TimerCts.Cancel();
-            // Queue the batch ready for sending.
-            _batchesReady.Enqueue(_currentBatch);
-            // Mark that there is no current batch.
-            _currentBatch = null;
-            // Trigger send to server.
-            TriggerSend();
+            // Pre-condition: Must be locked.
+            // Pre-condition: batches.Count > 0
+            // Pre-condition: First batch must not already be processed.
+            // Mark first batch as full, and cancel its send timeout.
+            var first = state.Batches.First.Value;
+            first.ProcessedCts.Cancel();
+            // If key is not in-flight, then move the last batch to the ready queue.
+            if (state.State == OrderingKeyState.Normal)
+            {
+                QueueReadyBatch(state);
+                // Trigger a send.
+                TriggerSend();
+            }
+        }
+
+        private void QueueReadyBatch(KeyState state)
+        {
+            // Pre-condition: Must be locked.
+            // Pre-condition: The last batch in this state must already be processed.
+            // Pre-condition: This state must be "Normal".
+            _batchesReady.Enqueue(new ReadyBatch(state, state.Batches.Last.Value));
+            state.Batches.RemoveLast();
+            // Mark this ordering-key as inflight.
+            state.SetState(OrderingKeyState.InFlight);
         }
 
         private void TriggerSend()
@@ -585,54 +754,82 @@ namespace Google.Cloud.PubSub.V1
             }
             // Remove client and batch from relevant queues.
             var client = _idleClients.Dequeue();
-            var batch = _batchesReady.Dequeue();
+            var readyBatch = _batchesReady.Dequeue();
+            var batch = readyBatch.Batch;
+            var state = readyBatch.State;
             _batchesInFlightCount += 1;
             // Update flow-control counts.
             _queueElementCount -= batch.Messages.Count;
             _queueByteCount -= batch.ByteCount;
+            // Send the batch
+            _taskHelper.Run(Send);
 
             async Task Send()
             {
                 // Perform the RPC to server, catching exceptions.
                 var publishTask = client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token));
                 var response = await _taskHelper.ConfigureAwaitHideErrors(() => publishTask, null);
-                // Propagate task result to batch.
-                switch (publishTask.Status)
-                {
-                    case TaskStatus.RanToCompletion:
-                        batch.BatchCompletion.SetResult(response.MessageIds);
-                        break;
-                    case TaskStatus.Canceled:
-                        batch.BatchCompletion.SetCanceled();
-                        break;
-                    case TaskStatus.Faulted:
-                        batch.BatchCompletion.SetException(publishTask.Exception.InnerExceptions);
-                        break;
-                    default:
-                        throw new InvalidOperationException("Invalid TaskStatus");
-                }
-                // A client is now idle. Record it, and see if a further batch is ready to send.
+                Action postLockAction;
                 lock (_lock)
                 {
                     _batchesInFlightCount -= 1;
                     _idleClients.Enqueue(client);
                     ShutdownIfCompleted();
-                    if (_batchesReady.Count > 0)
+                    state.SetState(OrderingKeyState.Normal);
+                    var batches = state.Batches;
+                    switch (publishTask.Status)
                     {
-                        // Already a batch in the ready-queue, so just send it.
-                        TriggerSend();
+                        case TaskStatus.RanToCompletion:
+                            postLockAction = () => batch.BatchCompletion.SetResult(response.MessageIds);
+                            break;
+                        case TaskStatus.Canceled:
+                            postLockAction = () => batch.BatchCompletion.SetCanceled();
+                            break;
+                        case TaskStatus.Faulted:
+                            if (state.HasOrderingKey)
+                            {
+                                // For batches with an ordering-key: Retry transient errors forever;
+                                // otherwise fail all unsent messages with the same ordering-key, then refuse any more until `ResumePublish()` is called.
+                                if (publishTask.Exception.As<RpcException>()?.IsRecoverable() ?? false)
+                                {
+                                    // Rebatch failed messages.
+                                    batches.AddLast(batch);
+                                    postLockAction = () => { };
+                                }
+                                else
+                                {
+                                    // Prepare to fail all batches, clear all batches, and mark ordering-key as in error state.
+                                    var batchesToFail = new List<Batch>(batches) { batch };
+                                    postLockAction = () =>
+                                    {
+                                        foreach (var batchToFail in batchesToFail)
+                                        {
+                                            batchToFail.BatchCompletion.SetException(publishTask.Exception.InnerExceptions);
+                                        }
+                                    };
+                                    batches.Clear();
+                                    state.SetState(OrderingKeyState.Error);
+                                }
+                            }
+                            else
+                            {
+                                // No ordering-key, just cancel the failed batch.
+                                postLockAction = () => batch.BatchCompletion.SetCanceled();
+                            }
+                            break;
+                        default:
+                            throw new InvalidOperationException("Invalid TaskStatus");
                     }
-                    else
+                    // Queue the next batch with the ordering-key of the batch just sent; if one exists.
+                    if (batches.Count > 0 && batches.Last.Value.IsProcessed)
                     {
-                        // If nothing queued to send, check to see if current batch is ready.
-                        QueueCurrentBatchIfRequired();
+                        QueueReadyBatch(state);
                     }
+                    // Trigger a new send, if there is any more data ready to send.
+                    TriggerSend();
                 }
+                postLockAction();
             }
-
-            // Send the batch
-            _taskHelper.Run(Send);
         }
-
     }
 }
