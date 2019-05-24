@@ -16,7 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.PubSub.V1.Tasks;
 using Google.Cloud.PubSub.V1.Tests.Tasks;
-using Google.Protobuf;
+using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,10 +31,15 @@ namespace Google.Cloud.PubSub.V1.Tests
         private class FakePublisherServiceApiClient : PublisherServiceApiClient
         {
             public FakePublisherServiceApiClient(IScheduler scheduler, TaskHelper taskHelper, params TimeSpan[] delays)
+                : this(scheduler, taskHelper, null, delays) { }
+
+            public FakePublisherServiceApiClient(
+                IScheduler scheduler, TaskHelper taskHelper, string orderingKeyToCauseError, params TimeSpan[] delays)
             {
                 _schduler = scheduler;
                 _taskHelper = taskHelper;
                 _delays = Enumerable.Repeat(delays.DefaultIfEmpty(), int.MaxValue).SelectMany(x => x).GetEnumerator();
+                _orderingKeyToCauseError = orderingKeyToCauseError;
                 _handledIds = new List<string>();
             }
 
@@ -43,6 +48,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly TaskHelper _taskHelper;
             private readonly IEnumerator<TimeSpan> _delays;
             private readonly List<string> _handledIds;
+
+            private string _orderingKeyToCauseError;
 
             public IReadOnlyList<string> HandledMessages
             {
@@ -59,21 +66,34 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 _delays.MoveNext();
                 await _taskHelper.ConfigureAwait(_schduler.Delay(_delays.Current, callSettings?.CancellationToken ?? CancellationToken.None));
+                var byOrderingKey = request.Messages.GroupBy(x => x.OrderingKey).ToList();
+                if (byOrderingKey.Count > 1)
+                {
+                    throw new InvalidOperationException("Multiple ordering-keys should not be present within a single batch.");
+                }
                 var msgIds = request.Messages.Select(x => x.Data.ToStringUtf8());
                 lock (_lock)
                 {
+                    if (byOrderingKey.Count > 0 && byOrderingKey[0].Key == _orderingKeyToCauseError)
+                    {
+                        // Cause a one-off unrecoverable error.
+                        _orderingKeyToCauseError = null;
+                        throw new RpcException(new Status(StatusCode.DataLoss, "Data loss"));
+                    }
                     _handledIds.AddRange(msgIds);
                 }
                 return new PublishResponse { MessageIds = { msgIds } };
             }
         }
 
-        private PublisherClient.Settings MakeSettings(IScheduler scheduler, int batchElementCountThreshold = 1, int batchRequestByteThreshold = 1)
+        private PublisherClient.Settings MakeSettings(IScheduler scheduler,
+            int batchElementCountThreshold = 1, int batchRequestByteThreshold = 1, bool enableMessageOrdering = false)
         {
             return new PublisherClient.Settings
             {
                 Scheduler = scheduler,
                 BatchingSettings = new BatchingSettings(batchElementCountThreshold, batchRequestByteThreshold, TimeSpan.FromSeconds(10)),
+                EnableMessageOrdering = enableMessageOrdering
             };
 
         }
@@ -181,6 +201,110 @@ namespace Google.Cloud.PubSub.V1.Tests
             Assert.ThrowsAny<ArgumentException>(() => new PublisherClient.Settings { BatchingSettings = new BatchingSettings(null, PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold + 1, null) }.Validate());
             new PublisherClient.Settings { BatchingSettings = new BatchingSettings(null, 1, null) }.Validate();
             new PublisherClient.Settings { BatchingSettings = new BatchingSettings(null, PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold, null) }.Validate();
+        }
+
+        [Fact]
+        public void OrderingKeyMustBeEnabled()
+        {
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler();
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper);
+            var settings = MakeSettings(scheduler);
+            int shutdownCount = 0;
+            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
+            {
+                Interlocked.Increment(ref shutdownCount);
+                return Task.FromResult(0);
+            }, taskHelper);
+            scheduler.Run(async () =>
+            {
+                await taskHelper.ConfigureAwait(
+                    Assert.ThrowsAsync<InvalidOperationException>(() => pub.PublishAsync("an ordering key", "1")));
+            });
+        }
+
+        [Theory, PairwiseData]
+        public void OrderingKeyManyMessages(
+            [CombinatorialValues(1, 2, 5, 7)] int clientCount,
+            [CombinatorialValues(1, 2, 6, 13)] int threadCount,
+            [CombinatorialValues(101, 2000, 9999)] int messageCount,
+            [CombinatorialValues(1, 2, 9, 51)] int orderingKeysCount,
+            [CombinatorialValues(1, 5, 50)] int batchElementCountThreshold,
+            [CombinatorialValues(0, 1, 59, 123, 1001)] int delayMs1,
+            [CombinatorialValues(0, 2, 500)] int delayMs2)
+        {
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler(threadCount);
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var clients = Enumerable.Range(0, clientCount)
+                .Select(_ => new FakePublisherServiceApiClient(scheduler, taskHelper,
+                    new[] { TimeSpan.FromMilliseconds(delayMs1), TimeSpan.FromMilliseconds(delayMs2) })).ToArray();
+            var settings = MakeSettings(scheduler,
+                batchElementCountThreshold: batchElementCountThreshold, batchRequestByteThreshold: 10000, enableMessageOrdering: true);
+            int shutdownCount = 0;
+            var pub = new PublisherClientImpl(topicName, clients, settings, () =>
+            {
+                Interlocked.Increment(ref shutdownCount);
+                return Task.FromResult(0);
+            }, taskHelper);
+            scheduler.Run(async () =>
+            {
+                var tasks = Enumerable.Range(0, messageCount)
+                    .Select(i => pub.PublishAsync((i % orderingKeysCount).ToString(), $"{i % orderingKeysCount}:{i}")).ToArray();
+                var ids = new HashSet<string>(await taskHelper.ConfigureAwait(taskHelper.WhenAll(tasks)));
+                await taskHelper.ConfigureAwait(pub.ShutdownAsync(new CancellationToken()));
+                Assert.Equal(messageCount, ids.Count);
+                // This doesn't check the global ordering between clients, but that's OK here.
+                // The emulator-based integration test checks are more thorough.
+                foreach (var client in clients)
+                {
+                    var kv = client.HandledMessages.Select(x => x.Split(':')).Select(x => (key: x[0], value: x[1]));
+                    foreach (var values in kv.GroupBy(x => x.key, x => x.value))
+                    {
+                        var errorMsg = $"Ordering-key '{values.Key}' out of order";
+                        foreach (var pair in values.Zip(values.Skip(1), (a, b) => (a, b)))
+                        {
+                            Assert.True(int.Parse(pair.a) < int.Parse(pair.b), errorMsg);
+                        }
+                    }
+                }
+                Assert.Equal(ids, new HashSet<string>(clients.SelectMany(x => x.HandledMessages)));
+                Assert.Equal(1, shutdownCount);
+            });
+        }
+
+        [Fact]
+        public void OrderingKeyResumePublish()
+        {
+            var topicName = new TopicName("FakeProject", "FakeTopic");
+            var scheduler = new TestScheduler();
+            TaskHelper taskHelper = scheduler.TaskHelper;
+            var client = new FakePublisherServiceApiClient(scheduler, taskHelper, "error-key");
+            var settings = MakeSettings(scheduler, enableMessageOrdering: true);
+            int shutdownCount = 0;
+            var pub = new PublisherClientImpl(topicName, new[] { client }, settings, () =>
+            {
+                Interlocked.Increment(ref shutdownCount);
+                return Task.FromResult(0);
+            }, taskHelper);
+            scheduler.Run(async () =>
+            {
+                // First call will trigger an unrecoverable error.
+                var ex = await taskHelper.ConfigureAwait(
+                    Assert.ThrowsAsync<RpcException>(() => pub.PublishAsync("error-key", "1")));
+                Assert.Equal(StatusCode.DataLoss, ex.StatusCode);
+                // Sending again will reject the message.
+                await taskHelper.ConfigureAwait(
+                    Assert.ThrowsAsync<OrderingKeyInErrorStateException>(() => pub.PublishAsync("error-key", "error")));
+                // Other ordering-keys publish OK.
+                await taskHelper.ConfigureAwait(pub.PublishAsync("ok-key", "ok"));
+                // Resume publishing on the ordering key.
+                pub.ResumePublish("error-key");
+                await taskHelper.ConfigureAwait(pub.PublishAsync("error-key", "2"));
+                var expected = new HashSet<string>(new[] { "ok", "2" });
+                Assert.Equal(expected, new HashSet<string>(client.HandledMessages));
+            });
         }
     }
 }
