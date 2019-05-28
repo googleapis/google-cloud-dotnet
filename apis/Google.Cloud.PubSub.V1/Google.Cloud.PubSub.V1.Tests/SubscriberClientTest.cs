@@ -73,6 +73,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     Message = new PubsubMessage
                     {
                         MessageId = msgId,
+                        OrderingKey = content.Contains('|') ? content.Split('|')[0] : "",
                         Data = ByteString.CopyFromUtf8(content)
                     }
                 };
@@ -704,6 +705,52 @@ namespace Google.Cloud.PubSub.V1.Tests
                     var expectedPings = Enumerable.Range(0, pingCount).Select(i => fake.Time0 + TimeSpan.FromSeconds(pingPeriodSeconds * (i + 1)));
                     Assert.Equal(expectedPings, fake.Subscribers[0].StreamPings);
                 });
+            }
+        }
+
+        [Theory, PairwiseData]
+        public void OrderingKeysManyMsgs(
+            [CombinatorialValues(73, 100, 404, 1409, 5402)] int msgCount,
+            [CombinatorialValues(1, 3, 6, 10, 55)] int orderingKeysCount,
+            [CombinatorialValues(1, 2, 5, 11, 44)] int flowMaxElements,
+            [CombinatorialValues(1, 2, 3, 9)] int threadCount,
+            [CombinatorialValues(1, 2, 3, 4, 5)] int rndSeed
+            )
+        {
+            var rnd = new Random(rndSeed);
+            var msgs = ServerAction.Data(TimeSpan.Zero, Enumerable.Range(0, msgCount).Select(i => $"order{i % orderingKeysCount}|{i}").ToList());
+            var recvedMsgs = new List<string>();
+            using (var fake = Fake.Create(new[] { new[] { msgs, ServerAction.Inf() } }, flowMaxElements: flowMaxElements, threadCount: threadCount))
+            {
+                var th = fake.TaskHelper;
+                fake.Scheduler.Run(async () =>
+                {
+                    var recvCount = 0;
+                    var startTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        var delay = TimeSpan.FromMilliseconds(rnd.Next(1000));
+                        await th.ConfigureAwait(fake.Scheduler.Delay(delay, default));
+                        lock (recvedMsgs)
+                        {
+                            recvedMsgs.Add(msg.Data.ToStringUtf8());
+                            recvCount += 1;
+                            if (recvCount == msgCount)
+                            {
+                                var dummyTask = fake.Subscriber.StopAsync(CancellationToken.None);
+                            }
+                        }
+                        return SubscriberClient.Reply.Ack;
+                    });
+                    await th.ConfigureAwait(startTask);
+                });
+            }
+            var expected = msgs.Msgs.GroupBy(x => x.Split('|')[0]).OrderBy(x => x.Key).ToList();
+            var actual = recvedMsgs.GroupBy(x => x.Split('|')[0]).OrderBy(x=>x.Key).ToList();
+            Assert.Equal(expected.Count, actual.Count);
+            Assert.Equal(expected.Select(x => x.Key), actual.Select(x => x.Key));
+            foreach (var pair in expected.Zip(actual, (e, a) => new { e, a }))
+            {
+                Assert.Equal(pair.e.ToList(), pair.a.ToList());
             }
         }
 
