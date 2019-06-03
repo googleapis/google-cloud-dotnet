@@ -51,8 +51,8 @@ namespace Google.Cloud.BigQuery.V2
     /// </remarks>
     public abstract partial class BigQueryClient : IDisposable
     {
-        private static readonly ScopedCredentialProvider _credentialProvider = new ScopedCredentialProvider(
-            new[] {
+        internal static ScopedCredentialProvider ScopedCredentialProvider { get; } =
+            new ScopedCredentialProvider(new[] {
                 BigqueryService.Scope.Bigquery,
                 BigqueryService.Scope.BigqueryInsertdata,
                 BigqueryService.Scope.DevstorageFullControl,
@@ -95,7 +95,7 @@ namespace Google.Cloud.BigQuery.V2
         public static async Task<BigQueryClient> CreateAsync(string projectId, GoogleCredential credential = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
+            var scopedCredentials = await ScopedCredentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(projectId, scopedCredentials);
         }
 
@@ -112,7 +112,7 @@ namespace Google.Cloud.BigQuery.V2
         public static BigQueryClient Create(string projectId, GoogleCredential credential = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            var scopedCredentials = _credentialProvider.GetCredentials(credential);
+            var scopedCredentials = ScopedCredentialProvider.GetCredentials(credential);
             return CreateImpl(projectId, scopedCredentials);
         }
 

@@ -50,9 +50,6 @@ namespace Google.Cloud.Translation.V2
     /// </remarks>
     public abstract class AdvancedTranslationClient : IDisposable
     {
-        private static readonly ScopedCredentialProvider _credentialProvider =
-            new ScopedCredentialProvider(new[] { TranslateService.Scope.CloudPlatform });
-
         /// <summary>
         /// The underlying translation service object used by this client.
         /// </summary>
@@ -324,7 +321,7 @@ namespace Google.Cloud.Translation.V2
         /// <returns>The task representing the created <see cref="AdvancedTranslationClient"/>.</returns>
         public static async Task<AdvancedTranslationClient> CreateAsync(GoogleCredential credential = null, string model = null)
         {
-            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
+            var scopedCredentials = await TranslationClient.ScopedCredentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(scopedCredentials, null, model);
         }
 
@@ -356,7 +353,7 @@ namespace Google.Cloud.Translation.V2
         /// <returns>The created <see cref="AdvancedTranslationClient"/>.</returns>
         public static AdvancedTranslationClient Create(GoogleCredential credential = null, string model = null)
         {
-            var scopedCredentials = _credentialProvider.GetCredentials(credential);
+            var scopedCredentials = TranslationClient.ScopedCredentialProvider.GetCredentials(credential);
             return CreateImpl(scopedCredentials, null, model);
         }
 
