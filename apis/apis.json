@@ -312,7 +312,7 @@
 
   {
     "id": "Google.Cloud.EntityFrameworkCore.Spanner",
-    "version": "1.0.0-alpha10",
+    "version": "1.0.0-alpha11",
     "type": "other",
     "targetFrameworks": "netstandard2.0",
     "testTargetFrameworks": "netcoreapp2.0;net461",
@@ -663,14 +663,16 @@
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Database Administration",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "2.0.0-beta09",
+    "version": "2.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
+      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Spanner.Common.V1": "project"
+      "Google.Cloud.Spanner.Common.V1": "project",
+      "Grpc.Core": "1.21.0"
     }
   },
 
@@ -680,14 +682,16 @@
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Instance Administration",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "2.0.0-beta09",
+    "version": "2.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
+      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Spanner.Common.V1": "project"
+      "Google.Cloud.Spanner.Common.V1": "project",
+      "Grpc.Core": "1.21.0"
     }
   },
 
@@ -695,21 +699,22 @@
     "id": "Google.Cloud.Spanner.Data",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
-    "version": "2.0.0-beta09",
+    "version": "2.0.0",
     "type": "other",
     "description": "Google ADO.NET Provider for Google Cloud Spanner.",
     "tags": [ "Spanner", "ADO" ],
     "dependencies": {
+      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.Cloud.Spanner.V1": "project",
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Grpc.Core": "default",
+      "Grpc.Core": "1.21.0",
       "Grpc.Gcp": "1.1.1"
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
-      "Google.Api.Gax.Testing": "default",
-      "Google.Api.Gax.Grpc.Testing": "default"
+      "Google.Api.Gax.Testing": "2.7.0",
+      "Google.Api.Gax.Grpc.Testing": "2.7.0"
     }
   },
 
@@ -717,11 +722,11 @@
     "id": "Google.Cloud.Spanner.Common.V1",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net45",
-    "version": "2.0.0-beta09",
+    "version": "2.0.0",
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax": "default"
+      "Google.Api.Gax": "2.7.0"
     }
   },
   
@@ -731,12 +736,14 @@
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner",
     "productUrl": "https://cloud.google.com/spanner/",
-    "version": "2.0.0-beta09",
+    "version": "2.0.0",
     "type": "grpc",
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Cloud.Spanner.Common.V1": "project"
+      "Google.Api.Gax.Grpc": "2.7.0",
+      "Google.Cloud.Spanner.Common.V1": "project",
+      "Grpc.Core": "1.21.0"
     }
   },
 

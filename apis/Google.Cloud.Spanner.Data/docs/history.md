@@ -1,6 +1,6 @@
 # Version history
 
-# 2.0.0 (in progress; latest release 2.0.0-beta08 on 2019-03-07)
+# 2.0.0, 2019-06-03
 
 New features:
 
@@ -9,10 +9,11 @@ New features:
   to return schema information
 - DML and PDML support
 - Batch DML support
+- Session label support
   
 Breaking changes:
 
-- Many aspects of configuration. Please refer to the [configuration guide](configuration.md),
+- Many aspects of configuration have changed. Please refer to the [configuration guide](configuration.md),
   [migration guide](migrating-to-2.md) and [connection string options](connection_string.md)
   for more details.
 - Null values are returned as `DBNull.Value` by default rather

@@ -68,6 +68,8 @@ so we can help you further.
 
 - `SpannerDbType.StructOf` has been replaced by
   `SpannerDbType.ForStruct`, using the new `SpannerStruct` type.
+- .NET Standard 1.5 is no longer supported; only .NET 4.5 and .NET Standard 2.0
+  are supported targets.
 
 ## Breaking changes in Google.Cloud.Spanner.V1
 
