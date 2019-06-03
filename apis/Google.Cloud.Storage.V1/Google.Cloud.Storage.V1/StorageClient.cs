@@ -46,8 +46,8 @@ namespace Google.Cloud.Storage.V1
     /// </remarks>
     public abstract partial class StorageClient : IDisposable
     {
-        private static readonly ScopedCredentialProvider _credentialProvider = new ScopedCredentialProvider(
-            new[] { StorageService.Scope.DevstorageFullControl });
+        internal static ScopedCredentialProvider ScopedCredentialProvider { get; } =
+            new ScopedCredentialProvider(new[] { StorageService.Scope.DevstorageFullControl });
 
         /// <summary>
         /// The underlying storage service object used by this client.
@@ -79,7 +79,7 @@ namespace Google.Cloud.Storage.V1
         /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
         public static async Task<StorageClient> CreateAsync(GoogleCredential credential = null, EncryptionKey encryptionKey = null)
         {
-            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
+            var scopedCredentials = await ScopedCredentialProvider.GetCredentialsAsync(credential).ConfigureAwait(false);
             return CreateImpl(scopedCredentials, encryptionKey);
         }
 
@@ -95,7 +95,7 @@ namespace Google.Cloud.Storage.V1
         /// <returns>The created <see cref="StorageClient"/>.</returns>
         public static StorageClient Create(GoogleCredential credential = null, EncryptionKey encryptionKey = null)
         {
-            var scopedCredentials = _credentialProvider.GetCredentials(credential);
+            var scopedCredentials = ScopedCredentialProvider.GetCredentials(credential);
             return CreateImpl(scopedCredentials, encryptionKey);
         }
 
