@@ -25,9 +25,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGFueS5wcm90bxIb",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGihnb29nbGUvY2xvdWQvdGFs",
-            "ZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvIuQDCgdDb21wYW55EgwKBG5hbWUYASABKAkSFAoMZGlzcGxh",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBpL2Fubm90",
+            "YXRpb25zLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29t",
+            "bW9uLnByb3RvIuQDCgdDb21wYW55EgwKBG5hbWUYASABKAkSFAoMZGlzcGxh",
             "eV9uYW1lGAIgASgJEhMKC2V4dGVybmFsX2lkGAMgASgJEjYKBHNpemUYBCAB",
             "KA4yKC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGFueVNpemUS",
             "HAoUaGVhZHF1YXJ0ZXJzX2FkZHJlc3MYBSABKAkSFQoNaGlyaW5nX2FnZW5j",
@@ -43,7 +43,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Z29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNi",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company), global::Google.Cloud.Talent.V4Beta1.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4Beta1.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null)})
           }));
@@ -187,7 +187,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// The street address of the company's main headquarters, which may be
     /// different from the job location. The service attempts
     /// to geolocate the provided address, and populates a more specific
-    /// location wherever possible in [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
+    /// location wherever possible in
+    /// [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string HeadquartersAddress {
@@ -296,8 +297,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// A list of keys of filterable [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes], whose
-    /// corresponding `string_values` are used in keyword searches. Jobs with
+    /// A list of keys of filterable
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes],
+    /// whose corresponding `string_values` are used in keyword searches. Jobs with
     /// `string_values` under these specified field keys are returned if any
     /// of the values match the search keyword. Custom field values with
     /// parenthesis, brackets and special symbols are not searchable as-is,
@@ -657,7 +659,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         private global::Google.Cloud.Talent.V4Beta1.Location headquartersLocation_;
         /// <summary>
         /// A structured headquarters location of the company, resolved from
-        /// [Company.hq_location][] if provided.
+        /// [Company.headquarters_address][google.cloud.talent.v4beta1.Company.headquarters_address]
+        /// if provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.Location HeadquartersLocation {

@@ -19,6 +19,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using apis = Google.Cloud.Talent.V4Beta1;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using Grpc.Core;
     using Moq;
@@ -37,6 +38,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void CreateJob()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateJobRequest expectedRequest = new CreateJobRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
@@ -71,6 +74,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task CreateJobAsync()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateJobRequest expectedRequest = new CreateJobRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
@@ -105,6 +110,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void CreateJob2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
@@ -137,6 +144,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task CreateJobAsync2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             CreateJobRequest request = new CreateJobRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
@@ -169,6 +178,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void GetJob()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             GetJobRequest expectedRequest = new GetJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -201,6 +212,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task GetJobAsync()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             GetJobRequest expectedRequest = new GetJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -233,6 +246,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void GetJob2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -264,6 +279,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task GetJobAsync2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             GetJobRequest request = new GetJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -295,6 +312,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void UpdateJob()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             UpdateJobRequest expectedRequest = new UpdateJobRequest
             {
                 Job = new Job(),
@@ -327,6 +346,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task UpdateJobAsync()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             UpdateJobRequest expectedRequest = new UpdateJobRequest
             {
                 Job = new Job(),
@@ -359,6 +380,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void UpdateJob2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
                 Job = new Job(),
@@ -390,6 +413,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task UpdateJobAsync2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             UpdateJobRequest request = new UpdateJobRequest
             {
                 Job = new Job(),
@@ -421,6 +446,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void DeleteJob()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteJobRequest expectedRequest = new DeleteJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -438,6 +465,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task DeleteJobAsync()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteJobRequest expectedRequest = new DeleteJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -455,6 +484,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void DeleteJob2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -471,6 +502,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task DeleteJobAsync2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobNameOneof = JobNameOneof.From(new JobName("[PROJECT]", "[TENANT]", "[JOBS]")),
@@ -487,6 +520,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void BatchDeleteJobs()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest expectedRequest = new BatchDeleteJobsRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
@@ -506,6 +541,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task BatchDeleteJobsAsync()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest expectedRequest = new BatchDeleteJobsRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
@@ -525,6 +562,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public void BatchDeleteJobs2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),
@@ -542,6 +581,8 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         public async Task BatchDeleteJobsAsync2()
         {
             Mock<JobService.JobServiceClient> mockGrpcClient = new Mock<JobService.JobServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
             BatchDeleteJobsRequest request = new BatchDeleteJobsRequest
             {
                 ParentAsTenantOrProjectNameOneof = TenantOrProjectNameOneof.From(new TenantName("[PROJECT]", "[TENANT]")),

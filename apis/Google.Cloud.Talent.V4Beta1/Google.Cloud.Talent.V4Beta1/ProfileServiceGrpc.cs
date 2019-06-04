@@ -157,7 +157,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -426,7 +428,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -443,7 +447,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -458,7 +464,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -475,7 +483,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// For example, search by raw queries "software engineer in Mountain View" or
       /// search by structured filters (location filter, education filter, etc.).
       ///
-      /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+      /// See
+      /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
