@@ -52,6 +52,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest> __Marshaller_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest> __Marshaller_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest> __Marshaller_ImportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest> __Marshaller_ExportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest> __Marshaller_FailoverInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest.Parser.ParseFrom);
 
@@ -81,6 +83,20 @@ namespace Google.Cloud.Redis.V1Beta1 {
         __ServiceName,
         "UpdateInstance",
         __Marshaller_UpdateInstanceRequest,
+        __Marshaller_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest, global::Google.LongRunning.Operation> __Method_ImportInstance = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportInstance",
+        __Marshaller_ImportInstanceRequest,
+        __Marshaller_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest, global::Google.LongRunning.Operation> __Method_ExportInstance = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportInstance",
+        __Marshaller_ExportInstanceRequest,
         __Marshaller_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest, global::Google.LongRunning.Operation> __Method_FailoverInstance = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest, global::Google.LongRunning.Operation>(
@@ -173,8 +189,42 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
 
       /// <summary>
-      /// Failover the master role to current replica node against a specific
-      /// STANDARD tier redis instance.
+      /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
+      ///
+      /// Redis may stop serving during this operation. Instance state will be
+      /// IMPORTING for entire operation. When complete, the instance will contain
+      /// only data from the imported file.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportInstance(global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Export Redis instance data into a Redis RDB format file in Cloud Storage.
+      ///
+      /// Redis will continue serving during this operation.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportInstance(global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Initiates a failover of the master node to current replica node for a
+      /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -486,8 +536,144 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Failover the master role to current replica node against a specific
-      /// STANDARD tier redis instance.
+      /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
+      ///
+      /// Redis may stop serving during this operation. Instance state will be
+      /// IMPORTING for entire operation. When complete, the instance will contain
+      /// only data from the imported file.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ImportInstance(global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
+      ///
+      /// Redis may stop serving during this operation. Instance state will be
+      /// IMPORTING for entire operation. When complete, the instance will contain
+      /// only data from the imported file.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ImportInstance(global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportInstance, null, options, request);
+      }
+      /// <summary>
+      /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
+      ///
+      /// Redis may stop serving during this operation. Instance state will be
+      /// IMPORTING for entire operation. When complete, the instance will contain
+      /// only data from the imported file.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportInstanceAsync(global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
+      ///
+      /// Redis may stop serving during this operation. Instance state will be
+      /// IMPORTING for entire operation. When complete, the instance will contain
+      /// only data from the imported file.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportInstanceAsync(global::Google.Cloud.Redis.V1Beta1.ImportInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportInstance, null, options, request);
+      }
+      /// <summary>
+      /// Export Redis instance data into a Redis RDB format file in Cloud Storage.
+      ///
+      /// Redis will continue serving during this operation.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ExportInstance(global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Export Redis instance data into a Redis RDB format file in Cloud Storage.
+      ///
+      /// Redis will continue serving during this operation.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ExportInstance(global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportInstance, null, options, request);
+      }
+      /// <summary>
+      /// Export Redis instance data into a Redis RDB format file in Cloud Storage.
+      ///
+      /// Redis will continue serving during this operation.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportInstanceAsync(global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Export Redis instance data into a Redis RDB format file in Cloud Storage.
+      ///
+      /// Redis will continue serving during this operation.
+      ///
+      /// The returned operation is automatically deleted after a few hours, so
+      /// there is no need to call DeleteOperation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportInstanceAsync(global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportInstance, null, options, request);
+      }
+      /// <summary>
+      /// Initiates a failover of the master node to current replica node for a
+      /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -499,8 +685,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return FailoverInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Failover the master role to current replica node against a specific
-      /// STANDARD tier redis instance.
+      /// Initiates a failover of the master node to current replica node for a
+      /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -510,8 +696,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_FailoverInstance, null, options, request);
       }
       /// <summary>
-      /// Failover the master role to current replica node against a specific
-      /// STANDARD tier redis instance.
+      /// Initiates a failover of the master node to current replica node for a
+      /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -523,8 +709,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return FailoverInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Failover the master role to current replica node against a specific
-      /// STANDARD tier redis instance.
+      /// Initiates a failover of the master node to current replica node for a
+      /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -597,6 +783,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
+          .AddMethod(__Method_ImportInstance, serviceImpl.ImportInstance)
+          .AddMethod(__Method_ExportInstance, serviceImpl.ExportInstance)
           .AddMethod(__Method_FailoverInstance, serviceImpl.FailoverInstance)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance).Build();
     }
