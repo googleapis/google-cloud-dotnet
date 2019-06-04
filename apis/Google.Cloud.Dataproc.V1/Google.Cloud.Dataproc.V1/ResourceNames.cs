@@ -251,6 +251,19 @@ namespace Google.Cloud.Dataproc.V1
 
     }
 
+    public partial class InstantiateInlineWorkflowTemplateRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Dataproc.V1.RegionName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Dataproc.V1.RegionName ParentAsRegionName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Dataproc.V1.RegionName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class InstantiateWorkflowTemplateRequest
     {
         /// <summary>

@@ -1589,8 +1589,151 @@ namespace Google.Cloud.Dataproc.V1
         /// Instantiates a template and begins execution.
         ///
         /// This method is equivalent to executing the sequence
-        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate],
-        /// [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
+        ///
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        ///
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        ///
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata][google.cloud.dataproc.v1.WorkflowMetadata].
+        ///
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the workflow template region, as described
+        /// in https://cloud.google.com/apis/design/resource_names of the form
+        /// `projects/{project_id}/regions/{region}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The workflow template to instantiate.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(
+            RegionName parent,
+            WorkflowTemplate template,
+            gaxgrpc::CallSettings callSettings = null) => InstantiateInlineWorkflowTemplateAsync(
+                new InstantiateInlineWorkflowTemplateRequest
+                {
+                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        ///
+        /// This method is equivalent to executing the sequence
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
+        ///
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        ///
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        ///
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata][google.cloud.dataproc.v1.WorkflowMetadata].
+        ///
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the workflow template region, as described
+        /// in https://cloud.google.com/apis/design/resource_names of the form
+        /// `projects/{project_id}/regions/{region}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The workflow template to instantiate.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<pbwkt::Empty, WorkflowMetadata>> InstantiateInlineWorkflowTemplateAsync(
+            RegionName parent,
+            WorkflowTemplate template,
+            st::CancellationToken cancellationToken) => InstantiateInlineWorkflowTemplateAsync(
+                parent,
+                template,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        ///
+        /// This method is equivalent to executing the sequence
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
+        ///
+        /// The returned Operation can be used to track execution of
+        /// workflow by polling
+        /// [operations.get][google.longrunning.Operations.GetOperation].
+        /// The Operation will complete when entire workflow is finished.
+        ///
+        /// The running workflow can be aborted via
+        /// [operations.cancel][google.longrunning.Operations.CancelOperation].
+        /// This will cause any inflight jobs to be cancelled and workflow-owned
+        /// clusters to be deleted.
+        ///
+        /// The [Operation.metadata][google.longrunning.Operation.metadata] will be
+        /// [WorkflowMetadata][google.cloud.dataproc.v1.WorkflowMetadata].
+        ///
+        /// On successful completion,
+        /// [Operation.response][google.longrunning.Operation.response] will be
+        /// [Empty][google.protobuf.Empty].
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The "resource name" of the workflow template region, as described
+        /// in https://cloud.google.com/apis/design/resource_names of the form
+        /// `projects/{project_id}/regions/{region}`
+        /// </param>
+        /// <param name="template">
+        /// Required. The workflow template to instantiate.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<pbwkt::Empty, WorkflowMetadata> InstantiateInlineWorkflowTemplate(
+            RegionName parent,
+            WorkflowTemplate template,
+            gaxgrpc::CallSettings callSettings = null) => InstantiateInlineWorkflowTemplate(
+                new InstantiateInlineWorkflowTemplateRequest
+                {
+                    ParentAsRegionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Template = gax::GaxPreconditions.CheckNotNull(template, nameof(template)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Instantiates a template and begins execution.
+        ///
+        /// This method is equivalent to executing the sequence
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
         /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
         ///
         /// The returned Operation can be used to track execution of
@@ -1639,8 +1782,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Instantiates a template and begins execution.
         ///
         /// This method is equivalent to executing the sequence
-        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate],
-        /// [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
         /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
         ///
         /// The returned Operation can be used to track execution of
@@ -1686,8 +1828,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Instantiates a template and begins execution.
         ///
         /// This method is equivalent to executing the sequence
-        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate],
-        /// [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
         /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
         ///
         /// The returned Operation can be used to track execution of
@@ -1736,8 +1877,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Instantiates a template and begins execution.
         ///
         /// This method is equivalent to executing the sequence
-        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate],
-        /// [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
         /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
         ///
         /// The returned Operation can be used to track execution of
@@ -1790,8 +1930,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Instantiates a template and begins execution.
         ///
         /// This method is equivalent to executing the sequence
-        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate],
-        /// [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
         /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
         ///
         /// The returned Operation can be used to track execution of
@@ -2606,8 +2745,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Instantiates a template and begins execution.
         ///
         /// This method is equivalent to executing the sequence
-        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate],
-        /// [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
         /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
         ///
         /// The returned Operation can be used to track execution of
@@ -2649,8 +2787,7 @@ namespace Google.Cloud.Dataproc.V1
         /// Instantiates a template and begins execution.
         ///
         /// This method is equivalent to executing the sequence
-        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate],
-        /// [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
+        /// [CreateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.CreateWorkflowTemplate], [InstantiateWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.InstantiateWorkflowTemplate],
         /// [DeleteWorkflowTemplate][google.cloud.dataproc.v1.WorkflowTemplateService.DeleteWorkflowTemplate].
         ///
         /// The returned Operation can be used to track execution of
