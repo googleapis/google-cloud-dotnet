@@ -203,7 +203,8 @@ namespace Google.Cloud.Logging.Log4Net
                 Severity = LogSeverity.Warning,
                 LogName = _logName,
                 Resource = _resource,
-                // This does not use patterns in the custom labels if they are enabled.
+                // Patterns included in custom labels will not be used in this "logs lost" entry.
+                // The pattern itself will be logged, regardless of the "UsePatternWithinCustomLabels" setting.
                 // This is acceptable as most patterns will be irrelevant in this context.
                 Labels = { _customLabels.ToDictionary(x => x.Key, x => x.Value) },
             };
