@@ -182,14 +182,14 @@ namespace Google.Cloud.PubSub.V1
         /// <remarks>
         /// The "Messaging" timeout backoff for <see cref="SubscriberServiceApiClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 25000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Maximum timeout: 12000 milliseconds</description></item>
+        /// <item><description>Maximum timeout: 25000 milliseconds</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetMessagingTimeoutBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(12000),
-            maxDelay: sys::TimeSpan.FromMilliseconds(12000),
+            delay: sys::TimeSpan.FromMilliseconds(25000),
+            maxDelay: sys::TimeSpan.FromMilliseconds(25000),
             delayMultiplier: 1.0
         );
 
@@ -424,9 +424,9 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 25000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 12000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 25000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
@@ -453,9 +453,9 @@ namespace Google.Cloud.PubSub.V1
         /// <item><description>Initial retry delay: 100 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 12000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 25000 milliseconds</description></item>
         /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 12000 milliseconds</description></item>
+        /// <item><description>Timeout maximum delay: 25000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
