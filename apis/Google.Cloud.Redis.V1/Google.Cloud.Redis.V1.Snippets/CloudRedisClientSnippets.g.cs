@@ -453,8 +453,7 @@ namespace Google.Cloud.Redis.V1.Snippets
             };
             Instance instance = new Instance
             {
-                DisplayName = "UpdatedDisplayName",
-                MemorySizeGb = 4,
+                DisplayName = " instance.memory_size_gb=4",
             };
             // Make the request
             Operation<Instance, OperationMetadata> response =
@@ -497,8 +496,7 @@ namespace Google.Cloud.Redis.V1.Snippets
             };
             Instance instance = new Instance
             {
-                DisplayName = "UpdatedDisplayName",
-                MemorySizeGb = 4,
+                DisplayName = " instance.memory_size_gb=4",
             };
             // Make the request
             Operation<Instance, OperationMetadata> response =
@@ -542,8 +540,7 @@ namespace Google.Cloud.Redis.V1.Snippets
                 },
                 Instance = new Instance
                 {
-                    DisplayName = "UpdatedDisplayName",
-                    MemorySizeGb = 4,
+                    DisplayName = " instance.memory_size_gb=4",
                 },
             };
             // Make the request
@@ -588,8 +585,7 @@ namespace Google.Cloud.Redis.V1.Snippets
                 },
                 Instance = new Instance
                 {
-                    DisplayName = "UpdatedDisplayName",
-                    MemorySizeGb = 4,
+                    DisplayName = " instance.memory_size_gb=4",
                 },
             };
             // Make the request
@@ -616,129 +612,280 @@ namespace Google.Cloud.Redis.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteInstanceAsync</summary>
-        public async Task DeleteInstanceAsync()
+        /// <summary>Snippet for ImportInstanceAsync</summary>
+        public async Task ImportInstanceAsync()
         {
-            // Snippet: DeleteInstanceAsync(InstanceName,CallSettings)
-            // Additional: DeleteInstanceAsync(InstanceName,CancellationToken)
+            // Snippet: ImportInstanceAsync(string,InputConfig,CallSettings)
+            // Additional: ImportInstanceAsync(string,InputConfig,CancellationToken)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            InputConfig inputConfig = new InputConfig();
             // Make the request
-            Operation<Empty, OperationMetadata> response =
-                await cloudRedisClient.DeleteInstanceAsync(name);
+            Operation<Instance, OperationMetadata> response =
+                await cloudRedisClient.ImportInstanceAsync(formattedName, inputConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse =
+            Operation<Instance, OperationMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse =
-                await cloudRedisClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                await cloudRedisClient.PollOnceImportInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance()
+        /// <summary>Snippet for ImportInstance</summary>
+        public void ImportInstance()
         {
-            // Snippet: DeleteInstance(InstanceName,CallSettings)
+            // Snippet: ImportInstance(string,InputConfig,CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            InputConfig inputConfig = new InputConfig();
             // Make the request
-            Operation<Empty, OperationMetadata> response =
-                cloudRedisClient.DeleteInstance(name);
+            Operation<Instance, OperationMetadata> response =
+                cloudRedisClient.ImportInstance(formattedName, inputConfig);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse =
+            Operation<Instance, OperationMetadata> completedResponse =
                 response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse =
-                cloudRedisClient.PollOnceDeleteInstance(operationName);
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                cloudRedisClient.PollOnceImportInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteInstanceAsync</summary>
-        public async Task DeleteInstanceAsync_RequestObject()
+        /// <summary>Snippet for ImportInstanceAsync</summary>
+        public async Task ImportInstanceAsync_RequestObject()
         {
-            // Snippet: DeleteInstanceAsync(DeleteInstanceRequest,CallSettings)
+            // Snippet: ImportInstanceAsync(ImportInstanceRequest,CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
+            ImportInstanceRequest request = new ImportInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InputConfig = new InputConfig(),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response =
-                await cloudRedisClient.DeleteInstanceAsync(request);
+            Operation<Instance, OperationMetadata> response =
+                await cloudRedisClient.ImportInstanceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse =
+            Operation<Instance, OperationMetadata> completedResponse =
                 await response.PollUntilCompletedAsync();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse =
-                await cloudRedisClient.PollOnceDeleteInstanceAsync(operationName);
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                await cloudRedisClient.PollOnceImportInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
 
-        /// <summary>Snippet for DeleteInstance</summary>
-        public void DeleteInstance_RequestObject()
+        /// <summary>Snippet for ImportInstance</summary>
+        public void ImportInstance_RequestObject()
         {
-            // Snippet: DeleteInstance(DeleteInstanceRequest,CallSettings)
+            // Snippet: ImportInstance(ImportInstanceRequest,CallSettings)
             // Create client
             CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest
+            ImportInstanceRequest request = new ImportInstanceRequest
             {
-                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                InputConfig = new InputConfig(),
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response =
-                cloudRedisClient.DeleteInstance(request);
+            Operation<Instance, OperationMetadata> response =
+                cloudRedisClient.ImportInstance(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse =
+            Operation<Instance, OperationMetadata> completedResponse =
                 response.PollUntilCompleted();
-            // The long-running operation is now complete.
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse =
-                cloudRedisClient.PollOnceDeleteInstance(operationName);
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                cloudRedisClient.PollOnceImportInstance(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
-                // The long-running operation is now complete.
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportInstanceAsync</summary>
+        public async Task ExportInstanceAsync()
+        {
+            // Snippet: ExportInstanceAsync(string,OutputConfig,CallSettings)
+            // Additional: ExportInstanceAsync(string,OutputConfig,CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            OutputConfig outputConfig = new OutputConfig();
+            // Make the request
+            Operation<Instance, OperationMetadata> response =
+                await cloudRedisClient.ExportInstanceAsync(formattedName, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                await cloudRedisClient.PollOnceExportInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportInstance</summary>
+        public void ExportInstance()
+        {
+            // Snippet: ExportInstance(string,OutputConfig,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            string formattedName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString();
+            OutputConfig outputConfig = new OutputConfig();
+            // Make the request
+            Operation<Instance, OperationMetadata> response =
+                cloudRedisClient.ExportInstance(formattedName, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                cloudRedisClient.PollOnceExportInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportInstanceAsync</summary>
+        public async Task ExportInstanceAsync_RequestObject()
+        {
+            // Snippet: ExportInstanceAsync(ExportInstanceRequest,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportInstanceRequest request = new ExportInstanceRequest
+            {
+                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                OutputConfig = new OutputConfig(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response =
+                await cloudRedisClient.ExportInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                await cloudRedisClient.PollOnceExportInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportInstance</summary>
+        public void ExportInstance_RequestObject()
+        {
+            // Snippet: ExportInstance(ExportInstanceRequest,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            ExportInstanceRequest request = new ExportInstanceRequest
+            {
+                Name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]").ToString(),
+                OutputConfig = new OutputConfig(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response =
+                cloudRedisClient.ExportInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse =
+                cloudRedisClient.PollOnceExportInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -878,6 +1025,133 @@ namespace Google.Cloud.Redis.V1.Snippets
             {
                 // If it has completed, then access the result
                 Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        public async Task DeleteInstanceAsync()
+        {
+            // Snippet: DeleteInstanceAsync(InstanceName,CallSettings)
+            // Additional: DeleteInstanceAsync(InstanceName,CancellationToken)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                await cloudRedisClient.DeleteInstanceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                await cloudRedisClient.PollOnceDeleteInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstance</summary>
+        public void DeleteInstance()
+        {
+            // Snippet: DeleteInstance(InstanceName,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                cloudRedisClient.DeleteInstance(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                cloudRedisClient.PollOnceDeleteInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        public async Task DeleteInstanceAsync_RequestObject()
+        {
+            // Snippet: DeleteInstanceAsync(DeleteInstanceRequest,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = await CloudRedisClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                await cloudRedisClient.DeleteInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                await cloudRedisClient.PollOnceDeleteInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstance</summary>
+        public void DeleteInstance_RequestObject()
+        {
+            // Snippet: DeleteInstance(DeleteInstanceRequest,CallSettings)
+            // Create client
+            CloudRedisClient cloudRedisClient = CloudRedisClient.Create();
+            // Initialize request argument(s)
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = new InstanceName("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response =
+                cloudRedisClient.DeleteInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse =
+                response.PollUntilCompleted();
+            // The long-running operation is now complete.
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse =
+                cloudRedisClient.PollOnceDeleteInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // The long-running operation is now complete.
             }
             // End snippet
         }

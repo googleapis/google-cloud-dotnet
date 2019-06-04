@@ -58,6 +58,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 MemorySizeGb = 34199707,
                 AuthorizedNetwork = "authorizedNetwork-1733809270",
+                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
             };
             mockGrpcClient.Setup(x => x.GetInstance(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -92,6 +93,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 MemorySizeGb = 34199707,
                 AuthorizedNetwork = "authorizedNetwork-1733809270",
+                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -126,6 +128,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 MemorySizeGb = 34199707,
                 AuthorizedNetwork = "authorizedNetwork-1733809270",
+                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -159,6 +162,7 @@ namespace Google.Cloud.Redis.V1.Tests
                 StatusMessage = "statusMessage-239442758",
                 MemorySizeGb = 34199707,
                 AuthorizedNetwork = "authorizedNetwork-1733809270",
+                PersistenceIamIdentity = "persistenceIamIdentity1061944584",
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Instance>(Task.FromResult(expectedResponse), null, null, null, null));
