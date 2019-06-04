@@ -22,6 +22,7 @@ using Google.Cloud.Logging.V2;
 using Google.Protobuf;
 using log4net.Appender;
 using log4net.Core;
+using log4net.Layout;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -64,7 +65,18 @@ namespace Google.Cloud.Logging.Log4Net
         // TODO:
         // * Various argument validations
         // * Send unsent logs on program exit? Using AppDomain.ProcessExit
-        //   - Note this only allows 2 seconds 
+        //   - Note this only allows 2 seconds
+
+        private struct CustomLabelPattern
+        {
+            public CustomLabelPattern(string key, PatternLayout layout)
+            {
+                Key = key;
+                Layout = layout;
+            }
+            public string Key { get; }
+            public PatternLayout Layout { get; }
+        }
 
         internal const string s_logsLostWarningMessage = "Logs lost due to insufficient process-local storage: {0} -> {1}";
         internal const string s_lostDateTimeFmt = "yyyy-MM-dd' 'HH:mm:ss'Z'";
@@ -121,6 +133,7 @@ namespace Google.Cloud.Logging.Log4Net
         private IClock _clock;
         private Platform _platform;
         private MonitoredResource _resource;
+        private CustomLabelPattern[] _customLabelsPatterns;
         private string _logName;
         private ILogQueue _logQ;
         private LogUploader _logUploader;
@@ -190,6 +203,8 @@ namespace Google.Cloud.Logging.Log4Net
                 Severity = LogSeverity.Warning,
                 LogName = _logName,
                 Resource = _resource,
+                // This does not use patterns in the custom labels if they are enabled.
+                // This is acceptable as most patterns will be irrelevant in this context.
                 Labels = { _customLabels.ToDictionary(x => x.Key, x => x.Value) },
             };
             var serverErrorBackoffSettings = new BackoffSettings(
@@ -201,6 +216,11 @@ namespace Google.Cloud.Logging.Log4Net
                 _client, _scheduler, _clock,
                 _logQ, logsLostWarningEntry, MaxUploadBatchSize,
                 serverErrorBackoffSettings);
+            if (_usePatternWithinCustomLabels)
+            {
+                // Initialize a pattern layout for each custom label.
+                _customLabelsPatterns = _customLabels.Select(x => new CustomLabelPattern(x.Key, new PatternLayout(x.Value))).ToArray();
+            }
             _isActivated = true;
         }
 
@@ -312,9 +332,19 @@ namespace Google.Cloud.Logging.Log4Net
                 labels.Add(nameof(MetaDataType.Level), loggingEvent.Level?.Name ?? unknown);
             }
             TryAddGitRevisionId(labels);
-            foreach (var customLabel in _customLabels)
+            if (_customLabelsPatterns != null)
             {
-                labels.Add(customLabel.Key, customLabel.Value);
+                foreach (var pattern in _customLabelsPatterns)
+                {
+                    labels.Add(pattern.Key, pattern.Layout.Format(loggingEvent));
+                }
+            }
+            else
+            {
+                foreach (var customLabel in _customLabels)
+                {
+                    labels.Add(customLabel.Key, customLabel.Value);
+                }
             }
             var logEntry = new LogEntry
             {

@@ -94,7 +94,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             IClock clock = null, IScheduler scheduler = null, Platform platform = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
             IEnumerable<MetaDataType> withMetadata = null, bool enableResourceTypeDetection = false,
-            bool requiresLog4Net = false)
+            bool requiresLog4Net = false, IDictionary<string, string> customLabels = null, bool usePatternWithinCustomLabels = false)
         {
             Hierarchy hierarchy = null;
             if (requiresLog4Net)
@@ -127,6 +127,11 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     appender.AddWithMetaData(metadata);
                 }
+                foreach (var customLabel in customLabels ?? Enumerable.Empty<KeyValuePair<string, string>>())
+                {
+                    appender.AddCustomLabel(new GoogleStackdriverAppender.Label { Key = customLabel.Key, Value = customLabel.Value });
+                }
+                appender.UsePatternWithinCustomLabels = usePatternWithinCustomLabels;
                 appender.ActivateOptions();
                 if (hierarchy != null)
                 {
@@ -150,7 +155,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             IClock clock = null, IScheduler scheduler = null, Platform platform = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
             IEnumerable<MetaDataType> withMetadata = null, bool enableResourceTypeDetection = false,
-            bool requiresLog4Net = false)
+            bool requiresLog4Net = false, IDictionary<string, string> customLabels = null, bool usePatternWithinCustomLabels = false)
         {
             List<LogEntry> uploadedEntries = new List<LogEntry>();
             await RunTest(entries =>
@@ -158,7 +163,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 uploadedEntries.AddRange(entries);
                 return Task.FromResult(new WriteLogEntriesResponse());
             }, testFn, clock, scheduler, platform, maxMemoryCount, maxMemorySize, maxUploadBatchSize,
-                withMetadata, enableResourceTypeDetection, requiresLog4Net);
+                withMetadata, enableResourceTypeDetection, requiresLog4Net, customLabels, usePatternWithinCustomLabels);
             return uploadedEntries;
         }
 
@@ -205,6 +210,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 Assert.Throws<InvalidOperationException>(() => appender.LocalQueueType = LocalQueueType.Memory);
                 Assert.Throws<InvalidOperationException>(() => appender.MaxMemorySize = 0);
                 Assert.Throws<InvalidOperationException>(() => appender.MaxMemoryCount = 0);
+                Assert.Throws<InvalidOperationException>(() => appender.UsePatternWithinCustomLabels = true);
                 Assert.Throws<InvalidOperationException>(() => appender.AddCustomLabel(new GoogleStackdriverAppender.Label { Key = "a", Value = "b" }));
                 Assert.Throws<InvalidOperationException>(() => appender.AddWithMetaData(MetaDataType.Domain));
                 Assert.Throws<InvalidOperationException>(() => appender.ServerErrorBackoffDelaySeconds = 0);
@@ -231,6 +237,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             appender.LocalQueueType = LocalQueueType.Memory;
             appender.MaxMemorySize = 0;
             appender.MaxMemoryCount = 0;
+            appender.UsePatternWithinCustomLabels = true;
             appender.AddCustomLabel(new GoogleStackdriverAppender.Label { Key = "a", Value = "b" });
             appender.AddWithMetaData(MetaDataType.Domain);
             appender.ServerErrorBackoffDelaySeconds = 0;
@@ -315,6 +322,55 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                     $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
                 Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
             }
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithCustomLabel()
+        {
+            var customLabels = new Dictionary<string, string>
+            {
+                { "label1", "label1value" },
+                { "label2", "%property{testing}" },
+            };
+            var uploadedEntries = await RunTestWorkingServer(
+                async appender =>
+                {
+                    LogInfo("Message0");
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
+                },
+                customLabels: customLabels,
+                requiresLog4Net: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal(customLabels, entry0.Labels.ToDictionary(x => x.Key, x => x.Value));
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithCustomLabelUsingPattern()
+        {
+            GlobalContext.Properties["testing"] = "my test property";
+            var customLabels = new Dictionary<string, string>
+            {
+                { "label1", "label1value" },
+                { "label2", "%property{testing}" },
+            };
+            var expectedCustomLabels = new Dictionary<string, string>
+            {
+                { "label1", "label1value" },
+                { "label2", "my test property" },
+            };
+            var uploadedEntries = await RunTestWorkingServer(
+                async appender =>
+                {
+                    LogInfo("Message0");
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
+                },
+                customLabels: customLabels,
+                usePatternWithinCustomLabels: true,
+                requiresLog4Net: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal(expectedCustomLabels, entry0.Labels.ToDictionary(x => x.Key, x => x.Value));
         }
 
         [Fact]

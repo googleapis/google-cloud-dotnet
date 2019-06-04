@@ -251,6 +251,17 @@ namespace Google.Cloud.Logging.Log4Net
             set => _credentialJson = ThrowIfActivated(value, nameof(CredentialJson));
         }
 
+        private bool _usePatternWithinCustomLabels;
+        /// <summary>
+        /// Enables <c>PatternLayout</c> use in custom labels. All the standard patterns documented in for Log4Net <c>PatternLayout</c>
+        /// are available. Custom pattern conversions are not possible.
+        /// </summary>
+        public bool UsePatternWithinCustomLabels
+        {
+            get => _usePatternWithinCustomLabels;
+            set => _usePatternWithinCustomLabels = ThrowIfActivated(value, nameof(UsePatternWithinCustomLabels));
+        }
+
         /// <summary>
         /// Specify custom labels for all log entries.
         /// </summary>
