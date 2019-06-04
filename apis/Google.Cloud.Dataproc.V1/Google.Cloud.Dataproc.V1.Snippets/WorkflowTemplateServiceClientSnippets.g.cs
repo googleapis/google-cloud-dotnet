@@ -351,16 +351,16 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for InstantiateInlineWorkflowTemplateAsync</summary>
         public async Task InstantiateInlineWorkflowTemplateAsync()
         {
-            // Snippet: InstantiateInlineWorkflowTemplateAsync(string,WorkflowTemplate,CallSettings)
-            // Additional: InstantiateInlineWorkflowTemplateAsync(string,WorkflowTemplate,CancellationToken)
+            // Snippet: InstantiateInlineWorkflowTemplateAsync(RegionName,WorkflowTemplate,CallSettings)
+            // Additional: InstantiateInlineWorkflowTemplateAsync(RegionName,WorkflowTemplate,CancellationToken)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = await WorkflowTemplateServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
+            RegionName parent = new RegionName("[PROJECT]", "[REGION]");
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             Operation<Empty, WorkflowMetadata> response =
-                await workflowTemplateServiceClient.InstantiateInlineWorkflowTemplateAsync(formattedParent, template);
+                await workflowTemplateServiceClient.InstantiateInlineWorkflowTemplateAsync(parent, template);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, WorkflowMetadata> completedResponse =
@@ -383,15 +383,15 @@ namespace Google.Cloud.Dataproc.V1.Snippets
         /// <summary>Snippet for InstantiateInlineWorkflowTemplate</summary>
         public void InstantiateInlineWorkflowTemplate()
         {
-            // Snippet: InstantiateInlineWorkflowTemplate(string,WorkflowTemplate,CallSettings)
+            // Snippet: InstantiateInlineWorkflowTemplate(RegionName,WorkflowTemplate,CallSettings)
             // Create client
             WorkflowTemplateServiceClient workflowTemplateServiceClient = WorkflowTemplateServiceClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new RegionName("[PROJECT]", "[REGION]").ToString();
+            RegionName parent = new RegionName("[PROJECT]", "[REGION]");
             WorkflowTemplate template = new WorkflowTemplate();
             // Make the request
             Operation<Empty, WorkflowMetadata> response =
-                workflowTemplateServiceClient.InstantiateInlineWorkflowTemplate(formattedParent, template);
+                workflowTemplateServiceClient.InstantiateInlineWorkflowTemplate(parent, template);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty, WorkflowMetadata> completedResponse =
@@ -420,7 +420,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             InstantiateInlineWorkflowTemplateRequest request = new InstantiateInlineWorkflowTemplateRequest
             {
-                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
+                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             // Make the request
@@ -454,7 +454,7 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             // Initialize request argument(s)
             InstantiateInlineWorkflowTemplateRequest request = new InstantiateInlineWorkflowTemplateRequest
             {
-                Parent = new RegionName("[PROJECT]", "[REGION]").ToString(),
+                ParentAsRegionName = new RegionName("[PROJECT]", "[REGION]"),
                 Template = new WorkflowTemplate(),
             };
             // Make the request
