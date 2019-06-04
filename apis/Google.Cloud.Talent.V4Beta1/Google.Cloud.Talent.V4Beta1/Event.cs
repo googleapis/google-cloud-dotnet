@@ -32,31 +32,31 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Zi5UaW1lc3RhbXASOgoJam9iX2V2ZW50GAUgASgLMiUuZ29vZ2xlLmNsb3Vk",
             "LnRhbGVudC52NGJldGExLkpvYkV2ZW50SAASQgoNcHJvZmlsZV9ldmVudBgG",
             "IAEoCzIpLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlRXZl",
-            "bnRIABITCgtldmVudF9ub3RlcxgJIAEoCUIHCgVldmVudCLvAwoISm9iRXZl",
+            "bnRIABITCgtldmVudF9ub3RlcxgJIAEoCUIHCgVldmVudCLsAwoISm9iRXZl",
             "bnQSQAoEdHlwZRgBIAEoDjIyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5Kb2JFdmVudC5Kb2JFdmVudFR5cGUSDAoEam9icxgCIAMoCSKSAwoMSm9i",
-            "RXZlbnRUeXBlEh4KGkpPQl9FVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDgoK",
-            "SU1QUkVTU0lPThABEggKBFZJRVcQAhIRCg1WSUVXX1JFRElSRUNUEAMSFQoR",
-            "QVBQTElDQVRJT05fU1RBUlQQBBIWChJBUFBMSUNBVElPTl9GSU5JU0gQBRIg",
-            "ChxBUFBMSUNBVElPTl9RVUlDS19TVUJNSVNTSU9OEAYSGAoUQVBQTElDQVRJ",
-            "T05fUkVESVJFQ1QQBxIhCh1BUFBMSUNBVElPTl9TVEFSVF9GUk9NX1NFQVJD",
-            "SBAIEiQKIEFQUExJQ0FUSU9OX1JFRElSRUNUX0ZST01fU0VBUkNIEAkSHgoa",
-            "QVBQTElDQVRJT05fQ09NUEFOWV9TVUJNSVQQChIMCghCT09LTUFSSxALEhAK",
-            "DE5PVElGSUNBVElPThAMEgkKBUhJUkVEEA0SCwoHU0VOVF9DVhAOEhUKEUlO",
-            "VEVSVklFV19HUkFOVEVEEA8SEgoOTk9UX0lOVEVSRVNURUQQECLYAQoMUHJv",
-            "ZmlsZUV2ZW50EkgKBHR5cGUYASABKA4yOi5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuUHJvZmlsZUV2ZW50LlByb2ZpbGVFdmVudFR5cGUSEAoIcHJv",
-            "ZmlsZXMYAiADKAkSDAoEam9icxgGIAMoCSJeChBQcm9maWxlRXZlbnRUeXBl",
-            "EiIKHlBST0ZJTEVfRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEg4KCklNUFJF",
-            "U1NJT04QARIICgRWSUVXEAISDAoIQk9PS01BUksQA0J4Ch9jb20uZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExQgpFdmVudFByb3RvUAFaQWdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0",
-            "YmV0YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
+            "MS5Kb2JFdmVudC5Kb2JFdmVudFR5cGUSDAoEam9icxgCIAMoCRIPCgdwcm9m",
+            "aWxlGAMgASgJIv4CCgxKb2JFdmVudFR5cGUSHgoaSk9CX0VWRU5UX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABIOCgpJTVBSRVNTSU9OEAESCAoEVklFVxACEhEKDVZJ",
+            "RVdfUkVESVJFQ1QQAxIVChFBUFBMSUNBVElPTl9TVEFSVBAEEhYKEkFQUExJ",
+            "Q0FUSU9OX0ZJTklTSBAFEiAKHEFQUExJQ0FUSU9OX1FVSUNLX1NVQk1JU1NJ",
+            "T04QBhIYChRBUFBMSUNBVElPTl9SRURJUkVDVBAHEiEKHUFQUExJQ0FUSU9O",
+            "X1NUQVJUX0ZST01fU0VBUkNIEAgSJAogQVBQTElDQVRJT05fUkVESVJFQ1Rf",
+            "RlJPTV9TRUFSQ0gQCRIeChpBUFBMSUNBVElPTl9DT01QQU5ZX1NVQk1JVBAK",
+            "EgwKCEJPT0tNQVJLEAsSEAoMTk9USUZJQ0FUSU9OEAwSCQoFSElSRUQQDRIL",
+            "CgdTRU5UX0NWEA4SFQoRSU5URVJWSUVXX0dSQU5URUQQDyLYAQoMUHJvZmls",
+            "ZUV2ZW50EkgKBHR5cGUYASABKA4yOi5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuUHJvZmlsZUV2ZW50LlByb2ZpbGVFdmVudFR5cGUSEAoIcHJvZmls",
+            "ZXMYAiADKAkSDAoEam9icxgGIAMoCSJeChBQcm9maWxlRXZlbnRUeXBlEiIK",
+            "HlBST0ZJTEVfRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEg4KCklNUFJFU1NJ",
+            "T04QARIICgRWSUVXEAISDAoIQk9PS01BUksQA0J4Ch9jb20uZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExQgpFdmVudFByb3RvUAFaQWdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0",
+            "YTE7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ClientEvent), global::Google.Cloud.Talent.V4Beta1.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "ProfileEvent", "EventNotes" }, new[]{ "Event" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent), global::Google.Cloud.Talent.V4Beta1.JobEvent.Parser, new[]{ "Type", "Jobs", "Profile" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent), global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Parser, new[]{ "Type", "Profiles", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.ProfileEvent.Types.ProfileEventType) }, null)
           }));
     }
@@ -121,7 +121,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequestIdFieldNumber = 1;
     private string requestId_ = "";
     /// <summary>
-    /// Required.
+    /// Optional but highly recommended.
     ///
     /// A unique ID generated in the API responses. It can be found in
     /// [ResponseMetadata.request_id][google.cloud.talent.v4beta1.ResponseMetadata.request_id].
@@ -454,6 +454,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public JobEvent(JobEvent other) : this() {
       type_ = other.type_;
       jobs_ = other.jobs_.Clone();
+      profile_ = other.profile_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -468,7 +469,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The type of the event (see [JobEventType][google.cloud.talent.v4beta1.JobEvent.JobEventType]).
+    /// The type of the event (see
+    /// [JobEventType][google.cloud.talent.v4beta1.JobEvent.JobEventType]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.JobEvent.Types.JobEventType Type {
@@ -486,15 +488,42 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The [job name(s)][google.cloud.talent.v4beta1.Job.name] associated with this event.
-    /// For example, if this is an [impression][google.cloud.talent.v4beta1.JobEvent.JobEventType.IMPRESSION] event,
-    /// this field contains the identifiers of all jobs shown to the job seeker.
-    /// If this was a [view][google.cloud.talent.v4beta1.JobEvent.JobEventType.VIEW] event, this field contains the
-    /// identifier of the viewed job.
+    /// The [job name(s)][google.cloud.talent.v4beta1.Job.name] associated with
+    /// this event. For example, if this is an
+    /// [impression][google.cloud.talent.v4beta1.JobEvent.JobEventType.IMPRESSION]
+    /// event, this field contains the identifiers of all jobs shown to the job
+    /// seeker. If this was a
+    /// [view][google.cloud.talent.v4beta1.JobEvent.JobEventType.VIEW] event, this
+    /// field contains the identifier of the viewed job.
+    ///
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+    /// example, "projects/api-test-project/tenants/foo/jobs/1234".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Jobs {
       get { return jobs_; }
+    }
+
+    /// <summary>Field number for the "profile" field.</summary>
+    public const int ProfileFieldNumber = 3;
+    private string profile_ = "";
+    /// <summary>
+    /// Optional.
+    ///
+    /// The [profile name][google.cloud.talent.v4beta1.Profile.name] associated
+    /// with this client event.
+    ///
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Profile {
+      get { return profile_; }
+      set {
+        profile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -512,6 +541,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       if (Type != other.Type) return false;
       if(!jobs_.Equals(other.jobs_)) return false;
+      if (Profile != other.Profile) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -520,6 +550,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       int hash = 1;
       if (Type != 0) hash ^= Type.GetHashCode();
       hash ^= jobs_.GetHashCode();
+      if (Profile.Length != 0) hash ^= Profile.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -538,6 +569,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteEnum((int) Type);
       }
       jobs_.WriteTo(output, _repeated_jobs_codec);
+      if (Profile.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Profile);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -550,6 +585,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       size += jobs_.CalculateSize(_repeated_jobs_codec);
+      if (Profile.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Profile);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -565,6 +603,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         Type = other.Type;
       }
       jobs_.Add(other.jobs_);
+      if (other.Profile.Length != 0) {
+        Profile = other.Profile;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -582,6 +623,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 18: {
             jobs_.AddEntriesFrom(input, _repeated_jobs_codec);
+            break;
+          }
+          case 26: {
+            Profile = input.ReadString();
             break;
           }
         }
@@ -637,7 +682,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// submitted an application for a job with a single click without
         /// entering information. If a job seeker performs this action, send only
         /// this event to the service. Do not also send
-        /// [JobEventType.APPLICATION_START][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_START] or [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_FINISH]
+        /// [JobEventType.APPLICATION_START][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_START]
+        /// or
+        /// [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_FINISH]
         /// events.
         /// </summary>
         [pbr::OriginalName("APPLICATION_QUICK_SUBMISSION")] ApplicationQuickSubmission = 6,
@@ -660,8 +707,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// (without viewing the details of the job posting), and is redirected
         /// to a different website to complete the application. If a candidate
         /// performs this action, send only this event to the service. Do not also
-        /// send [JobEventType.APPLICATION_START][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_START],
-        /// [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_FINISH] or [JobEventType.VIEW][google.cloud.talent.v4beta1.JobEvent.JobEventType.VIEW] events.
+        /// send
+        /// [JobEventType.APPLICATION_START][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_START],
+        /// [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4beta1.JobEvent.JobEventType.APPLICATION_FINISH]
+        /// or
+        /// [JobEventType.VIEW][google.cloud.talent.v4beta1.JobEvent.JobEventType.VIEW]
+        /// events.
         /// </summary>
         [pbr::OriginalName("APPLICATION_REDIRECT_FROM_SEARCH")] ApplicationRedirectFromSearch = 9,
         /// <summary>
@@ -703,11 +754,6 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// recommendation provided by the Cloud Talent Solution service.
         /// </summary>
         [pbr::OriginalName("INTERVIEW_GRANTED")] InterviewGranted = 15,
-        /// <summary>
-        /// The job seeker or other entity interacting with the service showed
-        /// no interest in the job.
-        /// </summary>
-        [pbr::OriginalName("NOT_INTERESTED")] NotInterested = 16,
       }
 
     }
@@ -779,7 +825,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Required.
     ///
-    /// The [profile name(s)][google.cloud.talent.v4beta1.Profile.name] associated with this client event.
+    /// The [profile name(s)][google.cloud.talent.v4beta1.Profile.name] associated
+    /// with this client event.
+    ///
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
+    /// for example, "projects/api-test-project/tenants/foo/profiles/bar".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Profiles {
@@ -794,11 +845,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// The job ID associated with this client event if there is one. Leave it
-    /// empty if the event isn't associated with a job.
+    /// The [job name(s)][google.cloud.talent.v4beta1.Job.name] associated with
+    /// this client event. Leave it empty if the event isn't associated with a job.
     ///
-    /// The job ID should be consistent with the
-    /// [JobApplication.job.requisition_id][] in the profile.
+    /// The format is
+    /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
+    /// example, "projects/api-test-project/tenants/foo/jobs/1234".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Jobs {

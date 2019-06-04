@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using pb = Google.Protobuf;
 using pbwkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -57,6 +58,10 @@ namespace Google.Cloud.Talent.V4Beta1
             BatchDeleteJobsSettings = existing.BatchDeleteJobsSettings;
             SearchJobsSettings = existing.SearchJobsSettings;
             SearchJobsForAlertSettings = existing.SearchJobsForAlertSettings;
+            BatchCreateJobsSettings = existing.BatchCreateJobsSettings;
+            BatchCreateJobsOperationsSettings = existing.BatchCreateJobsOperationsSettings?.Clone();
+            BatchUpdateJobsSettings = existing.BatchUpdateJobsSettings;
+            BatchUpdateJobsOperationsSettings = existing.BatchUpdateJobsOperationsSettings?.Clone();
             OnCopy(existing);
         }
 
@@ -360,6 +365,106 @@ namespace Google.Cloud.Talent.V4Beta1
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.BatchCreateJobs</c> and <c>JobServiceClient.BatchCreateJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>JobServiceClient.BatchCreateJobs</c> and
+        /// <c>JobServiceClient.BatchCreateJobsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateJobsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>JobServiceClient.BatchCreateJobs</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchCreateJobsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(5000L))
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.BatchUpdateJobs</c> and <c>JobServiceClient.BatchUpdateJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>JobServiceClient.BatchUpdateJobs</c> and
+        /// <c>JobServiceClient.BatchUpdateJobsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateJobsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>JobServiceClient.BatchUpdateJobs</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 500 milliseconds</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 5000 milliseconds</description></item>
+        /// <item><description>Total timeout: 300000 milliseconds</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BatchUpdateJobsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(
+                gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000L)),
+                sys::TimeSpan.FromMilliseconds(500L),
+                1.5,
+                sys::TimeSpan.FromMilliseconds(5000L))
+        };
 
         /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
@@ -2060,11 +2165,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2083,11 +2190,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2106,16 +2215,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2134,16 +2245,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2161,6 +2274,360 @@ namespace Google.Cloud.Talent.V4Beta1
             throw new sys::NotImplementedException();
         }
 
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="jobs">
+        /// Required.
+        ///
+        /// The jobs to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(
+            string parent,
+            scg::IEnumerable<Job> jobs,
+            gaxgrpc::CallSettings callSettings = null) => BatchCreateJobsAsync(
+                new BatchCreateJobsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Jobs = { gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="jobs">
+        /// Required.
+        ///
+        /// The jobs to be created.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(
+            string parent,
+            scg::IEnumerable<Job> jobs,
+            st::CancellationToken cancellationToken) => BatchCreateJobsAsync(
+                parent,
+                jobs,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and a default tenant is created if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="jobs">
+        /// Required.
+        ///
+        /// The jobs to be created.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchCreateJobs(
+            string parent,
+            scg::IEnumerable<Job> jobs,
+            gaxgrpc::CallSettings callSettings = null) => BatchCreateJobs(
+                new BatchCreateJobsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Jobs = { gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(
+            BatchCreateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchCreateJobsAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> PollOnceBatchCreateJobsAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<JobOperationResult, BatchOperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                BatchCreateJobsOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchCreateJobs(
+            BatchCreateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>BatchCreateJobs</c>.
+        /// </summary>
+        public virtual lro::OperationsClient BatchCreateJobsOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchCreateJobs</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> PollOnceBatchCreateJobs(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<JobOperationResult, BatchOperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                BatchCreateJobsOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="jobs">
+        /// Required.
+        ///
+        /// The jobs to be updated.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(
+            string parent,
+            scg::IEnumerable<Job> jobs,
+            gaxgrpc::CallSettings callSettings = null) => BatchUpdateJobsAsync(
+                new BatchUpdateJobsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Jobs = { gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="jobs">
+        /// Required.
+        ///
+        /// The jobs to be updated.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(
+            string parent,
+            scg::IEnumerable<Job> jobs,
+            st::CancellationToken cancellationToken) => BatchUpdateJobsAsync(
+                parent,
+                jobs,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="parent">
+        /// Required.
+        ///
+        /// The resource name of the tenant under which the job is created.
+        ///
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/api-test-project/tenant/foo".
+        ///
+        /// Tenant id is optional and the default tenant is used if unspecified, for
+        /// example, "projects/api-test-project".
+        /// </param>
+        /// <param name="jobs">
+        /// Required.
+        ///
+        /// The jobs to be updated.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchUpdateJobs(
+            string parent,
+            scg::IEnumerable<Job> jobs,
+            gaxgrpc::CallSettings callSettings = null) => BatchUpdateJobs(
+                new BatchUpdateJobsRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                    Jobs = { gax::GaxPreconditions.CheckNotNull(jobs, nameof(jobs)) },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(
+            BatchUpdateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchUpdateJobsAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> PollOnceBatchUpdateJobsAsync(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<JobOperationResult, BatchOperationMetadata>.PollOnceFromNameAsync(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                BatchUpdateJobsOperationsClient,
+                callSettings);
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> BatchUpdateJobs(
+            BatchUpdateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>BatchUpdateJobs</c>.
+        /// </summary>
+        public virtual lro::OperationsClient BatchUpdateJobsOperationsClient
+        {
+            get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BatchUpdateJobs</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<JobOperationResult, BatchOperationMetadata> PollOnceBatchUpdateJobs(
+            string operationName,
+            gaxgrpc::CallSettings callSettings = null) => lro::Operation<JobOperationResult, BatchOperationMetadata>.PollOnceFromName(
+                gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                BatchUpdateJobsOperationsClient,
+                callSettings);
+
     }
 
     /// <summary>
@@ -2176,6 +2643,8 @@ namespace Google.Cloud.Talent.V4Beta1
         private readonly gaxgrpc::ApiCall<BatchDeleteJobsRequest, pbwkt::Empty> _callBatchDeleteJobs;
         private readonly gaxgrpc::ApiCall<SearchJobsRequest, SearchJobsResponse> _callSearchJobs;
         private readonly gaxgrpc::ApiCall<SearchJobsRequest, SearchJobsResponse> _callSearchJobsForAlert;
+        private readonly gaxgrpc::ApiCall<BatchCreateJobsRequest, lro::Operation> _callBatchCreateJobs;
+        private readonly gaxgrpc::ApiCall<BatchUpdateJobsRequest, lro::Operation> _callBatchUpdateJobs;
 
         /// <summary>
         /// Constructs a client wrapper for the JobService service, with the specified gRPC client and settings.
@@ -2187,6 +2656,10 @@ namespace Google.Cloud.Talent.V4Beta1
             GrpcClient = grpcClient;
             JobServiceSettings effectiveSettings = settings ?? JobServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            BatchCreateJobsOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.BatchCreateJobsOperationsSettings);
+            BatchUpdateJobsOperationsClient = new lro::OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.BatchUpdateJobsOperationsSettings);
             _callCreateJob = clientHelper.BuildApiCall<CreateJobRequest, Job>(
                 GrpcClient.CreateJobAsync, GrpcClient.CreateJob, effectiveSettings.CreateJobSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
@@ -2211,6 +2684,12 @@ namespace Google.Cloud.Talent.V4Beta1
             _callSearchJobsForAlert = clientHelper.BuildApiCall<SearchJobsRequest, SearchJobsResponse>(
                 GrpcClient.SearchJobsForAlertAsync, GrpcClient.SearchJobsForAlert, effectiveSettings.SearchJobsForAlertSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callBatchCreateJobs = clientHelper.BuildApiCall<BatchCreateJobsRequest, lro::Operation>(
+                GrpcClient.BatchCreateJobsAsync, GrpcClient.BatchCreateJobs, effectiveSettings.BatchCreateJobsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callBatchUpdateJobs = clientHelper.BuildApiCall<BatchUpdateJobsRequest, lro::Operation>(
+                GrpcClient.BatchUpdateJobsAsync, GrpcClient.BatchUpdateJobs, effectiveSettings.BatchUpdateJobsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             Modify_ApiCall(ref _callCreateJob);
             Modify_CreateJobApiCall(ref _callCreateJob);
             Modify_ApiCall(ref _callGetJob);
@@ -2227,6 +2706,10 @@ namespace Google.Cloud.Talent.V4Beta1
             Modify_SearchJobsApiCall(ref _callSearchJobs);
             Modify_ApiCall(ref _callSearchJobsForAlert);
             Modify_SearchJobsForAlertApiCall(ref _callSearchJobsForAlert);
+            Modify_ApiCall(ref _callBatchCreateJobs);
+            Modify_BatchCreateJobsApiCall(ref _callBatchCreateJobs);
+            Modify_ApiCall(ref _callBatchUpdateJobs);
+            Modify_BatchUpdateJobsApiCall(ref _callBatchUpdateJobs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2248,6 +2731,8 @@ namespace Google.Cloud.Talent.V4Beta1
         partial void Modify_BatchDeleteJobsApiCall(ref gaxgrpc::ApiCall<BatchDeleteJobsRequest, pbwkt::Empty> call);
         partial void Modify_SearchJobsApiCall(ref gaxgrpc::ApiCall<SearchJobsRequest, SearchJobsResponse> call);
         partial void Modify_SearchJobsForAlertApiCall(ref gaxgrpc::ApiCall<SearchJobsRequest, SearchJobsResponse> call);
+        partial void Modify_BatchCreateJobsApiCall(ref gaxgrpc::ApiCall<BatchCreateJobsRequest, lro::Operation> call);
+        partial void Modify_BatchUpdateJobsApiCall(ref gaxgrpc::ApiCall<BatchUpdateJobsRequest, lro::Operation> call);
         partial void OnConstruction(JobService.JobServiceClient grpcClient, JobServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -2265,6 +2750,8 @@ namespace Google.Cloud.Talent.V4Beta1
         partial void Modify_ListJobsRequest(ref ListJobsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_BatchDeleteJobsRequest(ref BatchDeleteJobsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SearchJobsRequest(ref SearchJobsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BatchCreateJobsRequest(ref BatchCreateJobsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_BatchUpdateJobsRequest(ref BatchUpdateJobsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new job.
@@ -2521,11 +3008,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2545,11 +3034,13 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs that the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs that the caller has permission to
+        /// search against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2569,16 +3060,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2598,16 +3091,18 @@ namespace Google.Cloud.Talent.V4Beta1
         }
 
         /// <summary>
-        /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Searches for jobs using the provided
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         ///
         /// This API call is intended for the use case of targeting passive job
         /// seekers (for example, job seekers who have signed up to receive email
         /// alerts about potential job opportunities), and has different algorithmic
         /// adjustments that are targeted to passive job seekers.
         ///
-        /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-        /// present in the database, and only returns jobs the caller has
-        /// permission to search against.
+        /// This call constrains the
+        /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+        /// the database, and only returns jobs the caller has permission to search
+        /// against.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2625,6 +3120,100 @@ namespace Google.Cloud.Talent.V4Beta1
             Modify_SearchJobsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedEnumerable<SearchJobsRequest, SearchJobsResponse, SearchJobsResponse.Types.MatchingJob>(_callSearchJobsForAlert, request, callSettings);
         }
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchCreateJobsAsync(
+            BatchCreateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<JobOperationResult, BatchOperationMetadata>(
+                await _callBatchCreateJobs.Async(request, callSettings).ConfigureAwait(false), BatchCreateJobsOperationsClient);
+        }
+
+        /// <summary>
+        /// Begins executing a batch create jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<JobOperationResult, BatchOperationMetadata> BatchCreateJobs(
+            BatchCreateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<JobOperationResult, BatchOperationMetadata>(
+                _callBatchCreateJobs.Sync(request, callSettings), BatchCreateJobsOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>BatchCreateJobs</c>.
+        /// </summary>
+        public override lro::OperationsClient BatchCreateJobsOperationsClient { get; }
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override async stt::Task<lro::Operation<JobOperationResult, BatchOperationMetadata>> BatchUpdateJobsAsync(
+            BatchUpdateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<JobOperationResult, BatchOperationMetadata>(
+                await _callBatchUpdateJobs.Async(request, callSettings).ConfigureAwait(false), BatchUpdateJobsOperationsClient);
+        }
+
+        /// <summary>
+        /// Begins executing a batch update jobs operation.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override lro::Operation<JobOperationResult, BatchOperationMetadata> BatchUpdateJobs(
+            BatchUpdateJobsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateJobsRequest(ref request, ref callSettings);
+            return new lro::Operation<JobOperationResult, BatchOperationMetadata>(
+                _callBatchUpdateJobs.Sync(request, callSettings), BatchUpdateJobsOperationsClient);
+        }
+
+        /// <summary>
+        /// The long-running operations client for <c>BatchUpdateJobs</c>.
+        /// </summary>
+        public override lro::OperationsClient BatchUpdateJobsOperationsClient { get; }
 
     }
 
@@ -2653,4 +3242,19 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <inheritdoc/>
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
+
+    // Partial Grpc class to enable LRO client creation
+    public static partial class JobService
+    {
+        public partial class JobServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() => new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+
 }

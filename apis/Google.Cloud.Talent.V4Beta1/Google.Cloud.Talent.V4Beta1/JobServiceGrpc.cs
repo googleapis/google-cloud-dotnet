@@ -42,6 +42,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest> __Marshaller_BatchDeleteJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchDeleteJobsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest> __Marshaller_SearchJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse> __Marshaller_SearchJobsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest> __Marshaller_BatchCreateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest> __Marshaller_BatchUpdateJobsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job> __Method_CreateJob = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateJobRequest, global::Google.Cloud.Talent.V4Beta1.Job>(
         grpc::MethodType.Unary,
@@ -98,6 +101,20 @@ namespace Google.Cloud.Talent.V4Beta1 {
         "SearchJobsForAlert",
         __Marshaller_SearchJobsRequest,
         __Marshaller_SearchJobsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest, global::Google.LongRunning.Operation> __Method_BatchCreateJobs = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateJobs",
+        __Marshaller_BatchCreateJobsRequest,
+        __Marshaller_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest, global::Google.LongRunning.Operation> __Method_BatchUpdateJobs = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateJobs",
+        __Marshaller_BatchUpdateJobsRequest,
+        __Marshaller_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -185,11 +202,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
 
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs that the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs that the caller has permission to
+      /// search against.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -200,21 +219,45 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
 
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
       /// This API call is intended for the use case of targeting passive job
       /// seekers (for example, job seekers who have signed up to receive email
       /// alerts about potential job opportunities), and has different algorithmic
       /// adjustments that are targeted to passive job seekers.
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs the caller has permission to search
+      /// against.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse> SearchJobsForAlert(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Begins executing a batch create jobs operation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchCreateJobs(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Begins executing a batch update jobs operation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchUpdateJobs(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -549,11 +592,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteJobs, null, options, request);
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs that the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs that the caller has permission to
+      /// search against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -565,11 +610,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return SearchJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs that the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs that the caller has permission to
+      /// search against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -579,11 +626,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchJobs, null, options, request);
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs that the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs that the caller has permission to
+      /// search against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -595,11 +644,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return SearchJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs that the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs that the caller has permission to
+      /// search against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -609,16 +660,18 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_SearchJobs, null, options, request);
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
       /// This API call is intended for the use case of targeting passive job
       /// seekers (for example, job seekers who have signed up to receive email
       /// alerts about potential job opportunities), and has different algorithmic
       /// adjustments that are targeted to passive job seekers.
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs the caller has permission to search
+      /// against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -630,16 +683,18 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return SearchJobsForAlert(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
       /// This API call is intended for the use case of targeting passive job
       /// seekers (for example, job seekers who have signed up to receive email
       /// alerts about potential job opportunities), and has different algorithmic
       /// adjustments that are targeted to passive job seekers.
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs the caller has permission to search
+      /// against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -649,16 +704,18 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchJobsForAlert, null, options, request);
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
       /// This API call is intended for the use case of targeting passive job
       /// seekers (for example, job seekers who have signed up to receive email
       /// alerts about potential job opportunities), and has different algorithmic
       /// adjustments that are targeted to passive job seekers.
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs the caller has permission to search
+      /// against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -670,16 +727,18 @@ namespace Google.Cloud.Talent.V4Beta1 {
         return SearchJobsForAlertAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Searches for jobs using the provided [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Searches for jobs using the provided
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       ///
       /// This API call is intended for the use case of targeting passive job
       /// seekers (for example, job seekers who have signed up to receive email
       /// alerts about potential job opportunities), and has different algorithmic
       /// adjustments that are targeted to passive job seekers.
       ///
-      /// This call constrains the [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs
-      /// present in the database, and only returns jobs the caller has
-      /// permission to search against.
+      /// This call constrains the
+      /// [visibility][google.cloud.talent.v4beta1.Job.visibility] of jobs present in
+      /// the database, and only returns jobs the caller has permission to search
+      /// against.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -687,6 +746,94 @@ namespace Google.Cloud.Talent.V4Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse> SearchJobsForAlertAsync(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchJobsForAlert, null, options, request);
+      }
+      /// <summary>
+      /// Begins executing a batch create jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchCreateJobs(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Begins executing a batch create jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchCreateJobs(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateJobs, null, options, request);
+      }
+      /// <summary>
+      /// Begins executing a batch create jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateJobsAsync(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Begins executing a batch create jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchCreateJobsAsync(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateJobs, null, options, request);
+      }
+      /// <summary>
+      /// Begins executing a batch update jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchUpdateJobs(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Begins executing a batch update jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchUpdateJobs(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateJobs, null, options, request);
+      }
+      /// <summary>
+      /// Begins executing a batch update jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchUpdateJobsAsync(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Begins executing a batch update jobs operation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchUpdateJobsAsync(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateJobs, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override JobServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -707,7 +854,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
           .AddMethod(__Method_ListJobs, serviceImpl.ListJobs)
           .AddMethod(__Method_BatchDeleteJobs, serviceImpl.BatchDeleteJobs)
           .AddMethod(__Method_SearchJobs, serviceImpl.SearchJobs)
-          .AddMethod(__Method_SearchJobsForAlert, serviceImpl.SearchJobsForAlert).Build();
+          .AddMethod(__Method_SearchJobsForAlert, serviceImpl.SearchJobsForAlert)
+          .AddMethod(__Method_BatchCreateJobs, serviceImpl.BatchCreateJobs)
+          .AddMethod(__Method_BatchUpdateJobs, serviceImpl.BatchUpdateJobs).Build();
     }
 
   }

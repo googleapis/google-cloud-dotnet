@@ -26,117 +26,133 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvam9iX3NlcnZpY2UucHJv",
             "dG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxooZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGEx",
-            "L2NvbW1vbi5wcm90bxopZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2Zp",
-            "bHRlcnMucHJvdG8aK2dvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9oaXN0",
-            "b2dyYW0ucHJvdG8aJWdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9qb2Iu",
-            "cHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGh5n",
-            "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aG2dvb2dsZS9wcm90b2J1",
-            "Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
-            "dG8iUQoQQ3JlYXRlSm9iUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSLQoDam9i",
-            "GAIgASgLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYiIdCg1H",
-            "ZXRKb2JSZXF1ZXN0EgwKBG5hbWUYASABKAkicgoQVXBkYXRlSm9iUmVxdWVz",
-            "dBItCgNqb2IYASABKAsyIC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "Sm9iEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFzayIgChBEZWxldGVKb2JSZXF1ZXN0EgwKBG5hbWUYASABKAkiOAoW",
-            "QmF0Y2hEZWxldGVKb2JzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSDgoGZmls",
-            "dGVyGAIgASgJIpABCg9MaXN0Sm9ic1JlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
-            "Eg4KBmZpbHRlchgCIAEoCRISCgpwYWdlX3Rva2VuGAMgASgJEhEKCXBhZ2Vf",
-            "c2l6ZRgEIAEoBRI2Cghqb2JfdmlldxgFIAEoDjIkLmdvb2dsZS5jbG91ZC50",
-            "YWxlbnQudjRiZXRhMS5Kb2JWaWV3IpwBChBMaXN0Sm9ic1Jlc3BvbnNlEi4K",
-            "BGpvYnMYASADKAsyIC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9i",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRI/CghtZXRhZGF0YRgDIAEoCzIt",
-            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5SZXNwb25zZU1ldGFkYXRh",
-            "IqAJChFTZWFyY2hKb2JzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSTgoLc2Vh",
-            "cmNoX21vZGUYAiABKA4yOS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "U2VhcmNoSm9ic1JlcXVlc3QuU2VhcmNoTW9kZRJGChByZXF1ZXN0X21ldGFk",
-            "YXRhGAMgASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlJlcXVl",
-            "c3RNZXRhZGF0YRI4Cglqb2JfcXVlcnkYBCABKAsyJS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuSm9iUXVlcnkSGQoRZW5hYmxlX2Jyb2FkZW5pbmcY",
-            "BSABKAgSIwobcmVxdWlyZV9wcmVjaXNlX3Jlc3VsdF9zaXplGAYgASgIEkYK",
-            "EWhpc3RvZ3JhbV9xdWVyaWVzGAcgAygLMisuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLkhpc3RvZ3JhbVF1ZXJ5EjYKCGpvYl92aWV3GAggASgOMiQu",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYlZpZXcSDgoGb2Zmc2V0",
-            "GAkgASgFEhEKCXBhZ2Vfc2l6ZRgKIAEoBRISCgpwYWdlX3Rva2VuGAsgASgJ",
-            "EhAKCG9yZGVyX2J5GAwgASgJEmIKFWRpdmVyc2lmaWNhdGlvbl9sZXZlbBgN",
-            "IAEoDjJDLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hKb2Jz",
-            "UmVxdWVzdC5EaXZlcnNpZmljYXRpb25MZXZlbBJdChNjdXN0b21fcmFua2lu",
-            "Z19pbmZvGA4gASgLMkAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNl",
-            "YXJjaEpvYnNSZXF1ZXN0LkN1c3RvbVJhbmtpbmdJbmZvEh0KFWRpc2FibGVf",
-            "a2V5d29yZF9tYXRjaBgQIAEoCBqQAgoRQ3VzdG9tUmFua2luZ0luZm8SagoQ",
-            "aW1wb3J0YW5jZV9sZXZlbBgBIAEoDjJQLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5TZWFyY2hKb2JzUmVxdWVzdC5DdXN0b21SYW5raW5nSW5mby5J",
-            "bXBvcnRhbmNlTGV2ZWwSGgoScmFua2luZ19leHByZXNzaW9uGAIgASgJInMK",
-            "D0ltcG9ydGFuY2VMZXZlbBIgChxJTVBPUlRBTkNFX0xFVkVMX1VOU1BFQ0lG",
-            "SUVEEAASCAoETk9ORRABEgcKA0xPVxACEggKBE1JTEQQAxIKCgZNRURJVU0Q",
-            "BBIICgRISUdIEAUSCwoHRVhUUkVNRRAGIlIKClNlYXJjaE1vZGUSGwoXU0VB",
-            "UkNIX01PREVfVU5TUEVDSUZJRUQQABIOCgpKT0JfU0VBUkNIEAESFwoTRkVB",
-            "VFVSRURfSk9CX1NFQVJDSBACIlcKFERpdmVyc2lmaWNhdGlvbkxldmVsEiUK",
-            "IURJVkVSU0lGSUNBVElPTl9MRVZFTF9VTlNQRUNJRklFRBAAEgwKCERJU0FC",
-            "TEVEEAESCgoGU0lNUExFEAIi1wYKElNlYXJjaEpvYnNSZXNwb25zZRJSCg1t",
-            "YXRjaGluZ19qb2JzGAEgAygLMjsuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLlNlYXJjaEpvYnNSZXNwb25zZS5NYXRjaGluZ0pvYhJSChdoaXN0b2dy",
-            "YW1fcXVlcnlfcmVzdWx0cxgCIAMoCzIxLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5IaXN0b2dyYW1RdWVyeVJlc3VsdBIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAyABKAkSPwoQbG9jYXRpb25fZmlsdGVycxgEIAMoCzIlLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5Mb2NhdGlvbhIcChRlc3RpbWF0ZWRfdG90",
-            "YWxfc2l6ZRgFIAEoBRISCgp0b3RhbF9zaXplGAYgASgFEj8KCG1ldGFkYXRh",
-            "GAcgASgLMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlJlc3BvbnNl",
-            "TWV0YWRhdGESIgoaYnJvYWRlbmVkX3F1ZXJ5X2pvYnNfY291bnQYCCABKAUS",
-            "SQoQc3BlbGxfY29ycmVjdGlvbhgJIAEoCzIvLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5TcGVsbGluZ0NvcnJlY3Rpb24a3AEKC01hdGNoaW5nSm9i",
-            "Ei0KA2pvYhgBIAEoCzIgLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5K",
-            "b2ISEwoLam9iX3N1bW1hcnkYAiABKAkSGQoRam9iX3RpdGxlX3NuaXBwZXQY",
-            "AyABKAkSGwoTc2VhcmNoX3RleHRfc25pcHBldBgEIAEoCRJRCgxjb21tdXRl",
-            "X2luZm8YBSABKAsyOy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2Vh",
-            "cmNoSm9ic1Jlc3BvbnNlLkNvbW11dGVJbmZvGn4KC0NvbW11dGVJbmZvEjsK",
-            "DGpvYl9sb2NhdGlvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5Mb2NhdGlvbhIyCg90cmF2ZWxfZHVyYXRpb24YAiABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24qdgoHSm9iVmlldxIYChRKT0JfVklFV19V",
-            "TlNQRUNJRklFRBAAEhQKEEpPQl9WSUVXX0lEX09OTFkQARIUChBKT0JfVklF",
-            "V19NSU5JTUFMEAISEgoOSk9CX1ZJRVdfU01BTEwQAxIRCg1KT0JfVklFV19G",
-            "VUxMEAQy4gwKCkpvYlNlcnZpY2USvAEKCUNyZWF0ZUpvYhItLmdvb2dsZS5j",
-            "bG91ZC50YWxlbnQudjRiZXRhMS5DcmVhdGVKb2JSZXF1ZXN0GiAuZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExLkpvYiJegtPkkwJYIisvdjRiZXRhMS97",
-            "cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2JzOgEqWiYiIS92NGJl",
-            "dGExL3twYXJlbnQ9cHJvamVjdHMvKn0vam9iczoBKhKwAQoGR2V0Sm9iEiou",
-            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkdldEpvYlJlcXVlc3QaIC5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iIliC0+STAlISKy92NGJl",
-            "dGExL3tuYW1lPXByb2plY3RzLyovdGVuYW50cy8qL2pvYnMvKn1aIxIhL3Y0",
-            "YmV0YTEve25hbWU9cHJvamVjdHMvKi9qb2JzLyp9EsQBCglVcGRhdGVKb2IS",
-            "LS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVXBkYXRlSm9iUmVxdWVz",
-            "dBogLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2IiZoLT5JMCYDIv",
-            "L3Y0YmV0YTEve2pvYi5uYW1lPXByb2plY3RzLyovdGVuYW50cy8qL2pvYnMv",
-            "Kn06ASpaKjIlL3Y0YmV0YTEve2pvYi5uYW1lPXByb2plY3RzLyovam9icy8q",
-            "fToBKhKsAQoJRGVsZXRlSm9iEi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLkRlbGV0ZUpvYlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
-            "WILT5JMCUiorL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyov",
-            "am9icy8qfVojKiEvdjRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2pvYnMvKn0S",
-            "wQEKCExpc3RKb2JzEiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxp",
-            "c3RKb2JzUmVxdWVzdBotLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5M",
-            "aXN0Sm9ic1Jlc3BvbnNlIliC0+STAlISKy92NGJldGExL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi90ZW5hbnRzLyp9L2pvYnNaIxIhL3Y0YmV0YTEve3BhcmVudD1w",
-            "cm9qZWN0cy8qfS9qb2JzEtMBCg9CYXRjaERlbGV0ZUpvYnMSMy5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQmF0Y2hEZWxldGVKb2JzUmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJzgtPkkwJtIjcvdjRiZXRhMS97cGFy",
-            "ZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2JzOmJhdGNoRGVsZXRlOgEq",
-            "Wi8iLS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vam9iczpiYXRjaERl",
-            "bGV0ZRLbAQoKU2VhcmNoSm9icxIuLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5TZWFyY2hKb2JzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5TZWFyY2hKb2JzUmVzcG9uc2UibILT5JMCZiIyL3Y0YmV0YTEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vam9iczpzZWFyY2g6ASpa",
-            "LSIoL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9qb2JzOnNlYXJjaDoB",
-            "KhLzAQoSU2VhcmNoSm9ic0ZvckFsZXJ0Ei4uZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLlNlYXJjaEpvYnNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NGJldGExLlNlYXJjaEpvYnNSZXNwb25zZSJ8gtPkkwJ2IjovdjRi",
-            "ZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2JzOnNlYXJj",
-            "aEZvckFsZXJ0OgEqWjUiMC92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0v",
-            "am9iczpzZWFyY2hGb3JBbGVydDoBKkJ9Ch9jb20uZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NGJldGExQg9Kb2JTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRh",
-            "MTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
+            "bm5vdGF0aW9ucy5wcm90bxonZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGEx",
+            "L2JhdGNoLnByb3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29t",
+            "bW9uLnByb3RvGilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZmlsdGVy",
+            "cy5wcm90bxorZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2hpc3RvZ3Jh",
+            "bS5wcm90bxolZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2pvYi5wcm90",
+            "bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aHmdvb2ds",
+            "ZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
+            "cHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJR",
+            "ChBDcmVhdGVKb2JSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRItCgNqb2IYAiAB",
+            "KAsyIC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iIh0KDUdldEpv",
+            "YlJlcXVlc3QSDAoEbmFtZRgBIAEoCSJyChBVcGRhdGVKb2JSZXF1ZXN0Ei0K",
+            "A2pvYhgBIAEoCzIgLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2IS",
+            "LwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrIiAKEERlbGV0ZUpvYlJlcXVlc3QSDAoEbmFtZRgBIAEoCSI4ChZCYXRj",
+            "aERlbGV0ZUpvYnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIOCgZmaWx0ZXIY",
+            "AiABKAkikAEKD0xpc3RKb2JzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSDgoG",
+            "ZmlsdGVyGAIgASgJEhIKCnBhZ2VfdG9rZW4YAyABKAkSEQoJcGFnZV9zaXpl",
+            "GAQgASgFEjYKCGpvYl92aWV3GAUgASgOMiQuZ29vZ2xlLmNsb3VkLnRhbGVu",
+            "dC52NGJldGExLkpvYlZpZXcinAEKEExpc3RKb2JzUmVzcG9uc2USLgoEam9i",
+            "cxgBIAMoCzIgLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2ISFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJEj8KCG1ldGFkYXRhGAMgASgLMi0uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlJlc3BvbnNlTWV0YWRhdGEioAkK",
+            "EVNlYXJjaEpvYnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRJOCgtzZWFyY2hf",
+            "bW9kZRgCIAEoDjI5Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFy",
+            "Y2hKb2JzUmVxdWVzdC5TZWFyY2hNb2RlEkYKEHJlcXVlc3RfbWV0YWRhdGEY",
+            "AyABKAsyLC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUmVxdWVzdE1l",
+            "dGFkYXRhEjgKCWpvYl9xdWVyeRgEIAEoCzIlLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5Kb2JRdWVyeRIZChFlbmFibGVfYnJvYWRlbmluZxgFIAEo",
+            "CBIjChtyZXF1aXJlX3ByZWNpc2VfcmVzdWx0X3NpemUYBiABKAgSRgoRaGlz",
+            "dG9ncmFtX3F1ZXJpZXMYByADKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuSGlzdG9ncmFtUXVlcnkSNgoIam9iX3ZpZXcYCCABKA4yJC5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iVmlldxIOCgZvZmZzZXQYCSAB",
+            "KAUSEQoJcGFnZV9zaXplGAogASgFEhIKCnBhZ2VfdG9rZW4YCyABKAkSEAoI",
+            "b3JkZXJfYnkYDCABKAkSYgoVZGl2ZXJzaWZpY2F0aW9uX2xldmVsGA0gASgO",
+            "MkMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNlYXJjaEpvYnNSZXF1",
+            "ZXN0LkRpdmVyc2lmaWNhdGlvbkxldmVsEl0KE2N1c3RvbV9yYW5raW5nX2lu",
+            "Zm8YDiABKAsyQC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNo",
+            "Sm9ic1JlcXVlc3QuQ3VzdG9tUmFua2luZ0luZm8SHQoVZGlzYWJsZV9rZXl3",
+            "b3JkX21hdGNoGBAgASgIGpACChFDdXN0b21SYW5raW5nSW5mbxJqChBpbXBv",
+            "cnRhbmNlX2xldmVsGAEgASgOMlAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLlNlYXJjaEpvYnNSZXF1ZXN0LkN1c3RvbVJhbmtpbmdJbmZvLkltcG9y",
+            "dGFuY2VMZXZlbBIaChJyYW5raW5nX2V4cHJlc3Npb24YAiABKAkicwoPSW1w",
+            "b3J0YW5jZUxldmVsEiAKHElNUE9SVEFOQ0VfTEVWRUxfVU5TUEVDSUZJRUQQ",
+            "ABIICgROT05FEAESBwoDTE9XEAISCAoETUlMRBADEgoKBk1FRElVTRAEEggK",
+            "BEhJR0gQBRILCgdFWFRSRU1FEAYiUgoKU2VhcmNoTW9kZRIbChdTRUFSQ0hf",
+            "TU9ERV9VTlNQRUNJRklFRBAAEg4KCkpPQl9TRUFSQ0gQARIXChNGRUFUVVJF",
+            "RF9KT0JfU0VBUkNIEAIiVwoURGl2ZXJzaWZpY2F0aW9uTGV2ZWwSJQohRElW",
+            "RVJTSUZJQ0FUSU9OX0xFVkVMX1VOU1BFQ0lGSUVEEAASDAoIRElTQUJMRUQQ",
+            "ARIKCgZTSU1QTEUQAiLXBgoSU2VhcmNoSm9ic1Jlc3BvbnNlElIKDW1hdGNo",
+            "aW5nX2pvYnMYASADKAsyOy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "U2VhcmNoSm9ic1Jlc3BvbnNlLk1hdGNoaW5nSm9iElIKF2hpc3RvZ3JhbV9x",
+            "dWVyeV9yZXN1bHRzGAIgAygLMjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLkhpc3RvZ3JhbVF1ZXJ5UmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgD",
+            "IAEoCRI/ChBsb2NhdGlvbl9maWx0ZXJzGAQgAygLMiUuZ29vZ2xlLmNsb3Vk",
+            "LnRhbGVudC52NGJldGExLkxvY2F0aW9uEhwKFGVzdGltYXRlZF90b3RhbF9z",
+            "aXplGAUgASgFEhIKCnRvdGFsX3NpemUYBiABKAUSPwoIbWV0YWRhdGEYByAB",
+            "KAsyLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUmVzcG9uc2VNZXRh",
+            "ZGF0YRIiChpicm9hZGVuZWRfcXVlcnlfam9ic19jb3VudBgIIAEoBRJJChBz",
+            "cGVsbF9jb3JyZWN0aW9uGAkgASgLMi8uZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExLlNwZWxsaW5nQ29ycmVjdGlvbhrcAQoLTWF0Y2hpbmdKb2ISLQoD",
+            "am9iGAEgASgLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYhIT",
+            "Cgtqb2Jfc3VtbWFyeRgCIAEoCRIZChFqb2JfdGl0bGVfc25pcHBldBgDIAEo",
+            "CRIbChNzZWFyY2hfdGV4dF9zbmlwcGV0GAQgASgJElEKDGNvbW11dGVfaW5m",
+            "bxgFIAEoCzI7Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hK",
+            "b2JzUmVzcG9uc2UuQ29tbXV0ZUluZm8afgoLQ29tbXV0ZUluZm8SOwoMam9i",
+            "X2xvY2F0aW9uGAEgASgLMiUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkxvY2F0aW9uEjIKD3RyYXZlbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbiJYChZCYXRjaENyZWF0ZUpvYnNSZXF1ZXN0Eg4K",
+            "BnBhcmVudBgBIAEoCRIuCgRqb2JzGAIgAygLMiAuZ29vZ2xlLmNsb3VkLnRh",
+            "bGVudC52NGJldGExLkpvYiKJAQoWQmF0Y2hVcGRhdGVKb2JzUmVxdWVzdBIO",
+            "CgZwYXJlbnQYASABKAkSLgoEam9icxgCIAMoCzIgLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Kb2ISLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrKnYKB0pvYlZpZXcSGAoUSk9CX1ZJRVdf",
+            "VU5TUEVDSUZJRUQQABIUChBKT0JfVklFV19JRF9PTkxZEAESFAoQSk9CX1ZJ",
+            "RVdfTUlOSU1BTBACEhIKDkpPQl9WSUVXX1NNQUxMEAMSEQoNSk9CX1ZJRVdf",
+            "RlVMTBAEMqIQCgpKb2JTZXJ2aWNlErwBCglDcmVhdGVKb2ISLS5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQ3JlYXRlSm9iUmVxdWVzdBogLmdvb2ds",
+            "ZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Kb2IiXoLT5JMCWCIrL3Y0YmV0YTEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vam9iczoBKlomIiEvdjRi",
+            "ZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pvYnM6ASoSsAEKBkdldEpvYhIq",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5HZXRKb2JSZXF1ZXN0GiAu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkpvYiJYgtPkkwJSEisvdjRi",
+            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9qb2JzLyp9WiMSIS92",
+            "NGJldGExL3tuYW1lPXByb2plY3RzLyovam9icy8qfRLEAQoJVXBkYXRlSm9i",
+            "Ei0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlVwZGF0ZUpvYlJlcXVl",
+            "c3QaIC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuSm9iImaC0+STAmAy",
+            "Ly92NGJldGExL3tqb2IubmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9qb2Jz",
+            "Lyp9OgEqWioyJS92NGJldGExL3tqb2IubmFtZT1wcm9qZWN0cy8qL2pvYnMv",
+            "Kn06ASoSrAEKCURlbGV0ZUpvYhItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
+            "ZXRhMS5EZWxldGVKb2JSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IliC0+STAlIqKy92NGJldGExL3tuYW1lPXByb2plY3RzLyovdGVuYW50cy8q",
+            "L2pvYnMvKn1aIyohL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi9qb2JzLyp9",
+            "EsEBCghMaXN0Sm9icxIsLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5M",
+            "aXN0Sm9ic1JlcXVlc3QaLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
+            "TGlzdEpvYnNSZXNwb25zZSJYgtPkkwJSEisvdjRiZXRhMS97cGFyZW50PXBy",
+            "b2plY3RzLyovdGVuYW50cy8qfS9qb2JzWiMSIS92NGJldGExL3twYXJlbnQ9",
+            "cHJvamVjdHMvKn0vam9icxLTAQoPQmF0Y2hEZWxldGVKb2JzEjMuZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLkJhdGNoRGVsZXRlSm9ic1JlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkic4LT5JMCbSI3L3Y0YmV0YTEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vam9iczpiYXRjaERlbGV0ZToB",
+            "KlovIi0vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2pvYnM6YmF0Y2hE",
+            "ZWxldGUS2wEKClNlYXJjaEpvYnMSLi5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuU2VhcmNoSm9ic1JlcXVlc3QaLy5nb29nbGUuY2xvdWQudGFsZW50",
+            "LnY0YmV0YTEuU2VhcmNoSm9ic1Jlc3BvbnNlImyC0+STAmYiMi92NGJldGEx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6c2VhcmNoOgEq",
+            "Wi0iKC92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vam9iczpzZWFyY2g6",
+            "ASoS8wEKElNlYXJjaEpvYnNGb3JBbGVydBIuLmdvb2dsZS5jbG91ZC50YWxl",
+            "bnQudjRiZXRhMS5TZWFyY2hKb2JzUmVxdWVzdBovLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5TZWFyY2hKb2JzUmVzcG9uc2UifILT5JMCdiI6L3Y0",
+            "YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMvKn0vam9iczpzZWFy",
+            "Y2hGb3JBbGVydDoBKlo1IjAvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9",
+            "L2pvYnM6c2VhcmNoRm9yQWxlcnQ6ASoS3QEKD0JhdGNoQ3JlYXRlSm9icxIz",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5CYXRjaENyZWF0ZUpvYnNS",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ2gtPkkwJw",
+            "IjcvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9qb2Jz",
+            "OmJhdGNoQ3JlYXRlOgEqWjIiLS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMv",
+            "Kn0vam9iczpiYXRjaENyZWF0ZToBKhLdAQoPQmF0Y2hVcGRhdGVKb2JzEjMu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkJhdGNoVXBkYXRlSm9ic1Jl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInaC0+STAnAi",
+            "Ny92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2pvYnM6",
+            "YmF0Y2hVcGRhdGU6ASpaMiItL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8q",
+            "fS9qb2JzOmJhdGNoVXBkYXRlOgEqQn0KH2NvbS5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTFCD0pvYlNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGEx",
+            "O3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.BatchReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Talent.V4Beta1.JobView), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateJobRequest), global::Google.Cloud.Talent.V4Beta1.CreateJobRequest.Parser, new[]{ "Parent", "Job" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetJobRequest), global::Google.Cloud.Talent.V4Beta1.GetJobRequest.Parser, new[]{ "Name" }, null, null, null),
@@ -147,7 +163,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListJobsResponse), global::Google.Cloud.Talent.V4Beta1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Metadata" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Parser, new[]{ "Parent", "SearchMode", "RequestMetadata", "JobQuery", "EnableBroadening", "RequirePreciseResultSize", "HistogramQueries", "JobView", "Offset", "PageSize", "PageToken", "OrderBy", "DiversificationLevel", "CustomRankingInfo", "DisableKeywordMatch" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode), typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel) }, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Parser, new[]{ "ImportanceLevel", "RankingExpression" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) }, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Parser, new[]{ "MatchingJobs", "HistogramQueryResults", "NextPageToken", "LocationFilters", "EstimatedTotalSize", "TotalSize", "Metadata", "BroadenedQueryJobsCount", "SpellCorrection" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob.Parser, new[]{ "Job", "JobSummary", "JobTitleSnippet", "SearchTextSnippet", "CommuteInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo.Parser, new[]{ "JobLocation", "TravelDuration" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo), global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.CommuteInfo.Parser, new[]{ "JobLocation", "TravelDuration" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchCreateJobsRequest.Parser, new[]{ "Parent", "Jobs" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest), global::Google.Cloud.Talent.V4Beta1.BatchUpdateJobsRequest.Parser, new[]{ "Parent", "Jobs", "UpdateMask" }, null, null, null)
           }));
     }
     #endregion
@@ -156,8 +174,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
   #region Enums
   /// <summary>
   /// An enum that specifies the job attributes that are returned in the
-  /// [MatchingJob.Job][] in [SearchJobsResponse][google.cloud.talent.v4beta1.SearchJobsResponse] or [Job][google.cloud.talent.v4beta1.Job] objects in
-  /// [ListJobsResponse][google.cloud.talent.v4beta1.ListJobsResponse].
+  /// [MatchingJob.job][google.cloud.talent.v4beta1.SearchJobsResponse.MatchingJob.job]
+  /// or [ListJobsResponse.jobs][google.cloud.talent.v4beta1.ListJobsResponse.jobs]
+  /// fields.
   /// </summary>
   public enum JobView {
     /// <summary>
@@ -166,20 +185,31 @@ namespace Google.Cloud.Talent.V4Beta1 {
     [pbr::OriginalName("JOB_VIEW_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
     /// A ID only view of job, with following attributes:
-    /// [Job.name][google.cloud.talent.v4beta1.Job.name], [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
+    /// [Job.name][google.cloud.talent.v4beta1.Job.name],
+    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
     /// </summary>
     [pbr::OriginalName("JOB_VIEW_ID_ONLY")] IdOnly = 1,
     /// <summary>
     /// A minimal view of the job, with the following attributes:
-    /// [Job.name][google.cloud.talent.v4beta1.Job.name], [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], [Job.job_title][],
-    /// [Job.company][google.cloud.talent.v4beta1.Job.company], [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations], [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
+    /// [Job.name][google.cloud.talent.v4beta1.Job.name],
+    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title],
+    /// [Job.company][google.cloud.talent.v4beta1.Job.company],
+    /// [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations],
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code].
     /// </summary>
     [pbr::OriginalName("JOB_VIEW_MINIMAL")] Minimal = 2,
     /// <summary>
     /// A small view of the job, with the following attributes in the search
-    /// results: [Job.name][google.cloud.talent.v4beta1.Job.name], [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id], [Job.job_title][],
-    /// [Job.company][google.cloud.talent.v4beta1.Job.company], [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations], [Job.visibility][google.cloud.talent.v4beta1.Job.visibility],
-    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code], [Job.description][google.cloud.talent.v4beta1.Job.description].
+    /// results: [Job.name][google.cloud.talent.v4beta1.Job.name],
+    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id],
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title],
+    /// [Job.company][google.cloud.talent.v4beta1.Job.company],
+    /// [Job.DerivedInfo.locations][google.cloud.talent.v4beta1.Job.DerivedInfo.locations],
+    /// [Job.visibility][google.cloud.talent.v4beta1.Job.visibility],
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code],
+    /// [Job.description][google.cloud.talent.v4beta1.Job.description].
     /// </summary>
     [pbr::OriginalName("JOB_VIEW_SMALL")] Small = 3,
     /// <summary>
@@ -584,8 +614,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional but strongly recommended to be provided for the best service
     /// experience.
     ///
-    /// If [update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask] is provided, only the specified fields in
-    /// [job][google.cloud.talent.v4beta1.UpdateJobRequest.job] are updated. Otherwise all the fields are updated.
+    /// If [update_mask][google.cloud.talent.v4beta1.UpdateJobRequest.update_mask]
+    /// is provided, only the specified fields in
+    /// [job][google.cloud.talent.v4beta1.UpdateJobRequest.job] are updated.
+    /// Otherwise all the fields are updated.
     ///
     /// A field mask to restrict the fields that are updated. Only
     /// top level fields of [Job][google.cloud.talent.v4beta1.Job] are supported.
@@ -1166,8 +1198,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// The maximum number of jobs to be returned per page of results.
     ///
-    /// If [job_view][google.cloud.talent.v4beta1.ListJobsRequest.job_view] is set to [JobView.JOB_VIEW_ID_ONLY][google.cloud.talent.v4beta1.JobView.JOB_VIEW_ID_ONLY], the maximum allowed
-    /// page size is 1000. Otherwise, the maximum allowed page size is 100.
+    /// If [job_view][google.cloud.talent.v4beta1.ListJobsRequest.job_view] is set
+    /// to
+    /// [JobView.JOB_VIEW_ID_ONLY][google.cloud.talent.v4beta1.JobView.JOB_VIEW_ID_ONLY],
+    /// the maximum allowed page size is 1000. Otherwise, the maximum allowed page
+    /// size is 100.
     ///
     /// Default is 100 if empty or a number &lt; 1 is specified.
     /// </summary>
@@ -1186,8 +1221,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// The desired job attributes returned for jobs in the
-    /// search response. Defaults to [JobView.JOB_VIEW_FULL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_FULL] if no value is
-    /// specified.
+    /// search response. Defaults to
+    /// [JobView.JOB_VIEW_FULL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_FULL]
+    /// if no value is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.JobView JobView {
@@ -1629,7 +1665,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// Mode of a search.
     ///
-    /// Defaults to [SearchMode.JOB_SEARCH][google.cloud.talent.v4beta1.SearchJobsRequest.SearchMode.JOB_SEARCH].
+    /// Defaults to
+    /// [SearchMode.JOB_SEARCH][google.cloud.talent.v4beta1.SearchJobsRequest.SearchMode.JOB_SEARCH].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.SearchMode SearchMode {
@@ -1757,62 +1794,81 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// Job histogram facets:
     ///
-    /// * company_id: histogram by [Job.distributor_company_id][].
-    /// * company_display_name: histogram by [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name].
-    /// * employment_type: histogram by [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types], for example,
-    /// "FULL_TIME", "PART_TIME".
-    /// * company_size: histogram by [CompanySize][google.cloud.talent.v4beta1.CompanySize], for example, "SMALL",
-    /// "MEDIUM", "BIG".
-    /// * publish_time_in_month: histogram by the [Job.publish_time][] in months.
-    /// Must specify list of numeric buckets in spec.
-    /// * publish_time_in_year: histogram by the [Job.publish_time][] in years.
-    /// Must specify list of numeric buckets in spec.
-    /// * degree_type: histogram by the [Job.degree_type][], for example,
-    /// "Bachelors", "Masters".
-    /// * job_level: histogram by the [Job.job_level][google.cloud.talent.v4beta1.Job.job_level], for example, "Entry
-    /// Level".
+    /// * company_display_name: histogram by
+    /// [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name].
+    /// * employment_type: histogram by
+    /// [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types],
+    /// for example,
+    ///   "FULL_TIME", "PART_TIME".
+    /// * company_size: histogram by
+    /// [CompanySize][google.cloud.talent.v4beta1.CompanySize], for example,
+    /// "SMALL", "MEDIUM", "BIG".
+    /// * publish_time_in_month: histogram by the
+    /// [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    ///   in months.
+    ///   Must specify list of numeric buckets in spec.
+    /// * publish_time_in_year: histogram by the
+    /// [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    ///   in years.
+    ///   Must specify list of numeric buckets in spec.
+    /// * degree_types: histogram by the
+    /// [Job.degree_types][google.cloud.talent.v4beta1.Job.degree_types], for
+    /// example,
+    ///   "Bachelors", "Masters".
+    /// * job_level: histogram by the
+    /// [Job.job_level][google.cloud.talent.v4beta1.Job.job_level], for example,
+    /// "Entry
+    ///   Level".
     /// * country: histogram by the country code of jobs, for example, "US", "FR".
     /// * admin1: histogram by the admin1 code of jobs, which is a global
-    /// placeholder referring to the state, province, or the particular term a
-    /// country uses to define the geographic structure below the country level,
-    /// for example, "CA", "IL".
+    ///   placeholder referring to the state, province, or the particular term a
+    ///   country uses to define the geographic structure below the country level,
+    ///   for example, "CA", "IL".
     /// * city: histogram by a combination of the "city name, admin1 code". For
-    /// example,  "Mountain View, CA", "New York, NY".
+    ///   example,  "Mountain View, CA", "New York, NY".
     /// * admin1_country: histogram by a combination of the "admin1 code, country",
-    /// for example, "CA, US", "IL, US".
+    ///   for example, "CA, US", "IL, US".
     /// * city_coordinate: histogram by the city center's GPS coordinates (latitude
-    /// and longitude), for example, 37.4038522,-122.0987765. Since the coordinates
-    /// of a city center can change, customers may need to refresh them
-    /// periodically.
-    /// * locale: histogram by the [Job.language_code][google.cloud.talent.v4beta1.Job.language_code], for example, "en-US",
-    /// "fr-FR".
-    /// * language: histogram by the language subtag of the [Job.language_code][google.cloud.talent.v4beta1.Job.language_code],
-    /// for example, "en", "fr".
-    /// * category: histogram by the [JobCategory][google.cloud.talent.v4beta1.JobCategory], for example,
-    /// "COMPUTER_AND_IT", "HEALTHCARE".
-    /// * base_compensation_unit: histogram by the [CompensationUnit][] of base
-    /// salary, for example, "WEEKLY", "MONTHLY".
+    ///   and longitude), for example, 37.4038522,-122.0987765. Since the
+    ///   coordinates of a city center can change, customers may need to refresh
+    ///   them periodically.
+    /// * locale: histogram by the
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code], for
+    /// example, "en-US",
+    ///   "fr-FR".
+    /// * language: histogram by the language subtag of the
+    /// [Job.language_code][google.cloud.talent.v4beta1.Job.language_code],
+    ///   for example, "en", "fr".
+    /// * category: histogram by the
+    /// [JobCategory][google.cloud.talent.v4beta1.JobCategory], for example,
+    ///   "COMPUTER_AND_IT", "HEALTHCARE".
+    /// * base_compensation_unit: histogram by the
+    ///   [CompensationInfo.CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit]
+    ///   of base salary, for example, "WEEKLY", "MONTHLY".
     /// * base_compensation: histogram by the base salary. Must specify list of
-    /// numeric buckets to group results by.
+    ///   numeric buckets to group results by.
     /// * annualized_base_compensation: histogram by the base annualized salary.
-    /// Must specify list of numeric buckets to group results by.
+    ///   Must specify list of numeric buckets to group results by.
     /// * annualized_total_compensation: histogram by the total annualized salary.
-    /// Must specify list of numeric buckets to group results by.
-    /// * string_custom_attribute: histogram by string [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
-    /// Values can be accessed via square bracket notations like
-    /// string_custom_attribute["key1"].
-    /// * numeric_custom_attribute: histogram by numeric [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
-    /// Values can be accessed via square bracket notations like
-    /// numeric_custom_attribute["key1"]. Must specify list of numeric buckets to
-    /// group results by.
+    ///   Must specify list of numeric buckets to group results by.
+    /// * string_custom_attribute: histogram by string
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
+    ///   Values can be accessed via square bracket notations like
+    ///   string_custom_attribute["key1"].
+    /// * numeric_custom_attribute: histogram by numeric
+    /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes].
+    ///   Values can be accessed via square bracket notations like
+    ///   numeric_custom_attribute["key1"]. Must specify list of numeric buckets to
+    ///   group results by.
     ///
     /// Example expressions:
-    /// * count(admin1)
-    /// * count(base_compensation, [bucket(1000, 10000), bucket(10000, 100000),
-    /// bucket(100000, MAX)])
-    /// * count(string_custom_attribute["some-string-custom-attribute"])
-    /// * count(numeric_custom_attribute["some-numeric-custom-attribute"],
-    /// [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])
+    ///
+    /// * `count(admin1)`
+    /// * `count(base_compensation, [bucket(1000, 10000), bucket(10000, 100000),
+    /// bucket(100000, MAX)])`
+    /// * `count(string_custom_attribute["some-string-custom-attribute"])`
+    /// * `count(numeric_custom_attribute["some-numeric-custom-attribute"],
+    ///   [bucket(MIN, 0, "negative"), bucket(0, MAX, "non-negative"])`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.HistogramQuery> HistogramQueries {
@@ -1825,8 +1881,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// The desired job attributes returned for jobs in the
-    /// search response. Defaults to [JobView.SMALL][] if no value is specified.
+    /// The desired job attributes returned for jobs in the search response.
+    /// Defaults to
+    /// [JobView.JOB_VIEW_SMALL][google.cloud.talent.v4beta1.JobView.JOB_VIEW_SMALL]
+    /// if no value is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.JobView JobView {
@@ -1844,7 +1902,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     ///
     /// An integer that specifies the current offset (that is, starting result
     /// location, amongst the jobs deemed by the API as relevant) in search
-    /// results. This field is only considered if [page_token][google.cloud.talent.v4beta1.SearchJobsRequest.page_token] is unset.
+    /// results. This field is only considered if
+    /// [page_token][google.cloud.talent.v4beta1.SearchJobsRequest.page_token] is
+    /// unset.
     ///
     /// For example, 0 means to  return results starting from the first matching
     /// job, and 10 means to return from the 11th job. This can be used for
@@ -1884,8 +1944,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional.
     ///
     /// The token specifying the current offset within
-    /// search results. See [SearchJobsResponse.next_page_token][google.cloud.talent.v4beta1.SearchJobsResponse.next_page_token] for
-    /// an explanation of how to obtain the next set of query results.
+    /// search results. See
+    /// [SearchJobsResponse.next_page_token][google.cloud.talent.v4beta1.SearchJobsResponse.next_page_token]
+    /// for an explanation of how to obtain the next set of query results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1907,48 +1968,51 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Supported options are:
     ///
     /// * "relevance desc": By relevance descending, as determined by the API
-    /// algorithms. Relevance thresholding of query results is only available
-    /// with this ordering.
-    /// * "posting`_`publish`_`time desc": By [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
-    /// descending.
-    /// * "posting`_`update`_`time desc": By [Job.posting_update_time][google.cloud.talent.v4beta1.Job.posting_update_time]
-    /// descending.
+    ///   algorithms. Relevance thresholding of query results is only available
+    ///   with this ordering.
+    /// * "posting`_`publish`_`time desc": By
+    /// [Job.posting_publish_time][google.cloud.talent.v4beta1.Job.posting_publish_time]
+    ///   descending.
+    /// * "posting`_`update`_`time desc": By
+    /// [Job.posting_update_time][google.cloud.talent.v4beta1.Job.posting_update_time]
+    ///   descending.
     /// * "title": By [Job.title][google.cloud.talent.v4beta1.Job.title] ascending.
-    /// * "title desc": By [Job.title][google.cloud.talent.v4beta1.Job.title] descending.
+    /// * "title desc": By [Job.title][google.cloud.talent.v4beta1.Job.title]
+    /// descending.
     /// * "annualized`_`base`_`compensation": By job's
-    /// [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range] ascending. Jobs
-    /// whose annualized base compensation is unspecified are put at the end of
-    /// search results.
+    ///   [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range]
+    ///   ascending. Jobs whose annualized base compensation is unspecified are put
+    ///   at the end of search results.
     /// * "annualized`_`base`_`compensation desc": By job's
-    /// [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range] descending. Jobs
-    /// whose annualized base compensation is unspecified are put at the end of
-    /// search results.
+    ///   [CompensationInfo.annualized_base_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_base_compensation_range]
+    ///   descending. Jobs whose annualized base compensation is unspecified are
+    ///   put at the end of search results.
     /// * "annualized`_`total`_`compensation": By job's
-    /// [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range] ascending. Jobs
-    /// whose annualized base compensation is unspecified are put at the end of
-    /// search results.
+    ///   [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range]
+    ///   ascending. Jobs whose annualized base compensation is unspecified are put
+    ///   at the end of search results.
     /// * "annualized`_`total`_`compensation desc": By job's
-    /// [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range] descending. Jobs
-    /// whose annualized base compensation is unspecified are put at the end of
-    /// search results.
+    ///   [CompensationInfo.annualized_total_compensation_range][google.cloud.talent.v4beta1.CompensationInfo.annualized_total_compensation_range]
+    ///   descending. Jobs whose annualized base compensation is unspecified are
+    ///   put at the end of search results.
     /// * "custom`_`ranking desc": By the relevance score adjusted to the
-    /// [SearchJobsRequest.custom_ranking_info.ranking_expression][] with weight
-    /// factor assigned by
-    /// [SearchJobsRequest.custom_ranking_info.importance_level][] in descending
-    /// order.
+    ///   [SearchJobsRequest.CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression]
+    ///   with weight factor assigned by
+    ///   [SearchJobsRequest.CustomRankingInfo.importance_level][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.importance_level]
+    ///   in descending order.
     /// * "location`_`distance": By the distance between the location on jobs and
-    ///  locations specified in the
-    /// [SearchJobsRequest.job_query.location_filters][].
-    /// When this order is selected, the
-    /// [SearchJobsRequest.job_query.location_filters][] must not be empty. When
-    /// a job has multiple locations, the location closest to one of the locations
-    /// specified in the location filter will be used to calculate location
-    /// distance. Distance is calculated by the distance between two lat/long
-    /// coordinates, with a precision of 10e-4 degrees (11.3 meters).
-    /// Jobs that don't have locations specified will be ranked below jobs having
-    /// locations.
-    /// Diversification strategy is still applied unless explicitly disabled in
-    /// [SearchJobsRequest.diversification_level][google.cloud.talent.v4beta1.SearchJobsRequest.diversification_level].
+    ///   locations specified in the
+    ///   [JobQuery.location_filters][google.cloud.talent.v4beta1.JobQuery.location_filters].
+    ///   When this order is selected, the
+    ///   [JobQuery.location_filters][google.cloud.talent.v4beta1.JobQuery.location_filters]
+    ///   must not be empty. When a job has multiple locations, the location
+    ///   closest to one of the locations specified in the location filter will be
+    ///   used to calculate location distance. Distance is calculated by the
+    ///   distance between two lat/long coordinates, with a precision of 10e-4
+    ///   degrees (11.3 meters). Jobs that don't have locations specified will be
+    ///   ranked below jobs having locations. Diversification strategy is still
+    ///   applied unless explicitly disabled in
+    ///   [SearchJobsRequest.diversification_level][google.cloud.talent.v4beta1.SearchJobsRequest.diversification_level].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -1971,8 +2035,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// displayed to the job seeker higher up in the results, with the other jobs
     /// being displayed lower down in the results.
     ///
-    /// Defaults to [DiversificationLevel.SIMPLE][google.cloud.talent.v4beta1.SearchJobsRequest.DiversificationLevel.SIMPLE] if no value
-    /// is specified.
+    /// Defaults to
+    /// [DiversificationLevel.SIMPLE][google.cloud.talent.v4beta1.SearchJobsRequest.DiversificationLevel.SIMPLE]
+    /// if no value is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.SearchJobsRequest.Types.DiversificationLevel DiversificationLevel {
@@ -2005,23 +2070,28 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>
     /// Optional.
     ///
-    /// Controls whether to disable exact keyword match on [Job.job_title][],
-    /// [Job.description][google.cloud.talent.v4beta1.Job.description], [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name], [Job.locations][0],
-    /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications]. When disable keyword match is turned off, a
-    /// keyword match returns jobs that do not match given category filters when
-    /// there are matching keywords. For example, for the query "program manager,"
-    /// a result is returned even if the job posting has the title "software
-    /// developer," which doesn't fall into "program manager" ontology, but does
-    /// have "program manager" appearing in its description.
+    /// Controls whether to disable exact keyword match on
+    /// [Job.title][google.cloud.talent.v4beta1.Job.title],
+    /// [Job.description][google.cloud.talent.v4beta1.Job.description],
+    /// [Job.company_display_name][google.cloud.talent.v4beta1.Job.company_display_name],
+    /// [Job.addresses][google.cloud.talent.v4beta1.Job.addresses],
+    /// [Job.qualifications][google.cloud.talent.v4beta1.Job.qualifications]. When
+    /// disable keyword match is turned off, a keyword match returns jobs that do
+    /// not match given category filters when there are matching keywords. For
+    /// example, for the query "program manager," a result is returned even if the
+    /// job posting has the title "software developer," which doesn't fall into
+    /// "program manager" ontology, but does have "program manager" appearing in
+    /// its description.
     ///
     /// For queries like "cloud" that don't contain title or
     /// location specific ontology, jobs with "cloud" keyword matches are returned
     /// regardless of this flag's value.
     ///
-    /// Please use [Company.keyword_searchable_custom_fields][] or
-    /// [Company.keyword_searchable_custom_attributes][] if company specific
-    /// globally matched custom field/attribute string values is needed. Enabling
-    /// keyword match improves recall of subsequent search requests.
+    /// Use
+    /// [Company.keyword_searchable_job_custom_attributes][google.cloud.talent.v4beta1.Company.keyword_searchable_job_custom_attributes]
+    /// if company-specific globally matched custom field/attribute string values
+    /// are needed. Enabling keyword match improves recall of subsequent search
+    /// requests.
     ///
     /// Defaults to false.
     /// </summary>
@@ -2408,7 +2478,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Input only.
       ///
-      /// Custom ranking information for [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+      /// Custom ranking information for
+      /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
       /// </summary>
       public sealed partial class CustomRankingInfo : pb::IMessage<CustomRankingInfo> {
         private static readonly pb::MessageParser<CustomRankingInfo> _parser = new pb::MessageParser<CustomRankingInfo>(() => new CustomRankingInfo());
@@ -2452,8 +2523,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// Required.
         ///
         /// Controls over how important the score of
-        /// [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression] gets applied to job's final
-        /// ranking position.
+        /// [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression]
+        /// gets applied to job's final ranking position.
         ///
         /// An error is thrown if not specified.
         /// </summary>
@@ -2478,8 +2549,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// The syntax for this expression is a subset of Google SQL syntax.
         ///
         /// Supported operators are: +, -, *, /, where the left and right side of
-        /// the operator is either a numeric [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes] key,
-        /// integer/double value or an expression that can be evaluated to a number.
+        /// the operator is either a numeric
+        /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
+        /// key, integer/double value or an expression that can be evaluated to a
+        /// number.
         ///
         /// Parenthesis are supported to adjust calculation precedence. The
         /// expression must be &lt; 100 characters in length.
@@ -2598,7 +2671,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
           /// <summary>
-          /// The importance level for [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression].
+          /// The importance level for
+          /// [CustomRankingInfo.ranking_expression][google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ranking_expression].
           /// </summary>
           public enum ImportanceLevel {
             /// <summary>
@@ -2706,7 +2780,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob> matchingJobs_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob>();
     /// <summary>
-    /// The Job entities that match the specified [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+    /// The Job entities that match the specified
+    /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SearchJobsResponse.Types.MatchingJob> MatchingJobs {
@@ -2749,8 +2824,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location> locationFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location>();
     /// <summary>
     /// The location filters that the service applied to the specified query. If
-    /// any filters are lat-lng based, the [JobLocation.location_type][] is
-    /// [JobLocation.LocationType#LOCATION_TYPE_UNSPECIFIED][].
+    /// any filters are lat-lng based, the
+    /// [Location.location_type][google.cloud.talent.v4beta1.Location.location_type]
+    /// is
+    /// [Location.LocationType.LOCATION_TYPE_UNSPECIFIED][google.cloud.talent.v4beta1.Location.LocationType.LOCATION_TYPE_UNSPECIFIED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Location> LocationFilters {
@@ -2764,7 +2841,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// An estimation of the number of jobs that match the specified query.
     ///
     /// This number isn't guaranteed to be accurate. For accurate results,
-    /// see [enable_precise_result_size][].
+    /// see
+    /// [SearchJobsRequest.require_precise_result_size][google.cloud.talent.v4beta1.SearchJobsRequest.require_precise_result_size].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int EstimatedTotalSize {
@@ -2779,8 +2857,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private int totalSize_;
     /// <summary>
     /// The precise result count, which is available only if the client set
-    /// [enable_precise_result_size][] to `true`, or if the response
-    /// is the last page of results. Otherwise, the value is `-1`.
+    /// [SearchJobsRequest.require_precise_result_size][google.cloud.talent.v4beta1.SearchJobsRequest.require_precise_result_size]
+    /// to `true`, or if the response is the last page of results. Otherwise, the
+    /// value is `-1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TotalSize {
@@ -3047,7 +3126,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Output only.
       ///
-      /// Job entry with metadata inside [SearchJobsResponse][google.cloud.talent.v4beta1.SearchJobsResponse].
+      /// Job entry with metadata inside
+      /// [SearchJobsResponse][google.cloud.talent.v4beta1.SearchJobsResponse].
       /// </summary>
       public sealed partial class MatchingJob : pb::IMessage<MatchingJob> {
         private static readonly pb::MessageParser<MatchingJob> _parser = new pb::MessageParser<MatchingJob>(() => new MatchingJob());
@@ -3091,7 +3171,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int JobFieldNumber = 1;
         private global::Google.Cloud.Talent.V4Beta1.Job job_;
         /// <summary>
-        /// Job resource that matches the specified [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
+        /// Job resource that matches the specified
+        /// [SearchJobsRequest][google.cloud.talent.v4beta1.SearchJobsRequest].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.Job Job {
@@ -3120,9 +3201,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int JobTitleSnippetFieldNumber = 3;
         private string jobTitleSnippet_ = "";
         /// <summary>
-        /// Contains snippets of text from the [Job.job_title][] field most
-        /// closely matching a search query's keywords, if available. The matching
-        /// query keywords are enclosed in HTML bold tags.
+        /// Contains snippets of text from the
+        /// [Job.title][google.cloud.talent.v4beta1.Job.title] field most closely
+        /// matching a search query's keywords, if available. The matching query
+        /// keywords are enclosed in HTML bold tags.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string JobTitleSnippet {
@@ -3136,10 +3218,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int SearchTextSnippetFieldNumber = 4;
         private string searchTextSnippet_ = "";
         /// <summary>
-        /// Contains snippets of text from the [Job.description][google.cloud.talent.v4beta1.Job.description] and similar
-        /// fields that most closely match a search query's keywords, if available.
-        /// All HTML tags in the original fields are stripped when returned in this
-        /// field, and matching query keywords are enclosed in HTML bold tags.
+        /// Contains snippets of text from the
+        /// [Job.description][google.cloud.talent.v4beta1.Job.description] and
+        /// similar fields that most closely match a search query's keywords, if
+        /// available. All HTML tags in the original fields are stripped when
+        /// returned in this field, and matching query keywords are enclosed in HTML
+        /// bold tags.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string SearchTextSnippet {
@@ -3509,6 +3593,396 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Request to create a batch of jobs.
+  /// </summary>
+  public sealed partial class BatchCreateJobsRequest : pb::IMessage<BatchCreateJobsRequest> {
+    private static readonly pb::MessageParser<BatchCreateJobsRequest> _parser = new pb::MessageParser<BatchCreateJobsRequest>(() => new BatchCreateJobsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchCreateJobsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.JobServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchCreateJobsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchCreateJobsRequest(BatchCreateJobsRequest other) : this() {
+      parent_ = other.parent_;
+      jobs_ = other.jobs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchCreateJobsRequest Clone() {
+      return new BatchCreateJobsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required.
+    ///
+    /// The resource name of the tenant under which the job is created.
+    ///
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and a default tenant is created if unspecified, for
+    /// example, "projects/api-test-project".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "jobs" field.</summary>
+    public const int JobsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4Beta1.Job> _repeated_jobs_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.Job.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Job> jobs_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Job>();
+    /// <summary>
+    /// Required.
+    ///
+    /// The jobs to be created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Job> Jobs {
+      get { return jobs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateJobsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchCreateJobsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!jobs_.Equals(other.jobs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= jobs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      jobs_.WriteTo(output, _repeated_jobs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += jobs_.CalculateSize(_repeated_jobs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchCreateJobsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      jobs_.Add(other.jobs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            jobs_.AddEntriesFrom(input, _repeated_jobs_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request to update a batch of jobs.
+  /// </summary>
+  public sealed partial class BatchUpdateJobsRequest : pb::IMessage<BatchUpdateJobsRequest> {
+    private static readonly pb::MessageParser<BatchUpdateJobsRequest> _parser = new pb::MessageParser<BatchUpdateJobsRequest>(() => new BatchUpdateJobsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchUpdateJobsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.JobServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchUpdateJobsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchUpdateJobsRequest(BatchUpdateJobsRequest other) : this() {
+      parent_ = other.parent_;
+      jobs_ = other.jobs_.Clone();
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchUpdateJobsRequest Clone() {
+      return new BatchUpdateJobsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required.
+    ///
+    /// The resource name of the tenant under which the job is created.
+    ///
+    /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+    /// "projects/api-test-project/tenant/foo".
+    ///
+    /// Tenant id is optional and the default tenant is used if unspecified, for
+    /// example, "projects/api-test-project".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "jobs" field.</summary>
+    public const int JobsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Talent.V4Beta1.Job> _repeated_jobs_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.Job.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Job> jobs_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Job>();
+    /// <summary>
+    /// Required.
+    ///
+    /// The jobs to be updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Job> Jobs {
+      get { return jobs_; }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional but strongly recommended to be provided for the best service
+    /// experience, also increase latency when checking status of batch operation.
+    ///
+    /// If
+    /// [update_mask][google.cloud.talent.v4beta1.BatchUpdateJobsRequest.update_mask]
+    /// is provided, only the specified fields in
+    /// [Job][google.cloud.talent.v4beta1.Job] are updated. Otherwise all the
+    /// fields are updated.
+    ///
+    /// A field mask to restrict the fields that are updated. Only
+    /// top level fields of [Job][google.cloud.talent.v4beta1.Job] are supported.
+    ///
+    /// If
+    /// [update_mask][google.cloud.talent.v4beta1.BatchUpdateJobsRequest.update_mask]
+    /// is provided, The [Job][google.cloud.talent.v4beta1.Job] inside
+    /// [JobResult][] will only contains fields that is updated, plus the Id of the
+    /// Job. Otherwise,  [Job][google.cloud.talent.v4beta1.Job] will include all
+    /// fields, which can yield a very large response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchUpdateJobsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchUpdateJobsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!jobs_.Equals(other.jobs_)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= jobs_.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      jobs_.WriteTo(output, _repeated_jobs_codec);
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += jobs_.CalculateSize(_repeated_jobs_codec);
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchUpdateJobsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      jobs_.Add(other.jobs_);
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            jobs_.AddEntriesFrom(input, _repeated_jobs_codec);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(updateMask_);
+            break;
+          }
+        }
+      }
+    }
 
   }
 

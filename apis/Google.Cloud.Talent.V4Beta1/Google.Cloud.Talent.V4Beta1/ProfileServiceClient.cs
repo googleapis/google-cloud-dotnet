@@ -1463,7 +1463,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1487,7 +1489,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1802,7 +1806,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1827,7 +1833,9 @@ namespace Google.Cloud.Talent.V4Beta1
         /// For example, search by raw queries "software engineer in Mountain View" or
         /// search by structured filters (location filter, education filter, etc.).
         ///
-        /// See [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest] for more information.
+        /// See
+        /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+        /// for more information.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
