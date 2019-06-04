@@ -158,7 +158,9 @@ namespace Google.Cloud.Logging.NLog
                         case TypeCode.Int64:
                         case TypeCode.UInt64:
                             if (o is System.Enum)
+                            {
                                 break;  // Let StringEnumConverter handle formatting
+                            }
                             return Value.ForNumber(Convert.ToDouble(o));
                         case TypeCode.String:
                             return Value.ForString((string)o);
