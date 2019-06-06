@@ -33,120 +33,117 @@ namespace Grafeas.V1 {
             "dG8aGmdyYWZlYXMvdjEvZGlzY292ZXJ5LnByb3RvGhZncmFmZWFzL3YxL2lt",
             "YWdlLnByb3RvGhhncmFmZWFzL3YxL3BhY2thZ2UucHJvdG8aG2dyYWZlYXMv",
             "djEvcHJvdmVuYW5jZS5wcm90bxoeZ3JhZmVhcy92MS92dWxuZXJhYmlsaXR5",
-            "LnByb3RvIu8ECgpPY2N1cnJlbmNlEgwKBG5hbWUYASABKAkSJgoIcmVzb3Vy",
-            "Y2UYAiABKAsyFC5ncmFmZWFzLnYxLlJlc291cmNlEhEKCW5vdGVfbmFtZRgD",
-            "IAEoCRIiCgRraW5kGAQgASgOMhQuZ3JhZmVhcy52MS5Ob3RlS2luZBITCgty",
-            "ZW1lZGlhdGlvbhgFIAEoCRIvCgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYByABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKDXZ1bG5lcmFiaWxpdHkYCCAB",
-            "KAsyIy5ncmFmZWFzLnYxLlZ1bG5lcmFiaWxpdHlPY2N1cnJlbmNlSAASLAoF",
-            "YnVpbGQYCSABKAsyGy5ncmFmZWFzLnYxLkJ1aWxkT2NjdXJyZW5jZUgAEiwK",
-            "BWltYWdlGAogASgLMhsuZ3JhZmVhcy52MS5JbWFnZU9jY3VycmVuY2VIABIw",
-            "CgdwYWNrYWdlGAsgASgLMh0uZ3JhZmVhcy52MS5QYWNrYWdlT2NjdXJyZW5j",
-            "ZUgAEjYKCmRlcGxveW1lbnQYDCABKAsyIC5ncmFmZWFzLnYxLkRlcGxveW1l",
-            "bnRPY2N1cnJlbmNlSAASNAoJZGlzY292ZXJ5GA0gASgLMh8uZ3JhZmVhcy52",
-            "MS5EaXNjb3ZlcnlPY2N1cnJlbmNlSAASOAoLYXR0ZXN0YXRpb24YDiABKAsy",
-            "IS5ncmFmZWFzLnYxLkF0dGVzdGF0aW9uT2NjdXJyZW5jZUgAQgkKB2RldGFp",
-            "bHMiTQoIUmVzb3VyY2USDAoEbmFtZRgBIAEoCRILCgN1cmkYAiABKAkSJgoM",
-            "Y29udGVudF9oYXNoGAMgASgLMhAuZ3JhZmVhcy52MS5IYXNoIp8FCgROb3Rl",
-            "EgwKBG5hbWUYASABKAkSGQoRc2hvcnRfZGVzY3JpcHRpb24YAiABKAkSGAoQ",
-            "bG9uZ19kZXNjcmlwdGlvbhgDIAEoCRIiCgRraW5kGAQgASgOMhQuZ3JhZmVh",
-            "cy52MS5Ob3RlS2luZBIrCgtyZWxhdGVkX3VybBgFIAMoCzIWLmdyYWZlYXMu",
-            "djEuUmVsYXRlZFVybBIzCg9leHBpcmF0aW9uX3RpbWUYBiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2NyZWF0ZV90aW1lGAcgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgIIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASGgoScmVsYXRlZF9ub3Rl",
-            "X25hbWVzGAkgAygJEjYKDXZ1bG5lcmFiaWxpdHkYCiABKAsyHS5ncmFmZWFz",
-            "LnYxLlZ1bG5lcmFiaWxpdHlOb3RlSAASJgoFYnVpbGQYCyABKAsyFS5ncmFm",
-            "ZWFzLnYxLkJ1aWxkTm90ZUgAEiYKBWltYWdlGAwgASgLMhUuZ3JhZmVhcy52",
-            "MS5JbWFnZU5vdGVIABIqCgdwYWNrYWdlGA0gASgLMhcuZ3JhZmVhcy52MS5Q",
-            "YWNrYWdlTm90ZUgAEjAKCmRlcGxveW1lbnQYDiABKAsyGi5ncmFmZWFzLnYx",
-            "LkRlcGxveW1lbnROb3RlSAASLgoJZGlzY292ZXJ5GA8gASgLMhkuZ3JhZmVh",
-            "cy52MS5EaXNjb3ZlcnlOb3RlSAASMgoLYXR0ZXN0YXRpb24YECABKAsyGy5n",
-            "cmFmZWFzLnYxLkF0dGVzdGF0aW9uTm90ZUgAQgYKBHR5cGUiJAoUR2V0T2Nj",
-            "dXJyZW5jZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJfChZMaXN0T2NjdXJyZW5j",
-            "ZXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIOCgZmaWx0ZXIYAiABKAkSEQoJ",
-            "cGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiXwoXTGlzdE9j",
-            "Y3VycmVuY2VzUmVzcG9uc2USKwoLb2NjdXJyZW5jZXMYASADKAsyFi5ncmFm",
-            "ZWFzLnYxLk9jY3VycmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIicK",
-            "F0RlbGV0ZU9jY3VycmVuY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkiVQoXQ3Jl",
-            "YXRlT2NjdXJyZW5jZVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEioKCm9jY3Vy",
-            "cmVuY2UYAiABKAsyFi5ncmFmZWFzLnYxLk9jY3VycmVuY2UihAEKF1VwZGF0",
-            "ZU9jY3VycmVuY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSKgoKb2NjdXJyZW5j",
-            "ZRgCIAEoCzIWLmdyYWZlYXMudjEuT2NjdXJyZW5jZRIvCgt1cGRhdGVfbWFz",
-            "axgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siHgoOR2V0Tm90",
-            "ZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSIoChhHZXRPY2N1cnJlbmNlTm90ZVJl",
-            "cXVlc3QSDAoEbmFtZRgBIAEoCSJZChBMaXN0Tm90ZXNSZXF1ZXN0Eg4KBnBh",
-            "cmVudBgBIAEoCRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YBCABKAkiTQoRTGlzdE5vdGVzUmVzcG9uc2USHwoF",
-            "bm90ZXMYASADKAsyEC5ncmFmZWFzLnYxLk5vdGUSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJIiEKEURlbGV0ZU5vdGVSZXF1ZXN0EgwKBG5hbWUYASABKAki",
-            "VAoRQ3JlYXRlTm90ZVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEg8KB25vdGVf",
-            "aWQYAiABKAkSHgoEbm90ZRgDIAEoCzIQLmdyYWZlYXMudjEuTm90ZSJyChFV",
-            "cGRhdGVOb3RlUmVxdWVzdBIMCgRuYW1lGAEgASgJEh4KBG5vdGUYAiABKAsy",
-            "EC5ncmFmZWFzLnYxLk5vdGUSLwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuRmllbGRNYXNrImEKGkxpc3ROb3RlT2NjdXJyZW5jZXNS",
-            "ZXF1ZXN0EgwKBG5hbWUYASABKAkSDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vf",
-            "c2l6ZRgDIAEoBRISCgpwYWdlX3Rva2VuGAQgASgJImMKG0xpc3ROb3RlT2Nj",
-            "dXJyZW5jZXNSZXNwb25zZRIrCgtvY2N1cnJlbmNlcxgBIAMoCzIWLmdyYWZl",
-            "YXMudjEuT2NjdXJyZW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiqAEK",
-            "F0JhdGNoQ3JlYXRlTm90ZXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRI9CgVu",
-            "b3RlcxgCIAMoCzIuLmdyYWZlYXMudjEuQmF0Y2hDcmVhdGVOb3Rlc1JlcXVl",
-            "c3QuTm90ZXNFbnRyeRo+CgpOb3Rlc0VudHJ5EgsKA2tleRgBIAEoCRIfCgV2",
-            "YWx1ZRgCIAEoCzIQLmdyYWZlYXMudjEuTm90ZToCOAEiOwoYQmF0Y2hDcmVh",
-            "dGVOb3Rlc1Jlc3BvbnNlEh8KBW5vdGVzGAEgAygLMhAuZ3JhZmVhcy52MS5O",
-            "b3RlIlwKHUJhdGNoQ3JlYXRlT2NjdXJyZW5jZXNSZXF1ZXN0Eg4KBnBhcmVu",
-            "dBgBIAEoCRIrCgtvY2N1cnJlbmNlcxgCIAMoCzIWLmdyYWZlYXMudjEuT2Nj",
-            "dXJyZW5jZSJNCh5CYXRjaENyZWF0ZU9jY3VycmVuY2VzUmVzcG9uc2USKwoL",
-            "b2NjdXJyZW5jZXMYASADKAsyFi5ncmFmZWFzLnYxLk9jY3VycmVuY2UylA4K",
-            "B0dyYWZlYXMSdgoNR2V0T2NjdXJyZW5jZRIgLmdyYWZlYXMudjEuR2V0T2Nj",
-            "dXJyZW5jZVJlcXVlc3QaFi5ncmFmZWFzLnYxLk9jY3VycmVuY2UiK4LT5JMC",
-            "JRIjL3YxL3tuYW1lPXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn0ShwEKD0xp",
-            "c3RPY2N1cnJlbmNlcxIiLmdyYWZlYXMudjEuTGlzdE9jY3VycmVuY2VzUmVx",
-            "dWVzdBojLmdyYWZlYXMudjEuTGlzdE9jY3VycmVuY2VzUmVzcG9uc2UiK4LT",
-            "5JMCJRIjL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vb2NjdXJyZW5jZXMSfAoQ",
-            "RGVsZXRlT2NjdXJyZW5jZRIjLmdyYWZlYXMudjEuRGVsZXRlT2NjdXJyZW5j",
-            "ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiK4LT5JMCJSojL3Yx",
-            "L3tuYW1lPXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn0SiAEKEENyZWF0ZU9j",
-            "Y3VycmVuY2USIy5ncmFmZWFzLnYxLkNyZWF0ZU9jY3VycmVuY2VSZXF1ZXN0",
-            "GhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlIjeC0+STAjEiIy92MS97cGFyZW50",
-            "PXByb2plY3RzLyp9L29jY3VycmVuY2VzOgpvY2N1cnJlbmNlEqsBChZCYXRj",
-            "aENyZWF0ZU9jY3VycmVuY2VzEikuZ3JhZmVhcy52MS5CYXRjaENyZWF0ZU9j",
-            "Y3VycmVuY2VzUmVxdWVzdBoqLmdyYWZlYXMudjEuQmF0Y2hDcmVhdGVPY2N1",
-            "cnJlbmNlc1Jlc3BvbnNlIjqC0+STAjQiLy92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L29jY3VycmVuY2VzOmJhdGNoQ3JlYXRlOgEqEogBChBVcGRhdGVPY2N1",
-            "cnJlbmNlEiMuZ3JhZmVhcy52MS5VcGRhdGVPY2N1cnJlbmNlUmVxdWVzdBoW",
-            "LmdyYWZlYXMudjEuT2NjdXJyZW5jZSI3gtPkkwIxMiMvdjEve25hbWU9cHJv",
-            "amVjdHMvKi9vY2N1cnJlbmNlcy8qfToKb2NjdXJyZW5jZRJ+ChFHZXRPY2N1",
-            "cnJlbmNlTm90ZRIkLmdyYWZlYXMudjEuR2V0T2NjdXJyZW5jZU5vdGVSZXF1",
-            "ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlIjGC0+STAisSKS92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL29jY3VycmVuY2VzLyp9L25vdGVzEl4KB0dldE5vdGUSGi5ncmFm",
-            "ZWFzLnYxLkdldE5vdGVSZXF1ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlIiWC0+ST",
-            "Ah8SHS92MS97bmFtZT1wcm9qZWN0cy8qL25vdGVzLyp9Em8KCUxpc3ROb3Rl",
-            "cxIcLmdyYWZlYXMudjEuTGlzdE5vdGVzUmVxdWVzdBodLmdyYWZlYXMudjEu",
-            "TGlzdE5vdGVzUmVzcG9uc2UiJYLT5JMCHxIdL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKn0vbm90ZXMSagoKRGVsZXRlTm90ZRIdLmdyYWZlYXMudjEuRGVsZXRl",
-            "Tm90ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJYLT5JMCHyod",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbm90ZXMvKn0SagoKQ3JlYXRlTm90ZRId",
-            "LmdyYWZlYXMudjEuQ3JlYXRlTm90ZVJlcXVlc3QaEC5ncmFmZWFzLnYxLk5v",
-            "dGUiK4LT5JMCJSIdL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vbm90ZXM6BG5v",
-            "dGUSkwEKEEJhdGNoQ3JlYXRlTm90ZXMSIy5ncmFmZWFzLnYxLkJhdGNoQ3Jl",
-            "YXRlTm90ZXNSZXF1ZXN0GiQuZ3JhZmVhcy52MS5CYXRjaENyZWF0ZU5vdGVz",
-            "UmVzcG9uc2UiNILT5JMCLiIpL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vbm90",
-            "ZXM6YmF0Y2hDcmVhdGU6ASoSagoKVXBkYXRlTm90ZRIdLmdyYWZlYXMudjEu",
-            "VXBkYXRlTm90ZVJlcXVlc3QaEC5ncmFmZWFzLnYxLk5vdGUiK4LT5JMCJTId",
-            "L3YxL3tuYW1lPXByb2plY3RzLyovbm90ZXMvKn06BG5vdGUSmQEKE0xpc3RO",
-            "b3RlT2NjdXJyZW5jZXMSJi5ncmFmZWFzLnYxLkxpc3ROb3RlT2NjdXJyZW5j",
-            "ZXNSZXF1ZXN0GicuZ3JhZmVhcy52MS5MaXN0Tm90ZU9jY3VycmVuY2VzUmVz",
-            "cG9uc2UiMYLT5JMCKxIpL3YxL3tuYW1lPXByb2plY3RzLyovbm90ZXMvKn0v",
-            "b2NjdXJyZW5jZXNCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6IC",
-            "A0dSQWIGcHJvdG8z"));
+            "LnByb3RvIt0ECgpPY2N1cnJlbmNlEgwKBG5hbWUYASABKAkSFAoMcmVzb3Vy",
+            "Y2VfdXJpGAIgASgJEhEKCW5vdGVfbmFtZRgDIAEoCRIiCgRraW5kGAQgASgO",
+            "MhQuZ3JhZmVhcy52MS5Ob3RlS2luZBITCgtyZW1lZGlhdGlvbhgFIAEoCRIv",
+            "CgtjcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASLwoLdXBkYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEjwKDXZ1bG5lcmFiaWxpdHkYCCABKAsyIy5ncmFmZWFzLnYxLlZ1",
+            "bG5lcmFiaWxpdHlPY2N1cnJlbmNlSAASLAoFYnVpbGQYCSABKAsyGy5ncmFm",
+            "ZWFzLnYxLkJ1aWxkT2NjdXJyZW5jZUgAEiwKBWltYWdlGAogASgLMhsuZ3Jh",
+            "ZmVhcy52MS5JbWFnZU9jY3VycmVuY2VIABIwCgdwYWNrYWdlGAsgASgLMh0u",
+            "Z3JhZmVhcy52MS5QYWNrYWdlT2NjdXJyZW5jZUgAEjYKCmRlcGxveW1lbnQY",
+            "DCABKAsyIC5ncmFmZWFzLnYxLkRlcGxveW1lbnRPY2N1cnJlbmNlSAASNAoJ",
+            "ZGlzY292ZXJ5GA0gASgLMh8uZ3JhZmVhcy52MS5EaXNjb3ZlcnlPY2N1cnJl",
+            "bmNlSAASOAoLYXR0ZXN0YXRpb24YDiABKAsyIS5ncmFmZWFzLnYxLkF0dGVz",
+            "dGF0aW9uT2NjdXJyZW5jZUgAQgkKB2RldGFpbHMinwUKBE5vdGUSDAoEbmFt",
+            "ZRgBIAEoCRIZChFzaG9ydF9kZXNjcmlwdGlvbhgCIAEoCRIYChBsb25nX2Rl",
+            "c2NyaXB0aW9uGAMgASgJEiIKBGtpbmQYBCABKA4yFC5ncmFmZWFzLnYxLk5v",
+            "dGVLaW5kEisKC3JlbGF0ZWRfdXJsGAUgAygLMhYuZ3JhZmVhcy52MS5SZWxh",
+            "dGVkVXJsEjMKD2V4cGlyYXRpb25fdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAggASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIaChJyZWxhdGVkX25vdGVfbmFtZXMY",
+            "CSADKAkSNgoNdnVsbmVyYWJpbGl0eRgKIAEoCzIdLmdyYWZlYXMudjEuVnVs",
+            "bmVyYWJpbGl0eU5vdGVIABImCgVidWlsZBgLIAEoCzIVLmdyYWZlYXMudjEu",
+            "QnVpbGROb3RlSAASJgoFaW1hZ2UYDCABKAsyFS5ncmFmZWFzLnYxLkltYWdl",
+            "Tm90ZUgAEioKB3BhY2thZ2UYDSABKAsyFy5ncmFmZWFzLnYxLlBhY2thZ2VO",
+            "b3RlSAASMAoKZGVwbG95bWVudBgOIAEoCzIaLmdyYWZlYXMudjEuRGVwbG95",
+            "bWVudE5vdGVIABIuCglkaXNjb3ZlcnkYDyABKAsyGS5ncmFmZWFzLnYxLkRp",
+            "c2NvdmVyeU5vdGVIABIyCgthdHRlc3RhdGlvbhgQIAEoCzIbLmdyYWZlYXMu",
+            "djEuQXR0ZXN0YXRpb25Ob3RlSABCBgoEdHlwZSIkChRHZXRPY2N1cnJlbmNl",
+            "UmVxdWVzdBIMCgRuYW1lGAEgASgJIl8KFkxpc3RPY2N1cnJlbmNlc1JlcXVl",
+            "c3QSDgoGcGFyZW50GAEgASgJEg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3Np",
+            "emUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJfChdMaXN0T2NjdXJyZW5j",
+            "ZXNSZXNwb25zZRIrCgtvY2N1cnJlbmNlcxgBIAMoCzIWLmdyYWZlYXMudjEu",
+            "T2NjdXJyZW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiJwoXRGVsZXRl",
+            "T2NjdXJyZW5jZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJVChdDcmVhdGVPY2N1",
+            "cnJlbmNlUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSKgoKb2NjdXJyZW5jZRgC",
+            "IAEoCzIWLmdyYWZlYXMudjEuT2NjdXJyZW5jZSKEAQoXVXBkYXRlT2NjdXJy",
+            "ZW5jZVJlcXVlc3QSDAoEbmFtZRgBIAEoCRIqCgpvY2N1cnJlbmNlGAIgASgL",
+            "MhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlEi8KC3VwZGF0ZV9tYXNrGAMgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIeCg5HZXROb3RlUmVxdWVz",
+            "dBIMCgRuYW1lGAEgASgJIigKGEdldE9jY3VycmVuY2VOb3RlUmVxdWVzdBIM",
+            "CgRuYW1lGAEgASgJIlkKEExpc3ROb3Rlc1JlcXVlc3QSDgoGcGFyZW50GAEg",
+            "ASgJEg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFn",
+            "ZV90b2tlbhgEIAEoCSJNChFMaXN0Tm90ZXNSZXNwb25zZRIfCgVub3RlcxgB",
+            "IAMoCzIQLmdyYWZlYXMudjEuTm90ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAkiIQoRRGVsZXRlTm90ZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJUChFDcmVh",
+            "dGVOb3RlUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSDwoHbm90ZV9pZBgCIAEo",
+            "CRIeCgRub3RlGAMgASgLMhAuZ3JhZmVhcy52MS5Ob3RlInIKEVVwZGF0ZU5v",
+            "dGVSZXF1ZXN0EgwKBG5hbWUYASABKAkSHgoEbm90ZRgCIAEoCzIQLmdyYWZl",
+            "YXMudjEuTm90ZRIvCgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5GaWVsZE1hc2siYQoaTGlzdE5vdGVPY2N1cnJlbmNlc1JlcXVlc3QS",
+            "DAoEbmFtZRgBIAEoCRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiYwobTGlzdE5vdGVPY2N1cnJlbmNl",
+            "c1Jlc3BvbnNlEisKC29jY3VycmVuY2VzGAEgAygLMhYuZ3JhZmVhcy52MS5P",
+            "Y2N1cnJlbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKoAQoXQmF0Y2hD",
+            "cmVhdGVOb3Rlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEj0KBW5vdGVzGAIg",
+            "AygLMi4uZ3JhZmVhcy52MS5CYXRjaENyZWF0ZU5vdGVzUmVxdWVzdC5Ob3Rl",
+            "c0VudHJ5Gj4KCk5vdGVzRW50cnkSCwoDa2V5GAEgASgJEh8KBXZhbHVlGAIg",
+            "ASgLMhAuZ3JhZmVhcy52MS5Ob3RlOgI4ASI7ChhCYXRjaENyZWF0ZU5vdGVz",
+            "UmVzcG9uc2USHwoFbm90ZXMYASADKAsyEC5ncmFmZWFzLnYxLk5vdGUiXAod",
+            "QmF0Y2hDcmVhdGVPY2N1cnJlbmNlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
+            "EisKC29jY3VycmVuY2VzGAIgAygLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNl",
+            "Ik0KHkJhdGNoQ3JlYXRlT2NjdXJyZW5jZXNSZXNwb25zZRIrCgtvY2N1cnJl",
+            "bmNlcxgBIAMoCzIWLmdyYWZlYXMudjEuT2NjdXJyZW5jZTKUDgoHR3JhZmVh",
+            "cxJ2Cg1HZXRPY2N1cnJlbmNlEiAuZ3JhZmVhcy52MS5HZXRPY2N1cnJlbmNl",
+            "UmVxdWVzdBoWLmdyYWZlYXMudjEuT2NjdXJyZW5jZSIrgtPkkwIlEiMvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9vY2N1cnJlbmNlcy8qfRKHAQoPTGlzdE9jY3Vy",
+            "cmVuY2VzEiIuZ3JhZmVhcy52MS5MaXN0T2NjdXJyZW5jZXNSZXF1ZXN0GiMu",
+            "Z3JhZmVhcy52MS5MaXN0T2NjdXJyZW5jZXNSZXNwb25zZSIrgtPkkwIlEiMv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qfS9vY2N1cnJlbmNlcxJ8ChBEZWxldGVP",
+            "Y2N1cnJlbmNlEiMuZ3JhZmVhcy52MS5EZWxldGVPY2N1cnJlbmNlUmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIrgtPkkwIlKiMvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9vY2N1cnJlbmNlcy8qfRKIAQoQQ3JlYXRlT2NjdXJyZW5j",
+            "ZRIjLmdyYWZlYXMudjEuQ3JlYXRlT2NjdXJyZW5jZVJlcXVlc3QaFi5ncmFm",
+            "ZWFzLnYxLk9jY3VycmVuY2UiN4LT5JMCMSIjL3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKn0vb2NjdXJyZW5jZXM6Cm9jY3VycmVuY2USqwEKFkJhdGNoQ3JlYXRl",
+            "T2NjdXJyZW5jZXMSKS5ncmFmZWFzLnYxLkJhdGNoQ3JlYXRlT2NjdXJyZW5j",
+            "ZXNSZXF1ZXN0GiouZ3JhZmVhcy52MS5CYXRjaENyZWF0ZU9jY3VycmVuY2Vz",
+            "UmVzcG9uc2UiOoLT5JMCNCIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vb2Nj",
+            "dXJyZW5jZXM6YmF0Y2hDcmVhdGU6ASoSiAEKEFVwZGF0ZU9jY3VycmVuY2US",
+            "Iy5ncmFmZWFzLnYxLlVwZGF0ZU9jY3VycmVuY2VSZXF1ZXN0GhYuZ3JhZmVh",
+            "cy52MS5PY2N1cnJlbmNlIjeC0+STAjEyIy92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L29jY3VycmVuY2VzLyp9OgpvY2N1cnJlbmNlEn4KEUdldE9jY3VycmVuY2VO",
+            "b3RlEiQuZ3JhZmVhcy52MS5HZXRPY2N1cnJlbmNlTm90ZVJlcXVlc3QaEC5n",
+            "cmFmZWFzLnYxLk5vdGUiMYLT5JMCKxIpL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "b2NjdXJyZW5jZXMvKn0vbm90ZXMSXgoHR2V0Tm90ZRIaLmdyYWZlYXMudjEu",
+            "R2V0Tm90ZVJlcXVlc3QaEC5ncmFmZWFzLnYxLk5vdGUiJYLT5JMCHxIdL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbm90ZXMvKn0SbwoJTGlzdE5vdGVzEhwuZ3Jh",
+            "ZmVhcy52MS5MaXN0Tm90ZXNSZXF1ZXN0Gh0uZ3JhZmVhcy52MS5MaXN0Tm90",
+            "ZXNSZXNwb25zZSIlgtPkkwIfEh0vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9u",
+            "b3RlcxJqCgpEZWxldGVOb3RlEh0uZ3JhZmVhcy52MS5EZWxldGVOb3RlUmVx",
+            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIlgtPkkwIfKh0vdjEve25h",
+            "bWU9cHJvamVjdHMvKi9ub3Rlcy8qfRJqCgpDcmVhdGVOb3RlEh0uZ3JhZmVh",
+            "cy52MS5DcmVhdGVOb3RlUmVxdWVzdBoQLmdyYWZlYXMudjEuTm90ZSIrgtPk",
+            "kwIlIh0vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9ub3RlczoEbm90ZRKTAQoQ",
+            "QmF0Y2hDcmVhdGVOb3RlcxIjLmdyYWZlYXMudjEuQmF0Y2hDcmVhdGVOb3Rl",
+            "c1JlcXVlc3QaJC5ncmFmZWFzLnYxLkJhdGNoQ3JlYXRlTm90ZXNSZXNwb25z",
+            "ZSI0gtPkkwIuIikvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9ub3RlczpiYXRj",
+            "aENyZWF0ZToBKhJqCgpVcGRhdGVOb3RlEh0uZ3JhZmVhcy52MS5VcGRhdGVO",
+            "b3RlUmVxdWVzdBoQLmdyYWZlYXMudjEuTm90ZSIrgtPkkwIlMh0vdjEve25h",
+            "bWU9cHJvamVjdHMvKi9ub3Rlcy8qfToEbm90ZRKZAQoTTGlzdE5vdGVPY2N1",
+            "cnJlbmNlcxImLmdyYWZlYXMudjEuTGlzdE5vdGVPY2N1cnJlbmNlc1JlcXVl",
+            "c3QaJy5ncmFmZWFzLnYxLkxpc3ROb3RlT2NjdXJyZW5jZXNSZXNwb25zZSIx",
+            "gtPkkwIrEikvdjEve25hbWU9cHJvamVjdHMvKi9ub3Rlcy8qfS9vY2N1cnJl",
+            "bmNlc0JRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.AttestationReflection.Descriptor, global::Grafeas.V1.BuildReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, global::Grafeas.V1.DeploymentReflection.Descriptor, global::Grafeas.V1.DiscoveryReflection.Descriptor, global::Grafeas.V1.ImageReflection.Descriptor, global::Grafeas.V1.PackageReflection.Descriptor, global::Grafeas.V1.ProvenanceReflection.Descriptor, global::Grafeas.V1.VulnerabilityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Occurrence), global::Grafeas.V1.Occurrence.Parser, new[]{ "Name", "Resource", "NoteName", "Kind", "Remediation", "CreateTime", "UpdateTime", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation" }, new[]{ "Details" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Resource), global::Grafeas.V1.Resource.Parser, new[]{ "Name", "Uri", "ContentHash" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Occurrence), global::Grafeas.V1.Occurrence.Parser, new[]{ "Name", "ResourceUri", "NoteName", "Kind", "Remediation", "CreateTime", "UpdateTime", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation" }, new[]{ "Details" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Note), global::Grafeas.V1.Note.Parser, new[]{ "Name", "ShortDescription", "LongDescription", "Kind", "RelatedUrl", "ExpirationTime", "CreateTime", "UpdateTime", "RelatedNoteNames", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation" }, new[]{ "Type" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceRequest), global::Grafeas.V1.GetOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesRequest), global::Grafeas.V1.ListOccurrencesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null),
@@ -202,7 +199,7 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Occurrence(Occurrence other) : this() {
       name_ = other.name_;
-      resource_ = other.resource_ != null ? other.resource_.Clone() : null;
+      resourceUri_ = other.resourceUri_;
       noteName_ = other.noteName_;
       kind_ = other.kind_;
       remediation_ = other.remediation_;
@@ -255,17 +252,19 @@ namespace Grafeas.V1 {
       }
     }
 
-    /// <summary>Field number for the "resource" field.</summary>
-    public const int ResourceFieldNumber = 2;
-    private global::Grafeas.V1.Resource resource_;
+    /// <summary>Field number for the "resource_uri" field.</summary>
+    public const int ResourceUriFieldNumber = 2;
+    private string resourceUri_ = "";
     /// <summary>
-    /// Required. Immutable. The resource for which the occurrence applies.
+    /// Required. Immutable. A URI that represents the resource for which the
+    /// occurrence applies. For example,
+    /// `https://gcr.io/project/image@sha256:123abc` for a Docker image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grafeas.V1.Resource Resource {
-      get { return resource_; }
+    public string ResourceUri {
+      get { return resourceUri_; }
       set {
-        resource_ = value;
+        resourceUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -479,7 +478,7 @@ namespace Grafeas.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(Resource, other.Resource)) return false;
+      if (ResourceUri != other.ResourceUri) return false;
       if (NoteName != other.NoteName) return false;
       if (Kind != other.Kind) return false;
       if (Remediation != other.Remediation) return false;
@@ -500,7 +499,7 @@ namespace Grafeas.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (resource_ != null) hash ^= Resource.GetHashCode();
+      if (ResourceUri.Length != 0) hash ^= ResourceUri.GetHashCode();
       if (NoteName.Length != 0) hash ^= NoteName.GetHashCode();
       if (Kind != 0) hash ^= Kind.GetHashCode();
       if (Remediation.Length != 0) hash ^= Remediation.GetHashCode();
@@ -531,9 +530,9 @@ namespace Grafeas.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (resource_ != null) {
+      if (ResourceUri.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteMessage(Resource);
+        output.WriteString(ResourceUri);
       }
       if (NoteName.Length != 0) {
         output.WriteRawTag(26);
@@ -594,8 +593,8 @@ namespace Grafeas.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (resource_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Resource);
+      if (ResourceUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceUri);
       }
       if (NoteName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NoteName);
@@ -647,11 +646,8 @@ namespace Grafeas.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.resource_ != null) {
-        if (resource_ == null) {
-          resource_ = new global::Grafeas.V1.Resource();
-        }
-        Resource.MergeFrom(other.Resource);
+      if (other.ResourceUri.Length != 0) {
+        ResourceUri = other.ResourceUri;
       }
       if (other.NoteName.Length != 0) {
         NoteName = other.NoteName;
@@ -735,10 +731,7 @@ namespace Grafeas.V1 {
             break;
           }
           case 18: {
-            if (resource_ == null) {
-              resource_ = new global::Grafeas.V1.Resource();
-            }
-            input.ReadMessage(resource_);
+            ResourceUri = input.ReadString();
             break;
           }
           case 26: {
@@ -837,211 +830,6 @@ namespace Grafeas.V1 {
   }
 
   /// <summary>
-  /// An entity that can have metadata. For example, a Docker image.
-  /// </summary>
-  public sealed partial class Resource : pb::IMessage<Resource> {
-    private static readonly pb::MessageParser<Resource> _parser = new pb::MessageParser<Resource>(() => new Resource());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Resource> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Resource() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Resource(Resource other) : this() {
-      name_ = other.name_;
-      uri_ = other.uri_;
-      contentHash_ = other.contentHash_ != null ? other.contentHash_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Resource Clone() {
-      return new Resource(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// The name of the resource. For example, the name of a Docker image -
-    /// "Debian".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "uri" field.</summary>
-    public const int UriFieldNumber = 2;
-    private string uri_ = "";
-    /// <summary>
-    /// Required. The unique URI of the resource. For example,
-    /// `https://gcr.io/project/image@sha256:foo` for a Docker image.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Uri {
-      get { return uri_; }
-      set {
-        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "content_hash" field.</summary>
-    public const int ContentHashFieldNumber = 3;
-    private global::Grafeas.V1.Hash contentHash_;
-    /// <summary>
-    /// The hash of the resource content. For example, the Docker digest.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grafeas.V1.Hash ContentHash {
-      get { return contentHash_; }
-      set {
-        contentHash_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Resource);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Resource other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (Uri != other.Uri) return false;
-      if (!object.Equals(ContentHash, other.ContentHash)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
-      if (contentHash_ != null) hash ^= ContentHash.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (Uri.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Uri);
-      }
-      if (contentHash_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(ContentHash);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Uri.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
-      }
-      if (contentHash_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContentHash);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Resource other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Uri.Length != 0) {
-        Uri = other.Uri;
-      }
-      if (other.contentHash_ != null) {
-        if (contentHash_ == null) {
-          contentHash_ = new global::Grafeas.V1.Hash();
-        }
-        ContentHash.MergeFrom(other.ContentHash);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Uri = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (contentHash_ == null) {
-              contentHash_ = new global::Grafeas.V1.Hash();
-            }
-            input.ReadMessage(contentHash_);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
   /// A type of analysis that can be done for a resource.
   /// </summary>
   public sealed partial class Note : pb::IMessage<Note> {
@@ -1052,7 +840,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1760,7 +1548,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1896,7 +1684,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2126,7 +1914,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2286,7 +2074,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2422,7 +2210,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2595,7 +2383,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2805,7 +2593,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2941,7 +2729,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3077,7 +2865,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3307,7 +3095,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3467,7 +3255,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3603,7 +3391,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3807,7 +3595,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4017,7 +3805,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4246,7 +4034,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4404,7 +4192,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4563,7 +4351,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4690,7 +4478,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4849,7 +4637,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Grafeas.V1.GrafeasReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
