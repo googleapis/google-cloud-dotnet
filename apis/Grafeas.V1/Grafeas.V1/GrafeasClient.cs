@@ -558,6 +558,7 @@ namespace Grafeas.V1
     /// </summary>
     public abstract partial class GrafeasClient
     {
+
         /// <summary>
         /// Creates a <see cref="GrafeasClient"/> which uses the specified channel for remote operations.
         /// </summary>

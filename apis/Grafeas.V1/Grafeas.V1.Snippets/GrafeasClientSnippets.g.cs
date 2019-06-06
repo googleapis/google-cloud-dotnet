@@ -1332,5 +1332,6 @@ namespace Grafeas.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
     }
 }
