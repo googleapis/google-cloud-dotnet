@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateSnippetMarkdown", "Google.Cloud.Tools.GenerateSnippetMarkdown\Google.Cloud.Tools.GenerateSnippetMarkdown.csproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
 EndProject
@@ -40,9 +40,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Generate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ShowReleaseStatus", "Google.Cloud.Tools.ShowReleaseStatus\Google.Cloud.Tools.ShowReleaseStatus.csproj", "{1EAFDF69-BBF8-450F-8B73-BAED481378F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.VersionCompat", "Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj", "{1D31D545-9008-44BB-894F-11A84CDA8BDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.VersionCompat", "Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj", "{1D31D545-9008-44BB-894F-11A84CDA8BDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.VersionCompat.Tests", "Google.Cloud.Tools.VersionCompat.Tests\Google.Cloud.Tools.VersionCompat.Tests.csproj", "{7F116487-62FD-4F99-96B3-6CA428DD84E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.VersionCompat.Tests", "Google.Cloud.Tools.VersionCompat.Tests\Google.Cloud.Tools.VersionCompat.Tests.csproj", "{7F116487-62FD-4F99-96B3-6CA428DD84E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.SourceManipulation", "Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{8C4505CA-44CB-425C-861D-227D486D5842}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -306,6 +308,18 @@ Global
 		{7F116487-62FD-4F99-96B3-6CA428DD84E0}.Release|x64.Build.0 = Release|Any CPU
 		{7F116487-62FD-4F99-96B3-6CA428DD84E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{7F116487-62FD-4F99-96B3-6CA428DD84E0}.Release|x86.Build.0 = Release|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Debug|x64.Build.0 = Debug|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Debug|x86.Build.0 = Debug|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Release|x64.ActiveCfg = Release|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Release|x64.Build.0 = Release|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Release|x86.ActiveCfg = Release|Any CPU
+		{8C4505CA-44CB-425C-861D-227D486D5842}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
