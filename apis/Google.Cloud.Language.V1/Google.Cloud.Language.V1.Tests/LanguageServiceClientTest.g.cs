@@ -293,7 +293,6 @@ namespace Google.Cloud.Language.V1.Tests
             mockGrpcClient.VerifyAll();
         }
 
-
         [Fact]
         public void AnalyzeEntitySentiment3()
         {
