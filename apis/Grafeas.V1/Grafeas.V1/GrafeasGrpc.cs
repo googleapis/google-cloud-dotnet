@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Grafeas.V1 {
   /// <summary>
-  /// [Grafeas](grafeas.io) API.
+  /// [Grafeas](https://grafeas.io) API.
   ///
   /// Retrieves analysis results of Cloud components such as Docker container
   /// images.

@@ -32,26 +32,24 @@ namespace Grafeas.V1 {
             "Y2F0aW9uEg8KB2NwZV91cmkYASABKAkSJAoHdmVyc2lvbhgCIAEoCzITLmdy",
             "YWZlYXMudjEuVmVyc2lvbhIMCgRwYXRoGAMgASgJIksKC1BhY2thZ2VOb3Rl",
             "EgwKBG5hbWUYASABKAkSLgoMZGlzdHJpYnV0aW9uGAogAygLMhguZ3JhZmVh",
-            "cy52MS5EaXN0cmlidXRpb24iQwoRUGFja2FnZU9jY3VycmVuY2USLgoMaW5z",
-            "dGFsbGF0aW9uGAEgASgLMhguZ3JhZmVhcy52MS5JbnN0YWxsYXRpb24iRAoM",
-            "SW5zdGFsbGF0aW9uEgwKBG5hbWUYASABKAkSJgoIbG9jYXRpb24YAiADKAsy",
-            "FC5ncmFmZWFzLnYxLkxvY2F0aW9uIs0BCgdWZXJzaW9uEg0KBWVwb2NoGAEg",
-            "ASgFEgwKBG5hbWUYAiABKAkSEAoIcmV2aXNpb24YAyABKAkSLQoEa2luZBgE",
-            "IAEoDjIfLmdyYWZlYXMudjEuVmVyc2lvbi5WZXJzaW9uS2luZBIRCglmdWxs",
-            "X25hbWUYBSABKAkiUQoLVmVyc2lvbktpbmQSHAoYVkVSU0lPTl9LSU5EX1VO",
-            "U1BFQ0lGSUVEEAASCgoGTk9STUFMEAESCwoHTUlOSU1VTRACEgsKB01BWElN",
-            "VU0QAyo+CgxBcmNoaXRlY3R1cmUSHAoYQVJDSElURUNUVVJFX1VOU1BFQ0lG",
-            "SUVEEAASBwoDWDg2EAESBwoDWDY0EAJCUQoNaW8uZ3JhZmVhcy52MVABWjhn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMv",
-            "djE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
+            "cy52MS5EaXN0cmlidXRpb24iSQoRUGFja2FnZU9jY3VycmVuY2USDAoEbmFt",
+            "ZRgBIAEoCRImCghsb2NhdGlvbhgCIAMoCzIULmdyYWZlYXMudjEuTG9jYXRp",
+            "b24izQEKB1ZlcnNpb24SDQoFZXBvY2gYASABKAUSDAoEbmFtZRgCIAEoCRIQ",
+            "CghyZXZpc2lvbhgDIAEoCRItCgRraW5kGAQgASgOMh8uZ3JhZmVhcy52MS5W",
+            "ZXJzaW9uLlZlcnNpb25LaW5kEhEKCWZ1bGxfbmFtZRgFIAEoCSJRCgtWZXJz",
+            "aW9uS2luZBIcChhWRVJTSU9OX0tJTkRfVU5TUEVDSUZJRUQQABIKCgZOT1JN",
+            "QUwQARILCgdNSU5JTVVNEAISCwoHTUFYSU1VTRADKj4KDEFyY2hpdGVjdHVy",
+            "ZRIcChhBUkNISVRFQ1RVUkVfVU5TUEVDSUZJRUQQABIHCgNYODYQARIHCgNY",
+            "NjQQAkJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.Architecture), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Distribution), global::Grafeas.V1.Distribution.Parser, new[]{ "CpeUri", "Architecture", "LatestVersion", "Maintainer", "Url", "Description" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Location), global::Grafeas.V1.Location.Parser, new[]{ "CpeUri", "Version", "Path" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageNote), global::Grafeas.V1.PackageNote.Parser, new[]{ "Name", "Distribution" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageOccurrence), global::Grafeas.V1.PackageOccurrence.Parser, new[]{ "Installation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Installation), global::Grafeas.V1.Installation.Parser, new[]{ "Name", "Location" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageOccurrence), global::Grafeas.V1.PackageOccurrence.Parser, new[]{ "Name", "Location" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Version), global::Grafeas.V1.Version.Parser, new[]{ "Epoch", "Name", "Revision", "Kind", "FullName" }, null, new[]{ typeof(global::Grafeas.V1.Version.Types.VersionKind) }, null)
           }));
     }
@@ -745,7 +743,7 @@ namespace Grafeas.V1 {
   }
 
   /// <summary>
-  /// Details of a package occurrence.
+  /// Details on how a particular software package was installed on a system.
   /// </summary>
   public sealed partial class PackageOccurrence : pb::IMessage<PackageOccurrence> {
     private static readonly pb::MessageParser<PackageOccurrence> _parser = new pb::MessageParser<PackageOccurrence>(() => new PackageOccurrence());
@@ -772,156 +770,14 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PackageOccurrence(PackageOccurrence other) : this() {
-      installation_ = other.installation_ != null ? other.installation_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PackageOccurrence Clone() {
-      return new PackageOccurrence(this);
-    }
-
-    /// <summary>Field number for the "installation" field.</summary>
-    public const int InstallationFieldNumber = 1;
-    private global::Grafeas.V1.Installation installation_;
-    /// <summary>
-    /// Required. Where the package was installed.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grafeas.V1.Installation Installation {
-      get { return installation_; }
-      set {
-        installation_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PackageOccurrence);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PackageOccurrence other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Installation, other.Installation)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (installation_ != null) hash ^= Installation.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (installation_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Installation);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (installation_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Installation);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PackageOccurrence other) {
-      if (other == null) {
-        return;
-      }
-      if (other.installation_ != null) {
-        if (installation_ == null) {
-          installation_ = new global::Grafeas.V1.Installation();
-        }
-        Installation.MergeFrom(other.Installation);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (installation_ == null) {
-              installation_ = new global::Grafeas.V1.Installation();
-            }
-            input.ReadMessage(installation_);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
-  /// This represents how a particular software package may be installed on a
-  /// system.
-  /// </summary>
-  public sealed partial class Installation : pb::IMessage<Installation> {
-    private static readonly pb::MessageParser<Installation> _parser = new pb::MessageParser<Installation>(() => new Installation());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Installation> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.PackageReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Installation() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Installation(Installation other) : this() {
       name_ = other.name_;
       location_ = other.location_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Installation Clone() {
-      return new Installation(this);
+    public PackageOccurrence Clone() {
+      return new PackageOccurrence(this);
     }
 
     /// <summary>Field number for the "name" field.</summary>
@@ -954,11 +810,11 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Installation);
+      return Equals(other as PackageOccurrence);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Installation other) {
+    public bool Equals(PackageOccurrence other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1012,7 +868,7 @@ namespace Grafeas.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Installation other) {
+    public void MergeFrom(PackageOccurrence other) {
       if (other == null) {
         return;
       }
@@ -1056,7 +912,7 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.PackageReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Grafeas.V1.PackageReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

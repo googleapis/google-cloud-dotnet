@@ -29,21 +29,19 @@ namespace Grafeas.V1 {
             "Z2VycHJpbnQSDwoHdjFfbmFtZRgBIAEoCRIPCgd2Ml9ibG9iGAIgAygJEg8K",
             "B3YyX25hbWUYAyABKAkiTwoJSW1hZ2VOb3RlEhQKDHJlc291cmNlX3VybBgB",
             "IAEoCRIsCgtmaW5nZXJwcmludBgCIAEoCzIXLmdyYWZlYXMudjEuRmluZ2Vy",
-            "cHJpbnQiPQoPSW1hZ2VPY2N1cnJlbmNlEioKDWRlcml2ZWRfaW1hZ2UYASAB",
-            "KAsyEy5ncmFmZWFzLnYxLkRlcml2ZWQiiwEKB0Rlcml2ZWQSLAoLZmluZ2Vy",
-            "cHJpbnQYASABKAsyFy5ncmFmZWFzLnYxLkZpbmdlcnByaW50EhAKCGRpc3Rh",
-            "bmNlGAIgASgFEiUKCmxheWVyX2luZm8YAyADKAsyES5ncmFmZWFzLnYxLkxh",
-            "eWVyEhkKEWJhc2VfcmVzb3VyY2VfdXJsGAQgASgJQlEKDWlvLmdyYWZlYXMu",
-            "djFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9n",
-            "cmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
+            "cHJpbnQikwEKD0ltYWdlT2NjdXJyZW5jZRIsCgtmaW5nZXJwcmludBgBIAEo",
+            "CzIXLmdyYWZlYXMudjEuRmluZ2VycHJpbnQSEAoIZGlzdGFuY2UYAiABKAUS",
+            "JQoKbGF5ZXJfaW5mbxgDIAMoCzIRLmdyYWZlYXMudjEuTGF5ZXISGQoRYmFz",
+            "ZV9yZXNvdXJjZV91cmwYBCABKAlCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7",
+            "Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Layer), global::Grafeas.V1.Layer.Parser, new[]{ "Directive", "Arguments" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Fingerprint), global::Grafeas.V1.Fingerprint.Parser, new[]{ "V1Name", "V2Blob", "V2Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ImageNote), global::Grafeas.V1.ImageNote.Parser, new[]{ "ResourceUrl", "Fingerprint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ImageOccurrence), global::Grafeas.V1.ImageOccurrence.Parser, new[]{ "DerivedImage" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Derived), global::Grafeas.V1.Derived.Parser, new[]{ "Fingerprint", "Distance", "LayerInfo", "BaseResourceUrl" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ImageOccurrence), global::Grafeas.V1.ImageOccurrence.Parser, new[]{ "Fingerprint", "Distance", "LayerInfo", "BaseResourceUrl" }, null, null, null)
           }));
     }
     #endregion
@@ -412,10 +410,10 @@ namespace Grafeas.V1 {
 
   /// <summary>
   /// Basis describes the base image portion (Note) of the DockerImage
-  /// relationship. Linked occurrences are derived from this or an
-  /// equivalent image via:
+  /// relationship. Linked occurrences are derived from this or an equivalent image
+  /// via:
   ///   FROM &lt;Basis.resource_url>
-  /// Or an equivalent reference, e.g. a tag of the resource_url.
+  /// Or an equivalent reference, e.g., a tag of the resource_url.
   /// </summary>
   public sealed partial class ImageNote : pb::IMessage<ImageNote> {
     private static readonly pb::MessageParser<ImageNote> _parser = new pb::MessageParser<ImageNote>(() => new ImageNote());
@@ -588,7 +586,9 @@ namespace Grafeas.V1 {
   }
 
   /// <summary>
-  /// Details of an image occurrence.
+  /// Details of the derived image portion of the DockerImage relationship. This
+  /// image would be produced from a Dockerfile with FROM &lt;DockerImage.Basis in
+  /// attached Note>.
   /// </summary>
   public sealed partial class ImageOccurrence : pb::IMessage<ImageOccurrence> {
     private static readonly pb::MessageParser<ImageOccurrence> _parser = new pb::MessageParser<ImageOccurrence>(() => new ImageOccurrence());
@@ -615,149 +615,6 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageOccurrence(ImageOccurrence other) : this() {
-      derivedImage_ = other.derivedImage_ != null ? other.derivedImage_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ImageOccurrence Clone() {
-      return new ImageOccurrence(this);
-    }
-
-    /// <summary>Field number for the "derived_image" field.</summary>
-    public const int DerivedImageFieldNumber = 1;
-    private global::Grafeas.V1.Derived derivedImage_;
-    /// <summary>
-    /// Required. Immutable. The child image derived from the base image.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grafeas.V1.Derived DerivedImage {
-      get { return derivedImage_; }
-      set {
-        derivedImage_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ImageOccurrence);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ImageOccurrence other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(DerivedImage, other.DerivedImage)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (derivedImage_ != null) hash ^= DerivedImage.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (derivedImage_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(DerivedImage);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (derivedImage_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DerivedImage);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ImageOccurrence other) {
-      if (other == null) {
-        return;
-      }
-      if (other.derivedImage_ != null) {
-        if (derivedImage_ == null) {
-          derivedImage_ = new global::Grafeas.V1.Derived();
-        }
-        DerivedImage.MergeFrom(other.DerivedImage);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (derivedImage_ == null) {
-              derivedImage_ = new global::Grafeas.V1.Derived();
-            }
-            input.ReadMessage(derivedImage_);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
-  /// Derived describes the derived image portion (Occurrence) of the DockerImage
-  /// relationship. This image would be produced from a Dockerfile with FROM
-  /// &lt;DockerImage.Basis in attached Note>.
-  /// </summary>
-  public sealed partial class Derived : pb::IMessage<Derived> {
-    private static readonly pb::MessageParser<Derived> _parser = new pb::MessageParser<Derived>(() => new Derived());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Derived> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grafeas.V1.ImageReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Derived() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Derived(Derived other) : this() {
       fingerprint_ = other.fingerprint_ != null ? other.fingerprint_.Clone() : null;
       distance_ = other.distance_;
       layerInfo_ = other.layerInfo_.Clone();
@@ -766,8 +623,8 @@ namespace Grafeas.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Derived Clone() {
-      return new Derived(this);
+    public ImageOccurrence Clone() {
+      return new ImageOccurrence(this);
     }
 
     /// <summary>Field number for the "fingerprint" field.</summary>
@@ -831,11 +688,11 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Derived);
+      return Equals(other as ImageOccurrence);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Derived other) {
+    public bool Equals(ImageOccurrence other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -907,7 +764,7 @@ namespace Grafeas.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Derived other) {
+    public void MergeFrom(ImageOccurrence other) {
       if (other == null) {
         return;
       }

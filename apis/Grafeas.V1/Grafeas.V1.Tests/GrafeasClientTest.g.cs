@@ -44,6 +44,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -67,6 +68,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -90,6 +92,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -112,6 +115,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -201,6 +205,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -226,6 +231,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -251,6 +257,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -274,6 +281,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -374,6 +382,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -401,6 +410,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -427,6 +437,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
@@ -450,6 +461,7 @@ namespace Grafeas.V1.Tests
             Occurrence expectedResponse = new Occurrence
             {
                 OccurrenceName = new OccurrenceName("[PROJECT]", "[OCCURRENCE]"),
+                ResourceUri = "resourceUri-384040517",
                 NoteName = "noteName1780787896",
                 Remediation = "remediation779381797",
             };
