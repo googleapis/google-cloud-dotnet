@@ -466,16 +466,16 @@ namespace Google.Cloud.PubSub.V1
         {
             private struct FnInfo
             {
-                public FnInfo(Func<Task> fn, long byteCount)
+                internal FnInfo(Func<Task> fn, long byteCount)
                 {
                     Fn = fn;
                     ByteCount = byteCount;
                 }
-                public Func<Task> Fn { get; }
-                public long ByteCount { get; }
+                internal Func<Task> Fn { get; }
+                internal long ByteCount { get; }
             }
 
-            public Flow(long maxByteCount, long maxElementCount, Action<Task> registerTaskFn, TaskHelper taskHelper)
+            internal Flow(long maxByteCount, long maxElementCount, Action<Task> registerTaskFn, TaskHelper taskHelper)
             {
                 _maxByteCount = maxByteCount;
                 _maxElementCount = maxElementCount;
@@ -514,7 +514,7 @@ namespace Google.Cloud.PubSub.V1
             /// <param name="orderingKey">The ordering key for this message. Empty string if no ordering key.</param>
             /// <param name="fn">The function to execute.</param>
             /// <returns>A Task that completes once <paramref name="fn"/> has been scheduled for execution.</returns>
-            public async Task Process(long byteCount, string orderingKey, Func<Task> fn)
+            internal async Task Process(long byteCount, string orderingKey, Func<Task> fn)
             {
                 while (true)
                 {
@@ -612,9 +612,9 @@ namespace Google.Cloud.PubSub.V1
             private readonly LinkedList<Queue<T>> _qs = new LinkedList<Queue<T>>();
             private int _requeueCount = 0;
 
-            public void Enqueue(T item) => _q.Enqueue(item);
+            internal void Enqueue(T item) => _q.Enqueue(item);
 
-            public void Enqueue(IEnumerable<T> items)
+            internal void Enqueue(IEnumerable<T> items)
             {
                 foreach (var item in items)
                 {
@@ -622,14 +622,14 @@ namespace Google.Cloud.PubSub.V1
                 }
             }
 
-            public void Requeue(IEnumerable<T> items)
+            internal void Requeue(IEnumerable<T> items)
             {
                 var q = new Queue<T>(items);
                 _qs.AddLast(q);
                 _requeueCount += q.Count;
             }
 
-            public int Count => _q.Count + _requeueCount;
+            internal int Count => _q.Count + _requeueCount;
 
             /// <summary>
             /// Dequeue up to maxCount items.
@@ -638,7 +638,7 @@ namespace Google.Cloud.PubSub.V1
             /// <param name="maxCount">Maximum count of items to dequeue.</param>
             /// <param name="includeFn">If not null, must return <c>true</c> for the item to be included.</param>
             /// <returns></returns>
-            public List<T> Dequeue(int maxCount, Predicate<T> includeFn)
+            internal List<T> Dequeue(int maxCount, Predicate<T> includeFn)
             {
                 List<T> result = new List<T>();
                 Queue<T> q = _qs.First?.Value;
@@ -677,7 +677,7 @@ namespace Google.Cloud.PubSub.V1
                 return result;
             }
 
-            public bool TryPeek(out T value)
+            internal bool TryPeek(out T value)
             {
                 var qsNode = _qs.First;
                 while (qsNode != null)
@@ -701,7 +701,7 @@ namespace Google.Cloud.PubSub.V1
 
         internal class AsyncSingleRecvQueue<T>
         {
-            public AsyncSingleRecvQueue(TaskHelper taskHelper) => _taskHelper = taskHelper;
+            internal AsyncSingleRecvQueue(TaskHelper taskHelper) => _taskHelper = taskHelper;
 
             private readonly TaskHelper _taskHelper;
             private readonly object _lock = new object();
@@ -709,7 +709,7 @@ namespace Google.Cloud.PubSub.V1
             private TaskCompletionSource<int> _tcs = null;
 
             // Thread-safe.
-            public void Enqueue(T item)
+            internal void Enqueue(T item)
             {
                 TaskCompletionSource<int> tcs;
                 lock (_lock)
@@ -727,7 +727,7 @@ namespace Google.Cloud.PubSub.V1
 
             // Thread-safe to use concurrently with Enqueue(),
             // but this DequeueAsync() method must *not* be called concurrently.
-            public async Task<T> DequeueAsync()
+            internal async Task<T> DequeueAsync()
             {
                 lock (_lock)
                 {
@@ -756,38 +756,38 @@ namespace Google.Cloud.PubSub.V1
         {
             private struct NextAction
             {
-                public NextAction(bool isPull, Action action)
+                internal NextAction(bool isPull, Action action)
                 {
                     IsPull = isPull;
                     Action = action;
                 }
-                public bool IsPull { get; }
-                public Action Action { get; }
+                internal bool IsPull { get; }
+                internal Action Action { get; }
             }
 
             private struct TaskNextAction
             {
-                public TaskNextAction(Task task, NextAction nextAction)
+                internal TaskNextAction(Task task, NextAction nextAction)
                 {
                     Task = task;
                     NextAction = nextAction;
                 }
-                public Task Task { get; }
-                public NextAction NextAction { get; }
+                internal Task Task { get; }
+                internal NextAction NextAction { get; }
             }
 
             private struct TimedId // "Time" is abstract, a monotonic incrementing counter is used.
             {
-                public TimedId(long time, string id)
+                internal TimedId(long time, string id)
                 {
                     Time = time;
                     Id = id;
                 }
-                public long Time { get; }
-                public string Id { get; }
+                internal long Time { get; }
+                internal string Id { get; }
             }
 
-            public SingleChannel(SubscriberClientImpl subscriber,
+            internal SingleChannel(SubscriberClientImpl subscriber,
                 SubscriberServiceApiClient client, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
                 Flow flow,
                 Action<Task> registerTaskFn)
@@ -850,7 +850,7 @@ namespace Google.Cloud.PubSub.V1
             // Stream shutdown occurs after 1 minute, so ensure we're always before that.
             private readonly static TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(25);
 
-            public async Task StartAsync()
+            internal async Task StartAsync()
             {
                 // Start pull.
                 StartStreamingPull();
