@@ -28,49 +28,60 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             "ZmVyLnByb3RvEiVnb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXRyYW5zZmVy",
             "LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhxnb29nbGUvcHJv",
             "dG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKtAwoOVHJhbnNmZXJD",
-            "b25maWcSDAoEbmFtZRgBIAEoCRIeChZkZXN0aW5hdGlvbl9kYXRhc2V0X2lk",
-            "GAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIWCg5kYXRhX3NvdXJjZV9p",
-            "ZBgFIAEoCRInCgZwYXJhbXMYCSABKAsyFy5nb29nbGUucHJvdG9idWYuU3Ry",
-            "dWN0EhAKCHNjaGVkdWxlGAcgASgJEiAKGGRhdGFfcmVmcmVzaF93aW5kb3df",
-            "ZGF5cxgMIAEoBRIQCghkaXNhYmxlZBgNIAEoCBIvCgt1cGRhdGVfdGltZRgE",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNbmV4dF9ydW5f",
-            "dGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQwoFc3Rh",
-            "dGUYCiABKA4yNC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXRyYW5zZmVy",
-            "LnYxLlRyYW5zZmVyU3RhdGUSDwoHdXNlcl9pZBgLIAEoAxIWCg5kYXRhc2V0",
-            "X3JlZ2lvbhgOIAEoCSL+AwoLVHJhbnNmZXJSdW4SDAoEbmFtZRgBIAEoCRIx",
-            "Cg1zY2hlZHVsZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBIsCghydW5fdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASKAoMZXJyb3Jfc3RhdHVzGBUgASgLMhIuZ29vZ2xlLnJwYy5TdGF0",
-            "dXMSLgoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASLAoIZW5kX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBInCgZwYXJhbXMYCSABKAsyFy5nb29nbGUucHJvdG9idWYu",
-            "U3RydWN0Eh4KFmRlc3RpbmF0aW9uX2RhdGFzZXRfaWQYAiABKAkSFgoOZGF0",
-            "YV9zb3VyY2VfaWQYByABKAkSQwoFc3RhdGUYCCABKA4yNC5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkuZGF0YXRyYW5zZmVyLnYxLlRyYW5zZmVyU3RhdGUSDwoH",
-            "dXNlcl9pZBgLIAEoAxIQCghzY2hlZHVsZRgMIAEoCSKKAgoPVHJhbnNmZXJN",
-            "ZXNzYWdlEjAKDG1lc3NhZ2VfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASWAoIc2V2ZXJpdHkYAiABKA4yRi5nb29nbGUuY2xvdWQu",
-            "YmlncXVlcnkuZGF0YXRyYW5zZmVyLnYxLlRyYW5zZmVyTWVzc2FnZS5NZXNz",
-            "YWdlU2V2ZXJpdHkSFAoMbWVzc2FnZV90ZXh0GAMgASgJIlUKD01lc3NhZ2VT",
-            "ZXZlcml0eRIgChxNRVNTQUdFX1NFVkVSSVRZX1VOU1BFQ0lGSUVEEAASCAoE",
-            "SU5GTxABEgsKB1dBUk5JTkcQAhIJCgVFUlJPUhADKkcKDFRyYW5zZmVyVHlw",
-            "ZRIdChlUUkFOU0ZFUl9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFQkFUQ0gQARIN",
-            "CglTVFJFQU1JTkcQAipzCg1UcmFuc2ZlclN0YXRlEh4KGlRSQU5TRkVSX1NU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxACEgsKB1JVTk5JTkcQAxIN",
-            "CglTVUNDRUVERUQQBBIKCgZGQUlMRUQQBRINCglDQU5DRUxMRUQQBkLnAQop",
-            "Y29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhdHJhbnNmZXIudjFCDVRy",
-            "YW5zZmVyUHJvdG9QAVpRZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9jbG91ZC9iaWdxdWVyeS9kYXRhdHJhbnNmZXIvdjE7ZGF0YXRy",
-            "YW5zZmVyogIFR0NCRFSqAiVHb29nbGUuQ2xvdWQuQmlnUXVlcnkuRGF0YVRy",
-            "YW5zZmVyLlYxygIlR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XERhdGFUcmFuc2Zl",
-            "clxWMWIGcHJvdG8z"));
+            "LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKQAQoPU2NoZWR1bGVP",
+            "cHRpb25zEh8KF2Rpc2FibGVfYXV0b19zY2hlZHVsaW5nGAMgASgIEi4KCnN0",
+            "YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwK",
+            "CGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLQ",
+            "BAoOVHJhbnNmZXJDb25maWcSDAoEbmFtZRgBIAEoCRIeChZkZXN0aW5hdGlv",
+            "bl9kYXRhc2V0X2lkGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIWCg5k",
+            "YXRhX3NvdXJjZV9pZBgFIAEoCRInCgZwYXJhbXMYCSABKAsyFy5nb29nbGUu",
+            "cHJvdG9idWYuU3RydWN0EhAKCHNjaGVkdWxlGAcgASgJElAKEHNjaGVkdWxl",
+            "X29wdGlvbnMYGCABKAsyNi5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXRy",
+            "YW5zZmVyLnYxLlNjaGVkdWxlT3B0aW9ucxIgChhkYXRhX3JlZnJlc2hfd2lu",
+            "ZG93X2RheXMYDCABKAUSEAoIZGlzYWJsZWQYDSABKAgSLwoLdXBkYXRlX3Rp",
+            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKDW5leHRf",
+            "cnVuX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkMK",
+            "BXN0YXRlGAogASgOMjQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFu",
+            "c2Zlci52MS5UcmFuc2ZlclN0YXRlEg8KB3VzZXJfaWQYCyABKAMSFgoOZGF0",
+            "YXNldF9yZWdpb24YDiABKAkSFQoNcGFydG5lcl90b2tlbhgWIAEoCRI4Chdw",
+            "YXJ0bmVyX2Nvbm5lY3Rpb25faW5mbxgXIAEoCzIXLmdvb2dsZS5wcm90b2J1",
+            "Zi5TdHJ1Y3QilAUKC1RyYW5zZmVyUnVuEgwKBG5hbWUYASABKAkSTgoGbGFi",
+            "ZWxzGBYgAygLMj4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zl",
+            "ci52MS5UcmFuc2ZlclJ1bi5MYWJlbHNFbnRyeRIxCg1zY2hlZHVsZV90aW1l",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghydW5fdGlt",
+            "ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKAoMZXJyb3Jf",
+            "c3RhdHVzGBUgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSLgoKc3RhcnRfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
+            "bWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0",
+            "ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBInCgZw",
+            "YXJhbXMYCSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0Eh4KFmRlc3Rp",
+            "bmF0aW9uX2RhdGFzZXRfaWQYAiABKAkSFgoOZGF0YV9zb3VyY2VfaWQYByAB",
+            "KAkSQwoFc3RhdGUYCCABKA4yNC5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0",
+            "YXRyYW5zZmVyLnYxLlRyYW5zZmVyU3RhdGUSDwoHdXNlcl9pZBgLIAEoAxIQ",
+            "CghzY2hlZHVsZRgMIAEoCRIVCg1wYXJ0bmVyX3Rva2VuGBwgASgJGi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEilQIK",
+            "D1RyYW5zZmVyTWVzc2FnZRIwCgxtZXNzYWdlX3RpbWUYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wElgKCHNldmVyaXR5GAIgASgOMkYuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGF0cmFuc2Zlci52MS5UcmFuc2Zlck1l",
+            "c3NhZ2UuTWVzc2FnZVNldmVyaXR5EhQKDG1lc3NhZ2VfdGV4dBgDIAEoCSJg",
+            "Cg9NZXNzYWdlU2V2ZXJpdHkSIAocTUVTU0FHRV9TRVZFUklUWV9VTlNQRUNJ",
+            "RklFRBAAEggKBElORk8QARILCgdXQVJOSU5HEAISCQoFRVJST1IQAxIJCgVE",
+            "RUJVRxAEKksKDFRyYW5zZmVyVHlwZRIdChlUUkFOU0ZFUl9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASCQoFQkFUQ0gQARINCglTVFJFQU1JTkcQAhoCGAEqcwoNVHJh",
+            "bnNmZXJTdGF0ZRIeChpUUkFOU0ZFUl9TVEFURV9VTlNQRUNJRklFRBAAEgsK",
+            "B1BFTkRJTkcQAhILCgdSVU5OSU5HEAMSDQoJU1VDQ0VFREVEEAQSCgoGRkFJ",
+            "TEVEEAUSDQoJQ0FOQ0VMTEVEEAZC5wEKKWNvbS5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuZGF0YXRyYW5zZmVyLnYxQg1UcmFuc2ZlclByb3RvUAFaUWdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlncXVl",
+            "cnkvZGF0YXRyYW5zZmVyL3YxO2RhdGF0cmFuc2ZlcqICBUdDQkRUqgIlR29v",
+            "Z2xlLkNsb3VkLkJpZ1F1ZXJ5LkRhdGFUcmFuc2Zlci5WMcoCJUdvb2dsZVxD",
+            "bG91ZFxCaWdRdWVyeVxEYXRhVHJhbnNmZXJcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType), typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions), global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions.Parser, new[]{ "DisableAutoScheduling", "StartTime", "EndTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser, new[]{ "Name", "DestinationDatasetId", "DisplayName", "DataSourceId", "Params", "Schedule", "ScheduleOptions", "DataRefreshWindowDays", "Disabled", "UpdateTime", "NextRunTime", "State", "UserId", "DatasetRegion", "PartnerToken", "PartnerConnectionInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser, new[]{ "Name", "Labels", "ScheduleTime", "RunTime", "ErrorStatus", "StartTime", "EndTime", "UpdateTime", "Params", "DestinationDatasetId", "DataSourceId", "State", "UserId", "Schedule", "PartnerToken" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage), global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Parser, new[]{ "MessageTime", "Severity", "MessageText" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity) }, null)
           }));
     }
@@ -115,7 +126,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// </summary>
     [pbr::OriginalName("RUNNING")] Running = 3,
     /// <summary>
-    /// Data transfer completed successsfully.
+    /// Data transfer completed successfully.
     /// </summary>
     [pbr::OriginalName("SUCCEEDED")] Succeeded = 4,
     /// <summary>
@@ -132,6 +143,225 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
   #region Messages
   /// <summary>
+  /// Options customizing the data transfer schedule.
+  /// </summary>
+  public sealed partial class ScheduleOptions : pb::IMessage<ScheduleOptions> {
+    private static readonly pb::MessageParser<ScheduleOptions> _parser = new pb::MessageParser<ScheduleOptions>(() => new ScheduleOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ScheduleOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ScheduleOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ScheduleOptions(ScheduleOptions other) : this() {
+      disableAutoScheduling_ = other.disableAutoScheduling_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ScheduleOptions Clone() {
+      return new ScheduleOptions(this);
+    }
+
+    /// <summary>Field number for the "disable_auto_scheduling" field.</summary>
+    public const int DisableAutoSchedulingFieldNumber = 3;
+    private bool disableAutoScheduling_;
+    /// <summary>
+    /// If true, automatic scheduling of data transfer runs for this configuration
+    /// will be disabled. The runs can be started on ad-hoc basis using
+    /// StartManualTransferRuns API. When automatic scheduling is disabled, the
+    /// TransferConfig.schedule field will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool DisableAutoScheduling {
+      get { return disableAutoScheduling_; }
+      set {
+        disableAutoScheduling_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Specifies time to start scheduling transfer runs. The first run will be
+    /// scheduled at or after the start time according to a recurrence pattern
+    /// defined in the schedule string. The start time can be changed at any
+    /// moment. The time when a data transfer can be trigerred manually is not
+    /// limited by this option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// Defines time to stop scheduling transfer runs. A transfer run cannot be
+    /// scheduled at or after the end time. The end time can be changed at any
+    /// moment. The time when a data transfer can be trigerred manually is not
+    /// limited by this option.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ScheduleOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ScheduleOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisableAutoScheduling != other.DisableAutoScheduling) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisableAutoScheduling != false) hash ^= DisableAutoScheduling.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (DisableAutoScheduling != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(DisableAutoScheduling);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisableAutoScheduling != false) {
+        size += 1 + 1;
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ScheduleOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisableAutoScheduling != false) {
+        DisableAutoScheduling = other.DisableAutoScheduling;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(startTime_);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(endTime_);
+            break;
+          }
+          case 24: {
+            DisableAutoScheduling = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// Represents a data transfer configuration. A transfer configuration
   /// contains all metadata needed to perform a data transfer. For example,
   /// `destination_dataset_id` specifies where data should be stored.
@@ -147,7 +377,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -170,6 +400,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       dataSourceId_ = other.dataSourceId_;
       params_ = other.params_ != null ? other.params_.Clone() : null;
       schedule_ = other.schedule_;
+      scheduleOptions_ = other.scheduleOptions_ != null ? other.scheduleOptions_.Clone() : null;
       dataRefreshWindowDays_ = other.dataRefreshWindowDays_;
       disabled_ = other.disabled_;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
@@ -177,6 +408,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       state_ = other.state_;
       userId_ = other.userId_;
       datasetRegion_ = other.datasetRegion_;
+      partnerToken_ = other.partnerToken_;
+      partnerConnectionInfo_ = other.partnerConnectionInfo_ != null ? other.partnerConnectionInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -190,11 +423,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name of the transfer config.
-    /// Transfer config names have the form
-    /// `projects/{project_id}/transferConfigs/{config_id}`.
-    /// Where `config_id` is usually a uuid, even though it is not
-    /// guaranteed or required. The name is ignored when creating a transfer
-    /// config.
+    /// Transfer config names have the form of
+    /// `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`.
+    /// The name is automatically generated based on the config_id specified in
+    /// CreateTransferConfigRequest along with project_id and region. If config_id
+    /// is not provided, usually a uuid, even though it is not guaranteed or
+    /// required, will be generated for config_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -285,6 +519,20 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+    /// <summary>Field number for the "schedule_options" field.</summary>
+    public const int ScheduleOptionsFieldNumber = 24;
+    private global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions scheduleOptions_;
+    /// <summary>
+    /// Options customizing the data transfer schedule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions ScheduleOptions {
+      get { return scheduleOptions_; }
+      set {
+        scheduleOptions_ = value;
+      }
+    }
+
     /// <summary>Field number for the "data_refresh_window_days" field.</summary>
     public const int DataRefreshWindowDaysFieldNumber = 12;
     private int dataRefreshWindowDays_;
@@ -365,11 +613,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public const int UserIdFieldNumber = 11;
     private long userId_;
     /// <summary>
-    /// Output only. Unique ID of the user on whose behalf transfer is done.
-    /// Applicable only to data sources that do not support service accounts.
-    /// When set to 0, the data source service account credentials are used.
-    /// May be negative. Note, that this identifier is not stable.
-    /// It may change over time even for the same user.
+    /// Deprecated. Unique ID of the user on whose behalf transfer is done.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long UserId {
@@ -393,6 +637,46 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
     }
 
+    /// <summary>Field number for the "partner_token" field.</summary>
+    public const int PartnerTokenFieldNumber = 22;
+    private string partnerToken_ = "";
+    /// <summary>
+    /// A unique identifier used for identifying a transfer setup stored on
+    /// external partner side. The token is opaque to DTS and can only be
+    /// interpreted by partner. Partner data source should create a mapping between
+    /// the config id and the token to validate that a transfer config/run is
+    /// legitimate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PartnerToken {
+      get { return partnerToken_; }
+      set {
+        partnerToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "partner_connection_info" field.</summary>
+    public const int PartnerConnectionInfoFieldNumber = 23;
+    private global::Google.Protobuf.WellKnownTypes.Struct partnerConnectionInfo_;
+    /// <summary>
+    /// Transfer settings managed by partner data sources. It is stored as
+    /// key-value pairs and used for DTS UI display purpose only. Two reasons we
+    /// don't want to store them together with 'params' are:
+    ///  - The connection info is provided by partner and not editable in DTS UI
+    ///    which is different from the immutable parameter. It will be confusing to
+    ///    add another boolean to DataSourceParameter to differentiate them.
+    ///  - The connection info can be any arbitrary key-value pairs. Adding them to
+    ///    params fields requires partner to provide definition for them in data
+    ///    source definition. It will be friendlier to avoid that for partners.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Struct PartnerConnectionInfo {
+      get { return partnerConnectionInfo_; }
+      set {
+        partnerConnectionInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TransferConfig);
@@ -412,6 +696,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (DataSourceId != other.DataSourceId) return false;
       if (!object.Equals(Params, other.Params)) return false;
       if (Schedule != other.Schedule) return false;
+      if (!object.Equals(ScheduleOptions, other.ScheduleOptions)) return false;
       if (DataRefreshWindowDays != other.DataRefreshWindowDays) return false;
       if (Disabled != other.Disabled) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
@@ -419,6 +704,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != other.State) return false;
       if (UserId != other.UserId) return false;
       if (DatasetRegion != other.DatasetRegion) return false;
+      if (PartnerToken != other.PartnerToken) return false;
+      if (!object.Equals(PartnerConnectionInfo, other.PartnerConnectionInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -431,6 +718,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (DataSourceId.Length != 0) hash ^= DataSourceId.GetHashCode();
       if (params_ != null) hash ^= Params.GetHashCode();
       if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
+      if (scheduleOptions_ != null) hash ^= ScheduleOptions.GetHashCode();
       if (DataRefreshWindowDays != 0) hash ^= DataRefreshWindowDays.GetHashCode();
       if (Disabled != false) hash ^= Disabled.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -438,6 +726,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != 0) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (DatasetRegion.Length != 0) hash ^= DatasetRegion.GetHashCode();
+      if (PartnerToken.Length != 0) hash ^= PartnerToken.GetHashCode();
+      if (partnerConnectionInfo_ != null) hash ^= PartnerConnectionInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -503,6 +793,18 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(114);
         output.WriteString(DatasetRegion);
       }
+      if (PartnerToken.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(PartnerToken);
+      }
+      if (partnerConnectionInfo_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(PartnerConnectionInfo);
+      }
+      if (scheduleOptions_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(ScheduleOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -529,6 +831,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Schedule.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Schedule);
       }
+      if (scheduleOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ScheduleOptions);
+      }
       if (DataRefreshWindowDays != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DataRefreshWindowDays);
       }
@@ -549,6 +854,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (DatasetRegion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetRegion);
+      }
+      if (PartnerToken.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PartnerToken);
+      }
+      if (partnerConnectionInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PartnerConnectionInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -582,6 +893,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.Schedule.Length != 0) {
         Schedule = other.Schedule;
       }
+      if (other.scheduleOptions_ != null) {
+        if (scheduleOptions_ == null) {
+          scheduleOptions_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
+        }
+        ScheduleOptions.MergeFrom(other.ScheduleOptions);
+      }
       if (other.DataRefreshWindowDays != 0) {
         DataRefreshWindowDays = other.DataRefreshWindowDays;
       }
@@ -608,6 +925,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.DatasetRegion.Length != 0) {
         DatasetRegion = other.DatasetRegion;
+      }
+      if (other.PartnerToken.Length != 0) {
+        PartnerToken = other.PartnerToken;
+      }
+      if (other.partnerConnectionInfo_ != null) {
+        if (partnerConnectionInfo_ == null) {
+          partnerConnectionInfo_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        PartnerConnectionInfo.MergeFrom(other.PartnerConnectionInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -681,6 +1007,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             DatasetRegion = input.ReadString();
             break;
           }
+          case 178: {
+            PartnerToken = input.ReadString();
+            break;
+          }
+          case 186: {
+            if (partnerConnectionInfo_ == null) {
+              partnerConnectionInfo_ = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(partnerConnectionInfo_);
+            break;
+          }
+          case 194: {
+            if (scheduleOptions_ == null) {
+              scheduleOptions_ = new global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions();
+            }
+            input.ReadMessage(scheduleOptions_);
+            break;
+          }
         }
       }
     }
@@ -698,7 +1042,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -716,6 +1060,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransferRun(TransferRun other) : this() {
       name_ = other.name_;
+      labels_ = other.labels_.Clone();
       scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
       runTime_ = other.runTime_ != null ? other.runTime_.Clone() : null;
       errorStatus_ = other.errorStatus_ != null ? other.errorStatus_.Clone() : null;
@@ -728,6 +1073,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       state_ = other.state_;
       userId_ = other.userId_;
       schedule_ = other.schedule_;
+      partnerToken_ = other.partnerToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -751,6 +1097,19 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 22;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 178);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// User labels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
     }
 
     /// <summary>Field number for the "schedule_time" field.</summary>
@@ -900,11 +1259,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public const int UserIdFieldNumber = 11;
     private long userId_;
     /// <summary>
-    /// Output only. Unique ID of the user on whose behalf transfer is done.
-    /// Applicable only to data sources that do not support service accounts.
-    /// When set to 0, the data source service account credentials are used.
-    /// May be negative. Note, that this identifier is not stable.
-    /// It may change over time even for the same user.
+    /// Deprecated. Unique ID of the user on whose behalf transfer is done.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long UserId {
@@ -922,13 +1277,32 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// created as part of a regular schedule. For batch transfer runs that are
     /// scheduled manually, this is empty.
     /// NOTE: the system might choose to delay the schedule depending on the
-    /// current load, so `schedule_time` doesn't always matches this.
+    /// current load, so `schedule_time` doesn't always match this.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Schedule {
       get { return schedule_; }
       set {
         schedule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "partner_token" field.</summary>
+    public const int PartnerTokenFieldNumber = 28;
+    private string partnerToken_ = "";
+    /// <summary>
+    /// Output only. This is the same token initialized from TransferConfig.
+    /// Partner token is a unique identifier used for identifying a transfer setup
+    /// stored on external partner side. The token is opaque to DTS and can only be
+    /// interpreted by partner. Partner data source should create a mapping between
+    /// the config id and the token to validate that a transfer config/run is
+    /// legitimate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PartnerToken {
+      get { return partnerToken_; }
+      set {
+        partnerToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -946,6 +1320,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
       if (!object.Equals(RunTime, other.RunTime)) return false;
       if (!object.Equals(ErrorStatus, other.ErrorStatus)) return false;
@@ -958,6 +1333,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != other.State) return false;
       if (UserId != other.UserId) return false;
       if (Schedule != other.Schedule) return false;
+      if (PartnerToken != other.PartnerToken) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -965,6 +1341,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (runTime_ != null) hash ^= RunTime.GetHashCode();
       if (errorStatus_ != null) hash ^= ErrorStatus.GetHashCode();
@@ -977,6 +1354,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (State != 0) hash ^= State.GetHashCode();
       if (UserId != 0L) hash ^= UserId.GetHashCode();
       if (Schedule.Length != 0) hash ^= Schedule.GetHashCode();
+      if (PartnerToken.Length != 0) hash ^= PartnerToken.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1042,6 +1420,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(ErrorStatus);
       }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (PartnerToken.Length != 0) {
+        output.WriteRawTag(226, 1);
+        output.WriteString(PartnerToken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1053,6 +1436,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (scheduleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleTime);
       }
@@ -1089,6 +1473,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (Schedule.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Schedule);
       }
+      if (PartnerToken.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PartnerToken);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1103,6 +1490,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      labels_.Add(other.labels_);
       if (other.scheduleTime_ != null) {
         if (scheduleTime_ == null) {
           scheduleTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -1159,6 +1547,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
       if (other.Schedule.Length != 0) {
         Schedule = other.Schedule;
+      }
+      if (other.PartnerToken.Length != 0) {
+        PartnerToken = other.PartnerToken;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1244,6 +1635,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
             input.ReadMessage(errorStatus_);
             break;
           }
+          case 178: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 226: {
+            PartnerToken = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1261,7 +1660,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1475,6 +1874,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         /// Error message.
         /// </summary>
         [pbr::OriginalName("ERROR")] Error = 3,
+        /// <summary>
+        /// Debug message.
+        /// </summary>
+        [pbr::OriginalName("DEBUG")] Debug = 4,
       }
 
     }
