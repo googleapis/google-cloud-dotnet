@@ -379,6 +379,12 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public sealed class PublisherClientImpl : PublisherClient
     {
+        /// <summary>
+        /// A batch of messages that all have the same ordering-key (or no ordering-key), and will be
+        /// sent to the server in a single network call.
+        /// A batch has been "processed" when it can no longer be changed. This will mean it has either been inserted into
+        /// the queue for sending to the server, or has an ordering-key and is queued behind another batch with the same ordering-key.
+        /// </summary>
         private class Batch
         {
             public TaskCompletionSource<IList<string>> BatchCompletion { get; } = new TaskCompletionSource<IList<string>>();
@@ -397,10 +403,23 @@ namespace Google.Cloud.PubSub.V1
             }
         }
 
-        private enum OrderingKeyState {
+        private enum OrderingKeyState
+        {
+            /// <summary>
+            /// No batches in-flight for this key, and key is not in an error state.
+            /// The empty ordering-key (meaning no ordering) is always in this state.
+            /// </summary>
             Normal = 0,
-            InFlight, // In the "batches-ready" queue, or actually in-flight to/from server.
-            Error // This ordering-key is in an error state, so reject all messages.
+
+            /// <summary>
+            /// This key has a batch in the "batches-ready" queue, or actually in-flight to/from server.
+            /// </summary>
+            InFlight,
+
+            /// <summary>
+            /// This ordering-key is in an error state, so reject all messages.
+            /// </summary>
+            Error,
         };
 
         private class KeyState
@@ -485,12 +504,12 @@ namespace Google.Cloud.PubSub.V1
         private readonly long _batchByteCountThreshold;
         private readonly TimeSpan? _batchDelayThreshold;
 
-        // Internal state
+        // Internal state. All potential concurrent access guarded by `_lock`.
         // Clients idle, ready to be used.
         private readonly Queue<PublisherServiceApiClient> _idleClients;
         // Batches ready to send. Will only ever include at most one batch per ordering-key.
         private readonly Queue<ReadyBatch> _batchesReady;
-        // First: Currently-filling batch; Last: Next batch to send.
+        // For each ordering-key (including empty), the OrderingKeyState and batch(es) of messages.
         private readonly Dictionary<string, KeyState> _keyedState;
         private long _queueElementCount;
         private long _queueByteCount;
@@ -786,10 +805,15 @@ namespace Google.Cloud.PubSub.V1
                             postLockAction = () => batch.BatchCompletion.SetCanceled();
                             break;
                         case TaskStatus.Faulted:
+                            // If an ordering-key is present:
+                            // * A recoverable error is retried forever.
+                            // * A non-recoverable error fails all queued unsent messages that have the same ordering-key,
+                            //   and then refuses any more messages for that ordering-key until `ResumePublish()` is called.
+                            // If an ordering-key is not present:
+                            // * Standard gRPC retry behaviour within the underlying client is used.
+                            //   On failure just the single batch fails, and further messages are accepted.
                             if (state.HasOrderingKey)
                             {
-                                // For batches with an ordering-key: Retry transient errors forever;
-                                // otherwise fail all unsent messages with the same ordering-key, then refuse any more until `ResumePublish()` is called.
                                 if (publishTask.Exception.As<RpcException>()?.IsRecoverable() ?? false)
                                 {
                                     // Rebatch failed messages.

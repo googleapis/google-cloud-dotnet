@@ -210,7 +210,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
-        public void OrderingKeyMustBeEnabled()
+        public void PublishingMessageWithOrderingKeyRequiresOrderingEnabled()
         {
             var topicName = new TopicName("FakeProject", "FakeTopic");
             var scheduler = new TestScheduler();
@@ -301,21 +301,21 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 // First call will trigger an unrecoverable error.
                 var ex = await taskHelper.ConfigureAwait(
-                    Assert.ThrowsAsync<RpcException>(() => pub.PublishAsync(unrecoverableKey, "error-1")));
+                    Assert.ThrowsAsync<RpcException>(() => pub.PublishAsync(unrecoverableKey, "unrecoverable error")));
                 Assert.Equal(StatusCode.DataLoss, ex.StatusCode);
                 // Sending again will reject the message.
                 await taskHelper.ConfigureAwait(
-                    Assert.ThrowsAsync<OrderingKeyInErrorStateException>(() => pub.PublishAsync(unrecoverableKey, "error")));
+                    Assert.ThrowsAsync<OrderingKeyInErrorStateException>(() => pub.PublishAsync(unrecoverableKey, "key in error state")));
                 // Other ordering-keys publish OK.
                 await taskHelper.ConfigureAwait(pub.PublishAsync("ok-key", "ok"));
                 // Including a recoverable error.
-                await taskHelper.ConfigureAwait(pub.PublishAsync(recoverableKey, "not-an-error"));
+                await taskHelper.ConfigureAwait(pub.PublishAsync(recoverableKey, "recoverable error"));
                 // Including a message without an ordering key.
-                await taskHelper.ConfigureAwait(pub.PublishAsync("not-ordered"));
+                await taskHelper.ConfigureAwait(pub.PublishAsync("key not ordered"));
                 // Resume publishing on the ordering key.
                 pub.ResumePublish(unrecoverableKey);
-                await taskHelper.ConfigureAwait(pub.PublishAsync(unrecoverableKey, "error-2"));
-                var expected = new HashSet<string>(new[] { "ok", "error-2", "not-an-error", "not-ordered" });
+                await taskHelper.ConfigureAwait(pub.PublishAsync(unrecoverableKey, "unrecoverable key resumed"));
+                var expected = new HashSet<string>(new[] { "ok", "key not ordered", "recoverable error", "unrecoverable key resumed" });
                 Assert.Equal(expected, new HashSet<string>(client.HandledMessages));
             });
         }

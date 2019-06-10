@@ -526,6 +526,10 @@ namespace Google.Cloud.PubSub.V1
                             // Add to stats for this element.
                             _byteCount += byteCount;
                             _elementCount += 1;
+                            // If there's no ordering-key then the user callback function can always immediately be executed
+                            // because there's no ordering constraint to meet.
+                            // If there is an ordering-key then the user callback function must be exeuted sequentially per
+                            // ordering-key.
                             if (orderingKey.Length > 0)
                             {
                                 // Ordering-key is set on this message.
@@ -589,7 +593,8 @@ namespace Google.Cloud.PubSub.V1
                     }
                     if (nextFn.Fn != null)
                     {
-                        // Execute user code for the next message of this ordering-key.
+                        // Execute user code for the next message of this ordering-key;
+                        // this is not a recursive call, as this code is within a `Task.Run` :)
                         ExecuteFunction(orderingKey, nextFn.ByteCount, nextFn.Fn);
                     }
                     if (setEvent)
