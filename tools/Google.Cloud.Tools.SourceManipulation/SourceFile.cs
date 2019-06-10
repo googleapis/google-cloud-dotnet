@@ -16,6 +16,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -113,7 +114,7 @@ namespace Google.Cloud.Tools.SourceManipulation
                 string friendlyName = $"{typeName}.{methodName}({string.Join(", ", parameterTypes)})";
                 throw new Exception($"Expected to find one method matching {friendlyName}; found {matchingMethods.Count}");
             }
-            return WithNodeRemoved(matchingMethods[0]);
+            return WithNodesRemoved(matchingMethods[0]);
 
             bool ParameterMatches(ParameterSyntax syntax, string expectedType)
             {
@@ -149,7 +150,7 @@ namespace Google.Cloud.Tools.SourceManipulation
             {
                 throw new Exception($"Expected to find one property matching {typeName}.{propertyName}; found {matchingProperties.Count}");
             }
-            return WithNodeRemoved(matchingProperties[0]);
+            return WithNodesRemoved(matchingProperties[0]);
         }
 
         /// <summary>
@@ -171,7 +172,23 @@ namespace Google.Cloud.Tools.SourceManipulation
             {
                 throw new Exception("Cannot remove a field from a declaration with multiple declarators.");
             }
-            return WithNodeRemoved(matchingFields[0]);
+            return WithNodesRemoved(matchingFields[0]);
+        }
+
+        /// <summary>
+        /// Removes all declarations for the specified type name within the source file.
+        /// </summary>
+        /// <returns>The modified source file.</returns>
+        public SourceFile RemoveType(string typeName)
+        {
+            var typeDeclarations = _root.DescendantNodes().OfType<TypeDeclarationSyntax>()
+                .Where(typeDeclaration => typeDeclaration.Identifier.Text == typeName)
+                .ToList();
+            if (typeDeclarations.Count == 0)
+            {
+                throw new Exception($"Expected to find at least one type declaration of {typeName}");
+            }
+            return WithNodesRemoved(typeDeclarations);
         }
 
         /// <summary>
@@ -215,11 +232,18 @@ namespace Google.Cloud.Tools.SourceManipulation
             new SourceFile(_path, newRoot);
 
         /// <summary>
-        /// Returns the source file with the given syntax node removed.
+        /// Returns the source file with the given syntax nodes removed.
         /// </summary>
         /// <returns>The modified source file.</returns>
-        public SourceFile WithNodeRemoved(SyntaxNode nodeToRemove) =>
-            WithRootNode(_root.RemoveNode(nodeToRemove, SyntaxRemoveOptions.KeepDirectives));
+        public SourceFile WithNodesRemoved<T>(params T[] nodesToRemove) where T : SyntaxNode =>
+            WithNodesRemoved((IEnumerable<T>) nodesToRemove);
+
+        /// <summary>
+        /// Returns the source file with the given syntax nodes removed.
+        /// </summary>
+        /// <returns>The modified source file.</returns>
+        public SourceFile WithNodesRemoved<T>(IEnumerable<T> nodesToRemove) where T : SyntaxNode =>
+            WithRootNode(_root.RemoveNodes(nodesToRemove, SyntaxRemoveOptions.KeepDirectives));
 
         private class TypeNameRewriter : CSharpSyntaxRewriter
         {
