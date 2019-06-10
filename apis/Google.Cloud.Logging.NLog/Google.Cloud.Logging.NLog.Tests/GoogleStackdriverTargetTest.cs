@@ -114,11 +114,6 @@ namespace Google.Cloud.Logging.NLog.Tests
             return uploadedEntries;
         }
 
-        private LogEventInfo CreateLog(LogLevel level, string msg)
-        {
-            return new LogEventInfo { Level = level, Message = msg };
-        }
-
         private Task ActivateTargetAsync(Target target)
         {
             // ConfigureForTargetLogging() and a write are both required to trigger target initialization.
