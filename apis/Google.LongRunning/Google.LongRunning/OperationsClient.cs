@@ -250,6 +250,42 @@ namespace Google.LongRunning
     }
 
     /// <summary>
+    /// Builder class for <see cref="OperationsClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class OperationsClientBuilder : gaxgrpc::ClientBuilderBase<OperationsClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public OperationsSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override OperationsClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return OperationsClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<OperationsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return OperationsClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => OperationsClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => OperationsClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => OperationsClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Operations client wrapper, for convenient use.
     /// </summary>
     public abstract partial class OperationsClient
@@ -271,6 +307,8 @@ namespace Google.LongRunning
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="OperationsClient"/>, applying defaults for all unspecified settings,

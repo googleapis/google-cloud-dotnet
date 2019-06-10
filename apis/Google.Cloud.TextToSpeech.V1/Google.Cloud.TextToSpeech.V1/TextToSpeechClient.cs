@@ -188,6 +188,42 @@ namespace Google.Cloud.TextToSpeech.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="TextToSpeechClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class TextToSpeechClientBuilder : gaxgrpc::ClientBuilderBase<TextToSpeechClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public TextToSpeechSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override TextToSpeechClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return TextToSpeechClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<TextToSpeechClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return TextToSpeechClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => TextToSpeechClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TextToSpeechClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => TextToSpeechClient.ChannelPool;
+    }
+
+    /// <summary>
     /// TextToSpeech client wrapper, for convenient use.
     /// </summary>
     public abstract partial class TextToSpeechClient
@@ -211,6 +247,8 @@ namespace Google.Cloud.TextToSpeech.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="TextToSpeechClient"/>, applying defaults for all unspecified settings,

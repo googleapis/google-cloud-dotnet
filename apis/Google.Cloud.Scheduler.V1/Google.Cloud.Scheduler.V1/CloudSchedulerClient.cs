@@ -369,6 +369,42 @@ namespace Google.Cloud.Scheduler.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="CloudSchedulerClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class CloudSchedulerClientBuilder : gaxgrpc::ClientBuilderBase<CloudSchedulerClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public CloudSchedulerSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override CloudSchedulerClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return CloudSchedulerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<CloudSchedulerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return CloudSchedulerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => CloudSchedulerClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudSchedulerClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => CloudSchedulerClient.ChannelPool;
+    }
+
+    /// <summary>
     /// CloudScheduler client wrapper, for convenient use.
     /// </summary>
     public abstract partial class CloudSchedulerClient
@@ -392,6 +428,8 @@ namespace Google.Cloud.Scheduler.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudSchedulerClient"/>, applying defaults for all unspecified settings,

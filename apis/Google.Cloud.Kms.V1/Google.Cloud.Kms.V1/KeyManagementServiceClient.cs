@@ -799,6 +799,42 @@ namespace Google.Cloud.Kms.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="KeyManagementServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class KeyManagementServiceClientBuilder : gaxgrpc::ClientBuilderBase<KeyManagementServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public KeyManagementServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override KeyManagementServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return KeyManagementServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<KeyManagementServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return KeyManagementServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => KeyManagementServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => KeyManagementServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => KeyManagementServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// KeyManagementService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class KeyManagementServiceClient
@@ -822,6 +858,8 @@ namespace Google.Cloud.Kms.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="KeyManagementServiceClient"/>, applying defaults for all unspecified settings,

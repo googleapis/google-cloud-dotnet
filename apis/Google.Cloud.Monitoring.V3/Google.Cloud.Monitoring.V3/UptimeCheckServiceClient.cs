@@ -310,6 +310,42 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>
+    /// Builder class for <see cref="UptimeCheckServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class UptimeCheckServiceClientBuilder : gaxgrpc::ClientBuilderBase<UptimeCheckServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public UptimeCheckServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override UptimeCheckServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return UptimeCheckServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<UptimeCheckServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return UptimeCheckServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => UptimeCheckServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => UptimeCheckServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => UptimeCheckServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// UptimeCheckService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class UptimeCheckServiceClient
@@ -339,6 +375,8 @@ namespace Google.Cloud.Monitoring.V3
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="UptimeCheckServiceClient"/>, applying defaults for all unspecified settings,

@@ -156,6 +156,42 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="EventServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class EventServiceClientBuilder : gaxgrpc::ClientBuilderBase<EventServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public EventServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override EventServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return EventServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<EventServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return EventServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => EventServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => EventServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => EventServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// EventService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class EventServiceClient
@@ -181,6 +217,8 @@ namespace Google.Cloud.Talent.V4Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="EventServiceClient"/>, applying defaults for all unspecified settings,

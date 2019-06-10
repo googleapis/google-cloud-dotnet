@@ -188,6 +188,42 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="ErrorGroupServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class ErrorGroupServiceClientBuilder : gaxgrpc::ClientBuilderBase<ErrorGroupServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public ErrorGroupServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override ErrorGroupServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return ErrorGroupServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<ErrorGroupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return ErrorGroupServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ErrorGroupServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ErrorGroupServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => ErrorGroupServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// ErrorGroupService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class ErrorGroupServiceClient
@@ -211,6 +247,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="ErrorGroupServiceClient"/>, applying defaults for all unspecified settings,

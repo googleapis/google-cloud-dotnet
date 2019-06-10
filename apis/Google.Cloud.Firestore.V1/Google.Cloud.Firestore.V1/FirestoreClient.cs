@@ -504,6 +504,42 @@ namespace Google.Cloud.Firestore.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="FirestoreClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class FirestoreClientBuilder : gaxgrpc::ClientBuilderBase<FirestoreClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public FirestoreSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override FirestoreClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return FirestoreClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<FirestoreClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return FirestoreClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => FirestoreClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FirestoreClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => FirestoreClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Firestore client wrapper, for convenient use.
     /// </summary>
     public abstract partial class FirestoreClient
@@ -529,6 +565,8 @@ namespace Google.Cloud.Firestore.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="FirestoreClient"/>, applying defaults for all unspecified settings,

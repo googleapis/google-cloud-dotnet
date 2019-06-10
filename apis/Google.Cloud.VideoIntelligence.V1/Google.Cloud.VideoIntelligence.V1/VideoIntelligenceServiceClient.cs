@@ -181,6 +181,42 @@ namespace Google.Cloud.VideoIntelligence.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="VideoIntelligenceServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class VideoIntelligenceServiceClientBuilder : gaxgrpc::ClientBuilderBase<VideoIntelligenceServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public VideoIntelligenceServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override VideoIntelligenceServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return VideoIntelligenceServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<VideoIntelligenceServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return VideoIntelligenceServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => VideoIntelligenceServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => VideoIntelligenceServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => VideoIntelligenceServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// VideoIntelligenceService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class VideoIntelligenceServiceClient
@@ -204,6 +240,8 @@ namespace Google.Cloud.VideoIntelligence.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="VideoIntelligenceServiceClient"/>, applying defaults for all unspecified settings,

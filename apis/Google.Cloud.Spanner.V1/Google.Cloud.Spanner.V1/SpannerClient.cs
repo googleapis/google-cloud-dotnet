@@ -599,6 +599,42 @@ namespace Google.Cloud.Spanner.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="SpannerClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class SpannerClientBuilder : gaxgrpc::ClientBuilderBase<SpannerClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public SpannerSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override SpannerClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return SpannerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<SpannerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return SpannerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => SpannerClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SpannerClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => SpannerClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Spanner client wrapper, for convenient use.
     /// </summary>
     public abstract partial class SpannerClient
@@ -624,6 +660,8 @@ namespace Google.Cloud.Spanner.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="SpannerClient"/>, applying defaults for all unspecified settings,

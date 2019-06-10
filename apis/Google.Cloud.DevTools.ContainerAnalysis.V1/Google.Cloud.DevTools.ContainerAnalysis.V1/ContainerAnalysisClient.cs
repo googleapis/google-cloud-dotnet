@@ -217,6 +217,42 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="ContainerAnalysisClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class ContainerAnalysisClientBuilder : gaxgrpc::ClientBuilderBase<ContainerAnalysisClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public ContainerAnalysisSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override ContainerAnalysisClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return ContainerAnalysisClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<ContainerAnalysisClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return ContainerAnalysisClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ContainerAnalysisClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ContainerAnalysisClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => ContainerAnalysisClient.ChannelPool;
+    }
+
+    /// <summary>
     /// ContainerAnalysis client wrapper, for convenient use.
     /// </summary>
     public abstract partial class ContainerAnalysisClient
@@ -240,6 +276,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="ContainerAnalysisClient"/>, applying defaults for all unspecified settings,

@@ -339,6 +339,42 @@ namespace Google.Cloud.Datastore.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="DatastoreClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class DatastoreClientBuilder : gaxgrpc::ClientBuilderBase<DatastoreClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public DatastoreSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override DatastoreClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return DatastoreClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<DatastoreClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return DatastoreClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => DatastoreClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DatastoreClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => DatastoreClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Datastore client wrapper, for convenient use.
     /// </summary>
     public abstract partial class DatastoreClient
@@ -364,6 +400,8 @@ namespace Google.Cloud.Datastore.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="DatastoreClient"/>, applying defaults for all unspecified settings,

@@ -615,6 +615,42 @@ namespace Google.Cloud.Tasks.V2Beta3
     }
 
     /// <summary>
+    /// Builder class for <see cref="CloudTasksClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class CloudTasksClientBuilder : gaxgrpc::ClientBuilderBase<CloudTasksClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public CloudTasksSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override CloudTasksClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return CloudTasksClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<CloudTasksClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return CloudTasksClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => CloudTasksClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudTasksClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => CloudTasksClient.ChannelPool;
+    }
+
+    /// <summary>
     /// CloudTasks client wrapper, for convenient use.
     /// </summary>
     public abstract partial class CloudTasksClient
@@ -638,6 +674,8 @@ namespace Google.Cloud.Tasks.V2Beta3
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudTasksClient"/>, applying defaults for all unspecified settings,

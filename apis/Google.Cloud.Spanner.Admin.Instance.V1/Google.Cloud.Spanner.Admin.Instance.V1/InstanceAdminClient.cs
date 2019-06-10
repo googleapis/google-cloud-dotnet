@@ -480,6 +480,42 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="InstanceAdminClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class InstanceAdminClientBuilder : gaxgrpc::ClientBuilderBase<InstanceAdminClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public InstanceAdminSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override InstanceAdminClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return InstanceAdminClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<InstanceAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return InstanceAdminClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => InstanceAdminClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => InstanceAdminClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => InstanceAdminClient.ChannelPool;
+    }
+
+    /// <summary>
     /// InstanceAdmin client wrapper, for convenient use.
     /// </summary>
     public abstract partial class InstanceAdminClient
@@ -505,6 +541,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="InstanceAdminClient"/>, applying defaults for all unspecified settings,

@@ -1040,6 +1040,42 @@ namespace Google.Cloud.Container.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="ClusterManagerClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class ClusterManagerClientBuilder : gaxgrpc::ClientBuilderBase<ClusterManagerClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public ClusterManagerSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override ClusterManagerClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return ClusterManagerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<ClusterManagerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return ClusterManagerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ClusterManagerClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ClusterManagerClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => ClusterManagerClient.ChannelPool;
+    }
+
+    /// <summary>
     /// ClusterManager client wrapper, for convenient use.
     /// </summary>
     public abstract partial class ClusterManagerClient
@@ -1063,6 +1099,8 @@ namespace Google.Cloud.Container.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="ClusterManagerClient"/>, applying defaults for all unspecified settings,

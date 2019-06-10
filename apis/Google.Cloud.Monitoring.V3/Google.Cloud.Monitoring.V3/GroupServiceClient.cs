@@ -312,6 +312,42 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>
+    /// Builder class for <see cref="GroupServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class GroupServiceClientBuilder : gaxgrpc::ClientBuilderBase<GroupServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public GroupServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override GroupServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return GroupServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<GroupServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return GroupServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => GroupServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => GroupServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => GroupServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// GroupService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class GroupServiceClient
@@ -341,6 +377,8 @@ namespace Google.Cloud.Monitoring.V3
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="GroupServiceClient"/>, applying defaults for all unspecified settings,

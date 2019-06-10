@@ -218,6 +218,42 @@ namespace Google.Cloud.Debugger.V2
     }
 
     /// <summary>
+    /// Builder class for <see cref="Controller2Client"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class Controller2ClientBuilder : gaxgrpc::ClientBuilderBase<Controller2Client>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public Controller2Settings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override Controller2Client Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return Controller2Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<Controller2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return Controller2Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => Controller2Client.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => Controller2Client.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => Controller2Client.ChannelPool;
+    }
+
+    /// <summary>
     /// Controller2 client wrapper, for convenient use.
     /// </summary>
     public abstract partial class Controller2Client
@@ -243,6 +279,8 @@ namespace Google.Cloud.Debugger.V2
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="Controller2Client"/>, applying defaults for all unspecified settings,

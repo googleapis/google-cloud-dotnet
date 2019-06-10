@@ -279,6 +279,42 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="CompanyServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class CompanyServiceClientBuilder : gaxgrpc::ClientBuilderBase<CompanyServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public CompanyServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override CompanyServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return CompanyServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<CompanyServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return CompanyServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => CompanyServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CompanyServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => CompanyServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// CompanyService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class CompanyServiceClient
@@ -304,6 +340,8 @@ namespace Google.Cloud.Talent.V4Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="CompanyServiceClient"/>, applying defaults for all unspecified settings,

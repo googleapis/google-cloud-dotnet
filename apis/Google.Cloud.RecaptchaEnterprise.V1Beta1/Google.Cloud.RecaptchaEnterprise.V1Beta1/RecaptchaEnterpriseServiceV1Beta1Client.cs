@@ -187,6 +187,42 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="RecaptchaEnterpriseServiceV1Beta1Client"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class RecaptchaEnterpriseServiceV1Beta1ClientBuilder : gaxgrpc::ClientBuilderBase<RecaptchaEnterpriseServiceV1Beta1Client>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public RecaptchaEnterpriseServiceV1Beta1Settings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override RecaptchaEnterpriseServiceV1Beta1Client Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return RecaptchaEnterpriseServiceV1Beta1Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<RecaptchaEnterpriseServiceV1Beta1Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return RecaptchaEnterpriseServiceV1Beta1Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => RecaptchaEnterpriseServiceV1Beta1Client.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => RecaptchaEnterpriseServiceV1Beta1Client.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => RecaptchaEnterpriseServiceV1Beta1Client.ChannelPool;
+    }
+
+    /// <summary>
     /// RecaptchaEnterpriseServiceV1Beta1 client wrapper, for convenient use.
     /// </summary>
     public abstract partial class RecaptchaEnterpriseServiceV1Beta1Client
@@ -210,6 +246,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="RecaptchaEnterpriseServiceV1Beta1Client"/>, applying defaults for all unspecified settings,

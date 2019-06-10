@@ -499,6 +499,42 @@ namespace Google.Cloud.Redis.V1Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="CloudRedisClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class CloudRedisClientBuilder : gaxgrpc::ClientBuilderBase<CloudRedisClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public CloudRedisSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override CloudRedisClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return CloudRedisClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<CloudRedisClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return CloudRedisClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => CloudRedisClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudRedisClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => CloudRedisClient.ChannelPool;
+    }
+
+    /// <summary>
     /// CloudRedis client wrapper, for convenient use.
     /// </summary>
     public abstract partial class CloudRedisClient
@@ -522,6 +558,8 @@ namespace Google.Cloud.Redis.V1Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="CloudRedisClient"/>, applying defaults for all unspecified settings,

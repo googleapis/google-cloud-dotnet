@@ -219,6 +219,42 @@ namespace Google.Cloud.Trace.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="TraceServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class TraceServiceClientBuilder : gaxgrpc::ClientBuilderBase<TraceServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public TraceServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override TraceServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return TraceServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<TraceServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return TraceServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => TraceServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => TraceServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => TraceServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// TraceService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class TraceServiceClient
@@ -246,6 +282,8 @@ namespace Google.Cloud.Trace.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="TraceServiceClient"/>, applying defaults for all unspecified settings,

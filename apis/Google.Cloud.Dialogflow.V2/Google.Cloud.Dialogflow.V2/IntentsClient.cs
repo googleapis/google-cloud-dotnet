@@ -385,6 +385,42 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>
+    /// Builder class for <see cref="IntentsClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class IntentsClientBuilder : gaxgrpc::ClientBuilderBase<IntentsClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public IntentsSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override IntentsClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return IntentsClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<IntentsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return IntentsClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => IntentsClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IntentsClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => IntentsClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Intents client wrapper, for convenient use.
     /// </summary>
     public abstract partial class IntentsClient
@@ -410,6 +446,8 @@ namespace Google.Cloud.Dialogflow.V2
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="IntentsClient"/>, applying defaults for all unspecified settings,

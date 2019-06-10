@@ -389,6 +389,42 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="WorkflowTemplateServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class WorkflowTemplateServiceClientBuilder : gaxgrpc::ClientBuilderBase<WorkflowTemplateServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public WorkflowTemplateServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override WorkflowTemplateServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return WorkflowTemplateServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<WorkflowTemplateServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return WorkflowTemplateServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => WorkflowTemplateServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => WorkflowTemplateServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => WorkflowTemplateServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// WorkflowTemplateService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class WorkflowTemplateServiceClient
@@ -412,6 +448,8 @@ namespace Google.Cloud.Dataproc.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="WorkflowTemplateServiceClient"/>, applying defaults for all unspecified settings,
