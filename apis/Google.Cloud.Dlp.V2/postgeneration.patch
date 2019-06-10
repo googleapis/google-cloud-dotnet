@@ -1,0 +1,12 @@
+diff --git b/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs a/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs
+index 508541ed1..4edf92fd1 100644
+--- b/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.Dlp.V2/Google.Cloud.Dlp.V2.Snippets/DlpServiceClientSnippets.g.cs
+@@ -18,6 +18,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
+ {
+     using Google.Api.Gax;
+     using Google.Api.Gax.Grpc;
++    using Google.Api.Gax.ResourceNames;
+     using apis = Google.Cloud.Dlp.V2;
+     using Google.Protobuf;
+     using Google.Protobuf.WellKnownTypes;

@@ -1,0 +1,56 @@
+diff --git b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs
+index 400b4498d..d231dddad 100644
+--- b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs
++++ a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/CompletionClientSnippets.g.cs
+@@ -29,6 +29,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
+     using System.Linq;
+     using System.Threading;
+     using System.Threading.Tasks;
++    using Google.Api.Gax.ResourceNames;
+ 
+     /// <summary>Generated snippets</summary>
+     public class GeneratedCompletionClientSnippets
+diff --git b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs
+index 4a0839037..7b9c19f4b 100644
+--- b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs
++++ a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1.Snippets/JobServiceClientSnippets.g.cs
+@@ -23,7 +23,7 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
+     using Google.Protobuf;
+     using Google.Protobuf.WellKnownTypes;
+     using Grpc.Core;
+-    using SearchJobsResponse.Types;
++    using static SearchJobsResponse.Types;
+     using System;
+     using System.Collections;
+     using System.Collections.Generic;
+diff --git a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs
+index 234e44b12..68a4d6d2d 100644
+--- a/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs
++++ b/apis/Google.Cloud.Talent.V4Beta1/Google.Cloud.Talent.V4Beta1/JobServiceClient.cs
+@@ -20,7 +20,6 @@ using lro = Google.LongRunning;
+ using pb = Google.Protobuf;
+ using pbwkt = Google.Protobuf.WellKnownTypes;
+ using grpccore = Grpc.Core;
+-using st = SearchJobsResponse.Types;
+ using sys = System;
+ using sc = System.Collections;
+ using scg = System.Collections.Generic;
+@@ -3244,18 +3243,6 @@ namespace Google.Cloud.Talent.V4Beta1
+         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+     }
+ 
+-    public partial class SearchJobsRequest : gaxgrpc::IPageRequest { }
+-    public partial class SearchJobsResponse : gaxgrpc::IPageResponse<SearchJobsResponse.Types.MatchingJob>
+-    {
+-        /// <summary>
+-        /// Returns an enumerator that iterates through the resources in this response.
+-        /// </summary>
+-        public scg::IEnumerator<SearchJobsResponse.Types.MatchingJob> GetEnumerator() => MatchingJobs.GetEnumerator();
+-
+-        /// <inheritdoc/>
+-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+-    }
+-
+     // Partial Grpc class to enable LRO client creation
+     public static partial class JobService
+     {
