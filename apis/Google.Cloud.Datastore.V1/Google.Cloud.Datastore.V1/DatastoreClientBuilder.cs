@@ -13,57 +13,10 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Google.Cloud.Datastore.V1
 {
-    // Note: the generator would just generate an internal property to start with, so there'd be no need for this
-    // partial.
-    public partial class DatastoreClient
-    {
-        internal static ChannelPool ChannelPool => s_channelPool;
-    }
-
-    // Note: this partial class would be generated.
-    /// <summary>
-    /// Builder class for <see cref="DatastoreClient"/> to provide simple configuration of credentials, endpoint etc.
-    /// </summary>
-    public sealed partial class DatastoreClientBuilder : ClientBuilderBase<DatastoreClient>
-    {
-        /// <summary>
-        /// The settings to use for RPCs, or null for the default settings.
-        /// </summary>
-        public DatastoreSettings Settings { get; set; }
-
-        /// <inheritdoc />
-        public override DatastoreClient Build()
-        {
-            Validate();
-            var callInvoker = CreateCallInvoker();
-            return DatastoreClient.Create(callInvoker, Settings);
-        }
-
-        /// <inheritdoc />
-        public override async Task<DatastoreClient> BuildAsync(CancellationToken cancellationToken = default)
-        {
-            Validate();
-            var callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DatastoreClient.Create(callInvoker, Settings);
-        }
-
-        /// <inheritdoc />
-        protected override ServiceEndpoint GetDefaultEndpoint() => DatastoreClient.DefaultEndpoint;
-
-        /// <inheritdoc />
-        protected override IReadOnlyList<string> GetDefaultScopes() => DatastoreClient.DefaultScopes;
-
-        /// <inheritdoc />
-        protected override ChannelPool GetChannelPool() => DatastoreClient.ChannelPool;
-    }
-
-    // Note: this partial class wouldn't be generated
+    // Support for DatastoreDbBuilder.
     public sealed partial class DatastoreClientBuilder : ClientBuilderBase<DatastoreClient>
     {
         /// <summary>
