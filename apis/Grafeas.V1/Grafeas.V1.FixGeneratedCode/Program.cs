@@ -34,10 +34,12 @@ namespace Grafeas.V1.FixGeneratedCode
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "GrafeasClient.cs"))
                 .RemoveProperty("GrafeasClient", "DefaultEndpoint")
                 .RemoveProperty("GrafeasClient", "DefaultScopes")
+                .RemoveProperty("GrafeasClient", "ChannelPool")
                 .RemoveField("GrafeasClient", "s_channelPool")
                 .RemoveMethod("GrafeasClient", "CreateAsync", "ServiceEndpoint", "GrafeasSettings")
                 .RemoveMethod("GrafeasClient", "Create", "ServiceEndpoint", "GrafeasSettings")
                 .RemoveMethod("GrafeasClient", "ShutdownDefaultChannelsAsync")
+                .RemoveType("GrafeasClientBuilder")
                 .Save();
 
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1", "ResourceNames.cs"))
