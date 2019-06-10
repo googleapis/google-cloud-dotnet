@@ -279,6 +279,42 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>
+    /// Builder class for <see cref="AlertPolicyServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class AlertPolicyServiceClientBuilder : gaxgrpc::ClientBuilderBase<AlertPolicyServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public AlertPolicyServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override AlertPolicyServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return AlertPolicyServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<AlertPolicyServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return AlertPolicyServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => AlertPolicyServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => AlertPolicyServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => AlertPolicyServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// AlertPolicyService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class AlertPolicyServiceClient
@@ -308,6 +344,8 @@ namespace Google.Cloud.Monitoring.V3
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="AlertPolicyServiceClient"/>, applying defaults for all unspecified settings,

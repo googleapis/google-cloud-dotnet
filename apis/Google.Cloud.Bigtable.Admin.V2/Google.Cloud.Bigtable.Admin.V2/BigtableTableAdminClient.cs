@@ -371,6 +371,42 @@ namespace Google.Cloud.Bigtable.Admin.V2
     }
 
     /// <summary>
+    /// Builder class for <see cref="BigtableTableAdminClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class BigtableTableAdminClientBuilder : gaxgrpc::ClientBuilderBase<BigtableTableAdminClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public BigtableTableAdminSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override BigtableTableAdminClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return BigtableTableAdminClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<BigtableTableAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return BigtableTableAdminClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => BigtableTableAdminClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableTableAdminClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => BigtableTableAdminClient.ChannelPool;
+    }
+
+    /// <summary>
     /// BigtableTableAdmin client wrapper, for convenient use.
     /// </summary>
     public abstract partial class BigtableTableAdminClient
@@ -410,6 +446,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableTableAdminClient"/>, applying defaults for all unspecified settings,

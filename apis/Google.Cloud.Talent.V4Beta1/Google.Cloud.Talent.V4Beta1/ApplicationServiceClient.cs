@@ -279,6 +279,42 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="ApplicationServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class ApplicationServiceClientBuilder : gaxgrpc::ClientBuilderBase<ApplicationServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public ApplicationServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override ApplicationServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return ApplicationServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<ApplicationServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return ApplicationServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ApplicationServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ApplicationServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => ApplicationServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// ApplicationService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class ApplicationServiceClient
@@ -304,6 +340,8 @@ namespace Google.Cloud.Talent.V4Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="ApplicationServiceClient"/>, applying defaults for all unspecified settings,

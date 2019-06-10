@@ -280,6 +280,42 @@ namespace Google.Cloud.Debugger.V2
     }
 
     /// <summary>
+    /// Builder class for <see cref="Debugger2Client"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class Debugger2ClientBuilder : gaxgrpc::ClientBuilderBase<Debugger2Client>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public Debugger2Settings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override Debugger2Client Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return Debugger2Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<Debugger2Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return Debugger2Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => Debugger2Client.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => Debugger2Client.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => Debugger2Client.ChannelPool;
+    }
+
+    /// <summary>
     /// Debugger2 client wrapper, for convenient use.
     /// </summary>
     public abstract partial class Debugger2Client
@@ -305,6 +341,8 @@ namespace Google.Cloud.Debugger.V2
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="Debugger2Client"/>, applying defaults for all unspecified settings,

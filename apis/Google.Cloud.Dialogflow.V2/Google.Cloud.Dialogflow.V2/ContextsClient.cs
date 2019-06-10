@@ -310,6 +310,42 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>
+    /// Builder class for <see cref="ContextsClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class ContextsClientBuilder : gaxgrpc::ClientBuilderBase<ContextsClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public ContextsSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override ContextsClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return ContextsClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<ContextsClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return ContextsClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ContextsClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ContextsClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => ContextsClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Contexts client wrapper, for convenient use.
     /// </summary>
     public abstract partial class ContextsClient
@@ -335,6 +371,8 @@ namespace Google.Cloud.Dialogflow.V2
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="ContextsClient"/>, applying defaults for all unspecified settings,

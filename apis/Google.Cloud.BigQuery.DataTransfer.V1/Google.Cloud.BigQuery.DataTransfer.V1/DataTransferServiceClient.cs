@@ -616,6 +616,42 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="DataTransferServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class DataTransferServiceClientBuilder : gaxgrpc::ClientBuilderBase<DataTransferServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public DataTransferServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override DataTransferServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return DataTransferServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<DataTransferServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return DataTransferServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => DataTransferServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => DataTransferServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => DataTransferServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// DataTransferService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class DataTransferServiceClient
@@ -639,6 +675,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="DataTransferServiceClient"/>, applying defaults for all unspecified settings,

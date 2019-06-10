@@ -1071,6 +1071,42 @@ namespace Google.Cloud.Irm.V1Alpha2
     }
 
     /// <summary>
+    /// Builder class for <see cref="IncidentServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class IncidentServiceClientBuilder : gaxgrpc::ClientBuilderBase<IncidentServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public IncidentServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override IncidentServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return IncidentServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<IncidentServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return IncidentServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => IncidentServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => IncidentServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => IncidentServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// IncidentService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class IncidentServiceClient
@@ -1094,6 +1130,8 @@ namespace Google.Cloud.Irm.V1Alpha2
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="IncidentServiceClient"/>, applying defaults for all unspecified settings,

@@ -341,6 +341,42 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>
+    /// Builder class for <see cref="NotificationChannelServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class NotificationChannelServiceClientBuilder : gaxgrpc::ClientBuilderBase<NotificationChannelServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public NotificationChannelServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override NotificationChannelServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return NotificationChannelServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<NotificationChannelServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return NotificationChannelServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => NotificationChannelServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => NotificationChannelServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => NotificationChannelServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// NotificationChannelService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class NotificationChannelServiceClient
@@ -370,6 +406,8 @@ namespace Google.Cloud.Monitoring.V3
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="NotificationChannelServiceClient"/>, applying defaults for all unspecified settings,

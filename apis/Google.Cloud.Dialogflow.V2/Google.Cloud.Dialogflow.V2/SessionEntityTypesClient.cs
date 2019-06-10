@@ -279,6 +279,42 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>
+    /// Builder class for <see cref="SessionEntityTypesClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class SessionEntityTypesClientBuilder : gaxgrpc::ClientBuilderBase<SessionEntityTypesClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public SessionEntityTypesSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override SessionEntityTypesClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return SessionEntityTypesClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<SessionEntityTypesClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return SessionEntityTypesClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => SessionEntityTypesClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SessionEntityTypesClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => SessionEntityTypesClient.ChannelPool;
+    }
+
+    /// <summary>
     /// SessionEntityTypes client wrapper, for convenient use.
     /// </summary>
     public abstract partial class SessionEntityTypesClient
@@ -304,6 +340,8 @@ namespace Google.Cloud.Dialogflow.V2
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="SessionEntityTypesClient"/>, applying defaults for all unspecified settings,

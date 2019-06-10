@@ -312,6 +312,42 @@ namespace Google.Cloud.Language.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="LanguageServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class LanguageServiceClientBuilder : gaxgrpc::ClientBuilderBase<LanguageServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public LanguageServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override LanguageServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return LanguageServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<LanguageServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return LanguageServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => LanguageServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => LanguageServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => LanguageServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// LanguageService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class LanguageServiceClient
@@ -337,6 +373,8 @@ namespace Google.Cloud.Language.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="LanguageServiceClient"/>, applying defaults for all unspecified settings,

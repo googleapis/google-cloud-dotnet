@@ -157,6 +157,42 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="PhishingProtectionServiceV1Beta1Client"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class PhishingProtectionServiceV1Beta1ClientBuilder : gaxgrpc::ClientBuilderBase<PhishingProtectionServiceV1Beta1Client>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public PhishingProtectionServiceV1Beta1Settings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override PhishingProtectionServiceV1Beta1Client Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<PhishingProtectionServiceV1Beta1Client> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => PhishingProtectionServiceV1Beta1Client.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PhishingProtectionServiceV1Beta1Client.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => PhishingProtectionServiceV1Beta1Client.ChannelPool;
+    }
+
+    /// <summary>
     /// PhishingProtectionServiceV1Beta1 client wrapper, for convenient use.
     /// </summary>
     public abstract partial class PhishingProtectionServiceV1Beta1Client
@@ -180,6 +216,8 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="PhishingProtectionServiceV1Beta1Client"/>, applying defaults for all unspecified settings,

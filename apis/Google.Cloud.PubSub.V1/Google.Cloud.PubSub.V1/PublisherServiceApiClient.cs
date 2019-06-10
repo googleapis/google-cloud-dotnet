@@ -515,6 +515,42 @@ namespace Google.Cloud.PubSub.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="PublisherServiceApiClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class PublisherServiceApiClientBuilder : gaxgrpc::ClientBuilderBase<PublisherServiceApiClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public PublisherServiceApiSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override PublisherServiceApiClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return PublisherServiceApiClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<PublisherServiceApiClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return PublisherServiceApiClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => PublisherServiceApiClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => PublisherServiceApiClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => PublisherServiceApiClient.ChannelPool;
+    }
+
+    /// <summary>
     /// Publisher client wrapper, for convenient use.
     /// </summary>
     public abstract partial class PublisherServiceApiClient
@@ -540,6 +576,8 @@ namespace Google.Cloud.PubSub.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="PublisherServiceApiClient"/>, applying defaults for all unspecified settings,

@@ -309,6 +309,42 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>
+    /// Builder class for <see cref="ProfileServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class ProfileServiceClientBuilder : gaxgrpc::ClientBuilderBase<ProfileServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public ProfileServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override ProfileServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return ProfileServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<ProfileServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return ProfileServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ProfileServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ProfileServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => ProfileServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// ProfileService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class ProfileServiceClient
@@ -334,6 +370,8 @@ namespace Google.Cloud.Talent.V4Beta1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="ProfileServiceClient"/>, applying defaults for all unspecified settings,

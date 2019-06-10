@@ -403,6 +403,42 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="ClusterControllerClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class ClusterControllerClientBuilder : gaxgrpc::ClientBuilderBase<ClusterControllerClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public ClusterControllerSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override ClusterControllerClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return ClusterControllerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<ClusterControllerClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return ClusterControllerClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => ClusterControllerClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => ClusterControllerClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => ClusterControllerClient.ChannelPool;
+    }
+
+    /// <summary>
     /// ClusterController client wrapper, for convenient use.
     /// </summary>
     public abstract partial class ClusterControllerClient
@@ -426,6 +462,8 @@ namespace Google.Cloud.Dataproc.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="ClusterControllerClient"/>, applying defaults for all unspecified settings,

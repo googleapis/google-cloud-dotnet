@@ -402,6 +402,42 @@ namespace Google.Cloud.Firestore.Admin.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="FirestoreAdminClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class FirestoreAdminClientBuilder : gaxgrpc::ClientBuilderBase<FirestoreAdminClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public FirestoreAdminSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override FirestoreAdminClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return FirestoreAdminClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<FirestoreAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return FirestoreAdminClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => FirestoreAdminClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => FirestoreAdminClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => FirestoreAdminClient.ChannelPool;
+    }
+
+    /// <summary>
     /// FirestoreAdmin client wrapper, for convenient use.
     /// </summary>
     public abstract partial class FirestoreAdminClient
@@ -427,6 +463,8 @@ namespace Google.Cloud.Firestore.Admin.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="FirestoreAdminClient"/>, applying defaults for all unspecified settings,

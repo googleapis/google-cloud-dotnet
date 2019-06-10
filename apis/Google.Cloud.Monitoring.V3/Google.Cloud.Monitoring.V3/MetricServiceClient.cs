@@ -373,6 +373,42 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>
+    /// Builder class for <see cref="MetricServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class MetricServiceClientBuilder : gaxgrpc::ClientBuilderBase<MetricServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public MetricServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override MetricServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return MetricServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<MetricServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return MetricServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => MetricServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => MetricServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => MetricServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// MetricService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class MetricServiceClient
@@ -402,6 +438,8 @@ namespace Google.Cloud.Monitoring.V3
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="MetricServiceClient"/>, applying defaults for all unspecified settings,

@@ -699,6 +699,42 @@ namespace Google.Cloud.SecurityCenter.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="SecurityCenterClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class SecurityCenterClientBuilder : gaxgrpc::ClientBuilderBase<SecurityCenterClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public SecurityCenterSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override SecurityCenterClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return SecurityCenterClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<SecurityCenterClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return SecurityCenterClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => SecurityCenterClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => SecurityCenterClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => SecurityCenterClient.ChannelPool;
+    }
+
+    /// <summary>
     /// SecurityCenter client wrapper, for convenient use.
     /// </summary>
     public abstract partial class SecurityCenterClient
@@ -722,6 +758,8 @@ namespace Google.Cloud.SecurityCenter.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="SecurityCenterClient"/>, applying defaults for all unspecified settings,

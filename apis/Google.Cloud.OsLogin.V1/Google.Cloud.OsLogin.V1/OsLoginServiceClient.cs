@@ -313,6 +313,42 @@ namespace Google.Cloud.OsLogin.V1
     }
 
     /// <summary>
+    /// Builder class for <see cref="OsLoginServiceClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class OsLoginServiceClientBuilder : gaxgrpc::ClientBuilderBase<OsLoginServiceClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public OsLoginServiceSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override OsLoginServiceClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return OsLoginServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<OsLoginServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return OsLoginServiceClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => OsLoginServiceClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => OsLoginServiceClient.DefaultScopes;
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ChannelPool GetChannelPool() => OsLoginServiceClient.ChannelPool;
+    }
+
+    /// <summary>
     /// OsLoginService client wrapper, for convenient use.
     /// </summary>
     public abstract partial class OsLoginServiceClient
@@ -342,6 +378,8 @@ namespace Google.Cloud.OsLogin.V1
         });
 
         private static readonly gaxgrpc::ChannelPool s_channelPool = new gaxgrpc::ChannelPool(DefaultScopes);
+
+        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="OsLoginServiceClient"/>, applying defaults for all unspecified settings,
