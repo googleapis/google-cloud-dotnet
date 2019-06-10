@@ -290,42 +290,6 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     /// <summary>
-    /// Builder class for <see cref="BigtableServiceApiClient"/> to provide simple configuration of credentials, endpoint etc.
-    /// </summary>
-    public sealed partial class BigtableServiceApiClientBuilder : gaxgrpc::ClientBuilderBase<BigtableServiceApiClient>
-    {
-        /// <summary>
-        /// The settings to use for RPCs, or null for the default settings.
-        /// </summary>
-        public BigtableServiceApiSettings Settings { get; set; }
-
-        /// <inheritdoc/>
-        public override BigtableServiceApiClient Build()
-        {
-            Validate();
-            grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BigtableServiceApiClient.Create(callInvoker, Settings);
-        }
-
-        /// <inheritdoc />
-        public override async stt::Task<BigtableServiceApiClient> BuildAsync(st::CancellationToken cancellationToken = default)
-        {
-            Validate();
-            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BigtableServiceApiClient.Create(callInvoker, Settings);
-        }
-
-        /// <inheritdoc />
-        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => BigtableServiceApiClient.DefaultEndpoint;
-
-        /// <inheritdoc />
-        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableServiceApiClient.DefaultScopes;
-
-        /// <inheritdoc />
-        protected override gaxgrpc::ChannelPool GetChannelPool() => BigtableServiceApiClient.ChannelPool;
-    }
-
-    /// <summary>
     /// Bigtable client wrapper, for convenient use.
     /// </summary>
     public abstract partial class BigtableServiceApiClient
@@ -359,8 +323,6 @@ namespace Google.Cloud.Bigtable.V2
         });
 
         private static readonly gaxgrpcgcp::GcpCallInvokerPool s_callInvokerPool = new gaxgrpcgcp::GcpCallInvokerPool(DefaultScopes);
-
-        internal static gaxgrpc::ChannelPool ChannelPool => s_channelPool;
 
         /// <summary>
         /// Asynchronously creates a <see cref="BigtableServiceApiClient"/>, applying defaults for all unspecified settings,
