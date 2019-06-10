@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 15.0.26124.0
@@ -17,6 +17,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.V2.GenerateClient", "Google.Cloud.Bigtable.V2.GenerateClient\Google.Cloud.Bigtable.V2.GenerateClient.csproj", "{97EC9E30-ADD3-4D80-A2D5-8D611557813E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Bigtable.Common.V2", "..\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2.csproj", "{FD3A1128-0981-460C-86F2-621CA0A4799D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{9FC53511-2F0C-4099-B53F-7FD2863D2880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.Common", "..\..\tools\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{C81D237A-B51E-44B6-B413-6C02EDB2C084}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +127,30 @@ Global
 		{FD3A1128-0981-460C-86F2-621CA0A4799D}.Release|x64.Build.0 = Release|Any CPU
 		{FD3A1128-0981-460C-86F2-621CA0A4799D}.Release|x86.ActiveCfg = Release|Any CPU
 		{FD3A1128-0981-460C-86F2-621CA0A4799D}.Release|x86.Build.0 = Release|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Debug|x64.Build.0 = Debug|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Debug|x86.Build.0 = Debug|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Release|x64.ActiveCfg = Release|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Release|x64.Build.0 = Release|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Release|x86.ActiveCfg = Release|Any CPU
+		{9FC53511-2F0C-4099-B53F-7FD2863D2880}.Release|x86.Build.0 = Release|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Debug|x64.Build.0 = Debug|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Debug|x86.Build.0 = Debug|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|x64.ActiveCfg = Release|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|x64.Build.0 = Release|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|x86.ActiveCfg = Release|Any CPU
+		{C81D237A-B51E-44B6-B413-6C02EDB2C084}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
