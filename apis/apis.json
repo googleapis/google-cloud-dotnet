@@ -364,7 +364,7 @@
     "id": "Google.Cloud.Firestore",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com/docs/firestore/",
-    "version": "1.0.0-beta20",
+    "version": "1.0.0-beta21",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.1;net452",
@@ -372,11 +372,11 @@
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
       "Google.Cloud.Firestore.V1": "project",
-      "Grpc.Core": "default"
+      "Grpc.Core": "1.21.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Testing": "default",
-      "Grpc.Core.Testing": "1.19.0",
+      "Grpc.Core.Testing": "1.21.0",
       "System.ValueTuple": "4.4.0"
     }
   },
@@ -385,7 +385,7 @@
     "id": "Google.Cloud.Firestore.V1",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com",
-    "version": "1.0.0-beta20",
+    "version": "1.0.0-beta21",
     "type": "grpc",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.1;net452",
@@ -749,7 +749,7 @@
     "id": "Google.Cloud.Speech.V1",
     "productName": "Google Cloud Speech",
     "productUrl": "https://cloud.google.com/speech",
-    "version": "1.2.0-beta00",
+    "version": "1.2.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
     "tags": [ "Speech" ],
@@ -762,7 +762,7 @@
     "id": "Google.Cloud.Speech.V1P1Beta1",
     "productName": "Google Cloud Speech",
     "productUrl": "https://cloud.google.com/speech",
-    "version": "1.0.0-beta02",
+    "version": "1.0.0-beta03",
     "type": "grpc",
     "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
     "tags": [ "Speech" ],
