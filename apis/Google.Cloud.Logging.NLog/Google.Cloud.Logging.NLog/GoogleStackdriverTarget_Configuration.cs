@@ -52,6 +52,16 @@ namespace Google.Cloud.Logging.NLog
         public int TaskPendingLimit { get; set; } = 5;
 
         /// <summary>
+        /// Configures "service" for the "serviceContext" when <see cref="SendJsonPayload" /> = true
+        /// </summary>
+        public Layout ServiceContextName { get; set; } = "${appdomain:cached=true:format=\\{1\\}}";
+
+        /// <summary>
+        /// Configures "version" for the "serviceContext" when <see cref="SendJsonPayload" /> = true
+        /// </summary>
+        public Layout ServiceContextVersion { get; set; } = "${assembly-version:cached=true:type=File}";
+
+        /// <summary>
         /// The resource type of log entries.
         /// Default value depends on the detected platform. See the remarks section for details.
         /// </summary>

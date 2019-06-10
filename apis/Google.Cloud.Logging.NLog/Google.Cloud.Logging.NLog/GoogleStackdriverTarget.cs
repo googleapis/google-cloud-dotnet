@@ -473,6 +473,23 @@ namespace Google.Cloud.Logging.NLog
             {
                 var jsonStruct = new Struct();
                 jsonStruct.Fields.Add("message", Value.ForString(RenderLogEvent(Layout, loggingEvent)));
+                if (ServiceContextName != null)
+                {
+                    var serviceName = RenderLogEvent(ServiceContextName, loggingEvent);
+                    if (!string.IsNullOrEmpty(serviceName))
+                    {
+                        // Include ServiceContext to allow errors to be automatically forwarded
+                        var serviceVersion = RenderLogEvent(ServiceContextVersion, loggingEvent);
+                        if (string.IsNullOrEmpty(serviceVersion))
+                            serviceVersion = "0.0.0.0";
+
+                        var serviceContext = new Struct();
+                        jsonStruct.Fields.Add("serviceContext", Value.ForStruct(serviceContext));
+                        serviceContext.Fields.Add("service", Value.ForString(serviceName));
+                        serviceContext.Fields.Add("version", Value.ForString(serviceVersion));
+                    }
+                }
+
                 var propertiesStruct = new Struct();
                 jsonStruct.Fields.Add("properties", Value.ForStruct(propertiesStruct));
 
