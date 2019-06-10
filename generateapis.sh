@@ -150,6 +150,12 @@ generate_api() {
     $API_SRC_DIR/*.proto \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
     
+  if [[ -f $API_OUT_DIR/$1/postgeneration.patch ]]
+  then
+    echo "Applying post-generation patch for $1"
+    (cd $API_OUT_DIR/$1; git apply postgeneration.patch)
+  fi
+
   if [[ -f $API_OUT_DIR/$1/postgeneration.sh ]]
   then
     echo "Running post-generation script for $1"
@@ -258,6 +264,3 @@ generate_api Grafeas.V1 grafeas/v1 grafeas_v1.yaml
 
 # Microgenerator
 # microgenerate_api Google.Cloud.Vision.V1 google/cloud/vision/v1
-
-# Apply manually-created patches to fix current generator imperfections
-git apply post-generation.patch
