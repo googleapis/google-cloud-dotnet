@@ -62,6 +62,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferRunsSettings = existing.ListTransferRunsSettings;
             ListTransferLogsSettings = existing.ListTransferLogsSettings;
             CheckValidCredsSettings = existing.CheckValidCredsSettings;
+            StartManualTransferRunsSettings = existing.StartManualTransferRunsSettings;
+            EnableDataTransferServiceSettings = existing.EnableDataTransferServiceSettings;
+            IsDataTransferServiceEnabledSettings = existing.IsDataTransferServiceEnabledSettings;
             OnCopy(existing);
         }
 
@@ -516,6 +519,93 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
                 totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataTransferServiceClient.StartManualTransferRuns</c> and <c>DataTransferServiceClient.StartManualTransferRunsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DataTransferServiceClient.StartManualTransferRuns</c> and
+        /// <c>DataTransferServiceClient.StartManualTransferRunsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings StartManualTransferRunsSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataTransferServiceClient.EnableDataTransferService</c> and <c>DataTransferServiceClient.EnableDataTransferServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DataTransferServiceClient.EnableDataTransferService</c> and
+        /// <c>DataTransferServiceClient.EnableDataTransferServiceAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings EnableDataTransferServiceSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataTransferServiceClient.IsDataTransferServiceEnabled</c> and <c>DataTransferServiceClient.IsDataTransferServiceEnabledAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>DataTransferServiceClient.IsDataTransferServiceEnabled</c> and
+        /// <c>DataTransferServiceClient.IsDataTransferServiceEnabledAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description>No status codes</description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings IsDataTransferServiceEnabledSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: NonIdempotentRetryFilter
             )));
 
         /// <summary>
@@ -1055,7 +1145,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format /projects/{project_id}/locations/{location_id}
+        /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
@@ -1084,7 +1174,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format /projects/{project_id}/locations/{location_id}
+        /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
@@ -1110,7 +1200,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format /projects/{project_id}/locations/{location_id}
+        /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
@@ -1139,7 +1229,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format /projects/{project_id}/locations/{location_id}
+        /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
@@ -1168,7 +1258,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format /projects/{project_id}/locations/{location_id}
+        /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
@@ -1194,7 +1284,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </summary>
         /// <param name="parent">
         /// The BigQuery project id where the transfer configuration should be created.
-        /// Must be in the format /projects/{project_id}/locations/{location_id}
+        /// Must be in the format projects/{project_id}/locations/{location_id}
         /// If specified location and location of the destination bigquery dataset
         /// do not match - the request will fail.
         /// </param>
@@ -1954,6 +2044,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
         /// Transfer configuration name in the form:
@@ -1991,6 +2082,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
         /// Transfer configuration name in the form:
@@ -2025,6 +2117,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
         /// Transfer configuration name in the form:
@@ -2062,6 +2155,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
         /// Transfer configuration name in the form:
@@ -2099,6 +2193,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
         /// Transfer configuration name in the form:
@@ -2133,6 +2228,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="parent">
         /// Transfer configuration name in the form:
@@ -2170,6 +2266,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2192,6 +2289,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -2213,6 +2311,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3159,6 +3258,189 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </returns>
         public virtual CheckValidCredsResponse CheckValidCreds(
             CheckValidCredsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Start manual transfer runs to be executed now with schedule_time equal to
+        /// current time. The transfer runs can be created for a time range where the
+        /// run_time is between start_time (inclusive) and end_time (exclusive), or for
+        /// a specific run_time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StartManualTransferRunsResponse> StartManualTransferRunsAsync(
+            StartManualTransferRunsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Start manual transfer runs to be executed now with schedule_time equal to
+        /// current time. The transfer runs can be created for a time range where the
+        /// run_time is between start_time (inclusive) and end_time (exclusive), or for
+        /// a specific run_time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<StartManualTransferRunsResponse> StartManualTransferRunsAsync(
+            StartManualTransferRunsRequest request,
+            st::CancellationToken cancellationToken) => StartManualTransferRunsAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Start manual transfer runs to be executed now with schedule_time equal to
+        /// current time. The transfer runs can be created for a time range where the
+        /// run_time is between start_time (inclusive) and end_time (exclusive), or for
+        /// a specific run_time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual StartManualTransferRunsResponse StartManualTransferRuns(
+            StartManualTransferRunsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Enables data transfer service for a given project. This
+        /// method requires the additional scope of
+        /// 'https://www.googleapis.com/auth/cloudplatformprojects'
+        /// to manage the cloud project permissions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task EnableDataTransferServiceAsync(
+            EnableDataTransferServiceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Enables data transfer service for a given project. This
+        /// method requires the additional scope of
+        /// 'https://www.googleapis.com/auth/cloudplatformprojects'
+        /// to manage the cloud project permissions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task EnableDataTransferServiceAsync(
+            EnableDataTransferServiceRequest request,
+            st::CancellationToken cancellationToken) => EnableDataTransferServiceAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables data transfer service for a given project. This
+        /// method requires the additional scope of
+        /// 'https://www.googleapis.com/auth/cloudplatformprojects'
+        /// to manage the cloud project permissions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void EnableDataTransferService(
+            EnableDataTransferServiceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns true if data transfer is enabled for a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<IsDataTransferServiceEnabledResponse> IsDataTransferServiceEnabledAsync(
+            IsDataTransferServiceEnabledRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns true if data transfer is enabled for a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<IsDataTransferServiceEnabledResponse> IsDataTransferServiceEnabledAsync(
+            IsDataTransferServiceEnabledRequest request,
+            st::CancellationToken cancellationToken) => IsDataTransferServiceEnabledAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns true if data transfer is enabled for a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual IsDataTransferServiceEnabledResponse IsDataTransferServiceEnabled(
+            IsDataTransferServiceEnabledRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -3184,6 +3466,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         private readonly gaxgrpc::ApiCall<ListTransferRunsRequest, ListTransferRunsResponse> _callListTransferRuns;
         private readonly gaxgrpc::ApiCall<ListTransferLogsRequest, ListTransferLogsResponse> _callListTransferLogs;
         private readonly gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> _callCheckValidCreds;
+        private readonly gaxgrpc::ApiCall<StartManualTransferRunsRequest, StartManualTransferRunsResponse> _callStartManualTransferRuns;
+        private readonly gaxgrpc::ApiCall<EnableDataTransferServiceRequest, pbwkt::Empty> _callEnableDataTransferService;
+        private readonly gaxgrpc::ApiCall<IsDataTransferServiceEnabledRequest, IsDataTransferServiceEnabledResponse> _callIsDataTransferServiceEnabled;
 
         /// <summary>
         /// Constructs a client wrapper for the DataTransferService service, with the specified gRPC client and settings.
@@ -3234,6 +3519,15 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             _callCheckValidCreds = clientHelper.BuildApiCall<CheckValidCredsRequest, CheckValidCredsResponse>(
                 GrpcClient.CheckValidCredsAsync, GrpcClient.CheckValidCreds, effectiveSettings.CheckValidCredsSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callStartManualTransferRuns = clientHelper.BuildApiCall<StartManualTransferRunsRequest, StartManualTransferRunsResponse>(
+                GrpcClient.StartManualTransferRunsAsync, GrpcClient.StartManualTransferRuns, effectiveSettings.StartManualTransferRunsSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            _callEnableDataTransferService = clientHelper.BuildApiCall<EnableDataTransferServiceRequest, pbwkt::Empty>(
+                GrpcClient.EnableDataTransferServiceAsync, GrpcClient.EnableDataTransferService, effectiveSettings.EnableDataTransferServiceSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callIsDataTransferServiceEnabled = clientHelper.BuildApiCall<IsDataTransferServiceEnabledRequest, IsDataTransferServiceEnabledResponse>(
+                GrpcClient.IsDataTransferServiceEnabledAsync, GrpcClient.IsDataTransferServiceEnabled, effectiveSettings.IsDataTransferServiceEnabledSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             Modify_ApiCall(ref _callGetDataSource);
             Modify_GetDataSourceApiCall(ref _callGetDataSource);
             Modify_ApiCall(ref _callListDataSources);
@@ -3260,6 +3554,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             Modify_ListTransferLogsApiCall(ref _callListTransferLogs);
             Modify_ApiCall(ref _callCheckValidCreds);
             Modify_CheckValidCredsApiCall(ref _callCheckValidCreds);
+            Modify_ApiCall(ref _callStartManualTransferRuns);
+            Modify_StartManualTransferRunsApiCall(ref _callStartManualTransferRuns);
+            Modify_ApiCall(ref _callEnableDataTransferService);
+            Modify_EnableDataTransferServiceApiCall(ref _callEnableDataTransferService);
+            Modify_ApiCall(ref _callIsDataTransferServiceEnabled);
+            Modify_IsDataTransferServiceEnabledApiCall(ref _callIsDataTransferServiceEnabled);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3286,6 +3586,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_ListTransferRunsApiCall(ref gaxgrpc::ApiCall<ListTransferRunsRequest, ListTransferRunsResponse> call);
         partial void Modify_ListTransferLogsApiCall(ref gaxgrpc::ApiCall<ListTransferLogsRequest, ListTransferLogsResponse> call);
         partial void Modify_CheckValidCredsApiCall(ref gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> call);
+        partial void Modify_StartManualTransferRunsApiCall(ref gaxgrpc::ApiCall<StartManualTransferRunsRequest, StartManualTransferRunsResponse> call);
+        partial void Modify_EnableDataTransferServiceApiCall(ref gaxgrpc::ApiCall<EnableDataTransferServiceRequest, pbwkt::Empty> call);
+        partial void Modify_IsDataTransferServiceEnabledApiCall(ref gaxgrpc::ApiCall<IsDataTransferServiceEnabledRequest, IsDataTransferServiceEnabledResponse> call);
         partial void OnConstruction(DataTransferService.DataTransferServiceClient grpcClient, DataTransferServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -3309,6 +3612,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_ListTransferRunsRequest(ref ListTransferRunsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ListTransferLogsRequest(ref ListTransferLogsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CheckValidCredsRequest(ref CheckValidCredsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_StartManualTransferRunsRequest(ref StartManualTransferRunsRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_EnableDataTransferServiceRequest(ref EnableDataTransferServiceRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_IsDataTransferServiceEnabledRequest(ref IsDataTransferServiceEnabledRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves a supported data source and returns its settings,
@@ -3600,6 +3906,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3623,6 +3930,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// For each date - or whatever granularity the data source supports - in the
         /// range, one transfer run is created.
         /// Note that runs are created per UTC time in the time range.
+        /// DEPRECATED: use StartManualTransferRuns instead.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -3846,6 +4154,135 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             Modify_CheckValidCredsRequest(ref request, ref callSettings);
             return _callCheckValidCreds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Start manual transfer runs to be executed now with schedule_time equal to
+        /// current time. The transfer runs can be created for a time range where the
+        /// run_time is between start_time (inclusive) and end_time (exclusive), or for
+        /// a specific run_time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<StartManualTransferRunsResponse> StartManualTransferRunsAsync(
+            StartManualTransferRunsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartManualTransferRunsRequest(ref request, ref callSettings);
+            return _callStartManualTransferRuns.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Start manual transfer runs to be executed now with schedule_time equal to
+        /// current time. The transfer runs can be created for a time range where the
+        /// run_time is between start_time (inclusive) and end_time (exclusive), or for
+        /// a specific run_time.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override StartManualTransferRunsResponse StartManualTransferRuns(
+            StartManualTransferRunsRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartManualTransferRunsRequest(ref request, ref callSettings);
+            return _callStartManualTransferRuns.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enables data transfer service for a given project. This
+        /// method requires the additional scope of
+        /// 'https://www.googleapis.com/auth/cloudplatformprojects'
+        /// to manage the cloud project permissions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task EnableDataTransferServiceAsync(
+            EnableDataTransferServiceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableDataTransferServiceRequest(ref request, ref callSettings);
+            return _callEnableDataTransferService.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enables data transfer service for a given project. This
+        /// method requires the additional scope of
+        /// 'https://www.googleapis.com/auth/cloudplatformprojects'
+        /// to manage the cloud project permissions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void EnableDataTransferService(
+            EnableDataTransferServiceRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableDataTransferServiceRequest(ref request, ref callSettings);
+            _callEnableDataTransferService.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns true if data transfer is enabled for a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<IsDataTransferServiceEnabledResponse> IsDataTransferServiceEnabledAsync(
+            IsDataTransferServiceEnabledRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IsDataTransferServiceEnabledRequest(ref request, ref callSettings);
+            return _callIsDataTransferServiceEnabled.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns true if data transfer is enabled for a project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override IsDataTransferServiceEnabledResponse IsDataTransferServiceEnabled(
+            IsDataTransferServiceEnabledRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IsDataTransferServiceEnabledRequest(ref request, ref callSettings);
+            return _callIsDataTransferServiceEnabled.Sync(request, callSettings);
         }
 
     }
