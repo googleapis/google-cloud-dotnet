@@ -528,7 +528,7 @@ namespace Google.Cloud.PubSub.V1
                             _elementCount += 1;
                             // If there's no ordering-key then the user callback function can always immediately be executed
                             // because there's no ordering constraint to meet.
-                            // If there is an ordering-key then the user callback function must be exeuted sequentially per
+                            // If there is an ordering-key then the user callback function must be executed sequentially per
                             // ordering-key.
                             if (orderingKey.Length > 0)
                             {
