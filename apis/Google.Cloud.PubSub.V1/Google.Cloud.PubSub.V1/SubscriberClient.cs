@@ -464,7 +464,18 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         private class Flow
         {
-            public Flow(long maxByteCount, long maxElementCount, Action<Task> registerTaskFn, TaskHelper taskHelper)
+            private struct FnInfo
+            {
+                internal FnInfo(Func<Task> fn, long byteCount)
+                {
+                    Fn = fn;
+                    ByteCount = byteCount;
+                }
+                internal Func<Task> Fn { get; }
+                internal long ByteCount { get; }
+            }
+
+            internal Flow(long maxByteCount, long maxElementCount, Action<Task> registerTaskFn, TaskHelper taskHelper)
             {
                 _maxByteCount = maxByteCount;
                 _maxElementCount = maxElementCount;
@@ -479,6 +490,8 @@ namespace Google.Cloud.PubSub.V1
             private readonly Action<Task> _registerTaskFn;
             private readonly TaskHelper _taskHelper;
             private readonly AsyncAutoResetEvent _event;
+            // Tracking of messages with ordering-keys.
+            private readonly Dictionary<string, Queue<FnInfo>> _keyedTaskQs = new Dictionary<string, Queue<FnInfo>>();
 
             private long _byteCount;
             private long _elementCount;
@@ -498,9 +511,10 @@ namespace Google.Cloud.PubSub.V1
             /// has completed.
             /// </summary>
             /// <param name="byteCount">The number of bytes in the element associated with <paramref name="fn"/>.</param>
+            /// <param name="orderingKey">The ordering key for this message. Empty string if no ordering key.</param>
             /// <param name="fn">The function to execute.</param>
             /// <returns>A Task that completes once <paramref name="fn"/> has been scheduled for execution.</returns>
-            public async Task Process(long byteCount, Func<Task> fn)
+            internal async Task Process(long byteCount, string orderingKey, Func<Task> fn)
             {
                 while (true)
                 {
@@ -508,9 +522,34 @@ namespace Google.Cloud.PubSub.V1
                     {
                         if (IsFlowOk())
                         {
-                            // Flow is OK, so add for this element, and execute.
+                            // Flow is OK, so stop waiting.
+                            // Add to stats for this element.
                             _byteCount += byteCount;
                             _elementCount += 1;
+                            // If there's no ordering-key then the user callback function can always immediately be executed
+                            // because there's no ordering constraint to meet.
+                            // If there is an ordering-key then the user callback function must be executed sequentially per
+                            // ordering-key.
+                            if (orderingKey.Length > 0)
+                            {
+                                // Ordering-key is set on this message.
+                                if (_keyedTaskQs.TryGetValue(orderingKey, out var taskQ))
+                                {
+                                    // This ordering-key is already inflight; add to queue.
+                                    if (taskQ == null)
+                                    {
+                                        taskQ = new Queue<FnInfo>();
+                                        _keyedTaskQs[orderingKey] = taskQ;
+                                    }
+                                    taskQ.Enqueue(new FnInfo(fn, byteCount));
+                                    // Return immediately, the enqueued task will be executed by previous task with same key.
+                                    return;
+                                }
+                                // Mark this ordering-key inflight, and allow user code for this first message to be executed.
+                                // Set the queue to null to save allocation.
+                                // It'll be created on-demand if more than one message with the same key are queued.
+                                _keyedTaskQs.Add(orderingKey, null);
+                            }
                             break;
                         }
                     }
@@ -518,18 +557,45 @@ namespace Google.Cloud.PubSub.V1
                     // CancellationToken not required, as the fn() will always drain on cancellation.
                     await _taskHelper.ConfigureAwait(_event.WaitAsync(CancellationToken.None));
                 }
+                // Execute the user code for this message.
+                ExecuteFunction(orderingKey, byteCount, fn);
+            }
+
+            private void ExecuteFunction(string orderingKey, long byteCount, Func<Task> fn)
+            {
                 // Execute fn, and schedule the following code to execute once it has completed.
                 // Register the function, so we can be sure it's completed during shutdown.
                 Task task = _taskHelper.Run(async () => await _taskHelper.ConfigureAwaitWithFinally(fn, () =>
                 {
                     bool setEvent;
+                    FnInfo nextFn = default;
                     lock (_lock)
                     {
+                        if (orderingKey.Length > 0)
+                        {
+                            var taskQ = _keyedTaskQs[orderingKey];
+                            if (taskQ != null && taskQ.Count > 0)
+                            {
+                                // More fn(s) to execute with this same ordering-key; execute the next fn.
+                                nextFn = taskQ.Dequeue();
+                            }
+                            else
+                            {
+                                // All fns executed for this ordering-key; remove the key.
+                                _keyedTaskQs.Remove(orderingKey);
+                            }
+                        }
                         bool preIsFlowOk = IsFlowOk();
                         _byteCount -= byteCount;
                         _elementCount -= 1;
                         // If moving from flow-bad to flow-OK, then trigger the next execution.
                         setEvent = !preIsFlowOk && IsFlowOk();
+                    }
+                    if (nextFn.Fn != null)
+                    {
+                        // Execute user code for the next message of this ordering-key;
+                        // this is not a recursive call, as this code is within a `Task.Run` :)
+                        ExecuteFunction(orderingKey, nextFn.ByteCount, nextFn.Fn);
                     }
                     if (setEvent)
                     {
@@ -551,9 +617,9 @@ namespace Google.Cloud.PubSub.V1
             private readonly LinkedList<Queue<T>> _qs = new LinkedList<Queue<T>>();
             private int _requeueCount = 0;
 
-            public void Enqueue(T item) => _q.Enqueue(item);
+            internal void Enqueue(T item) => _q.Enqueue(item);
 
-            public void Enqueue(IEnumerable<T> items)
+            internal void Enqueue(IEnumerable<T> items)
             {
                 foreach (var item in items)
                 {
@@ -561,23 +627,23 @@ namespace Google.Cloud.PubSub.V1
                 }
             }
 
-            public void Requeue(IEnumerable<T> items)
+            internal void Requeue(IEnumerable<T> items)
             {
                 var q = new Queue<T>(items);
                 _qs.AddLast(q);
                 _requeueCount += q.Count;
             }
 
-            public int Count => _q.Count + _requeueCount;
+            internal int Count => _q.Count + _requeueCount;
 
             /// <summary>
             /// Dequeue up to maxCount items.
             /// Any items that are not included in the return value due to <c>includeFn</c> are discarded.
             /// </summary>
             /// <param name="maxCount">Maximum count of items to dequeue.</param>
-            /// <param name="includeFn">If not null, most return <c>true</c> for the item to be included.</param>
+            /// <param name="includeFn">If not null, must return <c>true</c> for the item to be included.</param>
             /// <returns></returns>
-            public List<T> Dequeue(int maxCount, Predicate<T> includeFn)
+            internal List<T> Dequeue(int maxCount, Predicate<T> includeFn)
             {
                 List<T> result = new List<T>();
                 Queue<T> q = _qs.First?.Value;
@@ -616,7 +682,7 @@ namespace Google.Cloud.PubSub.V1
                 return result;
             }
 
-            public bool TryPeek(out T value)
+            internal bool TryPeek(out T value)
             {
                 var qsNode = _qs.First;
                 while (qsNode != null)
@@ -640,7 +706,7 @@ namespace Google.Cloud.PubSub.V1
 
         internal class AsyncSingleRecvQueue<T>
         {
-            public AsyncSingleRecvQueue(TaskHelper taskHelper) => _taskHelper = taskHelper;
+            internal AsyncSingleRecvQueue(TaskHelper taskHelper) => _taskHelper = taskHelper;
 
             private readonly TaskHelper _taskHelper;
             private readonly object _lock = new object();
@@ -648,7 +714,7 @@ namespace Google.Cloud.PubSub.V1
             private TaskCompletionSource<int> _tcs = null;
 
             // Thread-safe.
-            public void Enqueue(T item)
+            internal void Enqueue(T item)
             {
                 TaskCompletionSource<int> tcs;
                 lock (_lock)
@@ -666,7 +732,7 @@ namespace Google.Cloud.PubSub.V1
 
             // Thread-safe to use concurrently with Enqueue(),
             // but this DequeueAsync() method must *not* be called concurrently.
-            public async Task<T> DequeueAsync()
+            internal async Task<T> DequeueAsync()
             {
                 lock (_lock)
                 {
@@ -695,38 +761,38 @@ namespace Google.Cloud.PubSub.V1
         {
             private struct NextAction
             {
-                public NextAction(bool isPull, Action action)
+                internal NextAction(bool isPull, Action action)
                 {
                     IsPull = isPull;
                     Action = action;
                 }
-                public bool IsPull { get; }
-                public Action Action { get; }
+                internal bool IsPull { get; }
+                internal Action Action { get; }
             }
 
             private struct TaskNextAction
             {
-                public TaskNextAction(Task task, NextAction nextAction)
+                internal TaskNextAction(Task task, NextAction nextAction)
                 {
                     Task = task;
                     NextAction = nextAction;
                 }
-                public Task Task { get; }
-                public NextAction NextAction { get; }
+                internal Task Task { get; }
+                internal NextAction NextAction { get; }
             }
 
             private struct TimedId // "Time" is abstract, a monotonic incrementing counter is used.
             {
-                public TimedId(long time, string id)
+                internal TimedId(long time, string id)
                 {
                     Time = time;
                     Id = id;
                 }
-                public long Time { get; }
-                public string Id { get; }
+                internal long Time { get; }
+                internal string Id { get; }
             }
 
-            public SingleChannel(SubscriberClientImpl subscriber,
+            internal SingleChannel(SubscriberClientImpl subscriber,
                 SubscriberServiceApiClient client, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
                 Flow flow,
                 Action<Task> registerTaskFn)
@@ -789,7 +855,7 @@ namespace Google.Cloud.PubSub.V1
             // Stream shutdown occurs after 1 minute, so ensure we're always before that.
             private readonly static TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(25);
 
-            public async Task StartAsync()
+            internal async Task StartAsync()
             {
                 // Start pull.
                 StartStreamingPull();
@@ -1005,7 +1071,7 @@ namespace Google.Cloud.PubSub.V1
                     var msg = msgs[msgIndex];
                     msgs[msgIndex] = null;
                     // Prepare to call user message handler, _flow.Process(...) enforces the user-handler concurrency constraints.
-                    await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), async () =>
+                    await _taskHelper.ConfigureAwait(_flow.Process(msg.CalculateSize(), msg.Message.OrderingKey ?? "", async () =>
                     {
                         // Running async. Common data needs locking
                         lock (_lock)
