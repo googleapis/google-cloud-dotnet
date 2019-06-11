@@ -597,7 +597,8 @@ namespace Google.Cloud.PubSub.V1
                 {
                     if (state.State == OrderingKeyState.Error)
                     {
-                        state.SetState(OrderingKeyState.Normal);
+                        // Remove ordering-key, which signals this ordering-key is in Normal state.
+                        _keyedState.Remove(orderingKey);
                     }
                 }
             }
