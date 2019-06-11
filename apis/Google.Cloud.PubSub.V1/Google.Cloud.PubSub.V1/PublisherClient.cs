@@ -69,11 +69,13 @@ namespace Google.Cloud.PubSub.V1
             /// </summary>
             public IScheduler Scheduler { get; set; }
 
+            // TODO: Make this property public when the ordering-keys feature is available in the service.
+            //       And remove the InternalsVisibleTo for the OrderingKeyTester
             /// <summary>
             /// Enable message ordering. It is invalid to set <see cref="PubsubMessage.OrderingKey"/> in a message
             /// if this has not been set to <c>true</c>.
             /// </summary>
-            public bool EnableMessageOrdering { get; set; }
+            internal bool EnableMessageOrdering { get; set; }
 
             internal void Validate()
             {
