@@ -37,7 +37,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// For more information about entity types, see the
   /// [Dialogflow
-  /// documentation](https://cloud.google.com/dialogflow-enterprise/docs/entities-overview).
+  /// documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
   /// </summary>
   public static partial class SessionEntityTypes
   {

@@ -42,7 +42,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// For more information about contexts, see the
   /// [Dialogflow
-  /// documentation](https://cloud.google.com/dialogflow-enterprise/docs/contexts-overview).
+  /// documentation](https://cloud.google.com/dialogflow/docs/contexts-overview).
   /// </summary>
   public static partial class Contexts
   {

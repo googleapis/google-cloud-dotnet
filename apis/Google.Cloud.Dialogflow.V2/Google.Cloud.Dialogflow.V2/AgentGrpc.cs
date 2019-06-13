@@ -38,7 +38,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// You can create an agent using both Dialogflow Standard Edition and
   /// Dialogflow Enterprise Edition. For details, see
   /// [Dialogflow
-  /// Editions](https://cloud.google.com/dialogflow-enterprise/docs/editions).
+  /// Editions](https://cloud.google.com/dialogflow/docs/editions).
   ///
   /// You can save your agent for backup or versioning by exporting the agent by
   /// using the [ExportAgent][google.cloud.dialogflow.v2.Agents.ExportAgent] method. You can import a saved
@@ -46,13 +46,13 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// Dialogflow provides several
   /// [prebuilt
-  /// agents](https://cloud.google.com/dialogflow-enterprise/docs/agents-prebuilt)
+  /// agents](https://cloud.google.com/dialogflow/docs/agents-prebuilt)
   /// for common conversation scenarios such as determining a date and time,
   /// converting currency, and so on.
   ///
   /// For more information about agents, see the
   /// [Dialogflow
-  /// documentation](https://cloud.google.com/dialogflow-enterprise/docs/agents-overview).
+  /// documentation](https://cloud.google.com/dialogflow/docs/agents-overview).
   /// </summary>
   public static partial class Agents
   {
@@ -60,6 +60,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GetAgentRequest> __Marshaller_GetAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.GetAgentRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.Agent> __Marshaller_Agent = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.Agent.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SetAgentRequest> __Marshaller_SetAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SetAgentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest> __Marshaller_DeleteAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest> __Marshaller_SearchAgentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse> __Marshaller_SearchAgentsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.TrainAgentRequest> __Marshaller_TrainAgentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.V2.TrainAgentRequest.Parser.ParseFrom);
@@ -74,6 +77,20 @@ namespace Google.Cloud.Dialogflow.V2 {
         "GetAgent",
         __Marshaller_GetAgentRequest,
         __Marshaller_Agent);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.SetAgentRequest, global::Google.Cloud.Dialogflow.V2.Agent> __Method_SetAgent = new grpc::Method<global::Google.Cloud.Dialogflow.V2.SetAgentRequest, global::Google.Cloud.Dialogflow.V2.Agent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetAgent",
+        __Marshaller_SetAgentRequest,
+        __Marshaller_Agent);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAgent = new grpc::Method<global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAgent",
+        __Marshaller_DeleteAgentRequest,
+        __Marshaller_Empty);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest, global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse> __Method_SearchAgents = new grpc::Method<global::Google.Cloud.Dialogflow.V2.SearchAgentsRequest, global::Google.Cloud.Dialogflow.V2.SearchAgentsResponse>(
         grpc::MethodType.Unary,
@@ -126,6 +143,28 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.Agent> GetAgent(global::Google.Cloud.Dialogflow.V2.GetAgentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates/updates the specified agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.Agent> SetAgent(global::Google.Cloud.Dialogflow.V2.SetAgentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes the specified agent.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAgent(global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -274,6 +313,94 @@ namespace Google.Cloud.Dialogflow.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Agent> GetAgentAsync(global::Google.Cloud.Dialogflow.V2.GetAgentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAgent, null, options, request);
+      }
+      /// <summary>
+      /// Creates/updates the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Agent SetAgent(global::Google.Cloud.Dialogflow.V2.SetAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates/updates the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.V2.Agent SetAgent(global::Google.Cloud.Dialogflow.V2.SetAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetAgent, null, options, request);
+      }
+      /// <summary>
+      /// Creates/updates the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Agent> SetAgentAsync(global::Google.Cloud.Dialogflow.V2.SetAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates/updates the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.Agent> SetAgentAsync(global::Google.Cloud.Dialogflow.V2.SetAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetAgent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAgent(global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAgent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAgent(global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAgent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAgentAsync(global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAgentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes the specified agent.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAgentAsync(global::Google.Cloud.Dialogflow.V2.DeleteAgentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAgent, null, options, request);
       }
       /// <summary>
       /// Returns the list of agents.
@@ -592,6 +719,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetAgent, serviceImpl.GetAgent)
+          .AddMethod(__Method_SetAgent, serviceImpl.SetAgent)
+          .AddMethod(__Method_DeleteAgent, serviceImpl.DeleteAgent)
           .AddMethod(__Method_SearchAgents, serviceImpl.SearchAgents)
           .AddMethod(__Method_TrainAgent, serviceImpl.TrainAgent)
           .AddMethod(__Method_ExportAgent, serviceImpl.ExportAgent)
