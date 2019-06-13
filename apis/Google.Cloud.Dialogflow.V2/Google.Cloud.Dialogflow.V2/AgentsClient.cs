@@ -1803,7 +1803,7 @@ namespace Google.Cloud.Dialogflow.V2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callSetAgent = clientHelper.BuildApiCall<SetAgentRequest, Agent>(
                 GrpcClient.SetAgentAsync, GrpcClient.SetAgent, effectiveSettings.SetAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"agent.parent={request.Agent.Parent}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"agent.parent={request.Agent?.Parent}"));
             _callDeleteAgent = clientHelper.BuildApiCall<DeleteAgentRequest, pbwkt::Empty>(
                 GrpcClient.DeleteAgentAsync, GrpcClient.DeleteAgent, effectiveSettings.DeleteAgentSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
