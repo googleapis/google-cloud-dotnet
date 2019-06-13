@@ -25,45 +25,46 @@ namespace Google.Cloud.Dialogflow.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9hdWRpb19jb25maWcucHJv",
-            "dG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGhxnb29nbGUvYXBpL2Fu",
-            "bm90YXRpb25zLnByb3RvIuQBChBJbnB1dEF1ZGlvQ29uZmlnEkEKDmF1ZGlv",
-            "X2VuY29kaW5nGAEgASgOMikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIu",
-            "QXVkaW9FbmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRIVCg1s",
-            "YW5ndWFnZV9jb2RlGAMgASgJEhQKDHBocmFzZV9oaW50cxgEIAMoCRJFCg1t",
-            "b2RlbF92YXJpYW50GAogASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
-            "djIuU3BlZWNoTW9kZWxWYXJpYW50ImYKFFZvaWNlU2VsZWN0aW9uUGFyYW1z",
-            "EgwKBG5hbWUYASABKAkSQAoLc3NtbF9nZW5kZXIYAiABKA4yKy5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5Tc21sVm9pY2VHZW5kZXIiswEKFlN5bnRo",
-            "ZXNpemVTcGVlY2hDb25maWcSFQoNc3BlYWtpbmdfcmF0ZRgBIAEoARINCgVw",
-            "aXRjaBgCIAEoARIWCg52b2x1bWVfZ2Fpbl9kYhgDIAEoARIaChJlZmZlY3Rz",
-            "X3Byb2ZpbGVfaWQYBSADKAkSPwoFdm9pY2UYBCABKAsyMC5nb29nbGUuY2xv",
-            "dWQuZGlhbG9nZmxvdy52Mi5Wb2ljZVNlbGVjdGlvblBhcmFtcyLNAQoRT3V0",
-            "cHV0QXVkaW9Db25maWcSRwoOYXVkaW9fZW5jb2RpbmcYASABKA4yLy5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5PdXRwdXRBdWRpb0VuY29kaW5nEhkK",
-            "EXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFElQKGHN5bnRoZXNpemVfc3BlZWNo",
-            "X2NvbmZpZxgDIAEoCzIyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlN5",
-            "bnRoZXNpemVTcGVlY2hDb25maWcq+wEKDUF1ZGlvRW5jb2RpbmcSHgoaQVVE",
-            "SU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIcChhBVURJT19FTkNPRElOR19M",
-            "SU5FQVJfMTYQARIXChNBVURJT19FTkNPRElOR19GTEFDEAISGAoUQVVESU9f",
-            "RU5DT0RJTkdfTVVMQVcQAxIWChJBVURJT19FTkNPRElOR19BTVIQBBIZChVB",
-            "VURJT19FTkNPRElOR19BTVJfV0IQBRIbChdBVURJT19FTkNPRElOR19PR0df",
-            "T1BVUxAGEikKJUFVRElPX0VOQ09ESU5HX1NQRUVYX1dJVEhfSEVBREVSX0JZ",
-            "VEUQByp2ChJTcGVlY2hNb2RlbFZhcmlhbnQSJAogU1BFRUNIX01PREVMX1ZB",
-            "UklBTlRfVU5TUEVDSUZJRUQQABIWChJVU0VfQkVTVF9BVkFJTEFCTEUQARIQ",
-            "CgxVU0VfU1RBTkRBUkQQAhIQCgxVU0VfRU5IQU5DRUQQAyqNAQoPU3NtbFZv",
-            "aWNlR2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAAS",
-            "GgoWU1NNTF9WT0lDRV9HRU5ERVJfTUFMRRABEhwKGFNTTUxfVk9JQ0VfR0VO",
-            "REVSX0ZFTUFMRRACEh0KGVNTTUxfVk9JQ0VfR0VOREVSX05FVVRSQUwQAyqk",
-            "AQoTT3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQVVRfQVVESU9fRU5DT0RJ",
-            "TkdfVU5TUEVDSUZJRUQQABIjCh9PVVRQVVRfQVVESU9fRU5DT0RJTkdfTElO",
-            "RUFSXzE2EAESHQoZT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QMxACEiIKHk9V",
-            "VFBVVF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADQp8BCh5jb20uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjJCEEF1ZGlvQ29uZmlnUHJvdG9QAVpEZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFs",
-            "b2dmbG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5E",
-            "aWFsb2dmbG93LlYyYgZwcm90bzM="));
+            "dG8SGmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyGh5nb29nbGUvcHJvdG9i",
+            "dWYvZHVyYXRpb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
+            "dG8i5AEKEElucHV0QXVkaW9Db25maWcSQQoOYXVkaW9fZW5jb2RpbmcYASAB",
+            "KA4yKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5BdWRpb0VuY29kaW5n",
+            "EhkKEXNhbXBsZV9yYXRlX2hlcnR6GAIgASgFEhUKDWxhbmd1YWdlX2NvZGUY",
+            "AyABKAkSFAoMcGhyYXNlX2hpbnRzGAQgAygJEkUKDW1vZGVsX3ZhcmlhbnQY",
+            "CiABKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5TcGVlY2hNb2Rl",
+            "bFZhcmlhbnQiZgoUVm9pY2VTZWxlY3Rpb25QYXJhbXMSDAoEbmFtZRgBIAEo",
+            "CRJACgtzc21sX2dlbmRlchgCIAEoDjIrLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
+            "bG93LnYyLlNzbWxWb2ljZUdlbmRlciKzAQoWU3ludGhlc2l6ZVNwZWVjaENv",
+            "bmZpZxIVCg1zcGVha2luZ19yYXRlGAEgASgBEg0KBXBpdGNoGAIgASgBEhYK",
+            "DnZvbHVtZV9nYWluX2RiGAMgASgBEhoKEmVmZmVjdHNfcHJvZmlsZV9pZBgF",
+            "IAMoCRI/CgV2b2ljZRgEIAEoCzIwLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LnYyLlZvaWNlU2VsZWN0aW9uUGFyYW1zIs0BChFPdXRwdXRBdWRpb0NvbmZp",
+            "ZxJHCg5hdWRpb19lbmNvZGluZxgBIAEoDjIvLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyLk91dHB1dEF1ZGlvRW5jb2RpbmcSGQoRc2FtcGxlX3JhdGVf",
+            "aGVydHoYAiABKAUSVAoYc3ludGhlc2l6ZV9zcGVlY2hfY29uZmlnGAMgASgL",
+            "MjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuU3ludGhlc2l6ZVNwZWVj",
+            "aENvbmZpZyr7AQoNQXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19V",
+            "TlNQRUNJRklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcK",
+            "E0FVRElPX0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxB",
+            "VxADEhYKEkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5H",
+            "X0FNUl9XQhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVE",
+            "SU9fRU5DT0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllURRAHKnYKElNwZWVj",
+            "aE1vZGVsVmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJ",
+            "RklFRBAAEhYKElVTRV9CRVNUX0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFS",
+            "RBACEhAKDFVTRV9FTkhBTkNFRBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQod",
+            "U1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNF",
+            "X0dFTkRFUl9NQUxFEAESHAoYU1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAIS",
+            "HQoZU1NNTF9WT0lDRV9HRU5ERVJfTkVVVFJBTBADKqQBChNPdXRwdXRBdWRp",
+            "b0VuY29kaW5nEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19VTlNQRUNJRklF",
+            "RBAAEiMKH09VVFBVVF9BVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIdChlP",
+            "VVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzEAISIgoeT1VUUFVUX0FVRElPX0VO",
+            "Q09ESU5HX09HR19PUFVTEANCnwEKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52MkIQQXVkaW9Db25maWdQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxvZ2Zsb3cvdjI7ZGlh",
+            "bG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.InputAudioConfig), global::Google.Cloud.Dialogflow.V2.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "PhraseHints", "ModelVariant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null),
@@ -155,7 +156,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// model][InputAudioConfig.model] that the caller is eligible for.
     ///
     /// Please see the [Dialogflow
-    /// docs](https://cloud.google.com/dialogflow-enterprise/docs/data-logging) for
+    /// docs](https://cloud.google.com/dialogflow/docs/data-logging) for
     /// how to make your project eligible for enhanced models.
     /// </summary>
     [pbr::OriginalName("USE_BEST_AVAILABLE")] UseBestAvailable = 1,
@@ -179,7 +180,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///
     /// * If the API caller isn't eligible for enhanced models, Dialogflow returns
     ///   an error. Please see the [Dialogflow
-    ///   docs](https://cloud.google.com/dialogflow-enterprise/docs/data-logging)
+    ///   docs](https://cloud.google.com/dialogflow/docs/data-logging)
     ///   for how to make your project eligible.
     /// </summary>
     [pbr::OriginalName("USE_ENHANCED")] UseEnhanced = 3,
@@ -317,7 +318,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The language of the supplied audio. Dialogflow does not do
     /// translations. See [Language
-    /// Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+    /// Support](https://cloud.google.com/dialogflow/docs/reference/language)
     /// for a list of the currently supported language codes. Note that queries in
     /// the same session do not necessarily need to specify the same language.
     /// </summary>
@@ -335,10 +336,10 @@ namespace Google.Cloud.Dialogflow.V2 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> phraseHints_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The collection of phrase hints which are used to boost accuracy
-    /// of speech recognition.
-    /// Refer to
-    /// [Cloud Speech API
+    /// Optional. A list of strings containing words and phrases that the speech
+    /// recognizer should recognize with higher likelihood.
+    ///
+    /// See [the Cloud Speech
     /// documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints)
     /// for more details.
     /// </summary>

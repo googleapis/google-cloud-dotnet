@@ -153,5 +153,87 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             mockGrpcClient.VerifyAll();
         }
 
+        [Fact]
+        public void SetAgent()
+        {
+            Mock<Agents.AgentsClient> mockGrpcClient = new Mock<Agents.AgentsClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            SetAgentRequest request = new SetAgentRequest();
+            Agent expectedResponse = new Agent
+            {
+                Parent = "parent-995424086",
+                DisplayName = "displayName1615086568",
+                DefaultLanguageCode = "defaultLanguageCode856575222",
+                TimeZone = "timeZone36848094",
+                Description = "description-1724546052",
+                AvatarUri = "avatarUri-402824826",
+                EnableLogging = false,
+                ClassificationThreshold = 1.11581064E8f,
+            };
+            mockGrpcClient.Setup(x => x.SetAgent(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            Agent response = client.SetAgent(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task SetAgentAsync()
+        {
+            Mock<Agents.AgentsClient> mockGrpcClient = new Mock<Agents.AgentsClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            SetAgentRequest request = new SetAgentRequest();
+            Agent expectedResponse = new Agent
+            {
+                Parent = "parent-995424086",
+                DisplayName = "displayName1615086568",
+                DefaultLanguageCode = "defaultLanguageCode856575222",
+                TimeZone = "timeZone36848094",
+                Description = "description-1724546052",
+                AvatarUri = "avatarUri-402824826",
+                EnableLogging = false,
+                ClassificationThreshold = 1.11581064E8f,
+            };
+            mockGrpcClient.Setup(x => x.SetAgentAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Agent>(Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            Agent response = await client.SetAgentAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void DeleteAgent()
+        {
+            Mock<Agents.AgentsClient> mockGrpcClient = new Mock<Agents.AgentsClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DeleteAgentRequest request = new DeleteAgentRequest();
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteAgent(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteAgent(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task DeleteAgentAsync()
+        {
+            Mock<Agents.AgentsClient> mockGrpcClient = new Mock<Agents.AgentsClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient())
+                .Returns(new Mock<Operations.OperationsClient>().Object);
+            DeleteAgentRequest request = new DeleteAgentRequest();
+            Empty expectedResponse = new Empty();
+            mockGrpcClient.Setup(x => x.DeleteAgentAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteAgentAsync(request);
+            mockGrpcClient.VerifyAll();
+        }
+
     }
 }
