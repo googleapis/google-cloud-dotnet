@@ -33,12 +33,18 @@ Additionally, it's worth configuring the Protocol Buffer JSON parser
 to ignore unknown fields. This means your webhook won't break if
 additional fields are added to `WebhookRequest` in the future.
 
-Here's a template for a Dialogflow webhook implemented in ASP.NET
-Core.
-
-{{sample:AgentsClient.Webhook}}
-
 Please refer to the [fulfillment
 documentation](https://dialogflow.com/docs/fulfillment) for more
 details around authentication, and the schema of requests and
 responses.
+
+The samples below provide a starting point for ASP.NET Core and
+ASP.NET.
+
+### Web hook template code for ASP.NET Core
+
+{{sample:AgentsClient.Webhook}}
+
+### Web hook template code for ASP.NET (classic) Web API
+
+{{sample:AgentsClient.WebApiWebhook}}
