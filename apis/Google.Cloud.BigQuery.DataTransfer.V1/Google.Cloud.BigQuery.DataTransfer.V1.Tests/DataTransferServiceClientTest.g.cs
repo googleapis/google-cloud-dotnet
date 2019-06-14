@@ -60,8 +60,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 HelpUrl = "helpUrl-789431439",
                 DefaultDataRefreshWindowDays = 1804935157,
                 ManualRunsDisabled = true,
-                PartnerLegalName = "partnerLegalName-1307326424",
-                RedirectUrl = "redirectUrl951230092",
             };
             mockGrpcClient.Setup(x => x.GetDataSource(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -94,8 +92,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 HelpUrl = "helpUrl-789431439",
                 DefaultDataRefreshWindowDays = 1804935157,
                 ManualRunsDisabled = true,
-                PartnerLegalName = "partnerLegalName-1307326424",
-                RedirectUrl = "redirectUrl951230092",
             };
             mockGrpcClient.Setup(x => x.GetDataSourceAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<DataSource>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -128,8 +124,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 HelpUrl = "helpUrl-789431439",
                 DefaultDataRefreshWindowDays = 1804935157,
                 ManualRunsDisabled = true,
-                PartnerLegalName = "partnerLegalName-1307326424",
-                RedirectUrl = "redirectUrl951230092",
             };
             mockGrpcClient.Setup(x => x.GetDataSource(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -161,8 +155,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 HelpUrl = "helpUrl-789431439",
                 DefaultDataRefreshWindowDays = 1804935157,
                 ManualRunsDisabled = true,
-                PartnerLegalName = "partnerLegalName-1307326424",
-                RedirectUrl = "redirectUrl951230092",
             };
             mockGrpcClient.Setup(x => x.GetDataSourceAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<DataSource>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -192,7 +184,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -224,7 +215,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -256,7 +246,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -286,7 +275,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -316,7 +304,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -348,7 +335,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -380,7 +366,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -410,7 +395,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -505,7 +489,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfig(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -535,7 +518,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -565,7 +547,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfig(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -594,7 +575,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 Disabled = true,
                 UserId = 147132913L,
                 DatasetRegion = "datasetRegion959248539",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferConfig>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -701,7 +681,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferRun(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -727,7 +706,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferRunAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -753,7 +731,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferRun(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -778,7 +755,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 DataSourceId = "dataSourceId-1015796374",
                 UserId = 147132913L,
                 Schedule = "schedule-697920873",
-                PartnerToken = "partnerToken725173186",
             };
             mockGrpcClient.Setup(x => x.GetTransferRunAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<TransferRun>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -960,68 +936,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<StartManualTransferRunsResponse>(Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
             StartManualTransferRunsResponse response = await client.StartManualTransferRunsAsync(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void EnableDataTransferService()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            EnableDataTransferServiceRequest request = new EnableDataTransferServiceRequest();
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.EnableDataTransferService(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            client.EnableDataTransferService(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task EnableDataTransferServiceAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            EnableDataTransferServiceRequest request = new EnableDataTransferServiceRequest();
-            Empty expectedResponse = new Empty();
-            mockGrpcClient.Setup(x => x.EnableDataTransferServiceAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<Empty>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            await client.EnableDataTransferServiceAsync(request);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public void IsDataTransferServiceEnabled()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            IsDataTransferServiceEnabledRequest request = new IsDataTransferServiceEnabledRequest();
-            IsDataTransferServiceEnabledResponse expectedResponse = new IsDataTransferServiceEnabledResponse
-            {
-                Enabled = false,
-                Reason = "reason-934964668",
-            };
-            mockGrpcClient.Setup(x => x.IsDataTransferServiceEnabled(request, It.IsAny<CallOptions>()))
-                .Returns(expectedResponse);
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            IsDataTransferServiceEnabledResponse response = client.IsDataTransferServiceEnabled(request);
-            Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task IsDataTransferServiceEnabledAsync()
-        {
-            Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new Mock<DataTransferService.DataTransferServiceClient>(MockBehavior.Strict);
-            IsDataTransferServiceEnabledRequest request = new IsDataTransferServiceEnabledRequest();
-            IsDataTransferServiceEnabledResponse expectedResponse = new IsDataTransferServiceEnabledResponse
-            {
-                Enabled = false,
-                Reason = "reason-934964668",
-            };
-            mockGrpcClient.Setup(x => x.IsDataTransferServiceEnabledAsync(request, It.IsAny<CallOptions>()))
-                .Returns(new Grpc.Core.AsyncUnaryCall<IsDataTransferServiceEnabledResponse>(Task.FromResult(expectedResponse), null, null, null, null));
-            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
-            IsDataTransferServiceEnabledResponse response = await client.IsDataTransferServiceEnabledAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }

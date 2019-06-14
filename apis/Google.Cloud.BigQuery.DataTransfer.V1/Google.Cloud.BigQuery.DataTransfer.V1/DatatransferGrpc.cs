@@ -59,9 +59,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> __Marshaller_ListTransferLogsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest> __Marshaller_CheckValidCredsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> __Marshaller_CheckValidCredsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest> __Marshaller_EnableDataTransferServiceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest> __Marshaller_IsDataTransferServiceEnabledRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse> __Marshaller_IsDataTransferServiceEnabledResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> __Method_GetDataSource = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource>(
         grpc::MethodType.Unary,
@@ -160,20 +157,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         "CheckValidCreds",
         __Marshaller_CheckValidCredsRequest,
         __Marshaller_CheckValidCredsResponse);
-
-    static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_EnableDataTransferService = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "EnableDataTransferService",
-        __Marshaller_EnableDataTransferServiceRequest,
-        __Marshaller_Empty);
-
-    static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse> __Method_IsDataTransferServiceEnabled = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "IsDataTransferServiceEnabled",
-        __Marshaller_IsDataTransferServiceEnabledRequest,
-        __Marshaller_IsDataTransferServiceEnabledResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -350,31 +333,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCreds(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Enables data transfer service for a given project. This
-      /// method requires the additional scope of
-      /// 'https://www.googleapis.com/auth/cloudplatformprojects'
-      /// to manage the cloud project permissions.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> EnableDataTransferService(global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Returns true if data transfer is enabled for a project.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse> IsDataTransferServiceEnabled(global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1084,106 +1042,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckValidCreds, null, options, request);
       }
-      /// <summary>
-      /// Enables data transfer service for a given project. This
-      /// method requires the additional scope of
-      /// 'https://www.googleapis.com/auth/cloudplatformprojects'
-      /// to manage the cloud project permissions.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty EnableDataTransferService(global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return EnableDataTransferService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Enables data transfer service for a given project. This
-      /// method requires the additional scope of
-      /// 'https://www.googleapis.com/auth/cloudplatformprojects'
-      /// to manage the cloud project permissions.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty EnableDataTransferService(global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_EnableDataTransferService, null, options, request);
-      }
-      /// <summary>
-      /// Enables data transfer service for a given project. This
-      /// method requires the additional scope of
-      /// 'https://www.googleapis.com/auth/cloudplatformprojects'
-      /// to manage the cloud project permissions.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnableDataTransferServiceAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return EnableDataTransferServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Enables data transfer service for a given project. This
-      /// method requires the additional scope of
-      /// 'https://www.googleapis.com/auth/cloudplatformprojects'
-      /// to manage the cloud project permissions.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnableDataTransferServiceAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.EnableDataTransferServiceRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_EnableDataTransferService, null, options, request);
-      }
-      /// <summary>
-      /// Returns true if data transfer is enabled for a project.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse IsDataTransferServiceEnabled(global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return IsDataTransferServiceEnabled(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns true if data transfer is enabled for a project.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse IsDataTransferServiceEnabled(global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_IsDataTransferServiceEnabled, null, options, request);
-      }
-      /// <summary>
-      /// Returns true if data transfer is enabled for a project.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse> IsDataTransferServiceEnabledAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return IsDataTransferServiceEnabledAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns true if data transfer is enabled for a project.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledResponse> IsDataTransferServiceEnabledAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.IsDataTransferServiceEnabledRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_IsDataTransferServiceEnabled, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DataTransferServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -1209,9 +1067,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           .AddMethod(__Method_DeleteTransferRun, serviceImpl.DeleteTransferRun)
           .AddMethod(__Method_ListTransferRuns, serviceImpl.ListTransferRuns)
           .AddMethod(__Method_ListTransferLogs, serviceImpl.ListTransferLogs)
-          .AddMethod(__Method_CheckValidCreds, serviceImpl.CheckValidCreds)
-          .AddMethod(__Method_EnableDataTransferService, serviceImpl.EnableDataTransferService)
-          .AddMethod(__Method_IsDataTransferServiceEnabled, serviceImpl.IsDataTransferServiceEnabled).Build();
+          .AddMethod(__Method_CheckValidCreds, serviceImpl.CheckValidCreds).Build();
     }
 
   }
