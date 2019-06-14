@@ -44,43 +44,41 @@ namespace Grafeas.V1 {
             "bmFsX2NvbnRleHRzGAQgAygLMhkuZ3JhZmVhcy52MS5Tb3VyY2VDb250ZXh0",
             "GkkKD0ZpbGVIYXNoZXNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiAB",
             "KAsyFi5ncmFmZWFzLnYxLkZpbGVIYXNoZXM6AjgBIjEKCkZpbGVIYXNoZXMS",
-            "IwoJZmlsZV9oYXNoGAEgAygLMhAuZ3JhZmVhcy52MS5IYXNoInEKBEhhc2gS",
-            "JwoEdHlwZRgBIAEoDjIZLmdyYWZlYXMudjEuSGFzaC5IYXNoVHlwZRINCgV2",
-            "YWx1ZRgCIAEoDCIxCghIYXNoVHlwZRIZChVIQVNIX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIKCgZTSEEyNTYQASJdCgdDb21tYW5kEgwKBG5hbWUYASABKAkSCwoD",
-            "ZW52GAIgAygJEgwKBGFyZ3MYAyADKAkSCwoDZGlyGAQgASgJEgoKAmlkGAUg",
-            "ASgJEhAKCHdhaXRfZm9yGAYgAygJIjcKCEFydGlmYWN0EhAKCGNoZWNrc3Vt",
-            "GAEgASgJEgoKAmlkGAIgASgJEg0KBW5hbWVzGAMgAygJIpoCCg1Tb3VyY2VD",
-            "b250ZXh0EjgKCmNsb3VkX3JlcG8YASABKAsyIi5ncmFmZWFzLnYxLkNsb3Vk",
-            "UmVwb1NvdXJjZUNvbnRleHRIABIxCgZnZXJyaXQYAiABKAsyHy5ncmFmZWFz",
-            "LnYxLkdlcnJpdFNvdXJjZUNvbnRleHRIABIrCgNnaXQYAyABKAsyHC5ncmFm",
-            "ZWFzLnYxLkdpdFNvdXJjZUNvbnRleHRIABI1CgZsYWJlbHMYBCADKAsyJS5n",
-            "cmFmZWFzLnYxLlNvdXJjZUNvbnRleHQuTGFiZWxzRW50cnkaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIJCgdjb250",
-            "ZXh0IooBCgxBbGlhc0NvbnRleHQSKwoEa2luZBgBIAEoDjIdLmdyYWZlYXMu",
-            "djEuQWxpYXNDb250ZXh0LktpbmQSDAoEbmFtZRgCIAEoCSI/CgRLaW5kEhQK",
-            "EEtJTkRfVU5TUEVDSUZJRUQQABIJCgVGSVhFRBABEgsKB01PVkFCTEUQAhIJ",
-            "CgVPVEhFUhAEIpMBChZDbG91ZFJlcG9Tb3VyY2VDb250ZXh0EiMKB3JlcG9f",
-            "aWQYASABKAsyEi5ncmFmZWFzLnYxLlJlcG9JZBIVCgtyZXZpc2lvbl9pZBgC",
-            "IAEoCUgAEjEKDWFsaWFzX2NvbnRleHQYAyABKAsyGC5ncmFmZWFzLnYxLkFs",
-            "aWFzQ29udGV4dEgAQgoKCHJldmlzaW9uIpUBChNHZXJyaXRTb3VyY2VDb250",
-            "ZXh0EhAKCGhvc3RfdXJpGAEgASgJEhYKDmdlcnJpdF9wcm9qZWN0GAIgASgJ",
-            "EhUKC3JldmlzaW9uX2lkGAMgASgJSAASMQoNYWxpYXNfY29udGV4dBgEIAEo",
-            "CzIYLmdyYWZlYXMudjEuQWxpYXNDb250ZXh0SABCCgoIcmV2aXNpb24iNAoQ",
-            "R2l0U291cmNlQ29udGV4dBILCgN1cmwYASABKAkSEwoLcmV2aXNpb25faWQY",
-            "AiABKAkiUwoGUmVwb0lkEjQKD3Byb2plY3RfcmVwb19pZBgBIAEoCzIZLmdy",
-            "YWZlYXMudjEuUHJvamVjdFJlcG9JZEgAEg0KA3VpZBgCIAEoCUgAQgQKAmlk",
-            "IjYKDVByb2plY3RSZXBvSWQSEgoKcHJvamVjdF9pZBgBIAEoCRIRCglyZXBv",
-            "X25hbWUYAiABKAlCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6IC",
-            "A0dSQWIGcHJvdG8z"));
+            "IwoJZmlsZV9oYXNoGAEgAygLMhAuZ3JhZmVhcy52MS5IYXNoIiMKBEhhc2gS",
+            "DAoEdHlwZRgBIAEoCRINCgV2YWx1ZRgCIAEoDCJdCgdDb21tYW5kEgwKBG5h",
+            "bWUYASABKAkSCwoDZW52GAIgAygJEgwKBGFyZ3MYAyADKAkSCwoDZGlyGAQg",
+            "ASgJEgoKAmlkGAUgASgJEhAKCHdhaXRfZm9yGAYgAygJIjcKCEFydGlmYWN0",
+            "EhAKCGNoZWNrc3VtGAEgASgJEgoKAmlkGAIgASgJEg0KBW5hbWVzGAMgAygJ",
+            "IpoCCg1Tb3VyY2VDb250ZXh0EjgKCmNsb3VkX3JlcG8YASABKAsyIi5ncmFm",
+            "ZWFzLnYxLkNsb3VkUmVwb1NvdXJjZUNvbnRleHRIABIxCgZnZXJyaXQYAiAB",
+            "KAsyHy5ncmFmZWFzLnYxLkdlcnJpdFNvdXJjZUNvbnRleHRIABIrCgNnaXQY",
+            "AyABKAsyHC5ncmFmZWFzLnYxLkdpdFNvdXJjZUNvbnRleHRIABI1CgZsYWJl",
+            "bHMYBCADKAsyJS5ncmFmZWFzLnYxLlNvdXJjZUNvbnRleHQuTGFiZWxzRW50",
+            "cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4AUIJCgdjb250ZXh0IooBCgxBbGlhc0NvbnRleHQSKwoEa2luZBgBIAEo",
+            "DjIdLmdyYWZlYXMudjEuQWxpYXNDb250ZXh0LktpbmQSDAoEbmFtZRgCIAEo",
+            "CSI/CgRLaW5kEhQKEEtJTkRfVU5TUEVDSUZJRUQQABIJCgVGSVhFRBABEgsK",
+            "B01PVkFCTEUQAhIJCgVPVEhFUhAEIpMBChZDbG91ZFJlcG9Tb3VyY2VDb250",
+            "ZXh0EiMKB3JlcG9faWQYASABKAsyEi5ncmFmZWFzLnYxLlJlcG9JZBIVCgty",
+            "ZXZpc2lvbl9pZBgCIAEoCUgAEjEKDWFsaWFzX2NvbnRleHQYAyABKAsyGC5n",
+            "cmFmZWFzLnYxLkFsaWFzQ29udGV4dEgAQgoKCHJldmlzaW9uIpUBChNHZXJy",
+            "aXRTb3VyY2VDb250ZXh0EhAKCGhvc3RfdXJpGAEgASgJEhYKDmdlcnJpdF9w",
+            "cm9qZWN0GAIgASgJEhUKC3JldmlzaW9uX2lkGAMgASgJSAASMQoNYWxpYXNf",
+            "Y29udGV4dBgEIAEoCzIYLmdyYWZlYXMudjEuQWxpYXNDb250ZXh0SABCCgoI",
+            "cmV2aXNpb24iNAoQR2l0U291cmNlQ29udGV4dBILCgN1cmwYASABKAkSEwoL",
+            "cmV2aXNpb25faWQYAiABKAkiUwoGUmVwb0lkEjQKD3Byb2plY3RfcmVwb19p",
+            "ZBgBIAEoCzIZLmdyYWZlYXMudjEuUHJvamVjdFJlcG9JZEgAEg0KA3VpZBgC",
+            "IAEoCUgAQgQKAmlkIjYKDVByb2plY3RSZXBvSWQSEgoKcHJvamVjdF9pZBgB",
+            "IAEoCRIRCglyZXBvX25hbWUYAiABKAlCUQoNaW8uZ3JhZmVhcy52MVABWjhn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMv",
+            "djE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildProvenance), global::Grafeas.V1.BuildProvenance.Parser, new[]{ "Id", "ProjectId", "Commands", "BuiltArtifacts", "CreateTime", "StartTime", "EndTime", "Creator", "LogsUri", "SourceProvenance", "TriggerId", "BuildOptions", "BuilderVersion" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Source), global::Grafeas.V1.Source.Parser, new[]{ "ArtifactStorageSourceUri", "FileHashes", "Context", "AdditionalContexts" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.FileHashes), global::Grafeas.V1.FileHashes.Parser, new[]{ "FileHash" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Hash), global::Grafeas.V1.Hash.Parser, new[]{ "Type", "Value" }, null, new[]{ typeof(global::Grafeas.V1.Hash.Types.HashType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Hash), global::Grafeas.V1.Hash.Parser, new[]{ "Type", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Command), global::Grafeas.V1.Command.Parser, new[]{ "Name", "Env", "Args", "Dir", "Id", "WaitFor" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Artifact), global::Grafeas.V1.Artifact.Parser, new[]{ "Checksum", "Id", "Names" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.SourceContext), global::Grafeas.V1.SourceContext.Parser, new[]{ "CloudRepo", "Gerrit", "Git", "Labels" }, new[]{ "Context" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -1004,15 +1002,15 @@ namespace Grafeas.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Grafeas.V1.Hash.Types.HashType type_ = 0;
+    private string type_ = "";
     /// <summary>
-    /// Required. The type of hash that was performed.
+    /// Required. The type of hash that was performed, e.g. "SHA-256".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Grafeas.V1.Hash.Types.HashType Type {
+    public string Type {
       get { return type_; }
       set {
-        type_ = value;
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1051,7 +1049,7 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (Value.Length != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1066,9 +1064,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Type);
+      if (Type.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Type);
       }
       if (Value.Length != 0) {
         output.WriteRawTag(18);
@@ -1082,8 +1080,8 @@ namespace Grafeas.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
       if (Value.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Value);
@@ -1099,7 +1097,7 @@ namespace Grafeas.V1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type.Length != 0) {
         Type = other.Type;
       }
       if (other.Value.Length != 0) {
@@ -1116,8 +1114,8 @@ namespace Grafeas.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            type_ = (global::Grafeas.V1.Hash.Types.HashType) input.ReadEnum();
+          case 10: {
+            Type = input.ReadString();
             break;
           }
           case 18: {
@@ -1127,27 +1125,6 @@ namespace Grafeas.V1 {
         }
       }
     }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the Hash message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      /// <summary>
-      /// Specifies the hash algorithm.
-      /// </summary>
-      public enum HashType {
-        /// <summary>
-        /// Unknown.
-        /// </summary>
-        [pbr::OriginalName("HASH_TYPE_UNSPECIFIED")] Unspecified = 0,
-        /// <summary>
-        /// A SHA-256 hash.
-        /// </summary>
-        [pbr::OriginalName("SHA256")] Sha256 = 1,
-      }
-
-    }
-    #endregion
 
   }
 
