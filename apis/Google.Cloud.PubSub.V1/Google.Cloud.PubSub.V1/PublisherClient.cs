@@ -840,8 +840,8 @@ namespace Google.Cloud.PubSub.V1
                             }
                             else
                             {
-                                // No ordering-key, just cancel the failed batch.
-                                postLockAction = () => batch.BatchCompletion.SetCanceled();
+                                // No ordering-key, just fail the batch.
+                                postLockAction = () => batch.BatchCompletion.SetException(publishTask.Exception.InnerExceptions);
                             }
                             break;
                         default:
