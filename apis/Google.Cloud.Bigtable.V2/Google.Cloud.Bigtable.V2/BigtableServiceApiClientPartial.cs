@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Gcp;
 using Google.Apis.Auth.OAuth2;
 using Grpc.Auth;
 using Grpc.Core;
@@ -196,8 +197,78 @@ namespace Google.Cloud.Bigtable.V2
         }
     }
 
+    public sealed partial class BigtableServiceApiClientBuilder : ClientBuilderBase<BigtableServiceApiClient>
+    {
+        /// <summary>
+        /// Creates a new instance with no settings.
+        /// </summary>
+        public BigtableServiceApiClientBuilder()
+        {
+        }
+
+        internal BigtableServiceApiClientBuilder(BigtableClientBuilder builder)
+        {
+            Settings = builder.Settings;
+            CopyCommonSettings(builder);
+        }
+
+        /// <inheritdoc />
+        protected override CallInvoker CreateCallInvoker()
+        {
+            if (CallInvoker != null)
+            {
+                return CallInvoker;
+            }
+            var endpoint = Endpoint ?? GetDefaultEndpoint();
+            var channelOptions = Settings.CreateChannelOptions().Concat(GetChannelOptions()).ToList();
+            // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
+            // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
+            if (base.CanUseChannelPool)
+            {
+                return CallInvokerPool.GetCallInvoker(endpoint, channelOptions);
+            }
+            else
+            {
+                var credentials = GetChannelCredentials();
+                return new GcpCallInvoker(endpoint.ToString(), credentials, channelOptions);
+            }
+        }
+
+        /// <inheritdoc />
+        protected override async Task<CallInvoker> CreateCallInvokerAsync(CancellationToken cancellationToken)
+        {
+            if (CallInvoker != null)
+            {
+                return CallInvoker;
+            }
+            var endpoint = Endpoint ?? GetDefaultEndpoint();
+            var channelOptions = Settings.CreateChannelOptions().Concat(GetChannelOptions()).ToList();
+            // Although *we* never allow the use of the channel pool, we can use the call invoker pool if and
+            // only if the base class thinks it can use the channel pool - i.e. it's only using default credentials.
+            if (base.CanUseChannelPool)
+            {
+                return await CallInvokerPool.GetCallInvokerAsync(endpoint, channelOptions).ConfigureAwait(false);
+            }
+            else
+            {
+                var credentials = GetChannelCredentials();
+                return new GcpCallInvoker(endpoint.ToString(), credentials, channelOptions);
+            }
+        }
+
+        /// <inheritdoc />
+        protected override bool CanUseChannelPool => false;
+
+        /// <inheritdoc />
+        protected override ChannelPool GetChannelPool() => throw new NotImplementedException();
+
+        private GcpCallInvokerPool CallInvokerPool => BigtableServiceApiClient.CallInvokerPool;
+    }
+
     public partial class BigtableServiceApiClient
     {
+        internal static GcpCallInvokerPool CallInvokerPool => s_callInvokerPool;
+
         /// <summary>
         /// Gets the value which specifies routing for replication.
         /// If null or empty, the "default" application profile will be used by the server.
