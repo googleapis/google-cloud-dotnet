@@ -112,18 +112,18 @@
     "id": "Google.Cloud.Bigtable.V2",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
-    "version": "1.0.0",
+    "version": "1.1.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0",
-      "Google.Api.Gax.Grpc.Gcp": "2.7.0",
+      "Google.Api.Gax.Grpc": "2.8.0-beta01",
+      "Google.Api.Gax.Grpc.Gcp": "2.8.0-beta01",
       "Google.Cloud.Bigtable.Common.V2": "project",
       "Grpc.Core": "1.21.0"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "2.7.0",
+      "Google.Api.Gax.Grpc.Testing": "2.8.0-beta01",
       "Google.Cloud.Bigtable.Admin.V2": "project",
     }
   },
