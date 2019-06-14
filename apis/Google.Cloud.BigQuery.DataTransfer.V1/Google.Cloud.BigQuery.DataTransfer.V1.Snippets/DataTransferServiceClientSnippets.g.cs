@@ -1345,59 +1345,5 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for EnableDataTransferServiceAsync</summary>
-        public async Task EnableDataTransferServiceAsync_RequestObject()
-        {
-            // Snippet: EnableDataTransferServiceAsync(EnableDataTransferServiceRequest,CallSettings)
-            // Additional: EnableDataTransferServiceAsync(EnableDataTransferServiceRequest,CancellationToken)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            EnableDataTransferServiceRequest request = new EnableDataTransferServiceRequest();
-            // Make the request
-            await dataTransferServiceClient.EnableDataTransferServiceAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for EnableDataTransferService</summary>
-        public void EnableDataTransferService_RequestObject()
-        {
-            // Snippet: EnableDataTransferService(EnableDataTransferServiceRequest,CallSettings)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
-            // Initialize request argument(s)
-            EnableDataTransferServiceRequest request = new EnableDataTransferServiceRequest();
-            // Make the request
-            dataTransferServiceClient.EnableDataTransferService(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for IsDataTransferServiceEnabledAsync</summary>
-        public async Task IsDataTransferServiceEnabledAsync_RequestObject()
-        {
-            // Snippet: IsDataTransferServiceEnabledAsync(IsDataTransferServiceEnabledRequest,CallSettings)
-            // Additional: IsDataTransferServiceEnabledAsync(IsDataTransferServiceEnabledRequest,CancellationToken)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            IsDataTransferServiceEnabledRequest request = new IsDataTransferServiceEnabledRequest();
-            // Make the request
-            IsDataTransferServiceEnabledResponse response = await dataTransferServiceClient.IsDataTransferServiceEnabledAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for IsDataTransferServiceEnabled</summary>
-        public void IsDataTransferServiceEnabled_RequestObject()
-        {
-            // Snippet: IsDataTransferServiceEnabled(IsDataTransferServiceEnabledRequest,CallSettings)
-            // Create client
-            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
-            // Initialize request argument(s)
-            IsDataTransferServiceEnabledRequest request = new IsDataTransferServiceEnabledRequest();
-            // Make the request
-            IsDataTransferServiceEnabledResponse response = dataTransferServiceClient.IsDataTransferServiceEnabled(request);
-            // End snippet
-        }
-
     }
 }
