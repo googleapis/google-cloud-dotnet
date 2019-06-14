@@ -290,6 +290,39 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     /// <summary>
+    /// Builder class for <see cref="BigtableServiceApiClient"/> to provide simple configuration of credentials, endpoint etc.
+    /// </summary>
+    public sealed partial class BigtableServiceApiClientBuilder : gaxgrpc::ClientBuilderBase<BigtableServiceApiClient>
+    {
+        /// <summary>
+        /// The settings to use for RPCs, or null for the default settings.
+        /// </summary>
+        public BigtableServiceApiSettings Settings { get; set; }
+
+        /// <inheritdoc/>
+        public override BigtableServiceApiClient Build()
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = CreateCallInvoker();
+            return BigtableServiceApiClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        public override async stt::Task<BigtableServiceApiClient> BuildAsync(st::CancellationToken cancellationToken = default)
+        {
+            Validate();
+            grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
+            return BigtableServiceApiClient.Create(callInvoker, Settings);
+        }
+
+        /// <inheritdoc />
+        protected override gaxgrpc::ServiceEndpoint GetDefaultEndpoint() => BigtableServiceApiClient.DefaultEndpoint;
+
+        /// <inheritdoc />
+        protected override scg::IReadOnlyList<string> GetDefaultScopes() => BigtableServiceApiClient.DefaultScopes;
+    }
+
+    /// <summary>
     /// Bigtable client wrapper, for convenient use.
     /// </summary>
     public abstract partial class BigtableServiceApiClient

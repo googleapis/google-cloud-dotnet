@@ -101,7 +101,7 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
 
         private static async Task<int> Main(string[] args)
         {
-            RemoveClientBuilder();
+            FixClientBuilder();
 
             // TODO: Figure out why `dotnet run` from generateapis.sh is sending 6 args instead of 3 as in: arg1 arg2 arg3 arg1 arg2 arg3
             if (args.Length < 3)
@@ -278,16 +278,14 @@ namespace Google.Cloud.Bigtable.V2.GenerateClient
         }
 
         /// <summary>
-        /// Temporary measure to remove the BigtableClientBuilder and the ChannelPool property. Bigtable uses a call invoker
-        /// pool instead of a channel pool; we'll need to work out what we want the builder to look like for this.
-        /// See https://github.com/googleapis/google-cloud-dotnet/issues/3117 for status.
+        /// Remove the parts of the generated BigtableServiceApiClientBuilder that are provided manual by partial classes.
         /// </summary>
-        private static void RemoveClientBuilder()
+        private static void FixClientBuilder()
         {
             var layout = DirectoryLayout.ForApi("Google.Cloud.Bigtable.V2");
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Google.Cloud.Bigtable.V2", "BigtableServiceApiClient.cs"))
                 .RemoveProperty("BigtableServiceApiClient", "ChannelPool")
-                .RemoveType("BigtableServiceApiClientBuilder")
+                .RemoveMethod("BigtableServiceApiClientBuilder", "GetChannelPool")
                 .Save();
         }
 
