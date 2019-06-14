@@ -2,104 +2,48 @@
 
 ## How can I use non-default credentials for gRPC-based APIs?
 
-The generated classes for gRPC-based APIs (such as
-[PublisherServiceApiClient](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.html))
-have `Create` overloads of this form:
+One option - and an option that has worked for these APIs since the
+start - is to create your own channel based on gRPC channel
+credentials, and pass that to the `Create` method.
+
+However, the libraries now implement a *client builder* pattern to make
+life considerably simpler when you wish to specify different
+credentials or a different API endpoint.
+
+The general pattern is to create a builder (using the same name as
+the client type, with a suffix of `Builder`), populate any
+propreties to override some aspect of the behavior, and then call
+`Build`. For example:
 
 ```csharp
-public static PublisherServiceApiClient Create(
-    ServiceEndpoint endpoint = null,
-    PublisherServiceApiSettings settings = null)
-
-public static PublisherServiceApiClient Create(
-    Channel channel,
-    PublisherServiceApiSettings settings = null)
+SpeechClient client = new SpeechClientBuilder
+{
+    // Populate properties here
+}.Build();
 ```
 
-(Equivalent asynchronous overloads exist as well.)
+In terms of credentials, there are four (mutually-exclusive)
+properties you can use to specify credentials:
 
-The first of these uses the default credentials to create a channel
-which is shared by all instances created in the same way, and
-optionally shut down using the `ShutDownDefaultChannelsAsync` method.
+- `ChannelCredentials`: the gRPC credentials to use
+- `CredentialsPath`: the path to a JSON file containing service account credentials
+- `JsonCredentials`: a string (in JSON format) containing service account credentials
+- `TokenAccessMethod`: a delegate used to provide access tokens
 
-The second of these never creates a new channel, and the caller is
-responsible for explicit clean-up if required. See ["Unmanaged
-resource clean-up"](guides/cleanup.md) for more details on situations where
-this is important.
-
-To create a client with specific credentials, you have to create the
-channel yourself, as the client doesn't expose the channel it uses.
-Creating a channel is simple, once you have a `ChannelCredentials`
-object, typically created using the `ToChannelCredentials` extension
-method. For example, to create a channel for a specific user:
+The final property is a delegate to avoid exposing a dependency on
+`Google.Apis.Auth` in the API surface, but the intention of it is to
+allow you to use any `ICredential` (e.g. a `GoogleCredential` or a
+`UserCredential`) via a method group conversion. For example, to
+create a `SpeechClient` with a `UserCredential`, you would write
+code like this:
 
 ```csharp
-// Make the ToChannelCredentials extension method available
-using Grpc.Auth;
-
-...
-
-// Obtain a user's credentials in an appropriate manner for your
-// application. See
-// https://developers.google.com/api-client-library/dotnet/guide/aaa_oauth
-UserCredential userCredential = ...;
-ChannelCredentials channelCredentials = userCredential.ToChannelCredentials();
-Channel channel = new Channel(PublisherServiceApiClient.DefaultEndpoint, channelCredentials);
-PublisherServiceApiClient client = PublisherServiceApiClient.Create(channel);
-// Now use client, and clean up channel if and when you need to.
+UserCredential credential = ...;
+SpeechClient client = new SpeechClientBuilder
+{
+    TokenAccessMethod = credential.GetAccessTokenForRequestAsync
+}.Build();
 ```
-
-Note that if you construct a `GoogleCredential` (e.g. with
-`GoogleCredential.FromFile`) you should apply the scopes required by
-the API using the `GoogleCredential.CreateScoped` method and the `DefaultScopes`
-property from the API you're using. For example:
-
-```
-GoogleCredential credential = GoogleCredential
-    .FromFile("auth.json")
-    .CreateScoped(PublisherServiceApiClient.DefaultScopes);
-ChannelCredentials channelCredentials = credential.ToChannelCredentials();
-...
-```
-
-We know that it's annoying to have to specify the scopes. An
-alternative is to use `Grpc.Core` version 1.8.0 or higher. If you
-add a dependency for that, the `CreateScoped` call above is not
-required. Over time, all released libraries will depend on the newer
-version directly, so your project won't require a dependency on
-`Grpc.Core` itself.
-
-It's also possible to specify credentials for an
-individual RPC call. For example, you can create a channel using the
-default application credentials, then specify a `CallCredentials` in
-the `CallSettings` passed to a single method call. The
-`ToCallCredentials()` method can be used to create a
-`CallCredentials`:
-
-```csharp
-// Make the ToCallCredentials extension method available
-using Grpc.Auth;
-
-...
-
-// Obtain a user's credentials in an appropriate manner for your
-// application. See
-// https://developers.google.com/api-client-library/dotnet/guide/aaa_oauth
-UserCredential userCredential = ...;
-CallCredentials callCredentials = userCredential.ToCallCredentials();
-
-// Use the default application credentials for the channel.
-PublisherServiceApiClient client = PublisherServiceApiClient.Create();
-client.Publish(/* regular method arguments */,
-    CallSettings.FromCallCredentials(callCredentials));
-```
-
-This approach means you don't need to worry about channel clean-up.
-
-We expect to make all of this easier over time, at least for common
-scenarios where you don't perform any channel shutdown. We also hope
-to remove the requirement to specify the scopes when creating
-credentials manually.
 
 ## How can I trace gRPC issues?
 
