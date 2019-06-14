@@ -43,4 +43,5 @@ else
 fi
 
 # Process the build log in releasebuild
+cd releasebuild
 ./processbuildtiminglog.sh
