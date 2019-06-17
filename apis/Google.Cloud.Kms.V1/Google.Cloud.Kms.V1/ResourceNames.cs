@@ -346,6 +346,112 @@ namespace Google.Cloud.Kms.V1
     }
 
     /// <summary>
+    /// Resource name for the 'import_job' resource.
+    /// </summary>
+    public sealed partial class ImportJobName : gax::IResourceName, sys::IEquatable<ImportJobName>
+    {
+        private static readonly gax::PathTemplate s_template = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/importJobs/{import_job}");
+
+        /// <summary>
+        /// Parses the given import_job resource name in string form into a new
+        /// <see cref="ImportJobName"/> instance.
+        /// </summary>
+        /// <param name="importJobName">The import_job resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="ImportJobName"/> if successful.</returns>
+        public static ImportJobName Parse(string importJobName)
+        {
+            gax::GaxPreconditions.CheckNotNull(importJobName, nameof(importJobName));
+            gax::TemplatedResourceName resourceName = s_template.ParseName(importJobName);
+            return new ImportJobName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given import_job resource name in string form into a new
+        /// <see cref="ImportJobName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="sys::ArgumentNullException"/> if <paramref name="importJobName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="importJobName">The import_job resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="ImportJobName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string importJobName, out ImportJobName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(importJobName, nameof(importJobName));
+            gax::TemplatedResourceName resourceName;
+            if (s_template.TryParseName(importJobName, out resourceName))
+            {
+                result = new ImportJobName(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="ImportJobName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="locationId">The location ID. Must not be <c>null</c>.</param>
+        /// <param name="keyRingId">The keyRing ID. Must not be <c>null</c>.</param>
+        /// <param name="importJobId">The importJob ID. Must not be <c>null</c>.</param>
+        public ImportJobName(string projectId, string locationId, string keyRingId, string importJobId)
+        {
+            ProjectId = gax::GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            LocationId = gax::GaxPreconditions.CheckNotNull(locationId, nameof(locationId));
+            KeyRingId = gax::GaxPreconditions.CheckNotNull(keyRingId, nameof(keyRingId));
+            ImportJobId = gax::GaxPreconditions.CheckNotNull(importJobId, nameof(importJobId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The location ID. Never <c>null</c>.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The keyRing ID. Never <c>null</c>.
+        /// </summary>
+        public string KeyRingId { get; }
+
+        /// <summary>
+        /// The importJob ID. Never <c>null</c>.
+        /// </summary>
+        public string ImportJobId { get; }
+
+        /// <inheritdoc />
+        public gax::ResourceNameKind Kind => gax::ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, LocationId, KeyRingId, ImportJobId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as ImportJobName);
+
+        /// <inheritdoc />
+        public bool Equals(ImportJobName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(ImportJobName a, ImportJobName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(ImportJobName a, ImportJobName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name which will contain one of a choice of resource names.
     /// </summary>
     /// <remarks>
@@ -793,6 +899,19 @@ namespace Google.Cloud.Kms.V1
 
     }
 
+    public partial class CreateImportJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Kms.V1.KeyRingName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Kms.V1.KeyRingName ParentAsKeyRingName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Kms.V1.KeyRingName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class CreateKeyRingRequest
     {
         /// <summary>
@@ -897,6 +1016,19 @@ namespace Google.Cloud.Kms.V1
 
     }
 
+    public partial class GetImportJobRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Kms.V1.ImportJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Kms.V1.ImportJobName ImportJobName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Kms.V1.ImportJobName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetKeyRingRequest
     {
         /// <summary>
@@ -919,6 +1051,19 @@ namespace Google.Cloud.Kms.V1
         {
             get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Kms.V1.CryptoKeyVersionName.Parse(Name); }
             set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ImportCryptoKeyVersionRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Kms.V1.CryptoKeyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Kms.V1.CryptoKeyName ParentAsCryptoKeyName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Kms.V1.CryptoKeyName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -950,6 +1095,19 @@ namespace Google.Cloud.Kms.V1
     }
 
     public partial class ListCryptoKeysRequest
+    {
+        /// <summary>
+        /// <see cref="Google.Cloud.Kms.V1.KeyRingName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public Google.Cloud.Kms.V1.KeyRingName ParentAsKeyRingName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Kms.V1.KeyRingName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListImportJobsRequest
     {
         /// <summary>
         /// <see cref="Google.Cloud.Kms.V1.KeyRingName"/>-typed view over the <see cref="Parent"/> resource name property.

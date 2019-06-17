@@ -27,162 +27,201 @@ namespace Google.Cloud.Kms.V1 {
             "CiFnb29nbGUvY2xvdWQva21zL3YxL3NlcnZpY2UucHJvdG8SE2dvb2dsZS5j",
             "bG91ZC5rbXMudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aI2dv",
             "b2dsZS9jbG91ZC9rbXMvdjEvcmVzb3VyY2VzLnByb3RvGiBnb29nbGUvcHJv",
-            "dG9idWYvZmllbGRfbWFzay5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVj",
-            "dC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIkwKE0xp",
-            "c3RLZXlSaW5nc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6",
-            "ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIqABChVMaXN0Q3J5cHRvS2V5",
-            "c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
-            "CgpwYWdlX3Rva2VuGAMgASgJElAKDHZlcnNpb25fdmlldxgEIAEoDjI6Lmdv",
-            "b2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlW",
-            "ZXJzaW9uVmlldyKfAQocTGlzdENyeXB0b0tleVZlcnNpb25zUmVxdWVzdBIO",
-            "CgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9r",
-            "ZW4YAyABKAkSSAoEdmlldxgEIAEoDjI6Lmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "Q3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uVmlldyJ0ChRMaXN0",
-            "S2V5UmluZ3NSZXNwb25zZRIvCglrZXlfcmluZ3MYASADKAsyHC5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLktleVJpbmcSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "EhIKCnRvdGFsX3NpemUYAyABKAUiegoWTGlzdENyeXB0b0tleXNSZXNwb25z",
-            "ZRIzCgtjcnlwdG9fa2V5cxgBIAMoCzIeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "Q3J5cHRvS2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9z",
-            "aXplGAMgASgFIpABCh1MaXN0Q3J5cHRvS2V5VmVyc2lvbnNSZXNwb25zZRJC",
-            "ChNjcnlwdG9fa2V5X3ZlcnNpb25zGAEgAygLMiUuZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5DcnlwdG9LZXlWZXJzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CRISCgp0b3RhbF9zaXplGAMgASgFIiEKEUdldEtleVJpbmdSZXF1ZXN0EgwK",
-            "BG5hbWUYASABKAkiIwoTR2V0Q3J5cHRvS2V5UmVxdWVzdBIMCgRuYW1lGAEg",
-            "ASgJIioKGkdldENyeXB0b0tleVZlcnNpb25SZXF1ZXN0EgwKBG5hbWUYASAB",
-            "KAkiIwoTR2V0UHVibGljS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJImsKFENy",
-            "ZWF0ZUtleVJpbmdSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRITCgtrZXlfcmlu",
-            "Z19pZBgCIAEoCRIuCghrZXlfcmluZxgDIAEoCzIcLmdvb2dsZS5jbG91ZC5r",
-            "bXMudjEuS2V5UmluZyJzChZDcmVhdGVDcnlwdG9LZXlSZXF1ZXN0Eg4KBnBh",
-            "cmVudBgBIAEoCRIVCg1jcnlwdG9fa2V5X2lkGAIgASgJEjIKCmNyeXB0b19r",
-            "ZXkYAyABKAsyHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleSJyCh1D",
-            "cmVhdGVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
-            "QQoSY3J5cHRvX2tleV92ZXJzaW9uGAIgASgLMiUuZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5DcnlwdG9LZXlWZXJzaW9uIn0KFlVwZGF0ZUNyeXB0b0tleVJlcXVl",
-            "c3QSMgoKY3J5cHRvX2tleRgBIAEoCzIeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
-            "Q3J5cHRvS2V5Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLkZpZWxkTWFzayKTAQodVXBkYXRlQ3J5cHRvS2V5VmVyc2lvblJlcXVl",
-            "c3QSQQoSY3J5cHRvX2tleV92ZXJzaW9uGAEgASgLMiUuZ29vZ2xlLmNsb3Vk",
-            "Lmttcy52MS5DcnlwdG9LZXlWZXJzaW9uEi8KC3VwZGF0ZV9tYXNrGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJYCg5FbmNyeXB0UmVxdWVz",
-            "dBIMCgRuYW1lGAEgASgJEhEKCXBsYWludGV4dBgCIAEoDBIlCh1hZGRpdGlv",
-            "bmFsX2F1dGhlbnRpY2F0ZWRfZGF0YRgDIAEoDCJZCg5EZWNyeXB0UmVxdWVz",
-            "dBIMCgRuYW1lGAEgASgJEhIKCmNpcGhlcnRleHQYAiABKAwSJQodYWRkaXRp",
-            "b25hbF9hdXRoZW50aWNhdGVkX2RhdGEYAyABKAwiUgoVQXN5bW1ldHJpY1Np",
-            "Z25SZXF1ZXN0EgwKBG5hbWUYASABKAkSKwoGZGlnZXN0GAMgASgLMhsuZ29v",
-            "Z2xlLmNsb3VkLmttcy52MS5EaWdlc3QiPAoYQXN5bW1ldHJpY0RlY3J5cHRS",
-            "ZXF1ZXN0EgwKBG5hbWUYASABKAkSEgoKY2lwaGVydGV4dBgDIAEoDCIkCg9E",
-            "ZWNyeXB0UmVzcG9uc2USEQoJcGxhaW50ZXh0GAEgASgMIjMKD0VuY3J5cHRS",
-            "ZXNwb25zZRIMCgRuYW1lGAEgASgJEhIKCmNpcGhlcnRleHQYAiABKAwiKwoW",
-            "QXN5bW1ldHJpY1NpZ25SZXNwb25zZRIRCglzaWduYXR1cmUYASABKAwiLgoZ",
-            "QXN5bW1ldHJpY0RlY3J5cHRSZXNwb25zZRIRCglwbGFpbnRleHQYASABKAwi",
-            "UwokVXBkYXRlQ3J5cHRvS2V5UHJpbWFyeVZlcnNpb25SZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkSHQoVY3J5cHRvX2tleV92ZXJzaW9uX2lkGAIgASgJIi4KHkRl",
-            "c3Ryb3lDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJIi4K",
-            "HlJlc3RvcmVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJ",
-            "IkgKBkRpZ2VzdBIQCgZzaGEyNTYYASABKAxIABIQCgZzaGEzODQYAiABKAxI",
-            "ABIQCgZzaGE1MTIYAyABKAxIAEIICgZkaWdlc3QiKQoQTG9jYXRpb25NZXRh",
-            "ZGF0YRIVCg1oc21fYXZhaWxhYmxlGAEgASgIMs0cChRLZXlNYW5hZ2VtZW50",
-            "U2VydmljZRKZAQoMTGlzdEtleVJpbmdzEiguZ29vZ2xlLmNsb3VkLmttcy52",
-            "MS5MaXN0S2V5UmluZ3NSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmttcy52MS5M",
-            "aXN0S2V5UmluZ3NSZXNwb25zZSI0gtPkkwIuEiwvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9rZXlSaW5ncxKsAQoOTGlzdENyeXB0b0tl",
-            "eXMSKi5nb29nbGUuY2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlzUmVxdWVz",
-            "dBorLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdENyeXB0b0tleXNSZXNwb25z",
-            "ZSJBgtPkkwI7EjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2tleVJpbmdzLyp9L2NyeXB0b0tleXMS1QEKFUxpc3RDcnlwdG9LZXlWZXJz",
-            "aW9ucxIxLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdENyeXB0b0tleVZlcnNp",
-            "b25zUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdENyeXB0b0tl",
-            "eVZlcnNpb25zUmVzcG9uc2UiVYLT5JMCTxJNL3YxL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn0vY3J5",
-            "cHRvS2V5VmVyc2lvbnMSiAEKCkdldEtleVJpbmcSJi5nb29nbGUuY2xvdWQu",
-            "a21zLnYxLkdldEtleVJpbmdSZXF1ZXN0GhwuZ29vZ2xlLmNsb3VkLmttcy52",
-            "MS5LZXlSaW5nIjSC0+STAi4SLC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2tleVJpbmdzLyp9EpsBCgxHZXRDcnlwdG9LZXkSKC5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkdldENyeXB0b0tleVJlcXVlc3QaHi5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkNyeXB0b0tleSJBgtPkkwI7EjkvdjEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn0SxAEK",
-            "E0dldENyeXB0b0tleVZlcnNpb24SLy5nb29nbGUuY2xvdWQua21zLnYxLkdl",
-            "dENyeXB0b0tleVZlcnNpb25SZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmttcy52",
-            "MS5DcnlwdG9LZXlWZXJzaW9uIlWC0+STAk8STS92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0",
-            "b0tleVZlcnNpb25zLyp9ErkBCgxHZXRQdWJsaWNLZXkSKC5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkdldFB1YmxpY0tleVJlcXVlc3QaHi5nb29nbGUuY2xvdWQu",
-            "a21zLnYxLlB1YmxpY0tleSJfgtPkkwJZElcvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKi9jcnlwdG9L",
-            "ZXlWZXJzaW9ucy8qfS9wdWJsaWNLZXkSmAEKDUNyZWF0ZUtleVJpbmcSKS5n",
-            "b29nbGUuY2xvdWQua21zLnYxLkNyZWF0ZUtleVJpbmdSZXF1ZXN0GhwuZ29v",
-            "Z2xlLmNsb3VkLmttcy52MS5LZXlSaW5nIj6C0+STAjgiLC92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2tleVJpbmdzOghrZXlfcmluZxKt",
-            "AQoPQ3JlYXRlQ3J5cHRvS2V5EisuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVh",
-            "dGVDcnlwdG9LZXlSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52MS5Dcnlw",
-            "dG9LZXkiTYLT5JMCRyI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9rZXlSaW5ncy8qfS9jcnlwdG9LZXlzOgpjcnlwdG9fa2V5Et4BChZD",
-            "cmVhdGVDcnlwdG9LZXlWZXJzaW9uEjIuZ29vZ2xlLmNsb3VkLmttcy52MS5D",
-            "cmVhdGVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5r",
-            "bXMudjEuQ3J5cHRvS2V5VmVyc2lvbiJpgtPkkwJjIk0vdjEve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8q",
-            "fS9jcnlwdG9LZXlWZXJzaW9uczoSY3J5cHRvX2tleV92ZXJzaW9uErgBCg9V",
-            "cGRhdGVDcnlwdG9LZXkSKy5nb29nbGUuY2xvdWQua21zLnYxLlVwZGF0ZUNy",
-            "eXB0b0tleVJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tl",
-            "eSJYgtPkkwJSMkQvdjEve2NyeXB0b19rZXkubmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qfToKY3J5cHRvX2tl",
-            "eRLxAQoWVXBkYXRlQ3J5cHRvS2V5VmVyc2lvbhIyLmdvb2dsZS5jbG91ZC5r",
-            "bXMudjEuVXBkYXRlQ3J5cHRvS2V5VmVyc2lvblJlcXVlc3QaJS5nb29nbGUu",
-            "Y2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24ifILT5JMCdjJgL3YxL3tj",
-            "cnlwdG9fa2V5X3ZlcnNpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9",
-            "OhJjcnlwdG9fa2V5X3ZlcnNpb24SowEKB0VuY3J5cHQSIy5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkVuY3J5cHRSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmttcy52",
-            "MS5FbmNyeXB0UmVzcG9uc2UiTYLT5JMCRyJCL3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyoqfTplbmNy",
-            "eXB0OgEqEqIBCgdEZWNyeXB0EiMuZ29vZ2xlLmNsb3VkLmttcy52MS5EZWNy",
-            "eXB0UmVxdWVzdBokLmdvb2dsZS5jbG91ZC5rbXMudjEuRGVjcnlwdFJlc3Bv",
-            "bnNlIkyC0+STAkYiQS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2tleVJpbmdzLyovY3J5cHRvS2V5cy8qfTpkZWNyeXB0OgEqEtIBCg5Bc3lt",
-            "bWV0cmljU2lnbhIqLmdvb2dsZS5jbG91ZC5rbXMudjEuQXN5bW1ldHJpY1Np",
-            "Z25SZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmttcy52MS5Bc3ltbWV0cmljU2ln",
-            "blJlc3BvbnNlImeC0+STAmEiXC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNp",
-            "b25zLyp9OmFzeW1tZXRyaWNTaWduOgEqEt4BChFBc3ltbWV0cmljRGVjcnlw",
-            "dBItLmdvb2dsZS5jbG91ZC5rbXMudjEuQXN5bW1ldHJpY0RlY3J5cHRSZXF1",
-            "ZXN0Gi4uZ29vZ2xlLmNsb3VkLmttcy52MS5Bc3ltbWV0cmljRGVjcnlwdFJl",
-            "c3BvbnNlImqC0+STAmQiXy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25z",
-            "Lyp9OmFzeW1tZXRyaWNEZWNyeXB0OgEqEtUBCh1VcGRhdGVDcnlwdG9LZXlQ",
-            "cmltYXJ5VmVyc2lvbhI5Lmdvb2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlQ3J5",
-            "cHRvS2V5UHJpbWFyeVZlcnNpb25SZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5DcnlwdG9LZXkiWYLT5JMCUyJOL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9OnVwZGF0ZVBy",
-            "aW1hcnlWZXJzaW9uOgEqEtcBChdEZXN0cm95Q3J5cHRvS2V5VmVyc2lvbhIz",
-            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuRGVzdHJveUNyeXB0b0tleVZlcnNpb25S",
-            "ZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9u",
-            "ImCC0+STAloiVS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tl",
-            "eVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9OmRl",
-            "c3Ryb3k6ASoS1wEKF1Jlc3RvcmVDcnlwdG9LZXlWZXJzaW9uEjMuZ29vZ2xl",
-            "LmNsb3VkLmttcy52MS5SZXN0b3JlQ3J5cHRvS2V5VmVyc2lvblJlcXVlc3Qa",
-            "JS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24iYILT5JMC",
-            "WiJVL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3Mv",
-            "Ki9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06cmVzdG9yZToB",
-            "KkKMAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMudjFCCEttc1Byb3RvUAFaNmdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQva21z",
-            "L3YxO2ttc/gBAaoCE0dvb2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVcQ2xv",
-            "dWRcS21zXFYxYgZwcm90bzM="));
+            "dG9idWYvZmllbGRfbWFzay5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJv",
+            "dG8ibgoTTGlzdEtleVJpbmdzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJ",
+            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVy",
+            "GAQgASgJEhAKCG9yZGVyX2J5GAUgASgJIsIBChVMaXN0Q3J5cHRvS2V5c1Jl",
+            "cXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpw",
+            "YWdlX3Rva2VuGAMgASgJElAKDHZlcnNpb25fdmlldxgEIAEoDjI6Lmdvb2ds",
+            "ZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJz",
+            "aW9uVmlldxIOCgZmaWx0ZXIYBSABKAkSEAoIb3JkZXJfYnkYBiABKAkiwQEK",
+            "HExpc3RDcnlwdG9LZXlWZXJzaW9uc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJ",
+            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEkgKBHZp",
+            "ZXcYBCABKA4yOi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNp",
+            "b24uQ3J5cHRvS2V5VmVyc2lvblZpZXcSDgoGZmlsdGVyGAUgASgJEhAKCG9y",
+            "ZGVyX2J5GAYgASgJInAKFUxpc3RJbXBvcnRKb2JzUmVxdWVzdBIOCgZwYXJl",
+            "bnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
+            "KAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJInQKFExpc3RL",
+            "ZXlSaW5nc1Jlc3BvbnNlEi8KCWtleV9yaW5ncxgBIAMoCzIcLmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuS2V5UmluZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkS",
+            "EgoKdG90YWxfc2l6ZRgDIAEoBSJ6ChZMaXN0Q3J5cHRvS2V5c1Jlc3BvbnNl",
+            "EjMKC2NyeXB0b19rZXlzGAEgAygLMh4uZ29vZ2xlLmNsb3VkLmttcy52MS5D",
+            "cnlwdG9LZXkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3Np",
+            "emUYAyABKAUikAEKHUxpc3RDcnlwdG9LZXlWZXJzaW9uc1Jlc3BvbnNlEkIK",
+            "E2NyeXB0b19rZXlfdmVyc2lvbnMYASADKAsyJS5nb29nbGUuY2xvdWQua21z",
+            "LnYxLkNyeXB0b0tleVZlcnNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
+            "EhIKCnRvdGFsX3NpemUYAyABKAUiegoWTGlzdEltcG9ydEpvYnNSZXNwb25z",
+            "ZRIzCgtpbXBvcnRfam9icxgBIAMoCzIeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "SW1wb3J0Sm9iEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9z",
+            "aXplGAMgASgFIiEKEUdldEtleVJpbmdSZXF1ZXN0EgwKBG5hbWUYASABKAki",
+            "IwoTR2V0Q3J5cHRvS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJIioKGkdldENy",
+            "eXB0b0tleVZlcnNpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiIwoTR2V0UHVi",
+            "bGljS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJIiMKE0dldEltcG9ydEpvYlJl",
+            "cXVlc3QSDAoEbmFtZRgBIAEoCSJrChRDcmVhdGVLZXlSaW5nUmVxdWVzdBIO",
+            "CgZwYXJlbnQYASABKAkSEwoLa2V5X3JpbmdfaWQYAiABKAkSLgoIa2V5X3Jp",
+            "bmcYAyABKAsyHC5nb29nbGUuY2xvdWQua21zLnYxLktleVJpbmcimgEKFkNy",
+            "ZWF0ZUNyeXB0b0tleVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhUKDWNyeXB0",
+            "b19rZXlfaWQYAiABKAkSMgoKY3J5cHRvX2tleRgDIAEoCzIeLmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5EiUKHXNraXBfaW5pdGlhbF92ZXJzaW9u",
+            "X2NyZWF0aW9uGAUgASgIInIKHUNyZWF0ZUNyeXB0b0tleVZlcnNpb25SZXF1",
+            "ZXN0Eg4KBnBhcmVudBgBIAEoCRJBChJjcnlwdG9fa2V5X3ZlcnNpb24YAiAB",
+            "KAsyJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24izgEK",
+            "HUltcG9ydENyeXB0b0tleVZlcnNpb25SZXF1ZXN0Eg4KBnBhcmVudBgBIAEo",
+            "CRJSCglhbGdvcml0aG0YAiABKA4yPy5nb29nbGUuY2xvdWQua21zLnYxLkNy",
+            "eXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvbkFsZ29yaXRobRISCgpp",
+            "bXBvcnRfam9iGAQgASgJEh0KE3JzYV9hZXNfd3JhcHBlZF9rZXkYBSABKAxI",
+            "AEIWChR3cmFwcGVkX2tleV9tYXRlcmlhbCJzChZDcmVhdGVJbXBvcnRKb2JS",
+            "ZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIVCg1pbXBvcnRfam9iX2lkGAIgASgJ",
+            "EjIKCmltcG9ydF9qb2IYAyABKAsyHi5nb29nbGUuY2xvdWQua21zLnYxLklt",
+            "cG9ydEpvYiJ9ChZVcGRhdGVDcnlwdG9LZXlSZXF1ZXN0EjIKCmNyeXB0b19r",
+            "ZXkYASABKAsyHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleRIvCgt1",
+            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
+            "kwEKHVVwZGF0ZUNyeXB0b0tleVZlcnNpb25SZXF1ZXN0EkEKEmNyeXB0b19r",
+            "ZXlfdmVyc2lvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRv",
+            "S2V5VmVyc2lvbhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5GaWVsZE1hc2siWAoORW5jcnlwdFJlcXVlc3QSDAoEbmFtZRgBIAEo",
+            "CRIRCglwbGFpbnRleHQYAiABKAwSJQodYWRkaXRpb25hbF9hdXRoZW50aWNh",
+            "dGVkX2RhdGEYAyABKAwiWQoORGVjcnlwdFJlcXVlc3QSDAoEbmFtZRgBIAEo",
+            "CRISCgpjaXBoZXJ0ZXh0GAIgASgMEiUKHWFkZGl0aW9uYWxfYXV0aGVudGlj",
+            "YXRlZF9kYXRhGAMgASgMIlIKFUFzeW1tZXRyaWNTaWduUmVxdWVzdBIMCgRu",
+            "YW1lGAEgASgJEisKBmRpZ2VzdBgDIAEoCzIbLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuRGlnZXN0IjwKGEFzeW1tZXRyaWNEZWNyeXB0UmVxdWVzdBIMCgRuYW1l",
+            "GAEgASgJEhIKCmNpcGhlcnRleHQYAyABKAwiJAoPRGVjcnlwdFJlc3BvbnNl",
+            "EhEKCXBsYWludGV4dBgBIAEoDCIzCg9FbmNyeXB0UmVzcG9uc2USDAoEbmFt",
+            "ZRgBIAEoCRISCgpjaXBoZXJ0ZXh0GAIgASgMIisKFkFzeW1tZXRyaWNTaWdu",
+            "UmVzcG9uc2USEQoJc2lnbmF0dXJlGAEgASgMIi4KGUFzeW1tZXRyaWNEZWNy",
+            "eXB0UmVzcG9uc2USEQoJcGxhaW50ZXh0GAEgASgMIlMKJFVwZGF0ZUNyeXB0",
+            "b0tleVByaW1hcnlWZXJzaW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJEh0KFWNy",
+            "eXB0b19rZXlfdmVyc2lvbl9pZBgCIAEoCSIuCh5EZXN0cm95Q3J5cHRvS2V5",
+            "VmVyc2lvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSIuCh5SZXN0b3JlQ3J5cHRv",
+            "S2V5VmVyc2lvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJICgZEaWdlc3QSEAoG",
+            "c2hhMjU2GAEgASgMSAASEAoGc2hhMzg0GAIgASgMSAASEAoGc2hhNTEyGAMg",
+            "ASgMSABCCAoGZGlnZXN0IikKEExvY2F0aW9uTWV0YWRhdGESFQoNaHNtX2F2",
+            "YWlsYWJsZRgBIAEoCDKXIwoUS2V5TWFuYWdlbWVudFNlcnZpY2USmQEKDExp",
+            "c3RLZXlSaW5ncxIoLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEtleVJpbmdz",
+            "UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdEtleVJpbmdzUmVz",
+            "cG9uc2UiNILT5JMCLhIsL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0va2V5UmluZ3MSrAEKDkxpc3RDcnlwdG9LZXlzEiouZ29vZ2xlLmNs",
+            "b3VkLmttcy52MS5MaXN0Q3J5cHRvS2V5c1JlcXVlc3QaKy5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkxpc3RDcnlwdG9LZXlzUmVzcG9uc2UiQYLT5JMCOxI5L3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qfS9j",
+            "cnlwdG9LZXlzEtUBChVMaXN0Q3J5cHRvS2V5VmVyc2lvbnMSMS5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlWZXJzaW9uc1JlcXVlc3QaMi5n",
+            "b29nbGUuY2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlWZXJzaW9uc1Jlc3Bv",
+            "bnNlIlWC0+STAk8STS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9L2NyeXB0b0tleVZlcnNpb25z",
+            "EqwBCg5MaXN0SW1wb3J0Sm9icxIqLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlz",
+            "dEltcG9ydEpvYnNSZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0",
+            "SW1wb3J0Sm9ic1Jlc3BvbnNlIkGC0+STAjsSOS92MS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKn0vaW1wb3J0Sm9icxKIAQoK",
+            "R2V0S2V5UmluZxImLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0S2V5UmluZ1Jl",
+            "cXVlc3QaHC5nb29nbGUuY2xvdWQua21zLnYxLktleVJpbmciNILT5JMCLhIs",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKn0S",
+            "mwEKDEdldENyeXB0b0tleRIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0Q3J5",
+            "cHRvS2V5UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
+            "IkGC0+STAjsSOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tl",
+            "eVJpbmdzLyovY3J5cHRvS2V5cy8qfRLEAQoTR2V0Q3J5cHRvS2V5VmVyc2lv",
+            "bhIvLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0Q3J5cHRvS2V5VmVyc2lvblJl",
+            "cXVlc3QaJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24i",
+            "VYLT5JMCTxJNL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5",
+            "UmluZ3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn0SuQEK",
+            "DEdldFB1YmxpY0tleRIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0UHVibGlj",
+            "S2V5UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuUHVibGljS2V5Il+C",
+            "0+STAlkSVy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJp",
+            "bmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9L3B1Ymxp",
+            "Y0tleRKbAQoMR2V0SW1wb3J0Sm9iEiguZ29vZ2xlLmNsb3VkLmttcy52MS5H",
+            "ZXRJbXBvcnRKb2JSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52MS5JbXBv",
+            "cnRKb2IiQYLT5JMCOxI5L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyova2V5UmluZ3MvKi9pbXBvcnRKb2JzLyp9EpgBCg1DcmVhdGVLZXlSaW5n",
+            "EikuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVLZXlSaW5nUmVxdWVzdBoc",
+            "Lmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5UmluZyI+gtPkkwI4IiwvdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9rZXlSaW5nczoIa2V5X3Jp",
+            "bmcSrQEKD0NyZWF0ZUNyeXB0b0tleRIrLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "Q3JlYXRlQ3J5cHRvS2V5UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "Q3J5cHRvS2V5Ik2C0+STAkciOS92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyova2V5UmluZ3MvKn0vY3J5cHRvS2V5czoKY3J5cHRvX2tleRLe",
+            "AQoWQ3JlYXRlQ3J5cHRvS2V5VmVyc2lvbhIyLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuQ3JlYXRlQ3J5cHRvS2V5VmVyc2lvblJlcXVlc3QaJS5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24iaYLT5JMCYyJNL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
+            "eXMvKn0vY3J5cHRvS2V5VmVyc2lvbnM6EmNyeXB0b19rZXlfdmVyc2lvbhLU",
+            "AQoWSW1wb3J0Q3J5cHRvS2V5VmVyc2lvbhIyLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuSW1wb3J0Q3J5cHRvS2V5VmVyc2lvblJlcXVlc3QaJS5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24iX4LT5JMCWSJUL3YxL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
+            "eXMvKn0vY3J5cHRvS2V5VmVyc2lvbnM6aW1wb3J0OgEqEq0BCg9DcmVhdGVJ",
+            "bXBvcnRKb2ISKy5nb29nbGUuY2xvdWQua21zLnYxLkNyZWF0ZUltcG9ydEpv",
+            "YlJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkltcG9ydEpvYiJNgtPk",
+            "kwJHIjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJp",
+            "bmdzLyp9L2ltcG9ydEpvYnM6CmltcG9ydF9qb2ISuAEKD1VwZGF0ZUNyeXB0",
+            "b0tleRIrLmdvb2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlQ3J5cHRvS2V5UmVx",
+            "dWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5IliC0+STAlIy",
+            "RC92MS97Y3J5cHRvX2tleS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "a2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9OgpjcnlwdG9fa2V5EvEBChZVcGRh",
+            "dGVDcnlwdG9LZXlWZXJzaW9uEjIuZ29vZ2xlLmNsb3VkLmttcy52MS5VcGRh",
+            "dGVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuQ3J5cHRvS2V5VmVyc2lvbiJ8gtPkkwJ2MmAvdjEve2NyeXB0b19rZXlf",
+            "dmVyc2lvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3Mv",
+            "Ki9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06EmNyeXB0b19r",
+            "ZXlfdmVyc2lvbhKjAQoHRW5jcnlwdBIjLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "RW5jcnlwdFJlcXVlc3QaJC5nb29nbGUuY2xvdWQua21zLnYxLkVuY3J5cHRS",
+            "ZXNwb25zZSJNgtPkkwJHIkIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKip9OmVuY3J5cHQ6ASoSogEK",
+            "B0RlY3J5cHQSIy5nb29nbGUuY2xvdWQua21zLnYxLkRlY3J5cHRSZXF1ZXN0",
+            "GiQuZ29vZ2xlLmNsb3VkLmttcy52MS5EZWNyeXB0UmVzcG9uc2UiTILT5JMC",
+            "RiJBL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3Mv",
+            "Ki9jcnlwdG9LZXlzLyp9OmRlY3J5cHQ6ASoS0gEKDkFzeW1tZXRyaWNTaWdu",
+            "EiouZ29vZ2xlLmNsb3VkLmttcy52MS5Bc3ltbWV0cmljU2lnblJlcXVlc3Qa",
+            "Ky5nb29nbGUuY2xvdWQua21zLnYxLkFzeW1tZXRyaWNTaWduUmVzcG9uc2Ui",
+            "Z4LT5JMCYSJcL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5",
+            "UmluZ3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06YXN5",
+            "bW1ldHJpY1NpZ246ASoS3gEKEUFzeW1tZXRyaWNEZWNyeXB0Ei0uZ29vZ2xl",
+            "LmNsb3VkLmttcy52MS5Bc3ltbWV0cmljRGVjcnlwdFJlcXVlc3QaLi5nb29n",
+            "bGUuY2xvdWQua21zLnYxLkFzeW1tZXRyaWNEZWNyeXB0UmVzcG9uc2UiaoLT",
+            "5JMCZCJfL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5Umlu",
+            "Z3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06YXN5bW1l",
+            "dHJpY0RlY3J5cHQ6ASoS1QEKHVVwZGF0ZUNyeXB0b0tleVByaW1hcnlWZXJz",
+            "aW9uEjkuZ29vZ2xlLmNsb3VkLmttcy52MS5VcGRhdGVDcnlwdG9LZXlQcmlt",
+            "YXJ5VmVyc2lvblJlcXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0",
+            "b0tleSJZgtPkkwJTIk4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn06dXBkYXRlUHJpbWFyeVZlcnNp",
+            "b246ASoS1wEKF0Rlc3Ryb3lDcnlwdG9LZXlWZXJzaW9uEjMuZ29vZ2xlLmNs",
+            "b3VkLmttcy52MS5EZXN0cm95Q3J5cHRvS2V5VmVyc2lvblJlcXVlc3QaJS5n",
+            "b29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24iYILT5JMCWiJV",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9j",
+            "cnlwdG9LZXlzLyovY3J5cHRvS2V5VmVyc2lvbnMvKn06ZGVzdHJveToBKhLX",
+            "AQoXUmVzdG9yZUNyeXB0b0tleVZlcnNpb24SMy5nb29nbGUuY2xvdWQua21z",
+            "LnYxLlJlc3RvcmVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbiJggtPkkwJaIlUvdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
+            "eXMvKi9jcnlwdG9LZXlWZXJzaW9ucy8qfTpyZXN0b3JlOgEqGnTKQRdjbG91",
+            "ZGttcy5nb29nbGVhcGlzLmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9jbG91ZGttc0KMAQoXY29tLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djFCCEttc1Byb3RvUAFaNmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQva21zL3YxO2ttc/gBAaoCE0dvb2dsZS5DbG91ZC5L",
+            "bXMuVjHKAhNHb29nbGVcQ2xvdWRcS21zXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsRequest), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "VersionView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsRequest), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "VersionView", "Filter", "OrderBy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View", "Filter", "OrderBy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListImportJobsRequest), global::Google.Cloud.Kms.V1.ListImportJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsResponse), global::Google.Cloud.Kms.V1.ListKeyRingsResponse.Parser, new[]{ "KeyRings", "NextPageToken", "TotalSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysResponse), global::Google.Cloud.Kms.V1.ListCryptoKeysResponse.Parser, new[]{ "CryptoKeys", "NextPageToken", "TotalSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse), global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse.Parser, new[]{ "CryptoKeyVersions", "NextPageToken", "TotalSize" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListImportJobsResponse), global::Google.Cloud.Kms.V1.ListImportJobsResponse.Parser, new[]{ "ImportJobs", "NextPageToken", "TotalSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetKeyRingRequest), global::Google.Cloud.Kms.V1.GetKeyRingRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest), global::Google.Cloud.Kms.V1.GetCryptoKeyRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetPublicKeyRequest), global::Google.Cloud.Kms.V1.GetPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.GetImportJobRequest), global::Google.Cloud.Kms.V1.GetImportJobRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateKeyRingRequest), global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser, new[]{ "Parent", "KeyRingId", "KeyRing" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest), global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser, new[]{ "Parent", "CryptoKeyId", "CryptoKey" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest), global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser, new[]{ "Parent", "CryptoKeyId", "CryptoKey", "SkipInitialVersionCreation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser, new[]{ "Parent", "CryptoKeyVersion" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser, new[]{ "Parent", "Algorithm", "ImportJob", "RsaAesWrappedKey" }, new[]{ "WrappedKeyMaterial" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateImportJobRequest), global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser, new[]{ "Parent", "ImportJobId", "ImportJob" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser, new[]{ "CryptoKey", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest.Parser, new[]{ "CryptoKeyVersion", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptRequest), global::Google.Cloud.Kms.V1.EncryptRequest.Parser, new[]{ "Name", "Plaintext", "AdditionalAuthenticatedData" }, null, null, null),
@@ -205,8 +244,7 @@ namespace Google.Cloud.Kms.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
+  /// Request message for [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
   /// </summary>
   public sealed partial class ListKeyRingsRequest : pb::IMessage<ListKeyRingsRequest> {
     private static readonly pb::MessageParser<ListKeyRingsRequest> _parser = new pb::MessageParser<ListKeyRingsRequest>(() => new ListKeyRingsRequest());
@@ -236,6 +274,8 @@ namespace Google.Cloud.Kms.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -249,8 +289,7 @@ namespace Google.Cloud.Kms.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format
-    /// `projects/*/locations/*`.
+    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -264,12 +303,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [KeyRings][google.cloud.kms.v1.KeyRing] to
-    /// include in the response.  Further [KeyRings][google.cloud.kms.v1.KeyRing]
-    /// can subsequently be obtained by including the
-    /// [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token]
-    /// in a subsequent request.  If unspecified, the server will pick an
-    /// appropriate default.
+    /// Optional limit on the number of [KeyRings][google.cloud.kms.v1.KeyRing] to include in the
+    /// response.  Further [KeyRings][google.cloud.kms.v1.KeyRing] can subsequently be obtained by
+    /// including the [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token] in a subsequent
+    /// request.  If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -294,6 +331,35 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Only include resources that match the filter in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. Specify how the results should be sorted. If not specified, the
+    /// results will be sorted in the default order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListKeyRingsRequest);
@@ -310,6 +376,8 @@ namespace Google.Cloud.Kms.V1 {
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -319,6 +387,8 @@ namespace Google.Cloud.Kms.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -344,6 +414,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -360,6 +438,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -380,6 +464,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -404,6 +494,14 @@ namespace Google.Cloud.Kms.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -411,8 +509,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
+  /// Request message for [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
   /// </summary>
   public sealed partial class ListCryptoKeysRequest : pb::IMessage<ListCryptoKeysRequest> {
     private static readonly pb::MessageParser<ListCryptoKeysRequest> _parser = new pb::MessageParser<ListCryptoKeysRequest>(() => new ListCryptoKeysRequest());
@@ -443,6 +540,8 @@ namespace Google.Cloud.Kms.V1 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       versionView_ = other.versionView_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -455,8 +554,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing]
-    /// to list, in the format `projects/*/locations/*/keyRings/*`.
+    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing] to list, in the format
+    /// `projects/*/locations/*/keyRings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -470,13 +569,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of [CryptoKeys][google.cloud.kms.v1.CryptoKey]
-    /// to include in the response.  Further
-    /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] can subsequently be obtained by
-    /// including the
-    /// [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token]
-    /// in a subsequent request.  If unspecified, the server will pick an
-    /// appropriate default.
+    /// Optional limit on the number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] to include in the
+    /// response.  Further [CryptoKeys][google.cloud.kms.v1.CryptoKey] can subsequently be obtained by
+    /// including the [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token] in a subsequent
+    /// request.  If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -515,6 +611,35 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 5;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Only include resources that match the filter in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 6;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. Specify how the results should be sorted. If not specified, the
+    /// results will be sorted in the default order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListCryptoKeysRequest);
@@ -532,6 +657,8 @@ namespace Google.Cloud.Kms.V1 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (VersionView != other.VersionView) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -542,6 +669,8 @@ namespace Google.Cloud.Kms.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (VersionView != 0) hash ^= VersionView.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -571,6 +700,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) VersionView);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -590,6 +727,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (VersionView != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VersionView);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -613,6 +756,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.VersionView != 0) {
         VersionView = other.VersionView;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -641,6 +790,14 @@ namespace Google.Cloud.Kms.V1 {
             versionView_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) input.ReadEnum();
             break;
           }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 50: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -648,8 +805,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
+  /// Request message for [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
   /// </summary>
   public sealed partial class ListCryptoKeyVersionsRequest : pb::IMessage<ListCryptoKeyVersionsRequest> {
     private static readonly pb::MessageParser<ListCryptoKeyVersionsRequest> _parser = new pb::MessageParser<ListCryptoKeyVersionsRequest>(() => new ListCryptoKeyVersionsRequest());
@@ -680,6 +836,8 @@ namespace Google.Cloud.Kms.V1 {
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       view_ = other.view_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -692,8 +850,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to list, in the format
+    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to list, in the format
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -708,13 +865,11 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional limit on the number of
-    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to include in the
-    /// response. Further [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion]
-    /// can subsequently be obtained by including the
-    /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token]
-    /// in a subsequent request. If unspecified, the server will pick an
-    /// appropriate default.
+    /// Optional limit on the number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to
+    /// include in the response. Further [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] can
+    /// subsequently be obtained by including the
+    /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token] in a subsequent request.
+    /// If unspecified, the server will pick an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -753,6 +908,35 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 5;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Only include resources that match the filter in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 6;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. Specify how the results should be sorted. If not specified, the
+    /// results will be sorted in the default order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListCryptoKeyVersionsRequest);
@@ -770,6 +954,8 @@ namespace Google.Cloud.Kms.V1 {
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (View != other.View) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -780,6 +966,8 @@ namespace Google.Cloud.Kms.V1 {
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (View != 0) hash ^= View.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -809,6 +997,14 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) View);
       }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -828,6 +1024,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (View != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -851,6 +1053,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.View != 0) {
         View = other.View;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -879,6 +1087,14 @@ namespace Google.Cloud.Kms.V1 {
             view_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionView) input.ReadEnum();
             break;
           }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 50: {
+            OrderBy = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -886,8 +1102,272 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
+  /// Request message for [KeyManagementService.ListImportJobs][google.cloud.kms.v1.KeyManagementService.ListImportJobs].
+  /// </summary>
+  public sealed partial class ListImportJobsRequest : pb::IMessage<ListImportJobsRequest> {
+    private static readonly pb::MessageParser<ListImportJobsRequest> _parser = new pb::MessageParser<ListImportJobsRequest>(() => new ListImportJobsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListImportJobsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListImportJobsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListImportJobsRequest(ListImportJobsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      orderBy_ = other.orderBy_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListImportJobsRequest Clone() {
+      return new ListImportJobsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing] to list, in the format
+    /// `projects/*/locations/*/keyRings/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// Optional limit on the number of [ImportJobs][google.cloud.kms.v1.ImportJob] to include in the
+    /// response. Further [ImportJobs][google.cloud.kms.v1.ImportJob] can subsequently be obtained by
+    /// including the [ListImportJobsResponse.next_page_token][google.cloud.kms.v1.ListImportJobsResponse.next_page_token] in a subsequent
+    /// request. If unspecified, the server will pick an appropriate default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional pagination token, returned earlier via
+    /// [ListImportJobsResponse.next_page_token][google.cloud.kms.v1.ListImportJobsResponse.next_page_token].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 4;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. Only include resources that match the filter in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 5;
+    private string orderBy_ = "";
+    /// <summary>
+    /// Optional. Specify how the results should be sorted. If not specified, the
+    /// results will be sorted in the default order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListImportJobsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListImportJobsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      if (OrderBy != other.OrderBy) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OrderBy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (OrderBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListImportJobsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.OrderBy.Length != 0) {
+        OrderBy = other.OrderBy;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 42: {
+            OrderBy = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Response message for [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
   /// </summary>
   public sealed partial class ListKeyRingsResponse : pb::IMessage<ListKeyRingsResponse> {
     private static readonly pb::MessageParser<ListKeyRingsResponse> _parser = new pb::MessageParser<ListKeyRingsResponse>(() => new ListKeyRingsResponse());
@@ -897,7 +1377,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -943,8 +1423,7 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListKeyRingsRequest.page_token][google.cloud.kms.v1.ListKeyRingsRequest.page_token]
-    /// to retrieve the next page of results.
+    /// [ListKeyRingsRequest.page_token][google.cloud.kms.v1.ListKeyRingsRequest.page_token] to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -958,8 +1437,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [KeyRings][google.cloud.kms.v1.KeyRing] that matched
-    /// the query.
+    /// The total number of [KeyRings][google.cloud.kms.v1.KeyRing] that matched the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TotalSize {
@@ -1079,8 +1557,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
+  /// Response message for [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
   /// </summary>
   public sealed partial class ListCryptoKeysResponse : pb::IMessage<ListCryptoKeysResponse> {
     private static readonly pb::MessageParser<ListCryptoKeysResponse> _parser = new pb::MessageParser<ListCryptoKeysResponse>(() => new ListCryptoKeysResponse());
@@ -1090,7 +1567,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1136,8 +1613,7 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListCryptoKeysRequest.page_token][google.cloud.kms.v1.ListCryptoKeysRequest.page_token]
-    /// to retrieve the next page of results.
+    /// [ListCryptoKeysRequest.page_token][google.cloud.kms.v1.ListCryptoKeysRequest.page_token] to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1151,8 +1627,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] that
-    /// matched the query.
+    /// The total number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] that matched the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TotalSize {
@@ -1272,8 +1747,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
+  /// Response message for [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
   /// </summary>
   public sealed partial class ListCryptoKeyVersionsResponse : pb::IMessage<ListCryptoKeyVersionsResponse> {
     private static readonly pb::MessageParser<ListCryptoKeyVersionsResponse> _parser = new pb::MessageParser<ListCryptoKeyVersionsResponse>(() => new ListCryptoKeyVersionsResponse());
@@ -1283,7 +1757,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1329,8 +1803,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListCryptoKeyVersionsRequest.page_token][google.cloud.kms.v1.ListCryptoKeyVersionsRequest.page_token]
-    /// to retrieve the next page of results.
+    /// [ListCryptoKeyVersionsRequest.page_token][google.cloud.kms.v1.ListCryptoKeyVersionsRequest.page_token] to retrieve the next page of
+    /// results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1344,8 +1818,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of
-    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] that matched the
+    /// The total number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] that matched the
     /// query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1466,8 +1939,197 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.GetKeyRing][google.cloud.kms.v1.KeyManagementService.GetKeyRing].
+  /// Response message for [KeyManagementService.ListImportJobs][google.cloud.kms.v1.KeyManagementService.ListImportJobs].
+  /// </summary>
+  public sealed partial class ListImportJobsResponse : pb::IMessage<ListImportJobsResponse> {
+    private static readonly pb::MessageParser<ListImportJobsResponse> _parser = new pb::MessageParser<ListImportJobsResponse>(() => new ListImportJobsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListImportJobsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListImportJobsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListImportJobsResponse(ListImportJobsResponse other) : this() {
+      importJobs_ = other.importJobs_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      totalSize_ = other.totalSize_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListImportJobsResponse Clone() {
+      return new ListImportJobsResponse(this);
+    }
+
+    /// <summary>Field number for the "import_jobs" field.</summary>
+    public const int ImportJobsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Kms.V1.ImportJob> _repeated_importJobs_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Kms.V1.ImportJob.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Kms.V1.ImportJob> importJobs_ = new pbc::RepeatedField<global::Google.Cloud.Kms.V1.ImportJob>();
+    /// <summary>
+    /// The list of [ImportJobs][google.cloud.kms.v1.ImportJob].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Kms.V1.ImportJob> ImportJobs {
+      get { return importJobs_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token to retrieve next page of results. Pass this value in
+    /// [ListImportJobsRequest.page_token][google.cloud.kms.v1.ListImportJobsRequest.page_token] to retrieve the next page of results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "total_size" field.</summary>
+    public const int TotalSizeFieldNumber = 3;
+    private int totalSize_;
+    /// <summary>
+    /// The total number of [ImportJobs][google.cloud.kms.v1.ImportJob] that matched the query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TotalSize {
+      get { return totalSize_; }
+      set {
+        totalSize_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListImportJobsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListImportJobsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!importJobs_.Equals(other.importJobs_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      if (TotalSize != other.TotalSize) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= importJobs_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (TotalSize != 0) hash ^= TotalSize.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      importJobs_.WriteTo(output, _repeated_importJobs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (TotalSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(TotalSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += importJobs_.CalculateSize(_repeated_importJobs_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (TotalSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSize);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListImportJobsResponse other) {
+      if (other == null) {
+        return;
+      }
+      importJobs_.Add(other.importJobs_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      if (other.TotalSize != 0) {
+        TotalSize = other.TotalSize;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            importJobs_.AddEntriesFrom(input, _repeated_importJobs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            TotalSize = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request message for [KeyManagementService.GetKeyRing][google.cloud.kms.v1.KeyManagementService.GetKeyRing].
   /// </summary>
   public sealed partial class GetKeyRingRequest : pb::IMessage<GetKeyRingRequest> {
     private static readonly pb::MessageParser<GetKeyRingRequest> _parser = new pb::MessageParser<GetKeyRingRequest>(() => new GetKeyRingRequest());
@@ -1477,7 +2139,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1507,8 +2169,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.KeyRing.name] of the
-    /// [KeyRing][google.cloud.kms.v1.KeyRing] to get.
+    /// The [name][google.cloud.kms.v1.KeyRing.name] of the [KeyRing][google.cloud.kms.v1.KeyRing] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1603,8 +2264,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.GetCryptoKey][google.cloud.kms.v1.KeyManagementService.GetCryptoKey].
+  /// Request message for [KeyManagementService.GetCryptoKey][google.cloud.kms.v1.KeyManagementService.GetCryptoKey].
   /// </summary>
   public sealed partial class GetCryptoKeyRequest : pb::IMessage<GetCryptoKeyRequest> {
     private static readonly pb::MessageParser<GetCryptoKeyRequest> _parser = new pb::MessageParser<GetCryptoKeyRequest>(() => new GetCryptoKeyRequest());
@@ -1614,7 +2274,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1644,8 +2304,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKey.name] of the
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+    /// The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1740,8 +2399,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.GetCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.GetCryptoKeyVersion].
+  /// Request message for [KeyManagementService.GetCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.GetCryptoKeyVersion].
   /// </summary>
   public sealed partial class GetCryptoKeyVersionRequest : pb::IMessage<GetCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<GetCryptoKeyVersionRequest> _parser = new pb::MessageParser<GetCryptoKeyVersionRequest>(() => new GetCryptoKeyVersionRequest());
@@ -1751,7 +2409,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1781,8 +2439,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1877,8 +2534,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+  /// Request message for [KeyManagementService.GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
   /// </summary>
   public sealed partial class GetPublicKeyRequest : pb::IMessage<GetPublicKeyRequest> {
     private static readonly pb::MessageParser<GetPublicKeyRequest> _parser = new pb::MessageParser<GetPublicKeyRequest>(() => new GetPublicKeyRequest());
@@ -1888,7 +2544,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1918,8 +2574,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to get.
+    /// The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
+    /// get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2014,8 +2670,142 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.CreateKeyRing][google.cloud.kms.v1.KeyManagementService.CreateKeyRing].
+  /// Request message for [KeyManagementService.GetImportJob][google.cloud.kms.v1.KeyManagementService.GetImportJob].
+  /// </summary>
+  public sealed partial class GetImportJobRequest : pb::IMessage<GetImportJobRequest> {
+    private static readonly pb::MessageParser<GetImportJobRequest> _parser = new pb::MessageParser<GetImportJobRequest>(() => new GetImportJobRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetImportJobRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetImportJobRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetImportJobRequest(GetImportJobRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetImportJobRequest Clone() {
+      return new GetImportJobRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetImportJobRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetImportJobRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetImportJobRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request message for [KeyManagementService.CreateKeyRing][google.cloud.kms.v1.KeyManagementService.CreateKeyRing].
   /// </summary>
   public sealed partial class CreateKeyRingRequest : pb::IMessage<CreateKeyRingRequest> {
     private static readonly pb::MessageParser<CreateKeyRingRequest> _parser = new pb::MessageParser<CreateKeyRingRequest>(() => new CreateKeyRingRequest());
@@ -2025,7 +2815,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2058,8 +2848,7 @@ namespace Google.Cloud.Kms.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format
-    /// `projects/*/locations/*`.
+    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2221,8 +3010,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.CreateCryptoKey][google.cloud.kms.v1.KeyManagementService.CreateCryptoKey].
+  /// Request message for [KeyManagementService.CreateCryptoKey][google.cloud.kms.v1.KeyManagementService.CreateCryptoKey].
   /// </summary>
   public sealed partial class CreateCryptoKeyRequest : pb::IMessage<CreateCryptoKeyRequest> {
     private static readonly pb::MessageParser<CreateCryptoKeyRequest> _parser = new pb::MessageParser<CreateCryptoKeyRequest>(() => new CreateCryptoKeyRequest());
@@ -2232,7 +3020,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2252,6 +3040,7 @@ namespace Google.Cloud.Kms.V1 {
       parent_ = other.parent_;
       cryptoKeyId_ = other.cryptoKeyId_;
       cryptoKey_ = other.cryptoKey_ != null ? other.cryptoKey_.Clone() : null;
+      skipInitialVersionCreation_ = other.skipInitialVersionCreation_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2264,8 +3053,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing
-    /// associated with the [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing associated with the
+    /// [CryptoKeys][google.cloud.kms.v1.CryptoKey].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2304,6 +3093,24 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "skip_initial_version_creation" field.</summary>
+    public const int SkipInitialVersionCreationFieldNumber = 5;
+    private bool skipInitialVersionCreation_;
+    /// <summary>
+    /// If set to true, the request will create a [CryptoKey][google.cloud.kms.v1.CryptoKey] without any
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion]. You must manually call
+    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] or
+    /// [ImportCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.ImportCryptoKeyVersion]
+    /// before you can use this [CryptoKey][google.cloud.kms.v1.CryptoKey].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool SkipInitialVersionCreation {
+      get { return skipInitialVersionCreation_; }
+      set {
+        skipInitialVersionCreation_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateCryptoKeyRequest);
@@ -2320,6 +3127,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Parent != other.Parent) return false;
       if (CryptoKeyId != other.CryptoKeyId) return false;
       if (!object.Equals(CryptoKey, other.CryptoKey)) return false;
+      if (SkipInitialVersionCreation != other.SkipInitialVersionCreation) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2329,6 +3137,7 @@ namespace Google.Cloud.Kms.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (CryptoKeyId.Length != 0) hash ^= CryptoKeyId.GetHashCode();
       if (cryptoKey_ != null) hash ^= CryptoKey.GetHashCode();
+      if (SkipInitialVersionCreation != false) hash ^= SkipInitialVersionCreation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2354,6 +3163,10 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(CryptoKey);
       }
+      if (SkipInitialVersionCreation != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SkipInitialVersionCreation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2370,6 +3183,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (cryptoKey_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CryptoKey);
+      }
+      if (SkipInitialVersionCreation != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2393,6 +3209,9 @@ namespace Google.Cloud.Kms.V1 {
           cryptoKey_ = new global::Google.Cloud.Kms.V1.CryptoKey();
         }
         CryptoKey.MergeFrom(other.CryptoKey);
+      }
+      if (other.SkipInitialVersionCreation != false) {
+        SkipInitialVersionCreation = other.SkipInitialVersionCreation;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2420,6 +3239,10 @@ namespace Google.Cloud.Kms.V1 {
             input.ReadMessage(cryptoKey_);
             break;
           }
+          case 40: {
+            SkipInitialVersionCreation = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -2427,8 +3250,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion].
+  /// Request message for [KeyManagementService.CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion].
   /// </summary>
   public sealed partial class CreateCryptoKeyVersionRequest : pb::IMessage<CreateCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<CreateCryptoKeyVersionRequest> _parser = new pb::MessageParser<CreateCryptoKeyVersionRequest>(() => new CreateCryptoKeyVersionRequest());
@@ -2438,7 +3260,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2469,9 +3291,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with the
-    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
+    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with
+    /// the [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2485,8 +3306,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 2;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with initial
-    /// field values.
+    /// A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion CryptoKeyVersion {
@@ -2603,8 +3423,490 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.UpdateCryptoKey][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKey].
+  /// Request message for [KeyManagementService.ImportCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.ImportCryptoKeyVersion].
+  /// </summary>
+  public sealed partial class ImportCryptoKeyVersionRequest : pb::IMessage<ImportCryptoKeyVersionRequest> {
+    private static readonly pb::MessageParser<ImportCryptoKeyVersionRequest> _parser = new pb::MessageParser<ImportCryptoKeyVersionRequest>(() => new ImportCryptoKeyVersionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ImportCryptoKeyVersionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCryptoKeyVersionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCryptoKeyVersionRequest(ImportCryptoKeyVersionRequest other) : this() {
+      parent_ = other.parent_;
+      algorithm_ = other.algorithm_;
+      importJob_ = other.importJob_;
+      switch (other.WrappedKeyMaterialCase) {
+        case WrappedKeyMaterialOneofCase.RsaAesWrappedKey:
+          RsaAesWrappedKey = other.RsaAesWrappedKey;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ImportCryptoKeyVersionRequest Clone() {
+      return new ImportCryptoKeyVersionRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to
+    /// be imported into.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "algorithm" field.</summary>
+    public const int AlgorithmFieldNumber = 2;
+    private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = 0;
+    /// <summary>
+    /// Required. The [algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] of
+    /// the key being imported. This does not need to match the
+    /// [version_template][google.cloud.kms.v1.CryptoKey.version_template] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] this
+    /// version imports into.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
+      get { return algorithm_; }
+      set {
+        algorithm_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "import_job" field.</summary>
+    public const int ImportJobFieldNumber = 4;
+    private string importJob_ = "";
+    /// <summary>
+    /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] that was used to
+    /// wrap this key material.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImportJob {
+      get { return importJob_; }
+      set {
+        importJob_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rsa_aes_wrapped_key" field.</summary>
+    public const int RsaAesWrappedKeyFieldNumber = 5;
+    /// <summary>
+    /// Wrapped key material produced with
+    /// [RSA_OAEP_3072_SHA1_AES_256][google.cloud.kms.v1.ImportJob.ImportMethod.RSA_OAEP_3072_SHA1_AES_256]
+    /// or
+    /// [RSA_OAEP_4096_SHA1_AES_256][google.cloud.kms.v1.ImportJob.ImportMethod.RSA_OAEP_4096_SHA1_AES_256].
+    ///
+    /// This field contains the concatenation of two wrapped keys:
+    /// &lt;ol>
+    ///   &lt;li>An ephemeral AES-256 wrapping key wrapped with the
+    ///       [public_key][google.cloud.kms.v1.ImportJob.public_key] using RSAES-OAEP with SHA-1,
+    ///       MGF1 with SHA-1, and an empty label.
+    ///   &lt;/li>
+    ///   &lt;li>The key to be imported, wrapped with the ephemeral AES-256 key
+    ///       using AES-KWP (RFC 5649).
+    ///   &lt;/li>
+    /// &lt;/ol>
+    ///
+    /// This format is the same as the format produced by PKCS#11 mechanism
+    /// CKM_RSA_AES_KEY_WRAP.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString RsaAesWrappedKey {
+      get { return wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey ? (pb::ByteString) wrappedKeyMaterial_ : pb::ByteString.Empty; }
+      set {
+        wrappedKeyMaterial_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        wrappedKeyMaterialCase_ = WrappedKeyMaterialOneofCase.RsaAesWrappedKey;
+      }
+    }
+
+    private object wrappedKeyMaterial_;
+    /// <summary>Enum of possible cases for the "wrapped_key_material" oneof.</summary>
+    public enum WrappedKeyMaterialOneofCase {
+      None = 0,
+      RsaAesWrappedKey = 5,
+    }
+    private WrappedKeyMaterialOneofCase wrappedKeyMaterialCase_ = WrappedKeyMaterialOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WrappedKeyMaterialOneofCase WrappedKeyMaterialCase {
+      get { return wrappedKeyMaterialCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearWrappedKeyMaterial() {
+      wrappedKeyMaterialCase_ = WrappedKeyMaterialOneofCase.None;
+      wrappedKeyMaterial_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ImportCryptoKeyVersionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ImportCryptoKeyVersionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Algorithm != other.Algorithm) return false;
+      if (ImportJob != other.ImportJob) return false;
+      if (RsaAesWrappedKey != other.RsaAesWrappedKey) return false;
+      if (WrappedKeyMaterialCase != other.WrappedKeyMaterialCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Algorithm != 0) hash ^= Algorithm.GetHashCode();
+      if (ImportJob.Length != 0) hash ^= ImportJob.GetHashCode();
+      if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) hash ^= RsaAesWrappedKey.GetHashCode();
+      hash ^= (int) wrappedKeyMaterialCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Algorithm != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Algorithm);
+      }
+      if (ImportJob.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ImportJob);
+      }
+      if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) {
+        output.WriteRawTag(42);
+        output.WriteBytes(RsaAesWrappedKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Algorithm != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Algorithm);
+      }
+      if (ImportJob.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImportJob);
+      }
+      if (wrappedKeyMaterialCase_ == WrappedKeyMaterialOneofCase.RsaAesWrappedKey) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(RsaAesWrappedKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ImportCryptoKeyVersionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Algorithm != 0) {
+        Algorithm = other.Algorithm;
+      }
+      if (other.ImportJob.Length != 0) {
+        ImportJob = other.ImportJob;
+      }
+      switch (other.WrappedKeyMaterialCase) {
+        case WrappedKeyMaterialOneofCase.RsaAesWrappedKey:
+          RsaAesWrappedKey = other.RsaAesWrappedKey;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            algorithm_ = (global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            ImportJob = input.ReadString();
+            break;
+          }
+          case 42: {
+            RsaAesWrappedKey = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request message for [KeyManagementService.CreateImportJob][google.cloud.kms.v1.KeyManagementService.CreateImportJob].
+  /// </summary>
+  public sealed partial class CreateImportJobRequest : pb::IMessage<CreateImportJobRequest> {
+    private static readonly pb::MessageParser<CreateImportJobRequest> _parser = new pb::MessageParser<CreateImportJobRequest>(() => new CreateImportJobRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateImportJobRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateImportJobRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateImportJobRequest(CreateImportJobRequest other) : this() {
+      parent_ = other.parent_;
+      importJobId_ = other.importJobId_;
+      importJob_ = other.importJob_ != null ? other.importJob_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateImportJobRequest Clone() {
+      return new CreateImportJobRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the [KeyRing][google.cloud.kms.v1.KeyRing] associated with the
+    /// [ImportJobs][google.cloud.kms.v1.ImportJob].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "import_job_id" field.</summary>
+    public const int ImportJobIdFieldNumber = 2;
+    private string importJobId_ = "";
+    /// <summary>
+    /// Required. It must be unique within a KeyRing and match the regular
+    /// expression `[a-zA-Z0-9_-]{1,63}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImportJobId {
+      get { return importJobId_; }
+      set {
+        importJobId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "import_job" field.</summary>
+    public const int ImportJobFieldNumber = 3;
+    private global::Google.Cloud.Kms.V1.ImportJob importJob_;
+    /// <summary>
+    /// Required. An [ImportJob][google.cloud.kms.v1.ImportJob] with initial field values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Kms.V1.ImportJob ImportJob {
+      get { return importJob_; }
+      set {
+        importJob_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateImportJobRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateImportJobRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (ImportJobId != other.ImportJobId) return false;
+      if (!object.Equals(ImportJob, other.ImportJob)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (ImportJobId.Length != 0) hash ^= ImportJobId.GetHashCode();
+      if (importJob_ != null) hash ^= ImportJob.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (ImportJobId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ImportJobId);
+      }
+      if (importJob_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ImportJob);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (ImportJobId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImportJobId);
+      }
+      if (importJob_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImportJob);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateImportJobRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.ImportJobId.Length != 0) {
+        ImportJobId = other.ImportJobId;
+      }
+      if (other.importJob_ != null) {
+        if (importJob_ == null) {
+          importJob_ = new global::Google.Cloud.Kms.V1.ImportJob();
+        }
+        ImportJob.MergeFrom(other.ImportJob);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            ImportJobId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (importJob_ == null) {
+              importJob_ = new global::Google.Cloud.Kms.V1.ImportJob();
+            }
+            input.ReadMessage(importJob_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request message for [KeyManagementService.UpdateCryptoKey][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKey].
   /// </summary>
   public sealed partial class UpdateCryptoKeyRequest : pb::IMessage<UpdateCryptoKeyRequest> {
     private static readonly pb::MessageParser<UpdateCryptoKeyRequest> _parser = new pb::MessageParser<UpdateCryptoKeyRequest>(() => new UpdateCryptoKeyRequest());
@@ -2614,7 +3916,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2782,8 +4084,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.UpdateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyVersion].
+  /// Request message for [KeyManagementService.UpdateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyVersion].
   /// </summary>
   public sealed partial class UpdateCryptoKeyVersionRequest : pb::IMessage<UpdateCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<UpdateCryptoKeyVersionRequest> _parser = new pb::MessageParser<UpdateCryptoKeyVersionRequest>(() => new UpdateCryptoKeyVersionRequest());
@@ -2793,7 +4094,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2824,8 +4125,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 1;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with updated
-    /// values.
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion CryptoKeyVersion {
@@ -2962,8 +4262,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+  /// Request message for [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
   /// </summary>
   public sealed partial class EncryptRequest : pb::IMessage<EncryptRequest> {
     private static readonly pb::MessageParser<EncryptRequest> _parser = new pb::MessageParser<EncryptRequest>(() => new EncryptRequest());
@@ -2973,7 +4272,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3005,13 +4304,11 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] or
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
-    /// encryption.
+    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] or [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+    /// to use for encryption.
     ///
-    /// If a [CryptoKey][google.cloud.kms.v1.CryptoKey] is specified, the server
-    /// will use its [primary version][google.cloud.kms.v1.CryptoKey.primary].
+    /// If a [CryptoKey][google.cloud.kms.v1.CryptoKey] is specified, the server will use its
+    /// [primary version][google.cloud.kms.v1.CryptoKey.primary].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3028,12 +4325,11 @@ namespace Google.Cloud.Kms.V1 {
     /// Required. The data to encrypt. Must be no larger than 64KiB.
     ///
     /// The maximum size depends on the key version's
-    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-    /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
-    /// plaintext must be no larger than 64KiB. For
-    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
-    /// the plaintext and additional_authenticated_data fields must be no larger
-    /// than 8KiB.
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
+    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the plaintext must be no larger
+    /// than 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
+    /// plaintext and additional_authenticated_data fields must be no larger than
+    /// 8KiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Plaintext {
@@ -3048,16 +4344,14 @@ namespace Google.Cloud.Kms.V1 {
     private pb::ByteString additionalAuthenticatedData_ = pb::ByteString.Empty;
     /// <summary>
     /// Optional data that, if specified, must also be provided during decryption
-    /// through
-    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
+    /// through [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
     ///
     /// The maximum size depends on the key version's
-    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
-    /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the AAD
-    /// must be no larger than 64KiB. For
-    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
-    /// the plaintext and additional_authenticated_data fields must be no larger
-    /// than 8KiB.
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
+    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the AAD must be no larger than
+    /// 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
+    /// plaintext and additional_authenticated_data fields must be no larger than
+    /// 8KiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AdditionalAuthenticatedData {
@@ -3184,8 +4478,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+  /// Request message for [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
   /// </summary>
   public sealed partial class DecryptRequest : pb::IMessage<DecryptRequest> {
     private static readonly pb::MessageParser<DecryptRequest> _parser = new pb::MessageParser<DecryptRequest>(() => new DecryptRequest());
@@ -3195,7 +4488,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3227,9 +4520,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption. The
-    /// server will choose the appropriate version.
+    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption.
+    /// The server will choose the appropriate version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3386,8 +4678,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
+  /// Request message for [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
   /// </summary>
   public sealed partial class AsymmetricSignRequest : pb::IMessage<AsymmetricSignRequest> {
     private static readonly pb::MessageParser<AsymmetricSignRequest> _parser = new pb::MessageParser<AsymmetricSignRequest>(() => new AsymmetricSignRequest());
@@ -3397,7 +4688,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3428,9 +4719,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
-    /// signing.
+    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -3563,8 +4852,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
+  /// Request message for [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
   /// </summary>
   public sealed partial class AsymmetricDecryptRequest : pb::IMessage<AsymmetricDecryptRequest> {
     private static readonly pb::MessageParser<AsymmetricDecryptRequest> _parser = new pb::MessageParser<AsymmetricDecryptRequest>(() => new AsymmetricDecryptRequest());
@@ -3574,7 +4862,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3605,8 +4893,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
     /// decryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3621,9 +4908,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CiphertextFieldNumber = 3;
     private pb::ByteString ciphertext_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The data encrypted with the named
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public key using
-    /// OAEP.
+    /// Required. The data encrypted with the named [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public
+    /// key using OAEP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Ciphertext {
@@ -3734,8 +5020,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+  /// Response message for [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
   /// </summary>
   public sealed partial class DecryptResponse : pb::IMessage<DecryptResponse> {
     private static readonly pb::MessageParser<DecryptResponse> _parser = new pb::MessageParser<DecryptResponse>(() => new DecryptResponse());
@@ -3745,7 +5030,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3775,8 +5060,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int PlaintextFieldNumber = 1;
     private pb::ByteString plaintext_ = pb::ByteString.Empty;
     /// <summary>
-    /// The decrypted data originally supplied in
-    /// [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext].
+    /// The decrypted data originally supplied in [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Plaintext {
@@ -3871,8 +5155,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+  /// Response message for [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
   /// </summary>
   public sealed partial class EncryptResponse : pb::IMessage<EncryptResponse> {
     private static readonly pb::MessageParser<EncryptResponse> _parser = new pb::MessageParser<EncryptResponse>(() => new EncryptResponse());
@@ -3882,7 +5165,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3913,9 +5196,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in
-    /// encryption.
+    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in encryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4040,8 +5321,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
+  /// Response message for [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
   /// </summary>
   public sealed partial class AsymmetricSignResponse : pb::IMessage<AsymmetricSignResponse> {
     private static readonly pb::MessageParser<AsymmetricSignResponse> _parser = new pb::MessageParser<AsymmetricSignResponse>(() => new AsymmetricSignResponse());
@@ -4051,7 +5331,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4176,8 +5456,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for
-  /// [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
+  /// Response message for [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
   /// </summary>
   public sealed partial class AsymmetricDecryptResponse : pb::IMessage<AsymmetricDecryptResponse> {
     private static readonly pb::MessageParser<AsymmetricDecryptResponse> _parser = new pb::MessageParser<AsymmetricDecryptResponse>(() => new AsymmetricDecryptResponse());
@@ -4187,7 +5466,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4312,8 +5591,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
+  /// Request message for [KeyManagementService.UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
   /// </summary>
   public sealed partial class UpdateCryptoKeyPrimaryVersionRequest : pb::IMessage<UpdateCryptoKeyPrimaryVersionRequest> {
     private static readonly pb::MessageParser<UpdateCryptoKeyPrimaryVersionRequest> _parser = new pb::MessageParser<UpdateCryptoKeyPrimaryVersionRequest>(() => new UpdateCryptoKeyPrimaryVersionRequest());
@@ -4323,7 +5601,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4354,8 +5632,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to
-    /// update.
+    /// The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4369,8 +5646,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionIdFieldNumber = 2;
     private string cryptoKeyVersionId_ = "";
     /// <summary>
-    /// The id of the child
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+    /// The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CryptoKeyVersionId {
@@ -4481,8 +5757,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.DestroyCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DestroyCryptoKeyVersion].
+  /// Request message for [KeyManagementService.DestroyCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DestroyCryptoKeyVersion].
   /// </summary>
   public sealed partial class DestroyCryptoKeyVersionRequest : pb::IMessage<DestroyCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<DestroyCryptoKeyVersionRequest> _parser = new pb::MessageParser<DestroyCryptoKeyVersionRequest>(() => new DestroyCryptoKeyVersionRequest());
@@ -4492,7 +5767,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4522,8 +5797,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4618,8 +5892,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for
-  /// [KeyManagementService.RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion].
+  /// Request message for [KeyManagementService.RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion].
   /// </summary>
   public sealed partial class RestoreCryptoKeyVersionRequest : pb::IMessage<RestoreCryptoKeyVersionRequest> {
     private static readonly pb::MessageParser<RestoreCryptoKeyVersionRequest> _parser = new pb::MessageParser<RestoreCryptoKeyVersionRequest>(() => new RestoreCryptoKeyVersionRequest());
@@ -4629,7 +5902,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4659,8 +5932,7 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4765,7 +6037,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4986,8 +6258,7 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Cloud KMS metadata for the given
-  /// [google.cloud.location.Location][google.cloud.location.Location].
+  /// Cloud KMS metadata for the given [google.cloud.location.Location][google.cloud.location.Location].
   /// </summary>
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata> {
     private static readonly pb::MessageParser<LocationMetadata> _parser = new pb::MessageParser<LocationMetadata>(() => new LocationMetadata());
@@ -4997,7 +6268,7 @@ namespace Google.Cloud.Kms.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Kms.V1.ServiceReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5029,8 +6300,7 @@ namespace Google.Cloud.Kms.V1 {
     /// <summary>
     /// Indicates whether [CryptoKeys][google.cloud.kms.v1.CryptoKey] with
     /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]
-    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] can be created in this
-    /// location.
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] can be created in this location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool HsmAvailable {

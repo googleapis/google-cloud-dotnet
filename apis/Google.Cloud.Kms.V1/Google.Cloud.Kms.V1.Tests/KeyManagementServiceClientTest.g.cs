@@ -126,6 +126,96 @@ namespace Google.Cloud.Kms.V1.Tests
         }
 
         [Fact]
+        public void GetImportJob()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetImportJobRequest expectedRequest = new GetImportJobRequest
+            {
+                ImportJobName = new ImportJobName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetImportJob(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJobName name = new ImportJobName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]");
+            ImportJob response = client.GetImportJob(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetImportJobAsync()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetImportJobRequest expectedRequest = new GetImportJobRequest
+            {
+                ImportJobName = new ImportJobName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetImportJobAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ImportJob>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJobName name = new ImportJobName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]");
+            ImportJob response = await client.GetImportJobAsync(name);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void GetImportJob2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetImportJobRequest request = new GetImportJobRequest
+            {
+                ImportJobName = new ImportJobName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetImportJob(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob response = client.GetImportJob(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task GetImportJobAsync2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            GetImportJobRequest request = new GetImportJobRequest
+            {
+                ImportJobName = new ImportJobName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name2-1052831874",
+            };
+            mockGrpcClient.Setup(x => x.GetImportJobAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ImportJob>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob response = await client.GetImportJobAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
         public void GetCryptoKey()
         {
             Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
@@ -228,6 +318,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -251,6 +343,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -274,6 +368,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -296,6 +392,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -403,6 +501,132 @@ namespace Google.Cloud.Kms.V1.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<KeyRing>(Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
             KeyRing response = await client.CreateKeyRingAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateImportJob()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            CreateImportJobRequest expectedRequest = new CreateImportJobRequest
+            {
+                ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                ImportJobId = "my-import-job",
+                ImportJob = new ImportJob
+                {
+                    ImportMethod = ImportJob.Types.ImportMethod.RsaOaep3072Sha1Aes256,
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                },
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateImportJob(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyRingName parent = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]");
+            string importJobId = "my-import-job";
+            ImportJob importJob = new ImportJob
+            {
+                ImportMethod = ImportJob.Types.ImportMethod.RsaOaep3072Sha1Aes256,
+                ProtectionLevel = ProtectionLevel.Hsm,
+            };
+            ImportJob response = client.CreateImportJob(parent, importJobId, importJob);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateImportJobAsync()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            CreateImportJobRequest expectedRequest = new CreateImportJobRequest
+            {
+                ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                ImportJobId = "my-import-job",
+                ImportJob = new ImportJob
+                {
+                    ImportMethod = ImportJob.Types.ImportMethod.RsaOaep3072Sha1Aes256,
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                },
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateImportJobAsync(expectedRequest, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ImportJob>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            KeyRingName parent = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]");
+            string importJobId = "my-import-job";
+            ImportJob importJob = new ImportJob
+            {
+                ImportMethod = ImportJob.Types.ImportMethod.RsaOaep3072Sha1Aes256,
+                ProtectionLevel = ProtectionLevel.Hsm,
+            };
+            ImportJob response = await client.CreateImportJobAsync(parent, importJobId, importJob);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void CreateImportJob2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            CreateImportJobRequest request = new CreateImportJobRequest
+            {
+                ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                ImportJobId = "my-import-job",
+                ImportJob = new ImportJob
+                {
+                    ImportMethod = ImportJob.Types.ImportMethod.RsaOaep3072Sha1Aes256,
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                },
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateImportJob(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob response = client.CreateImportJob(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task CreateImportJobAsync2()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            CreateImportJobRequest request = new CreateImportJobRequest
+            {
+                ParentAsKeyRingName = new KeyRingName("[PROJECT]", "[LOCATION]", "[KEY_RING]"),
+                ImportJobId = "my-import-job",
+                ImportJob = new ImportJob
+                {
+                    ImportMethod = ImportJob.Types.ImportMethod.RsaOaep3072Sha1Aes256,
+                    ProtectionLevel = ProtectionLevel.Hsm,
+                },
+            };
+            ImportJob expectedResponse = new ImportJob
+            {
+                Name = "name3373707",
+            };
+            mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<ImportJob>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            ImportJob response = await client.CreateImportJobAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -589,6 +813,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -614,6 +840,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -639,6 +867,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -662,11 +892,65 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
             CryptoKeyVersion response = await client.CreateCryptoKeyVersionAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void ImportCryptoKeyVersion()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            ImportCryptoKeyVersionRequest request = new ImportCryptoKeyVersionRequest
+            {
+                ParentAsCryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified,
+                ImportJob = "importJob2125587491",
+            };
+            CryptoKeyVersion expectedResponse = new CryptoKeyVersion
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2-1714851050",
+                ImportFailureReason = "importFailureReason-494073229",
+            };
+            mockGrpcClient.Setup(x => x.ImportCryptoKeyVersion(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersion response = client.ImportCryptoKeyVersion(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ImportCryptoKeyVersionAsync()
+        {
+            Mock<KeyManagementService.KeyManagementServiceClient> mockGrpcClient = new Mock<KeyManagementService.KeyManagementServiceClient>(MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient())
+                .Returns(new Mock<IAMPolicy.IAMPolicyClient>().Object);
+            ImportCryptoKeyVersionRequest request = new ImportCryptoKeyVersionRequest
+            {
+                ParentAsCryptoKeyName = new CryptoKeyName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified,
+                ImportJob = "importJob2125587491",
+            };
+            CryptoKeyVersion expectedResponse = new CryptoKeyVersion
+            {
+                CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2-1714851050",
+                ImportFailureReason = "importFailureReason-494073229",
+            };
+            mockGrpcClient.Setup(x => x.ImportCryptoKeyVersionAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
+            KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
+            CryptoKeyVersion response = await client.ImportCryptoKeyVersionAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -781,6 +1065,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -806,6 +1092,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -831,6 +1119,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -854,6 +1144,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -1168,6 +1460,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -1191,6 +1485,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -1214,6 +1510,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -1236,6 +1534,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -1258,6 +1558,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -1281,6 +1583,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -1304,6 +1608,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -1326,6 +1632,8 @@ namespace Google.Cloud.Kms.V1.Tests
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
                 CryptoKeyVersionName = new CryptoKeyVersionName("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                ImportJob = "importJob2125587491",
+                ImportFailureReason = "importFailureReason-494073229",
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<CryptoKeyVersion>(Task.FromResult(expectedResponse), null, null, null, null));
