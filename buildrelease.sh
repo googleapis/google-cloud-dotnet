@@ -43,7 +43,7 @@ fi
 cd $(dirname $0)
 
 rm -rf releasebuild
-git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasebuild -c core.autocrlf=input
+git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasebuild -c core.autocrlf=input --recursive
 cd releasebuild
 export CI=true # Forces SourceLink in the main build.
 
