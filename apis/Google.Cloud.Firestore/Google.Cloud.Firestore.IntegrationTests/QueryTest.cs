@@ -186,6 +186,16 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Equal(allDocs.Skip(1).Take(3), results);
         }
 
+        [Fact]
+        public async Task SimpleCollectionGroup()
+        {
+            var collection = _fixture.CollectionGroupName;
+            var snapshot = await _fixture.FirestoreDb.CollectionGroup(_fixture.CollectionGroupName)
+                .GetSnapshotAsync();
+            var documents = snapshot.Documents.Select(doc => doc.ConvertTo<NamedDocument>()).OrderBy(doc => doc.Name).ToList();
+            Assert.Equal(new[] { NamedDocument.Child1, NamedDocument.Child2 }, documents);
+        }
+
         public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>
         {
             { "StringArray", "x", new[] { "string-x,y", "mixed" } },
