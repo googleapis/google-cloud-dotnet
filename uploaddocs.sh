@@ -13,6 +13,9 @@ declare -r DOCS_OUTPUT_DIR=$2
 declare -r SERVICE_ACCOUNT_JSON=$(realpath $3)
 declare -r STAGING_BUCKET=$4
 
+# Make sure the temporary directory used by Python exists
+mkdir -p dirname $(python -c 'import tempfile; print(tempfile.NamedTemporaryFile().name)')
+
 python -m pip install -q gcp-docuploader
 
 for nupkg in $NUPKG_DIR/*.nupkg
