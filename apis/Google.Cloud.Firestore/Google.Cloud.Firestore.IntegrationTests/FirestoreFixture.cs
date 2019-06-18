@@ -41,9 +41,19 @@ namespace Google.Cloud.Firestore.IntegrationTests
         public CollectionReference HighScoreCollection { get; }
 
         /// <summary>
-        /// A collection with <see cref="HighScore"/> data in. Don't modify in tests!
+        /// A collection with <see cref="ArrayDocument"/> data in. Don't modify in tests!
         /// </summary>
         public CollectionReference ArrayQueryCollection { get; }
+
+        /// <summary>
+        /// The name of a collection which appears under two different documents.
+        /// </summary>
+        public string CollectionGroupName { get; }
+
+        /// <summary>
+        /// The collection containing the documents with <see cref="CollectionGroupName"/> child collections.
+        /// </summary>
+        public CollectionReference CollectionGroupParentCollection { get; }
 
         /// <summary>
         /// A collection intended for tests to create and fetch documents in. Don't query in tests!
@@ -61,6 +71,8 @@ namespace Google.Cloud.Firestore.IntegrationTests
             NonQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-non-query");
             HighScoreCollection = FirestoreDb.Collection(CollectionPrefix + "-high-scores");
             ArrayQueryCollection = FirestoreDb.Collection(CollectionPrefix + "-array-query");
+            CollectionGroupParentCollection = FirestoreDb.Collection(CollectionPrefix + "-collection-group-parent");
+            CollectionGroupName = IdGenerator.FromGuid(prefix: "test-");
             Task.Run(PopulateCollections).Wait();
         }
 
@@ -68,6 +80,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             await PopulateCollection(HighScoreCollection, HighScore.Data);
             await PopulateCollection(ArrayQueryCollection, ArrayDocument.Data);
+            await PopulateCollectionGroups();
         }
 
         private async Task PopulateCollection(CollectionReference collection, IEnumerable<object> documents)
@@ -80,6 +93,22 @@ namespace Google.Cloud.Firestore.IntegrationTests
             await batch.CommitAsync();
         }
 
+        private async Task PopulateCollectionGroups()
+        {
+            var batch = FirestoreDb.StartBatch();
+            var parentDoc1 = CollectionGroupParentCollection.Document();
+            var parentDoc2 = CollectionGroupParentCollection.Document();
+
+            batch.Create(parentDoc1, NamedDocument.Parent1);
+            batch.Create(parentDoc2, NamedDocument.Parent2);
+
+            var childDoc1 = parentDoc1.Collection(CollectionGroupName).Document();
+            var childDoc2 = parentDoc1.Collection(CollectionGroupName).Document();
+
+            batch.Create(childDoc1, NamedDocument.Child1);
+            batch.Create(childDoc2, NamedDocument.Child2);
+            await batch.CommitAsync();
+        }
 
         /// <summary>
         /// Creates a collection reference that will not have been used by other tests (except maliciously).
