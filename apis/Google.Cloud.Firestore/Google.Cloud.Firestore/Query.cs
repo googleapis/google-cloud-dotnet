@@ -39,7 +39,6 @@ namespace Google.Cloud.Firestore
         // These are all read-only, but may be mutable. They should never be mutated;
         // multiple Query objects may share the same internal references.
         // Any additional fields should be included in equality/hash code checks.
-        internal CollectionReference Collection { get; }
         private readonly int _offset;
         private readonly int? _limit;
         private readonly IReadOnlyList<InternalOrdering> _orderings; // Never null
@@ -47,32 +46,37 @@ namespace Google.Cloud.Firestore
         private readonly IReadOnlyList<FieldPath> _projections; // May be null
         private readonly Cursor _startAt;
         private readonly Cursor _endAt;
+        private readonly QueryRoot _root;
 
         /// <summary>
         /// The database this query will search over.
         /// </summary>
-        public virtual FirestoreDb Database => Collection.Database;
+        public virtual FirestoreDb Database => _root.Database;
 
         // Parent path of this query
-        internal string ParentPath => Collection.Parent?.Path ?? Database.DocumentsPath;
+        internal string ParentPath => _root.ParentPath;
+
+        private Query(QueryRoot root)
+        {
+            _root = root;
+            _orderings = new List<InternalOrdering>();
+        }
 
         // private protected = only visible to subclasses within the same assembly.
-        // In reality, *only* CollectionReference will ever derive from Query.
-        private protected Query()
+        private protected Query(FirestoreDb database, DocumentReference parent, string collectionId)
+            : this(QueryRoot.ForCollection(database, parent, collectionId))
         {
-            Collection = this as CollectionReference;
-            GaxPreconditions.CheckState(Collection != null, "Internal Query constructor should only be used from CollectionReference");
-            _orderings = new List<InternalOrdering>();
         }
 
         // Constructor used for all the fluent interface methods. This contains all the fields, which are copied verbatim with
         // no further cloning: it is the responsibility of each method to ensure it creates a clone for any new data.
         private Query(
-            CollectionReference collection, int offset, int? limit,
+            QueryRoot root,
+            int offset, int? limit,
             IReadOnlyList<InternalOrdering> orderings, IReadOnlyList<InternalFilter> filters, IReadOnlyList<FieldPath> projections,
             Cursor startAt, Cursor endAt)
         {
-            Collection = collection;
+            _root = root;
             _offset = offset;
             _limit = limit;
             _orderings = orderings;
@@ -85,7 +89,7 @@ namespace Google.Cloud.Firestore
         internal StructuredQuery ToStructuredQuery() =>
             new StructuredQuery
             {
-                From = { new CollectionSelector { CollectionId = Collection.Id } },
+                From = { new CollectionSelector { AllDescendants = _root.AllDescendants, CollectionId = _root.CollectionId } },
                 Limit = _limit,
                 Offset = _offset,
                 OrderBy = { _orderings.Select(o => o.ToProto()) },
@@ -132,7 +136,7 @@ namespace Google.Cloud.Firestore
             {
                 fieldPaths = new[] { FieldPath.DocumentId };
             }
-            return new Query(Collection, _offset, _limit, _orderings, _filters, new List<FieldPath>(fieldPaths), _startAt, _endAt);
+            return new Query(_root, _offset, _limit, _orderings, _filters, new List<FieldPath>(fieldPaths), _startAt, _endAt);
         }
 
         /// <summary>
@@ -326,7 +330,7 @@ namespace Google.Cloud.Firestore
             InternalFilter filter = InternalFilter.Create(fieldPath, op, value);
             var newFilters = _filters == null ? new List<InternalFilter>() : new List<InternalFilter>(_filters);
             newFilters.Add(filter);
-            return new Query(Collection, _offset, _limit, _orderings, newFilters, _projections, _startAt, _endAt);
+            return new Query(_root, _offset, _limit, _orderings, newFilters, _projections, _startAt, _endAt);
         }
 
         /// <summary>
@@ -412,7 +416,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckState(_startAt == null && _endAt == null,
                 "All orderings must be specified before StartAt, StartAfter, EndBefore or EndAt are called.");
             var newOrderings = new List<InternalOrdering>(_orderings) { new InternalOrdering(fieldPath, direction) };
-            return new Query(Collection, _offset, _limit, newOrderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, _startAt, _endAt);
         }
 
         /// <summary>
@@ -426,7 +430,7 @@ namespace Google.Cloud.Firestore
         public Query Limit(int limit)
         {
             GaxPreconditions.CheckArgumentRange(limit, nameof(limit), 0, int.MaxValue);
-            return new Query(Collection, _offset, limit, _orderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, _offset, limit, _orderings, _filters, _projections, _startAt, _endAt);
         }
         
         /// <summary>
@@ -440,7 +444,7 @@ namespace Google.Cloud.Firestore
         public Query Offset(int offset)
         {
             GaxPreconditions.CheckArgumentRange(offset, nameof(offset), 0, int.MaxValue);
-            return new Query(Collection, offset, _limit, _orderings, _filters, _projections, _startAt, _endAt);
+            return new Query(_root, offset, _limit, _orderings, _filters, _projections, _startAt, _endAt);
         }
 
         /// <summary>
@@ -595,13 +599,14 @@ namespace Google.Cloud.Firestore
         // Helper methods for cursor-related functionality
 
         internal Query StartAt(object[] fieldValues, bool before) =>
-            new Query(Collection, _offset, _limit, _orderings, _filters, _projections, CreateCursor(fieldValues, before), _endAt);
+            new Query(_root, _offset, _limit, _orderings, _filters, _projections, CreateCursor(fieldValues, before), _endAt);
 
         internal Query EndAt(object[] fieldValues, bool before) =>
-            new Query(Collection, _offset, _limit, _orderings, _filters, _projections, _startAt, CreateCursor(fieldValues, before));
+            new Query(_root, _offset, _limit, _orderings, _filters, _projections, _startAt, CreateCursor(fieldValues, before));
 
         private Cursor CreateCursor(object[] fieldValues, bool before)
         {
+            string basePath = _root.CollectionId == null ? ParentPath : $"{ParentPath}/{_root.CollectionId}";
             GaxPreconditions.CheckNotNull(fieldValues, nameof(fieldValues));
             GaxPreconditions.CheckArgument(fieldValues.Length != 0, nameof(fieldValues), "Cannot specify an empty set of values for a start/end query cursor.");
             GaxPreconditions.CheckArgument(
@@ -621,14 +626,13 @@ namespace Google.Cloud.Firestore
                     switch (fieldValues[i])
                     {
                         case string relativePath:
-                            // Note: this assumes querying over a single collection at the moment.
                             // Convert to a DocumentReference for the cursor
                             PathUtilities.ValidateId(relativePath, nameof(fieldValues));
-                            value = Collection.Document(relativePath);
+                            value = Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}");
                             break;
                         case DocumentReference absoluteRef:
-                            // Just validate that the given document is a direct child of the parent collection.
-                            GaxPreconditions.CheckArgument(absoluteRef.Parent.Equals(Collection), nameof(fieldValues),
+                            // Just validate that the given document is a child of the parent collection.
+                            GaxPreconditions.CheckArgument(absoluteRef.Path.StartsWith(basePath + "/"), nameof(fieldValues),
                                 "A DocumentReference cursor value for a document ID must be a descendant of the collection of the query");
                             break;
                         default:
@@ -646,19 +650,23 @@ namespace Google.Cloud.Firestore
         internal Query StartAtSnapshot(DocumentSnapshot snapshot, bool before)
         {
             var cursor = CreateCursorFromSnapshot(snapshot, before, out var newOrderings);
-            return new Query(Collection, _offset, _limit, newOrderings, _filters, _projections, cursor, _endAt);
+            return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, cursor, _endAt);
         }
 
         internal Query EndAtSnapshot(DocumentSnapshot snapshot, bool before)
         {
             var cursor = CreateCursorFromSnapshot(snapshot, before, out var newOrderings);
-            return new Query(Collection, _offset, _limit, newOrderings, _filters, _projections, _startAt, cursor);
+            return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, _startAt, cursor);
         }
 
         private Cursor CreateCursorFromSnapshot(DocumentSnapshot snapshot, bool before, out IReadOnlyList<InternalOrdering> newOrderings)
         {
-            GaxPreconditions.CheckArgument(Equals(snapshot.Reference.Parent, Collection),
-                nameof(snapshot), "Snapshot was from incorrect collection");
+            // TODO: Validation for all-descendants queries?
+            if (!_root.AllDescendants)
+            {
+                GaxPreconditions.CheckArgument(snapshot.Reference.Parent.Path == $"{ParentPath}/{_root.CollectionId}",
+                    nameof(snapshot), "Snapshot was from incorrect collection");
+            }
 
             GaxPreconditions.CheckNotNull(snapshot, nameof(snapshot));
             var cursor = new Cursor { Before = before };
@@ -741,7 +749,7 @@ namespace Google.Cloud.Firestore
             {
                 return false;
             }
-            return Collection.Equals(other.Collection) &&
+            return _root.Equals(other._root) &&
                 _offset == other._offset &&
                 _limit == other._limit &&
                 EqualityHelpers.ListsEqual(_orderings, other._orderings) &&
@@ -753,7 +761,7 @@ namespace Google.Cloud.Firestore
 
         /// <inheritdoc />
         public override int GetHashCode() => EqualityHelpers.CombineHashCodes(
-            Collection.GetHashCode(),
+            _root.GetHashCode(),
             _offset,
             _limit ?? -1,
             EqualityHelpers.GetListHashCode(_orderings),
@@ -958,5 +966,38 @@ namespace Google.Cloud.Firestore
             }
         }
 
+        private sealed class QueryRoot : IEquatable<QueryRoot>
+        {
+            internal FirestoreDb Database { get; }
+            internal string ParentPath { get; }
+            internal string CollectionId { get; }
+            internal bool AllDescendants { get; }
+
+            private QueryRoot(FirestoreDb database, string parentPath, string collectionId, bool allDescendants)
+            {
+                Database = GaxPreconditions.CheckNotNull(database, nameof(database));
+                ParentPath = parentPath;
+                CollectionId = GaxPreconditions.CheckNotNull(collectionId, nameof(collectionId));
+                AllDescendants = allDescendants;
+            }
+
+            internal static QueryRoot ForCollection(FirestoreDb database, DocumentReference parent, string collectionId) =>
+                new QueryRoot(database, parent?.Path ?? database?.DocumentsPath, collectionId, false);
+
+            internal static QueryRoot ForCollectionGroup(FirestoreDb database, string collectionId) =>
+                new QueryRoot(database, database?.DocumentsPath, collectionId, true);
+
+            public override bool Equals(object obj) => Equals(obj as QueryRoot);
+
+            public bool Equals(QueryRoot other) =>
+                other != null &&
+                Database.Equals(other.Database) &&
+                ParentPath == other.ParentPath &&
+                CollectionId == other.CollectionId &&
+                AllDescendants == other.AllDescendants;
+
+            public override int GetHashCode() =>
+                EqualityHelpers.CombineHashCodes(Database.GetHashCode(), ParentPath.GetHashCode(), CollectionId?.GetHashCode() ?? 0, AllDescendants ? 1 : 0);
+        }
     }
 }
