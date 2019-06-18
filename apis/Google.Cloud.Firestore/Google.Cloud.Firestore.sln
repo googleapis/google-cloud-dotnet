@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore", "Google.Cloud.Firestore\Google.Cloud.Firestore.csproj", "{0CE6F762-3B85-47A5-8450-19725847E635}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.Benchmarks", "Google.Cloud.Firestore.Benchmarks\Google.Cloud.Firestore.Benchmarks.csproj", "{AA8DDA67-32F0-459F-B82B-E4F12273D0D2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Firestore.V1", "..\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1.csproj", "{CB33B137-E474-4F53-8545-E7597BAC1C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.CleanTestData", "Google.Cloud.Firestore.CleanTestData\Google.Cloud.Firestore.CleanTestData.csproj", "{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,18 @@ Global
 		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|x64.Build.0 = Release|Any CPU
 		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|x86.ActiveCfg = Release|Any CPU
 		{CB33B137-E474-4F53-8545-E7597BAC1C58}.Release|x86.Build.0 = Release|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Debug|x64.Build.0 = Debug|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Debug|x86.Build.0 = Debug|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|x64.ActiveCfg = Release|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|x64.Build.0 = Release|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB66C09D-C8D2-4BC0-9B89-69B80E957D0B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
