@@ -439,8 +439,6 @@ namespace Google.Cloud.Firestore.Tests
             "doc2/col2/doc3",
             // DocumentReference not in this collection
             s_db.Document("othercol/doc"),
-            // DocumentReference which isn't a direct chid
-            s_db.Document("col/doc/col2/doc2")
         };
 
         [Theory]
@@ -460,10 +458,12 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void DocumentIdCursor_ValidDocumentReference()
+        [Theory]
+        [InlineData("col/foo")]
+        [InlineData("col/doc/col2/doc2")]
+        public void DocumentIdCursor_ValidDocumentReference(string path)
         {
-            var doc = s_db.Document("col/foo");
+            var doc = s_db.Document(path);
             var query = GetEmptyQuery().OrderBy(FieldPath.DocumentId).StartAt(doc);
             var expected = new Value { ReferenceValue = doc.Path };
             var actual = query.ToStructuredQuery().StartAt.Values.Single();
@@ -805,7 +805,7 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void OrderBy()
+        public void Equality_OrderBy()
         {
             var col = s_db.Collection("col");
             var query = col.OrderBy("foo").OrderByDescending("bar");

@@ -45,15 +45,10 @@ namespace Google.Cloud.Firestore
         /// </summary>
         public DocumentReference Parent { get; }
 
-        /// <inheritdoc />
-        public override FirestoreDb Database { get; }
-
-        internal CollectionReference(FirestoreDb database, DocumentReference parent, string id)
+        internal CollectionReference(FirestoreDb database, DocumentReference parent, string id) : base(database, parent, id)
         {
-            Database = GaxPreconditions.CheckNotNull(database, nameof(database));
-            GaxPreconditions.CheckNotNull(id, nameof(id));
             Parent = parent; // May be null
-            Id = id;
+            Id = GaxPreconditions.CheckNotNull(id, nameof(id));
             Path = $"{ParentPath}/{Id}";
         }
         
