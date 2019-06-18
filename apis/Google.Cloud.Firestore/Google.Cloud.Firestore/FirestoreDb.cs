@@ -181,6 +181,21 @@ namespace Google.Cloud.Firestore
         }
 
         /// <summary>
+        /// Creates and returns a new <see cref="Query"/> that includes all documents in the
+        /// database that are contained in a collection or subcollection with the
+        /// given collection ID.
+        /// </summary>
+        /// <param name="collectionId">Identifies the collections to query over.
+        /// Every collection or subcollection with this ID as the last segment
+        /// of its path will be included. Must not contain a slash.</param>
+        /// <returns>The created <see cref="Query"/>.</returns>
+        public Query CollectionGroup(string collectionId)
+        {
+            PathUtilities.ValidateId(collectionId, nameof(collectionId));
+            return Query.ForCollectionGroup(this, collectionId);
+        }
+
+        /// <summary>
         /// Creates a write batch, which can be used to commit multiple mutations atomically.
         /// </summary>
         /// <returns>A write batch for this database.</returns>
