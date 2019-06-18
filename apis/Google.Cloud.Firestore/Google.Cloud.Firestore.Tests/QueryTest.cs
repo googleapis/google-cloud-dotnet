@@ -893,6 +893,15 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void Equality_CollectionGroup()
+        {
+            EqualityTester.AssertEqual(s_db.CollectionGroup("col"),
+                equal: new[] { s_db.CollectionGroup("col") },
+                unequal: new[] { s_db.Collection("col") }
+            );
+        }
+
+        [Fact]
         public void ArrayContainsIsEquality()
         {
             var collection = s_db.Collection("col");
@@ -939,6 +948,19 @@ namespace Google.Cloud.Firestore.Tests
         {
             var collection = s_db.Collection("col");
             Assert.Throws<ArgumentException>(() => collection.OrderBy("field").StartAt(new[] { new { Nested = FieldValue.Delete } }));
+        }
+
+        [Fact]
+        public void CollectionGroup()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var query = db.CollectionGroup("col").WhereEqualTo("field", "value");
+            var expected = new StructuredQuery
+            {
+                From = { new CollectionSelector { AllDescendants = true, CollectionId = "col" } },
+                Where = Filter(new FieldFilter { Field = Field("field"), Op = FieldFilter.Types.Operator.Equal, Value = CreateValue("value") }),
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
 
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };

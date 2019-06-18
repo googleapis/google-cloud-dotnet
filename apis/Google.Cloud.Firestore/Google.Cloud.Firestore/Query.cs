@@ -86,6 +86,9 @@ namespace Google.Cloud.Firestore
             _endAt = endAt;
         }
 
+        internal static Query ForCollectionGroup(FirestoreDb database, string collectionId) =>
+            new Query(QueryRoot.ForCollectionGroup(database, collectionId));
+
         internal StructuredQuery ToStructuredQuery() =>
             new StructuredQuery
             {
