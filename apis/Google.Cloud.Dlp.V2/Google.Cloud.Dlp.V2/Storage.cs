@@ -122,12 +122,13 @@ namespace Google.Cloud.Dlp.V2 {
             "LQoFZmllbGQYASABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJ",
             "ZCp0CgpMaWtlbGlob29kEhoKFkxJS0VMSUhPT0RfVU5TUEVDSUZJRUQQABIR",
             "Cg1WRVJZX1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NTSUJMRRAD",
-            "EgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZEAUqUAoIRmlsZVR5cGUSGQoV",
+            "EgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZEAUqWgoIRmlsZVR5cGUSGQoV",
             "RklMRV9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLQklOQVJZX0ZJTEUQARINCglU",
-            "RVhUX0ZJTEUQAhIJCgVJTUFHRRADQo8BChljb20uZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyQgpEbHBTdG9yYWdlUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvcHJpdmFjeS9kbHAvdjI7ZGxwqgITR29vZ2xlLkNs",
-            "b3VkLkRscC5WMsoCE0dvb2dsZVxDbG91ZFxEbHBcVjJiBnByb3RvMw=="));
+            "RVhUX0ZJTEUQAhIJCgVJTUFHRRADEggKBEFWUk8QB0KPAQoZY29tLmdvb2ds",
+            "ZS5wcml2YWN5LmRscC52MkIKRGxwU3RvcmFnZVABWjhnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3ByaXZhY3kvZGxwL3YyO2RscKoC",
+            "E0dvb2dsZS5DbG91ZC5EbHAuVjLKAhNHb29nbGVcQ2xvdWRcRGxwXFYyYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, new pbr::GeneratedClrTypeInfo[] {
@@ -214,6 +215,11 @@ namespace Google.Cloud.Dlp.V2 {
     /// bytes_limit_per_file has no effect on image files.
     /// </summary>
     [pbr::OriginalName("IMAGE")] Image = 3,
+    /// <summary>
+    /// Included file extensions:
+    ///   avro
+    /// </summary>
+    [pbr::OriginalName("AVRO")] Avro = 7,
   }
 
   #endregion
