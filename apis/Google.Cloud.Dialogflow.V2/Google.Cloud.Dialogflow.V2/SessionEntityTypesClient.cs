@@ -1408,7 +1408,7 @@ namespace Google.Cloud.Dialogflow.V2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateSessionEntityType = clientHelper.BuildApiCall<UpdateSessionEntityTypeRequest, SessionEntityType>(
                 GrpcClient.UpdateSessionEntityTypeAsync, GrpcClient.UpdateSessionEntityType, effectiveSettings.UpdateSessionEntityTypeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session_entity_type.name={request.SessionEntityType.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"session_entity_type.name={request.SessionEntityType?.Name}"));
             _callDeleteSessionEntityType = clientHelper.BuildApiCall<DeleteSessionEntityTypeRequest, pbwkt::Empty>(
                 GrpcClient.DeleteSessionEntityTypeAsync, GrpcClient.DeleteSessionEntityType, effectiveSettings.DeleteSessionEntityTypeSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

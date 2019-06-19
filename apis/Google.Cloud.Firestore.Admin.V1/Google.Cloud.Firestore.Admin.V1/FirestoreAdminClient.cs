@@ -2444,7 +2444,7 @@ namespace Google.Cloud.Firestore.Admin.V1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateField = clientHelper.BuildApiCall<UpdateFieldRequest, lro::Operation>(
                 GrpcClient.UpdateFieldAsync, GrpcClient.UpdateField, effectiveSettings.UpdateFieldSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"field.name={request.Field.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"field.name={request.Field?.Name}"));
             Modify_ApiCall(ref _callCreateIndex);
             Modify_CreateIndexApiCall(ref _callCreateIndex);
             Modify_ApiCall(ref _callListIndexes);

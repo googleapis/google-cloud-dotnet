@@ -2553,7 +2553,7 @@ namespace Google.Cloud.Dataproc.V1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateWorkflowTemplate = clientHelper.BuildApiCall<UpdateWorkflowTemplateRequest, WorkflowTemplate>(
                 GrpcClient.UpdateWorkflowTemplateAsync, GrpcClient.UpdateWorkflowTemplate, effectiveSettings.UpdateWorkflowTemplateSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"template.name={request.Template.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"template.name={request.Template?.Name}"));
             _callListWorkflowTemplates = clientHelper.BuildApiCall<ListWorkflowTemplatesRequest, ListWorkflowTemplatesResponse>(
                 GrpcClient.ListWorkflowTemplatesAsync, GrpcClient.ListWorkflowTemplates, effectiveSettings.ListWorkflowTemplatesSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));

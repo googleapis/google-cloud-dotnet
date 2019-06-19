@@ -2706,7 +2706,7 @@ namespace Google.Cloud.Talent.V4Beta1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateJob = clientHelper.BuildApiCall<UpdateJobRequest, Job>(
                 GrpcClient.UpdateJobAsync, GrpcClient.UpdateJob, effectiveSettings.UpdateJobSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"job.name={request.Job.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"job.name={request.Job?.Name}"));
             _callDeleteJob = clientHelper.BuildApiCall<DeleteJobRequest, pbwkt::Empty>(
                 GrpcClient.DeleteJobAsync, GrpcClient.DeleteJob, effectiveSettings.DeleteJobSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

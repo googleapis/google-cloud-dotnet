@@ -4351,7 +4351,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callPartialUpdateInstance = clientHelper.BuildApiCall<PartialUpdateInstanceRequest, lro::Operation>(
                 GrpcClient.PartialUpdateInstanceAsync, GrpcClient.PartialUpdateInstance, effectiveSettings.PartialUpdateInstanceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"instance.name={request.Instance?.Name}"));
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, pbwkt::Empty>(
                 GrpcClient.DeleteInstanceAsync, GrpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
@@ -4381,7 +4381,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateAppProfile = clientHelper.BuildApiCall<UpdateAppProfileRequest, lro::Operation>(
                 GrpcClient.UpdateAppProfileAsync, GrpcClient.UpdateAppProfile, effectiveSettings.UpdateAppProfileSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"app_profile.name={request.AppProfile.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"app_profile.name={request.AppProfile?.Name}"));
             _callDeleteAppProfile = clientHelper.BuildApiCall<DeleteAppProfileRequest, pbwkt::Empty>(
                 GrpcClient.DeleteAppProfileAsync, GrpcClient.DeleteAppProfile, effectiveSettings.DeleteAppProfileSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

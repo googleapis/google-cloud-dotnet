@@ -2520,7 +2520,7 @@ namespace Google.Cloud.Dialogflow.V2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateIntent = clientHelper.BuildApiCall<UpdateIntentRequest, Intent>(
                 GrpcClient.UpdateIntentAsync, GrpcClient.UpdateIntent, effectiveSettings.UpdateIntentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"intent.name={request.Intent.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"intent.name={request.Intent?.Name}"));
             _callDeleteIntent = clientHelper.BuildApiCall<DeleteIntentRequest, pbwkt::Empty>(
                 GrpcClient.DeleteIntentAsync, GrpcClient.DeleteIntent, effectiveSettings.DeleteIntentSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

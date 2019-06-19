@@ -6662,10 +6662,10 @@ namespace Google.Cloud.Kms.V1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateCryptoKey = clientHelper.BuildApiCall<UpdateCryptoKeyRequest, CryptoKey>(
                 GrpcClient.UpdateCryptoKeyAsync, GrpcClient.UpdateCryptoKey, effectiveSettings.UpdateCryptoKeySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"crypto_key.name={request.CryptoKey.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"crypto_key.name={request.CryptoKey?.Name}"));
             _callUpdateCryptoKeyVersion = clientHelper.BuildApiCall<UpdateCryptoKeyVersionRequest, CryptoKeyVersion>(
                 GrpcClient.UpdateCryptoKeyVersionAsync, GrpcClient.UpdateCryptoKeyVersion, effectiveSettings.UpdateCryptoKeyVersionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"crypto_key_version.name={request.CryptoKeyVersion.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"crypto_key_version.name={request.CryptoKeyVersion?.Name}"));
             _callEncrypt = clientHelper.BuildApiCall<EncryptRequest, EncryptResponse>(
                 GrpcClient.EncryptAsync, GrpcClient.Encrypt, effectiveSettings.EncryptSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

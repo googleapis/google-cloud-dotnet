@@ -5317,7 +5317,7 @@ namespace Google.Cloud.Tasks.V2Beta3
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateQueue = clientHelper.BuildApiCall<UpdateQueueRequest, Queue>(
                 GrpcClient.UpdateQueueAsync, GrpcClient.UpdateQueue, effectiveSettings.UpdateQueueSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"queue.name={request.Queue.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"queue.name={request.Queue?.Name}"));
             _callDeleteQueue = clientHelper.BuildApiCall<DeleteQueueRequest, pbwkt::Empty>(
                 GrpcClient.DeleteQueueAsync, GrpcClient.DeleteQueue, effectiveSettings.DeleteQueueSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

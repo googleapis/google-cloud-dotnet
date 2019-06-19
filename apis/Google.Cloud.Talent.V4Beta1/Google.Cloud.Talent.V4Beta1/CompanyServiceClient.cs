@@ -1553,7 +1553,7 @@ namespace Google.Cloud.Talent.V4Beta1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateCompany = clientHelper.BuildApiCall<UpdateCompanyRequest, Company>(
                 GrpcClient.UpdateCompanyAsync, GrpcClient.UpdateCompany, effectiveSettings.UpdateCompanySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"company.name={request.Company.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"company.name={request.Company?.Name}"));
             _callDeleteCompany = clientHelper.BuildApiCall<DeleteCompanyRequest, pbwkt::Empty>(
                 GrpcClient.DeleteCompanyAsync, GrpcClient.DeleteCompany, effectiveSettings.DeleteCompanySettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

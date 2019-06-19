@@ -1586,7 +1586,7 @@ namespace Google.Cloud.Dialogflow.V2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateContext = clientHelper.BuildApiCall<UpdateContextRequest, Context>(
                 GrpcClient.UpdateContextAsync, GrpcClient.UpdateContext, effectiveSettings.UpdateContextSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"context.name={request.Context.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"context.name={request.Context?.Name}"));
             _callDeleteContext = clientHelper.BuildApiCall<DeleteContextRequest, pbwkt::Empty>(
                 GrpcClient.DeleteContextAsync, GrpcClient.DeleteContext, effectiveSettings.DeleteContextSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

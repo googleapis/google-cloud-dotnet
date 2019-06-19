@@ -1582,7 +1582,7 @@ namespace Google.Cloud.Talent.V4Beta1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateProfile = clientHelper.BuildApiCall<UpdateProfileRequest, Profile>(
                 GrpcClient.UpdateProfileAsync, GrpcClient.UpdateProfile, effectiveSettings.UpdateProfileSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"profile.name={request.Profile.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"profile.name={request.Profile?.Name}"));
             _callDeleteProfile = clientHelper.BuildApiCall<DeleteProfileRequest, pbwkt::Empty>(
                 GrpcClient.DeleteProfileAsync, GrpcClient.DeleteProfile, effectiveSettings.DeleteProfileSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

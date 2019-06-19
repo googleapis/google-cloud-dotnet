@@ -1572,7 +1572,7 @@ namespace Google.Cloud.Monitoring.V3
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateAlertPolicy = clientHelper.BuildApiCall<UpdateAlertPolicyRequest, AlertPolicy>(
                 GrpcClient.UpdateAlertPolicyAsync, GrpcClient.UpdateAlertPolicy, effectiveSettings.UpdateAlertPolicySettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"alert_policy.name={request.AlertPolicy.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"alert_policy.name={request.AlertPolicy?.Name}"));
             Modify_ApiCall(ref _callListAlertPolicies);
             Modify_ListAlertPoliciesApiCall(ref _callListAlertPolicies);
             Modify_ApiCall(ref _callGetAlertPolicy);

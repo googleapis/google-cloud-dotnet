@@ -1454,7 +1454,7 @@ namespace Google.Cloud.Monitoring.V3
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, Group>(
                 GrpcClient.UpdateGroupAsync, GrpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"group.name={request.Group.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"group.name={request.Group?.Name}"));
             _callDeleteGroup = clientHelper.BuildApiCall<DeleteGroupRequest, pbwkt::Empty>(
                 GrpcClient.DeleteGroupAsync, GrpcClient.DeleteGroup, effectiveSettings.DeleteGroupSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

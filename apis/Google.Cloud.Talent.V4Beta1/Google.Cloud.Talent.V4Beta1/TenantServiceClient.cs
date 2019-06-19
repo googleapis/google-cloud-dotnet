@@ -1467,7 +1467,7 @@ namespace Google.Cloud.Talent.V4Beta1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateTenant = clientHelper.BuildApiCall<UpdateTenantRequest, Tenant>(
                 GrpcClient.UpdateTenantAsync, GrpcClient.UpdateTenant, effectiveSettings.UpdateTenantSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"tenant.name={request.Tenant.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"tenant.name={request.Tenant?.Name}"));
             _callDeleteTenant = clientHelper.BuildApiCall<DeleteTenantRequest, pbwkt::Empty>(
                 GrpcClient.DeleteTenantAsync, GrpcClient.DeleteTenant, effectiveSettings.DeleteTenantSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

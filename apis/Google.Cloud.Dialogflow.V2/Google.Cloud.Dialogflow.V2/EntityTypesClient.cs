@@ -4103,7 +4103,7 @@ namespace Google.Cloud.Dialogflow.V2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateEntityType = clientHelper.BuildApiCall<UpdateEntityTypeRequest, EntityType>(
                 GrpcClient.UpdateEntityTypeAsync, GrpcClient.UpdateEntityType, effectiveSettings.UpdateEntityTypeSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"entity_type.name={request.EntityType.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"entity_type.name={request.EntityType?.Name}"));
             _callDeleteEntityType = clientHelper.BuildApiCall<DeleteEntityTypeRequest, pbwkt::Empty>(
                 GrpcClient.DeleteEntityTypeAsync, GrpcClient.DeleteEntityType, effectiveSettings.DeleteEntityTypeSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

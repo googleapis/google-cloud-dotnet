@@ -5510,7 +5510,7 @@ namespace Google.Cloud.Vision.V1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateProductSet = clientHelper.BuildApiCall<UpdateProductSetRequest, ProductSet>(
                 GrpcClient.UpdateProductSetAsync, GrpcClient.UpdateProductSet, effectiveSettings.UpdateProductSetSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product_set.name={request.ProductSet.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product_set.name={request.ProductSet?.Name}"));
             _callDeleteProductSet = clientHelper.BuildApiCall<DeleteProductSetRequest, pbwkt::Empty>(
                 GrpcClient.DeleteProductSetAsync, GrpcClient.DeleteProductSet, effectiveSettings.DeleteProductSetSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
@@ -5525,7 +5525,7 @@ namespace Google.Cloud.Vision.V1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateProduct = clientHelper.BuildApiCall<UpdateProductRequest, Product>(
                 GrpcClient.UpdateProductAsync, GrpcClient.UpdateProduct, effectiveSettings.UpdateProductSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product.name={request.Product.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"product.name={request.Product?.Name}"));
             _callDeleteProduct = clientHelper.BuildApiCall<DeleteProductRequest, pbwkt::Empty>(
                 GrpcClient.DeleteProductAsync, GrpcClient.DeleteProduct, effectiveSettings.DeleteProductSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

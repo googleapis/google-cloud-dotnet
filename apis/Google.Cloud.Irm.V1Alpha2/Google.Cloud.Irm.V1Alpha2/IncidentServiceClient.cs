@@ -7124,7 +7124,7 @@ namespace Google.Cloud.Irm.V1Alpha2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateIncident = clientHelper.BuildApiCall<UpdateIncidentRequest, Incident>(
                 GrpcClient.UpdateIncidentAsync, GrpcClient.UpdateIncident, effectiveSettings.UpdateIncidentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"incident.name={request.Incident.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"incident.name={request.Incident?.Name}"));
             _callSearchSimilarIncidents = clientHelper.BuildApiCall<SearchSimilarIncidentsRequest, SearchSimilarIncidentsResponse>(
                 GrpcClient.SearchSimilarIncidentsAsync, GrpcClient.SearchSimilarIncidents, effectiveSettings.SearchSimilarIncidentsSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
@@ -7154,10 +7154,10 @@ namespace Google.Cloud.Irm.V1Alpha2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateSignal = clientHelper.BuildApiCall<UpdateSignalRequest, Signal>(
                 GrpcClient.UpdateSignalAsync, GrpcClient.UpdateSignal, effectiveSettings.UpdateSignalSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"signal.name={request.Signal.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"signal.name={request.Signal?.Name}"));
             _callEscalateIncident = clientHelper.BuildApiCall<EscalateIncidentRequest, EscalateIncidentResponse>(
                 GrpcClient.EscalateIncidentAsync, GrpcClient.EscalateIncident, effectiveSettings.EscalateIncidentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"incident.name={request.Incident.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"incident.name={request.Incident?.Name}"));
             _callCreateArtifact = clientHelper.BuildApiCall<CreateArtifactRequest, Artifact>(
                 GrpcClient.CreateArtifactAsync, GrpcClient.CreateArtifact, effectiveSettings.CreateArtifactSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
@@ -7166,7 +7166,7 @@ namespace Google.Cloud.Irm.V1Alpha2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateArtifact = clientHelper.BuildApiCall<UpdateArtifactRequest, Artifact>(
                 GrpcClient.UpdateArtifactAsync, GrpcClient.UpdateArtifact, effectiveSettings.UpdateArtifactSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"artifact.name={request.Artifact.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"artifact.name={request.Artifact?.Name}"));
             _callDeleteArtifact = clientHelper.BuildApiCall<DeleteArtifactRequest, pbwkt::Empty>(
                 GrpcClient.DeleteArtifactAsync, GrpcClient.DeleteArtifact, effectiveSettings.DeleteArtifactSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
@@ -7178,7 +7178,7 @@ namespace Google.Cloud.Irm.V1Alpha2
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateSubscription = clientHelper.BuildApiCall<UpdateSubscriptionRequest, Subscription>(
                 GrpcClient.UpdateSubscriptionAsync, GrpcClient.UpdateSubscription, effectiveSettings.UpdateSubscriptionSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription.name={request.Subscription.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"subscription.name={request.Subscription?.Name}"));
             _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(
                 GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));

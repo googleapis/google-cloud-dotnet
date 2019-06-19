@@ -1361,7 +1361,7 @@ namespace Google.Cloud.Monitoring.V3
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callUpdateUptimeCheckConfig = clientHelper.BuildApiCall<UpdateUptimeCheckConfigRequest, UptimeCheckConfig>(
                 GrpcClient.UpdateUptimeCheckConfigAsync, GrpcClient.UpdateUptimeCheckConfig, effectiveSettings.UpdateUptimeCheckConfigSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"uptime_check_config.name={request.UptimeCheckConfig.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"uptime_check_config.name={request.UptimeCheckConfig?.Name}"));
             _callDeleteUptimeCheckConfig = clientHelper.BuildApiCall<DeleteUptimeCheckConfigRequest, pbwkt::Empty>(
                 GrpcClient.DeleteUptimeCheckConfigAsync, GrpcClient.DeleteUptimeCheckConfig, effectiveSettings.DeleteUptimeCheckConfigSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));

@@ -2444,7 +2444,7 @@ namespace Google.Cloud.PubSub.V1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateTopic = clientHelper.BuildApiCall<UpdateTopicRequest, Topic>(
                 GrpcClient.UpdateTopicAsync, GrpcClient.UpdateTopic, effectiveSettings.UpdateTopicSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic.name={request.Topic.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic.name={request.Topic?.Name}"));
             _callPublish = clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
                 GrpcClient.PublishAsync, GrpcClient.Publish, effectiveSettings.PublishSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"topic={request.Topic}"));

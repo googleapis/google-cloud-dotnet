@@ -2015,7 +2015,7 @@ namespace Google.Cloud.Monitoring.V3
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
             _callUpdateNotificationChannel = clientHelper.BuildApiCall<UpdateNotificationChannelRequest, NotificationChannel>(
                 GrpcClient.UpdateNotificationChannelAsync, GrpcClient.UpdateNotificationChannel, effectiveSettings.UpdateNotificationChannelSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"notification_channel.name={request.NotificationChannel.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"notification_channel.name={request.NotificationChannel?.Name}"));
             _callDeleteNotificationChannel = clientHelper.BuildApiCall<DeleteNotificationChannelRequest, pbwkt::Empty>(
                 GrpcClient.DeleteNotificationChannelAsync, GrpcClient.DeleteNotificationChannel, effectiveSettings.DeleteNotificationChannelSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
