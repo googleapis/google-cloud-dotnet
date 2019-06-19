@@ -963,6 +963,27 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expected, query.ToStructuredQuery());
         }
 
+        [Fact]
+        public void CollectionGroup_InvalidCursor()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var collection = s_db.Collection("col1");
+            var document = new Document
+            {
+                CreateTime = CreateProtoTimestamp(0, 0),
+                UpdateTime = CreateProtoTimestamp(0, 0),
+                Name = collection.Document("doc").Path,
+                Fields = { { "field", CreateArray(CreateValue(1), CreateValue(2)) } }
+            };
+            var snapshot = DocumentSnapshot.ForDocument(s_db, document, Timestamp.FromProto(document.CreateTime));
+
+            // Collection group query for a different collection
+            var query = db.CollectionGroup("col2");
+
+            Assert.Throws<ArgumentException>(() => query.StartAt(snapshot));
+        }
+
+
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };
         private static Filter Filter(UnaryFilter filter) => new Filter { UnaryFilter = filter };
         private static Filter Filter(FieldFilter filter) => new Filter { FieldFilter = filter };

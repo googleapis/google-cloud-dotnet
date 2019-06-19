@@ -650,13 +650,13 @@ namespace Google.Cloud.Firestore
             return cursor;
         }
 
-        internal Query StartAtSnapshot(DocumentSnapshot snapshot, bool before)
+        private Query StartAtSnapshot(DocumentSnapshot snapshot, bool before)
         {
             var cursor = CreateCursorFromSnapshot(snapshot, before, out var newOrderings);
             return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, cursor, _endAt);
         }
 
-        internal Query EndAtSnapshot(DocumentSnapshot snapshot, bool before)
+        private Query EndAtSnapshot(DocumentSnapshot snapshot, bool before)
         {
             var cursor = CreateCursorFromSnapshot(snapshot, before, out var newOrderings);
             return new Query(_root, _offset, _limit, newOrderings, _filters, _projections, _startAt, cursor);
@@ -664,10 +664,15 @@ namespace Google.Cloud.Firestore
 
         private Cursor CreateCursorFromSnapshot(DocumentSnapshot snapshot, bool before, out IReadOnlyList<InternalOrdering> newOrderings)
         {
-            // TODO: Validation for all-descendants queries?
+            GaxPreconditions.CheckArgument(snapshot.Reference.Parent.Id == _root.CollectionId,
+                nameof(snapshot), "Snapshot was from incorrect collection");
+
+            // For non-collection-group queries, the snapshot must be in the exact right collection.
+            // We've checked the parent collection ID above; now check the document containing that collection, if any.
             if (!_root.AllDescendants)
             {
-                GaxPreconditions.CheckArgument(snapshot.Reference.Parent.Path == $"{ParentPath}/{_root.CollectionId}",
+                var snapshotGrandparentPath = snapshot.Reference.Parent.Parent?.Path ?? _root.Database.DocumentsPath;
+                GaxPreconditions.CheckArgument(snapshotGrandparentPath == ParentPath,
                     nameof(snapshot), "Snapshot was from incorrect collection");
             }
 
