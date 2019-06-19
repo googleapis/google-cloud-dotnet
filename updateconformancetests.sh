@@ -17,3 +17,11 @@ $PROTOC \
   -I conformance-tests \
   -I $CORE_PROTOS_ROOT \
   conformance-tests/storage/v1/*.proto
+
+# Bigtable
+$PROTOC \
+  --csharp_out=apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.Tests/Conformance \
+  -I conformance-tests \
+  -I $CORE_PROTOS_ROOT \
+  -I googleapis \
+  conformance-tests/bigtable/v2/proto/google/cloud/conformance/bigtable/v2/*.proto
