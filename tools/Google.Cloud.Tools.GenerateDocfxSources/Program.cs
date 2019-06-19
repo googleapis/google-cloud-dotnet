@@ -211,11 +211,17 @@ download a service account JSON file then set the `GOOGLE_APPLICATION_CREDENTIAL
 The credentials will automatically be used to authenticate. See the [Getting Started With
 Authentication](https://cloud.google.com/docs/authentication/getting-started) guide for more details.";
 
-            string clientClasses = CreateClientClassesDocumentation(api);
+            var clients = GetClientClasses(api);
+            string clientClasses = CreateClientClassesDocumentation(api, clients);
 
+            var exampleClient = clients.FirstOrDefault();
             string clientConstruction =
-@"Create a client instance by calling the static `Create` method, optionally
-specifying an end-point or channel and settings.";
+$@"Create a client instance by calling the static `Create` method. Alternatively,
+use the builder class associated with each client class (e.g. {exampleClient}Builder for {exampleClient})
+as an easy way of specifying custom credentials, settings, or a custom endpoint.";
+
+            string nonProductStub = $@"This package is not a product in its own right; this page is
+present as a root for the [API reference documentation](obj/api/{api.Id}.yml)";
 
             text = text
                 .Replace("{{title}}", title)
@@ -224,28 +230,15 @@ specifying an end-point or channel and settings.";
                 .Replace("{{installation}}", installation)
                 .Replace("{{auth}}", auth)
                 .Replace("{{client-classes}}", clientClasses)
-                .Replace("{{client-construction}}", clientConstruction);
+                .Replace("{{client-construction}}", clientConstruction)
+                .Replace("{{non-product-stub}}", nonProductStub);
             text = Regex.Replace(text, @"\{\{sample:([^\.]+)\.([^}]+)\}\}", "[!code-cs[](obj/snippets/" + api.Id + ".$1.txt#$2)]");
             return text;
         }
 
-        private static string CreateClientClassesDocumentation(ApiMetadata api)
+        private static string CreateClientClassesDocumentation(ApiMetadata api, List<string> clients)
         {
-            if (api.Type != ApiType.Grpc)
-            {
-                return "FIXME"; // No automatic templating for this API
-            }
-            var layout = DirectoryLayout.ForApi(api.Id);
-            var packageSource = Path.Combine(layout.SourceDirectory, api.Id);
-            var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs");
-            // TODO: Find a more robust way of detecting the clients.
-            var clients = sourceFiles
-                .Where(file => File.ReadAllText(file).Contains(": gaxgrpc::ServiceSettingsBase")) // Check it contains a generated client
-                .Select(file => Path.GetFileName(file))             // Just the file name, not full path
-                .Select(file => file.Substring(0, file.Length - 3)) // Trim .cs
-                .OrderBy(client => client)
-                .Select(client => $"[{client}](obj/api/{api.Id}.{client}.yml)") // Markdown link to API doc
-                .ToList();
+            clients = clients.Select(client => $"[{client}](obj/api/{api.Id}.{client}.yml)").ToList(); // Markdown link to API doc
             switch (clients.Count)
             {
                 case 0: return "FIXME"; // No automatic templating for this API
@@ -254,6 +247,24 @@ specifying an end-point or channel and settings.";
                     var list = string.Join("\r\n", clients.Select(client => $"- {client}"));
                     return $"All operations are performed through the following client classes:\r\n\r\n{list}";
             }
+        }
+
+        // TODO: Find a more robust way of detecting the clients.
+        private static List<string> GetClientClasses(ApiMetadata api)
+        {
+            if (api.Type != ApiType.Grpc)
+            {
+                return new List<string>();
+            }
+            var layout = DirectoryLayout.ForApi(api.Id);
+            var packageSource = Path.Combine(layout.SourceDirectory, api.Id);
+            var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs");
+            return sourceFiles
+                .Where(file => File.ReadAllText(file).Contains(": gaxgrpc::ServiceSettingsBase")) // Check it contains a generated client
+                .Select(file => Path.GetFileName(file))             // Just the file name, not full path
+                .Select(file => file.Substring(0, file.Length - 3)) // Trim .cs
+                .OrderBy(client => client)
+                .ToList();
         }
 
         private static void CreateToc(string api, string outputDirectory)

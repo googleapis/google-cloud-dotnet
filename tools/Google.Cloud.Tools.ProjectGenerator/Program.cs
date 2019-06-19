@@ -241,10 +241,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
         static void GenerateDocumentationStub(string apiRoot, ApiMetadata api)
         {
             string file = Path.Combine(apiRoot, "docs", "index.md");
-            if (!File.Exists(file) && api.ProductName != null && api.ProductUrl != null)
+            if (File.Exists(file))
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(file));
-                File.WriteAllText(file,
+                return;
+            }
+            Directory.CreateDirectory(Path.GetDirectoryName(file));
+            string stub = api.ProductName != null && api.ProductUrl != null ?
 @"{{title}}
 
 {{description}}
@@ -260,11 +262,12 @@ namespace Google.Cloud.Tools.ProjectGenerator
 {{client-classes}}
 
 {{client-construction}}
-");
-                Console.WriteLine($"Generated documentation stub for {api.Id}");
-            }
+"
+: "{{non-product-stub}}";
+            File.WriteAllText(file, stub);
+            Console.WriteLine($"Generated documentation stub for {api.Id}");
         }
-        
+
         private static void GenerateMainProject(ApiMetadata api, string directory, HashSet<string> apiNames)
         {
             if (api.Version == null)

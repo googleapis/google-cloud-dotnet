@@ -143,7 +143,8 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             string snippetsSource = Directory.GetDirectories(layout.SourceDirectory, "*.Snippets").FirstOrDefault();
             if (snippetsSource == null)
             {
-                throw new UserErrorException($"Unable to find snippets within API. Aborting.");
+                Console.WriteLine($"Unable to find snippets within API {api}. Ignoring this API.");
+                return 0;
             }
 
             string output = layout.SnippetOutputDirectory;
