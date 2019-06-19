@@ -890,7 +890,6 @@ namespace Google.Cloud.Firestore
                 }
                 else
                 {
-                    // TODO: For arrays and maps, we should check this recursively.
                     var convertedValue = ValueSerializer.Serialize(value);
                     ValidateNoSentinelsRecursively(convertedValue, "Sentinel values cannot be specified in filters");
                     return new InternalFilter(fieldPath, (int) op, convertedValue);
