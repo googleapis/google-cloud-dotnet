@@ -4016,16 +4016,16 @@ namespace Google.Cloud.SecurityCenter.V1
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"resource={request.Resource}"));
             _callUpdateFinding = clientHelper.BuildApiCall<UpdateFindingRequest, Finding>(
                 GrpcClient.UpdateFindingAsync, GrpcClient.UpdateFinding, effectiveSettings.UpdateFindingSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"finding.name={request.Finding.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"finding.name={request.Finding?.Name}"));
             _callUpdateOrganizationSettings = clientHelper.BuildApiCall<UpdateOrganizationSettingsRequest, OrganizationSettings>(
                 GrpcClient.UpdateOrganizationSettingsAsync, GrpcClient.UpdateOrganizationSettings, effectiveSettings.UpdateOrganizationSettingsSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"organization_settings.name={request.OrganizationSettings.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"organization_settings.name={request.OrganizationSettings?.Name}"));
             _callUpdateSource = clientHelper.BuildApiCall<UpdateSourceRequest, Source>(
                 GrpcClient.UpdateSourceAsync, GrpcClient.UpdateSource, effectiveSettings.UpdateSourceSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"source.name={request.Source.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"source.name={request.Source?.Name}"));
             _callUpdateSecurityMarks = clientHelper.BuildApiCall<UpdateSecurityMarksRequest, SecurityMarks>(
                 GrpcClient.UpdateSecurityMarksAsync, GrpcClient.UpdateSecurityMarks, effectiveSettings.UpdateSecurityMarksSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"security_marks.name={request.SecurityMarks.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"security_marks.name={request.SecurityMarks?.Name}"));
             Modify_ApiCall(ref _callCreateSource);
             Modify_CreateSourceApiCall(ref _callCreateSource);
             Modify_ApiCall(ref _callCreateFinding);

@@ -1816,7 +1816,7 @@ namespace Google.Cloud.Firestore.V1
                 GrpcClient.CreateDocumentAsync, GrpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings);
             _callUpdateDocument = clientHelper.BuildApiCall<UpdateDocumentRequest, Document>(
                 GrpcClient.UpdateDocumentAsync, GrpcClient.UpdateDocument, effectiveSettings.UpdateDocumentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"document.name={request.Document.Name}"));
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"document.name={request.Document?.Name}"));
             _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, pbwkt::Empty>(
                 GrpcClient.DeleteDocumentAsync, GrpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
