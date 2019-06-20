@@ -379,7 +379,7 @@ namespace Google.Cloud.Firestore.Tests
             var value = ValueSerializer.Serialize(valueToSerialize);
             string warning = null;
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient()).WithWarningLogger(Log);
-            var context = new DeserializationContext(db);
+            var context = new DeserializationContext(db.Document("a/b"));
             ValueDeserializer.Deserialize(context, value, typeof(T));
             return warning;
 

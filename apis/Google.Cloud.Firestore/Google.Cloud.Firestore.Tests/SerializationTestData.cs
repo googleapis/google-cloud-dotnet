@@ -30,7 +30,7 @@ namespace Google.Cloud.Firestore.Tests
     internal static class SerializationTestData
     {
         internal static FirestoreDb Database { get; } = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-        internal static DeserializationContext Context => new DeserializationContext(Database);
+        internal static DeserializationContext Context => new DeserializationContext(Database.Document("a/b"));
 
         public static IEnumerable<object[]> BclAndValues { get; } = new List<object[]>
         {

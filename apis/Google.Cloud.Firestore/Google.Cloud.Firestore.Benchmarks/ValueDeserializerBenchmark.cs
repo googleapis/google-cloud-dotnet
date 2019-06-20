@@ -23,7 +23,7 @@ namespace Google.Cloud.Firestore.Benchmarks
         public static FirestoreDb FakeDb { get; } =
             FirestoreDb.Create("project", "database", new FakeFirestoreClient());
 
-        private static DeserializationContext Context => new DeserializationContext(FakeDb);
+        private static DeserializationContext Context => new DeserializationContext(FakeDb.Document("a/b"));
 
         [Benchmark]
         public object DeserializeMap_Attributed() =>
