@@ -101,7 +101,6 @@ namespace Google.Cloud.Firestore
             }
             var context = new DeserializationContext(Reference);
             object deserialized = ValueDeserializer.DeserializeMap(context, Document.Fields, typeof(T));
-            AttributedIdAssigner.MaybeAssignId(deserialized, Reference);
             return (T) deserialized;
         }
 

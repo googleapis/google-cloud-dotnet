@@ -264,8 +264,8 @@ namespace Google.Cloud.Firestore.Tests
                 Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2",
                 Fields =
                 {
-                    ["Name"] = ProtoHelpers.CreateValue("text"),
-                    ["Value"] = ProtoHelpers.CreateValue(100)
+                    ["Name"] = CreateValue("text"),
+                    ["Value"] = CreateValue(100)
                 }
             };
             var document = DocumentSnapshot.ForDocument(db, proto, readTime);
@@ -311,6 +311,31 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal("text", converted.Name);
             Assert.Equal(100, converted.Value);
             Assert.Equal("doc2", converted.DocumentId);
+        }
+
+        [Fact]
+        public void ConvertTo_WithNestedId()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var readTime = new Timestamp(10, 2);
+            var proto = new Document
+            {
+                CreateTime = CreateProtoTimestamp(1, 10),
+                UpdateTime = CreateProtoTimestamp(2, 20),
+                Name = "projects/proj/databases/db/documents/col1/doc1/col2/doc2",
+                Fields =
+                {
+                    ["Nested"] = CreateMap(("Name", CreateValue("text")), ("Value", CreateValue(100))),
+                    ["OuterName"] = CreateValue("Outer name")
+                }
+            };
+            var document = DocumentSnapshot.ForDocument(db, proto, readTime);
+
+            var converted = document.ConvertTo<SampleDataWithNestedDocumentId>();
+            Assert.Equal("Outer name", converted.OuterName);
+            Assert.Equal("text", converted.Nested.Name);
+            Assert.Equal(100, converted.Nested.Value);
+            Assert.Equal("doc2", converted.Nested.DocumentId);
         }
 
         private static DocumentSnapshot GetSampleSnapshot()
@@ -363,6 +388,16 @@ namespace Google.Cloud.Firestore.Tests
             
             [FirestoreProperty]
             public int Value { get; set; }
+        }
+
+        [FirestoreData]
+        private class SampleDataWithNestedDocumentId
+        {
+            [FirestoreProperty]
+            public SampleDataWithDocumentId Nested { get; set; }
+
+            [FirestoreProperty]
+            public string OuterName { get; set; }
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore
         internal FirestoreDb Database => DocumentReference.Database;
 
         /// <summary>
-        /// The document being deserialized.
+        /// The document being deserialized. This is never null.
         /// </summary>
         internal DocumentReference DocumentReference { get; }
 
