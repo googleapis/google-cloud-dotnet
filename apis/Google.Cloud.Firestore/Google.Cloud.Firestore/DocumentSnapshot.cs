@@ -99,7 +99,7 @@ namespace Google.Cloud.Firestore
             {
                 return default;
             }
-            var context = new DeserializationContext(Database);
+            var context = new DeserializationContext(Reference);
             object deserialized = ValueDeserializer.DeserializeMap(context, Document.Fields, typeof(T));
             AttributedIdAssigner.MaybeAssignId(deserialized, Reference);
             return (T) deserialized;
@@ -138,7 +138,7 @@ namespace Google.Cloud.Firestore
         {
             var raw = ExtractValue(path);
             GaxPreconditions.CheckState(raw != null, $"Field {path} not found in document");
-            var context = new DeserializationContext(Database);
+            var context = new DeserializationContext(Reference);
             return (T) ValueDeserializer.Deserialize(context, raw, typeof(T));
         }
 
@@ -163,7 +163,7 @@ namespace Google.Cloud.Firestore
                 value = default(T);
                 return false;
             }
-            var context = new DeserializationContext(Database);
+            var context = new DeserializationContext(Reference);
             value = (T) ValueDeserializer.Deserialize(context, raw, typeof(T));
             return true;
         }

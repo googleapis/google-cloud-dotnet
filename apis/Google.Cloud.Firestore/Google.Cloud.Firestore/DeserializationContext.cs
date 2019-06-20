@@ -24,15 +24,20 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// The database containing the document being deserialized. This is never null.
         /// </summary>
-        internal FirestoreDb Database { get; }
+        internal FirestoreDb Database => DocumentReference.Database;
+
+        /// <summary>
+        /// The document being deserialized.
+        /// </summary>
+        internal DocumentReference DocumentReference { get; }
 
         /// <summary>
         /// Constructs a new context.
         /// </summary>
-        /// <param name="database">The database containing the document being deserialized. Must not be null.</param>
-        internal DeserializationContext(FirestoreDb database)
+        /// <param name="reference">The document being deserialized. Must not be null.</param>
+        internal DeserializationContext(DocumentReference reference)
         {
-            Database = GaxPreconditions.CheckNotNull(database, nameof(database));
+            DocumentReference = GaxPreconditions.CheckNotNull(reference, nameof(reference));
         }
     }
 }
