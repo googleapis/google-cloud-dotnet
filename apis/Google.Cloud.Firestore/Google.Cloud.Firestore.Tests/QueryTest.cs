@@ -439,6 +439,8 @@ namespace Google.Cloud.Firestore.Tests
             "doc2/col2/doc3",
             // DocumentReference not in this collection
             s_db.Document("othercol/doc"),
+            // DocumentReference which isn't a direct chid
+            "col/doc/col2/doc2"
         };
 
         [Theory]
@@ -460,7 +462,6 @@ namespace Google.Cloud.Firestore.Tests
 
         [Theory]
         [InlineData("col/foo")]
-        [InlineData("col/doc/col2/doc2")]
         public void DocumentIdCursor_ValidDocumentReference(string path)
         {
             var doc = s_db.Document(path);
@@ -964,25 +965,18 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
-        public void CollectionGroup_InvalidCursor()
+        public void CollectionGroup_CursorForPath()
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-            var collection = s_db.Collection("col1");
-            var document = new Document
+            var query = db.CollectionGroup("col").OrderBy(FieldPath.DocumentId).StartAfter("a/b");
+            var expected = new StructuredQuery
             {
-                CreateTime = CreateProtoTimestamp(0, 0),
-                UpdateTime = CreateProtoTimestamp(0, 0),
-                Name = collection.Document("doc").Path,
-                Fields = { { "field", CreateArray(CreateValue(1), CreateValue(2)) } }
+                From = { new CollectionSelector { AllDescendants = true, CollectionId = "col" } },
+                OrderBy = { new Order { Field = Field("__name__"), Direction = Direction.Ascending } },
+                StartAt = new Cursor { Values = { CreateValue(db.Document("a/b")) } }
             };
-            var snapshot = DocumentSnapshot.ForDocument(s_db, document, Timestamp.FromProto(document.CreateTime));
-
-            // Collection group query for a different collection
-            var query = db.CollectionGroup("col2");
-
-            Assert.Throws<ArgumentException>(() => query.StartAt(snapshot));
+            Assert.Equal(expected, query.ToStructuredQuery());
         }
-
 
         private static FieldReference Field(string path) => new FieldReference { FieldPath = path };
         private static Filter Filter(UnaryFilter filter) => new Filter { UnaryFilter = filter };

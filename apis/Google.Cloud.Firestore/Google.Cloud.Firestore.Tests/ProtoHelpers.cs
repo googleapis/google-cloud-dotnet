@@ -37,6 +37,7 @@ namespace Google.Cloud.Firestore.Tests
         internal static Value CreateValue(double value) => new Value { DoubleValue = value };
         internal static Value CreateValue(long value) => new Value { IntegerValue = value };
         internal static Value CreateValue(string value) => new Value { StringValue = value };
+        internal static Value CreateValue(DocumentReference reference) => new Value { ReferenceValue = reference.Path };
 
         internal static Value CreateNullValue() => new Value { NullValue = wkt.NullValue.NullValue };
 
