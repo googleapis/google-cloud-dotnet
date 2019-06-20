@@ -30,11 +30,12 @@ namespace Google.Cloud.Firestore.Tests.Converters
         public void NullReturnsProhibited()
         {
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var context = new DeserializationContext(db);
             var converter = CustomConverter.ForConverterType(typeof(NullReturningConverter), typeof(string));
             Assert.Throws<InvalidOperationException>(() => converter.Serialize(""));
             Assert.Throws<InvalidOperationException>(() => converter.SerializeMap("", new Dictionary<string, Value>()));
-            Assert.Throws<InvalidOperationException>(() => converter.DeserializeValue(db, new Value { StringValue = "" }));
-            Assert.Throws<InvalidOperationException>(() => converter.DeserializeMap(db, new Dictionary<string, Value>()));
+            Assert.Throws<InvalidOperationException>(() => converter.DeserializeValue(context, new Value { StringValue = "" }));
+            Assert.Throws<InvalidOperationException>(() => converter.DeserializeMap(context, new Dictionary<string, Value>()));
         }
 
         [Fact]

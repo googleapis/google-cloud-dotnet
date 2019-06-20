@@ -25,18 +25,18 @@ namespace Google.Cloud.Firestore.Converters
         /// <summary>
         /// Deserializes a single (possibly map- or list-based) Firestore value to a POCO.
         /// </summary>
-        /// <param name="db">The database the value was fetched from. Used when deserializing document references. Never null.</param>
+        /// <param name="context">The context for the deserialization operation. Never null.</param>
         /// <param name="value">The Firestore value to deserialize. Never null.</param>
         /// <returns>The deserialized value. Should never be null.</returns>
-        object DeserializeValue(FirestoreDb db, Value value);
+        object DeserializeValue(DeserializationContext context, Value value);
 
         /// <summary>
         /// Deserializes a map (as a dictionary of name/value pairs) to a POCO.
         /// </summary>
-        /// <param name="db">The database the value was fetched from. Used when deserializing document references. Never null.</param>
+        /// <param name="context">The context for the deserialization operation. Never null.</param>
         /// <param name="values">The name/value pairs to deserialize. Never null.</param>
         /// <returns>The deserialized value. Should never be null.</returns>
-        object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values);
+        object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values);
 
         /// <summary>
         /// Serializes a single POCO to a Firestore representation.

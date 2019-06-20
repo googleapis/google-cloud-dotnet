@@ -31,12 +31,12 @@ namespace Google.Cloud.Firestore.Converters
             _elementType = elementType;
         }
 
-        protected override object DeserializeArray(FirestoreDb db, RepeatedField<Value> values)
+        protected override object DeserializeArray(DeserializationContext context, RepeatedField<Value> values)
         {
             Array array = Array.CreateInstance(_elementType, values.Count);
             for (int i = 0; i < values.Count; i++)
             {
-                var converted = ValueDeserializer.Deserialize(db, values[i], _elementType);
+                var converted = ValueDeserializer.Deserialize(context, values[i], _elementType);
                 array.SetValue(converted, i);
             }
             return array;

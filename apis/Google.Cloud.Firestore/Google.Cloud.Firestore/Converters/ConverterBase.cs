@@ -38,33 +38,33 @@ namespace Google.Cloud.Firestore.Converters
             TargetType = targetType;
         }
 
-        public virtual object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values) =>
+        public virtual object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values) =>
             throw new ArgumentException($"Unable to convert map value to {TargetType}");
 
-        public virtual object DeserializeValue(FirestoreDb db, Value value)
+        public virtual object DeserializeValue(DeserializationContext context, Value value)
         {
             switch (value.ValueTypeCase)
             {
                 case Value.ValueTypeOneofCase.ArrayValue:
-                    return DeserializeArray(db, value.ArrayValue.Values);
+                    return DeserializeArray(context, value.ArrayValue.Values);
                 case Value.ValueTypeOneofCase.BooleanValue:
-                    return DeserializeBoolean(db, value.BooleanValue);
+                    return DeserializeBoolean(context, value.BooleanValue);
                 case Value.ValueTypeOneofCase.BytesValue:
-                    return DeserializeBytes(db, value.BytesValue);
+                    return DeserializeBytes(context, value.BytesValue);
                 case Value.ValueTypeOneofCase.DoubleValue:
-                    return DeserializeDouble(db, value.DoubleValue);
+                    return DeserializeDouble(context, value.DoubleValue);
                 case Value.ValueTypeOneofCase.GeoPointValue:
-                    return DeserializeGeoPoint(db, value.GeoPointValue);
+                    return DeserializeGeoPoint(context, value.GeoPointValue);
                 case Value.ValueTypeOneofCase.IntegerValue:
-                    return DeserializeInteger(db, value.IntegerValue);
+                    return DeserializeInteger(context, value.IntegerValue);
                 case Value.ValueTypeOneofCase.MapValue:
-                    return DeserializeMap(db, value.MapValue.Fields);
+                    return DeserializeMap(context, value.MapValue.Fields);
                 case Value.ValueTypeOneofCase.ReferenceValue:
-                    return DeserializeReference(db, value.ReferenceValue);
+                    return DeserializeReference(context, value.ReferenceValue);
                 case Value.ValueTypeOneofCase.StringValue:
-                    return DeserializeString(db, value.StringValue);
+                    return DeserializeString(context, value.StringValue);
                 case Value.ValueTypeOneofCase.TimestampValue:
-                    return DeserializeTimestamp(db, value.TimestampValue);
+                    return DeserializeTimestamp(context, value.TimestampValue);
                 default:
                     throw new ArgumentException($"Unable to convert value type {value.ValueTypeCase}");
             }
@@ -75,31 +75,31 @@ namespace Google.Cloud.Firestore.Converters
         public virtual void SerializeMap(object value, IDictionary<string, Value> map) =>
             throw new ArgumentException($"Unable to convert {TargetType} to a map");
 
-        protected virtual object DeserializeArray(FirestoreDb db, RepeatedField<Value> values) =>
+        protected virtual object DeserializeArray(DeserializationContext context, RepeatedField<Value> values) =>
             throw new ArgumentException($"Unable to convert array value to {TargetType}");
 
-        protected virtual object DeserializeBoolean(FirestoreDb db, bool value) =>
+        protected virtual object DeserializeBoolean(DeserializationContext context, bool value) =>
             throw new ArgumentException($"Unable to convert Boolean value to {TargetType}");
 
-        protected virtual object DeserializeBytes(FirestoreDb db, ByteString value) =>
+        protected virtual object DeserializeBytes(DeserializationContext context, ByteString value) =>
             throw new ArgumentException($"Unable to convert bytes value to {TargetType}");
 
-        protected virtual object DeserializeDouble(FirestoreDb db, double value) =>
+        protected virtual object DeserializeDouble(DeserializationContext context, double value) =>
             throw new ArgumentException($"Unable to convert double value to {TargetType}");
 
-        protected virtual object DeserializeGeoPoint(FirestoreDb db, LatLng value) =>
+        protected virtual object DeserializeGeoPoint(DeserializationContext context, LatLng value) =>
             throw new ArgumentException($"Unable to convert LatLng value to {TargetType}");
 
-        protected virtual object DeserializeInteger(FirestoreDb db, long value) =>
+        protected virtual object DeserializeInteger(DeserializationContext context, long value) =>
             throw new ArgumentException($"Unable to convert integer value to {TargetType}");
 
-        protected virtual object DeserializeReference(FirestoreDb db, string value) =>
+        protected virtual object DeserializeReference(DeserializationContext context, string value) =>
             throw new ArgumentException($"Unable to convert reference value to {TargetType}");
 
-        protected virtual object DeserializeString(FirestoreDb db, string value) =>
+        protected virtual object DeserializeString(DeserializationContext context, string value) =>
             throw new ArgumentException($"Unable to convert string value to {TargetType}");
 
-        protected virtual object DeserializeTimestamp(FirestoreDb db, wkt::Timestamp value) =>
+        protected virtual object DeserializeTimestamp(DeserializationContext context, wkt::Timestamp value) =>
             throw new ArgumentException($"Unable to convert Timestamp value to {TargetType}");
     }
 }

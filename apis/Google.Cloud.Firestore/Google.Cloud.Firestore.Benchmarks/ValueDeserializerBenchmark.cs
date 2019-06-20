@@ -23,28 +23,30 @@ namespace Google.Cloud.Firestore.Benchmarks
         public static FirestoreDb FakeDb { get; } =
             FirestoreDb.Create("project", "database", new FakeFirestoreClient());
 
+        private static DeserializationContext Context => new DeserializationContext(FakeDb);
+
         [Benchmark]
         public object DeserializeMap_Attributed() =>
-            ValueDeserializer.DeserializeMap(FakeDb, SampleData.SerializedMap, typeof(HighScore));
+            ValueDeserializer.DeserializeMap(Context, SampleData.SerializedMap, typeof(HighScore));
 
         [Benchmark]
         public object Deserialize_Attributed() =>
-            ValueDeserializer.Deserialize(FakeDb, SampleData.Serialized, typeof(HighScore));
+            ValueDeserializer.Deserialize(Context, SampleData.Serialized, typeof(HighScore));
 
         [Benchmark]
         public object DeserializeMap_Dictionary() =>
-            ValueDeserializer.DeserializeMap(FakeDb, SampleData.SerializedMap, typeof(Dictionary<string, object>));
+            ValueDeserializer.DeserializeMap(Context, SampleData.SerializedMap, typeof(Dictionary<string, object>));
 
         [Benchmark]
         public object Deserialize_Dictionary() =>
-            ValueDeserializer.Deserialize(FakeDb, SampleData.Serialized, typeof(Dictionary<string, object>));
+            ValueDeserializer.Deserialize(Context, SampleData.Serialized, typeof(Dictionary<string, object>));
 
         [Benchmark]
         public object DeserializeMap_Expando() =>
-            ValueDeserializer.DeserializeMap(FakeDb, SampleData.SerializedMap, typeof(ExpandoObject));
+            ValueDeserializer.DeserializeMap(Context, SampleData.SerializedMap, typeof(ExpandoObject));
 
         [Benchmark]
         public object Deserialize_Expando() =>
-            ValueDeserializer.Deserialize(FakeDb, SampleData.Serialized, typeof(ExpandoObject));
+            ValueDeserializer.Deserialize(Context, SampleData.Serialized, typeof(ExpandoObject));
     }
 }

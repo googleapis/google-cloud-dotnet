@@ -36,7 +36,7 @@ namespace Google.Cloud.Firestore.Converters
             _converter = s_primitiveConverters.GetOrAdd(targetType, t => PrimitiveConverter.ForType(t));
         }
 
-        protected override object DeserializeInteger(FirestoreDb db, long value) => _converter.Int64ToEnum(value);
+        protected override object DeserializeInteger(DeserializationContext context, long value) => _converter.Int64ToEnum(value);
 
         public override Value Serialize(object value) => new Value { IntegerValue = _converter.EnumToInt64(value) };
 

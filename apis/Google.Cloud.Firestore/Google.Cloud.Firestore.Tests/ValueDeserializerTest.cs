@@ -40,7 +40,7 @@ namespace Google.Cloud.Firestore.Tests
         public void DeserializeToExpando()
         {
             var value = new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } };
-            dynamic result = ValueDeserializer.Deserialize(SerializationTestData.Database, value, typeof(ExpandoObject));
+            dynamic result = ValueDeserializer.Deserialize(SerializationTestData.Context, value, typeof(ExpandoObject));
             Assert.Equal("Jon", result.name);
             Assert.Equal(10L, result.score);
         }
@@ -49,7 +49,7 @@ namespace Google.Cloud.Firestore.Tests
         public void DeserializeToObjectDictionary()
         {
             var value = new Value { MapValue = new MapValue { Fields = { { "name", new Value { StringValue = "Jon" } }, { "score", new Value { IntegerValue = 10L } } } } };
-            var result = ValueDeserializer.Deserialize(SerializationTestData.Database, value, typeof(object));
+            var result = ValueDeserializer.Deserialize(SerializationTestData.Context, value, typeof(object));
             Assert.IsType<Dictionary<string, object>>(result);
             var expected = new Dictionary<string, object>
             {
@@ -63,7 +63,7 @@ namespace Google.Cloud.Firestore.Tests
         public void DeserializeToSpecificDictionary()
         {
             var value = new Value { MapValue = new MapValue { Fields = { { "x", new Value { IntegerValue = 10L } }, { "y", new Value { IntegerValue = 20L } } } } };
-            var result = ValueDeserializer.Deserialize(SerializationTestData.Database, value, typeof(Dictionary<string, int>));
+            var result = ValueDeserializer.Deserialize(SerializationTestData.Context, value, typeof(Dictionary<string, int>));
             Assert.IsType<Dictionary<string, int>>(result);
             var expected = new Dictionary<string, int>
             {
@@ -379,7 +379,8 @@ namespace Google.Cloud.Firestore.Tests
             var value = ValueSerializer.Serialize(valueToSerialize);
             string warning = null;
             var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient()).WithWarningLogger(Log);
-            ValueDeserializer.Deserialize(db, value, typeof(T));
+            var context = new DeserializationContext(db);
+            ValueDeserializer.Deserialize(context, value, typeof(T));
             return warning;
 
             void Log(string message)
@@ -395,7 +396,7 @@ namespace Google.Cloud.Firestore.Tests
 
         // Just a convenience method to avoid having to specify all of this on each call.
         private static object DeserializeDefault(Value value, BclType targetType) =>
-            ValueDeserializer.Deserialize(SerializationTestData.Database, value, targetType);
+            ValueDeserializer.Deserialize(SerializationTestData.Context, value, targetType);
 
         /// <summary>
         /// An interface that we can't deserialize to, because Dictionary{,} doesn't implement it.

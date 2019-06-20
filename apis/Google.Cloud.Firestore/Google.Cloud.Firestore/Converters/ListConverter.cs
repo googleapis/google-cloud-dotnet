@@ -48,13 +48,13 @@ namespace Google.Cloud.Firestore.Converters
             }
         }
 
-        protected override object DeserializeArray(FirestoreDb db, RepeatedField<Value> values)
+        protected override object DeserializeArray(DeserializationContext context, RepeatedField<Value> values)
         {
             // TODO: See if using a compiled expression tree is faster.
             var list = (IList) Activator.CreateInstance(TargetType);
             foreach (var value in values)
             {
-                var deserialized = ValueDeserializer.Deserialize(db, value, _elementType);
+                var deserialized = ValueDeserializer.Deserialize(context, value, _elementType);
                 list.Add(deserialized);
             }
             return list;
