@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.IntegrationTests.Models;
 using System;
 using System.Collections.Generic;
@@ -186,14 +187,129 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Equal(allDocs.Skip(1).Take(3), results);
         }
 
+        // Collection group queries taken from Node implementation
         [Fact]
-        public async Task SimpleCollectionGroup()
+        public async Task CanQueryCollectionGroups()
         {
-            var collection = _fixture.CollectionGroupName;
-            var snapshot = await _fixture.FirestoreDb.CollectionGroup(_fixture.CollectionGroupName)
+            var rootDocPath = $"{_fixture.CollectionGroupQueryCollection.Id}/{IdGenerator.FromGuid()}";
+            // Create a random collection group name, but prefix it with "b" for predictable ordering
+            var collectionGroup = IdGenerator.FromGuid(prefix: "b");
+
+            string[] docPaths =
+            {
+                $"abc/123/{collectionGroup}/cg-doc1",
+                $"abc/123/{collectionGroup}/cg-doc2",
+                $"abc/123/{collectionGroup}/cg-doc3",
+                $"{collectionGroup}/cg-doc4",
+                $"def/456/{collectionGroup}/cg-doc5",
+                $"{collectionGroup}/virtual-doc/nested-coll/not-cg-doc",
+                $"x{collectionGroup}/not-cg-doc",
+                $"{collectionGroup}x/not-cg-doc",
+                $"abc/123/{collectionGroup}x/not-cg-doc",
+                $"abc/123/x{collectionGroup}/not-cg-doc",
+                $"abc/{collectionGroup}"
+            };
+            var db = _fixture.FirestoreDb;
+            var batch = db.StartBatch();
+            batch.Set(db.Document(rootDocPath), new { X = 1 });
+            foreach (var docPath in docPaths)
+            {
+                batch.Set(db.Document($"{rootDocPath}/{docPath}"), new { X = 1 });
+            }
+            await batch.CommitAsync();
+
+            var querySnapshot = await db.CollectionGroup(collectionGroup).GetSnapshotAsync();
+            var actualIds = querySnapshot.Select(d => d.Id).ToList();
+            var expectedIds = new List<string> { "cg-doc1", "cg-doc2", "cg-doc3", "cg-doc4", "cg-doc5" };
+            Assert.Equal(expectedIds, actualIds);
+        }
+
+        [Fact]
+        public async Task CanQueryCollectionGroupsWithStartAtEndAtByArbitraryDocumentId()
+        {
+            var rootDocPath = $"{_fixture.CollectionGroupQueryCollection.Id}/{IdGenerator.FromGuid()}";
+            // Create a random collection group name, but prefix it with "b" for predictable ordering
+            var collectionGroup = IdGenerator.FromGuid(prefix: "b");
+
+            string[] docPaths =
+            {
+                $"a/a/{collectionGroup}/cg-doc1",
+                $"a/b/a/b/{collectionGroup}/cg-doc2",
+                $"a/b/{collectionGroup}/cg-doc3",
+                $"a/b/c/d/{collectionGroup}/cg-doc4",
+                $"a/c/{collectionGroup}/cg-doc5",
+                $"{collectionGroup}/cg-doc6",
+                $"a/b/nope/nope"
+            };
+            var db = _fixture.FirestoreDb;
+            var batch = db.StartBatch();
+            batch.Set(db.Document(rootDocPath), new { X = 1 });
+            foreach (var docPath in docPaths)
+            {
+                batch.Set(db.Document($"{rootDocPath}/{docPath}"), new { X = 1 });
+            }
+            await batch.CommitAsync();
+
+            var querySnapshot = await db.CollectionGroup(collectionGroup)
+                .OrderBy(FieldPath.DocumentId)
+                .StartAt($"{rootDocPath}/a/b")
+                .EndAt($"{rootDocPath}/a/b0")
                 .GetSnapshotAsync();
-            var documents = snapshot.Documents.Select(doc => doc.ConvertTo<NamedDocument>()).OrderBy(doc => doc.Name).ToList();
-            Assert.Equal(new[] { NamedDocument.Child1, NamedDocument.Child2 }, documents);
+            var actualIds = querySnapshot.Select(d => d.Id).ToList();
+            var expectedIds = new List<string> { "cg-doc2", "cg-doc3", "cg-doc4" };
+            Assert.Equal(expectedIds, actualIds);
+
+            querySnapshot = await db.CollectionGroup(collectionGroup)
+                .OrderBy(FieldPath.DocumentId)
+                .StartAfter($"{rootDocPath}/a/b")
+                .EndBefore($"{rootDocPath}/a/b/{collectionGroup}/cg-doc3")
+                .GetSnapshotAsync();
+            actualIds = querySnapshot.Select(d => d.Id).ToList();
+            Assert.Single(actualIds, "cg-doc2");
+        }
+
+        [Fact]
+        public async Task CanQueryCollectionGroupsWithWhereFiltersOnArbitraryDocumentId()
+        {
+            var rootDocPath = $"{_fixture.CollectionGroupQueryCollection.Id}/{IdGenerator.FromGuid()}";
+            // Create a random collection group name, but prefix it with "b" for predictable ordering
+            var collectionGroup = IdGenerator.FromGuid(prefix: "b");
+
+            string[] docPaths =
+            {
+                $"a/a/{collectionGroup}/cg-doc1",
+                $"a/b/a/b/{collectionGroup}/cg-doc2",
+                $"a/b/{collectionGroup}/cg-doc3",
+                $"a/b/c/d/{collectionGroup}/cg-doc4",
+                $"a/c/{collectionGroup}/cg-doc5",
+                $"{collectionGroup}/cg-doc6",
+                $"a/b/nope/nope"
+            };
+            var db = _fixture.FirestoreDb;
+            var batch = db.StartBatch();
+            batch.Set(db.Document(rootDocPath), new { X = 1 });
+            foreach (var docPath in docPaths)
+            {
+                batch.Set(db.Document($"{rootDocPath}/{docPath}"), new { X = 1 });
+            }
+            await batch.CommitAsync();
+
+            var querySnapshot = await db.CollectionGroup(collectionGroup)
+                .OrderBy(FieldPath.DocumentId)
+                .WhereGreaterThanOrEqualTo(FieldPath.DocumentId, db.Document($"{rootDocPath}/a/b"))
+                .WhereLessThanOrEqualTo(FieldPath.DocumentId, db.Document($"{rootDocPath}/a/b0"))
+                .GetSnapshotAsync();
+            var actualIds = querySnapshot.Select(d => d.Id).ToList();
+            var expectedIds = new List<string> { "cg-doc2", "cg-doc3", "cg-doc4" };
+            Assert.Equal(expectedIds, actualIds);
+
+            querySnapshot = await db.CollectionGroup(collectionGroup)
+                .OrderBy(FieldPath.DocumentId)
+                .WhereGreaterThan(FieldPath.DocumentId, db.Document($"{rootDocPath}/a/b"))
+                .WhereLessThan(FieldPath.DocumentId, db.Document($"{rootDocPath}/a/b/{collectionGroup}/cg-doc3"))
+                .GetSnapshotAsync();
+            actualIds = querySnapshot.Select(d => d.Id).ToList();
+            Assert.Single(actualIds, "cg-doc2");
         }
 
         public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>
