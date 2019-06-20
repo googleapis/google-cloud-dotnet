@@ -34,14 +34,14 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Deserializes from a Firestore Value proto to a .NET type.
         /// </summary>
-        /// <param name="db">The database to use when deserializing DocumentReferences. Must not be null.</param>
+        /// <param name="context">The context for the deserialization operation. Never null.</param>
         /// <param name="value">The value to deserialize. Must not be null.</param>
         /// <param name="targetType">The target type. The method tries to convert to this type. If the type is
         /// object, it uses the default representation of the value.</param>
         /// <returns>The deserialized value</returns>
-        internal static object Deserialize(FirestoreDb db, Value value, BclType targetType)
+        internal static object Deserialize(DeserializationContext context, Value value, BclType targetType)
         {
-            GaxPreconditions.CheckNotNull(db, nameof(db));
+            GaxPreconditions.CheckNotNull(context, nameof(context));
             GaxPreconditions.CheckNotNull(value, nameof(value));
 
             // If we're asked for a Value, just clone it, even for null values.
@@ -67,16 +67,16 @@ namespace Google.Cloud.Firestore
             // We deserialize to T and Nullable<T> the same way for all non-null values. Use the converter
             // associated with the non-nullable version of the target type.
             BclType nonNullableTargetType = underlyingType ?? targetType;
-            return ConverterCache.GetConverter(nonNullableTargetType).DeserializeValue(db, value);
+            return ConverterCache.GetConverter(nonNullableTargetType).DeserializeValue(context, value);
         }
 
-        internal static object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values, BclType targetType)
+        internal static object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values, BclType targetType)
         {
             if (targetType == typeof(object))
             {
                 targetType = typeof(Dictionary<string, object>);
             }
-            return ConverterCache.GetConverter(targetType).DeserializeMap(db, values);
+            return ConverterCache.GetConverter(targetType).DeserializeMap(context, values);
         }
 
         private static BclType GetTargetType(Value value)

@@ -62,17 +62,17 @@ namespace Google.Cloud.Firestore.Converters
             _wrappedConverter = wrappedConverter;
         }
 
-        public object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values)
+        public object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
         {
-            var poco = ValueDeserializer.DeserializeMap(db, values, typeof(Dictionary<string, object>));
+            var poco = ValueDeserializer.DeserializeMap(context, values, typeof(Dictionary<string, object>));
             var converted = _wrappedConverter.FromFirestore(poco);
             GaxPreconditions.CheckState(converted != null, "Converter deserialized to null value");
             return converted;
         }
 
-        public object DeserializeValue(FirestoreDb db, Value value)
+        public object DeserializeValue(DeserializationContext context, Value value)
         {
-            var poco = ValueDeserializer.Deserialize(db, value, typeof(object));
+            var poco = ValueDeserializer.Deserialize(context, value, typeof(object));
             var converted = _wrappedConverter.FromFirestore(poco);
             GaxPreconditions.CheckState(converted != null, "Converter deserialized to null value");
             return converted;

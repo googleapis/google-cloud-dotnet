@@ -96,7 +96,7 @@ namespace Google.Cloud.Firestore.Converters
                 : CustomConverter.ForConverterType(attribute.ConverterType, targetType);
         }
 
-        public override object DeserializeMap(FirestoreDb db, IDictionary<string, Value> values)
+        public override object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
         {
             // TODO: Consider using a compiled expression tree for this.
             object ret;
@@ -113,7 +113,7 @@ namespace Google.Cloud.Firestore.Converters
             {
                 if (_writableProperties.TryGetValue(pair.Key, out var property))
                 {
-                    property.SetValue(db, pair.Value, ret);
+                    property.SetValue(context, pair.Value, ret);
                 }
                 else
                 {
@@ -122,7 +122,7 @@ namespace Google.Cloud.Firestore.Converters
                         case UnknownPropertyHandling.Ignore:
                             break;
                         case UnknownPropertyHandling.Warn:
-                            db.LogWarning($"No writable property for Firestore field {pair.Key} in type {TargetType.FullName}");
+                            context.Database.LogWarning($"No writable property for Firestore field {pair.Key} in type {TargetType.FullName}");
                             break;
                         case UnknownPropertyHandling.Throw:
                             throw new ArgumentException($"No writable property for Firestore field {pair.Key} in type {TargetType.FullName}");
@@ -194,12 +194,12 @@ namespace Google.Cloud.Firestore.Converters
                     : _converter.Serialize(propertyValue);
             }
 
-            internal void SetValue(FirestoreDb db, Value value, object target)
+            internal void SetValue(DeserializationContext context, Value value, object target)
             {
                 object converted =
-                    _converter == null ? ValueDeserializer.Deserialize(db, value, _propertyInfo.PropertyType)
+                    _converter == null ? ValueDeserializer.Deserialize(context, value, _propertyInfo.PropertyType)
                     : value.ValueTypeCase == Value.ValueTypeOneofCase.NullValue ? null
-                    : _converter.DeserializeValue(db, value);
+                    : _converter.DeserializeValue(context, value);
                 _propertyInfo.SetValue(target, converted);
             }
         }

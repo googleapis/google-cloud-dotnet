@@ -146,7 +146,8 @@ namespace Google.Cloud.Firestore.Tests.Converters
                 { "WriteOnly", new Value { IntegerValue = 200 } },
             };
             var db = FirestoreDb.Create("project", "database", new FakeFirestoreClient());
-            Model model = (Model) converter.DeserializeMap(db, map);
+            var context = new DeserializationContext(db);
+            Model model = (Model) converter.DeserializeMap(context, map);
             Assert.Equal(now, model.Created);
             Assert.Equal(50, model.ReadWrite);
             Assert.Equal(100, model.SeparatedBackingProperty);
