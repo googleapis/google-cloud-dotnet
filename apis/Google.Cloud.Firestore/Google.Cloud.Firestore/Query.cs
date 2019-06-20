@@ -609,7 +609,6 @@ namespace Google.Cloud.Firestore
 
         private Cursor CreateCursor(object[] fieldValues, bool before)
         {
-            string basePath = _root.CollectionId == null ? ParentPath : $"{ParentPath}/{_root.CollectionId}";
             GaxPreconditions.CheckNotNull(fieldValues, nameof(fieldValues));
             GaxPreconditions.CheckArgument(fieldValues.Length != 0, nameof(fieldValues), "Cannot specify an empty set of values for a start/end query cursor.");
             GaxPreconditions.CheckArgument(
@@ -626,21 +625,7 @@ namespace Google.Cloud.Firestore
                 // a DocumentReference (absolute path that must be a descendant of this collection).
                 if (Equals(_orderings[i].Field, FieldPath.DocumentId))
                 {
-                    switch (fieldValues[i])
-                    {
-                        case string relativePath:
-                            // Convert to a DocumentReference for the cursor
-                            PathUtilities.ValidateId(relativePath, nameof(fieldValues));
-                            value = Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}");
-                            break;
-                        case DocumentReference absoluteRef:
-                            // Just validate that the given document is a child of the parent collection.
-                            GaxPreconditions.CheckArgument(absoluteRef.Path.StartsWith(basePath + "/"), nameof(fieldValues),
-                                "A DocumentReference cursor value for a document ID must be a descendant of the collection of the query");
-                            break;
-                        default:
-                            throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", nameof(fieldValues));
-                    }
+                    value = ConvertReference(fieldValues[i], nameof(fieldValues));
                 }
                 var convertedValue = ValueSerializer.Serialize(value);
                 ValidateNoSentinelsRecursively(convertedValue, "Snapshot ordering contained a sentinel value");
@@ -648,6 +633,35 @@ namespace Google.Cloud.Firestore
             }
 
             return cursor;
+        }
+
+        private DocumentReference ConvertReference(object fieldValue, string parameterName)
+        {
+            string basePath = _root.AllDescendants ? ParentPath : $"{ParentPath}/{_root.CollectionId}";
+            DocumentReference reference;
+            switch (fieldValue)
+            {
+                case string relativePath:
+                    reference = Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}");
+                    break;
+                case DocumentReference absoluteRef:
+                    reference = absoluteRef;
+                    break;
+                default:
+                    throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", parameterName);
+            }
+            GaxPreconditions.CheckArgument(
+                reference.Path.StartsWith(basePath + "/"),
+                parameterName,
+                "'{0}' is not part of the query result set and cannot be used as a query boundary",
+                reference.Path);
+
+            GaxPreconditions.CheckArgument(
+                _root.AllDescendants || reference.Parent.Path == basePath,
+                parameterName,
+                "Only a direct child can be used as a query boundary. Found: '{0}'",
+                reference.Path);
+            return reference;
         }
 
         private Query StartAtSnapshot(DocumentSnapshot snapshot, bool before)
@@ -664,14 +678,13 @@ namespace Google.Cloud.Firestore
 
         private Cursor CreateCursorFromSnapshot(DocumentSnapshot snapshot, bool before, out IReadOnlyList<InternalOrdering> newOrderings)
         {
-            GaxPreconditions.CheckArgument(snapshot.Reference.Parent.Id == _root.CollectionId,
-                nameof(snapshot), "Snapshot was from incorrect collection");
-
             // For non-collection-group queries, the snapshot must be in the exact right collection.
-            // We've checked the parent collection ID above; now check the document containing that collection, if any.
             if (!_root.AllDescendants)
             {
-                var snapshotGrandparentPath = snapshot.Reference.Parent.Parent?.Path ?? _root.Database.DocumentsPath;
+                CollectionReference snapshotCollection = snapshot.Reference.Parent;
+                GaxPreconditions.CheckArgument(snapshotCollection.Id == _root.CollectionId,
+                    nameof(snapshot), "Snapshot was from incorrect collection");
+                var snapshotGrandparentPath = snapshotCollection.Parent?.Path ?? _root.Database.DocumentsPath;
                 GaxPreconditions.CheckArgument(snapshotGrandparentPath == ParentPath,
                     nameof(snapshot), "Snapshot was from incorrect collection");
             }
