@@ -150,7 +150,7 @@ namespace Google.Cloud.Firestore.Snippets
             string projectId = _fixture.ProjectId;
             FirestoreDb db = FirestoreDb.Create(projectId);
 
-            // Create a document with a random ID in the "cities" collection.
+            // Create a document with a random ID in the "scores" collection.
             CollectionReference collection = db.Collection("scores");
             DocumentReference document = await collection.AddAsync(new HighScore { Score = 10, Name = "Jon" });
 
@@ -272,5 +272,39 @@ namespace Google.Cloud.Firestore.Snippets
             }
         }
         // End sample
+
+        // Sample: DocumentId
+        [FirestoreData]
+        public class ChatRoom
+        {
+            [FirestoreDocumentId]
+            public DocumentReference Reference { get; set; }
+
+            [FirestoreProperty]
+            public string Name { get; set; }
+
+            [FirestoreProperty]
+            public bool Public { get; set; }
+        }
+        // End sample
+
+        [Fact]
+        public async Task DocumentId()
+        {
+            // Sample: DocumentIdUsage
+            string projectId = _fixture.ProjectId;
+            FirestoreDb db = FirestoreDb.Create(projectId);
+
+            // Create a document with a random ID in the "rooms" collection.
+            CollectionReference collection = db.Collection("rooms");
+            DocumentReference document = await collection.AddAsync(new ChatRoom { Name = "Jon's private chat" });
+            
+            // Later in code, fetch a snapshot (potentially using a query; we're fetching directly for simplicity)
+            DocumentSnapshot snapshot = await document.GetSnapshotAsync();
+            ChatRoom room = snapshot.ConvertTo<ChatRoom>();
+            // room.Reference is now populated with the document reference
+            // End sample
+            Assert.Equal(document, room.Reference);
+        }
     }
 }

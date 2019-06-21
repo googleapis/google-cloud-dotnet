@@ -138,9 +138,26 @@ You might then use it to create a document and then fetch it like this:
 {{sample:DataModel.AttributedClassUsage}}
 
 In order to deserialize a map as an attributed class, the class must have a public parameterless constructor. (The C# compiler provides
-one by default if no other constructors are specified.) The properties in the map must each have an attributed, public instance property with a public setter,
+one by default if no other constructors are specified.) The properties in the map must each have an attributed instance property with a setter,
 and the type of the property must be suitable for the value in the map. If the attributed class doesn't have a suitable property for an element of the map,
 an exception is thrown.
+
+An additional attribute, [FirestoreDocumentId](obj/api/Google.Cloud.Firestore.FirestoreDocumentIdAttribute.yml), is also available for attributed classes.
+This must be placed on a property of type `string` or `DocumentReference`. The property plays no part in serializing data when writing to Firestore, but is automatically
+populated when deserializing a document. If the property is of type `string`, it is populated with the document ID. If the property is of type `DocumentReference`, it
+is populated with the complete reference to the document.
+
+For example, consider the following data model:
+
+{{sample:DataModel.DocumentId}}
+
+The following code creates a document for a chat room, then later fetches it.
+
+{{sample:DataModel.DocumentIdUsage}}
+
+Without the `FirestoreDocumentId` attribute, the document reference would still be available to the code that deserializes the snapshot, but other code using the
+`ChatRoom` object later wouldn't have access to it without extra code to populate it. The `FirestoreDocumentId` attribute just allows you to get at the document ID
+or reference without any additional code.
 
 ## Mapping with dictionaries
 
