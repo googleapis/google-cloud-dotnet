@@ -25,8 +25,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         // See https://cloud.google.com/storage/docs/public-datasets/landsat
         // We pick one particular prefix/directory and a small file to test.
         private const string LandsatBucket = "gcp-public-data-landsat";
-        private const string LandsatPrefix = "LC08/PRE/044/034/LC80440342016259LGN00/";
-        private const string LandsatObject = LandsatPrefix + "LC80440342016259LGN00_MTL.txt";
+        private const string LandsatObject = "LC08/PRE/044/034/LC80440342016259LGN00/LC80440342016259LGN00_MTL.txt";
 
         private readonly StorageFixture _fixture;
 
@@ -47,8 +46,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             TestEnvironment.SkipIfVpcSc();
             var client = StorageClient.CreateUnauthenticated();
-            var objects = client.ListObjects(LandsatBucket, LandsatPrefix).ToList();
-            Assert.Equal(13, objects.Count);
+            var objects = client.ListObjects(StorageFixture.CrossLanguageTestBucket).ToList();
+            Assert.Equal(3, objects.Count);
         }
 
         [Fact]
