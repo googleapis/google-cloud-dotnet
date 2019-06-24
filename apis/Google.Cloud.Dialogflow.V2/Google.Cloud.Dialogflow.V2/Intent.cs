@@ -1552,7 +1552,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         private readonly pbc::RepeatedField<string> prompts_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// Optional. The collection of prompts that the agent can present to the
-        /// user in order to collect value for the parameter.
+        /// user in order to collect a value for the parameter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<string> Prompts {

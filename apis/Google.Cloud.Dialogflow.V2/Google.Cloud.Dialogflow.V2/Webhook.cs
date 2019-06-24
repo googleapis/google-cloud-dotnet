@@ -28,28 +28,29 @@ namespace Google.Cloud.Dialogflow.V2 {
             "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MhooZ29vZ2xlL2Nsb3VkL2RpYWxv",
             "Z2Zsb3cvdjIvY29udGV4dC5wcm90bxonZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zs",
             "b3cvdjIvaW50ZW50LnByb3RvGihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92",
-            "Mi9zZXNzaW9uLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3Rv",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvItYBCg5XZWJob29rUmVx",
-            "dWVzdBIPCgdzZXNzaW9uGAQgASgJEhMKC3Jlc3BvbnNlX2lkGAEgASgJEj0K",
-            "DHF1ZXJ5X3Jlc3VsdBgCIAEoCzInLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLlF1ZXJ5UmVzdWx0El8KHm9yaWdpbmFsX2RldGVjdF9pbnRlbnRfcmVx",
-            "dWVzdBgDIAEoCzI3Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk9yaWdp",
-            "bmFsRGV0ZWN0SW50ZW50UmVxdWVzdCKzAgoPV2ViaG9va1Jlc3BvbnNlEhgK",
-            "EGZ1bGZpbGxtZW50X3RleHQYASABKAkSSAoUZnVsZmlsbG1lbnRfbWVzc2Fn",
-            "ZXMYAiADKAsyKi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5JbnRlbnQu",
-            "TWVzc2FnZRIOCgZzb3VyY2UYAyABKAkSKAoHcGF5bG9hZBgEIAEoCzIXLmdv",
-            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3QSPAoPb3V0cHV0X2NvbnRleHRzGAUgAygL",
-            "MiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udGV4dBJEChRmb2xs",
-            "b3d1cF9ldmVudF9pbnB1dBgGIAEoCzImLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LnYyLkV2ZW50SW5wdXQiaAobT3JpZ2luYWxEZXRlY3RJbnRlbnRSZXF1",
-            "ZXN0Eg4KBnNvdXJjZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgJEigKB3BheWxv",
-            "YWQYAyABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QpsBCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCDFdlYmhvb2tQcm90b1ABWkRnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxv",
-            "Z2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRp",
-            "YWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
+            "Mi9zZXNzaW9uLnByb3RvGjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9z",
+            "ZXNzaW9uX2VudGl0eV90eXBlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3Ry",
+            "dWN0LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvItYBCg5X",
+            "ZWJob29rUmVxdWVzdBIPCgdzZXNzaW9uGAQgASgJEhMKC3Jlc3BvbnNlX2lk",
+            "GAEgASgJEj0KDHF1ZXJ5X3Jlc3VsdBgCIAEoCzInLmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LnYyLlF1ZXJ5UmVzdWx0El8KHm9yaWdpbmFsX2RldGVjdF9p",
+            "bnRlbnRfcmVxdWVzdBgDIAEoCzI3Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
+            "LnYyLk9yaWdpbmFsRGV0ZWN0SW50ZW50UmVxdWVzdCKzAgoPV2ViaG9va1Jl",
+            "c3BvbnNlEhgKEGZ1bGZpbGxtZW50X3RleHQYASABKAkSSAoUZnVsZmlsbG1l",
+            "bnRfbWVzc2FnZXMYAiADKAsyKi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "Mi5JbnRlbnQuTWVzc2FnZRIOCgZzb3VyY2UYAyABKAkSKAoHcGF5bG9hZBgE",
+            "IAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSPAoPb3V0cHV0X2NvbnRl",
+            "eHRzGAUgAygLMiMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udGV4",
+            "dBJEChRmb2xsb3d1cF9ldmVudF9pbnB1dBgGIAEoCzImLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyLkV2ZW50SW5wdXQiaAobT3JpZ2luYWxEZXRlY3RJ",
+            "bnRlbnRSZXF1ZXN0Eg4KBnNvdXJjZRgBIAEoCRIPCgd2ZXJzaW9uGAIgASgJ",
+            "EigKB3BheWxvYWQYAyABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QpsB",
+            "Ch5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCDFdlYmhvb2tQcm90",
+            "b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xl",
+            "LkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookRequest), global::Google.Cloud.Dialogflow.V2.WebhookRequest.Parser, new[]{ "Session", "ResponseId", "QueryResult", "OriginalDetectIntentRequest" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookResponse), global::Google.Cloud.Dialogflow.V2.WebhookResponse.Parser, new[]{ "FulfillmentText", "FulfillmentMessages", "Source", "Payload", "OutputContexts", "FollowupEventInput" }, null, null, null),
@@ -448,6 +449,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. Makes the platform immediately invoke another `DetectIntent` call
     /// internally with the specified event as input.
+    /// When this field is set, Dialogflow ignores the `fulfillment_text`,
+    /// `fulfillment_messages`, and `payload` fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Dialogflow.V2.EventInput FollowupEventInput {
