@@ -114,13 +114,13 @@ namespace Google.Cloud.Spanner.V1
         /// <remarks>
         /// The "Default" retry backoff for <see cref="SpannerClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial delay: 250 milliseconds</description></item>
         /// <item><description>Maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetDefaultRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(1000),
+            delay: sys::TimeSpan.FromMilliseconds(250),
             maxDelay: sys::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
@@ -154,13 +154,13 @@ namespace Google.Cloud.Spanner.V1
         /// <remarks>
         /// The "Streaming" retry backoff for <see cref="SpannerClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial delay: 250 milliseconds</description></item>
         /// <item><description>Maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetStreamingRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(1000),
+            delay: sys::TimeSpan.FromMilliseconds(250),
             maxDelay: sys::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
@@ -194,13 +194,13 @@ namespace Google.Cloud.Spanner.V1
         /// <remarks>
         /// The "LongRunning" retry backoff for <see cref="SpannerClient"/> RPC methods is defined as:
         /// <list type="bullet">
-        /// <item><description>Initial delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial delay: 250 milliseconds</description></item>
         /// <item><description>Maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Delay multiplier: 1.3</description></item>
         /// </list>
         /// </remarks>
         public static gaxgrpc::BackoffSettings GetLongRunningRetryBackoff() => new gaxgrpc::BackoffSettings(
-            delay: sys::TimeSpan.FromMilliseconds(1000),
+            delay: sys::TimeSpan.FromMilliseconds(250),
             maxDelay: sys::TimeSpan.FromMilliseconds(32000),
             delayMultiplier: 1.3
         );
@@ -233,7 +233,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.CreateSession</c> and
         /// <c>SpannerClient.CreateSessionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -262,7 +262,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.GetSession</c> and
         /// <c>SpannerClient.GetSessionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -291,7 +291,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.ListSessions</c> and
         /// <c>SpannerClient.ListSessionsAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -320,7 +320,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.DeleteSession</c> and
         /// <c>SpannerClient.DeleteSessionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -349,7 +349,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.ExecuteSql</c> and
         /// <c>SpannerClient.ExecuteSqlAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -387,7 +387,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.ExecuteBatchDml</c> and
         /// <c>SpannerClient.ExecuteBatchDmlAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -416,7 +416,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.Read</c> and
         /// <c>SpannerClient.ReadAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -454,7 +454,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.BeginTransaction</c> and
         /// <c>SpannerClient.BeginTransactionAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -483,7 +483,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.Commit</c> and
         /// <c>SpannerClient.CommitAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 3600000 milliseconds</description></item>
@@ -512,7 +512,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.Rollback</c> and
         /// <c>SpannerClient.RollbackAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -541,7 +541,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.PartitionQuery</c> and
         /// <c>SpannerClient.PartitionQueryAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
@@ -570,7 +570,7 @@ namespace Google.Cloud.Spanner.V1
         /// The default <c>SpannerClient.PartitionRead</c> and
         /// <c>SpannerClient.PartitionReadAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial retry delay: 250 milliseconds</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
         /// <item><description>Initial timeout: 60000 milliseconds</description></item>
