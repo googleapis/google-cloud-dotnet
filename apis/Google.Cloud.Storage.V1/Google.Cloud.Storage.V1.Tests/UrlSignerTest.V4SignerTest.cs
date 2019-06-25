@@ -13,17 +13,11 @@
 // limitations under the License.
 
 using Google.Api.Gax.Testing;
-using Google.Apis.Auth.OAuth2;
-using Google.Cloud.ClientTesting;
 using Google.Cloud.Storage.V1.Tests.Conformance;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.Tests
@@ -79,7 +73,7 @@ namespace Google.Cloud.Storage.V1.Tests
             public void ExpiryValidation_Invalid(int seconds)
             {
                 var signer = UrlSigner
-                    .FromServiceAccountCredential(ConformanceTestData.TestCredential)
+                    .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
 
@@ -90,7 +84,7 @@ namespace Google.Cloud.Storage.V1.Tests
             public void ExpiryValidation_Exactly1Week()
             {
                 var signer = UrlSigner
-                    .FromServiceAccountCredential(ConformanceTestData.TestCredential)
+                    .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
                     .WithSigningVersion(SigningVersion.V4)
                     .WithClock(new FakeClock());
 
