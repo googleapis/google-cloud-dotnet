@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,8 @@ namespace Google.Cloud.Bigtable.V2.Tests.Conformance
 {
     public class ReadRowsConformanceTest
     {
-        public static TheoryData<ReadRowsTest> TestData { get; } = ConformanceTestData.GetTheoryData(f => f.ReadRowsTests);
+        public static TheoryData<ReadRowsTest> TestData { get; } =
+            ConformanceTestData.Load<TestFile>("bigtable", "v2").GetTheoryData(file => file.ReadRowsTests);
 
         [Theory, MemberData(nameof(TestData))]
         public async Task ReadRows(ReadRowsTest testCase)

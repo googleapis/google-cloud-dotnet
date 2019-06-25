@@ -25,7 +25,8 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
 {
     public class V4SignerConformanceTest
     {
-        public static TheoryData<SigningV4Test> TestData { get; } = ConformanceTestData.GetTheoryData(f => f.SigningV4Tests);
+        public static TheoryData<SigningV4Test> TestData { get; } = StorageConformanceTestData.TestData.GetTheoryData(f => f.SigningV4Tests);
+        
         private static readonly Dictionary<string, HttpMethod> s_methods = new Dictionary<string, HttpMethod>
             {
                 { "GET", HttpMethod.Get },
@@ -39,7 +40,7 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
             var timestamp = test.Timestamp.ToDateTime();
             var clock = new FakeClock(timestamp);
             var signer = UrlSigner
-                .FromServiceAccountCredential(ConformanceTestData.TestCredential)
+                .FromServiceAccountCredential(StorageConformanceTestData.TestCredential)
                 .WithSigningVersion(SigningVersion.V4)
                 .WithClock(clock);
 
