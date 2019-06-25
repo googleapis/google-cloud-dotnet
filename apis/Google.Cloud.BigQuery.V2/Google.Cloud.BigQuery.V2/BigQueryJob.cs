@@ -125,17 +125,20 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
-        /// Polls this job for completion.
+        /// Polls this job for completion, returning a new <see cref="BigQueryJob"/> object with the updated information.
         /// This method just creates a <see cref="JobReference"/> and delegates to <see cref="BigQueryClient.PollJobUntilCompleted(JobReference, GetJobOptions, PollSettings)"/>.
         /// </summary>
+        /// <remarks>
+        /// Note that this method does not modify the state of the object it is called on. Instead, a new object is returned.
+        /// If you need to check that the job completed without errors, or access any other information, you need to use the
+        /// return value of the method.
+        /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
         /// May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
         public BigQueryJob PollUntilCompleted(GetJobOptions options = null, PollSettings pollSettings = null) =>
             _client.PollJobUntilCompleted(Reference, options, pollSettings);
-
-        // FIXME: The documentation isn't really correct here...
 
         /// <summary>
         /// Retrieves the result of this job, which must be a query job.
