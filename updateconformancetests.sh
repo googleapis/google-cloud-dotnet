@@ -18,6 +18,14 @@ $PROTOC \
   -I $CORE_PROTOS_ROOT \
   conformance-tests/storage/v1/proto/google/cloud/conformance/storage/v1/*.proto
 
+# Firestore
+$PROTOC \
+  --csharp_out=apis/Google.Cloud.Firestore/Google.Cloud.Firestore.Tests/Proto \
+  -I conformance-tests \
+  -I $CORE_PROTOS_ROOT \
+  -I googleapis \
+  conformance-tests/firestore/v1/proto/google/cloud/conformance/firestore/v1/*.proto
+
 # Bigtable
 $PROTOC \
   --csharp_out=apis/Google.Cloud.Bigtable.V2/Google.Cloud.Bigtable.V2.Tests/Conformance \

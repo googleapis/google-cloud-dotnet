@@ -36,7 +36,4 @@
       <DependentUpon>QueryTest.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Proto/test-suite.binproto" />
-  </ItemGroup>
 </Project>
