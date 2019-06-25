@@ -16,7 +16,7 @@ $PROTOC \
   --csharp_out=apis/Google.Cloud.Storage.V1/Google.Cloud.Storage.V1.Tests/Conformance \
   -I conformance-tests \
   -I $CORE_PROTOS_ROOT \
-  conformance-tests/storage/v1/*.proto
+  conformance-tests/storage/v1/proto/google/cloud/conformance/storage/v1/*.proto
 
 # Bigtable
 $PROTOC \
