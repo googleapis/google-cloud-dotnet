@@ -151,3 +151,74 @@ Unhandled Exception: System.IO.FileNotFoundException:
 In that case, the simplest fix is to add a direct dependency to
 `Grpc.Core` from your application, which will ensure that the
 native libraries are copied appropriately.
+
+## How can I modify repeated fields and maps in protobuf messages?
+
+The generated C# code for protobuf messages makes simple properties
+read/write, but repeated fields and map fields are read-only. That
+doesn't stop you from populating them, though: it just means you
+can't change the property to refer to a *different* list or map.
+
+Typically you'll populate this using a *collection initializer*
+nested within an *object initializer*. As an example, let's look at
+how we might create a `BatchAnnotateImagesRequest` message in the
+Vision API. (This is just an easy-to-understand example; the
+Google.Cloud.Vision.V1 package provides helper methods to avoid you
+having to create batches yourself in most cases.)
+
+The protobuf description looks like this:
+
+```proto
+// Multiple image annotation requests are batched into a single service call.
+message BatchAnnotateImagesRequest {
+  // Individual image annotation requests for this batch.
+  repeated AnnotateImageRequest requests = 1;
+}
+```
+
+In the generated C# code, the `Requests` property of
+`BatchAnnotateImagesRequest` is read-only, but you can populate it
+with a collection initializer:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#ProtoRepeatedField1)]
+
+You don't *have* to use a collection initializer though, and
+sometimes it would be inconvenient to do so. It's perfectly valid to
+add to the repeated field after other initialization:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#ProtoRepeatedField2)]
+
+Finally, it's worth being aware that `RepeatedField<T>` has an `Add`
+overload accepting an `IEnumerable<T>`. This allows you to use a
+collection initializer to copy items out of another collection, or a
+LINQ query result:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#ProtoRepeatedField3)]
+
+Likewise for map fields (which are significantly less common) you
+can use collection initializers, or (from C# 6 onwards) the indexer
+syntax within an object initializer. As an example of this, let's
+consider the Scheduler V1 API, which contains a message like this:
+
+```proto
+message HttpTarget {
+  // Other fields omitted
+
+  // The user can specify HTTP request headers to send with the job's
+  // HTTP request. (Further documentation omitted here.)
+  map<string, string> headers = 3;
+}
+```
+
+Again, the `Headers` property in the generated message is read-only,
+but you can populate it with a collection initializer:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#ProtoMap1)]
+
+Or an indexer in an object initializer:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#ProtoMap2)]
+
+Or modify it after other initialization steps:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#ProtoMap3)]
