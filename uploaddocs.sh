@@ -39,6 +39,11 @@ do
       echo "No 'All APIs' link to remove"    
     fi
     
+    if ! head xrefmap.yml | grep -q baseUrl
+    then
+      sed -i "1s/^/baseUrl: https:\/\/googleapis.dev\/dotnet\/$pkg\/$version\/\n/" xrefmap.yml
+    fi
+    
     # TODO: Product page
     echo "Generating metadata"
     python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository https://github.com/googleapis/google-cloud-dotnet
