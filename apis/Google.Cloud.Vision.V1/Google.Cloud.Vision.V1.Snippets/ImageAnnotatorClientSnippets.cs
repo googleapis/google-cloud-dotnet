@@ -378,7 +378,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         // See [DetectWebInformation](ref) for a synchronous example.
         // End see-also
 
-        [Fact]
+        [Fact(Skip = "Flaky; see https://github.com/googleapis/google-cloud-dotnet/issues/3174")]
         public void DetectLocalizedObjects()
         {
             Image image = Image.FromUri("https://cloud.google.com/vision/docs/images/bicycle_example.png");
