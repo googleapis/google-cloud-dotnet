@@ -85,10 +85,11 @@ microgenerate_api() {
 }
 
 generate_api() {
+  echo Generating $1
   API_TMP_DIR=$OUTDIR/$1
   API_OUT_DIR=apis
-  API_SRC_DIR=googleapis/$2
-  API_YAML=$API_SRC_DIR/../$3
+  API_SRC_DIR=googleapis/$(python tools/getapifield.py apis/apis.json $1 protoPath)
+  API_YAML=$API_SRC_DIR/../$(python tools/getapifield.py apis/apis.json $1 serviceYaml)
 
   if [[ ! -f $API_YAML ]]
   then
@@ -96,7 +97,6 @@ generate_api() {
     exit 1
   fi
 
-  echo Generating $1
   mkdir $API_TMP_DIR
   
   # There should be only one gapic yaml file...
@@ -105,6 +105,12 @@ generate_api() {
     cp $i $API_TMP_DIR/gapic.yaml
   done
 
+  # The LongRunning API code is under the Apache licence for C#, but BSD for other languages.
+  if [[ $1 == "Google.LongRunning" ]]
+  then
+    sed -i s/license-header-bsd-3-clause.txt/license-header-apache-2.0.txt/g googleapis/google/longrunning/longrunning_gapic.yaml
+  fi
+  
   # Generate the descriptor set for this API. We always explicitly
   # include IAM so that gRPC rerouting works; it doesn't have any negative
   # impact for non-IAM APIs. (Ditto Grafeas.)
@@ -131,12 +137,12 @@ generate_api() {
   args+=(--gapic_yaml=$API_TMP_DIR/gapic.yaml)
   args+=(--output=$API_TMP_DIR)
   args+=(--language=csharp)
-  
+
   # Suppress protobuf warnings in Java 9/10. By the time they
   # become a problem, we won't be using Java...
   java ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]} \
   2>&1 | grep -v "does not have control environment" || true # Ignore control environment warnings (and grep exit code)
-  
+
   cp -r $API_TMP_DIR/$1 $API_OUT_DIR
 
   # Generate the C# protos/gRPC directly into the right directory
@@ -161,6 +167,12 @@ generate_api() {
     echo "Running post-generation script for $1"
     (cd $API_OUT_DIR/$1; ./postgeneration.sh)
   fi
+
+  # Revert the LongRunning GAPIC change
+  if [[ $1 == "Google.LongRunning" ]]
+  then
+    git -C googleapis checkout google/longrunning/longrunning_gapic.yaml
+  fi
 }
 
 # Entry point
@@ -184,12 +196,7 @@ OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
 
-# Generate LongRunning, after changing the license text (because we use
-# Apache for LRO where other languages use BSD)
-sed -i s/license-header-bsd-3-clause.txt/license-header-apache-2.0.txt/g googleapis/google/longrunning/longrunning_gapic.yaml
-generate_api Google.LongRunning google/longrunning longrunning/longrunning.yaml
-git -C googleapis checkout google/longrunning/longrunning_gapic.yaml
-
+# TODO: Do this part on demand...
 # IAM (just proto and grpc)
 $PROTOC \
   --csharp_out=apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1 \
@@ -216,51 +223,18 @@ $PROTOC \
 # Now the per-API codegen
 
 # Legacy GAPIC generator
-generate_api Google.Cloud.Asset.V1 google/cloud/asset/v1 asset_v1.yaml
-generate_api Google.Cloud.Asset.V1Beta1 google/cloud/asset/v1beta1 asset_v1beta1.yaml
-generate_api Google.Cloud.BigQuery.DataTransfer.V1 google/cloud/bigquery/datatransfer/v1 datatransfer.yaml
-generate_api Google.Cloud.Bigtable.Admin.V2 google/bigtable/admin/v2 bigtableadmin.yaml
-generate_api Google.Cloud.Bigtable.V2 google/bigtable/v2 bigtable.yaml
-generate_api Google.Cloud.Container.V1 google/container/v1 container_v1.yaml
-generate_api Google.Cloud.Dataproc.V1 google/cloud/dataproc/v1 v1/dataproc.yaml
-generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
-generate_api Google.Cloud.Debugger.V2 google/devtools/clouddebugger/v2 clouddebugger.yaml
-generate_api Google.Cloud.DevTools.ContainerAnalysis.V1 google/devtools/containeranalysis/v1 containeranalysis_v1.yaml
-generate_api Google.Cloud.Dialogflow.V2 google/cloud/dialogflow/v2 dialogflow_v2.yaml
-generate_api Google.Cloud.Dlp.V2 google/privacy/dlp/v2 dlp_v2.yaml
-generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
-generate_api Google.Cloud.Firestore.V1 google/firestore/v1 firestore_v1.yaml
-generate_api Google.Cloud.Firestore.Admin.V1 google/firestore/admin/v1 firestore_admin_v1.yaml
-generate_api Google.Cloud.Irm.V1Alpha2 google/cloud/irm/v1alpha2 irm_v1alpha2.yaml
-generate_api Google.Cloud.Kms.V1 google/cloud/kms/v1 cloudkms.yaml
-generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
-generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml
-generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
-generate_api Google.Cloud.OsLogin.V1 google/cloud/oslogin/v1 oslogin_v1.yaml
-generate_api Google.Cloud.OsLogin.V1Beta google/cloud/oslogin/v1beta oslogin_v1beta.yaml
-generate_api Google.Cloud.PhishingProtection.V1Beta1 google/cloud/phishingprotection/v1beta1 phishingprotection.yaml
-generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
-generate_api Google.Cloud.RecaptchaEnterprise.V1Beta1 google/cloud/recaptchaenterprise/v1beta1 recaptchaenterprise_v1beta1.yaml
-generate_api Google.Cloud.Redis.V1 google/cloud/redis/v1 redis_v1.yaml
-generate_api Google.Cloud.Redis.V1Beta1 google/cloud/redis/v1beta1 redis_v1beta1.yaml
-generate_api Google.Cloud.Scheduler.V1 google/cloud/scheduler/v1 cloudscheduler_v1.yaml
-generate_api Google.Cloud.SecurityCenter.V1 google/cloud/securitycenter/v1 securitycenter_v1.yaml
-generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
-generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
-generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
-generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 speech_v1.yaml
-generate_api Google.Cloud.Speech.V1P1Beta1 google/cloud/speech/v1p1beta1 speech_v1p1beta1.yaml
-generate_api Google.Cloud.Talent.V4Beta1 google/cloud/talent/v4beta1 talent_v4beta1.yaml
-generate_api Google.Cloud.Tasks.V2 google/cloud/tasks/v2 cloudtasks_v2.yaml
-generate_api Google.Cloud.Tasks.V2Beta3 google/cloud/tasks/v2beta3 cloudtasks_v2beta3.yaml
-generate_api Google.Cloud.TextToSpeech.V1 google/cloud/texttospeech/v1 tts_v1.yaml
-generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 cloudtrace_v1.yaml
-generate_api Google.Cloud.Trace.V2 google/devtools/cloudtrace/v2 cloudtrace_v2.yaml
-generate_api Google.Cloud.VideoIntelligence.V1 google/cloud/videointelligence/v1 videointelligence_v1.yaml
-generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision_v1.yaml
-generate_api Google.Cloud.WebRisk.V1Beta1 google/cloud/webrisk/v1beta1 webrisk.yaml
 
-generate_api Grafeas.V1 grafeas/v1 grafeas_v1.yaml
+packages=$@
+if [[ -z "$packages" ]]
+then
+  # We assume if there's a protopath, there's also a YAML file...
+  packages=$(python tools/listapis.py apis/apis.json --test protoPath)
+fi
+
+for package in $packages
+do
+  generate_api $package
+done
 
 # Microgenerator
 # microgenerate_api Google.Cloud.Vision.V1 google/cloud/vision/v1
