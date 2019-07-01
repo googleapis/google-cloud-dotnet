@@ -25,6 +25,8 @@ catalog file. There's an entry for each API, containing:
 - Target framework versions
 - Package description for NuGet
 - Tags for NuGet (in addition to default ones)
+- Proto path within the googleapis repository
+- Service YAML file
 
 The catalog is used to generate project files and also during the
 release process described below. Running the project generator is

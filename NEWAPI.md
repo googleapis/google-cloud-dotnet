@@ -10,6 +10,7 @@ Prerequisites:
 - `git`
 - `bash` (on Windows, the version that comes with Git for Windows)
 - `wget`
+- Python 3 on the path as `python`
 - Java 9+ (until the microgenerators are in use for everything)
 - .NET Core SDK, suitable for the version specified in `global.json`
 
@@ -54,28 +55,57 @@ same namespace should be specified in the GAPIC YAML file under
 If anything doesn't match your expectations, please file an issue in
 this repo and we'll get it sorted. (There are complexities here around internal processes.)
 
-Step 3: Add the API to generateapis.sh
---------------------------------------
+Step 3: Modify the API catalog
+------------------------------
 
-Adding an API will usually be as simple as adding a line like this
-to the section at the bottom of `generateapis.sh` in the root
-directory:
+Edit `apis/apis.json`. This is in alphabetical order - please keep it that way.
+You'll typically want JSON like this:
 
-```text
-generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
+```json
+{
+  "id": "FIXME",
+  "protoPath": "FIXME",
+  "serviceYaml": "FIXME",
+  "productName": "FIXME",
+  "productUrl": "FIXME",
+  "version": "1.0.0-beta01",
+  "type": "grpc",
+  "description": "FIXME",
+  "tags": [ "FIXME_1", "FIXME_2" ],
+}
 ```
 
-The first argument to the `generate_api` function is the API
-namespace (our tooling is too primitive to work it out from the
-files, at the moment). The second argument is the directory within
-the `googleapis` repo. The third argument is the name of the general
-YAML file for the service. (It's assumed there will only be one file
-ending with `_gapic.yaml`.)
+Fix everything with "FIXME". There's no set number of tags, but these are used for the NuGet package,
+so consider what users will search for.
 
-Please keep the list of `generate_api` calls in alphabetical order.
+The `protoPath` property is the directory within the `googleapis` repo, e.g.
+`"google/firestore/v1"`. The `serviceYaml` property is the name of the
+service's YAML configuration file relative to the *parent* directory
+of the proto path, e.g. `"firestore_v1.yaml"`.
+
+The above assumes you're happy to create an initial beta release for
+the generated code immediately. As of late 2017, that's usually
+fine. If you want to avoid creating a release, use a version of
+`1.0.0-alpha00` or `1.0.0-beta00` depending on whether or not you
+expect to perform alpha releases.
+
+If your project uses the IAM or long-running operations APIs, you'll need to add dependencies for those, e.g.
+
+```json
+"dependencies": {
+  "Google.LongRunning": "1.1.0",
+  "Google.Cloud.Iam.V1": "1.2.0"
+}
+```
+
+Look at other APIs for example values.
 
 Step 4: Run generateapis.sh
 ---------------------------
+
+You can either run this by specifying the IDs of the packages you
+want to generate, or run it without specifying any arguments at all,
+in which case all APIs will be generated.
 
 This will clone both the `googleapis` and `toolkit` repos as
 subdirectories, or pull them if they already exist.
@@ -95,45 +125,7 @@ changes if that's the most convenient approach. Create a commit containing:
 - The new directory under `apis`
 
 
-Step 6: Modify the API catalog
-------------------------------
-
-Edit `apis/apis.json`. Again, this is in alphabetical order - please keep it that way.
-You'll typically want JSON like this:
-
-```json
-{
-  "id": "FIXME",
-  "productName": "FIXME",
-  "productUrl": "FIXME",
-  "version": "1.0.0-beta01",
-  "type": "grpc",
-  "description": "FIXME",
-  "tags": [ "FIXME_1", "FIXME_2" ],
-}
-```
-
-Fix everything with "FIXME". There's no set number of tags, but these are used for the NuGet package,
-so consider what users will search for.
-
-The above assumes you're happy to create an initial beta release for
-the generated code immediately. As of late 2017, that's usually
-fine. If you want to avoid creating a release, use a version of
-`1.0.0-alpha00` or `1.0.0-beta00` depending on whether or not you
-expect to perform alpha releases.
-
-If your project uses the IAM or long-running operations APIs, you'll need to add dependencies for those, e.g.
-
-```json
-"dependencies": {
-  "Google.LongRunning": "1.1.0",
-  "Google.Cloud.Iam.V1": "1.2.0"
-}
-```
-
-Look at other APIs for example values.
-
-Step 7: Generate files
+Step 6: Generate project files
 ----------------------
 
 Run `generateprojects.sh`. This should create:
@@ -142,10 +134,10 @@ Run `generateprojects.sh`. This should create:
 - Project files for the production project and the snippets
 - A stub documentation file
 
-Step 8: Run the smoke test
+Step 7: Run the smoke test
 --------------------------
 
-New APIs should come with a smoke test, just to check we can at
+Some APIs should come with a smoke test, just to check we can at
 least make a single request.
 
 - Ensure the `TEST_PROJECT` environment variable is set to your GCP
@@ -153,7 +145,7 @@ least make a single request.
 - Ensure the API is enabled for your project
 - Run `runintegrationtests.sh --smoke Your.ApiName.Here`
 
-Step 9: Create a PR
+Step 8: Create a PR
 -------------------
 
 You should now have a lot of new project/coverage/doc/solution files, and
@@ -167,14 +159,14 @@ the API catalog and project files.
 found that separating them helps diagnose issues with one part or
 another.)
 
-Step 10: Merge the PR
----------------------
+Step 9: Merge the PR
+--------------------
 
 As everything is generated other than the API catalog change, the PR
 can be merged on green. Of course, a second pair of eyes on the
 change is always useful.
 
-Step 11 (Optional): Release the first package for the API
+Step 10 (Optional): Release the first package for the API
 ---------------------------------------------------------
 
 Follow the [releasing process](PROCESSES.md) to push a package to

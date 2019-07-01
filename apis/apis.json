@@ -1,28 +1,8 @@
 [
-  // This file lists all the APIs (and similar; some aren't strictly
-  // APIs) that we generate project files for.
-
-  // Fields:
-  // id: Name of the main generated library; matches top-level
-  //     directory name and solution file
-  // version: library version, e.g. 1.0.0 or 1.0.0-alpha01
-  //   - Special value "project" is used to indicate a project reference within this repository.
-  //   - Special value "default" is used for external package references that are defaulted by
-  //     the project generator. Currently valid for GAX and gRPC packages. The version number
-  //     must be specified explicitly for stable projects.
-  // description: Used for NuGet package description
-  // tags: Any tags to use in NuGet in addition to Google and Cloud
-  // type: "rest", "grpc" or "other":
-  // - rest = REST-based API; implicitly depends on Google.Api.Gax.Rest
-  // - grpc = GRPC-based API; implicitly depends on Google.Api.Gax.Grpc
-  // targetFrameworks: only used for "other" projects
-  // dependencies: Dependencies in addition to defaults, for the main API
-  // testDependencies: Dependencies for all test projects. (This can lead to redundant dependencies, but it's simple.)
-  // productName: Name of product to include when using doc templates
-  // productUrl: Product home page URL to include when using doc templates
-
   {
     "id": "Google.Cloud.Asset.V1",
+    "protoPath": "google/cloud/asset/v1",
+    "serviceYaml": "asset_v1.yaml",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
     "version": "1.0.0-beta01",
@@ -37,6 +17,8 @@
 
   {
     "id": "Google.Cloud.Asset.V1Beta1",
+    "protoPath": "google/cloud/asset/v1beta1",
+    "serviceYaml": "asset_v1beta1.yaml",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
     "version": "1.0.0-beta01",
@@ -51,6 +33,8 @@
 
   {
     "id": "Google.Cloud.BigQuery.DataTransfer.V1",
+    "protoPath": "google/cloud/bigquery/datatransfer/v1",
+    "serviceYaml": "datatransfer.yaml",
     "productName": "Google BigQuery Data Transfer",
     "productUrl": "https://cloud.google.com/bigquery/transfer/",
     "version": "1.0.0-beta05",
@@ -78,6 +62,8 @@
 
   {
     "id": "Google.Cloud.Bigtable.Admin.V2",
+    "protoPath": "google/bigtable/admin/v2",
+    "serviceYaml": "bigtableadmin.yaml",
     "productName": "Google Cloud Bigtable Administration",
     "productUrl": "https://cloud.google.com/bigtable/",
     "version": "1.1.0-beta01",
@@ -111,6 +97,8 @@
   
   {
     "id": "Google.Cloud.Bigtable.V2",
+    "protoPath": "google/bigtable/v2",
+    "serviceYaml": "bigtable.yaml",
     "productName": "Google Bigtable",
     "productUrl": "https://cloud.google.com/bigtable/",
     "version": "1.1.0-beta01",
@@ -125,22 +113,26 @@
     },
     "testDependencies": {
       "Google.Api.Gax.Grpc.Testing": "2.8.0-beta01",
-      "Google.Cloud.Bigtable.Admin.V2": "project",
+      "Google.Cloud.Bigtable.Admin.V2": "project"
     }
   },
 
   {
     "id": "Google.Cloud.Container.V1",
+    "protoPath": "google/container/v1",
+    "serviceYaml": "container_v1.yaml",
     "productName": "Google Kubernetes Engine API",
     "productUrl": "https://cloud.google.com/kubernetes-engine/docs/reference/rest/",
     "version": "1.0.0-beta02",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Kubernetes Engine API, used for building and managing container based applications, powered by the open source Kubernetes technology.",
-    "tags": [ "Kubernetes" ],
+    "tags": [ "Kubernetes" ]
   },
 
   {
     "id": "Google.Cloud.Dataproc.V1",
+    "protoPath": "google/cloud/dataproc/v1",
+    "serviceYaml": "v1/dataproc.yaml",
     "productName": "Google Cloud Dataproc",
     "productUrl": "https://cloud.google.com/dataproc/docs/concepts/overview",
     "version": "1.0.0-beta04",
@@ -154,6 +146,8 @@
 
   {
     "id": "Google.Cloud.Datastore.V1",
+    "protoPath": "google/datastore/v1",
+    "serviceYaml": "datastore.yaml",
     "productName": "Google Cloud Datastore",
     "productUrl": "https://cloud.google.com/datastore/docs/concepts/overview",
     "version": "2.2.0-beta02",
@@ -167,6 +161,8 @@
 
   {
     "id": "Google.Cloud.Debugger.V2",
+    "protoPath": "google/devtools/clouddebugger/v2",
+    "serviceYaml": "clouddebugger.yaml",
     "productName": "Stackdriver Debugger",
     "productUrl": "https://cloud.google.com/debugger/",
     "version": "1.0.0-beta03",
@@ -174,7 +170,7 @@
     "description": "Recommended Google client library to access the Google Cloud Debugger API.",
     "tags": [ "Debug", "Debugger", "Debugging", "Stackdriver"],
     "dependencies": {
-      "Google.Cloud.DevTools.Common": "1.0.0",
+      "Google.Cloud.DevTools.Common": "1.0.0"
     }
   },
 
@@ -193,6 +189,8 @@
 
   {
     "id": "Google.Cloud.DevTools.ContainerAnalysis.V1",
+    "protoPath": "google/devtools/containeranalysis/v1",
+    "serviceYaml": "containeranalysis_v1.yaml",
     "productName": "Google Container Analysis",
     "productUrl": "https://cloud.google.com/container-registry/docs/container-analysis/",
     "version": "1.0.0-beta04",
@@ -276,7 +274,7 @@
     "dependencies": {
       "Google.Api.Gax.Grpc": "default",
       "Google.Cloud.Logging.V2": "2.1.0",
-      "Google.Cloud.Trace.V1": "1.0.0",
+      "Google.Cloud.Trace.V1": "1.0.0"
     },
     "testDependencies": {
       "Google.Cloud.ErrorReporting.V1Beta1": "project",
@@ -286,6 +284,8 @@
   
   {
     "id": "Google.Cloud.Dialogflow.V2",
+    "protoPath": "google/cloud/dialogflow/v2",
+    "serviceYaml": "dialogflow_v2.yaml",
     "productName": "Google Cloud Dialogflow",
     "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
     "version": "1.0.0-beta03",
@@ -303,6 +303,8 @@
 
   {
     "id": "Google.Cloud.Dlp.V2",
+    "protoPath": "google/privacy/dlp/v2",
+    "serviceYaml": "dlp_v2.yaml",
     "productName": "Google Cloud Data Loss Prevention",
     "productUrl": "https://cloud.google.com/dlp/",
     "version": "1.0.0-beta10",
@@ -338,6 +340,8 @@
   
   {
     "id": "Google.Cloud.ErrorReporting.V1Beta1",
+    "protoPath": "google/devtools/clouderrorreporting/v1beta1",
+    "serviceYaml": "errorreporting.yaml",
     "productName": "Stackdriver Error Reporting",
     "productUrl": "https://cloud.google.com/error-reporting/",
     "version": "1.0.0-beta09",
@@ -348,6 +352,8 @@
 
   {
     "id": "Google.Cloud.Firestore.Admin.V1",
+    "protoPath": "google/firestore/admin/v1",
+    "serviceYaml": "firestore_admin_v1.yaml",
     "productName": "Firestore Admin",
     "productUrl": "https://firebase.google.com",
     "targetFrameworks": "netstandard2.0;net45",
@@ -384,6 +390,8 @@
 
   {
     "id": "Google.Cloud.Firestore.V1",
+    "protoPath": "google/firestore/v1",
+    "serviceYaml": "firestore_v1.yaml",
     "productName": "Firestore",
     "productUrl": "https://firebase.google.com",
     "version": "1.0.0-beta22",
@@ -393,7 +401,7 @@
     "description": "Low-level Google client library to access the Firestore API. Users are recommended to use the Google.Cloud.Firestore package instead.",
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "1.1.0"
     }
   },
 
@@ -402,11 +410,13 @@
     "version": "1.3.0-beta00",
     "type": "grpc",
     "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
-    "tags": [ "IAM", "Identity", "Access" ],
+    "tags": [ "IAM", "Identity", "Access" ]
   },
 
   {
     "id": "Google.Cloud.Irm.V1Alpha2",
+    "protoPath": "google/cloud/irm/v1alpha2",
+    "serviceYaml": "irm_v1alpha2.yaml",
     "productName": "Stackdriver Incident Response and Management (IRM)",
     "productUrl": "https://cloud.google.com/incident-response/",
     "version": "1.0.0-beta00",
@@ -414,12 +424,14 @@
     "description": "gRPC services for the Stackdriver Incident Response & Management API.",
     "tags": [ "IRM", "Incident Response", "Incident Management", "Stackdriver" ],
     "dependencies": {
-      "Google.Cloud.Monitoring.V3": "1.0.0",
+      "Google.Cloud.Monitoring.V3": "1.0.0"
     }
   },
 
   {
     "id": "Google.Cloud.Kms.V1",
+    "protoPath": "google/cloud/kms/v1",
+    "serviceYaml": "cloudkms.yaml",
     "productName": "Google Cloud Key Management Service",
     "productUrl": "https://cloud.google.com/kms/",
     "version": "1.1.0-beta01",
@@ -433,6 +445,8 @@
 
   {
     "id": "Google.Cloud.Language.V1",
+    "protoPath": "google/cloud/language/v1",
+    "serviceYaml": "language_v1.yaml",
     "productName": "Google Cloud Natural Language",
     "productUrl": "https://cloud.google.com/natural-language",
     "version": "1.3.0-beta02",
@@ -495,6 +509,8 @@
 
   {
     "id": "Google.Cloud.Logging.V2",
+    "protoPath": "google/logging/v2",
+    "serviceYaml": "logging.yaml",
     "productName": "Stackdriver Logging",
     "productUrl": "https://cloud.google.com/logging/",
     "version": "2.3.0-beta01",
@@ -503,7 +519,7 @@
     "tags": [ "Logging", "Stackdriver" ],
     "dependencies": {
       "Google.Api.CommonProtos": "1.6.0",
-      "Google.Cloud.Logging.Type": "2.0.0",
+      "Google.Cloud.Logging.Type": "2.0.0"
     }
   },
 
@@ -522,12 +538,14 @@
 
   {
     "id": "Google.Cloud.Monitoring.V3",
+    "protoPath": "google/monitoring/v3",
+    "serviceYaml": "monitoring.yaml",
     "productName": "Stackdriver Monitoring",
     "productUrl": "https://cloud.google.com/monitoring/api/v3/",
     "version": "1.1.0-beta03",
     "type": "grpc",
     "description": "Recommended Google client library to access the Stackdriver Monitoring API, which manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.",
-    "tags": [ "Monitoring", "Stackdriver" ],
+    "tags": [ "Monitoring", "Stackdriver" ]
   },
 
   {
@@ -544,6 +562,8 @@
 
   {
     "id": "Google.Cloud.OsLogin.V1",
+    "protoPath": "google/cloud/oslogin/v1",
+    "serviceYaml": "oslogin_v1.yaml",
     "productName": "Google Cloud OS Login API",
     "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
     "version": "1.0.0-beta02",
@@ -557,6 +577,8 @@
 
   {
     "id": "Google.Cloud.OsLogin.V1Beta",
+    "protoPath": "google/cloud/oslogin/v1beta",
+    "serviceYaml": "oslogin_v1beta.yaml",
     "productName": "Google Cloud OS Login API",
     "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
     "version": "1.0.0-beta02",
@@ -570,9 +592,10 @@
 
   {
     "id": "Google.Cloud.PhishingProtection.V1Beta1",
-    // TODO: Review these before the first release
+    "protoPath": "google/cloud/phishingprotection/v1beta1",
+    "serviceYaml": "phishingprotection.yaml",
     "productName": "Cloud Phishing Protection",
-    "productUrl": "https://cloud.google.com/phishingprotection/",
+    "productUrl": "https://cloud.google.com/phishing-protection/",
     "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Phishing Protection API.",
@@ -581,6 +604,8 @@
   
   {
     "id": "Google.Cloud.PubSub.V1",
+    "protoPath": "google/pubsub/v1",
+    "serviceYaml": "pubsub.yaml",
     "productName": "Cloud Pub/Sub",
     "productUrl": "https://cloud.google.com/pubsub/",
     "version": "1.1.0-beta04",
@@ -597,9 +622,10 @@
 
   {
     "id": "Google.Cloud.RecaptchaEnterprise.V1Beta1",
-    // TODO: Review these before the first release
-    "productName": "Google Cloud reCAPTCHA for Enterprise",
-    "productUrl": "https://cloud.google.com/recaptcha/",
+    "protoPath": "google/cloud/recaptchaenterprise/v1beta1",
+    "serviceYaml": "recaptchaenterprise_v1beta1.yaml",
+    "productName": "Google Cloud reCAPTCHA Enterprise",
+    "productUrl": "https://cloud.google.com/recaptcha-enterprise/",
     "version": "1.0.0-beta00",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API.",
@@ -608,19 +634,23 @@
 
   {
     "id": "Google.Cloud.Redis.V1",
+    "protoPath": "google/cloud/redis/v1",
+    "serviceYaml": "redis_v1.yaml",
     "productName": "Google Cloud Memorystore for Redis",
     "productUrl": "https://cloud.google.com/memorystore/",
     "version": "1.0.0-beta03",
     "type": "grpc",
     "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
     "dependencies": {
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "1.1.0"
     },
     "tags": [ "Redis", "Memorystore" ]
   },
 
   {
     "id": "Google.Cloud.Redis.V1Beta1",
+    "protoPath": "google/cloud/redis/v1beta1",
+    "serviceYaml": "redis_v1beta1.yaml",
     "productName": "Google Cloud Memorystore for Redis",
     "productUrl": "https://cloud.google.com/memorystore/",
     "version": "1.0.0-beta03",
@@ -634,6 +664,8 @@
 
   {
     "id": "Google.Cloud.Scheduler.V1",
+    "protoPath": "google/cloud/scheduler/v1",
+    "serviceYaml": "cloudscheduler_v1.yaml",
     "productName": "Google Cloud Scheduler",
     "productUrl": "https://cloud.google.com/scheduler/",
     "version": "1.1.0-beta01",
@@ -644,6 +676,8 @@
 
   {
     "id": "Google.Cloud.SecurityCenter.V1",
+    "protoPath": "google/cloud/securitycenter/v1",
+    "serviceYaml": "securitycenter_v1.yaml",
     "productName": "Google Cloud Security Command Center",
     "productUrl": "https://cloud.google.com/security-command-center/",
     "version": "1.0.0-beta03",
@@ -658,6 +692,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Database.V1",
+    "protoPath": "google/spanner/admin/database/v1",
+    "serviceYaml": "spanner_admin_database.yaml",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Database Administration",
@@ -677,6 +713,8 @@
 
   {
     "id": "Google.Cloud.Spanner.Admin.Instance.V1",
+    "protoPath": "google/spanner/admin/instance/v1",
+    "serviceYaml": "spanner_admin_instance.yaml",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner Instance Administration",
@@ -731,6 +769,8 @@
   
   {
     "id": "Google.Cloud.Spanner.V1",
+    "protoPath": "google/spanner/v1",
+    "serviceYaml": "spanner.yaml",
     "targetFrameworks": "netstandard2.0;net45",
     "testTargetFrameworks": "netcoreapp2.0;net461",
     "productName": "Google Cloud Spanner",
@@ -748,6 +788,8 @@
 
   {
     "id": "Google.Cloud.Speech.V1",
+    "protoPath": "google/cloud/speech/v1",
+    "serviceYaml": "speech_v1.yaml",
     "productName": "Google Cloud Speech",
     "productUrl": "https://cloud.google.com/speech",
     "version": "1.2.0-beta01",
@@ -761,6 +803,8 @@
 
   {
     "id": "Google.Cloud.Speech.V1P1Beta1",
+    "protoPath": "google/cloud/speech/v1p1beta1",
+    "serviceYaml": "speech_v1p1beta1.yaml",
     "productName": "Google Cloud Speech",
     "productUrl": "https://cloud.google.com/speech",
     "version": "1.0.0-beta03",
@@ -768,7 +812,7 @@
     "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
     "tags": [ "Speech" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "1.1.0"
     }
   },
 
@@ -794,6 +838,8 @@
 
   {
     "id": "Google.Cloud.Talent.V4Beta1",
+    "protoPath": "google/cloud/talent/v4beta1",
+    "serviceYaml": "talent_v4beta1.yaml",
     "productName": "Google Cloud Talent Solution",
     "productUrl": "https://cloud.google.com/talent-solution/",
     "version": "1.0.0-beta05",
@@ -807,6 +853,8 @@
 
   {
     "id": "Google.Cloud.Tasks.V2",
+    "protoPath": "google/cloud/tasks/v2",
+    "serviceYaml": "cloudtasks_v2.yaml",
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
     "version": "1.1.0-beta01",
@@ -814,12 +862,14 @@
     "description": "Recommended Google client library to access the Google Cloud Tasks API (v2), which manages the execution of large numbers of distributed requests.",
     "tags": [ "Tasks" ],
     "dependencies": {
-      "Google.Cloud.Iam.V1": "1.2.0",
+      "Google.Cloud.Iam.V1": "1.2.0"
     }
   },
 
   {
     "id": "Google.Cloud.Tasks.V2Beta3",
+    "protoPath": "google/cloud/tasks/v2beta3",
+    "serviceYaml": "cloudtasks_v2beta3.yaml",
     "productName": "Google Cloud Tasks",
     "productUrl": "https://cloud.google.com/tasks/",
     "version": "1.0.0-beta07",
@@ -833,6 +883,8 @@
 
   {
     "id": "Google.Cloud.TextToSpeech.V1",
+    "protoPath": "google/cloud/texttospeech/v1",
+    "serviceYaml": "tts_v1.yaml",
     "productName": "Google Cloud Text-to-Speech",
     "productUrl": "https://cloud.google.com/text-to-speech",
     "version": "1.0.0-beta03",
@@ -843,16 +895,20 @@
 
   {
     "id": "Google.Cloud.Trace.V1",
+    "protoPath": "google/devtools/cloudtrace/v1",
+    "serviceYaml": "cloudtrace_v1.yaml",
     "productName": "Stackdriver Trace",
     "productUrl": "https://cloud.google.com/trace/",
     "version": "1.1.0-beta01",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Trace API, which sends and retrieves trace data from Google Cloud Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Cloud Trace for display, reporting, and analysis.",
-    "tags": [ "Tracing", "Trace" ],
+    "tags": [ "Tracing", "Trace" ]
   },
 
   {
     "id": "Google.Cloud.Trace.V2",
+    "protoPath": "google/devtools/cloudtrace/v2",
+    "serviceYaml": "cloudtrace_v2.yaml",
     "productName": "Stackdriver Trace",
     "productUrl": "https://cloud.google.com/trace/",
     "version": "1.0.0-beta02",
@@ -877,6 +933,8 @@
 
   {
     "id": "Google.Cloud.VideoIntelligence.V1",
+    "protoPath": "google/cloud/videointelligence/v1",
+    "serviceYaml": "videointelligence_v1.yaml",
     "productName": "Google Cloud Video Intelligence",
     "productUrl": "https://cloud.google.com/video-intelligence",
     "version": "1.1.0-beta05",
@@ -884,12 +942,14 @@
     "description": "Recommended Google client library to access the Google Cloud Video Intelligence API.",
     "tags": [ "VideoIntelligence" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0",
+      "Google.LongRunning": "1.1.0"
     }
   },
 
   {
     "id": "Google.Cloud.Vision.V1",
+    "protoPath": "google/cloud/vision/v1",
+    "serviceYaml": "vision_v1.yaml",
     "productName": "Google Cloud Vision",
     "productUrl": "https://cloud.google.com/vision",
     "version": "1.5.0-beta01",
@@ -905,6 +965,8 @@
 
   {
     "id": "Google.Cloud.WebRisk.V1Beta1",
+    "protoPath": "google/cloud/webrisk/v1beta1",
+    "serviceYaml": "webrisk.yaml",
     "productName": "Google Cloud Web Risk",
     "productUrl": "https://cloud.google.com/web-risk/",
     "version": "1.0.0-beta02",
@@ -915,6 +977,8 @@
   
   {
     "id": "Google.LongRunning",
+    "protoPath": "google/longrunning",
+    "serviceYaml": "longrunning/longrunning.yaml",
     "version": "1.2.0-beta01",
     "type": "grpc",
     "description": "gRPC services for the Google Long Running Operations API. This library is typically used as a dependency for other API client libraries.",
@@ -928,11 +992,13 @@
 
   {
     "id": "Grafeas.V1",
+    "protoPath": "grafeas/v1",
+    "serviceYaml": "grafeas_v1.yaml",
     "productName": "Grafeas",
     "productUrl": "https://grafeas.io/",
     "version": "1.0.0-beta04",
     "type": "grpc",
     "description": "Recommended client library to access Grafeas, an open artifact metadata API to audit and govern your software supply chain.",
-    "tags": [ "audit", "metadata", "artifact", "grafeas"  ],
+    "tags": [ "audit", "metadata", "artifact", "grafeas"  ]
   }
 ]
