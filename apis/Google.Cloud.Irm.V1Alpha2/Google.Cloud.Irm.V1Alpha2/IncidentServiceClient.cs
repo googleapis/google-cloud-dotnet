@@ -63,6 +63,7 @@ namespace Google.Cloud.Irm.V1Alpha2
             CreateSignalSettings = existing.CreateSignalSettings;
             SearchSignalsSettings = existing.SearchSignalsSettings;
             GetSignalSettings = existing.GetSignalSettings;
+            LookupSignalSettings = existing.LookupSignalSettings;
             UpdateSignalSettings = existing.UpdateSignalSettings;
             EscalateIncidentSettings = existing.EscalateIncidentSettings;
             CreateArtifactSettings = existing.CreateArtifactSettings;
@@ -528,6 +529,36 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
         public gaxgrpc::CallSettings GetSignalSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IncidentServiceClient.LookupSignal</c> and <c>IncidentServiceClient.LookupSignalAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>IncidentServiceClient.LookupSignal</c> and
+        /// <c>IncidentServiceClient.LookupSignalAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings LookupSignalSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
             gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -3520,7 +3551,64 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// incidents belong to.
         /// </param>
         /// <param name="query">
-        /// Query to specify which signals should be returned.
+        /// An expression that defines which signals to return.
+        ///
+        /// Search atoms can be used to match certain specific fields.  Otherwise,
+        /// plain text will match text fields in the signal.
+        ///
+        /// Search atoms:
+        ///
+        /// * `start` - (timestamp) The time the signal was created.
+        /// * `title` - The title of the signal.
+        /// * `signal_state` - `open` or `closed`. State of the signal.
+        ///   (e.g., `signal_state:open`)
+        ///
+        /// Timestamp formats:
+        ///
+        /// * yyyy-MM-dd - an absolute date, treated as a calendar-day-wide window.
+        ///   In other words, the "&lt;" operator will match dates before that date, the
+        ///   "&gt;" operator will match dates after that date, and the ":" operator will
+        ///   match the entire day.
+        /// * yyyy-MM-ddTHH:mm - Same as above, but with minute resolution.
+        /// * yyyy-MM-ddTHH:mm:ss - Same as above, but with second resolution.
+        /// * Nd (e.g. 7d) - a relative number of days ago, treated as a moment in time
+        ///   (as opposed to a day-wide span) a multiple of 24 hours ago (as opposed to
+        ///   calendar days).  In the case of daylight savings time, it will apply the
+        ///   current timezone to both ends of the range.  Note that exact matching
+        ///   (e.g. `start:7d`) is unlikely to be useful because that would only match
+        ///   signals created precisely at a particular instant in time.
+        ///
+        /// The absolute timestamp formats (everything starting with a year) can
+        /// optionally be followed with a UTC offset in +/-hh:mm format.  Also, the 'T'
+        /// separating dates and times can optionally be replaced with a space. Note
+        /// that any timestamp containing a space or colon will need to be quoted.
+        ///
+        /// Examples:
+        ///
+        /// * `foo` - matches signals containing the word "foo"
+        /// * `"foo bar"` - matches signals containing the phrase "foo bar"
+        /// * `foo bar` or `foo AND bar` - matches signals containing the words
+        ///   "foo" and "bar"
+        /// * `foo -bar` or `foo AND NOT bar` - matches signals containing the
+        ///   word
+        ///   "foo" but not the word "bar"
+        /// * `foo OR bar` - matches signals containing the word "foo" or the
+        ///   word "bar"
+        /// * `start&gt;2018-11-28` - matches signals which started after November
+        ///   11, 2018.
+        /// * `start&lt;=2018-11-28` - matches signals which started on or before
+        ///   November 11, 2018.
+        /// * `start:2018-11-28` - matches signals which started on November 11,
+        ///   2018.
+        /// * `start&gt;"2018-11-28 01:02:03+04:00"` - matches signals which started
+        ///   after November 11, 2018 at 1:02:03 AM according to the UTC+04 time
+        ///   zone.
+        /// * `start&gt;7d` - matches signals which started after the point in time
+        ///   7*24 hours ago
+        /// * `start&gt;180d` - similar to 7d, but likely to cross the daylight savings
+        ///   time boundary, so the end time will be 1 hour different from "now."
+        /// * `foo AND start&gt;90d AND stage&lt;resolved` - unresolved signals from
+        ///   the past 90 days containing the word "foo"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -3560,7 +3648,64 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// incidents belong to.
         /// </param>
         /// <param name="query">
-        /// Query to specify which signals should be returned.
+        /// An expression that defines which signals to return.
+        ///
+        /// Search atoms can be used to match certain specific fields.  Otherwise,
+        /// plain text will match text fields in the signal.
+        ///
+        /// Search atoms:
+        ///
+        /// * `start` - (timestamp) The time the signal was created.
+        /// * `title` - The title of the signal.
+        /// * `signal_state` - `open` or `closed`. State of the signal.
+        ///   (e.g., `signal_state:open`)
+        ///
+        /// Timestamp formats:
+        ///
+        /// * yyyy-MM-dd - an absolute date, treated as a calendar-day-wide window.
+        ///   In other words, the "&lt;" operator will match dates before that date, the
+        ///   "&gt;" operator will match dates after that date, and the ":" operator will
+        ///   match the entire day.
+        /// * yyyy-MM-ddTHH:mm - Same as above, but with minute resolution.
+        /// * yyyy-MM-ddTHH:mm:ss - Same as above, but with second resolution.
+        /// * Nd (e.g. 7d) - a relative number of days ago, treated as a moment in time
+        ///   (as opposed to a day-wide span) a multiple of 24 hours ago (as opposed to
+        ///   calendar days).  In the case of daylight savings time, it will apply the
+        ///   current timezone to both ends of the range.  Note that exact matching
+        ///   (e.g. `start:7d`) is unlikely to be useful because that would only match
+        ///   signals created precisely at a particular instant in time.
+        ///
+        /// The absolute timestamp formats (everything starting with a year) can
+        /// optionally be followed with a UTC offset in +/-hh:mm format.  Also, the 'T'
+        /// separating dates and times can optionally be replaced with a space. Note
+        /// that any timestamp containing a space or colon will need to be quoted.
+        ///
+        /// Examples:
+        ///
+        /// * `foo` - matches signals containing the word "foo"
+        /// * `"foo bar"` - matches signals containing the phrase "foo bar"
+        /// * `foo bar` or `foo AND bar` - matches signals containing the words
+        ///   "foo" and "bar"
+        /// * `foo -bar` or `foo AND NOT bar` - matches signals containing the
+        ///   word
+        ///   "foo" but not the word "bar"
+        /// * `foo OR bar` - matches signals containing the word "foo" or the
+        ///   word "bar"
+        /// * `start&gt;2018-11-28` - matches signals which started after November
+        ///   11, 2018.
+        /// * `start&lt;=2018-11-28` - matches signals which started on or before
+        ///   November 11, 2018.
+        /// * `start:2018-11-28` - matches signals which started on November 11,
+        ///   2018.
+        /// * `start&gt;"2018-11-28 01:02:03+04:00"` - matches signals which started
+        ///   after November 11, 2018 at 1:02:03 AM according to the UTC+04 time
+        ///   zone.
+        /// * `start&gt;7d` - matches signals which started after the point in time
+        ///   7*24 hours ago
+        /// * `start&gt;180d` - similar to 7d, but likely to cross the daylight savings
+        ///   time boundary, so the end time will be 1 hour different from "now."
+        /// * `foo AND start&gt;90d AND stage&lt;resolved` - unresolved signals from
+        ///   the past 90 days containing the word "foo"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -3600,7 +3745,64 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// incidents belong to.
         /// </param>
         /// <param name="query">
-        /// Query to specify which signals should be returned.
+        /// An expression that defines which signals to return.
+        ///
+        /// Search atoms can be used to match certain specific fields.  Otherwise,
+        /// plain text will match text fields in the signal.
+        ///
+        /// Search atoms:
+        ///
+        /// * `start` - (timestamp) The time the signal was created.
+        /// * `title` - The title of the signal.
+        /// * `signal_state` - `open` or `closed`. State of the signal.
+        ///   (e.g., `signal_state:open`)
+        ///
+        /// Timestamp formats:
+        ///
+        /// * yyyy-MM-dd - an absolute date, treated as a calendar-day-wide window.
+        ///   In other words, the "&lt;" operator will match dates before that date, the
+        ///   "&gt;" operator will match dates after that date, and the ":" operator will
+        ///   match the entire day.
+        /// * yyyy-MM-ddTHH:mm - Same as above, but with minute resolution.
+        /// * yyyy-MM-ddTHH:mm:ss - Same as above, but with second resolution.
+        /// * Nd (e.g. 7d) - a relative number of days ago, treated as a moment in time
+        ///   (as opposed to a day-wide span) a multiple of 24 hours ago (as opposed to
+        ///   calendar days).  In the case of daylight savings time, it will apply the
+        ///   current timezone to both ends of the range.  Note that exact matching
+        ///   (e.g. `start:7d`) is unlikely to be useful because that would only match
+        ///   signals created precisely at a particular instant in time.
+        ///
+        /// The absolute timestamp formats (everything starting with a year) can
+        /// optionally be followed with a UTC offset in +/-hh:mm format.  Also, the 'T'
+        /// separating dates and times can optionally be replaced with a space. Note
+        /// that any timestamp containing a space or colon will need to be quoted.
+        ///
+        /// Examples:
+        ///
+        /// * `foo` - matches signals containing the word "foo"
+        /// * `"foo bar"` - matches signals containing the phrase "foo bar"
+        /// * `foo bar` or `foo AND bar` - matches signals containing the words
+        ///   "foo" and "bar"
+        /// * `foo -bar` or `foo AND NOT bar` - matches signals containing the
+        ///   word
+        ///   "foo" but not the word "bar"
+        /// * `foo OR bar` - matches signals containing the word "foo" or the
+        ///   word "bar"
+        /// * `start&gt;2018-11-28` - matches signals which started after November
+        ///   11, 2018.
+        /// * `start&lt;=2018-11-28` - matches signals which started on or before
+        ///   November 11, 2018.
+        /// * `start:2018-11-28` - matches signals which started on November 11,
+        ///   2018.
+        /// * `start&gt;"2018-11-28 01:02:03+04:00"` - matches signals which started
+        ///   after November 11, 2018 at 1:02:03 AM according to the UTC+04 time
+        ///   zone.
+        /// * `start&gt;7d` - matches signals which started after the point in time
+        ///   7*24 hours ago
+        /// * `start&gt;180d` - similar to 7d, but likely to cross the daylight savings
+        ///   time boundary, so the end time will be 1 hour different from "now."
+        /// * `foo AND start&gt;90d AND stage&lt;resolved` - unresolved signals from
+        ///   the past 90 days containing the word "foo"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -3640,7 +3842,64 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// incidents belong to.
         /// </param>
         /// <param name="query">
-        /// Query to specify which signals should be returned.
+        /// An expression that defines which signals to return.
+        ///
+        /// Search atoms can be used to match certain specific fields.  Otherwise,
+        /// plain text will match text fields in the signal.
+        ///
+        /// Search atoms:
+        ///
+        /// * `start` - (timestamp) The time the signal was created.
+        /// * `title` - The title of the signal.
+        /// * `signal_state` - `open` or `closed`. State of the signal.
+        ///   (e.g., `signal_state:open`)
+        ///
+        /// Timestamp formats:
+        ///
+        /// * yyyy-MM-dd - an absolute date, treated as a calendar-day-wide window.
+        ///   In other words, the "&lt;" operator will match dates before that date, the
+        ///   "&gt;" operator will match dates after that date, and the ":" operator will
+        ///   match the entire day.
+        /// * yyyy-MM-ddTHH:mm - Same as above, but with minute resolution.
+        /// * yyyy-MM-ddTHH:mm:ss - Same as above, but with second resolution.
+        /// * Nd (e.g. 7d) - a relative number of days ago, treated as a moment in time
+        ///   (as opposed to a day-wide span) a multiple of 24 hours ago (as opposed to
+        ///   calendar days).  In the case of daylight savings time, it will apply the
+        ///   current timezone to both ends of the range.  Note that exact matching
+        ///   (e.g. `start:7d`) is unlikely to be useful because that would only match
+        ///   signals created precisely at a particular instant in time.
+        ///
+        /// The absolute timestamp formats (everything starting with a year) can
+        /// optionally be followed with a UTC offset in +/-hh:mm format.  Also, the 'T'
+        /// separating dates and times can optionally be replaced with a space. Note
+        /// that any timestamp containing a space or colon will need to be quoted.
+        ///
+        /// Examples:
+        ///
+        /// * `foo` - matches signals containing the word "foo"
+        /// * `"foo bar"` - matches signals containing the phrase "foo bar"
+        /// * `foo bar` or `foo AND bar` - matches signals containing the words
+        ///   "foo" and "bar"
+        /// * `foo -bar` or `foo AND NOT bar` - matches signals containing the
+        ///   word
+        ///   "foo" but not the word "bar"
+        /// * `foo OR bar` - matches signals containing the word "foo" or the
+        ///   word "bar"
+        /// * `start&gt;2018-11-28` - matches signals which started after November
+        ///   11, 2018.
+        /// * `start&lt;=2018-11-28` - matches signals which started on or before
+        ///   November 11, 2018.
+        /// * `start:2018-11-28` - matches signals which started on November 11,
+        ///   2018.
+        /// * `start&gt;"2018-11-28 01:02:03+04:00"` - matches signals which started
+        ///   after November 11, 2018 at 1:02:03 AM according to the UTC+04 time
+        ///   zone.
+        /// * `start&gt;7d` - matches signals which started after the point in time
+        ///   7*24 hours ago
+        /// * `start&gt;180d` - similar to 7d, but likely to cross the daylight savings
+        ///   time boundary, so the end time will be 1 hour different from "now."
+        /// * `foo AND start&gt;90d AND stage&lt;resolved` - unresolved signals from
+        ///   the past 90 days containing the word "foo"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -3888,6 +4147,62 @@ namespace Google.Cloud.Irm.V1Alpha2
         /// </returns>
         public virtual Signal GetSignal(
             GetSignalRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Finds a signal by other unique IDs.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Signal> LookupSignalAsync(
+            LookupSignalRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Finds a signal by other unique IDs.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Signal> LookupSignalAsync(
+            LookupSignalRequest request,
+            st::CancellationToken cancellationToken) => LookupSignalAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finds a signal by other unique IDs.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Signal LookupSignal(
+            LookupSignalRequest request,
             gaxgrpc::CallSettings callSettings = null)
         {
             throw new sys::NotImplementedException();
@@ -7084,6 +7399,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         private readonly gaxgrpc::ApiCall<CreateSignalRequest, Signal> _callCreateSignal;
         private readonly gaxgrpc::ApiCall<SearchSignalsRequest, SearchSignalsResponse> _callSearchSignals;
         private readonly gaxgrpc::ApiCall<GetSignalRequest, Signal> _callGetSignal;
+        private readonly gaxgrpc::ApiCall<LookupSignalRequest, Signal> _callLookupSignal;
         private readonly gaxgrpc::ApiCall<UpdateSignalRequest, Signal> _callUpdateSignal;
         private readonly gaxgrpc::ApiCall<EscalateIncidentRequest, EscalateIncidentResponse> _callEscalateIncident;
         private readonly gaxgrpc::ApiCall<CreateArtifactRequest, Artifact> _callCreateArtifact;
@@ -7152,6 +7468,8 @@ namespace Google.Cloud.Irm.V1Alpha2
             _callGetSignal = clientHelper.BuildApiCall<GetSignalRequest, Signal>(
                 GrpcClient.GetSignalAsync, GrpcClient.GetSignal, effectiveSettings.GetSignalSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"name={request.Name}"));
+            _callLookupSignal = clientHelper.BuildApiCall<LookupSignalRequest, Signal>(
+                GrpcClient.LookupSignalAsync, GrpcClient.LookupSignal, effectiveSettings.LookupSignalSettings);
             _callUpdateSignal = clientHelper.BuildApiCall<UpdateSignalRequest, Signal>(
                 GrpcClient.UpdateSignalAsync, GrpcClient.UpdateSignal, effectiveSettings.UpdateSignalSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"signal.name={request.Signal?.Name}"));
@@ -7232,6 +7550,8 @@ namespace Google.Cloud.Irm.V1Alpha2
             Modify_SearchSignalsApiCall(ref _callSearchSignals);
             Modify_ApiCall(ref _callGetSignal);
             Modify_GetSignalApiCall(ref _callGetSignal);
+            Modify_ApiCall(ref _callLookupSignal);
+            Modify_LookupSignalApiCall(ref _callLookupSignal);
             Modify_ApiCall(ref _callUpdateSignal);
             Modify_UpdateSignalApiCall(ref _callUpdateSignal);
             Modify_ApiCall(ref _callEscalateIncident);
@@ -7294,6 +7614,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         partial void Modify_CreateSignalApiCall(ref gaxgrpc::ApiCall<CreateSignalRequest, Signal> call);
         partial void Modify_SearchSignalsApiCall(ref gaxgrpc::ApiCall<SearchSignalsRequest, SearchSignalsResponse> call);
         partial void Modify_GetSignalApiCall(ref gaxgrpc::ApiCall<GetSignalRequest, Signal> call);
+        partial void Modify_LookupSignalApiCall(ref gaxgrpc::ApiCall<LookupSignalRequest, Signal> call);
         partial void Modify_UpdateSignalApiCall(ref gaxgrpc::ApiCall<UpdateSignalRequest, Signal> call);
         partial void Modify_EscalateIncidentApiCall(ref gaxgrpc::ApiCall<EscalateIncidentRequest, EscalateIncidentResponse> call);
         partial void Modify_CreateArtifactApiCall(ref gaxgrpc::ApiCall<CreateArtifactRequest, Artifact> call);
@@ -7335,6 +7656,7 @@ namespace Google.Cloud.Irm.V1Alpha2
         partial void Modify_CreateSignalRequest(ref CreateSignalRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SearchSignalsRequest(ref SearchSignalsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetSignalRequest(ref GetSignalRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_LookupSignalRequest(ref LookupSignalRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_UpdateSignalRequest(ref UpdateSignalRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_EscalateIncidentRequest(ref EscalateIncidentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_CreateArtifactRequest(ref CreateArtifactRequest request, ref gaxgrpc::CallSettings settings);
@@ -7881,6 +8203,46 @@ namespace Google.Cloud.Irm.V1Alpha2
         {
             Modify_GetSignalRequest(ref request, ref callSettings);
             return _callGetSignal.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds a signal by other unique IDs.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Signal> LookupSignalAsync(
+            LookupSignalRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupSignalRequest(ref request, ref callSettings);
+            return _callLookupSignal.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds a signal by other unique IDs.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Signal LookupSignal(
+            LookupSignalRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_LookupSignalRequest(ref request, ref callSettings);
+            return _callLookupSignal.Sync(request, callSettings);
         }
 
         /// <summary>

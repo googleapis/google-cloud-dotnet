@@ -339,6 +339,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             {
                 AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
+                ContentType = "contentType831846208",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotation(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -363,6 +364,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             {
                 AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
+                ContentType = "contentType831846208",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationAsync(expectedRequest, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Annotation>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -387,6 +389,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             {
                 AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
+                ContentType = "contentType831846208",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotation(request, It.IsAny<CallOptions>()))
                 .Returns(expectedResponse);
@@ -409,6 +412,7 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
             {
                 AnnotationName = new AnnotationName("[PROJECT]", "[INCIDENT]", "[ANNOTATION]"),
                 Content = "content951530617",
+                ContentType = "contentType831846208",
             };
             mockGrpcClient.Setup(x => x.CreateAnnotationAsync(request, It.IsAny<CallOptions>()))
                 .Returns(new Grpc.Core.AsyncUnaryCall<Annotation>(Task.FromResult(expectedResponse), null, null, null, null));
@@ -782,6 +786,50 @@ namespace Google.Cloud.Irm.V1Alpha2.Tests
                 .Returns(new Grpc.Core.AsyncUnaryCall<Signal>(Task.FromResult(expectedResponse), null, null, null, null));
             IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
             Signal response = await client.GetSignalAsync(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public void LookupSignal()
+        {
+            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
+            LookupSignalRequest request = new LookupSignalRequest();
+            Signal expectedResponse = new Signal
+            {
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
+                Etag = "etag3123477",
+                Incident = "incident86983890",
+                Title = "title110371416",
+                ContentType = "contentType831846208",
+                Content = "content951530617",
+            };
+            mockGrpcClient.Setup(x => x.LookupSignal(request, It.IsAny<CallOptions>()))
+                .Returns(expectedResponse);
+            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
+            Signal response = client.LookupSignal(request);
+            Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task LookupSignalAsync()
+        {
+            Mock<IncidentService.IncidentServiceClient> mockGrpcClient = new Mock<IncidentService.IncidentServiceClient>(MockBehavior.Strict);
+            LookupSignalRequest request = new LookupSignalRequest();
+            Signal expectedResponse = new Signal
+            {
+                SignalName = new SignalName("[PROJECT]", "[SIGNAL]"),
+                Etag = "etag3123477",
+                Incident = "incident86983890",
+                Title = "title110371416",
+                ContentType = "contentType831846208",
+                Content = "content951530617",
+            };
+            mockGrpcClient.Setup(x => x.LookupSignalAsync(request, It.IsAny<CallOptions>()))
+                .Returns(new Grpc.Core.AsyncUnaryCall<Signal>(Task.FromResult(expectedResponse), null, null, null, null));
+            IncidentServiceClient client = new IncidentServiceClientImpl(mockGrpcClient.Object, null);
+            Signal response = await client.LookupSignalAsync(request);
             Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }

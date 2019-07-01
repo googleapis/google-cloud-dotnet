@@ -3,7 +3,7 @@
 //     source: google/cloud/irm/v1alpha2/incidents_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2018 Google LLC.
+// Copyright 2019 Google LLC.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,6 +53,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.Signal> __Marshaller_Signal = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.Signal.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest> __Marshaller_SearchSignalsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> __Marshaller_SearchSignalsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest> __Marshaller_LookupSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest> __Marshaller_GetSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest> __Marshaller_UpdateSignalRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.UpdateSignalRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest> __Marshaller_EscalateIncidentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Irm.V1Alpha2.EscalateIncidentRequest.Parser.ParseFrom);
@@ -164,6 +165,13 @@ namespace Google.Cloud.Irm.V1Alpha2 {
         "SearchSignals",
         __Marshaller_SearchSignalsRequest,
         __Marshaller_SearchSignalsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal> __Method_LookupSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LookupSignal",
+        __Marshaller_LookupSignalRequest,
+        __Marshaller_Signal);
 
     static readonly grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal> __Method_GetSignal = new grpc::Method<global::Google.Cloud.Irm.V1Alpha2.GetSignalRequest, global::Google.Cloud.Irm.V1Alpha2.Signal>(
         grpc::MethodType.Unary,
@@ -441,6 +449,17 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> SearchSignals(global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Finds a signal by other unique IDs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Irm.V1Alpha2.Signal> LookupSignal(global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1248,6 +1267,50 @@ namespace Google.Cloud.Irm.V1Alpha2 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.SearchSignalsResponse> SearchSignalsAsync(global::Google.Cloud.Irm.V1Alpha2.SearchSignalsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchSignals, null, options, request);
+      }
+      /// <summary>
+      /// Finds a signal by other unique IDs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Irm.V1Alpha2.Signal LookupSignal(global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupSignal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds a signal by other unique IDs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Irm.V1Alpha2.Signal LookupSignal(global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LookupSignal, null, options, request);
+      }
+      /// <summary>
+      /// Finds a signal by other unique IDs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Signal> LookupSignalAsync(global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LookupSignalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds a signal by other unique IDs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Irm.V1Alpha2.Signal> LookupSignalAsync(global::Google.Cloud.Irm.V1Alpha2.LookupSignalRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LookupSignal, null, options, request);
       }
       /// <summary>
       /// Returns a signal by name.
@@ -2181,6 +2244,7 @@ namespace Google.Cloud.Irm.V1Alpha2 {
           .AddMethod(__Method_ListTags, serviceImpl.ListTags)
           .AddMethod(__Method_CreateSignal, serviceImpl.CreateSignal)
           .AddMethod(__Method_SearchSignals, serviceImpl.SearchSignals)
+          .AddMethod(__Method_LookupSignal, serviceImpl.LookupSignal)
           .AddMethod(__Method_GetSignal, serviceImpl.GetSignal)
           .AddMethod(__Method_UpdateSignal, serviceImpl.UpdateSignal)
           .AddMethod(__Method_EscalateIncident, serviceImpl.EscalateIncident)
