@@ -20,7 +20,6 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Moq;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Spanner.V1.SqlResultStream;
@@ -142,8 +141,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             var mock = new Mock<IScheduler>(MockBehavior.Strict);
             // Delay taken from retry info
             mock.Setup(s => s.Delay(TimeSpan.FromSeconds(3), default)).Returns(Task.FromResult(0));
-            // Delay taken from backoff settings (which have still doubled, even when the first value wasn't used)
-            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(2), default)).Returns(Task.FromResult(0));
+            // Delay taken from backoff settings (which weren't affected by the first exception, because it contained backoff information)
+            mock.Setup(s => s.Delay(TimeSpan.FromSeconds(1), default)).Returns(Task.FromResult(0));
 
             // The first exception contains retry info, so we don't use the backoff settings
             var retryInfo = new Rpc.RetryInfo { RetryDelay = Duration.FromTimeSpan(TimeSpan.FromSeconds(3)) };
