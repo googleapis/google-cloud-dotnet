@@ -1449,6 +1449,33 @@ namespace Google.Cloud.Irm.V1Alpha2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for LookupSignalAsync</summary>
+        public async Task LookupSignalAsync_RequestObject()
+        {
+            // Snippet: LookupSignalAsync(LookupSignalRequest,CallSettings)
+            // Additional: LookupSignalAsync(LookupSignalRequest,CancellationToken)
+            // Create client
+            IncidentServiceClient incidentServiceClient = await IncidentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LookupSignalRequest request = new LookupSignalRequest();
+            // Make the request
+            Signal response = await incidentServiceClient.LookupSignalAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for LookupSignal</summary>
+        public void LookupSignal_RequestObject()
+        {
+            // Snippet: LookupSignal(LookupSignalRequest,CallSettings)
+            // Create client
+            IncidentServiceClient incidentServiceClient = IncidentServiceClient.Create();
+            // Initialize request argument(s)
+            LookupSignalRequest request = new LookupSignalRequest();
+            // Make the request
+            Signal response = incidentServiceClient.LookupSignal(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateSignalAsync</summary>
         public async Task UpdateSignalAsync()
         {
