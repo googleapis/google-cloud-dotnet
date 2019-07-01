@@ -35,8 +35,8 @@ namespace Google.Cloud.Spanner.V1
         /// responses without a resume token anyway.
         /// </summary>
         private const int DefaultMaxBufferSize = 512;
-        // TODO: Validate that these make sense!
-        private static readonly BackoffSettings s_defaultBackoffSettings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(15), 2.0);
+        // Note: these settings are taken from the Java code (SpannerImpl.newBackoff, which uses the default ExponentialBackoff multiplier of 1.5)
+        private static readonly BackoffSettings s_defaultBackoffSettings = new BackoffSettings(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(32), 1.5);
 
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
@@ -253,9 +253,12 @@ namespace Google.Cloud.Spanner.V1
             internal async Task RecordErrorAndWaitAsync(RpcException exception, CancellationToken cancellationToken)
             {
                 _consecutiveErrors++;
-                TimeSpan thisDelay = GetRetryDelay(exception) ?? _nextDelay;
-                await _scheduler.Delay(_backoffJitter.GetDelay(thisDelay), cancellationToken).ConfigureAwait(false);
-                _nextDelay = _backoffSettings.NextDelay(_nextDelay);
+                TimeSpan? delayFromException = GetRetryDelay(exception);
+                await _scheduler.Delay(_backoffJitter.GetDelay(delayFromException ?? _nextDelay), cancellationToken).ConfigureAwait(false);
+                if (delayFromException == null)
+                {
+                    _nextDelay = _backoffSettings.NextDelay(_nextDelay);
+                }
             }
 
             /// <summary>
