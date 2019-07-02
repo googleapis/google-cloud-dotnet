@@ -88,8 +88,8 @@ generate_api() {
   echo Generating $1
   API_TMP_DIR=$OUTDIR/$1
   API_OUT_DIR=apis
-  API_SRC_DIR=googleapis/$(python tools/getapifield.py apis/apis.json $1 protoPath)
-  API_YAML=$API_SRC_DIR/../$(python tools/getapifield.py apis/apis.json $1 serviceYaml)
+  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  API_YAML=$API_SRC_DIR/../$($PYTHON3 tools/getapifield.py apis/apis.json $1 serviceYaml)
 
   if [[ ! -f $API_YAML ]]
   then
@@ -228,7 +228,7 @@ packages=$@
 if [[ -z "$packages" ]]
 then
   # We assume if there's a protopath, there's also a YAML file...
-  packages=$(python tools/listapis.py apis/apis.json --test protoPath)
+  packages=$($PYTHON3 tools/listapis.py apis/apis.json --test protoPath)
 fi
 
 for package in $packages
