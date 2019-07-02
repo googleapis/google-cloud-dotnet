@@ -20,9 +20,9 @@ declare -r REPORTGENERATOR=$TOOL_PACKAGES/ReportGenerator.$REPORTGENERATOR_VERSI
 declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERSION
 
 # Try to detect Python 3. It's quite different between Windows and Linux.
-if which python > /dev/null && python --version | grep -q "Python 3"; then declare -r PYTHON3=python
-elif which py > /dev/null && py -3 --version | grep -q "Python 3"; then declare -r PYTHON3="py -3"
-elif which python3 > /dev/null && python3 --version | grep -q "Python 3"; then declare -r PYTHON3=python3
+if which python > /dev/null && python --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3=python
+elif which py > /dev/null && py -3 --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3="py -3"
+elif which python3 > /dev/null && python3 --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3=python3
 else
   echo "Unable to detect Python 3 installation."
   exit 1
