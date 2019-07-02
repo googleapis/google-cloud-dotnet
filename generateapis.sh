@@ -50,11 +50,11 @@ fetch_github_repos() {
   fi
 }
 
-microgenerate_api() {
+generate_microgenerator() {
   API_TMP_DIR=$OUTDIR/$1
   PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$1
   API_OUT_DIR=apis
-  API_SRC_DIR=googleapis/$2
+  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   
   mkdir -p $PRODUCTION_PACKAGE_DIR
   
@@ -84,8 +84,7 @@ microgenerate_api() {
   fi
 }
 
-generate_api() {
-  echo Generating $1
+generate_gapicgenerator() {
   API_TMP_DIR=$OUTDIR/$1
   API_OUT_DIR=apis
   API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
@@ -104,12 +103,6 @@ generate_api() {
   do
     cp $i $API_TMP_DIR/gapic.yaml
   done
-
-  # The LongRunning API code is under the Apache licence for C#, but BSD for other languages.
-  if [[ $1 == "Google.LongRunning" ]]
-  then
-    sed -i s/license-header-bsd-3-clause.txt/license-header-apache-2.0.txt/g googleapis/google/longrunning/longrunning_gapic.yaml
-  fi
   
   # Generate the descriptor set for this API. We always explicitly
   # include IAM so that gRPC rerouting works; it doesn't have any negative
@@ -155,25 +148,71 @@ generate_api() {
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     $API_SRC_DIR/*.proto \
     2>&1 | grep -v "but not used" || true # Ignore import warnings (and grep exit code)
-    
-  if [[ -f $API_OUT_DIR/$1/postgeneration.patch ]]
+}
+
+generate_proto() {
+  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  $PROTOC \
+    --csharp_out=apis/$1/$1 \
+    -I googleapis \
+    -I $CORE_PROTOS_ROOT \
+    $API_SRC_DIR/*.proto
+}
+
+generate_protogrpc() {
+  API_SRC_DIR=googleapis/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
+  $PROTOC \
+    --csharp_out=apis/$1/$1 \
+    --grpc_out=apis/$1/$1 \
+    -I googleapis \
+    -I $CORE_PROTOS_ROOT \
+    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
+    $API_SRC_DIR/*.proto
+}
+
+generate_api() {
+  PACKAGE=$1
+  PACKAGE_DIR=apis/$1
+  echo "Generating $PACKAGE"
+  GENERATOR=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE generator)
+
+  if [[ -f $API_OUT_DIR/$1/pregeneration.sh ]]
   then
-    echo "Applying post-generation patch for $1"
-    (cd $API_OUT_DIR/$1; git apply postgeneration.patch)
+    echo "Running pre-generation script for $PACKAGE"
+    (cd $PACKAGE_DIR; ./pregeneration.sh)
+  fi
+
+  case "$GENERATOR" in
+    micro)
+      generate_microgenerator $1
+      ;;
+    gapic)
+      generate_gapicgenerator $1
+      ;;
+    proto)
+      generate_proto $1
+      ;;
+    protogrpc)
+      generate_protogrpc $1
+      ;;
+    *)
+      echo "Unknown generator: $GENERATOR"
+      exit 1
+  esac
+  if [[ -f $PACKAGE_DIR/postgeneration.patch ]]
+  then
+    echo "Applying post-generation patch for $PACKAGE"
+    (cd $PACKAGE_DIR; git apply postgeneration.patch)
   fi
 
   if [[ -f $API_OUT_DIR/$1/postgeneration.sh ]]
   then
-    echo "Running post-generation script for $1"
-    (cd $API_OUT_DIR/$1; ./postgeneration.sh)
-  fi
-
-  # Revert the LongRunning GAPIC change
-  if [[ $1 == "Google.LongRunning" ]]
-  then
-    git -C googleapis checkout google/longrunning/longrunning_gapic.yaml
+    echo "Running post-generation script for $PACKAGE"
+    (cd $PACKAGE_DIR; ./postgeneration.sh)
   fi
 }
+
+
 
 # Entry point
 
@@ -196,45 +235,13 @@ OUTDIR=tmp
 rm -rf $OUTDIR
 mkdir $OUTDIR
 
-# TODO: Do this part on demand...
-# IAM (just proto and grpc)
-$PROTOC \
-  --csharp_out=apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1 \
-  --grpc_out=apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1 \
-  -I googleapis \
-  -I $CORE_PROTOS_ROOT \
-  --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-  googleapis/google/iam/v1/*.proto
-
-# Logging version-agnostic types
-$PROTOC \
-  --csharp_out=apis/Google.Cloud.Logging.Type/Google.Cloud.Logging.Type \
-  -I googleapis \
-  -I $CORE_PROTOS_ROOT \
-  googleapis/google/logging/type/*.proto
-
-# OS Login version-agnostic types
-$PROTOC \
-  --csharp_out=apis/Google.Cloud.OsLogin.Common/Google.Cloud.OsLogin.Common \
-  -I googleapis \
-  -I $CORE_PROTOS_ROOT \
-  googleapis/google/cloud/oslogin/common/*.proto
-
-# Now the per-API codegen
-
-# Legacy GAPIC generator
-
 packages=$@
 if [[ -z "$packages" ]]
 then
-  # We assume if there's a protopath, there's also a YAML file...
-  packages=$($PYTHON3 tools/listapis.py apis/apis.json --test protoPath)
+  packages=$($PYTHON3 tools/listapis.py apis/apis.json --test generator)
 fi
 
 for package in $packages
 do
   generate_api $package
 done
-
-# Microgenerator
-# microgenerate_api Google.Cloud.Vision.V1 google/cloud/vision/v1
