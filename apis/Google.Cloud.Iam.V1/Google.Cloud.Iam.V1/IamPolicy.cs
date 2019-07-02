@@ -25,31 +25,33 @@ namespace Google.Cloud.Iam.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5nb29nbGUvaWFtL3YxL2lhbV9wb2xpY3kucHJvdG8SDWdvb2dsZS5pYW0u",
-            "djEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aGmdvb2dsZS9pYW0vdjEv",
-            "cG9saWN5LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIk4K",
-            "E1NldElhbVBvbGljeVJlcXVlc3QSEAoIcmVzb3VyY2UYASABKAkSJQoGcG9s",
-            "aWN5GAIgASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiJwoTR2V0SWFtUG9s",
-            "aWN5UmVxdWVzdBIQCghyZXNvdXJjZRgBIAEoCSJCChlUZXN0SWFtUGVybWlz",
-            "c2lvbnNSZXF1ZXN0EhAKCHJlc291cmNlGAEgASgJEhMKC3Blcm1pc3Npb25z",
-            "GAIgAygJIjEKGlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlEhMKC3Blcm1p",
-            "c3Npb25zGAEgAygJMpQDCglJQU1Qb2xpY3kSdAoMU2V0SWFtUG9saWN5EiIu",
-            "Z29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlh",
-            "bS52MS5Qb2xpY3kiKYLT5JMCIyIeL3YxL3tyZXNvdXJjZT0qKn06c2V0SWFt",
-            "UG9saWN5OgEqEnQKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0",
-            "SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IimC0+ST",
-            "AiMiHi92MS97cmVzb3VyY2U9Kip9OmdldElhbVBvbGljeToBKhKaAQoSVGVz",
-            "dElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlz",
-            "c2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lv",
-            "bnNSZXNwb25zZSIvgtPkkwIpIiQvdjEve3Jlc291cmNlPSoqfTp0ZXN0SWFt",
-            "UGVybWlzc2lvbnM6ASpChgEKEWNvbS5nb29nbGUuaWFtLnYxQg5JYW1Qb2xp",
-            "Y3lQcm90b1ABWjBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2lhbS92MTtpYW34AQGqAhNHb29nbGUuQ2xvdWQuSWFtLlYxygITR29v",
-            "Z2xlXENsb3VkXElhbVxWMWIGcHJvdG8z"));
+            "djEaG2dvb2dsZS9pYW0vdjEvb3B0aW9ucy5wcm90bxoaZ29vZ2xlL2lhbS92",
+            "MS9wb2xpY3kucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
+            "F2dvb2dsZS9hcGkvY2xpZW50LnByb3RvIk4KE1NldElhbVBvbGljeVJlcXVl",
+            "c3QSEAoIcmVzb3VyY2UYASABKAkSJQoGcG9saWN5GAIgASgLMhUuZ29vZ2xl",
+            "LmlhbS52MS5Qb2xpY3kiWQoTR2V0SWFtUG9saWN5UmVxdWVzdBIQCghyZXNv",
+            "dXJjZRgBIAEoCRIwCgdvcHRpb25zGAIgASgLMh8uZ29vZ2xlLmlhbS52MS5H",
+            "ZXRQb2xpY3lPcHRpb25zIkIKGVRlc3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QS",
+            "EAoIcmVzb3VyY2UYASABKAkSEwoLcGVybWlzc2lvbnMYAiADKAkiMQoaVGVz",
+            "dElhbVBlcm1pc3Npb25zUmVzcG9uc2USEwoLcGVybWlzc2lvbnMYASADKAky",
+            "tAMKCUlBTVBvbGljeRJ0CgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYx",
+            "LlNldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSIp",
+            "gtPkkwIjIh4vdjEve3Jlc291cmNlPSoqfTpzZXRJYW1Qb2xpY3k6ASoSdAoM",
+            "R2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1",
+            "ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiKYLT5JMCIyIeL3YxL3tyZXNv",
+            "dXJjZT0qKn06Z2V0SWFtUG9saWN5OgEqEpoBChJUZXN0SWFtUGVybWlzc2lv",
+            "bnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVlc3Qa",
+            "KS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlIi+C",
+            "0+STAikiJC92MS97cmVzb3VyY2U9Kip9OnRlc3RJYW1QZXJtaXNzaW9uczoB",
+            "KhoeykEbaWFtLW1ldGEtYXBpLmdvb2dsZWFwaXMuY29tQoYBChFjb20uZ29v",
+            "Z2xlLmlhbS52MUIOSWFtUG9saWN5UHJvdG9QAVowZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9pYW0vdjE7aWFt+AEBqgITR29vZ2xl",
+            "LkNsb3VkLklhbS5WMcoCE0dvb2dsZVxDbG91ZFxJYW1cVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Iam.V1.OptionsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.SetIamPolicyRequest), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser, new[]{ "Resource", "Policy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetIamPolicyRequest), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetIamPolicyRequest), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource", "Options" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser, new[]{ "Resource", "Permissions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsResponse), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser, new[]{ "Permissions" }, null, null, null)
           }));
@@ -263,6 +265,7 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetIamPolicyRequest(GetIamPolicyRequest other) : this() {
       resource_ = other.resource_;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -286,6 +289,21 @@ namespace Google.Cloud.Iam.V1 {
       }
     }
 
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 2;
+    private global::Google.Cloud.Iam.V1.GetPolicyOptions options_;
+    /// <summary>
+    /// OPTIONAL: A `GetPolicyOptions` object for specifying options to
+    /// `GetIamPolicy`. This field is only used by Cloud IAM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Iam.V1.GetPolicyOptions Options {
+      get { return options_; }
+      set {
+        options_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetIamPolicyRequest);
@@ -300,6 +318,7 @@ namespace Google.Cloud.Iam.V1 {
         return true;
       }
       if (Resource != other.Resource) return false;
+      if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -307,6 +326,7 @@ namespace Google.Cloud.Iam.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Resource.Length != 0) hash ^= Resource.GetHashCode();
+      if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -324,6 +344,10 @@ namespace Google.Cloud.Iam.V1 {
         output.WriteRawTag(10);
         output.WriteString(Resource);
       }
+      if (options_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Options);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -334,6 +358,9 @@ namespace Google.Cloud.Iam.V1 {
       int size = 0;
       if (Resource.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
+      }
+      if (options_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -349,6 +376,12 @@ namespace Google.Cloud.Iam.V1 {
       if (other.Resource.Length != 0) {
         Resource = other.Resource;
       }
+      if (other.options_ != null) {
+        if (options_ == null) {
+          options_ = new global::Google.Cloud.Iam.V1.GetPolicyOptions();
+        }
+        Options.MergeFrom(other.Options);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -362,6 +395,13 @@ namespace Google.Cloud.Iam.V1 {
             break;
           case 10: {
             Resource = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (options_ == null) {
+              options_ = new global::Google.Cloud.Iam.V1.GetPolicyOptions();
+            }
+            input.ReadMessage(options_);
             break;
           }
         }
