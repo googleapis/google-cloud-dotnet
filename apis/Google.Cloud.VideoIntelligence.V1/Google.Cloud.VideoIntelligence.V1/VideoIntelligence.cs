@@ -174,12 +174,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             "ZXJ2aWNlEocBCg1Bbm5vdGF0ZVZpZGVvEjcuZ29vZ2xlLmNsb3VkLnZpZGVv",
             "aW50ZWxsaWdlbmNlLnYxLkFubm90YXRlVmlkZW9SZXF1ZXN0Gh0uZ29vZ2xl",
             "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiIegtPkkwIYIhMvdjEvdmlkZW9zOmFu",
-            "bm90YXRlOgEqQuQBCiVjb20uZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdl",
+            "bm90YXRlOgEqQosCCiVjb20uZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdl",
             "bmNlLnYxQh1WaWRlb0ludGVsbGlnZW5jZVNlcnZpY2VQcm90b1ABWlJnb29n",
             "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3ZpZGVv",
             "aW50ZWxsaWdlbmNlL3YxO3ZpZGVvaW50ZWxsaWdlbmNlqgIhR29vZ2xlLkNs",
             "b3VkLlZpZGVvSW50ZWxsaWdlbmNlLlYxygIhR29vZ2xlXENsb3VkXFZpZGVv",
-            "SW50ZWxsaWdlbmNlXFYxYgZwcm90bzM="));
+            "SW50ZWxsaWdlbmNlXFYx6gIkR29vZ2xlOjpDbG91ZDo6VmlkZW9JbnRlbGxp",
+            "Z2VuY2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VideoIntelligence.V1.Feature), typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode), typeof(global::Google.Cloud.VideoIntelligence.V1.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
