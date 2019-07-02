@@ -64,6 +64,7 @@ You'll typically want JSON like this:
 ```json
 {
   "id": "FIXME",
+  "generator": "gapic",
   "protoPath": "FIXME",
   "serviceYaml": "FIXME",
   "productName": "FIXME",
