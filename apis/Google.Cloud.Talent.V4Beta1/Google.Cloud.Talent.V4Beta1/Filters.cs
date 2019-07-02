@@ -47,7 +47,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5FbXBsb3ltZW50VHlwZRIW",
             "Cg5sYW5ndWFnZV9jb2RlcxgLIAMoCRJHChJwdWJsaXNoX3RpbWVfcmFuZ2UY",
             "DCABKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGltZXN0YW1w",
-            "UmFuZ2USFQoNZXhjbHVkZWRfam9icxgNIAMoCSL1BgoMUHJvZmlsZVF1ZXJ5",
+            "UmFuZ2USFQoNZXhjbHVkZWRfam9icxgNIAMoCSLWBwoMUHJvZmlsZVF1ZXJ5",
             "Eg0KBXF1ZXJ5GAEgASgJEkUKEGxvY2F0aW9uX2ZpbHRlcnMYAiADKAsyKy5n",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTG9jYXRpb25GaWx0ZXISRgoR",
             "am9iX3RpdGxlX2ZpbHRlcnMYAyADKAsyKy5nb29nbGUuY2xvdWQudGFsZW50",
@@ -67,69 +67,72 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "ZXRhMS5BcHBsaWNhdGlvbk91dGNvbWVOb3Rlc0ZpbHRlchJSChdhcHBsaWNh",
             "dGlvbl9qb2JfZmlsdGVycxgNIAMoCzIxLmdvb2dsZS5jbG91ZC50YWxlbnQu",
             "djRiZXRhMS5BcHBsaWNhdGlvbkpvYkZpbHRlchIfChdjdXN0b21fYXR0cmli",
-            "dXRlX2ZpbHRlchgPIAEoCSLfAgoOTG9jYXRpb25GaWx0ZXISDwoHYWRkcmVz",
-            "cxgBIAEoCRITCgtyZWdpb25fY29kZRgCIAEoCRIkCgdsYXRfbG5nGAMgASgL",
-            "MhMuZ29vZ2xlLnR5cGUuTGF0TG5nEhkKEWRpc3RhbmNlX2luX21pbGVzGAQg",
-            "ASgBEmEKFnRlbGVjb21tdXRlX3ByZWZlcmVuY2UYBSABKA4yQS5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuTG9jYXRpb25GaWx0ZXIuVGVsZWNvbW11",
-            "dGVQcmVmZXJlbmNlEg8KB25lZ2F0ZWQYBiABKAgicgoVVGVsZWNvbW11dGVQ",
-            "cmVmZXJlbmNlEiYKIlRFTEVDT01NVVRFX1BSRUZFUkVOQ0VfVU5TUEVDSUZJ",
-            "RUQQABIYChRURUxFQ09NTVVURV9FWENMVURFRBABEhcKE1RFTEVDT01NVVRF",
-            "X0FMTE9XRUQQAiLAAwoSQ29tcGVuc2F0aW9uRmlsdGVyEkgKBHR5cGUYASAB",
-            "KA4yOi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGVuc2F0aW9u",
-            "RmlsdGVyLkZpbHRlclR5cGUSTQoFdW5pdHMYAiADKA4yPi5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuQ29tcGVuc2F0aW9uSW5mby5Db21wZW5zYXRp",
-            "b25Vbml0Ek4KBXJhbmdlGAMgASgLMj8uZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLkNvbXBlbnNhdGlvbkluZm8uQ29tcGVuc2F0aW9uUmFuZ2USOAow",
-            "aW5jbHVkZV9qb2JzX3dpdGhfdW5zcGVjaWZpZWRfY29tcGVuc2F0aW9uX3Jh",
-            "bmdlGAQgASgIIoYBCgpGaWx0ZXJUeXBlEhsKF0ZJTFRFUl9UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASDQoJVU5JVF9PTkxZEAESEwoPVU5JVF9BTkRfQU1PVU5UEAIS",
-            "GgoWQU5OVUFMSVpFRF9CQVNFX0FNT1VOVBADEhsKF0FOTlVBTElaRURfVE9U",
-            "QUxfQU1PVU5UEAQivAMKDUNvbW11dGVGaWx0ZXISQgoOY29tbXV0ZV9tZXRo",
-            "b2QYASABKA4yKi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tbXV0",
-            "ZU1ldGhvZBIuChFzdGFydF9jb29yZGluYXRlcxgCIAEoCzITLmdvb2dsZS50",
-            "eXBlLkxhdExuZxIyCg90cmF2ZWxfZHVyYXRpb24YAyABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb24SIQoZYWxsb3dfaW1wcmVjaXNlX2FkZHJlc3Nl",
-            "cxgEIAEoCBJOCgxyb2FkX3RyYWZmaWMYBSABKA4yNi5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuQ29tbXV0ZUZpbHRlci5Sb2FkVHJhZmZpY0gAEjAK",
-            "DmRlcGFydHVyZV90aW1lGAYgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5",
-            "SAAiTAoLUm9hZFRyYWZmaWMSHAoYUk9BRF9UUkFGRklDX1VOU1BFQ0lGSUVE",
-            "EAASEAoMVFJBRkZJQ19GUkVFEAESDQoJQlVTWV9IT1VSEAJCEAoOdHJhZmZp",
-            "Y19vcHRpb24iNAoOSm9iVGl0bGVGaWx0ZXISEQoJam9iX3RpdGxlGAEgASgJ",
-            "Eg8KB25lZ2F0ZWQYAiABKAgiLQoLU2tpbGxGaWx0ZXISDQoFc2tpbGwYASAB",
-            "KAkSDwoHbmVnYXRlZBgCIAEoCCKhAgoORW1wbG95ZXJGaWx0ZXISEAoIZW1w",
-            "bG95ZXIYASABKAkSTAoEbW9kZRgCIAEoDjI+Lmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5FbXBsb3llckZpbHRlci5FbXBsb3llckZpbHRlck1vZGUS",
-            "DwoHbmVnYXRlZBgDIAEoCCKdAQoSRW1wbG95ZXJGaWx0ZXJNb2RlEiQKIEVN",
-            "UExPWUVSX0ZJTFRFUl9NT0RFX1VOU1BFQ0lGSUVEEAASGgoWQUxMX0VNUExP",
-            "WU1FTlRfUkVDT1JEUxABEiMKH0NVUlJFTlRfRU1QTE9ZTUVOVF9SRUNPUkRT",
-            "X09OTFkQAhIgChxQQVNUX0VNUExPWU1FTlRfUkVDT1JEU19PTkxZEAMiiAEK",
-            "D0VkdWNhdGlvbkZpbHRlchIOCgZzY2hvb2wYASABKAkSFgoOZmllbGRfb2Zf",
-            "c3R1ZHkYAiABKAkSPAoLZGVncmVlX3R5cGUYAyABKA4yJy5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuRGVncmVlVHlwZRIPCgduZWdhdGVkGAYgASgI",
-            "InwKFFdvcmtFeHBlcmllbmNlRmlsdGVyEjEKDm1pbl9leHBlcmllbmNlGAEg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjEKDm1heF9leHBlcmll",
-            "bmNlGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uImMKFUFwcGxp",
-            "Y2F0aW9uRGF0ZUZpbHRlchIlCgpzdGFydF9kYXRlGAEgASgLMhEuZ29vZ2xl",
-            "LnR5cGUuRGF0ZRIjCghlbmRfZGF0ZRgCIAEoCzIRLmdvb2dsZS50eXBlLkRh",
-            "dGUiRwodQXBwbGljYXRpb25PdXRjb21lTm90ZXNGaWx0ZXISFQoNb3V0Y29t",
-            "ZV9ub3RlcxgBIAEoCRIPCgduZWdhdGVkGAIgASgIIlYKFEFwcGxpY2F0aW9u",
-            "Sm9iRmlsdGVyEhoKEmpvYl9yZXF1aXNpdGlvbl9pZBgCIAEoCRIRCglqb2Jf",
-            "dGl0bGUYAyABKAkSDwoHbmVnYXRlZBgEIAEoCCL8AQoKVGltZUZpbHRlchIu",
-            "CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBIsCghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASRQoKdGltZV9maWVsZBgDIAEoDjIxLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5UaW1lRmlsdGVyLlRpbWVGaWVsZCJJCglUaW1lRmllbGQSGgoW",
-            "VElNRV9GSUVMRF9VTlNQRUNJRklFRBAAEg8KC0NSRUFURV9USU1FEAESDwoL",
-            "VVBEQVRFX1RJTUUQAkJ6Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExQgxGaWx0ZXJzUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgND",
-            "VFNiBnByb3RvMw=="));
+            "dXRlX2ZpbHRlchgPIAEoCRJfCh1jYW5kaWRhdGVfYXZhaWxhYmlsaXR5X2Zp",
+            "bHRlchgQIAEoCzI4Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5DYW5k",
+            "aWRhdGVBdmFpbGFiaWxpdHlGaWx0ZXIi3wIKDkxvY2F0aW9uRmlsdGVyEg8K",
+            "B2FkZHJlc3MYASABKAkSEwoLcmVnaW9uX2NvZGUYAiABKAkSJAoHbGF0X2xu",
+            "ZxgDIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxIZChFkaXN0YW5jZV9pbl9t",
+            "aWxlcxgEIAEoARJhChZ0ZWxlY29tbXV0ZV9wcmVmZXJlbmNlGAUgASgOMkEu",
+            "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uRmlsdGVyLlRl",
+            "bGVjb21tdXRlUHJlZmVyZW5jZRIPCgduZWdhdGVkGAYgASgIInIKFVRlbGVj",
+            "b21tdXRlUHJlZmVyZW5jZRImCiJURUxFQ09NTVVURV9QUkVGRVJFTkNFX1VO",
+            "U1BFQ0lGSUVEEAASGAoUVEVMRUNPTU1VVEVfRVhDTFVERUQQARIXChNURUxF",
+            "Q09NTVVURV9BTExPV0VEEAIiwAMKEkNvbXBlbnNhdGlvbkZpbHRlchJICgR0",
+            "eXBlGAEgASgOMjouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBl",
+            "bnNhdGlvbkZpbHRlci5GaWx0ZXJUeXBlEk0KBXVuaXRzGAIgAygOMj4uZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNvbXBlbnNhdGlvbkluZm8uQ29t",
+            "cGVuc2F0aW9uVW5pdBJOCgVyYW5nZRgDIAEoCzI/Lmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Db21wZW5zYXRpb25JbmZvLkNvbXBlbnNhdGlvblJh",
+            "bmdlEjgKMGluY2x1ZGVfam9ic193aXRoX3Vuc3BlY2lmaWVkX2NvbXBlbnNh",
+            "dGlvbl9yYW5nZRgEIAEoCCKGAQoKRmlsdGVyVHlwZRIbChdGSUxURVJfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEg0KCVVOSVRfT05MWRABEhMKD1VOSVRfQU5EX0FN",
+            "T1VOVBACEhoKFkFOTlVBTElaRURfQkFTRV9BTU9VTlQQAxIbChdBTk5VQUxJ",
+            "WkVEX1RPVEFMX0FNT1VOVBAEIrwDCg1Db21tdXRlRmlsdGVyEkIKDmNvbW11",
+            "dGVfbWV0aG9kGAEgASgOMiouZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkNvbW11dGVNZXRob2QSLgoRc3RhcnRfY29vcmRpbmF0ZXMYAiABKAsyEy5n",
+            "b29nbGUudHlwZS5MYXRMbmcSMgoPdHJhdmVsX2R1cmF0aW9uGAMgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEiEKGWFsbG93X2ltcHJlY2lzZV9h",
+            "ZGRyZXNzZXMYBCABKAgSTgoMcm9hZF90cmFmZmljGAUgASgOMjYuZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLkNvbW11dGVGaWx0ZXIuUm9hZFRyYWZm",
+            "aWNIABIwCg5kZXBhcnR1cmVfdGltZRgGIAEoCzIWLmdvb2dsZS50eXBlLlRp",
+            "bWVPZkRheUgAIkwKC1JvYWRUcmFmZmljEhwKGFJPQURfVFJBRkZJQ19VTlNQ",
+            "RUNJRklFRBAAEhAKDFRSQUZGSUNfRlJFRRABEg0KCUJVU1lfSE9VUhACQhAK",
+            "DnRyYWZmaWNfb3B0aW9uIjQKDkpvYlRpdGxlRmlsdGVyEhEKCWpvYl90aXRs",
+            "ZRgBIAEoCRIPCgduZWdhdGVkGAIgASgIIi0KC1NraWxsRmlsdGVyEg0KBXNr",
+            "aWxsGAEgASgJEg8KB25lZ2F0ZWQYAiABKAgioQIKDkVtcGxveWVyRmlsdGVy",
+            "EhAKCGVtcGxveWVyGAEgASgJEkwKBG1vZGUYAiABKA4yPi5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuRW1wbG95ZXJGaWx0ZXIuRW1wbG95ZXJGaWx0",
+            "ZXJNb2RlEg8KB25lZ2F0ZWQYAyABKAginQEKEkVtcGxveWVyRmlsdGVyTW9k",
+            "ZRIkCiBFTVBMT1lFUl9GSUxURVJfTU9ERV9VTlNQRUNJRklFRBAAEhoKFkFM",
+            "TF9FTVBMT1lNRU5UX1JFQ09SRFMQARIjCh9DVVJSRU5UX0VNUExPWU1FTlRf",
+            "UkVDT1JEU19PTkxZEAISIAocUEFTVF9FTVBMT1lNRU5UX1JFQ09SRFNfT05M",
+            "WRADIogBCg9FZHVjYXRpb25GaWx0ZXISDgoGc2Nob29sGAEgASgJEhYKDmZp",
+            "ZWxkX29mX3N0dWR5GAIgASgJEjwKC2RlZ3JlZV90eXBlGAMgASgOMicuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkRlZ3JlZVR5cGUSDwoHbmVnYXRl",
+            "ZBgGIAEoCCJ8ChRXb3JrRXhwZXJpZW5jZUZpbHRlchIxCg5taW5fZXhwZXJp",
+            "ZW5jZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg5tYXhf",
+            "ZXhwZXJpZW5jZRgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJj",
+            "ChVBcHBsaWNhdGlvbkRhdGVGaWx0ZXISJQoKc3RhcnRfZGF0ZRgBIAEoCzIR",
+            "Lmdvb2dsZS50eXBlLkRhdGUSIwoIZW5kX2RhdGUYAiABKAsyES5nb29nbGUu",
+            "dHlwZS5EYXRlIkcKHUFwcGxpY2F0aW9uT3V0Y29tZU5vdGVzRmlsdGVyEhUK",
+            "DW91dGNvbWVfbm90ZXMYASABKAkSDwoHbmVnYXRlZBgCIAEoCCJWChRBcHBs",
+            "aWNhdGlvbkpvYkZpbHRlchIaChJqb2JfcmVxdWlzaXRpb25faWQYAiABKAkS",
+            "EQoJam9iX3RpdGxlGAMgASgJEg8KB25lZ2F0ZWQYBCABKAgi/AEKClRpbWVG",
+            "aWx0ZXISLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEkUKCnRpbWVfZmllbGQYAyABKA4yMS5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuVGltZUZpbHRlci5UaW1lRmllbGQiSQoJVGltZUZp",
+            "ZWxkEhoKFlRJTUVfRklFTERfVU5TUEVDSUZJRUQQABIPCgtDUkVBVEVfVElN",
+            "RRABEg8KC1VQREFURV9USU1FEAIiLgobQ2FuZGlkYXRlQXZhaWxhYmlsaXR5",
+            "RmlsdGVyEg8KB25lZ2F0ZWQYASABKAhCegofY29tLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMUIMRmlsdGVyc1Byb3RvUAFaQWdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7",
+            "dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ApplicationReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.JobReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.JobQuery), global::Google.Cloud.Talent.V4Beta1.JobQuery.Parser, new[]{ "Query", "Companies", "LocationFilters", "JobCategories", "CommuteFilter", "CompanyDisplayNames", "CompensationFilter", "CustomAttributeFilter", "DisableSpellCheck", "EmploymentTypes", "LanguageCodes", "PublishTimeRange", "ExcludedJobs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ProfileQuery), global::Google.Cloud.Talent.V4Beta1.ProfileQuery.Parser, new[]{ "Query", "LocationFilters", "JobTitleFilters", "EmployerFilters", "EducationFilters", "SkillFilters", "WorkExperienceFilter", "TimeFilters", "HirableFilter", "ApplicationDateFilters", "ApplicationOutcomeNotesFilters", "ApplicationJobFilters", "CustomAttributeFilter", "CandidateAvailabilityFilter" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter), global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser, new[]{ "Address", "RegionCode", "LatLng", "DistanceInMiles", "TelecommutePreference", "Negated" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter), global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Parser, new[]{ "Type", "Units", "Range", "IncludeJobsWithUnspecifiedCompensationRange" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter), global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Parser, new[]{ "CommuteMethod", "StartCoordinates", "TravelDuration", "AllowImpreciseAddresses", "RoadTraffic", "DepartureTime" }, new[]{ "TrafficOption" }, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic) }, null),
@@ -141,7 +144,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter.Parser, new[]{ "StartDate", "EndDate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter.Parser, new[]{ "OutcomeNotes", "Negated" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter), global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter.Parser, new[]{ "JobRequisitionId", "JobTitle", "Negated" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter), global::Google.Cloud.Talent.V4Beta1.TimeFilter.Parser, new[]{ "StartTime", "EndTime", "TimeField" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter), global::Google.Cloud.Talent.V4Beta1.TimeFilter.Parser, new[]{ "StartTime", "EndTime", "TimeField" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter), global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter.Parser, new[]{ "Negated" }, null, null, null)
           }));
     }
     #endregion
@@ -203,10 +207,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int QueryFieldNumber = 1;
     private string query_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The query string that matches against the job title, description, and
-    /// location fields.
+    /// Optional. The query string that matches against the job title, description,
+    /// and location fields.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -224,9 +226,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> companies_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// This filter specifies the company entities to search against.
+    /// Optional. This filter specifies the company entities to search against.
     ///
     /// If a value isn't specified, jobs are searched for against all
     /// companies.
@@ -254,9 +254,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter> locationFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The location filter specifies geo-regions containing the jobs to
+    /// Optional. The location filter specifies geo-regions containing the jobs to
     /// search against. See
     /// [LocationFilter][google.cloud.talent.v4beta1.LocationFilter] for more
     /// information.
@@ -282,11 +280,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForEnum(34, x => (int) x, x => (global::Google.Cloud.Talent.V4Beta1.JobCategory) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory> jobCategories_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobCategory>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The category filter specifies the categories of jobs to search against.
-    /// See [JobCategory][google.cloud.talent.v4beta1.JobCategory] for more
-    /// information.
+    /// Optional. The category filter specifies the categories of jobs to search
+    /// against. See [JobCategory][google.cloud.talent.v4beta1.JobCategory] for
+    /// more information.
     ///
     /// If a value isn't specified, jobs from any category are searched against.
     ///
@@ -302,9 +298,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CommuteFilterFieldNumber = 5;
     private global::Google.Cloud.Talent.V4Beta1.CommuteFilter commuteFilter_;
     /// <summary>
-    /// Optional.
-    ///
-    ///  Allows filtering jobs by commute time with different travel methods (for
+    /// Optional. Allows filtering jobs by commute time with different travel
+    /// methods (for
     ///  example, driving or public transit).
     ///
     /// Note: This only works when you specify a
@@ -328,9 +323,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> companyDisplayNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// This filter specifies the exact company
+    /// Optional. This filter specifies the exact company
     /// [Company.display_name][google.cloud.talent.v4beta1.Company.display_name] of
     /// the jobs to search against.
     ///
@@ -351,9 +344,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CompensationFilterFieldNumber = 7;
     private global::Google.Cloud.Talent.V4Beta1.CompensationFilter compensationFilter_;
     /// <summary>
-    /// Optional.
-    ///
-    /// This search filter is applied only to
+    /// Optional. This search filter is applied only to
     /// [Job.compensation_info][google.cloud.talent.v4beta1.Job.compensation_info].
     /// For example, if the filter is specified as "Hourly job with per-hour
     /// compensation > $15", only jobs meeting these criteria are searched. If a
@@ -371,9 +362,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CustomAttributeFilterFieldNumber = 8;
     private string customAttributeFilter_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// This filter specifies a structured syntax to match against the
+    /// Optional. This filter specifies a structured syntax to match against the
     /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes]
     /// marked as `filterable`.
     ///
@@ -409,9 +398,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisableSpellCheckFieldNumber = 9;
     private bool disableSpellCheck_;
     /// <summary>
-    /// Optional.
-    ///
-    /// This flag controls the spell-check feature. If false, the
+    /// Optional. This flag controls the spell-check feature. If false, the
     /// service attempts to correct a misspelled query,
     /// for example, "enginee" is corrected to "engineer".
     ///
@@ -431,10 +418,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForEnum(82, x => (int) x, x => (global::Google.Cloud.Talent.V4Beta1.EmploymentType) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentType> employmentTypes_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmploymentType>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The employment type filter specifies the employment type of jobs to
-    /// search against, such as
+    /// Optional. The employment type filter specifies the employment type of jobs
+    /// to search against, such as
     /// [EmploymentType.FULL_TIME][google.cloud.talent.v4beta1.EmploymentType.FULL_TIME].
     ///
     /// If a value isn't specified, jobs in the search results includes any
@@ -454,9 +439,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> languageCodes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// This filter specifies the locale of jobs to search against,
+    /// Optional. This filter specifies the locale of jobs to search against,
     /// for example, "en-US".
     ///
     /// If a value isn't specified, the search results can contain jobs in any
@@ -477,10 +460,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PublishTimeRangeFieldNumber = 12;
     private global::Google.Cloud.Talent.V4Beta1.TimestampRange publishTimeRange_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Jobs published within a range specified by this filter are searched
-    /// against.
+    /// Optional. Jobs published within a range specified by this filter are
+    /// searched against.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.TimestampRange PublishTimeRange {
@@ -496,9 +477,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(106);
     private readonly pbc::RepeatedField<string> excludedJobs_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// This filter specifies a list of job names to be excluded during search.
+    /// Optional. This filter specifies a list of job names to be excluded during
+    /// search.
     ///
     /// At most 400 excluded job names are allowed.
     /// </summary>
@@ -795,6 +775,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       applicationOutcomeNotesFilters_ = other.applicationOutcomeNotesFilters_.Clone();
       applicationJobFilters_ = other.applicationJobFilters_.Clone();
       customAttributeFilter_ = other.customAttributeFilter_;
+      candidateAvailabilityFilter_ = other.candidateAvailabilityFilter_ != null ? other.candidateAvailabilityFilter_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -807,9 +788,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int QueryFieldNumber = 1;
     private string query_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// Keywords to match any text fields of profiles.
+    /// Optional. Keywords to match any text fields of profiles.
     ///
     /// For example, "software engineer in Palo Alto".
     /// </summary>
@@ -827,10 +806,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Talent.V4Beta1.LocationFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter> locationFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.LocationFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The location filter specifies geo-regions containing the profiles to
-    /// search against.
+    /// Optional. The location filter specifies geo-regions containing the profiles
+    /// to search against.
     ///
     /// If a location filter isn't specified, profiles fitting the other search
     /// criteria are retrieved regardless of where they're located.
@@ -852,9 +829,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Talent.V4Beta1.JobTitleFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobTitleFilter> jobTitleFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.JobTitleFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// Job title filter specifies job titles of profiles to match on.
+    /// Optional. Job title filter specifies job titles of profiles to match on.
     ///
     /// If a job title isn't specified, profiles with any titles are retrieved.
     ///
@@ -878,9 +853,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmployerFilter> employerFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EmployerFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// Employer filter specifies employers of profiles to match on.
+    /// Optional. Employer filter specifies employers of profiles to match on.
     ///
     /// If an employer filter isn't specified, profiles with any employers are
     /// retrieved.
@@ -906,9 +879,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Talent.V4Beta1.EducationFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EducationFilter> educationFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.EducationFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// Education filter specifies education of profiles to match on.
+    /// Optional. Education filter specifies education of profiles to match on.
     ///
     /// If an education filter isn't specified, profiles with any education are
     /// retrieved.
@@ -933,9 +904,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Talent.V4Beta1.SkillFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SkillFilter> skillFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.SkillFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// Skill filter specifies skill of profiles to match on.
+    /// Optional. Skill filter specifies skill of profiles to match on.
     ///
     /// If a skill filter isn't specified, profiles with any skills are retrieved.
     ///
@@ -959,10 +928,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Talent.V4Beta1.WorkExperienceFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.WorkExperienceFilter> workExperienceFilter_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.WorkExperienceFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// Work experience filter specifies the total working experience of profiles
-    /// to match on.
+    /// Optional. Work experience filter specifies the total working experience of
+    /// profiles to match on.
     ///
     /// If a work experience filter isn't specified, profiles with any
     /// professional experience are retrieved.
@@ -983,10 +950,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Talent.V4Beta1.TimeFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.TimeFilter> timeFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.TimeFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// Time filter specifies the create/update timestamp of the profiles to match
-    /// on.
+    /// Optional. Time filter specifies the create/update timestamp of the profiles
+    /// to match on.
     ///
     /// For example, search for profiles created since "2018-1-1".
     /// </summary>
@@ -1000,9 +965,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_hirableFilter_codec = pb::FieldCodec.ForStructWrapper<bool>(74);
     private bool? hirableFilter_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The hirable filter specifies the profile's hirable status to match on.
+    /// Optional. The hirable filter specifies the profile's hirable status to
+    /// match on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? HirableFilter {
@@ -1018,9 +982,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter> applicationDateFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The application date filters specify application date ranges to match on.
+    /// Optional. The application date filters specify application date ranges to
+    /// match on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationDateFilter> ApplicationDateFilters {
@@ -1033,10 +996,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter> applicationOutcomeNotesFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The application outcome notes filters specify the notes for the outcome of
-    /// the job application.
+    /// Optional. The application outcome notes filters specify the notes for the
+    /// outcome of the job application.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationOutcomeNotesFilter> ApplicationOutcomeNotesFilters {
@@ -1049,9 +1010,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(106, global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter> applicationJobFilters_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The application job filters specify the job applied for in the application.
+    /// Optional. The application job filters specify the job applied for in the
+    /// application.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.ApplicationJobFilter> ApplicationJobFilters {
@@ -1062,9 +1022,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CustomAttributeFilterFieldNumber = 15;
     private string customAttributeFilter_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// This filter specifies a structured syntax to match against the
+    /// Optional. This filter specifies a structured syntax to match against the
     /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes]
     /// that are marked as `filterable`.
     ///
@@ -1098,6 +1056,35 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
     }
 
+    /// <summary>Field number for the "candidate_availability_filter" field.</summary>
+    public const int CandidateAvailabilityFilterFieldNumber = 16;
+    private global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter candidateAvailabilityFilter_;
+    /// <summary>
+    /// Optional. The candidate availability filter which filters based on
+    /// availability signals.
+    ///
+    /// Signal 1: Number of days since most recent job application.  See
+    /// [Availability.JobApplicationAvailabilitySignal][google.cloud.talent.v4beta1.Availability.JobApplicationAvailabilitySignal]
+    /// for the details of this signal.
+    ///
+    /// Signal 2: Number of days since last profile update. See
+    /// [Availability.ProfileUpdateAvailabilitySignal][google.cloud.talent.v4beta1.Availability.ProfileUpdateAvailabilitySignal]
+    /// for the details of this signal.
+    ///
+    /// The candidate availability filter helps a recruiter understand if a
+    /// specific candidate is likely to be actively seeking new job opportunities
+    /// based on an aggregated set of signals.  Specifically, the intent is NOT to
+    /// indicate the candidate's potential qualification / interest / close ability
+    /// for a specific job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter CandidateAvailabilityFilter {
+      get { return candidateAvailabilityFilter_; }
+      set {
+        candidateAvailabilityFilter_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProfileQuery);
@@ -1124,6 +1111,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if(!applicationOutcomeNotesFilters_.Equals(other.applicationOutcomeNotesFilters_)) return false;
       if(!applicationJobFilters_.Equals(other.applicationJobFilters_)) return false;
       if (CustomAttributeFilter != other.CustomAttributeFilter) return false;
+      if (!object.Equals(CandidateAvailabilityFilter, other.CandidateAvailabilityFilter)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1143,6 +1131,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       hash ^= applicationOutcomeNotesFilters_.GetHashCode();
       hash ^= applicationJobFilters_.GetHashCode();
       if (CustomAttributeFilter.Length != 0) hash ^= CustomAttributeFilter.GetHashCode();
+      if (candidateAvailabilityFilter_ != null) hash ^= CandidateAvailabilityFilter.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1177,6 +1166,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteRawTag(122);
         output.WriteString(CustomAttributeFilter);
       }
+      if (candidateAvailabilityFilter_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(CandidateAvailabilityFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1203,6 +1196,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       size += applicationJobFilters_.CalculateSize(_repeated_applicationJobFilters_codec);
       if (CustomAttributeFilter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomAttributeFilter);
+      }
+      if (candidateAvailabilityFilter_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CandidateAvailabilityFilter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1235,6 +1231,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
       applicationJobFilters_.Add(other.applicationJobFilters_);
       if (other.CustomAttributeFilter.Length != 0) {
         CustomAttributeFilter = other.CustomAttributeFilter;
+      }
+      if (other.candidateAvailabilityFilter_ != null) {
+        if (candidateAvailabilityFilter_ == null) {
+          candidateAvailabilityFilter_ = new global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter();
+        }
+        CandidateAvailabilityFilter.MergeFrom(other.CandidateAvailabilityFilter);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1302,6 +1304,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
             CustomAttributeFilter = input.ReadString();
             break;
           }
+          case 130: {
+            if (candidateAvailabilityFilter_ == null) {
+              candidateAvailabilityFilter_ = new global::Google.Cloud.Talent.V4Beta1.CandidateAvailabilityFilter();
+            }
+            input.ReadMessage(candidateAvailabilityFilter_);
+            break;
+          }
         }
       }
     }
@@ -1356,9 +1365,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AddressFieldNumber = 1;
     private string address_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The address name, such as "Mountain View" or "Bay Area".
+    /// Optional. The address name, such as "Mountain View" or "Bay Area".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Address {
@@ -1372,11 +1379,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RegionCodeFieldNumber = 2;
     private string regionCode_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// CLDR region code of the country/region of the address. This is used
-    /// to address ambiguity of the user-input location, for example, "Liverpool"
-    /// against "Liverpool, NY, US" or "Liverpool, UK".
+    /// Optional. CLDR region code of the country/region of the address. This is
+    /// used to address ambiguity of the user-input location, for example,
+    /// "Liverpool" against "Liverpool, NY, US" or "Liverpool, UK".
     ///
     /// Set this field if all the jobs to search against are from a same region,
     /// or jobs are world-wide, but the job seeker is from a specific region.
@@ -1384,6 +1389,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// See http://cldr.unicode.org/ and
     /// http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html
     /// for details. Example: "CH" for Switzerland.
+    /// Note that this filter is not applicable for Profile Search related queries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RegionCode {
@@ -1397,9 +1403,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int LatLngFieldNumber = 3;
     private global::Google.Type.LatLng latLng_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The latitude and longitude of the geographic center from which to
+    /// Optional. The latitude and longitude of the geographic center from which to
     /// search. This field's ignored if `address` is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1414,11 +1418,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DistanceInMilesFieldNumber = 4;
     private double distanceInMiles_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The distance_in_miles is applied when the location being searched for is
-    /// identified as a city or smaller. When the location being searched for is a
-    /// state or larger, this field is ignored.
+    /// Optional. The distance_in_miles is applied when the location being searched
+    /// for is identified as a city or smaller. When the location being searched
+    /// for is a state or larger, this field is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double DistanceInMiles {
@@ -1432,10 +1434,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TelecommutePreferenceFieldNumber = 5;
     private global::Google.Cloud.Talent.V4Beta1.LocationFilter.Types.TelecommutePreference telecommutePreference_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// Allows the client to return jobs without a
-    /// set location, specifically, telecommuting jobs (telecomuting is considered
+    /// Optional. Allows the client to return jobs without a
+    /// set location, specifically, telecommuting jobs (telecommuting is considered
     /// by the service as a special location.
     /// [Job.posting_region][google.cloud.talent.v4beta1.Job.posting_region]
     /// indicates if a job permits telecommuting. If this field is set to
@@ -1466,10 +1466,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 6;
     private bool negated_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Whether to apply negation to the filter so profiles matching the filter
-    /// are excluded.
+    /// Optional. Whether to apply negation to the filter so profiles matching the
+    /// filter are excluded.
     ///
     /// Currently only supported in profile search.
     /// </summary>
@@ -1722,9 +1720,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TypeFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType type_ = 0;
     /// <summary>
-    /// Required.
-    ///
-    /// Type of filter.
+    /// Required. Type of filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationFilter.Types.FilterType Type {
@@ -1740,9 +1736,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit) x);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit> units_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit>();
     /// <summary>
-    /// Required.
-    ///
-    /// Specify desired `base compensation entry's`
+    /// Required. Specify desired `base compensation entry's`
     /// [CompensationInfo.CompensationUnit][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1754,9 +1748,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RangeFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange range_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Compensation range.
+    /// Optional. Compensation range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange Range {
@@ -1770,10 +1762,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int IncludeJobsWithUnspecifiedCompensationRangeFieldNumber = 4;
     private bool includeJobsWithUnspecifiedCompensationRange_;
     /// <summary>
-    /// Optional.
-    ///
-    /// If set to true, jobs with unspecified compensation range fields are
-    /// included.
+    /// Optional. If set to true, jobs with unspecified compensation range fields
+    /// are included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IncludeJobsWithUnspecifiedCompensationRange {
@@ -2031,9 +2021,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CommuteMethodFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.CommuteMethod commuteMethod_ = 0;
     /// <summary>
-    /// Required.
-    ///
-    /// The method of transportation for which to calculate the commute time.
+    /// Required. The method of transportation for which to calculate the commute
+    /// time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CommuteMethod CommuteMethod {
@@ -2047,10 +2036,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StartCoordinatesFieldNumber = 2;
     private global::Google.Type.LatLng startCoordinates_;
     /// <summary>
-    /// Required.
-    ///
-    /// The latitude and longitude of the location from which to calculate the
-    /// commute time.
+    /// Required. The latitude and longitude of the location from which to
+    /// calculate the commute time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng StartCoordinates {
@@ -2064,10 +2051,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TravelDurationFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Duration travelDuration_;
     /// <summary>
-    /// Required.
-    ///
-    /// The maximum travel time in seconds. The maximum allowed value is `3600s`
-    /// (one hour). Format is `123s`.
+    /// Required. The maximum travel time in seconds. The maximum allowed value is
+    /// `3600s` (one hour). Format is `123s`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration TravelDuration {
@@ -2081,12 +2066,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AllowImpreciseAddressesFieldNumber = 4;
     private bool allowImpreciseAddresses_;
     /// <summary>
-    /// Optional.
-    /// If `true`, jobs without street level addresses may also be returned.
-    /// For city level addresses, the city center is used. For state and coarser
-    /// level addresses, text matching is used.
-    /// If this field is set to `false` or isn't specified, only jobs that include
-    /// street level addresses will be returned by commute search.
+    /// Optional. If `true`, jobs without street level addresses may also be
+    /// returned. For city level addresses, the city center is used. For state and
+    /// coarser level addresses, text matching is used. If this field is set to
+    /// `false` or isn't specified, only jobs that include street level addresses
+    /// will be returned by commute search.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowImpreciseAddresses {
@@ -2099,9 +2083,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "road_traffic" field.</summary>
     public const int RoadTrafficFieldNumber = 5;
     /// <summary>
-    /// Optional.
-    ///
-    /// Specifies the traffic density to use when calculating commute time.
+    /// Optional. Specifies the traffic density to use when calculating commute
+    /// time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CommuteFilter.Types.RoadTraffic RoadTraffic {
@@ -2115,10 +2098,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// <summary>Field number for the "departure_time" field.</summary>
     public const int DepartureTimeFieldNumber = 6;
     /// <summary>
-    /// Optional.
-    ///
-    /// The departure time used to calculate traffic impact, represented as
-    /// [google.type.TimeOfDay][google.type.TimeOfDay] in local time zone.
+    /// Optional. The departure time used to calculate traffic impact,
+    /// represented as [google.type.TimeOfDay][google.type.TimeOfDay] in local
+    /// time zone.
     ///
     /// Currently traffic model is restricted to hour level resolution.
     /// </summary>
@@ -2409,9 +2391,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobTitleFieldNumber = 1;
     private string jobTitle_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The job title, for example, "Software engineer", or "Product manager".
+    /// Required. The job title, for example, "Software engineer", or "Product
+    /// manager".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string JobTitle {
@@ -2425,10 +2406,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 2;
     private bool negated_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Whether to apply negation to the filter so profiles matching the filter
-    /// are excluded.
+    /// Optional. Whether to apply negation to the filter so profiles matching the
+    /// filter are excluded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -2582,9 +2561,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SkillFieldNumber = 1;
     private string skill_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The skill name. For example, "java", "j2ee", and so on.
+    /// Required. The skill name. For example, "java", "j2ee", and so on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Skill {
@@ -2598,10 +2575,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 2;
     private bool negated_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Whether to apply negation to the filter so profiles matching the filter
-    /// are excluded.
+    /// Optional. Whether to apply negation to the filter so profiles matching the
+    /// filter are excluded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -2756,9 +2731,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EmployerFieldNumber = 1;
     private string employer_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The name of the employer, for example "Google", "Alphabet".
+    /// Required. The name of the employer, for example "Google", "Alphabet".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Employer {
@@ -2772,9 +2745,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ModeFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.EmployerFilter.Types.EmployerFilterMode mode_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// Define set of
+    /// Optional. Define set of
     /// [EmploymentRecord][google.cloud.talent.v4beta1.EmploymentRecord]s to search
     /// against.
     ///
@@ -2793,10 +2764,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 3;
     private bool negated_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Whether to apply negation to the filter so profiles matching the filter
-    /// is excluded.
+    /// Optional. Whether to apply negation to the filter so profiles matching the
+    /// filter is excluded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -3002,9 +2971,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SchoolFieldNumber = 1;
     private string school_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The school name. For example "MIT", "University of California, Berkeley".
+    /// Optional. The school name. For example "MIT", "University of California,
+    /// Berkeley".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string School {
@@ -3018,9 +2986,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int FieldOfStudyFieldNumber = 2;
     private string fieldOfStudy_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The field of study. This is to search against value provided in
+    /// Optional. The field of study. This is to search against value provided in
     /// [Degree.fields_of_study][google.cloud.talent.v4beta1.Degree.fields_of_study].
     /// For example "Computer Science", "Mathematics".
     /// </summary>
@@ -3036,11 +3002,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DegreeTypeFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.DegreeType degreeType_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// Education degree in ISCED code. Each value in degree covers a specific
-    /// level of education, without any expansion to upper nor lower levels of
-    /// education degree.
+    /// Optional. Education degree in ISCED code. Each value in degree covers a
+    /// specific level of education, without any expansion to upper nor lower
+    /// levels of education degree.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.DegreeType DegreeType {
@@ -3054,10 +3018,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 6;
     private bool negated_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Whether to apply negation to the filter so profiles matching the filter
-    /// is excluded.
+    /// Optional. Whether to apply negation to the filter so profiles matching the
+    /// filter is excluded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Negated {
@@ -3249,9 +3211,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int MinExperienceFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration minExperience_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The minimum duration of the work experience (inclusive).
+    /// Optional. The minimum duration of the work experience (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration MinExperience {
@@ -3265,9 +3225,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int MaxExperienceFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Duration maxExperience_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The maximum duration of the work experience (exclusive).
+    /// Optional. The maximum duration of the work experience (exclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration MaxExperience {
@@ -3441,10 +3399,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StartDateFieldNumber = 1;
     private global::Google.Type.Date startDate_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Start date. If it's missing, The API matches profiles with application date
-    /// not after the end date.
+    /// Optional. Start date. If it's missing, The API matches profiles with
+    /// application date not after the end date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date StartDate {
@@ -3458,10 +3414,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EndDateFieldNumber = 2;
     private global::Google.Type.Date endDate_;
     /// <summary>
-    /// Optional.
-    ///
-    /// End date. If it's missing, The API matches profiles with application date
-    /// not before the start date.
+    /// Optional. End date. If it's missing, The API matches profiles with
+    /// application date not before the start date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date EndDate {
@@ -3627,9 +3581,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeNotesFieldNumber = 1;
     private string outcomeNotes_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// User entered or selected outcome reason. The API does an exact match on the
+    /// Required. User entered or selected outcome reason. The API does an exact
+    /// match on the
     /// [Application.outcome_notes][google.cloud.talent.v4beta1.Application.outcome_notes]
     /// in profiles.
     /// </summary>
@@ -3645,9 +3598,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 2;
     private bool negated_;
     /// <summary>
-    /// Optional.
-    ///
-    /// If true, The API excludes all candidates with any
+    /// Optional. If true, The API excludes all candidates with any
     /// [Application.outcome_notes][google.cloud.talent.v4beta1.Application.outcome_notes]
     /// matching the outcome reason specified in the filter.
     /// </summary>
@@ -3804,10 +3755,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobRequisitionIdFieldNumber = 2;
     private string jobRequisitionId_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The job requisition id in the application. The API does an exact match on
-    /// the [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] of
+    /// Optional. The job requisition id in the application. The API does an exact
+    /// match on the
+    /// [Job.requisition_id][google.cloud.talent.v4beta1.Job.requisition_id] of
     /// [Application.job][google.cloud.talent.v4beta1.Application.job] in profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3822,10 +3772,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int JobTitleFieldNumber = 3;
     private string jobTitle_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The job title in the application. The API does an exact match on the
-    /// [Job.title][google.cloud.talent.v4beta1.Job.title] of
+    /// Optional. The job title in the application. The API does an exact match on
+    /// the [Job.title][google.cloud.talent.v4beta1.Job.title] of
     /// [Application.job][google.cloud.talent.v4beta1.Application.job] in profiles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3840,9 +3788,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NegatedFieldNumber = 4;
     private bool negated_;
     /// <summary>
-    /// Optional.
-    ///
-    /// If true, the API excludes all profiles with any
+    /// Optional. If true, the API excludes all profiles with any
     /// [Application.job][google.cloud.talent.v4beta1.Application.job] matching the
     /// filters.
     /// </summary>
@@ -4015,11 +3961,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StartTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Start timestamp, matching profiles with the start time. If this field
-    /// missing, The API matches profiles with create / update timestamp before the
-    /// end timestamp.
+    /// Optional. Start timestamp, matching profiles with the start time. If this
+    /// field missing, The API matches profiles with create / update timestamp
+    /// before the end timestamp.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -4033,9 +3977,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Optional.
-    ///
-    /// End timestamp, matching profiles with the end time. If this field
+    /// Optional. End timestamp, matching profiles with the end time. If this field
     /// missing, The API matches profiles with create / update timestamp after the
     /// start timestamp.
     /// </summary>
@@ -4051,9 +3993,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TimeFieldFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.TimeFilter.Types.TimeField timeField_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// Specifies which time field to filter profiles.
+    /// Optional. Specifies which time field to filter profiles.
     ///
     /// Defaults to
     /// [TimeField.CREATE_TIME][google.cloud.talent.v4beta1.TimeFilter.TimeField.CREATE_TIME].
@@ -4216,6 +4156,144 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Input only
+  ///
+  /// Filter on availability signals.
+  /// </summary>
+  public sealed partial class CandidateAvailabilityFilter : pb::IMessage<CandidateAvailabilityFilter> {
+    private static readonly pb::MessageParser<CandidateAvailabilityFilter> _parser = new pb::MessageParser<CandidateAvailabilityFilter>(() => new CandidateAvailabilityFilter());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CandidateAvailabilityFilter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CandidateAvailabilityFilter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CandidateAvailabilityFilter(CandidateAvailabilityFilter other) : this() {
+      negated_ = other.negated_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CandidateAvailabilityFilter Clone() {
+      return new CandidateAvailabilityFilter(this);
+    }
+
+    /// <summary>Field number for the "negated" field.</summary>
+    public const int NegatedFieldNumber = 1;
+    private bool negated_;
+    /// <summary>
+    /// Optional. It is false by default. If true, API excludes all the potential
+    /// available profiles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Negated {
+      get { return negated_; }
+      set {
+        negated_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CandidateAvailabilityFilter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CandidateAvailabilityFilter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Negated != other.Negated) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Negated != false) hash ^= Negated.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Negated != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Negated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Negated != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CandidateAvailabilityFilter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Negated != false) {
+        Negated = other.Negated;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Negated = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
 
   }
 

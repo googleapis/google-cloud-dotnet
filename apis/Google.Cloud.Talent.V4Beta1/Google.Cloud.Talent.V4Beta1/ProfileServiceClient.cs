@@ -506,9 +506,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists profiles by filter. The order is unspecified.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The resource name of the tenant under which the job is created.
+        /// Required. The resource name of the tenant under which the profile is
+        /// created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
@@ -544,9 +543,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists profiles by filter. The order is unspecified.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The resource name of the tenant under which the job is created.
+        /// Required. The resource name of the tenant under which the profile is
+        /// created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
@@ -582,9 +580,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists profiles by filter. The order is unspecified.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The resource name of the tenant under which the job is created.
+        /// Required. The resource name of the tenant under which the profile is
+        /// created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
@@ -620,9 +617,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists profiles by filter. The order is unspecified.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The resource name of the tenant under which the job is created.
+        /// Required. The resource name of the tenant under which the profile is
+        /// created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
@@ -696,17 +692,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates and returns a new profile.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The name of the tenant this profile belongs to.
+        /// Required. The name of the tenant this profile belongs to.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// The profile to be created.
+        /// Required. The profile to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -729,17 +721,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates and returns a new profile.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The name of the tenant this profile belongs to.
+        /// Required. The name of the tenant this profile belongs to.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// The profile to be created.
+        /// Required. The profile to be created.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -759,17 +747,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates and returns a new profile.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The name of the tenant this profile belongs to.
+        /// Required. The name of the tenant this profile belongs to.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// The profile to be created.
+        /// Required. The profile to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -792,17 +776,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates and returns a new profile.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The name of the tenant this profile belongs to.
+        /// Required. The name of the tenant this profile belongs to.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// The profile to be created.
+        /// Required. The profile to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -825,17 +805,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates and returns a new profile.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The name of the tenant this profile belongs to.
+        /// Required. The name of the tenant this profile belongs to.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// The profile to be created.
+        /// Required. The profile to be created.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -855,17 +831,13 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates and returns a new profile.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// The name of the tenant this profile belongs to.
+        /// Required. The name of the tenant this profile belongs to.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenants/foo".
         /// </param>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// The profile to be created.
+        /// Required. The profile to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -944,9 +916,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Gets the specified profile.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to get.
+        /// Required. Resource name of the profile to get.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -971,9 +941,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Gets the specified profile.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to get.
+        /// Required. Resource name of the profile to get.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -995,9 +963,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Gets the specified profile.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to get.
+        /// Required. Resource name of the profile to get.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1022,9 +988,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Gets the specified profile.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to get.
+        /// Required. Resource name of the profile to get.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1049,9 +1013,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Gets the specified profile.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to get.
+        /// Required. Resource name of the profile to get.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1073,9 +1035,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Gets the specified profile.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to get.
+        /// Required. Resource name of the profile to get.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1156,9 +1116,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates the specified profile and returns the updated result.
         /// </summary>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// Profile to be updated.
+        /// Required. Profile to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1179,9 +1137,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates the specified profile and returns the updated result.
         /// </summary>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// Profile to be updated.
+        /// Required. Profile to be updated.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1199,9 +1155,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates the specified profile and returns the updated result.
         /// </summary>
         /// <param name="profile">
-        /// Required.
-        ///
-        /// Profile to be updated.
+        /// Required. Profile to be updated.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1280,9 +1234,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// associated.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to be deleted.
+        /// Required. Resource name of the profile to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1309,9 +1261,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// associated.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to be deleted.
+        /// Required. Resource name of the profile to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1335,9 +1285,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// associated.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to be deleted.
+        /// Required. Resource name of the profile to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1361,9 +1309,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// associated.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to be deleted.
+        /// Required. Resource name of the profile to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1390,9 +1336,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// associated.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to be deleted.
+        /// Required. Resource name of the profile to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1416,9 +1360,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// associated.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// Resource name of the profile to be deleted.
+        /// Required. Resource name of the profile to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",

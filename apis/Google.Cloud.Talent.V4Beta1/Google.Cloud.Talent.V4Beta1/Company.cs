@@ -131,9 +131,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The display name of the company, for example, "Google, LLC".
+    /// Required. The display name of the company, for example, "Google, LLC".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {
@@ -147,9 +145,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExternalIdFieldNumber = 3;
     private string externalId_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Client side company identifier, used to uniquely identify the
+    /// Required. Client side company identifier, used to uniquely identify the
     /// company.
     ///
     /// The maximum number of allowed characters is 255.
@@ -166,9 +162,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int SizeFieldNumber = 4;
     private global::Google.Cloud.Talent.V4Beta1.CompanySize size_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// The employer's company size.
+    /// Optional. The employer's company size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.CompanySize Size {
@@ -182,12 +176,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int HeadquartersAddressFieldNumber = 5;
     private string headquartersAddress_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The street address of the company's main headquarters, which may be
-    /// different from the job location. The service attempts
-    /// to geolocate the provided address, and populates a more specific
-    /// location wherever possible in
+    /// Optional. The street address of the company's main headquarters, which may
+    /// be different from the job location. The service attempts to geolocate the
+    /// provided address, and populates a more specific location wherever possible
+    /// in
     /// [DerivedInfo.headquarters_location][google.cloud.talent.v4beta1.Company.DerivedInfo.headquarters_location].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -202,9 +194,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int HiringAgencyFieldNumber = 6;
     private bool hiringAgency_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Set to true if it is the hiring agency that post jobs for other
+    /// Optional. Set to true if it is the hiring agency that post jobs for other
     /// employers.
     ///
     /// Defaults to false if not provided.
@@ -221,9 +211,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int EeoTextFieldNumber = 7;
     private string eeoText_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// Equal Employment Opportunity legal disclaimer text to be
+    /// Optional. Equal Employment Opportunity legal disclaimer text to be
     /// associated with all jobs, and typically to be displayed in all
     /// roles.
     ///
@@ -241,9 +229,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int WebsiteUriFieldNumber = 8;
     private string websiteUri_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The URI representing the company's primary web site or home page,
+    /// Optional. The URI representing the company's primary web site or home page,
     /// for example, "https://www.google.com".
     ///
     /// The maximum number of allowed characters is 255.
@@ -260,10 +246,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CareerSiteUriFieldNumber = 9;
     private string careerSiteUri_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The URI to employer's career site or careers page on the employer's web
-    /// site, for example, "https://careers.google.com".
+    /// Optional. The URI to employer's career site or careers page on the
+    /// employer's web site, for example, "https://careers.google.com".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CareerSiteUri {
@@ -277,9 +261,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ImageUriFieldNumber = 10;
     private string imageUri_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// A URI that hosts the employer's company logo.
+    /// Optional. A URI that hosts the employer's company logo.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ImageUri {
@@ -295,9 +277,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> keywordSearchableJobCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// A list of keys of filterable
+    /// Optional. A list of keys of filterable
     /// [Job.custom_attributes][google.cloud.talent.v4beta1.Job.custom_attributes],
     /// whose corresponding `string_values` are used in keyword searches. Jobs with
     /// `string_values` under these specified field keys are returned if any

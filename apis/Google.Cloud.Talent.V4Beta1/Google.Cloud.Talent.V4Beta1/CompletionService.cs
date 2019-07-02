@@ -26,36 +26,39 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tcGxldGlvbl9zZXJ2",
             "aWNlLnByb3RvEhtnb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2ds",
-            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQv",
-            "djRiZXRhMS9jb21tb24ucHJvdG8iwgMKFENvbXBsZXRlUXVlcnlSZXF1ZXN0",
-            "Eg4KBnBhcmVudBgBIAEoCRINCgVxdWVyeRgCIAEoCRIWCg5sYW5ndWFnZV9j",
-            "b2RlcxgDIAMoCRIRCglwYWdlX3NpemUYBCABKAUSDwoHY29tcGFueRgFIAEo",
-            "CRJQCgVzY29wZRgGIAEoDjJBLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5Db21wbGV0ZVF1ZXJ5UmVxdWVzdC5Db21wbGV0aW9uU2NvcGUSTgoEdHlw",
-            "ZRgHIAEoDjJALmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wbGV0",
-            "ZVF1ZXJ5UmVxdWVzdC5Db21wbGV0aW9uVHlwZSJLCg9Db21wbGV0aW9uU2Nv",
-            "cGUSIAocQ09NUExFVElPTl9TQ09QRV9VTlNQRUNJRklFRBAAEgoKBlRFTkFO",
-            "VBABEgoKBlBVQkxJQxACImAKDkNvbXBsZXRpb25UeXBlEh8KG0NPTVBMRVRJ",
-            "T05fVFlQRV9VTlNQRUNJRklFRBAAEg0KCUpPQl9USVRMRRABEhAKDENPTVBB",
-            "TllfTkFNRRACEgwKCENPTUJJTkVEEAMixQIKFUNvbXBsZXRlUXVlcnlSZXNw",
-            "b25zZRJfChJjb21wbGV0aW9uX3Jlc3VsdHMYASADKAsyQy5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlc3BvbnNlLkNvbXBs",
-            "ZXRpb25SZXN1bHQSPwoIbWV0YWRhdGEYAiABKAsyLS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuUmVzcG9uc2VNZXRhZGF0YRqJAQoQQ29tcGxldGlv",
-            "blJlc3VsdBISCgpzdWdnZXN0aW9uGAEgASgJEk4KBHR5cGUYAiABKA4yQC5n",
+            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnBy",
+            "b3RvGihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3Rv",
+            "IsIDChRDb21wbGV0ZVF1ZXJ5UmVxdWVzdBIOCgZwYXJlbnQYASABKAkSDQoF",
+            "cXVlcnkYAiABKAkSFgoObGFuZ3VhZ2VfY29kZXMYAyADKAkSEQoJcGFnZV9z",
+            "aXplGAQgASgFEg8KB2NvbXBhbnkYBSABKAkSUAoFc2NvcGUYBiABKA4yQS5n",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlcXVl",
-            "c3QuQ29tcGxldGlvblR5cGUSEQoJaW1hZ2VfdXJpGAMgASgJMucBCgpDb21w",
-            "bGV0aW9uEtgBCg1Db21wbGV0ZVF1ZXJ5EjEuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXF1ZXN0GjIuZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLkNvbXBsZXRlUXVlcnlSZXNwb25zZSJggtPkkwJa",
-            "Ei8vdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfTpjb21w",
-            "bGV0ZVonEiUvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9OmNvbXBsZXRl",
+            "c3QuQ29tcGxldGlvblNjb3BlEk4KBHR5cGUYByABKA4yQC5nb29nbGUuY2xv",
+            "dWQudGFsZW50LnY0YmV0YTEuQ29tcGxldGVRdWVyeVJlcXVlc3QuQ29tcGxl",
+            "dGlvblR5cGUiSwoPQ29tcGxldGlvblNjb3BlEiAKHENPTVBMRVRJT05fU0NP",
+            "UEVfVU5TUEVDSUZJRUQQABIKCgZURU5BTlQQARIKCgZQVUJMSUMQAiJgCg5D",
+            "b21wbGV0aW9uVHlwZRIfChtDT01QTEVUSU9OX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABINCglKT0JfVElUTEUQARIQCgxDT01QQU5ZX05BTUUQAhIMCghDT01CSU5F",
+            "RBADIsUCChVDb21wbGV0ZVF1ZXJ5UmVzcG9uc2USXwoSY29tcGxldGlvbl9y",
+            "ZXN1bHRzGAEgAygLMkMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNv",
+            "bXBsZXRlUXVlcnlSZXNwb25zZS5Db21wbGV0aW9uUmVzdWx0Ej8KCG1ldGFk",
+            "YXRhGAIgASgLMi0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlJlc3Bv",
+            "bnNlTWV0YWRhdGEaiQEKEENvbXBsZXRpb25SZXN1bHQSEgoKc3VnZ2VzdGlv",
+            "bhgBIAEoCRJOCgR0eXBlGAIgASgOMkAuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExLkNvbXBsZXRlUXVlcnlSZXF1ZXN0LkNvbXBsZXRpb25UeXBlEhEK",
+            "CWltYWdlX3VyaRgDIAEoCTLVAgoKQ29tcGxldGlvbhLYAQoNQ29tcGxldGVR",
+            "dWVyeRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21wbGV0ZVF1",
+            "ZXJ5UmVxdWVzdBoyLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Db21w",
+            "bGV0ZVF1ZXJ5UmVzcG9uc2UiYILT5JMCWhIvL3Y0YmV0YTEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL3RlbmFudHMvKn06Y29tcGxldGVaJxIlL3Y0YmV0YTEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qfTpjb21wbGV0ZRpsykETam9icy5nb29nbGVhcGlz",
+            "LmNvbdJBU2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9qb2Jz",
             "QoQBCh9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExQhZDb21wbGV0",
             "aW9uU2VydmljZVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
             "L2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0YmV0YTE7dGFsZW50ogIDQ1RT",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest), global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Parser, new[]{ "Parent", "Query", "LanguageCodes", "PageSize", "Company", "Scope", "Type" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope), typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Parser, new[]{ "CompletionResults", "Metadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult), global::Google.Cloud.Talent.V4Beta1.CompleteQueryResponse.Types.CompletionResult.Parser, new[]{ "Suggestion", "Type", "ImageUri" }, null, null, null)})
@@ -114,9 +117,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Resource name of tenant the completion is performed within.
+    /// Required. Resource name of tenant the completion is performed within.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
     /// "projects/api-test-project/tenant/foo".
@@ -136,9 +137,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int QueryFieldNumber = 2;
     private string query_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The query used to generate suggestions.
+    /// Required. The query used to generate suggestions.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -156,9 +155,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> languageCodes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// The list of languages of the query. This is
+    /// Optional. The list of languages of the query. This is
     /// the BCP-47 language code, such as "en-US" or "sr-Latn".
     /// For more information, see
     /// [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
@@ -194,9 +191,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Required.
-    ///
-    /// Completion result count.
+    /// Required. Completion result count.
     ///
     /// The maximum allowed page size is 10.
     /// </summary>
@@ -212,9 +207,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CompanyFieldNumber = 5;
     private string company_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// If provided, restricts completion to specified company.
+    /// Optional. If provided, restricts completion to specified company.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -235,9 +228,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ScopeFieldNumber = 6;
     private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionScope scope_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// The scope of the completion. The defaults is
+    /// Optional. The scope of the completion. The defaults is
     /// [CompletionScope.PUBLIC][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionScope.PUBLIC].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -252,9 +243,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TypeFieldNumber = 7;
     private global::Google.Cloud.Talent.V4Beta1.CompleteQueryRequest.Types.CompletionType type_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// The completion topic. The default is
+    /// Optional. The completion topic. The default is
     /// [CompletionType.COMBINED][google.cloud.talent.v4beta1.CompleteQueryRequest.CompletionType.COMBINED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

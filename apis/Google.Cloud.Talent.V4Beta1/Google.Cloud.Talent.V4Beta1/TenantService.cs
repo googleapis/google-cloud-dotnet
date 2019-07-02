@@ -26,44 +26,47 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50X3NlcnZpY2Uu",
             "cHJvdG8SG2dvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMRocZ29vZ2xlL2Fw",
-            "aS9hbm5vdGF0aW9ucy5wcm90bxooZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJl",
-            "dGExL2NvbW1vbi5wcm90bxooZ29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGEx",
-            "L3RlbmFudC5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBn",
-            "b29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJaChNDcmVhdGVUZW5h",
-            "bnRSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIzCgZ0ZW5hbnQYAiABKAsyIy5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGVuYW50IiAKEEdldFRlbmFu",
-            "dFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJ7ChNVcGRhdGVUZW5hbnRSZXF1ZXN0",
-            "EjMKBnRlbmFudBgBIAEoCzIjLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
-            "MS5UZW5hbnQSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuRmllbGRNYXNrIiMKE0RlbGV0ZVRlbmFudFJlcXVlc3QSDAoEbmFtZRgB",
-            "IAEoCSJLChJMaXN0VGVuYW50c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhIK",
-            "CnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXplGAMgASgFIqUBChNMaXN0",
-            "VGVuYW50c1Jlc3BvbnNlEjQKB3RlbmFudHMYASADKAsyIy5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuVGVuYW50EhcKD25leHRfcGFnZV90b2tlbhgC",
-            "IAEoCRI/CghtZXRhZGF0YRgDIAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5SZXNwb25zZU1ldGFkYXRhMoIGCg1UZW5hbnRTZXJ2aWNlEpYB",
-            "CgxDcmVhdGVUZW5hbnQSMC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
-            "Q3JlYXRlVGVuYW50UmVxdWVzdBojLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5UZW5hbnQiL4LT5JMCKSIkL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0",
-            "cy8qfS90ZW5hbnRzOgEqEo0BCglHZXRUZW5hbnQSLS5nb29nbGUuY2xvdWQu",
-            "dGFsZW50LnY0YmV0YTEuR2V0VGVuYW50UmVxdWVzdBojLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMS5UZW5hbnQiLILT5JMCJhIkL3Y0YmV0YTEve25h",
-            "bWU9cHJvamVjdHMvKi90ZW5hbnRzLyp9Ep0BCgxVcGRhdGVUZW5hbnQSMC5n",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVXBkYXRlVGVuYW50UmVxdWVz",
-            "dBojLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5UZW5hbnQiNoLT5JMC",
-            "MDIrL3Y0YmV0YTEve3RlbmFudC5uYW1lPXByb2plY3RzLyovdGVuYW50cy8q",
-            "fToBKhKGAQoMRGVsZXRlVGVuYW50EjAuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
-            "NGJldGExLkRlbGV0ZVRlbmFudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiLILT5JMCJiokL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5h",
-            "bnRzLyp9Ep4BCgtMaXN0VGVuYW50cxIvLmdvb2dsZS5jbG91ZC50YWxlbnQu",
-            "djRiZXRhMS5MaXN0VGVuYW50c1JlcXVlc3QaMC5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuTGlzdFRlbmFudHNSZXNwb25zZSIsgtPkkwImEiQvdjRi",
-            "ZXRhMS97cGFyZW50PXByb2plY3RzLyp9L3RlbmFudHNCgAEKH2NvbS5nb29n",
+            "aS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8a",
+            "KGdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21tb24ucHJvdG8aKGdv",
+            "b2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS90ZW5hbnQucHJvdG8aG2dvb2ds",
+            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxk",
+            "X21hc2sucHJvdG8iWgoTQ3JlYXRlVGVuYW50UmVxdWVzdBIOCgZwYXJlbnQY",
+            "ASABKAkSMwoGdGVuYW50GAIgASgLMiMuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExLlRlbmFudCIgChBHZXRUZW5hbnRSZXF1ZXN0EgwKBG5hbWUYASAB",
+            "KAkiewoTVXBkYXRlVGVuYW50UmVxdWVzdBIzCgZ0ZW5hbnQYASABKAsyIy5n",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGVuYW50Ei8KC3VwZGF0ZV9t",
+            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIjChNEZWxl",
+            "dGVUZW5hbnRSZXF1ZXN0EgwKBG5hbWUYASABKAkiSwoSTGlzdFRlbmFudHNS",
+            "ZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRISCgpwYWdlX3Rva2VuGAIgASgJEhEK",
+            "CXBhZ2Vfc2l6ZRgDIAEoBSKlAQoTTGlzdFRlbmFudHNSZXNwb25zZRI0Cgd0",
+            "ZW5hbnRzGAEgAygLMiMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlRl",
+            "bmFudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSPwoIbWV0YWRhdGEYAyAB",
+            "KAsyLS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUmVzcG9uc2VNZXRh",
+            "ZGF0YTLwBgoNVGVuYW50U2VydmljZRKWAQoMQ3JlYXRlVGVuYW50EjAuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNyZWF0ZVRlbmFudFJlcXVlc3Qa",
+            "Iy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGVuYW50Ii+C0+STAiki",
+            "JC92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vdGVuYW50czoBKhKNAQoJ",
+            "R2V0VGVuYW50Ei0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkdldFRl",
+            "bmFudFJlcXVlc3QaIy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGVu",
+            "YW50IiyC0+STAiYSJC92NGJldGExL3tuYW1lPXByb2plY3RzLyovdGVuYW50",
+            "cy8qfRKdAQoMVXBkYXRlVGVuYW50EjAuZ29vZ2xlLmNsb3VkLnRhbGVudC52",
+            "NGJldGExLlVwZGF0ZVRlbmFudFJlcXVlc3QaIy5nb29nbGUuY2xvdWQudGFs",
+            "ZW50LnY0YmV0YTEuVGVuYW50IjaC0+STAjAyKy92NGJldGExL3t0ZW5hbnQu",
+            "bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKn06ASoShgEKDERlbGV0ZVRlbmFu",
+            "dBIwLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5EZWxldGVUZW5hbnRS",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiyC0+STAiYqJC92NGJl",
+            "dGExL3tuYW1lPXByb2plY3RzLyovdGVuYW50cy8qfRKeAQoLTGlzdFRlbmFu",
+            "dHMSLy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdFRlbmFudHNS",
+            "ZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxpc3RUZW5h",
+            "bnRzUmVzcG9uc2UiLILT5JMCJhIkL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0",
+            "cy8qfS90ZW5hbnRzGmzKQRNqb2JzLmdvb2dsZWFwaXMuY29t0kFTaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2pvYnNCgAEKH2NvbS5nb29n",
             "bGUuY2xvdWQudGFsZW50LnY0YmV0YTFCElRlbmFudFNlcnZpY2VQcm90b1AB",
             "WkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
             "L3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.TenantReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.TenantReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest), global::Google.Cloud.Talent.V4Beta1.CreateTenantRequest.Parser, new[]{ "Parent", "Tenant" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetTenantRequest), global::Google.Cloud.Talent.V4Beta1.GetTenantRequest.Parser, new[]{ "Name" }, null, null, null),
@@ -119,9 +122,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Resource name of the project under which the tenant is created.
+    /// Required. Resource name of the project under which the tenant is created.
     ///
     /// The format is "projects/{project_id}", for example,
     /// "projects/api-test-project".
@@ -138,9 +139,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TenantFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.Tenant tenant_;
     /// <summary>
-    /// Required.
-    ///
-    /// The tenant to be created.
+    /// Required. The tenant to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Tenant Tenant {
@@ -297,9 +296,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The resource name of the tenant to be retrieved.
+    /// Required. The resource name of the tenant to be retrieved.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
     /// "projects/api-test-project/tenants/foo".
@@ -438,9 +435,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int TenantFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.Tenant tenant_;
     /// <summary>
-    /// Required.
-    ///
-    /// The tenant resource to replace the current resource in the system.
+    /// Required. The tenant resource to replace the current resource in the
+    /// system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Tenant Tenant {
@@ -457,11 +453,15 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Optional but strongly recommended for the best service
     /// experience.
     ///
-    /// If [update_mask][google.cloud.talent.v4beta1.UpdateTenantRequest.update_mask] is provided, only the specified fields in
-    /// [tenant][google.cloud.talent.v4beta1.UpdateTenantRequest.tenant] are updated. Otherwise all the fields are updated.
+    /// If
+    /// [update_mask][google.cloud.talent.v4beta1.UpdateTenantRequest.update_mask]
+    /// is provided, only the specified fields in
+    /// [tenant][google.cloud.talent.v4beta1.UpdateTenantRequest.tenant] are
+    /// updated. Otherwise all the fields are updated.
     ///
     /// A field mask to specify the tenant fields to be updated. Only
-    /// top level fields of [Tenant][google.cloud.talent.v4beta1.Tenant] are supported.
+    /// top level fields of [Tenant][google.cloud.talent.v4beta1.Tenant] are
+    /// supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -624,9 +624,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The resource name of the tenant to be deleted.
+    /// Required. The resource name of the tenant to be deleted.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
     /// "projects/api-test-project/tenants/foo".
@@ -766,9 +764,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Resource name of the project under which the tenant is created.
+    /// Required. Resource name of the project under which the tenant is created.
     ///
     /// The format is "projects/{project_id}", for example,
     /// "projects/api-test-project".
@@ -785,9 +781,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The starting indicator from which to return results.
+    /// Optional. The starting indicator from which to return results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -801,9 +795,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The maximum number of tenants to be returned, at most 100.
+    /// Optional. The maximum number of tenants to be returned, at most 100.
     /// Default is 100 if a non-positive number is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
