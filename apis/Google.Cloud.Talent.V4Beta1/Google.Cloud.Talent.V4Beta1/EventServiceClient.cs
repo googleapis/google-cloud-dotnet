@@ -359,9 +359,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the event is created.
+        /// Required. Resource name of the tenant under which the event is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -370,10 +368,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
-        /// Required.
-        ///
-        /// Events issued when end user interacts with customer's application that
-        /// uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -402,9 +398,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the event is created.
+        /// Required. Resource name of the tenant under which the event is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -413,10 +407,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
-        /// Required.
-        ///
-        /// Events issued when end user interacts with customer's application that
-        /// uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -442,9 +434,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the event is created.
+        /// Required. Resource name of the tenant under which the event is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -453,10 +443,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
-        /// Required.
-        ///
-        /// Events issued when end user interacts with customer's application that
-        /// uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -485,9 +473,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the event is created.
+        /// Required. Resource name of the tenant under which the event is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -496,10 +482,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
-        /// Required.
-        ///
-        /// Events issued when end user interacts with customer's application that
-        /// uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -528,9 +512,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the event is created.
+        /// Required. Resource name of the tenant under which the event is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -539,10 +521,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
-        /// Required.
-        ///
-        /// Events issued when end user interacts with customer's application that
-        /// uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -568,9 +548,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// about self service tools.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the event is created.
+        /// Required. Resource name of the tenant under which the event is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -579,10 +557,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="clientEvent">
-        /// Required.
-        ///
-        /// Events issued when end user interacts with customer's application that
-        /// uses Cloud Talent Solution.
+        /// Required. Events issued when end user interacts with customer's application
+        /// that uses Cloud Talent Solution.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

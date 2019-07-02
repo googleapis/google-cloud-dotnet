@@ -476,9 +476,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new company entity.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -487,9 +485,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company to be created.
+        /// Required. The company to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -512,9 +508,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new company entity.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -523,9 +517,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company to be created.
+        /// Required. The company to be created.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -545,9 +537,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new company entity.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -556,9 +546,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company to be created.
+        /// Required. The company to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -581,9 +569,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new company entity.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -592,9 +578,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company to be created.
+        /// Required. The company to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -617,9 +601,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new company entity.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -628,9 +610,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company to be created.
+        /// Required. The company to be created.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -650,9 +630,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Creates a new company entity.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -661,9 +639,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// example, "projects/api-test-project".
         /// </param>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company to be created.
+        /// Required. The company to be created.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -742,9 +718,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Retrieves specified company.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be retrieved.
+        /// Required. The resource name of the company to be retrieved.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -772,9 +746,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Retrieves specified company.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be retrieved.
+        /// Required. The resource name of the company to be retrieved.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -799,9 +771,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Retrieves specified company.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be retrieved.
+        /// Required. The resource name of the company to be retrieved.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -829,9 +799,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Retrieves specified company.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be retrieved.
+        /// Required. The resource name of the company to be retrieved.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -859,9 +827,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Retrieves specified company.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be retrieved.
+        /// Required. The resource name of the company to be retrieved.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -886,9 +852,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Retrieves specified company.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be retrieved.
+        /// Required. The resource name of the company to be retrieved.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -972,9 +936,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company resource to replace the current resource in the system.
+        /// Required. The company resource to replace the current resource in the
+        /// system.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -995,9 +958,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company resource to replace the current resource in the system.
+        /// Required. The company resource to replace the current resource in the
+        /// system.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="st::CancellationToken"/> to use for this RPC.
@@ -1015,9 +977,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Updates specified company.
         /// </summary>
         /// <param name="company">
-        /// Required.
-        ///
-        /// The company resource to replace the current resource in the system.
+        /// Required. The company resource to replace the current resource in the
+        /// system.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1095,9 +1056,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Prerequisite: The company has no jobs associated with it.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be deleted.
+        /// Required. The resource name of the company to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -1126,9 +1085,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Prerequisite: The company has no jobs associated with it.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be deleted.
+        /// Required. The resource name of the company to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -1154,9 +1111,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Prerequisite: The company has no jobs associated with it.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be deleted.
+        /// Required. The resource name of the company to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -1182,9 +1137,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Prerequisite: The company has no jobs associated with it.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be deleted.
+        /// Required. The resource name of the company to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -1213,9 +1166,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Prerequisite: The company has no jobs associated with it.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be deleted.
+        /// Required. The resource name of the company to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -1241,9 +1192,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Prerequisite: The company has no jobs associated with it.
         /// </summary>
         /// <param name="name">
-        /// Required.
-        ///
-        /// The resource name of the company to be deleted.
+        /// Required. The resource name of the company to be deleted.
         ///
         /// The format is
         /// "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for
@@ -1324,9 +1273,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all companies associated with the project.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -1365,9 +1312,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all companies associated with the project.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -1406,9 +1351,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all companies associated with the project.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".
@@ -1447,9 +1390,7 @@ namespace Google.Cloud.Talent.V4Beta1
         /// Lists all companies associated with the project.
         /// </summary>
         /// <param name="parent">
-        /// Required.
-        ///
-        /// Resource name of the tenant under which the company is created.
+        /// Required. Resource name of the tenant under which the company is created.
         ///
         /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
         /// "projects/api-test-project/tenant/foo".

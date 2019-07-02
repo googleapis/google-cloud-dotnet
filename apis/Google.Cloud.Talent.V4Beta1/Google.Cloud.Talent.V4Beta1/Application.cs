@@ -141,9 +141,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExternalIdFieldNumber = 31;
     private string externalId_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Client side application identifier, used to uniquely identify the
+    /// Required. Client side application identifier, used to uniquely identify the
     /// application.
     ///
     /// The maximum number of allowed characters is 255.
@@ -218,9 +216,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ApplicationDateFieldNumber = 7;
     private global::Google.Type.Date applicationDate_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The application date.
+    /// Optional. The application date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date ApplicationDate {
@@ -234,10 +230,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StageFieldNumber = 11;
     private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage stage_ = 0;
     /// <summary>
-    /// Required.
-    ///
-    /// What is the most recent stage of the application (that is, new, screen,
-    /// send cv, hired, finished work)?  This field is intentionally not
+    /// Required. What is the most recent stage of the application (that is, new,
+    /// screen, send cv, hired, finished work)?  This field is intentionally not
     /// comprehensive of every possible status, but instead, represents statuses
     /// that would be used to indicate to the ML models good / bad matches.
     /// </summary>
@@ -253,9 +247,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int StateFieldNumber = 13;
     private global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState state_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// The application state.
+    /// Optional. The application state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState State {
@@ -271,10 +263,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(130, global::Google.Cloud.Talent.V4Beta1.Interview.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Interview> interviews_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.Interview>();
     /// <summary>
-    /// Optional.
-    ///
-    /// All interviews (screen, onsite, and so on) conducted as part of this
-    /// application (includes details such as user conducting the interview,
+    /// Optional. All interviews (screen, onsite, and so on) conducted as part of
+    /// this application (includes details such as user conducting the interview,
     /// timestamp, feedback, and so on).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -287,9 +277,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     private static readonly pb::FieldCodec<bool?> _single_referral_codec = pb::FieldCodec.ForStructWrapper<bool>(146);
     private bool? referral_;
     /// <summary>
-    /// Optional.
-    ///
-    /// If the candidate is referred by a employee.
+    /// Optional. If the candidate is referred by a employee.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool? Referral {
@@ -303,9 +291,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CreateTimeFieldNumber = 19;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Required.
-    ///
-    /// Reflects the time that the application was created.
+    /// Required. Reflects the time that the application was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -319,9 +305,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UpdateTimeFieldNumber = 20;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The last update timestamp.
+    /// Optional. The last update timestamp.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -335,10 +319,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeNotesFieldNumber = 21;
     private string outcomeNotes_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// Free text reason behind the recruitement outcome (for example, reason for
-    /// withdraw / reject, reason for an unsuccessful finish, and so on).
+    /// Optional. Free text reason behind the recruitement outcome (for example,
+    /// reason for withdraw / reject, reason for an unsuccessful finish, and so
+    /// on).
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -354,9 +337,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeFieldNumber = 22;
     private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// Outcome positiveness shows how positive the outcome is.
+    /// Optional. Outcome positiveness shows how positive the outcome is.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Outcome Outcome {

@@ -1405,9 +1405,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AllowMissingIdsFieldNumber = 4;
     private bool allowMissingIds_;
     /// <summary>
-    /// Optional.
-    ///
-    /// If set to `true`,
+    /// Optional. If set to `true`,
     /// [domain][google.cloud.talent.v4beta1.RequestMetadata.domain],
     /// [session_id][google.cloud.talent.v4beta1.RequestMetadata.session_id] and
     /// [user_id][google.cloud.talent.v4beta1.RequestMetadata.user_id] are
@@ -1430,10 +1428,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DeviceInfoFieldNumber = 5;
     private global::Google.Cloud.Talent.V4Beta1.DeviceInfo deviceInfo_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The type of device used by the job seeker at the time of the call to the
-    /// service.
+    /// Optional. The type of device used by the job seeker at the time of the call
+    /// to the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.DeviceInfo DeviceInfo {
@@ -1778,9 +1774,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DeviceTypeFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType deviceType_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// Type of the device.
+    /// Optional. Type of the device.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.DeviceInfo.Types.DeviceType DeviceType {
@@ -1794,9 +1788,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int IdFieldNumber = 2;
     private string id_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// A device-specific ID. The ID must be a unique identifier that
+    /// Optional. A device-specific ID. The ID must be a unique identifier that
     /// distinguishes the device from other devices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2042,10 +2034,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int FilterableFieldNumber = 3;
     private bool filterable_;
     /// <summary>
-    /// Optional.
-    ///
-    /// If the `filterable` flag is true, custom field values are searchable.
-    /// If false, values are not searchable.
+    /// Optional. If the `filterable` flag is true, custom field values are
+    /// searchable. If false, values are not searchable.
     ///
     /// Default is false.
     /// </summary>
@@ -2408,9 +2398,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationEntry>();
     /// <summary>
-    /// Optional.
-    ///
-    /// Job compensation information.
+    /// Optional. Job compensation information.
     ///
     /// At most one entry can be of type
     /// [CompensationInfo.CompensationType.BASE][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.BASE],
@@ -2765,9 +2753,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int TypeFieldNumber = 1;
         private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationType type_ = 0;
         /// <summary>
-        /// Optional.
-        ///
-        /// Compensation type.
+        /// Optional. Compensation type.
         ///
         /// Default is
         /// [CompensationType.COMPENSATION_TYPE_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationType.COMPENSATION_TYPE_UNSPECIFIED].
@@ -2784,9 +2770,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int UnitFieldNumber = 2;
         private global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationUnit unit_ = 0;
         /// <summary>
-        /// Optional.
-        ///
-        /// Frequency of the specified amount.
+        /// Optional. Frequency of the specified amount.
         ///
         /// Default is
         /// [CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED][google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED].
@@ -2802,9 +2786,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>Field number for the "amount" field.</summary>
         public const int AmountFieldNumber = 3;
         /// <summary>
-        /// Optional.
-        ///
-        /// Compensation amount.
+        /// Optional. Compensation amount.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Type.Money Amount {
@@ -2818,9 +2800,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         /// <summary>Field number for the "range" field.</summary>
         public const int RangeFieldNumber = 4;
         /// <summary>
-        /// Optional.
-        ///
-        /// Compensation range.
+        /// Optional. Compensation range.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4Beta1.CompensationInfo.Types.CompensationRange Range {
@@ -2835,9 +2815,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int DescriptionFieldNumber = 5;
         private string description_ = "";
         /// <summary>
-        /// Optional.
-        ///
-        /// Compensation description.  For example, could
+        /// Optional. Compensation description.  For example, could
         /// indicate equity terms or provide additional context to an estimated
         /// bonus.
         /// </summary>
@@ -2854,9 +2832,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         private static readonly pb::FieldCodec<double?> _single_expectedUnitsPerYear_codec = pb::FieldCodec.ForStructWrapper<double>(50);
         private double? expectedUnitsPerYear_;
         /// <summary>
-        /// Optional.
-        ///
-        /// Expected number of units paid each year. If not specified, when
+        /// Optional. Expected number of units paid each year. If not specified, when
         /// [Job.employment_types][google.cloud.talent.v4beta1.Job.employment_types]
         /// is FULLTIME, a default value is inferred based on
         /// [unit][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.unit].
@@ -3125,12 +3101,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int MaxCompensationFieldNumber = 2;
         private global::Google.Type.Money maxCompensation_;
         /// <summary>
-        /// Optional.
-        ///
-        /// The maximum amount of compensation. If left empty, the value is set
-        /// to a maximal compensation value and the currency code is set to
-        /// match the [currency code][google.type.Money.currency_code] of
-        /// min_compensation.
+        /// Optional. The maximum amount of compensation. If left empty, the value is
+        /// set to a maximal compensation value and the currency code is set to match
+        /// the [currency code][google.type.Money.currency_code] of min_compensation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Type.Money MaxCompensation {
@@ -3144,11 +3117,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         public const int MinCompensationFieldNumber = 1;
         private global::Google.Type.Money minCompensation_;
         /// <summary>
-        /// Optional.
-        ///
-        /// The minimum amount of compensation. If left empty, the value is set
-        /// to zero and the currency code is set to match the
-        /// [currency code][google.type.Money.currency_code] of max_compensation.
+        /// Optional. The minimum amount of compensation. If left empty, the value is
+        /// set to zero and the currency code is set to match the [currency
+        /// code][google.type.Money.currency_code] of max_compensation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Type.Money MinCompensation {
@@ -3320,9 +3291,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// Name of license or certification.
+    /// Optional. Name of license or certification.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -3338,9 +3307,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AcquireDateFieldNumber = 2;
     private global::Google.Type.Date acquireDate_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Acquisition date or effective date of license or certification.
+    /// Optional. Acquisition date or effective date of license or certification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date AcquireDate {
@@ -3354,9 +3321,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExpireDateFieldNumber = 3;
     private global::Google.Type.Date expireDate_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Expiration date of license of certification.
+    /// Optional. Expiration date of license of certification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date ExpireDate {
@@ -3370,9 +3335,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int AuthorityFieldNumber = 4;
     private string authority_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// Authority of license, such as government.
+    /// Optional. Authority of license, such as government.
     ///
     /// Number of characters allowed is 100.
     /// </summary>
@@ -3388,9 +3351,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// Description of license or certification.
+    /// Optional. Description of license or certification.
     ///
     /// Number of characters allowed is 100,000.
     /// </summary>
@@ -3607,9 +3568,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// Skill display name.
+    /// Optional. Skill display name.
     ///
     /// For example, "Java", "Python".
     ///
@@ -3627,9 +3586,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int LastUsedDateFieldNumber = 2;
     private global::Google.Type.Date lastUsedDate_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The last time this skill was used.
+    /// Optional. The last time this skill was used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Date LastUsedDate {
@@ -3643,10 +3600,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int LevelFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel level_ = 0;
     /// <summary>
-    /// Optional.
-    ///
-    /// Skill proficiency level which indicates how proficient the candidate is at
-    /// this skill.
+    /// Optional. Skill proficiency level which indicates how proficient the
+    /// candidate is at this skill.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.SkillProficiencyLevel Level {
@@ -3660,9 +3615,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ContextFieldNumber = 4;
     private string context_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// A paragraph describes context of this skill.
+    /// Optional. A paragraph describes context of this skill.
     ///
     /// Number of characters allowed is 100,000.
     /// </summary>
@@ -3888,9 +3841,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RatingFieldNumber = 6;
     private global::Google.Cloud.Talent.V4Beta1.Rating rating_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The rating on this interview.
+    /// Optional. The rating on this interview.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Rating Rating {
@@ -3904,10 +3855,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OutcomeFieldNumber = 7;
     private global::Google.Cloud.Talent.V4Beta1.Outcome outcome_ = 0;
     /// <summary>
-    /// Required.
-    ///
-    /// The overall decision resulting from this interview (positive, negative,
-    /// nuetral).
+    /// Required. The overall decision resulting from this interview (positive,
+    /// negative, nuetral).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Outcome Outcome {

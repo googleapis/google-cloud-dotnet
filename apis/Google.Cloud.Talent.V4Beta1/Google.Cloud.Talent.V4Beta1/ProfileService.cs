@@ -26,72 +26,76 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvcHJvZmlsZV9zZXJ2aWNl",
             "LnByb3RvEhtnb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9h",
-            "cGkvYW5ub3RhdGlvbnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQvdjRi",
-            "ZXRhMS9jb21tb24ucHJvdG8aKWdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRh",
-            "MS9maWx0ZXJzLnByb3RvGitnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEv",
-            "aGlzdG9ncmFtLnByb3RvGilnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEv",
-            "cHJvZmlsZS5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBn",
-            "b29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJ7ChNMaXN0UHJvZmls",
-            "ZXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRISCgpwYWdlX3Rva2VuGAIgASgJ",
-            "EhEKCXBhZ2Vfc2l6ZRgDIAEoBRItCglyZWFkX21hc2sYBCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuRmllbGRNYXNrImcKFExpc3RQcm9maWxlc1Jlc3BvbnNl",
-            "EjYKCHByb2ZpbGVzGAEgAygLMiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
-            "dGExLlByb2ZpbGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIl0KFENyZWF0",
-            "ZVByb2ZpbGVSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRI1Cgdwcm9maWxlGAIg",
-            "ASgLMiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiIQoR",
-            "R2V0UHJvZmlsZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJ+ChRVcGRhdGVQcm9m",
-            "aWxlUmVxdWVzdBI1Cgdwcm9maWxlGAEgASgLMiQuZ29vZ2xlLmNsb3VkLnRh",
-            "bGVudC52NGJldGExLlByb2ZpbGUSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrIiQKFERlbGV0ZVByb2ZpbGVSZXF1",
-            "ZXN0EgwKBG5hbWUYASABKAki/AIKFVNlYXJjaFByb2ZpbGVzUmVxdWVzdBIO",
-            "CgZwYXJlbnQYASABKAkSRgoQcmVxdWVzdF9tZXRhZGF0YRgCIAEoCzIsLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5SZXF1ZXN0TWV0YWRhdGESQAoN",
-            "cHJvZmlsZV9xdWVyeRgDIAEoCzIpLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5Qcm9maWxlUXVlcnkSEQoJcGFnZV9zaXplGAQgASgFEhIKCnBhZ2Vf",
-            "dG9rZW4YBSABKAkSDgoGb2Zmc2V0GAYgASgFEhsKE2Rpc2FibGVfc3BlbGxf",
-            "Y2hlY2sYByABKAgSEAoIb3JkZXJfYnkYCCABKAkSGwoTY2FzZV9zZW5zaXRp",
-            "dmVfc29ydBgJIAEoCBJGChFoaXN0b2dyYW1fcXVlcmllcxgKIAMoCzIrLmdv",
-            "b2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5IaXN0b2dyYW1RdWVyeSL8AgoW",
-            "U2VhcmNoUHJvZmlsZXNSZXNwb25zZRIcChRlc3RpbWF0ZWRfdG90YWxfc2l6",
-            "ZRgBIAEoAxJJChBzcGVsbF9jb3JyZWN0aW9uGAIgASgLMi8uZ29vZ2xlLmNs",
-            "b3VkLnRhbGVudC52NGJldGExLlNwZWxsaW5nQ29ycmVjdGlvbhI/CghtZXRh",
-            "ZGF0YRgDIAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5SZXNw",
-            "b25zZU1ldGFkYXRhEhcKD25leHRfcGFnZV90b2tlbhgEIAEoCRJSChdoaXN0",
-            "b2dyYW1fcXVlcnlfcmVzdWx0cxgFIAMoCzIxLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5IaXN0b2dyYW1RdWVyeVJlc3VsdBJLChNzdW1tYXJpemVk",
-            "X3Byb2ZpbGVzGAYgAygLMi4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
-            "LlN1bW1hcml6ZWRQcm9maWxlIoIBChFTdW1tYXJpemVkUHJvZmlsZRI2Cghw",
-            "cm9maWxlcxgBIAMoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Q",
-            "cm9maWxlEjUKB3N1bW1hcnkYAiABKAsyJC5nb29nbGUuY2xvdWQudGFsZW50",
-            "LnY0YmV0YTEuUHJvZmlsZTL/BwoOUHJvZmlsZVNlcnZpY2USrAEKDExpc3RQ",
-            "cm9maWxlcxIwLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5MaXN0UHJv",
-            "ZmlsZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxp",
-            "c3RQcm9maWxlc1Jlc3BvbnNlIjeC0+STAjESLy92NGJldGExL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi90ZW5hbnRzLyp9L3Byb2ZpbGVzEqQBCg1DcmVhdGVQcm9m",
-            "aWxlEjEuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNyZWF0ZVByb2Zp",
-            "bGVSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2Zp",
-            "bGUiOoLT5JMCNCIvL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFu",
-            "dHMvKn0vcHJvZmlsZXM6ASoSmwEKCkdldFByb2ZpbGUSLi5nb29nbGUuY2xv",
-            "dWQudGFsZW50LnY0YmV0YTEuR2V0UHJvZmlsZVJlcXVlc3QaJC5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZSI3gtPkkwIxEi8vdjRiZXRh",
-            "MS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKi9wcm9maWxlcy8qfRKsAQoN",
-            "VXBkYXRlUHJvZmlsZRIxLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5V",
-            "cGRhdGVQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQudjRi",
-            "ZXRhMS5Qcm9maWxlIkKC0+STAjwyNy92NGJldGExL3twcm9maWxlLm5hbWU9",
-            "cHJvamVjdHMvKi90ZW5hbnRzLyovcHJvZmlsZXMvKn06ASoSkwEKDURlbGV0",
-            "ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuRGVsZXRl",
-            "UHJvZmlsZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiN4LT5JMC",
-            "MSovL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyovcHJvZmls",
-            "ZXMvKn0SswEKDlNlYXJjaFByb2ZpbGVzEjIuZ29vZ2xlLmNsb3VkLnRhbGVu",
-            "dC52NGJldGExLlNlYXJjaFByb2ZpbGVzUmVxdWVzdBozLmdvb2dsZS5jbG91",
-            "ZC50YWxlbnQudjRiZXRhMS5TZWFyY2hQcm9maWxlc1Jlc3BvbnNlIjiC0+ST",
-            "AjIiLS92NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9OnNl",
-            "YXJjaDoBKkKBAQofY29tLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMUIT",
-            "UHJvZmlsZVNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKIC",
-            "A0NUU2IGcHJvdG8z"));
+            "cGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3Rv",
+            "Gihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvY29tbW9uLnByb3RvGiln",
+            "b29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZmlsdGVycy5wcm90bxorZ29v",
+            "Z2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2hpc3RvZ3JhbS5wcm90bxopZ29v",
+            "Z2xlL2Nsb3VkL3RhbGVudC92NGJldGExL3Byb2ZpbGUucHJvdG8aG2dvb2ds",
+            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxk",
+            "X21hc2sucHJvdG8iewoTTGlzdFByb2ZpbGVzUmVxdWVzdBIOCgZwYXJlbnQY",
+            "ASABKAkSEgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUS",
+            "LQoJcmVhZF9tYXNrGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
+            "ayJnChRMaXN0UHJvZmlsZXNSZXNwb25zZRI2Cghwcm9maWxlcxgBIAMoCzIk",
+            "Lmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCSJdChRDcmVhdGVQcm9maWxlUmVxdWVzdBIOCgZw",
+            "YXJlbnQYASABKAkSNQoHcHJvZmlsZRgCIAEoCzIkLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5Qcm9maWxlIiEKEUdldFByb2ZpbGVSZXF1ZXN0EgwK",
+            "BG5hbWUYASABKAkifgoUVXBkYXRlUHJvZmlsZVJlcXVlc3QSNQoHcHJvZmls",
+            "ZRgBIAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxl",
+            "Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFzayIkChREZWxldGVQcm9maWxlUmVxdWVzdBIMCgRuYW1lGAEgASgJIpMD",
+            "ChVTZWFyY2hQcm9maWxlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEkYKEHJl",
+            "cXVlc3RfbWV0YWRhdGEYAiABKAsyLC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuUmVxdWVzdE1ldGFkYXRhEkAKDXByb2ZpbGVfcXVlcnkYAyABKAsy",
+            "KS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZVF1ZXJ5EhEK",
+            "CXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJEg4KBm9mZnNl",
+            "dBgGIAEoBRIbChNkaXNhYmxlX3NwZWxsX2NoZWNrGAcgASgIEhAKCG9yZGVy",
+            "X2J5GAggASgJEhsKE2Nhc2Vfc2Vuc2l0aXZlX3NvcnQYCSABKAgSRgoRaGlz",
+            "dG9ncmFtX3F1ZXJpZXMYCiADKAsyKy5nb29nbGUuY2xvdWQudGFsZW50LnY0",
+            "YmV0YTEuSGlzdG9ncmFtUXVlcnkSFQoNcmVzdWx0X3NldF9pZBgMIAEoCSKT",
+            "AwoWU2VhcmNoUHJvZmlsZXNSZXNwb25zZRIcChRlc3RpbWF0ZWRfdG90YWxf",
+            "c2l6ZRgBIAEoAxJJChBzcGVsbF9jb3JyZWN0aW9uGAIgASgLMi8uZ29vZ2xl",
+            "LmNsb3VkLnRhbGVudC52NGJldGExLlNwZWxsaW5nQ29ycmVjdGlvbhI/Cght",
+            "ZXRhZGF0YRgDIAEoCzItLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5S",
+            "ZXNwb25zZU1ldGFkYXRhEhcKD25leHRfcGFnZV90b2tlbhgEIAEoCRJSChdo",
+            "aXN0b2dyYW1fcXVlcnlfcmVzdWx0cxgFIAMoCzIxLmdvb2dsZS5jbG91ZC50",
+            "YWxlbnQudjRiZXRhMS5IaXN0b2dyYW1RdWVyeVJlc3VsdBJLChNzdW1tYXJp",
+            "emVkX3Byb2ZpbGVzGAYgAygLMi4uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJl",
+            "dGExLlN1bW1hcml6ZWRQcm9maWxlEhUKDXJlc3VsdF9zZXRfaWQYByABKAki",
+            "ggEKEVN1bW1hcml6ZWRQcm9maWxlEjYKCHByb2ZpbGVzGAEgAygLMiQuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUSNQoHc3VtbWFyeRgC",
+            "IAEoCzIkLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5Qcm9maWxlMu0I",
+            "Cg5Qcm9maWxlU2VydmljZRKsAQoMTGlzdFByb2ZpbGVzEjAuZ29vZ2xlLmNs",
+            "b3VkLnRhbGVudC52NGJldGExLkxpc3RQcm9maWxlc1JlcXVlc3QaMS5nb29n",
+            "bGUuY2xvdWQudGFsZW50LnY0YmV0YTEuTGlzdFByb2ZpbGVzUmVzcG9uc2Ui",
+            "N4LT5JMCMRIvL3Y0YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL3RlbmFudHMv",
+            "Kn0vcHJvZmlsZXMSpAEKDUNyZWF0ZVByb2ZpbGUSMS5nb29nbGUuY2xvdWQu",
+            "dGFsZW50LnY0YmV0YTEuQ3JlYXRlUHJvZmlsZVJlcXVlc3QaJC5nb29nbGUu",
+            "Y2xvdWQudGFsZW50LnY0YmV0YTEuUHJvZmlsZSI6gtPkkwI0Ii8vdjRiZXRh",
+            "MS97cGFyZW50PXByb2plY3RzLyovdGVuYW50cy8qfS9wcm9maWxlczoBKhKb",
+            "AQoKR2V0UHJvZmlsZRIuLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRhMS5H",
+            "ZXRQcm9maWxlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5Qcm9maWxlIjeC0+STAjESLy92NGJldGExL3tuYW1lPXByb2plY3RzLyov",
+            "dGVuYW50cy8qL3Byb2ZpbGVzLyp9EqwBCg1VcGRhdGVQcm9maWxlEjEuZ29v",
+            "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExLlVwZGF0ZVByb2ZpbGVSZXF1ZXN0",
+            "GiQuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlByb2ZpbGUiQoLT5JMC",
+            "PDI3L3Y0YmV0YTEve3Byb2ZpbGUubmFtZT1wcm9qZWN0cy8qL3RlbmFudHMv",
+            "Ki9wcm9maWxlcy8qfToBKhKTAQoNRGVsZXRlUHJvZmlsZRIxLmdvb2dsZS5j",
+            "bG91ZC50YWxlbnQudjRiZXRhMS5EZWxldGVQcm9maWxlUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSI3gtPkkwIxKi8vdjRiZXRhMS97bmFtZT1w",
+            "cm9qZWN0cy8qL3RlbmFudHMvKi9wcm9maWxlcy8qfRKzAQoOU2VhcmNoUHJv",
+            "ZmlsZXMSMi5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuU2VhcmNoUHJv",
+            "ZmlsZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLlNl",
+            "YXJjaFByb2ZpbGVzUmVzcG9uc2UiOILT5JMCMiItL3Y0YmV0YTEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL3RlbmFudHMvKn06c2VhcmNoOgEqGmzKQRNqb2JzLmdv",
+            "b2dsZWFwaXMuY29t0kFTaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2pvYnNCgQEKH2NvbS5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFC",
+            "E1Byb2ZpbGVTZXJ2aWNlUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSi",
+            "AgNDVFNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.FiltersReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.HistogramReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.ProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest), global::Google.Cloud.Talent.V4Beta1.ListProfilesRequest.Parser, new[]{ "Parent", "PageToken", "PageSize", "ReadMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse), global::Google.Cloud.Talent.V4Beta1.ListProfilesResponse.Parser, new[]{ "Profiles", "NextPageToken" }, null, null, null),
@@ -99,8 +103,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.GetProfileRequest), global::Google.Cloud.Talent.V4Beta1.GetProfileRequest.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest), global::Google.Cloud.Talent.V4Beta1.UpdateProfileRequest.Parser, new[]{ "Profile", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest), global::Google.Cloud.Talent.V4Beta1.DeleteProfileRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest), global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest.Parser, new[]{ "Parent", "RequestMetadata", "ProfileQuery", "PageSize", "PageToken", "Offset", "DisableSpellCheck", "OrderBy", "CaseSensitiveSort", "HistogramQueries" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse), global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse.Parser, new[]{ "EstimatedTotalSize", "SpellCorrection", "Metadata", "NextPageToken", "HistogramQueryResults", "SummarizedProfiles" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest), global::Google.Cloud.Talent.V4Beta1.SearchProfilesRequest.Parser, new[]{ "Parent", "RequestMetadata", "ProfileQuery", "PageSize", "PageToken", "Offset", "DisableSpellCheck", "OrderBy", "CaseSensitiveSort", "HistogramQueries", "ResultSetId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse), global::Google.Cloud.Talent.V4Beta1.SearchProfilesResponse.Parser, new[]{ "EstimatedTotalSize", "SpellCorrection", "Metadata", "NextPageToken", "HistogramQueryResults", "SummarizedProfiles", "ResultSetId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.SummarizedProfile), global::Google.Cloud.Talent.V4Beta1.SummarizedProfile.Parser, new[]{ "Profiles", "Summary" }, null, null, null)
           }));
     }
@@ -152,9 +156,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The resource name of the tenant under which the job is created.
+    /// Required. The resource name of the tenant under which the profile is
+    /// created.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
     /// "projects/api-test-project/tenants/foo".
@@ -171,9 +174,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The token that specifies the current offset (that is, starting result).
+    /// Optional. The token that specifies the current offset (that is, starting
+    /// result).
     ///
     /// Please set the value to
     /// [ListProfilesResponse.next_page_token][google.cloud.talent.v4beta1.ListProfilesResponse.next_page_token]
@@ -191,9 +193,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional.
-    ///
-    /// The maximum number of profiles to be returned, at most 100.
+    /// Optional. The maximum number of profiles to be returned, at most 100.
     ///
     /// Default is 100 unless a positive number smaller than 100 is specified.
     /// </summary>
@@ -209,10 +209,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ReadMaskFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// Optional.
-    ///
-    /// A field mask to specify the profile fields to be listed in response.
-    /// All fields are listed if it is unset.
+    /// Optional. A field mask to specify the profile fields to be listed in
+    /// response. All fields are listed if it is unset.
     ///
     /// Valid values are:
     ///
@@ -565,9 +563,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The name of the tenant this profile belongs to.
+    /// Required. The name of the tenant this profile belongs to.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
     /// "projects/api-test-project/tenants/foo".
@@ -584,9 +580,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ProfileFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.Profile profile_;
     /// <summary>
-    /// Required.
-    ///
-    /// The profile to be created.
+    /// Required. The profile to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Profile Profile {
@@ -743,9 +737,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Resource name of the profile to get.
+    /// Required. Resource name of the profile to get.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -885,9 +877,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ProfileFieldNumber = 1;
     private global::Google.Cloud.Talent.V4Beta1.Profile profile_;
     /// <summary>
-    /// Required.
-    ///
-    /// Profile to be updated.
+    /// Required. Profile to be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Profile Profile {
@@ -901,37 +891,35 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Optional.
-    ///
-    /// A field mask to specify the profile fields to update.
+    /// Optional. A field mask to specify the profile fields to update.
     ///
     /// A full update is performed if it is unset.
     ///
     /// Valid values are:
     ///
-    /// * externalId
+    /// * external_id
     /// * source
     /// * uri
-    /// * isHirable
-    /// * createTime
-    /// * updateTime
-    /// * resumeHrxml
-    /// * personNames
+    /// * is_hirable
+    /// * create_time
+    /// * update_time
+    /// * resume
+    /// * person_names
     /// * addresses
-    /// * emailAddresses
-    /// * phoneNumbers
-    /// * personalUris
-    /// * additionalContactInfo
-    /// * employmentRecords
-    /// * educationRecords
+    /// * email_addresses
+    /// * phone_numbers
+    /// * personal_uris
+    /// * additional_contact_info
+    /// * employment_records
+    /// * education_records
     /// * skills
     /// * projects
     /// * publications
     /// * patents
     /// * certifications
-    /// * recruitingNotes
-    /// * customAttributes
-    /// * groupId
+    /// * recruiting_notes
+    /// * custom_attributes
+    /// * group_id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -1094,9 +1082,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Resource name of the profile to be deleted.
+    /// Required. Resource name of the profile to be deleted.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/profiles/{profile_id}",
@@ -1232,6 +1218,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       orderBy_ = other.orderBy_;
       caseSensitiveSort_ = other.caseSensitiveSort_;
       histogramQueries_ = other.histogramQueries_.Clone();
+      resultSetId_ = other.resultSetId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1244,9 +1231,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// The resource name of the tenant to search within.
+    /// Required. The resource name of the tenant to search within.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
     /// "projects/api-test-project/tenants/foo".
@@ -1263,11 +1248,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int RequestMetadataFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.RequestMetadata requestMetadata_;
     /// <summary>
-    /// Required.
-    ///
-    /// The meta information collected about the profile search user. This is used
-    /// to improve the search quality of the service. These values are provided by
-    /// users, and must be precise and consistent.
+    /// Required. The meta information collected about the profile search user.
+    /// This is used to improve the search quality of the service. These values are
+    /// provided by users, and must be precise and consistent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.RequestMetadata RequestMetadata {
@@ -1281,9 +1264,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ProfileQueryFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.ProfileQuery profileQuery_;
     /// <summary>
-    /// Optional.
-    ///
-    /// Search query to execute. See
+    /// Optional. Search query to execute. See
     /// [ProfileQuery][google.cloud.talent.v4beta1.ProfileQuery] for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1298,9 +1279,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional.
-    ///
-    /// A limit on the number of profiles returned in the search results.
+    /// Optional. A limit on the number of profiles returned in the search results.
     /// A value above the default value 10 can increase search response time.
     ///
     /// The maximum value allowed is 100. Otherwise an error is thrown.
@@ -1317,11 +1296,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int PageTokenFieldNumber = 5;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The pageToken, similar to offset enables users of the API to paginate
-    /// through the search results. To retrieve the first page of results, set the
-    /// pageToken to empty. The search response includes a
+    /// Optional. The pageToken, similar to offset enables users of the API to
+    /// paginate through the search results. To retrieve the first page of results,
+    /// set the pageToken to empty. The search response includes a
     /// [nextPageToken][google.cloud.talent.v4beta1.SearchProfilesResponse.next_page_token]
     /// field that can be used to populate the pageToken field for the next page of
     /// results. Using pageToken instead of offset increases the performance of the
@@ -1339,10 +1316,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OffsetFieldNumber = 6;
     private int offset_;
     /// <summary>
-    /// Optional.
-    ///
-    /// An integer that specifies the current offset (that is, starting result) in
-    /// search results. This field is only considered if
+    /// Optional. An integer that specifies the current offset (that is, starting
+    /// result) in search results. This field is only considered if
     /// [page_token][google.cloud.talent.v4beta1.SearchProfilesRequest.page_token]
     /// is unset.
     ///
@@ -1364,9 +1339,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int DisableSpellCheckFieldNumber = 7;
     private bool disableSpellCheck_;
     /// <summary>
-    /// Optional.
-    ///
-    /// This flag controls the spell-check feature. If `false`, the
+    /// Optional. This flag controls the spell-check feature. If `false`, the
     /// service attempts to correct a misspelled query.
     ///
     /// For example, "enginee" is corrected to "engineer".
@@ -1383,9 +1356,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int OrderByFieldNumber = 8;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional.
-    ///
-    /// The criteria that determines how search results are sorted.
+    /// Optional. The criteria that determines how search results are sorted.
     /// Defaults is "relevance desc" if no value is specified.
     ///
     /// Supported options are:
@@ -1427,11 +1398,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int CaseSensitiveSortFieldNumber = 9;
     private bool caseSensitiveSort_;
     /// <summary>
-    /// Optional.
-    ///
-    /// When sort by field is based on alphabetical order, sort values case
-    /// sensitively (based on ASCII) when the value is set to true. Default value
-    /// is case in-sensitive sort (false).
+    /// Optional. When sort by field is based on alphabetical order, sort values
+    /// case sensitively (based on ASCII) when the value is set to true. Default
+    /// value is case in-sensitive sort (false).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool CaseSensitiveSort {
@@ -1447,10 +1416,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Talent.V4Beta1.HistogramQuery.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.HistogramQuery> histogramQueries_ = new pbc::RepeatedField<global::Google.Cloud.Talent.V4Beta1.HistogramQuery>();
     /// <summary>
-    /// Optional.
-    ///
-    /// A list of expressions specifies histogram requests against matching
-    /// profiles for
+    /// Optional. A list of expressions specifies histogram requests against
+    /// matching profiles for
     /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest].
     ///
     /// The expression syntax looks like a function definition with optional
@@ -1537,6 +1504,45 @@ namespace Google.Cloud.Talent.V4Beta1 {
       get { return histogramQueries_; }
     }
 
+    /// <summary>Field number for the "result_set_id" field.</summary>
+    public const int ResultSetIdFieldNumber = 12;
+    private string resultSetId_ = "";
+    /// <summary>
+    /// Optional. An id that uniquely identifies the result set of a
+    /// [SearchProfiles][] call.  The id should be retrieved from the
+    /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse]
+    /// message returned from a previous invocation of [SearchProfiles][].
+    ///
+    /// A result set is an ordered list of search results.
+    ///
+    /// If this field is not set, a new result set is computed based on the
+    /// [profile_query][google.cloud.talent.v4beta1.SearchProfilesRequest.profile_query].
+    /// A new
+    /// [result_set_id][google.cloud.talent.v4beta1.SearchProfilesRequest.result_set_id]
+    /// is returned as a handle to access this result set.
+    ///
+    /// If this field is set, the service will ignore the resource and
+    /// [profile_query][google.cloud.talent.v4beta1.SearchProfilesRequest.profile_query]
+    /// values, and simply retrieve a page of results from the corresponding result
+    /// set.  In this case, one and only one of [page_token] or [offset] must be
+    /// set.
+    ///
+    /// A typical use case is to invoke
+    /// [SearchProfilesRequest][google.cloud.talent.v4beta1.SearchProfilesRequest]
+    /// without this field, then use the resulting
+    /// [result_set_id][google.cloud.talent.v4beta1.SearchProfilesRequest.result_set_id]
+    /// in
+    /// [SearchProfilesResponse][google.cloud.talent.v4beta1.SearchProfilesResponse]
+    /// to page through the results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ResultSetId {
+      get { return resultSetId_; }
+      set {
+        resultSetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SearchProfilesRequest);
@@ -1560,6 +1566,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (OrderBy != other.OrderBy) return false;
       if (CaseSensitiveSort != other.CaseSensitiveSort) return false;
       if(!histogramQueries_.Equals(other.histogramQueries_)) return false;
+      if (ResultSetId != other.ResultSetId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1576,6 +1583,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
       if (CaseSensitiveSort != false) hash ^= CaseSensitiveSort.GetHashCode();
       hash ^= histogramQueries_.GetHashCode();
+      if (ResultSetId.Length != 0) hash ^= ResultSetId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1626,6 +1634,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         output.WriteBool(CaseSensitiveSort);
       }
       histogramQueries_.WriteTo(output, _repeated_histogramQueries_codec);
+      if (ResultSetId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(ResultSetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1662,6 +1674,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         size += 1 + 1;
       }
       size += histogramQueries_.CalculateSize(_repeated_histogramQueries_codec);
+      if (ResultSetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResultSetId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1707,6 +1722,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
         CaseSensitiveSort = other.CaseSensitiveSort;
       }
       histogramQueries_.Add(other.histogramQueries_);
+      if (other.ResultSetId.Length != 0) {
+        ResultSetId = other.ResultSetId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1764,6 +1782,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
             histogramQueries_.AddEntriesFrom(input, _repeated_histogramQueries_codec);
             break;
           }
+          case 98: {
+            ResultSetId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1804,6 +1826,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       nextPageToken_ = other.nextPageToken_;
       histogramQueryResults_ = other.histogramQueryResults_.Clone();
       summarizedProfiles_ = other.summarizedProfiles_.Clone();
+      resultSetId_ = other.resultSetId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1900,6 +1923,22 @@ namespace Google.Cloud.Talent.V4Beta1 {
       get { return summarizedProfiles_; }
     }
 
+    /// <summary>Field number for the "result_set_id" field.</summary>
+    public const int ResultSetIdFieldNumber = 7;
+    private string resultSetId_ = "";
+    /// <summary>
+    /// An id that uniquely identifies the result set of a
+    /// [SearchProfiles][google.cloud.talent.v4beta1.ProfileService.SearchProfiles]
+    /// call for consistent results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ResultSetId {
+      get { return resultSetId_; }
+      set {
+        resultSetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SearchProfilesResponse);
@@ -1919,6 +1958,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (NextPageToken != other.NextPageToken) return false;
       if(!histogramQueryResults_.Equals(other.histogramQueryResults_)) return false;
       if(!summarizedProfiles_.Equals(other.summarizedProfiles_)) return false;
+      if (ResultSetId != other.ResultSetId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1931,6 +1971,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
       hash ^= histogramQueryResults_.GetHashCode();
       hash ^= summarizedProfiles_.GetHashCode();
+      if (ResultSetId.Length != 0) hash ^= ResultSetId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1962,6 +2003,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       histogramQueryResults_.WriteTo(output, _repeated_histogramQueryResults_codec);
       summarizedProfiles_.WriteTo(output, _repeated_summarizedProfiles_codec);
+      if (ResultSetId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ResultSetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1984,6 +2029,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       size += histogramQueryResults_.CalculateSize(_repeated_histogramQueryResults_codec);
       size += summarizedProfiles_.CalculateSize(_repeated_summarizedProfiles_codec);
+      if (ResultSetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResultSetId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2015,6 +2063,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       }
       histogramQueryResults_.Add(other.histogramQueryResults_);
       summarizedProfiles_.Add(other.summarizedProfiles_);
+      if (other.ResultSetId.Length != 0) {
+        ResultSetId = other.ResultSetId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2054,6 +2105,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
           case 50: {
             summarizedProfiles_.AddEntriesFrom(input, _repeated_summarizedProfiles_codec);
+            break;
+          }
+          case 58: {
+            ResultSetId = input.ReadString();
             break;
           }
         }

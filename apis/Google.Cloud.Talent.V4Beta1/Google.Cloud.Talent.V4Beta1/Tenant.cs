@@ -25,9 +25,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvdGVuYW50LnByb3RvEhtn",
-            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaKGdvb2dsZS9jbG91ZC90YWxl",
-            "bnQvdjRiZXRhMS9jb21tb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8i+AEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFs",
+            "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEaHGdvb2dsZS9hcGkvYW5ub3Rh",
+            "dGlvbnMucHJvdG8aKGdvb2dsZS9jbG91ZC90YWxlbnQvdjRiZXRhMS9jb21t",
+            "b24ucHJvdG8i+AEKBlRlbmFudBIMCgRuYW1lGAEgASgJEhMKC2V4dGVybmFs",
             "X2lkGAIgASgJEkUKCnVzYWdlX3R5cGUYAyABKA4yMS5nb29nbGUuY2xvdWQu",
             "dGFsZW50LnY0YmV0YTEuVGVuYW50LkRhdGFVc2FnZVR5cGUSNAosa2V5d29y",
             "ZF9zZWFyY2hhYmxlX3Byb2ZpbGVfY3VzdG9tX2F0dHJpYnV0ZXMYBCADKAki",
@@ -37,7 +37,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
             "b3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.Tenant), global::Google.Cloud.Talent.V4Beta1.Tenant.Parser, new[]{ "Name", "ExternalId", "UsageType", "KeywordSearchableProfileCustomAttributes" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType) }, null)
           }));
@@ -113,9 +113,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ExternalIdFieldNumber = 2;
     private string externalId_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Client side tenant identifier, used to uniquely identify the tenant.
+    /// Required. Client side tenant identifier, used to uniquely identify the
+    /// tenant.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>
@@ -131,12 +130,12 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int UsageTypeFieldNumber = 3;
     private global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType usageType_ = 0;
     /// <summary>
-    /// Optional.
+    /// Optional. Indicates whether data owned by this tenant may be used to
+    /// provide product improvements across other tenants.
     ///
-    /// Indicates whether data owned by this tenant may be used to provide product
-    /// improvements across other tenants.
-    ///
-    /// Defaults behavior is [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED] if it's unset.
+    /// Defaults behavior is
+    /// [DataUsageType.ISOLATED][google.cloud.talent.v4beta1.Tenant.DataUsageType.ISOLATED]
+    /// if it's unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.Tenant.Types.DataUsageType UsageType {
@@ -152,11 +151,10 @@ namespace Google.Cloud.Talent.V4Beta1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> keywordSearchableProfileCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional.
-    ///
-    /// A list of keys of filterable [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes], whose
-    /// corresponding `string_values` are used in keyword searches. Profiles with
-    /// `string_values` under these specified field keys are returned if any
+    /// Optional. A list of keys of filterable
+    /// [Profile.custom_attributes][google.cloud.talent.v4beta1.Profile.custom_attributes],
+    /// whose corresponding `string_values` are used in keyword searches. Profiles
+    /// with `string_values` under these specified field keys are returned if any
     /// of the values match the search keyword. Custom field values with
     /// parenthesis, brackets and special symbols are not searchable as-is,
     /// and must be surrounded by quotes.

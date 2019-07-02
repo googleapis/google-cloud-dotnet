@@ -26,21 +26,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
           string.Concat(
             "Ci9nb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0YTEvZXZlbnRfc2VydmljZS5w",
             "cm90bxIbZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExGhxnb29nbGUvYXBp",
-            "L2Fubm90YXRpb25zLnByb3RvGidnb29nbGUvY2xvdWQvdGFsZW50L3Y0YmV0",
-            "YTEvZXZlbnQucHJvdG8iagoYQ3JlYXRlQ2xpZW50RXZlbnRSZXF1ZXN0Eg4K",
-            "BnBhcmVudBgBIAEoCRI+CgxjbGllbnRfZXZlbnQYAiABKAsyKC5nb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0YmV0YTEuQ2xpZW50RXZlbnQy9QEKDEV2ZW50U2Vy",
-            "dmljZRLkAQoRQ3JlYXRlQ2xpZW50RXZlbnQSNS5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuQ3JlYXRlQ2xpZW50RXZlbnRSZXF1ZXN0GiguZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NGJldGExLkNsaWVudEV2ZW50Im6C0+STAmgiMy92",
-            "NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKi90ZW5hbnRzLyp9L2NsaWVudEV2",
-            "ZW50czoBKlouIikvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2NsaWVu",
-            "dEV2ZW50czoBKkJ/Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "L2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxon",
+            "Z29vZ2xlL2Nsb3VkL3RhbGVudC92NGJldGExL2V2ZW50LnByb3RvImoKGENy",
+            "ZWF0ZUNsaWVudEV2ZW50UmVxdWVzdBIOCgZwYXJlbnQYASABKAkSPgoMY2xp",
+            "ZW50X2V2ZW50GAIgASgLMiguZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
+            "LkNsaWVudEV2ZW50MuMCCgxFdmVudFNlcnZpY2US5AEKEUNyZWF0ZUNsaWVu",
+            "dEV2ZW50EjUuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkNyZWF0ZUNs",
+            "aWVudEV2ZW50UmVxdWVzdBooLmdvb2dsZS5jbG91ZC50YWxlbnQudjRiZXRh",
+            "MS5DbGllbnRFdmVudCJugtPkkwJoIjMvdjRiZXRhMS97cGFyZW50PXByb2pl",
+            "Y3RzLyovdGVuYW50cy8qfS9jbGllbnRFdmVudHM6ASpaLiIpL3Y0YmV0YTEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qfS9jbGllbnRFdmVudHM6ASoabMpBE2pvYnMu",
+            "Z29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvam9ic0J/Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGEx",
             "QhFFdmVudFNlcnZpY2VQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
             "cm90by9nb29nbGVhcGlzL2Nsb3VkL3RhbGVudC92NGJldGExO3RhbGVudKIC",
             "A0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Talent.V4Beta1.EventReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest), global::Google.Cloud.Talent.V4Beta1.CreateClientEventRequest.Parser, new[]{ "Parent", "ClientEvent" }, null, null, null)
           }));
@@ -91,9 +94,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required.
-    ///
-    /// Resource name of the tenant under which the event is created.
+    /// Required. Resource name of the tenant under which the event is created.
     ///
     /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
     /// "projects/api-test-project/tenant/foo".
@@ -113,10 +114,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
     public const int ClientEventFieldNumber = 2;
     private global::Google.Cloud.Talent.V4Beta1.ClientEvent clientEvent_;
     /// <summary>
-    /// Required.
-    ///
-    /// Events issued when end user interacts with customer's application that
-    /// uses Cloud Talent Solution.
+    /// Required. Events issued when end user interacts with customer's application
+    /// that uses Cloud Talent Solution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4Beta1.ClientEvent ClientEvent {
