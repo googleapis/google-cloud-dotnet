@@ -17,6 +17,7 @@ using Google.Cloud.Tools.SourceManipulation;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -76,7 +77,8 @@ namespace Grafeas.V1.FixGeneratedCode
                 _channelDeclaration = SyntaxFactory.ParseStatement("Channel channel = null;")
                     // TODO: Potentially format the node automatically instead of hard-coding whitespace.
                     .WithLeadingTrivia(SyntaxFactory.Whitespace("            "))
-                    .WithTrailingTrivia(SyntaxFactory.Whitespace("\r\n"));
+                    // By using the native linebreak format, we avoid generating whitespace-only git changes.
+                    .WithTrailingTrivia(SyntaxFactory.Whitespace(Environment.NewLine));
                 _clientCreation = SyntaxFactory.ParseStatement("GrafeasClient grafeasClient = GrafeasClient.Create(channel);");
             }
 
