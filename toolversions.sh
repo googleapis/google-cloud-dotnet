@@ -28,6 +28,13 @@ else
   exit 1
 fi
 
+# When running in Java 9+, we want to disable some warnings... but
+# the options aren't available in Java 8. Even detecting Java 9+ is ugly :(
+if java -? 2>&1 | grep -q add-modules
+then
+  declare -r JAVA9OPTS="--add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED"
+fi
+
 # Cross-platform tools
 case "$OSTYPE" in
   linux*)

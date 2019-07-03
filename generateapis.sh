@@ -120,8 +120,6 @@ generate_gapicgenerator() {
 
 
   jvm_args=()
-  jvm_args+=(--add-opens=java.base/java.nio=ALL-UNNAMED)
-  jvm_args+=(--add-opens=java.base/java.lang=ALL-UNNAMED)
   jvm_args+=(-cp gapic-generator/build/libs/gapic-generator-${GAPIC_GENERATOR_VERSION}-all.jar)
   
   args=()
@@ -133,7 +131,7 @@ generate_gapicgenerator() {
 
   # Suppress protobuf warnings in Java 9/10. By the time they
   # become a problem, we won't be using Java...
-  java ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]} \
+  java $JAVA9OPTS ${jvm_args[*]} com.google.api.codegen.GeneratorMain GAPIC_CODE ${args[*]} \
   2>&1 | grep -v "does not have control environment" || true # Ignore control environment warnings (and grep exit code)
 
   cp -r $API_TMP_DIR/$1 $API_OUT_DIR
