@@ -10,9 +10,9 @@ package = Path(__file__).parent.name
 
 bash = '/bin/bash'
 if sys.platform == 'win32':
-  bash = '"C:\\Program Files\\Git\\bin\\bash.exe"'
+  bash = 'C:\\Program Files\\Git\\bin\\bash.exe'
 
 shell.run(
-  f'{bash} generateapis.sh {package}',
+  (bash, 'generateapis.sh', package),
   cwd = root,
   hide_output = False)
