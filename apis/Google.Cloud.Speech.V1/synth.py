@@ -1,4 +1,4 @@
-import os
+import sys
 from synthtool import shell
 from pathlib import Path
 
@@ -8,7 +8,11 @@ from pathlib import Path
 root = Path(__file__).parent.parent.parent
 package = Path(__file__).parent.name
 
+bash = '/bin/bash'
+if sys.platform == 'win32':
+  bash = '"C:\\Program Files\\Git\\bin\\bash.exe"'
+
 shell.run(
-  f'"C:\\Program Files\\Git\\bin\\bash.exe" generateapis.sh {package}',
+  f'{bash} generateapis.sh {package}',
   cwd = root,
   hide_output = False)
