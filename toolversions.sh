@@ -103,6 +103,23 @@ install_docfx() {
   fi  
 }
 
+install_dotnet() {
+  # This might be due to the incorrect version being installed,
+  # or it not being present at all.
+  if ! dotnet --version 2>&1 > /dev/null
+  then
+    case "$OSTYPE" in
+      linux*)
+        # Assumption: we're running in a Kokoro build and don't need sudo
+        apt-get install dotnet-sdk-2.2
+        ;;
+      *)
+        echo "Please install the version of the .NET Core listed in global.json"
+        exit 1
+    esac
+  fi
+}
+
 # Logs to both stdout and a build timing log, allowing
 # post-processing to see how long each part of the build takes.
 log_build_action() {
