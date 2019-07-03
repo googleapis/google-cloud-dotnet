@@ -51,6 +51,8 @@ namespace Google.Cloud.Dialogflow.V2
         private AgentsSettings(AgentsSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            SetAgentSettings = existing.SetAgentSettings;
+            DeleteAgentSettings = existing.DeleteAgentSettings;
             GetAgentSettings = existing.GetAgentSettings;
             SearchAgentsSettings = existing.SearchAgentsSettings;
             TrainAgentSettings = existing.TrainAgentSettings;
@@ -61,8 +63,6 @@ namespace Google.Cloud.Dialogflow.V2
             ImportAgentOperationsSettings = existing.ImportAgentOperationsSettings?.Clone();
             RestoreAgentSettings = existing.RestoreAgentSettings;
             RestoreAgentOperationsSettings = existing.RestoreAgentOperationsSettings?.Clone();
-            SetAgentSettings = existing.SetAgentSettings;
-            DeleteAgentSettings = existing.DeleteAgentSettings;
             OnCopy(existing);
         }
 
@@ -131,6 +131,66 @@ namespace Google.Cloud.Dialogflow.V2
             maxDelay: sys::TimeSpan.FromMilliseconds(20000),
             delayMultiplier: 1.0
         );
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentsClient.SetAgent</c> and <c>AgentsClient.SetAgentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AgentsClient.SetAgent</c> and
+        /// <c>AgentsClient.SetAgentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings SetAgentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AgentsClient.DeleteAgent</c> and <c>AgentsClient.DeleteAgentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>AgentsClient.DeleteAgent</c> and
+        /// <c>AgentsClient.DeleteAgentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.0</description></item>
+        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="grpccore::StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="grpccore::StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAgentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
+            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
+                retryFilter: IdempotentRetryFilter
+            )));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -396,64 +456,6 @@ namespace Google.Cloud.Dialogflow.V2
         };
 
         /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AgentsClient.SetAgent</c> and <c>AgentsClient.SetAgentAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>AgentsClient.SetAgent</c> and
-        /// <c>AgentsClient.SetAgentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings SetAgentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AgentsClient.DeleteAgent</c> and <c>AgentsClient.DeleteAgentAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// The default <c>AgentsClient.DeleteAgent</c> and
-        /// <c>AgentsClient.DeleteAgentAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 20000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 20000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteAgentSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
-
-        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="AgentsSettings"/> object.</returns>
@@ -652,6 +654,295 @@ namespace Google.Cloud.Dialogflow.V2
         public virtual Agents.AgentsClient GrpcClient
         {
             get { throw new sys::NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="agent">
+        /// Required. The agent to update.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Agent> SetAgentAsync(
+            Agent agent,
+            gaxgrpc::CallSettings callSettings = null) => SetAgentAsync(
+                new SetAgentRequest
+                {
+                    Agent = gax::GaxPreconditions.CheckNotNull(agent, nameof(agent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="agent">
+        /// Required. The agent to update.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Agent> SetAgentAsync(
+            Agent agent,
+            st::CancellationToken cancellationToken) => SetAgentAsync(
+                agent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="agent">
+        /// Required. The agent to update.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Agent SetAgent(
+            Agent agent,
+            gaxgrpc::CallSettings callSettings = null) => SetAgent(
+                new SetAgentRequest
+                {
+                    Agent = gax::GaxPreconditions.CheckNotNull(agent, nameof(agent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Agent> SetAgentAsync(
+            SetAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual stt::Task<Agent> SetAgentAsync(
+            SetAgentRequest request,
+            st::CancellationToken cancellationToken) => SetAgentAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Agent SetAgent(
+            SetAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to delete is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAgentAsync(
+            gaxres::ProjectName parent,
+            gaxgrpc::CallSettings callSettings = null) => DeleteAgentAsync(
+                new DeleteAgentRequest
+                {
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to delete is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAgentAsync(
+            gaxres::ProjectName parent,
+            st::CancellationToken cancellationToken) => DeleteAgentAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to delete is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteAgent(
+            gaxres::ProjectName parent,
+            gaxgrpc::CallSettings callSettings = null) => DeleteAgent(
+                new DeleteAgentRequest
+                {
+                    ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to delete is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAgentAsync(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => DeleteAgentAsync(
+                new DeleteAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to delete is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAgentAsync(
+            string parent,
+            st::CancellationToken cancellationToken) => DeleteAgentAsync(
+                parent,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project that the agent to delete is associated with.
+        /// Format: `projects/&lt;Project ID&gt;`.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteAgent(
+            string parent,
+            gaxgrpc::CallSettings callSettings = null) => DeleteAgent(
+                new DeleteAgentRequest
+                {
+                    Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAgentAsync(
+            DeleteAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="cancellationToken">
+        /// A <see cref="st::CancellationToken"/> to use for this RPC.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public virtual stt::Task DeleteAgentAsync(
+            DeleteAgentRequest request,
+            st::CancellationToken cancellationToken) => DeleteAgentAsync(
+                request,
+                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public virtual void DeleteAgent(
+            DeleteAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            throw new sys::NotImplementedException();
         }
 
         /// <summary>
@@ -1640,115 +1931,6 @@ namespace Google.Cloud.Dialogflow.V2
                 RestoreAgentOperationsClient,
                 callSettings);
 
-        /// <summary>
-        /// Creates/updates the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Agent> SetAgentAsync(
-            SetAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Creates/updates the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual stt::Task<Agent> SetAgentAsync(
-            SetAgentRequest request,
-            st::CancellationToken cancellationToken) => SetAgentAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates/updates the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual Agent SetAgent(
-            SetAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Deletes the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteAgentAsync(
-            DeleteAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
-        /// <summary>
-        /// Deletes the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="st::CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public virtual stt::Task DeleteAgentAsync(
-            DeleteAgentRequest request,
-            st::CancellationToken cancellationToken) => DeleteAgentAsync(
-                request,
-                gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Deletes the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public virtual void DeleteAgent(
-            DeleteAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            throw new sys::NotImplementedException();
-        }
-
     }
 
     /// <summary>
@@ -1756,14 +1938,14 @@ namespace Google.Cloud.Dialogflow.V2
     /// </summary>
     public sealed partial class AgentsClientImpl : AgentsClient
     {
+        private readonly gaxgrpc::ApiCall<SetAgentRequest, Agent> _callSetAgent;
+        private readonly gaxgrpc::ApiCall<DeleteAgentRequest, pbwkt::Empty> _callDeleteAgent;
         private readonly gaxgrpc::ApiCall<GetAgentRequest, Agent> _callGetAgent;
         private readonly gaxgrpc::ApiCall<SearchAgentsRequest, SearchAgentsResponse> _callSearchAgents;
         private readonly gaxgrpc::ApiCall<TrainAgentRequest, lro::Operation> _callTrainAgent;
         private readonly gaxgrpc::ApiCall<ExportAgentRequest, lro::Operation> _callExportAgent;
         private readonly gaxgrpc::ApiCall<ImportAgentRequest, lro::Operation> _callImportAgent;
         private readonly gaxgrpc::ApiCall<RestoreAgentRequest, lro::Operation> _callRestoreAgent;
-        private readonly gaxgrpc::ApiCall<SetAgentRequest, Agent> _callSetAgent;
-        private readonly gaxgrpc::ApiCall<DeleteAgentRequest, pbwkt::Empty> _callDeleteAgent;
 
         /// <summary>
         /// Constructs a client wrapper for the Agents service, with the specified gRPC client and settings.
@@ -1783,6 +1965,12 @@ namespace Google.Cloud.Dialogflow.V2
                 grpcClient.CreateOperationsClient(), effectiveSettings.ImportAgentOperationsSettings);
             RestoreAgentOperationsClient = new lro::OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.RestoreAgentOperationsSettings);
+            _callSetAgent = clientHelper.BuildApiCall<SetAgentRequest, Agent>(
+                GrpcClient.SetAgentAsync, GrpcClient.SetAgent, effectiveSettings.SetAgentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"agent.parent={request.Agent?.Parent}"));
+            _callDeleteAgent = clientHelper.BuildApiCall<DeleteAgentRequest, pbwkt::Empty>(
+                GrpcClient.DeleteAgentAsync, GrpcClient.DeleteAgent, effectiveSettings.DeleteAgentSettings)
+                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
             _callGetAgent = clientHelper.BuildApiCall<GetAgentRequest, Agent>(
                 GrpcClient.GetAgentAsync, GrpcClient.GetAgent, effectiveSettings.GetAgentSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
@@ -1801,12 +1989,10 @@ namespace Google.Cloud.Dialogflow.V2
             _callRestoreAgent = clientHelper.BuildApiCall<RestoreAgentRequest, lro::Operation>(
                 GrpcClient.RestoreAgentAsync, GrpcClient.RestoreAgent, effectiveSettings.RestoreAgentSettings)
                 .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
-            _callSetAgent = clientHelper.BuildApiCall<SetAgentRequest, Agent>(
-                GrpcClient.SetAgentAsync, GrpcClient.SetAgent, effectiveSettings.SetAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"agent.parent={request.Agent?.Parent}"));
-            _callDeleteAgent = clientHelper.BuildApiCall<DeleteAgentRequest, pbwkt::Empty>(
-                GrpcClient.DeleteAgentAsync, GrpcClient.DeleteAgent, effectiveSettings.DeleteAgentSettings)
-                .WithCallSettingsOverlay(request => gaxgrpc::CallSettings.FromHeader("x-goog-request-params", $"parent={request.Parent}"));
+            Modify_ApiCall(ref _callSetAgent);
+            Modify_SetAgentApiCall(ref _callSetAgent);
+            Modify_ApiCall(ref _callDeleteAgent);
+            Modify_DeleteAgentApiCall(ref _callDeleteAgent);
             Modify_ApiCall(ref _callGetAgent);
             Modify_GetAgentApiCall(ref _callGetAgent);
             Modify_ApiCall(ref _callSearchAgents);
@@ -1819,10 +2005,6 @@ namespace Google.Cloud.Dialogflow.V2
             Modify_ImportAgentApiCall(ref _callImportAgent);
             Modify_ApiCall(ref _callRestoreAgent);
             Modify_RestoreAgentApiCall(ref _callRestoreAgent);
-            Modify_ApiCall(ref _callSetAgent);
-            Modify_SetAgentApiCall(ref _callSetAgent);
-            Modify_ApiCall(ref _callDeleteAgent);
-            Modify_DeleteAgentApiCall(ref _callDeleteAgent);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1836,14 +2018,14 @@ namespace Google.Cloud.Dialogflow.V2
 
         // Partial methods called for each ApiCall on construction.
         // Allows per-RPC-method modification of the underlying ApiCall object.
+        partial void Modify_SetAgentApiCall(ref gaxgrpc::ApiCall<SetAgentRequest, Agent> call);
+        partial void Modify_DeleteAgentApiCall(ref gaxgrpc::ApiCall<DeleteAgentRequest, pbwkt::Empty> call);
         partial void Modify_GetAgentApiCall(ref gaxgrpc::ApiCall<GetAgentRequest, Agent> call);
         partial void Modify_SearchAgentsApiCall(ref gaxgrpc::ApiCall<SearchAgentsRequest, SearchAgentsResponse> call);
         partial void Modify_TrainAgentApiCall(ref gaxgrpc::ApiCall<TrainAgentRequest, lro::Operation> call);
         partial void Modify_ExportAgentApiCall(ref gaxgrpc::ApiCall<ExportAgentRequest, lro::Operation> call);
         partial void Modify_ImportAgentApiCall(ref gaxgrpc::ApiCall<ImportAgentRequest, lro::Operation> call);
         partial void Modify_RestoreAgentApiCall(ref gaxgrpc::ApiCall<RestoreAgentRequest, lro::Operation> call);
-        partial void Modify_SetAgentApiCall(ref gaxgrpc::ApiCall<SetAgentRequest, Agent> call);
-        partial void Modify_DeleteAgentApiCall(ref gaxgrpc::ApiCall<DeleteAgentRequest, pbwkt::Empty> call);
         partial void OnConstruction(Agents.AgentsClient grpcClient, AgentsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>
@@ -1854,14 +2036,91 @@ namespace Google.Cloud.Dialogflow.V2
         // Partial methods called on each request.
         // Allows per-RPC-call modification to the request and CallSettings objects,
         // before the underlying RPC is performed.
+        partial void Modify_SetAgentRequest(ref SetAgentRequest request, ref gaxgrpc::CallSettings settings);
+        partial void Modify_DeleteAgentRequest(ref DeleteAgentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_GetAgentRequest(ref GetAgentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_SearchAgentsRequest(ref SearchAgentsRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_TrainAgentRequest(ref TrainAgentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ExportAgentRequest(ref ExportAgentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_ImportAgentRequest(ref ImportAgentRequest request, ref gaxgrpc::CallSettings settings);
         partial void Modify_RestoreAgentRequest(ref RestoreAgentRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_SetAgentRequest(ref SetAgentRequest request, ref gaxgrpc::CallSettings settings);
-        partial void Modify_DeleteAgentRequest(ref DeleteAgentRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override stt::Task<Agent> SetAgentAsync(
+            SetAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetAgentRequest(ref request, ref callSettings);
+            return _callSetAgent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates/updates the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override Agent SetAgent(
+            SetAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetAgentRequest(ref request, ref callSettings);
+            return _callSetAgent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task that completes when the RPC has completed.
+        /// </returns>
+        public override stt::Task DeleteAgentAsync(
+            DeleteAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAgentRequest(ref request, ref callSettings);
+            return _callDeleteAgent.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes the specified agent.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        public override void DeleteAgent(
+            DeleteAgentRequest request,
+            gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAgentRequest(ref request, ref callSettings);
+            _callDeleteAgent.Sync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified agent.
@@ -2172,83 +2431,6 @@ namespace Google.Cloud.Dialogflow.V2
         /// The long-running operations client for <c>RestoreAgent</c>.
         /// </summary>
         public override lro::OperationsClient RestoreAgentOperationsClient { get; }
-
-        /// <summary>
-        /// Creates/updates the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override stt::Task<Agent> SetAgentAsync(
-            SetAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_SetAgentRequest(ref request, ref callSettings);
-            return _callSetAgent.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Creates/updates the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override Agent SetAgent(
-            SetAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_SetAgentRequest(ref request, ref callSettings);
-            return _callSetAgent.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task that completes when the RPC has completed.
-        /// </returns>
-        public override stt::Task DeleteAgentAsync(
-            DeleteAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteAgentRequest(ref request, ref callSettings);
-            return _callDeleteAgent.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Deletes the specified agent.
-        /// </summary>
-        /// <param name="request">
-        /// The request object containing all of the parameters for the API call.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        public override void DeleteAgent(
-            DeleteAgentRequest request,
-            gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteAgentRequest(ref request, ref callSettings);
-            _callDeleteAgent.Sync(request, callSettings);
-        }
 
     }
 

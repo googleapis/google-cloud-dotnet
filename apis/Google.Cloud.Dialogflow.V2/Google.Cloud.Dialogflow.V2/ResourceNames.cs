@@ -829,6 +829,19 @@ namespace Google.Cloud.Dialogflow.V2
 
     }
 
+    public partial class DeleteAgentRequest
+    {
+        /// <summary>
+        /// <see cref="gaxres::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gaxres::ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : gaxres::ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class DeleteAllContextsRequest
     {
         /// <summary>

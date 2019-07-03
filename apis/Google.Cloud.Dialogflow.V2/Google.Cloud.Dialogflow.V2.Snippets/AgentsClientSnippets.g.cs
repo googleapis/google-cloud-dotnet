@@ -35,6 +35,126 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
     /// <summary>Generated snippets</summary>
     public class GeneratedAgentsClientSnippets
     {
+        /// <summary>Snippet for SetAgentAsync</summary>
+        public async Task SetAgentAsync()
+        {
+            // Snippet: SetAgentAsync(Agent,CallSettings)
+            // Additional: SetAgentAsync(Agent,CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            Agent agent = new Agent();
+            // Make the request
+            Agent response = await agentsClient.SetAgentAsync(agent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgent</summary>
+        public void SetAgent()
+        {
+            // Snippet: SetAgent(Agent,CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            Agent agent = new Agent();
+            // Make the request
+            Agent response = agentsClient.SetAgent(agent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgentAsync</summary>
+        public async Task SetAgentAsync_RequestObject()
+        {
+            // Snippet: SetAgentAsync(SetAgentRequest,CallSettings)
+            // Additional: SetAgentAsync(SetAgentRequest,CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            SetAgentRequest request = new SetAgentRequest
+            {
+                Agent = new Agent(),
+            };
+            // Make the request
+            Agent response = await agentsClient.SetAgentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetAgent</summary>
+        public void SetAgent_RequestObject()
+        {
+            // Snippet: SetAgent(SetAgentRequest,CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            SetAgentRequest request = new SetAgentRequest
+            {
+                Agent = new Agent(),
+            };
+            // Make the request
+            Agent response = agentsClient.SetAgent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentAsync</summary>
+        public async Task DeleteAgentAsync()
+        {
+            // Snippet: DeleteAgentAsync(ProjectName,CallSettings)
+            // Additional: DeleteAgentAsync(ProjectName,CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = new ProjectName("[PROJECT]");
+            // Make the request
+            await agentsClient.DeleteAgentAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgent</summary>
+        public void DeleteAgent()
+        {
+            // Snippet: DeleteAgent(ProjectName,CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = new ProjectName("[PROJECT]");
+            // Make the request
+            agentsClient.DeleteAgent(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentAsync</summary>
+        public async Task DeleteAgentAsync_RequestObject()
+        {
+            // Snippet: DeleteAgentAsync(DeleteAgentRequest,CallSettings)
+            // Additional: DeleteAgentAsync(DeleteAgentRequest,CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAgentRequest request = new DeleteAgentRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            await agentsClient.DeleteAgentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgent</summary>
+        public void DeleteAgent_RequestObject()
+        {
+            // Snippet: DeleteAgent(DeleteAgentRequest,CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            DeleteAgentRequest request = new DeleteAgentRequest
+            {
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            agentsClient.DeleteAgent(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetAgentAsync</summary>
         public async Task GetAgentAsync()
         {
@@ -668,60 +788,6 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 // The long-running operation is now complete.
             }
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetAgentAsync</summary>
-        public async Task SetAgentAsync_RequestObject()
-        {
-            // Snippet: SetAgentAsync(SetAgentRequest,CallSettings)
-            // Additional: SetAgentAsync(SetAgentRequest,CancellationToken)
-            // Create client
-            AgentsClient agentsClient = await AgentsClient.CreateAsync();
-            // Initialize request argument(s)
-            SetAgentRequest request = new SetAgentRequest();
-            // Make the request
-            Agent response = await agentsClient.SetAgentAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for SetAgent</summary>
-        public void SetAgent_RequestObject()
-        {
-            // Snippet: SetAgent(SetAgentRequest,CallSettings)
-            // Create client
-            AgentsClient agentsClient = AgentsClient.Create();
-            // Initialize request argument(s)
-            SetAgentRequest request = new SetAgentRequest();
-            // Make the request
-            Agent response = agentsClient.SetAgent(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAgentAsync</summary>
-        public async Task DeleteAgentAsync_RequestObject()
-        {
-            // Snippet: DeleteAgentAsync(DeleteAgentRequest,CallSettings)
-            // Additional: DeleteAgentAsync(DeleteAgentRequest,CancellationToken)
-            // Create client
-            AgentsClient agentsClient = await AgentsClient.CreateAsync();
-            // Initialize request argument(s)
-            DeleteAgentRequest request = new DeleteAgentRequest();
-            // Make the request
-            await agentsClient.DeleteAgentAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for DeleteAgent</summary>
-        public void DeleteAgent_RequestObject()
-        {
-            // Snippet: DeleteAgent(DeleteAgentRequest,CallSettings)
-            // Create client
-            AgentsClient agentsClient = AgentsClient.Create();
-            // Initialize request argument(s)
-            DeleteAgentRequest request = new DeleteAgentRequest();
-            // Make the request
-            agentsClient.DeleteAgent(request);
             // End snippet
         }
 
