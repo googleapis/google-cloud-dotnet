@@ -27,7 +27,7 @@ The following libraries are available at a [GA](#versioning) quality level:
 * [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1/) (GA)
 * [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/) (GA)
 * [Stackdriver Trace v1](https://cloud.google.com/trace/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (GA)
-* [Google Cloud Tasks](https://cloud.google.com/cloud-tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
+* [Google Cloud Tasks](https://cloud.google.com/tasks/) -[API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Tasks.V2/) (GA)
 * [Google Cloud Translation](https://cloud.google.com/translate/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Translation.V2/) (GA)
 * [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence/) - [API docs](https://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.VideoIntelligence.V1/) (GA)
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googleapis.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (GA)
