@@ -215,7 +215,8 @@ generate_api() {
 # Entry point
 
 install_protoc
-install_grpc  
+install_grpc
+install_dotnet
 fetch_github_repos
 GAPIC_GENERATOR_VERSION=$(cat gapic-generator/version.txt)
 
