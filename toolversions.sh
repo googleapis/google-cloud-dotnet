@@ -117,8 +117,8 @@ install_dotnet() {
   then
     case "$OSTYPE" in
       linux*)
-        # Assumption: we're running in a Kokoro build and don't need sudo
-        apt-get install dotnet-sdk-2.2
+        echo "Installing .NET Core SDK"
+        sudo apt-get install dotnet-sdk-2.2
         ;;
       *)
         echo "Please install the version of the .NET Core listed in global.json"
