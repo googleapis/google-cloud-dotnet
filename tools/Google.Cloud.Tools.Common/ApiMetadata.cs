@@ -48,6 +48,22 @@ namespace Google.Cloud.Tools.Common
         public Dictionary<string, string> Dependencies { get; set; } = new Dictionary<string, string>();
         public Dictionary<string, string> TestDependencies { get; set; } = new Dictionary<string, string>();
         public List<string> MetaApis { get; set; } // TODO: enum?
+        
+        /// <summary>
+        /// The type of generator used to generate source code for this API.
+        /// </summary>
+        public GeneratorType Generator { get; set;  }
+        
+        /// <summary>
+        /// The path within googleapis for the API protos.
+        /// </summary>
+        public string ProtoPath { get; set; }
+        
+        /// <summary>
+        /// The path in the directory above <see cref="ProtoPath"/> for the service YAML.
+        /// (Only appropriate for GAPIC generated APIs.)
+        /// </summary>
+        public string ServiceYaml { get; set; }
 
         public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
 
