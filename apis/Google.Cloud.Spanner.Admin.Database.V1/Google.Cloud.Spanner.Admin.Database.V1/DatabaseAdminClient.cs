@@ -168,28 +168,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <remarks>
         /// The default <c>DatabaseAdminClient.CreateDatabase</c> and
-        /// <c>DatabaseAdminClient.CreateDatabaseAsync</c> <see cref="gaxgrpc::RetrySettings"/> are:
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 32000 milliseconds</description></item>
-        /// <item><description>Initial timeout: 60000 milliseconds</description></item>
-        /// <item><description>Timeout multiplier: 1.0</description></item>
-        /// <item><description>Timeout maximum delay: 60000 milliseconds</description></item>
-        /// </list>
-        /// Retry will be attempted on the following response status codes:
-        /// <list>
-        /// <item><description>No status codes</description></item>
-        /// </list>
-        /// Default RPC expiration is 600000 milliseconds.
+        /// <c>DatabaseAdminClient.CreateDatabaseAsync</c> timing is an expiration of one hour with no retry.
         /// </remarks>
         public gaxgrpc::CallSettings CreateDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromCallTiming(
-            gaxgrpc::CallTiming.FromRetry(new gaxgrpc::RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
+            gaxgrpc::CallTiming.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>DatabaseAdminClient.CreateDatabase</c>.
