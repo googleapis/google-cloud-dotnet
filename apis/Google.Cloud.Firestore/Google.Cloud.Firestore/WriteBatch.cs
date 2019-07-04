@@ -260,9 +260,10 @@ namespace Google.Cloud.Firestore
                     UpdateMask = includeEmptyUpdatePath || updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null
                 }, true));
                 includeTransformInWriteResults = false;
+                // Don't include the precondition in the Transform write, if there is one.
                 precondition = null;
             }
-            if (sentinelFields.Count > 0 || precondition != null)
+            if (sentinelFields.Count > 0)
             {
                 Elements.Add(new BatchElement(new Write
                 {
