@@ -203,7 +203,7 @@
     "serviceYaml": "containeranalysis_v1.yaml",
     "productName": "Google Container Analysis",
     "productUrl": "https://cloud.google.com/container-registry/docs/container-analysis/",
-    "version": "1.0.0-beta04",
+    "version": "1.0.0-beta05",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Container Analysis API.",
     "tags": [ "analysis", "artifact", "metadata", "grafeas" ],
@@ -1047,7 +1047,7 @@
     "serviceYaml": "grafeas_v1.yaml",
     "productName": "Grafeas",
     "productUrl": "https://grafeas.io/",
-    "version": "1.0.0-beta04",
+    "version": "1.0.0-beta05",
     "type": "grpc",
     "description": "Recommended client library to access Grafeas, an open artifact metadata API to audit and govern your software supply chain.",
     "tags": [ "audit", "metadata", "artifact", "grafeas"  ]
