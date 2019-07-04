@@ -1631,9 +1631,10 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Rule for modifying a CustomInfoType to alter behavior under certain
-      /// circumstances, depending on the specific details of the rule. Not supported
-      /// for the `surrogate_type` custom info type.
+      /// Deprecated; use `InspectionRuleSet` instead. Rule for modifying a
+      /// `CustomInfoType` to alter behavior under certain circumstances, depending
+      /// on the specific details of the rule. Not supported for the `surrogate_type`
+      /// custom infoType.
       /// </summary>
       public sealed partial class DetectionRule : pb::IMessage<DetectionRule> {
         private static readonly pb::MessageParser<DetectionRule> _parser = new pb::MessageParser<DetectionRule>(() => new DetectionRule());
