@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="2.4.0-beta02" />
+    <PackageReference Include="HdrHistogram" Version="2.5.0" />
+  </ItemGroup>
+
+</Project>
