@@ -66,7 +66,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
         // Hard-coded versions for all analyzer projects.
         private static readonly Dictionary<string, string> CommonAnalyzerDependencies = new Dictionary<string, string>
         {
-            { CSharpWorkspacesPackage, "3.1.0" }
+            { CSharpWorkspacesPackage, "2.4.0" }
         };
 
         // Hard-coded versions for all test packages. These can be defaulted even for stable packages, whereas
