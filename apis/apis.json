@@ -54,8 +54,7 @@
     "type": "rest",
     "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
     "dependencies": {
-      "Google.Api.Gax.Rest": "2.8.0-beta01",
-      "Google.Apis.Bigquery.v2": "1.40.2.1616"
+      "Google.Apis.Bigquery.v2": "1.40.2.1634"
     },
     "testDependencies": {
       "Google.Cloud.Storage.V1": "project"
@@ -75,14 +74,12 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Bigtable.Common.V2": "project",
-      "Grpc.Core": "1.21.0"
+      "Google.Cloud.Bigtable.Common.V2": "project"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "2.7.0"
+      "Google.Api.Gax.Grpc.Testing": "2.9.0"
     }
   },
 
@@ -94,8 +91,8 @@
     "description": "Common code used by Bigtable V2 APIs",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax": "2.7.0",
-      "Google.Protobuf": "3.6.1"
+      "Google.Api.Gax": "2.9.0",
+      "Google.Protobuf": "3.8.0"
     }
   },
   
@@ -111,13 +108,11 @@
     "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
     "tags": [ "Bigtable" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.8.0-beta01",
-      "Google.Api.Gax.Grpc.Gcp": "2.8.0-beta01",
-      "Google.Cloud.Bigtable.Common.V2": "project",
-      "Grpc.Core": "1.21.0"
+      "Google.Api.Gax.Grpc.Gcp": "default",
+      "Google.Cloud.Bigtable.Common.V2": "project"
     },
     "testDependencies": {
-      "Google.Api.Gax.Grpc.Testing": "2.8.0-beta01",
+      "Google.Api.Gax.Grpc.Testing": "default",
       "Google.Cloud.Bigtable.Admin.V2": "project"
     }
   },
@@ -251,7 +246,7 @@
     "testDependencies": {
       "Google.Cloud.Diagnostics.Common.Tests": "project",
       "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
-      "Google.Api.Gax.Testing": "2.7.0"
+      "Google.Api.Gax.Testing": "default"
     },
     "additionalAnalyzerTestDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
@@ -304,8 +299,7 @@
     "description": "Recommended Google client library to access the Google Dialogflow API.",
     "tags": [ "dialogflow", "iot" ],
     "dependencies": {
-      "Google.LongRunning": "1.1.0",
-      "Google.Api.CommonProtos": "1.6.0"
+      "Google.LongRunning": "1.1.0"
     },
     "testDependencies": {
       "Microsoft.AspNetCore.Mvc.Core": "1.0.4"
@@ -393,11 +387,11 @@
     "tags": [ "firestore", "firebase" ],
     "dependencies": {
       "Google.Cloud.Firestore.V1": "project",
-      "Grpc.Core": "1.21.0"
+      "Grpc.Core": "1.22.0"
     },
     "testDependencies": {
       "Google.Api.Gax.Testing": "default",
-      "Grpc.Core.Testing": "1.21.0",
+      "Grpc.Core.Testing": "1.22.0",
       "System.ValueTuple": "4.4.0"
     }
   },
@@ -485,13 +479,13 @@
     "tags": [ "Log4Net", "Logging", "Stackdriver" ],
     "dependencies": {
       "log4net": "2.0.8",
-      "Google.Api.Gax.Grpc": "2.7.0",
+      "Google.Api.Gax.Grpc": "default",
       "Google.Cloud.Logging.V2": "2.2.0",
       "Google.Cloud.DevTools.Common": "1.0.0",
-      "Grpc.Core": "1.21.0"
+      "Grpc.Core": "default"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.7.0"
+      "Google.Api.Gax.Testing": "default"
     }
   },
 
@@ -505,13 +499,13 @@
     "tags": [ "NLog", "Logging", "Stackdriver" ],
     "dependencies": {
       "NLog": "4.5.11",
-      "Google.Api.Gax.Grpc": "2.7.0",
+      "Google.Api.Gax.Grpc": "default",
       "Google.Cloud.Logging.V2": "2.2.0",
       "Google.Cloud.DevTools.Common": "1.0.0",
-      "Grpc.Core": "1.21.0"
+      "Grpc.Core": "default"
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.7.0"
+      "Google.Api.Gax.Testing": "default"
     }
   },
 
@@ -555,7 +549,7 @@
     "description": "Google Compute Engine Metadata v1 client library",
     "tags": [ "Metadata" ],
     "dependencies": {
-      "Google.Apis.Compute.v1": "1.39.0.1553"
+      "Google.Apis.Compute.v1": "1.40.2.1629"
     }
   },
 
@@ -739,11 +733,9 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Spanner.Common.V1": "project",
-      "Grpc.Core": "1.21.0"
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -761,11 +753,9 @@
     "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.LongRunning": "1.1.0",
       "Google.Cloud.Iam.V1": "1.2.0",
-      "Google.Cloud.Spanner.Common.V1": "project",
-      "Grpc.Core": "1.21.0"
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -778,17 +768,15 @@
     "description": "Google ADO.NET Provider for Google Cloud Spanner.",
     "tags": [ "Spanner", "ADO" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0",
       "Google.Cloud.Spanner.V1": "project",
       "Google.Cloud.Spanner.Admin.Database.V1": "project",
       "Google.Cloud.Spanner.Admin.Instance.V1": "project",
-      "Grpc.Core": "1.21.0",
       "Grpc.Gcp": "1.1.1"
     },
     "testDependencies": {
       "CoreCompat.EnterpriseLibrary.TransientFaultHandling": "6.0.1304-r3",
-      "Google.Api.Gax.Testing": "2.7.0",
-      "Google.Api.Gax.Grpc.Testing": "2.7.0"
+      "Google.Api.Gax.Testing": "default",
+      "Google.Api.Gax.Grpc.Testing": "default"
     }
   },
 
@@ -800,7 +788,7 @@
     "description": "Common resource names used by all Spanner V1 APIs",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax": "2.7.0"
+      "Google.Api.Gax": "default"
     }
   },
   
@@ -818,9 +806,7 @@
     "description": "Low-level Google client library to access the Google Cloud Spanner API. The ADO.NET provider (Google.Cloud.Spanner.Data) which depends on this package is generally preferred for Spanner access.",
     "tags": [ "Spanner" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0",
-      "Google.Cloud.Spanner.Common.V1": "project",
-      "Grpc.Core": "1.21.0"
+      "Google.Cloud.Spanner.Common.V1": "project"
     }
   },
 
@@ -864,8 +850,7 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
     "dependencies": {
-      "Google.Api.Gax.Rest": "2.8.0-beta01",
-      "Google.Apis.Storage.v1": "1.40.2.1603"
+      "Google.Apis.Storage.v1": "1.40.2.1635"
     },
     "testDependencies": {
       "Google.Cloud.Iam.V1": "1.2.0",
@@ -971,7 +956,6 @@
     "type": "rest",
     "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
     "dependencies": {
-      "Google.Api.Gax.Rest": "2.8.0-beta01",
       "Google.Apis.Translate.v2": "1.40.2.875"
     },
     "tags": [ "Translate", "Translation" ]
@@ -1005,9 +989,7 @@
     "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
     "tags": [ "Vision" ],
     "dependencies": {
-      "Google.Api.Gax.Grpc": "2.7.0",
-      "Google.LongRunning": "1.1.0",
-      "Grpc.Core": "1.21.0"
+      "Google.LongRunning": "1.1.0"
     }
   },
 
@@ -1036,7 +1018,7 @@
     "dependencies": {
     },
     "testDependencies": {
-      "Google.Api.Gax.Testing": "2.7.0"
+      "Google.Api.Gax.Testing": "default"
     }
   },
 
